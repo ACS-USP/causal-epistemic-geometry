@@ -1,0 +1,119 @@
+# Causal Geometry of Epistemic Complementarity
+
+This repository is currently **DEVELOPMENT infrastructure**. It is a small,
+deterministic harness for asking whether one controlled activation intervention
+can change *where a frozen language model fails* while approximately preserving
+individual competence. It does not contain a scientific result.
+
+The first question is intentionally narrower than the long-term program:
+
+```text
+one frozen model f_theta
+        |
+        +--> baseline: h_l -> h_l
+        |
+        +--> treatment: h_l -> h_l + alpha * v_i
+                    |
+          same held-out items with exact ground truth
+                    |
+          paired error vectors e_0(t), e_i(t)
+                    |
+          accuracy + error similarity + rescue/damage trade-off
+```
+
+Q1 CURRENT: Can one activation intervention change the error profile while
+preserving individual competence?
+
+Q2 FUTURE: Does geometry between interventions, such as `cosine(v_i, v_j)`,
+predict pairwise error complementarity?
+
+The code is deliberately shaped so Q2 can be added later without making a
+large pairwise experiment the current default.
+
+## Quick start: mock mode
+
+The mock path needs no GPU, model, network, or benchmark download. From this
+repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+ceg doctor
+ceg run configs/mock_smoke.yaml
+```
+
+The same commands are available through `python -m epistemic_geometry.cli`.
+Run artifacts are written under `runs/` and include resolved configuration,
+paired predictions, metrics, a manifest, and `summary.md`.
+
+```bash
+make test
+make lint
+make smoke
+python -m compileall -q src
+```
+
+The mock is a miniature representation-space classifier: deterministic item
+representations are passed through a fixed linear readout, and steering is
+literally applied before that readout. Named useful/destructive/random mock
+vectors are software fixtures only. **MOCK RESULTS ARE SOFTWARE VALIDATION
+ONLY.**
+
+## Scientific status
+
+The primary summary always shows baseline accuracy, steered accuracy, delta
+accuracy, error correlation, error Jaccard, rescue rate, damage rate, double
+fault, and pair-oracle complementarity headroom together. Low error similarity
+with collapsed accuracy is not a useful result. Pair-oracle headroom is a
+diagnostic upper bound, not an implementable ensemble or majority-vote claim.
+
+The repository starts with exact-label JSONL ground truth and a mechanical
+normalizer. It stores raw model output and normalized output separately so
+parsing failures cannot silently become model claims.
+
+No real model or benchmark is downloaded by default. No external model API,
+paid inference, RunPod call, or remote Git operation is used by this project.
+
+## Optional HuggingFace path
+
+Torch is intentionally not forced by the generic package because CUDA builds
+are machine-specific. On a prepared GPU machine, install the existing
+compatible Torch build first, then:
+
+```bash
+pip install -e ".[hf,dev]"
+ceg doctor --config configs/runpod_qwen3_8b.example.yaml
+```
+
+The example config is not executed locally and does not download Qwen3-8B.
+It makes model ID/path, dtype, device map, layer, alpha, token scope,
+generation, and benchmark path explicit. See [docs/RUNPOD.md](docs/RUNPOD.md)
+for the deliberately boring setup procedure.
+
+For a saved vector:
+
+```bash
+ceg build-vector configs/runpod_qwen3_8b.example.yaml vectors/qwen3_contrast.npz
+ceg inspect-vector vectors/qwen3_contrast.npz
+ceg run configs/runpod_qwen3_8b.example.yaml
+```
+
+The vector command is an explicit model-loading action. The default mock
+workflow does not call it.
+
+## What is not claimed yet
+
+This project does not currently claim that activation steering creates useful
+diversity, that one selected vector is scientifically privileged, or that
+representation geometry predicts error covariance. It has not frozen a model,
+benchmark split, vector construction, layer, alpha, controls, or confirmatory
+hypothesis. Those decisions belong after development review. See:
+
+- [Scientific question](docs/SCIENTIFIC_QUESTION.md)
+- [Development protocol](docs/DEVELOPMENT_PROTOCOL.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Next Q2 geometry](docs/NEXT_Q2_GEOMETRY.md)
+- [RunPod guide](docs/RUNPOD.md)
+- [Handoff](docs/HANDOFF.md)
+

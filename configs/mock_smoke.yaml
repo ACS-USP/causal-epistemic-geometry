@@ -1,0 +1,31 @@
+experiment:
+  name: mock-smoke
+  stage: development
+  seed: 123
+
+backend:
+  type: mock
+  hidden_size: 8
+  n_classes: 4
+  layer: 0
+  max_new_tokens: 1
+  do_sample: false
+
+benchmark:
+  type: mock
+  n_items: 48
+  allowed_targets: [A, B, C, D]
+
+steering:
+  enabled: true
+  layer: 0
+  alpha: 0.5
+  token_scope: all_tokens
+  constructor: random_unit
+  vector_seed: 456
+  vector_dimension: 8
+
+output:
+  root: runs
+  save_figures: true
+

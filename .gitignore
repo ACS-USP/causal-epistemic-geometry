@@ -1,0 +1,33 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Local experiment outputs and model material.
+runs/
+*.npz
+*.safetensors
+*.bin
+*.pt
+*.pth
+models/
+checkpoints/
+
+# Credentials and local machine state.
+.env
+.env.*
+*.token
+hf_home/
+transformers_cache/
+
+# Notebook/editor noise.
+.DS_Store
+.idea/
+.vscode/
+*.ipynb_checkpoints/
+

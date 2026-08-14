@@ -1,0 +1,40 @@
+# EXAMPLE ONLY. This config is intentionally not executed by local smoke tests.
+experiment:
+  name: qwen3-8b-development-kill-test
+  stage: development
+  seed: 123
+
+backend:
+  type: huggingface
+  model_id: Qwen/Qwen3-8B
+  device: auto
+  device_map: auto
+  dtype: auto
+  layer: 24
+  # Set this if automatic discovery does not match the model revision.
+  layer_path: model.model.layers
+  max_new_tokens: 4
+  do_sample: false
+  temperature: 1.0
+
+benchmark:
+  type: jsonl
+  path: examples/toy_benchmark.jsonl
+  max_items: 8
+  allowed_targets: [A, B, C, D]
+
+steering:
+  enabled: true
+  layer: 24
+  alpha: 0.0  # Set only after a vector and tiny development plan are reviewed.
+  token_scope: last_token
+  constructor: random_unit
+  vector_seed: 456
+  vector_dimension: 4096  # Replace with the loaded model's actual hidden size.
+  # Or point to a checked-out .npz vector plus adjacent JSON metadata:
+  # vector_path: vectors/qwen3_contrast.npz
+
+output:
+  root: runs
+  save_figures: true
+
