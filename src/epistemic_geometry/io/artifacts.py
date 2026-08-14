@@ -105,7 +105,12 @@ def write_run_artifacts(config: RunConfig, result: ExperimentResult) -> Path:
     root = Path(config.output.root)
     if not root.is_absolute():
         root = Path.cwd() / root
-    run_dir = root / f"{timestamp}_{config.experiment.name}_{config_hash}"
+    base_name = f"{timestamp}_{config.experiment.name}_{config_hash}"
+    run_dir = root / base_name
+    collision_index = 1
+    while run_dir.exists():
+        run_dir = root / f"{base_name}_{collision_index:02d}"
+        collision_index += 1
     run_dir.mkdir(parents=True, exist_ok=False)
 
     manifest = {
