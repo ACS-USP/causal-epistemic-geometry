@@ -49,10 +49,21 @@ def compute_paired_metrics(predictions: list[Prediction]) -> dict[str, float | d
     pair_oracle_accuracy = float(np.logical_or(base_correct, treat_correct).mean())
     return {
         "n_items": float(base_errors.size),
+        "parse_failure_count": float(
+            sum(prediction.parse_status != "OK" for prediction in predictions)
+        ),
+        "parse_status_counts": dict(
+            Counter(prediction.parse_status for prediction in predictions)
+        ),
         "baseline_accuracy": baseline_accuracy,
         "treatment_accuracy": treatment_accuracy,
         "delta_accuracy": treatment_accuracy - baseline_accuracy,
         "error_correlation_phi": phi_correlation(base_errors, treat_errors),
+        "error_correlation_phi_status": (
+            "undefined_zero_variance"
+            if np.std(base_errors) == 0 or np.std(treat_errors) == 0
+            else "defined"
+        ),
         "error_jaccard": error_jaccard(base_errors, treat_errors),
         "disagreement_rate": float(np.not_equal(base_errors, treat_errors).mean()),
         "double_fault": double_fault(base_errors, treat_errors),
@@ -66,4 +77,18 @@ def compute_paired_metrics(predictions: list[Prediction]) -> dict[str, float | d
         "complementarity_headroom": pair_oracle_accuracy
         - max(baseline_accuracy, treatment_accuracy),
         "pair_counts": dict(counts),
+        "paired_2x2": {
+            "baseline_correct__treatment_correct": counts.get(
+                "baseline_correct__treatment_correct", 0
+            ),
+            "baseline_correct__treatment_wrong": counts.get(
+                "baseline_correct__treatment_wrong", 0
+            ),
+            "baseline_wrong__treatment_correct": counts.get(
+                "baseline_wrong__treatment_correct", 0
+            ),
+            "baseline_wrong__treatment_wrong": counts.get(
+                "baseline_wrong__treatment_wrong", 0
+            ),
+        },
     }

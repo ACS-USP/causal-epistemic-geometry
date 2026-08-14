@@ -31,26 +31,40 @@ class BackendConfig:
     type: str
     model_id: str | None = None
     model_path: str | None = None
+    model_revision: str | None = None
+    tokenizer_id: str | None = None
+    tokenizer_revision: str | None = None
     hidden_size: int = 8
     n_classes: int = 4
     device: str = "auto"
     dtype: str = "auto"
     layer: int = 0
     layer_path: str | None = None
+    prompt_mode: str = "plain"
     max_new_tokens: int = 4
     do_sample: bool = False
     temperature: float = 1.0
     device_map: str | dict[str, Any] | None = None
+    batch_size: int = 1
+    quantization: str = "none"
 
     def __post_init__(self) -> None:
-        if self.type not in {"mock", "huggingface"}:
-            raise ConfigError("backend.type must be 'mock' or 'huggingface'")
+        if self.type not in {"mock", "huggingface", "tiny_transformer"}:
+            raise ConfigError("backend.type must be mock, huggingface, or tiny_transformer")
+        if not isinstance(self.layer, int) or self.layer < 0:
+            raise ConfigError("backend.layer must be a non-negative integer")
         if self.hidden_size <= 0 or self.n_classes <= 1:
             raise ConfigError("backend hidden_size/n_classes are invalid")
         if self.max_new_tokens <= 0:
             raise ConfigError("backend.max_new_tokens must be positive")
         if self.do_sample and self.temperature <= 0:
             raise ConfigError("backend.temperature must be positive when sampling")
+        if self.prompt_mode not in {"plain", "chat"}:
+            raise ConfigError("backend.prompt_mode must be plain or chat")
+        if self.batch_size <= 0:
+            raise ConfigError("backend.batch_size must be positive")
+        if self.quantization != "none":
+            raise ConfigError("Only quantization: none is implemented; choose it explicitly later")
 
 
 @dataclass(frozen=True)
@@ -70,6 +84,10 @@ class BenchmarkConfig:
             raise ConfigError("benchmark.path is required for JSONL benchmarks")
         if not self.allowed_targets:
             raise ConfigError("benchmark.allowed_targets must not be empty")
+        if self.max_items is not None and (
+            not isinstance(self.max_items, int) or self.max_items <= 0
+        ):
+            raise ConfigError("benchmark.max_items must be a positive integer when provided")
 
 
 @dataclass(frozen=True)
@@ -84,7 +102,7 @@ class SteeringConfig:
     vector_dimension: int | None = None
 
     def __post_init__(self) -> None:
-        if self.layer < 0:
+        if not isinstance(self.layer, int) or self.layer < 0:
             raise ConfigError("steering.layer must be non-negative")
         if self.token_scope not in {"all_tokens", "last_token"}:
             raise ConfigError("steering.token_scope must be all_tokens or last_token")
@@ -149,4 +167,3 @@ def load_config(path: str | Path) -> RunConfig:
         output=output,
         source_path=str(config_path.resolve()),
     )
-

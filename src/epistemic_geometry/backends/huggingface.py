@@ -13,7 +13,9 @@ from epistemic_geometry.backends.base import (
     OptionalDependencyError,
     validate_vector_dimension,
 )
+from epistemic_geometry.benchmarks.prompts import render_prompt
 from epistemic_geometry.config import BackendConfig
+from epistemic_geometry.reproducibility import stable_digest
 from epistemic_geometry.types import BackendOutput, BenchmarkItem, Intervention
 
 
@@ -25,53 +27,90 @@ class HuggingFaceBackend(ModelBackend):
     Transformers installed, and no model is downloaded by ``ceg doctor``.
     """
 
-    def __init__(self, config: BackendConfig) -> None:
+    def __init__(
+        self,
+        config: BackendConfig,
+        model: Any | None = None,
+        tokenizer: Any | None = None,
+        model_identifier: str | None = None,
+        tokenizer_identifier: str | None = None,
+        model_revision: str | None = None,
+    ) -> None:
         try:
             import torch
-            from transformers import AutoModelForCausalLM, AutoTokenizer
         except ImportError as exc:
             raise OptionalDependencyError(
-                "HuggingFace mode requires torch and transformers. Install with "
-                "pip install -e '.[hf]' after confirming the appropriate Torch build."
+                "HuggingFace mode requires torch. Install the approved Torch build first."
             ) from exc
 
+        if (model is None) != (tokenizer is None):
+            raise ValueError("Injected HuggingFace tests must provide both model and tokenizer")
+
         model_name = config.model_path or config.model_id
-        if not model_name:
+        if model is None and not model_name:
             raise ValueError(
                 "backend.model_id or backend.model_path is required for huggingface mode"
             )
         self.config = config
         self.torch = torch
-        self.model_name = model_name
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model_name = model_identifier or model_name or "injected-model"
+        self.tokenizer_name = tokenizer_identifier or config.tokenizer_id or self.model_name
+        self.model_revision = model_revision or config.model_revision
+        self._injected_model = model is not None
+        if model is None:
+            try:
+                from transformers import AutoModelForCausalLM, AutoTokenizer
+            except ImportError as exc:
+                raise OptionalDependencyError(
+                    "HuggingFace mode requires transformers. Install with "
+                    "pip install -e '.[hf]' after confirming the appropriate Torch build."
+                ) from exc
+            tokenizer_source = config.tokenizer_id or model_name
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                tokenizer_source,
+                revision=config.tokenizer_revision or config.model_revision,
+            )
+        else:
+            self.tokenizer = tokenizer
         if self.tokenizer.pad_token_id is None:
-            self.tokenizer.pad_token = self.tokenizer.eos_token
+            if getattr(self.tokenizer, "eos_token", None) is not None:
+                self.tokenizer.pad_token = self.tokenizer.eos_token
+            else:
+                self.tokenizer.pad_token_id = 0
 
         load_kwargs: dict[str, Any] = {"trust_remote_code": False}
-        dtype = self._resolve_dtype(config.dtype)
-        if dtype is not None:
-            load_kwargs["torch_dtype"] = dtype
-        if config.device_map is not None:
-            load_kwargs["device_map"] = config.device_map
-        elif config.device == "auto" and torch.cuda.is_available():
-            load_kwargs["device_map"] = "auto"
-
-        try:
-            self.model = AutoModelForCausalLM.from_pretrained(model_name, **load_kwargs)
-        except RuntimeError as exc:
-            if "out of memory" in str(exc).lower():
-                raise RuntimeError(
-                    "CUDA out of memory while loading the model. Try a smaller model, "
-                    "an explicit bf16/fp16 dtype, or a device map with more available memory."
-                ) from exc
-            raise
+        if model is None:
+            dtype = self._resolve_dtype(config.dtype)
+            if dtype is not None:
+                load_kwargs["torch_dtype"] = dtype
+            if config.device_map is not None:
+                load_kwargs["device_map"] = config.device_map
+            elif config.device == "auto" and torch.cuda.is_available():
+                load_kwargs["device_map"] = "auto"
+            try:
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    model_name,
+                    revision=config.model_revision,
+                    **load_kwargs,
+                )
+            except RuntimeError as exc:
+                if "out of memory" in str(exc).lower():
+                    raise RuntimeError(
+                        "CUDA out of memory while loading the model. Try a smaller model, "
+                        "an explicit bf16/fp16 dtype, or a device map with more available memory."
+                    ) from exc
+                raise
+        else:
+            self.model = model
         self.model.eval()
         for parameter in self.model.parameters():
             parameter.requires_grad_(False)
 
-        if "device_map" not in load_kwargs:
+        if model is None and "device_map" not in load_kwargs:
             target_device = self._resolve_device(config.device)
             self.model.to(target_device)
+        elif model is not None and config.device not in {"auto", "injected"}:
+            self.model.to(self._resolve_device(config.device))
         self.device = next(self.model.parameters()).device
         self._layer_stack = self._locate_layer_stack(config.layer_path)
         config_hidden_size = getattr(self.model.config, "hidden_size", None)
@@ -109,8 +148,7 @@ class HuggingFaceBackend(ModelBackend):
         return current
 
     def _locate_layer_stack(self, explicit_path: str | None) -> Any:
-        candidates = [
-            explicit_path,
+        candidates = [explicit_path] if explicit_path else [
             "model.model.layers",
             "model.layers",
             "transformer.h",
@@ -121,14 +159,15 @@ class HuggingFaceBackend(ModelBackend):
         for path in candidates:
             if not path:
                 continue
-            try:
-                stack = self._resolve_path(self, path)
-            except (AttributeError, IndexError, TypeError) as exc:
-                failures.append(f"{path}: {exc}")
-                continue
-            if hasattr(stack, "__len__") and len(stack) > 0:
-                return stack
-            failures.append(f"{path}: object is not a non-empty layer stack")
+            for root_name, root in (("backend", self), ("model", self.model)):
+                try:
+                    stack = self._resolve_path(root, path)
+                except (AttributeError, IndexError, TypeError) as exc:
+                    failures.append(f"{root_name}.{path}: {exc}")
+                    continue
+                if hasattr(stack, "__len__") and len(stack) > 0:
+                    return stack
+                failures.append(f"{root_name}.{path}: object is not a non-empty layer stack")
         detail = "; ".join(failures)
         raise RuntimeError(
             "Could not locate a transformer layer stack. Set backend.layer_path explicitly "
@@ -143,8 +182,17 @@ class HuggingFaceBackend(ModelBackend):
         encoded = self.tokenizer(prompt, return_tensors="pt")
         return {key: value.to(self.device) for key, value in encoded.items()}
 
+    def _encode_item(self, item: BenchmarkItem) -> tuple[dict[str, Any], str, str]:
+        rendered = render_prompt(item, mode=self.config.prompt_mode, tokenizer=self.tokenizer)
+        encoded = self.tokenizer(rendered.text, return_tensors="pt")
+        return (
+            {key: value.to(self.device) for key, value in encoded.items()},
+            rendered.text,
+            rendered.hash,
+        )
+
     def predict(self, item: BenchmarkItem) -> BackendOutput:
-        encoded = self._tokenize(item.prompt)
+        encoded, _rendered_prompt, prompt_hash = self._encode_item(item)
         input_length = int(encoded["input_ids"].shape[1])
         generation_kwargs: dict[str, Any] = {
             "max_new_tokens": self.config.max_new_tokens,
@@ -165,12 +213,25 @@ class HuggingFaceBackend(ModelBackend):
             raise
         new_tokens = generated[0, input_length:]
         raw_output = self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
-        return BackendOutput(raw_output=raw_output, metadata={"model": self.model_name})
+        return BackendOutput(
+            raw_output=raw_output,
+            metadata={
+                "model": self.model_name,
+                "prompt_mode": self.config.prompt_mode,
+                "rendered_prompt_hash": prompt_hash,
+                "input_token_count": input_length,
+                "generation": {
+                    "do_sample": self.config.do_sample,
+                    "temperature": self.config.temperature,
+                    "max_new_tokens": self.config.max_new_tokens,
+                },
+            },
+        )
 
     def extract_activation(self, item: BenchmarkItem) -> np.ndarray:
         """Extract the last non-padding token at the configured layer."""
 
-        encoded = self._tokenize(item.prompt)
+        encoded, _rendered_prompt, _prompt_hash = self._encode_item(item)
         captured: list[Any] = []
 
         def capture(_module: Any, _inputs: Any, output: Any) -> Any:
@@ -181,7 +242,8 @@ class HuggingFaceBackend(ModelBackend):
             captured.append(hidden[:, last_index, :].detach().float().cpu())
             return output
 
-        handle = self._layer_stack[self.config.layer].register_forward_hook(capture)
+        layer = self.layer_module(self.config.layer)
+        handle = layer.register_forward_hook(capture)
         try:
             with self.torch.inference_mode():
                 self.model(**encoded, use_cache=False)
@@ -191,13 +253,19 @@ class HuggingFaceBackend(ModelBackend):
             raise RuntimeError("Activation hook did not capture a layer output")
         return captured[0][0].numpy().copy()
 
-    def _hook_for(self, intervention: Intervention):
-        validate_vector_dimension(intervention.vector, self)
-        if intervention.layer >= len(self._layer_stack):
+    def layer_module(self, layer: int) -> Any:
+        """Return a validated transformer block for integration diagnostics."""
+
+        if layer < 0 or layer >= len(self._layer_stack):
             raise ValueError(
-                f"Intervention layer {intervention.layer} is outside layer stack of size "
+                f"Layer {layer} is outside the discovered layer stack of size "
                 f"{len(self._layer_stack)}"
             )
+        return self._layer_stack[layer]
+
+    def _hook_for(self, intervention: Intervention):
+        validate_vector_dimension(intervention.vector, self)
+        layer = self.layer_module(intervention.layer)
         vector = self.torch.as_tensor(
             intervention.vector.values,
             device=self.device,
@@ -231,7 +299,7 @@ class HuggingFaceBackend(ModelBackend):
                 return (updated, *rest)
             return [updated, *rest]
 
-        return self._layer_stack[intervention.layer].register_forward_hook(hook)
+        return layer.register_forward_hook(hook)
 
     @contextmanager
     def steer(self, intervention: Intervention) -> Iterator[None]:
@@ -242,3 +310,37 @@ class HuggingFaceBackend(ModelBackend):
             yield
         finally:
             handle.remove()
+
+    def provenance(self) -> dict[str, Any]:
+        """Return model/tokenizer identity without exposing credentials."""
+
+        parameters = list(self.model.parameters())
+        devices = sorted({str(parameter.device) for parameter in parameters})
+        config = getattr(self.model, "config", None)
+        architectures = getattr(config, "architectures", None) if config is not None else None
+        revision = self.model_revision or getattr(config, "_commit_hash", None)
+        resolved_path = getattr(config, "_name_or_path", None) if config is not None else None
+        return {
+            "model_identifier": self.model_name,
+            "resolved_model_path": resolved_path
+            or ("INJECTED_TEST_MODEL" if self._injected_model else "UNKNOWN"),
+            "model_revision": revision or "UNKNOWN",
+            "tokenizer_identifier": self.tokenizer_name,
+            "tokenizer_revision": self.config.tokenizer_revision or "UNKNOWN",
+            "transformers_model_class": self.model.__class__.__name__,
+            "architectures": architectures or [self.model.__class__.__name__],
+            "num_layers": len(self._layer_stack),
+            "hidden_size": self.hidden_size,
+            "parameter_count": int(sum(parameter.numel() for parameter in parameters)),
+            "dtype": str(parameters[0].dtype) if parameters else "UNKNOWN",
+            "devices": devices,
+            "quantization": self.config.quantization,
+            "layer_path": self.config.layer_path or "AUTO",
+            "layer_index_for_activation": self.config.layer,
+            "prompt_mode": self.config.prompt_mode,
+            "injected_test_model": self._injected_model,
+            "model_fingerprint": stable_digest(
+                self.model.__class__.__name__, self.hidden_size, len(self._layer_stack),
+                sum(parameter.numel() for parameter in parameters),
+            ),
+        }

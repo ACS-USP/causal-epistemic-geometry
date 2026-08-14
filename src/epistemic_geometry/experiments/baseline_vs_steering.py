@@ -12,8 +12,8 @@ from epistemic_geometry.backends import ModelBackend, build_backend
 from epistemic_geometry.backends.base import validate_vector_dimension
 from epistemic_geometry.benchmarks import Benchmark, JsonlBenchmark, MockBenchmark
 from epistemic_geometry.config import RunConfig
-from epistemic_geometry.io.artifacts import write_run_artifacts
-from epistemic_geometry.metrics import compute_paired_metrics
+from epistemic_geometry.io.artifacts import RunInterrupted, RunSession, resolved_config_hash
+from epistemic_geometry.metrics import bootstrap_paired_metrics, compute_paired_metrics
 from epistemic_geometry.reproducibility import seed_everything
 from epistemic_geometry.steering import (
     difference_of_means,
@@ -73,6 +73,7 @@ def build_vector(config: RunConfig, backend: ModelBackend, benchmark: Benchmark)
             items[:midpoint],
             items[midpoint:],
             layer=steering.layer,
+            seed=config.experiment.seed,
         )
     elif steering.constructor.startswith("mock_fixture:"):
         fixture_kind = steering.constructor.split(":", 1)[1]
@@ -99,15 +100,16 @@ def _prediction(
     output: Any,
     parser: Any,
 ) -> Prediction:
-    normalized = parser.normalize(output.raw_output)
+    parsed = parser.parse(output.raw_output)
     return Prediction(
         item_id=item.id,
         condition=condition,
         raw_output=output.raw_output,
-        normalized_output=normalized,
+        normalized_output=parsed.normalized,
         target=item.target,
-        correct=normalized == item.target.upper(),
-        metadata=output.metadata,
+        correct=parsed.status == "OK" and parsed.normalized == item.target.upper(),
+        parse_status=parsed.status,
+        metadata={**output.metadata, "parse_status": parsed.status},
     )
 
 
@@ -115,6 +117,7 @@ def evaluate_paired(
     backend: ModelBackend,
     benchmark: Benchmark,
     intervention: Intervention,
+    bootstrap_seed: int | None = None,
 ) -> ExperimentResult:
     """Run paired in-order inference while preserving baseline state."""
 
@@ -126,6 +129,8 @@ def evaluate_paired(
             steered_output = backend.predict(item)
         predictions.append(_prediction(item, "steered", steered_output, benchmark.parser))
     metrics = compute_paired_metrics(predictions)
+    if bootstrap_seed is not None:
+        metrics["bootstrap"] = bootstrap_paired_metrics(predictions, bootstrap_seed)
     return ExperimentResult(
         predictions=predictions,
         metrics=metrics,
@@ -142,7 +147,11 @@ def evaluate_paired(
     )
 
 
-def _scalar_run(config: RunConfig) -> Path:
+def _scalar_run(
+    config: RunConfig,
+    resume_dir: Path | None = None,
+    stop_after_items: int | None = None,
+) -> Path:
     seed_everything(config.experiment.seed)
     benchmark = build_benchmark(config)
     backend = build_backend(config)
@@ -157,14 +166,101 @@ def _scalar_run(config: RunConfig) -> Path:
         token_scope=config.steering.token_scope,
         vector=vector,
     )
-    result = evaluate_paired(backend, benchmark, intervention)
-    return write_run_artifacts(config, result)
+    backend_provenance = backend.provenance() if hasattr(backend, "provenance") else {
+        "backend_type": config.backend.type
+    }
+    identity = {
+        "config_hash": resolved_config_hash(config),
+        "experiment_seed": config.experiment.seed,
+        "backend_type": config.backend.type,
+        "model_identifier": config.backend.model_path or config.backend.model_id,
+        "vector_hash": vector.hash,
+        "vector": {
+            "hash": vector.hash,
+            "layer": vector.layer,
+            "constructor": vector.constructor,
+            "normalization": vector.normalization,
+            "metadata": vector.metadata,
+        },
+        "intervention": {
+            "layer": intervention.layer,
+            "alpha": intervention.alpha,
+            "vector_id": intervention.vector_id,
+            "token_scope": intervention.token_scope,
+        },
+        "backend": backend_provenance,
+        "prompt_mode": config.backend.prompt_mode,
+        "decoding": {
+            "do_sample": config.backend.do_sample,
+            "temperature": config.backend.temperature,
+            "max_new_tokens": config.backend.max_new_tokens,
+        },
+        "benchmark_type": config.benchmark.type,
+    }
+    session = (
+        RunSession.resume(resume_dir, config, identity)
+        if resume_dir
+        else RunSession.create(config, identity)
+    )
+    existing = session.existing_predictions()
+    try:
+        for item_index, item in enumerate(benchmark, start=1):
+            baseline_key = (item.id, "baseline")
+            if baseline_key not in existing:
+                baseline_output = backend.predict(item)
+                prediction = _prediction(item, "baseline", baseline_output, benchmark.parser)
+                session.append_prediction(prediction)
+                existing[baseline_key] = prediction
+            steered_key = (item.id, "steered")
+            if steered_key not in existing:
+                with backend.steer(intervention):
+                    steered_output = backend.predict(item)
+                prediction = _prediction(item, "steered", steered_output, benchmark.parser)
+                session.append_prediction(prediction)
+                existing[steered_key] = prediction
+            if stop_after_items is not None and item_index >= stop_after_items:
+                session.set_status("INTERRUPTED")
+                raise RunInterrupted(session.run_dir)
+    except RunInterrupted:
+        raise
+    except Exception:
+        session.set_status("FAILED")
+        raise
+
+    predictions = [
+        existing[(item.id, condition)]
+        for item in benchmark
+        for condition in ("baseline", "steered")
+    ]
+    metrics = compute_paired_metrics(predictions)
+    metrics["bootstrap"] = bootstrap_paired_metrics(predictions, config.experiment.seed)
+    result = ExperimentResult(
+        predictions=predictions,
+        metrics=metrics,
+        provenance={
+            "n_items": len(benchmark),
+            "vector_hash": vector.hash,
+            "vector": identity["vector"],
+            "intervention": identity["intervention"],
+            "backend": backend_provenance,
+            "prompt_mode": config.backend.prompt_mode,
+            "decoding": identity["decoding"],
+            "benchmark_type": config.benchmark.type,
+        },
+    )
+    return session.finalize(result)
 
 
-def run_experiment(config: RunConfig) -> Path | list[Path]:
+def run_experiment(
+    config: RunConfig,
+    resume_dir: str | Path | None = None,
+    stop_after_items: int | None = None,
+) -> Path | list[Path]:
     """Run one scalar experiment or an explicitly configured development sweep."""
 
     alpha_values = config.steering.alpha_values()
+    if resume_dir is not None and len(alpha_values) > 1:
+        raise ValueError("Resume is supported for scalar runs, not alpha sweeps")
     if len(alpha_values) > 1:
         if config.experiment.stage != "development":
             raise ValueError("Alpha sweeps are development-only; set experiment.stage: development")
@@ -174,7 +270,11 @@ def run_experiment(config: RunConfig) -> Path | list[Path]:
         ]
         _write_alpha_sweep(config, alpha_values, paths)
         return paths
-    return _scalar_run(config)
+    return _scalar_run(
+        config,
+        resume_dir=Path(resume_dir) if resume_dir is not None else None,
+        stop_after_items=stop_after_items,
+    )
 
 
 def _write_alpha_sweep(config: RunConfig, alpha_values: list[float], paths: list[Path]) -> Path:

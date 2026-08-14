@@ -44,6 +44,7 @@ class Prediction:
     normalized_output: str
     target: str
     correct: bool
+    parse_status: str = "OK"
     metadata: dict[str, Any] = field(default_factory=dict)
 
 
@@ -97,4 +98,3 @@ class ExperimentResult:
     predictions: list[Prediction]
     metrics: dict[str, Any]
     provenance: dict[str, Any]
-

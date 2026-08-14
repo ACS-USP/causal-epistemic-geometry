@@ -88,16 +88,34 @@ def runtime_metadata() -> dict[str, Any]:
         "python_version": sys.version,
         "platform": platform.platform(),
         "packages": package_versions(
-            ["causal-epistemic-geometry", "numpy", "pandas", "PyYAML", "torch", "transformers"]
+            [
+                "causal-epistemic-geometry",
+                "numpy",
+                "pandas",
+                "PyYAML",
+                "torch",
+                "transformers",
+                "accelerate",
+                "tokenizers",
+            ]
         ),
     }
     try:
         import torch
 
         metadata["torch"] = {
+            "torch_version": torch.__version__,
+            "cuda_runtime": getattr(torch.version, "cuda", None),
             "cuda_available": bool(torch.cuda.is_available()),
             "cuda_device_count": int(torch.cuda.device_count()),
+            "mps_available": bool(
+                hasattr(torch.backends, "mps") and torch.backends.mps.is_available()
+            ),
             "devices": [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())],
+            "memory_total_bytes": [
+                int(torch.cuda.get_device_properties(i).total_memory)
+                for i in range(torch.cuda.device_count())
+            ],
             "bf16_supported": bool(torch.cuda.is_bf16_supported())
             if torch.cuda.is_available()
             else False,
@@ -111,4 +129,3 @@ def canonical_json(data: Any) -> str:
     """Serialize data for stable config/artifact hashing."""
 
     return json.dumps(data, sort_keys=True, separators=(",", ":"), default=str)
-

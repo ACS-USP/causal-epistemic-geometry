@@ -79,6 +79,7 @@ def difference_of_means(
     layer: int,
     normalize: bool = True,
     metadata: dict[str, object] | None = None,
+    seed: int | None = None,
 ) -> SteeringVector:
     """Use ``mean(h_positive) - mean(h_negative)`` as a transparent constructor.
 
@@ -93,6 +94,9 @@ def difference_of_means(
     if positive.shape[1] != backend.hidden_size or negative.shape[1] != backend.hidden_size:
         raise ValueError("Extracted activations do not match backend hidden size")
     values, normalization = _normalize(positive.mean(axis=0) - negative.mean(axis=0), normalize)
+    backend_provenance = (
+        backend.provenance() if hasattr(backend, "provenance") else {"backend_type": "unknown"}
+    )
     vector = SteeringVector(
         values=values,
         layer=layer,
@@ -101,6 +105,8 @@ def difference_of_means(
         metadata={
             "positive_items": [item.id for item in positive_items],
             "negative_items": [item.id for item in negative_items],
+            "creation_seed": seed,
+            "model_provenance": backend_provenance,
             "extraction_policy": (
                 "backend-defined; mock uses latent representation, HF uses "
                 "last non-padding token"

@@ -4,8 +4,17 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from collections.abc import Iterator
+from dataclasses import dataclass
 
 from epistemic_geometry.types import BenchmarkItem
+
+
+@dataclass(frozen=True)
+class ParsedAnswer:
+    """Mechanical parser result kept distinct from model correctness."""
+
+    normalized: str
+    status: str
 
 
 class AnswerParser:
@@ -21,9 +30,25 @@ class AnswerParser:
         )
 
     def normalize(self, raw_output: str) -> str:
+        return self.parse(raw_output).normalized
+
+    def parse(self, raw_output: str) -> ParsedAnswer:
+        """Accept only exact short-label forms and expose parse failures."""
+
         first_line = next((line.strip() for line in raw_output.splitlines() if line.strip()), "")
-        token = first_line.split()[0] if first_line else ""
-        return token.strip("[](){}.,:;\"'").upper()
+        if not first_line:
+            return ParsedAnswer("", "EMPTY")
+        candidate = first_line.strip()
+        candidate_without_period = candidate[:-1].strip() if candidate.endswith(".") else candidate
+        normalized = candidate_without_period.upper()
+        if self.allowed_targets is None:
+            return ParsedAnswer(normalized, "OK" if " " not in normalized else "AMBIGUOUS")
+        if normalized in self.allowed_targets:
+            return ParsedAnswer(normalized, "OK")
+        token = candidate.split()[0].strip("[](){}.,:;\"'").upper()
+        if token in self.allowed_targets:
+            return ParsedAnswer(token, "AMBIGUOUS")
+        return ParsedAnswer(normalized.strip("[](){}.,:;\"'"), "INVALID")
 
     def validate(self, item: BenchmarkItem) -> None:
         if self.allowed_targets is not None and item.target.upper() not in self.allowed_targets:

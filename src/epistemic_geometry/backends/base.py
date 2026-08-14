@@ -57,6 +57,10 @@ def build_backend(config: RunConfig) -> ModelBackend:
         from .huggingface import HuggingFaceBackend
 
         return HuggingFaceBackend(backend_config)
+    if backend_config.type == "tiny_transformer":
+        from .tiny import TinyRandomTransformerBackend
+
+        return TinyRandomTransformerBackend(backend_config, seed=config.experiment.seed)
     raise ValueError(f"Unsupported backend type: {backend_config.type}")
 
 
@@ -68,4 +72,3 @@ def validate_vector_dimension(vector: SteeringVector, backend: ModelBackend) -> 
             f"Steering vector dimension {vector.dimension} does not match "
             f"backend hidden size {backend.hidden_size}"
         )
-

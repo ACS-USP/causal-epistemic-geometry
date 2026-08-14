@@ -20,9 +20,9 @@ def accuracy(correct: np.ndarray | list[bool]) -> float:
 def phi_correlation(errors_a: np.ndarray | list[bool], errors_b: np.ndarray | list[bool]) -> float:
     """Return Pearson/phi correlation with explicit constant-vector conventions.
 
-    If both error vectors are identical constants, the result is 1.0. If only
-    one is constant, or both constants differ, the result is 0.0 rather than
-    propagating an undefined NaN into a run summary.
+    If either vector has zero variance, Pearson/phi is mathematically
+    undefined. Return NaN; callers must carry an explicit status rather than
+    silently turning the undefined value into zero.
     """
 
     a = _binary(errors_a).astype(float)
@@ -33,7 +33,7 @@ def phi_correlation(errors_a: np.ndarray | list[bool], errors_b: np.ndarray | li
     b_centered = b - b.mean()
     denominator = float(np.linalg.norm(a_centered) * np.linalg.norm(b_centered))
     if denominator == 0:
-        return 1.0 if np.array_equal(a, b) else 0.0
+        return float("nan")
     return float(np.dot(a_centered, b_centered) / denominator)
 
 
@@ -57,4 +57,3 @@ def double_fault(errors_a: np.ndarray | list[bool], errors_b: np.ndarray | list[
     if a.size != b.size or a.size == 0:
         raise ValueError("Error vectors must be non-empty and have equal length")
     return float(np.logical_and(a, b).mean())
-

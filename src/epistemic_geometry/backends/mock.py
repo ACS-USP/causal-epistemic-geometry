@@ -117,3 +117,16 @@ class MockBackend(ModelBackend):
                 metadata={"seed": seed, "software_fixture": True},
             )
         )
+
+    def provenance(self) -> dict[str, object]:
+        """Return deterministic identity for artifact lineage."""
+
+        return {
+            "backend_type": "mock",
+            "model_identifier": "mock-linear-fixture",
+            "model_revision": "local-code",
+            "hidden_size": self.hidden_size,
+            "parameter_count": int(self._readout.size),
+            "dtype": str(self._readout.dtype),
+            "seed": self.seed,
+        }

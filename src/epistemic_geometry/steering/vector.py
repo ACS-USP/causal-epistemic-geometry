@@ -33,6 +33,7 @@ def save_vector(
     path: str | Path,
     metadata_path: str | Path | None = None,
     git_commit: str | None = None,
+    git_dirty: bool | None = None,
 ) -> tuple[Path, Path]:
     """Save values in NumPy format and provenance in adjacent JSON."""
 
@@ -49,6 +50,7 @@ def save_vector(
         "normalization": vector.normalization,
         "metadata": vector.metadata,
         "git_commit": git_commit,
+        "git_dirty": git_dirty,
     }
     meta_path.write_text(json.dumps(metadata, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return vector_path, meta_path
@@ -84,4 +86,3 @@ def with_computed_hash(vector: SteeringVector) -> SteeringVector:
     """Return an equivalent vector with its content hash populated."""
 
     return replace(vector, hash=vector_hash(vector.values))
-

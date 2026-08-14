@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import os
 import platform
 from pathlib import Path
@@ -17,7 +18,8 @@ from epistemic_geometry.experiments.baseline_vs_steering import (
     build_vector,
 )
 from epistemic_geometry.experiments.baseline_vs_steering import run_experiment as execute_experiment
-from epistemic_geometry.reproducibility import git_metadata
+from epistemic_geometry.io.artifacts import validate_run_directory
+from epistemic_geometry.reproducibility import git_metadata, runtime_metadata
 from epistemic_geometry.steering import load_vector, save_vector
 
 app = typer.Typer(help="Causal Geometry of Epistemic Complementarity research CLI")
@@ -25,6 +27,23 @@ app = typer.Typer(help="Causal Geometry of Epistemic Complementarity research CL
 
 def _dependency_status(name: str) -> str:
     return "yes" if importlib.util.find_spec(name) else "no"
+
+
+def _model_cache_status(model_ref: str) -> str:
+    """Inspect the local HF cache only; never resolve or download a model."""
+
+    if Path(model_ref).exists():
+        return "CACHED"
+    try:
+        from huggingface_hub import scan_cache_dir
+
+        cache = scan_cache_dir()
+        for repo in cache.repos:
+            if repo.repo_id == model_ref and repo.revisions:
+                return "CACHED"
+    except (ImportError, OSError, RuntimeError):
+        pass
+    return "NOT CACHED"
 
 
 @app.command()
@@ -44,6 +63,10 @@ def doctor(
 
         typer.echo(f"CUDA available: {torch.cuda.is_available()}")
         typer.echo(f"CUDA device count: {torch.cuda.device_count()}")
+        typer.echo(
+            "MPS available: "
+            f"{hasattr(torch.backends, 'mps') and torch.backends.mps.is_available()}"
+        )
         for index in range(torch.cuda.device_count()):
             typer.echo(f"GPU {index}: {torch.cuda.get_device_name(index)}")
         typer.echo(
@@ -71,7 +94,7 @@ def doctor(
         typer.echo(f"Config: valid ({loaded.backend.type} backend)")
         layer_plausible = loaded.backend.layer >= 0 and loaded.steering.layer >= 0
         typer.echo(f"Layer config plausible: {layer_plausible}")
-        if loaded.backend.type == "huggingface":
+        if loaded.backend.type in {"huggingface", "tiny_transformer"}:
             typer.echo(
                 "HF backend dependencies ready: "
                 f"{torch_status == 'yes' and transformers_status == 'yes'}"
@@ -86,7 +109,7 @@ def doctor(
             if not vector_path.is_absolute():
                 vector_path = Path.cwd() / vector_path
             typer.echo(f"Steering vector exists: {vector_path.exists()}")
-        if loaded.backend.type == "huggingface":
+        if loaded.backend.type in {"huggingface", "tiny_transformer"}:
             typer.echo(
                 "HF config note: model/layer plausibility is checked only when the optional "
                 "backend is explicitly constructed; doctor does not download models."
@@ -97,12 +120,17 @@ def doctor(
 
 
 @app.command("run")
-def run(config: Path = typer.Argument(..., help="YAML experiment configuration.")) -> None:
+def run(
+    config: Path = typer.Argument(..., help="YAML experiment configuration."),
+    resume: Path | None = typer.Option(
+        None, "--resume", help="Resume an interrupted run directory."
+    ),
+) -> None:
     """Run baseline versus one steering vector, or an explicit dev alpha sweep."""
 
     try:
         loaded = load_config(config)
-        paths = execute_experiment(loaded)
+        paths = execute_experiment(loaded, resume_dir=resume)
     except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
         typer.echo(f"Run failed: {exc}", err=True)
         raise typer.Exit(code=1) from exc
@@ -112,6 +140,145 @@ def run(config: Path = typer.Argument(..., help="YAML experiment configuration."
             typer.echo(f"  {path}")
     else:
         typer.echo(f"Run complete: {paths}")
+
+
+@app.command()
+def preflight(
+    config: Path = typer.Argument(..., help="YAML configuration to inspect without inference."),
+) -> None:
+    """Report what a run would do without loading weights or generating tokens."""
+
+    try:
+        loaded = load_config(config)
+        benchmark_count: int | str
+        if loaded.benchmark.type == "mock":
+            benchmark_count = loaded.benchmark.n_items
+        else:
+            benchmark_path = Path(loaded.benchmark.path or "")
+            if not benchmark_path.is_absolute():
+                benchmark_path = Path.cwd() / benchmark_path
+            if not benchmark_path.exists():
+                benchmark_count = "UNKNOWN (benchmark path missing)"
+            else:
+                benchmark = build_benchmark(loaded)
+                benchmark_count = len(benchmark)
+        blockers: list[str] = []
+        if loaded.benchmark.type == "jsonl":
+            benchmark_path = Path(loaded.benchmark.path or "")
+            if not benchmark_path.is_absolute():
+                benchmark_path = Path.cwd() / benchmark_path
+            if not benchmark_path.exists():
+                blockers.append(f"benchmark path missing: {benchmark_path}")
+        if loaded.backend.type in {"huggingface", "tiny_transformer"}:
+            if _dependency_status("torch") != "yes" or _dependency_status("transformers") != "yes":
+                blockers.append("Torch/Transformers dependencies are missing")
+        if loaded.backend.type == "huggingface":
+            model_ref = loaded.backend.model_path or loaded.backend.model_id
+            if not model_ref or model_ref == "REPLACE_ME":
+                blockers.append("model id/path is REPLACE_ME or missing")
+            elif loaded.backend.model_path and not Path(model_ref).exists():
+                blockers.append(f"local model path does not exist: {model_ref}")
+            else:
+                cache_status = _model_cache_status(str(model_ref))
+                typer.echo(f"Model cache: {cache_status}")
+                if cache_status != "CACHED":
+                    blockers.append("model is NOT CACHED/NOT VERIFIED; no download was attempted")
+            if loaded.backend.layer_path == "REPLACE_ME":
+                blockers.append("backend.layer_path is REPLACE_ME")
+            for field_name, field_value in (
+                ("backend.model_revision", loaded.backend.model_revision),
+                ("backend.tokenizer_id", loaded.backend.tokenizer_id),
+                ("backend.tokenizer_revision", loaded.backend.tokenizer_revision),
+            ):
+                if field_value == "REPLACE_ME":
+                    blockers.append(f"{field_name} is REPLACE_ME")
+        if loaded.steering.vector_path:
+            vector_path = Path(loaded.steering.vector_path)
+            if not vector_path.is_absolute():
+                vector_path = Path.cwd() / vector_path
+            if not vector_path.exists():
+                blockers.append(f"steering vector missing: {vector_path}")
+            else:
+                typer.echo(f"Vector path: {vector_path}")
+        elif loaded.steering.constructor == "REPLACE_ME":
+            blockers.append("steering constructor is REPLACE_ME")
+        output_root = Path(loaded.output.root)
+        if not output_root.is_absolute():
+            output_root = Path.cwd() / output_root
+        typer.echo(f"Backend: {loaded.backend.type}")
+        model_label = loaded.backend.model_path or loaded.backend.model_id or "local fixture"
+        typer.echo(f"Model: {model_label}")
+        typer.echo(f"Benchmark: {loaded.benchmark.type} ({benchmark_count} items)")
+        typer.echo(f"Prompt mode: {loaded.backend.prompt_mode}")
+        typer.echo(f"Layer: {loaded.steering.layer}")
+        typer.echo(f"Alpha: {loaded.steering.alpha_values()}")
+        typer.echo(f"Token scope: {loaded.steering.token_scope}")
+        typer.echo(
+            f"Decoding: do_sample={loaded.backend.do_sample}, "
+            f"max_new_tokens={loaded.backend.max_new_tokens}"
+        )
+        if isinstance(benchmark_count, int):
+            calls = benchmark_count * 2
+            extraction_calls = (
+                benchmark_count if loaded.steering.constructor == "difference_of_means" else 0
+            )
+            typer.echo(
+                f"Estimated generation calls: {calls}; "
+                f"activation extractions: {extraction_calls}"
+            )
+        typer.echo(f"Expected artifact root: {output_root}")
+        typer.echo("Resume compatibility: config/vector/model identity is checked by hash")
+        if blockers:
+            typer.echo("PREFLIGHT: NOT READY")
+            for blocker in blockers:
+                typer.echo(f"  BLOCKER: {blocker}")
+            raise typer.Exit(code=1)
+        typer.echo("PREFLIGHT: READY (no inference or downloads performed)")
+    except (ConfigError, FileNotFoundError, ValueError) as exc:
+        typer.echo(f"Preflight failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+
+
+@app.command("validate-run")
+def validate_run(run_dir: Path = typer.Argument(..., help="Completed run directory.")) -> None:
+    """Recompute metrics and hashes for a completed run."""
+
+    try:
+        report = validate_run_directory(run_dir)
+    except (FileNotFoundError, ValueError, KeyError, json.JSONDecodeError) as exc:
+        typer.echo(f"Run invalid: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(json.dumps(report, indent=2, sort_keys=True))
+
+
+@app.command()
+def environment() -> None:
+    """Print a non-secret runtime snapshot."""
+
+    typer.echo(json.dumps(runtime_metadata(), indent=2, sort_keys=True))
+
+
+@app.command("estimate-memory")
+def estimate_memory(
+    parameters: int = typer.Option(..., "--parameters", help="Parameter count, e.g. 8000000000."),
+    dtype: str = typer.Option("bf16", "--dtype", help="float32, fp16, bf16, or int8."),
+) -> None:
+    """Give a rough weight-memory estimate; KV cache/runtime overhead is extra."""
+
+    bytes_per_parameter = {"float32": 4, "fp32": 4, "fp16": 2, "bf16": 2, "int8": 1}
+    if parameters <= 0 or dtype not in bytes_per_parameter:
+        typer.echo(
+            "parameters must be positive and dtype must be float32, fp16, bf16, or int8",
+            err=True,
+        )
+        raise typer.Exit(code=1)
+    weight_bytes = parameters * bytes_per_parameter[dtype]
+    gib = weight_bytes / 1024**3
+    typer.echo(f"Approximate weights: {gib:.2f} GiB ({dtype})")
+    typer.echo(
+        "Warning: generation KV cache, activations, allocator overhead, and device "
+        "mapping are additional."
+    )
 
 
 @app.command("build-vector")
@@ -132,6 +299,7 @@ def build_vector_command(
             vector,
             output,
             git_commit=git_metadata(Path.cwd()).get("git_commit"),
+            git_dirty=git_metadata(Path.cwd()).get("git_dirty"),
         )
     except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
         typer.echo(f"Vector build failed: {exc}", err=True)
