@@ -10,9 +10,15 @@
 - Optional, dependency-gated HuggingFace causal-LM backend with temporary
   activation hooks, last-token/all-token scope, layer discovery, inference mode,
   and actionable OOM/dependency errors.
+- Network-free `tiny_transformer` backend using an actual randomly initialized
+  GPT-2-style decoder, with hook integration tests and an end-to-end smoke run.
 - CLI commands: `doctor`, `run`, `build-vector`, `inspect-vector`, `summarize`.
+- CLI commands: `preflight`, `validate-run`, `environment`, and
+  `estimate-memory`.
 - Reproducibility helpers, manifests, tests, linting, compile checks, and mock
   smoke workflow.
+- Append-only resumable runs with status transitions, provenance checks, tail
+  quarantine, deterministic metrics recomputation, and run validation.
 
 ## What is mocked
 
@@ -21,12 +27,24 @@ linear readout. Mock useful/destructive/random vectors are fixtures designed to
 exercise rescue and damage paths. They are not model evidence, benchmark
 evidence, or a simulated scientific result.
 
-## What remains untested on a real transformer
+## Current readiness
 
-The HuggingFace code path has not been run in this local smoke workflow. A
-principal researcher must verify the exact model revision, tokenizer behavior,
-layer path, hidden size, device map, dtype, generation format, and vector
-construction on a prepared GPU machine.
+Q1 software infrastructure: READY.
+
+Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER.
+
+Q1 real 8B model: NOT RUN.
+
+Q1 scientific result: NONE.
+
+Q2 geometry: NOT RUN.
+
+## What remains untested on a real deployment
+
+No pretrained model or GPU deployment has been run. A principal researcher must
+verify the exact model revision, tokenizer behavior, chat template, layer path,
+hidden size, device map, dtype, generation format, and vector construction on a
+prepared GPU machine.
 
 ## Exact local smoke
 
@@ -34,6 +52,7 @@ construction on a prepared GPU machine.
 cd ~/dev/causal-epistemic-geometry
 source .venv/bin/activate
 ceg run configs/mock_smoke.yaml
+ceg run configs/tiny_transformer_smoke.yaml
 ```
 
 Or use `make smoke`. Run artifacts appear in `runs/`, which is ignored by Git.
@@ -49,7 +68,8 @@ ceg doctor --config configs/runpod_qwen3_8b.example.yaml
 ```
 
 Model download/cache, vector creation, and the real smoke run are explicit
-reviewed steps documented in [RUNPOD.md](RUNPOD.md).
+reviewed steps documented in [RUNPOD.md](RUNPOD.md) and
+[RUNPOD_Q1_CHECKLIST.md](RUNPOD_Q1_CHECKLIST.md).
 
 ## Vector and experiment commands
 
@@ -90,4 +110,3 @@ Add multiple reviewed interventions and small pure geometry helpers, then test
 whether `geometry(v_i, v_j)` predicts held-out
 `error_correlation(e_i, e_j)`. Do not add manifold or Riemannian theory before
 that milestone.
-

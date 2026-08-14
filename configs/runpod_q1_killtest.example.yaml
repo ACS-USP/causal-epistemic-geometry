@@ -1,0 +1,41 @@
+# TEMPLATE ONLY. Replace every REPLACE_ME value after scientific review.
+experiment:
+  name: q1-killtest-development-REPLACE_ME
+  stage: development
+  seed: 123
+
+backend:
+  type: huggingface
+  model_id: REPLACE_ME
+  model_revision: REPLACE_ME
+  tokenizer_id: REPLACE_ME
+  tokenizer_revision: REPLACE_ME
+  device: auto
+  device_map: auto
+  dtype: auto
+  layer: 0  # REPLACE_ME after architecture review
+  layer_path: REPLACE_ME
+  prompt_mode: chat
+  max_new_tokens: 4
+  do_sample: false
+  temperature: 1.0
+  batch_size: 1
+  quantization: none
+
+benchmark:
+  type: jsonl
+  path: REPLACE_ME
+  max_items: 8  # REPLACE_ME after task-split review
+  allowed_targets: [A, B, C, D]
+
+steering:
+  enabled: true
+  layer: 0  # REPLACE_ME after architecture review
+  alpha: 0.0  # REPLACE_ME after development review
+  token_scope: last_token
+  vector_path: REPLACE_ME
+  constructor: loaded_vector
+
+output:
+  root: runs
+  save_figures: false

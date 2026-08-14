@@ -48,6 +48,16 @@ ceg doctor --config configs/runpod_qwen3_8b.example.yaml
 verify the model revision, layer path, and hidden size for the exact model you
 intend to test.
 
+Before any inference, use the no-download preflight:
+
+```bash
+ceg preflight configs/runpod_q1_smoke.example.yaml
+```
+
+It reports item count, generation calls, layer/alpha/token scope, cache status,
+missing placeholders, vector path, and expected output root. A nonzero result
+for the template is expected until the researcher fills in reviewed choices.
+
 ## 4. Explicit model cache/download step
 
 Only after the principal researcher approves the exact open-weight model,
@@ -102,6 +112,17 @@ ceg run path/to/reviewed_development.yaml
 The current implementation runs items one at a time. This is deliberate while
 hook and paired-state correctness are being established.
 
+Runs are append-only and resumable at item-condition granularity. If a process
+is interrupted, reuse the exact same config and pass the run directory:
+
+```bash
+ceg run path/to/reviewed_development.yaml --resume runs/<interrupted-run>
+ceg validate-run runs/<completed-run>
+```
+
+Changing the resolved scientific config, model/vector identity, alpha, layer,
+or token scope refuses resume.
+
 ## 8. Copying artifacts back
 
 Copy only the run directory and vector metadata needed for review:
@@ -113,4 +134,3 @@ rsync -a runs/<timestamped-run>/ /path/to/local/review/runs/<timestamped-run>/
 Review `manifest.json`, `predictions.jsonl`, `metrics.json`, and `summary.md`
 together. The manifest records timestamp, seed, backend/model, config hash,
 vector hash, git state, Python/package versions, and device metadata.
-

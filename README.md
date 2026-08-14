@@ -41,6 +41,7 @@ source .venv/bin/activate
 python -m pip install -e ".[dev]"
 ceg doctor
 ceg run configs/mock_smoke.yaml
+ceg preflight configs/mock_smoke.yaml
 ```
 
 The same commands are available through `python -m epistemic_geometry.cli`.
@@ -53,6 +54,17 @@ make lint
 make smoke
 python -m compileall -q src
 ```
+
+With the optional Torch/Transformers stack installed, exercise the real
+mechanics without downloading a model:
+
+```bash
+make tiny-smoke
+ceg validate-run runs/<tiny-transformer-run>
+```
+
+Completed runs are resumable only with matching provenance:
+`ceg run <config> --resume <interrupted-run>`.
 
 The mock is a miniature representation-space classifier: deterministic item
 representations are passed through a fixed linear readout, and steering is
@@ -71,6 +83,11 @@ diagnostic upper bound, not an implementable ensemble or majority-vote claim.
 The repository starts with exact-label JSONL ground truth and a mechanical
 normalizer. It stores raw model output and normalized output separately so
 parsing failures cannot silently become model claims.
+
+The real-transformer mechanics are exercised locally with a randomly
+initialized two-layer GPT-2-style model built from config. This path is labeled
+`TINY_RANDOM_TRANSFORMER` and is software validation only. It does not test
+language capability or support Q1.
 
 No real model or benchmark is downloaded by default. No external model API,
 paid inference, RunPod call, or remote Git operation is used by this project.
@@ -115,5 +132,6 @@ hypothesis. Those decisions belong after development review. See:
 - [Architecture](docs/ARCHITECTURE.md)
 - [Next Q2 geometry](docs/NEXT_Q2_GEOMETRY.md)
 - [RunPod guide](docs/RUNPOD.md)
+- [RunPod Q1 checklist](docs/RUNPOD_Q1_CHECKLIST.md)
+- [Pre-RunPod audit](docs/PRE_RUNPOD_AUDIT.md)
 - [Handoff](docs/HANDOFF.md)
-
