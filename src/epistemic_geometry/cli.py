@@ -169,6 +169,17 @@ def preflight(
         benchmark_count: int | str
         if loaded.benchmark.type == "mock":
             benchmark_count = loaded.benchmark.n_items
+        elif loaded.benchmark.type == "mmlu_pro":
+            benchmark_count = "configured split (not loaded by preflight)"
+            if loaded.benchmark.split_manifest:
+                manifest_path = Path(loaded.benchmark.split_manifest)
+                if not manifest_path.is_absolute():
+                    manifest_path = Path.cwd() / manifest_path
+                if manifest_path.exists():
+                    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                    split_ids = manifest.get("splits", {}).get(loaded.benchmark.split or "")
+                    if isinstance(split_ids, list):
+                        benchmark_count = len(split_ids)
         else:
             benchmark_path = Path(loaded.benchmark.path or "")
             if not benchmark_path.is_absolute():
@@ -185,6 +196,15 @@ def preflight(
                 benchmark_path = Path.cwd() / benchmark_path
             if not benchmark_path.exists():
                 blockers.append(f"benchmark path missing: {benchmark_path}")
+        if loaded.benchmark.type == "mmlu_pro":
+            if _dependency_status("datasets") != "yes":
+                blockers.append("datasets dependency is missing; install the HF extra")
+            if loaded.benchmark.split in {"dev_calibration", "dev_evaluation"}:
+                manifest_path = Path(loaded.benchmark.split_manifest or "")
+                if not manifest_path.is_absolute():
+                    manifest_path = Path.cwd() / manifest_path
+                if not manifest_path.exists():
+                    blockers.append(f"split manifest missing: {manifest_path}")
         if loaded.backend.type in {"huggingface", "tiny_transformer"}:
             if _dependency_status("torch") != "yes" or _dependency_status("transformers") != "yes":
                 blockers.append("Torch/Transformers dependencies are missing")
@@ -225,6 +245,9 @@ def preflight(
         model_label = loaded.backend.model_path or loaded.backend.model_id or "local fixture"
         typer.echo(f"Model: {model_label}")
         typer.echo(f"Benchmark: {loaded.benchmark.type} ({benchmark_count} items)")
+        if loaded.benchmark.type == "mmlu_pro":
+            typer.echo(f"Dataset revision: {loaded.benchmark.dataset_revision or 'UNKNOWN'}")
+            typer.echo(f"Dataset split: {loaded.benchmark.split or 'UNKNOWN'}")
         typer.echo(f"Prompt mode: {loaded.backend.prompt_mode}")
         typer.echo(f"Layer: {loaded.steering.layer}")
         typer.echo(f"Alpha: {loaded.steering.alpha_values()}")
