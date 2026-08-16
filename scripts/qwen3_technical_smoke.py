@@ -116,6 +116,21 @@ def main() -> int:
     ]
     compare_items = items[: args.serial_items]
 
+    repeated_serial_outputs = [
+        _serial_output(
+            backend,
+            compare_items[0],
+            "baseline",
+            None,
+            0.0,
+            config.steering.layer,
+        )
+        for _ in range(2)
+    ]
+    repeated_serial_audit = _compare_scores(
+        repeated_serial_outputs[0], repeated_serial_outputs[1]
+    )
+
     backend.reset_execution_stats()
     _sync_if_cuda(backend)
     serial_start = time.perf_counter()
@@ -218,6 +233,7 @@ def main() -> int:
         "model": backend.provenance(),
         "technical_items": len(items),
         "serial_comparison_items": len(compare_items),
+        "repeated_serial_audit": repeated_serial_audit,
         "prompt_lengths": {item.item_id: item.prompt_length for item in prepared},
         "candidate_token_audit": audits,
         "vector": {"hash": vector.hash, "dimension": vector.dimension, "layer": vector.layer},
