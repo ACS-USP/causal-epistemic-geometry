@@ -66,3 +66,22 @@ The tiny random transformer and all mock outputs are software validation only.
 They do not support or reject Q1, do not establish useful complementarity, and
 do not make any Q2 geometry claim.
 
+## RunPod connection audit (2026-08-16)
+
+The old `masters-project` workflow and local SSH metadata were inspected
+read-only. The old project has a destructive bootstrap that removes `.venv`,
+force-installs CUDA Torch, and installs unrelated Node/Gemini tooling; none of
+that was reused. The existing dedicated RunPod Ed25519 identity and its public
+fingerprint are documented in `LOCAL_SSH_AUDIT.md`; no private key contents
+were read or committed.
+
+The new repository now provides scoped SSH alias configuration, read-only
+connection diagnostics, additive rsync push/pull, persistent `/workspace`
+cache setup, storage checks, Pod stop checks, and a local `make predeploy` gate.
+The alias helper was tested against temporary configs only; the real
+`~/.ssh/config` was not modified.
+
+After this task, what remains untested is the actual Pod endpoint, Remote SSH
+connection, remote CUDA visibility, rsync transfer to a live Pod, real-model
+cache/download, and any pretrained-model inference. These are deliberately
+cost-gated and require the researcher to supply the new Pod host/port.
