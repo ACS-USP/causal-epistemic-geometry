@@ -162,6 +162,7 @@ def main() -> int:
         candidate_head_mode: str = "full_vocab_reference",
         selected_prepared: list[Any] | None = None,
         condition_chunk_size: int | None = None,
+        selected_conditions: list[tuple[dict[str, Any], Any | None]] | None = None,
     ) -> tuple[dict[tuple[str, str], Any], float, dict[str, int]]:
         mode_config = replace(
             backend.config,
@@ -181,7 +182,9 @@ def main() -> int:
         _sync_if_cuda(mode_backend)
         started = time.perf_counter()
         outputs = mode_backend.predict_choice_batch(
-            selected_prepared or prepared, conditions, mode=mode
+            selected_prepared or prepared,
+            selected_conditions or conditions,
+            mode=mode,
         )
         _sync_if_cuda(mode_backend)
         return (
@@ -205,6 +208,13 @@ def main() -> int:
     )
     single_cached_chunk1, _, _ = run_batch(
         "cached_decode", selected_prepared=single_prepared, condition_chunk_size=1
+    )
+    baseline_only = conditions[:1]
+    single_full_baseline, _, _ = run_batch(
+        "full_prompt_batched", selected_prepared=single_prepared, selected_conditions=baseline_only
+    )
+    single_cached_baseline, _, _ = run_batch(
+        "cached_decode", selected_prepared=single_prepared, selected_conditions=baseline_only
     )
 
     serial_comparison = {}
@@ -265,6 +275,14 @@ def main() -> int:
                 )
                 for item in compare_items[:1]
                 for condition, _vector in conditions
+            },
+            "baseline_only": {
+                f"{item.id}/{condition['condition']}": _compare_scores(
+                    single_full_baseline[(item.id, condition["condition"])],
+                    single_cached_baseline[(item.id, condition["condition"])],
+                )
+                for item in compare_items[:1]
+                for condition, _vector in baseline_only
             },
         },
         "max_serial_cached_margin_difference": max(
