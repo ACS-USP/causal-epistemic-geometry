@@ -24,6 +24,8 @@ def _run(
 
 def test_ssh_config_helper_is_scoped_idempotent_and_dry_run(tmp_path: Path) -> None:
     config = tmp_path / "config"
+    identity = tmp_path / "runpod-key"
+    identity.write_text("test-only placeholder; never used for authentication\n", encoding="utf-8")
     config.write_text(
         "Host keep-me\n    HostName keep.example\n\n"
         "Host runpod-a40\n    HostName old.example\n",
@@ -37,6 +39,8 @@ def test_ssh_config_helper_is_scoped_idempotent_and_dry_run(tmp_path: Path) -> N
         "203.0.113.10",
         "--port",
         "12345",
+        "--identity",
+        str(identity),
         "--dry-run",
     )
     assert dry.returncode == 0
@@ -50,6 +54,8 @@ def test_ssh_config_helper_is_scoped_idempotent_and_dry_run(tmp_path: Path) -> N
         "203.0.113.10",
         "--port",
         "12345",
+        "--identity",
+        str(identity),
     )
     assert applied.returncode == 0
     second = _run(
@@ -60,6 +66,8 @@ def test_ssh_config_helper_is_scoped_idempotent_and_dry_run(tmp_path: Path) -> N
         "203.0.113.11",
         "--port",
         "12346",
+        "--identity",
+        str(identity),
     )
     assert second.returncode == 0
     text = config.read_text(encoding="utf-8")
