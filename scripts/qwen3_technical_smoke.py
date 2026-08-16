@@ -71,6 +71,8 @@ def _compare_scores(reference: Any, candidate: Any) -> dict[str, Any]:
         "margin_difference": abs(_margin(reference_scores) - _margin(candidate_scores)),
         "reference_prediction": reference.raw_output,
         "candidate_prediction": candidate.raw_output,
+        "reference_scores": reference_scores,
+        "candidate_scores": candidate_scores,
     }
 
 
@@ -197,6 +199,7 @@ def main() -> int:
         "model": backend.provenance(),
         "technical_items": len(items),
         "serial_comparison_items": len(compare_items),
+        "prompt_lengths": {item.item_id: item.prompt_length for item in prepared},
         "candidate_token_audit": audits,
         "vector": {"hash": vector.hash, "dimension": vector.dimension, "layer": vector.layer},
         "engines": {
