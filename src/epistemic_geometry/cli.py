@@ -42,7 +42,9 @@ def _model_cache_status(model_ref: str) -> str:
         for repo in cache.repos:
             if repo.repo_id == model_ref and repo.revisions:
                 return "CACHED"
-    except (ImportError, OSError, RuntimeError):
+    except Exception:
+        # Cache inspection is informational; a missing cache directory must
+        # become NOT CACHED rather than aborting a no-download preflight.
         pass
     return "NOT CACHED"
 
