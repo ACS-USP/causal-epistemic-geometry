@@ -424,6 +424,7 @@ def _row_payload(
             "condition_chunk_size": config.backend.condition_chunk_size,
             "max_prefill_tokens": config.backend.max_prefill_tokens,
             "padding_side": config.backend.padding_side,
+            "serial_shape_reference": config.backend.serial_shape_reference,
         },
     }
 
@@ -1200,10 +1201,21 @@ def run_q1_v1_1(
                 "v1_condition": old_name,
                 "prediction_differences": changed,
                 "prediction_difference_rate": changed / EVALUATION_SIZE,
-                "max_absolute_score_difference": max(differences) if differences else 0.0,
-                "median_absolute_score_difference": float(np.median(differences))
-                if differences
-                else 0.0,
+                "score_comparison": (
+                    "NOT_COMPARABLE_LOGITS_VS_LOG_PROBABILITIES"
+                    if config.backend.candidate_head_mode == "candidate_only"
+                    else "FULL_VOCAB_LOG_PROBABILITY"
+                ),
+                "max_absolute_score_difference": (
+                    None
+                    if config.backend.candidate_head_mode == "candidate_only"
+                    else max(differences) if differences else 0.0
+                ),
+                "median_absolute_score_difference": (
+                    None
+                    if config.backend.candidate_head_mode == "candidate_only"
+                    else float(np.median(differences)) if differences else 0.0
+                ),
                 "old_accuracy": float(np.mean(old_correct)),
                 "new_accuracy": float(np.mean(new_correct)),
                 "old_score_margin_groups": _old_margin_groups(

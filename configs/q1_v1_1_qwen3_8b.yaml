@@ -25,10 +25,10 @@ backend:
   do_sample: false
   batch_size: 1
   quantization: none
-  execution_mode: cached_decode
-  candidate_head_mode: full_vocab_reference
-  item_batch_size: 4
-  condition_chunk_size: 3
+  execution_mode: full_prompt_batched
+  candidate_head_mode: candidate_only
+  item_batch_size: 1
+  condition_chunk_size: 1
   max_prefill_tokens: 8192
   padding_side: left
   attention_implementation: auto
