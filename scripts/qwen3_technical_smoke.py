@@ -146,9 +146,13 @@ def main() -> int:
         mode: str,
         candidate_head_mode: str = "full_vocab_reference",
         selected_prepared: list[Any] | None = None,
+        condition_chunk_size: int | None = None,
     ) -> tuple[dict[tuple[str, str], Any], float, dict[str, int]]:
         mode_config = replace(
-            backend.config, execution_mode=mode, candidate_head_mode=candidate_head_mode
+            backend.config,
+            execution_mode=mode,
+            candidate_head_mode=candidate_head_mode,
+            condition_chunk_size=condition_chunk_size or backend.config.condition_chunk_size,
         )
         mode_backend = backend if mode_config == backend.config else HuggingFaceBackend(
             mode_config,
@@ -181,6 +185,12 @@ def main() -> int:
         "full_prompt_batched", selected_prepared=single_prepared
     )
     single_cached, _, _ = run_batch("cached_decode", selected_prepared=single_prepared)
+    single_full_prompt_chunk1, _, _ = run_batch(
+        "full_prompt_batched", selected_prepared=single_prepared, condition_chunk_size=1
+    )
+    single_cached_chunk1, _, _ = run_batch(
+        "cached_decode", selected_prepared=single_prepared, condition_chunk_size=1
+    )
 
     serial_comparison = {}
     full_prompt_comparison = {}
@@ -231,7 +241,15 @@ def main() -> int:
                 )
                 for item in compare_items[:1]
                 for condition, _vector in conditions
-            }
+            },
+            "full_prompt_vs_cached_condition_chunk_1": {
+                f"{item.id}/{condition['condition']}": _compare_scores(
+                    single_full_prompt_chunk1[(item.id, condition["condition"])],
+                    single_cached_chunk1[(item.id, condition["condition"])],
+                )
+                for item in compare_items[:1]
+                for condition, _vector in conditions
+            },
         },
         "max_serial_cached_margin_difference": max(
             (row["margin_difference"] for row in serial_comparison.values()), default=0.0
