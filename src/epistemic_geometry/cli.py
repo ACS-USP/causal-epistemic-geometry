@@ -427,12 +427,22 @@ def q1_v1_1(
     config: Path = typer.Argument(..., help="Frozen Q1 V1.1 YAML config."),
     split_manifest: Path = typer.Argument(..., help="Frozen V1 split manifest."),
     resume: Path | None = typer.Option(None, "--resume", help="Resume an interrupted V1.1 run."),
+    equivalence_only: bool = typer.Option(
+        False,
+        "--equivalence-only",
+        help="Run only the 512-item baseline/PC1 engine gate; no full V1.1 conditions.",
+    ),
 ) -> None:
-    """Run the controlled V1.1 follow-up; the holdout is forbidden."""
+    """Run V1.1 or its development-only pre-run engine gate."""
 
     try:
         loaded = load_config(config)
-        path = run_q1_v1_1(loaded, split_manifest, resume_dir=resume)
+        path = run_q1_v1_1(
+            loaded,
+            split_manifest,
+            resume_dir=resume,
+            equivalence_only=equivalence_only,
+        )
     except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
         typer.echo(f"Q1 V1.1 failed: {exc}", err=True)
         raise typer.Exit(code=1) from exc

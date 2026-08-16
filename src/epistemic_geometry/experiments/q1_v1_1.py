@@ -1005,9 +1005,12 @@ def _assert_q1_resume_compatible(existing: Prediction, current: Prediction) -> N
 
 
 def run_q1_v1_1(
-    config: RunConfig, split_manifest: str | Path, resume_dir: str | Path | None = None
+    config: RunConfig,
+    split_manifest: str | Path,
+    resume_dir: str | Path | None = None,
+    equivalence_only: bool = False,
 ) -> Path:
-    """Run the frozen V1.1 follow-up on DEV_EVALUATION only."""
+    """Run V1.1 or its pre-run 512-item engine-equivalence gate."""
 
     if config.experiment.stage != "development":
         raise ValueError("Q1 V1.1 is development-only")
@@ -1024,6 +1027,8 @@ def run_q1_v1_1(
             "V1.1 projected A40 cost "
             f"${estimate['estimated_a40_cost_usd']:.2f} exceeds $2.00 stop rule"
         )
+    if equivalence_only and resume_dir is not None:
+        raise ValueError("The equivalence-only gate cannot resume a scientific run")
     if resume_dir is not None:
         run_dir = Path(resume_dir)
         if not run_dir.is_dir():
@@ -1224,6 +1229,39 @@ def run_q1_v1_1(
             _atomic_write(
                 run_dir / "summary.md",
                 _summary("STOPPED_NUMERICAL", numerical_audit, {}, {}, {}, estimate),
+            )
+            return run_dir
+
+        if equivalence_only:
+            prediction_hash = _sha256_bytes((run_dir / "predictions.jsonl").read_bytes())
+            equivalence_metrics = {
+                "protocol": PROTOCOL_ID,
+                "scientific_result": "NONE",
+                "equivalence_only": True,
+                "compared_conditions": [spec["condition"] for spec in numerical_specs],
+                "numerical_audit": numerical_audit,
+            }
+            _write_json(run_dir / "metrics.json", equivalence_metrics)
+            manifest_payload.update(
+                {
+                    "status": "EQUIVALENCE_COMPLETE",
+                    "equivalence_only": True,
+                    "scientific_result": "NONE",
+                    "prediction_count": len(records),
+                    "prediction_sha256": prediction_hash,
+                    "numerical_audit": numerical_audit,
+                }
+            )
+            _write_manifest(run_dir, manifest_payload)
+            _atomic_write(
+                run_dir / "summary.md",
+                "# Q1 V1.1 Engine Equivalence Gate\n\n"
+                "This artifact is an engineering gate only. It contains the three "
+                "original-order conditions on DEV_EVALUATION and is not a scientific result.\n\n"
+                f"Prediction rows: {len(records)}\n\n"
+                f"Maximum prediction difference rate: "
+                f"{numerical_audit['max_prediction_difference_rate']:.6f}\n\n"
+                "Confirmatory access: NO\n",
             )
             return run_dir
 
