@@ -21,6 +21,7 @@ from epistemic_geometry.experiments.baseline_vs_steering import run_experiment a
 from epistemic_geometry.io.artifacts import validate_run_directory
 from epistemic_geometry.reproducibility import git_metadata, runtime_metadata
 from epistemic_geometry.steering import load_vector, save_vector
+from epistemic_geometry.storage import storage_report
 
 app = typer.Typer(help="Causal Geometry of Epistemic Complementarity research CLI")
 
@@ -44,6 +45,16 @@ def _model_cache_status(model_ref: str) -> str:
     except (ImportError, OSError, RuntimeError):
         pass
     return "NOT CACHED"
+
+
+def _path_is_inside(path_value: str | None, parent: str) -> bool:
+    if not path_value:
+        return False
+    try:
+        Path(path_value).expanduser().resolve().relative_to(Path(parent).resolve())
+        return True
+    except ValueError:
+        return False
 
 
 @app.command()
@@ -79,6 +90,11 @@ def doctor(
         typer.echo("bf16 support: unknown")
     typer.echo(f"HF_HOME: {os.environ.get('HF_HOME', '(default)')}")
     typer.echo(f"TRANSFORMERS_CACHE: {os.environ.get('TRANSFORMERS_CACHE', '(default)')}")
+    hf_home = os.environ.get("HF_HOME")
+    if hf_home and Path("/workspace").exists() and not _path_is_inside(hf_home, "/workspace"):
+        typer.echo("WARNING: HF_HOME is outside /workspace; model cache may be ephemeral.")
+    elif Path("/workspace").exists() and not hf_home:
+        typer.echo("WARNING: HF_HOME is unset on a /workspace machine; cache location is implicit.")
 
     if config is None:
         run_root = Path.cwd() / "runs"
@@ -256,6 +272,21 @@ def environment() -> None:
     """Print a non-secret runtime snapshot."""
 
     typer.echo(json.dumps(runtime_metadata(), indent=2, sort_keys=True))
+
+
+@app.command("storage-check")
+def storage_check(
+    workspace: Path = typer.Option(Path("/workspace"), "--workspace"),
+    threshold_gib: float = typer.Option(10.0, "--threshold-gib", min=0.0),
+) -> None:
+    """Report disk usage and warn about low persistent workspace capacity."""
+
+    report = storage_report(workspace, threshold_gib)
+    typer.echo(json.dumps(report, indent=2, sort_keys=True))
+    if report["warning"]:
+        typer.echo(f"STORAGE CHECK: WARNING: {report['warning']}", err=True)
+    else:
+        typer.echo("STORAGE CHECK: OK")
 
 
 @app.command("estimate-memory")

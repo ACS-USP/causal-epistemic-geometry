@@ -7,13 +7,12 @@ choose the model, benchmark, layer, vector, or alpha for the researcher.
 
 ```bash
 cd /workspace/causal-epistemic-geometry
-export HF_HOME=/workspace/huggingface
-export TRANSFORMERS_CACHE=/workspace/huggingface/transformers
-mkdir -p "$HF_HOME" "$TRANSFORMERS_CACHE"
+source scripts/runpod_environment.sh
 bash scripts/bootstrap_runpod.sh
 source .venv/bin/activate
 python -c 'import torch; print(torch.__version__, torch.cuda.is_available())'
 ceg doctor
+ceg storage-check
 ```
 
 If the image already provides Torch, do not replace it blindly. Install a
@@ -86,4 +85,5 @@ Copy `manifest.json`, `config_resolved.yaml`, `predictions.jsonl`,
 `metrics.json`, `summary.md`, and vector metadata home. Review status,
 provenance, parse counts, 2×2 outcomes, accuracy, and complementarity together.
 Stop the instance when the approved technical/development work is complete.
-
+Before termination, pull artifacts from the Mac and follow
+[BEFORE_TERMINATING_POD.md](BEFORE_TERMINATING_POD.md).

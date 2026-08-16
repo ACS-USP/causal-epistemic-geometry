@@ -134,4 +134,7 @@ hypothesis. Those decisions belong after development review. See:
 - [RunPod guide](docs/RUNPOD.md)
 - [RunPod Q1 checklist](docs/RUNPOD_Q1_CHECKLIST.md)
 - [Pre-RunPod audit](docs/PRE_RUNPOD_AUDIT.md)
+- [RunPod cost gates](docs/RUNPOD_COST_GATES.md)
+- [Codex Remote SSH workflow](docs/CODEX_REMOTE_SSH.md)
+- [Legacy RunPod workflow audit](docs/OLD_RUNPOD_WORKFLOW_AUDIT.md)
 - [Handoff](docs/HANDOFF.md)

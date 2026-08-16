@@ -10,11 +10,19 @@ Choose persistent paths appropriate to the machine, for example:
 
 ```bash
 export CEG_ROOT=/workspace/causal-epistemic-geometry
-export HF_HOME=/workspace/huggingface
-export TRANSFORMERS_CACHE=/workspace/huggingface/transformers
-mkdir -p "$HF_HOME" "$TRANSFORMERS_CACHE"
+export HF_HOME=/workspace/hf-cache
+mkdir -p "$HF_HOME"
 cd "$CEG_ROOT"
 ```
+
+The checked-in helper is equivalent and is preferred on the Pod:
+
+```bash
+source scripts/runpod_environment.sh
+```
+
+Keep `/workspace/hf-cache` as the canonical persistent HuggingFace cache. Do
+not silently fall back to `/root/.cache/huggingface` on a Pod.
 
 Do not commit caches, tokens, or model files. Never print a HuggingFace token.
 
@@ -29,6 +37,7 @@ bash scripts/bootstrap_runpod.sh
 source .venv/bin/activate
 python -c 'import torch; print(torch.__version__, torch.cuda.is_available())'
 ceg doctor
+ceg storage-check
 ```
 
 If Torch is missing, install a build matched to the image, driver, and Python
@@ -122,6 +131,10 @@ ceg validate-run runs/<completed-run>
 
 Changing the resolved scientific config, model/vector identity, alpha, layer,
 or token scope refuses resume.
+
+For local-to-Pod transfer, use the checked-in SSH/rsync helpers described in
+[CODEX_REMOTE_SSH.md](CODEX_REMOTE_SSH.md). They preserve Git history and do
+not delete remote files by default.
 
 ## 8. Copying artifacts back
 

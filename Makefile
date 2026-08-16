@@ -1,7 +1,7 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python)
 RUFF ?= $(if $(wildcard .venv/bin/ruff),.venv/bin/ruff,ruff)
 
-.PHONY: test lint smoke doctor preflight tiny-smoke
+.PHONY: test lint smoke doctor preflight tiny-smoke predeploy storage-check
 
 test:
 	$(PYTHON) -m pytest -q
@@ -20,3 +20,9 @@ preflight:
 
 tiny-smoke:
 	$(PYTHON) -m epistemic_geometry.cli run configs/tiny_transformer_smoke.yaml
+
+predeploy:
+	bash scripts/predeploy_gate.sh
+
+storage-check:
+	$(PYTHON) -m epistemic_geometry.cli storage-check

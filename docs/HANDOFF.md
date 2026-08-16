@@ -19,6 +19,9 @@
   smoke workflow.
 - Append-only resumable runs with status transitions, provenance checks, tail
   quarantine, deterministic metrics recomputation, and run validation.
+- Local-only RunPod preparation: SSH alias helper, read-only connection check,
+  additive rsync push/pull, persistent cache environment, storage diagnostics,
+  and a no-cost pre-deploy gate.
 
 ## What is mocked
 
@@ -65,6 +68,7 @@ bash scripts/bootstrap_runpod.sh
 source .venv/bin/activate
 pip install -e ".[hf,dev]"  # after confirming a compatible existing Torch build
 ceg doctor --config configs/runpod_qwen3_8b.example.yaml
+ceg storage-check
 ```
 
 Model download/cache, vector creation, and the real smoke run are explicit

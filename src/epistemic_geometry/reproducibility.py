@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import importlib.metadata
 import json
+import os
 import platform
 import random
 import subprocess
@@ -99,6 +100,11 @@ def runtime_metadata() -> dict[str, Any]:
                 "tokenizers",
             ]
         ),
+        "environment": {
+            "HF_HOME": os.environ.get("HF_HOME"),
+            "TRANSFORMERS_CACHE": os.environ.get("TRANSFORMERS_CACHE"),
+            "CEG_ROOT": os.environ.get("CEG_ROOT"),
+        },
     }
     try:
         import torch

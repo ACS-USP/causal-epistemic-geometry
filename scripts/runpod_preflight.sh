@@ -9,8 +9,14 @@ if [[ -x "${REPO_ROOT}/.venv/bin/ceg" ]]; then
   CEG_BIN="${REPO_ROOT}/.venv/bin/ceg"
 fi
 
-echo "== doctor =="
+echo "== environment =="
+if [[ -f "scripts/runpod_environment.sh" ]]; then
+  # shellcheck disable=SC1091
+  source scripts/runpod_environment.sh
+fi
+echo
+echo "== doctor (no download) =="
 "${CEG_BIN}" doctor --config "${CONFIG_PATH}" || true
 echo
-echo "== preflight =="
+echo "== preflight (no inference/download) =="
 "${CEG_BIN}" preflight "${CONFIG_PATH}"
