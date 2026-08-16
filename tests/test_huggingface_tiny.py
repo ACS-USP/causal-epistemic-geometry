@@ -147,6 +147,13 @@ def test_hook_cleanup_and_repeated_contexts_do_not_accumulate(tiny_backend) -> N
     assert len(tiny_backend.layer_module(0)._forward_hooks) == 0
 
 
+def test_steer_preserves_choice_prompt_position_until_inference_finishes(tiny_backend) -> None:
+    tiny_backend._choice_prompt_index = 2
+    with tiny_backend.steer(_intervention(0.1, "last_token")):
+        assert tiny_backend._choice_prompt_index == 2
+    assert tiny_backend._choice_prompt_index is None
+
+
 def test_dimension_and_layer_errors_are_loud(tiny_backend) -> None:
     bad = SteeringVector(np.zeros(31), 0, "bad", "none", hash="bad")
     with pytest.raises(ValueError, match="dimension"):

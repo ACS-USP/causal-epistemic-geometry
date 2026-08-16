@@ -1253,7 +1253,6 @@ class HuggingFaceBackend(ModelBackend):
     def steer(self, intervention: Intervention) -> Iterator[None]:
         """Install exactly one hook and remove it even if generation fails."""
 
-        self._choice_prompt_index = None
         handle = self._hook_for(intervention)
         try:
             yield
