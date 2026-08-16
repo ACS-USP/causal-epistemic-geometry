@@ -143,7 +143,9 @@ def main() -> int:
     serial_stats = backend.execution_stats()
 
     def run_batch(
-        mode: str, candidate_head_mode: str = "full_vocab_reference"
+        mode: str,
+        candidate_head_mode: str = "full_vocab_reference",
+        selected_prepared: list[Any] | None = None,
     ) -> tuple[dict[tuple[str, str], Any], float, dict[str, int]]:
         mode_config = replace(
             backend.config, execution_mode=mode, candidate_head_mode=candidate_head_mode
@@ -159,7 +161,9 @@ def main() -> int:
         mode_backend.reset_execution_stats()
         _sync_if_cuda(mode_backend)
         started = time.perf_counter()
-        outputs = mode_backend.predict_choice_batch(prepared, conditions, mode=mode)
+        outputs = mode_backend.predict_choice_batch(
+            selected_prepared or prepared, conditions, mode=mode
+        )
         _sync_if_cuda(mode_backend)
         return (
             _index_outputs(outputs),
@@ -172,6 +176,11 @@ def main() -> int:
     candidate_only, candidate_only_seconds, candidate_only_stats = run_batch(
         "cached_decode", "candidate_only"
     )
+    single_prepared = prepared[:1]
+    single_full_prompt, _, _ = run_batch(
+        "full_prompt_batched", selected_prepared=single_prepared
+    )
+    single_cached, _, _ = run_batch("cached_decode", selected_prepared=single_prepared)
 
     serial_comparison = {}
     full_prompt_comparison = {}
@@ -214,6 +223,16 @@ def main() -> int:
         "serial_vs_cached": serial_comparison,
         "full_prompt_vs_cached": full_prompt_comparison,
         "full_vocab_vs_candidate_only": candidate_head_comparison,
+        "single_item_padding_isolation": {
+            "full_prompt_vs_cached": {
+                f"{item.id}/{condition['condition']}": _compare_scores(
+                    single_full_prompt[(item.id, condition["condition"])],
+                    single_cached[(item.id, condition["condition"])],
+                )
+                for item in compare_items[:1]
+                for condition, _vector in conditions
+            }
+        },
         "max_serial_cached_margin_difference": max(
             (row["margin_difference"] for row in serial_comparison.values()), default=0.0
         ),
