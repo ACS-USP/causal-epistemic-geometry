@@ -83,7 +83,7 @@ class HuggingFaceBackend(ModelBackend):
         if model is None:
             dtype = self._resolve_dtype(config.dtype)
             if dtype is not None:
-                load_kwargs["torch_dtype"] = dtype
+                load_kwargs["dtype"] = dtype
             if config.device_map is not None:
                 load_kwargs["device_map"] = config.device_map
             elif config.device == "auto" and torch.cuda.is_available():
@@ -249,7 +249,7 @@ class HuggingFaceBackend(ModelBackend):
 
     def _text_token_ids(self, text: str) -> list[int]:
         encoded = self.tokenizer(text, add_special_tokens=False)
-        values = encoded["input_ids"] if isinstance(encoded, dict) else encoded
+        values = encoded["input_ids"] if "input_ids" in encoded else encoded
         if hasattr(values, "tolist"):
             values = values.tolist()
         if values and isinstance(values[0], list):
