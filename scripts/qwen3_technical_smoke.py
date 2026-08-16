@@ -65,8 +65,13 @@ def _compare_scores(reference: Any, candidate: Any) -> dict[str, Any]:
         abs(float(reference_scores[label]) - float(candidate_scores[label]))
         for label in reference_scores
     ]
+    reference_ranking = sorted(reference_scores, key=reference_scores.get, reverse=True)
+    candidate_ranking = sorted(candidate_scores, key=candidate_scores.get, reverse=True)
     return {
         "prediction_equal": reference.raw_output == candidate.raw_output,
+        "ranking_equal": reference_ranking == candidate_ranking,
+        "reference_ranking": reference_ranking,
+        "candidate_ranking": candidate_ranking,
         "max_absolute_score_difference": max(differences, default=0.0),
         "margin_difference": abs(_margin(reference_scores) - _margin(candidate_scores)),
         "reference_prediction": reference.raw_output,
@@ -232,10 +237,16 @@ def main() -> int:
             )
             if not serial_comparison[f"{item.id}/{key[1]}"]["prediction_equal"]:
                 raise AssertionError(f"Serial/cached prediction mismatch for {key}")
+            if not serial_comparison[f"{item.id}/{key[1]}"]["ranking_equal"]:
+                raise AssertionError(f"Serial/cached ranking mismatch for {key}")
             if not full_prompt_comparison[f"{item.id}/{key[1]}"]["prediction_equal"]:
                 raise AssertionError(f"Full-prompt/cached prediction mismatch for {key}")
+            if not full_prompt_comparison[f"{item.id}/{key[1]}"]["ranking_equal"]:
+                raise AssertionError(f"Full-prompt/cached ranking mismatch for {key}")
             if not candidate_head_comparison[f"{item.id}/{key[1]}"]["prediction_equal"]:
                 raise AssertionError(f"Full-vocab/candidate-only prediction mismatch for {key}")
+            if not candidate_head_comparison[f"{item.id}/{key[1]}"]["ranking_equal"]:
+                raise AssertionError(f"Full-vocab/candidate-only ranking mismatch for {key}")
 
     result = {
         "status": "PASS",

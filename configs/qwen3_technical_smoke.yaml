@@ -19,7 +19,7 @@ backend:
   prompt_mode: chat
   enable_thinking: false
   inference_mode: choice_loglikelihood
-  candidate_labels: [A, B, C, D]
+  candidate_labels: [A, B, C, D, E, F, G, H, I, J]
   max_new_tokens: 1
   do_sample: false
   batch_size: 2
