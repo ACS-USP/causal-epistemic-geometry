@@ -778,13 +778,23 @@ class HuggingFaceBackend(ModelBackend):
         results: dict[tuple[str, str], BackendOutput] = {}
         chunk_size = self.config.condition_chunk_size
         for item_batch in self._planned_item_batches(prepared_items):
+            sequences = [
+                item.prompt_ids
+                + (
+                    (item.candidate_token_ids[item.candidate_labels[0]][0],)
+                    if self.config.serial_shape_reference
+                    else ()
+                )
+                for item in item_batch
+            ]
             input_ids, attention_mask, position_ids, lengths = self._pad_token_sequences(
-                [item.prompt_ids for item in item_batch]
+                sequences
             )
+            target_offset = 2 if self.config.serial_shape_reference else 1
             if self.config.padding_side == "left":
-                target_positions_by_item = [input_ids.shape[1] - 1] * len(lengths)
+                target_positions_by_item = [input_ids.shape[1] - target_offset] * len(lengths)
             else:
-                target_positions_by_item = [length - 1 for length in lengths]
+                target_positions_by_item = [length - target_offset for length in lengths]
             for condition_start in range(0, len(conditions), chunk_size):
                 condition_chunk = conditions[condition_start : condition_start + chunk_size]
                 row_items = [item for item in item_batch for _ in condition_chunk]
@@ -829,7 +839,11 @@ class HuggingFaceBackend(ModelBackend):
                     output,
                     row_items,
                     row_specs,
-                    "full_prompt_batched",
+                    (
+                        "full_prompt_batched_serial_shape"
+                        if self.config.serial_shape_reference
+                        else "full_prompt_batched"
+                    ),
                     logit_positions=target_positions,
                 )
                 for item, spec, output_row in zip(row_items, row_specs, outputs, strict=True):
@@ -1307,6 +1321,7 @@ class HuggingFaceBackend(ModelBackend):
             "condition_chunk_size": self.config.condition_chunk_size,
             "max_prefill_tokens": self.config.max_prefill_tokens,
             "padding_side": self.config.padding_side,
+            "serial_shape_reference": self.config.serial_shape_reference,
             "enable_thinking": self.config.enable_thinking,
             "cpu_offload_detected": any(device == "cpu" for device in devices),
             "injected_test_model": self._injected_model,

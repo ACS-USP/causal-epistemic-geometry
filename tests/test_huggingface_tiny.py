@@ -398,6 +398,36 @@ def test_optimized_choice_engines_match_serial_predictions(tiny_backend, executi
             )
 
 
+def test_serial_shape_reference_matches_candidatewise_scores(tiny_backend) -> None:
+    items = _choice_items()[:1]
+    vector = SteeringVector(
+        values=np.linspace(-0.4, 0.4, 32),
+        layer=0,
+        constructor="test",
+        normalization="none",
+        hash="serial-shape-vector",
+    )
+    backend = _choice_backend(tiny_backend, execution_mode="full_prompt_batched")
+    backend.config = replace(
+        backend.config,
+        serial_shape_reference=True,
+        item_batch_size=1,
+        condition_chunk_size=1,
+    )
+    conditions = [
+        ({"condition": "baseline", "alpha": 0.0, "layer": 0}, None),
+        ({"condition": "plus", "alpha": 0.8, "layer": 0}, vector),
+    ]
+    outputs = backend.predict_choice_batch(backend.prepare_choice_items(items), conditions)
+    by_key = {(item.item_id, spec["condition"]): output for item, spec, output in outputs}
+    for spec, condition_vector in conditions:
+        serial = _serial_choice_output(backend, items[0], condition_vector, float(spec["alpha"]))
+        actual = by_key[(items[0].id, spec["condition"])]
+        assert actual.raw_output == serial.raw_output
+        for label, value in serial.metadata["candidate_scores"].items():
+            assert actual.metadata["candidate_scores"][label] == pytest.approx(value, abs=1e-6)
+
+
 def test_candidate_only_head_preserves_ranking_and_margins(tiny_backend) -> None:
     items = _choice_items()
     vector = SteeringVector(

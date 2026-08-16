@@ -59,6 +59,7 @@ class BackendConfig:
     attention_implementation: str = "auto"
     torch_compile: bool = False
     cuda_graphs: bool = False
+    serial_shape_reference: bool = False
 
     def __post_init__(self) -> None:
         if self.type not in {"mock", "huggingface", "tiny_transformer"}:

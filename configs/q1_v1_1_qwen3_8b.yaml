@@ -34,6 +34,7 @@ backend:
   attention_implementation: auto
   torch_compile: false
   cuda_graphs: false
+  serial_shape_reference: true
 
 benchmark:
   type: mmlu_pro
