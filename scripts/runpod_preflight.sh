@@ -10,9 +10,11 @@ if [[ -x "${REPO_ROOT}/.venv/bin/ceg" ]]; then
 fi
 
 echo "== environment =="
-if [[ -f "scripts/runpod_environment.sh" ]]; then
+if [[ -f "scripts/runpod_environment.sh" && ( -d /workspace || "${CEG_FORCE_RUNPOD_ENV:-0}" == "1" ) ]]; then
   # shellcheck disable=SC1091
   source scripts/runpod_environment.sh
+else
+  echo "Local preflight: not sourcing the Pod environment helper."
 fi
 echo
 echo "== doctor (no download) =="
