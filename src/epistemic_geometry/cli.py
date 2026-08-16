@@ -27,6 +27,7 @@ from epistemic_geometry.experiments.q1_v1 import (
 from epistemic_geometry.experiments.q1_v1_1 import (
     audit_q1_v1_1_repeat,
     estimate_v1_v1,
+    repair_q1_v1_1_finalization,
     run_q1_v1_1,
     validate_q1_v1_1_run,
 )
@@ -447,6 +448,20 @@ def q1_v1_1(
         typer.echo(f"Q1 V1.1 failed: {exc}", err=True)
         raise typer.Exit(code=1) from exc
     typer.echo(f"Q1 V1.1 complete: {path}")
+
+
+@app.command("repair-q1-v1-1")
+def repair_q1_v1_1(
+    run_dir: Path = typer.Argument(..., help="Failed Q1 V1.1 run to repair.")
+) -> None:
+    """Finalize a complete row artifact without performing inference."""
+
+    try:
+        path = repair_q1_v1_1_finalization(run_dir)
+    except (FileNotFoundError, ValueError, RuntimeError) as exc:
+        typer.echo(f"Q1 V1.1 repair failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Q1 V1.1 finalization repaired: {path}")
 
 
 @app.command("audit-q1-v1-1-repeat")

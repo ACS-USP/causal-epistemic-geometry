@@ -1420,6 +1420,81 @@ def run_q1_v1_1(
         raise
 
 
+def repair_q1_v1_1_finalization(run_dir: str | Path) -> Path:
+    """Finalize a row-complete run after a post-inference reporting failure.
+
+    This operation never performs inference. It is deliberately limited to a
+    run marked ``FAILED`` whose canonical prediction, metrics, audit, and
+    permutation artifacts are already present and internally hashed.
+    """
+
+    path = Path(run_dir)
+    manifest_path = path / "manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("experiment_type") != "q1_v1_1_controlled_followup":
+        raise ValueError("Not a Q1 V1.1 run directory")
+    if manifest.get("status") != "FAILED":
+        raise ValueError("Only a FAILED Q1 V1.1 run can be repaired")
+    required = (
+        "config_resolved.yaml",
+        "predictions.jsonl",
+        "metrics.json",
+        "numerical_audit.json",
+        "permutation_manifests.json",
+    )
+    missing = [name for name in required if not (path / name).is_file()]
+    if missing:
+        raise ValueError(f"Cannot repair incomplete run; missing: {', '.join(missing)}")
+
+    rows = [
+        json.loads(line)
+        for line in (path / "predictions.jsonl").read_text(encoding="utf-8").splitlines()
+    ]
+    if len(rows) != EVALUATION_SIZE * 31:
+        raise ValueError("Cannot repair run with incomplete prediction rows")
+    keys = [(row["item_id"], row["condition"]) for row in rows]
+    if len(keys) != len(set(keys)):
+        raise ValueError("Cannot repair run with duplicate scientific prediction keys")
+
+    metrics = json.loads((path / "metrics.json").read_text(encoding="utf-8"))
+    numerical_audit = json.loads((path / "numerical_audit.json").read_text(encoding="utf-8"))
+    if numerical_audit.get("status") != "PASS":
+        raise ValueError("Cannot repair run whose numerical audit did not pass")
+    prediction_hash = _sha256_bytes((path / "predictions.jsonl").read_bytes())
+    metrics_hash = _sha256_bytes((path / "metrics.json").read_bytes())
+    if manifest.get("prediction_sha256") != prediction_hash:
+        raise ValueError("Prediction hash mismatch; refusing repair")
+    if manifest.get("metrics_sha256") != metrics_hash:
+        raise ValueError("Metrics hash mismatch; refusing repair")
+    if len(metrics.get("condition_specs", [])) != 31:
+        raise ValueError("Cannot repair run with an incomplete condition table")
+
+    summary = _summary(
+        "COMPLETE",
+        numerical_audit,
+        metrics["conditions"],
+        metrics["permutation_metrics"],
+        metrics["margin_analysis"],
+        manifest["workload_estimate"],
+    )
+    _atomic_write(path / "summary.md", summary)
+    manifest.update(
+        {
+            "status": "COMPLETE",
+            "prediction_count": len(rows),
+            "condition_count": 31,
+            "prediction_sha256": prediction_hash,
+            "metrics_sha256": metrics_hash,
+            "numerical_audit": numerical_audit,
+            "permutation_manifest_sha256": _sha256_bytes(
+                (path / "permutation_manifests.json").read_bytes()
+            ),
+        }
+    )
+    _write_manifest(path, manifest)
+    return path
+
+
 def validate_q1_v1_1_run(run_dir: str | Path, split_manifest: str | Path) -> dict[str, Any]:
     """Validate hashes, firewall, row uniqueness, conditions, and metrics."""
 
