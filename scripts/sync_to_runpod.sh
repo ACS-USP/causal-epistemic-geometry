@@ -48,6 +48,7 @@ excludes=(
   --exclude .pytest_cache/
   --exclude .ruff_cache/
   --exclude runs/
+  --exclude review/
   --exclude models/
   --exclude checkpoints/
   --exclude hf-cache/
@@ -70,6 +71,7 @@ tar_excludes=(
   --exclude=./.pytest_cache
   --exclude=./.ruff_cache
   --exclude=./runs
+  --exclude=./review
   --exclude=./models
   --exclude=./checkpoints
   --exclude=./hf-cache
