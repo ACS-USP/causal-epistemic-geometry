@@ -11,6 +11,7 @@ from epistemic_geometry.experiments.q1_v1_1 import (
     ORIGINAL_VECTOR_HASHES,
     PERMUTATION_IDS,
     _frozen_conditions,
+    _summary,
     estimate_v1_v1,
 )
 from epistemic_geometry.types import SteeringVector
@@ -68,3 +69,28 @@ def test_v1_1_workload_estimate_is_below_frozen_cost_gate() -> None:
     assert estimate["candidate_forward_passes"] == 512 * 31 * 10
     assert estimate["cost_gate_pass"] is True
     assert estimate["estimated_a40_cost_usd"] < 2.0
+
+
+def test_v1_1_summary_handles_candidate_only_noncomparable_scores() -> None:
+    summary = _summary(
+        "STOPPED_NUMERICAL",
+        {
+            "status": "PASS",
+            "conditions": {
+                "baseline_fp32": {
+                    "prediction_differences": 0,
+                    "max_absolute_score_difference": None,
+                    "median_absolute_score_difference": None,
+                    "old_accuracy": 0.5,
+                    "new_accuracy": 0.5,
+                }
+            },
+        },
+        {},
+        {},
+        {},
+        {},
+    )
+
+    assert "max score difference n/a" in summary
+    assert "median score difference n/a" in summary

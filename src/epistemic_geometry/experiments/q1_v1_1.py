@@ -825,8 +825,8 @@ def _summary(
     for name, row in numerical_audit.get("conditions", {}).items():
         lines.append(
             f"- {name}: prediction differences {row['prediction_differences']}/512; "
-            f"max score difference {row['max_absolute_score_difference']:.8g}; "
-            f"median score difference {row['median_absolute_score_difference']:.8g}; "
+            f"max score difference {_display(row['max_absolute_score_difference'])}; "
+            f"median score difference {_display(row['median_absolute_score_difference'])}; "
             f"old accuracy {row['old_accuracy']:.4f}; new accuracy {row['new_accuracy']:.4f}"
         )
     lines.extend([f"- numerical audit status: {numerical_audit.get('status')}", ""])
