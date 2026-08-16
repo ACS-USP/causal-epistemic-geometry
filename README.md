@@ -87,10 +87,25 @@ parsing failures cannot silently become model claims.
 The real-transformer mechanics are exercised locally with a randomly
 initialized two-layer GPT-2-style model built from config. This path is labeled
 `TINY_RANDOM_TRANSFORMER` and is software validation only. It does not test
-language capability or support Q1.
+language capability or support Q1. The same path has also been exercised on a
+live NVIDIA A40 CUDA device using
+`configs/tiny_transformer_cuda_smoke.yaml`; that run validates deployment
+mechanics only and is not a scientific result.
+
+Current readiness:
+
+```text
+Q1 SOFTWARE: READY
+Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL + LIVE CUDA
+Q1 REAL 8B MODEL: NOT RUN
+Q1 SCIENTIFIC RESULT: NONE
+Q2 GEOMETRY: NOT RUN
+```
 
 No real model or benchmark is downloaded by default. No external model API,
-paid inference, RunPod call, or remote Git operation is used by this project.
+paid inference, or remote Git operation is used by this project. The optional
+RunPod path is explicit; Gate 1 used only a local random transformer fixture
+and did not download a model.
 
 ## Optional HuggingFace path
 

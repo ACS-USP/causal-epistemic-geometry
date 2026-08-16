@@ -34,7 +34,8 @@ evidence, or a simulated scientific result.
 
 Q1 software infrastructure: READY.
 
-Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER.
+Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER, INCLUDING
+LIVE CUDA ON NVIDIA A40.
 
 Q1 real 8B model: NOT RUN.
 
@@ -44,10 +45,11 @@ Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
 
-No pretrained model or GPU deployment has been run. A principal researcher must
-verify the exact model revision, tokenizer behavior, chat template, layer path,
-hidden size, device map, dtype, generation format, and vector construction on a
-prepared GPU machine.
+No pretrained model has been run. A principal researcher must verify the exact
+model revision, tokenizer behavior, chat template, layer path, hidden size,
+device map, dtype, generation format, and vector construction on the prepared
+GPU machine. The random CUDA run is not evidence about language capability or
+Q1.
 
 ## Exact local smoke
 
@@ -56,6 +58,7 @@ cd ~/dev/causal-epistemic-geometry
 source .venv/bin/activate
 ceg run configs/mock_smoke.yaml
 ceg run configs/tiny_transformer_smoke.yaml
+ceg run configs/tiny_transformer_cuda_smoke.yaml  # CUDA machine only
 ```
 
 Or use `make smoke`. Run artifacts appear in `runs/`, which is ignored by Git.
@@ -71,7 +74,9 @@ ceg doctor --config configs/runpod_qwen3_8b.example.yaml
 ceg storage-check
 ```
 
-Model download/cache, vector creation, and the real smoke run are explicit
+On the validated Pod, Torch was `2.4.1+cu124`, CUDA was visible on one NVIDIA
+A40, and Transformers `4.57.6` was installed without replacing Torch. Model
+download/cache, vector creation, and the real smoke run are explicit
 reviewed steps documented in [RUNPOD.md](RUNPOD.md) and
 [RUNPOD_Q1_CHECKLIST.md](RUNPOD_Q1_CHECKLIST.md).
 

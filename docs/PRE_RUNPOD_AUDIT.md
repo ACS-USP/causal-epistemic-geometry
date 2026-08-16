@@ -44,19 +44,26 @@ modified.
 ## What was exercised
 
 - Actual Torch/Transformers forward passes on a CPU randomly initialized tiny
-  decoder-only model.
+  decoder-only model, followed by the same path on a live NVIDIA A40 CUDA
+  device.
 - Tensor/tuple layer outputs, exact last-token/all-token hook arithmetic,
   alpha-zero and zero-vector identity, cleanup, repeated contexts, dimension
   and layer errors, no-grad inference, last-non-padding extraction, difference
   of means, vector serialization, end-to-end metrics, and run validation.
+- The checked-in `configs/tiny_transformer_cuda_smoke.yaml` completed an
+  8-item, 16-prediction paired run on CUDA. Its artifact was pulled back and
+  passed `ceg validate-run` locally.
+- Remote bootstrap, `ceg doctor`, full pytest (37 tests), Ruff, and compileall
+  passed after the compatibility repairs below.
 
 ## Remains untested
 
 - No pretrained model was downloaded, and no Qwen3-8B/Llama/large model was
   loaded.
-- No real GPU, CUDA device map, bf16 kernel, MPS production run, chat template
-  from a real instruct tokenizer, or multi-GPU sharding has been exercised.
-- No scientific benchmark, frozen layer/alpha, or Q1 claim has been run.
+- No real tokenizer/chat template, pretrained-model generation, device map,
+  bf16 production inference, MPS run, or multi-GPU sharding has been exercised.
+- No scientific benchmark, frozen layer/alpha, Q1 claim, or Q2 geometry
+  experiment has been run.
 - The optional tiny pretrained smoke was skipped intentionally; the network
   path is not needed to validate mechanics.
 
@@ -75,13 +82,32 @@ that was reused. The existing dedicated RunPod Ed25519 identity and its public
 fingerprint are documented in `LOCAL_SSH_AUDIT.md`; no private key contents
 were read or committed.
 
-The new repository now provides scoped SSH alias configuration, read-only
-connection diagnostics, additive rsync push/pull, persistent `/workspace`
+The new repository provides scoped SSH alias configuration, read-only
+connection diagnostics, additive rsync/tar push-pull, persistent `/workspace`
 cache setup, storage checks, Pod stop checks, and a local `make predeploy` gate.
-The alias helper was tested against temporary configs only; the real
-`~/.ssh/config` was not modified.
+The real alias is now configured locally, non-interactive SSH succeeds, and the
+repository was synchronized without touching unrelated repositories.
 
-After this task, what remains untested is the actual Pod endpoint, Remote SSH
-connection, remote CUDA visibility, rsync transfer to a live Pod, real-model
-cache/download, and any pretrained-model inference. These are deliberately
-cost-gated and require the researcher to supply the new Pod host/port.
+Observed remote facts:
+
+- Ubuntu 22.04, Python 3.11.10, x86_64.
+- NVIDIA A40, 46,068 MiB, driver 580.159.04; one CUDA device visible.
+- `torch==2.4.1+cu124`, `transformers==4.57.6`, CUDA available, bf16 support
+  reported by Torch.
+- `/workspace/hf-cache` is the active cache path. No model files were added.
+- The image did not have `rsync`; the tested additive tar-over-SSH fallback was
+  used. macOS AppleDouble metadata and remote ownership preservation were
+  explicitly hardened.
+
+Two engineering issues were found and repaired during the live check:
+
+1. Unbounded `transformers` installed 5.15.0, which disables itself with the
+   image's Torch 2.4.1. The optional dependency is now constrained to
+   `transformers>=4.45,<5`, without replacing Torch.
+2. The SSH-helper test depended on the researcher's private local key path. It
+   now uses a temporary test-only identity while production invocation still
+   validates the configured identity file.
+
+The remaining cost-gated work is the reviewed pretrained-model technical smoke
+and, only after that, the principal researcher's Q1 choices. No claim is made
+from the random-transformer run.
