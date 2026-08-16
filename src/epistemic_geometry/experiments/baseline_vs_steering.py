@@ -132,7 +132,11 @@ def _prediction(
         target=item.target,
         correct=parsed.status == "OK" and parsed.normalized == item.target.upper(),
         parse_status=parsed.status,
-        metadata={**output.metadata, "parse_status": parsed.status},
+        metadata={
+            **output.metadata,
+            "parse_status": parsed.status,
+            "item_metadata": item.metadata,
+        },
     )
 
 

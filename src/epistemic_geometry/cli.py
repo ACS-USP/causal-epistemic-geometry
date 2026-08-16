@@ -18,6 +18,11 @@ from epistemic_geometry.experiments.baseline_vs_steering import (
     build_vector,
 )
 from epistemic_geometry.experiments.baseline_vs_steering import run_experiment as execute_experiment
+from epistemic_geometry.experiments.q1_v1 import (
+    build_split_manifest,
+    run_q1_v1,
+    validate_q1_v1_run,
+)
 from epistemic_geometry.io.artifacts import validate_run_directory
 from epistemic_geometry.reproducibility import git_metadata, runtime_metadata
 from epistemic_geometry.steering import load_vector, save_vector
@@ -285,11 +290,56 @@ def validate_run(run_dir: Path = typer.Argument(..., help="Completed run directo
     """Recompute metrics and hashes for a completed run."""
 
     try:
-        report = validate_run_directory(run_dir)
+        manifest_path = run_dir / "manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if manifest.get("experiment_type") == "q1_v1_fixed_15_condition_pilot":
+            report = validate_q1_v1_run(run_dir)
+        else:
+            report = validate_run_directory(run_dir)
     except (FileNotFoundError, ValueError, KeyError, json.JSONDecodeError) as exc:
         typer.echo(f"Run invalid: {exc}", err=True)
         raise typer.Exit(code=1) from exc
     typer.echo(json.dumps(report, indent=2, sort_keys=True))
+
+
+@app.command("build-splits")
+def build_splits(
+    config: Path = typer.Argument(..., help="Pinned Q1 YAML config."),
+    output: Path = typer.Argument(..., help="JSON split manifest output path."),
+) -> None:
+    """Create the fixed 512/512 development split from official MMLU-Pro test."""
+
+    try:
+        loaded = load_config(config)
+        if loaded.benchmark.type != "mmlu_pro":
+            raise ConfigError("build-splits requires benchmark.type: mmlu_pro")
+        manifest = build_split_manifest(loaded, output)
+    except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
+        typer.echo(f"Split construction failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Split manifest: {output}")
+    typer.echo(f"Manifest SHA-256: {manifest['manifest_sha256']}")
+    typer.echo(json.dumps(manifest["sizes"], sort_keys=True))
+
+
+@app.command("q1-v1")
+def q1_v1(
+    config: Path = typer.Argument(..., help="Pinned Q1 V1 base YAML config."),
+    split_manifest: Path = typer.Argument(..., help="Fixed 512/512/holdout split manifest."),
+) -> None:
+    """Run the fixed Q1 V1 development pilot; the confirmatory holdout is forbidden."""
+
+    try:
+        loaded = load_config(config)
+        if loaded.experiment.stage != "development":
+            raise ConfigError("q1-v1 is development-only")
+        if loaded.benchmark.type != "mmlu_pro":
+            raise ConfigError("q1-v1 requires benchmark.type: mmlu_pro")
+        path = run_q1_v1(loaded, split_manifest)
+    except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
+        typer.echo(f"Q1 V1 failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Q1 V1 complete: {path}")
 
 
 @app.command()

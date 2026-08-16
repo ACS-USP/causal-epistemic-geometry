@@ -1,0 +1,46 @@
+# Derived Q1 V1 DEVELOPMENT configuration. The split manifest is item IDs only;
+# the parent q1_v1_qwen3_8b.example.yaml locks model and dataset revisions.
+experiment:
+  name: q1-v1-calibration
+  stage: development
+  seed: 20260816
+
+backend:
+  type: huggingface
+  model_id: Qwen/Qwen3-8B
+  model_revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_id: Qwen/Qwen3-8B
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  hidden_size: 4096
+  device: cuda
+  dtype: bf16
+  layer: 17
+  layer_path: model.model.layers
+  prompt_mode: chat
+  enable_thinking: false
+  inference_mode: choice_loglikelihood
+  candidate_labels: [A, B, C, D, E, F, G, H, I, J]
+  max_new_tokens: 1
+  do_sample: false
+  batch_size: 1
+  quantization: none
+
+benchmark:
+  type: mmlu_pro
+  dataset_id: TIGER-Lab/MMLU-Pro
+  dataset_revision: b189ec765aa7ed75c8acfea42df31fdae71f97be
+  split: dev_calibration
+  split_manifest: data/splits/mmlu_pro_q1_v1.json
+  allowed_targets: [A, B, C, D, E, F, G, H, I, J]
+
+steering:
+  enabled: false
+  layer: 17
+  alpha: 0.0
+  token_scope: last_token
+  constructor: zero_vector
+  vector_dimension: 4096
+
+output:
+  root: runs/q1_v1
+  save_figures: true

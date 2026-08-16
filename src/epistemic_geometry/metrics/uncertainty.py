@@ -14,12 +14,15 @@ def bootstrap_paired_metrics(
     seed: int,
     n_resamples: int = 200,
     confidence: float = 0.95,
+    treatment_condition: str = "steered",
 ) -> dict[str, object]:
     """Bootstrap descriptive intervals over items; not a hypothesis test."""
 
     if n_resamples <= 0 or not 0 < confidence < 1:
         raise ValueError("n_resamples must be positive and confidence must lie in (0, 1)")
-    base_errors, treatment_errors, _counts = _paired_arrays(predictions)
+    base_errors, treatment_errors, _counts = _paired_arrays(
+        predictions, treatment_condition=treatment_condition
+    )
     n_items = base_errors.size
     rng = np.random.default_rng(stable_seed("bootstrap", seed, n_items, n_resamples))
     deltas: list[float] = []
@@ -66,6 +69,7 @@ def bootstrap_paired_metrics(
         "seed": seed,
         "n_resamples": n_resamples,
         "confidence": confidence,
+        "treatment_condition": treatment_condition,
         "delta_accuracy_interval": interval(deltas),
         "rescue_minus_damage_interval": interval(rescue_minus_damage),
         "complementarity_headroom_interval": interval(headrooms),

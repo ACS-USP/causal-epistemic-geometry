@@ -262,39 +262,64 @@ class HuggingFaceBackend(ModelBackend):
     def _predict_choice_loglikelihood(self, item: BenchmarkItem) -> BackendOutput:
         """Score complete candidate continuations without generation or sampling."""
 
-        _encoded, rendered_prompt, prompt_hash = self._encode_item(item)
-        prompt_ids = self._text_token_ids(rendered_prompt)
+        encoded, _rendered_prompt, prompt_hash = self._encode_item(item)
+        prompt_length = int(encoded["attention_mask"][0].sum().item())
+        prompt_ids = encoded["input_ids"][0, :prompt_length].tolist()
         labels = self._candidate_labels(item)
         scores: dict[str, float] = {}
         token_ids_by_label: dict[str, list[int]] = {}
         self._choice_prompt_index = len(prompt_ids) - 1
         try:
             with self.torch.inference_mode():
-                prompt_tensor = self.torch.tensor(
-                    [prompt_ids], dtype=self.torch.long, device=self.device
-                )
+                candidate_rows: list[list[int]] = []
                 for label in labels:
                     candidate_ids = self._text_token_ids(label)
                     token_ids_by_label[label] = candidate_ids
-                    full_ids = self.torch.cat(
-                        [prompt_tensor, self.torch.tensor([candidate_ids], device=self.device)],
-                        dim=1,
-                    )
-                    attention_mask = self.torch.ones_like(full_ids)
+                    candidate_rows.append(candidate_ids)
+                max_candidate_length = max(len(row) for row in candidate_rows)
+                full_rows = [
+                    prompt_ids
+                    + row
+                    + [self.tokenizer.pad_token_id] * (max_candidate_length - len(row))
+                    for row in candidate_rows
+                ]
+                attention_rows = [
+                    [1] * (len(prompt_ids) + len(row))
+                    + [0] * (max_candidate_length - len(row))
+                    for row in candidate_rows
+                ]
+                full_ids = self.torch.tensor(full_rows, dtype=self.torch.long, device=self.device)
+                attention_mask = self.torch.tensor(
+                    attention_rows, dtype=self.torch.long, device=self.device
+                )
+                try:
                     output = self.model(
                         input_ids=full_ids,
                         attention_mask=attention_mask,
                         use_cache=False,
                     )
-                    candidate_start = len(prompt_ids) - 1
-                    candidate_logits = output.logits[0, candidate_start:-1, :]
-                    candidate_targets = full_ids[0, len(prompt_ids) :]
-                    log_probs = self.torch.log_softmax(candidate_logits, dim=-1)
-                    selected = log_probs.gather(1, candidate_targets.unsqueeze(1)).squeeze(1)
-                    score = float(selected.sum().item())
+                except RuntimeError as exc:
+                    if "out of memory" in str(exc).lower():
+                        raise RuntimeError(
+                            "CUDA out of memory during choice scoring. Reduce the candidate "
+                            "label count or use a smaller model/device configuration."
+                        ) from exc
+                    raise
+                candidate_start = len(prompt_ids) - 1
+                log_probs = self.torch.log_softmax(output.logits, dim=-1)
+                for row_index, (label, candidate_ids) in enumerate(
+                    zip(labels, candidate_rows, strict=True)
+                ):
+                    candidate_logits = log_probs[
+                        row_index, candidate_start : candidate_start + len(candidate_ids), :
+                    ]
+                    candidate_targets = full_ids[
+                        row_index, len(prompt_ids) : len(prompt_ids) + len(candidate_ids)
+                    ]
+                    selected = candidate_logits.gather(1, candidate_targets.unsqueeze(1)).squeeze(1)
                     if not self.torch.isfinite(selected).all():
                         raise RuntimeError(f"Non-finite candidate score for {item.id}/{label}")
-                    scores[label] = score
+                    scores[label] = float(selected.sum().item())
         finally:
             self._choice_prompt_index = None
         if not scores or not all(np.isfinite(value) for value in scores.values()):

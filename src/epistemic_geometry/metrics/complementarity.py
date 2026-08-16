@@ -10,11 +10,17 @@ from epistemic_geometry.metrics.errors import accuracy, double_fault, error_jacc
 from epistemic_geometry.types import Prediction
 
 
-def _paired_arrays(predictions: list[Prediction]) -> tuple[np.ndarray, np.ndarray, Counter[str]]:
+def _paired_arrays(
+    predictions: list[Prediction],
+    treatment_condition: str = "steered",
+) -> tuple[np.ndarray, np.ndarray, Counter[str]]:
     baseline = [item for item in predictions if item.condition == "baseline"]
-    treatment = [item for item in predictions if item.condition == "steered"]
+    treatment = [item for item in predictions if item.condition == treatment_condition]
     if len(baseline) != len(treatment) or not baseline:
-        raise ValueError("Need equal non-empty baseline and steered prediction sets")
+        raise ValueError(
+            "Need equal non-empty baseline and treatment prediction sets for "
+            f"condition {treatment_condition!r}"
+        )
     base_by_id = {item.item_id: item for item in baseline}
     treat_by_id = {item.item_id: item for item in treatment}
     if len(base_by_id) != len(baseline) or len(treat_by_id) != len(treatment):
@@ -34,10 +40,13 @@ def _paired_arrays(predictions: list[Prediction]) -> tuple[np.ndarray, np.ndarra
     return base_errors, treat_errors, counts
 
 
-def compute_paired_metrics(predictions: list[Prediction]) -> dict[str, float | dict[str, int]]:
+def compute_paired_metrics(
+    predictions: list[Prediction],
+    treatment_condition: str = "steered",
+) -> dict[str, float | dict[str, int]]:
     """Compute a small, accuracy-aware descriptive metric set."""
 
-    base_errors, treat_errors, counts = _paired_arrays(predictions)
+    base_errors, treat_errors, counts = _paired_arrays(predictions, treatment_condition)
     base_correct = ~base_errors
     treat_correct = ~treat_errors
     baseline_accuracy = accuracy(base_correct)
@@ -55,6 +64,7 @@ def compute_paired_metrics(predictions: list[Prediction]) -> dict[str, float | d
         "parse_status_counts": dict(
             Counter(prediction.parse_status for prediction in predictions)
         ),
+        "treatment_condition": treatment_condition,
         "baseline_accuracy": baseline_accuracy,
         "treatment_accuracy": treatment_accuracy,
         "delta_accuracy": treatment_accuracy - baseline_accuracy,
