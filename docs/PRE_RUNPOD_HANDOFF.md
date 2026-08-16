@@ -183,18 +183,21 @@ and follow `BEFORE_TERMINATING_POD.md`.
 
 ## Current optimization pivot
 
-The Pod is intentionally stopped. Do not retry SSH until it is restarted and
-the endpoint is confirmed. The serial V1.1 attempt was safely interrupted and
-preserved as `review/serial_reference_v1_1_partial/`; it had no persisted
-prediction rows and is not a scientific result.
+The serial V1.1 attempt was safely interrupted and preserved as
+`review/serial_reference_v1_1_partial/`; it had no persisted prediction rows
+and remains a golden provenance record, not a scientific result. After the
+Pod was restarted and its SSH host fingerprint confirmed, the Qwen3/A40
+optimization gates and a clean V1.1 DEVELOPMENT run were completed remotely.
 
 Local engineering now includes serial reference, full-prompt batching, cached
 one-token decode, a shared-prefix multi-token fallback, prepared prompts,
 candidate token audits, candidate-only head provenance, row-wise hooks,
 deterministic length buckets, batched activation capture, append/fsync
 prediction journals, duplicate/conflict protection, tail quarantine, and V1.1
-`--resume` support. Optional compile/CUDA-graph prototypes are disabled, and
-Qwen3 suffix replay is strictly gated.
+`--resume` support. The approved Q1 profile is
+`full_prompt_batched + serial_shape_reference + candidate_only`, with
+item/condition chunks of one. Optional compile/CUDA-graph prototypes remain
+disabled, and Qwen3 suffix replay is preserved but not canonical.
 
 The exact local checks are:
 
@@ -208,6 +211,12 @@ python scripts/profile_tiny_engines.py
 ceg preflight configs/runpod_q1_killtest.example.yaml
 ```
 
-The remaining blocker is real-Qwen/A40 equivalence and performance. At that
-point the local agent must print `RUNPOD_REQUIRED_FOR_EQUIVALENCE` and stop
-remote attempts until the researcher restarts the Pod.
+The real-Qwen equivalence gate passed with zero discrete prediction
+differences on 512 DEV items × baseline/PC1−/PC1+. The clean V1.1 run produced
+15,872 validated DEVELOPMENT rows in approximately 17.5 minutes, versus the
+serial estimate of 183.8 minutes. The complete prediction file remains on
+RunPod; only small review artifacts are kept locally.
+
+Remaining engineering work is optional: formal A40 autotuning, utilization/
+VRAM profiling, and compile/CUDA-graph benchmarks. No V1.2, Q2, or
+confirmatory experiment was run.

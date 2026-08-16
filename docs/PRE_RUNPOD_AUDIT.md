@@ -185,7 +185,27 @@ crash-safe V1.1 journals, optional accelerator boundaries, and local
 serial/optimized tiny-transformer tests. The local profile is explicitly
 `TINY_RANDOM_TRANSFORMER_ENGINEERING_ONLY`.
 
-Current local validation: 67 tests pass, Ruff passes, and the tiny profile
-reports forward-call accounting. Real-Qwen candidate audit, Qwen3 suffix
-replay, A40 autotuning, and optimized-vs-Qwen serial equivalence remain
-untested because the Pod is stopped.
+Current local validation: 75 tests pass, Ruff passes, and the tiny profile
+reports forward-call accounting.
+
+## Post-restart Qwen optimization audit (2026-08-16)
+
+The Pod was restarted later with a confirmed SSH host fingerprint. All model
+operations remained remote-only under the pinned cache. The Qwen3 A–J
+candidate audit found single-token, context-compatible continuations. The
+serial-shape `full_prompt_batched` profile with `candidate_only` passed the
+512-item DEV baseline/PC1−/PC1+ equivalence gate with zero discrete prediction
+differences.
+
+Ordinary BF16 cached decode and shape-changing batching were also exercised,
+but they produced prediction flips against the serial oracle and were rejected
+as canonical. Native Qwen3 suffix replay matched the cached path on technical
+smoke but was slower, so it remains an optional guarded engine. The approved
+profile completed a clean 31-condition V1.1 DEVELOPMENT run: 15,872 rows,
+validated hashes, no duplicate scientific keys, and no confirmatory holdout
+access. The observed runtime was approximately 17.48 minutes versus the old
+183.80-minute estimate, about 10.52×.
+
+The run's full predictions remain on RunPod. Only small review artifacts are
+stored in `review/q1_v1_1_optimized_clean_run/`. No Q1 scientific conclusion
+is frozen; no V1.2 or Q2 experiment was run.

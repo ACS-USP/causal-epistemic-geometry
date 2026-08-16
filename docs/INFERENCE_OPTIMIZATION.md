@@ -1,54 +1,77 @@
 # Inference optimization status
 
 This document records engineering status only. The Q1 V1.1 scientific
-protocol remains frozen. No optimized engine has been approved for a real
-Qwen3 run yet.
+protocol remains frozen. The optimized run is DEVELOPMENT infrastructure and
+does not establish a scientific claim.
 
-## Implemented locally
+## Approved Q1 V1.1 profile
 
-- `serial_reference` remains the preserved candidate-wise full-prompt oracle.
-- Prepared choice items render and tokenize prompts once, retaining prompt
-  hashes, candidate IDs, semantic IDs, and token-count audits.
-- Single-token candidates are scored from one prompt state. The optional
-  `candidate_only` head gathers only allowed LM-head rows; its unnormalized
-  score semantics are explicit in provenance.
-- `full_prompt_batched` supports deterministic item/condition batching,
-  explicit masks/positions, left or right padding, and row-wise deltas.
-- `cached_decode` prefills `prompt[:-1]` once, then decodes the final prompt
-  token with condition chunks and temporary vectorized steering hooks.
-- Multi-token labels use a shared-prefix continuation fallback rather than
-  repeating the long prompt for every candidate.
-- Batched activation extraction captures selected last-token layers without
-  retaining graphs; difference-of-means uses it when available.
-- The planner enforces deterministic length buckets, item limits, and padded
-  token budgets.
-- Prediction journals append and fsync completed rows, quarantine a truncated
-  tail, reject duplicates/conflicts, and support V1.1 `--resume` semantics.
-- Optional `torch.compile` and CUDA-graph boundaries exist but are off by
-  default. Qwen3 suffix replay is isolated behind strict model/version guards
-  and fails closed until equivalence is audited.
+The clean Q1 V1.1 run used:
 
-## Local evidence
+```text
+engine: full_prompt_batched
+serial_shape_reference: true
+candidate_head_mode: candidate_only
+item_batch_size: 1
+condition_chunk_size: 1
+padding: left
+attention: SDPA (requested: auto)
+torch.compile: false
+CUDA graphs: false
+```
 
-`tests/test_huggingface_tiny.py` exercises real Torch/Transformers forwards on
-a randomly initialized two-layer GPT-2-style model. It covers alpha-zero and
-zero-vector identity, exact hook shifts, token isolation, cleanup, repeated
-contexts, padding, candidate-only ranking/margins, multi-token fallback,
-batched activations, cache reuse, and forward-call accounting.
+The important speedup is the single-token choice fast path: the prompt is
+evaluated once and the ten allowed A–J LM-head rows are gathered. The
+`serial_shape_reference` option deliberately preserves the old candidate-wise
+sequence shape, which was necessary for exact BF16 equivalence on Qwen3.
+`candidate_only` stores unnormalized candidate logits. Their rankings and
+pairwise margins are valid; they must not be described as full-vocabulary
+log-probabilities.
 
-`benchmarks/serial_reference_profile.json` is a tiny CPU engineering profile.
-Its timings are not transferable to Qwen3 or an A40 and must not be cited as a
-scientific or deployment result.
+## Real-Qwen engineering evidence
 
-## Still requires the restarted Pod
+The pinned Qwen3 tokenizer audit found A–J to be single-token and
+context-compatible under the frozen chat template and `enable_thinking=false`.
+The following gates were run on the A40 using the pinned Qwen3 revision:
 
-- Qwen3 tokenizer boundary audit for A–J under the frozen chat template.
-- BF16 cached-decode equivalence against the preserved serial Qwen rows.
-- Qwen3 layer-17 suffix replay implementation/equivalence.
-- Attention backend audit, A40 item/condition autotuning, compile/graph
-  benchmarks, GPU utilization, VRAM, and end-to-end speedup.
-- Complete-512 equivalence and the clean optimized V1.1 rerun.
+- serial reference versus `full_prompt_batched` with serial-shape preservation:
+  512 DEV items × baseline/PC1−/PC1+, zero discrete prediction differences;
+- the same gate with `candidate_only`: zero discrete prediction differences;
+- complete clean V1.1: 512 DEV items × 31 frozen conditions = 15,872 rows,
+  validated with no duplicate keys and no holdout access;
+- native Qwen3 suffix replay: exercised on technical smoke and matched the
+  cached path there, but it was slower and is not canonical;
+- ordinary BF16 cached decode and shape-changing batching: exercised, but not
+  approved because they produced discrete flips against the serial oracle.
 
-The local implementation must stop at `RUNPOD_REQUIRED_FOR_EQUIVALENCE` when
-these are the only remaining blockers. No V1.1 scientific conclusion is made
-by this engineering work.
+The validated clean run is recorded in the local review bundle under
+`review/q1_v1_1_optimized_clean_run/`. The full prediction file remains on
+RunPod because real experimental predictions are remote-only by policy.
+
+Observed wall-time accounting uses the run timestamp and final prediction
+journal mtime: approximately 17.48 minutes for 15,872 item-condition rows,
+versus the serial estimate of 183.80 minutes, or approximately 10.52×. The
+cost estimate is approximately $0.12 at the recorded $0.40/A40-hour planning
+rate. This is an engineering runtime observation, not a scientific result.
+
+## Preserved alternatives
+
+- `serial_reference` remains the correctness oracle and is never deleted.
+- `full_prompt_batched` remains available, but ordinary shape-changing BF16
+  execution is not accepted as an exact Q1 replacement.
+- `cached_decode` shares the prompt prefix and performs one-token decoding. It
+  is useful infrastructure and passed local/tiny mechanics tests, but its
+  Qwen3 512-item gate produced flips and it is not canonical for V1.1.
+- `cached_suffix_replay` uses guarded native Qwen3 decoder/cache APIs. It fails
+  closed on unsupported model/version combinations and is not canonical after
+  the technical speed comparison.
+
+## Not approved or not measured
+
+`torch.compile`, CUDA graphs, asynchronous CPU/GPU pipelines, and A40 batch
+autotuning were not enabled for the clean scientific-development run. They
+must remain optional and require a fresh equivalence gate before use. Peak GPU
+utilization and a formal VRAM autotuning profile were not captured as part of
+the approved run, so no claim is made for those quantities.
+
+No V1.2 or Q2 experiment was run. No confirmatory holdout was accessed.

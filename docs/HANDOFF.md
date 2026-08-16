@@ -34,11 +34,11 @@ evidence, or a simulated scientific result.
 
 Q1 software infrastructure: READY.
 
-Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER, INCLUDING
-LIVE CUDA ON NVIDIA A40.
+Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER AND ON A
+PINNED QWEN3-8B/A40 TECHNICAL PATH.
 
-Q1 real 8B model: ONE FIXED DEVELOPMENT PILOT COMPLETE; V1.1 SERIAL ATTEMPT
-INTERRUPTED BEFORE PREDICTION ROWS; NO CLAIM.
+Q1 real 8B model: V1.1 DEVELOPMENT RUN COMPLETE with 15,872 rows under the
+approved serial-shape/candidate-only engine; NO CONFIRMATORY CLAIM.
 
 Q1 scientific result: NONE FROZEN; DESCRIPTIVE PILOT ARTIFACT ONLY.
 
@@ -46,11 +46,13 @@ Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
 
-One fixed Qwen3-8B development pilot ran before the optimization pivot. The
-exact provenance and descriptive table are in [Q1_V1_RESULTS.md](Q1_V1_RESULTS.md).
-The later serial V1.1 attempt was interrupted before prediction rows were
-persisted and is preserved only as an engineering/provenance record. Neither
-establishes Q1; the confirmatory holdout was not evaluated.
+The Qwen3 path was exercised on the pinned revision and one A40. The exact
+512-item equivalence gate passed for the canonical profile, and the complete
+V1.1 DEVELOPMENT artifact was validated remotely. Ordinary cached decode and
+shape-changing batching were deliberately not approved because they produced
+BF16 prediction flips against the serial oracle. `torch.compile`, CUDA graphs,
+formal batch autotuning, and a full utilization/VRAM profile remain optional
+engineering work. The confirmatory holdout was not evaluated.
 
 ## Exact local smoke
 
@@ -88,7 +90,9 @@ ceg build-vector path/to/config.yaml vectors/example.npz
 ceg inspect-vector vectors/example.npz
 ceg run path/to/config.yaml
 ceg q1-v1 configs/q1_v1_qwen3_8b.example.yaml data/splits/mmlu_pro_q1_v1.json
+ceg q1-v1-1 configs/q1_v1_1_qwen3_8b.yaml data/splits/mmlu_pro_q1_v1.json
 ceg validate-run runs/q1_v1/<completed-run>
+ceg repair-q1-v1-1 runs/q1_v1_1/<failed-row-complete-run>  # no inference
 ceg summarize runs/<run-directory>
 ```
 
