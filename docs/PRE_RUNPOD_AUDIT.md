@@ -139,3 +139,27 @@ The fixed Q1 pilot completed after this audit update. Its 7,680-row artifact
 passed validation and its explicit 32-item repeat audit passed with maximum
 absolute score difference 0.0 at tolerance 1e-5. The descriptive results are
 recorded in `docs/Q1_V1_RESULTS.md`; they do not establish Q1 or authorize V2.
+
+## V1.1 controlled-follow-up preflight (2026-08-16)
+
+Before V1.1 execution, the local and remote code paths were re-audited. The
+protocol is frozen in `docs/Q1_DEVELOPMENT_PROTOCOL_V1_1.md`; no V1.1 outcomes
+were used to choose its controls.
+
+- Local `pytest`: 50 passed; Ruff and `compileall` passed.
+- Local preflight stayed offline: it did not instantiate the MMLU-Pro adapter,
+  resolve a dataset, load a model, or download anything. It reported the
+  expected local blockers for remote-only data/model availability.
+- The frozen V1.1 condition table is 31 conditions: 19 original-order and 12
+  option-permutation conditions, for 15,872 item-condition evaluations and
+  158,720 candidate forward passes.
+- The deterministic cost estimate is 183.799 minutes and US$1.2253 under the
+  explicitly recorded US$0.40/A40-hour assumption, below the US$2 stop gate.
+- Commit `6e8e6d1` was pushed to the authorized GitHub branch and synchronized
+  to RunPod. The sync is additive and excludes `runs/`, `review/`, caches,
+  model material, and secrets.
+- Remote tests, Ruff, compileall, and V1.1 preflight passed on the A40 Pod.
+
+The V1.1 real run is remote-only and must be reported separately from this
+engineering audit. Its scientific status remains DEVELOPMENT; no V1.2, Q2, or
+confirmatory holdout access is authorized.

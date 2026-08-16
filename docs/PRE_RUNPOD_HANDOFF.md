@@ -145,5 +145,38 @@ The researcher must choose and review the real model, benchmark, vector
 construction, layer, token scope, alpha, and controls before any pretrained
 model download or Q1 run. The unresolved questions are intentionally
 scientific, not hook/resume/artifact engineering.
+
+## V1.1 controlled follow-up status
+
+The V1.1 protocol is now frozen and committed locally/GitHub. It reuses the
+exact Q1 V1 model, dataset revision, split, vectors, layer, token scope, and
+deterministic choice-log-likelihood scorer. It adds only the pre-registered
+FP32 numerical audit, equal-norm random controls, and four deterministic option
+permutations. It remains DEVELOPMENT and stops after V1.1.
+
+Local preflight:
+
+```bash
+ceg preflight-q1-v1-1 configs/q1_v1_1_qwen3_8b.yaml
+ceg preflight configs/q1_v1_1_qwen3_8b.yaml
+```
+
+The first command estimates the frozen workload/cost without inference. The
+second is deliberately offline on the Mac and may report that the remote-only
+model/dataset are unavailable locally.
+
+Remote launch, only after reviewing the frozen protocol and cost gate:
+
+```bash
+cd /workspace/causal-epistemic-geometry
+source scripts/runpod_environment.sh
+ceg q1-v1-1 configs/q1_v1_1_qwen3_8b.yaml data/splits/mmlu_pro_q1_v1.json
+ceg validate-run runs/q1_v1_1/<completed-run>
+```
+
+The real run must print and satisfy `hostname`, `/workspace/causal-epistemic-geometry`,
+and `HF_HOME=/workspace/hf-cache` before model/data operations. It must not
+access `confirmatory_holdout`. The final principal-review bundle is assembled
+on the Mac only after remote validation and a read-only artifact pull.
 Before terminating the Pod, pull artifacts with `scripts/sync_from_runpod.sh`
 and follow `BEFORE_TERMINATING_POD.md`.
