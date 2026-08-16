@@ -85,6 +85,14 @@ tar_excludes=(
   --exclude='*.token'
 )
 
+create_tar() {
+  if [[ "$(uname -s)" == "Darwin" ]]; then
+    COPYFILE_DISABLE=1 tar --no-mac-metadata --no-xattrs --no-acls --no-fflags "$@"
+  else
+    tar "$@"
+  fi
+}
+
 if [[ ! "${REMOTE_ROOT}" =~ ^/[A-Za-z0-9_./-]+$ ]]; then
   echo "Unsafe RUNPOD_REMOTE_ROOT; use an absolute path without shell metacharacters." >&2
   exit 2
@@ -115,11 +123,11 @@ echo "Remote rsync is unavailable; using additive tar-over-SSH fallback."
 if [[ "${dry_run}" == "1" ]]; then
   archive="$(mktemp "${TMPDIR:-/tmp}/ceg-sync-dry-run.XXXXXX")"
   trap 'rm -f "${archive}"' EXIT
-  COPYFILE_DISABLE=1 tar -C "${REPO_ROOT}" -cf "${archive}" "${tar_excludes[@]}" .
+  create_tar -C "${REPO_ROOT}" -cf "${archive}" "${tar_excludes[@]}" .
   tar -tf "${archive}"
   exit 0
 fi
 
-COPYFILE_DISABLE=1 tar -C "${REPO_ROOT}" -cf - "${tar_excludes[@]}" . | \
+create_tar -C "${REPO_ROOT}" -cf - "${tar_excludes[@]}" . | \
   ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
   "mkdir -p -- '${REMOTE_ROOT}' && tar --no-same-owner -xpf - -C '${REMOTE_ROOT}'"
