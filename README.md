@@ -96,16 +96,17 @@ Current readiness:
 
 ```text
 Q1 SOFTWARE: READY
-Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL + LIVE CUDA
-Q1 REAL 8B MODEL: NOT RUN
-Q1 SCIENTIFIC RESULT: NONE
+Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL + LIVE QWEN SMOKE
+Q1 REAL 8B MODEL: DEVELOPMENT PILOT COMPLETE; NO CLAIM
+Q1 SCIENTIFIC RESULT: NONE FROZEN
 Q2 GEOMETRY: NOT RUN
 ```
 
-No real model or benchmark is downloaded by default. No external model API,
-paid inference, or remote Git operation is used by this project. The optional
-RunPod path is explicit; Gate 1 used only a local random transformer fixture
-and did not download a model.
+Real model/data operations are RunPod-only. The Mac is the canonical source
+for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`
+copies committed local state over the scoped SSH alias without using GitHub.
+Weights, dataset contents, activations, and real predictions remain on the
+RunPod cache/workspace. See [Q1 V1 results](docs/Q1_V1_RESULTS.md).
 
 ## Optional HuggingFace path
 

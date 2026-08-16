@@ -1,11 +1,11 @@
 # Pre-RunPod handoff
 
-## Gate 1 result — 2026-08-16
+## Gate 1 and Gate 2 result — 2026-08-16
 
 Gate 1 is complete for software and CUDA mechanics. The live Pod was used only
 with a randomly initialized tiny GPT-2-style Transformer built from config.
-No pretrained weights, Qwen/Llama model, benchmark campaign, Q1 run, or Q2
-experiment was executed.
+Gate 2 then ran one fixed Qwen3-8B/MMLU-Pro-derived DEVELOPMENT pilot. It did
+not access the confirmatory holdout and does not establish Q1.
 
 ## What changed
 
@@ -80,11 +80,27 @@ See `RUNPOD_COST_GATES.md` before starting the reviewed pretrained-model gate.
 - `ceg preflight` reports the expected missing placeholders for the reviewed
   Q1 template without inference or downloads.
 
+## Gate 2 result
+
+- Qwen3-8B revision `b968826d9c46dd6066d109eabc6255188de91218` loaded on one
+  A40 in BF16 with no quantization or CPU offload.
+- MMLU-Pro revision `b189ec765aa7ed75c8acfea42df31fdae71f97be` was accessed
+  only on RunPod under `/workspace/hf-cache`.
+- Technical 8-item smoke, alpha-zero/zero-vector identity, and exact serial
+  score repeat passed.
+- Validation baseline: 70 items, accuracy 0.5429, no parse failures; the
+  30%/90% gate did not stop the pilot.
+- Q1 V1: 512 calibration, 512 development evaluation, exactly 15 conditions,
+  7,680 rows; artifact validation passed.
+- Explicit repeat audit: 32 items, baseline + `pca_pc1_minus` + `random_0_minus`,
+  96 rows, max score difference 0.0 at tolerance 1e-5.
+- Full descriptive results: [Q1_V1_RESULTS.md](Q1_V1_RESULTS.md).
+
 ## Not tested
 
-No pretrained model, CUDA device map, bf16 generation, Qwen3-8B, large model,
-scientific benchmark, or Q1 result was run. Optional tiny pretrained smoke is
-skipped. The tiny random transformer report is software validation only.
+No confirmatory experiment, holdout analysis, Q2 geometry, committee/majority
+vote, or scientific claim was run. Free generation was not the primary Q1
+scorer. The tiny random transformer report is software validation only.
 
 ## Remote facts
 
@@ -92,7 +108,8 @@ skipped. The tiny random transformer report is software validation only.
 - NVIDIA A40, 46,068 MiB, driver 580.159.04; one CUDA device visible.
 - `torch==2.4.1+cu124`, `transformers==4.57.6`, CUDA available, bf16 support
   reported by Torch.
-- No pretrained model or model cache material was downloaded.
+- Gate 1 itself downloaded no pretrained model. Gate 2 later downloaded the
+  authorized Qwen3-8B only on RunPod; the cache remains remote.
 - Codex CLI was not installed on the Pod. The existing SSH path is ready for a
   desktop Remote SSH session at `/workspace/causal-epistemic-geometry`.
 

@@ -58,8 +58,8 @@ modified.
 
 ## Remains untested
 
-- No pretrained model was downloaded, and no Qwen3-8B/Llama/large model was
-  loaded.
+- Before Gate 2, no pretrained model had been downloaded. Gate 2 subsequently
+  loaded only the authorized pinned Qwen3-8B on RunPod.
 - No real tokenizer/chat template, pretrained-model generation, device map,
   bf16 production inference, MPS run, or multi-GPU sharding has been exercised.
 - No scientific benchmark, frozen layer/alpha, Q1 claim, or Q2 geometry
@@ -135,7 +135,7 @@ the serial scorer, despite identical top labels. The batched path was removed;
 the canonical scorer remains serial so candidate scores are stable and
 auditable. This is a correctness decision, not a scientific tuning choice.
 
-The fixed Q1 pilot itself remains pending at the time of this audit. No
-calibration direction, evaluation condition, Q1 result, or Q2 claim is being
-interpreted here. After the pilot, this document must be supplemented with the
-artifact validator result and exact stop/continue status.
+The fixed Q1 pilot completed after this audit update. Its 7,680-row artifact
+passed validation and its explicit 32-item repeat audit passed with maximum
+absolute score difference 0.0 at tolerance 1e-5. The descriptive results are
+recorded in `docs/Q1_V1_RESULTS.md`; they do not establish Q1 or authorize V2.

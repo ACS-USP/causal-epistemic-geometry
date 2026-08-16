@@ -646,6 +646,8 @@ def validate_q1_v1_run(run_dir: str | Path) -> dict[str, Any]:
         raise ValueError("Not a Q1 V1 fixed-condition pilot directory")
     if manifest.get("status") != "COMPLETE":
         raise ValueError(f"Q1 run status is {manifest.get('status')!r}, not COMPLETE")
+    if manifest.get("repeat_check", {}).get("status") != "PASS":
+        raise ValueError("Q1 repeat audit is missing or did not pass")
     rows = [json.loads(line) for line in (path / "predictions.jsonl").read_text().splitlines()]
     keys = [(row["item_id"], row["condition"]) for row in rows]
     if len(keys) != len(set(keys)):
@@ -655,6 +657,35 @@ def validate_q1_v1_run(run_dir: str | Path) -> dict[str, Any]:
         raise ValueError("Q1 condition set is incomplete or inconsistent")
     if manifest.get("prediction_count") != len(rows):
         raise ValueError("Q1 prediction count mismatch")
+    predictions = [
+        Prediction(
+            item_id=str(row["item_id"]),
+            condition=str(row["condition"]),
+            raw_output=str(row["raw_output"]),
+            normalized_output=str(row["normalized_output"]),
+            target=str(row["target"]),
+            correct=bool(row["correct"]),
+            parse_status=str(row.get("parse_status", "OK")),
+            metadata=dict(row.get("metadata", {})),
+        )
+        for row in rows
+    ]
+    baseline = [prediction for prediction in predictions if prediction.condition == "baseline"]
+    stored_metrics = json.loads((path / "metrics.json").read_text(encoding="utf-8"))
+    for condition in names:
+        if condition == "baseline":
+            continue
+        paired = baseline + [
+            prediction for prediction in predictions if prediction.condition == condition
+        ]
+        recomputed = compute_paired_metrics(paired, treatment_condition=condition)
+        recomputed["bootstrap"] = bootstrap_paired_metrics(
+            paired,
+            int(manifest["experiment_seed"]),
+            treatment_condition=condition,
+        )
+        if _json_safe(stored_metrics["conditions"][condition]) != _json_safe(recomputed):
+            raise ValueError(f"Q1 metrics do not recompute from prediction rows: {condition}")
     if manifest.get("prediction_sha256") != _sha256_bytes(
         (path / "predictions.jsonl").read_bytes()
     ):
@@ -759,6 +790,7 @@ def audit_q1_v1_repeat(
         "Repeated selected conditions: PASS",
         "Repeated selected conditions: PASS (32 items; 96 rows; max score diff <= 1e-5)",
     )
+    summary = summary.replace("Repeated rows checked: 0", f"Repeated rows checked: {comparisons}")
     _atomic_write(summary_path, summary)
     manifest_path = path / "manifest.json"
     manifest_payload = json.loads(manifest_path.read_text(encoding="utf-8"))

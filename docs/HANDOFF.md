@@ -37,19 +37,19 @@ Q1 software infrastructure: READY.
 Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER, INCLUDING
 LIVE CUDA ON NVIDIA A40.
 
-Q1 real 8B model: NOT RUN.
+Q1 real 8B model: ONE FIXED DEVELOPMENT PILOT COMPLETE; NO CLAIM.
 
-Q1 scientific result: NONE.
+Q1 scientific result: NONE FROZEN; DESCRIPTIVE PILOT ARTIFACT ONLY.
 
 Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
 
-No pretrained model has been run. A principal researcher must verify the exact
-model revision, tokenizer behavior, chat template, layer path, hidden size,
-device map, dtype, generation format, and vector construction on the prepared
-GPU machine. The random CUDA run is not evidence about language capability or
-Q1.
+One fixed Qwen3-8B development pilot has now run on the prepared GPU machine.
+The exact provenance and descriptive table are in
+[Q1_V1_RESULTS.md](Q1_V1_RESULTS.md). The pilot does not establish Q1 and the
+confirmatory holdout was not evaluated. The random CUDA run remains software
+validation only.
 
 ## Exact local smoke
 
@@ -86,6 +86,8 @@ reviewed steps documented in [RUNPOD.md](RUNPOD.md) and
 ceg build-vector path/to/config.yaml vectors/example.npz
 ceg inspect-vector vectors/example.npz
 ceg run path/to/config.yaml
+ceg q1-v1 configs/q1_v1_qwen3_8b.example.yaml data/splits/mmlu_pro_q1_v1.json
+ceg validate-run runs/q1_v1/<completed-run>
 ceg summarize runs/<run-directory>
 ```
 
