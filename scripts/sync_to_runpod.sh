@@ -115,11 +115,11 @@ echo "Remote rsync is unavailable; using additive tar-over-SSH fallback."
 if [[ "${dry_run}" == "1" ]]; then
   archive="$(mktemp "${TMPDIR:-/tmp}/ceg-sync-dry-run.XXXXXX")"
   trap 'rm -f "${archive}"' EXIT
-  tar -C "${REPO_ROOT}" -cf "${archive}" "${tar_excludes[@]}" .
+  COPYFILE_DISABLE=1 tar -C "${REPO_ROOT}" -cf "${archive}" "${tar_excludes[@]}" .
   tar -tf "${archive}"
   exit 0
 fi
 
-tar -C "${REPO_ROOT}" -cf - "${tar_excludes[@]}" . | \
+COPYFILE_DISABLE=1 tar -C "${REPO_ROOT}" -cf - "${tar_excludes[@]}" . | \
   ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
-  "mkdir -p -- '${REMOTE_ROOT}' && tar -xpf - -C '${REMOTE_ROOT}'"
+  "mkdir -p -- '${REMOTE_ROOT}' && tar --no-same-owner -xpf - -C '${REMOTE_ROOT}'"

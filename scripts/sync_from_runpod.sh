@@ -89,4 +89,4 @@ fi
 
 mkdir -p "${destination}"
 ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
-  "tar -cf - -C '${remote_path}' ." | tar -xpf - -C "${destination}"
+  "tar -cf - -C '${remote_path}' ." | tar -xf - -C "${destination}"
