@@ -10,7 +10,7 @@ holdout access.
 ## Freeze record
 
 - protocol timestamp: `2026-08-16T20:14:27Z`
-- protocol freeze commit: recorded in the Git commit that adds this file
+- protocol freeze commit: `b5d97fd`
 - original V1 run ID: `20260816T172847Z_q1-v1-development_ac2f36265c`
 - original V1 experiment commit: `8236e9887e452dc252ef36a8da470c16ef2dd610`
 - model: `Qwen/Qwen3-8B`
