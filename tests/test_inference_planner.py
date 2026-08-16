@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from epistemic_geometry.inference.planner import plan_prepared_items
+from epistemic_geometry.inference.planner import group_conditions_by_layer, plan_prepared_items
 from epistemic_geometry.types import PreparedChoiceItem
 
 
@@ -40,3 +40,14 @@ def test_length_planner_is_deterministic_and_respects_both_budgets() -> None:
 def test_length_planner_rejects_item_larger_than_token_budget() -> None:
     with pytest.raises(ValueError, match="exceeds"):
         plan_prepared_items([_item("too-long", 9)], max_items=2, max_prefill_tokens=8)
+
+
+def test_conditions_group_deterministically_by_layer() -> None:
+    conditions = [
+        ({"condition": "l2", "layer": 2}, None),
+        ({"condition": "default"}, None),
+        ({"condition": "l2b", "layer": 2}, None),
+    ]
+    grouped = group_conditions_by_layer(conditions, default_layer=1)
+    assert list(grouped) == [2, 1]
+    assert [spec["condition"] for spec, _ in grouped[2]] == ["l2", "l2b"]

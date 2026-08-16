@@ -479,6 +479,23 @@ def test_cached_decode_forward_accounting_exposes_prefix_reuse(tiny_backend) -> 
     assert stats["forward_calls"] == 3
 
 
+def test_heterogeneous_layers_are_grouped_without_row_contamination(tiny_backend) -> None:
+    backend = _choice_backend(tiny_backend, execution_mode="cached_decode")
+    items = _choice_items()
+    vector_a = SteeringVector(np.ones(32), 0, "test", "none", hash="layer-a")
+    vector_b = SteeringVector(np.full(32, 2.0), 1, "test", "none", hash="layer-b")
+    conditions = [
+        ({"condition": "layer-0", "alpha": 0.2, "layer": 0}, vector_a),
+        ({"condition": "layer-1", "alpha": -0.3, "layer": 1}, vector_b),
+    ]
+    optimized = backend.predict_choice_batch(backend.prepare_choice_items(items), conditions)
+    by_key = {(item.item_id, spec["condition"]): output for item, spec, output in optimized}
+    for item in items:
+        for spec, vector in conditions:
+            serial = _serial_choice_output(backend, item, vector, float(spec["alpha"]))
+            assert by_key[(item.id, spec["condition"])].raw_output == serial.raw_output
+
+
 def test_qwen3_suffix_replay_guard_fails_closed_on_tiny_gpt2(tiny_backend) -> None:
     engine = Qwen3CachedSuffixReplayEngine(tiny_backend)
     assert engine.status.supported is False

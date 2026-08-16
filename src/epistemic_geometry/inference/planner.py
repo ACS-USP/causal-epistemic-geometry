@@ -82,3 +82,15 @@ def plan_prepared_items(
     }
     payload["plan_hash"] = stable_digest(canonical_json(payload))
     return plans, payload
+
+
+def group_conditions_by_layer(
+    conditions: list[tuple[dict[str, Any], Any]], default_layer: int
+) -> dict[int, list[tuple[dict[str, Any], Any]]]:
+    """Group future heterogeneous-layer conditions without choosing a sweep."""
+
+    grouped: dict[int, list[tuple[dict[str, Any], Any]]] = {}
+    for spec, vector in conditions:
+        layer = int(spec.get("layer", default_layer))
+        grouped.setdefault(layer, []).append((spec, vector))
+    return grouped

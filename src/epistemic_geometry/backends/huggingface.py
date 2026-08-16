@@ -17,7 +17,7 @@ from epistemic_geometry.backends.base import (
 )
 from epistemic_geometry.benchmarks.prompts import render_prompt
 from epistemic_geometry.config import BackendConfig
-from epistemic_geometry.inference.planner import plan_prepared_items
+from epistemic_geometry.inference.planner import group_conditions_by_layer, plan_prepared_items
 from epistemic_geometry.reproducibility import require_remote_hf_execution, stable_digest
 from epistemic_geometry.types import (
     BackendOutput,
@@ -478,6 +478,26 @@ class HuggingFaceBackend(ModelBackend):
             from epistemic_geometry.backends.qwen3_replay import Qwen3CachedSuffixReplayEngine
 
             Qwen3CachedSuffixReplayEngine(self).require_supported()
+        condition_layers = {
+            int(spec.get("layer", self.config.layer)) for spec, _vector in conditions
+        }
+        if len(condition_layers) > 1:
+            grouped_outputs: list[tuple[PreparedChoiceItem, dict[str, Any], BackendOutput]] = []
+            for grouped_conditions in group_conditions_by_layer(
+                conditions, self.config.layer
+            ).values():
+                grouped_outputs.extend(
+                    self.predict_choice_batch(prepared_items, grouped_conditions, execution_mode)
+                )
+            output_by_key = {
+                (item.item_id, str(spec["condition"])): (item, spec, output)
+                for item, spec, output in grouped_outputs
+            }
+            return [
+                output_by_key[(item.item_id, str(spec["condition"]))]
+                for item in prepared_items
+                for spec, _vector in conditions
+            ]
         if any(len(item.prompt_ids) < 2 for item in prepared_items):
             raise ValueError("Cached choice scoring requires at least two prompt tokens")
         if any(not item.all_candidates_single_token for item in prepared_items):
