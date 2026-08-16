@@ -223,12 +223,16 @@ def main() -> int:
     )
 
     serial_comparison = {}
+    serial_full_prompt_comparison = {}
     full_prompt_comparison = {}
     candidate_head_comparison = {}
     for item in compare_items:
         for condition, _vector in conditions:
             key = (item.id, condition["condition"])
             serial_comparison[f"{item.id}/{key[1]}"] = _compare_scores(serial[key], cached[key])
+            serial_full_prompt_comparison[f"{item.id}/{key[1]}"] = _compare_scores(
+                serial[key], full_prompt[key]
+            )
             full_prompt_comparison[f"{item.id}/{key[1]}"] = _compare_scores(
                 full_prompt[key], cached[key]
             )
@@ -262,6 +266,7 @@ def main() -> int:
             },
         },
         "serial_vs_cached": serial_comparison,
+        "serial_vs_full_prompt": serial_full_prompt_comparison,
         "full_prompt_vs_cached": full_prompt_comparison,
         "full_vocab_vs_candidate_only": candidate_head_comparison,
         "single_item_padding_isolation": {
@@ -300,6 +305,9 @@ def main() -> int:
             (row["margin_difference"] for row in candidate_head_comparison.values()), default=0.0
         ),
         "ranking_equivalence": {
+            "serial_vs_full_prompt": all(
+                row["ranking_equal"] for row in serial_full_prompt_comparison.values()
+            ),
             "serial_vs_cached": all(
                 row["ranking_equal"] for row in serial_comparison.values()
             ),

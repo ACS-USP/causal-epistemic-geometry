@@ -1,0 +1,56 @@
+# SOFTWARE VALIDATION ONLY. Eight cached MMLU-Pro items; not a Q1 result.
+experiment:
+  name: qwen3-mmlu-technical-smoke
+  stage: development
+  seed: 20260816
+
+backend:
+  type: huggingface
+  model_id: Qwen/Qwen3-8B
+  model_revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_id: Qwen/Qwen3-8B
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  hidden_size: 4096
+  device: cuda
+  device_map: null
+  dtype: bf16
+  layer: 17
+  layer_path: model.model.layers
+  prompt_mode: chat
+  enable_thinking: false
+  inference_mode: choice_loglikelihood
+  candidate_labels: [A, B, C, D, E, F, G, H, I, J]
+  max_new_tokens: 1
+  do_sample: false
+  batch_size: 2
+  quantization: none
+  execution_mode: cached_decode
+  candidate_head_mode: full_vocab_reference
+  item_batch_size: 2
+  condition_chunk_size: 2
+  max_prefill_tokens: 8192
+  padding_side: left
+  attention_implementation: auto
+  torch_compile: false
+  cuda_graphs: false
+
+benchmark:
+  type: mmlu_pro
+  dataset_id: TIGER-Lab/MMLU-Pro
+  dataset_revision: b189ec765aa7ed75c8acfea42df31fdae71f97be
+  split: validation
+  max_items: 8
+  allowed_targets: [A, B, C, D, E, F, G, H, I, J]
+
+steering:
+  enabled: true
+  layer: 17
+  alpha: 0.125
+  token_scope: last_token
+  constructor: random_unit
+  vector_seed: 917
+  vector_dimension: 4096
+
+output:
+  root: runs/technical_qwen3_mmlu
+  save_figures: false
