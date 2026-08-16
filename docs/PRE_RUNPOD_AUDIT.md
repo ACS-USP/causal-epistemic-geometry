@@ -108,6 +108,34 @@ Two engineering issues were found and repaired during the live check:
    now uses a temporary test-only identity while production invocation still
    validates the configured identity file.
 
-The remaining cost-gated work is the reviewed pretrained-model technical smoke
-and, only after that, the principal researcher's Q1 choices. No claim is made
-from the random-transformer run.
+## Gate 2 pre-pilot audit (2026-08-16)
+
+The principal researcher authorized the fixed Q1 V1 development protocol. The
+following operational choices are pinned in `docs/Q1_DEVELOPMENT_PROTOCOL_V1.md`:
+Qwen/Qwen3-8B revision `b968826d9c46dd6066d109eabc6255188de91218`,
+TIGER-Lab/MMLU-Pro revision `b189ec765aa7ed75c8acfea42df31fdae71f97be`,
+direct-choice log-likelihood, Qwen non-thinking chat mode, block 17, last
+prompt token, and the 15-condition calibration/evaluation design. The
+development split manifest is `data/splits/mmlu_pro_q1_v1.json` with hash
+`84982e4c72e230ffff78363f085d4d5c53447fd1e248e5e170ed5e8c508d343e`.
+
+The live pinned smoke and validation audit now show:
+
+- 8-item technical smoke: PASS; alpha=0 identity and zero-vector identity
+  held for predictions and candidate scores within the configured tolerance.
+- Validation baseline: 70 items, 0.5429 accuracy, 0 parse failures; the
+  30%/90% stop gate was not triggered.
+- Validation repeat: exact prediction rows and candidate scores matched.
+- Qwen provenance: 36 layers, hidden size 4096, BF16, one A40, no CPU
+  offload, no quantization, resolved path `model.model.layers`, block 17.
+
+One optimization was explicitly rejected during audit. Scoring the ten labels
+in one BF16 batch changed candidate log-likelihoods by as much as 1.375 versus
+the serial scorer, despite identical top labels. The batched path was removed;
+the canonical scorer remains serial so candidate scores are stable and
+auditable. This is a correctness decision, not a scientific tuning choice.
+
+The fixed Q1 pilot itself remains pending at the time of this audit. No
+calibration direction, evaluation condition, Q1 result, or Q2 claim is being
+interpreted here. After the pilot, this document must be supplemented with the
+artifact validator result and exact stop/continue status.

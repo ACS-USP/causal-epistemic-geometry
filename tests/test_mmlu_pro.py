@@ -15,6 +15,7 @@ from epistemic_geometry.config import (
     RunConfig,
     SteeringConfig,
 )
+from epistemic_geometry.reproducibility import require_remote_hf_execution
 
 
 def _row(index: int, category: str = "category-a") -> dict:
@@ -78,3 +79,9 @@ def test_development_config_cannot_access_confirmatory_holdout() -> None:
             steering=SteeringConfig(),
             output=OutputConfig(),
         )
+
+
+def test_real_hf_operations_are_refused_outside_runpod(monkeypatch) -> None:
+    monkeypatch.delenv("HF_HOME", raising=False)
+    with pytest.raises(RuntimeError, match="remote-only"):
+        require_remote_hf_execution("test operation")

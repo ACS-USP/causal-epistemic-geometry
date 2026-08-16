@@ -86,6 +86,11 @@ category using split seed `20260816` into:
 Only item IDs are stored in the split manifest. Development configuration is
 programmatically forbidden from selecting `confirmatory_holdout`.
 
+The materialized manifest is `data/splits/mmlu_pro_q1_v1.json` with manifest
+SHA-256 `84982e4c72e230ffff78363f085d4d5c53447fd1e248e5e170ed5e8c508d343e`.
+It contains item IDs only; labels remain in the pinned dataset cache and the
+development adapter cannot select the holdout split.
+
 ## Intervention
 
 - One residual-stream location: Qwen block index 17 (18th block, zero-based).
@@ -107,6 +112,11 @@ PCA signs are arbitrary, so both signs are predeclared. Random seeds derive
 from protocol seed `20260816`; no post-result regeneration or orthogonalization
 is permitted in V1. Direction hashes, singular values, explained variance,
 pairwise random cosines, and source IDs are artifacts.
+
+The four null direction IDs are exactly `random_0`, `random_1`, `random_2`,
+`random_3`. Candidate scoring is intentionally serial. A candidate-batched
+implementation was tested on the real model and rejected because BF16 batch
+kernel arithmetic changed scores by up to 1.375 relative to serial scoring.
 
 ## Standardized intervention scale and conditions
 

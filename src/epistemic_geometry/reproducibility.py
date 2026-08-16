@@ -12,6 +12,7 @@ import json
 import os
 import platform
 import random
+import socket
 import subprocess
 import sys
 from pathlib import Path
@@ -135,3 +136,36 @@ def canonical_json(data: Any) -> str:
     """Serialize data for stable config/artifact hashing."""
 
     return json.dumps(data, sort_keys=True, separators=(",", ":"), default=str)
+
+
+def remote_execution_context() -> dict[str, str]:
+    """Return the non-secret location context required for real HF operations."""
+
+    return {
+        "hostname": socket.gethostname(),
+        "pwd": str(Path.cwd()),
+        "HF_HOME": os.environ.get("HF_HOME", "(unset)"),
+    }
+
+
+def require_remote_hf_execution(operation: str) -> None:
+    """Refuse real model/data loading unless the RunPod cache invariant holds.
+
+    Local configuration and preflight remain usable without this invariant. The
+    guard is only called immediately before a real Transformers or datasets
+    load, preventing accidental Mac downloads.
+    """
+
+    context = remote_execution_context()
+    print("EXECUTION HOST")
+    print(f"hostname: {context['hostname']}")
+    print(f"pwd: {context['pwd']}")
+    print(f"HF_HOME: {context['HF_HOME']}")
+    root = Path(context["pwd"]).resolve()
+    expected_root = Path("/workspace/causal-epistemic-geometry").resolve()
+    if context["HF_HOME"] != "/workspace/hf-cache" or expected_root not in (root, *root.parents):
+        raise RuntimeError(
+            f"Refusing {operation}: real HuggingFace operations are remote-only. "
+            "Required pwd under /workspace/causal-epistemic-geometry and "
+            "HF_HOME=/workspace/hf-cache. No download was attempted."
+        )

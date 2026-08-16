@@ -127,6 +127,10 @@ def doctor(
             if not benchmark_path.is_absolute():
                 benchmark_path = Path.cwd() / benchmark_path
             typer.echo(f"Benchmark path exists: {benchmark_path.exists()}")
+        if loaded.benchmark.type == "mmlu_pro":
+            typer.echo(
+                "MMLU-Pro dataset: remote-only; local doctor performs no dataset load/download"
+            )
         if loaded.steering.vector_path:
             vector_path = Path(loaded.steering.vector_path)
             if not vector_path.is_absolute():
@@ -204,8 +208,18 @@ def preflight(
             if not benchmark_path.exists():
                 blockers.append(f"benchmark path missing: {benchmark_path}")
         if loaded.benchmark.type == "mmlu_pro":
+            typer.echo(
+                "Dataset contents: NOT LOADED (preflight is offline; real MMLU-Pro "
+                "operations are RunPod-only)"
+            )
             if _dependency_status("datasets") != "yes":
-                blockers.append("datasets dependency is missing; install the HF extra")
+                blockers.append(
+                    "dataset dependency unavailable locally; install the HF extra only on RunPod"
+                )
+            else:
+                typer.echo(
+                    "Dataset cache: NOT INSPECTED LOCALLY (remote dataset unresolved locally)"
+                )
             if loaded.benchmark.split in {"dev_calibration", "dev_evaluation"}:
                 manifest_path = Path(loaded.benchmark.split_manifest or "")
                 if not manifest_path.is_absolute():

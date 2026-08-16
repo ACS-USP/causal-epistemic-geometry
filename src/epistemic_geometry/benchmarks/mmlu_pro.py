@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from epistemic_geometry.benchmarks.base import AnswerParser, Benchmark
-from epistemic_geometry.reproducibility import stable_digest
+from epistemic_geometry.reproducibility import require_remote_hf_execution, stable_digest
 from epistemic_geometry.types import BenchmarkItem
 
 MMLU_PRO_ID = "TIGER-Lab/MMLU-Pro"
@@ -131,6 +131,7 @@ class MMLUProBenchmark(Benchmark):
         return cls(split=split, rows=rows, dataset_revision="fixture")
 
     def _load_rows(self, revision: str | None) -> tuple[list[dict[str, Any]], str]:
+        require_remote_hf_execution("MMLU-Pro dataset loading")
         try:
             from datasets import load_dataset
         except ImportError as exc:
