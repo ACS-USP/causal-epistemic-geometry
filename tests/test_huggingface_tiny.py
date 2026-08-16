@@ -24,6 +24,22 @@ from epistemic_geometry.steering.vector import load_vector, save_vector  # noqa:
 from epistemic_geometry.types import BenchmarkItem, Intervention, SteeringVector  # noqa: E402
 
 
+class _BatchEncodingTokenizer:
+    """Wrap the tiny tokenizer like the real Transformers tokenizer API."""
+
+    def __init__(self, tokenizer):
+        from transformers.tokenization_utils_base import BatchEncoding
+
+        self._tokenizer = tokenizer
+        self._batch_encoding = BatchEncoding
+
+    def __getattr__(self, name):
+        return getattr(self._tokenizer, name)
+
+    def __call__(self, *args, **kwargs):
+        return self._batch_encoding(self._tokenizer(*args, **kwargs))
+
+
 @pytest.fixture()
 def tiny_backend() -> TinyRandomTransformerBackend:
     return TinyRandomTransformerBackend(
@@ -186,6 +202,27 @@ def test_choice_loglikelihood_scores_complete_candidates_and_targets_prompt_toke
     with tiny_backend.steer(vector):
         steered = tiny_backend.predict(item)
     assert set(steered.metadata["candidate_scores"]) == {"A", "LONG"}
+
+
+def test_prepare_choice_item_accepts_transformers_batch_encoding(tiny_backend) -> None:
+    config = replace(tiny_backend.config, inference_mode="choice_loglikelihood")
+    backend = HuggingFaceBackend(
+        config,
+        model=tiny_backend.model,
+        tokenizer=_BatchEncodingTokenizer(tiny_backend.tokenizer),
+        model_identifier="injected-batch-encoding",
+        tokenizer_identifier="injected-batch-encoding",
+    )
+    item = BenchmarkItem(
+        id="batch-encoding-choice",
+        prompt="Choose one answer",
+        target="A",
+        metadata={"candidate_labels": ["A", "B"]},
+    )
+    prepared = backend.prepare_choice_item(item)
+    assert prepared.prompt_length > 0
+    assert prepared.candidate_token_ids["A"]
+    assert isinstance(prepared.context_compatible_candidate_ids["A"], tuple)
 
 
 def test_choice_log_softmax_promotes_logits_to_fp32_without_grad(tiny_backend) -> None:

@@ -281,7 +281,7 @@ class HuggingFaceBackend(ModelBackend):
             standalone = tuple(self._text_token_ids(label))
             token_ids[label] = standalone
             joined = self.tokenizer(rendered_prompt + label, add_special_tokens=False)
-            joined_values = joined["input_ids"] if isinstance(joined, dict) else joined
+            joined_values = joined["input_ids"] if "input_ids" in joined else joined
             if hasattr(joined_values, "tolist"):
                 joined_values = joined_values.tolist()
             if joined_values and isinstance(joined_values[0], list):
