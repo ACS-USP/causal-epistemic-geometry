@@ -222,6 +222,15 @@ def _scalar_run(
             "temperature": config.backend.temperature,
             "max_new_tokens": config.backend.max_new_tokens,
         },
+        "inference_engine": config.backend.execution_mode,
+        "candidate_head_mode": config.backend.candidate_head_mode,
+        "attention_implementation": config.backend.attention_implementation,
+        "torch_compile": config.backend.torch_compile,
+        "cuda_graphs": config.backend.cuda_graphs,
+        "item_batch_size": config.backend.item_batch_size,
+        "condition_chunk_size": config.backend.condition_chunk_size,
+        "max_prefill_tokens": config.backend.max_prefill_tokens,
+        "padding_side": config.backend.padding_side,
         "benchmark_type": config.benchmark.type,
     }
     session = (
@@ -231,23 +240,78 @@ def _scalar_run(
     )
     existing = session.existing_predictions()
     try:
-        for item_index, item in enumerate(benchmark, start=1):
-            baseline_key = (item.id, "baseline")
-            if baseline_key not in existing:
-                baseline_output = backend.predict(item)
-                prediction = _prediction(item, "baseline", baseline_output, benchmark.parser)
-                session.append_prediction(prediction)
-                existing[baseline_key] = prediction
-            steered_key = (item.id, "steered")
-            if steered_key not in existing:
-                with backend.steer(intervention):
-                    steered_output = backend.predict(item)
-                prediction = _prediction(item, "steered", steered_output, benchmark.parser)
-                session.append_prediction(prediction)
-                existing[steered_key] = prediction
-            if stop_after_items is not None and item_index >= stop_after_items:
-                session.set_status("INTERRUPTED")
-                raise RunInterrupted(session.run_dir)
+        if config.backend.execution_mode != "serial_reference":
+            if config.backend.inference_mode != "choice_loglikelihood":
+                raise ValueError(
+                    "Optimized execution engines currently require "
+                    "backend.inference_mode=choice_loglikelihood"
+                )
+            if not hasattr(backend, "prepare_choice_items") or not hasattr(
+                backend, "predict_choice_batch"
+            ):
+                raise TypeError(
+                    "The selected optimized engine requires a prepared-choice backend"
+                )
+            pending_items = [
+                item
+                for item in benchmark
+                if (item.id, "baseline") not in existing
+                or (item.id, "steered") not in existing
+            ]
+            prepared = backend.prepare_choice_items(pending_items)  # type: ignore[attr-defined]
+            condition_inputs = [
+                (
+                    {"condition": "baseline", "alpha": 0.0, "layer": intervention.layer},
+                    None,
+                ),
+                (
+                    {
+                        "condition": "steered",
+                        "alpha": intervention.alpha,
+                        "layer": intervention.layer,
+                    },
+                    vector,
+                ),
+            ]
+            item_by_id = {item.id: item for item in pending_items}
+            optimized_rows = backend.predict_choice_batch(  # type: ignore[attr-defined]
+                prepared, condition_inputs
+            )
+            completed_items: set[str] = set()
+            for prepared_item, spec, output in optimized_rows:
+                item = item_by_id[prepared_item.item_id]
+                prediction = _prediction(item, spec["condition"], output, benchmark.parser)
+                key = (prediction.item_id, prediction.condition)
+                if key not in existing:
+                    session.append_prediction(prediction)
+                    existing[key] = prediction
+                completed_items.add(prediction.item_id)
+                if (
+                    spec["condition"] == "steered"
+                    and (prediction.item_id, "baseline") in existing
+                    and stop_after_items is not None
+                    and len(completed_items) >= stop_after_items
+                ):
+                    session.set_status("INTERRUPTED")
+                    raise RunInterrupted(session.run_dir)
+        else:
+            for item_index, item in enumerate(benchmark, start=1):
+                baseline_key = (item.id, "baseline")
+                if baseline_key not in existing:
+                    baseline_output = backend.predict(item)
+                    prediction = _prediction(item, "baseline", baseline_output, benchmark.parser)
+                    session.append_prediction(prediction)
+                    existing[baseline_key] = prediction
+                steered_key = (item.id, "steered")
+                if steered_key not in existing:
+                    with backend.steer(intervention):
+                        steered_output = backend.predict(item)
+                    prediction = _prediction(item, "steered", steered_output, benchmark.parser)
+                    session.append_prediction(prediction)
+                    existing[steered_key] = prediction
+                if stop_after_items is not None and item_index >= stop_after_items:
+                    session.set_status("INTERRUPTED")
+                    raise RunInterrupted(session.run_dir)
     except RunInterrupted:
         raise
     except Exception:

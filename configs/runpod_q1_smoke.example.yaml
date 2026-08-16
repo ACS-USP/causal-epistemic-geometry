@@ -19,6 +19,16 @@ backend:
   max_new_tokens: 4
   do_sample: false
   batch_size: 1
+  inference_mode: choice_loglikelihood
+  execution_mode: cached_decode
+  candidate_head_mode: full_vocab_reference
+  item_batch_size: 1
+  condition_chunk_size: 1
+  max_prefill_tokens: 8192
+  padding_side: left
+  attention_implementation: auto
+  torch_compile: false
+  cuda_graphs: false
 
 benchmark:
   type: jsonl

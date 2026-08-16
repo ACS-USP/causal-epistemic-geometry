@@ -284,6 +284,15 @@ def preflight(
             f"Decoding: do_sample={loaded.backend.do_sample}, "
             f"max_new_tokens={loaded.backend.max_new_tokens}"
         )
+        typer.echo(f"Inference engine: {loaded.backend.execution_mode}")
+        typer.echo(f"Candidate head: {loaded.backend.candidate_head_mode}")
+        typer.echo(
+            "Planner: "
+            f"item_batch_size={loaded.backend.item_batch_size}, "
+            f"condition_chunk_size={loaded.backend.condition_chunk_size}, "
+            f"max_prefill_tokens={loaded.backend.max_prefill_tokens}, "
+            f"padding={loaded.backend.padding_side}"
+        )
         if isinstance(benchmark_count, int):
             calls = benchmark_count * 2
             extraction_calls = (
@@ -293,6 +302,16 @@ def preflight(
                 f"Estimated generation calls: {calls}; "
                 f"activation extractions: {extraction_calls}"
             )
+            if loaded.backend.execution_mode == "serial_reference":
+                typer.echo(
+                    "Estimated choice forwards: benchmark_items x conditions x candidate_labels "
+                    "(serial reference)"
+                )
+            else:
+                typer.echo(
+                    "Estimated optimized calls: prepared/prefill batches + condition decode "
+                    "chunks; exact padding plan is computed after tokenization"
+                )
         typer.echo(f"Expected artifact root: {output_root}")
         typer.echo("Resume compatibility: config/vector/model identity is checked by hash")
         if blockers:
@@ -407,12 +426,13 @@ def preflight_q1_v1_1(config: Path = typer.Argument(..., help="Frozen V1.1 YAML 
 def q1_v1_1(
     config: Path = typer.Argument(..., help="Frozen Q1 V1.1 YAML config."),
     split_manifest: Path = typer.Argument(..., help="Frozen V1 split manifest."),
+    resume: Path | None = typer.Option(None, "--resume", help="Resume an interrupted V1.1 run."),
 ) -> None:
     """Run the controlled V1.1 follow-up; the holdout is forbidden."""
 
     try:
         loaded = load_config(config)
-        path = run_q1_v1_1(loaded, split_manifest)
+        path = run_q1_v1_1(loaded, split_manifest, resume_dir=resume)
     except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
         typer.echo(f"Q1 V1.1 failed: {exc}", err=True)
         raise typer.Exit(code=1) from exc

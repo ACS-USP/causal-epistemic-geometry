@@ -21,6 +21,16 @@ backend:
   temperature: 1.0
   batch_size: 1
   quantization: none
+  inference_mode: choice_loglikelihood
+  execution_mode: cached_decode
+  candidate_head_mode: full_vocab_reference  # Switch only after equivalence approval.
+  item_batch_size: 1  # Tune on the target GPU; do not assume this value is optimal.
+  condition_chunk_size: 1
+  max_prefill_tokens: 8192
+  padding_side: left
+  attention_implementation: auto
+  torch_compile: false
+  cuda_graphs: false
 
 benchmark:
   type: jsonl

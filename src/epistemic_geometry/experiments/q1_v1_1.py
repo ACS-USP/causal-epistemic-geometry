@@ -415,6 +415,15 @@ def _row_payload(
             "token_scope": "last_token",
             "prompt_mode": config.backend.prompt_mode,
             "inference_mode": config.backend.inference_mode,
+            "execution_engine": config.backend.execution_mode,
+            "candidate_head_mode": config.backend.candidate_head_mode,
+            "attention_implementation": config.backend.attention_implementation,
+            "torch_compile": config.backend.torch_compile,
+            "cuda_graphs": config.backend.cuda_graphs,
+            "item_batch_size": config.backend.item_batch_size,
+            "condition_chunk_size": config.backend.condition_chunk_size,
+            "max_prefill_tokens": config.backend.max_prefill_tokens,
+            "padding_side": config.backend.padding_side,
         },
     }
 
@@ -738,6 +747,15 @@ def estimate_v1_v1(config: RunConfig) -> dict[str, Any]:
     observed_v1_minutes = float(options.get("observed_v1_scoring_minutes", 80.85))
     estimated_minutes = observed_v1_minutes * condition_count / 15.0 * 1.10
     hourly_rate = float(options.get("a40_hourly_usd_assumption", 0.40))
+    item_batch_size = max(1, int(config.backend.item_batch_size))
+    condition_chunk_size = max(1, int(config.backend.condition_chunk_size))
+    ordering_count = 1 + len(options.get("permutation_ids", PERMUTATION_IDS))
+    optimized_prefill_batches = math.ceil(n_items / item_batch_size) * ordering_count
+    optimized_decode_batches = math.ceil(n_items / item_batch_size) * (
+        math.ceil(original_conditions / condition_chunk_size)
+        + len(options.get("permutation_ids", PERMUTATION_IDS))
+        * math.ceil(3 / condition_chunk_size)
+    )
     return {
         "items": n_items,
         "original_order_conditions": original_conditions,
@@ -753,6 +771,14 @@ def estimate_v1_v1(config: RunConfig) -> dict[str, Any]:
         "estimated_a40_cost_usd": estimated_minutes / 60.0 * hourly_rate,
         "cost_gate_usd": 2.0,
         "cost_gate_pass": estimated_minutes / 60.0 * hourly_rate <= 2.0,
+        "execution_engine_requested": config.backend.execution_mode,
+        "optimized_plan": {
+            "ordering_count": ordering_count,
+            "prefill_batches_upper_bound": optimized_prefill_batches,
+            "decode_batches_upper_bound": optimized_decode_batches,
+            "candidate_forward_passes_avoided_by_single_token_fast_path": candidate_forwards,
+            "note": "Engineering estimate only; target-GPU benchmark remains required.",
+        },
     }
 
 
@@ -875,7 +901,86 @@ def _display(value: Any) -> str:
     return f"{float(value):.4f}"
 
 
-def run_q1_v1_1(config: RunConfig, split_manifest: str | Path) -> Path:
+def _recover_q1_prediction_journal(path: Path) -> None:
+    """Quarantine an interrupted final JSONL record without losing prior rows."""
+
+    if not path.exists() or not path.stat().st_size:
+        return
+    raw = path.read_bytes()
+    lines = raw.splitlines(keepends=True)
+    if lines[-1].endswith((b"\n", b"\r")):
+        return
+    try:
+        json.loads(lines[-1].decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        quarantine = path.with_suffix(".quarantine.jsonl")
+        suffix = 1
+        while quarantine.exists():
+            quarantine = path.with_suffix(f".quarantine.{suffix}.jsonl")
+            suffix += 1
+        quarantine.write_bytes(lines[-1])
+        _atomic_write(path, b"".join(lines[:-1]).decode("utf-8"))
+    else:
+        _atomic_write(path, raw.decode("utf-8") + "\n")
+
+
+def _load_q1_prediction_journal(
+    path: Path,
+) -> tuple[dict[tuple[str, str], Prediction], list[dict[str, Any]]]:
+    _recover_q1_prediction_journal(path)
+    if not path.exists():
+        path.touch()
+    predictions: dict[tuple[str, str], Prediction] = {}
+    records: list[dict[str, Any]] = []
+    for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"Invalid V1.1 prediction journal row at line {line_number}") from exc
+        key = (str(row["item_id"]), str(row["condition"]))
+        if key in predictions:
+            raise ValueError(f"Duplicate V1.1 prediction key: {key}")
+        predictions[key] = Prediction(
+            item_id=key[0],
+            condition=key[1],
+            raw_output=str(row["raw_output"]),
+            normalized_output=str(row["normalized_output"]),
+            target=str(row["target"]),
+            correct=bool(row["correct"]),
+            parse_status=str(row.get("parse_status", "OK")),
+            metadata=dict(row.get("metadata", {})),
+        )
+        records.append(row)
+    return predictions, records
+
+
+def _append_q1_prediction(path: Path, row: dict[str, Any]) -> None:
+    """Append one complete row and fsync it before the next condition proceeds."""
+
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(_json_safe(row), sort_keys=True) + "\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+def _assert_q1_resume_compatible(existing: Prediction, current: Prediction) -> None:
+    """Reject conflicting recomputation rather than silently keeping one row."""
+
+    fields = ("raw_output", "normalized_output", "target", "correct", "parse_status")
+    if any(getattr(existing, field) != getattr(current, field) for field in fields):
+        raise ValueError(
+            f"Conflicting recomputed V1.1 prediction for {existing.item_id}/{existing.condition}"
+        )
+    for name in ("rendered_prompt_hash", "candidate_score_semantics"):
+        if existing.metadata.get(name) != current.metadata.get(name):
+            raise ValueError(
+                f"Conflicting V1.1 provenance for {existing.item_id}/{existing.condition}: {name}"
+            )
+
+
+def run_q1_v1_1(
+    config: RunConfig, split_manifest: str | Path, resume_dir: str | Path | None = None
+) -> Path:
     """Run the frozen V1.1 follow-up on DEV_EVALUATION only."""
 
     if config.experiment.stage != "development":
@@ -893,52 +998,76 @@ def run_q1_v1_1(config: RunConfig, split_manifest: str | Path) -> Path:
             "V1.1 projected A40 cost "
             f"${estimate['estimated_a40_cost_usd']:.2f} exceeds $2.00 stop rule"
         )
-    run_dir, config_hash = _run_dir(config)
-    _atomic_write(
-        run_dir / "config_resolved.yaml", yaml.safe_dump(config.as_dict(), sort_keys=False)
-    )
-    _write_json(
-        run_dir / "v1_reference.json",
-        {
-            "run_id": reference["path"].name,
-            "path": str(reference["path"]),
-            "manifest": {
-                "git_commit": reference["manifest"].get("git_commit"),
-                "timestamp_utc": reference["manifest"].get("timestamp_utc"),
-                "prediction_sha256": reference["manifest"].get("prediction_sha256"),
-                "metrics_sha256": reference["manifest"].get("metrics_sha256"),
+    if resume_dir is not None:
+        run_dir = Path(resume_dir)
+        if not run_dir.is_dir():
+            raise FileNotFoundError(f"Cannot resume missing V1.1 run directory: {run_dir}")
+        existing_manifest = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))
+        config_hash = stable_digest(
+            canonical_json({"config": config.as_dict(), "protocol": PROTOCOL_ID})
+        )[:10]
+        if existing_manifest.get("config_hash") != config_hash:
+            raise ValueError("V1.1 resume refused: resolved config hash does not match")
+        if existing_manifest.get("status") == "COMPLETE":
+            raise ValueError("V1.1 run is already COMPLETE; choose a new run")
+        manifest_payload = existing_manifest
+        manifest_payload["status"] = "RUNNING"
+    else:
+        run_dir, config_hash = _run_dir(config)
+        _atomic_write(
+            run_dir / "config_resolved.yaml", yaml.safe_dump(config.as_dict(), sort_keys=False)
+        )
+        _write_json(
+            run_dir / "v1_reference.json",
+            {
+                "run_id": reference["path"].name,
+                "path": str(reference["path"]),
+                "manifest": {
+                    "git_commit": reference["manifest"].get("git_commit"),
+                    "timestamp_utc": reference["manifest"].get("timestamp_utc"),
+                    "prediction_sha256": reference["manifest"].get("prediction_sha256"),
+                    "metrics_sha256": reference["manifest"].get("metrics_sha256"),
+                },
+                "model_revision": V1_MODEL_REVISION,
+                "dataset_revision": V1_DATASET_REVISION,
+                "split_manifest_sha256": V1_SPLIT_HASH,
+                "vector_hashes": ORIGINAL_VECTOR_HASHES,
+                "alpha_pc1_plus": reference["alpha_pc1_plus"],
+                "alpha_pc1_minus": reference["alpha_pc1_minus"],
             },
-            "model_revision": V1_MODEL_REVISION,
+        )
+        manifest_payload = {
+            "artifact_schema_version": 1,
+            "experiment_type": "q1_v1_1_controlled_followup",
+            "protocol": PROTOCOL_ID,
+            "status": "RUNNING",
+            "config_hash": config_hash,
+            "timestamp_utc": dt.datetime.now(dt.UTC).isoformat(),
+            "experiment_seed": config.experiment.seed,
+            "benchmark": "TIGER-Lab/MMLU-Pro",
             "dataset_revision": V1_DATASET_REVISION,
+            "split_manifest": str(manifest_path),
             "split_manifest_sha256": V1_SPLIT_HASH,
-            "vector_hashes": ORIGINAL_VECTOR_HASHES,
-            "alpha_pc1_plus": reference["alpha_pc1_plus"],
-            "alpha_pc1_minus": reference["alpha_pc1_minus"],
-        },
-    )
-    manifest_payload: dict[str, Any] = {
-        "artifact_schema_version": 1,
-        "experiment_type": "q1_v1_1_controlled_followup",
-        "protocol": PROTOCOL_ID,
-        "status": "RUNNING",
-        "config_hash": config_hash,
-        "timestamp_utc": dt.datetime.now(dt.UTC).isoformat(),
-        "experiment_seed": config.experiment.seed,
-        "benchmark": "TIGER-Lab/MMLU-Pro",
-        "dataset_revision": V1_DATASET_REVISION,
-        "split_manifest": str(manifest_path),
-        "split_manifest_sha256": V1_SPLIT_HASH,
-        "split": "DEV_EVALUATION",
-        "evaluation_item_count": EVALUATION_SIZE,
-        "confirmatory_accessed": "NO",
-        "holdout_access": "forbidden",
-        "v1_reference_run_id": reference["path"].name,
-        "v1_reference_path": str(reference["path"]),
-        "v1_vector_hashes": ORIGINAL_VECTOR_HASHES,
-        "workload_estimate": estimate,
-        **git_metadata(Path(__file__).resolve().parents[3]),
-        **runtime_metadata(),
-    }
+            "split": "DEV_EVALUATION",
+            "evaluation_item_count": EVALUATION_SIZE,
+            "confirmatory_accessed": "NO",
+            "holdout_access": "forbidden",
+            "v1_reference_run_id": reference["path"].name,
+            "v1_reference_path": str(reference["path"]),
+            "v1_vector_hashes": ORIGINAL_VECTOR_HASHES,
+            "inference_engine": config.backend.execution_mode,
+            "candidate_head_mode": config.backend.candidate_head_mode,
+            "attention_implementation_requested": config.backend.attention_implementation,
+            "torch_compile": config.backend.torch_compile,
+            "cuda_graphs": config.backend.cuda_graphs,
+            "item_batch_size": config.backend.item_batch_size,
+            "condition_chunk_size": config.backend.condition_chunk_size,
+            "max_prefill_tokens": config.backend.max_prefill_tokens,
+            "padding_side": config.backend.padding_side,
+            "workload_estimate": estimate,
+            **git_metadata(Path(__file__).resolve().parents[3]),
+            **runtime_metadata(),
+        }
     _write_manifest(run_dir, manifest_payload)
     try:
         backend = build_backend(config)
@@ -947,18 +1076,66 @@ def run_q1_v1_1(config: RunConfig, split_manifest: str | Path) -> Path:
         manifest_payload["benchmark_provenance"] = benchmark.provenance()
         _write_manifest(run_dir, manifest_payload)
         original_specs, vectors = _frozen_conditions(reference)
+        prediction_journal = run_dir / "predictions.jsonl"
+        existing_predictions, records = _load_q1_prediction_journal(prediction_journal)
         predictions_by_condition: dict[str, list[Prediction]] = {}
-        records: list[dict[str, Any]] = []
+        for existing_prediction in existing_predictions.values():
+            predictions_by_condition.setdefault(existing_prediction.condition, []).append(
+                existing_prediction
+            )
+
+        def record_prediction(
+            prediction: Prediction, spec: dict[str, Any]
+        ) -> None:
+            key = (prediction.item_id, prediction.condition)
+            row = _row_payload(prediction, spec, config, model_provenance)
+            if key in existing_predictions:
+                _assert_q1_resume_compatible(existing_predictions[key], prediction)
+                return
+            _append_q1_prediction(prediction_journal, row)
+            existing_predictions[key] = prediction
+            records.append(row)
+            predictions_by_condition.setdefault(spec["condition"], []).append(prediction)
 
         def evaluate_specs(items: list[BenchmarkItem], specs: list[dict[str, Any]]) -> None:
-            for item in items:
-                for spec in specs:
-                    vector = (
-                        vectors.get(str(spec["direction_id"])) if spec["direction_id"] else None
-                    )
-                    prediction = _run_one(backend, item, spec, benchmark.parser, vector)
-                    predictions_by_condition.setdefault(spec["condition"], []).append(prediction)
-                    records.append(_row_payload(prediction, spec, config, model_provenance))
+            if config.backend.execution_mode == "serial_reference":
+                for item in items:
+                    for spec in specs:
+                        vector = (
+                            vectors.get(str(spec["direction_id"]))
+                            if spec["direction_id"]
+                            else None
+                        )
+                        prediction = _run_one(backend, item, spec, benchmark.parser, vector)
+                        record_prediction(prediction, spec)
+                return
+            if not hasattr(backend, "prepare_choice_items") or not hasattr(
+                backend, "predict_choice_batch"
+            ):
+                raise TypeError(
+                    "An optimized V1.1 execution engine requires a HuggingFace-style "
+                    "prepared choice batch backend"
+                )
+            prepared = backend.prepare_choice_items(items)  # type: ignore[attr-defined]
+            condition_inputs = [
+                (
+                    spec,
+                    vectors.get(str(spec["direction_id"]))
+                    if spec["direction_id"]
+                    else None,
+                )
+                for spec in specs
+            ]
+            item_by_id = {item.id: item for item in items}
+            batch_outputs = backend.predict_choice_batch(  # type: ignore[attr-defined]
+                prepared, condition_inputs
+            )
+            for prepared_item, spec, output in batch_outputs:
+                item = item_by_id[prepared_item.item_id]
+                prediction = _semantic_prediction(
+                    _prediction(item, spec["condition"], output, benchmark.parser), item
+                )
+                record_prediction(prediction, spec)
 
         numerical_specs = original_specs[:3]
         evaluate_specs(benchmark.items(), numerical_specs)
@@ -1006,9 +1183,12 @@ def run_q1_v1_1(config: RunConfig, split_manifest: str | Path) -> Path:
         if numerical_audit["max_prediction_difference_rate"] > 0.01:
             numerical_audit["status"] = "STOP"
             _write_json(run_dir / "numerical_audit.json", numerical_audit)
-            with (run_dir / "predictions.jsonl").open("w", encoding="utf-8") as handle:
-                for record in records:
-                    handle.write(json.dumps(_json_safe(record), sort_keys=True) + "\n")
+            _atomic_write(
+                run_dir / "predictions.jsonl",
+                "".join(
+                    json.dumps(_json_safe(record), sort_keys=True) + "\n" for record in records
+                ),
+            )
             manifest_payload.update(
                 {"status": "STOPPED_NUMERICAL", "numerical_audit": numerical_audit}
             )
@@ -1114,9 +1294,12 @@ def run_q1_v1_1(config: RunConfig, split_manifest: str | Path) -> Path:
             "category_analysis_pc1_plus": category_analysis,
         }
         _write_json(run_dir / "metrics.json", metric_payload)
-        with (run_dir / "predictions.jsonl").open("w", encoding="utf-8") as handle:
-            for record in records:
-                handle.write(json.dumps(_json_safe(record), sort_keys=True) + "\n")
+        _atomic_write(
+            run_dir / "predictions.jsonl",
+            "".join(
+                json.dumps(_json_safe(record), sort_keys=True) + "\n" for record in records
+            ),
+        )
         _save_figures(
             run_dir,
             metrics,

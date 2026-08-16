@@ -89,8 +89,20 @@ def difference_of_means(
 
     if not positive_items or not negative_items:
         raise ValueError("Both positive_items and negative_items are required")
-    positive = np.stack([np.asarray(backend.extract_activation(item)) for item in positive_items])
-    negative = np.stack([np.asarray(backend.extract_activation(item)) for item in negative_items])
+    all_items = [*positive_items, *negative_items]
+    batch_extractor = getattr(backend, "extract_activations_batch", None)
+    if callable(batch_extractor):
+        extracted_by_layer = batch_extractor(all_items, layers=[layer])
+        extracted = np.asarray(extracted_by_layer[layer])
+        positive = extracted[: len(positive_items)]
+        negative = extracted[len(positive_items) :]
+    else:
+        positive = np.stack(
+            [np.asarray(backend.extract_activation(item)) for item in positive_items]
+        )
+        negative = np.stack(
+            [np.asarray(backend.extract_activation(item)) for item in negative_items]
+        )
     if positive.shape[1] != backend.hidden_size or negative.shape[1] != backend.hidden_size:
         raise ValueError("Extracted activations do not match backend hidden size")
     values, normalization = _normalize(positive.mean(axis=0) - negative.mean(axis=0), normalize)

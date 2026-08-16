@@ -16,6 +16,16 @@ backend:
   max_new_tokens: 1
   do_sample: false
   batch_size: 1
+  inference_mode: choice_loglikelihood
+  execution_mode: cached_decode
+  candidate_head_mode: full_vocab_reference
+  item_batch_size: 2
+  condition_chunk_size: 2
+  max_prefill_tokens: 256
+  padding_side: left
+  attention_implementation: eager
+  torch_compile: false
+  cuda_graphs: false
 
 benchmark:
   type: jsonl
@@ -33,4 +43,3 @@ steering:
 output:
   root: runs
   save_figures: false
-
