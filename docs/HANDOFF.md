@@ -37,7 +37,8 @@ Q1 software infrastructure: READY.
 Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER, INCLUDING
 LIVE CUDA ON NVIDIA A40.
 
-Q1 real 8B model: ONE FIXED DEVELOPMENT PILOT COMPLETE; NO CLAIM.
+Q1 real 8B model: ONE FIXED DEVELOPMENT PILOT COMPLETE; V1.1 SERIAL ATTEMPT
+INTERRUPTED BEFORE PREDICTION ROWS; NO CLAIM.
 
 Q1 scientific result: NONE FROZEN; DESCRIPTIVE PILOT ARTIFACT ONLY.
 
@@ -45,11 +46,11 @@ Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
 
-One fixed Qwen3-8B development pilot has now run on the prepared GPU machine.
-The exact provenance and descriptive table are in
-[Q1_V1_RESULTS.md](Q1_V1_RESULTS.md). The pilot does not establish Q1 and the
-confirmatory holdout was not evaluated. The random CUDA run remains software
-validation only.
+One fixed Qwen3-8B development pilot ran before the optimization pivot. The
+exact provenance and descriptive table are in [Q1_V1_RESULTS.md](Q1_V1_RESULTS.md).
+The later serial V1.1 attempt was interrupted before prediction rows were
+persisted and is preserved only as an engineering/provenance record. Neither
+establishes Q1; the confirmatory holdout was not evaluated.
 
 ## Exact local smoke
 

@@ -180,3 +180,34 @@ access `confirmatory_holdout`. The final principal-review bundle is assembled
 on the Mac only after remote validation and a read-only artifact pull.
 Before terminating the Pod, pull artifacts with `scripts/sync_from_runpod.sh`
 and follow `BEFORE_TERMINATING_POD.md`.
+
+## Current optimization pivot
+
+The Pod is intentionally stopped. Do not retry SSH until it is restarted and
+the endpoint is confirmed. The serial V1.1 attempt was safely interrupted and
+preserved as `review/serial_reference_v1_1_partial/`; it had no persisted
+prediction rows and is not a scientific result.
+
+Local engineering now includes serial reference, full-prompt batching, cached
+one-token decode, a shared-prefix multi-token fallback, prepared prompts,
+candidate token audits, candidate-only head provenance, row-wise hooks,
+deterministic length buckets, batched activation capture, append/fsync
+prediction journals, duplicate/conflict protection, tail quarantine, and V1.1
+`--resume` support. Optional compile/CUDA-graph prototypes are disabled, and
+Qwen3 suffix replay is strictly gated.
+
+The exact local checks are:
+
+```bash
+cd ~/dev/causal-epistemic-geometry
+source .venv/bin/activate
+pytest -q
+ruff check .
+python -m compileall -q src
+python scripts/profile_tiny_engines.py
+ceg preflight configs/runpod_q1_killtest.example.yaml
+```
+
+The remaining blocker is real-Qwen/A40 equivalence and performance. At that
+point the local agent must print `RUNPOD_REQUIRED_FOR_EQUIVALENCE` and stop
+remote attempts until the researcher restarts the Pod.

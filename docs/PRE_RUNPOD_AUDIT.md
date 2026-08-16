@@ -163,3 +163,29 @@ were used to choose its controls.
 The V1.1 real run is remote-only and must be reported separately from this
 engineering audit. Its scientific status remains DEVELOPMENT; no V1.2, Q2, or
 confirmatory holdout access is authorized.
+
+## Serial V1.1 interruption and local optimization pivot (2026-08-16)
+
+The first long serial V1.1 worker was stopped deliberately to avoid idle GPU
+cost. The exact worker received SIGINT, did not exit within the grace window,
+and then received SIGTERM. No SSH daemon, shell, or unrelated process was
+terminated. The remote run was marked
+`INTERRUPTED_FOR_INFERENCE_OPTIMIZATION`; it contained zero persisted
+prediction rows because the old runner buffered rows until finalization.
+
+Its metadata-only artifact was pulled to the ignored local directory
+`review/serial_reference_v1_1_partial/` and hashed. It remains a provenance
+record and is not a scientific result or a run to resume as final V1.1.
+
+After the Pod was stopped, no remote commands were attempted. Local engineering
+added the preserved `serial_reference` mode, prepared prompts, single-token
+scoring, candidate-only head semantics, deterministic length planning, batched
+activation extraction, cached decode, multi-token shared-prefix fallback,
+crash-safe V1.1 journals, optional accelerator boundaries, and local
+serial/optimized tiny-transformer tests. The local profile is explicitly
+`TINY_RANDOM_TRANSFORMER_ENGINEERING_ONLY`.
+
+Current local validation: 67 tests pass, Ruff passes, and the tiny profile
+reports forward-call accounting. Real-Qwen candidate audit, Qwen3 suffix
+replay, A40 autotuning, and optimized-vs-Qwen serial equivalence remain
+untested because the Pod is stopped.

@@ -96,11 +96,20 @@ Current readiness:
 
 ```text
 Q1 SOFTWARE: READY
-Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL + LIVE QWEN SMOKE
-Q1 REAL 8B MODEL: DEVELOPMENT PILOT COMPLETE; NO CLAIM
+Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL; QWEN OPTIMIZATION PENDING
+Q1 REAL 8B MODEL: ONE DEVELOPMENT PILOT COMPLETE; V1.1 SERIAL ATTEMPT INTERRUPTED
 Q1 SCIENTIFIC RESULT: NONE FROZEN
 Q2 GEOMETRY: NOT RUN
 ```
+
+The local optimized execution path now includes prepared prompts, single-token
+candidate scoring, deterministic item/condition batching, prefix KV reuse,
+row-wise steering, batched activations, a shared-prefix multi-token fallback,
+and crash-safe resume journals. See
+[Inference optimization](docs/INFERENCE_OPTIMIZATION.md). The tiny profile and
+all tiny-transformer outputs are software validation only. The RunPod is
+currently stopped; Qwen3/A40 equivalence, suffix replay, autotuning, and the
+clean optimized V1.1 rerun have not been performed.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`
