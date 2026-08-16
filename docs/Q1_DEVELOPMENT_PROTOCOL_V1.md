@@ -25,7 +25,7 @@ out of scope.
 - Inference: `model.eval()` and `torch.inference_mode()`.
 - Requested model revision: resolved HuggingFace commit is recorded below
   before the first smoke and reused thereafter.
-- Resolved model revision: `PENDING_RESOLUTION_BEFORE_SMOKE`.
+- Resolved model revision: `b968826d9c46dd6066d109eabc6255188de91218`.
 - Canonical cache: `/workspace/hf-cache`.
 
 The revision field is an operational resolution of the named model, not a
@@ -57,7 +57,8 @@ post-result scientific choice. It must never revert to a floating `main`.
   one-token assumption is made.
 - Final rendered prompt hashes, candidate token IDs/counts, and all scores are
   stored with predictions.
-- Prompt template hash: `PENDING_FINAL_TEMPLATE_HASH`.
+- Prompt template ID: `Q1_V1_MMLU_PRO_DIRECT_CHOICE_V1`; each rendered prompt
+  receives a stable SHA-256 hash in the prediction metadata.
 
 ## Dataset and calibration firewall
 
@@ -65,7 +66,9 @@ post-result scientific choice. It must never revert to a floating `main`.
 - Report label: **MMLU-Pro-derived direct-choice evaluation**.
 - This is not official MMLU-Pro leaderboard evaluation and must not be
   compared directly with the official leaderboard.
-- Dataset revision/hash: `PENDING_RESOLUTION_BEFORE_SMOKE`.
+- Dataset revision/hash: `b189ec765aa7ed75c8acfea42df31fdae71f97be`.
+- Dataset cache fingerprints observed: validation
+  `4b5d7ccad3cc2d72`, test `0072dd0a32d256fc`.
 - Official `validation` split: 70 items, protocol calibration only.
 - First technical smoke: 8 validation items.
 - Baseline calibration gate: all 70 validation items, baseline only.

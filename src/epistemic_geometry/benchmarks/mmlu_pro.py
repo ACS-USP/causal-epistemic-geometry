@@ -12,6 +12,7 @@ from epistemic_geometry.types import BenchmarkItem
 
 MMLU_PRO_ID = "TIGER-Lab/MMLU-Pro"
 LABELS = tuple("ABCDEFGHIJ")
+PROMPT_TEMPLATE_ID = "Q1_V1_MMLU_PRO_DIRECT_CHOICE_V1"
 
 
 def render_mmlu_pro_question(question: str, options: list[str]) -> str:

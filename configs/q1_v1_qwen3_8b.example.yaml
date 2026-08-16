@@ -8,9 +8,9 @@ experiment:
 backend:
   type: huggingface
   model_id: Qwen/Qwen3-8B
-  model_revision: RESOLVE_BEFORE_SMOKE
+  model_revision: b968826d9c46dd6066d109eabc6255188de91218
   tokenizer_id: Qwen/Qwen3-8B
-  tokenizer_revision: RESOLVE_BEFORE_SMOKE
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
   hidden_size: 4096
   device: cuda
   device_map: null
@@ -29,7 +29,7 @@ backend:
 benchmark:
   type: mmlu_pro
   dataset_id: TIGER-Lab/MMLU-Pro
-  dataset_revision: RESOLVE_BEFORE_SMOKE
+  dataset_revision: b189ec765aa7ed75c8acfea42df31fdae71f97be
   split: validation
   max_items: 8
   allowed_targets: [A, B, C, D, E, F, G, H, I, J]
