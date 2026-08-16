@@ -17,7 +17,7 @@ Options:
   --source PATH          Remote path (default: /workspace/.../runs/)
   --destination PATH     Local destination (default: runs/runpod/)
   --allow-existing       Permit merging into an existing destination
-  --dry-run              Show rsync changes without copying
+  --dry-run              Show transfer changes without copying
   -h, --help             Show this help
 EOF
 }
@@ -33,21 +33,9 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-command -v rsync >/dev/null 2>&1 || { echo "rsync is required." >&2; exit 1; }
-if [[ -e "${destination}" && "${allow_existing}" != "1" ]]; then
-  echo "Refusing to merge into existing destination: ${destination}" >&2
-  echo "Review it, then rerun with --allow-existing (or choose another destination)." >&2
-  exit 1
-fi
-temporary_destination=""
-if [[ "${dry_run}" == "1" && ! -e "${destination}" ]]; then
-  temporary_destination="$(mktemp -d "${TMPDIR:-/tmp}/ceg-pull-dry-run.XXXXXX")"
-  trap 'rm -rf "${temporary_destination}"' EXIT
-  rsync_destination="${temporary_destination}/"
-  echo "Dry run uses a temporary destination; no local destination is created."
-else
-  mkdir -p "${destination}"
-  rsync_destination="${destination}"
+if [[ ! "${remote_path}" =~ ^/[A-Za-z0-9_./-]+/?$ ]]; then
+  echo "Unsafe remote source path; use an absolute path without shell metacharacters." >&2
+  exit 2
 fi
 
 # Keep flags compatible with the older rsync shipped on some macOS systems.
@@ -59,6 +47,46 @@ fi
 echo "Pull source: ${SSH_ALIAS}:${remote_path}"
 echo "Pull target: ${destination}"
 echo "Remote files are never deleted; local merge requires --allow-existing."
-rsync "${flags[@]}" \
-  -e 'ssh -o BatchMode=yes -o ConnectTimeout=8' \
-  "${SSH_ALIAS}:${remote_path}" "${rsync_destination}"
+remote_rsync="$(ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
+  'command -v rsync >/dev/null 2>&1 && echo yes || echo no')" || {
+  echo "Unable to inspect remote rsync; SSH authentication or connection failed." >&2
+  exit 1
+}
+
+if [[ "${remote_rsync}" == "yes" ]]; then
+  if [[ -e "${destination}" && "${allow_existing}" != "1" ]]; then
+    echo "Refusing to merge into existing destination: ${destination}" >&2
+    echo "Review it, then rerun with --allow-existing (or choose another destination)." >&2
+    exit 1
+  fi
+  temporary_destination=""
+  if [[ "${dry_run}" == "1" && ! -e "${destination}" ]]; then
+    temporary_destination="$(mktemp -d "${TMPDIR:-/tmp}/ceg-pull-dry-run.XXXXXX")"
+    trap 'rm -rf "${temporary_destination}"' EXIT
+    rsync_destination="${temporary_destination}/"
+    echo "Dry run uses a temporary destination; no local destination is created."
+  else
+    mkdir -p "${destination}"
+    rsync_destination="${destination}"
+  fi
+  rsync "${flags[@]}" \
+    -e 'ssh -o BatchMode=yes -o ConnectTimeout=8' \
+    "${SSH_ALIAS}:${remote_path}" "${rsync_destination}"
+  exit 0
+fi
+
+echo "Remote rsync is unavailable; using tar-over-SSH fallback."
+if [[ -e "${destination}" && "${allow_existing}" != "1" ]]; then
+  echo "Refusing to merge into existing destination: ${destination}" >&2
+  echo "Review it, then rerun with --allow-existing (or choose another destination)." >&2
+  exit 1
+fi
+if [[ "${dry_run}" == "1" ]]; then
+  ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
+    "tar -cf - -C '${remote_path}' ." | tar -tf -
+  exit 0
+fi
+
+mkdir -p "${destination}"
+ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
+  "tar -cf - -C '${remote_path}' ." | tar -xpf - -C "${destination}"

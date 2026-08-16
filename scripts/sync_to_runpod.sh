@@ -63,9 +63,63 @@ excludes=(
   --exclude '*.token'
 )
 
+tar_excludes=(
+  --exclude=./.venv
+  --exclude=./venv
+  --exclude=./__pycache__
+  --exclude=./.pytest_cache
+  --exclude=./.ruff_cache
+  --exclude=./runs
+  --exclude=./models
+  --exclude=./checkpoints
+  --exclude=./hf-cache
+  --exclude=./huggingface
+  --exclude=./.cache
+  --exclude=./.env
+  --exclude=./.env.*
+  --exclude='*.safetensors'
+  --exclude='*.bin'
+  --exclude='*.pt'
+  --exclude='*.pth'
+  --exclude='*.ckpt'
+  --exclude='*.token'
+)
+
+if [[ ! "${REMOTE_ROOT}" =~ ^/[A-Za-z0-9_./-]+$ ]]; then
+  echo "Unsafe RUNPOD_REMOTE_ROOT; use an absolute path without shell metacharacters." >&2
+  exit 2
+fi
+
 echo "Sync source: ${REPO_ROOT}/"
 echo "Sync target: ${SSH_ALIAS}:${REMOTE_ROOT}/"
 echo "Excluded: virtualenvs, caches, runs, model material, and secrets"
-rsync "${flags[@]}" "${excludes[@]}" \
-  -e 'ssh -o BatchMode=yes -o ConnectTimeout=8' \
-  "${REPO_ROOT}/" "${SSH_ALIAS}:${REMOTE_ROOT}/"
+remote_rsync="$(ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
+  'command -v rsync >/dev/null 2>&1 && echo yes || echo no')" || {
+  echo "Unable to inspect remote rsync; SSH authentication or connection failed." >&2
+  exit 1
+}
+
+if [[ "${remote_rsync}" == "yes" ]]; then
+  rsync "${flags[@]}" "${excludes[@]}" \
+    -e 'ssh -o BatchMode=yes -o ConnectTimeout=8' \
+    "${REPO_ROOT}/" "${SSH_ALIAS}:${REMOTE_ROOT}/"
+  exit 0
+fi
+
+if [[ "${delete_remote}" == "1" ]]; then
+  echo "Cannot use --delete when remote rsync is unavailable; install rsync or review a different workflow." >&2
+  exit 1
+fi
+
+echo "Remote rsync is unavailable; using additive tar-over-SSH fallback."
+if [[ "${dry_run}" == "1" ]]; then
+  archive="$(mktemp "${TMPDIR:-/tmp}/ceg-sync-dry-run.XXXXXX")"
+  trap 'rm -f "${archive}"' EXIT
+  tar -C "${REPO_ROOT}" -cf "${archive}" "${tar_excludes[@]}" .
+  tar -tf "${archive}"
+  exit 0
+fi
+
+tar -C "${REPO_ROOT}" -cf - "${tar_excludes[@]}" . | \
+  ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
+  "mkdir -p -- '${REMOTE_ROOT}' && tar -xpf - -C '${REMOTE_ROOT}'"
