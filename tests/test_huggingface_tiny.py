@@ -184,6 +184,15 @@ def test_choice_loglikelihood_scores_complete_candidates_and_targets_prompt_toke
     assert set(steered.metadata["candidate_scores"]) == {"A", "LONG"}
 
 
+def test_choice_log_softmax_promotes_logits_to_fp32_without_grad(tiny_backend) -> None:
+    logits = torch.tensor([[1.0, 2.0, -3.0]], dtype=torch.bfloat16)
+    with torch.inference_mode():
+        log_probs = tiny_backend._choice_log_softmax(logits)
+    assert log_probs.dtype == torch.float32
+    assert log_probs.requires_grad is False
+    assert all(parameter.dtype == torch.float32 for parameter in tiny_backend.model.parameters())
+
+
 def test_last_non_padding_activation_policy(tiny_backend) -> None:
     base_tokenizer = tiny_backend.tokenizer
 

@@ -24,6 +24,12 @@ from epistemic_geometry.experiments.q1_v1 import (
     run_q1_v1,
     validate_q1_v1_run,
 )
+from epistemic_geometry.experiments.q1_v1_1 import (
+    audit_q1_v1_1_repeat,
+    estimate_v1_v1,
+    run_q1_v1_1,
+    validate_q1_v1_1_run,
+)
 from epistemic_geometry.io.artifacts import validate_run_directory
 from epistemic_geometry.reproducibility import git_metadata, runtime_metadata
 from epistemic_geometry.steering import load_vector, save_vector
@@ -309,6 +315,11 @@ def validate_run(run_dir: Path = typer.Argument(..., help="Completed run directo
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         if manifest.get("experiment_type") == "q1_v1_fixed_15_condition_pilot":
             report = validate_q1_v1_run(run_dir)
+        elif manifest.get("experiment_type") == "q1_v1_1_controlled_followup":
+            split_manifest = Path("data/splits/mmlu_pro_q1_v1.json")
+            if not split_manifest.exists():
+                split_manifest = Path(manifest["split_manifest"])
+            report = validate_q1_v1_1_run(run_dir, split_manifest)
         else:
             report = validate_run_directory(run_dir)
     except (FileNotFoundError, ValueError, KeyError, json.JSONDecodeError) as exc:
@@ -371,6 +382,57 @@ def audit_q1_v1_repeat_command(
         result = audit_q1_v1_repeat(loaded, split_manifest, run_dir, repeat_items)
     except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
         typer.echo(f"Q1 repeat audit failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(json.dumps(result, indent=2, sort_keys=True))
+
+
+@app.command("preflight-q1-v1-1")
+def preflight_q1_v1_1(config: Path = typer.Argument(..., help="Frozen V1.1 YAML config.")) -> None:
+    """Estimate V1.1 workload and cost without model/data inference."""
+
+    try:
+        loaded = load_config(config)
+        estimate = estimate_v1_v1(loaded)
+    except (ConfigError, ValueError, FileNotFoundError) as exc:
+        typer.echo(f"V1.1 preflight failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(json.dumps(estimate, indent=2, sort_keys=True))
+    if not estimate["cost_gate_pass"]:
+        typer.echo("V1.1 PREFLIGHT: STOP — projected cost exceeds $2.00", err=True)
+        raise typer.Exit(code=1)
+    typer.echo("V1.1 PREFLIGHT: COST GATE PASS (no inference or downloads performed)")
+
+
+@app.command("q1-v1-1")
+def q1_v1_1(
+    config: Path = typer.Argument(..., help="Frozen Q1 V1.1 YAML config."),
+    split_manifest: Path = typer.Argument(..., help="Frozen V1 split manifest."),
+) -> None:
+    """Run the controlled V1.1 follow-up; the holdout is forbidden."""
+
+    try:
+        loaded = load_config(config)
+        path = run_q1_v1_1(loaded, split_manifest)
+    except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
+        typer.echo(f"Q1 V1.1 failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Q1 V1.1 complete: {path}")
+
+
+@app.command("audit-q1-v1-1-repeat")
+def audit_q1_v1_1_repeat_command(
+    config: Path = typer.Argument(..., help="Frozen Q1 V1.1 YAML config."),
+    split_manifest: Path = typer.Argument(..., help="Frozen V1 split manifest."),
+    run_dir: Path = typer.Argument(..., help="Completed Q1 V1.1 run directory."),
+    repeat_items: int = typer.Option(16, "--items", min=1, max=512),
+) -> None:
+    """Repeat the fixed V1.1 reproducibility subset."""
+
+    try:
+        loaded = load_config(config)
+        result = audit_q1_v1_1_repeat(loaded, split_manifest, run_dir, repeat_items)
+    except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
+        typer.echo(f"Q1 V1.1 repeat audit failed: {exc}", err=True)
         raise typer.Exit(code=1) from exc
     typer.echo(json.dumps(result, indent=2, sort_keys=True))
 

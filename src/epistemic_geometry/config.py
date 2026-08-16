@@ -156,6 +156,7 @@ class RunConfig:
     benchmark: BenchmarkConfig
     steering: SteeringConfig
     output: OutputConfig
+    q1_v1_1: dict[str, Any] = field(default_factory=dict)
     source_path: str | None = None
 
     def __post_init__(self) -> None:
@@ -197,11 +198,13 @@ def load_config(path: str | Path) -> RunConfig:
     benchmark = BenchmarkConfig(**_section(raw, "benchmark"))
     steering = SteeringConfig(**_section(raw, "steering"))
     output = OutputConfig(**_section(raw, "output"))
+    q1_v1_1 = _section(raw, "q1_v1_1")
     return RunConfig(
         experiment=experiment,
         backend=backend,
         benchmark=benchmark,
         steering=steering,
         output=output,
+        q1_v1_1=q1_v1_1,
         source_path=str(config_path.resolve()),
     )

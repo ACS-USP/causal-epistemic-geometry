@@ -300,7 +300,7 @@ class HuggingFaceBackend(ModelBackend):
                         0, candidate_start : candidate_start + len(candidate_ids), :
                     ]
                     candidate_targets = full_ids[0, len(prompt_ids) :]
-                    log_probs = self.torch.log_softmax(candidate_logits, dim=-1)
+                    log_probs = self._choice_log_softmax(candidate_logits)
                     selected = log_probs.gather(1, candidate_targets.unsqueeze(1)).squeeze(1)
                     if not self.torch.isfinite(selected).all():
                         raise RuntimeError(f"Non-finite candidate score for {item.id}/{label}")
@@ -326,6 +326,16 @@ class HuggingFaceBackend(ModelBackend):
                 },
             },
         )
+
+    def _choice_log_softmax(self, candidate_logits: Any) -> Any:
+        """Compute candidate probabilities in FP32 without changing model weights.
+
+        Q1 V1 used the model output dtype directly. V1.1 freezes the numerical
+        audit by promoting only this probability calculation, leaving the
+        BF16 model, activations, and candidate-likelihood semantics unchanged.
+        """
+
+        return self.torch.log_softmax(candidate_logits.float(), dim=-1)
 
     def extract_activation(self, item: BenchmarkItem) -> np.ndarray:
         """Extract the last non-padding token at the configured layer."""
