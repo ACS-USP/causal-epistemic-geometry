@@ -50,6 +50,15 @@ class BackendConfig:
     inference_mode: str = "generation"
     enable_thinking: bool | None = None
     candidate_labels: list[str] = field(default_factory=lambda: ["A", "B", "C", "D"])
+    execution_mode: str = "serial_reference"
+    candidate_head_mode: str = "full_vocab_reference"
+    item_batch_size: int = 1
+    condition_chunk_size: int = 1
+    max_prefill_tokens: int = 8192
+    padding_side: str = "left"
+    attention_implementation: str = "auto"
+    torch_compile: bool = False
+    cuda_graphs: bool = False
 
     def __post_init__(self) -> None:
         if self.type not in {"mock", "huggingface", "tiny_transformer"}:
@@ -76,6 +85,30 @@ class BackendConfig:
             self.candidate_labels
         ):
             raise ConfigError("backend.candidate_labels must be a non-empty unique list")
+        if self.execution_mode not in {
+            "serial_reference",
+            "full_prompt_batched",
+            "cached_decode",
+            "cached_suffix_replay",
+        }:
+            raise ConfigError(
+                "backend.execution_mode must be serial_reference, full_prompt_batched, "
+                "cached_decode, or cached_suffix_replay"
+            )
+        if self.candidate_head_mode not in {"full_vocab_reference", "candidate_only"}:
+            raise ConfigError(
+                "backend.candidate_head_mode must be full_vocab_reference or candidate_only"
+            )
+        if self.item_batch_size <= 0 or self.condition_chunk_size <= 0:
+            raise ConfigError("backend batch sizes must be positive")
+        if self.max_prefill_tokens <= 0:
+            raise ConfigError("backend.max_prefill_tokens must be positive")
+        if self.padding_side not in {"left", "right"}:
+            raise ConfigError("backend.padding_side must be left or right")
+        if self.attention_implementation not in {"auto", "eager", "sdpa", "flash_attention_2"}:
+            raise ConfigError(
+                "backend.attention_implementation must be auto, eager, sdpa, or flash_attention_2"
+            )
 
 
 @dataclass(frozen=True)

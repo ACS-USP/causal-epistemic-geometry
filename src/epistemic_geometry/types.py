@@ -49,6 +49,31 @@ class Prediction:
 
 
 @dataclass(frozen=True)
+class PreparedChoiceItem:
+    """Immutable tokenized choice item shared by all execution conditions."""
+
+    item_id: str
+    target: str
+    metadata: dict[str, Any]
+    rendered_prompt: str
+    rendered_prompt_hash: str
+    prompt_ids: tuple[int, ...]
+    candidate_labels: tuple[str, ...]
+    candidate_token_ids: dict[str, tuple[int, ...]]
+    context_compatible_candidate_ids: dict[str, tuple[int, ...]]
+    semantic_option_ids: tuple[int, ...]
+    permutation_id: str | None = None
+
+    @property
+    def prompt_length(self) -> int:
+        return len(self.prompt_ids)
+
+    @property
+    def all_candidates_single_token(self) -> bool:
+        return all(len(ids) == 1 for ids in self.candidate_token_ids.values())
+
+
+@dataclass(frozen=True)
 class SteeringVector:
     """A reproducible intervention vector and its scientific provenance."""
 

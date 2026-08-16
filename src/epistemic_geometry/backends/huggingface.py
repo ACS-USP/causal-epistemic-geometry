@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import copy
+import inspect
 from collections.abc import Iterator
 from contextlib import contextmanager
 from typing import Any
@@ -15,8 +17,15 @@ from epistemic_geometry.backends.base import (
 )
 from epistemic_geometry.benchmarks.prompts import render_prompt
 from epistemic_geometry.config import BackendConfig
+from epistemic_geometry.inference.planner import plan_prepared_items
 from epistemic_geometry.reproducibility import require_remote_hf_execution, stable_digest
-from epistemic_geometry.types import BackendOutput, BenchmarkItem, Intervention
+from epistemic_geometry.types import (
+    BackendOutput,
+    BenchmarkItem,
+    Intervention,
+    PreparedChoiceItem,
+    SteeringVector,
+)
 
 
 class HuggingFaceBackend(ModelBackend):
@@ -58,6 +67,13 @@ class HuggingFaceBackend(ModelBackend):
         self.model_revision = model_revision or config.model_revision
         self._injected_model = model is not None
         self._choice_prompt_index: int | None = None
+        self._execution_stats: dict[str, int] = {
+            "forward_calls": 0,
+            "serial_candidate_forwards": 0,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
+            "tokens_processed": 0,
+        }
         if model is None:
             require_remote_hf_execution("HuggingFace model/tokenizer loading")
             try:
@@ -89,6 +105,8 @@ class HuggingFaceBackend(ModelBackend):
                 load_kwargs["device_map"] = config.device_map
             elif config.device == "auto" and torch.cuda.is_available():
                 load_kwargs["device_map"] = "auto"
+            if config.attention_implementation != "auto":
+                load_kwargs["attn_implementation"] = config.attention_implementation
             try:
                 self.model = AutoModelForCausalLM.from_pretrained(
                     model_name,
@@ -248,6 +266,76 @@ class HuggingFaceBackend(ModelBackend):
             raise ValueError(f"Item {item.id} does not provide valid candidate labels")
         return labels
 
+    def prepare_choice_item(self, item: BenchmarkItem) -> PreparedChoiceItem:
+        """Render and tokenize one choice item once for all conditions."""
+
+        if self.config.inference_mode != "choice_loglikelihood":
+            raise ValueError("PreparedChoiceItem requires choice_loglikelihood inference")
+        encoded, rendered_prompt, prompt_hash = self._encode_item(item)
+        mask = encoded["attention_mask"][0].bool()
+        prompt_ids = tuple(int(value) for value in encoded["input_ids"][0][mask].tolist())
+        labels = tuple(self._candidate_labels(item))
+        token_ids: dict[str, tuple[int, ...]] = {}
+        context_ids: dict[str, tuple[int, ...]] = {}
+        for label in labels:
+            standalone = tuple(self._text_token_ids(label))
+            token_ids[label] = standalone
+            joined = self.tokenizer(rendered_prompt + label, add_special_tokens=False)
+            joined_values = joined["input_ids"] if isinstance(joined, dict) else joined
+            if hasattr(joined_values, "tolist"):
+                joined_values = joined_values.tolist()
+            if joined_values and isinstance(joined_values[0], list):
+                joined_values = joined_values[0]
+            joined_ids = tuple(int(value) for value in joined_values)
+            context_ids[label] = (
+                joined_ids[len(prompt_ids) :]
+                if joined_ids[: len(prompt_ids)] == prompt_ids
+                else tuple()
+            )
+        semantic_ids = item.metadata.get("semantic_option_ids")
+        if not isinstance(semantic_ids, list):
+            semantic_ids = list(range(len(labels)))
+        return PreparedChoiceItem(
+            item_id=item.id,
+            target=item.target,
+            metadata=dict(item.metadata),
+            rendered_prompt=rendered_prompt,
+            rendered_prompt_hash=prompt_hash,
+            prompt_ids=prompt_ids,
+            candidate_labels=labels,
+            candidate_token_ids=token_ids,
+            context_compatible_candidate_ids=context_ids,
+            semantic_option_ids=tuple(int(value) for value in semantic_ids),
+            permutation_id=item.metadata.get("permutation_id"),
+        )
+
+    def prepare_choice_items(self, items: list[BenchmarkItem]) -> list[PreparedChoiceItem]:
+        """Prepare a stable list before entering the GPU inference loop."""
+
+        return [self.prepare_choice_item(item) for item in items]
+
+    def candidate_token_audit(self, prepared: PreparedChoiceItem) -> dict[str, Any]:
+        """Report boundary-aware candidate tokenization for one rendered prompt."""
+
+        return {
+            "item_id": prepared.item_id,
+            "rendered_prompt_hash": prepared.rendered_prompt_hash,
+            "candidates": {
+                label: {
+                    "standalone_token_ids": list(prepared.candidate_token_ids[label]),
+                    "context_compatible_token_ids": list(
+                        prepared.context_compatible_candidate_ids[label]
+                    ),
+                    "standalone_token_count": len(prepared.candidate_token_ids[label]),
+                    "context_compatible": bool(
+                        prepared.context_compatible_candidate_ids[label]
+                    ),
+                }
+                for label in prepared.candidate_labels
+            },
+            "all_standalone_single_token": prepared.all_candidates_single_token,
+        }
+
     def _text_token_ids(self, text: str) -> list[int]:
         encoded = self.tokenizer(text, add_special_tokens=False)
         values = encoded["input_ids"] if "input_ids" in encoded else encoded
@@ -283,10 +371,14 @@ class HuggingFaceBackend(ModelBackend):
                     )
                     attention_mask = self.torch.ones_like(full_ids)
                     try:
-                        output = self.model(
-                            input_ids=full_ids,
-                            attention_mask=attention_mask,
-                            use_cache=False,
+                        output = self._forward(
+                            self.model,
+                            {
+                                "input_ids": full_ids,
+                                "attention_mask": attention_mask,
+                                "use_cache": False,
+                            },
+                            "serial_candidate",
                         )
                     except RuntimeError as exc:
                         if "out of memory" in str(exc).lower():
@@ -337,6 +429,661 @@ class HuggingFaceBackend(ModelBackend):
 
         return self.torch.log_softmax(candidate_logits.float(), dim=-1)
 
+    def reset_execution_stats(self) -> None:
+        """Reset inference counters used by engineering profiles."""
+
+        for key in self._execution_stats:
+            self._execution_stats[key] = 0
+
+    def execution_stats(self) -> dict[str, int]:
+        """Return a snapshot of counted expensive forward operations."""
+
+        return dict(self._execution_stats)
+
+    def _forward(self, module: Any, kwargs: dict[str, Any], phase: str) -> Any:
+        """Call a model/core forward while recording non-scientific counters."""
+
+        self._execution_stats["forward_calls"] += 1
+        if phase == "serial_candidate":
+            self._execution_stats["serial_candidate_forwards"] += 1
+        elif phase == "prefill":
+            self._execution_stats["prefill_forwards"] += 1
+        elif phase == "decode":
+            self._execution_stats["decode_forwards"] += 1
+        input_ids = kwargs.get("input_ids")
+        if input_ids is not None and hasattr(input_ids, "numel"):
+            self._execution_stats["tokens_processed"] += int(input_ids.numel())
+        return module(**kwargs)
+
+    def predict_choice_batch(
+        self,
+        prepared_items: list[PreparedChoiceItem],
+        conditions: list[tuple[dict[str, Any], SteeringVector | None]],
+        mode: str | None = None,
+    ) -> list[tuple[PreparedChoiceItem, dict[str, Any], BackendOutput]]:
+        """Evaluate many item/condition pairs with explicit cache provenance.
+
+        The returned order is item-major, then condition-major.  This method is
+        deliberately separate from ``predict``: ``serial_reference`` remains
+        the untouched correctness oracle, while optimized callers opt into
+        prepared prompts, row-wise deltas, and prefix-cache reuse explicitly.
+        """
+
+        if not prepared_items or not conditions:
+            return []
+        execution_mode = mode or self.config.execution_mode
+        if execution_mode == "serial_reference":
+            raise ValueError("predict_choice_batch requires a non-serial execution mode")
+        if execution_mode == "cached_suffix_replay":
+            from epistemic_geometry.backends.qwen3_replay import Qwen3CachedSuffixReplayEngine
+
+            Qwen3CachedSuffixReplayEngine(self).require_supported()
+        if any(len(item.prompt_ids) < 2 for item in prepared_items):
+            raise ValueError("Cached choice scoring requires at least two prompt tokens")
+        if any(not item.all_candidates_single_token for item in prepared_items):
+            return self._predict_choice_batch_cached_multitoken(prepared_items, conditions)
+        if execution_mode == "full_prompt_batched":
+            return self._predict_choice_batch_full_prompt(prepared_items, conditions)
+        if execution_mode == "cached_decode":
+            return self._predict_choice_batch_cached(prepared_items, conditions)
+        raise ValueError(f"Unsupported choice execution mode: {execution_mode}")
+
+    def _pad_token_sequences(
+        self, sequences: list[tuple[int, ...]]
+    ) -> tuple[Any, Any, Any, list[int]]:
+        torch = self.torch
+        if not sequences:
+            raise ValueError("Cannot pad an empty sequence list")
+        max_length = max(len(sequence) for sequence in sequences)
+        pad_id = int(self.tokenizer.pad_token_id or 0)
+        input_ids = torch.full(
+            (len(sequences), max_length), pad_id, dtype=torch.long, device=self.device
+        )
+        attention_mask = torch.zeros(
+            (len(sequences), max_length), dtype=torch.long, device=self.device
+        )
+        lengths: list[int] = []
+        for row, sequence in enumerate(sequences):
+            length = len(sequence)
+            lengths.append(length)
+            if self.config.padding_side == "left":
+                start = max_length - length
+            else:
+                start = 0
+            input_ids[row, start : start + length] = torch.tensor(
+                sequence, dtype=torch.long, device=self.device
+            )
+            attention_mask[row, start : start + length] = 1
+        position_ids = attention_mask.cumsum(dim=-1) - 1
+        position_ids.masked_fill_(attention_mask == 0, 1)
+        return input_ids, attention_mask, position_ids, lengths
+
+    def _expand_conditions(
+        self,
+        prepared_items: list[PreparedChoiceItem],
+        condition_chunk: list[tuple[dict[str, Any], SteeringVector | None]],
+    ) -> Any:
+        """Create one B*C x hidden row-delta matrix in item-major order."""
+
+        torch = self.torch
+        deltas: list[Any] = []
+        layer_values: set[int] = set()
+        for _item in prepared_items:
+            for spec, vector in condition_chunk:
+                layer = int(spec.get("layer", self.config.layer))
+                layer_values.add(layer)
+                if vector is None or float(spec.get("alpha", 0.0)) == 0.0:
+                    deltas.append(torch.zeros(self.hidden_size, device=self.device))
+                    continue
+                if vector.dimension != self.hidden_size:
+                    raise ValueError(
+                        f"Steering vector dimension {vector.dimension} does not match "
+                        f"hidden size {self.hidden_size}"
+                    )
+                values = torch.as_tensor(
+                    vector.values, dtype=next(self.model.parameters()).dtype, device=self.device
+                )
+                deltas.append(values * float(spec["alpha"]))
+        if len(layer_values) != 1:
+            raise NotImplementedError(
+                "One optimized decode batch must share a steering layer; group heterogeneous "
+                "layers before execution"
+            )
+        return torch.stack(deltas, dim=0)
+
+    def _rowwise_hook(self, layer: int, deltas: Any, target_positions: Any):
+        torch = self.torch
+        module = self.layer_module(layer)
+
+        def hook(_module: Any, _inputs: Any, output: Any) -> Any:
+            if isinstance(output, torch.Tensor):
+                hidden = output
+                rest: tuple[Any, ...] | None = None
+            elif (
+                isinstance(output, (tuple, list))
+                and output
+                and isinstance(output[0], torch.Tensor)
+            ):
+                hidden = output[0]
+                rest = tuple(output[1:])
+            else:
+                raise TypeError("Optimized hook expected Tensor or tuple[Tensor, ...]")
+            if hidden.shape[0] != deltas.shape[0]:
+                raise RuntimeError(
+                    f"Row-delta batch {deltas.shape[0]} does not match hidden batch "
+                    f"{hidden.shape[0]}"
+                )
+            updated = hidden.clone()
+            rows = torch.arange(hidden.shape[0], device=hidden.device)
+            updated[rows, target_positions, :] += deltas.to(
+                device=hidden.device, dtype=hidden.dtype
+            )
+            if rest is None:
+                return updated
+            if isinstance(output, tuple):
+                return (updated, *rest)
+            return [updated, *rest]
+
+        return module.register_forward_hook(hook)
+
+    def _model_core(self) -> Any:
+        if hasattr(self.model, "model") and callable(getattr(self.model.model, "forward", None)):
+            return self.model.model
+        if hasattr(self.model, "transformer"):
+            return self.model.transformer
+        base = self.model.get_base_model() if hasattr(self.model, "get_base_model") else None
+        if base is not None:
+            return base
+        raise RuntimeError("Could not locate the decoder core for optimized choice scoring")
+
+    def _forward_kwargs(
+        self,
+        module: Any,
+        input_ids: Any,
+        attention_mask: Any,
+        position_ids: Any,
+        past_key_values: Any | None = None,
+        cache_position: Any | None = None,
+    ) -> dict[str, Any]:
+        kwargs: dict[str, Any] = {
+            "input_ids": input_ids,
+            "attention_mask": attention_mask,
+            "position_ids": position_ids,
+            "use_cache": True,
+            "return_dict": True,
+        }
+        parameters = inspect.signature(module.forward).parameters
+        has_var_kwargs = any(
+            parameter.kind == inspect.Parameter.VAR_KEYWORD
+            for parameter in parameters.values()
+        )
+        if past_key_values is not None and (
+            "past_key_values" in parameters or has_var_kwargs
+        ):
+            kwargs["past_key_values"] = past_key_values
+        if cache_position is not None and (
+            "cache_position" in parameters or has_var_kwargs
+        ):
+            kwargs["cache_position"] = cache_position
+        return kwargs
+
+    def _clone_and_repeat_cache(self, cache: Any, repeats: int) -> Any:
+        """Copy a Transformers cache before a decode mutates it."""
+
+        if cache is None:
+            raise RuntimeError("The decoder did not return a prefix cache")
+        if hasattr(cache, "batch_repeat_interleave"):
+            repeated = copy.deepcopy(cache)
+            repeated.batch_repeat_interleave(repeats)
+            return repeated
+        if isinstance(cache, (tuple, list)):
+            layers = []
+            for layer_cache in cache:
+                if isinstance(layer_cache, (tuple, list)):
+                    layers.append(
+                        type(layer_cache)(
+                            tensor.repeat_interleave(repeats, dim=0)
+                            for tensor in layer_cache
+                        )
+                    )
+                else:
+                    layers.append(layer_cache.repeat_interleave(repeats, dim=0))
+            return type(cache)(layers)
+        raise TypeError(f"Unsupported Transformers cache type: {type(cache)!r}")
+
+    def _candidate_outputs(
+        self,
+        output: Any,
+        rows: list[PreparedChoiceItem],
+        row_conditions: list[dict[str, Any]],
+        engine: str,
+        logit_positions: Any | None = None,
+    ) -> list[BackendOutput]:
+        torch = self.torch
+        candidate_counts = [len(row.candidate_labels) for row in rows]
+        max_candidates = max(candidate_counts)
+        candidate_ids = torch.zeros(
+            (len(rows), max_candidates), dtype=torch.long, device=self.device
+        )
+        for index, row in enumerate(rows):
+            values = [row.candidate_token_ids[label][0] for label in row.candidate_labels]
+            candidate_ids[index, : len(values)] = torch.tensor(
+                values, dtype=torch.long, device=self.device
+            )
+        semantics = self.config.candidate_head_mode
+        if logit_positions is None:
+            sequence_length = (
+                output.last_hidden_state.shape[1]
+                if semantics == "candidate_only"
+                else output.logits.shape[1]
+            )
+            logit_positions = torch.full(
+                (len(rows),), sequence_length - 1, dtype=torch.long, device=self.device
+            )
+        if semantics == "candidate_only":
+            hidden = output.last_hidden_state[
+                torch.arange(len(rows), device=self.device), logit_positions, :
+            ]
+            output_embeddings = self.model.get_output_embeddings()
+            if output_embeddings is None or not hasattr(output_embeddings, "weight"):
+                raise RuntimeError("Candidate-only head requires output embedding weights")
+            weights = output_embeddings.weight[candidate_ids]
+            scores_tensor = torch.einsum("rd,rcd->rc", hidden, weights)
+            if getattr(output_embeddings, "bias", None) is not None:
+                scores_tensor = scores_tensor + output_embeddings.bias[candidate_ids]
+            score_semantics = "candidate_logits_no_vocab_normalization"
+        else:
+            logits = output.logits[
+                torch.arange(len(rows), device=self.device), logit_positions, :
+            ]
+            scores_tensor = self._choice_log_softmax(logits).gather(1, candidate_ids)
+            score_semantics = "full_vocab_log_probability"
+        results: list[BackendOutput] = []
+        for index, (row, spec) in enumerate(zip(rows, row_conditions, strict=True)):
+            labels = row.candidate_labels
+            scores = {
+                label: float(scores_tensor[index, label_index].item())
+                for label_index, label in enumerate(labels)
+            }
+            prediction = max(scores, key=scores.get)
+            results.append(
+                BackendOutput(
+                    raw_output=prediction,
+                    metadata={
+                        "model": self.model_name,
+                        "prompt_mode": self.config.prompt_mode,
+                        "enable_thinking": self.config.enable_thinking,
+                        "inference_mode": "choice_loglikelihood",
+                        "rendered_prompt_hash": row.rendered_prompt_hash,
+                        "prompt_token_count": row.prompt_length,
+                        "candidate_scores": scores,
+                        "candidate_score_semantics": score_semantics,
+                        "candidate_token_ids": {
+                            label: list(row.candidate_token_ids[label]) for label in labels
+                        },
+                        "candidate_token_counts": {
+                            label: len(row.candidate_token_ids[label]) for label in labels
+                        },
+                        "execution_engine": engine,
+                        "condition": spec.get("condition"),
+                        "prefix_cache_enabled": engine == "cached_decode",
+                    },
+                )
+            )
+        return results
+
+    def _planned_item_batches(
+        self, prepared_items: list[PreparedChoiceItem]
+    ) -> list[list[PreparedChoiceItem]]:
+        plans, _payload = plan_prepared_items(
+            prepared_items,
+            max_items=self.config.item_batch_size,
+            max_prefill_tokens=self.config.max_prefill_tokens,
+        )
+        by_id = {item.item_id: item for item in prepared_items}
+        return [[by_id[item_id] for item_id in plan.item_ids] for plan in plans]
+
+    def _predict_choice_batch_full_prompt(
+        self,
+        prepared_items: list[PreparedChoiceItem],
+        conditions: list[tuple[dict[str, Any], SteeringVector | None]],
+    ) -> list[tuple[PreparedChoiceItem, dict[str, Any], BackendOutput]]:
+        torch = self.torch
+        results: dict[tuple[str, str], BackendOutput] = {}
+        chunk_size = self.config.condition_chunk_size
+        for item_batch in self._planned_item_batches(prepared_items):
+            input_ids, attention_mask, position_ids, lengths = self._pad_token_sequences(
+                [item.prompt_ids for item in item_batch]
+            )
+            if self.config.padding_side == "left":
+                target_positions_by_item = [input_ids.shape[1] - 1] * len(lengths)
+            else:
+                target_positions_by_item = [length - 1 for length in lengths]
+            for condition_start in range(0, len(conditions), chunk_size):
+                condition_chunk = conditions[condition_start : condition_start + chunk_size]
+                row_items = [item for item in item_batch for _ in condition_chunk]
+                row_specs = [spec for _item in item_batch for spec, _vector in condition_chunk]
+                row_input_ids = input_ids.repeat_interleave(len(condition_chunk), dim=0)
+                row_attention = attention_mask.repeat_interleave(len(condition_chunk), dim=0)
+                row_positions = position_ids.repeat_interleave(len(condition_chunk), dim=0)
+                row_deltas = self._expand_conditions(item_batch, condition_chunk)
+                layer = int(condition_chunk[0][0].get("layer", self.config.layer))
+                target_positions = torch.tensor(
+                    [
+                        target_position
+                        for target_position in target_positions_by_item
+                        for _condition in condition_chunk
+                    ],
+                    dtype=torch.long,
+                    device=self.device,
+                )
+                handle = self._rowwise_hook(layer, row_deltas, target_positions)
+                try:
+                    with torch.inference_mode():
+                        if self.config.candidate_head_mode == "candidate_only":
+                            core = self._model_core()
+                            output = self._forward(
+                                core,
+                                self._forward_kwargs(
+                                    core, row_input_ids, row_attention, row_positions
+                                ),
+                                "decode",
+                            )
+                        else:
+                            output = self._forward(
+                                self.model,
+                                self._forward_kwargs(
+                                    self.model, row_input_ids, row_attention, row_positions
+                                ),
+                                "decode",
+                            )
+                finally:
+                    handle.remove()
+                outputs = self._candidate_outputs(
+                    output,
+                    row_items,
+                    row_specs,
+                    "full_prompt_batched",
+                    logit_positions=target_positions,
+                )
+                for item, spec, output_row in zip(row_items, row_specs, outputs, strict=True):
+                    results[(item.item_id, str(spec["condition"]))] = output_row
+        return [
+            (item, spec, results[(item.item_id, str(spec["condition"]))])
+            for item in prepared_items
+            for spec, _vector in conditions
+        ]
+
+    def _predict_choice_batch_cached(
+        self,
+        prepared_items: list[PreparedChoiceItem],
+        conditions: list[tuple[dict[str, Any], SteeringVector | None]],
+    ) -> list[tuple[PreparedChoiceItem, dict[str, Any], BackendOutput]]:
+        torch = self.torch
+        results: dict[tuple[str, str], BackendOutput] = {}
+        chunk_size = self.config.condition_chunk_size
+        core = self._model_core()
+        if self.config.padding_side != "left":
+            raise ValueError(
+                "cached_decode currently requires left padding so prefix cache positions "
+                "remain contiguous; use left padding or full_prompt_batched"
+            )
+        for item_batch in self._planned_item_batches(prepared_items):
+            prefix_ids, prefix_mask, _prefix_positions, prefix_lengths = self._pad_token_sequences(
+                [item.prompt_ids[:-1] for item in item_batch]
+            )
+            query_ids = torch.tensor(
+                [[item.prompt_ids[-1]] for item in item_batch],
+                dtype=torch.long,
+                device=self.device,
+            )
+            with torch.inference_mode():
+                prefix_output = self._forward(
+                    core,
+                    self._forward_kwargs(
+                        core,
+                        prefix_ids,
+                        prefix_mask,
+                        _prefix_positions,
+                        cache_position=torch.arange(
+                            prefix_ids.shape[1], dtype=torch.long, device=self.device
+                        ),
+                    ),
+                    "prefill",
+                )
+            prefix_cache = getattr(prefix_output, "past_key_values", None)
+            if prefix_cache is None and isinstance(prefix_output, (tuple, list)):
+                prefix_cache = prefix_output[1]
+            if prefix_cache is None:
+                raise RuntimeError("Cached decode requested but model returned no past_key_values")
+            for condition_start in range(0, len(conditions), chunk_size):
+                condition_chunk = conditions[condition_start : condition_start + chunk_size]
+                condition_count = len(condition_chunk)
+                row_items = [item for item in item_batch for _ in condition_chunk]
+                row_specs = [spec for _item in item_batch for spec, _vector in condition_chunk]
+                row_query_ids = query_ids.repeat_interleave(condition_count, dim=0)
+                row_prefix_mask = prefix_mask.repeat_interleave(condition_count, dim=0)
+                query_mask = torch.ones(
+                    (row_query_ids.shape[0], 1), dtype=torch.long, device=self.device
+                )
+                row_attention = torch.cat([row_prefix_mask, query_mask], dim=1)
+                query_position_ids = torch.tensor(
+                    [[length] for length in prefix_lengths],
+                    dtype=torch.long,
+                    device=self.device,
+                ).repeat_interleave(condition_count, dim=0)
+                row_deltas = self._expand_conditions(item_batch, condition_chunk)
+                layer = int(condition_chunk[0][0].get("layer", self.config.layer))
+                target_positions = torch.zeros(
+                    (len(row_items),), dtype=torch.long, device=self.device
+                )
+                handle = self._rowwise_hook(layer, row_deltas, target_positions)
+                try:
+                    repeated_cache = self._clone_and_repeat_cache(prefix_cache, condition_count)
+                    with torch.inference_mode():
+                        if self.config.candidate_head_mode == "candidate_only":
+                            output = self._forward(
+                                core,
+                                self._forward_kwargs(
+                                    core,
+                                    row_query_ids,
+                                    row_attention,
+                                    query_position_ids,
+                                    past_key_values=repeated_cache,
+                                    cache_position=torch.tensor(
+                                        [prefix_ids.shape[1]], dtype=torch.long, device=self.device
+                                    ),
+                                ),
+                                "decode",
+                            )
+                        else:
+                            output = self._forward(
+                                self.model,
+                                self._forward_kwargs(
+                                    self.model,
+                                    row_query_ids,
+                                    row_attention,
+                                    query_position_ids,
+                                    past_key_values=repeated_cache,
+                                    cache_position=torch.tensor(
+                                        [prefix_ids.shape[1]], dtype=torch.long, device=self.device
+                                    ),
+                                ),
+                                "decode",
+                            )
+                finally:
+                    handle.remove()
+                outputs = self._candidate_outputs(output, row_items, row_specs, "cached_decode")
+                for item, spec, output_row in zip(row_items, row_specs, outputs, strict=True):
+                    results[(item.item_id, str(spec["condition"]))] = output_row
+        return [
+            (item, spec, results[(item.item_id, str(spec["condition"]))])
+            for item in prepared_items
+            for spec, _vector in conditions
+        ]
+
+    def _predict_choice_batch_cached_multitoken(
+        self,
+        prepared_items: list[PreparedChoiceItem],
+        conditions: list[tuple[dict[str, Any], SteeringVector | None]],
+    ) -> list[tuple[PreparedChoiceItem, dict[str, Any], BackendOutput]]:
+        """Score multi-token labels from one shared prefix cache per item.
+
+        This deliberately favors a small, auditable fallback over candidate-wise
+        full-prompt forwards.  It is not the common MMLU-Pro path, where the
+        single-token fast path is expected to apply.
+        """
+
+        if self.config.candidate_head_mode == "candidate_only":
+            raise ValueError(
+                "candidate_only head is only defined for single-token candidates; "
+                "use full_vocab_reference for the multi-token fallback"
+            )
+        torch = self.torch
+        core = self._model_core()
+        results: dict[tuple[str, str], BackendOutput] = {}
+        for item in prepared_items:
+            prefix_ids, prefix_mask, prefix_positions, prefix_lengths = self._pad_token_sequences(
+                [item.prompt_ids[:-1]]
+            )
+            query_ids = torch.tensor(
+                [[item.prompt_ids[-1]]], dtype=torch.long, device=self.device
+            )
+            with torch.inference_mode():
+                prefix_output = self._forward(
+                    core,
+                    self._forward_kwargs(
+                        core,
+                        prefix_ids,
+                        prefix_mask,
+                        prefix_positions,
+                        cache_position=torch.arange(
+                            prefix_ids.shape[1], dtype=torch.long, device=self.device
+                        ),
+                    ),
+                    "prefill",
+                )
+            prefix_cache = getattr(prefix_output, "past_key_values", None)
+            if prefix_cache is None and isinstance(prefix_output, (tuple, list)):
+                prefix_cache = prefix_output[1]
+            if prefix_cache is None:
+                raise RuntimeError("Cached decode requested but model returned no past_key_values")
+            for spec, vector in conditions:
+                delta = self._expand_conditions([item], [(spec, vector)])
+                handle = self._rowwise_hook(
+                    int(spec.get("layer", self.config.layer)), delta, torch.zeros(
+                        (1,), dtype=torch.long, device=self.device
+                    )
+                )
+                try:
+                    query_cache = self._clone_and_repeat_cache(prefix_cache, 1)
+                    query_attention = torch.cat(
+                        [prefix_mask, torch.ones((1, 1), dtype=torch.long, device=self.device)],
+                        dim=1,
+                    )
+                    with torch.inference_mode():
+                        query_output = self._forward(
+                            self.model,
+                            self._forward_kwargs(
+                                self.model,
+                                query_ids,
+                                query_attention,
+                                torch.tensor(
+                                    [[prefix_lengths[0]]], dtype=torch.long, device=self.device
+                                ),
+                                past_key_values=query_cache,
+                                cache_position=torch.tensor(
+                                    [prefix_ids.shape[1]], dtype=torch.long, device=self.device
+                                ),
+                            ),
+                            "decode",
+                        )
+                finally:
+                    handle.remove()
+                scores: dict[str, float] = {}
+                first_log_probs = self._choice_log_softmax(query_output.logits[:, -1, :])
+                query_cache = getattr(query_output, "past_key_values", None)
+                if query_cache is None and isinstance(query_output, (tuple, list)):
+                    query_cache = query_output[1]
+                if query_cache is None:
+                    raise RuntimeError("Multi-token fallback did not receive a continuation cache")
+                for label in item.candidate_labels:
+                    candidate_ids = item.candidate_token_ids[label]
+                    total = first_log_probs[0, candidate_ids[0]]
+                    continuation_cache = query_cache
+                    for offset, token_id in enumerate(candidate_ids[1:], start=1):
+                        continuation_cache = self._clone_and_repeat_cache(continuation_cache, 1)
+                        input_token = torch.tensor(
+                            [[token_id]], dtype=torch.long, device=self.device
+                        )
+                        attention = torch.ones(
+                            (1, len(item.prompt_ids) + offset),
+                            dtype=torch.long,
+                            device=self.device,
+                        )
+                        with torch.inference_mode():
+                            continuation_output = self._forward(
+                                self.model,
+                                self._forward_kwargs(
+                                    self.model,
+                                    input_token,
+                                    attention,
+                                    torch.tensor(
+                                        [[len(item.prompt_ids) + offset]],
+                                        dtype=torch.long,
+                                        device=self.device,
+                                    ),
+                                    past_key_values=continuation_cache,
+                                    cache_position=torch.tensor(
+                                        [prefix_ids.shape[1] + offset],
+                                        dtype=torch.long,
+                                        device=self.device,
+                                    ),
+                                ),
+                                "decode",
+                            )
+                        total = total + self._choice_log_softmax(
+                            continuation_output.logits[:, -1, :]
+                        )[0, candidate_ids[offset]]
+                        continuation_cache = getattr(
+                            continuation_output, "past_key_values", None
+                        )
+                        if continuation_cache is None:
+                            raise RuntimeError(
+                                "Multi-token fallback lost its continuation cache"
+                            )
+                    scores[label] = float(total.item())
+                prediction = max(scores, key=scores.get)
+                results[(item.item_id, str(spec["condition"]))] = BackendOutput(
+                    raw_output=prediction,
+                    metadata={
+                        "model": self.model_name,
+                        "prompt_mode": self.config.prompt_mode,
+                        "enable_thinking": self.config.enable_thinking,
+                        "inference_mode": "choice_loglikelihood",
+                        "rendered_prompt_hash": item.rendered_prompt_hash,
+                        "prompt_token_count": item.prompt_length,
+                        "candidate_scores": scores,
+                        "candidate_score_semantics": "full_vocab_log_probability",
+                        "candidate_token_ids": {
+                            label: list(item.candidate_token_ids[label])
+                            for label in item.candidate_labels
+                        },
+                        "candidate_token_counts": {
+                            label: len(item.candidate_token_ids[label])
+                            for label in item.candidate_labels
+                        },
+                        "execution_engine": "cached_decode_multitoken",
+                        "condition": spec.get("condition"),
+                        "prefix_cache_enabled": True,
+                    },
+                )
+        return [
+            (item, spec, results[(item.item_id, str(spec["condition"]))])
+            for item in prepared_items
+            for spec, _vector in conditions
+        ]
+
     def extract_activation(self, item: BenchmarkItem) -> np.ndarray:
         """Extract the last non-padding token at the configured layer."""
 
@@ -361,6 +1108,64 @@ class HuggingFaceBackend(ModelBackend):
         if not captured:
             raise RuntimeError("Activation hook did not capture a layer output")
         return captured[0][0].numpy().copy()
+
+    def extract_activations_batch(
+        self, items: list[BenchmarkItem], layers: list[int] | None = None
+    ) -> dict[int, np.ndarray]:
+        """Capture selected last-token activations in one padded forward pass."""
+
+        if not items:
+            return {}
+        selected_layers = layers or [self.config.layer]
+        for layer in selected_layers:
+            self.layer_module(layer)
+        encoded_items = [self._encode_item(item) for item in items]
+        sequences = []
+        for encoded, _prompt, _prompt_hash in encoded_items:
+            mask = encoded["attention_mask"][0].bool()
+            sequences.append(tuple(int(value) for value in encoded["input_ids"][0][mask].tolist()))
+        input_ids, attention_mask, position_ids, lengths = self._pad_token_sequences(sequences)
+        if self.config.padding_side == "left":
+            positions = [input_ids.shape[1] - 1] * len(lengths)
+        else:
+            positions = [length - 1 for length in lengths]
+        target_positions = self.torch.tensor(positions, dtype=self.torch.long, device=self.device)
+        captured: dict[int, np.ndarray] = {}
+        handles = []
+
+        def make_capture(layer: int):
+            def capture(_module: Any, _inputs: Any, output: Any) -> Any:
+                hidden = output[0] if isinstance(output, (tuple, list)) else output
+                if not isinstance(hidden, self.torch.Tensor):
+                    raise TypeError("Transformer layer output did not contain a Tensor")
+                rows = self.torch.arange(hidden.shape[0], device=hidden.device)
+                captured[layer] = hidden[rows, target_positions, :].detach().float().cpu().numpy()
+                return output
+
+            return capture
+
+        try:
+            for layer in selected_layers:
+                handles.append(self.layer_module(layer).register_forward_hook(make_capture(layer)))
+            with self.torch.inference_mode():
+                self._forward(
+                    self.model,
+                    {
+                        "input_ids": input_ids,
+                        "attention_mask": attention_mask,
+                        "position_ids": position_ids,
+                        "use_cache": False,
+                    },
+                    "decode",
+                )
+        finally:
+            for handle in handles:
+                handle.remove()
+        if set(captured) != set(selected_layers):
+            raise RuntimeError(
+                "Batched activation extraction did not capture every requested layer"
+            )
+        return captured
 
     def layer_module(self, layer: int) -> Any:
         """Return a validated transformer block for integration diagnostics."""
@@ -443,6 +1248,9 @@ class HuggingFaceBackend(ModelBackend):
         devices = sorted({str(parameter.device) for parameter in parameters})
         config = getattr(self.model, "config", None)
         architectures = getattr(config, "architectures", None) if config is not None else None
+        attention_backend = (
+            getattr(config, "_attn_implementation", None) if config is not None else None
+        )
         revision = self.model_revision or getattr(config, "_commit_hash", None)
         resolved_path = getattr(config, "_name_or_path", None) if config is not None else None
         return {
@@ -464,6 +1272,16 @@ class HuggingFaceBackend(ModelBackend):
             "layer_index_for_activation": self.config.layer,
             "prompt_mode": self.config.prompt_mode,
             "inference_mode": self.config.inference_mode,
+            "execution_engine": self.config.execution_mode,
+            "candidate_head_mode": self.config.candidate_head_mode,
+            "attention_implementation": attention_backend
+            or self.config.attention_implementation,
+            "torch_compile": self.config.torch_compile,
+            "cuda_graphs": self.config.cuda_graphs,
+            "item_batch_size": self.config.item_batch_size,
+            "condition_chunk_size": self.config.condition_chunk_size,
+            "max_prefill_tokens": self.config.max_prefill_tokens,
+            "padding_side": self.config.padding_side,
             "enable_thinking": self.config.enable_thinking,
             "cpu_offload_detected": any(device == "cpu" for device in devices),
             "injected_test_model": self._injected_model,

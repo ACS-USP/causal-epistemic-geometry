@@ -12,6 +12,10 @@ torch = pytest.importorskip("torch")
 pytest.importorskip("transformers")
 
 from epistemic_geometry.backends.huggingface import HuggingFaceBackend  # noqa: E402
+from epistemic_geometry.backends.qwen3_replay import (  # noqa: E402
+    Qwen3CachedSuffixReplayEngine,
+    SuffixReplayUnavailable,
+)
 from epistemic_geometry.backends.tiny import TinyRandomTransformerBackend  # noqa: E402
 from epistemic_geometry.benchmarks.mock import MockBenchmark  # noqa: E402
 from epistemic_geometry.config import BackendConfig  # noqa: E402
@@ -267,3 +271,218 @@ def test_injected_backend_provenance_is_explicit(tiny_backend) -> None:
     assert provenance["num_layers"] == 2
     assert provenance["hidden_size"] == 32
     assert provenance["model_revision"] == "local-config"
+
+
+def _choice_backend(
+    tiny_backend, *, execution_mode: str, candidate_head_mode: str = "full_vocab_reference"
+):
+    tiny_backend.config = replace(
+        tiny_backend.config,
+        inference_mode="choice_loglikelihood",
+        execution_mode=execution_mode,
+        candidate_head_mode=candidate_head_mode,
+        item_batch_size=2,
+        condition_chunk_size=2,
+        padding_side="left",
+    )
+    return tiny_backend
+
+
+def _choice_items() -> list[BenchmarkItem]:
+    return [
+        BenchmarkItem(
+            id="batch-short",
+            prompt="Choose one answer alpha beta",
+            target="A",
+            metadata={"candidate_labels": ["A", "B", "C", "D"]},
+        ),
+        BenchmarkItem(
+            id="batch-long",
+            prompt="Choose one answer alpha beta gamma delta epsilon",
+            target="B",
+            metadata={"candidate_labels": ["A", "B", "C", "D"]},
+        ),
+    ]
+
+
+def _serial_choice_output(backend, item, vector=None, alpha=0.0):
+    if vector is None:
+        return backend.predict(item)
+    intervention = Intervention(0, alpha, vector.hash, "last_token", vector)
+    with backend.steer(intervention):
+        return backend.predict(item)
+
+
+@pytest.mark.parametrize("execution_mode", ["full_prompt_batched", "cached_decode"])
+def test_optimized_choice_engines_match_serial_predictions(tiny_backend, execution_mode) -> None:
+    items = _choice_items()
+    vector = SteeringVector(
+        values=np.linspace(-0.4, 0.4, 32),
+        layer=0,
+        constructor="test",
+        normalization="none",
+        hash="batch-vector",
+    )
+    backend = _choice_backend(tiny_backend, execution_mode=execution_mode)
+    prepared = backend.prepare_choice_items(items)
+    conditions = [
+        ({"condition": "baseline", "alpha": 0.0, "layer": 0}, None),
+        ({"condition": "plus", "alpha": 0.8, "layer": 0}, vector),
+        ({"condition": "minus", "alpha": -0.8, "layer": 0}, vector),
+    ]
+    optimized = backend.predict_choice_batch(prepared, conditions)
+    optimized_by_key = {
+        (item.item_id, spec["condition"]): output
+        for item, spec, output in optimized
+    }
+    for item in items:
+        for spec, condition_vector in conditions:
+            serial = _serial_choice_output(
+                backend, item, condition_vector, float(spec["alpha"])
+            )
+            actual = optimized_by_key[(item.id, spec["condition"])]
+            assert actual.raw_output == serial.raw_output
+            assert set(actual.metadata["candidate_scores"]) == set(
+                serial.metadata["candidate_scores"]
+            )
+            if execution_mode == "full_prompt_batched":
+                for label, value in serial.metadata["candidate_scores"].items():
+                    assert actual.metadata["candidate_scores"][label] == pytest.approx(
+                        value, abs=2e-5
+                    )
+            else:
+                assert actual.metadata["candidate_score_semantics"] == (
+                    "full_vocab_log_probability"
+                )
+
+
+def test_candidate_only_head_preserves_ranking_and_margins(tiny_backend) -> None:
+    items = _choice_items()
+    vector = SteeringVector(
+        values=np.linspace(-0.7, 0.7, 32),
+        layer=0,
+        constructor="test",
+        normalization="none",
+        hash="candidate-head-vector",
+    )
+    conditions = [
+        ({"condition": "baseline", "alpha": 0.0, "layer": 0}, None),
+        ({"condition": "plus", "alpha": 1.1, "layer": 0}, vector),
+    ]
+    reference = _choice_backend(
+        tiny_backend, execution_mode="cached_decode", candidate_head_mode="full_vocab_reference"
+    )
+    full = reference.predict_choice_batch(reference.prepare_choice_items(items), conditions)
+    candidate = _choice_backend(
+        tiny_backend, execution_mode="cached_decode", candidate_head_mode="candidate_only"
+    )
+    only = candidate.predict_choice_batch(candidate.prepare_choice_items(items), conditions)
+    full_by_key = {(item.item_id, spec["condition"]): output for item, spec, output in full}
+    only_by_key = {(item.item_id, spec["condition"]): output for item, spec, output in only}
+    for key, full_output in full_by_key.items():
+        only_output = only_by_key[key]
+        full_scores = full_output.metadata["candidate_scores"]
+        only_scores = only_output.metadata["candidate_scores"]
+        assert only_output.raw_output == full_output.raw_output
+        assert only_output.metadata["candidate_score_semantics"] == (
+            "candidate_logits_no_vocab_normalization"
+        )
+        full_order = sorted(full_scores, key=full_scores.get, reverse=True)
+        only_order = sorted(only_scores, key=only_scores.get, reverse=True)
+        assert only_order == full_order
+        assert (only_scores[full_order[0]] - only_scores[full_order[1]]) == pytest.approx(
+            full_scores[full_order[0]] - full_scores[full_order[1]], abs=2e-5
+        )
+
+
+def test_full_prompt_right_padding_targets_each_real_last_token(tiny_backend) -> None:
+    backend = _choice_backend(tiny_backend, execution_mode="full_prompt_batched")
+    backend.config = replace(backend.config, padding_side="right")
+    items = _choice_items()
+    vector = SteeringVector(
+        values=np.linspace(-0.5, 0.5, 32),
+        layer=0,
+        constructor="test",
+        normalization="none",
+        hash="right-pad-vector",
+    )
+    conditions = [({"condition": "plus", "alpha": 0.9, "layer": 0}, vector)]
+    optimized = backend.predict_choice_batch(backend.prepare_choice_items(items), conditions)
+    by_id = {item.id: item for item in items}
+    for prepared, spec, output in optimized:
+        serial = _serial_choice_output(
+            backend, by_id[prepared.item_id], vector, float(spec["alpha"])
+        )
+        assert output.raw_output == serial.raw_output
+
+
+def test_cached_decode_rejects_unsafe_right_padding(tiny_backend) -> None:
+    backend = _choice_backend(tiny_backend, execution_mode="cached_decode")
+    backend.config = replace(backend.config, padding_side="right")
+    with pytest.raises(ValueError, match="left padding"):
+        backend.predict_choice_batch(
+            backend.prepare_choice_items(_choice_items()),
+            [({"condition": "baseline", "alpha": 0.0, "layer": 0}, None)],
+        )
+
+
+def test_multitoken_choice_fallback_reuses_prefix_and_matches_serial(tiny_backend) -> None:
+    backend = _choice_backend(tiny_backend, execution_mode="cached_decode")
+    item = BenchmarkItem(
+        id="multi-token-choice",
+        prompt="Choose one answer alpha beta",
+        target="A",
+        metadata={"candidate_labels": ["A", "LONG LABEL"]},
+    )
+    prepared = backend.prepare_choice_item(item)
+    assert not prepared.all_candidates_single_token
+    vector = SteeringVector(
+        values=np.linspace(-0.2, 0.2, 32),
+        layer=0,
+        constructor="test",
+        normalization="none",
+        hash="multitoken-vector",
+    )
+    condition = {"condition": "plus", "alpha": 0.4, "layer": 0}
+    actual = backend.predict_choice_batch([(prepared)], [(condition, vector)])[0][2]
+    serial = _serial_choice_output(backend, item, vector, 0.4)
+    assert actual.raw_output == serial.raw_output
+    assert actual.metadata["execution_engine"] == "cached_decode_multitoken"
+
+
+def test_batched_activation_extraction_matches_itemwise_and_captures_layers(tiny_backend) -> None:
+    items = _choice_items()
+    batched = tiny_backend.extract_activations_batch(items, layers=[0, 1])
+    assert set(batched) == {0, 1}
+    assert batched[0].shape == (2, 32)
+    assert batched[1].shape == (2, 32)
+    for index, item in enumerate(items):
+        assert np.allclose(batched[0][index], tiny_backend.extract_activation(item), atol=1e-6)
+
+
+def test_cached_decode_forward_accounting_exposes_prefix_reuse(tiny_backend) -> None:
+    backend = _choice_backend(tiny_backend, execution_mode="cached_decode")
+    vector = SteeringVector(
+        values=np.ones(32),
+        layer=0,
+        constructor="test",
+        normalization="none",
+        hash="accounting-vector",
+    )
+    conditions = [
+        ({"condition": f"c{index}", "alpha": float(index), "layer": 0}, vector)
+        for index in range(3)
+    ]
+    backend.reset_execution_stats()
+    backend.predict_choice_batch(backend.prepare_choice_items(_choice_items()), conditions)
+    stats = backend.execution_stats()
+    assert stats["prefill_forwards"] == 1
+    assert stats["decode_forwards"] == 2
+    assert stats["forward_calls"] == 3
+
+
+def test_qwen3_suffix_replay_guard_fails_closed_on_tiny_gpt2(tiny_backend) -> None:
+    engine = Qwen3CachedSuffixReplayEngine(tiny_backend)
+    assert engine.status.supported is False
+    with pytest.raises(SuffixReplayUnavailable, match="not Qwen3"):
+        engine.require_supported()
