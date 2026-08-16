@@ -87,9 +87,13 @@ if [[ ! "${user_name}" =~ ^[A-Za-z0-9._-]+$ ]]; then
 fi
 identity_resolved="${identity_file/#\~/${HOME}}"
 if [[ ! -f "${identity_resolved}" ]]; then
-  echo "SSH identity file does not exist: ${identity_resolved}" >&2
-  echo "Use --identity PATH if the dedicated RunPod key is stored elsewhere." >&2
-  exit 1
+  if [[ "${dry_run}" == "1" ]]; then
+    echo "DRY RUN: identity file not checked because no file will be written." >&2
+  else
+    echo "SSH identity file does not exist: ${identity_resolved}" >&2
+    echo "Use --identity PATH if the dedicated RunPod key is stored elsewhere." >&2
+    exit 1
+  fi
 fi
 
 config_dir="$(dirname "${config_file}")"

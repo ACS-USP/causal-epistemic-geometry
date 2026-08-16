@@ -26,7 +26,10 @@ dev = [
   "ruff>=0.5",
 ]
 hf = [
-  "transformers>=4.45",
+  # The RunPod bootstrap intentionally preserves an existing CUDA Torch build.
+  # Transformers 5.x requires Torch >=2.5, while common CUDA images still ship
+  # Torch 2.4.x; keep the optional stack compatible with both.
+  "transformers>=4.45,<5",
   "accelerate>=0.33",
 ]
 
@@ -48,4 +51,3 @@ ignore = ["B008"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra"
-
