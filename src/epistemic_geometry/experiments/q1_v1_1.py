@@ -1618,7 +1618,8 @@ def validate_q1_v1_1_run(run_dir: str | Path, split_manifest: str | Path) -> dic
         if len(permutation_manifests.get(permutation_id, [])) != EVALUATION_SIZE:
             raise ValueError(f"Permutation manifest incomplete for {permutation_id}")
         for row in by_condition[f"{permutation_id}_baseline"]:
-            metadata = row.metadata.get("item_metadata", {})
+            row_metadata = row.metadata
+            metadata = row_metadata.get("item_metadata", {})
             semantic_ids = metadata.get("semantic_option_ids")
             if (
                 not isinstance(semantic_ids, list)
@@ -1633,7 +1634,7 @@ def validate_q1_v1_1_run(run_dir: str | Path, split_manifest: str | Path) -> dic
                 raise ValueError(
                     f"Permutation semantic order mismatch for {permutation_id}/{row.item_id}"
                 )
-            if metadata.get("semantic_target_original_index") != metadata.get(
+            if row_metadata.get("semantic_target_original_index") != metadata.get(
                 "original_target_index"
             ):
                 raise ValueError(
