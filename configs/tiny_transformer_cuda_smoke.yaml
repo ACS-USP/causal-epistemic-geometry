@@ -1,0 +1,35 @@
+experiment:
+  name: tiny-random-transformer-cuda-smoke
+  stage: development
+  seed: 321
+
+backend:
+  type: tiny_transformer
+  model_id: TINY_RANDOM_GPT2_CONFIG_ONLY
+  hidden_size: 32
+  n_classes: 4
+  device: cuda
+  dtype: float32
+  layer: 0
+  layer_path: transformer.h
+  prompt_mode: plain
+  max_new_tokens: 1
+  do_sample: false
+  batch_size: 1
+
+benchmark:
+  type: jsonl
+  path: examples/technical_smoke_mcq.jsonl
+  max_items: 8
+  allowed_targets: [A, B, C, D]
+
+steering:
+  enabled: true
+  layer: 0
+  alpha: 0.25
+  token_scope: last_token
+  constructor: difference_of_means
+
+output:
+  root: runs
+  save_figures: false
