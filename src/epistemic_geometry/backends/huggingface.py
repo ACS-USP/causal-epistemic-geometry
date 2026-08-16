@@ -506,6 +506,12 @@ class HuggingFaceBackend(ModelBackend):
             return self._predict_choice_batch_full_prompt(prepared_items, conditions)
         if execution_mode == "cached_decode":
             return self._predict_choice_batch_cached(prepared_items, conditions)
+        if execution_mode == "cached_suffix_replay":
+            from epistemic_geometry.backends.qwen3_replay import Qwen3CachedSuffixReplayEngine
+
+            return Qwen3CachedSuffixReplayEngine(self).predict_choice_batch(
+                prepared_items, conditions
+            )
         raise ValueError(f"Unsupported choice execution mode: {execution_mode}")
 
     def _pad_token_sequences(
