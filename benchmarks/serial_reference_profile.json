@@ -7,43 +7,43 @@
   ],
   "cost_summaries": [
     {
-      "a40_hours_per_10k_item_condition": 0.014940653818484861,
-      "cost_usd_per_10k_item_condition": 0.006573887680133339,
+      "a40_hours_per_10k_item_condition": 0.017567288543634478,
+      "cost_usd_per_10k_item_condition": 0.007729606959199171,
       "hourly_rate_usd": 0.44,
       "item_conditions": 8,
-      "item_conditions_per_second": 185.92076434707684,
+      "item_conditions_per_second": 158.12216955839253,
       "mode": "serial_reference",
       "peak_vram_bytes": null,
       "prompt_tokens": null,
-      "seconds": 0.0430290829972364,
-      "seconds_per_1k_item_condition": 5.37863537465455,
+      "seconds": 0.0505937910056673,
+      "seconds_per_1k_item_condition": 6.324223875708412,
       "speedup_vs_reference": 1.0
     },
     {
-      "a40_hours_per_10k_item_condition": 0.004612355203587665,
-      "cost_usd_per_10k_item_condition": 0.002029436289578573,
+      "a40_hours_per_10k_item_condition": 0.005463411455113803,
+      "cost_usd_per_10k_item_condition": 0.002403901040250073,
       "hourly_rate_usd": 0.44,
       "item_conditions": 8,
-      "item_conditions_per_second": 602.2471503532764,
+      "item_conditions_per_second": 508.43283552765416,
       "mode": "full_prompt_batched",
       "peak_vram_bytes": null,
       "prompt_tokens": null,
-      "seconds": 0.013283582986332476,
-      "seconds_per_1k_item_condition": 1.6604478732915595,
-      "speedup_vs_reference": 3.23926782717503
+      "seconds": 0.015734624990727752,
+      "seconds_per_1k_item_condition": 1.966828123840969,
+      "speedup_vs_reference": 3.2154430776381187
     },
     {
-      "a40_hours_per_10k_item_condition": 0.0013793256787014091,
-      "cost_usd_per_10k_item_condition": 0.00060690329862862,
+      "a40_hours_per_10k_item_condition": 0.004506770831843217,
+      "cost_usd_per_10k_item_condition": 0.0019829791660110154,
       "hourly_rate_usd": 0.44,
       "item_conditions": 8,
-      "item_conditions_per_second": 2013.866500617147,
+      "item_conditions_per_second": 616.3565624750657,
       "mode": "cached_decode",
       "peak_vram_bytes": null,
       "prompt_tokens": null,
-      "seconds": 0.003972457954660058,
-      "seconds_per_1k_item_condition": 0.49655724433250725,
-      "speedup_vs_reference": 10.831853600051156
+      "seconds": 0.012979499995708466,
+      "seconds_per_1k_item_condition": 1.6224374994635582,
+      "speedup_vs_reference": 3.8979768883543744
     }
   ],
   "items": [
@@ -65,7 +65,7 @@
       "mode": "serial_reference",
       "peak_vram_bytes": null,
       "prompt_tokens": 22,
-      "seconds": 0.0430290829972364
+      "seconds": 0.0505937910056673
     },
     {
       "execution_stats": {
@@ -79,7 +79,7 @@
       "mode": "full_prompt_batched",
       "peak_vram_bytes": null,
       "prompt_tokens": 22,
-      "seconds": 0.013283582986332476
+      "seconds": 0.015734624990727752
     },
     {
       "execution_stats": {
@@ -93,7 +93,7 @@
       "mode": "cached_decode",
       "peak_vram_bytes": null,
       "prompt_tokens": 22,
-      "seconds": 0.003972457954660058
+      "seconds": 0.012979499995708466
     }
   ],
   "model": "random GPT2 config, no downloaded weights",

@@ -345,15 +345,13 @@ def test_optimized_choice_engines_match_serial_predictions(tiny_backend, executi
             assert set(actual.metadata["candidate_scores"]) == set(
                 serial.metadata["candidate_scores"]
             )
-            if execution_mode == "full_prompt_batched":
-                for label, value in serial.metadata["candidate_scores"].items():
-                    assert actual.metadata["candidate_scores"][label] == pytest.approx(
-                        value, abs=2e-5
-                    )
-            else:
-                assert actual.metadata["candidate_score_semantics"] == (
-                    "full_vocab_log_probability"
+            for label, value in serial.metadata["candidate_scores"].items():
+                assert actual.metadata["candidate_scores"][label] == pytest.approx(
+                    value, abs=2e-5
                 )
+            assert actual.metadata["candidate_score_semantics"] == (
+                "full_vocab_log_probability"
+            )
 
 
 def test_candidate_only_head_preserves_ranking_and_margins(tiny_backend) -> None:

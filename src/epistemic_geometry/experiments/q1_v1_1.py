@@ -963,6 +963,32 @@ def _append_q1_prediction(path: Path, row: dict[str, Any]) -> None:
         os.fsync(handle.fileno())
 
 
+class _BufferedQ1Journal:
+    """Buffer complete rows while retaining crash-safe chunk boundaries."""
+
+    def __init__(self, path: Path, chunk_size: int = 32) -> None:
+        if chunk_size <= 0:
+            raise ValueError("chunk_size must be positive")
+        self.path = path
+        self.chunk_size = chunk_size
+        self._rows: list[dict[str, Any]] = []
+
+    def append(self, row: dict[str, Any]) -> None:
+        self._rows.append(row)
+        if len(self._rows) >= self.chunk_size:
+            self.flush()
+
+    def flush(self) -> None:
+        if not self._rows:
+            return
+        with self.path.open("a", encoding="utf-8") as handle:
+            for row in self._rows:
+                handle.write(json.dumps(_json_safe(row), sort_keys=True) + "\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        self._rows.clear()
+
+
 def _assert_q1_resume_compatible(existing: Prediction, current: Prediction) -> None:
     """Reject conflicting recomputation rather than silently keeping one row."""
 
@@ -1078,6 +1104,7 @@ def run_q1_v1_1(
         original_specs, vectors = _frozen_conditions(reference)
         prediction_journal = run_dir / "predictions.jsonl"
         existing_predictions, records = _load_q1_prediction_journal(prediction_journal)
+        journal = _BufferedQ1Journal(prediction_journal)
         predictions_by_condition: dict[str, list[Prediction]] = {}
         for existing_prediction in existing_predictions.values():
             predictions_by_condition.setdefault(existing_prediction.condition, []).append(
@@ -1092,7 +1119,7 @@ def run_q1_v1_1(
             if key in existing_predictions:
                 _assert_q1_resume_compatible(existing_predictions[key], prediction)
                 return
-            _append_q1_prediction(prediction_journal, row)
+            journal.append(row)
             existing_predictions[key] = prediction
             records.append(row)
             predictions_by_condition.setdefault(spec["condition"], []).append(prediction)
@@ -1139,6 +1166,7 @@ def run_q1_v1_1(
 
         numerical_specs = original_specs[:3]
         evaluate_specs(benchmark.items(), numerical_specs)
+        journal.flush()
         numerical_audit: dict[str, Any] = {"status": "PASS", "conditions": {}}
         for spec in numerical_specs:
             name = spec["condition"]
@@ -1200,6 +1228,7 @@ def run_q1_v1_1(
             return run_dir
 
         evaluate_specs(benchmark.items(), original_specs[3:])
+        journal.flush()
         permutation_manifests: dict[str, list[dict[str, Any]]] = {}
         ordering_conditions: dict[str, dict[str, str]] = {
             "original": {
@@ -1335,6 +1364,7 @@ def run_q1_v1_1(
         )
         return run_dir
     except Exception:
+        journal.flush()
         manifest_payload["status"] = "FAILED"
         _write_manifest(run_dir, manifest_payload)
         raise

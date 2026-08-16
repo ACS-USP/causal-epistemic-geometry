@@ -8,6 +8,7 @@ import pytest
 
 from epistemic_geometry.experiments.q1_v1_1 import (
     _append_q1_prediction,
+    _BufferedQ1Journal,
     _load_q1_prediction_journal,
 )
 
@@ -40,3 +41,15 @@ def test_q1_journal_recovers_truncated_tail_and_rejects_duplicates(tmp_path) -> 
         handle.write(json.dumps(_row()) + "\n")
     with pytest.raises(ValueError, match="Duplicate"):
         _load_q1_prediction_journal(path)
+
+
+def test_q1_journal_flushes_complete_chunks(tmp_path) -> None:
+    path = tmp_path / "buffered.jsonl"
+    journal = _BufferedQ1Journal(path, chunk_size=2)
+    journal.append(_row("item-1"))
+    assert not path.exists()
+    journal.append(_row("item-2"))
+    assert len(path.read_text(encoding="utf-8").splitlines()) == 2
+    journal.append(_row("item-3"))
+    journal.flush()
+    assert len(path.read_text(encoding="utf-8").splitlines()) == 3
