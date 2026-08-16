@@ -200,6 +200,9 @@ def main() -> int:
 
     full_prompt, full_prompt_seconds, full_prompt_stats = run_batch("full_prompt_batched")
     cached, cached_seconds, cached_stats = run_batch("cached_decode")
+    suffix_replay, suffix_replay_seconds, suffix_replay_stats = run_batch(
+        "cached_suffix_replay"
+    )
     candidate_only, candidate_only_seconds, candidate_only_stats = run_batch(
         "cached_decode", "candidate_only"
     )
@@ -226,6 +229,7 @@ def main() -> int:
     serial_full_prompt_comparison = {}
     full_prompt_comparison = {}
     candidate_head_comparison = {}
+    suffix_replay_comparison = {}
     for item in compare_items:
         for condition, _vector in conditions:
             key = (item.id, condition["condition"])
@@ -238,6 +242,9 @@ def main() -> int:
             )
             candidate_head_comparison[f"{item.id}/{key[1]}"] = _compare_scores(
                 cached[key], candidate_only[key]
+            )
+            suffix_replay_comparison[f"{item.id}/{key[1]}"] = _compare_scores(
+                cached[key], suffix_replay[key]
             )
             if not serial_comparison[f"{item.id}/{key[1]}"]["prediction_equal"]:
                 raise AssertionError(f"Serial/cached prediction mismatch for {key}")
@@ -264,11 +271,16 @@ def main() -> int:
                 "seconds": candidate_only_seconds,
                 "stats": candidate_only_stats,
             },
+            "cached_suffix_replay": {
+                "seconds": suffix_replay_seconds,
+                "stats": suffix_replay_stats,
+            },
         },
         "serial_vs_cached": serial_comparison,
         "serial_vs_full_prompt": serial_full_prompt_comparison,
         "full_prompt_vs_cached": full_prompt_comparison,
         "full_vocab_vs_candidate_only": candidate_head_comparison,
+        "cached_decode_vs_suffix_replay": suffix_replay_comparison,
         "single_item_padding_isolation": {
             "full_prompt_vs_cached": {
                 f"{item.id}/{condition['condition']}": _compare_scores(
@@ -316,6 +328,9 @@ def main() -> int:
             ),
             "full_vocab_vs_candidate_only": all(
                 row["ranking_equal"] for row in candidate_head_comparison.values()
+            ),
+            "cached_decode_vs_suffix_replay": all(
+                row["ranking_equal"] for row in suffix_replay_comparison.values()
             ),
         },
     }
