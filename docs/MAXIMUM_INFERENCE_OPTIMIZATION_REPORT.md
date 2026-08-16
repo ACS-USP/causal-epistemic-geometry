@@ -52,9 +52,11 @@ approved or enabled.
 
 The prediction journal reached its complete 15,872 rows at approximately
 17.48 minutes after the run timestamp. The old serial estimate was 183.80
-minutes, giving approximately 10.52× observed speedup. At the recorded
-$0.40/A40-hour planning rate, the observed compute estimate is approximately
-$0.12. GPU utilization and peak VRAM were not formally captured for this run.
+minutes, giving approximately 10.52× observed speedup. At the requested
+$0.44/A40-hour accounting rate, the observed compute estimate is approximately
+$0.13 total, or $0.081 per 10,000 item-condition rows. The run manifest's
+conservative $0.40 planning rate gives approximately $0.12. GPU utilization and
+peak VRAM were not formally captured for this run.
 
 ## Scientific firewall
 
