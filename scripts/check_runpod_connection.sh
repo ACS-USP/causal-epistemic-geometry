@@ -2,9 +2,9 @@
 set -euo pipefail
 
 alias_name="${RUNPOD_SSH_HOST:-runpod-ceg}"
-ssh_options=()
+ssh_command=(ssh)
 if [[ -n "${SSH_CONFIG_PATH:-}" ]]; then
-  ssh_options=(-F "${SSH_CONFIG_PATH}")
+  ssh_command+=(-F "${SSH_CONFIG_PATH}")
 fi
 if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
   echo "Usage: check_runpod_connection.sh [SSH_ALIAS]"
@@ -16,7 +16,7 @@ if [[ $# -gt 1 ]]; then
   exit 2
 fi
 
-if ! ssh_config="$(ssh "${ssh_options[@]}" -G "${alias_name}" 2>/dev/null)"; then
+if ! ssh_config="$("${ssh_command[@]}" -G "${alias_name}" 2>/dev/null)"; then
   echo "Unable to inspect SSH configuration for ${alias_name}." >&2
   exit 1
 fi
@@ -29,7 +29,7 @@ if [[ -z "${resolved_host}" || "${resolved_host}" == "${alias_name}" ]]; then
 fi
 
 echo "Checking ${alias_name} (${resolved_host}) with BatchMode and no remote writes..."
-if ! ssh "${ssh_options[@]}" \
+if ! "${ssh_command[@]}" \
   -o BatchMode=yes \
   -o ConnectTimeout=8 \
   -o ServerAliveInterval=10 \

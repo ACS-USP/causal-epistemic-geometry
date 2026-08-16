@@ -79,6 +79,19 @@ def test_connection_check_explains_unconfigured_alias(tmp_path: Path) -> None:
     assert "not configured" in result.stderr.lower()
 
 
+def test_connection_check_default_ssh_options_do_not_raise_unbound_error(
+    tmp_path: Path,
+) -> None:
+    env = dict(os.environ)
+    env.pop("SSH_CONFIG_PATH", None)
+    env["HOME"] = str(tmp_path)
+    env["RUNPOD_SSH_HOST"] = "ceg-test-unconfigured"
+    result = _run("check_runpod_connection.sh", env=env)
+    assert result.returncode != 0
+    assert "unbound variable" not in result.stderr.lower()
+    assert "not configured" in result.stderr.lower()
+
+
 def test_transfer_helpers_are_explicit_and_non_destructive_by_default() -> None:
     for script in ("sync_to_runpod.sh", "sync_from_runpod.sh"):
         result = _run(script, "--help")
