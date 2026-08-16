@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from dataclasses import replace
 
 import numpy as np
@@ -214,11 +215,17 @@ def test_difference_of_means_tiny_vector_provenance_and_roundtrip(tiny_backend, 
     assert vector.dimension == 32
     assert np.isclose(np.linalg.norm(vector.values), 1.0)
     assert vector.metadata["creation_seed"] == 8
+    assert vector.metadata["source_item_ids"] == [item.id for item in benchmark.items()]
     assert vector.metadata["model_provenance"]["model_revision"] == "local-config"
     assert vector.hash
     vector_path, metadata_path = save_vector(
         vector, tmp_path / "tiny.npz", git_commit="test-commit"
     )
+    saved_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    assert saved_metadata["source_item_ids"] == [item.id for item in benchmark.items()]
+    assert saved_metadata["model_identifier"] == "tiny-random-gpt2-config"
+    assert saved_metadata["model_revision"] == "local-config"
+    assert saved_metadata["git_commit"] == "test-commit"
     restored = load_vector(vector_path, metadata_path)
     assert np.array_equal(vector.values, restored.values)
     assert restored.hash == vector.hash

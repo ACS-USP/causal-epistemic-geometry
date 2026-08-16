@@ -97,14 +97,17 @@ def difference_of_means(
     backend_provenance = (
         backend.provenance() if hasattr(backend, "provenance") else {"backend_type": "unknown"}
     )
+    positive_ids = [item.id for item in positive_items]
+    negative_ids = [item.id for item in negative_items]
     vector = SteeringVector(
         values=values,
         layer=layer,
         constructor="difference_of_means",
         normalization=normalization,
         metadata={
-            "positive_items": [item.id for item in positive_items],
-            "negative_items": [item.id for item in negative_items],
+            "positive_items": positive_ids,
+            "negative_items": negative_ids,
+            "source_item_ids": positive_ids + negative_ids,
             "creation_seed": seed,
             "model_provenance": backend_provenance,
             "extraction_policy": (

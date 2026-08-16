@@ -42,12 +42,30 @@ def save_vector(
     meta_path.parent.mkdir(parents=True, exist_ok=True)
     digest = vector.hash or vector_hash(vector.values)
     np.savez_compressed(vector_path, values=np.asarray(vector.values, dtype=np.float64))
+    model_provenance = vector.metadata.get("model_provenance", {})
+    if not isinstance(model_provenance, dict):
+        model_provenance = {}
+    positive_items = vector.metadata.get("positive_items", [])
+    negative_items = vector.metadata.get("negative_items", [])
+    source_item_ids = vector.metadata.get(
+        "source_item_ids",
+        list(positive_items) + list(negative_items)
+        if isinstance(positive_items, list) and isinstance(negative_items, list)
+        else [],
+    )
     metadata: dict[str, Any] = {
         "vector_hash": digest,
         "dimension": vector.dimension,
         "layer": vector.layer,
         "constructor": vector.constructor,
         "normalization": vector.normalization,
+        "creation_seed": vector.metadata.get("creation_seed"),
+        "source_item_ids": source_item_ids,
+        "extraction_policy": vector.metadata.get("extraction_policy", "UNKNOWN"),
+        "model_identifier": model_provenance.get("model_identifier", "UNKNOWN"),
+        "model_revision": model_provenance.get("model_revision", "UNKNOWN"),
+        "tokenizer_identifier": model_provenance.get("tokenizer_identifier", "UNKNOWN"),
+        "tokenizer_revision": model_provenance.get("tokenizer_revision", "UNKNOWN"),
         "metadata": vector.metadata,
         "git_commit": git_commit,
         "git_dirty": git_dirty,
