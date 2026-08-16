@@ -50,7 +50,8 @@ else
   rsync_destination="${destination}"
 fi
 
-flags=(-a --partial --human-readable --info=progress2 --protect-args)
+# Keep flags compatible with the older rsync shipped on some macOS systems.
+flags=(-a --partial --human-readable --progress)
 if [[ "${dry_run}" == "1" ]]; then
   flags+=(--dry-run --itemize-changes)
 fi

@@ -31,7 +31,8 @@ done
 
 command -v rsync >/dev/null 2>&1 || { echo "rsync is required." >&2; exit 1; }
 
-flags=(-a --partial --human-readable --info=progress2 --protect-args)
+# Keep flags compatible with the older rsync shipped on some macOS systems.
+flags=(-a --partial --human-readable --progress)
 if [[ "${dry_run}" == "1" ]]; then
   flags+=(--dry-run --itemize-changes)
 fi
