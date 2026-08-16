@@ -786,11 +786,17 @@ def audit_q1_v1_repeat(
     _atomic_write(metrics_path, metrics_text)
     summary_path = path / "summary.md"
     summary = summary_path.read_text(encoding="utf-8")
-    summary = summary.replace(
-        "Repeated selected conditions: PASS",
-        "Repeated selected conditions: PASS (32 items; 96 rows; max score diff <= 1e-5)",
+    repeat_line = "Repeated selected conditions: PASS (32 items; 96 rows; max score diff <= 1e-5)"
+    summary = "\n".join(
+        repeat_line if line.startswith("Repeated selected conditions:") else line
+        for line in summary.splitlines()
     )
-    summary = summary.replace("Repeated rows checked: 0", f"Repeated rows checked: {comparisons}")
+    summary = "\n".join(
+        f"Repeated rows checked: {comparisons}"
+        if line.startswith("Repeated rows checked:")
+        else line
+        for line in summary.splitlines()
+    )
     _atomic_write(summary_path, summary)
     manifest_path = path / "manifest.json"
     manifest_payload = json.loads(manifest_path.read_text(encoding="utf-8"))
