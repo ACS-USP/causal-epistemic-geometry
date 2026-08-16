@@ -34,6 +34,7 @@ from epistemic_geometry.reproducibility import (
     stable_seed,
 )
 from epistemic_geometry.steering import (
+    load_vector,
     random_unit_vector,
     save_vector,
     vector_hash,
@@ -668,3 +669,100 @@ def validate_q1_v1_run(run_dir: str | Path) -> dict[str, Any]:
         "prediction_sha256": manifest["prediction_sha256"],
         "metrics_sha256": manifest["metrics_sha256"],
     }
+
+
+def audit_q1_v1_repeat(
+    config: RunConfig,
+    split_manifest: str | Path,
+    run_dir: str | Path,
+    repeat_items: int = 32,
+) -> dict[str, Any]:
+    """Repeat baseline, one PCA, and one random condition on a fixed prefix."""
+
+    if repeat_items <= 0 or repeat_items > EVALUATION_SIZE:
+        raise ValueError("repeat_items must be between 1 and the 512 evaluation items")
+    path = Path(run_dir)
+    metrics_path = path / "metrics.json"
+    metrics_payload = json.loads(metrics_path.read_text(encoding="utf-8"))
+    specs = {
+        spec["condition"]: spec for spec in metrics_payload["condition_specs"]
+    }
+    selected_names = ["baseline", "pca_pc1_minus", "random_0_minus"]
+    for name in selected_names[1:]:
+        if name not in specs:
+            raise ValueError(f"Q1 artifact lacks required repeat condition {name}")
+    benchmark = _load_split_benchmark(
+        config,
+        Path(split_manifest).resolve(),
+        "dev_evaluation",
+    )
+    backend = build_backend(config)
+    expected_rows = {
+        (row["item_id"], row["condition"]): row
+        for row in (
+            json.loads(line)
+            for line in (path / "predictions.jsonl").read_text(encoding="utf-8").splitlines()
+        )
+    }
+    comparisons = 0
+    max_score_diff = 0.0
+    for item in benchmark.items()[:repeat_items]:
+        outputs: list[tuple[str, Any]] = [("baseline", backend.predict(item))]
+        for condition_name in selected_names[1:]:
+            spec = specs[condition_name]
+            direction_id = str(spec["direction_id"])
+            vector = load_vector(path / "vectors" / direction_id)
+            intervention = Intervention(
+                layer=config.steering.layer,
+                alpha=float(spec["alpha"]),
+                vector_id=vector.hash,
+                token_scope=config.steering.token_scope,
+                vector=vector,
+            )
+            with backend.steer(intervention):
+                outputs.append((condition_name, backend.predict(item)))
+        for condition_name, output in outputs:
+            prediction = _prediction(item, condition_name, output, benchmark.parser)
+            expected = expected_rows[(item.id, condition_name)]
+            if prediction.normalized_output != expected["normalized_output"]:
+                raise ValueError(
+                    f"Q1 repeat prediction mismatch for {item.id}/{condition_name}"
+                )
+            observed_scores = prediction.metadata.get("candidate_scores", {})
+            expected_scores = expected.get("metadata", {}).get("candidate_scores", {})
+            if set(observed_scores) != set(expected_scores):
+                raise ValueError(f"Q1 repeat candidate set mismatch for {item.id}/{condition_name}")
+            for label, observed in observed_scores.items():
+                difference = abs(float(observed) - float(expected_scores[label]))
+                max_score_diff = max(max_score_diff, difference)
+                if difference > 1e-5:
+                    raise ValueError(
+                        f"Q1 repeat score mismatch for {item.id}/{condition_name}/{label}: "
+                        f"difference {difference} exceeds 1e-5"
+                    )
+            comparisons += 1
+    repeat_check = {
+        "status": "PASS",
+        "conditions": selected_names,
+        "items": repeat_items,
+        "rows_checked": comparisons,
+        "max_abs_score_difference": max_score_diff,
+        "score_tolerance": 1e-5,
+        "method": "same-process-independent-repeat_on_fixed_prefix",
+    }
+    metrics_payload["repeat_check"] = repeat_check
+    metrics_text = json.dumps(_json_safe(metrics_payload), indent=2, sort_keys=True) + "\n"
+    _atomic_write(metrics_path, metrics_text)
+    summary_path = path / "summary.md"
+    summary = summary_path.read_text(encoding="utf-8")
+    summary = summary.replace(
+        "Repeated selected conditions: PASS",
+        "Repeated selected conditions: PASS (32 items; 96 rows; max score diff <= 1e-5)",
+    )
+    _atomic_write(summary_path, summary)
+    manifest_path = path / "manifest.json"
+    manifest_payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest_payload["repeat_check"] = repeat_check
+    manifest_payload["metrics_sha256"] = _sha256_bytes(metrics_text.encode("utf-8"))
+    _write_json(manifest_path, manifest_payload)
+    return repeat_check

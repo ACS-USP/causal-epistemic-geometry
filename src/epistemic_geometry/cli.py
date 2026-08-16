@@ -19,6 +19,7 @@ from epistemic_geometry.experiments.baseline_vs_steering import (
 )
 from epistemic_geometry.experiments.baseline_vs_steering import run_experiment as execute_experiment
 from epistemic_geometry.experiments.q1_v1 import (
+    audit_q1_v1_repeat,
     build_split_manifest,
     run_q1_v1,
     validate_q1_v1_run,
@@ -354,6 +355,24 @@ def q1_v1(
         typer.echo(f"Q1 V1 failed: {exc}", err=True)
         raise typer.Exit(code=1) from exc
     typer.echo(f"Q1 V1 complete: {path}")
+
+
+@app.command("audit-q1-v1-repeat")
+def audit_q1_v1_repeat_command(
+    config: Path = typer.Argument(..., help="Pinned Q1 V1 base YAML config."),
+    split_manifest: Path = typer.Argument(..., help="Fixed Q1 split manifest."),
+    run_dir: Path = typer.Argument(..., help="Completed Q1 V1 run directory."),
+    repeat_items: int = typer.Option(32, "--items", min=1, max=512),
+) -> None:
+    """Repeat fixed Q1 conditions on a deterministic prefix and record tolerance."""
+
+    try:
+        loaded = load_config(config)
+        result = audit_q1_v1_repeat(loaded, split_manifest, run_dir, repeat_items)
+    except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
+        typer.echo(f"Q1 repeat audit failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(json.dumps(result, indent=2, sort_keys=True))
 
 
 @app.command()
