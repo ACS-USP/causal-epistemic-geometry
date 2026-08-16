@@ -68,6 +68,7 @@ def main() -> None:
         ({"condition": "steered", "alpha": 0.4, "layer": 0}, vector),
     ]
     rows = []
+    prompt_lengths = []
     for mode in ("serial_reference", "full_prompt_batched", "cached_decode"):
         backend = _backend(mode)
         backend.reset_execution_stats()
@@ -79,6 +80,7 @@ def main() -> None:
                     backend.predict(item)
         else:
             prepared = backend.prepare_choice_items(items)
+            prompt_lengths = [item.prompt_length for item in prepared]
             backend.predict_choice_batch(prepared, conditions)
         elapsed = time.perf_counter() - started
         rows.append(
@@ -89,7 +91,11 @@ def main() -> None:
                 prompt_tokens=sum(item.prompt.count("alpha") + 3 for item in items),
             )
         )
-        rows[-1] = {**rows[-1].__dict__, "execution_stats": backend.execution_stats()}
+        rows[-1] = {
+            **rows[-1].__dict__,
+            "execution_stats": backend.execution_stats(),
+            "attention_implementation": backend.provenance().get("attention_implementation"),
+        }
     measurements = [
         ModeMeasurement(row["mode"], row["seconds"], row["item_conditions"]) for row in rows
     ]
@@ -98,6 +104,12 @@ def main() -> None:
         "model": "random GPT2 config, no downloaded weights",
         "items": [item.id for item in items],
         "candidate_labels": ["A", "B", "C", "D"],
+        "prompt_length_summary": {
+            "mean": float(np.mean(prompt_lengths)),
+            "p50": float(np.percentile(prompt_lengths, 50)),
+            "p90": float(np.percentile(prompt_lengths, 90)),
+            "p99": float(np.percentile(prompt_lengths, 99)),
+        },
         "measurements": rows,
         "cost_summaries": compare_modes(measurements),
     }

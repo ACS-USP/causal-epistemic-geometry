@@ -7,43 +7,43 @@
   ],
   "cost_summaries": [
     {
-      "a40_hours_per_10k_item_condition": 0.017567288543634478,
-      "cost_usd_per_10k_item_condition": 0.007729606959199171,
+      "a40_hours_per_10k_item_condition": 0.015183130562945735,
+      "cost_usd_per_10k_item_condition": 0.006680577447696123,
       "hourly_rate_usd": 0.44,
       "item_conditions": 8,
-      "item_conditions_per_second": 158.12216955839253,
+      "item_conditions_per_second": 182.9515834209392,
       "mode": "serial_reference",
       "peak_vram_bytes": null,
       "prompt_tokens": null,
-      "seconds": 0.0505937910056673,
-      "seconds_per_1k_item_condition": 6.324223875708412,
+      "seconds": 0.043727416021283716,
+      "seconds_per_1k_item_condition": 5.4659270026604645,
       "speedup_vs_reference": 1.0
     },
     {
-      "a40_hours_per_10k_item_condition": 0.005463411455113803,
-      "cost_usd_per_10k_item_condition": 0.002403901040250073,
+      "a40_hours_per_10k_item_condition": 0.004454485072831933,
+      "cost_usd_per_10k_item_condition": 0.0019599734320460507,
       "hourly_rate_usd": 0.44,
       "item_conditions": 8,
-      "item_conditions_per_second": 508.43283552765416,
+      "item_conditions_per_second": 623.5912192678668,
       "mode": "full_prompt_batched",
       "peak_vram_bytes": null,
       "prompt_tokens": null,
-      "seconds": 0.015734624990727752,
-      "seconds_per_1k_item_condition": 1.966828123840969,
-      "speedup_vs_reference": 3.2154430776381187
+      "seconds": 0.012828917009755969,
+      "seconds_per_1k_item_condition": 1.6036146262194961,
+      "speedup_vs_reference": 3.4085040840181953
     },
     {
-      "a40_hours_per_10k_item_condition": 0.004506770831843217,
-      "cost_usd_per_10k_item_condition": 0.0019829791660110154,
+      "a40_hours_per_10k_item_condition": 0.0014272569589795442,
+      "cost_usd_per_10k_item_condition": 0.0006279930619509994,
       "hourly_rate_usd": 0.44,
       "item_conditions": 8,
-      "item_conditions_per_second": 616.3565624750657,
+      "item_conditions_per_second": 1946.2352313656436,
       "mode": "cached_decode",
       "peak_vram_bytes": null,
       "prompt_tokens": null,
-      "seconds": 0.012979499995708466,
-      "seconds_per_1k_item_condition": 1.6224374994635582,
-      "speedup_vs_reference": 3.8979768883543744
+      "seconds": 0.004110500041861087,
+      "seconds_per_1k_item_condition": 0.5138125052326359,
+      "speedup_vs_reference": 10.637979704650608
     }
   ],
   "items": [
@@ -54,6 +54,7 @@
   ],
   "measurements": [
     {
+      "attention_implementation": "sdpa",
       "execution_stats": {
         "decode_forwards": 0,
         "forward_calls": 32,
@@ -65,9 +66,10 @@
       "mode": "serial_reference",
       "peak_vram_bytes": null,
       "prompt_tokens": 22,
-      "seconds": 0.0505937910056673
+      "seconds": 0.043727416021283716
     },
     {
+      "attention_implementation": "sdpa",
       "execution_stats": {
         "decode_forwards": 1,
         "forward_calls": 1,
@@ -79,9 +81,10 @@
       "mode": "full_prompt_batched",
       "peak_vram_bytes": null,
       "prompt_tokens": 22,
-      "seconds": 0.015734624990727752
+      "seconds": 0.012828917009755969
     },
     {
+      "attention_implementation": "sdpa",
       "execution_stats": {
         "decode_forwards": 1,
         "forward_calls": 2,
@@ -93,9 +96,15 @@
       "mode": "cached_decode",
       "peak_vram_bytes": null,
       "prompt_tokens": 22,
-      "seconds": 0.012979499995708466
+      "seconds": 0.004110500041861087
     }
   ],
   "model": "random GPT2 config, no downloaded weights",
+  "prompt_length_summary": {
+    "mean": 7.5,
+    "p50": 7.5,
+    "p90": 8.7,
+    "p99": 8.969999999999999
+  },
   "status": "TINY_RANDOM_TRANSFORMER_ENGINEERING_ONLY"
 }
