@@ -1582,12 +1582,12 @@ def validate_q1_v1_1_run(run_dir: str | Path, split_manifest: str | Path) -> dic
             baseline_name = specs[name]["baseline_condition"]
             baseline = [replace(row, condition="baseline") for row in by_condition[baseline_name]]
             treatment = [replace(row, condition=name) for row in by_condition[name]]
-        recomputed = compute_paired_metrics(baseline + treatment, treatment_condition=name)
+            recomputed = compute_paired_metrics(baseline + treatment, treatment_condition=name)
         if "bootstrap" in stored:
             recomputed["bootstrap"] = bootstrap_paired_metrics(
                 baseline + treatment,
                 int(manifest["experiment_seed"]),
-                treatment_condition=name,
+                treatment_condition=("baseline_self" if name == "baseline_fp32" else name),
             )
         if _json_safe(stored) != _json_safe(recomputed):
             raise ValueError(f"V1.1 metric mismatch for {name}")
