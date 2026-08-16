@@ -8,9 +8,11 @@ from html import escape
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 from epistemic_geometry.backends import ModelBackend, build_backend
 from epistemic_geometry.backends.base import validate_vector_dimension
-from epistemic_geometry.benchmarks import Benchmark, JsonlBenchmark, MockBenchmark
+from epistemic_geometry.benchmarks import Benchmark, JsonlBenchmark, MMLUProBenchmark, MockBenchmark
 from epistemic_geometry.config import RunConfig
 from epistemic_geometry.io.artifacts import RunInterrupted, RunSession, resolved_config_hash
 from epistemic_geometry.metrics import bootstrap_paired_metrics, compute_paired_metrics
@@ -19,6 +21,7 @@ from epistemic_geometry.steering import (
     difference_of_means,
     load_vector,
     random_unit_vector,
+    vector_hash,
 )
 from epistemic_geometry.types import ExperimentResult, Intervention, Prediction, SteeringVector
 
@@ -34,6 +37,17 @@ def build_benchmark(config: RunConfig) -> Benchmark:
             allowed_targets=benchmark_config.allowed_targets,
         )
     path = Path(benchmark_config.path or "")
+    if benchmark_config.type == "mmlu_pro":
+        manifest_path = benchmark_config.split_manifest
+        if manifest_path and not Path(manifest_path).is_absolute():
+            manifest_path = str(Path.cwd() / manifest_path)
+        return MMLUProBenchmark(
+            split=benchmark_config.split or "validation",
+            dataset_revision=benchmark_config.dataset_revision,
+            split_manifest=manifest_path,
+            max_items=benchmark_config.max_items,
+            dataset_id=benchmark_config.dataset_id or "TIGER-Lab/MMLU-Pro",
+        )
     if not path.is_absolute():
         path = Path.cwd() / path
     return JsonlBenchmark(
@@ -62,6 +76,15 @@ def build_vector(config: RunConfig, backend: ModelBackend, benchmark: Benchmark)
             ),
             layer=steering.layer,
             metadata={"source": "config_generated_random_control"},
+        )
+    elif steering.constructor == "zero_vector":
+        vector = SteeringVector(
+            values=np.zeros(steering.vector_dimension or backend.hidden_size, dtype=np.float64),
+            layer=steering.layer,
+            constructor="zero_vector",
+            normalization="none",
+            metadata={"source": "technical_identity_control"},
+            hash=vector_hash(np.zeros(steering.vector_dimension or backend.hidden_size)),
         )
     elif steering.constructor == "difference_of_means":
         items = benchmark.items()

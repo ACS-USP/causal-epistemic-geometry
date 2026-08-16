@@ -31,6 +31,7 @@ hf = [
   # Torch 2.4.x; keep the optional stack compatible with both.
   "transformers>=4.45,<5",
   "accelerate>=0.33",
+  "datasets>=3.0",
 ]
 
 [project.scripts]

@@ -47,6 +47,9 @@ class BackendConfig:
     device_map: str | dict[str, Any] | None = None
     batch_size: int = 1
     quantization: str = "none"
+    inference_mode: str = "generation"
+    enable_thinking: bool | None = None
+    candidate_labels: list[str] = field(default_factory=lambda: ["A", "B", "C", "D"])
 
     def __post_init__(self) -> None:
         if self.type not in {"mock", "huggingface", "tiny_transformer"}:
@@ -65,6 +68,14 @@ class BackendConfig:
             raise ConfigError("backend.batch_size must be positive")
         if self.quantization != "none":
             raise ConfigError("Only quantization: none is implemented; choose it explicitly later")
+        if self.inference_mode not in {"generation", "choice_loglikelihood"}:
+            raise ConfigError(
+                "backend.inference_mode must be generation or choice_loglikelihood"
+            )
+        if not self.candidate_labels or len(set(self.candidate_labels)) != len(
+            self.candidate_labels
+        ):
+            raise ConfigError("backend.candidate_labels must be a non-empty unique list")
 
 
 @dataclass(frozen=True)
@@ -74,14 +85,31 @@ class BenchmarkConfig:
     path: str | None = None
     max_items: int | None = None
     allowed_targets: list[str] = field(default_factory=lambda: ["A", "B", "C", "D"])
+    dataset_id: str | None = None
+    dataset_revision: str | None = None
+    split: str | None = None
+    split_manifest: str | None = None
 
     def __post_init__(self) -> None:
-        if self.type not in {"mock", "jsonl"}:
-            raise ConfigError("benchmark.type must be 'mock' or 'jsonl'")
+        if self.type not in {"mock", "jsonl", "mmlu_pro"}:
+            raise ConfigError("benchmark.type must be mock, jsonl, or mmlu_pro")
         if self.type == "mock" and self.n_items <= 0:
             raise ConfigError("benchmark.n_items must be positive")
         if self.type == "jsonl" and not self.path:
             raise ConfigError("benchmark.path is required for JSONL benchmarks")
+        if self.type == "mmlu_pro":
+            if self.dataset_id not in {None, "TIGER-Lab/MMLU-Pro"}:
+                raise ConfigError("mmlu_pro currently supports dataset TIGER-Lab/MMLU-Pro only")
+            if self.split not in {
+                "validation",
+                "test",
+                "dev_calibration",
+                "dev_evaluation",
+                "confirmatory_holdout",
+            }:
+                raise ConfigError(
+                    "mmlu_pro split must be validation, test, dev_calibration, or dev_evaluation"
+                )
         if not self.allowed_targets:
             raise ConfigError("benchmark.allowed_targets must not be empty")
         if self.max_items is not None and (
@@ -129,6 +157,16 @@ class RunConfig:
     steering: SteeringConfig
     output: OutputConfig
     source_path: str | None = None
+
+    def __post_init__(self) -> None:
+        if (
+            self.experiment.stage == "development"
+            and self.benchmark.split == "confirmatory_holdout"
+        ):
+            raise ConfigError(
+                "Development stage cannot access CONFIRMATORY_HOLDOUT; use a future "
+                "explicit confirmatory unlock protocol"
+            )
 
     def as_dict(self) -> dict[str, Any]:
         data = asdict(self)

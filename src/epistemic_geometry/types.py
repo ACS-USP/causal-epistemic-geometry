@@ -81,6 +81,7 @@ class Intervention:
     vector_id: str
     token_scope: str
     vector: SteeringVector = field(repr=False, compare=False, default=None)  # type: ignore[assignment]
+    token_index: int | None = field(default=None, repr=False, compare=False)
 
     def __post_init__(self) -> None:
         if self.layer < 0:
@@ -89,6 +90,8 @@ class Intervention:
             raise ValueError("token_scope must be 'all_tokens' or 'last_token'")
         if self.vector is None:
             raise ValueError("Intervention requires a SteeringVector")
+        if self.token_index is not None and self.token_index < 0:
+            raise ValueError("Intervention token_index must be non-negative when provided")
 
 
 @dataclass

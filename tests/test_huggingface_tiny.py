@@ -17,7 +17,7 @@ from epistemic_geometry.benchmarks.mock import MockBenchmark  # noqa: E402
 from epistemic_geometry.config import BackendConfig  # noqa: E402
 from epistemic_geometry.steering.constructors import difference_of_means  # noqa: E402
 from epistemic_geometry.steering.vector import load_vector, save_vector  # noqa: E402
-from epistemic_geometry.types import Intervention, SteeringVector  # noqa: E402
+from epistemic_geometry.types import BenchmarkItem, Intervention, SteeringVector  # noqa: E402
 
 
 @pytest.fixture()
@@ -161,6 +161,27 @@ def test_production_inference_has_no_grad_graph(tiny_backend) -> None:
         output = tiny_backend.model(**encoded, use_cache=False)
     assert output.logits.requires_grad is False
     assert all(parameter.requires_grad is False for parameter in tiny_backend.model.parameters())
+
+
+def test_choice_loglikelihood_scores_complete_candidates_and_targets_prompt_token(
+    tiny_backend,
+) -> None:
+    tiny_backend.config = replace(tiny_backend.config, inference_mode="choice_loglikelihood")
+    item = BenchmarkItem(
+        id="choice-1",
+        prompt="Choose one answer",
+        target="A",
+        metadata={"candidate_labels": ["A", "LONG"]},
+    )
+    baseline = tiny_backend.predict(item)
+    assert baseline.raw_output in {"A", "LONG"}
+    assert set(baseline.metadata["candidate_scores"]) == {"A", "LONG"}
+    assert all(np.isfinite(value) for value in baseline.metadata["candidate_scores"].values())
+    assert baseline.metadata["candidate_token_counts"]["LONG"] >= 1
+    vector = _intervention(0.1, "last_token")
+    with tiny_backend.steer(vector):
+        steered = tiny_backend.predict(item)
+    assert set(steered.metadata["candidate_scores"]) == {"A", "LONG"}
 
 
 def test_last_non_padding_activation_policy(tiny_backend) -> None:

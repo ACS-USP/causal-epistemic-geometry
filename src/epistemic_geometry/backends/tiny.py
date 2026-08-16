@@ -29,14 +29,20 @@ class TinyWhitespaceTokenizer:
     def _encode_token(self, token: str) -> int:
         return 3 + stable_seed("tiny-token", token) % (self.vocab_size - 3)
 
-    def __call__(self, text: str, return_tensors: str = "pt") -> dict[str, Any]:
+    def __call__(
+        self,
+        text: str,
+        return_tensors: str = "pt",
+        add_special_tokens: bool = True,
+    ) -> dict[str, Any]:
         if return_tensors != "pt":
             raise ValueError("TinyWhitespaceTokenizer only supports return_tensors='pt'")
         import torch
 
-        tokens = [self.bos_token_id]
+        tokens = [self.bos_token_id] if add_special_tokens else []
         tokens.extend(self._encode_token(token) for token in text.split())
-        tokens.append(self.eos_token_id)
+        if add_special_tokens:
+            tokens.append(self.eos_token_id)
         return {
             "input_ids": torch.tensor([tokens], dtype=torch.long),
             "attention_mask": torch.ones((1, len(tokens)), dtype=torch.long),

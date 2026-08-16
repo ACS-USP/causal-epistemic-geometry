@@ -57,6 +57,7 @@ class HuggingFaceBackend(ModelBackend):
         self.tokenizer_name = tokenizer_identifier or config.tokenizer_id or self.model_name
         self.model_revision = model_revision or config.model_revision
         self._injected_model = model is not None
+        self._choice_prompt_index: int | None = None
         if model is None:
             try:
                 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -166,6 +167,9 @@ class HuggingFaceBackend(ModelBackend):
                     failures.append(f"{root_name}.{path}: {exc}")
                     continue
                 if hasattr(stack, "__len__") and len(stack) > 0:
+                    self._resolved_layer_path = (
+                        path if root_name == "backend" else f"model.{path}"
+                    )
                     return stack
                 failures.append(f"{root_name}.{path}: object is not a non-empty layer stack")
         detail = "; ".join(failures)
@@ -183,7 +187,12 @@ class HuggingFaceBackend(ModelBackend):
         return {key: value.to(self.device) for key, value in encoded.items()}
 
     def _encode_item(self, item: BenchmarkItem) -> tuple[dict[str, Any], str, str]:
-        rendered = render_prompt(item, mode=self.config.prompt_mode, tokenizer=self.tokenizer)
+        rendered = render_prompt(
+            item,
+            mode=self.config.prompt_mode,
+            tokenizer=self.tokenizer,
+            enable_thinking=self.config.enable_thinking,
+        )
         encoded = self.tokenizer(rendered.text, return_tensors="pt")
         return (
             {key: value.to(self.device) for key, value in encoded.items()},
@@ -192,6 +201,8 @@ class HuggingFaceBackend(ModelBackend):
         )
 
     def predict(self, item: BenchmarkItem) -> BackendOutput:
+        if self.config.inference_mode == "choice_loglikelihood":
+            return self._predict_choice_loglikelihood(item)
         encoded, _rendered_prompt, prompt_hash = self._encode_item(item)
         input_length = int(encoded["input_ids"].shape[1])
         generation_kwargs: dict[str, Any] = {
@@ -224,6 +235,84 @@ class HuggingFaceBackend(ModelBackend):
                     "do_sample": self.config.do_sample,
                     "temperature": self.config.temperature,
                     "max_new_tokens": self.config.max_new_tokens,
+                },
+            },
+        )
+
+    def _candidate_labels(self, item: BenchmarkItem) -> list[str]:
+        labels = item.metadata.get("candidate_labels", self.config.candidate_labels)
+        if not isinstance(labels, list) or not labels or not all(
+            isinstance(label, str) and label for label in labels
+        ):
+            raise ValueError(f"Item {item.id} does not provide valid candidate labels")
+        return labels
+
+    def _text_token_ids(self, text: str) -> list[int]:
+        encoded = self.tokenizer(text, add_special_tokens=False)
+        values = encoded["input_ids"] if isinstance(encoded, dict) else encoded
+        if hasattr(values, "tolist"):
+            values = values.tolist()
+        if values and isinstance(values[0], list):
+            values = values[0]
+        token_ids = [int(value) for value in values]
+        if not token_ids:
+            raise ValueError(f"Text produced no tokens: {text!r}")
+        return token_ids
+
+    def _predict_choice_loglikelihood(self, item: BenchmarkItem) -> BackendOutput:
+        """Score complete candidate continuations without generation or sampling."""
+
+        _encoded, rendered_prompt, prompt_hash = self._encode_item(item)
+        prompt_ids = self._text_token_ids(rendered_prompt)
+        labels = self._candidate_labels(item)
+        scores: dict[str, float] = {}
+        token_ids_by_label: dict[str, list[int]] = {}
+        self._choice_prompt_index = len(prompt_ids) - 1
+        try:
+            with self.torch.inference_mode():
+                prompt_tensor = self.torch.tensor(
+                    [prompt_ids], dtype=self.torch.long, device=self.device
+                )
+                for label in labels:
+                    candidate_ids = self._text_token_ids(label)
+                    token_ids_by_label[label] = candidate_ids
+                    full_ids = self.torch.cat(
+                        [prompt_tensor, self.torch.tensor([candidate_ids], device=self.device)],
+                        dim=1,
+                    )
+                    attention_mask = self.torch.ones_like(full_ids)
+                    output = self.model(
+                        input_ids=full_ids,
+                        attention_mask=attention_mask,
+                        use_cache=False,
+                    )
+                    candidate_start = len(prompt_ids) - 1
+                    candidate_logits = output.logits[0, candidate_start:-1, :]
+                    candidate_targets = full_ids[0, len(prompt_ids) :]
+                    log_probs = self.torch.log_softmax(candidate_logits, dim=-1)
+                    selected = log_probs.gather(1, candidate_targets.unsqueeze(1)).squeeze(1)
+                    score = float(selected.sum().item())
+                    if not self.torch.isfinite(selected).all():
+                        raise RuntimeError(f"Non-finite candidate score for {item.id}/{label}")
+                    scores[label] = score
+        finally:
+            self._choice_prompt_index = None
+        if not scores or not all(np.isfinite(value) for value in scores.values()):
+            raise RuntimeError(f"No finite candidate scores were produced for {item.id}")
+        prediction = max(scores, key=scores.get)
+        return BackendOutput(
+            raw_output=prediction,
+            metadata={
+                "model": self.model_name,
+                "prompt_mode": self.config.prompt_mode,
+                "enable_thinking": self.config.enable_thinking,
+                "inference_mode": "choice_loglikelihood",
+                "rendered_prompt_hash": prompt_hash,
+                "prompt_token_count": len(prompt_ids),
+                "candidate_scores": scores,
+                "candidate_token_ids": token_ids_by_label,
+                "candidate_token_counts": {
+                    label: len(token_ids) for label, token_ids in token_ids_by_label.items()
                 },
             },
         )
@@ -292,7 +381,21 @@ class HuggingFaceBackend(ModelBackend):
             if intervention.token_scope == "all_tokens":
                 updated = updated + delta
             else:
-                updated[:, -1:, :] = updated[:, -1:, :] + delta
+                token_index = intervention.token_index
+                if token_index is None:
+                    token_index = self._choice_prompt_index
+                if token_index is None:
+                    token_index = -1
+                if token_index < 0:
+                    token_index += hidden.shape[1]
+                if token_index >= hidden.shape[1]:
+                    raise ValueError(
+                        f"Intervention token index {token_index} is outside sequence length "
+                        f"{hidden.shape[1]}"
+                    )
+                updated[:, token_index : token_index + 1, :] = (
+                    updated[:, token_index : token_index + 1, :] + delta
+                )
             if rest is None:
                 return updated
             if isinstance(output, tuple):
@@ -305,11 +408,13 @@ class HuggingFaceBackend(ModelBackend):
     def steer(self, intervention: Intervention) -> Iterator[None]:
         """Install exactly one hook and remove it even if generation fails."""
 
+        self._choice_prompt_index = None
         handle = self._hook_for(intervention)
         try:
             yield
         finally:
             handle.remove()
+            self._choice_prompt_index = None
 
     def provenance(self) -> dict[str, Any]:
         """Return model/tokenizer identity without exposing credentials."""
@@ -335,9 +440,12 @@ class HuggingFaceBackend(ModelBackend):
             "dtype": str(parameters[0].dtype) if parameters else "UNKNOWN",
             "devices": devices,
             "quantization": self.config.quantization,
-            "layer_path": self.config.layer_path or "AUTO",
+            "layer_path": self._resolved_layer_path,
             "layer_index_for_activation": self.config.layer,
             "prompt_mode": self.config.prompt_mode,
+            "inference_mode": self.config.inference_mode,
+            "enable_thinking": self.config.enable_thinking,
+            "cpu_offload_detected": any(device == "cpu" for device in devices),
             "injected_test_model": self._injected_model,
             "model_fingerprint": stable_digest(
                 self.model.__class__.__name__, self.hidden_size, len(self._layer_stack),
