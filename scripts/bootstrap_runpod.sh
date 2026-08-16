@@ -21,7 +21,12 @@ if [[ -f "${REPO_ROOT}/scripts/runpod_environment.sh" ]]; then
 fi
 
 if [[ ! -d "${VENV_DIR}" ]]; then
-  python3 -m venv "${VENV_DIR}"
+  if python3 -c 'import torch' >/dev/null 2>&1; then
+    echo "System Torch detected; exposing the existing CUDA build inside the venv."
+    python3 -m venv --system-site-packages "${VENV_DIR}"
+  else
+    python3 -m venv "${VENV_DIR}"
+  fi
 fi
 
 # shellcheck disable=SC1091
