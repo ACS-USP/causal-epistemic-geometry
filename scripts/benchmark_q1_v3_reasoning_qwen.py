@@ -52,6 +52,18 @@ def _record_summary(record: Any) -> dict[str, Any]:
 def _compare_rows(left: dict[str, Any], right: dict[str, Any]) -> dict[str, Any]:
     left_ids = left["token_ids"]
     right_ids = right["token_ids"]
+    first_mismatch = next(
+        (
+            index
+            for index, (left_token, right_token) in enumerate(
+                zip(left_ids, right_ids, strict=False)
+            )
+            if left_token != right_token
+        ),
+        None,
+    )
+    if first_mismatch is None and len(left_ids) != len(right_ids):
+        first_mismatch = min(len(left_ids), len(right_ids))
     return {
         "token_ids_equal": left_ids == right_ids,
         "parse_equal": (
@@ -61,6 +73,7 @@ def _compare_rows(left: dict[str, Any], right: dict[str, Any]) -> dict[str, Any]
         "correct_equal": left["correct"] == right["correct"],
         "left_length": len(left_ids),
         "right_length": len(right_ids),
+        "first_token_mismatch": first_mismatch,
     }
 
 
@@ -241,9 +254,14 @@ def main() -> None:
     serial_prefix_mismatches = sum(not row["token_ids_equal"] for row in prefix_comparisons)
     serial_prefix_parse_mismatches = sum(not row["parse_equal"] for row in prefix_comparisons)
     batch_comparisons = []
+    batch_comparison_details = []
     for view_id, rows in serial_rows.items():
         for budget in budgets:
-            batch_comparisons.append(_compare_rows(rows[budget], batched_rows[view_id][budget]))
+            comparison = _compare_rows(rows[budget], batched_rows[view_id][budget])
+            batch_comparisons.append(comparison)
+            batch_comparison_details.append(
+                {"view_id": view_id, "budget": budget, **comparison}
+            )
     batch_token_mismatches = sum(not row["token_ids_equal"] for row in batch_comparisons)
     batch_parse_mismatches = sum(not row["parse_equal"] for row in batch_comparisons)
     result = {
@@ -274,6 +292,7 @@ def main() -> None:
                 "batch_size": args.batch_size,
                 "serial_vs_batched_token_mismatches": batch_token_mismatches,
                 "serial_vs_batched_parse_mismatches": batch_parse_mismatches,
+                "serial_vs_batched_comparisons": batch_comparison_details,
             },
         },
         "pairwise": pairwise,
