@@ -82,7 +82,7 @@ def run_baseline_calibration(
                     metadata.get("rendered_prompt_hash", item.metadata["rendered_prompt_hash"])
                 ),
                 metadata={
-                    "view_id": item.id,
+                    "view_id": item.item_id,
                     "source_prompt_hash": item.metadata["rendered_prompt_hash"],
                     "condition": "baseline",
                     "candidate_score_semantics": metadata["candidate_score_semantics"],
