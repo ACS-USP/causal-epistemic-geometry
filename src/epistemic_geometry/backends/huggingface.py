@@ -485,6 +485,15 @@ class HuggingFaceBackend(ModelBackend):
         else:
             eos_set = {int(value) for value in eos_ids}
 
+        model_parameters = inspect.signature(self.model.forward).parameters
+        model_has_var_kwargs = any(
+            parameter.kind == inspect.Parameter.VAR_KEYWORD
+            for parameter in model_parameters.values()
+        )
+        supports_cache_position = (
+            "cache_position" in model_parameters or model_has_var_kwargs
+        )
+
         for batch_index, batch_indices in enumerate(batches):
             # A deterministic max-token budget is used here.  The planner
             # never changes scientific row identity; it only chooses grouping.
@@ -507,12 +516,17 @@ class HuggingFaceBackend(ModelBackend):
             finished = [False] * len(batch_indices)
             stop_reasons: list[str | None] = [None] * len(batch_indices)
             with self.torch.inference_mode():
-                model_outputs = self.model(
-                    input_ids=batch_inputs,
-                    attention_mask=batch_masks,
-                    position_ids=batch_position_ids,
-                    use_cache=True,
-                )
+                prefill_kwargs: dict[str, Any] = {
+                    "input_ids": batch_inputs,
+                    "attention_mask": batch_masks,
+                    "position_ids": batch_position_ids,
+                    "use_cache": True,
+                }
+                if supports_cache_position:
+                    prefill_kwargs["cache_position"] = self.torch.arange(
+                        batch_inputs.shape[1], dtype=self.torch.long, device=self.device
+                    )
+                model_outputs = self.model(**prefill_kwargs)
                 past_key_values = model_outputs.past_key_values
                 for step in range(max_new_tokens):
                     if step == 0:
@@ -557,13 +571,23 @@ class HuggingFaceBackend(ModelBackend):
                     )
                     if all(finished):
                         break
-                    model_outputs = self.model(
-                        input_ids=next_tensor,
-                        attention_mask=masks,
-                        position_ids=(masks.sum(dim=1).long() - 1).unsqueeze(1).clamp_min(0),
-                        past_key_values=past_key_values,
-                        use_cache=True,
-                    )
+                    decode_kwargs: dict[str, Any] = {
+                        "input_ids": next_tensor,
+                        "attention_mask": masks,
+                        "position_ids": (masks.sum(dim=1).long() - 1)
+                        .unsqueeze(1)
+                        .clamp_min(0),
+                        "past_key_values": past_key_values,
+                        "use_cache": True,
+                    }
+                    if supports_cache_position:
+                        decode_kwargs["cache_position"] = self.torch.full(
+                            (len(batch_indices),),
+                            sequences.shape[1] - 1,
+                            dtype=self.torch.long,
+                            device=self.device,
+                        )
+                    model_outputs = self.model(**decode_kwargs)
                     past_key_values = model_outputs.past_key_values
 
             for row_index, original_index in enumerate(batch_indices):
