@@ -475,7 +475,7 @@ class HuggingFaceBackend(ModelBackend):
             warpers.append(TopKLogitsWarper(top_k=generation_config.top_k))
         if generation_config.top_p is not None and generation_config.top_p < 1.0:
             warpers.append(TopPLogitsWarper(top_p=generation_config.top_p))
-        if generation_config.min_p is not None and generation_config.min_p > 0.0:
+        if generation_config.min_p is not None:
             warpers.append(MinPLogitsWarper(min_p=generation_config.min_p))
         eos_ids = generation_config.eos_token_id
         if eos_ids is None:
@@ -526,6 +526,7 @@ class HuggingFaceBackend(ModelBackend):
                     prefill_kwargs["cache_position"] = self.torch.arange(
                         batch_inputs.shape[1], dtype=self.torch.long, device=self.device
                     )
+                prefill_kwargs["return_dict"] = True
                 model_outputs = self.model(**prefill_kwargs)
                 past_key_values = model_outputs.past_key_values
                 for step in range(max_new_tokens):
@@ -537,6 +538,13 @@ class HuggingFaceBackend(ModelBackend):
                         ]
                     else:
                         logits = model_outputs.logits[:, -1, :]
+                    # Match Transformers' canonical ``generate`` path: it
+                    # copies next-token logits to float32 before applying
+                    # processors/warpers and sampling. Sampling directly from
+                    # bf16 logits can diverge after many stochastic tokens.
+                    logits = logits.to(
+                        copy=True, dtype=self.torch.float32, device=self.device
+                    )
                     next_tokens: list[int] = []
                     for row_index in range(len(batch_indices)):
                         if finished[row_index]:
@@ -579,6 +587,7 @@ class HuggingFaceBackend(ModelBackend):
                         .clamp_min(0),
                         "past_key_values": past_key_values,
                         "use_cache": True,
+                        "return_dict": True,
                     }
                     if supports_cache_position:
                         decode_kwargs["cache_position"] = self.torch.full(
