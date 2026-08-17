@@ -74,6 +74,14 @@ ONLY.**
 
 ## Scientific status
 
+The MMLU-Pro multiple-choice Q1 V1–V1.2 instrument series is formally closed
+as DEVELOPMENT. Its artifacts remain preserved for audit, but its
+estimator-sensitive results do not freeze a scientific claim. Q1 V2 is a new
+instrument, E3-10: a procedural exact semantic ten-way answer space with no
+answer-position slots or cross-rendering aggregation. See
+[the closeout](docs/Q1_V1_SERIES_CLOSEOUT.md) and [the E3-10 design
+protocol](docs/Q1_V2_EXACT_SEMANTIC_INSTRUMENT.md).
+
 The primary summary always shows baseline accuracy, steered accuracy, delta
 accuracy, error correlation, error Jaccard, rescue rate, damage rate, double
 fault, and pair-oracle complementarity headroom together. Low error similarity
@@ -95,13 +103,26 @@ mechanics only and is not a scientific result.
 Current readiness:
 
 ```text
-Q1 SOFTWARE: READY
-Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL AND QWEN3/A40 TECHNICAL SMOKE
-Q1 REAL 8B MODEL: V1.1 DEVELOPMENT RUN COMPLETE; NO CONFIRMATORY RESULT
+Q1 V1–V1.2 INSTRUMENT SERIES: CLOSED AS DEVELOPMENT
+Q1 V2 E3-10 SOFTWARE: GENERATORS/ORACLES/VALIDATOR READY
+Q1 V2 BASELINE CALIBRATION: NOT RUN (RunPod-only)
+Q1 V2 QWEN TOKEN AUDIT: PENDING
 Q1 SCIENTIFIC RESULT: NONE FROZEN
-Q1 V1.2: DEVELOPMENT RUN COMPLETE / REVIEW BUNDLE LOCAL / NO CLAIM FROZEN
 Q2 GEOMETRY: NOT RUN
+CONFIRMATORY HOLDOUT: UNTOUCHED
 ```
+
+The local E3-10 gate is model-free:
+
+```bash
+ceg validate-e3 --n-per-cell 500
+python scripts/build_q1_v2_design_artifact.py
+```
+
+It creates generators, exact oracles, frozen template hashes, examples, and
+balance audits without model outcomes. Real baseline calibration must run on
+the explicitly approved remote model and stop for principal review before
+steering, development evaluation, or the confirmatory holdout.
 
 The optimized execution path includes prepared prompts, single-token candidate
 scoring, deterministic batching, prefix-cache and suffix-replay prototypes,
@@ -115,20 +136,9 @@ BF16 shape changes produced prediction flips. The full V1.2 score artifacts
 were later recovered locally, under ignored `review/` paths, solely for the
 authorized analysis-only aggregator audit; they are not Git-tracked source.
 
-V1.2 is the explicitly authorized development follow-up for label/position-bias
-deconfounding. It uses exact cyclic option balance, centered semantic-logit
-aggregation, a secondary probability aggregator, and a pre-specified finite-
-difference slot-tracking probe. See
-[Q1 DEVELOPMENT PROTOCOL V1.2](docs/Q1_DEVELOPMENT_PROTOCOL_V1_2.md). It has
-now completed the frozen 512-item DEV_EVALUATION run on the pinned remote
-Qwen3-8B/A40 path. The remote validator recomputed the derived artifacts and
-reported `COMPLETE`, 24,075 raw rows, 1,536 symmetrized rows, and no holdout
-access. The small principal-review bundle is in
-`review/q1_v1_2_principal_review/`; this remains DEVELOPMENT evidence only and
-does not freeze a scientific claim. The complete raw-score audit bundle is in
-`review/q1_v1_2_principal_review_complete/`; see
-[the aggregator audit](docs/Q1_V1_2_AGGREGATOR_AUDIT.md). Its descriptive
-classification is aggregator-sensitive and does not authorize V1.3 or Q2.
+The previous V1.2 artifacts remain historical DEVELOPMENT evidence only. Their
+aggregator-sensitive result does not authorize V1.3 or Q2; the instrument is
+closed rather than reinterpreted.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`

@@ -32,41 +32,31 @@ evidence, or a simulated scientific result.
 
 ## Current readiness
 
-Q1 software infrastructure: READY.
+Q1 V1–V1.2 multiple-choice instrument series: CLOSED AS DEVELOPMENT. Its
+artifacts remain available for audit, but no scientific result is frozen.
 
-Q1 real-transformer mechanics: VALIDATED ON TINY RANDOM TRANSFORMER AND ON A
-PINNED QWEN3-8B/A40 TECHNICAL PATH.
+Q1 V2 E3-10 software infrastructure: READY locally for model-free generators,
+exact oracles, views, balance, split, and qualification recomputation checks.
 
-Q1 real 8B model: V1.1 DEVELOPMENT RUN COMPLETE with 15,872 rows under the
-approved serial-shape/candidate-only engine; NO CONFIRMATORY CLAIM.
+Q1 V2 real-transformer mechanics: Qwen tokenization and baseline calibration
+NOT RUN; RunPod is intentionally stopped during local implementation.
 
-Q1 scientific result: NONE FROZEN; DESCRIPTIVE PILOT ARTIFACT ONLY.
+Q1 real 8B model: prior V1 development runs are closed; E3-10 has not been run
+on Qwen.
 
-Q1 V1.2: DEVELOPMENT RUN COMPLETE on pinned remote Qwen3-8B/A40; review bundle
-pulled locally; the authorized analysis-only aggregator audit is complete; NO
-CONFIRMATORY CLAIM.
+Q1 scientific result: NONE FROZEN.
+
+Q1 V2 steering: NOT RUN. No E3-10 activation direction, PCA, or random control
+has been constructed.
 
 Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
 
-The Qwen3 path was exercised on the pinned revision and one A40. The exact
-512-item equivalence gate passed for the canonical profile, and the complete
-V1.1 DEVELOPMENT artifact was validated remotely. Ordinary cached decode and
-shape-changing batching were deliberately not approved because they produced
-BF16 prediction flips against the serial oracle. `torch.compile`, CUDA graphs,
-formal batch autotuning, and a full utilization/VRAM profile remain optional
-engineering work. The confirmatory holdout was not evaluated.
-
-Q1 DEVELOPMENT V1.2 label/position-bias deconfounding is complete on the frozen
-512-item DEV_EVALUATION split. The raw artifact has 24,075 rows and the stored
-symmetrized artifact has 1,536 rows, with `confirmatory_accessed=NO`. The
-independent local S recomputation has zero discrete prediction mismatches.
-The secondary Q aggregator gives PC1+ 47.07% accuracy versus 48.05% under S,
-with 6 rescues and 9 damages versus S's 6 rescues and 2 damages. This is an
-analysis-only, aggregator-sensitive DEVELOPMENT result; no claim is frozen.
-See [Q1 V1.2 aggregator audit](Q1_V1_2_AGGREGATOR_AUDIT.md) and the complete
-ignored bundle at `review/q1_v1_2_principal_review_complete/`.
+The E3-10 Qwen path still needs the exact decimal and number-word token audit,
+baseline-only calibration, mechanical qualification, and principal review.
+The local design artifact has no model outcomes. The V1/Qwen engineering
+history is retained separately and is not being used to qualify E3-10.
 
 ## Exact local smoke
 
@@ -79,6 +69,18 @@ ceg run configs/tiny_transformer_cuda_smoke.yaml  # CUDA machine only
 ```
 
 Or use `make smoke`. Run artifacts appear in `runs/`, which is ignored by Git.
+
+## Exact E3-10 local gate
+
+```bash
+ceg validate-e3 --n-per-cell 500
+python scripts/build_q1_v2_design_artifact.py
+```
+
+This is model-free and performs no network operation. The future remote-only
+sequence is to build a calibration manifest, audit candidate tokenization with
+`scripts/audit_e3_tokenization.py`, run baseline calibration, and stop for
+review before any steering.
 
 ## Exact RunPod setup
 
@@ -122,10 +124,10 @@ at least one copy is correct; they are not a deployed ensemble.
 
 ## What not to conclude yet
 
-Do not conclude that steering creates useful diversity, that the chosen vector
-is scientifically meaningful, or that geometry between vectors predicts error
-covariance. This repository currently validates software and enables the Q1
-development kill-test only.
+Do not conclude that steering creates useful diversity, that E3-10 will
+qualify, that any vector is scientifically meaningful, or that geometry between
+vectors predicts error covariance. E3-10 is software-ready, not a scientific
+result.
 
 ## Q1 kill criterion
 
