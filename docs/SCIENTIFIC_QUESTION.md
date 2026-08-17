@@ -2,6 +2,14 @@
 
 ## Q1: the current development kill-test
 
+The earlier MMLU-Pro V1–V1.2 multiple-choice instrument and the E3-10 direct
+answer-logit instrument are closed as development instruments. The active
+measurement redesign is Q1 V3: a stochastic reasoning policy with exact
+procedural oracles, matched/independent rollout seeds, and a deterministic
+`FINAL:` answer contract. Instrument calibration must pass before any
+activation direction is constructed. See
+[Q1_V3_REASONING_AGENT_PROTOCOL.md](Q1_V3_REASONING_AGENT_PROTOCOL.md).
+
 For one frozen model `f_theta`, compare:
 
 ```text
@@ -18,6 +26,13 @@ binary errors `e_0(t)` and `e_i(t)`, then ask:
 This is a development experiment, not a confirmatory claim. The useful regime,
 if one exists, must preserve individual accuracy approximately while changing
 the error profile enough to create measurable complementarity.
+
+For Q1 V3, each condition is a sampled policy
+`(trajectory, y_hat) ~ pi_theta,v(. | x, seed)`. Matched-seed baseline and
+treatment rollouts provide the causal pair; independent seeds estimate error
+propensity and repeated-agent complementarity. The exact oracle and raw
+trajectory remain primary provenance, while propensity and hard error metrics
+are reported separately.
 
 ## Motivation and limits
 
@@ -81,4 +96,3 @@ The Q1 line should be treated as a kill-test, not a search for a positive:
 - If apparent movement disappears under parser, seed, task-split, or null-vector
   controls, treat it as a development failure or artifact.
 - A negative result is a valid outcome and should remain easy to report.
-

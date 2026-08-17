@@ -1,7 +1,7 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python)
 RUFF ?= $(if $(wildcard .venv/bin/ruff),.venv/bin/ruff,ruff)
 
-.PHONY: test lint smoke doctor preflight preflight-v1-1 preflight-v1-2 tiny-smoke predeploy storage-check
+.PHONY: test lint smoke doctor preflight preflight-v1-1 preflight-v1-2 tiny-smoke predeploy storage-check q1-v3-gate q1-v3-design
 
 test:
 	$(PYTHON) -m pytest -q
@@ -32,3 +32,9 @@ predeploy:
 
 storage-check:
 	$(PYTHON) -m epistemic_geometry.cli storage-check
+
+q1-v3-gate:
+	$(PYTHON) scripts/run_q1_v3_structural_gate.py --n-per-cell 5000
+
+q1-v3-design:
+	$(PYTHON) scripts/build_q1_v3_design_artifact.py

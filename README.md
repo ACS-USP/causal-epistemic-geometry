@@ -76,11 +76,20 @@ ONLY.**
 
 The MMLU-Pro multiple-choice Q1 V1–V1.2 instrument series is formally closed
 as DEVELOPMENT. Its artifacts remain preserved for audit, but its
-estimator-sensitive results do not freeze a scientific claim. Q1 V2 is a new
-instrument, E3-10: a procedural exact semantic ten-way answer space with no
-answer-position slots or cross-rendering aggregation. See
-[the closeout](docs/Q1_V1_SERIES_CLOSEOUT.md) and [the E3-10 design
-protocol](docs/Q1_V2_EXACT_SEMANTIC_INSTRUMENT.md).
+estimator-sensitive results do not freeze a scientific claim. Q1 V2 / E3-10,
+the direct first-response semantic-logit instrument, is also closed as a
+non-qualified ablation: its Qwen calibration did not provide a stable
+measurement channel. See [the V1 closeout](docs/Q1_V1_SERIES_CLOSEOUT.md),
+[the direct-instrument closeout](docs/Q1_V2_DIRECT_INSTRUMENT_CLOSEOUT.md),
+and [the archived E3-10 design](docs/Q1_V2_EXACT_SEMANTIC_INSTRUMENT.md).
+
+The active structural reset is Q1 V3: a stochastic reasoning-agent protocol
+with exact procedural oracles, deterministic surface twins, matched and
+independent rollout seeds, and a strict `FINAL:` parser. It evaluates the
+reasoning policy with `enable_thinking=true`; it does not infer competence
+from a direct candidate-logit slice. The model-free structural gate passes,
+but Q1 V3 Stage A/B calibration has not run and no steering direction exists.
+Read [the Q1 V3 protocol](docs/Q1_V3_REASONING_AGENT_PROTOCOL.md).
 
 The primary summary always shows baseline accuracy, steered accuracy, delta
 accuracy, error correlation, error Jaccard, rescue rate, damage rate, double
@@ -104,15 +113,31 @@ Current readiness:
 
 ```text
 Q1 V1–V1.2 INSTRUMENT SERIES: CLOSED AS DEVELOPMENT
-Q1 V2 E3-10 SOFTWARE: GENERATORS/ORACLES/VALIDATOR READY
-Q1 V2 STRUCTURAL GATE: PASS (MODEL-FREE)
-Q1 V2 QWEN TOKEN AUDIT: PASS (decimal and number-word candidates)
-Q1 V2 BASELINE CALIBRATION: COMPLETE — NOT QUALIFIED
-Q1 V2 FRESH SPLITS: NOT GENERATED
+Q1 V2 E3-10 DIRECT INSTRUMENT: CLOSED — NOT QUALIFIED
+Q1 V3 REASONING SOFTWARE: GENERATORS/ORACLES/SEEDS/PARSER READY
+Q1 V3 STRUCTURAL GATE: PASS (MODEL-FREE, 5,000 PER CELL)
+Q1 V3 STAGE A: NOT RUN
+Q1 V3 STAGE B: NOT RUN
+Q1 V3 STEERING: NOT READY / NOT RUN
+Q1 V3 FRESH SPLITS: NOT GENERATED
 Q1 SCIENTIFIC RESULT: NONE FROZEN
 Q2 GEOMETRY: NOT RUN
 CONFIRMATORY HOLDOUT: UNTOUCHED
 ```
+
+The Q1 V3 design bundle is model-free and local:
+
+```bash
+python scripts/build_q1_v3_design_artifact.py
+python scripts/build_q1_v3_calibration_manifests.py stage_a \
+  --gate review/q1_v3_reasoning_instrument/structural_gate_summary.json \
+  --output review/q1_v3_reasoning_instrument/stage_a_manifest.json
+```
+
+These commands create procedural manifests only. The 36 Stage-A manifests are
+not model outcomes, do not access DEV or holdout items, and do not construct
+steering. Start remote baseline-only calibration only after principal review
+and the documented cost gate.
 
 The local E3-10 structural gate is model-free and uses 5,000 balanced items
 per family/cell:
@@ -154,6 +179,10 @@ aggregator-sensitive result does not authorize V1.3 or Q2; the instrument is
 closed rather than reinterpreted. E3-10 likewise produced no Q1 steering result:
 baseline calibration showed chance-like competence and failed output-channel
 stability thresholds, so the pre-registered stop rule was applied.
+
+Q1 V3 is intentionally stopped before model calibration. Its current status
+is an engineering/design milestone, not a scientific result. One-shot
+reasoning-policy steering is gated on successful Stage B qualification.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`
@@ -200,6 +229,8 @@ hypothesis. Those decisions belong after development review. See:
 
 - [Scientific question](docs/SCIENTIFIC_QUESTION.md)
 - [Development protocol](docs/DEVELOPMENT_PROTOCOL.md)
+- [Q1 V2 direct-instrument closeout](docs/Q1_V2_DIRECT_INSTRUMENT_CLOSEOUT.md)
+- [Q1 V3 reasoning-agent protocol](docs/Q1_V3_REASONING_AGENT_PROTOCOL.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Next Q2 geometry](docs/NEXT_Q2_GEOMETRY.md)
 - [RunPod guide](docs/RUNPOD.md)

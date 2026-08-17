@@ -1,0 +1,44 @@
+# Q1 V3 — REASONING-AGENT INSTRUMENT CALIBRATION TEMPLATE
+# Do not execute until the local structural gate is PASS and the principal
+# researcher authorizes the remote Stage-A calibration.
+experiment:
+  name: q1-v3-reasoning-instrument
+  stage: development
+  seed: 20260817
+
+backend:
+  type: huggingface
+  model_id: Qwen/Qwen3-8B
+  model_revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_id: Qwen/Qwen3-8B
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  prompt_mode: chat
+  enable_thinking: true
+  dtype: bf16
+  device: auto
+  inference_mode: generation
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  max_new_tokens: 512
+
+benchmark:
+  type: q1_v3_reasoning
+  split: REASONING_STAGE_A_SCREEN
+  manifest_path: REPLACE_ME_STAGE_A_MANIFEST.json
+
+steering:
+  enabled: false
+
+q1_v3:
+  phase: stage_a_screen
+  reasoning_budgets: [512, 1024, 2048]
+  rollout_count: 2
+  seed_regime: independent
+  final_field: "FINAL:"
+  no_adaptive_retries: true
+
+output:
+  root: runs/q1_v3_reasoning_instrument

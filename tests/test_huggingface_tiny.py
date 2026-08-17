@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from dataclasses import replace
 
@@ -18,6 +19,10 @@ from epistemic_geometry.backends.qwen3_replay import (  # noqa: E402
 )
 from epistemic_geometry.backends.tiny import TinyRandomTransformerBackend  # noqa: E402
 from epistemic_geometry.benchmarks.mock import MockBenchmark  # noqa: E402
+from epistemic_geometry.benchmarks.reasoning.base import ReasoningView  # noqa: E402
+from epistemic_geometry.benchmarks.reasoning.rollouts import (  # noqa: E402
+    rollout_record_from_output,
+)
 from epistemic_geometry.config import BackendConfig  # noqa: E402
 from epistemic_geometry.steering.constructors import difference_of_means  # noqa: E402
 from epistemic_geometry.steering.vector import load_vector, save_vector  # noqa: E402
@@ -188,6 +193,56 @@ def test_production_inference_has_no_grad_graph(tiny_backend) -> None:
         output = tiny_backend.model(**encoded, use_cache=False)
     assert output.logits.requires_grad is False
     assert all(parameter.requires_grad is False for parameter in tiny_backend.model.parameters())
+
+
+def test_seeded_reasoning_generation_records_raw_trajectory_and_parse_fields(tiny_backend) -> None:
+    tiny_backend.config = replace(
+        tiny_backend.config,
+        enable_thinking=True,
+        do_sample=True,
+        max_new_tokens=3,
+        temperature=0.6,
+        top_p=0.95,
+        top_k=20,
+        min_p=0.0,
+    )
+    item = BenchmarkItem(id="reasoning-tiny", prompt="alpha beta gamma", target="3")
+    torch.manual_seed(999)
+    expected_after_generation = torch.rand(4)
+    torch.manual_seed(999)
+    output_a = tiny_backend.generate_reasoning(item, sampling_seed=123)
+    output_b = tiny_backend.generate_reasoning(item, sampling_seed=123)
+    actual_after_generation = torch.rand(4)
+    assert output_a.raw_output == output_b.raw_output
+    assert torch.equal(expected_after_generation, actual_after_generation)
+    assert output_a.metadata["generation_seed"] == 123
+    assert output_a.metadata["generated_token_ids"]
+
+    view = ReasoningView(
+        latent_id="MODREG-R:depth_4:tiny",
+        view_id="MODREG-R:depth_4:tiny:canonical",
+        family="MODREG-R",
+        cell="depth_4",
+        surface="canonical",
+        answer=3,
+        prompt="alpha beta gamma",
+        prompt_hash=hashlib.sha256(b"alpha beta gamma").hexdigest(),
+        template_hash="template",
+    )
+    record = rollout_record_from_output(
+        view,
+        output_a,
+        intervention_id="baseline",
+        rollout_index=0,
+        sampling_seed=123,
+        generation_config={"temperature": 0.6, "top_p": 0.95, "top_k": 20},
+    )
+    assert record.raw_text == output_a.raw_output
+    assert record.token_ids == tuple(output_a.metadata["generated_token_ids"])
+    assert record.metadata["model_revision"] == "local-config"
+    view_output = tiny_backend.generate_reasoning_view(view, sampling_seed=123)
+    assert view_output.metadata["view_id"] == view.view_id
+    assert view_output.metadata["source_prompt_hash"] == view.prompt_hash
 
 
 def test_choice_loglikelihood_scores_complete_candidates_and_targets_prompt_token(

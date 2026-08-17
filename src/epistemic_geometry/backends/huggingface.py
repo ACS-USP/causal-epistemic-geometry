@@ -228,6 +228,9 @@ class HuggingFaceBackend(ModelBackend):
             "max_new_tokens": self.config.max_new_tokens,
             "do_sample": self.config.do_sample,
             "pad_token_id": self.tokenizer.pad_token_id,
+            "top_p": self.config.top_p,
+            "top_k": self.config.top_k,
+            "min_p": self.config.min_p,
         }
         if self.config.do_sample:
             generation_kwargs["temperature"] = self.config.temperature
@@ -257,6 +260,117 @@ class HuggingFaceBackend(ModelBackend):
                 },
             },
         )
+
+    def generate_reasoning(
+        self,
+        item: BenchmarkItem,
+        *,
+        sampling_seed: int,
+        max_new_tokens: int | None = None,
+    ) -> BackendOutput:
+        """Generate one seeded reasoning trajectory without any intervention.
+
+        This is the baseline-only execution primitive for Q1 V3 calibration.
+        One-shot steering is intentionally not accepted here until the new
+        reasoning instrument qualifies.
+        """
+
+        if self.config.enable_thinking is not True:
+            raise ValueError("Q1 V3 reasoning generation requires enable_thinking=true")
+        if not self.config.do_sample:
+            raise ValueError("Q1 V3 canonical reasoning generation requires do_sample=true")
+        encoded, _rendered_prompt, prompt_hash = self._encode_item(item)
+        input_length = int(encoded["input_ids"].shape[1])
+        generation_kwargs: dict[str, Any] = {
+            "max_new_tokens": int(max_new_tokens or self.config.max_new_tokens),
+            "do_sample": True,
+            "temperature": self.config.temperature,
+            "top_p": self.config.top_p,
+            "top_k": self.config.top_k,
+            "min_p": self.config.min_p,
+            "pad_token_id": self.tokenizer.pad_token_id,
+        }
+        try:
+            rng_devices = []
+            if self.device.type == "cuda":
+                rng_devices = [self.device.index or self.torch.cuda.current_device()]
+            with self.torch.random.fork_rng(devices=rng_devices, enabled=True):
+                self.torch.manual_seed(int(sampling_seed))
+                if self.device.type == "cuda":
+                    self.torch.cuda.manual_seed_all(int(sampling_seed))
+                with self.torch.inference_mode():
+                    generated = self.model.generate(**encoded, **generation_kwargs)
+        except RuntimeError as exc:
+            if "out of memory" in str(exc).lower():
+                raise RuntimeError(
+                    "CUDA out of memory during reasoning generation. Reduce max_new_tokens, "
+                    "use a smaller batch/model, or choose an explicit supported dtype."
+                ) from exc
+            raise
+        new_tokens = generated[0, input_length:]
+        # Preserve the complete decoded trajectory; the parser is responsible
+        # for whitespace normalization around the exact FINAL field.
+        raw_output = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
+        return BackendOutput(
+            raw_output=raw_output,
+            metadata={
+                "model": self.model_name,
+                "model_revision": self.model_revision or "UNKNOWN",
+                "prompt_mode": self.config.prompt_mode,
+                "enable_thinking": True,
+                "rendered_prompt_hash": prompt_hash,
+                "input_token_count": input_length,
+                "generated_token_count": int(new_tokens.numel()),
+                "generated_token_ids": [int(token) for token in new_tokens.tolist()],
+                "generation_seed": int(sampling_seed),
+                "generation": {
+                    "do_sample": True,
+                    "temperature": self.config.temperature,
+                    "top_p": self.config.top_p,
+                    "top_k": self.config.top_k,
+                    "min_p": self.config.min_p,
+                    "max_new_tokens": int(max_new_tokens or self.config.max_new_tokens),
+                },
+                "intervention": "none",
+            },
+        )
+
+    def generate_reasoning_view(
+        self,
+        view: Any,
+        *,
+        sampling_seed: int,
+        max_new_tokens: int | None = None,
+    ) -> BackendOutput:
+        """Generate a reasoning view while retaining latent-view provenance."""
+
+        item = BenchmarkItem(
+            id=view.view_id,
+            prompt=view.prompt,
+            target=str(view.answer),
+            metadata={
+                "latent_id": view.latent_id,
+                "view_id": view.view_id,
+                "response_channel": "reasoning_exact_final",
+                "source_prompt_hash": view.prompt_hash,
+                "source_template_hash": view.template_hash,
+            },
+        )
+        output = self.generate_reasoning(
+            item,
+            sampling_seed=sampling_seed,
+            max_new_tokens=max_new_tokens,
+        )
+        metadata = dict(output.metadata)
+        metadata.update(
+            {
+                "latent_id": view.latent_id,
+                "view_id": view.view_id,
+                "source_prompt_hash": view.prompt_hash,
+                "source_template_hash": view.template_hash,
+            }
+        )
+        return BackendOutput(raw_output=output.raw_output, metadata=metadata)
 
     def _candidate_labels(self, item: BenchmarkItem) -> list[str]:
         labels = item.metadata.get("candidate_labels", self.config.candidate_labels)

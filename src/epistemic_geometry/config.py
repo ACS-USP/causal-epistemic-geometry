@@ -44,6 +44,9 @@ class BackendConfig:
     max_new_tokens: int = 4
     do_sample: bool = False
     temperature: float = 1.0
+    top_p: float = 1.0
+    top_k: int = 0
+    min_p: float = 0.0
     device_map: str | dict[str, Any] | None = None
     batch_size: int = 1
     quantization: str = "none"
@@ -72,6 +75,12 @@ class BackendConfig:
             raise ConfigError("backend.max_new_tokens must be positive")
         if self.do_sample and self.temperature <= 0:
             raise ConfigError("backend.temperature must be positive when sampling")
+        if not 0 < self.top_p <= 1:
+            raise ConfigError("backend.top_p must be in (0, 1]")
+        if self.top_k < 0:
+            raise ConfigError("backend.top_k must be non-negative")
+        if not 0 <= self.min_p <= 1:
+            raise ConfigError("backend.min_p must be in [0, 1]")
         if self.prompt_mode not in {"plain", "chat"}:
             raise ConfigError("backend.prompt_mode must be plain or chat")
         if self.batch_size <= 0:
@@ -124,8 +133,10 @@ class BenchmarkConfig:
     manifest_path: str | None = None
 
     def __post_init__(self) -> None:
-        if self.type not in {"mock", "jsonl", "mmlu_pro", "e3_10"}:
-            raise ConfigError("benchmark.type must be mock, jsonl, mmlu_pro, or e3_10")
+        if self.type not in {"mock", "jsonl", "mmlu_pro", "e3_10", "q1_v3_reasoning"}:
+            raise ConfigError(
+                "benchmark.type must be mock, jsonl, mmlu_pro, e3_10, or q1_v3_reasoning"
+            )
         if self.type == "mock" and self.n_items <= 0:
             raise ConfigError("benchmark.n_items must be positive")
         if self.type == "jsonl" and not self.path:
@@ -155,6 +166,8 @@ class BenchmarkConfig:
                 )
             if not (self.manifest_path or self.split_manifest):
                 raise ConfigError("e3_10 requires benchmark.manifest_path")
+        if self.type == "q1_v3_reasoning" and not (self.manifest_path or self.split_manifest):
+            raise ConfigError("q1_v3_reasoning requires benchmark.manifest_path")
         if not self.allowed_targets:
             raise ConfigError("benchmark.allowed_targets must not be empty")
         if self.max_items is not None and (
@@ -203,6 +216,7 @@ class RunConfig:
     output: OutputConfig
     q1_v1_1: dict[str, Any] = field(default_factory=dict)
     q1_v1_2: dict[str, Any] = field(default_factory=dict)
+    q1_v3: dict[str, Any] = field(default_factory=dict)
     source_path: str | None = None
 
     def __post_init__(self) -> None:
@@ -246,6 +260,7 @@ def load_config(path: str | Path) -> RunConfig:
     output = OutputConfig(**_section(raw, "output"))
     q1_v1_1 = _section(raw, "q1_v1_1")
     q1_v1_2 = _section(raw, "q1_v1_2")
+    q1_v3 = _section(raw, "q1_v3")
     return RunConfig(
         experiment=experiment,
         backend=backend,
@@ -254,5 +269,6 @@ def load_config(path: str | Path) -> RunConfig:
         output=output,
         q1_v1_1=q1_v1_1,
         q1_v1_2=q1_v1_2,
+        q1_v3=q1_v3,
         source_path=str(config_path.resolve()),
     )

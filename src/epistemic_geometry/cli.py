@@ -237,6 +237,22 @@ def preflight(
                             for value in manifests.values()
                             if isinstance(value, dict)
                         )
+        elif loaded.benchmark.type == "q1_v3_reasoning":
+            benchmark_count = "configured Q1 V3 manifests (not loaded)"
+            manifest_value = loaded.benchmark.manifest_path or loaded.benchmark.split_manifest
+            if manifest_value:
+                manifest_path = Path(manifest_value)
+                if not manifest_path.is_absolute():
+                    manifest_path = Path.cwd() / manifest_path
+                if manifest_path.exists():
+                    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                    manifests = manifest.get("manifests", {})
+                    if isinstance(manifests, dict):
+                        benchmark_count = sum(
+                            len(value.get("items", []))
+                            for value in manifests.values()
+                            if isinstance(value, dict)
+                        )
         else:
             benchmark_path = Path(loaded.benchmark.path or "")
             if not benchmark_path.is_absolute():
@@ -283,6 +299,17 @@ def preflight(
                 blockers.append("E3-10 instrument calibration must have steering.enabled=false")
             if loaded.backend.candidate_head_mode != "candidate_only":
                 blockers.append("E3-10 requires backend.candidate_head_mode=candidate_only")
+        if loaded.benchmark.type == "q1_v3_reasoning":
+            manifest_value = loaded.benchmark.manifest_path or loaded.benchmark.split_manifest
+            manifest_path = Path(manifest_value or "")
+            if not manifest_path.is_absolute():
+                manifest_path = Path.cwd() / manifest_path
+            if not manifest_path.exists():
+                blockers.append(f"Q1 V3 manifest missing: {manifest_path}")
+            if loaded.steering.enabled:
+                blockers.append(
+                    "Q1 V3 calibration is baseline-only; steering.enabled must be false"
+                )
         if loaded.backend.type in {"huggingface", "tiny_transformer"}:
             if _dependency_status("torch") != "yes" or _dependency_status("transformers") != "yes":
                 blockers.append("Torch/Transformers dependencies are missing")
@@ -329,6 +356,9 @@ def preflight(
         if loaded.benchmark.type == "e3_10":
             typer.echo(f"E3-10 split: {loaded.benchmark.split or 'UNKNOWN'}")
             typer.echo("E3-10 scoring: ten semantic candidates; baseline-only calibration")
+        if loaded.benchmark.type == "q1_v3_reasoning":
+            typer.echo(f"Q1 V3 phase: {loaded.q1_v3.get('phase', 'UNKNOWN')}")
+            typer.echo("Q1 V3 scoring: sampled reasoning trajectory + exact FINAL parser")
         typer.echo(f"Prompt mode: {loaded.backend.prompt_mode}")
         typer.echo(f"Layer: {loaded.steering.layer}")
         typer.echo(f"Alpha: {loaded.steering.alpha_values()}")

@@ -35,29 +35,27 @@ evidence, or a simulated scientific result.
 Q1 V1–V1.2 multiple-choice instrument series: CLOSED AS DEVELOPMENT. Its
 artifacts remain available for audit, but no scientific result is frozen.
 
-Q1 V2 E3-10 software infrastructure: READY locally for model-free generators,
-exact oracles, views, balance, split, qualification recomputation checks, and
-the v2 structural gate.
+Q1 V2 / E3-10 direct instrument: CLOSED — NOT QUALIFIED. The direct
+first-response semantic-logit calibration did not provide a stable measurement
+channel on Qwen3-8B. This is an instrument ablation, not a result about
+procedural reasoning or steering. See
+[Q1_V2_DIRECT_INSTRUMENT_CLOSEOUT.md](Q1_V2_DIRECT_INSTRUMENT_CLOSEOUT.md).
 
-Q1 V2 pre-model structural gate: PASS. MODREG effective depth is monotonic;
-MODREG10, FSM10, and eligible SATCOUNT10 cells may proceed to baseline-only
-calibration. REACHCOUNT10 cells and SATCOUNT10 `vars4_clauses4` were excluded
-by the frozen shallow-shortcut failure rule. No model outcome was used.
+Q1 V3 reasoning-agent software: READY locally for procedural generators,
+exact oracles, deterministic surface twins, stable rollout seeds, raw
+trajectory records, exact FINAL parsing, repeated-rollout metrics, and the
+Stage A/B manifest/firewall tooling.
 
-Q1 V2 real-transformer mechanics: Qwen tokenization audit PASS on the cached
-Qwen/Qwen3-8B revision `b968826d9c46dd6066d109eabc6255188de91218`; decimal and
-number-word candidates were all unique context-compatible single tokens.
-Baseline-only calibration then completed remotely with 6,600 view rows.
+Q1 V3 model-free structural gate: PASS on at least 5,000 generated items per
+family/cell. All current cells are eligible; two low-complexity SAT cells have
+documented shortcut warnings, not failures. No model outcome was used.
 
-The frozen mechanical qualification rule returned zero qualifying cells across
-the 11 scheduled cells. Canonical decimal accuracy was approximately chance in
-every family/cell, and the decimal/word stability criterion also failed. The
-suite therefore returned `E3_10_INSTRUMENT_NOT_QUALIFIED`. No fresh geometry,
-development, or confirmatory splits were generated.
+Q1 V3 Stage A/B calibration: NOT RUN. Q1 V3 steering: NOT READY and NOT RUN.
+RunPod is stopped during local implementation. The current review bundle is
+`review/q1_v3_reasoning_instrument/` (ignored local artifact).
 
-Q1 real 8B model: prior V1 development runs are closed; E3-10 baseline
-calibration was run on Qwen, but no steering or scientific Q1 experiment was
-run.
+Q1 real 8B model: prior V1 development runs and the E3-10 baseline calibration
+are closed; no Q1 V3 calibration has run.
 
 Q1 scientific result: NONE FROZEN.
 
@@ -68,12 +66,10 @@ Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
 
-The E3-10 Qwen path has now been exercised through tokenization and
-baseline-only calibration. The complete CPU-audited review bundle is at
+The E3-10 Qwen path and baseline-only calibration are preserved at
 `review/q1_v2_instrument_review/` (ignored because it contains real model
-outputs), including enriched per-view semantic rows, six figures, the complete
-11-cell table, independent recomputation, and validator output. The V1/Qwen
-engineering history is retained separately and was not used to qualify E3-10.
+outputs). The V1/Qwen engineering history is retained separately and was not
+used to qualify Q1 V3. The new Q1 V3 bundle contains no model outputs.
 
 ## Exact local smoke
 
@@ -101,6 +97,40 @@ CPU-only audit are in the ignored `review/q1_v2_instrument_review/` bundle.
 Because the suite failed the frozen qualification rule, the manifest builder
 did not generate fresh scientific splits and the next action is principal
 researcher review, not steering.
+
+## Exact Q1 V3 local gate
+
+```bash
+cd ~/dev/causal-epistemic-geometry
+source .venv/bin/activate
+python scripts/run_q1_v3_structural_gate.py --n-per-cell 5000
+python scripts/build_q1_v3_design_artifact.py
+python scripts/build_q1_v3_calibration_manifests.py stage_a \
+  --gate review/q1_v3_reasoning_instrument/structural_gate_summary.json \
+  --output review/q1_v3_reasoning_instrument/stage_a_manifest.json
+```
+
+This is model-free. It creates 36 Stage-A manifests (12 cells × 3 budgets),
+each with 60 fresh latent items. It does not load Qwen, construct steering, or
+touch the future scientific splits. Principal review is required before any
+RunPod command.
+
+After principal review and only on RunPod with the pinned cache/model, the
+baseline-only calibration runner is:
+
+```bash
+python scripts/run_q1_v3_calibration.py \
+  configs/q1_v3_reasoning_instrument.example.yaml \
+  --manifest review/q1_v3_reasoning_instrument/stage_a_manifest.json \
+  --manifest-key MODREG-R/depth_4/512 \
+  --output runs/q1_v3_stage_a/modreg_depth4_512
+```
+
+Omit `--manifest-key` only when deliberately running every Stage-A manifest.
+The runner loads one model, performs baseline reasoning rollouts only, stores
+raw trajectories and parse records, and writes mechanical outcomes. It never
+constructs a steering direction. The model-loading guard refuses to run on the
+Mac.
 
 ## Exact RunPod setup
 
@@ -144,10 +174,10 @@ at least one copy is correct; they are not a deployed ensemble.
 
 ## What not to conclude yet
 
-Do not conclude that steering creates useful diversity, that E3-10 will
+Do not conclude that steering creates useful diversity, that Q1 V3 will
 qualify, that any vector is scientifically meaningful, or that geometry between
-vectors predicts error covariance. E3-10 is software-ready, not a scientific
-result.
+vectors predicts error covariance. E3-10 is a closed ablation; Q1 V3 is still
+pre-calibration infrastructure, not a scientific result.
 
 ## Q1 kill criterion
 
