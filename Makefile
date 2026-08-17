@@ -1,7 +1,7 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python)
 RUFF ?= $(if $(wildcard .venv/bin/ruff),.venv/bin/ruff,ruff)
 
-.PHONY: test lint smoke doctor preflight preflight-v1-1 tiny-smoke predeploy storage-check
+.PHONY: test lint smoke doctor preflight preflight-v1-1 preflight-v1-2 tiny-smoke predeploy storage-check
 
 test:
 	$(PYTHON) -m pytest -q
@@ -20,6 +20,9 @@ preflight:
 
 preflight-v1-1:
 	$(PYTHON) -m epistemic_geometry.cli preflight-q1-v1-1 configs/q1_v1_1_qwen3_8b.yaml
+
+preflight-v1-2:
+	$(PYTHON) -m epistemic_geometry.cli preflight-q1-v1-2 configs/q1_v1_2_qwen3_8b.yaml
 
 tiny-smoke:
 	$(PYTHON) -m epistemic_geometry.cli run configs/tiny_transformer_smoke.yaml

@@ -99,6 +99,7 @@ Q1 SOFTWARE: READY
 Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL AND QWEN3/A40 TECHNICAL SMOKE
 Q1 REAL 8B MODEL: V1.1 DEVELOPMENT RUN COMPLETE; NO CONFIRMATORY RESULT
 Q1 SCIENTIFIC RESULT: NONE FROZEN
+Q1 V1.2: AUTHORIZED / IMPLEMENTED LOCALLY / NOT YET RUN
 Q2 GEOMETRY: NOT RUN
 ```
 
@@ -112,6 +113,13 @@ on the A40. See [Inference optimization](docs/INFERENCE_OPTIMIZATION.md).
 Cache/decode alternatives remain preserved but are not canonical because their
 BF16 shape changes produced prediction flips. The full real prediction file
 remains on RunPod; only small review artifacts are local.
+
+V1.2 is the explicitly authorized development follow-up for label/position-bias
+deconfounding. It uses exact cyclic option balance, centered semantic-logit
+aggregation, a secondary probability aggregator, and a pre-specified finite-
+difference slot-tracking probe. See
+[Q1 DEVELOPMENT PROTOCOL V1.2](docs/Q1_DEVELOPMENT_PROTOCOL_V1_2.md). It has
+not been run yet; no V1.2 outcome is available.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`

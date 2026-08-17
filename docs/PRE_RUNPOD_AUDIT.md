@@ -209,3 +209,27 @@ access. The observed runtime was approximately 17.48 minutes versus the old
 The run's full predictions remain on RunPod. Only small review artifacts are
 stored in `review/q1_v1_1_optimized_clean_run/`. No Q1 scientific conclusion
 is frozen; no V1.2 or Q2 experiment was run.
+
+## V1.2 local implementation audit (2026-08-17)
+
+The authorized V1.2 label/position-bias deconfounding protocol was implemented
+locally while the Pod was stopped. The implementation freezes the exact cyclic
+ordering, the three main conditions plus the finite-difference probe, centered
+semantic-logit symmetrization, the probability-mean secondary aggregator,
+paired metrics, descriptive bootstrap, six planned figures, raw score storage,
+and the development firewall. It reuses original-order V1.1 rows only after
+checking prompt, model/tokenizer, scorer, vector, alpha, layer, and token-scope
+identity; otherwise it recomputes them.
+
+The local validator now recomputes symmetrized scores and paired metrics from
+raw JSONL and checks the exact DEV_EVALUATION ID set, cyclic grid, target
+identity, candidate-score semantics, hashes, and required artifacts. A
+synthetic one-item/ten-option validator fixture passed without model or dataset
+access. Full local validation reached 81 tests, Ruff, compileall, mock smoke,
+and offline V1.2 cost preflight. No V1.2 real-model data, holdout data, or
+scientific result exists.
+
+The only remaining blocker is execution against the already-cached Qwen3-8B
+and MMLU-Pro artifacts on RunPod. The Pod was intentionally stopped after the
+local implementation; no SSH retry is needed until the principal researcher
+restarts it and confirms its current endpoint.

@@ -220,3 +220,21 @@ RunPod; only small review artifacts are kept locally.
 Remaining engineering work is optional: formal A40 autotuning, utilization/
 VRAM profiling, and compile/CUDA-graph benchmarks. No V1.2, Q2, or
 confirmatory experiment was run.
+
+## V1.2 next step
+
+Q1 DEVELOPMENT V1.2 — label/position-bias deconfounding — is now authorized
+and implemented locally, but has not been executed. The Pod may remain stopped
+during local review. When it is restarted, confirm the current endpoint and
+host fingerprint before using the exact remote command:
+
+```bash
+source .venv/bin/activate
+ceg preflight configs/q1_v1_2_qwen3_8b.yaml
+ceg q1-v1-2 configs/q1_v1_2_qwen3_8b.yaml data/splits/mmlu_pro_q1_v1.json
+ceg validate-run runs/q1_v1_2/<completed-run>
+```
+
+The V1.2 protocol freezes cyclic option balance, centered semantic-logit
+aggregation, the secondary probability aggregator, and the finite-difference
+slot-tracking probe. It must not be changed after outcomes are observed.

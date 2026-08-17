@@ -31,6 +31,11 @@ from epistemic_geometry.experiments.q1_v1_1 import (
     run_q1_v1_1,
     validate_q1_v1_1_run,
 )
+from epistemic_geometry.experiments.q1_v1_2 import (
+    estimate_q1_v1_2,
+    run_q1_v1_2,
+    validate_q1_v1_2_run,
+)
 from epistemic_geometry.io.artifacts import validate_run_directory
 from epistemic_geometry.reproducibility import git_metadata, runtime_metadata
 from epistemic_geometry.steering import load_vector, save_vector
@@ -74,7 +79,7 @@ def _path_is_inside(path_value: str | None, parent: str) -> bool:
 
 @app.command()
 def doctor(
-    config: Path | None = typer.Option(None, "--config", help="Optional YAML config to validate.")
+    config: Path | None = typer.Option(None, "--config", help="Optional YAML config to validate."),
 ) -> None:
     """Report local runtime/GPU readiness without downloading anything."""
 
@@ -90,8 +95,7 @@ def doctor(
         typer.echo(f"CUDA available: {torch.cuda.is_available()}")
         typer.echo(f"CUDA device count: {torch.cuda.device_count()}")
         typer.echo(
-            "MPS available: "
-            f"{hasattr(torch.backends, 'mps') and torch.backends.mps.is_available()}"
+            f"MPS available: {hasattr(torch.backends, 'mps') and torch.backends.mps.is_available()}"
         )
         for index in range(torch.cuda.device_count()):
             typer.echo(f"GPU {index}: {torch.cuda.get_device_name(index)}")
@@ -300,8 +304,7 @@ def preflight(
                 benchmark_count if loaded.steering.constructor == "difference_of_means" else 0
             )
             typer.echo(
-                f"Estimated generation calls: {calls}; "
-                f"activation extractions: {extraction_calls}"
+                f"Estimated generation calls: {calls}; activation extractions: {extraction_calls}"
             )
             if loaded.backend.execution_mode == "serial_reference":
                 typer.echo(
@@ -340,6 +343,11 @@ def validate_run(run_dir: Path = typer.Argument(..., help="Completed run directo
             if not split_manifest.exists():
                 split_manifest = Path(manifest["split_manifest"])
             report = validate_q1_v1_1_run(run_dir, split_manifest)
+        elif manifest.get("protocol") == "Q1_DEVELOPMENT_PROTOCOL_V1_2":
+            split_manifest = Path("data/splits/mmlu_pro_q1_v1.json")
+            if not split_manifest.exists():
+                split_manifest = Path(manifest["split_manifest"])
+            report = validate_q1_v1_2_run(run_dir, split_manifest)
         else:
             report = validate_run_directory(run_dir)
     except (FileNotFoundError, ValueError, KeyError, json.JSONDecodeError) as exc:
@@ -450,9 +458,52 @@ def q1_v1_1(
     typer.echo(f"Q1 V1.1 complete: {path}")
 
 
+@app.command("q1-v1-2")
+def q1_v1_2(
+    config: Path = typer.Argument(..., help="Frozen Q1 V1.2 YAML config."),
+    split_manifest: Path = typer.Argument(..., help="Frozen Q1 split manifest."),
+) -> None:
+    """Run the development-only V1.2 label/position deconfounding protocol."""
+
+    try:
+        loaded = load_config(config)
+        path = run_q1_v1_2(loaded, split_manifest)
+    except (ConfigError, FileNotFoundError, ValueError, RuntimeError) as exc:
+        typer.echo(f"Q1 V1.2 failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"Q1 V1.2 complete: {path}")
+
+
+@app.command("preflight-q1-v1-2")
+def preflight_q1_v1_2(
+    config: Path = typer.Argument(..., help="Frozen Q1 V1.2 YAML config."),
+) -> None:
+    """Print the V1.2 workload/cost gate without loading model or dataset."""
+
+    try:
+        loaded = load_config(config)
+        estimate = estimate_q1_v1_2(loaded)
+    except (ConfigError, FileNotFoundError, ValueError) as exc:
+        typer.echo(f"V1.2 preflight failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo("Q1 V1.2 PREFLIGHT — no inference or downloads performed")
+    typer.echo(f"Items: {estimate['items']}")
+    typer.echo(f"Cyclic orderings per item: {estimate['cyclic_orderings_per_item']}")
+    typer.echo(f"Conditions per ordering: {estimate['conditions_per_ordering']}")
+    typer.echo(f"Total item-condition rows: {estimate['total_item_condition_rows']}")
+    typer.echo(f"Exact original rows eligible for reuse: {estimate['exact_original_rows_reused']}")
+    typer.echo(f"Estimated computed rows: {estimate['estimated_computed_rows']}")
+    typer.echo(f"Estimated runtime minutes: {estimate['estimated_runtime_minutes']:.2f}")
+    typer.echo(f"Estimated A40 cost: ${estimate['estimated_a40_cost_usd']:.2f}")
+    if not estimate["cost_gate_pass"]:
+        typer.echo("V1.2 PREFLIGHT: STOP — projected cost exceeds $1.00", err=True)
+        raise typer.Exit(code=1)
+    typer.echo("V1.2 PREFLIGHT: COST GATE PASS")
+
+
 @app.command("repair-q1-v1-1")
 def repair_q1_v1_1(
-    run_dir: Path = typer.Argument(..., help="Failed Q1 V1.1 run to repair.")
+    run_dir: Path = typer.Argument(..., help="Failed Q1 V1.1 run to repair."),
 ) -> None:
     """Finalize a complete row artifact without performing inference."""
 

@@ -42,6 +42,8 @@ approved serial-shape/candidate-only engine; NO CONFIRMATORY CLAIM.
 
 Q1 scientific result: NONE FROZEN; DESCRIPTIVE PILOT ARTIFACT ONLY.
 
+Q1 V1.2: AUTHORIZED AND IMPLEMENTED LOCALLY; NOT RUN.
+
 Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
@@ -53,6 +55,12 @@ shape-changing batching were deliberately not approved because they produced
 BF16 prediction flips against the serial oracle. `torch.compile`, CUDA graphs,
 formal batch autotuning, and a full utilization/VRAM profile remain optional
 engineering work. The confirmatory holdout was not evaluated.
+
+The next authorized step is Q1 DEVELOPMENT V1.2 label/position-bias
+deconfounding. Its frozen protocol, cyclic balance, centered semantic score,
+secondary probability score, finite-difference slot probe, and validator are
+implemented locally in [Q1_DEVELOPMENT_PROTOCOL_V1_2.md](Q1_DEVELOPMENT_PROTOCOL_V1_2.md).
+No V1.2 real-model outcome exists yet.
 
 ## Exact local smoke
 
@@ -91,6 +99,7 @@ ceg inspect-vector vectors/example.npz
 ceg run path/to/config.yaml
 ceg q1-v1 configs/q1_v1_qwen3_8b.example.yaml data/splits/mmlu_pro_q1_v1.json
 ceg q1-v1-1 configs/q1_v1_1_qwen3_8b.yaml data/splits/mmlu_pro_q1_v1.json
+ceg q1-v1-2 configs/q1_v1_2_qwen3_8b.yaml data/splits/mmlu_pro_q1_v1.json
 ceg validate-run runs/q1_v1/<completed-run>
 ceg repair-q1-v1-1 runs/q1_v1_1/<failed-row-complete-run>  # no inference
 ceg summarize runs/<run-directory>
