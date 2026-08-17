@@ -233,3 +233,14 @@ The only remaining blocker is execution against the already-cached Qwen3-8B
 and MMLU-Pro artifacts on RunPod. The Pod was intentionally stopped after the
 local implementation; no SSH retry is needed until the principal researcher
 restarts it and confirms its current endpoint.
+
+## V1.2 remote preflight correction (2026-08-17)
+
+The first remote V1.2 launch was stopped before model inference by a false
+implementation guard requiring ten options for every item. A read-only audit
+of the cached pinned MMLU-Pro revision found the frozen 512-item evaluation
+distribution `K=3:1, K=4:35, K=5:2, K=6:3, K=7:4, K=8:12, K=9:30,
+K=10:425`. The protocol itself specifies per-item `K`, so the guard and local
+validator were repaired to use each item's exact cyclic length. No scientific
+choice, item, score, model operation, or result was changed; the worker exited
+before constructing the model.

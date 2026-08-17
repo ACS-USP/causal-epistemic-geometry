@@ -490,7 +490,10 @@ def preflight_q1_v1_2(
     typer.echo(f"Items: {estimate['items']}")
     typer.echo(f"Cyclic orderings per item: {estimate['cyclic_orderings_per_item']}")
     typer.echo(f"Conditions per ordering: {estimate['conditions_per_ordering']}")
-    typer.echo(f"Total item-condition rows: {estimate['total_item_condition_rows']}")
+    typer.echo(
+        "Total item-condition rows (K<=10 upper bound): "
+        f"{estimate['total_item_condition_rows']}"
+    )
     typer.echo(f"Exact original rows eligible for reuse: {estimate['exact_original_rows_reused']}")
     typer.echo(f"Estimated computed rows: {estimate['estimated_computed_rows']}")
     typer.echo(f"Estimated runtime minutes: {estimate['estimated_runtime_minutes']:.2f}")

@@ -159,8 +159,10 @@ def _load_benchmark(config: RunConfig, split_manifest: Path) -> MMLUProBenchmark
     actual_ids = {item.id for item in benchmark}
     if actual_ids != evaluation_ids or actual_ids & holdout_ids:
         raise ValueError("V1.2 loaded item IDs violate the frozen split")
-    if any(len(item.metadata.get("options", [])) != len(LABELS) for item in benchmark):
-        raise ValueError("V1.2 requires exactly ten MMLU-Pro options for every item")
+    if any(
+        not 2 <= len(item.metadata.get("options", [])) <= len(LABELS) for item in benchmark
+    ):
+        raise ValueError("V1.2 requires each item to have between 2 and 10 options")
     return benchmark
 
 
@@ -1082,7 +1084,7 @@ def validate_q1_v1_2_run(run_dir: str | Path, split_manifest: str | Path) -> dic
         raise ValueError("V1.2 run is not a complete V1.2 artifact")
     if (
         manifest.get("item_count") != EVALUATION_SIZE
-        or manifest.get("cyclic_ordering_count") != len(LABELS)
+        or not 2 <= int(manifest.get("cyclic_ordering_count", 0)) <= len(LABELS)
         or manifest.get("model_revision") != MODEL_REVISION
         or manifest.get("dataset_revision") != V1_DATASET_REVISION
     ):
@@ -1151,26 +1153,26 @@ def validate_q1_v1_2_run(run_dir: str | Path, split_manifest: str | Path) -> dic
     expected_roles = set(ALL_ROLES)
     if {row["role"] for row in raw_rows} != expected_roles:
         raise ValueError("V1.2 condition roles are incomplete")
-    if manifest.get("raw_row_count") != EVALUATION_SIZE * 10 * len(ALL_ROLES):
-        raise ValueError("V1.2 raw row count is incompatible with the frozen 10-way design")
     by_item: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in raw_rows:
         by_item[row["item_id"]].append(row)
         option_count = int(row["option_count"])
         shift = int(row["cyclic_shift"])
         if (
-            option_count != len(LABELS)
-            or row["candidate_labels"] != list(LABELS)
-            or len(row["semantic_option_ids"]) != len(LABELS)
+            option_count < 2
+            or option_count > len(LABELS)
+            or row["candidate_labels"] != list(LABELS[:option_count])
+            or len(row["semantic_option_ids"]) != option_count
         ):
             raise ValueError(f"V1.2 candidate semantics mismatch for {row['item_id']}")
         if row["semantic_option_ids"] != cyclic_option_order(option_count, shift):
             raise ValueError(f"V1.2 cyclic mapping mismatch for {row['item_id']} shift {shift}")
         if row.get("candidate_score_semantics") != "candidate_logits_no_vocab_normalization":
             raise ValueError(f"V1.2 score semantics mismatch for {row['item_id']}")
-        scores = {label: float(row["candidate_scores"][label]) for label in LABELS}
+        labels = list(row["candidate_labels"])
+        scores = {label: float(row["candidate_scores"][label]) for label in labels}
         predicted_label = max(scores, key=scores.get)
-        predicted_position = LABELS.index(predicted_label)
+        predicted_position = labels.index(predicted_label)
         predicted_semantic = int(row["semantic_option_ids"][predicted_position])
         target_semantic = int(row["target_semantic_original_index"])
         target_position = row["semantic_option_ids"].index(target_semantic)
@@ -1187,14 +1189,30 @@ def validate_q1_v1_2_run(run_dir: str | Path, split_manifest: str | Path) -> dic
         rows = by_item[item_id]
         if len({int(row["target_semantic_original_index"]) for row in rows}) != 1:
             raise ValueError(f"V1.2 target semantic identity changed for {item_id}")
+        option_counts = {int(row["option_count"]) for row in rows}
+        if len(option_counts) != 1:
+            raise ValueError(f"V1.2 option count changed across shifts for {item_id}")
+        option_count = option_counts.pop()
         expected_keys = {
             (shift, role)
-            for shift in range(10)
+            for shift in range(option_count)
             for role in ALL_ROLES
         }
         actual_keys = {(int(row["cyclic_shift"]), row["role"]) for row in rows}
         if actual_keys != expected_keys:
             raise ValueError(f"V1.2 incomplete item/shift/role grid for {item_id}")
+
+    expected_raw_count = sum(
+        len({int(row["cyclic_shift"]) for row in by_item[item_id]}) * len(ALL_ROLES)
+        for item_id in expected_item_id_order
+    )
+    if manifest.get("raw_row_count") != expected_raw_count:
+        raise ValueError("V1.2 raw row count does not match per-item cyclic grids")
+    expected_max_options = max(
+        int(rows[0]["option_count"]) for rows in by_item.values()
+    )
+    if manifest.get("cyclic_ordering_count") != expected_max_options:
+        raise ValueError("V1.2 cyclic ordering count does not match item option counts")
 
     lightweight_items = []
     for item_id in expected_item_id_order:
@@ -1249,7 +1267,11 @@ def validate_q1_v1_2_run(run_dir: str | Path, split_manifest: str | Path) -> dic
     directional_rows = [
         json.loads(line) for line in directional_path.read_text(encoding="utf-8").splitlines()
     ]
-    if len(directional_rows) != EVALUATION_SIZE * len(LABELS):
+    expected_directional_count = sum(
+        len({int(row["cyclic_shift"]) for row in by_item[item_id]})
+        for item_id in expected_item_id_order
+    )
+    if len(directional_rows) != expected_directional_count:
         raise ValueError("V1.2 directional response row count mismatch")
     for artifact_name in (
         "cyclic_permutation_manifests.json",
@@ -1302,5 +1324,9 @@ def estimate_q1_v1_2(config: RunConfig) -> dict[str, Any]:
         "estimated_a40_cost_usd": estimated_minutes / 60.0 * hourly_rate,
         "cost_gate_usd": 1.0,
         "cost_gate_pass": estimated_minutes / 60.0 * hourly_rate <= 1.0,
-        "note": "Engineering estimate only; no inference or dataset/model load performed.",
+        "row_count_is_upper_bound": True,
+        "note": (
+            "Engineering upper-bound estimate assumes K=10 for every item; "
+            "no inference or dataset/model load performed."
+        ),
     }
