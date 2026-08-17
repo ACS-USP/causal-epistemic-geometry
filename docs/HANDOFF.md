@@ -44,11 +44,20 @@ MODREG10, FSM10, and eligible SATCOUNT10 cells may proceed to baseline-only
 calibration. REACHCOUNT10 cells and SATCOUNT10 `vars4_clauses4` were excluded
 by the frozen shallow-shortcut failure rule. No model outcome was used.
 
-Q1 V2 real-transformer mechanics: Qwen tokenization and baseline calibration
-NOT RUN; RunPod is intentionally stopped during local implementation.
+Q1 V2 real-transformer mechanics: Qwen tokenization audit PASS on the cached
+Qwen/Qwen3-8B revision `b968826d9c46dd6066d109eabc6255188de91218`; decimal and
+number-word candidates were all unique context-compatible single tokens.
+Baseline-only calibration then completed remotely with 6,600 view rows.
 
-Q1 real 8B model: prior V1 development runs are closed; E3-10 has not been run
-on Qwen.
+The frozen mechanical qualification rule returned zero qualifying cells across
+the 11 scheduled cells. Canonical decimal accuracy was approximately chance in
+every family/cell, and the decimal/word stability criterion also failed. The
+suite therefore returned `E3_10_INSTRUMENT_NOT_QUALIFIED`. No fresh geometry,
+development, or confirmatory splits were generated.
+
+Q1 real 8B model: prior V1 development runs are closed; E3-10 baseline
+calibration was run on Qwen, but no steering or scientific Q1 experiment was
+run.
 
 Q1 scientific result: NONE FROZEN.
 
@@ -59,10 +68,12 @@ Q2 geometry: NOT RUN.
 
 ## What remains untested on a real deployment
 
-The E3-10 Qwen path still needs the exact decimal and number-word token audit,
-baseline-only calibration, mechanical qualification, and principal review.
-The local design artifact has no model outcomes. The V1/Qwen engineering
-history is retained separately and is not being used to qualify E3-10.
+The E3-10 Qwen path has now been exercised through tokenization and
+baseline-only calibration. The complete CPU-audited review bundle is at
+`review/q1_v2_instrument_review/` (ignored because it contains real model
+outputs), including enriched per-view semantic rows, six figures, the complete
+11-cell table, independent recomputation, and validator output. The V1/Qwen
+engineering history is retained separately and was not used to qualify E3-10.
 
 ## Exact local smoke
 
@@ -85,12 +96,11 @@ MPLCONFIGDIR=/tmp/ceg-mpl python scripts/run_e3_structural_gate.py
 
 This is model-free and performs no network operation. The full 5,000-item
 per-cell bundle is in `review/q1_v2_instrument_design_v2/`; the prior v1
-design artifact remains archival. The future remote-only
-sequence is to build a calibration manifest, audit candidate tokenization with
-`scripts/audit_e3_tokenization.py`, run baseline calibration, and stop for
-review before any steering. The manifest builder uses the committed
-`configs/q1_v2_structural_eligibility.json` allowlist and will not schedule
-the excluded structural-shortcut cells.
+design artifact remains archival. The executed remote calibration and its
+CPU-only audit are in the ignored `review/q1_v2_instrument_review/` bundle.
+Because the suite failed the frozen qualification rule, the manifest builder
+did not generate fresh scientific splits and the next action is principal
+researcher review, not steering.
 
 ## Exact RunPod setup
 

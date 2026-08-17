@@ -105,9 +105,10 @@ Current readiness:
 ```text
 Q1 V1–V1.2 INSTRUMENT SERIES: CLOSED AS DEVELOPMENT
 Q1 V2 E3-10 SOFTWARE: GENERATORS/ORACLES/VALIDATOR READY
-Q1 V2 STRUCTURAL GATE: PASS (MODEL-FREE; Qwen NOT RUN)
-Q1 V2 BASELINE CALIBRATION: NOT RUN (RunPod-only)
-Q1 V2 QWEN TOKEN AUDIT: PENDING
+Q1 V2 STRUCTURAL GATE: PASS (MODEL-FREE)
+Q1 V2 QWEN TOKEN AUDIT: PASS (decimal and number-word candidates)
+Q1 V2 BASELINE CALIBRATION: COMPLETE — NOT QUALIFIED
+Q1 V2 FRESH SPLITS: NOT GENERATED
 Q1 SCIENTIFIC RESULT: NONE FROZEN
 Q2 GEOMETRY: NOT RUN
 CONFIRMATORY HOLDOUT: UNTOUCHED
@@ -127,7 +128,11 @@ structural validity, target support, target-conditional features, shortcut
 baselines, rejection efficiency, twins, and latent namespace leakage without
 model outcomes. Real baseline calibration must run on
 the explicitly approved remote model and stop for principal review before
-steering, development evaluation, or the confirmatory holdout.
+steering, development evaluation, or the confirmatory holdout. That calibration
+was completed on the cached Qwen3-8B snapshot and failed the frozen qualification
+rule in all 11 scheduled cells, so no fresh scientific splits were generated.
+The CPU-audited bundle is under the ignored local path
+`review/q1_v2_instrument_review/`.
 The committed `configs/q1_v2_structural_eligibility.json` is the fail-closed
 allowlist used to keep structurally failed cells out of the future Qwen
 calibration manifest.
@@ -146,7 +151,9 @@ authorized analysis-only aggregator audit; they are not Git-tracked source.
 
 The previous V1.2 artifacts remain historical DEVELOPMENT evidence only. Their
 aggregator-sensitive result does not authorize V1.3 or Q2; the instrument is
-closed rather than reinterpreted.
+closed rather than reinterpreted. E3-10 likewise produced no Q1 steering result:
+baseline calibration showed chance-like competence and failed output-channel
+stability thresholds, so the pre-registered stop rule was applied.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`
