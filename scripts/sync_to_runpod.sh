@@ -52,6 +52,7 @@ if [[ "${delete_remote}" == "1" ]]; then
 fi
 
 excludes=(
+  --exclude .git/
   --exclude .venv/
   --exclude venv/
   --exclude __pycache__/
@@ -75,6 +76,7 @@ excludes=(
 )
 
 tar_excludes=(
+  --exclude=./.git
   --exclude=./.venv
   --exclude=./venv
   --exclude=./__pycache__
