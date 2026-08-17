@@ -120,8 +120,10 @@ is allowed during instrument qualification.
 
 ### Stage A — screen
 
-For every eligible family/cell and each budget in 512, 1024, and 2048, new
-latent items are evaluated with two independent baseline seeds. A cell/budget
+For every eligible family/cell, one frozen set of 60 latent items is evaluated
+under each budget in 512, 1024, and 2048. The latent IDs are identical across
+the three budget conditions, while the two independent rollout seed identities
+are also identical across budgets. A cell/budget
 passes only if accuracy is 20–90%, parse success is at least 98%, and the
 maximum seed accuracy gap is at most 15 percentage points.
 

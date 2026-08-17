@@ -134,10 +134,11 @@ python scripts/build_q1_v3_calibration_manifests.py stage_a \
   --output review/q1_v3_reasoning_instrument/stage_a_manifest.json
 ```
 
-These commands create procedural manifests only. The 36 Stage-A manifests are
-not model outcomes, do not access DEV or holdout items, and do not construct
-steering. Start remote baseline-only calibration only after principal review
-and the documented cost gate.
+These commands create procedural manifests only. The 36 Stage-A budget
+conditions use 12 frozen 60-item latent sets; they are not model outcomes, do
+not access DEV or holdout items, and do not construct steering. Start remote
+baseline-only calibration only after principal review and the documented cost
+gate.
 
 The local E3-10 structural gate is model-free and uses 5,000 balanced items
 per family/cell:

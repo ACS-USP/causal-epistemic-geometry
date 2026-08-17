@@ -23,6 +23,7 @@ from epistemic_geometry.benchmarks.reasoning.calibration import (
 from epistemic_geometry.benchmarks.reasoning.splits import (
     generate_fresh_scientific_splits,
 )
+from epistemic_geometry.reproducibility import canonical_json, stable_digest
 
 
 def _write(path: Path, payload: dict[str, Any]) -> None:
@@ -35,9 +36,12 @@ def _load(path: Path) -> dict[str, Any]:
 
 
 def _manifest_payload(phase: str, manifests: tuple[Any, ...], **extra: Any) -> dict[str, Any]:
-    return {
+    payload = {
         "suite": "Q1-V3-REASONING",
         "phase": phase,
+        "manifest_schema_version": (
+            "q1-v3-stage-a-paired-budget-v1" if phase == "stage_a_screen" else "q1-v3-v1"
+        ),
         "model_outcomes": False,
         "steering_outcomes": False,
         "manifests": {
@@ -46,6 +50,30 @@ def _manifest_payload(phase: str, manifests: tuple[Any, ...], **extra: Any) -> d
         },
         **extra,
     }
+    if phase == "stage_a_screen":
+        paired_groups: dict[str, Any] = {}
+        for manifest in manifests:
+            group_key = f"{manifest.family}/{manifest.cell}"
+            group = paired_groups.setdefault(
+                group_key,
+                {
+                    "family": manifest.family,
+                    "cell": manifest.cell,
+                    "seed": manifest.seed,
+                    "budgets": [],
+                    "latent_ids": [item.latent_id for item in manifest.items],
+                    "paired_item_set_hash": manifest.metadata["paired_item_set_hash"],
+                },
+            )
+            group["budgets"].append(manifest.reasoning_budget)
+        for group in paired_groups.values():
+            group["budgets"] = sorted(group["budgets"])
+            group["latent_id_count"] = len(group["latent_ids"])
+        payload["paired_budget_groups"] = paired_groups
+    payload["manifest_hash"] = stable_digest(
+        "Q1-V3-MANIFEST-CONTENT", canonical_json(payload)
+    )
+    return payload
 
 
 def main() -> None:

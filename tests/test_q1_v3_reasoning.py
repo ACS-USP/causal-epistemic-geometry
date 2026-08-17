@@ -136,6 +136,57 @@ def test_stage_a_b_rules_are_frozen_and_mechanical() -> None:
     assert all(len(manifest.items) == 60 for manifest in manifests)
 
 
+def test_stage_a_budgets_share_exactly_one_latent_item_set_per_cell() -> None:
+    eligible = [(family, cell) for family, cells in FAMILY_CELLS.items() for cell in cells]
+    manifests = generate_stage_a_manifests(eligible, seed=20260817)
+    grouped: dict[tuple[str, str], list] = {}
+    for manifest in manifests:
+        grouped.setdefault((manifest.family, manifest.cell), []).append(manifest)
+
+    assert len(grouped) == len(eligible)
+    all_cell_ids: set[str] = set()
+    for (_family, _cell), cell_manifests in grouped.items():
+        assert [manifest.reasoning_budget for manifest in cell_manifests] == [512, 1024, 2048]
+        assert len({manifest.seed for manifest in cell_manifests}) == 1
+        latent_sets = [
+            tuple(item.latent_id for item in manifest.items) for manifest in cell_manifests
+        ]
+        assert latent_sets[0] == latent_sets[1] == latent_sets[2]
+        assert len(latent_sets[0]) == len(set(latent_sets[0])) == 60
+        assert all_cell_ids.isdisjoint(latent_sets[0])
+        all_cell_ids.update(latent_sets[0])
+        assert len({manifest.metadata["paired_item_set_hash"] for manifest in cell_manifests}) == 1
+
+
+def test_stage_a_rollout_seed_schedule_is_budget_invariant() -> None:
+    manifests = generate_stage_a_manifests([("FSM-R", "length_4")], seed=31)
+    by_budget = {manifest.reasoning_budget: manifest for manifest in manifests}
+    for index, _item in enumerate(by_budget[512].items):
+        for rollout_index in (0, 1):
+            seeds = {
+                budget: rollout_seed(
+                    99,
+                    by_budget[budget].items[index].latent_id,
+                    "baseline",
+                    rollout_index,
+                    regime="independent",
+                )
+                for budget in (512, 1024, 2048)
+            }
+            assert len(set(seeds.values())) == 1
+            assert by_budget[512].items[index].latent_id == by_budget[1024].items[index].latent_id
+
+
+def test_stage_a_budget_remains_execution_provenance() -> None:
+    from epistemic_geometry.benchmarks.reasoning.runner import _generation_config
+    from epistemic_geometry.config import load_config
+
+    config = load_config("configs/q1_v3_reasoning_instrument.example.yaml")
+    assert [
+        _generation_config(config, budget)["max_new_tokens"] for budget in (512, 1024, 2048)
+    ] == [512, 1024, 2048]
+
+
 def test_calibration_summary_uses_canonical_as_primary_and_reports_twin() -> None:
     records = []
     for latent_id, canonical_answer, twin_answer in (

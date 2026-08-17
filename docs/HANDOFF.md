@@ -110,10 +110,10 @@ python scripts/build_q1_v3_calibration_manifests.py stage_a \
   --output review/q1_v3_reasoning_instrument/stage_a_manifest.json
 ```
 
-This is model-free. It creates 36 Stage-A manifests (12 cells × 3 budgets),
-each with 60 fresh latent items. It does not load Qwen, construct steering, or
-touch the future scientific splits. Principal review is required before any
-RunPod command.
+This is model-free. It creates 36 Stage-A budget conditions (12 cells × 3
+budgets) over 12 frozen 60-item latent sets. It does not load Qwen, construct
+steering, or touch the future scientific splits. Principal review is required
+before any RunPod command.
 
 After principal review and only on RunPod with the pinned cache/model, the
 baseline-only calibration runner is:

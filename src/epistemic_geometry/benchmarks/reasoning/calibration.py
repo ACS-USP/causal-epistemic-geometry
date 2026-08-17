@@ -5,6 +5,8 @@ from __future__ import annotations
 from collections.abc import Iterable
 from typing import Any
 
+from epistemic_geometry.reproducibility import stable_digest
+
 from .families import FAMILY_CELLS
 from .splits import STAGE_A, STAGE_B, ReasoningSplit, generate_split
 
@@ -38,16 +40,41 @@ def eligible_cells_from_gate(gate: dict[str, Any]) -> list[tuple[str, str]]:
 def generate_stage_a_manifests(
     eligible_cells: Iterable[tuple[str, str]], *, seed: int
 ) -> tuple[ReasoningSplit, ...]:
+    """Create paired-budget conditions over one frozen item set per cell.
+
+    The reasoning budget is an execution condition. It must not participate in
+    latent-item generation, otherwise budget comparisons are confounded with
+    finite-sample item difficulty.
+    """
+
     manifests: list[ReasoningSplit] = []
     for family, cell in sorted(eligible_cells):
+        item_set = generate_split(
+            family,
+            cell,
+            STAGE_A,
+            seed=seed,
+            n_items=STAGE_A_ITEMS,
+            reasoning_budget=None,
+        )
+        latent_ids = tuple(item.latent_id for item in item_set.items)
+        item_set_hash = stable_digest(
+            "Q1-V3-STAGE-A-PAIRED-ITEM-SET", family, cell, seed, *latent_ids
+        )
         for budget in REASONING_BUDGETS:
             manifests.append(
-                generate_split(
-                    family,
-                    cell,
-                    STAGE_A,
-                    seed=seed + budget,
-                    n_items=STAGE_A_ITEMS,
+                ReasoningSplit(
+                    split_name=item_set.split_name,
+                    family=item_set.family,
+                    cell=item_set.cell,
+                    seed=item_set.seed,
+                    items=item_set.items,
+                    metadata={
+                        **item_set.metadata,
+                        "paired_budget_design": "q1-v3-stage-a-paired-budget-v1",
+                        "paired_item_set_hash": item_set_hash,
+                        "paired_budget_condition": budget,
+                    },
                     reasoning_budget=budget,
                 )
             )

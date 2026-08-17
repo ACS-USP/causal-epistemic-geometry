@@ -125,8 +125,9 @@ gate status is **{gate['status']}** using the stored model-free report.
 ## CALIBRATION
 
 Stage A: **NOT RUN**. Stage B: **NOT RUN**. Qwen outcomes: none. The Stage-A
-manifest builder is model-free and creates 36 manifests (12 cells × 3 budgets),
-60 fresh latent items per manifest, with independent rollout seeds planned.
+manifest builder is model-free and creates 36 budget conditions (12 cells × 3
+budgets) over 12 frozen 60-item latent sets. Corresponding rollout seed
+identities are shared across budgets.
 
 ## INSTRUMENT
 

@@ -32,6 +32,11 @@ python scripts/build_q1_v3_calibration_manifests.py stage_a \
   --output review/q1_v3_reasoning_instrument/stage_a_manifest.json
 ```
 
+The corrected manifest uses schema `q1-v3-stage-a-paired-budget-v1`: each
+family/cell has exactly one 60-item latent set shared by budgets 512/1024/2048,
+with a recorded manifest content hash. The regenerated manifest hash is stored
+in the review bundle.
+
 ## After principal review
 
 1. Start the existing RunPod only when the researcher authorizes Stage A.
@@ -72,3 +77,10 @@ intentional full Stage-A launch.
   geometry, or holdout artifacts before Stage B qualification and review.
 
 No Q1 scientific conclusion is available at this handoff.
+
+When remote execution becomes the only remaining step, the explicit handoff
+sentinel is:
+
+```text
+RUNPOD_REQUIRED_FOR_Q1_V3_REASONING_STAGE_A
+```
