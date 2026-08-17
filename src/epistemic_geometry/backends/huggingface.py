@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import inspect
+import time
 from collections.abc import Iterator
 from contextlib import contextmanager
 from typing import Any
@@ -515,6 +516,10 @@ class HuggingFaceBackend(ModelBackend):
             generated: list[list[int]] = [[] for _ in batch_indices]
             finished = [False] * len(batch_indices)
             stop_reasons: list[str | None] = [None] * len(batch_indices)
+            if self.device.type == "cuda":
+                self.torch.cuda.reset_peak_memory_stats(self.device)
+                self.torch.cuda.synchronize(self.device)
+            batch_started = time.perf_counter()
             with self.torch.inference_mode():
                 prefill_kwargs: dict[str, Any] = {
                     "input_ids": batch_inputs,
@@ -526,9 +531,14 @@ class HuggingFaceBackend(ModelBackend):
                     prefill_kwargs["cache_position"] = self.torch.arange(
                         batch_inputs.shape[1], dtype=self.torch.long, device=self.device
                     )
+                prefill_started = time.perf_counter()
                 prefill_kwargs["return_dict"] = True
                 model_outputs = self.model(**prefill_kwargs)
+                if self.device.type == "cuda":
+                    self.torch.cuda.synchronize(self.device)
+                prefill_seconds = time.perf_counter() - prefill_started
                 past_key_values = model_outputs.past_key_values
+                decode_started = time.perf_counter()
                 for step in range(max_new_tokens):
                     if step == 0:
                         last_positions = batch_masks.sum(dim=1).long() - 1
@@ -598,6 +608,26 @@ class HuggingFaceBackend(ModelBackend):
                         )
                     model_outputs = self.model(**decode_kwargs)
                     past_key_values = model_outputs.past_key_values
+                if self.device.type == "cuda":
+                    self.torch.cuda.synchronize(self.device)
+                decode_seconds = time.perf_counter() - decode_started
+            generation_seconds = time.perf_counter() - batch_started
+            timing = {
+                "prefill_seconds": prefill_seconds,
+                "decode_seconds": decode_seconds,
+                "generation_seconds": generation_seconds,
+            }
+            if self.device.type == "cuda":
+                timing.update(
+                    {
+                        "peak_memory_allocated_bytes": int(
+                            self.torch.cuda.max_memory_allocated(self.device)
+                        ),
+                        "peak_memory_reserved_bytes": int(
+                            self.torch.cuda.max_memory_reserved(self.device)
+                        ),
+                    }
+                )
 
             for row_index, original_index in enumerate(batch_indices):
                 tokens = tuple(generated[row_index])
@@ -630,6 +660,7 @@ class HuggingFaceBackend(ModelBackend):
                         "batch_prompt_lengths": [prompt_lengths[index] for index in batch_indices],
                         "batch_padded_prefill_tokens": len(batch_indices)
                         * max(prompt_lengths[index] for index in batch_indices),
+                        "timing": timing,
                         "batch_planner": "q1-v3-reasoning-length-bucket-v1",
                         "intervention": "none",
                         "view_id": view.view_id,

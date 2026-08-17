@@ -46,6 +46,7 @@ def _record_summary(record: Any) -> dict[str, Any]:
         "parse_status": record.parse_status,
         "parsed_answer": record.parsed_answer,
         "correct": record.correct,
+        "timing": record.metadata.get("timing"),
     }
 
 
@@ -255,6 +256,7 @@ def main() -> None:
     serial_prefix_parse_mismatches = sum(not row["parse_equal"] for row in prefix_comparisons)
     batch_comparisons = []
     batch_comparison_details = []
+    batch_timings = []
     for view_id, rows in serial_rows.items():
         for budget in budgets:
             comparison = _compare_rows(rows[budget], batched_rows[view_id][budget])
@@ -262,6 +264,12 @@ def main() -> None:
             batch_comparison_details.append(
                 {"view_id": view_id, "budget": budget, **comparison}
             )
+    # Timing belongs to the physical max-budget generation, so retain one
+    # copy per physical task rather than duplicating it for derived budgets.
+    for rows in batched_rows.values():
+        timing = rows[max(budgets)].get("timing")
+        if timing is not None:
+            batch_timings.append(timing)
     batch_token_mismatches = sum(not row["token_ids_equal"] for row in batch_comparisons)
     batch_parse_mismatches = sum(not row["parse_equal"] for row in batch_comparisons)
     result = {
@@ -293,6 +301,7 @@ def main() -> None:
                 "serial_vs_batched_token_mismatches": batch_token_mismatches,
                 "serial_vs_batched_parse_mismatches": batch_parse_mismatches,
                 "serial_vs_batched_comparisons": batch_comparison_details,
+                "physical_generation_timings": batch_timings,
             },
         },
         "pairwise": pairwise,
