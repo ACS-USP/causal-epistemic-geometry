@@ -1,3 +1,6 @@
+import json
+from dataclasses import dataclass
+
 import pytest
 
 from epistemic_geometry.benchmarks.reasoning.base import ReasoningItem
@@ -6,6 +9,13 @@ from epistemic_geometry.benchmarks.reasoning.calibration import (
     select_stage_b_cells,
     stage_a_qualifies,
     stage_b_qualifies,
+)
+from epistemic_geometry.benchmarks.reasoning.engines import (
+    BATCHED_REASONING,
+    MAX_BUDGET_PREFIX_REUSE,
+    SERIAL_REASONING_REFERENCE,
+    derive_budget_outputs,
+    deterministic_length_batches,
 )
 from epistemic_geometry.benchmarks.reasoning.families import FAMILY_CELLS, generate_item, oracle_for
 from epistemic_geometry.benchmarks.reasoning.parser import parse_exact_integer_final
@@ -25,7 +35,9 @@ from epistemic_geometry.benchmarks.reasoning.splits import (
     generate_split,
 )
 from epistemic_geometry.benchmarks.reasoning.validation import validate_item
+from epistemic_geometry.config import load_config
 from epistemic_geometry.experiments.reasoning_agent import plurality_answer, plurality_ensemble
+from epistemic_geometry.types import BackendOutput
 
 
 def test_all_reasoning_generators_have_exact_oracles_and_twins() -> None:
@@ -58,6 +70,149 @@ def test_reasoning_parser_uses_last_final_outside_thinking() -> None:
     assert parse_exact_integer_final("FINAL: 3 extra").status == "INVALID_FINAL"
     assert parse_exact_integer_final("partial", truncated=True).status == "TRUNCATED_NO_FINAL"
     assert parse_exact_integer_final("<think>not closed").status == "THINKING_UNCLOSED"
+
+
+def test_max_budget_prefix_reuse_derives_each_budget_independently() -> None:
+    source = BackendOutput(
+        raw_output="unused",
+        metadata={"generated_token_ids": list(range(12)), "generation_seed": 17},
+    )
+    outputs = derive_budget_outputs(
+        source,
+        view_id="FSM-R:length_4:item:canonical",
+        sampling_seed=17,
+        source_max_budget=12,
+        budgets=(4, 8, 12),
+        decode_tokens=lambda ids: "TOKENS:" + ",".join(map(str, ids)),
+    )
+    assert [outputs[budget].metadata["generated_token_ids"] for budget in (4, 8, 12)] == [
+        [0, 1, 2, 3],
+        list(range(8)),
+        list(range(12)),
+    ]
+    assert outputs[4].raw_output == "TOKENS:0,1,2,3"
+    assert outputs[4].metadata["derived_from_prefix"] is True
+    assert outputs[12].metadata["derived_from_prefix"] is False
+    assert outputs[4].metadata["physical_generation_id"] == outputs[12].metadata[
+        "physical_generation_id"
+    ]
+
+
+def test_prefix_reuse_requires_exact_generated_tokens() -> None:
+    with pytest.raises(ValueError, match="generated_token_ids"):
+        derive_budget_outputs(
+            BackendOutput(raw_output="FINAL: 1"),
+            view_id="item:canonical",
+            sampling_seed=1,
+            source_max_budget=4,
+            budgets=(4,),
+            decode_tokens=lambda ids: str(ids),
+        )
+
+
+def test_reasoning_length_batch_planner_is_deterministic_and_budget_independent() -> None:
+    lengths = [("long", 100), ("short-b", 10), ("short-a", 10), ("mid", 50)]
+    assert deterministic_length_batches(lengths, batch_size=2, max_padded_tokens=120) == [
+        ("short-a", "short-b"),
+        ("mid",),
+        ("long",),
+    ]
+    assert SERIAL_REASONING_REFERENCE != MAX_BUDGET_PREFIX_REUSE
+    with pytest.raises(ValueError, match="exceeds max_padded_tokens"):
+        deterministic_length_batches([("too-long", 121)], batch_size=2, max_padded_tokens=120)
+
+
+def test_prefix_runner_reduces_physical_generations_without_reducing_rows(
+    tmp_path, monkeypatch
+) -> None:
+    from epistemic_geometry.benchmarks.reasoning import runner
+
+    manifests = generate_stage_a_manifests([("FSM-R", "length_4")], seed=31)
+    payload = {
+        "manifests": {
+            f"{split.family}/{split.cell}/{split.reasoning_budget}": split.to_record()
+            for split in manifests
+        }
+    }
+    manifest_path = tmp_path / "stage_a.json"
+    manifest_path.write_text(json.dumps(payload), encoding="utf-8")
+    config = load_config("configs/q1_v3_reasoning_instrument.example.yaml")
+
+    @dataclass
+    class FakeTokenizer:
+        def decode(self, ids, skip_special_tokens=True):
+            del skip_special_tokens
+            return "<think>done</think>\nFINAL: 4" if ids else ""
+
+    class FakeBackend:
+        tokenizer = FakeTokenizer()
+
+        def __init__(self):
+            self.calls = []
+            self.batch_calls = []
+
+        def generate_reasoning_view(self, view, *, sampling_seed, max_new_tokens):
+            self.calls.append((view.view_id, sampling_seed, max_new_tokens))
+            return BackendOutput(
+                raw_output="<think>done</think>\nFINAL: 4",
+                metadata={
+                    "generated_token_ids": list(range(max_new_tokens)),
+                    "generation_seed": sampling_seed,
+                },
+            )
+
+        def generate_reasoning_batch(
+            self, rows, *, max_new_tokens, batch_size, max_prefill_tokens
+        ):
+            self.batch_calls.append(
+                (len(rows), max_new_tokens, batch_size, max_prefill_tokens)
+            )
+            return [
+                self.generate_reasoning_view(
+                    view, sampling_seed=seed, max_new_tokens=max_new_tokens
+                )
+                for view, seed in rows
+            ]
+
+        def provenance(self):
+            return {"model": "fake"}
+
+    fake = FakeBackend()
+    monkeypatch.setattr(runner, "build_backend", lambda _config: fake)
+    output = runner.run_baseline_calibration(
+        config,
+        manifest_path,
+        tmp_path / "run",
+        inference_engine=MAX_BUDGET_PREFIX_REUSE,
+        max_items=1,
+    )
+    rows = [json.loads(line) for line in (output / "rollouts.jsonl").read_text().splitlines()]
+    assert len(fake.calls) == 2
+    assert len(rows) == 6
+    assert {row["generation_config"]["max_new_tokens"] for row in rows} == {512, 1024, 2048}
+    assert len({row["physical_generation_id"] for row in rows}) == 2
+    assert sum(row["derived_from_prefix"] for row in rows) == 4
+    assert all(row["natural_completion_length"] == 2048 for row in rows)
+
+    fake.calls.clear()
+    batched_output = runner.run_baseline_calibration(
+        config,
+        manifest_path,
+        tmp_path / "batched-run",
+        inference_engine=BATCHED_REASONING,
+        max_items=1,
+    )
+    batched_rows = [
+        json.loads(line)
+        for line in (batched_output / "rollouts.jsonl").read_text().splitlines()
+    ]
+    assert fake.batch_calls == [(2, 2048, 1, 8192)]
+    assert len(fake.calls) == 2
+    assert batched_rows == rows
+    batched_manifest = json.loads((batched_output / "manifest.json").read_text())
+    assert batched_manifest["inference_engine"] == BATCHED_REASONING
+    assert batched_manifest["inference_engine_version"] == "q1-v3-reasoning-engine-v1"
+    assert batched_manifest["inference_settings"]["batch_size"] == 1
 
 
 def test_matched_and_independent_seed_regimes_are_distinct() -> None:

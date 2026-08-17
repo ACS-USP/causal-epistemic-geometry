@@ -17,6 +17,10 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--manifest-key")
     parser.add_argument("--max-items", type=int)
+    parser.add_argument(
+        "--inference-engine",
+        choices=("serial_reasoning_reference", "max_budget_prefix_reuse", "batched_reasoning"),
+    )
     args = parser.parse_args()
     config = load_config(args.config)
     output = run_baseline_calibration(
@@ -25,6 +29,7 @@ def main() -> None:
         args.output,
         manifest_key=args.manifest_key,
         max_items=args.max_items,
+        inference_engine=args.inference_engine,
     )
     print(f"Q1 V3 baseline calibration artifacts: {output}")
 

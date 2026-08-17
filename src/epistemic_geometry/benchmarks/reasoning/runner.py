@@ -18,7 +18,15 @@ from epistemic_geometry.backends.base import build_backend
 from epistemic_geometry.config import RunConfig
 from epistemic_geometry.reproducibility import canonical_json, stable_digest
 
-from .base import ReasoningView
+from .engines import (
+    BATCHED_REASONING,
+    MAX_BUDGET_PREFIX_REUSE,
+    REASONING_ENGINE_VERSION,
+    SERIAL_REASONING_REFERENCE,
+    SUPPORTED_REASONING_ENGINES,
+    derive_budget_outputs,
+    physical_generation_id,
+)
 from .rendering import render_reasoning
 from .rollouts import (
     RolloutRecord,
@@ -123,16 +131,7 @@ def _load_manifest(path: Path) -> dict[str, Any]:
     return payload
 
 
-def run_baseline_calibration(
-    config: RunConfig,
-    manifest_path: str | Path,
-    output_dir: str | Path,
-    *,
-    manifest_key: str | None = None,
-    max_items: int | None = None,
-) -> Path:
-    """Run Stage A or B baseline rollouts and write auditable raw artifacts."""
-
+def _validate_calibration_config(config: RunConfig) -> tuple[str, int]:
     if config.backend.type != "huggingface":
         raise ValueError("Q1 V3 calibration requires backend.type=huggingface")
     if config.experiment.stage != "development":
@@ -147,71 +146,31 @@ def run_baseline_calibration(
         raise ValueError("calibration requires independent rollout seeds")
     rollout_count = int(config.q1_v3.get("rollout_count", 2 if phase == "stage_a_screen" else 4))
     if rollout_count <= 0:
-        raise ValueError("q1_v3.rollout_count must be positive")
+        raise ValueError("rollout_count must be positive")
+    return phase, rollout_count
 
-    payload = _load_manifest(Path(manifest_path))
-    manifests = payload["manifests"]
-    selected_keys = [manifest_key] if manifest_key else sorted(manifests)
-    if any(key not in manifests for key in selected_keys):
+
+def _selected_keys(manifests: dict[str, Any], manifest_key: str | None) -> list[str]:
+    selected = [manifest_key] if manifest_key else sorted(manifests)
+    if any(key not in manifests for key in selected):
         raise KeyError(f"manifest key not found: {manifest_key}")
+    return selected
 
-    backend = build_backend(config)
-    output = Path(output_dir)
-    output.mkdir(parents=True, exist_ok=True)
-    all_records: list[RolloutRecord] = []
-    outcomes: list[dict[str, Any]] = []
-    for key in selected_keys:
-        split = ReasoningSplit.from_record(manifests[key], development=True)
-        items = split.items[:max_items] if max_items is not None else split.items
-        if max_items is not None and max_items <= 0:
-            raise ValueError("max_items must be positive")
-        views: list[ReasoningView] = []
-        surfaces = ("canonical",) if phase == "stage_a_screen" else (
-            "canonical",
-            "surface_twin",
-        )
-        for item in items:
-            views.extend(render_reasoning(item, surface=surface) for surface in surfaces)
-        records: list[RolloutRecord] = []
-        budget = int(split.reasoning_budget or config.backend.max_new_tokens)
-        generation_config = _generation_config(config, budget)
-        for view in views:
-            for rollout_index in range(rollout_count):
-                seed = rollout_seed(
-                    config.experiment.seed,
-                    view.latent_id,
-                    "baseline",
-                    rollout_index,
-                    regime=regime,
-                )
-                backend_output = backend.generate_reasoning_view(
-                    view,
-                    sampling_seed=seed,
-                    max_new_tokens=budget,
-                )
-                record = rollout_record_from_output(
-                    view,
-                    backend_output,
-                    intervention_id="baseline",
-                    rollout_index=rollout_index,
-                    sampling_seed=seed,
-                    generation_config=generation_config,
-                )
-                records.append(record)
-                all_records.append(record)
-        summary = summarize_rollouts(records)
-        summary.update(
-            {
-                "family": split.family,
-                "cell": split.cell,
-                "reasoning_budget": budget,
-                "manifest_key": key,
-                "phase": phase,
-                "n_items_evaluated": len(items),
-            }
-        )
-        outcomes.append(summary)
 
+def _records_to_artifacts(
+    *,
+    output: Path,
+    phase: str,
+    config: RunConfig,
+    manifest_path: Path,
+    selected_keys: list[str],
+    outcomes: list[dict[str, Any]],
+    all_records: list[RolloutRecord],
+    backend: Any,
+    inference_engine: str,
+    physical_generations: int,
+    rollout_count: int,
+) -> Path:
     rows_path = output / "rollouts.jsonl"
     rows_tmp = rows_path.with_suffix(".jsonl.tmp")
     rows_tmp.write_text(
@@ -224,17 +183,331 @@ def run_baseline_calibration(
     _atomic_json(
         output / "manifest.json",
         {
-            "status": "COMPLETE" if max_items is None else "PARTIAL_ENGINEERING_RUN",
+            "status": "COMPLETE",
             "phase": phase,
             "model_outcomes": True,
             "steering_outcomes": False,
             "confirmatory_accessed": False,
+            "inference_engine": inference_engine,
+            "inference_engine_version": REASONING_ENGINE_VERSION,
+            "inference_settings": {
+                "batch_size": int(
+                    config.q1_v3.get("batch_size", config.backend.batch_size)
+                ),
+                "max_prefill_tokens": int(
+                    config.q1_v3.get("max_prefill_tokens", config.backend.max_prefill_tokens)
+                ),
+                "padding_side": config.backend.padding_side,
+                "enable_thinking": config.backend.enable_thinking,
+                "do_sample": config.backend.do_sample,
+                "temperature": config.backend.temperature,
+                "top_p": config.backend.top_p,
+                "top_k": config.backend.top_k,
+                "min_p": config.backend.min_p,
+            },
             "config_hash": stable_digest("q1-v3-config", canonical_json(config.as_dict())),
-            "source_manifest": str(Path(manifest_path)),
+            "source_manifest": str(manifest_path),
             "manifest_keys": selected_keys,
             "rollout_count": rollout_count,
             "rollout_rows": len(all_records),
+            "physical_generation_count": physical_generations,
+            "scientific_budget_outcomes": len(all_records),
             "model_provenance": provenance,
         },
     )
     return output
+
+
+def _run_serial_reasoning(
+    *,
+    config: RunConfig,
+    payload: dict[str, Any],
+    manifest_path: Path,
+    selected_keys: list[str],
+    output: Path,
+    phase: str,
+    rollout_count: int,
+    max_items: int | None,
+    backend: Any,
+) -> Path:
+    """Known-correct one-request-at-a-time reference implementation."""
+
+    all_records: list[RolloutRecord] = []
+    outcomes: list[dict[str, Any]] = []
+    for key in selected_keys:
+        split = ReasoningSplit.from_record(payload["manifests"][key], development=True)
+        items = split.items[:max_items] if max_items is not None else split.items
+        surfaces = ("canonical",) if phase == "stage_a_screen" else ("canonical", "surface_twin")
+        records: list[RolloutRecord] = []
+        budget = int(split.reasoning_budget or config.backend.max_new_tokens)
+        generation_config = _generation_config(config, budget)
+        for item in items:
+            for surface in surfaces:
+                view = render_reasoning(item, surface=surface)
+                for rollout_index in range(rollout_count):
+                    seed = rollout_seed(
+                        config.experiment.seed,
+                        view.latent_id,
+                        "baseline",
+                        rollout_index,
+                        regime="independent",
+                    )
+                    backend_output = backend.generate_reasoning_view(
+                        view, sampling_seed=seed, max_new_tokens=budget
+                    )
+                    record = rollout_record_from_output(
+                        view,
+                        backend_output,
+                        intervention_id="baseline",
+                        rollout_index=rollout_index,
+                        sampling_seed=seed,
+                        generation_config=generation_config,
+                    )
+                    records.append(record)
+                    all_records.append(record)
+        summary = summarize_rollouts(records)
+        summary.update(
+            {
+                "family": split.family,
+                "cell": split.cell,
+                "reasoning_budget": budget,
+                "manifest_key": key,
+                "phase": phase,
+                "n_items_evaluated": len(items),
+            }
+        )
+        outcomes.append(summary)
+    result = _records_to_artifacts(
+        output=output,
+        phase=phase,
+        config=config,
+        manifest_path=manifest_path,
+        selected_keys=selected_keys,
+        outcomes=outcomes,
+        all_records=all_records,
+        backend=backend,
+        inference_engine=SERIAL_REASONING_REFERENCE,
+        physical_generations=len(all_records),
+        rollout_count=rollout_count,
+    )
+    if max_items is not None:
+        manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
+        manifest["status"] = "PARTIAL_ENGINEERING_RUN"
+        _atomic_json(output / "manifest.json", manifest)
+    return result
+
+
+def _run_max_budget_prefix_reuse(
+    *,
+    config: RunConfig,
+    payload: dict[str, Any],
+    manifest_path: Path,
+    selected_keys: list[str],
+    output: Path,
+    phase: str,
+    rollout_count: int,
+    max_items: int | None,
+    backend: Any,
+    batched: bool = False,
+) -> Path:
+    """Generate one max-budget trajectory and derive each paired budget row.
+
+    ``batched=True`` changes only physical execution: the same ordered task
+    list is passed through the backend's length-aware batched generator.  The
+    budget prefixes and parser remain exactly the same as in the reference
+    prefix-reuse engine.
+    """
+
+    if not hasattr(backend, "tokenizer"):
+        raise TypeError("max-budget prefix reuse requires a tokenizer-backed backend")
+    manifests = payload["manifests"]
+    grouped: dict[tuple[str, str], dict[int, tuple[str, ReasoningSplit]]] = {}
+    for key in selected_keys:
+        split = ReasoningSplit.from_record(manifests[key], development=True)
+        budget = int(split.reasoning_budget or config.backend.max_new_tokens)
+        grouped.setdefault((split.family, split.cell), {})[budget] = (key, split)
+
+    all_records: list[RolloutRecord] = []
+    records_by_key: dict[str, list[RolloutRecord]] = {key: [] for key in selected_keys}
+    physical_generations = 0
+    for group_key in sorted(grouped):
+        budget_rows = grouped[group_key]
+        ordered_budgets = sorted(budget_rows)
+        source_budget = max(ordered_budgets)
+        _source_key, source_split = budget_rows[source_budget]
+        source_items = (
+            source_split.items[:max_items] if max_items is not None else source_split.items
+        )
+        source_ids = tuple(item.latent_id for item in source_items)
+        for _budget, (_key, split) in budget_rows.items():
+            if tuple(item.latent_id for item in split.items[: len(source_items)]) != source_ids:
+                raise ValueError(
+                    "max-budget prefix reuse requires paired latent IDs across budget manifests"
+                )
+        surfaces = ("canonical",) if phase == "stage_a_screen" else ("canonical", "surface_twin")
+        tasks: list[tuple[Any, int]] = []
+        task_rollouts: list[int] = []
+        for item in source_items:
+            for surface in surfaces:
+                view = render_reasoning(item, surface=surface)
+                for rollout_index in range(rollout_count):
+                    seed = rollout_seed(
+                        config.experiment.seed,
+                        view.latent_id,
+                        "baseline",
+                        rollout_index,
+                        regime="independent",
+                    )
+                    tasks.append((view, seed))
+                    task_rollouts.append(rollout_index)
+
+        if batched:
+            if not hasattr(backend, "generate_reasoning_batch"):
+                raise TypeError("batched reasoning requires a batch-capable backend")
+            source_outputs = backend.generate_reasoning_batch(
+                tasks,
+                max_new_tokens=source_budget,
+                batch_size=int(config.q1_v3.get("batch_size", config.backend.batch_size)),
+                max_prefill_tokens=int(
+                    config.q1_v3.get("max_prefill_tokens", config.backend.max_prefill_tokens)
+                ),
+            )
+        else:
+            source_outputs = [
+                backend.generate_reasoning_view(
+                    view,
+                    sampling_seed=seed,
+                    max_new_tokens=source_budget,
+                )
+                for view, seed in tasks
+            ]
+
+        for (view, seed), task_rollout_index, source_output in zip(
+            tasks, task_rollouts, source_outputs, strict=True
+        ):
+            physical_generations += 1
+            physical_id = physical_generation_id(
+                view_id=view.view_id,
+                sampling_seed=seed,
+                source_max_budget=source_budget,
+            )
+            derived = derive_budget_outputs(
+                source_output,
+                view_id=view.view_id,
+                sampling_seed=seed,
+                source_max_budget=source_budget,
+                budgets=ordered_budgets,
+                decode_tokens=lambda ids: backend.tokenizer.decode(
+                    ids, skip_special_tokens=True
+                ),
+            )
+            for budget in ordered_budgets:
+                key, _split = budget_rows[budget]
+                generation_config = _generation_config(config, budget)
+                record = rollout_record_from_output(
+                    view,
+                    derived[budget],
+                    intervention_id="baseline",
+                    rollout_index=task_rollout_index,
+                    sampling_seed=seed,
+                    generation_config=generation_config,
+                )
+                if record.physical_generation_id != physical_id:
+                    raise RuntimeError("physical generation provenance mismatch")
+                records_by_key[key].append(record)
+                all_records.append(record)
+
+    outcomes: list[dict[str, Any]] = []
+    for key in selected_keys:
+        records = records_by_key[key]
+        if not records:
+            raise ValueError(f"no records generated for manifest key {key}")
+        split = ReasoningSplit.from_record(manifests[key], development=True)
+        budget = int(split.reasoning_budget or config.backend.max_new_tokens)
+        summary = summarize_rollouts(records)
+        summary.update(
+            {
+                "family": split.family,
+                "cell": split.cell,
+                "reasoning_budget": budget,
+                "manifest_key": key,
+                "phase": phase,
+                "n_items_evaluated": len(split.items[:max_items])
+                if max_items is not None
+                else len(split.items),
+            }
+        )
+        outcomes.append(summary)
+    result = _records_to_artifacts(
+        output=output,
+        phase=phase,
+        config=config,
+        manifest_path=manifest_path,
+        selected_keys=selected_keys,
+        outcomes=outcomes,
+        all_records=all_records,
+        backend=backend,
+        inference_engine=BATCHED_REASONING if batched else MAX_BUDGET_PREFIX_REUSE,
+        physical_generations=physical_generations,
+        rollout_count=rollout_count,
+    )
+    if max_items is not None:
+        manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
+        manifest["status"] = "PARTIAL_ENGINEERING_RUN"
+        _atomic_json(output / "manifest.json", manifest)
+    return result
+
+
+def run_baseline_calibration(
+    config: RunConfig,
+    manifest_path: str | Path,
+    output_dir: str | Path,
+    *,
+    manifest_key: str | None = None,
+    max_items: int | None = None,
+    inference_engine: str | None = None,
+) -> Path:
+    """Run Stage A or B baseline rollouts and write auditable raw artifacts."""
+
+    phase, rollout_count = _validate_calibration_config(config)
+    selected_engine = str(
+        inference_engine or config.q1_v3.get("inference_engine", SERIAL_REASONING_REFERENCE)
+    )
+    if selected_engine not in SUPPORTED_REASONING_ENGINES:
+        raise ValueError(
+            f"unsupported Q1 V3 inference_engine {selected_engine!r}; "
+            f"choose one of {sorted(SUPPORTED_REASONING_ENGINES)}"
+        )
+    payload = _load_manifest(Path(manifest_path))
+    manifests = payload["manifests"]
+    selected_keys = _selected_keys(manifests, manifest_key)
+
+    backend = build_backend(config)
+    output = Path(output_dir)
+    output.mkdir(parents=True, exist_ok=True)
+    if max_items is not None and max_items <= 0:
+        raise ValueError("max_items must be positive")
+    if selected_engine in {MAX_BUDGET_PREFIX_REUSE, BATCHED_REASONING}:
+        return _run_max_budget_prefix_reuse(
+            config=config,
+            payload=payload,
+            manifest_path=Path(manifest_path),
+            selected_keys=selected_keys,
+            output=output,
+            phase=phase,
+            rollout_count=rollout_count,
+            max_items=max_items,
+            backend=backend,
+            batched=selected_engine == BATCHED_REASONING,
+        )
+    return _run_serial_reasoning(
+        config=config,
+        payload=payload,
+        manifest_path=Path(manifest_path),
+        selected_keys=selected_keys,
+        output=output,
+        phase=phase,
+        rollout_count=rollout_count,
+        max_items=max_items,
+        backend=backend,
+    )

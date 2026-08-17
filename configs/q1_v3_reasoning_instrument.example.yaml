@@ -37,6 +37,10 @@ q1_v3:
   reasoning_budgets: [512, 1024, 2048]
   rollout_count: 2
   seed_regime: independent
+  # Engineering-only switches. The scientific protocol is unchanged.
+  inference_engine: serial_reasoning_reference
+  batch_size: 1
+  max_prefill_tokens: 8192
   final_field: "FINAL:"
   no_adaptive_retries: true
 

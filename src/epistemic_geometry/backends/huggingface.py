@@ -16,6 +16,7 @@ from epistemic_geometry.backends.base import (
     validate_vector_dimension,
 )
 from epistemic_geometry.benchmarks.prompts import render_prompt
+from epistemic_geometry.benchmarks.reasoning.engines import deterministic_length_batches
 from epistemic_geometry.config import BackendConfig
 from epistemic_geometry.inference.planner import group_conditions_by_layer, plan_prepared_items
 from epistemic_geometry.reproducibility import require_remote_hf_execution, stable_digest
@@ -371,6 +372,276 @@ class HuggingFaceBackend(ModelBackend):
             }
         )
         return BackendOutput(raw_output=output.raw_output, metadata=metadata)
+
+    def generate_reasoning_batch(
+        self,
+        rows: list[tuple[Any, int]],
+        *,
+        max_new_tokens: int,
+        batch_size: int,
+        max_prefill_tokens: int = 8192,
+    ) -> list[BackendOutput]:
+        """Generate independent reasoning rows with length-aware KV batching.
+
+        Each row owns a CUDA/CPU ``torch.Generator`` seeded with the frozen
+        rollout seed.  Sampling is therefore independent of batch order.  The
+        model's own logits warpers implement the configured temperature/top-k/
+        top-p/min-p semantics; this method only replaces the outer serial
+        ``generate`` loop with explicit cached decoding.
+        """
+
+        if not rows:
+            return []
+        if not self.config.enable_thinking or not self.config.do_sample:
+            raise ValueError("batched reasoning requires thinking and sampling enabled")
+        if batch_size <= 0 or max_prefill_tokens <= 0 or max_new_tokens <= 0:
+            raise ValueError("batch_size, max_prefill_tokens, and max_new_tokens must be positive")
+
+        try:
+            from transformers import GenerationConfig
+            from transformers.generation.logits_process import (
+                LogitsProcessorList,
+                MinPLogitsWarper,
+                TemperatureLogitsWarper,
+                TopKLogitsWarper,
+                TopPLogitsWarper,
+            )
+        except ImportError as exc:  # pragma: no cover - guarded by backend construction
+            raise OptionalDependencyError("batched reasoning requires transformers") from exc
+
+        prepared: list[dict[str, Any]] = []
+        for view, seed in rows:
+            item = BenchmarkItem(
+                id=view.view_id,
+                prompt=view.prompt,
+                target=str(view.answer),
+                metadata={
+                    "latent_id": view.latent_id,
+                    "view_id": view.view_id,
+                    "response_channel": "reasoning_exact_final",
+                    "source_prompt_hash": view.prompt_hash,
+                    "source_template_hash": view.template_hash,
+                },
+            )
+            rendered = render_prompt(
+                item,
+                mode=self.config.prompt_mode,
+                tokenizer=self.tokenizer,
+                enable_thinking=self.config.enable_thinking,
+            )
+            prepared.append({"view": view, "seed": int(seed), "rendered": rendered})
+
+        previous_padding_side = getattr(self.tokenizer, "padding_side", None)
+        if previous_padding_side is not None:
+            self.tokenizer.padding_side = self.config.padding_side
+        try:
+            encoded = self.tokenizer(
+                [row["rendered"].text for row in prepared],
+                padding=True,
+                return_tensors="pt",
+            )
+        finally:
+            if previous_padding_side is not None:
+                self.tokenizer.padding_side = previous_padding_side
+        encoded = {key: value.to(self.device) for key, value in encoded.items()}
+        attention_mask = encoded["attention_mask"]
+        prompt_lengths = [int(value) for value in attention_mask.sum(dim=1).tolist()]
+        # Deterministic length buckets are formed from the already-tokenized
+        # prompts.  Results are restored to the caller's original row order.
+        planned_batches = deterministic_length_batches(
+            [(str(index), length) for index, length in enumerate(prompt_lengths)],
+            batch_size=batch_size,
+            max_padded_tokens=max_prefill_tokens,
+        )
+        batches = [[int(index) for index in batch] for batch in planned_batches]
+        output_rows: list[BackendOutput | None] = [None] * len(rows)
+        generation_config = GenerationConfig(
+            do_sample=True,
+            temperature=self.config.temperature,
+            top_p=self.config.top_p,
+            top_k=self.config.top_k,
+            min_p=self.config.min_p,
+            pad_token_id=self.tokenizer.pad_token_id,
+            eos_token_id=getattr(self.tokenizer, "eos_token_id", None),
+        )
+        # ``_get_logits_warper`` existed in some Transformers releases and was
+        # folded into ``_get_logits_processor`` in others.  Construct the
+        # small, explicitly frozen sampler here so the optimized path does not
+        # depend on a private model method or on a particular model class.
+        warpers = LogitsProcessorList()
+        if generation_config.temperature is not None and generation_config.temperature != 1.0:
+            warpers.append(TemperatureLogitsWarper(generation_config.temperature))
+        if generation_config.top_k is not None and generation_config.top_k != 0:
+            warpers.append(TopKLogitsWarper(top_k=generation_config.top_k))
+        if generation_config.top_p is not None and generation_config.top_p < 1.0:
+            warpers.append(TopPLogitsWarper(top_p=generation_config.top_p))
+        if generation_config.min_p is not None and generation_config.min_p > 0.0:
+            warpers.append(MinPLogitsWarper(min_p=generation_config.min_p))
+        eos_ids = generation_config.eos_token_id
+        if eos_ids is None:
+            eos_set: set[int] = set()
+        elif isinstance(eos_ids, int):
+            eos_set = {eos_ids}
+        else:
+            eos_set = {int(value) for value in eos_ids}
+
+        for batch_index, batch_indices in enumerate(batches):
+            # A deterministic max-token budget is used here.  The planner
+            # never changes scientific row identity; it only chooses grouping.
+            batch_inputs = encoded["input_ids"][batch_indices]
+            batch_masks = encoded["attention_mask"][batch_indices]
+            # Explicit position IDs make left- and right-padded batches
+            # equivalent to the corresponding unbatched calls.  This is
+            # particularly important for decoder-only models whose automatic
+            # position inference differs across Transformers versions.
+            batch_position_ids = batch_masks.long().cumsum(dim=-1) - 1
+            batch_position_ids = batch_position_ids.clamp_min(0)
+            sequences = batch_inputs.clone()
+            masks = batch_masks.clone()
+            generators = []
+            for index in batch_indices:
+                generator = self.torch.Generator(device=self.device)
+                generator.manual_seed(int(prepared[index]["seed"]))
+                generators.append(generator)
+            generated: list[list[int]] = [[] for _ in batch_indices]
+            finished = [False] * len(batch_indices)
+            stop_reasons: list[str | None] = [None] * len(batch_indices)
+            with self.torch.inference_mode():
+                model_outputs = self.model(
+                    input_ids=batch_inputs,
+                    attention_mask=batch_masks,
+                    position_ids=batch_position_ids,
+                    use_cache=True,
+                )
+                past_key_values = model_outputs.past_key_values
+                for step in range(max_new_tokens):
+                    if step == 0:
+                        last_positions = batch_masks.sum(dim=1).long() - 1
+                        logits = model_outputs.logits[
+                            self.torch.arange(len(batch_indices), device=self.device),
+                            last_positions,
+                        ]
+                    else:
+                        logits = model_outputs.logits[:, -1, :]
+                    next_tokens: list[int] = []
+                    for row_index in range(len(batch_indices)):
+                        if finished[row_index]:
+                            next_tokens.append(int(self.tokenizer.pad_token_id))
+                            continue
+                        row_logits = logits[row_index : row_index + 1]
+                        row_logits = warpers(sequences[row_index : row_index + 1], row_logits)
+                        probabilities = self.torch.softmax(row_logits, dim=-1)
+                        sampled = self.torch.multinomial(
+                            probabilities,
+                            num_samples=1,
+                            generator=generators[row_index],
+                        )
+                        token = int(sampled.item())
+                        next_tokens.append(token)
+                        generated[row_index].append(token)
+                        if token in eos_set:
+                            finished[row_index] = True
+                            stop_reasons[row_index] = "eos_token"
+                    next_tensor = self.torch.tensor(
+                        next_tokens, dtype=batch_inputs.dtype, device=self.device
+                    ).unsqueeze(1)
+                    sequences = self.torch.cat((sequences, next_tensor), dim=1)
+                    masks = self.torch.cat(
+                        (
+                            masks,
+                            self.torch.ones(
+                                (len(batch_indices), 1), dtype=masks.dtype, device=self.device
+                            ),
+                        ),
+                        dim=1,
+                    )
+                    if all(finished):
+                        break
+                    model_outputs = self.model(
+                        input_ids=next_tensor,
+                        attention_mask=masks,
+                        position_ids=(masks.sum(dim=1).long() - 1).unsqueeze(1).clamp_min(0),
+                        past_key_values=past_key_values,
+                        use_cache=True,
+                    )
+                    past_key_values = model_outputs.past_key_values
+
+            for row_index, original_index in enumerate(batch_indices):
+                tokens = tuple(generated[row_index])
+                if stop_reasons[row_index] is None:
+                    stop_reasons[row_index] = "max_new_tokens"
+                view = prepared[original_index]["view"]
+                output_rows[original_index] = BackendOutput(
+                    raw_output=self.tokenizer.decode(tokens, skip_special_tokens=True),
+                    metadata={
+                        "model": self.model_name,
+                        "model_revision": self.model_revision or "UNKNOWN",
+                        "prompt_mode": self.config.prompt_mode,
+                        "enable_thinking": True,
+                        "rendered_prompt_hash": prepared[original_index]["rendered"].hash,
+                        "input_token_count": prompt_lengths[original_index],
+                        "generated_token_count": len(tokens),
+                        "generated_token_ids": list(tokens),
+                        "generation_seed": prepared[original_index]["seed"],
+                        "stop_reason": stop_reasons[row_index],
+                        "generation": {
+                            "do_sample": True,
+                            "temperature": self.config.temperature,
+                            "top_p": self.config.top_p,
+                            "top_k": self.config.top_k,
+                            "min_p": self.config.min_p,
+                            "max_new_tokens": max_new_tokens,
+                        },
+                        "batch_index": batch_index,
+                        "batch_size": len(batch_indices),
+                        "batch_prompt_lengths": [prompt_lengths[index] for index in batch_indices],
+                        "batch_padded_prefill_tokens": len(batch_indices)
+                        * max(prompt_lengths[index] for index in batch_indices),
+                        "batch_planner": "q1-v3-reasoning-length-bucket-v1",
+                        "intervention": "none",
+                        "view_id": view.view_id,
+                        "source_prompt_hash": view.prompt_hash,
+                        "source_template_hash": view.template_hash,
+                    },
+                )
+        if any(output is None for output in output_rows):
+            raise RuntimeError("batched reasoning did not produce one output per row")
+        return [output for output in output_rows if output is not None]
+
+    def derive_reasoning_prefix_output(
+        self,
+        output: BackendOutput,
+        *,
+        prefix_length: int,
+        source_max_budget: int,
+        physical_generation_id: str,
+        derived_from_prefix: bool,
+        natural_completion_length: int,
+        reasoning_budget: int,
+    ) -> BackendOutput:
+        """Decode an exact generated-token prefix without rerunning the model."""
+
+        token_ids = tuple(int(token) for token in output.metadata.get("generated_token_ids", ()))
+        if prefix_length < 0 or prefix_length > len(token_ids):
+            raise ValueError("prefix_length is outside generated token range")
+        prefix_ids = token_ids[:prefix_length]
+        metadata = dict(output.metadata)
+        metadata.update(
+            {
+                "generated_token_ids": list(prefix_ids),
+                "generated_token_count": len(prefix_ids),
+                "physical_generation_id": physical_generation_id,
+                "source_max_budget": source_max_budget,
+                "prefix_length": prefix_length,
+                "derived_from_prefix": derived_from_prefix,
+                "natural_completion_length": natural_completion_length,
+                "reasoning_budget": reasoning_budget,
+            }
+        )
+        return BackendOutput(
+            raw_output=self.tokenizer.decode(prefix_ids, skip_special_tokens=True),
+            metadata=metadata,
+        )
 
     def _candidate_labels(self, item: BenchmarkItem) -> list[str]:
         labels = item.metadata.get("candidate_labels", self.config.candidate_labels)

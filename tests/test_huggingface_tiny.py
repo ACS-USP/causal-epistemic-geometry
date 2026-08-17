@@ -245,6 +245,74 @@ def test_seeded_reasoning_generation_records_raw_trajectory_and_parse_fields(tin
     assert view_output.metadata["source_prompt_hash"] == view.prompt_hash
 
 
+def test_batched_reasoning_preserves_per_row_seed_streams(tiny_backend) -> None:
+    tiny_backend.config = replace(
+        tiny_backend.config,
+        enable_thinking=True,
+        do_sample=True,
+        max_new_tokens=5,
+        temperature=0.6,
+        top_p=0.95,
+        top_k=20,
+        min_p=0.0,
+        # Right padding plus an explicit last-real-token gather is the
+        # portable exact path for decoder-only batch prefill.  Left-padding
+        # behavior remains a model-specific benchmark choice and is audited
+        # separately on the real Qwen backend.
+        padding_side="right",
+    )
+    views = [
+        ReasoningView(
+            latent_id="FSM-R:length_4:batch-a",
+            view_id="FSM-R:length_4:batch-a:canonical",
+            family="FSM-R",
+            cell="length_4",
+            surface="canonical",
+            answer=3,
+            prompt="alpha beta",
+            prompt_hash=hashlib.sha256(b"alpha beta").hexdigest(),
+            template_hash="template",
+        ),
+        ReasoningView(
+            latent_id="FSM-R:length_4:batch-b",
+            view_id="FSM-R:length_4:batch-b:canonical",
+            family="FSM-R",
+            cell="length_4",
+            surface="canonical",
+            answer=3,
+            prompt="alpha beta gamma delta",
+            prompt_hash=hashlib.sha256(b"alpha beta gamma delta").hexdigest(),
+            template_hash="template",
+        ),
+    ]
+    seeds = [101, 202]
+    serial = [
+        tiny_backend.generate_reasoning_view(view, sampling_seed=seed, max_new_tokens=5)
+        for view, seed in zip(views, seeds, strict=True)
+    ]
+    batched = tiny_backend.generate_reasoning_batch(
+        list(zip(views, seeds, strict=True)),
+        max_new_tokens=5,
+        batch_size=2,
+        max_prefill_tokens=256,
+    )
+    assert [output.metadata["generated_token_ids"] for output in batched] == [
+        output.metadata["generated_token_ids"] for output in serial
+    ]
+    shuffled = tiny_backend.generate_reasoning_batch(
+        list(zip(reversed(views), reversed(seeds), strict=True)),
+        max_new_tokens=5,
+        batch_size=2,
+        max_prefill_tokens=256,
+    )
+    assert shuffled[0].metadata["generated_token_ids"] == serial[1].metadata[
+        "generated_token_ids"
+    ]
+    assert shuffled[1].metadata["generated_token_ids"] == serial[0].metadata[
+        "generated_token_ids"
+    ]
+
+
 def test_choice_loglikelihood_scores_complete_candidates_and_targets_prompt_token(
     tiny_backend,
 ) -> None:

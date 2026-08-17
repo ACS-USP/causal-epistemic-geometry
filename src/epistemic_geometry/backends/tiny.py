@@ -25,27 +25,46 @@ class TinyWhitespaceTokenizer:
     def __init__(self, vocab_size: int = 64) -> None:
         self.vocab_size = vocab_size
         self.name_or_path = "tiny-whitespace-tokenizer"
+        self.padding_side = "left"
 
     def _encode_token(self, token: str) -> int:
         return 3 + stable_seed("tiny-token", token) % (self.vocab_size - 3)
 
     def __call__(
         self,
-        text: str,
+        text: str | list[str],
         return_tensors: str = "pt",
         add_special_tokens: bool = True,
+        padding: bool = False,
     ) -> dict[str, Any]:
         if return_tensors != "pt":
             raise ValueError("TinyWhitespaceTokenizer only supports return_tensors='pt'")
         import torch
 
-        tokens = [self.bos_token_id] if add_special_tokens else []
-        tokens.extend(self._encode_token(token) for token in text.split())
-        if add_special_tokens:
-            tokens.append(self.eos_token_id)
+        texts = [text] if isinstance(text, str) else text
+        token_rows = []
+        for value in texts:
+            tokens = [self.bos_token_id] if add_special_tokens else []
+            tokens.extend(self._encode_token(token) for token in value.split())
+            if add_special_tokens:
+                tokens.append(self.eos_token_id)
+            token_rows.append(tokens)
+        if len(token_rows) > 1 and not padding:
+            raise ValueError("TinyWhitespaceTokenizer requires padding=True for batches")
+        width = max(len(tokens) for tokens in token_rows)
+        padded_rows = []
+        masks = []
+        for tokens in token_rows:
+            pad_count = width - len(tokens)
+            if self.padding_side == "left":
+                padded_rows.append([self.pad_token_id] * pad_count + tokens)
+                masks.append([0] * pad_count + [1] * len(tokens))
+            else:
+                padded_rows.append(tokens + [self.pad_token_id] * pad_count)
+                masks.append([1] * len(tokens) + [0] * pad_count)
         return {
-            "input_ids": torch.tensor([tokens], dtype=torch.long),
-            "attention_mask": torch.ones((1, len(tokens)), dtype=torch.long),
+            "input_ids": torch.tensor(padded_rows, dtype=torch.long),
+            "attention_mask": torch.tensor(masks, dtype=torch.long),
         }
 
     def decode(self, token_ids: Any, skip_special_tokens: bool = True) -> str:

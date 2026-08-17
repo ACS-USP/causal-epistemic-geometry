@@ -74,6 +74,11 @@ class RolloutRecord:
     final_answer_token_count: int | None = None
     generation_config: dict[str, Any] = field(default_factory=dict)
     metadata: dict[str, Any] = field(default_factory=dict)
+    physical_generation_id: str | None = None
+    source_max_budget: int | None = None
+    prefix_length: int | None = None
+    derived_from_prefix: bool = False
+    natural_completion_length: int | None = None
 
     @classmethod
     def from_parsed(
@@ -128,6 +133,11 @@ class RolloutRecord:
             "generation_config": self.generation_config,
             "generation_config_hash": generation_config_hash(self.generation_config),
             "metadata": self.metadata,
+            "physical_generation_id": self.physical_generation_id,
+            "source_max_budget": self.source_max_budget,
+            "prefix_length": self.prefix_length,
+            "derived_from_prefix": self.derived_from_prefix,
+            "natural_completion_length": self.natural_completion_length,
         }
 
 
@@ -155,6 +165,11 @@ def rollout_record_from_output(
     think_count = metadata.pop("think_token_count", None)
     final_count = metadata.pop("final_answer_token_count", None)
     stop_reason = metadata.pop("stop_reason", None)
+    physical_generation_id = metadata.pop("physical_generation_id", None)
+    source_max_budget = metadata.pop("source_max_budget", None)
+    prefix_length = metadata.pop("prefix_length", None)
+    derived_from_prefix = bool(metadata.pop("derived_from_prefix", False))
+    natural_completion_length = metadata.pop("natural_completion_length", None)
     return RolloutRecord.from_parsed(
         latent_id=view.latent_id,
         view_id=view.view_id,
@@ -172,4 +187,11 @@ def rollout_record_from_output(
         final_answer_token_count=int(final_count) if final_count is not None else None,
         generation_config=dict(generation_config),
         metadata=metadata,
+        physical_generation_id=physical_generation_id,
+        source_max_budget=(int(source_max_budget) if source_max_budget is not None else None),
+        prefix_length=(int(prefix_length) if prefix_length is not None else None),
+        derived_from_prefix=derived_from_prefix,
+        natural_completion_length=(
+            int(natural_completion_length) if natural_completion_length is not None else None
+        ),
     )
