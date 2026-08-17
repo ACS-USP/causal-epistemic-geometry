@@ -591,7 +591,7 @@ class HuggingFaceBackend(ModelBackend):
                     }
                     if supports_cache_position:
                         decode_kwargs["cache_position"] = self.torch.full(
-                            (len(batch_indices),),
+                            (1,),
                             sequences.shape[1] - 1,
                             dtype=self.torch.long,
                             device=self.device,
