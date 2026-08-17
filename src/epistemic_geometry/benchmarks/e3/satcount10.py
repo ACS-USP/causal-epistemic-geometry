@@ -40,17 +40,25 @@ def _valid_clause(clause: list[int], n_variables: int) -> bool:
 
 def generate(seed: int, cell: str) -> LatentItem:
     n_variables, n_clauses = _cell(cell)
-    rng = np.random.default_rng(stable_seed("E3-10", "SATCOUNT10", cell, seed))
-    clauses: list[list[int]] = []
-    while len(clauses) < n_clauses:
-        width = int(rng.integers(2, min(4, n_variables) + 1))
-        variables = [
-            int(x) for x in rng.choice(np.arange(1, n_variables + 1), size=width, replace=False)
-        ]
-        signs = [1 if bool(rng.integers(0, 2)) else -1 for _ in variables]
-        clause = [variable * sign for variable, sign in zip(variables, signs, strict=True)]
-        if _valid_clause(clause, n_variables) and clause not in clauses:
-            clauses.append(clause)
+    for attempt in range(10_000):
+        rng = np.random.default_rng(stable_seed("E3-10", "SATCOUNT10", cell, seed, attempt))
+        clauses: list[list[int]] = []
+        while len(clauses) < n_clauses:
+            width = int(rng.integers(2, min(4, n_variables) + 1))
+            variables = [
+                int(x) for x in rng.choice(np.arange(1, n_variables + 1), size=width, replace=False)
+            ]
+            signs = [1 if bool(rng.integers(0, 2)) else -1 for _ in variables]
+            clause = [variable * sign for variable, sign in zip(variables, signs, strict=True)]
+            existing = {tuple(sorted(existing_clause)) for existing_clause in clauses}
+            if _valid_clause(clause, n_variables) and tuple(sorted(clause)) not in existing:
+                clauses.append(clause)
+        if {abs(literal) for clause in clauses for literal in clause} == set(
+            range(1, n_variables + 1)
+        ):
+            break
+    else:
+        raise RuntimeError(f"could not generate a SATCOUNT10 item using all variables: {seed}")
     spec = {"n_variables": n_variables, "clauses": clauses}
     difficulty = {
         "variables": n_variables,

@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 
 from epistemic_geometry.backends.huggingface import HuggingFaceBackend
-from epistemic_geometry.benchmarks.e3.base import LatentItem
+from epistemic_geometry.benchmarks.e3.base import GENERATOR_VERSION, LatentItem
 from epistemic_geometry.benchmarks.e3.calibration import run_baseline_calibration
 from epistemic_geometry.benchmarks.e3.qualification import select_cells, summarize_cell
 from epistemic_geometry.benchmarks.e3.splits import SplitManifest
@@ -25,10 +25,19 @@ def _load_manifests(path: Path) -> list[SplitManifest]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if payload.get("split") != "INSTRUMENT_CALIBRATION":
         raise ValueError("calibration runner accepts only INSTRUMENT_CALIBRATION manifests")
+    if payload.get("generator_version") != GENERATOR_VERSION:
+        raise ValueError("calibration manifest uses a different generator version")
+    if payload.get("model_outcomes"):
+        raise ValueError("calibration manifest provenance is invalid: model outcomes already used")
+    eligible_cells = set(payload.get("structural_gate", {}).get("eligible_cells", []))
+    if not eligible_cells:
+        raise ValueError("calibration manifest is missing structural eligibility")
     manifests: list[SplitManifest] = []
-    for record in payload.get("manifests", {}).values():
+    for key, record in payload.get("manifests", {}).items():
         if not isinstance(record, dict):
             raise ValueError("malformed family/cell manifest")
+        if key not in eligible_cells:
+            raise ValueError(f"structurally ineligible cell was scheduled for calibration: {key}")
         manifests.append(
             SplitManifest(
                 split_name=str(record["split_name"]),
@@ -55,9 +64,9 @@ def main() -> None:
         raise ValueError("E3-10 calibration requires development stage and steering.enabled=false")
     if config.backend.candidate_head_mode != "candidate_only":
         raise ValueError("E3-10 calibration requires candidate_head_mode=candidate_only")
+    manifests = _load_manifests(args.manifest)
     backend = HuggingFaceBackend(config.backend)
     rows = []
-    manifests = _load_manifests(args.manifest)
     for manifest in manifests:
         rows.extend(
             run_baseline_calibration(

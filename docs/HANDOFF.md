@@ -36,7 +36,13 @@ Q1 V1–V1.2 multiple-choice instrument series: CLOSED AS DEVELOPMENT. Its
 artifacts remain available for audit, but no scientific result is frozen.
 
 Q1 V2 E3-10 software infrastructure: READY locally for model-free generators,
-exact oracles, views, balance, split, and qualification recomputation checks.
+exact oracles, views, balance, split, qualification recomputation checks, and
+the v2 structural gate.
+
+Q1 V2 pre-model structural gate: PASS. MODREG effective depth is monotonic;
+MODREG10, FSM10, and eligible SATCOUNT10 cells may proceed to baseline-only
+calibration. REACHCOUNT10 cells and SATCOUNT10 `vars4_clauses4` were excluded
+by the frozen shallow-shortcut failure rule. No model outcome was used.
 
 Q1 V2 real-transformer mechanics: Qwen tokenization and baseline calibration
 NOT RUN; RunPod is intentionally stopped during local implementation.
@@ -74,13 +80,17 @@ Or use `make smoke`. Run artifacts appear in `runs/`, which is ignored by Git.
 
 ```bash
 ceg validate-e3 --n-per-cell 500
-python scripts/build_q1_v2_design_artifact.py
+MPLCONFIGDIR=/tmp/ceg-mpl python scripts/run_e3_structural_gate.py
 ```
 
-This is model-free and performs no network operation. The future remote-only
+This is model-free and performs no network operation. The full 5,000-item
+per-cell bundle is in `review/q1_v2_instrument_design_v2/`; the prior v1
+design artifact remains archival. The future remote-only
 sequence is to build a calibration manifest, audit candidate tokenization with
 `scripts/audit_e3_tokenization.py`, run baseline calibration, and stop for
-review before any steering.
+review before any steering. The manifest builder uses the committed
+`configs/q1_v2_structural_eligibility.json` allowlist and will not schedule
+the excluded structural-shortcut cells.
 
 ## Exact RunPod setup
 

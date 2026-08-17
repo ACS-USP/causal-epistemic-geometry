@@ -22,7 +22,7 @@ NUMBER_WORDS = (
     "nine",
 )
 SUITE_VERSION = "E3-10-v1"
-GENERATOR_VERSION = "e3-generators-v1"
+GENERATOR_VERSION = "e3-generators-v2"
 DECIMAL_ANSWER_INSTRUCTION = (
     "Return the final value as exactly one decimal digit from 0 through 9. Do not explain."
 )

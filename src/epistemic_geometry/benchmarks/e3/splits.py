@@ -52,6 +52,29 @@ class SplitManifest:
         }
 
 
+@dataclass(frozen=True)
+class BalancedGenerationStats:
+    """Operational statistics for oracle-only target balancing."""
+
+    attempts: int
+    accepted: int
+    candidate_counts_by_target: dict[str, int]
+    accepted_counts_by_target: dict[str, int]
+
+    def to_record(self) -> dict[str, object]:
+        return {
+            "attempts": self.attempts,
+            "accepted": self.accepted,
+            "candidate_counts_by_target": self.candidate_counts_by_target,
+            "accepted_counts_by_target": self.accepted_counts_by_target,
+            "attempts_per_accepted": self.attempts / max(1, self.accepted),
+            "acceptance_rate_by_target": {
+                target: self.accepted_counts_by_target.get(target, 0) / max(1, count)
+                for target, count in self.candidate_counts_by_target.items()
+            },
+        }
+
+
 def generate_latent(family: str, cell: str, seed: int) -> LatentItem:
     """Dispatch to a family generator using no model-dependent state."""
 
@@ -88,24 +111,55 @@ def generate_balanced_items(
     model output, confidence, activation, or steering result is consulted.
     """
 
+    items, _stats = generate_balanced_items_with_stats(
+        family,
+        cell,
+        n_items,
+        seed,
+        split_name=split_name,
+        max_attempts=max_attempts,
+    )
+    return items
+
+
+def generate_balanced_items_with_stats(
+    family: str,
+    cell: str,
+    n_items: int,
+    seed: int,
+    *,
+    split_name: str = CALIBRATION_SPLIT,
+    max_attempts: int | None = None,
+) -> tuple[tuple[LatentItem, ...], BalancedGenerationStats]:
+    """Generate a balanced pool and expose acceptance-efficiency counts."""
+
     _validate_family_cell(family, cell)
     if n_items <= 0 or n_items % 10:
         raise ValueError("n_items must be positive and divisible by 10")
     quotas = {digit: n_items // 10 for digit in DIGITS}
     counts = {digit: 0 for digit in DIGITS}
+    candidate_counts = {digit: 0 for digit in DIGITS}
     accepted: list[LatentItem] = []
     seen: set[str] = set()
     limit = max_attempts or n_items * 20_000
     for attempt in range(limit):
         candidate_seed = stable_seed("E3-10", split_name, family, cell, seed, attempt)
         item = generate_latent(family, cell, candidate_seed)
+        candidate_counts[item.target] += 1
         if item.latent_hash in seen or counts[item.target] >= quotas[item.target]:
             continue
         accepted.append(item)
         seen.add(item.latent_hash)
         counts[item.target] += 1
         if len(accepted) == n_items:
-            return tuple(accepted)
+            return tuple(accepted), BalancedGenerationStats(
+                attempts=attempt + 1,
+                accepted=len(accepted),
+                candidate_counts_by_target={
+                    str(key): value for key, value in candidate_counts.items()
+                },
+                accepted_counts_by_target={str(key): value for key, value in counts.items()},
+            )
     raise RuntimeError(
         f"could not balance {family}/{cell} after {limit} deterministic attempts; counts={counts}"
     )

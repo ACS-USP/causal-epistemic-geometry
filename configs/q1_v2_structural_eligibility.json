@@ -1,0 +1,35 @@
+{
+  "suite": "E3-10",
+  "generator_version": "e3-generators-v2",
+  "gate": "E3-10 PRE-MODEL STRUCTURAL VALIDITY GATE",
+  "structural_approval": true,
+  "model_outcomes_used": false,
+  "eligible_cells": [
+    "FSM10/length_12",
+    "FSM10/length_16",
+    "FSM10/length_4",
+    "FSM10/length_8",
+    "MODREG10/depth_12",
+    "MODREG10/depth_16",
+    "MODREG10/depth_4",
+    "MODREG10/depth_8",
+    "SATCOUNT10/vars4_clauses6",
+    "SATCOUNT10/vars5_clauses8",
+    "SATCOUNT10/vars6_clauses10"
+  ],
+  "shortcut_warnings": [
+    "SATCOUNT10/vars4_clauses6"
+  ],
+  "excluded_cells": [
+    "REACHCOUNT10/H1_p010",
+    "REACHCOUNT10/H2_p010",
+    "REACHCOUNT10/H2_p018",
+    "REACHCOUNT10/H3_p015",
+    "SATCOUNT10/vars4_clauses4"
+  ],
+  "rules": {
+    "target_support": "all ten digits observed",
+    "generator_structural_validity": "all family-specific validity checks pass",
+    "shortcut_failure": "held-out shallow classifier accuracy must remain below 0.40"
+  }
+}

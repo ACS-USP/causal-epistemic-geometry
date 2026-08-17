@@ -105,6 +105,7 @@ Current readiness:
 ```text
 Q1 V1–V1.2 INSTRUMENT SERIES: CLOSED AS DEVELOPMENT
 Q1 V2 E3-10 SOFTWARE: GENERATORS/ORACLES/VALIDATOR READY
+Q1 V2 STRUCTURAL GATE: PASS (MODEL-FREE; Qwen NOT RUN)
 Q1 V2 BASELINE CALIBRATION: NOT RUN (RunPod-only)
 Q1 V2 QWEN TOKEN AUDIT: PENDING
 Q1 SCIENTIFIC RESULT: NONE FROZEN
@@ -112,17 +113,24 @@ Q2 GEOMETRY: NOT RUN
 CONFIRMATORY HOLDOUT: UNTOUCHED
 ```
 
-The local E3-10 gate is model-free:
+The local E3-10 structural gate is model-free and uses 5,000 balanced items
+per family/cell:
 
 ```bash
 ceg validate-e3 --n-per-cell 500
-python scripts/build_q1_v2_design_artifact.py
+MPLCONFIGDIR=/tmp/ceg-mpl python scripts/run_e3_structural_gate.py
 ```
 
-It creates generators, exact oracles, frozen template hashes, examples, and
-balance audits without model outcomes. Real baseline calibration must run on
+The versioned bundle is written to
+`review/q1_v2_instrument_design_v2/`. It records effective MODREG depth,
+structural validity, target support, target-conditional features, shortcut
+baselines, rejection efficiency, twins, and latent namespace leakage without
+model outcomes. Real baseline calibration must run on
 the explicitly approved remote model and stop for principal review before
 steering, development evaluation, or the confirmatory holdout.
+The committed `configs/q1_v2_structural_eligibility.json` is the fail-closed
+allowlist used to keep structurally failed cells out of the future Qwen
+calibration manifest.
 
 The optimized execution path includes prepared prompts, single-token candidate
 scoring, deterministic batching, prefix-cache and suffix-replay prototypes,

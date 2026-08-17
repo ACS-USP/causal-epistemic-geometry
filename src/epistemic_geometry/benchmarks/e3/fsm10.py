@@ -23,10 +23,18 @@ def _length(cell: str) -> int:
 
 def generate(seed: int, cell: str) -> LatentItem:
     length = _length(cell)
-    rng = np.random.default_rng(stable_seed("E3-10", "FSM10", cell, seed))
-    transitions = {symbol: [int(x) for x in rng.permutation(STATES)] for symbol in SYMBOLS}
-    start = int(rng.integers(0, 10))
-    sequence = [str(x) for x in rng.choice(SYMBOLS, size=length)]
+    for attempt in range(10_000):
+        rng = np.random.default_rng(stable_seed("E3-10", "FSM10", cell, seed, attempt))
+        transitions = {symbol: [int(x) for x in rng.permutation(STATES)] for symbol in SYMBOLS}
+        if any(mapping == list(STATES) for mapping in transitions.values()):
+            continue
+        if len({tuple(mapping) for mapping in transitions.values()}) != len(SYMBOLS):
+            continue
+        start = int(rng.integers(0, 10))
+        sequence = [str(x) for x in rng.choice(SYMBOLS, size=length)]
+        break
+    else:
+        raise RuntimeError(f"could not generate a non-degenerate FSM10 item for seed {seed}")
     spec = {"transitions": transitions, "start": start, "sequence": sequence}
     difficulty = {"sequence_length": length, "state_count": 10, "symbol_count": 3}
     target = oracle(spec)

@@ -9,6 +9,7 @@ from .base import DIGITS, LatentItem
 from .oracle import oracle_for
 from .rendering import render_latent
 from .splits import HOLDOUT_SPLIT, SplitManifest, assert_split_disjoint, generate_latent
+from .structural import validate_structural_item
 
 
 def validate_item(item: LatentItem) -> dict[str, Any]:
@@ -16,6 +17,9 @@ def validate_item(item: LatentItem) -> dict[str, Any]:
 
     if oracle_for(item) != item.target:
         raise AssertionError("oracle mismatch")
+    structural = validate_structural_item(item)
+    if not structural["valid"]:
+        raise AssertionError(f"structural generator defect in {item.latent_id}: {structural}")
     roundtrip = LatentItem.from_record(item.to_record())
     if roundtrip != item:
         raise AssertionError(f"latent serialization changed {item.latent_id}")
@@ -44,6 +48,7 @@ def validate_item(item: LatentItem) -> dict[str, Any]:
         "target": item.target,
         "views": len(views),
         "surface_oracle_equal": True,
+        "structural_valid": True,
     }
 
 
