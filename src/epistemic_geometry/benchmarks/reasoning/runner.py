@@ -10,13 +10,14 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
 from epistemic_geometry.backends.base import build_backend
 from epistemic_geometry.config import RunConfig
-from epistemic_geometry.reproducibility import canonical_json, stable_digest
+from epistemic_geometry.reproducibility import canonical_json, git_metadata, stable_digest
 
 from .engines import (
     BATCHED_REASONING,
@@ -27,6 +28,7 @@ from .engines import (
     derive_budget_outputs,
     physical_generation_id,
 )
+from .journal import PhysicalGenerationJournal
 from .rendering import render_reasoning
 from .rollouts import (
     RolloutRecord,
@@ -131,6 +133,56 @@ def _load_manifest(path: Path) -> dict[str, Any]:
     return payload
 
 
+def _source_commit() -> str | None:
+    """Prefer the commit explicitly supplied by the canonical source host."""
+
+    explicit = os.environ.get("CEG_SOURCE_COMMIT")
+    if explicit:
+        return explicit
+    return git_metadata(Path.cwd()).get("git_commit")
+
+
+def _journal_identity(
+    *,
+    config: RunConfig,
+    payload: dict[str, Any],
+    manifest_path: Path,
+    selected_keys: list[str],
+    phase: str,
+    rollout_count: int,
+    inference_engine: str,
+) -> dict[str, Any]:
+    """Build the immutable identity that makes resume incompatibilities loud."""
+
+    return {
+        "phase": phase,
+        "selected_manifest_keys": list(selected_keys),
+        "manifest_hash": stable_digest("Q1-V3-STAGE-A-MANIFEST", canonical_json(payload)),
+        "manifest_path": str(manifest_path),
+        "config_hash": stable_digest("q1-v3-config", canonical_json(config.as_dict())),
+        "rollout_count": rollout_count,
+        "inference_engine": inference_engine,
+        "inference_engine_version": REASONING_ENGINE_VERSION,
+        "source_commit": _source_commit(),
+        "model_id": config.backend.model_id,
+        "model_revision": config.backend.model_revision,
+        "tokenizer_id": config.backend.tokenizer_id,
+        "tokenizer_revision": config.backend.tokenizer_revision,
+        "enable_thinking": config.backend.enable_thinking,
+        "do_sample": config.backend.do_sample,
+        "temperature": config.backend.temperature,
+        "top_p": config.backend.top_p,
+        "top_k": config.backend.top_k,
+        "min_p": config.backend.min_p,
+        "max_physical_budget": max(
+            int(budget)
+            for budget in config.q1_v3.get(
+                "reasoning_budgets", [config.backend.max_new_tokens]
+            )
+        ),
+    }
+
+
 def _validate_calibration_config(config: RunConfig) -> tuple[str, int]:
     if config.backend.type != "huggingface":
         raise ValueError("Q1 V3 calibration requires backend.type=huggingface")
@@ -170,6 +222,7 @@ def _records_to_artifacts(
     inference_engine: str,
     physical_generations: int,
     rollout_count: int,
+    journal: PhysicalGenerationJournal | None = None,
 ) -> Path:
     rows_path = output / "rollouts.jsonl"
     rows_tmp = rows_path.with_suffix(".jsonl.tmp")
@@ -207,12 +260,20 @@ def _records_to_artifacts(
             },
             "config_hash": stable_digest("q1-v3-config", canonical_json(config.as_dict())),
             "source_manifest": str(manifest_path),
+            "source_manifest_hash": stable_digest(
+                "Q1-V3-STAGE-A-MANIFEST", manifest_path.read_text(encoding="utf-8")
+            ),
             "manifest_keys": selected_keys,
             "rollout_count": rollout_count,
             "rollout_rows": len(all_records),
             "physical_generation_count": physical_generations,
             "scientific_budget_outcomes": len(all_records),
             "model_provenance": provenance,
+            "source_commit": _source_commit(),
+            "physical_journal": str(journal.path) if journal is not None else None,
+            "physical_journal_quarantined_tail": (
+                journal.quarantined_tail if journal is not None else None
+            ),
         },
     )
     return output
@@ -327,9 +388,41 @@ def _run_max_budget_prefix_reuse(
         budget = int(split.reasoning_budget or config.backend.max_new_tokens)
         grouped.setdefault((split.family, split.cell), {})[budget] = (key, split)
 
-    all_records: list[RolloutRecord] = []
-    records_by_key: dict[str, list[RolloutRecord]] = {key: [] for key in selected_keys}
+    journal = (
+        PhysicalGenerationJournal(
+            output / "physical_journal.jsonl",
+            identity=_journal_identity(
+                config=config,
+                payload=payload,
+                manifest_path=manifest_path,
+                selected_keys=selected_keys,
+                phase=phase,
+                rollout_count=rollout_count,
+                inference_engine=MAX_BUDGET_PREFIX_REUSE,
+            ),
+        )
+        if phase == "stage_a_screen" and not batched
+        else None
+    )
+    if journal is not None:
+        _atomic_json(
+            output / "manifest.json",
+            {
+                "status": "RUNNING",
+                "phase": phase,
+                "model_outcomes": True,
+                "steering_outcomes": False,
+                "confirmatory_accessed": False,
+                "inference_engine": MAX_BUDGET_PREFIX_REUSE,
+                "inference_engine_version": REASONING_ENGINE_VERSION,
+                "source_commit": _source_commit(),
+                "physical_journal": str(journal.path),
+                "physical_journal_identity_hash": journal.identity_digest,
+                "manifest_keys": selected_keys,
+            },
+        )
     physical_generations = 0
+    in_memory_rows: dict[tuple[str, int], dict[str, dict[str, Any]]] = {}
     for group_key in sorted(grouped):
         budget_rows = grouped[group_key]
         ordered_budgets = sorted(budget_rows)
@@ -373,18 +466,34 @@ def _run_max_budget_prefix_reuse(
                 ),
             )
         else:
-            source_outputs = [
-                backend.generate_reasoning_view(
+            if journal is None:
+                source_outputs = [
+                    backend.generate_reasoning_view(
+                        view,
+                        sampling_seed=seed,
+                        max_new_tokens=source_budget,
+                    )
+                    for view, seed in tasks
+                ]
+            else:
+                # Generate one row at a time so every completed trajectory is
+                # journaled before the next model call begins.
+                source_outputs = [None] * len(tasks)
+
+        for task_position, ((view, seed), task_rollout_index) in enumerate(
+            zip(tasks, task_rollouts, strict=True)
+        ):
+            if journal is not None and journal.has((view.latent_id, task_rollout_index)):
+                continue
+            source_output = source_outputs[task_position]
+            if source_output is None:
+                source_output = backend.generate_reasoning_view(
                     view,
                     sampling_seed=seed,
                     max_new_tokens=source_budget,
                 )
-                for view, seed in tasks
-            ]
-
-        for (view, seed), task_rollout_index, source_output in zip(
-            tasks, task_rollouts, source_outputs, strict=True
-        ):
+            if source_output is None:
+                raise RuntimeError("missing source output for an incomplete journal row")
             physical_generations += 1
             physical_id = physical_generation_id(
                 view_id=view.view_id,
@@ -401,6 +510,7 @@ def _run_max_budget_prefix_reuse(
                     ids, skip_special_tokens=True
                 ),
             )
+            derived_records: dict[str, dict[str, Any]] = {}
             for budget in ordered_budgets:
                 key, _split = budget_rows[budget]
                 generation_config = _generation_config(config, budget)
@@ -414,8 +524,73 @@ def _run_max_budget_prefix_reuse(
                 )
                 if record.physical_generation_id != physical_id:
                     raise RuntimeError("physical generation provenance mismatch")
-                records_by_key[key].append(record)
-                all_records.append(record)
+                derived_records[key] = record.to_record()
+            in_memory_rows[(view.latent_id, task_rollout_index)] = derived_records
+            if journal is not None:
+                    journal.append(
+                    {
+                        "latent_id": view.latent_id,
+                        "view_id": view.view_id,
+                        "family": view.family,
+                        "cell": view.cell,
+                        "target": view.answer,
+                        "rollout_index": task_rollout_index,
+                        "sampling_seed": seed,
+                        "physical_generation_id": physical_id,
+                        "source_max_budget": source_budget,
+                        "source_raw_text": source_output.raw_output,
+                        "source_token_ids": list(
+                            source_output.metadata.get("generated_token_ids", ())
+                        ),
+                        "source_metadata": dict(source_output.metadata),
+                        "derived_records": derived_records,
+                        }
+                    )
+
+    # Reconstruct output ordering from the deterministic task plan.  This also
+    # makes a resumed run byte-for-byte stable relative to an uninterrupted run.
+    all_records: list[RolloutRecord] = []
+    records_by_key: dict[str, list[RolloutRecord]] = {key: [] for key in selected_keys}
+    for group_key in sorted(grouped):
+        budget_rows = grouped[group_key]
+        ordered_budgets = sorted(budget_rows)
+        source_budget = max(ordered_budgets)
+        source_split = budget_rows[source_budget][1]
+        source_items = (
+            source_split.items[:max_items] if max_items is not None else source_split.items
+        )
+        surfaces = (
+            ("canonical",)
+            if phase == "stage_a_screen"
+            else ("canonical", "surface_twin")
+        )
+        for item in source_items:
+            for surface in surfaces:
+                view = render_reasoning(item, surface=surface)
+                for rollout_index in range(rollout_count):
+                    if journal is not None:
+                        journal_row = journal.get((view.latent_id, rollout_index))
+                        if journal_row is None:
+                            raise RuntimeError(
+                                "journal missing completed physical key "
+                                f"{(view.latent_id, rollout_index)}"
+                            )
+                        derived_records = journal_row["derived_records"]
+                    else:
+                        derived_records = in_memory_rows.get((view.latent_id, rollout_index))
+                        if derived_records is None:
+                            raise RuntimeError(
+                                "in-memory results missing physical key "
+                                f"{(view.latent_id, rollout_index)}"
+                            )
+                    for budget in ordered_budgets:
+                        key = budget_rows[budget][0]
+                        record = RolloutRecord.from_record(derived_records[key])
+                        records_by_key[key].append(record)
+                        all_records.append(record)
+
+    if journal is not None:
+        physical_generations = len(journal.rows)
 
     outcomes: list[dict[str, Any]] = []
     for key in selected_keys:
@@ -450,6 +625,7 @@ def _run_max_budget_prefix_reuse(
         inference_engine=BATCHED_REASONING if batched else MAX_BUDGET_PREFIX_REUSE,
         physical_generations=physical_generations,
         rollout_count=rollout_count,
+        journal=journal,
     )
     if max_items is not None:
         manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))

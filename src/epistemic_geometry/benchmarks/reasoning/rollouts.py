@@ -81,6 +81,73 @@ class RolloutRecord:
     natural_completion_length: int | None = None
 
     @classmethod
+    def from_record(cls, record: dict[str, Any]) -> RolloutRecord:
+        """Rehydrate a previously journaled scientific row without parsing again."""
+
+        required = {
+            "latent_id",
+            "view_id",
+            "family",
+            "cell",
+            "target",
+            "intervention_id",
+            "rollout_index",
+            "sampling_seed",
+            "raw_text",
+            "parsed_answer",
+            "parse_status",
+            "correct",
+        }
+        missing = sorted(required - set(record))
+        if missing:
+            raise ValueError(f"journaled rollout is missing fields: {missing}")
+        return cls(
+            latent_id=str(record["latent_id"]),
+            view_id=str(record["view_id"]),
+            family=str(record["family"]),
+            cell=str(record["cell"]),
+            target=int(record["target"]),
+            intervention_id=str(record["intervention_id"]),
+            rollout_index=int(record["rollout_index"]),
+            sampling_seed=int(record["sampling_seed"]),
+            raw_text=str(record["raw_text"]),
+            parsed_answer=(
+                int(record["parsed_answer"]) if record["parsed_answer"] is not None else None
+            ),
+            parse_status=str(record["parse_status"]),
+            correct=bool(record["correct"]),
+            token_ids=tuple(int(token) for token in record.get("token_ids", ())),
+            stop_reason=record.get("stop_reason"),
+            think_token_count=(
+                int(record["think_token_count"])
+                if record.get("think_token_count") is not None
+                else None
+            ),
+            final_answer_token_count=(
+                int(record["final_answer_token_count"])
+                if record.get("final_answer_token_count") is not None
+                else None
+            ),
+            generation_config=dict(record.get("generation_config", {})),
+            metadata=dict(record.get("metadata", {})),
+            physical_generation_id=record.get("physical_generation_id"),
+            source_max_budget=(
+                int(record["source_max_budget"])
+                if record.get("source_max_budget") is not None
+                else None
+            ),
+            prefix_length=(
+                int(record["prefix_length"]) if record.get("prefix_length") is not None else None
+            ),
+            derived_from_prefix=bool(record.get("derived_from_prefix", False)),
+            natural_completion_length=(
+                int(record["natural_completion_length"])
+                if record.get("natural_completion_length") is not None
+                else None
+            ),
+        )
+
+    @classmethod
     def from_parsed(
         cls,
         *,

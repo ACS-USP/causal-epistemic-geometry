@@ -1,6 +1,6 @@
 # Q1 V3 — reasoning inference optimization gate
 
-Status: **PREFIX-REUSE APPROVED — BATCHED SAMPLING REJECTED FOR REAL QWEN**
+Status: **FINAL B=1 GATE IN PROGRESS — PREFIX-REUSE REMAINS APPROVED**
 
 This is an engineering report. No Stage-A calibration, steering experiment,
 holdout evaluation, or scientific conclusion was produced.
@@ -115,26 +115,39 @@ gates, not missing scientific outcomes.
 
 ## Performance implication
 
-The passing prefix path is materially safer but does not meet the aspirational
-10× end-to-end target by itself. On the bounded representative probe it was
-~2.11× faster than serial generation (622.0 s → 294.4 s). A simple linear
-projection of the previously estimated 183.8-minute serial Stage-A runtime is
-approximately 87 minutes before model-load and I/O overhead. Therefore no
-clean Stage-A run was launched: the optimized path is eligible from a
-correctness perspective, but the throughput target remains unmet and should
-be reviewed before spending on the full calibration.
+The `183.8 minute` value belongs to the historical Q1 V1.1 direct-answer
+campaign. It is not a Q1 V3 Stage-A estimate and is excluded from this report.
+
+The correct previously measured Q1 V3 Stage-A workload is:
+
+- 4,320 scientific budget-rollout outcomes;
+- approximately 34.65 A40 hours for the unoptimized serial projection;
+- approximately US$15.25 at US$0.44 per A40-hour.
+
+Under the already approved max-budget prefix reuse, the frozen 4,320 rows are
+derived from approximately 1,440 physical 2,048-token trajectories. The
+bounded representative Qwen probe measured 622.0 s for 18 serial physical
+generations and 294.4 s for 6 prefix-reuse physical generations. A conservative
+workload projection must be recomputed from the final B=1 gate and the existing
+per-budget telemetry; it must use the larger of the empirical scaling and the
+workload-weighted estimate. No V3 Stage-A outcome is implied by either
+projection.
 
 At the observed `$0.44/hour` A40 rate, the bounded probe's generation-only
 compute was approximately $0.08 serial and $0.04 prefix-reuse. These are
-engineering costs, not scientific results. The Pod was stopped immediately
-after the gate.
+engineering costs, not scientific results. The historical
+`review/serial_reference_v1_1_partial/` artifact is retained as an explicitly
+archival V1.1 record; it is not the Q1 V3 serial reference. Q1 V3 uses
+`serial_reasoning_reference` plus the bounded real-Qwen equivalence gate.
 
 ## Approval rule
 
 The clean Stage-A run must still be launched from the beginning; this
-engineering work must not be mixed with the old serial partial run. The
-approved execution choice is now `max_budget_prefix_reuse`. It is the fastest
-bounded path that preserved the serial Qwen trajectory. `serial_reasoning_reference`
-remains permanently available as the correctness oracle. `batched_reasoning`
-must remain disabled for scientific runs unless a future implementation passes
-the same gate.
+engineering work must not be mixed with the old serial partial run. The final
+B=1 gate compares the approved HF-generation prefix path with the custom
+batch-size-1 decoder. The adoption rule is prospective: a candidate must have
+zero token, parse, and correctness mismatches and at least 10% lower
+representative end-to-end wall time. If it does not, the approved
+`max_budget_prefix_reuse` path remains canonical. `serial_reasoning_reference`
+remains permanently available as the correctness oracle, and
+`batched_reasoning` remains disabled for scientific runs.
