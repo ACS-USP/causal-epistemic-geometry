@@ -109,6 +109,48 @@ def main() -> None:
         "outcome, activation, steering direction, DEV split, or holdout was used.\n"
     )
     (output / "protocol_draft.md").write_text(protocol, encoding="utf-8")
+    summary = f"""# Q1 V3 — Reasoning-Agent Structural Reset
+
+## OLD INSTRUMENT
+
+Q1 V1–V1.2 and Q1 V2 / E3-10 are closed as DEVELOPMENT instruments. No Q1
+scientific result is frozen.
+
+## LOCAL GENERATORS
+
+MODREG-R, FSM-R, and SATCOUNT-R passed deterministic oracle, serialization,
+surface-twin, answer-distribution, and shallow-shortcut audits. The structural
+gate status is **{gate['status']}** using the stored model-free report.
+
+## CALIBRATION
+
+Stage A: **NOT RUN**. Stage B: **NOT RUN**. Qwen outcomes: none. The Stage-A
+manifest builder is model-free and creates 36 manifests (12 cells × 3 budgets),
+60 fresh latent items per manifest, with independent rollout seeds planned.
+
+## INSTRUMENT
+
+Q1 V3 reasoning-agent instrument: **PRE-CALIBRATION / NOT QUALIFIED YET**.
+The policy is Qwen3-8B with thinking enabled, deterministic recorded sampling
+configuration, exact `FINAL:` parsing, and raw trajectory retention.
+
+## SPLITS AND FIREWALL
+
+Fresh geometry, steering-development, and confirmatory splits are **NOT
+GENERATED**. Confirmatory access is **UNTOUCHED**.
+
+## STEERING
+
+One-shot reasoning-policy steering is **NOT READY** and was not constructed.
+No PCA, random control, DEV evaluation, or geometry experiment was run.
+
+## INFRASTRUCTURE
+
+The model-free bundle contains no weights or model outputs. The RunPod remains
+stopped during local implementation. Real baseline-only calibration requires
+principal review and the documented remote cache/cost gates.
+"""
+    (output / "summary.md").write_text(summary, encoding="utf-8")
     _write(output / "family_definitions.json", _family_definitions())
     _write(
         output / "difficulty_cells.json",
