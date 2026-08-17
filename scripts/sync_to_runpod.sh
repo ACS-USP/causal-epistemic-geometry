@@ -175,5 +175,5 @@ fi
 
 create_tar -C "${REPO_ROOT}" -cf - "${tar_excludes[@]}" . | \
   ssh -o BatchMode=yes -o ConnectTimeout=8 "${SSH_ALIAS}" \
-  "mkdir -p -- '${REMOTE_ROOT}' && tar --no-same-owner -xpf - -C '${REMOTE_ROOT}'"
+  "mkdir -p -- '${REMOTE_ROOT}' && tar --no-same-owner --overwrite -xpf - -C '${REMOTE_ROOT}'"
 sync_stage_a_manifest
