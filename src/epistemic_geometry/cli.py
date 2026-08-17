@@ -12,6 +12,7 @@ import typer
 
 from epistemic_geometry import __version__
 from epistemic_geometry.analysis.summarize import read_summary
+from epistemic_geometry.analysis.v1_v2_audit import validate_audit_dir
 from epistemic_geometry.config import ConfigError, load_config
 from epistemic_geometry.experiments.baseline_vs_steering import (
     build_benchmark,
@@ -156,6 +157,22 @@ def doctor(
 
     run_root.mkdir(parents=True, exist_ok=True)
     typer.echo(f"Writable run directory: {run_root} ({os.access(run_root, os.W_OK)})")
+
+
+@app.command("validate-v1-2-audit")
+def validate_v1_v2_audit(
+    audit_dir: Path = typer.Argument(..., help="Complete V1.2 analysis-only audit bundle."),
+) -> None:
+    """Validate hashes, row counts, and the primary S recomputation gate."""
+
+    try:
+        result = validate_audit_dir(audit_dir)
+    except (FileNotFoundError, ValueError, KeyError) as exc:
+        typer.echo(f"V1.2 audit validation failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"V1.2 audit validation: {result['status']}")
+    for name, passed in result["checks"].items():
+        typer.echo(f"  {name}: {'PASS' if passed else 'FAIL'}")
 
 
 @app.command("run")

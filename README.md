@@ -111,8 +111,9 @@ and crash-safe resume journals. The canonical Q1 V1.1 profile passed the
 reference and completed 15,872 DEVELOPMENT rows in approximately 17.5 minutes
 on the A40. See [Inference optimization](docs/INFERENCE_OPTIMIZATION.md).
 Cache/decode alternatives remain preserved but are not canonical because their
-BF16 shape changes produced prediction flips. The full real prediction file
-remains on RunPod; only small review artifacts are local.
+BF16 shape changes produced prediction flips. The full V1.2 score artifacts
+were later recovered locally, under ignored `review/` paths, solely for the
+authorized analysis-only aggregator audit; they are not Git-tracked source.
 
 V1.2 is the explicitly authorized development follow-up for label/position-bias
 deconfounding. It uses exact cyclic option balance, centered semantic-logit
@@ -124,7 +125,10 @@ Qwen3-8B/A40 path. The remote validator recomputed the derived artifacts and
 reported `COMPLETE`, 24,075 raw rows, 1,536 symmetrized rows, and no holdout
 access. The small principal-review bundle is in
 `review/q1_v1_2_principal_review/`; this remains DEVELOPMENT evidence only and
-does not freeze a scientific claim.
+does not freeze a scientific claim. The complete raw-score audit bundle is in
+`review/q1_v1_2_principal_review_complete/`; see
+[the aggregator audit](docs/Q1_V1_2_AGGREGATOR_AUDIT.md). Its descriptive
+classification is aggregator-sensitive and does not authorize V1.3 or Q2.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`
