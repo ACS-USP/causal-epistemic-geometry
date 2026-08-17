@@ -527,7 +527,7 @@ def _run_max_budget_prefix_reuse(
                 derived_records[key] = record.to_record()
             in_memory_rows[(view.latent_id, task_rollout_index)] = derived_records
             if journal is not None:
-                    journal.append(
+                journal.append(
                     {
                         "latent_id": view.latent_id,
                         "view_id": view.view_id,
@@ -544,8 +544,14 @@ def _run_max_budget_prefix_reuse(
                         ),
                         "source_metadata": dict(source_output.metadata),
                         "derived_records": derived_records,
-                        }
-                    )
+                    }
+                )
+                print(
+                    "Q1 V3 physical trajectory complete: "
+                    f"latent_id={view.latent_id} rollout={task_rollout_index} "
+                    f"physical_generation_id={physical_id}",
+                    flush=True,
+                )
 
     # Reconstruct output ordering from the deterministic task plan.  This also
     # makes a resumed run byte-for-byte stable relative to an uninterrupted run.
@@ -661,6 +667,7 @@ def run_baseline_calibration(
     backend = build_backend(config)
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
+    _atomic_json(output / "config_resolved.json", config.as_dict())
     if max_items is not None and max_items <= 0:
         raise ValueError("max_items must be positive")
     if selected_engine in {MAX_BUDGET_PREFIX_REUSE, BATCHED_REASONING}:
