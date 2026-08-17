@@ -1,5 +1,9 @@
 # Handoff
 
+> **Live-status note:** this document is a capability and command handoff, not
+> the live experiment dashboard. Q1 V3 Stage A is now running baseline-only on
+> RunPod. For the current state, read [CURRENT_STATUS.md](CURRENT_STATUS.md).
+
 ## What works now
 
 - Modern `src/` Python package with YAML validation and a typed domain model.
@@ -50,12 +54,14 @@ Q1 V3 model-free structural gate: PASS on at least 5,000 generated items per
 family/cell. All current cells are eligible; two low-complexity SAT cells have
 documented shortcut warnings, not failures. No model outcome was used.
 
-Q1 V3 Stage A/B calibration: NOT RUN. Q1 V3 steering: NOT READY and NOT RUN.
-RunPod is stopped during local implementation. The current review bundle is
-`review/q1_v3_reasoning_instrument/` (ignored local artifact).
+Q1 V3 Stage A: RUNNING baseline-only. Q1 V3 Stage B: NOT RUN. Q1 V3 steering:
+NOT READY and NOT RUN. The active run uses the frozen scientific execution
+commit `4faea97`; no result is available yet. The current review bundle is
+`review/q1_v3_reasoning_instrument/` (ignored local artifact). See
+[CURRENT_STATUS.md](CURRENT_STATUS.md) for the remote journal and live state.
 
 Q1 real 8B model: prior V1 development runs and the E3-10 baseline calibration
-are closed; no Q1 V3 calibration has run.
+are closed; Q1 V3 Stage A is the first active V3 baseline-only calibration.
 
 Q1 scientific result: NONE FROZEN.
 
@@ -69,7 +75,9 @@ Q2 geometry: NOT RUN.
 The E3-10 Qwen path and baseline-only calibration are preserved at
 `review/q1_v2_instrument_review/` (ignored because it contains real model
 outputs). The V1/Qwen engineering history is retained separately and was not
-used to qualify Q1 V3. The new Q1 V3 bundle contains no model outputs.
+used to qualify Q1 V3. The new Q1 V3 bundle contains no model outputs. The
+active Q1 V3 Stage-A outputs remain on RunPod until the run completes and the
+artifact is explicitly pulled and validated.
 
 ## Exact local smoke
 
@@ -112,8 +120,9 @@ python scripts/build_q1_v3_calibration_manifests.py stage_a \
 
 This is model-free. It creates 36 Stage-A budget conditions (12 cells × 3
 budgets) over 12 frozen 60-item latent sets. It does not load Qwen, construct
-steering, or touch the future scientific splits. Principal review is required
-before any RunPod command.
+steering, or touch the future scientific splits. Principal review was required
+before the current RunPod command and has been completed. Do not regenerate the
+active manifest while Stage A is running.
 
 After principal review and only on RunPod with the pinned cache/model, the
 baseline-only calibration runner is:

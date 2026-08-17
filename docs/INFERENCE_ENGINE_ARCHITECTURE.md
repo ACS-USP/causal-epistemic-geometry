@@ -2,8 +2,9 @@
 
 This document describes execution mechanics only. It does not change the
 frozen Q1 V3 scientific protocol. The permanent correctness oracle is
-`serial_reasoning_reference`; the final B=1 gate determines whether a faster
-exact implementation is worth adopting before Stage A.
+`serial_reasoning_reference`; the final B=1 gate determined which exact
+implementation was worth adopting for Stage A. The live run state is tracked
+in [CURRENT_STATUS.md](CURRENT_STATUS.md).
 
 ## Scientific invariant
 
@@ -80,9 +81,9 @@ Continuous batching or an external serving engine may be used only as an
 engineering upper bound. It cannot become the canonical scientific engine
 without the same equivalence gate and complete provenance.
 
-## Real-Qwen approval gate
+## Completed real-Qwen approval gate
 
-Before a clean Stage A launch, compare on a bounded technical subset:
+The pre-Stage-A gate compared the following on a bounded technical subset:
 
 - independently generated 512 and 1024 outputs against prefixes of a 2048
   output with the same item/view/seed;

@@ -2,8 +2,13 @@
 
 Status: **FINAL GATE COMPLETE — MAX-BUDGET PREFIX REUSE CANONICAL**
 
-This is an engineering report. No Stage-A calibration, steering experiment,
-holdout evaluation, or scientific conclusion was produced.
+> **Timing note:** this report records the engineering gate immediately before
+> the clean Stage-A launch. Stage A was launched afterward in a separate run
+> from commit `4faea97`; this file contains no Stage-A outcomes. See
+> [CURRENT_STATUS.md](CURRENT_STATUS.md) for the live state.
+
+This is an engineering report. No Stage-A calibration result, steering
+experiment, holdout evaluation, or scientific conclusion is contained here.
 
 ## Frozen protocol
 
@@ -87,7 +92,7 @@ offline cache:
 - model class: `Qwen3ForCausalLM`, 8.19B parameters, BF16, SDPA;
 - host: `081a89558983`, `HF_HOME=/workspace/hf-cache`;
 - data: already-consumed Stage-A engineering items only;
-- holdout and Stage A: untouched.
+- holdout and Stage A: untouched **at the time of this engineering gate**.
 
 For three groups and two items per group (18 budget rows), independent
 512/1024/2048 generations matched the corresponding 2048 prefixes exactly.
@@ -160,9 +165,9 @@ archival V1.1 record; it is not the Q1 V3 serial reference. Q1 V3 uses
 
 ## Approval rule
 
-The clean Stage-A run must still be launched from the beginning; this
-engineering work must not be mixed with the old serial partial run. The final
-B=1 gate compared the approved HF-generation prefix path with the custom
+The clean Stage-A run was launched afterward from the beginning; this
+engineering work was not mixed with the old serial partial run. The final B=1
+gate compared the approved HF-generation prefix path with the custom
 batch-size-1 decoder. The candidate had six token mismatches and no material
 speed gain, so it was rejected. The approved
 `max_budget_prefix_reuse` path remains canonical, with

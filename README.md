@@ -1,7 +1,9 @@
 # Causal Geometry of Epistemic Complementarity
 
-This repository is currently **DEVELOPMENT infrastructure**. It is a small,
-deterministic harness for asking whether one controlled activation intervention
+This repository is currently **DEVELOPMENT infrastructure**. Q1 V3 Stage A is
+in progress as a baseline-only remote calibration; it has produced no
+scientific conclusion. The repository is a small, deterministic harness for
+asking whether one controlled activation intervention
 can change *where a frozen language model fails* while approximately preserving
 individual competence. It does not contain a scientific result.
 
@@ -29,6 +31,25 @@ predict pairwise error complementarity?
 
 The code is deliberately shaped so Q2 can be added later without making a
 large pairwise experiment the current default.
+
+## Start here
+
+For a first visit, read in this order:
+
+1. [Current repository status](docs/CURRENT_STATUS.md) — what is running now,
+   what is historical, and what remains forbidden.
+2. [Scientific question](docs/SCIENTIFIC_QUESTION.md) — the motivation and
+   measurement discipline.
+3. [Q1 V3 frozen protocol](docs/Q1_V3_REASONING_AGENT_PROTOCOL.md) — the
+   current reasoning-agent instrument and stop rules.
+4. [Inference-engine architecture](docs/INFERENCE_ENGINE_ARCHITECTURE.md) —
+   how exactness and crash-safe execution are enforced.
+5. [RunPod checklist](docs/RUNPOD_Q1_CHECKLIST.md) — deployment and recovery.
+
+The V1/V2 documents are preserved historical development records. They explain
+why the instrument changed, but they are not the current protocol. The
+[handoff](docs/HANDOFF.md) collects local commands and capabilities; the
+[current-status page](docs/CURRENT_STATUS.md) is the only live status index.
 
 ## Quick start: mock mode
 
@@ -87,8 +108,9 @@ The active structural reset is Q1 V3: a stochastic reasoning-agent protocol
 with exact procedural oracles, deterministic surface twins, matched and
 independent rollout seeds, and a strict `FINAL:` parser. It evaluates the
 reasoning policy with `enable_thinking=true`; it does not infer competence
-from a direct candidate-logit slice. The model-free structural gate passes,
-but Q1 V3 Stage A/B calibration has not run and no steering direction exists.
+from a direct candidate-logit slice. The model-free structural gate passes.
+Stage A is currently running baseline-only; Stage B has not run and no
+steering direction exists. See the [current status page](docs/CURRENT_STATUS.md).
 Read [the Q1 V3 protocol](docs/Q1_V3_REASONING_AGENT_PROTOCOL.md).
 
 The primary summary always shows baseline accuracy, steered accuracy, delta
@@ -116,7 +138,7 @@ Q1 V1–V1.2 INSTRUMENT SERIES: CLOSED AS DEVELOPMENT
 Q1 V2 E3-10 DIRECT INSTRUMENT: CLOSED — NOT QUALIFIED
 Q1 V3 REASONING SOFTWARE: GENERATORS/ORACLES/SEEDS/PARSER READY
 Q1 V3 STRUCTURAL GATE: PASS (MODEL-FREE, 5,000 PER CELL)
-Q1 V3 STAGE A: NOT RUN
+Q1 V3 STAGE A: RUNNING — BASELINE-ONLY; RESULTS PENDING
 Q1 V3 STAGE B: NOT RUN
 Q1 V3 STEERING: NOT READY / NOT RUN
 Q1 V3 FRESH SPLITS: NOT GENERATED
@@ -136,9 +158,10 @@ python scripts/build_q1_v3_calibration_manifests.py stage_a \
 
 These commands create procedural manifests only. The 36 Stage-A budget
 conditions use 12 frozen 60-item latent sets; they are not model outcomes, do
-not access DEV or holdout items, and do not construct steering. Start remote
-baseline-only calibration only after principal review and the documented cost
-gate.
+not access DEV or holdout items, and do not construct steering. The current
+manifest was reviewed and the authorized baseline-only calibration is now
+running remotely. Do not regenerate it or alter its source commit while the
+run is active.
 
 The local E3-10 structural gate is model-free and uses 5,000 balanced items
 per family/cell:
@@ -181,9 +204,10 @@ closed rather than reinterpreted. E3-10 likewise produced no Q1 steering result:
 baseline calibration showed chance-like competence and failed output-channel
 stability thresholds, so the pre-registered stop rule was applied.
 
-Q1 V3 is intentionally stopped before model calibration. Its current status
-is an engineering/design milestone, not a scientific result. One-shot
-reasoning-policy steering is gated on successful Stage B qualification.
+Q1 V3 is currently in its authorized baseline-only Stage-A calibration. Its
+current status is still an engineering/development milestone, not a scientific
+result. One-shot reasoning-policy steering remains gated on successful Stage B
+qualification and principal review.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`
@@ -224,9 +248,10 @@ workflow does not call it.
 
 This project does not currently claim that activation steering creates useful
 diversity, that one selected vector is scientifically privileged, or that
-representation geometry predicts error covariance. It has not frozen a model,
-benchmark split, vector construction, layer, alpha, controls, or confirmatory
-hypothesis. Those decisions belong after development review. See:
+representation geometry predicts error covariance. Q1 V3 has frozen its model,
+protocol, parser, budgets, and Stage-A manifest for this development screen,
+but it has not produced a scientific result or frozen any steering direction,
+layer, alpha, control, or confirmatory claim. See:
 
 - [Scientific question](docs/SCIENTIFIC_QUESTION.md)
 - [Development protocol](docs/DEVELOPMENT_PROTOCOL.md)

@@ -1,5 +1,10 @@
 # Q1 V3 — Pre-Calibration Handoff
 
+> **Historical snapshot:** this document describes the repository immediately
+> before Stage A was authorized. It remains useful for reconstructing the
+> pre-run checklist, but it is not the live status page. See
+> [CURRENT_STATUS.md](CURRENT_STATUS.md) for the current operational state.
+
 ## Current state
 
 - Q1 V1–V1.2 multiple-choice instruments: formally closed as DEVELOPMENT.

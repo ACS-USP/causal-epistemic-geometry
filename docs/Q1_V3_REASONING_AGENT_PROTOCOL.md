@@ -195,13 +195,13 @@ intervention, controls, norms, and seed regime must be reviewed separately.
 The present reset does not construct directions, run PCA, inspect DEV
 outcomes, or access the confirmatory holdout.
 
-## Current local status
+## Status at protocol freeze
 
 ```text
 Q1 V1–V1.2: CLOSED AS DEVELOPMENT
 Q1 V2 / E3-10: NOT QUALIFIED; retained as direct-readout ablation
 Q1 V3 model-free structural gate: PASS
-Q1 V3 Stage A: NOT RUN
+Q1 V3 Stage A: NOT RUN AT PROTOCOL FREEZE
 Q1 V3 Stage B: NOT RUN
 Q1 V3 steering: NOT READY / NOT RUN
 Q1 V3 fresh scientific splits: NOT GENERATED
@@ -210,6 +210,9 @@ Q2 geometry: NOT RUN
 CONFIRMATORY HOLDOUT: UNTOUCHED
 ```
 
-The next legitimate action is principal-researcher review of the model-free
-design bundle, followed by a cost-gated baseline-only Stage-A calibration on
-the remote RunPod. The RunPod remains stopped during local implementation.
+The next legitimate action at the time of protocol freeze was
+principal-researcher review of the model-free design bundle, followed by a
+cost-gated baseline-only Stage-A calibration on the remote RunPod. That review
+and launch have since occurred. The live state is maintained separately in
+[CURRENT_STATUS.md](CURRENT_STATUS.md); this protocol remains the normative
+scientific specification and is not a progress log.
