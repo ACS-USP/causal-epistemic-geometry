@@ -292,6 +292,10 @@ class HuggingFaceBackend(ModelBackend):
             "min_p": self.config.min_p,
             "pad_token_id": self.tokenizer.pad_token_id,
         }
+        if self.device.type == "cuda":
+            self.torch.cuda.reset_peak_memory_stats(self.device)
+            self.torch.cuda.synchronize(self.device)
+        generation_started = time.perf_counter()
         try:
             rng_devices = []
             if self.device.type == "cuda":
@@ -309,6 +313,9 @@ class HuggingFaceBackend(ModelBackend):
                     "use a smaller batch/model, or choose an explicit supported dtype."
                 ) from exc
             raise
+        if self.device.type == "cuda":
+            self.torch.cuda.synchronize(self.device)
+        generation_seconds = time.perf_counter() - generation_started
         new_tokens = generated[0, input_length:]
         # Preserve the complete decoded trajectory; the parser is responsible
         # for whitespace normalization around the exact FINAL field.
@@ -325,6 +332,21 @@ class HuggingFaceBackend(ModelBackend):
                 "generated_token_count": int(new_tokens.numel()),
                 "generated_token_ids": [int(token) for token in new_tokens.tolist()],
                 "generation_seed": int(sampling_seed),
+                "timing": {
+                    "generation_seconds": generation_seconds,
+                    **(
+                        {
+                            "peak_memory_allocated_bytes": int(
+                                self.torch.cuda.max_memory_allocated(self.device)
+                            ),
+                            "peak_memory_reserved_bytes": int(
+                                self.torch.cuda.max_memory_reserved(self.device)
+                            ),
+                        }
+                        if self.device.type == "cuda"
+                        else {}
+                    ),
+                },
                 "generation": {
                     "do_sample": True,
                     "temperature": self.config.temperature,
