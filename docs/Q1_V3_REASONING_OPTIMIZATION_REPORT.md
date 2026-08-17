@@ -1,6 +1,6 @@
 # Q1 V3 — reasoning inference optimization gate
 
-Status: **NOT APPROVED — real-Qwen equivalence pending GPU availability**
+Status: **PREFIX-REUSE APPROVED — BATCHED SAMPLING REJECTED FOR REAL QWEN**
 
 This is an engineering report. No Stage-A calibration, steering experiment,
 holdout evaluation, or scientific conclusion was produced.
@@ -80,33 +80,61 @@ corresponding prefixes of a separately generated 2048 trajectory, then
 compares serial rows with batched rows. It is constrained to already-consumed
 development items and never accesses the holdout or launches Stage A.
 
-It has not run in this turn. Starting both available A40 Pods failed with the
-RunPod capacity response “There are not enough free GPUs on the host machine to
-start this pod.” No Pod was terminated, deleted, reconfigured, or used for a
-download.
+The bounded gate ran on the authorized RunPod A40 using only the existing
+offline cache:
 
-Therefore the following remain unmeasured on the real Qwen3-8B revision:
+- model snapshot: `b968826d9c46dd6066d109eabc6255188de91218`;
+- model class: `Qwen3ForCausalLM`, 8.19B parameters, BF16, SDPA;
+- host: `effad46be16c`, `HF_HOME=/workspace/hf-cache`;
+- data: already-consumed Stage-A engineering items only;
+- holdout and Stage A: untouched.
 
-- prefix-token equivalence;
-- left/right padding choice;
-- Qwen batch RNG equivalence;
-- A40 throughput, utilization, and peak VRAM;
-- attention backend;
-- compile warm-up and steady-state performance;
-- CUDA graph feasibility;
-- suffix replay or any layer-specific steering reuse.
+For three groups and two items per group (18 budget rows), independent
+512/1024/2048 generations matched the corresponding 2048 prefixes exactly.
+The serial reference took 622.0 s for 18 physical generations. Prefix reuse
+took 294.4 s for 6 physical generations: zero token mismatches, zero parse
+mismatches, and zero correctness mismatches. This is an engineering approval,
+not a scientific result.
 
-These are engineering gates, not missing scientific outcomes.
+The batched cached-decoding path took 181.1 s for 6 physical generations but
+failed equivalence: 18/18 token trajectories differed, with 2 parse and 2
+correctness differences. The failure persisted under left padding (6/6 token,
+4 parse, 3 correctness differences), in a two-copy same-prompt test, and with
+the eager attention implementation. The batch path is therefore not approved
+for real-Qwen scientific data. Its local tiny-transformer result remains only
+software validation.
+
+The one-item batch-size-1 diagnostic passed after two repairs: explicit Qwen
+cache positions and float32 logits before sampling, matching Transformers'
+canonical `generate` path. The remaining failure is genuine batch-shape
+numerical sensitivity, not a known missing cache argument.
+
+Unmeasured or not approved: compile warm-up/steady state, CUDA graphs,
+Qwen-specific suffix replay, and a full Stage-A run. These are engineering
+gates, not missing scientific outcomes.
+
+## Performance implication
+
+The passing prefix path is materially safer but does not meet the aspirational
+10× end-to-end target by itself. On the bounded representative probe it was
+~2.11× faster than serial generation (622.0 s → 294.4 s). A simple linear
+projection of the previously estimated 183.8-minute serial Stage-A runtime is
+approximately 87 minutes before model-load and I/O overhead. Therefore no
+clean Stage-A run was launched: the optimized path is eligible from a
+correctness perspective, but the throughput target remains unmet and should
+be reviewed before spending on the full calibration.
+
+At the observed `$0.44/hour` A40 rate, the bounded probe's generation-only
+compute was approximately $0.08 serial and $0.04 prefix-reuse. These are
+engineering costs, not scientific results. The Pod was stopped immediately
+after the gate.
 
 ## Approval rule
 
-The optimized engine is not approved for a clean Stage-A run until the real
-Qwen gate has zero discrete token, parser, and correctness differences against
-the serial reference. The clean Stage-A run must then be launched from the
-beginning; this engineering work must not be mixed with the old serial partial
-run.
-
-Current recommendation: retain `serial_reasoning_reference` as the canonical
-Q1 V3 engine until the bounded real-Qwen gate passes. If max-budget prefix
-reuse passes but batched padding or RNG equivalence fails, use the passing
-prefix engine and keep batching disabled.
+The clean Stage-A run must still be launched from the beginning; this
+engineering work must not be mixed with the old serial partial run. The
+approved execution choice is now `max_budget_prefix_reuse`. It is the fastest
+bounded path that preserved the serial Qwen trajectory. `serial_reasoning_reference`
+remains permanently available as the correctness oracle. `batched_reasoning`
+must remain disabled for scientific runs unless a future implementation passes
+the same gate.

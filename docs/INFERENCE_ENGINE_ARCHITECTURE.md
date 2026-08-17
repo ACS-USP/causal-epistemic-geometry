@@ -23,8 +23,8 @@ source trajectory.
 | Engine | Physical work | Status |
 |---|---|---|
 | `serial_reasoning_reference` | One independent Transformers generation per budget row | Permanent correctness oracle; preserved |
-| `max_budget_prefix_reuse` | One maximum-budget generation per item/view/seed; derive shorter rows by exact token censoring | Implemented; local unit-tested; real-Qwen prefix gate pending |
-| `batched_reasoning` | The same maximum-budget prefix reuse, with deterministic length buckets and per-row seeded cached decoding | Implemented; tiny random-transformer equivalence passed; real-Qwen gate pending |
+| `max_budget_prefix_reuse` | One maximum-budget generation per item/view/seed; derive shorter rows by exact token censoring | **Approved bounded real-Qwen path**; local and remote token-equivalence passed |
+| `batched_reasoning` | The same maximum-budget prefix reuse, with deterministic length buckets and per-row seeded cached decoding | Implemented and benchmarkable; **rejected for real-Qwen scientific use** after bounded equivalence failures |
 
 The serial reference is intentionally not deleted or rewritten when an
 optimized engine is changed. `max_budget_prefix_reuse` parses every censored
@@ -50,10 +50,14 @@ final-answer stopping or semantic parser behavior is introduced by this
 engine.
 
 Decoder-only padding is explicit. Right-padding plus gathering the final real
-token is covered by the network-free GPT-2 fixture. Left-padding remains a
-model-specific engineering choice and must be benchmarked against the serial
-oracle on Qwen3 before use. Position IDs, attention masks, batch prompt
-lengths, and padded-token cost are recorded in output provenance.
+token is covered by the network-free GPT-2 fixture. On the cached Qwen3-8B
+revision, both right- and left-padded batches failed the serial token gate.
+More importantly, a two-row batch containing two copies of the *same prompt*
+also diverged from serial sampling, including with eager attention rather than
+SDPA. This is the expected kind of numerical sensitivity that can change a
+long stochastic reasoning trajectory. Consequently this engine remains useful
+for software/performance studies only; it is not a canonical scientific
+execution mode.
 
 ## Future optional accelerators
 
@@ -81,5 +85,19 @@ Before a clean Stage A launch, compare on a bounded technical subset:
 - candidate/runtime metadata, forward-call accounting, and peak memory.
 
 Floating-point equality is not required, but discrete token and parser
-differences are not acceptable for canonical approval. If the real-Qwen gate
-fails, keep the serial reference and use the safest passing engine only.
+differences are not acceptable for canonical approval. The bounded Qwen gate
+passed for `max_budget_prefix_reuse` and failed for `batched_reasoning`:
+
+| Bounded probe | Prefix token/parse mismatches | Batched token/parse mismatches |
+|---|---:|---:|
+| one prompt, batch size 1, right padding | 0 / 0 | 0 / 0 |
+| three groups × two items, right padding | 0 / 0 | 18 / 2 |
+| two items, left padding | 0 / 0 | 6 / 4 |
+| two copies of one prompt, right padding | not applicable | token mismatch at rows 0/1 (first at 6/119) |
+| two copies, eager attention | not applicable | token mismatch at rows 0/1 (first at 6/203) |
+
+The passing engine is therefore `max_budget_prefix_reuse`. It reduces the
+bounded representative physical generations from 18 to 6 and measured
+generation time from 622.0 s to 294.4 s (~2.11×), while preserving every
+compared token prefix and parse result. If any future batched implementation
+is proposed, it must pass a fresh real-Qwen gate before use.

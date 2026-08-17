@@ -38,7 +38,9 @@ q1_v3:
   rollout_count: 2
   seed_regime: independent
   # Engineering-only switches. The scientific protocol is unchanged.
-  inference_engine: serial_reasoning_reference
+  # Approved bounded real-Qwen optimization. The serial reference remains
+  # available for audits; batched_reasoning is not approved for science.
+  inference_engine: max_budget_prefix_reuse
   batch_size: 1
   max_prefill_tokens: 8192
   final_field: "FINAL:"
