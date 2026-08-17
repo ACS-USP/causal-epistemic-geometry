@@ -227,12 +227,11 @@ identity, candidate-score semantics, hashes, and required artifacts. A
 synthetic one-item/ten-option validator fixture passed without model or dataset
 access. Full local validation reached 81 tests, Ruff, compileall, mock smoke,
 and offline V1.2 cost preflight. No V1.2 real-model data, holdout data, or
-scientific result exists.
+scientific result existed at this local-only checkpoint; the subsequent
+remote execution is documented below.
 
-The only remaining blocker is execution against the already-cached Qwen3-8B
-and MMLU-Pro artifacts on RunPod. The Pod was intentionally stopped after the
-local implementation; no SSH retry is needed until the principal researcher
-restarts it and confirms its current endpoint.
+At that checkpoint, the only remaining blocker was execution against the
+already-cached Qwen3-8B and MMLU-Pro artifacts on RunPod.
 
 ## V1.2 remote preflight correction (2026-08-17)
 
@@ -244,3 +243,17 @@ K=10:425`. The protocol itself specifies per-item `K`, so the guard and local
 validator were repaired to use each item's exact cyclic length. No scientific
 choice, item, score, model operation, or result was changed; the worker exited
 before constructing the model.
+
+## V1.2 remote development run (2026-08-17)
+
+After the per-item correction, the pinned cached remote run completed at
+`runs/q1_v1_2/20260817T012330Z_q1-v1-2-development_05cfe01b68`. The run used
+the verified A40 and `HF_HOME=/workspace/hf-cache`; no model or dataset was
+downloaded during execution. The remote validator recomputed all derived
+artifacts and passed with 512 DEV items, 24,075 raw rows, 1,536 symmetrized
+rows, six figures, and `confirmatory_accessed=NO`. The raw score SHA-256 is
+`8a8c6b1afd4d019ee4fcb18dc0b787997218f0fcb8ddda6997239b68ae8cdd60`.
+
+The local review bundle is `review/q1_v1_2_principal_review/` and its archive
+is `review/q1_v1_2_principal_review.tar.gz`. This is descriptive DEVELOPMENT
+evidence only; no Q1 claim, V1.3, Q2, or confirmatory result is frozen.

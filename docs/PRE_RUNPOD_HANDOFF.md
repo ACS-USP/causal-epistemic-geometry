@@ -218,23 +218,26 @@ serial estimate of 183.8 minutes. The complete prediction file remains on
 RunPod; only small review artifacts are kept locally.
 
 Remaining engineering work is optional: formal A40 autotuning, utilization/
-VRAM profiling, and compile/CUDA-graph benchmarks. No V1.2, Q2, or
+VRAM profiling, and compile/CUDA-graph benchmarks. No V1.3, Q2, or
 confirmatory experiment was run.
 
-## V1.2 next step
+## V1.2 completed development run
 
 Q1 DEVELOPMENT V1.2 — label/position-bias deconfounding — is now authorized
-and implemented locally, but has not been executed. The Pod may remain stopped
-during local review. When it is restarted, confirm the current endpoint and
-host fingerprint before using the exact remote command:
+and complete on the pinned remote Qwen3-8B/A40 path. The run used the exact
+frozen model, dataset, split, vectors, alphas, layer, token scope, cyclic
+design, and scorer. The remote validator passed with 512 items, 24,075 raw
+rows, 1,536 symmetrized rows, and no holdout access.
 
 ```bash
-source .venv/bin/activate
-ceg preflight configs/q1_v1_2_qwen3_8b.yaml
-ceg q1-v1-2 configs/q1_v1_2_qwen3_8b.yaml data/splits/mmlu_pro_q1_v1.json
-ceg validate-run runs/q1_v1_2/<completed-run>
+cat review/q1_v1_2_principal_review/summary.md
+cat review/q1_v1_2_principal_review/manifest.json
+open review/q1_v1_2_principal_review.tar.gz
 ```
 
-The V1.2 protocol freezes cyclic option balance, centered semantic-logit
-aggregation, the secondary probability aggregator, and the finite-difference
-slot-tracking probe. It must not be changed after outcomes are observed.
+The full raw score and symmetrized-score files remain on RunPod; the local
+bundle contains the small review artifacts, figures, probe rows, hashes, and
+provenance. The V1.2 protocol freezes cyclic option balance, centered
+semantic-logit aggregation, the secondary probability aggregator, and the
+finite-difference slot-tracking probe. It must not be changed after outcomes
+are observed.

@@ -99,7 +99,7 @@ Q1 SOFTWARE: READY
 Q1 REAL-TRANSFORMER MECHANICS: VALIDATED ON TINY MODEL AND QWEN3/A40 TECHNICAL SMOKE
 Q1 REAL 8B MODEL: V1.1 DEVELOPMENT RUN COMPLETE; NO CONFIRMATORY RESULT
 Q1 SCIENTIFIC RESULT: NONE FROZEN
-Q1 V1.2: AUTHORIZED / IMPLEMENTED LOCALLY / NOT YET RUN
+Q1 V1.2: DEVELOPMENT RUN COMPLETE / REVIEW BUNDLE LOCAL / NO CLAIM FROZEN
 Q2 GEOMETRY: NOT RUN
 ```
 
@@ -119,7 +119,12 @@ deconfounding. It uses exact cyclic option balance, centered semantic-logit
 aggregation, a secondary probability aggregator, and a pre-specified finite-
 difference slot-tracking probe. See
 [Q1 DEVELOPMENT PROTOCOL V1.2](docs/Q1_DEVELOPMENT_PROTOCOL_V1_2.md). It has
-not been run yet; no V1.2 outcome is available.
+now completed the frozen 512-item DEV_EVALUATION run on the pinned remote
+Qwen3-8B/A40 path. The remote validator recomputed the derived artifacts and
+reported `COMPLETE`, 24,075 raw rows, 1,536 symmetrized rows, and no holdout
+access. The small principal-review bundle is in
+`review/q1_v1_2_principal_review/`; this remains DEVELOPMENT evidence only and
+does not freeze a scientific claim.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`

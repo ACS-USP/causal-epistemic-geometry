@@ -42,7 +42,8 @@ approved serial-shape/candidate-only engine; NO CONFIRMATORY CLAIM.
 
 Q1 scientific result: NONE FROZEN; DESCRIPTIVE PILOT ARTIFACT ONLY.
 
-Q1 V1.2: AUTHORIZED AND IMPLEMENTED LOCALLY; NOT RUN.
+Q1 V1.2: DEVELOPMENT RUN COMPLETE on pinned remote Qwen3-8B/A40; review bundle
+pulled locally; NO CONFIRMATORY CLAIM.
 
 Q2 geometry: NOT RUN.
 
@@ -56,11 +57,12 @@ BF16 prediction flips against the serial oracle. `torch.compile`, CUDA graphs,
 formal batch autotuning, and a full utilization/VRAM profile remain optional
 engineering work. The confirmatory holdout was not evaluated.
 
-The next authorized step is Q1 DEVELOPMENT V1.2 label/position-bias
-deconfounding. Its frozen protocol, cyclic balance, centered semantic score,
-secondary probability score, finite-difference slot probe, and validator are
-implemented locally in [Q1_DEVELOPMENT_PROTOCOL_V1_2.md](Q1_DEVELOPMENT_PROTOCOL_V1_2.md).
-No V1.2 real-model outcome exists yet.
+Q1 DEVELOPMENT V1.2 label/position-bias deconfounding is now complete on the
+frozen 512-item DEV_EVALUATION split. The remote validator recomputed the
+derived artifacts successfully: 24,075 raw rows, 1,536 symmetrized rows,
+`confirmatory_accessed=NO`. The small review bundle is
+`review/q1_v1_2_principal_review/`; the full raw score artifact remains on
+RunPod. Review the descriptive outcome before any future protocol change.
 
 ## Exact local smoke
 
