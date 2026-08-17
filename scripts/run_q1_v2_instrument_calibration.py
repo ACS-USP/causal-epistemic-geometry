@@ -81,7 +81,7 @@ def main() -> None:
         grouped.setdefault((row.family, row.cell), []).append(row)
     summaries = [summarize_cell(group) for group in grouped.values()]
     selected = select_cells(summaries)
-    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.mkdir(parents=True, exist_ok=True)
     scores_path = args.output / "baseline_score_vectors.jsonl"
     with scores_path.open("w", encoding="utf-8") as handle:
         for row in rows:
