@@ -1,4 +1,4 @@
-"""Deterministic option-order controls for Q1 V1.1."""
+"""Deterministic option-order controls for Q1 V1.1 and V1.2."""
 
 from __future__ import annotations
 
@@ -109,3 +109,115 @@ def permute_mmlu_items(
         permuted.append(changed)
         manifest.append(record)
     return permuted, manifest
+
+
+def cyclic_option_order(option_count: int, shift: int) -> list[int]:
+    """Return the V1.2 balanced order for one cyclic displayed-slot shift.
+
+    Semantic option ``j`` is assigned to displayed slot ``(j + shift) mod K``.
+    Consequently the semantic ID at displayed slot ``s`` is ``(s-shift) mod
+    K``. Shift zero is exactly the original ordering.
+    """
+
+    if option_count < 2 or option_count > len(LABELS):
+        raise ValueError("Cyclic option order requires between 2 and 10 options")
+    if shift < 0 or shift >= option_count:
+        raise ValueError("Cyclic shift must satisfy 0 <= shift < option_count")
+    return [(slot - shift) % option_count for slot in range(option_count)]
+
+
+def cyclic_mmlu_item(item: BenchmarkItem, shift: int) -> tuple[BenchmarkItem, dict[str, Any]]:
+    """Apply one deterministic V1.2 cyclic ordering without randomization."""
+
+    options = item.metadata.get("options")
+    if not isinstance(options, list) or not options:
+        raise ValueError(f"Item {item.id} lacks MMLU-Pro option metadata")
+    options = [str(option) for option in options]
+    order = cyclic_option_order(len(options), shift)
+    original_target_index = int(item.metadata.get("answer_index", LABELS.index(item.target)))
+    permuted_target_index = order.index(original_target_index)
+    question = _question_from_rendered_prompt(item.prompt)
+    permuted_options = [options[index] for index in order]
+    metadata = dict(item.metadata)
+    metadata.update(
+        {
+            "cyclic_shift": shift,
+            "cyclic_ordering_convention": "semantic_j_to_displayed_(j_plus_r)_mod_K",
+            "original_item_id": item.id,
+            "option_order_original_indices": order,
+            "semantic_option_ids": order,
+            "original_options": options,
+            "options": permuted_options,
+            "original_target_index": original_target_index,
+            "permuted_target_index": permuted_target_index,
+        }
+    )
+    cycled = BenchmarkItem(
+        id=item.id,
+        prompt=render_mmlu_pro_question(question, permuted_options),
+        target=LABELS[permuted_target_index],
+        metadata=metadata,
+    )
+    manifest = {
+        "cyclic_shift": shift,
+        "item_id": item.id,
+        "option_count": len(options),
+        "option_order_original_indices": order,
+        "original_target_index": original_target_index,
+        "permuted_target_index": permuted_target_index,
+        "target_label": cycled.target,
+    }
+    return cycled, manifest
+
+
+def cyclic_mmlu_items(
+    items: list[BenchmarkItem], shift: int
+) -> tuple[list[BenchmarkItem], list[dict[str, Any]]]:
+    """Apply one V1.2 cyclic shift to a stable item list."""
+
+    cycled: list[BenchmarkItem] = []
+    manifest: list[dict[str, Any]] = []
+    for item in items:
+        changed, record = cyclic_mmlu_item(item, shift)
+        cycled.append(changed)
+        manifest.append(record)
+    return cycled, manifest
+
+
+def validate_cyclic_balance(items: list[BenchmarkItem]) -> dict[str, Any]:
+    """Assert exact per-item Latin-cycle balance and return an audit report."""
+
+    if not items:
+        raise ValueError("Cannot validate cyclic balance for an empty item list")
+    records: list[dict[str, Any]] = []
+    for item in items:
+        options = item.metadata.get("options")
+        if not isinstance(options, list) or not options:
+            raise ValueError(f"Item {item.id} lacks options for cyclic balance")
+        option_count = len(options)
+        orders = [cyclic_option_order(option_count, shift) for shift in range(option_count)]
+        visits = {
+            semantic: [order.index(semantic) for order in orders]
+            for semantic in range(option_count)
+        }
+        if any(sorted(slots) != list(range(option_count)) for slots in visits.values()):
+            raise ValueError(f"Cyclic balance failed for item {item.id}")
+        original_target = int(item.metadata.get("answer_index", LABELS.index(item.target)))
+        target_slots = [order.index(original_target) for order in orders]
+        if sorted(target_slots) != list(range(option_count)):
+            raise ValueError(f"Target balance failed for item {item.id}")
+        records.append(
+            {
+                "item_id": item.id,
+                "option_count": option_count,
+                "cyclic_orderings": option_count,
+                "every_semantic_option_visits_every_slot": True,
+                "target_semantic_identity_invariant": True,
+            }
+        )
+    return {
+        "status": "PASS",
+        "item_count": len(items),
+        "records": records,
+        "convention": "semantic_j_to_displayed_(j_plus_r)_mod_K",
+    }

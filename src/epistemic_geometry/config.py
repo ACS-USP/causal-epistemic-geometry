@@ -79,9 +79,7 @@ class BackendConfig:
         if self.quantization != "none":
             raise ConfigError("Only quantization: none is implemented; choose it explicitly later")
         if self.inference_mode not in {"generation", "choice_loglikelihood"}:
-            raise ConfigError(
-                "backend.inference_mode must be generation or choice_loglikelihood"
-            )
+            raise ConfigError("backend.inference_mode must be generation or choice_loglikelihood")
         if not self.candidate_labels or len(set(self.candidate_labels)) != len(
             self.candidate_labels
         ):
@@ -191,6 +189,7 @@ class RunConfig:
     steering: SteeringConfig
     output: OutputConfig
     q1_v1_1: dict[str, Any] = field(default_factory=dict)
+    q1_v1_2: dict[str, Any] = field(default_factory=dict)
     source_path: str | None = None
 
     def __post_init__(self) -> None:
@@ -233,6 +232,7 @@ def load_config(path: str | Path) -> RunConfig:
     steering = SteeringConfig(**_section(raw, "steering"))
     output = OutputConfig(**_section(raw, "output"))
     q1_v1_1 = _section(raw, "q1_v1_1")
+    q1_v1_2 = _section(raw, "q1_v1_2")
     return RunConfig(
         experiment=experiment,
         backend=backend,
@@ -240,5 +240,6 @@ def load_config(path: str | Path) -> RunConfig:
         steering=steering,
         output=output,
         q1_v1_1=q1_v1_1,
+        q1_v1_2=q1_v1_2,
         source_path=str(config_path.resolve()),
     )
