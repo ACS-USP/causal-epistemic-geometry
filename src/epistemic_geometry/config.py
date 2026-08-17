@@ -121,10 +121,11 @@ class BenchmarkConfig:
     dataset_revision: str | None = None
     split: str | None = None
     split_manifest: str | None = None
+    manifest_path: str | None = None
 
     def __post_init__(self) -> None:
-        if self.type not in {"mock", "jsonl", "mmlu_pro"}:
-            raise ConfigError("benchmark.type must be mock, jsonl, or mmlu_pro")
+        if self.type not in {"mock", "jsonl", "mmlu_pro", "e3_10"}:
+            raise ConfigError("benchmark.type must be mock, jsonl, mmlu_pro, or e3_10")
         if self.type == "mock" and self.n_items <= 0:
             raise ConfigError("benchmark.n_items must be positive")
         if self.type == "jsonl" and not self.path:
@@ -142,6 +143,18 @@ class BenchmarkConfig:
                 raise ConfigError(
                     "mmlu_pro split must be validation, test, dev_calibration, or dev_evaluation"
                 )
+        if self.type == "e3_10":
+            if self.split not in {
+                "INSTRUMENT_CALIBRATION",
+                "GEOMETRY_CALIBRATION",
+                "DEV_EVALUATION",
+            }:
+                raise ConfigError(
+                    "e3_10 development config must use INSTRUMENT_CALIBRATION, "
+                    "GEOMETRY_CALIBRATION, or DEV_EVALUATION"
+                )
+            if not (self.manifest_path or self.split_manifest):
+                raise ConfigError("e3_10 requires benchmark.manifest_path")
         if not self.allowed_targets:
             raise ConfigError("benchmark.allowed_targets must not be empty")
         if self.max_items is not None and (

@@ -13,6 +13,7 @@ import typer
 from epistemic_geometry import __version__
 from epistemic_geometry.analysis.summarize import read_summary
 from epistemic_geometry.analysis.v1_v2_audit import validate_audit_dir
+from epistemic_geometry.benchmarks.e3.validation import validate_suite
 from epistemic_geometry.config import ConfigError, load_config
 from epistemic_geometry.experiments.baseline_vs_steering import (
     build_benchmark,
@@ -220,6 +221,22 @@ def preflight(
                     split_ids = manifest.get("splits", {}).get(loaded.benchmark.split or "")
                     if isinstance(split_ids, list):
                         benchmark_count = len(split_ids)
+        elif loaded.benchmark.type == "e3_10":
+            benchmark_count = "configured E3-10 family/cell manifests (not loaded)"
+            manifest_value = loaded.benchmark.manifest_path or loaded.benchmark.split_manifest
+            if manifest_value:
+                manifest_path = Path(manifest_value)
+                if not manifest_path.is_absolute():
+                    manifest_path = Path.cwd() / manifest_path
+                if manifest_path.exists():
+                    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                    manifests = manifest.get("manifests", {})
+                    if isinstance(manifests, dict):
+                        benchmark_count = sum(
+                            len(value.get("items", []))
+                            for value in manifests.values()
+                            if isinstance(value, dict)
+                        )
         else:
             benchmark_path = Path(loaded.benchmark.path or "")
             if not benchmark_path.is_absolute():
@@ -255,6 +272,17 @@ def preflight(
                     manifest_path = Path.cwd() / manifest_path
                 if not manifest_path.exists():
                     blockers.append(f"split manifest missing: {manifest_path}")
+        if loaded.benchmark.type == "e3_10":
+            manifest_value = loaded.benchmark.manifest_path or loaded.benchmark.split_manifest
+            manifest_path = Path(manifest_value or "")
+            if not manifest_path.is_absolute():
+                manifest_path = Path.cwd() / manifest_path
+            if not manifest_path.exists():
+                blockers.append(f"E3-10 manifest missing: {manifest_path}")
+            if loaded.steering.enabled:
+                blockers.append("E3-10 instrument calibration must have steering.enabled=false")
+            if loaded.backend.candidate_head_mode != "candidate_only":
+                blockers.append("E3-10 requires backend.candidate_head_mode=candidate_only")
         if loaded.backend.type in {"huggingface", "tiny_transformer"}:
             if _dependency_status("torch") != "yes" or _dependency_status("transformers") != "yes":
                 blockers.append("Torch/Transformers dependencies are missing")
@@ -298,6 +326,9 @@ def preflight(
         if loaded.benchmark.type == "mmlu_pro":
             typer.echo(f"Dataset revision: {loaded.benchmark.dataset_revision or 'UNKNOWN'}")
             typer.echo(f"Dataset split: {loaded.benchmark.split or 'UNKNOWN'}")
+        if loaded.benchmark.type == "e3_10":
+            typer.echo(f"E3-10 split: {loaded.benchmark.split or 'UNKNOWN'}")
+            typer.echo("E3-10 scoring: ten semantic candidates; baseline-only calibration")
         typer.echo(f"Prompt mode: {loaded.backend.prompt_mode}")
         typer.echo(f"Layer: {loaded.steering.layer}")
         typer.echo(f"Alpha: {loaded.steering.alpha_values()}")
@@ -344,6 +375,22 @@ def preflight(
     except (ConfigError, FileNotFoundError, ValueError) as exc:
         typer.echo(f"Preflight failed: {exc}", err=True)
         raise typer.Exit(code=1) from exc
+
+
+@app.command("validate-e3")
+def validate_e3(
+    n_per_cell: int = typer.Option(
+        100, "--n-per-cell", min=1, help="CPU validation seeds per cell."
+    ),
+) -> None:
+    """Validate E3-10 generators, exact oracles, and deterministic views."""
+
+    try:
+        report = validate_suite(n_per_cell=n_per_cell)
+    except (ValueError, AssertionError, RuntimeError) as exc:
+        typer.echo(f"E3-10 validation failed: {exc}", err=True)
+        raise typer.Exit(code=1) from exc
+    typer.echo(json.dumps(report, indent=2, sort_keys=True))
 
 
 @app.command("validate-run")
@@ -508,8 +555,7 @@ def preflight_q1_v1_2(
     typer.echo(f"Cyclic orderings per item: {estimate['cyclic_orderings_per_item']}")
     typer.echo(f"Conditions per ordering: {estimate['conditions_per_ordering']}")
     typer.echo(
-        "Total item-condition rows (K<=10 upper bound): "
-        f"{estimate['total_item_condition_rows']}"
+        f"Total item-condition rows (K<=10 upper bound): {estimate['total_item_condition_rows']}"
     )
     typer.echo(f"Exact original rows eligible for reuse: {estimate['exact_original_rows_reused']}")
     typer.echo(f"Estimated computed rows: {estimate['estimated_computed_rows']}")

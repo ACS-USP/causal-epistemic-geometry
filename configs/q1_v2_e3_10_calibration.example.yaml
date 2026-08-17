@@ -1,0 +1,38 @@
+# E3-10 BASELINE-ONLY INSTRUMENT QUALIFICATION TEMPLATE
+# This file is intentionally not executable until the principal researcher
+# freezes the exact Qwen revision and layer path. It must run only on RunPod.
+experiment:
+  name: q1-v2-e3-10-instrument-calibration
+  stage: development
+  seed: 20260817
+
+backend:
+  type: huggingface
+  model_id: Qwen/Qwen3-8B
+  model_revision: REPLACE_ME_IMMUTABLE_QWEN_REVISION
+  tokenizer_id: Qwen/Qwen3-8B
+  tokenizer_revision: REPLACE_ME_IMMUTABLE_QWEN_REVISION
+  prompt_mode: chat
+  enable_thinking: false
+  dtype: bf16
+  device: auto
+  attention_implementation: auto
+  inference_mode: choice_loglikelihood
+  candidate_head_mode: candidate_only
+  execution_mode: cached_decode
+
+benchmark:
+  type: e3_10
+  split: INSTRUMENT_CALIBRATION
+  manifest_path: REPLACE_ME_CALIBRATION_MANIFEST.json
+  # 200 latent items per family/cell; three views per item.
+
+steering:
+  enabled: false
+
+output:
+  root: runs/q1_v2_instrument_calibration
+
+# Qualification is mechanically applied only after all baseline rows exist.
+# No steering direction, activation extraction, PCA, or vector search is
+# permitted in this phase. Cost must be checked before execution.

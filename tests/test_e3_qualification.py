@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import json
+import subprocess
+import sys
+
 import numpy as np
 
 from epistemic_geometry.benchmarks.e3.qualification import (
@@ -58,3 +62,26 @@ def test_qualification_and_selection_are_mechanical() -> None:
     summaries = [summary, {**summary, "cell": "length_8", "accuracy": 0.6}]
     selected = select_cells(summaries)
     assert selected["FSM10"]["cell"] == "length_4"
+
+
+def test_independent_recomputation_script_reads_only_score_vectors(tmp_path) -> None:
+    scores_path = tmp_path / "scores.jsonl"
+    scores_path.write_text(
+        "".join(json.dumps(row.to_record()) + "\n" for row in _rows()), encoding="utf-8"
+    )
+    output_path = tmp_path / "recomputed.json"
+    result = subprocess.run(
+        [
+            sys.executable,
+            "scripts/recompute_q1_v2_instrument.py",
+            str(scores_path),
+            "--output",
+            str(output_path),
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert "families_selected" in result.stdout
+    report = json.loads(output_path.read_text(encoding="utf-8"))
+    assert report["selected"]["FSM10"]["cell"] == "length_4"
