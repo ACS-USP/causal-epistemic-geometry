@@ -134,7 +134,9 @@ Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`
 copies committed local state over the scoped SSH alias without using GitHub.
 Weights, dataset contents, activations, and real predictions remain on the
-RunPod cache/workspace. See [Q1 V1 results](docs/Q1_V1_RESULTS.md).
+RunPod cache/workspace, except for the explicitly authorized V1.2 raw-score
+recovery under ignored `review/` paths for analysis-only audit. See
+[Q1 V1 results](docs/Q1_V1_RESULTS.md).
 
 ## Optional HuggingFace path
 
