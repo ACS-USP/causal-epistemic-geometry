@@ -1,8 +1,9 @@
 # Q1 V3 reasoning inference engines
 
 This document describes execution mechanics only. It does not change the
-frozen Q1 V3 scientific protocol, and no engine is approved for Stage A until
-its rows have been compared with the preserved reference.
+frozen Q1 V3 scientific protocol. The permanent correctness oracle is
+`serial_reasoning_reference`; the final B=1 gate determines whether a faster
+exact implementation is worth adopting before Stage A.
 
 ## Scientific invariant
 
@@ -25,6 +26,11 @@ source trajectory.
 | `serial_reasoning_reference` | One independent Transformers generation per budget row | Permanent correctness oracle; preserved |
 | `max_budget_prefix_reuse` | One maximum-budget generation per item/view/seed; derive shorter rows by exact token censoring | **Approved bounded real-Qwen path**; local and remote token-equivalence passed |
 | `batched_reasoning` | The same maximum-budget prefix reuse, with deterministic length buckets and per-row seeded cached decoding | Implemented and benchmarkable; **rejected for real-Qwen scientific use** after bounded equivalence failures |
+
+The approved Stage-A default remains batch size 1. A custom batch-size-1
+decoder is an engineering candidate only; it must preserve every sampled token
+and must beat the approved HuggingFace `generate` plus prefix-reuse path by at
+least 10% before it can replace that path.
 
 The serial reference is intentionally not deleted or rewritten when an
 optimized engine is changed. `max_budget_prefix_reuse` parses every censored
@@ -101,3 +107,19 @@ bounded representative physical generations from 18 to 6 and measured
 generation time from 622.0 s to 294.4 s (~2.11×), while preserving every
 compared token prefix and parse result. If any future batched implementation
 is proposed, it must pass a fresh real-Qwen gate before use.
+
+## Stage-A crash safety
+
+For a full Stage-A run, the prefix engine writes one append-only
+`physical_journal.jsonl` row after each complete 2,048-token physical
+trajectory. Each row contains the raw generated token IDs, decoded source
+response, physical identity, seed, generation configuration, and all three
+independently parsed budget-derived rows. The journal is fsync-backed, rejects
+conflicting duplicate keys, and quarantines a malformed final JSONL record.
+
+The resume key is `latent_id × rollout_index`; it is intentionally independent
+of batch boundaries. A changed model revision, generation setting, manifest,
+engine, or source commit changes the journal identity and refuses resume.
+`scripts/validate_q1_v3_stage_a.py` validates physical coverage, scientific-row
+coverage, exact prefix derivation, provenance, and the no-holdout/no-steering
+firewall without loading a model.
