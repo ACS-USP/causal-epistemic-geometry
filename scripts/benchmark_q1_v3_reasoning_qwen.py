@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
@@ -78,15 +79,22 @@ def main() -> None:
     parser.add_argument("--max-rollouts", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=2)
     parser.add_argument("--padding-side", choices=("left", "right"))
+    parser.add_argument("--model-path", type=Path)
+    parser.add_argument("--tokenizer-path", type=Path)
     args = parser.parse_args()
     if args.max_items <= 0 or args.max_rollouts <= 0 or args.batch_size <= 0:
         raise SystemExit("max-items, max-rollouts, and batch-size must be positive")
 
     config = load_config(args.config)
+    backend_config = config.backend
     if args.padding_side is not None:
-        from dataclasses import replace
-
-        config = replace(config, backend=replace(config.backend, padding_side=args.padding_side))
+        backend_config = replace(backend_config, padding_side=args.padding_side)
+    if args.model_path is not None:
+        backend_config = replace(backend_config, model_path=str(args.model_path))
+    if args.tokenizer_path is not None:
+        backend_config = replace(backend_config, tokenizer_id=str(args.tokenizer_path))
+    if backend_config is not config.backend:
+        config = replace(config, backend=backend_config)
     payload = _load_payload(args.manifest)
     available = sorted(payload["manifests"])
     requested_groups = args.manifest_keys or sorted(
