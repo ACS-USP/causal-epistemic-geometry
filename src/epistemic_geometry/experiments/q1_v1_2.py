@@ -1095,8 +1095,12 @@ def validate_q1_v1_2_run(run_dir: str | Path, split_manifest: str | Path) -> dic
     ):
         raise ValueError("V1.2 firewall is not intact")
     split = Path(split_manifest)
-    if _sha256_bytes(split.read_bytes()) != V1_SPLIT_HASH:
+    split_file_hash = _sha256_bytes(split.read_bytes())
+    split_payload = json.loads(split.read_text(encoding="utf-8"))
+    if split_payload.get("manifest_sha256") != V1_SPLIT_HASH:
         raise ValueError("V1.2 split hash mismatch")
+    if manifest.get("split_manifest_sha256") != split_file_hash:
+        raise ValueError("V1.2 split file hash mismatch")
     resolved_config = yaml.safe_load(
         (path / "config_resolved.yaml").read_text(encoding="utf-8")
     )
@@ -1105,13 +1109,12 @@ def validate_q1_v1_2_run(run_dir: str | Path, split_manifest: str | Path) -> dic
             {
                 "config": resolved_config,
                 "protocol": PROTOCOL_ID,
-                "split_manifest_sha256": V1_SPLIT_HASH,
+                "split_manifest_sha256": split_file_hash,
             }
         )
     )[:10]
     if manifest.get("config_hash") != expected_config_hash:
         raise ValueError("V1.2 resolved config hash mismatch")
-    split_payload = json.loads(split.read_text(encoding="utf-8"))
     expected_item_id_order = split_payload.get("splits", {}).get("dev_evaluation", [])
     expected_item_ids = set(expected_item_id_order)
     holdout_ids = set(split_payload.get("splits", {}).get("confirmatory_holdout", []))

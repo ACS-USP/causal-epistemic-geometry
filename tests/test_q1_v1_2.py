@@ -104,12 +104,13 @@ def test_v1_v2_validator_recomputes_synthetic_artifact(tmp_path, monkeypatch) ->
         "test",
     )
     split_payload = {
+        "manifest_sha256": "synthetic-frozen-split-digest",
         "splits": {"dev_evaluation": [item.id], "confirmatory_holdout": []}
     }
     split_path = tmp_path / "split.json"
     split_path.write_text(json.dumps(split_payload), encoding="utf-8")
-    split_hash = hashlib.sha256(split_path.read_bytes()).hexdigest()
-    monkeypatch.setattr(v12, "V1_SPLIT_HASH", split_hash)
+    split_file_hash = hashlib.sha256(split_path.read_bytes()).hexdigest()
+    monkeypatch.setattr(v12, "V1_SPLIT_HASH", "synthetic-frozen-split-digest")
 
     run_dir = tmp_path / "run"
     run_dir.mkdir()
@@ -124,7 +125,7 @@ def test_v1_v2_validator_recomputes_synthetic_artifact(tmp_path, monkeypatch) ->
             {
                 "config": resolved,
                 "protocol": v12.PROTOCOL_ID,
-                "split_manifest_sha256": split_hash,
+                "split_manifest_sha256": split_file_hash,
             }
         )
     )[:10]
@@ -193,6 +194,7 @@ def test_v1_v2_validator_recomputes_synthetic_artifact(tmp_path, monkeypatch) ->
         "confirmatory_accessed": "NO",
         "holdout_access": "forbidden",
         "config_hash": config_hash,
+        "split_manifest_sha256": split_file_hash,
         "experiment_seed": 7,
         "pc1_hash": v12.PC1_HASH,
         "layer": 17,
