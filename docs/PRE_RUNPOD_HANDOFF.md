@@ -34,6 +34,18 @@ scripts/check_runpod_connection.sh
 scripts/sync_to_runpod.sh --dry-run
 ```
 
+The normal sync intentionally excludes `review/` artifacts. For the corrected
+Stage-A run, transfer only the frozen manifest explicitly after the source
+tree sync:
+
+```bash
+scripts/sync_to_runpod.sh \
+  --stage-a-manifest review/q1_v3_reasoning_instrument/stage_a_manifest.json
+```
+
+This installs the manifest atomically at the matching remote path and does
+not transfer model weights, caches, runs, or other review artifacts.
+
 The alias is `runpod-ceg`; the persistent cache is `/workspace/hf-cache`.
 See `RUNPOD_COST_GATES.md` before starting the reviewed pretrained-model gate.
 
