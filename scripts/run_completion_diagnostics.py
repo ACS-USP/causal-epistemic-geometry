@@ -216,11 +216,16 @@ def main() -> int:
                 _append_jsonl(journal_path, result.to_record())
                 completed_rows[(item.item_id, cap)] = result.to_record()
                 completed += 1
-                print(
-                    f"completed diagnostic candidate={args.candidate} item={item.item_id} "
-                    f"cap={cap} status={result.status.value} tokens={token_count}",
-                    flush=True,
-                )
+                try:
+                    print(
+                        f"completed diagnostic candidate={args.candidate} item={item.item_id} "
+                        f"cap={cap} status={result.status.value} tokens={token_count}",
+                        flush=True,
+                    )
+                except BrokenPipeError:
+                    # The journal is already durable; a disconnected SSH stdout
+                    # stream must not invalidate a completed diagnostic row.
+                    pass
                 if result.status != ExternalStatus.TRUNCATED_THINKING:
                     break
         _atomic_json(

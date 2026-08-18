@@ -288,11 +288,15 @@ def main() -> int:
                     raise
                 _append_jsonl(journal_path, result.to_record())
                 completed[key] = result
-                print(
-                    f"completed {args.candidate} item={item.item_id} seed={seed} "
-                    f"status={result.status.value} tokens={result.token_count}",
-                    flush=True,
-                )
+                try:
+                    print(
+                        f"completed {args.candidate} item={item.item_id} seed={seed} "
+                        f"status={result.status.value} tokens={result.token_count}",
+                        flush=True,
+                    )
+                except BrokenPipeError:
+                    # The item row was fsynced before reporting progress.
+                    pass
         rows = [completed[(item.item_id, _seed(args.candidate, item.item_id, rollout))]
                 for item in selected for rollout in rollout_seeds]
         summary = summarize_qualification(rows)

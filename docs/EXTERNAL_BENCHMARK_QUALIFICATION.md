@@ -78,6 +78,9 @@ seed only when the previous cap truncates, and records each attempt. Select the
 smallest cap safely above the observed natural completion lengths, without using
 accuracy or steering outcomes. Before restarting Q1, record the proposed cap,
 projected wall time, and projected GPU cost for principal review.
+If any diagnostic item requires 32,768, the candidate receives an explicit
+`high_cap_warning` and must be treated as operationally expensive even though it
+is not scientifically rejected.
 
 On RunPod, after explicitly resolving the official source and writing a normalized
 JSONL file:
