@@ -1,8 +1,9 @@
 # Causal Geometry of Epistemic Complementarity
 
-This repository is currently **DEVELOPMENT infrastructure**. Q1 V3 Stage A is
-in progress as a baseline-only remote calibration; it has produced no
-scientific conclusion. The repository is a small, deterministic harness for
+This repository is currently **DEVELOPMENT infrastructure**. Q1 V3 Stage A
+completed as a baseline-only calibration and failed its frozen screen with no
+surviving families; it produced no steering conclusion. The repository is a
+small, deterministic harness for
 asking whether one controlled activation intervention
 can change *where a frozen language model fails* while approximately preserving
 individual competence. It does not contain a scientific result.
@@ -109,8 +110,8 @@ with exact procedural oracles, deterministic surface twins, matched and
 independent rollout seeds, and a strict `FINAL:` parser. It evaluates the
 reasoning policy with `enable_thinking=true`; it does not infer competence
 from a direct candidate-logit slice. The model-free structural gate passes.
-Stage A is currently running baseline-only; Stage B has not run and no
-steering direction exists. See the [current status page](docs/CURRENT_STATUS.md).
+Stage A completed baseline-only and failed its frozen screen; Stage B has not
+run and no steering direction exists. See the [current status page](docs/CURRENT_STATUS.md).
 Read [the Q1 V3 protocol](docs/Q1_V3_REASONING_AGENT_PROTOCOL.md).
 
 The primary summary always shows baseline accuracy, steered accuracy, delta
@@ -138,7 +139,7 @@ Q1 V1–V1.2 INSTRUMENT SERIES: CLOSED AS DEVELOPMENT
 Q1 V2 E3-10 DIRECT INSTRUMENT: CLOSED — NOT QUALIFIED
 Q1 V3 REASONING SOFTWARE: GENERATORS/ORACLES/SEEDS/PARSER READY
 Q1 V3 STRUCTURAL GATE: PASS (MODEL-FREE, 5,000 PER CELL)
-Q1 V3 STAGE A: RUNNING — BASELINE-ONLY; RESULTS PENDING
+Q1 V3 STAGE A: COMPLETE — BASELINE-ONLY; SCREEN FAILED
 Q1 V3 STAGE B: NOT RUN
 Q1 V3 STEERING: NOT READY / NOT RUN
 Q1 V3 FRESH SPLITS: NOT GENERATED
@@ -158,10 +159,10 @@ python scripts/build_q1_v3_calibration_manifests.py stage_a \
 
 These commands create procedural manifests only. The 36 Stage-A budget
 conditions use 12 frozen 60-item latent sets; they are not model outcomes, do
-not access DEV or holdout items, and do not construct steering. The current
-manifest was reviewed and the authorized baseline-only calibration is now
-running remotely. Do not regenerate it or alter its source commit while the
-run is active.
+not access DEV or holdout items, and do not construct steering. The reviewed
+manifest was used for the completed baseline-only calibration. Its local
+artifact is under `review/q1_v3_stage_a/`; do not use it to construct steering
+or Stage B.
 
 The local E3-10 structural gate is model-free and uses 5,000 balanced items
 per family/cell:
@@ -204,10 +205,10 @@ closed rather than reinterpreted. E3-10 likewise produced no Q1 steering result:
 baseline calibration showed chance-like competence and failed output-channel
 stability thresholds, so the pre-registered stop rule was applied.
 
-Q1 V3 is currently in its authorized baseline-only Stage-A calibration. Its
-current status is still an engineering/development milestone, not a scientific
-result. One-shot reasoning-policy steering remains gated on successful Stage B
-qualification and principal review.
+Q1 V3 completed its authorized baseline-only Stage-A calibration, but the
+frozen instrument screen failed with zero surviving families. This is an
+engineering/development outcome, not a steering result. The pre-registered
+stop rule forbids Stage B and steering from this run.
 
 Real model/data operations are RunPod-only. The Mac is the canonical source
 for code, configs, tests, documentation, and Git history; `scripts/sync_to_runpod.sh`

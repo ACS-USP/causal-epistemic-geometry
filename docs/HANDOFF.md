@@ -1,8 +1,9 @@
 # Handoff
 
 > **Live-status note:** this document is a capability and command handoff, not
-> the live experiment dashboard. Q1 V3 Stage A is now running baseline-only on
-> RunPod. For the current state, read [CURRENT_STATUS.md](CURRENT_STATUS.md).
+> the live experiment dashboard. Q1 V3 Stage A completed baseline-only and
+> failed the frozen screen; Stage B and steering were not run. For the current
+> state, read [CURRENT_STATUS.md](CURRENT_STATUS.md).
 
 ## What works now
 
@@ -54,14 +55,15 @@ Q1 V3 model-free structural gate: PASS on at least 5,000 generated items per
 family/cell. All current cells are eligible; two low-complexity SAT cells have
 documented shortcut warnings, not failures. No model outcome was used.
 
-Q1 V3 Stage A: RUNNING baseline-only. Q1 V3 Stage B: NOT RUN. Q1 V3 steering:
-NOT READY and NOT RUN. The active run uses the frozen scientific execution
-commit `4faea97`; no result is available yet. The current review bundle is
-`review/q1_v3_reasoning_instrument/` (ignored local artifact). See
-[CURRENT_STATUS.md](CURRENT_STATUS.md) for the remote journal and live state.
+Q1 V3 Stage A: COMPLETE baseline-only; frozen screen FAILED with zero surviving
+families. Q1 V3 Stage B: NOT RUN. Q1 V3 steering: NOT READY and NOT RUN. The
+run used frozen scientific execution commit `4faea97`; no steering result is
+available. The recovered artifact is under `review/q1_v3_stage_a/`. See
+[CURRENT_STATUS.md](CURRENT_STATUS.md) for the final state.
 
 Q1 real 8B model: prior V1 development runs and the E3-10 baseline calibration
-are closed; Q1 V3 Stage A is the first active V3 baseline-only calibration.
+are closed; Q1 V3 Stage A is complete and did not qualify the reasoning
+instrument.
 
 Q1 scientific result: NONE FROZEN.
 
@@ -76,8 +78,7 @@ The E3-10 Qwen path and baseline-only calibration are preserved at
 `review/q1_v2_instrument_review/` (ignored because it contains real model
 outputs). The V1/Qwen engineering history is retained separately and was not
 used to qualify Q1 V3. The new Q1 V3 bundle contains no model outputs. The
-active Q1 V3 Stage-A outputs remain on RunPod until the run completes and the
-artifact is explicitly pulled and validated.
+Q1 V3 Stage-A outputs were pulled and locally validated; the Pod is stopped.
 
 ## Exact local smoke
 
@@ -118,11 +119,11 @@ python scripts/build_q1_v3_calibration_manifests.py stage_a \
   --output review/q1_v3_reasoning_instrument/stage_a_manifest.json
 ```
 
-This is model-free. It creates 36 Stage-A budget conditions (12 cells × 3
-budgets) over 12 frozen 60-item latent sets. It does not load Qwen, construct
-steering, or touch the future scientific splits. Principal review was required
-before the current RunPod command and has been completed. Do not regenerate the
-active manifest while Stage A is running.
+This is model-free. It created 36 Stage-A budget conditions (12 cells × 3
+budgets) over 12 frozen 60-item latent sets. It did not load Qwen locally,
+construct steering, or touch the future scientific splits. Principal review was
+required before the completed RunPod command and was completed. Do not
+regenerate the frozen manifest after the failed screen.
 
 After principal review and only on RunPod with the pinned cache/model, the
 baseline-only calibration runner is:

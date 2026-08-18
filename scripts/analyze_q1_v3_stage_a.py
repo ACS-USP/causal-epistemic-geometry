@@ -233,7 +233,12 @@ def _write_figures(out: Path, outcomes: list[dict[str, Any]], rows: list[dict[st
             ]
             grouped_lengths.append(values)
             labels.append(f"{group}\n{budget}")
-    ax.boxplot(grouped_lengths, labels=labels, showfliers=False)
+    # Matplotlib 3.9 renamed ``labels`` to ``tick_labels``. Keep the analysis
+    # script usable across the lightweight local environments used for review.
+    try:
+        ax.boxplot(grouped_lengths, tick_labels=labels, showfliers=False)
+    except TypeError:  # pragma: no cover - exercised by older Matplotlib only
+        ax.boxplot(grouped_lengths, labels=labels, showfliers=False)
     ax.set_ylabel("derived prefix token count")
     ax.tick_params(axis="x", labelrotation=75)
     fig.tight_layout()
