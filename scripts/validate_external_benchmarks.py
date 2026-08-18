@@ -107,7 +107,9 @@ def main() -> int:
         "No model, dataset, steering direction, activation, or holdout item was used.\n"
         "Fixtures are software tests, not benchmark results. Real dataset materialization\n"
         "must happen on the RunPod execution host and record an immutable source revision.\n\n"
-        "Q1 smoke: at most 20 new items × 1 seed per practical candidate.\n"
+        "Completion diagnostic: 3–5 new items on the fixed 8192→16384→32768 ladder;\n"
+        "diagnostic outcomes never enter qualification. Q1 smoke: at most 20 new\n"
+        "items × 1 seed per practical candidate with a prospective generous cap.\n"
         "Q2 qualification: only survivors, 50 new items × 2 independent seeds.\n"
         "No steering pilot is authorized in this campaign.\n",
         encoding="utf-8",

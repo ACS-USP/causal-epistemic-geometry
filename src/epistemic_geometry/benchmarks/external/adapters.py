@@ -21,7 +21,7 @@ class CandidateSpec:
     official_source: str
     source_revision_policy: str
     objective_evaluation: str
-    q1_max_new_tokens: int
+    completion_diagnostic_caps: tuple[int, ...] = (8192, 16384, 32768)
     status: str = "UNTESTED"
     notes: str = ""
 
@@ -33,7 +33,6 @@ _SPECS = (
         official_source="https://arxiv.org/abs/2512.14917",
         source_revision_policy="record official release/repository revision on RunPod",
         objective_evaluation="official executable output evaluator required",
-        q1_max_new_tokens=2048,
         notes="Q0 remains unresolved until a stable official public artifact/evaluator is located.",
     ),
     CandidateSpec(
@@ -42,7 +41,6 @@ _SPECS = (
         official_source="https://github.com/LiveCodeBench/LiveCodeBench",
         source_revision_policy="record dataset release and evaluator commit",
         objective_evaluation="official deterministic test-output evaluator",
-        q1_max_new_tokens=2048,
     ),
     CandidateSpec(
         name="CRUXEval",
@@ -50,7 +48,6 @@ _SPECS = (
         official_source="https://github.com/facebookresearch/cruxeval",
         source_revision_policy="record dataset revision and evaluator commit",
         objective_evaluation="deterministic Python output evaluator",
-        q1_max_new_tokens=2048,
         notes="Established control; possible contamination risk is documented, not hidden.",
     ),
     CandidateSpec(
@@ -59,7 +56,6 @@ _SPECS = (
         official_source="https://github.com/livebench/livebench",
         source_revision_policy="record LiveBench release date and evaluator commit",
         objective_evaluation="objective subtasks only; reject LLM-judge tasks",
-        q1_max_new_tokens=2048,
     ),
 )
 

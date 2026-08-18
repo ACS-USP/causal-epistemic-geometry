@@ -80,3 +80,8 @@ def test_unknown_evaluator_rejected() -> None:
     object.__setattr__(item, "evaluator", "llm_judge")
     with pytest.raises(ValueError, match="unsupported deterministic evaluator"):
         score_external_response(item, "FINAL: anything", rollout_seed=0)
+
+
+def test_completion_diagnostic_caps_are_fixed_and_not_a_scientific_tuning_grid() -> None:
+    for spec in candidate_specs():
+        assert spec.completion_diagnostic_caps == (8192, 16384, 32768)

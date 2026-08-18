@@ -146,15 +146,20 @@ def main() -> int:
     parser.add_argument("--stage", choices=["q1_smoke", "q2_qualification"], required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--offset", type=int, default=0)
-    parser.add_argument("--max-new-tokens", type=int, default=2048)
+    parser.add_argument(
+        "--max-new-tokens",
+        type=int,
+        required=True,
+        help="Prospectively frozen generous cap selected from completion diagnostics",
+    )
     args = parser.parse_args()
     spec = _spec(args.candidate)
     expected_limit = 20 if args.stage == "q1_smoke" else 50
     expected_seeds = 1 if args.stage == "q1_smoke" else 2
     if args.max_new_tokens <= 0:
         parser.error("--max-new-tokens must be positive")
-    if args.stage == "q1_smoke" and args.max_new_tokens != spec.q1_max_new_tokens:
-        parser.error("Q1 smoke cap is fixed at 2048 for this campaign")
+    if args.max_new_tokens < 8192:
+        parser.error("Q1/Q2 caps below 8192 are not allowed after the low-cap correction")
 
     adapter = adapter_for(args.candidate)
     items = adapter.load_items(args.data)
@@ -178,6 +183,11 @@ def main() -> int:
         "limit": expected_limit,
         "rollout_indices": rollout_seeds,
         "generation_config": {**GENERATION_CONFIG, "max_new_tokens": args.max_new_tokens},
+        "cap_policy": {
+            "kind": "prospective_completion_diagnostic",
+            "diagnostic_caps": list(spec.completion_diagnostic_caps),
+            "low_cap_2048_runs": "LOW_CAP_DIAGNOSTIC_ONLY",
+        },
         "steering": False,
         "holdout": False,
         "source_commit": git_metadata(ROOT).get("git_commit"),
@@ -302,7 +312,7 @@ def main() -> int:
             },
         )
         return 0
-    except Exception as exc:
+    except BaseException as exc:
         prior = json.loads(manifest_path.read_text(encoding="utf-8"))
         prior.update(
             {

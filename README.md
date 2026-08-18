@@ -142,11 +142,23 @@ Q1 V3 STRUCTURAL GATE: PASS (MODEL-FREE, 5,000 PER CELL)
 Q1 V3 STAGE A: COMPLETE — BASELINE-ONLY; SCREEN FAILED
 Q1 V3 STAGE B: NOT RUN
 Q1 V3 STEERING: NOT READY / NOT RUN
+EXTERNAL BENCHMARK QUALIFICATION: Q0 PASS; LOW-CAP 2048 RUNS DIAGNOSTIC ONLY
+EXTERNAL BENCHMARK Q1/Q2: NOT RESTARTED — COMPLETION-CAP CALIBRATION REQUIRED
 Q1 V3 FRESH SPLITS: NOT GENERATED
 Q1 SCIENTIFIC RESULT: NONE FROZEN
 Q2 GEOMETRY: NOT RUN
 CONFIRMATORY HOLDOUT: UNTOUCHED
 ```
+
+The current external-benchmark qualification branch is a cheap instrument
+search, not a steering experiment. The first CRUXEval/LiveCodeBench/LiveBench
+smokes used `max_new_tokens=2048`; those trajectories are preserved as
+`LOW_CAP_DIAGNOSTIC` records because Qwen3 thinking truncation at that cap is an
+operational artifact. The next authorized step is a 3–5-item completion-length
+diagnostic at 8192, escalating only the same truncating item/seed to 16384 and
+then 32768. Only after that diagnostic is a generous cap frozen may a new
+20-item smoke begin. See
+[external benchmark qualification](docs/EXTERNAL_BENCHMARK_QUALIFICATION.md).
 
 The Q1 V3 design bundle is model-free and local:
 

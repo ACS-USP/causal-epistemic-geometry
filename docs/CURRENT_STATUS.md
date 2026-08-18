@@ -30,6 +30,7 @@ Stage B was not run, and the confirmatory holdout remains untouched.
 | Confirmatory holdout | UNTOUCHED | Firewall remains active |
 | Canonical real-Qwen engine | `max_budget_prefix_reuse` | [Optimization report](Q1_V3_REASONING_OPTIMIZATION_REPORT.md) |
 | Scientific execution source | Commit `4faea97` | Frozen source for the completed run |
+| External benchmark qualification | Q0 passed; old 2048 smokes are `LOW_CAP_DIAGNOSTIC` only | [Qualification protocol](EXTERNAL_BENCHMARK_QUALIFICATION.md) |
 
 The completed artifact contains exactly 1,440 physical generations and 4,320
 derived scientific rows. Remote and local validators both returned `valid:
@@ -90,6 +91,11 @@ The authorized post-run sequence was:
 4. stop the Pod after artifacts are safe locally;
 5. apply the frozen stop rule: because zero families survived, do not produce
    or execute Stage B and return control to the principal researcher.
+
+The separate external-benchmark search is also DEVELOPMENT-only. Its first
+2048-token thinking smokes are preserved but cannot qualify or disqualify a
+benchmark. The next remote action is the bounded completion-cap diagnostic;
+there is no active Pod inference while the protocol and code are being updated.
 
 ## Scientific boundary
 
