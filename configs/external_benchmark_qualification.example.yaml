@@ -1,0 +1,28 @@
+# Template only. Real data paths are materialized on RunPod and never downloaded
+# by local preflight. Do not use this file to launch steering or holdout work.
+campaign:
+  name: external-benchmark-qualification
+  stage: q1_smoke  # q1_smoke or q2_qualification
+  candidate: CRUXEval
+  normalized_jsonl: /workspace/causal-epistemic-geometry/data/cruxeval_q1.jsonl
+  output: review/external_benchmark_qualification/cruxeval_q1
+  offset: 0
+  max_items: 20
+  rollout_seeds: [0]
+  max_new_tokens: 2048
+
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  enable_thinking: true
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0
+
+firewall:
+  steering: false
+  geometry: false
+  confirmatory_holdout: false
