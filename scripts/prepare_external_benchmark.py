@@ -30,6 +30,15 @@ def _cruxeval_prompt(code: str, value: str) -> str:
     )
 
 
+def _final_contract(prompt: str, answer_description: str) -> str:
+    return (
+        f"{prompt.rstrip()}\n\n"
+        "For this evaluation, do not use a judge or explanatory paraphrase. "
+        f"End with exactly one line in the form FINAL: <{answer_description}>. "
+        "Do not add text after FINAL."
+    )
+
+
 def _write_jsonl(path: Path, records: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
@@ -76,6 +85,102 @@ def _prepare_cruxeval(
                     "dataset_revision": revision,
                     "native_fields": ["code", "input", "output", "id"],
                     "official_evaluator": "facebookresearch/cruxeval/evaluation",
+                },
+            }
+        )
+    _write_jsonl(output, records)
+    return {"dataset": repo_id, "revision": revision, "n_items": len(records)}
+
+
+def _prepare_livecodebench(
+    output: Path, requested_revision: str | None, limit: int | None
+) -> dict[str, object]:
+    require_remote_hf_execution("LiveCodeBench dataset loading")
+    from datasets import load_dataset
+
+    repo_id = "livecodebench/test_generation"
+    revision = _resolve_dataset_revision(repo_id, requested_revision)
+    dataset = load_dataset(repo_id, split="test", revision=revision)
+    records: list[dict[str, object]] = []
+    for index, row in enumerate(dataset):
+        if limit is not None and index >= limit:
+            break
+        tests = json.loads(str(row["test"]))
+        if not tests or not isinstance(tests[0], dict):
+            raise ValueError(f"LiveCodeBench row {row['question_id']} has no first test case")
+        test = tests[0]
+        testcase = (
+            f"assert {row['function_name']}({test['input']}) == # TODO"
+        )
+        prompt = _final_contract(
+            "Problem:\n"
+            + str(row["question_content"])
+            + "\nFunction:\n```\n"
+            + str(row["starter_code"])
+            + "\n```\n\nPlease complete this test case:\n```\n"
+            + testcase
+            + "\n```",
+            "the exact Python output expression",
+        )
+        records.append(
+            {
+                "item_id": f"{row['question_id']}:{row['test_id']}",
+                "benchmark": "LiveCodeBench",
+                "subtask": "test_output_prediction",
+                "prompt": prompt,
+                "reference_answer": str(test["output"]),
+                "evaluator": "python_literal",
+                "source_revision": revision,
+                "metadata": {
+                    "dataset_repo": repo_id,
+                    "dataset_revision": revision,
+                    "official_scenario": "testoutputprediction",
+                    "official_evaluator": (
+                        "lcb_runner.evaluation.compute_test_output_prediction_metrics"
+                    ),
+                    "question_id": str(row["question_id"]),
+                    "test_id": int(row["test_id"]),
+                },
+            }
+        )
+    _write_jsonl(output, records)
+    return {"dataset": repo_id, "revision": revision, "n_items": len(records)}
+
+
+def _prepare_livebench(
+    output: Path, requested_revision: str | None, limit: int | None
+) -> dict[str, object]:
+    require_remote_hf_execution("LiveBench objective dataset loading")
+    from datasets import load_dataset
+
+    repo_id = "livebench/reasoning"
+    revision = _resolve_dataset_revision(repo_id, requested_revision)
+    dataset = load_dataset(repo_id, split="test", revision=revision)
+    records: list[dict[str, object]] = []
+    for index, row in enumerate(dataset):
+        if limit is not None and index >= limit:
+            break
+        turns = row.get("turns")
+        if not isinstance(turns, list) or len(turns) != 1:
+            raise ValueError(f"LiveBench row {row['question_id']} is not a single-turn item")
+        prompt = _final_contract(str(turns[0]), "the exact comma-separated answer payload")
+        records.append(
+            {
+                "item_id": str(row["question_id"]),
+                "benchmark": "LiveBench",
+                "subtask": "objective_subtask",
+                "prompt": prompt,
+                "reference_answer": str(row["ground_truth"]),
+                "evaluator": "exact",
+                "source_revision": revision,
+                "metadata": {
+                    "dataset_repo": repo_id,
+                    "dataset_revision": revision,
+                    "official_task": str(row["task"]),
+                    "official_evaluator": (
+                        "LiveBench deterministic task scorer; exact payload adapter"
+                    ),
+                    "llm_judge": False,
                 },
             }
         )
@@ -154,6 +259,10 @@ def main() -> int:
     args = parser.parse_args()
     if args.candidate == "CRUXEval":
         summary = _prepare_cruxeval(args.output, args.revision, args.limit)
+    elif args.candidate == "LiveCodeBench":
+        summary = _prepare_livecodebench(args.output, args.revision, args.limit)
+    elif args.candidate == "LiveBench" and args.source_jsonl is None:
+        summary = _prepare_livebench(args.output, args.revision, args.limit)
     else:
         if args.source_jsonl is None or args.evaluator is None or not args.revision:
             parser.error("non-CRUX candidates require --source-jsonl, --revision, and --evaluator")
