@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 1 is prospectively frozen for a bounded full non-thinking smoke on fresh long character-count and fresh CRUXEval semantic items. Only this exploration gate is authorized; outcomes must be reviewed before any positive control or causal work.
+Gate 1 completed as a bounded full non-thinking exploration. Fresh long character-count was promising on n=20; CRUXEval failed because mechanical format/completion failures dominated. No causal or steering work occurred.
 
-**Next authorized action:** Execute only the staged Gate 1 smoke after the pre-outcome source commit; then stop the Pod and return the compact review artifact to the principal.
+**Next authorized action:** Principal review of the compact Gate 1 artifact. No positive control, steering, activation, geometry, or Q2 execution is authorized yet.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

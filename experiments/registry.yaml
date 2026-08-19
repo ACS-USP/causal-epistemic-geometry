@@ -126,11 +126,16 @@ experiments:
     question: Can full non-thinking generation produce finished, genuine semantic errors?
     instrument: Fresh long character-count and fresh CRUXEval semantic items
     model_policy: Qwen3-8B, BF16, sampled full autoregressive generation, thinking disabled
-    status: IN_PROGRESS
-    outcome: Prospective specification committed; model outcomes not yet recorded.
-    scientific_interpretation: Exploration-only instrument gate; no causal or steering claim.
+    status: COMPLETE_EXPLORATION
+    outcome: >-
+      Fresh long character-count: 19/20 valid, 15 correct, 4 wrong. CRUXEval:
+      13/20 valid, 5 correct, 8 wrong, 7 invalid format. Five native-thinking
+      reference trajectories were run for the promising character-count arm.
+    scientific_interpretation: >-
+      Character-count is an exploration candidate for principal review;
+      CRUXEval failed the completion/format gate. No causal or steering claim.
     source_commit: 2d03624ebc594f504a0f19c6104c8c8909fd5de1
     artifact: review/full_nonthinking_smoke/
-    cost_usd: null
+    cost_usd: 0.079435404667072
     holdout_status: UNTOUCHED
-    next_action: Execute bounded Stage 1/Stage 2 smoke only, then stop for principal review.
+    next_action: Principal review; do not run positive control or steering automatically.

@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 1 is prospectively frozen for a bounded full non-thinking smoke on fresh long character-count and fresh CRUXEval semantic items. Only this exploration gate is authorized; outcomes must be reviewed before any positive control or causal work.
+Gate 1 completed as a bounded full non-thinking exploration. Fresh long character-count was promising on n=20; CRUXEval failed because mechanical format/completion failures dominated. No causal or steering work occurred.
 
-- Workstream: `FULL_NONTHINKING_SMOKE`
+- Workstream: `FULL_NONTHINKING_SMOKE_COMPLETE`
 - RunPod: `STOPPED`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Execute only the staged Gate 1 smoke after the pre-outcome source commit; then stop the Pod and return the compact review artifact to the principal.
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: Principal review of the compact Gate 1 artifact. No positive control, steering, activation, geometry, or Q2 execution is authorized yet.
 
 ## Scientific program
 
@@ -33,7 +33,7 @@ Gate 1 is prospectively frozen for a bounded full non-thinking smoke on fresh lo
 | `EXTERNAL_BENCHMARK_SEARCH` | `CLOSED_DEVELOPMENT` | CRUXEval low-cap records were reclassified; generous-cap diagnostics exposed saturation and format sensitivity. No steering was run. |
 | `Q1_V4_MICROBENCH` | `CLOSED_DEVELOPMENT` | Character counting saturated semantically and exposed parser artifacts. A tiny weekday activation association is descriptive only and is being statistically reanalyzed for tied-rank correctness. |
 | `Q1_V4_DENSE_CODE` | `PAUSED_INFRASTRUCTURE` | Nested per-test outcomes are instrument-promising, but safe objective execution is not production-ready. No model pilot was run. |
-| `FULL_NONTHINKING_SMOKE` | `IN_PROGRESS` | Prospective Gate 1 exploration: full autoregressive Qwen generation with thinking disabled on fresh long character-count and fresh CRUXEval items; classification and outcomes are not yet recorded. |
+| `FULL_NONTHINKING_SMOKE` | `COMPLETE_EXPLORATION` | Fresh long character-count classified PROMISING at 19/20 valid, 15 correct, and 4 genuine wrong. CRUXEval classified MECHANICAL_OR_COMPLETION_FAILURE at 13/20 valid, with 7 format failures. A five-item native-thinking reference was descriptive only. No steering. |
 
 ## Scientific firewall
 
@@ -42,7 +42,7 @@ Gate 1 is prospectively frozen for a bounded full non-thinking smoke on fresh lo
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `FULL_NONTHINKING_SMOKE_GATE_1`
+- `current_task`: `OFFLINE_PRINCIPAL_REVIEW_AFTER_FULL_NONTHINKING_SMOKE`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
