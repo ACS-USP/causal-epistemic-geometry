@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from enum import StrEnum
 
 import numpy as np
@@ -120,6 +121,8 @@ def unbiased_two_rollout_propensity_distance(
     errors_j: np.ndarray | list[list[bool]],
     *,
     seed_regime: SeedRegime | str,
+    item_ids_i: Sequence[str],
+    item_ids_j: Sequence[str],
 ) -> float:
     """Estimate ``E_t[(p_ti-p_tj)^2]`` from two independent rollouts each.
 
@@ -136,6 +139,14 @@ def unbiased_two_rollout_propensity_distance(
     right = _matrix(errors_j)
     if left.shape != right.shape or left.shape[1] != 2:
         raise ValueError("each condition must have shape [n_items, 2] with matched items")
+    ids_i = tuple(str(value) for value in item_ids_i)
+    ids_j = tuple(str(value) for value in item_ids_j)
+    if len(ids_i) != left.shape[0] or len(ids_j) != right.shape[0]:
+        raise ValueError("item provenance length must match rollout matrix rows")
+    if len(set(ids_i)) != len(ids_i) or len(set(ids_j)) != len(ids_j):
+        raise ValueError("item provenance IDs must be unique within each condition")
+    if ids_i != ids_j:
+        raise ValueError("item provenance IDs and row order must match exactly")
     i1, i2 = left[:, 0].astype(float), left[:, 1].astype(float)
     j1, j2 = right[:, 0].astype(float), right[:, 1].astype(float)
     return float(np.mean(i1 * i2 + j1 * j2 - i1 * j2 - i2 * j1))

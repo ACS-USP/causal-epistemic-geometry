@@ -85,7 +85,8 @@ D_hat = mean_t[
 
 It is valid only for independent rollout banks with matched item identity. It
 must reject common-random-number coupling, missing or reordered item
-provenance, and shapes other than exactly two independent draws per condition.
+provenance, duplicate item IDs, and shapes other than exactly two independent
+draws per condition.
 It is unbiased but can be high variance and can be negative in a finite sample.
 
 ## Seed regimes

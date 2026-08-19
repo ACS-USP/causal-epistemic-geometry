@@ -57,12 +57,24 @@ def test_unbiased_two_rollout_distance_exact_fixture_and_seed_guard() -> None:
         left,
         right,
         seed_regime=SeedRegime.INDEPENDENT_PRIMARY,
+        item_ids_i=["a", "b", "c", "d"],
+        item_ids_j=["a", "b", "c", "d"],
     ) == np.mean(expected_rows)
     with np.testing.assert_raises_regex(ValueError, "INDEPENDENT_PRIMARY"):
         unbiased_two_rollout_propensity_distance(
             left,
             right,
             seed_regime=SeedRegime.MATCHED_COUPLING_SECONDARY,
+            item_ids_i=["a", "b", "c", "d"],
+            item_ids_j=["a", "b", "c", "d"],
+        )
+    with np.testing.assert_raises_regex(ValueError, "row order"):
+        unbiased_two_rollout_propensity_distance(
+            left,
+            right,
+            seed_regime=SeedRegime.INDEPENDENT_PRIMARY,
+            item_ids_i=["a", "b", "c", "d"],
+            item_ids_j=["b", "a", "c", "d"],
         )
 
 
@@ -79,6 +91,8 @@ def test_unbiased_two_rollout_distance_is_unbiased_in_monte_carlo() -> None:
                 left,
                 right,
                 seed_regime=SeedRegime.INDEPENDENT_PRIMARY,
+                item_ids_i=[str(index) for index in range(200)],
+                item_ids_j=[str(index) for index in range(200)],
             )
         )
     assert abs(np.mean(estimates) - np.mean((p_i - p_j) ** 2)) < 0.01

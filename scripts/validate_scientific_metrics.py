@@ -43,6 +43,7 @@ def main() -> int:
 
     true_distance = float(np.mean((p0 - pj) ** 2))
     estimates = []
+    item_ids = [f"item-{index}" for index in range(p0.size)]
     for _ in range(4_000):
         errors_0 = rng.random((p0.size, 2)) < p0[:, None]
         errors_j = rng.random((pj.size, 2)) < pj[:, None]
@@ -51,6 +52,8 @@ def main() -> int:
                 errors_0,
                 errors_j,
                 seed_regime=SeedRegime.INDEPENDENT_PRIMARY,
+                item_ids_i=item_ids,
+                item_ids_j=item_ids,
             )
         )
     estimate_mean = float(np.mean(estimates))
@@ -73,6 +76,8 @@ def main() -> int:
             errors_0,
             errors_j,
             seed_regime=SeedRegime.MATCHED_COUPLING_SECONDARY,
+            item_ids_i=item_ids,
+            item_ids_j=item_ids,
         )
     except ValueError:
         matched_rejected = True
