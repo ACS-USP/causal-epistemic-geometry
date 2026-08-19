@@ -35,7 +35,46 @@ def _wilson(successes: int, total: int) -> tuple[float, float] | None:
 
 
 def _charcount(run: Path) -> dict[str, Any]:
-    rows = [json.loads(line) for line in (run / "journal.jsonl").read_text().splitlines() if line]
+    journal_path = run / "journal.jsonl"
+    if not journal_path.exists():
+        fields = [
+            "stratum",
+            "n",
+            "valid",
+            "valid_rate",
+            "correct",
+            "wrong",
+            "conditional_accuracy",
+            "raw_accuracy",
+            "invalid_format",
+            "truncated",
+            "runtime_error",
+            "token_mean",
+            "token_median",
+            "token_max",
+            "valid_ci95",
+            "promising",
+        ]
+        with (OUT / "CHARCOUNT_RESULTS.csv").open("w", newline="", encoding="utf-8") as handle:
+            csv.DictWriter(handle, fieldnames=fields).writeheader()
+        report = """# Character-count microbench report
+
+The authorized character-count worker was interrupted by the V4 hard cost gate
+before its first complete trajectory was journaled. This is an operational
+non-result, not evidence that character counting is semantically good or bad.
+No stratum was evaluated and no stratum was selected.
+
+Decision sentinel for this bounded run: **CHARCOUNT_MICROBENCH_NOT_PROMISING**
+(not evaluated; cost-gated).
+"""
+        (OUT / "CHARCOUNT_REPORT.md").write_text(report, encoding="utf-8")
+        return {
+            "status": "CHARCOUNT_MICROBENCH_NOT_PROMISING",
+            "evaluation_status": "INTERRUPTED_COST_GATE",
+            "strata": [],
+        }
+    rows = [json.loads(line) for line in journal_path.read_text().splitlines() if line]
+    complete_run = len(rows) == 30
     by_stratum: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
         by_stratum[str(row["stratum"])].append(row)
@@ -86,6 +125,18 @@ def _charcount(run: Path) -> dict[str, Any]:
         "",
         "This is a development-only screen; n=10 per stratum is not a scientific estimate.",
         "",
+        (
+            f"Only {len(rows)}/30 authorized trajectories were journaled before the hard "
+            "cost gate. The short and medium strata are present; the long stratum was not "
+            "run. These partial rows are retained as engineering diagnostics. The V4 "
+            "qualification gate was not applied to this incomplete run."
+            if not complete_run
+            else (
+                "All 30 authorized trajectories are present; the frozen V4 screen is "
+                "reported below."
+            )
+        ),
+        "",
         "| stratum | valid | correct | wrong | invalid | trunc. | conditional accuracy | "
         "mean tokens |",
         "|---|---:|---:|---:|---:|---:|---:|---:|",
@@ -98,9 +149,13 @@ def _charcount(run: Path) -> dict[str, Any]:
         )
     report += [
         "",
-        f"Decision: **{status}**",
+        (
+            "Decision: **CHARCOUNT_MICROBENCH_NOT_PROMISING** (partial run; not evaluated)."
+            if not complete_run
+            else f"Decision: **{status}**"
+        ),
         "",
-        "No stratum was selected from model outcomes if the screen fails. No steering was run.",
+        "No stratum was selected and no steering was run.",
     ]
     (OUT / "CHARCOUNT_REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     try:
@@ -120,7 +175,13 @@ def _charcount(run: Path) -> dict[str, Any]:
         plt.close(figure)
     except ImportError:
         pass
-    return {"status": status, "strata": summary}
+    return {
+        "status": "CHARCOUNT_MICROBENCH_NOT_PROMISING" if not complete_run else status,
+        "evaluation_status": "PARTIAL_COST_GATE" if not complete_run else "COMPLETE",
+        "complete": complete_run,
+        "completed_rows": len(rows),
+        "strata": summary,
+    }
 
 
 def _rank(values: np.ndarray) -> np.ndarray:
