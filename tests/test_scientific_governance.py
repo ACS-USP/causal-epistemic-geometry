@@ -24,8 +24,8 @@ def test_project_state_and_generated_status_are_current() -> None:
     state = yaml.safe_load((ROOT / "project_state.yaml").read_text(encoding="utf-8"))
     assert state["project"]["claim_status"] == "NONE_FROZEN"
     assert state["scientific_firewall"]["confirmatory_holdout"] == "UNTOUCHED"
-    assert state["current"]["gpu_work_authorized"] is True
-    assert state["current"]["workstream"] == "POSITIVE_CONTROL_WEEKDAYS_LOCKED"
+    assert state["current"]["gpu_work_authorized"] is False
+    assert state["current"]["workstream"] == "POSITIVE_CONTROL_WEEKDAYS_BLOCKED_MODEL_ACCESS"
 
 
 def test_registry_and_document_audits_pass() -> None:

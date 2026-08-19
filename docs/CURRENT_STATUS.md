@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule.
+Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule. The bounded published weekday positive control was then blocked before inference by gated Llama model-content access (HTTP 401); no positive-control outcomes were collected. The additive operator check passed separately.
 
-- Workstream: `POSITIVE_CONTROL_WEEKDAYS_LOCKED`
+- Workstream: `POSITIVE_CONTROL_WEEKDAYS_BLOCKED_MODEL_ACCESS`
 - RunPod: `STOPPED`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Verify gated model access remotely and cost, then execute only the bounded Gate 2 weekday reproduction. Do not run original Q1 steering, the substrate race, Q2, or the holdout.
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: Principal review. If desired, provide authenticated access to the exact pinned Llama model and re-run only the frozen bounded Gate 2 control. Do not run original Q1 steering, the substrate race, Q2, or the holdout.
 
 ## Scientific program
 
@@ -42,7 +42,7 @@ Gate 1 semantic accounting was repaired offline without new inference. Character
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `POSITIVE_CONTROL_WEEKDAYS_DEVELOPMENT_LOCK`
+- `current_task`: `POSITIVE_CONTROL_WEEKDAYS_BLOCKED_MODEL_ACCESS`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
