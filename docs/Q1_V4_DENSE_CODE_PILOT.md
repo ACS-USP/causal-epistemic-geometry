@@ -2,6 +2,13 @@
 
 Status: **BLOCKED BEFORE GPU — `DENSE_CODE_PILOT_BLOCKED_BY_EVALUATOR`**
 
+An authorized follow-up attempted to provision the required disposable Docker
+sandbox on macOS. Homebrew installed Colima, Docker CLI, and the QEMU fallback,
+but neither the `vz` nor `qemu` Colima profile remained alive long enough to
+expose a Docker daemon. The follow-up therefore stopped with
+`DENSE_CODE_PILOT_BLOCKED_BY_SANDBOX` and zero GPU spend. See the provisioning
+and validation reports under `review/q1_dense_code_pilot/`.
+
 This branch records the model-free gate for the proposed five-problem, two-seed
 baseline-only code-generation pilot. No Qwen inference, activation extraction,
 steering, geometry, holdout access, or RunPod start is part of this result.
