@@ -9,7 +9,7 @@ campaign:
   offset: 0
   max_items: 20
   rollout_seeds: [0]
-  max_new_tokens: 8192  # frozen only after the completion diagnostic ladder
+  max_new_tokens: 16384  # corrected CRUXEval Q1 smoke cap; fixed prospectively
   completion_diagnostic_caps: [8192, 16384, 32768]
 
 model:

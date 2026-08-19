@@ -62,8 +62,12 @@ PYTHONPATH=src python scripts/validate_external_benchmarks.py
 PYTHONPATH=src pytest -q tests/test_external_benchmarks.py
 ```
 
-The next remote step, after the Pod is deliberately restarted, is the bounded
-completion diagnostic. It must finish before a new 20-item smoke is launched:
+The completion diagnostics are complete and remain diagnostic-only. The currently
+authorized remote step is the corrected CRUXEval Q1 smoke: 20 new items, selected
+with `--offset 20` so neither the completion-diagnostic items nor the old 2048-token
+smoke items are reused, and a cap fixed prospectively at `16384`.
+
+The historical diagnostic command was:
 
 ```bash
 python scripts/run_completion_diagnostics.py \
@@ -73,11 +77,10 @@ python scripts/run_completion_diagnostics.py \
   --output review/external_benchmark_qualification/cruxeval_completion_diagnostic
 ```
 
-Repeat for each practical candidate. The script retries the exact same item and
-seed only when the previous cap truncates, and records each attempt. Select the
-smallest cap safely above the observed natural completion lengths, without using
-accuracy or steering outcomes. Before restarting Q1, record the proposed cap,
-projected wall time, and projected GPU cost for principal review.
+The script retries the exact same item and seed only when the previous cap
+truncates, and records each attempt. Diagnostic outcomes never enter qualification
+tables. The CRUXEval cap correction is an explicit prospective instrument decision,
+not an outcome-driven tuning step.
 If any diagnostic item requires 32,768, the candidate receives an explicit
 `high_cap_warning` and must be treated as operationally expensive even though it
 is not scientifically rejected.
@@ -90,15 +93,16 @@ python scripts/run_external_qualification.py \
   --candidate CRUXEval \
   --data /workspace/causal-epistemic-geometry/data/cruxeval_output.jsonl \
   --stage q1_smoke \
-  --max-new-tokens 8192 \
-  --output review/external_benchmark_qualification/cruxeval_q1
+  --offset 20 \
+  --max-new-tokens 16384 \
+  --output review/external_benchmark_qualification/cruxeval_q1_corrected_16384
 
 python scripts/run_external_qualification.py \
   --candidate CRUXEval \
   --data /workspace/causal-epistemic-geometry/data/cruxeval_output.jsonl \
   --stage q2_qualification \
   --offset 20 \
-  --max-new-tokens 8192 \
+  --max-new-tokens 16384 \
   --output review/external_benchmark_qualification/cruxeval_q2
 ```
 
