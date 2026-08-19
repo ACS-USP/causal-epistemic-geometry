@@ -43,6 +43,7 @@ from epistemic_geometry.types import BenchmarkItem  # noqa: E402
 
 MODEL_ID = "Qwen/Qwen3-8B"
 MODEL_REVISION = "b968826d9c46dd6066d109eabc6255188de91218"
+SOURCE_COMMIT_OVERRIDE = os.environ.get("CEG_SOURCE_COMMIT")
 GENERATION_CONFIG = {
     "model_id": MODEL_ID,
     "model_revision": MODEL_REVISION,
@@ -190,7 +191,8 @@ def main() -> int:
         },
         "steering": False,
         "holdout": False,
-        "source_commit": git_metadata(ROOT).get("git_commit"),
+        "source_commit": SOURCE_COMMIT_OVERRIDE or git_metadata(ROOT).get("git_commit"),
+        "source_commit_source": "environment_override" if SOURCE_COMMIT_OVERRIDE else "git_metadata",
     }
     identity_hash = stable_digest("EXTERNAL-RUN-IDENTITY", canonical_json(identity))
     manifest_path = output / "manifest.json"
