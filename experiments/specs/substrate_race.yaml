@@ -1,0 +1,29 @@
+schema_version: 1
+id: MODEL_POLICY_BENCHMARK_SUBSTRATE_RACE
+status: PROSPECTIVE_NOT_AUTHORIZED
+stage: EXPLORATION
+arms:
+  models_policies:
+    - qwen3_8b_native_thinking
+    - qwen3_8b_full_nonthinking_generation
+    - llama_3_1_8b_positive_control_policy
+  instruments:
+    - fresh_character_count
+    - fresh_cruxeval_semantic
+    - dense_code_only_after_safe_evaluator
+successive_halving:
+  stage_1_items_per_arm: 5
+  stage_2_additional_items_per_survivor: 15
+  final_rollout_seeds_for_best_arms: 2
+  maximum_best_arms: 2
+objectives:
+  - high_valid_completion
+  - genuine_correct_and_wrong_mass
+  - deterministic_evaluator
+  - low_token_and_gpu_cost
+  - baseline_resampling_structure
+selection_prohibitions:
+  - closest_to_55_percent_as_sole_criterion
+  - outcome_dependent_prompt_tuning
+  - truncation_as_difficulty
+

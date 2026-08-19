@@ -1,0 +1,45 @@
+schema_version: 1
+id: FIRST_MICRO_Q1
+status: PROSPECTIVE_REQUIRES_INSTRUMENT_AND_POSITIVE_CONTROL
+stage: DEVELOPMENT_LOCK
+sample:
+  problems_min: 20
+  problems_max: 50
+  exact_value_frozen_before_run: true
+conditions:
+  - baseline_independent_seed_bank_a
+  - baseline_independent_seed_bank_b
+  - positive_alpha_direction
+  - negative_alpha_direction
+  - norm_matched_random_direction
+  - alpha_zero_identity
+seed_regimes:
+  primary: INDEPENDENT_PRIMARY
+  secondary: MATCHED_COUPLING_SECONDARY
+required_controls:
+  - published_positive_control_implementation
+  - activation_manipulation_check
+  - hook_lifecycle
+  - alpha_zero_identity
+primary_estimands:
+  - mean_error_rate
+  - repeated_baseline_oracle
+  - oracle_gain_g_j
+  - competence_adjusted_complementarity_c_j
+  - unbiased_two_rollout_propensity_distance
+  - paired_hard_error_table
+requirements_to_freeze:
+  - qualified_objective_instrument
+  - competence_tolerance
+  - direction_constructor
+  - layer
+  - alpha
+  - parser_evaluator
+  - seed_banks
+  - prospective_futility_rule
+forbidden:
+  - layer_sweep
+  - alpha_sweep
+  - direction_selection_on_evaluation_outcomes
+  - confirmatory_language
+

@@ -1,0 +1,34 @@
+schema_version: 1
+id: FUTURE_Q2_GEOMETRY
+status: CLOSED_UNTIL_IDENTIFIABLE_MICRO_Q1
+stage: FUTURE
+question: Does intervention geometry predict held-out semantic error-profile geometry?
+metric_ladder:
+  - id: flat
+    metrics:
+      - cosine_distance
+      - normalized_euclidean_distance
+  - id: activation_covariance
+    metric: v_transpose_sigma_inverse_w
+    requirements:
+      - held_out_covariance_data
+      - regularization_frozen
+  - id: behavioral_pullback
+    metric: v_transpose_j_transpose_g_y_j_w
+    alternatives:
+      - prospectively_frozen_finite_difference
+matrix_inference:
+  primary: direction_label_permutation_qap_mantel_style
+  permutation_unit: intervention_direction_label
+  iid_pairwise_p_values: forbidden
+  dyadic_regression: secondary_only
+requirements:
+  - q1_effect_identified_beyond_resampling
+  - multiple_pre_specified_directions
+  - held_out_error_profiles
+  - no_adaptive_metric_selection
+forbidden:
+  - manifold_api_without_empirical_need
+  - committee_search
+  - giant_layer_vector_alpha_grid
+

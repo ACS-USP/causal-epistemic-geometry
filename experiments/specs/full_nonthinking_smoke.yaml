@@ -1,0 +1,36 @@
+schema_version: 1
+id: FULL_NONTHINKING_SMOKE
+status: PROSPECTIVE_NOT_AUTHORIZED
+stage: EXPLORATION
+question: Does full non-thinking generation yield completed genuine errors that first-state readout missed?
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+arms:
+  - id: QWEN_NATIVE_THINKING
+    enable_thinking: true
+  - id: QWEN_FULL_NONTHINKING
+    enable_thinking: false
+policy:
+  generation: full
+  prompts_frozen_before_outcomes: true
+  token_cap_role: operational_ceiling_not_difficulty
+instruments:
+  - fresh_character_count
+  - fresh_cruxeval_semantic
+  - objective_livebench_optional_if_already_supported
+successive_halving:
+  stage_1_items_per_arm: 5
+  stage_2_additional_items_for_survivors: 15
+screen:
+  require_valid_completion: true
+  require_genuine_correct_and_wrong: true
+  reject_truncation_dominated: true
+forbidden:
+  - steering
+  - activation_collection
+  - prompt_tuning_after_outcomes
+  - cap_tuning_for_accuracy
+

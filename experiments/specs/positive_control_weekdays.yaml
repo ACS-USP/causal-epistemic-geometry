@@ -1,0 +1,32 @@
+schema_version: 1
+id: PUBLISHED_POSITIVE_CONTROL_WEEKDAYS
+status: PROSPECTIVE_DEVELOPMENT_LOCK_REQUIRED
+stage: DEVELOPMENT_LOCK
+source:
+  paper: arXiv:2605.05115
+  repository: https://github.com/goodfire-ai/causalab
+  branch: manifold_steering
+  commit: RESOLVE_AND_FREEZE_BEFORE_EXECUTION
+model:
+  id: meta-llama/Llama-3.1-8B-Instruct
+  revision: RESOLVE_AND_FREEZE_BEFORE_EXECUTION
+task: upstream_weekdays_8b_pipeline
+method: upstream_manifold_path_steering
+outcomes:
+  - weekday_output_probability_path
+  - endpoint_target_probability
+  - top1_weekday_legibility
+controls:
+  - unintervened
+  - upstream_linear_path
+  - upstream_shuffled_or_off_structure_control
+  - identity_intervention
+pass_rule: FREEZE_FROM_PUBLISHED_EFFECT_AND_NUMERICAL_TOLERANCE_BEFORE_RUN
+interpretation:
+  pass: intervention_stack_validated_on_published_adjacent_effect
+  fail: original_q1_null_not_interpretable
+forbidden:
+  - adapting_result_to_qwen_during_replication
+  - treating_replication_as_q1
+  - importing_manifold_metric_as_default_q2
+
