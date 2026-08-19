@@ -8,13 +8,13 @@
 
 ## Current work
 
-The offline scientific rearchitecture is complete: historical instruments are classified, statistical ambiguities are repaired, and a prospective staged evidence ladder is frozen for principal review.
+Gate 1 is prospectively frozen for a bounded full non-thinking smoke on fresh long character-count and fresh CRUXEval semantic items. Only this exploration gate is authorized; outcomes must be reviewed before any positive control or causal work.
 
-- Workstream: `SCIENTIFIC_REARCHITECTURE_COMPLETE`
+- Workstream: `FULL_NONTHINKING_SMOKE`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal review. If accepted, separately authorize only the five-item-per-arm full non-thinking generation smoke; this branch authorizes no model run.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute only the staged Gate 1 smoke after the pre-outcome source commit; then stop the Pod and return the compact review artifact to the principal.
 
 ## Scientific program
 
@@ -33,6 +33,7 @@ The offline scientific rearchitecture is complete: historical instruments are cl
 | `EXTERNAL_BENCHMARK_SEARCH` | `CLOSED_DEVELOPMENT` | CRUXEval low-cap records were reclassified; generous-cap diagnostics exposed saturation and format sensitivity. No steering was run. |
 | `Q1_V4_MICROBENCH` | `CLOSED_DEVELOPMENT` | Character counting saturated semantically and exposed parser artifacts. A tiny weekday activation association is descriptive only and is being statistically reanalyzed for tied-rank correctness. |
 | `Q1_V4_DENSE_CODE` | `PAUSED_INFRASTRUCTURE` | Nested per-test outcomes are instrument-promising, but safe objective execution is not production-ready. No model pilot was run. |
+| `FULL_NONTHINKING_SMOKE` | `IN_PROGRESS` | Prospective Gate 1 exploration: full autoregressive Qwen generation with thinking disabled on fresh long character-count and fresh CRUXEval items; classification and outcomes are not yet recorded. |
 
 ## Scientific firewall
 
@@ -41,7 +42,7 @@ The offline scientific rearchitecture is complete: historical instruments are cl
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `OFFLINE_ANALYSIS_ONLY`
+- `current_task`: `FULL_NONTHINKING_SMOKE_GATE_1`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

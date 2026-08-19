@@ -218,6 +218,7 @@ def test_seeded_reasoning_generation_records_raw_trajectory_and_parse_fields(tin
     assert output_a.metadata["generation_seed"] == 123
     assert output_a.metadata["generated_token_ids"]
 
+
     view = ReasoningView(
         latent_id="MODREG-R:depth_4:tiny",
         view_id="MODREG-R:depth_4:tiny:canonical",
@@ -243,6 +244,23 @@ def test_seeded_reasoning_generation_records_raw_trajectory_and_parse_fields(tin
     view_output = tiny_backend.generate_reasoning_view(view, sampling_seed=123)
     assert view_output.metadata["view_id"] == view.view_id
     assert view_output.metadata["source_prompt_hash"] == view.prompt_hash
+
+
+def test_seeded_full_generation_supports_explicit_nonthinking_mode(tiny_backend) -> None:
+    tiny_backend.config = replace(
+        tiny_backend.config,
+        enable_thinking=False,
+        do_sample=True,
+        max_new_tokens=2,
+        temperature=0.6,
+        top_p=0.95,
+        top_k=20,
+        min_p=0.0,
+    )
+    item = BenchmarkItem(id="nonthinking-tiny", prompt="alpha beta", target="3")
+    output = tiny_backend.generate_reasoning(item, sampling_seed=321)
+    assert output.metadata["enable_thinking"] is False
+    assert output.metadata["generated_token_ids"]
 
 
 def test_batched_reasoning_preserves_per_row_seed_streams(tiny_backend) -> None:

@@ -8,6 +8,7 @@ import pytest
 
 from epistemic_geometry.benchmarks.external.adapters import adapter_for, candidate_specs
 from epistemic_geometry.benchmarks.external.base import (
+    ExternalItem,
     ExternalStatus,
     score_external_response,
 )
@@ -59,6 +60,22 @@ def test_python_literal_evaluator_is_semantic_and_does_not_execute_code() -> Non
         item, "FINAL: __import__('os').system('false')", rollout_seed=0
     )
     assert malicious.status == ExternalStatus.INVALID_FORMAT
+
+
+def test_python_literal_contract_preserves_string_quotes_and_structure() -> None:
+    item = ExternalItem(
+        item_id="string-contract",
+        benchmark="CRUXEval",
+        subtask="output_prediction",
+        prompt="fixture",
+        reference_answer="'2,4,2,0,'",
+        evaluator="python_literal",
+        source_revision="fixture",
+    )
+    quoted = score_external_response(item, "FINAL: '2,4,2,0,'", rollout_seed=0)
+    unquoted = score_external_response(item, "FINAL: 2,4,2,0,", rollout_seed=0)
+    assert quoted.status == ExternalStatus.VALID_CORRECT
+    assert unquoted.status == ExternalStatus.VALID_WRONG
 
 
 def test_two_seed_metrics_report_pair_counts_and_headroom() -> None:

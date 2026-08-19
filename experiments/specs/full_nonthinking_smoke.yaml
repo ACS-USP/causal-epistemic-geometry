@@ -1,36 +1,83 @@
-schema_version: 1
+schema_version: 2
 id: FULL_NONTHINKING_SMOKE
-status: PROSPECTIVE_NOT_AUTHORIZED
+status: PROSPECTIVE_AUTHORIZED
 stage: EXPLORATION
-question: Does full non-thinking generation yield completed genuine errors that first-state readout missed?
+question: >-
+  Does full autoregressive generation with Qwen thinking disabled produce
+  finished, objectively scorable semantic errors on a fresh instrument?
 model:
   id: Qwen/Qwen3-8B
   revision: b968826d9c46dd6066d109eabc6255188de91218
   dtype: bf16
   quantization: none
-arms:
-  - id: QWEN_NATIVE_THINKING
-    enable_thinking: true
-  - id: QWEN_FULL_NONTHINKING
-    enable_thinking: false
-policy:
-  generation: full
-  prompts_frozen_before_outcomes: true
-  token_cap_role: operational_ceiling_not_difficulty
+  prompt_mode: chat
+generation:
+  enable_thinking: false
+  full_autoregressive: true
+  max_new_tokens: 4096
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  seed_policy: stable_seed(FULL-NONTHINKING-SMOKE, model_revision, instrument, item_id, rollout_index)
 instruments:
-  - fresh_character_count
-  - fresh_cruxeval_semantic
-  - objective_livebench_optional_if_already_supported
+  - id: FRESH_PSEUDOWORD_LONG
+    benchmark: procedural character count
+    n_items: 20
+    item_policy: fresh deterministic long pseudowords; no historical V4 IDs
+    evaluator: exact integer oracle with strict FINAL parser
+  - id: CRUXEVAL_SEMANTIC
+    benchmark: CRUXEval
+    n_items: 20
+    item_policy: fresh unseen official item IDs; historical diagnostic IDs excluded
+    evaluator: deterministic type-aware Python-literal evaluator
+    llm_judge: false
 successive_halving:
-  stage_1_items_per_arm: 5
-  stage_2_additional_items_for_survivors: 15
-screen:
-  require_valid_completion: true
-  require_genuine_correct_and_wrong: true
-  reject_truncation_dominated: true
-forbidden:
-  - steering
-  - activation_collection
-  - prompt_tuning_after_outcomes
-  - cap_tuning_for_accuracy
-
+  stage_1:
+    items_per_instrument: 5
+    purpose: technical_continuation_only
+    pass:
+      semantically_evaluable_at_least: 4
+      failure_dominance: failures_must_not_dominate
+    accuracy_gate: false
+  stage_2:
+    additional_items_if_stage_1_passes: 15
+    purpose: full_n20_instrument_classification
+classification_after_full_n20_only:
+  PROMISING:
+    valid_completion_minimum: 0.90
+    genuine_correct_minimum: 2
+    genuine_wrong_minimum: 2
+    mechanical_failures_must_not_dominate: true
+  SATURATED:
+    valid_completion_minimum: 0.90
+    genuine_wrong_maximum: 1
+  FLOOR:
+    valid_completion_minimum: 0.90
+    genuine_correct_maximum: 1
+  MECHANICAL_OR_COMPLETION_FAILURE:
+    valid_completion_maximum: 0.89
+native_thinking_reference:
+  enabled_only_if: full_nonthinking_classification_is_PROMISING
+  items: first_5_frozen_item_ids_per_promising_instrument
+  rollout_count: 5
+  seed_namespace: FULL-NONTHINKING-SMOKE-NATIVE-THINKING-REFERENCE
+  purpose: descriptive_channel_reference_only
+  never_expands_automatically: true
+cost:
+  target_usd: 0.15
+  hard_stop_usd: 0.30
+  estimated_trajectories_before_start: 50
+  gpu_rate_usd_per_a40_hour: 0.44
+state_boundary:
+  steering: NOT_AUTHORIZED
+  activation_collection: NOT_AUTHORIZED
+  pca: NOT_AUTHORIZED
+  geometry: NOT_AUTHORIZED
+  q2: NOT_AUTHORIZED
+  confirmatory_holdout: UNTOUCHED
+  livebench: NOT_IN_THIS_GATE
+  livecodebench: NOT_IN_THIS_GATE
+  benchmark_prompt_changes_after_outcomes: FORBIDDEN
+  cap_tuning_after_outcomes: FORBIDDEN

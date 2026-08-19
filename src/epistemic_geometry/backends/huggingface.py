@@ -270,15 +270,13 @@ class HuggingFaceBackend(ModelBackend):
         sampling_seed: int,
         max_new_tokens: int | None = None,
     ) -> BackendOutput:
-        """Generate one seeded reasoning trajectory without any intervention.
+        """Generate one seeded full autoregressive trajectory without intervention.
 
-        This is the baseline-only execution primitive for Q1 V3 calibration.
-        One-shot steering is intentionally not accepted here until the new
-        reasoning instrument qualifies.
+        The same primitive serves the historical thinking-enabled reasoning
+        path and the prospective full non-thinking smoke.  ``enable_thinking``
+        remains explicit in the rendered chat template and in provenance; no
+        caller may silently switch the response mode.
         """
-
-        if self.config.enable_thinking is not True:
-            raise ValueError("Q1 V3 reasoning generation requires enable_thinking=true")
         if not self.config.do_sample:
             raise ValueError("Q1 V3 canonical reasoning generation requires do_sample=true")
         encoded, _rendered_prompt, prompt_hash = self._encode_item(item)
@@ -326,7 +324,7 @@ class HuggingFaceBackend(ModelBackend):
                 "model": self.model_name,
                 "model_revision": self.model_revision or "UNKNOWN",
                 "prompt_mode": self.config.prompt_mode,
-                "enable_thinking": True,
+                "enable_thinking": self.config.enable_thinking,
                 "rendered_prompt_hash": prompt_hash,
                 "input_token_count": input_length,
                 "generated_token_count": int(new_tokens.numel()),

@@ -119,3 +119,18 @@ experiments:
     cost_usd: 0.0
     holdout_status: UNTOUCHED
     next_action: Principal review; no model execution is authorized by this entry.
+
+  - id: FULL_NONTHINKING_SMOKE
+    version: GATE-1
+    stage: EXPLORATION
+    question: Can full non-thinking generation produce finished, genuine semantic errors?
+    instrument: Fresh long character-count and fresh CRUXEval semantic items
+    model_policy: Qwen3-8B, BF16, sampled full autoregressive generation, thinking disabled
+    status: IN_PROGRESS
+    outcome: Prospective specification committed; model outcomes not yet recorded.
+    scientific_interpretation: Exploration-only instrument gate; no causal or steering claim.
+    source_commit: PROSPECTIVE_GATE_COMMIT
+    artifact: review/full_nonthinking_smoke/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    next_action: Execute bounded Stage 1/Stage 2 smoke only, then stop for principal review.

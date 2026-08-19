@@ -106,3 +106,47 @@ def generate_character_count_manifest(
         "items": items,
         "manifest_hash": digest,
     }
+
+
+def generate_full_nonthinking_smoke_manifest(
+    *, seed: int = 20260819, n_items: int = 20
+) -> dict[str, Any]:
+    """Generate the fresh, long-pseudoword Gate 1 smoke manifest.
+
+    This is intentionally a separate generator entry point.  Historical V4
+    manifests retain their original prompt wording and IDs; the Gate 1
+    manifest has a new seed namespace, new IDs, and an explicit answer-only
+    contract.  The model still performs ordinary full autoregressive
+    generation; only the Qwen chat-template thinking mode is disabled.
+    """
+
+    if n_items <= 0:
+        raise ValueError("n_items must be positive")
+    stratum = "FRESH_PSEUDOWORD_LONG"
+    items: list[dict[str, Any]] = []
+    for index in range(n_items):
+        item_seed = stable_seed("FULL-NONTHINKING-SMOKE-CHARCOUNT", seed, stratum, index)
+        item = _make_item(stratum, index, seed=item_seed)
+        record = item.to_record()
+        record["item_id"] = f"gate1_full_nonthinking_charcount_{index:02d}"
+        record["prompt"] = (
+            f"How many times does the letter '{item.target_character}' appear in "
+            f"'{item.text}'?\nReturn exactly one integer in this form:\nFINAL: <integer>"
+        )
+        record["prompt_hash"] = stable_digest("V4-CHARCOUNT-PROMPT", record["prompt"])
+        record["item_hash"] = stable_digest(
+            "V4-CHARCOUNT-ITEM", canonical_json(record)
+        )
+        items.append(record)
+    digest = stable_digest("FULL-NONTHINKING-CHARCOUNT-MANIFEST", canonical_json(items))
+    return {
+        "suite": "Q1_GATE_1_FULL_NONTHINKING_SMOKE",
+        "instrument": "FRESH_PSEUDOWORD_LONG",
+        "generator_version": "v4-charcount-gate1-nonthinking-1",
+        "seed": seed,
+        "stratum": stratum,
+        "n_items": n_items,
+        "items": items,
+        "manifest_hash": digest,
+        "prompt_policy": "exact_integer_final_without_reasoning_instruction",
+    }

@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-The offline scientific rearchitecture is complete: historical instruments are classified, statistical ambiguities are repaired, and a prospective staged evidence ladder is frozen for principal review.
+Gate 1 is prospectively frozen for a bounded full non-thinking smoke on fresh long character-count and fresh CRUXEval semantic items. Only this exploration gate is authorized; outcomes must be reviewed before any positive control or causal work.
 
-**Next authorized action:** Principal review. If accepted, separately authorize only the five-item-per-arm full non-thinking generation smoke; this branch authorizes no model run.
+**Next authorized action:** Execute only the staged Gate 1 smoke after the pre-outcome source commit; then stop the Pod and return the compact review artifact to the principal.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
