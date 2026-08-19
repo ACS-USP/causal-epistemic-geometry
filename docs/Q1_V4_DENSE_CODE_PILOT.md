@@ -5,7 +5,7 @@ Status: **BLOCKED BEFORE GPU — `DENSE_CODE_PILOT_BLOCKED_BY_EVALUATOR`**
 An authorized follow-up attempted to provision the required disposable Docker
 sandbox on macOS. Homebrew installed Colima, Docker CLI, and the QEMU fallback,
 but neither the `vz` nor `qemu` Colima profile remained alive long enough to
-expose a Docker daemon. The follow-up therefore stopped with
+expose a validated Docker daemon. The follow-up therefore stopped with
 `DENSE_CODE_PILOT_BLOCKED_BY_SANDBOX` and zero GPU spend. See the provisioning
 and validation reports under `review/q1_dense_code_pilot/`.
 
@@ -37,9 +37,12 @@ process with time and resource limits, but does not by itself establish the
 required no-network, no-secrets, no-arbitrary-filesystem boundary. The official
 documentation recommends Docker for safe execution.
 
-The current Mac has no Docker, Podman, or Firejail executable. A local
-`sandbox-exec` profile has not been validated as an equivalent evaluator for the
-Linux RunPod execution environment and is therefore not substituted silently.
+The Mac now has a fail-closed Docker/Colima template, but no approved running
+daemon or immutable evaluator image. The Dockerfile deliberately retains an
+unresolved base-image digest, and its wrapper requires GNU `timeout`/`gtimeout`,
+which stock macOS does not provide. A local `sandbox-exec` profile has not been
+validated as equivalent to a disposable Linux evaluator and is not substituted
+silently.
 
 ## Decision
 
@@ -47,16 +50,17 @@ The pilot cannot safely select five items or execute generated programs yet.
 This is a pre-GPU evaluator gate, not a benchmark failure and not a scientific
 result. No items were selected, no model outputs exist, and no cost was spent.
 
-The next authorized implementation step is to provide one of:
+If dense code is prioritized again after the scientific portfolio review, the
+preferred implementation is:
 
-1. the official EvalPlus Docker image and a verified remote execution wrapper
-   that emits the full per-test detail vector; or
-2. another already audited evaluator with equivalent isolation and deterministic
-   per-test outcomes.
+1. generate model outputs on the isolated GPU host without executing them;
+2. evaluate them in a disposable, credential-free Linux CPU VM or audited
+   equivalent with no network or host mounts;
+3. recover only hashed per-test outcomes and destroy the evaluator.
 
-After that gate passes, the exact five-item selection rule, frozen manifest,
-Qwen generation policy, and US$0.50 hard cost ceiling from the principal review
-remain unchanged. No outcome-dependent benchmark selection is permitted.
+The old five-item manifest and cost ceiling remain historical snapshots. A
+future run requires a fresh prospective authorization and may not reuse them as
+silent current protocol. No outcome-dependent benchmark selection is permitted.
 
 ## Scientific firewall
 

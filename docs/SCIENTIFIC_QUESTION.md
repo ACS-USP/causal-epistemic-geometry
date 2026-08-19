@@ -1,14 +1,13 @@
 # Scientific question
 
-## Q1: the current development kill-test
+## Q1: the minimal development kill-test
 
-The earlier MMLU-Pro V1–V1.2 multiple-choice instrument and the E3-10 direct
-answer-logit instrument are closed as development instruments. The active
-measurement redesign is Q1 V3: a stochastic reasoning policy with exact
-procedural oracles, matched/independent rollout seeds, and a deterministic
-`FINAL:` answer contract. Instrument calibration must pass before any
-activation direction is constructed. See
-[Q1_V3_REASONING_AGENT_PROTOCOL.md](Q1_V3_REASONING_AGENT_PROTOCOL.md).
+MMLU-Pro V1–V1.2, E3-10 V2, the V3 procedural reasoning agent, and V4
+micro-instruments are closed or paused development instruments. None produced a
+scientific steering result. The current task is an offline scientific
+rearchitecture; no model execution is authorized. The normative current
+framing is in [SCIENTIFIC_CONSTITUTION.md](SCIENTIFIC_CONSTITUTION.md), with
+history in [INSTRUMENT_HISTORY.md](INSTRUMENT_HISTORY.md).
 
 For one frozen model `f_theta`, compare:
 
@@ -27,7 +26,7 @@ This is a development experiment, not a confirmatory claim. The useful regime,
 if one exists, must preserve individual accuracy approximately while changing
 the error profile enough to create measurable complementarity.
 
-For Q1 V3, each condition is a sampled policy
+For a future stochastic Q1, each condition is a sampled policy
 `(trajectory, y_hat) ~ pi_theta,v(. | x, seed)`. Matched-seed baseline and
 treatment rollouts provide the causal pair; independent seeds estimate error
 propensity and repeated-agent complementarity. The exact oracle and raw

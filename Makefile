@@ -1,7 +1,7 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python)
 RUFF ?= $(if $(wildcard .venv/bin/ruff),.venv/bin/ruff,ruff)
 
-.PHONY: test lint smoke doctor preflight preflight-v1-1 preflight-v1-2 tiny-smoke predeploy storage-check q1-v3-gate q1-v3-design q1-v3-engine-benchmark
+.PHONY: test lint smoke doctor preflight preflight-v1-1 preflight-v1-2 tiny-smoke predeploy storage-check q1-v3-gate q1-v3-design q1-v3-engine-benchmark state-check docs-check registry-check metrics-check scientific-audit
 
 test:
 	$(PYTHON) -m pytest -q
@@ -41,3 +41,17 @@ q1-v3-design:
 
 q1-v3-engine-benchmark:
 	$(PYTHON) scripts/benchmark_q1_v3_reasoning_engines.py
+
+state-check:
+	$(PYTHON) scripts/render_project_state.py --check
+
+docs-check:
+	$(PYTHON) scripts/check_docs.py
+
+registry-check:
+	$(PYTHON) scripts/check_experiment_registry.py
+
+metrics-check:
+	$(PYTHON) scripts/validate_scientific_metrics.py
+
+scientific-audit: state-check docs-check registry-check metrics-check
