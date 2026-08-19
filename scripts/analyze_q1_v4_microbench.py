@@ -17,6 +17,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
+from epistemic_geometry.benchmarks.v4.character_count import STRATA  # noqa: E402
 from epistemic_geometry.benchmarks.v4.geometry import conceptual_distance  # noqa: E402
 from epistemic_geometry.reproducibility import stable_seed  # noqa: E402
 
@@ -79,7 +80,30 @@ Decision sentinel for this bounded run: **CHARCOUNT_MICROBENCH_NOT_PROMISING**
     for row in rows:
         by_stratum[str(row["stratum"])].append(row)
     summary: list[dict[str, Any]] = []
-    for stratum, group in sorted(by_stratum.items()):
+    for stratum in STRATA:
+        group = by_stratum.get(stratum, [])
+        if not group:
+            summary.append(
+                {
+                    "stratum": stratum,
+                    "n": 0,
+                    "valid": 0,
+                    "valid_rate": None,
+                    "correct": 0,
+                    "wrong": 0,
+                    "conditional_accuracy": None,
+                    "raw_accuracy": None,
+                    "invalid_format": 0,
+                    "truncated": 0,
+                    "runtime_error": 0,
+                    "token_mean": None,
+                    "token_median": None,
+                    "token_max": None,
+                    "valid_ci95": None,
+                    "promising": False,
+                }
+            )
+            continue
         counts = Counter(row["status"] for row in group)
         valid = counts["VALID_CORRECT"] + counts["VALID_WRONG"]
         correct = counts["VALID_CORRECT"]
@@ -142,10 +166,15 @@ Decision sentinel for this bounded run: **CHARCOUNT_MICROBENCH_NOT_PROMISING**
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in summary:
+        valid_rate = f"{row['valid_rate']:.1%}" if row["valid_rate"] is not None else "not run"
+        token_mean = f"{row['token_mean']:.1f}" if row["token_mean"] is not None else "—"
         report.append(
-            f"| {row['stratum']} | {row['valid']}/{row['n']} ({row['valid_rate']:.1%}) | "
+            f"| {row['stratum']} | "
+            f"{row['valid']}/{row['n']} "
+            f"({valid_rate}) | "
             f"{row['correct']} | {row['wrong']} | {row['invalid_format']} | {row['truncated']} | "
-            f"{row['conditional_accuracy']} | {row['token_mean']:.1f} |"
+            f"{row['conditional_accuracy']} | "
+            f"{token_mean} |"
         )
     report += [
         "",
@@ -163,8 +192,16 @@ Decision sentinel for this bounded run: **CHARCOUNT_MICROBENCH_NOT_PROMISING**
 
         figure, axis = plt.subplots(figsize=(8, 4.5))
         names = [row["stratum"] for row in summary]
-        axis.bar(names, [row["valid_rate"] for row in summary], label="valid completion")
-        axis.bar(names, [row["wrong"] / row["n"] for row in summary], label="genuine wrong")
+        axis.bar(
+            names,
+            [row["valid_rate"] if row["valid_rate"] is not None else 0.0 for row in summary],
+            label="valid completion",
+        )
+        axis.bar(
+            names,
+            [row["wrong"] / row["n"] if row["n"] else 0.0 for row in summary],
+            label="genuine wrong",
+        )
         axis.set_ylim(0, 1)
         axis.set_ylabel("fraction of items")
         axis.set_title("V4 character-count development screen")
