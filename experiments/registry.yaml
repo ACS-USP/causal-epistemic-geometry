@@ -178,3 +178,23 @@ experiments:
         relative_reduction: 0.7688167419736623
         endpoint_sanity: 1.0
     next_action: Principal review; do not execute the substrate race, original Q1, Q2, or holdout.
+
+  - id: MODEL_POLICY_BENCHMARK_SUBSTRATE_RACE
+    version: GATE-3-INCREMENTAL
+    stage: EXPLORATION
+    question: >-
+      Which frozen model-policy plus objective semantic-error instrument
+      provides the cleanest development substrate for a later original
+      micro-Q1?
+    instrument: Fresh long character count and fresh CRUXEval semantic items
+    model_policy: Qwen3-8B full non-thinking versus Llama-3.1-8B-Instruct full generation
+    status: PROSPECTIVE
+    outcome: NOT_RUN
+    scientific_interpretation: >-
+      Baseline-only substrate selection. This race cannot establish steering,
+      complementarity, geometry, Q1, Q2, or collective utility.
+    source_commit: c881ee0
+    artifact: review/substrate_race/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    next_action: Execute only the frozen Gate 3 staged race, then stop for principal review.

@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule. An authenticated retry of the frozen published weekday positive control passed: manifold mean cumulative behavior distance was 0.3234 versus 1.3987 for linear steering, a 76.9% reduction, with 100% endpoint sanity. This validates one published intervention stack only; it is not an original Q1, Q2, or semantic-complementarity result.
+Gate 3 is authorized as a bounded, baseline-only incremental race between Qwen3-8B full non-thinking and Llama-3.1-8B-Instruct on two fresh common objective instruments. The purpose is development substrate selection; original activation steering, geometry, Q2, and the confirmatory holdout remain forbidden.
 
-- Workstream: `POSITIVE_CONTROL_WEEKDAYS_PASS_PRINCIPAL_REVIEW`
+- Workstream: `SUBSTRATE_RACE`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
+- GPU work authorized: `true`
 - New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the completed Gate 2 positive control. Do not run the substrate race, original Q1 steering, micro-Q1, Q2, or the holdout without a new explicit authorization.
+- Next authorized action: Execute the frozen Gate 3 Stage 1 -> Stage 2 -> at most two-cell Stage 3 substrate race after local manifests, model access, and cost checks pass.
 
 ## Scientific program
 
@@ -43,7 +43,7 @@ Gate 1 semantic accounting was repaired offline without new inference. Character
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `PRINCIPAL_REVIEW_AFTER_POSITIVE_CONTROL_PASS`
+- `current_task`: `GATE3_SUBSTRATE_RACE_BASELINE_ONLY`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

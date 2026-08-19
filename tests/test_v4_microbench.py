@@ -12,6 +12,8 @@ from epistemic_geometry.benchmarks.dense_code import (
 from epistemic_geometry.benchmarks.v4.character_count import (
     STRATA,
     generate_character_count_manifest,
+    generate_full_nonthinking_smoke_manifest,
+    generate_substrate_race_manifest,
 )
 from epistemic_geometry.benchmarks.v4.character_parser import parse_final_integer
 from epistemic_geometry.benchmarks.v4.geometry import (
@@ -28,10 +30,22 @@ def test_character_manifest_is_deterministic_and_exactly_balanced() -> None:
     assert len(first["items"]) == 30
     assert {item["stratum"] for item in first["items"]} == set(STRATA)
     assert all(
-        item["text"].count(item["target_character"]) == item["answer"]
-        for item in first["items"]
+        item["text"].count(item["target_character"]) == item["answer"] for item in first["items"]
     )
     assert len({item["item_hash"] for item in first["items"]}) == 30
+
+
+def test_substrate_race_character_manifest_is_fresh_and_deterministic() -> None:
+    first = generate_substrate_race_manifest(seed=20260820)
+    second = generate_substrate_race_manifest(seed=20260820)
+    historical = generate_full_nonthinking_smoke_manifest(seed=20260819)
+    assert first == second
+    assert first["generator_version"] == "v4-charcount-gate3-substrate-race-1"
+    assert {row["item_id"] for row in first["items"]}.isdisjoint(
+        row["item_id"] for row in historical["items"]
+    )
+    assert all(row["stratum"] == "FRESH_PSEUDOWORD_LONG" for row in first["items"])
+    assert all("Think as needed" not in row["prompt"] for row in first["items"])
 
 
 def test_geometry_manifest_and_distances() -> None:
@@ -62,7 +76,7 @@ def test_character_parser_accepts_only_explicit_final_variants() -> None:
     assert parse_final_integer("### Final Answer:\n**7**") == ("PARSED", 7, None)
     assert parse_final_integer("### ✅ FINAL: 2") == ("PARSED", 2, None)
     assert parse_final_integer("FINAL: 3\n") == ("PARSED", 3, None)
-    assert parse_final_integer("The answer is 3") [0] == "INVALID_FORMAT"
+    assert parse_final_integer("The answer is 3")[0] == "INVALID_FORMAT"
     assert parse_final_integer("FINAL: 3\nFINAL: 4")[0] == "INVALID_FORMAT"
     assert parse_final_integer("FINAL: five")[0] == "INVALID_FORMAT"
     assert parse_final_integer("<think>unfinished", truncated=False)[0] == "TRUNCATED_THINKING"

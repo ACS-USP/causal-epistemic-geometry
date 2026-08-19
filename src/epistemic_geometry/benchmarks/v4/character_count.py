@@ -134,9 +134,7 @@ def generate_full_nonthinking_smoke_manifest(
             f"'{item.text}'?\nReturn exactly one integer in this form:\nFINAL: <integer>"
         )
         record["prompt_hash"] = stable_digest("V4-CHARCOUNT-PROMPT", record["prompt"])
-        record["item_hash"] = stable_digest(
-            "V4-CHARCOUNT-ITEM", canonical_json(record)
-        )
+        record["item_hash"] = stable_digest("V4-CHARCOUNT-ITEM", canonical_json(record))
         items.append(record)
     digest = stable_digest("FULL-NONTHINKING-CHARCOUNT-MANIFEST", canonical_json(items))
     return {
@@ -148,5 +146,45 @@ def generate_full_nonthinking_smoke_manifest(
         "n_items": n_items,
         "items": items,
         "manifest_hash": digest,
+        "prompt_policy": "exact_integer_final_without_reasoning_instruction",
+    }
+
+
+def generate_substrate_race_manifest(*, seed: int = 20260820, n_items: int = 20) -> dict[str, Any]:
+    """Generate the fresh long character-count arm for Gate 3.
+
+    This deliberately uses a new seed namespace and new IDs rather than
+    transforming a historical Gate-1 manifest. The prompt semantics remain
+    the accepted full non-thinking contract, while item identity and the
+    manifest digest are independent of every earlier smoke.
+    """
+
+    if n_items <= 0:
+        raise ValueError("n_items must be positive")
+    stratum = "FRESH_PSEUDOWORD_LONG"
+    items: list[dict[str, Any]] = []
+    for index in range(n_items):
+        item_seed = stable_seed("GATE3-SUBSTRATE-RACE-CHARCOUNT", seed, stratum, index)
+        item = _make_item(stratum, index, seed=item_seed)
+        record = item.to_record()
+        record["item_id"] = f"gate3_substrate_charcount_{index:02d}"
+        record["prompt"] = (
+            f"How many times does the letter '{item.target_character}' appear in "
+            f"'{item.text}'?\nReturn exactly one integer in this form:\nFINAL: <integer>"
+        )
+        record["prompt_hash"] = stable_digest("V4-CHARCOUNT-PROMPT", record["prompt"])
+        record["item_hash"] = stable_digest("V4-CHARCOUNT-ITEM", canonical_json(record))
+        items.append(record)
+    return {
+        "suite": "Q1_GATE3_SUBSTRATE_RACE",
+        "instrument": "FRESH_PSEUDOWORD_LONG",
+        "generator_version": "v4-charcount-gate3-substrate-race-1",
+        "seed": seed,
+        "stratum": stratum,
+        "n_items": n_items,
+        "items": items,
+        "manifest_hash": stable_digest(
+            "GATE3-SUBSTRATE-RACE-CHARCOUNT-MANIFEST", canonical_json(items)
+        ),
         "prompt_policy": "exact_integer_final_without_reasoning_instruction",
     }

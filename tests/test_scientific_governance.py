@@ -24,8 +24,9 @@ def test_project_state_and_generated_status_are_current() -> None:
     state = yaml.safe_load((ROOT / "project_state.yaml").read_text(encoding="utf-8"))
     assert state["project"]["claim_status"] == "NONE_FROZEN"
     assert state["scientific_firewall"]["confirmatory_holdout"] == "UNTOUCHED"
-    assert state["current"]["gpu_work_authorized"] is False
-    assert state["current"]["workstream"] == "POSITIVE_CONTROL_WEEKDAYS_PASS_PRINCIPAL_REVIEW"
+    workstream = state["current"]["workstream"]
+    assert workstream in {"SUBSTRATE_RACE", "SUBSTRATE_RACE_COMPLETE_PRINCIPAL_REVIEW"}
+    assert state["current"]["gpu_work_authorized"] is (workstream == "SUBSTRATE_RACE")
     assert state["scientific_firewall"]["steering"] == "ORIGINAL_Q1_NOT_RUN"
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
