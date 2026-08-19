@@ -192,7 +192,9 @@ def main() -> int:
         "steering": False,
         "holdout": False,
         "source_commit": SOURCE_COMMIT_OVERRIDE or git_metadata(ROOT).get("git_commit"),
-        "source_commit_source": "environment_override" if SOURCE_COMMIT_OVERRIDE else "git_metadata",
+        "source_commit_source": (
+            "environment_override" if SOURCE_COMMIT_OVERRIDE else "git_metadata"
+        ),
     }
     identity_hash = stable_digest("EXTERNAL-RUN-IDENTITY", canonical_json(identity))
     manifest_path = output / "manifest.json"
