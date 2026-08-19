@@ -17,6 +17,12 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
+from epistemic_geometry.analysis.rank_statistics import (  # noqa: E402
+    average_ranks,
+    label_permutation_test,
+    pearson_correlation,
+    spearman_correlation,
+)
 from epistemic_geometry.benchmarks.v4.character_count import STRATA  # noqa: E402
 from epistemic_geometry.benchmarks.v4.geometry import conceptual_distance  # noqa: E402
 from epistemic_geometry.reproducibility import stable_seed  # noqa: E402
@@ -222,18 +228,17 @@ Decision sentinel for this bounded run: **CHARCOUNT_MICROBENCH_NOT_PROMISING**
 
 
 def _rank(values: np.ndarray) -> np.ndarray:
-    order = np.argsort(values, kind="stable")
-    ranks = np.empty(len(values), dtype=float)
-    ranks[order] = np.arange(len(values), dtype=float)
-    return ranks
+    """Compatibility wrapper using average ranks for tied values."""
+
+    return average_ranks(values)
 
 
 def _corr(left: np.ndarray, right: np.ndarray, *, spearman: bool) -> float | None:
-    if len(left) < 3 or np.std(left) == 0 or np.std(right) == 0:
-        return None
-    if spearman:
-        left, right = _rank(left), _rank(right)
-    return float(np.corrcoef(left, right)[0, 1])
+    return (
+        spearman_correlation(left, right)
+        if spearman
+        else pearson_correlation(left, right)
+    )
 
 
 def _pairwise(values: list[np.ndarray], distance: Any) -> np.ndarray:
@@ -268,7 +273,6 @@ def _geometry(run: Path, manifest_path: Path) -> dict[str, Any]:
     rows = [json.loads(line) for line in (run / "rows.jsonl").read_text().splitlines() if line]
     arrays = np.load(run / "activations.npz")
     results: list[dict[str, Any]] = []
-    rng = np.random.default_rng(stable_seed("V4-GEOMETRY-PERMUTATION"))
     for domain in ("WEEKDAYS", "LETTERS"):
         domain_rows = [row for row in rows if row["domain"] == domain]
         # Use the conceptual index stored in the manifest, not lexical label order.
@@ -294,19 +298,16 @@ def _geometry(run: Path, manifest_path: Path) -> dict[str, Any]:
         )
         obs_spearman = _corr(conceptual, activation, spearman=True)
         obs_pearson = _corr(conceptual, activation, spearman=False)
-        null = []
-        for _ in range(10000):
-            permuted = rng.permutation(len(concepts))
-            permuted_indices = [concept_indices[concepts[index]] for index in permuted]
-            permuted_conceptual = _conceptual_pairs(domain, permuted_indices)
-            value = _corr(permuted_conceptual, activation, spearman=True)
-            if value is not None:
-                null.append(value)
-        p_value = (
-            (1 + sum(abs(value) >= abs(obs_spearman or 0.0) for value in null)) / (1 + len(null))
-            if obs_spearman is not None
-            else None
+        ordered_indices = tuple(concept_indices[label] for label in concepts)
+        permutation = label_permutation_test(
+            ordered_indices,
+            activation,
+            lambda order, domain=domain: _conceptual_pairs(domain, list(order)),
+            exact=domain == "WEEKDAYS",
+            n_permutations=10_000,
+            seed=stable_seed("V4-GEOMETRY-CORRECTED-PERMUTATION", domain),
         )
+        p_value = permutation["p_value"]
         behavior_spearman = behavior_pearson = activation_behavior_spearman = None
         if len(distributions) == len(concepts):
             behavior = _pairwise([distributions[label] for label in concepts], _hellinger)
@@ -325,7 +326,8 @@ def _geometry(run: Path, manifest_path: Path) -> dict[str, Any]:
                 "direct_behavior_spearman": behavior_spearman,
                 "direct_behavior_pearson": behavior_pearson,
                 "activation_behavior_spearman": activation_behavior_spearman,
-                "permutations": len(null),
+                "permutations": permutation["permutations"],
+                "permutation_method": permutation["method"],
             }
         )
         try:

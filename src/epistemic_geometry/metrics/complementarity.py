@@ -55,6 +55,7 @@ def compute_paired_metrics(
     baseline_success_count = int(base_correct.sum())
     rescue_count = int(np.logical_and(base_errors, ~treat_errors).sum())
     damage_count = int(np.logical_and(base_correct, treat_errors).sum())
+    n_items = int(base_errors.size)
     pair_oracle_accuracy = float(np.logical_or(base_correct, treat_correct).mean())
     return {
         "n_items": float(base_errors.size),
@@ -83,6 +84,9 @@ def compute_paired_metrics(
         "damage_rate": float(damage_count / baseline_success_count)
         if baseline_success_count
         else float("nan"),
+        "rescue_fraction": rescue_count / n_items,
+        "damage_fraction": damage_count / n_items,
+        "net_flip_fraction": (rescue_count - damage_count) / n_items,
         "pair_oracle_accuracy": pair_oracle_accuracy,
         "complementarity_headroom": pair_oracle_accuracy
         - max(baseline_accuracy, treatment_accuracy),
