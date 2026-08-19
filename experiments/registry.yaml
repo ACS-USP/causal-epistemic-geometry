@@ -129,7 +129,7 @@ experiments:
     status: IN_PROGRESS
     outcome: Prospective specification committed; model outcomes not yet recorded.
     scientific_interpretation: Exploration-only instrument gate; no causal or steering claim.
-    source_commit: PROSPECTIVE_GATE_COMMIT
+    source_commit: 2d03624ebc594f504a0f19c6104c8c8909fd5de1
     artifact: review/full_nonthinking_smoke/
     cost_usd: null
     holdout_status: UNTOUCHED
