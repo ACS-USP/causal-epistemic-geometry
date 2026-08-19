@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Historical instrument campaigns are closed or paused. This branch repairs statistics, creates a canonical experiment registry, and freezes a staged evidence ladder before any new model execution.
+The offline scientific rearchitecture is complete: historical instruments are classified, statistical ambiguities are repaired, and a prospective staged evidence ladder is frozen for principal review.
 
-**Next authorized action:** Complete offline rearchitecture and principal review; no model or GPU work is authorized by this branch.
+**Next authorized action:** Principal review. If accepted, separately authorize only the five-item-per-arm full non-thinking generation smoke; this branch authorizes no model run.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

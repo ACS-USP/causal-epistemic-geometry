@@ -8,13 +8,13 @@
 
 ## Current work
 
-Historical instrument campaigns are closed or paused. This branch repairs statistics, creates a canonical experiment registry, and freezes a staged evidence ladder before any new model execution.
+The offline scientific rearchitecture is complete: historical instruments are classified, statistical ambiguities are repaired, and a prospective staged evidence ladder is frozen for principal review.
 
-- Workstream: `SCIENTIFIC_REARCHITECTURE`
+- Workstream: `SCIENTIFIC_REARCHITECTURE_COMPLETE`
 - RunPod: `STOPPED`
 - GPU work authorized: `false`
 - New scientific experiment authorized: `false`
-- Next authorized action: Complete offline rearchitecture and principal review; no model or GPU work is authorized by this branch.
+- Next authorized action: Principal review. If accepted, separately authorize only the five-item-per-arm full non-thinking generation smoke; this branch authorizes no model run.
 
 ## Scientific program
 

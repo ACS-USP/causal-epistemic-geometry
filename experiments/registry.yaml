@@ -111,12 +111,11 @@ experiments:
     question: Can the repository support identifiable, staged Q1/Q2 evidence without historical ambiguity?
     instrument: Offline code, statistics, state registry, and prospective protocol audit
     model_policy: No model execution
-    status: IN_PROGRESS
-    outcome: PENDING
+    status: COMPLETE
+    outcome: Canonical state, corrected statistics, validators, and prospective evidence ladder completed offline.
     scientific_interpretation: Methodological infrastructure only.
-    source_commit: 690cc75
+    source_commit: fd35fda
     artifact: docs/REARCHITECTURE_REPORT.md
     cost_usd: 0.0
     holdout_status: UNTOUCHED
-    next_action: Complete offline validation and principal review.
-
+    next_action: Principal review; no model execution is authorized by this entry.
