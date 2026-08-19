@@ -193,7 +193,7 @@ experiments:
     scientific_interpretation: >-
       Baseline-only substrate selection. This race cannot establish steering,
       complementarity, geometry, Q1, Q2, or collective utility.
-    source_commit: 125bf3c
+    source_commit: fa7cb86
     artifact: review/substrate_race/
     cost_usd: null
     holdout_status: UNTOUCHED
