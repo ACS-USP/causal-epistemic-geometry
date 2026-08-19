@@ -20,7 +20,7 @@ project:
 
 current:
   workstream: SUBSTRATE_RACE
-  source_commit: c881ee0
+  source_commit: 125bf3c
   summary: >-
     Gate 3 is authorized as a bounded, baseline-only incremental race between
     Qwen3-8B full non-thinking and Llama-3.1-8B-Instruct on two fresh common

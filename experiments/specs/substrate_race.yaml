@@ -6,7 +6,7 @@ stage: EXPLORATION
 question: >-
   Which frozen model-policy plus objective semantic-error instrument provides
   the cleanest development substrate for a later original micro-Q1?
-experiment_source_commit: c881ee0
+experiment_source_commit: 125bf3c
 
 models_policies:
   - id: QWEN_NONTHINKING
