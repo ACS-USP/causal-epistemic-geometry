@@ -1,0 +1,132 @@
+schema_version: 1
+last_verified: "2026-08-19"
+project:
+  name: Causal Geometry of Epistemic Complementarity
+  repository: ACS-USP/causal-epistemic-geometry
+  scientific_stage: DEVELOPMENT
+  claim_status: NONE_FROZEN
+  long_term_question: >-
+    Can internal representation and intervention geometry predict and causally
+    control which blind spots competence-preserving model variants exhibit?
+  minimal_q1: >-
+    Can one controlled activation intervention change where a frozen model
+    fails beyond ordinary stochastic resampling without merely making it worse?
+  q2: >-
+    Does geometry between interventions predict geometry between semantic
+    error profiles?
+  q3: >-
+    Can a realizable committee exploit measured complementarity for collective
+    utility?
+
+current:
+  workstream: SCIENTIFIC_REARCHITECTURE
+  summary: >-
+    Historical instrument campaigns are closed or paused. This branch repairs
+    statistics, creates a canonical experiment registry, and freezes a staged
+    evidence ladder before any new model execution.
+  next_authorized_action: >-
+    Complete offline rearchitecture and principal review; no model or GPU work
+    is authorized by this branch.
+  runpod: STOPPED
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
+
+scientific_firewall:
+  steering: NOT_RUN_SCIENTIFICALLY
+  geometry_q2: NOT_RUN
+  committee_q3: NOT_RUN
+  confirmatory_holdout: UNTOUCHED
+  model_downloads_local: FORBIDDEN
+  current_task: OFFLINE_ANALYSIS_ONLY
+
+instrument_history:
+  - id: Q1_V1_SERIES
+    status: CLOSED_DEVELOPMENT
+    conclusion: >-
+      MMLU-Pro multiple-choice outcomes were estimator-sensitive; no robust
+      semantic-complementarity claim was frozen.
+  - id: Q1_V2_E3_10
+    status: CLOSED_NOT_QUALIFIED
+    conclusion: >-
+      The non-thinking first-response candidate-logit readout was chance-like
+      and output-channel unstable; it remains a direct-readout ablation.
+  - id: Q1_V3_REASONING_AGENT
+    status: CLOSED_SCREEN_FAILED
+    conclusion: >-
+      Stage A completed baseline-only with zero qualifying families. Apparent
+      intermediate performance was dominated by completion and truncation.
+  - id: EXTERNAL_BENCHMARK_SEARCH
+    status: CLOSED_DEVELOPMENT
+    conclusion: >-
+      CRUXEval low-cap records were reclassified; generous-cap diagnostics
+      exposed saturation and format sensitivity. No steering was run.
+  - id: Q1_V4_MICROBENCH
+    status: CLOSED_DEVELOPMENT
+    conclusion: >-
+      Character counting saturated semantically and exposed parser artifacts.
+      A tiny weekday activation association is descriptive only and is being
+      statistically reanalyzed for tied-rank correctness.
+  - id: Q1_V4_DENSE_CODE
+    status: PAUSED_INFRASTRUCTURE
+    conclusion: >-
+      Nested per-test outcomes are instrument-promising, but safe objective
+      execution is not production-ready. No model pilot was run.
+
+workflow_regimes:
+  EXPLORATION:
+    purpose: Cheap signal discovery and instrument rejection.
+    typical_scale: 5-20 items
+    requirements:
+      - exact or audited outcome labels
+      - explicit cost ceiling
+      - preserved raw outcomes
+      - no confirmatory language
+  DEVELOPMENT_LOCK:
+    purpose: Freeze a promising instrument before causal evaluation.
+    requirements:
+      - versioned protocol and schema
+      - cost projection and synthetic statistical validation
+      - immutable model, policy, prompts, seeds, parser, and estimands
+      - principal review
+  CONFIRMATORY:
+    purpose: Execute a sealed hypothesis test without adaptive choices.
+    requirements:
+      - sealed estimands and holdout
+      - exact source commit and validator
+      - no outcome-dependent tuning
+
+canonical_documents:
+  constitution: docs/SCIENTIFIC_CONSTITUTION.md
+  status: docs/CURRENT_STATUS.md
+  metrics: docs/METRICS_AND_STATISTICS.md
+  ladder: docs/EXPERIMENT_LADDER.md
+  engineering: docs/ENGINEERING_POLICY.md
+  history: docs/INSTRUMENT_HISTORY.md
+  index: docs/DOCUMENT_INDEX.md
+  portfolio: docs/PORTFOLIO_STRATEGY.md
+  positive_control: docs/POSITIVE_CONTROL_PROTOCOL.md
+  rearchitecture_report: docs/REARCHITECTURE_REPORT.md
+  experiment_registry: experiments/registry.yaml
+  decision_log: experiments/decision_log.yaml
+
+historical_artifacts:
+  q1_v3_stage_a:
+    path: review/q1_v3_stage_a/
+    bundle: review/q1_v3_stage_a.tar.gz
+    sha256: a8947ea434601d0a723c378ed04f911043c009d57240b6b850b146cb525a5f0b
+    immutable: true
+  q1_v4_microbench:
+    path: review/q1_v4_microbench/
+    immutable_original: true
+    corrected_reanalysis_path: review/q1_v4_microbench_reanalysis/
+
+infrastructure:
+  mac_role: Canonical code, configuration, tests, documentation, and Git history.
+  runpod_role: Real model inference only when separately authorized.
+  dense_code_sandbox:
+    status: NOT_PRODUCTION_READY
+    blockers:
+      - unresolved immutable base-image digest
+      - host timeout dependency is not portable to stock macOS
+      - no validated credential-free disposable Linux executor
+

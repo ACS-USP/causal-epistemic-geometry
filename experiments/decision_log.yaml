@@ -1,0 +1,38 @@
+schema_version: 1
+decisions:
+  - date: "2026-08-17"
+    id: close_mmlu_pro
+    decision: Close the MMLU-Pro multiple-choice V1 series.
+    reason: Reasonable pre-registered aggregation estimators yielded qualitatively different conclusions.
+    consequence: No Q1 result frozen; eliminate arbitrary answer-slot dependence by construction.
+  - date: "2026-08-17"
+    id: reasoning_policy
+    decision: Treat the sampled reasoning policy, not a first-token direct readout, as the measured agent.
+    reason: E3-10 direct readout was chance-like and output-channel unstable.
+    consequence: Preserve trajectories, parser state, explicit rollout seeds, and completion diagnostics.
+  - date: "2026-08-18"
+    id: reject_truncation_difficulty
+    decision: Reject V3 cells whose apparent difficulty was dominated by truncation or unfinished thinking.
+    reason: Q1 requires genuine completed semantic errors, not operational failures.
+    consequence: Stage B and steering were not run.
+  - date: "2026-08-18"
+    id: separate_bench_e_g
+    decision: Separate error-instrument screening (Bench E) from descriptive geometry screening (Bench G).
+    reason: A geometry signal and a useful semantic error matrix are distinct prerequisites.
+    consequence: V4 geometry cannot qualify a behavioral instrument or imply causality.
+  - date: "2026-08-19"
+    id: close_charcount
+    decision: Close character counting as a Q1 error instrument.
+    reason: Semantic accuracy saturated and residual failures included parser artifacts.
+    consequence: Do not increase length or tune prompts to manufacture errors.
+  - date: "2026-08-19"
+    id: pause_dense_code
+    decision: Pause dense-code execution before GPU inference.
+    reason: Nested executable outcomes are promising, but the evaluator lacked an approved security boundary.
+    consequence: No generated code or model pilot was run.
+  - date: "2026-08-19"
+    id: pause_docker_debugging
+    decision: Stop local Docker/Colima debugging pending the scientific reset.
+    reason: Infrastructure effort was disproportionate before the instrument portfolio was prioritized.
+    consequence: Keep the template fail-closed and prefer a disposable credential-free Linux evaluator later.
+

@@ -1,0 +1,122 @@
+schema_version: 1
+experiments:
+  - id: Q1_V1_MMLU_PRO
+    version: V1-V1.2
+    stage: DEVELOPMENT
+    question: Can steering change paired MMLU-Pro errors while preserving accuracy?
+    instrument: MMLU-Pro multiple-choice with option-position controls
+    model_policy: Qwen3-8B direct candidate scoring
+    status: CLOSED
+    outcome: Estimator-sensitive after symmetrization; no robust semantic conclusion.
+    scientific_interpretation: Instrument non-qualification, not evidence for or against Q1.
+    source_commit: 17429ff
+    artifact: docs/Q1_V1_SERIES_CLOSEOUT.md
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    next_action: NONE; preserve for audit only.
+
+  - id: Q1_V2_E3_10
+    version: V2
+    stage: DEVELOPMENT
+    question: Can an exact ten-way semantic readout provide a stable baseline instrument?
+    instrument: E3-10 procedural exact-semantic direct readout
+    model_policy: Qwen3-8B, thinking disabled, first-response candidate logits
+    status: CLOSED_NOT_QUALIFIED
+    outcome: No scheduled cell passed the frozen competence and stability thresholds.
+    scientific_interpretation: Direct-readout ablation failed; no steering conclusion.
+    source_commit: 1e7effe
+    artifact: docs/Q1_V2_DIRECT_INSTRUMENT_CLOSEOUT.md
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    next_action: NONE; do not revive this readout as the reasoning-agent instrument.
+
+  - id: Q1_V3_REASONING_AGENT_STAGE_A
+    version: V3
+    stage: DEVELOPMENT
+    question: Which exact procedural tasks yield completed but genuinely wrong reasoning?
+    instrument: MODREG-R, FSM-R, SATCOUNT-R baseline screen
+    model_policy: Qwen3-8B sampled thinking with 512/1024/2048 prefix-derived budgets
+    status: CLOSED_SCREEN_FAILED
+    outcome: Zero families survived the frozen Stage-A screen.
+    scientific_interpretation: Difficulty was mainly truncation/completion or near-ceiling conditional accuracy.
+    source_commit: 4faea97
+    artifact: review/q1_v3_stage_a/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    next_action: Stage B and steering remain forbidden for this instrument.
+
+  - id: EXTERNAL_BENCHMARK_QUALIFICATION
+    version: Q0-Q1
+    stage: EXPLORATION
+    question: Can an external objective benchmark yield high completion and genuine errors?
+    instrument: CRUXEval and audited external adapters
+    model_policy: Qwen3-8B sampled thinking
+    status: CLOSED_DEVELOPMENT
+    outcome: Low-cap records reclassified; generous-cap CRUXEval exposed saturation and format sensitivity.
+    scientific_interpretation: Cheap instrument search; no benchmark qualified for steering.
+    source_commit: 85123f8
+    artifact: docs/EXTERNAL_BENCHMARK_QUALIFICATION.md
+    cost_usd: null
+    holdout_status: NOT_APPLICABLE
+    next_action: Superseded by the prospective substrate race after rearchitecture.
+
+  - id: Q1_V4_CHARCOUNT
+    version: V4
+    stage: EXPLORATION
+    question: Does exact character counting provide completed semantic errors?
+    instrument: Procedural short, medium, and long character counts
+    model_policy: Qwen3-8B sampled thinking
+    status: CLOSED_NOT_PROMISING
+    outcome: Semantic performance saturated; observed failures included parser artifacts.
+    scientific_interpretation: Instrument failure, not a Q1 result.
+    source_commit: 5f3cde2
+    artifact: review/q1_v4_microbench/
+    cost_usd: null
+    holdout_status: NOT_APPLICABLE
+    next_action: NONE.
+
+  - id: Q1_V4_GEOMETRY
+    version: V4
+    stage: EXPLORATION
+    question: Is known cyclic/sequential structure descriptively visible in one activation layer?
+    instrument: Weekday cycle and alphabet sequence prompts
+    model_policy: Qwen3-8B forward-only activations at preselected block 31
+    status: CLOSED_DESCRIPTIVE
+    outcome: Tiny weekday association reported; tied-rank implementation requires corrected reanalysis.
+    scientific_interpretation: Descriptive activation diagnostic only; no behavioral replication or causal result.
+    source_commit: 3a64cfb
+    artifact: review/q1_v4_microbench/
+    cost_usd: null
+    holdout_status: NOT_APPLICABLE
+    next_action: Preserve original and publish offline corrected reanalysis.
+
+  - id: Q1_V4_DENSE_CODE
+    version: V4
+    stage: EXPLORATION
+    question: Can nested executable tests provide dense, objective semantic error vectors?
+    instrument: EvalPlus-style problem/program/test hierarchy
+    model_policy: No model run
+    status: PAUSED_INFRASTRUCTURE
+    outcome: Objective evaluator promising; safe disposable sandbox not production-ready.
+    scientific_interpretation: Scientifically untested and operationally blocked.
+    source_commit: 690cc75
+    artifact: docs/Q1_V4_DENSE_CODE_PILOT.md
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    next_action: Do not prioritize until a credential-free disposable Linux evaluator is audited.
+
+  - id: SCIENTIFIC_REARCHITECTURE_2026_08
+    version: 1
+    stage: DEVELOPMENT_LOCK
+    question: Can the repository support identifiable, staged Q1/Q2 evidence without historical ambiguity?
+    instrument: Offline code, statistics, state registry, and prospective protocol audit
+    model_policy: No model execution
+    status: IN_PROGRESS
+    outcome: PENDING
+    scientific_interpretation: Methodological infrastructure only.
+    source_commit: 690cc75
+    artifact: docs/REARCHITECTURE_REPORT.md
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    next_action: Complete offline validation and principal review.
+
