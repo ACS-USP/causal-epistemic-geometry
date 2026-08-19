@@ -60,6 +60,7 @@ def test_character_parser_accepts_only_explicit_final_variants() -> None:
     assert parse_final_integer("`FINAL: -2`") == ("PARSED", -2, None)
     assert parse_final_integer("### Final Answer: **7**") == ("PARSED", 7, None)
     assert parse_final_integer("### Final Answer:\n**7**") == ("PARSED", 7, None)
+    assert parse_final_integer("### ✅ FINAL: 2") == ("PARSED", 2, None)
     assert parse_final_integer("FINAL: 3\n") == ("PARSED", 3, None)
     assert parse_final_integer("The answer is 3") [0] == "INVALID_FORMAT"
     assert parse_final_integer("FINAL: 3\nFINAL: 4")[0] == "INVALID_FORMAT"

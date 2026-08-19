@@ -5,13 +5,13 @@ from __future__ import annotations
 import re
 
 _FINAL_LINE = re.compile(
-    r"^\s*(?:(?:[-*]|#{1,6})\s+)?"
+    r"^\s*(?:(?:[-*]|#{1,6})\s+)*(?:[✅☑✔]\s*)?"
     r"(?:\*\*|__|`)?FINAL(?:\s+ANSWER)?\s*:\s*"
     r"(?:\*\*|__|`)?([+-]?\d+)(?:\*\*|__|`)?\s*$",
     re.IGNORECASE,
 )
 _FINAL_LABEL = re.compile(
-    r"^\s*(?:(?:[-*]|#{1,6})\s+)?"
+    r"^\s*(?:(?:[-*]|#{1,6})\s+)*(?:[✅☑✔]\s*)?"
     r"(?:\*\*|__|`)?FINAL(?:\s+ANSWER)?\s*:",
     re.IGNORECASE,
 )

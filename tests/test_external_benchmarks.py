@@ -75,7 +75,51 @@ def test_python_literal_contract_preserves_string_quotes_and_structure() -> None
     quoted = score_external_response(item, "FINAL: '2,4,2,0,'", rollout_seed=0)
     unquoted = score_external_response(item, "FINAL: 2,4,2,0,", rollout_seed=0)
     assert quoted.status == ExternalStatus.VALID_CORRECT
-    assert unquoted.status == ExternalStatus.VALID_WRONG
+    assert unquoted.status == ExternalStatus.VALID_CORRECT
+
+    structured = ExternalItem(
+        item_id="structured-contract",
+        benchmark="CRUXEval",
+        subtask="output_prediction",
+        prompt="fixture",
+        reference_answer="[1, 2]",
+        evaluator="python_literal",
+        source_revision="fixture",
+    )
+    assert (
+        score_external_response(structured, "FINAL: [1, 2]", rollout_seed=0).status
+        == ExternalStatus.VALID_CORRECT
+    )
+    assert (
+        score_external_response(structured, "FINAL: 1,2", rollout_seed=0).status
+        == ExternalStatus.VALID_WRONG
+    )
+    assert (
+        score_external_response(structured, "FINAL: [1,2", rollout_seed=0).status
+        == ExternalStatus.INVALID_FORMAT
+    )
+
+
+def test_external_parser_accepts_harmless_markdown_final_wrappers() -> None:
+    item = adapter_for("LiveBench").load_items(FIXTURES["LiveBench"])[0]
+    result = score_external_response(item, "### ✅ FINAL: 42", rollout_seed=0)
+    assert result.status == ExternalStatus.VALID_CORRECT
+
+
+def test_unquoted_string_answers_are_semantically_scored() -> None:
+    item = ExternalItem(
+        item_id="bare-string",
+        benchmark="CRUXEval",
+        subtask="output_prediction",
+        prompt="fixture",
+        reference_answer="'Name unknown'",
+        evaluator="python_literal",
+        source_revision="fixture",
+    )
+    correct = score_external_response(item, "FINAL: Name unknown", rollout_seed=0)
+    wrong = score_external_response(item, "FINAL: Name known", rollout_seed=0)
+    assert correct.status == ExternalStatus.VALID_CORRECT
+    assert wrong.status == ExternalStatus.VALID_WRONG
 
 
 def test_two_seed_metrics_report_pair_counts_and_headroom() -> None:

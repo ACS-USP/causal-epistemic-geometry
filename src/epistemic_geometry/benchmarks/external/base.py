@@ -78,6 +78,23 @@ class ParsedExternalAnswer:
     parse_reason: str | None = None
 
 
+_FINAL_LINE = re.compile(
+    r"^\s*(?:(?:[-*]|#{1,6})\s+)*(?:[✅☑✔]\s*)?"
+    r"(?:\*\*|__|`)?FINAL\s*:\s*(.*?)\s*$",
+    re.IGNORECASE,
+)
+
+
+def _unwrap_markdown(value: str) -> str:
+    """Remove one harmless emphasis/code wrapper around a final answer."""
+
+    value = value.strip()
+    for wrapper in ("**", "__", "`"):
+        if value.startswith(wrapper) and value.endswith(wrapper) and len(value) > 2 * len(wrapper):
+            return value[len(wrapper) : -len(wrapper)].strip()
+    return value
+
+
 @dataclass(frozen=True)
 class ExternalResult:
     """One model outcome retaining parsing and correctness separately."""
@@ -157,7 +174,8 @@ def parse_external_answer(raw_text: str, *, truncated: bool = False) -> ParsedEx
     if unclosed or truncated:
         return ParsedExternalAnswer(raw_text, None, ExternalStatus.TRUNCATED_THINKING)
     lines = [line.strip() for line in visible.splitlines() if line.strip()]
-    finals = [line[6:].strip() for line in lines if line.startswith("FINAL:")]
+    matches = [_FINAL_LINE.fullmatch(line) for line in lines]
+    finals = [_unwrap_markdown(match.group(1)) for match in matches if match is not None]
     if len(finals) != 1:
         return ParsedExternalAnswer(
             raw_text,
@@ -165,7 +183,7 @@ def parse_external_answer(raw_text: str, *, truncated: bool = False) -> ParsedEx
             ExternalStatus.INVALID_FORMAT,
             "expected exactly one FINAL line",
         )
-    final_line_index = next(index for index, line in enumerate(lines) if line.startswith("FINAL:"))
+    final_line_index = next(index for index, match in enumerate(matches) if match is not None)
     if final_line_index != len(lines) - 1 or not finals[0]:
         return ParsedExternalAnswer(
             raw_text,
@@ -181,10 +199,76 @@ def _normalize_exact(value: str) -> str:
 
 
 def _normalize_python_literal(value: str) -> str:
-    """Compare Python output semantically, without executing arbitrary code."""
+    """Normalize a structurally typed Python answer without executing code."""
 
     parsed = ast.literal_eval(value.strip())
-    return json.dumps(parsed, sort_keys=True, separators=(",", ":"), default=str)
+    return json.dumps(_canonical_literal(parsed), sort_keys=True, separators=(",", ":"))
+
+
+def _canonical_literal(value: Any) -> Any:
+    """Encode literal types explicitly so structure and scalar type are retained."""
+
+    if value is None:
+        return ["none", None]
+    if isinstance(value, bool):
+        return ["bool", value]
+    if isinstance(value, int):
+        return ["int", value]
+    if isinstance(value, float):
+        return ["float", value]
+    if isinstance(value, str):
+        return ["str", value]
+    if isinstance(value, list):
+        return ["list", [_canonical_literal(item) for item in value]]
+    if isinstance(value, tuple):
+        return ["tuple", [_canonical_literal(item) for item in value]]
+    if isinstance(value, dict):
+        entries = [
+            [_canonical_literal(key), _canonical_literal(item)] for key, item in value.items()
+        ]
+        entries.sort(key=lambda entry: json.dumps(entry[0], sort_keys=True))
+        return ["dict", entries]
+    if isinstance(value, (set, frozenset)):
+        entries = [_canonical_literal(item) for item in value]
+        entries.sort(key=lambda entry: json.dumps(entry, sort_keys=True))
+        return ["set", entries]
+    raise ValueError(f"unsupported Python literal type: {type(value).__name__}")
+
+
+def _parse_typed_python_answer(actual: str, expected: str) -> tuple[Any, Any]:
+    """Parse an answer using the reference's type, allowing bare string finals.
+
+    CRUXEval's reference strings are serialized Python literals, while a model
+    naturally emits ``FINAL: yes`` rather than ``FINAL: 'yes'``. If and only if
+    the reference itself is a string, an otherwise non-literal final payload is
+    treated as that exact string. Structured reference types still require
+    structurally valid Python literals.
+    """
+
+    expected_value = ast.literal_eval(expected.strip())
+    actual_text = actual.strip()
+    if isinstance(expected_value, str):
+        try:
+            parsed_actual = ast.literal_eval(actual_text)
+        except (ValueError, SyntaxError):
+            parsed_actual = None
+        actual_value = parsed_actual if isinstance(parsed_actual, str) else actual_text
+    else:
+        actual_value = ast.literal_eval(actual_text)
+    return actual_value, expected_value
+
+
+def evaluate_external_answer(actual: str, expected: str, evaluator: str) -> bool:
+    """Evaluate one parsed answer under a deterministic registered evaluator."""
+
+    if evaluator == "exact":
+        return _normalize_exact(actual) == _normalize_exact(expected)
+    if evaluator == "python_literal":
+        actual_value, expected_value = _parse_typed_python_answer(actual, expected)
+        return _canonical_literal(actual_value) == _canonical_literal(expected_value)
+    if evaluator == "json":
+        return _normalize_json(actual) == _normalize_json(expected)
+    raise ValueError(f"unsupported deterministic evaluator: {evaluator!r}")
 
 
 def _normalize_json(value: str) -> str:
@@ -193,8 +277,9 @@ def _normalize_json(value: str) -> str:
 
 EVALUATORS: dict[str, Callable[[str, str], bool]] = {
     "exact": lambda actual, expected: _normalize_exact(actual) == _normalize_exact(expected),
-    "python_literal": lambda actual, expected: _normalize_python_literal(actual)
-    == _normalize_python_literal(expected),
+    "python_literal": lambda actual, expected: evaluate_external_answer(
+        actual, expected, "python_literal"
+    ),
     "json": lambda actual, expected: _normalize_json(actual) == _normalize_json(expected),
 }
 
