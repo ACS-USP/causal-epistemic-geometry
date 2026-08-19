@@ -36,6 +36,17 @@ instruments:
     evaluator: deterministic_type_aware_python_literal
     historical_ids: reconstructed_from_preserved_manifests_and_journals
 
+frozen_common_manifests:
+  character_count:
+    path: review/substrate_race/CHARCOUNT_MANIFEST.json
+    manifest_hash: 8d53205e7f1672925bb2820119703aa0d2b69a7485028dc240526ab2e8eedcfd
+  cruxeval:
+    path: review/substrate_race/CRUXEVAL_MANIFEST.json
+    jsonl_path: review/substrate_race/CRUXEVAL_MANIFEST.jsonl
+    manifest_hash: 95ed8ddb880d3e61d2582709acbc6c3ead554246dec245e5928663992fcf6145
+    dataset_revision: b96af0450242eb4da433032b90998f25588a5d0f
+    historical_excluded_count: 43
+
 generation:
   max_new_tokens: 4096
   do_sample: true
