@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 1 completed as a bounded full non-thinking exploration. Fresh long character-count was promising on n=20; CRUXEval failed because mechanical format/completion failures dominated. No causal or steering work occurred.
+Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule.
 
-- Workstream: `FULL_NONTHINKING_SMOKE_COMPLETE`
+- Workstream: `GATE1_SEMANTIC_REANALYSIS_COMPLETE`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the compact Gate 1 artifact. No positive control, steering, activation, geometry, or Q2 execution is authorized yet.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Freeze and audit the published weekday positive-control lock, verify model access, then execute only the bounded Gate 2 reproduction. Do not run original Q1 steering, the substrate race, Q2, or the holdout.
 
 ## Scientific program
 
@@ -33,7 +33,7 @@ Gate 1 completed as a bounded full non-thinking exploration. Fresh long characte
 | `EXTERNAL_BENCHMARK_SEARCH` | `CLOSED_DEVELOPMENT` | CRUXEval low-cap records were reclassified; generous-cap diagnostics exposed saturation and format sensitivity. No steering was run. |
 | `Q1_V4_MICROBENCH` | `CLOSED_DEVELOPMENT` | Character counting saturated semantically and exposed parser artifacts. A tiny weekday activation association is descriptive only and is being statistically reanalyzed for tied-rank correctness. |
 | `Q1_V4_DENSE_CODE` | `PAUSED_INFRASTRUCTURE` | Nested per-test outcomes are instrument-promising, but safe objective execution is not production-ready. No model pilot was run. |
-| `FULL_NONTHINKING_SMOKE` | `COMPLETE_EXPLORATION` | Fresh long character-count classified PROMISING at 19/20 valid, 15 correct, and 4 genuine wrong. CRUXEval classified MECHANICAL_OR_COMPLETION_FAILURE at 13/20 valid, with 7 format failures. A five-item native-thinking reference was descriptive only. No steering. |
+| `FULL_NONTHINKING_SMOKE` | `ACCEPTED_EXPLORATION` | Original outputs are preserved. Deterministic semantic reanalysis gives character-count 20/20 valid, 15 correct, 5 genuine wrong, 75%, PROMISING; CRUXEval 20/20 valid, 8 correct, 12 wrong, 40%, PROMISING. No steering occurred; this is still an exploration instrument result. |
 
 ## Scientific firewall
 
@@ -42,7 +42,7 @@ Gate 1 completed as a bounded full non-thinking exploration. Fresh long characte
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `OFFLINE_PRINCIPAL_REVIEW_AFTER_FULL_NONTHINKING_SMOKE`
+- `current_task`: `POSITIVE_CONTROL_WEEKDAYS_DEVELOPMENT_LOCK`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

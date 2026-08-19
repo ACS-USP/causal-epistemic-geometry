@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 1 completed as a bounded full non-thinking exploration. Fresh long character-count was promising on n=20; CRUXEval failed because mechanical format/completion failures dominated. No causal or steering work occurred.
+Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule.
 
-**Next authorized action:** Principal review of the compact Gate 1 artifact. No positive control, steering, activation, geometry, or Q2 execution is authorized yet.
+**Next authorized action:** Freeze and audit the published weekday positive-control lock, verify model access, then execute only the bounded Gate 2 reproduction. Do not run original Q1 steering, the substrate race, Q2, or the holdout.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

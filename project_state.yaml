@@ -19,18 +19,20 @@ project:
     utility?
 
 current:
-  workstream: FULL_NONTHINKING_SMOKE_COMPLETE
-  source_commit: 2d03624ebc594f504a0f19c6104c8c8909fd5de1
+  workstream: GATE1_SEMANTIC_REANALYSIS_COMPLETE
+  source_commit: e843831
   summary: >-
-    Gate 1 completed as a bounded full non-thinking exploration. Fresh long
-    character-count was promising on n=20; CRUXEval failed because mechanical
-    format/completion failures dominated. No causal or steering work occurred.
+    Gate 1 semantic accounting was repaired offline without new inference.
+    Character-count is 20/20 semantically evaluable with 15 correct and 5
+    genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at
+    40%. Character-count remains PROMISING under the frozen rule.
   next_authorized_action: >-
-    Principal review of the compact Gate 1 artifact. No positive control,
-    steering, activation, geometry, or Q2 execution is authorized yet.
+    Freeze and audit the published weekday positive-control lock, verify model
+    access, then execute only the bounded Gate 2 reproduction. Do not run
+    original Q1 steering, the substrate race, Q2, or the holdout.
   runpod: STOPPED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
   steering: NOT_RUN_SCIENTIFICALLY
@@ -38,7 +40,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: OFFLINE_PRINCIPAL_REVIEW_AFTER_FULL_NONTHINKING_SMOKE
+  current_task: POSITIVE_CONTROL_WEEKDAYS_DEVELOPMENT_LOCK
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -73,12 +75,12 @@ instrument_history:
       Nested per-test outcomes are instrument-promising, but safe objective
       execution is not production-ready. No model pilot was run.
   - id: FULL_NONTHINKING_SMOKE
-    status: COMPLETE_EXPLORATION
+    status: ACCEPTED_EXPLORATION
     conclusion: >-
-      Fresh long character-count classified PROMISING at 19/20 valid, 15
-      correct, and 4 genuine wrong. CRUXEval classified
-      MECHANICAL_OR_COMPLETION_FAILURE at 13/20 valid, with 7 format failures.
-      A five-item native-thinking reference was descriptive only. No steering.
+      Original outputs are preserved. Deterministic semantic reanalysis gives
+      character-count 20/20 valid, 15 correct, 5 genuine wrong, 75%,
+      PROMISING; CRUXEval 20/20 valid, 8 correct, 12 wrong, 40%, PROMISING.
+      No steering occurred; this is still an exploration instrument result.
 
 workflow_regimes:
   EXPLORATION:

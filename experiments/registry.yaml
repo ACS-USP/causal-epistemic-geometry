@@ -126,16 +126,42 @@ experiments:
     question: Can full non-thinking generation produce finished, genuine semantic errors?
     instrument: Fresh long character-count and fresh CRUXEval semantic items
     model_policy: Qwen3-8B, BF16, sampled full autoregressive generation, thinking disabled
-    status: COMPLETE_EXPLORATION
+    status: ACCEPTED_EXPLORATION
     outcome: >-
-      Fresh long character-count: 19/20 valid, 15 correct, 4 wrong. CRUXEval:
-      13/20 valid, 5 correct, 8 wrong, 7 invalid format. Five native-thinking
-      reference trajectories were run for the promising character-count arm.
+      Original accounting is preserved. Offline semantic reanalysis gives
+      fresh long character-count: 20/20 valid, 15 correct, 5 wrong, 75%;
+      CRUXEval: 20/20 valid, 8 correct, 12 wrong, 40%. Five native-thinking
+      reference trajectories remain descriptive only.
     scientific_interpretation: >-
-      Character-count is an exploration candidate for principal review;
-      CRUXEval failed the completion/format gate. No causal or steering claim.
+      Character-count remains PROMISING under the frozen Gate-1 rule. The
+      corrected CRUXEval result is recorded for later substrate analysis. This
+      accepts an instrument exploration result, not a causal or steering claim.
     source_commit: 2d03624ebc594f504a0f19c6104c8c8909fd5de1
     artifact: review/full_nonthinking_smoke/
     cost_usd: 0.079435404667072
     holdout_status: UNTOUCHED
-    next_action: Principal review; do not run positive control or steering automatically.
+    reanalysis:
+      source_commit: e843831
+      artifact: review/full_nonthinking_smoke_reanalysis/
+      input_journal_sha256: f0f7cc47550398f07db08ee8ba479485671a4c3691e38b32c4ef5634445b5734
+      inference_performed: false
+      parser_version: gate1-semantic-reanalysis-v1
+    next_action: Freeze and execute only the published weekday positive control after its development lock.
+
+  - id: PUBLISHED_POSITIVE_CONTROL_WEEKDAYS
+    version: GATE-2
+    stage: DEVELOPMENT_LOCK
+    question: Can the environment reproduce a published weekday activation-to-behavior intervention?
+    instrument: CausaLab manifold_steering weekdays_8b_pipeline
+    model_policy: Llama-3.1-8B-Instruct, exact upstream policy to be frozen before execution
+    status: PROSPECTIVE_DEVELOPMENT_LOCK_REQUIRED
+    outcome: null
+    scientific_interpretation: >-
+      Methodological positive control only. A pass validates the intervention
+      stack; it does not establish Q1, semantic complementarity, Q2, or a
+      manifold metric for this repository.
+    source_commit: e843831
+    artifact: review/positive_control_weekdays/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    next_action: Resolve and freeze upstream commit, model access, metric, and cost before GPU execution.

@@ -35,4 +35,8 @@ decisions:
     decision: Stop local Docker/Colima debugging pending the scientific reset.
     reason: Infrastructure effort was disproportionate before the instrument portfolio was prioritized.
     consequence: Keep the template fail-closed and prefer a disposable credential-free Linux evaluator later.
-
+  - date: "2026-08-19"
+    id: accept_gate1_semantic_reanalysis
+    decision: Accept the Gate-1 character-count arm as a promising exploration instrument after deterministic offline semantic reanalysis.
+    reason: The preserved raw outputs contain one unambiguous Markdown-wrapped integer and seven unquoted string finals that the original strict parser incorrectly treated as mechanical failures.
+    consequence: Corrected character-count is 20/20 valid, 15 correct, 5 genuine wrong; authorize only the separately frozen published weekday positive control before any original Q1 work.
