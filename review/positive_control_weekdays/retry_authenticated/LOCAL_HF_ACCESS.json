@@ -1,0 +1,15 @@
+{
+  "authenticated": true,
+  "username": "costaleirbag",
+  "huggingface_hub_version": "1.27.0",
+  "repository": "meta-llama/Llama-3.1-8B",
+  "revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "gated_file_probe": {
+    "status": "PASS",
+    "file": "model-00001-of-00004.safetensors",
+    "size_bytes": 4976698672,
+    "body_downloaded": false
+  },
+  "model_weights_downloaded_to_mac": false,
+  "credentials_recorded": false
+}

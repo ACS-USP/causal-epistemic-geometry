@@ -19,31 +19,34 @@ project:
     utility?
 
 current:
-  workstream: POSITIVE_CONTROL_WEEKDAYS_BLOCKED_MODEL_ACCESS
-  source_commit: 6d6a29d
+  workstream: POSITIVE_CONTROL_WEEKDAYS_PASS_PRINCIPAL_REVIEW
+  source_commit: ed96958
   summary: >-
     Gate 1 semantic accounting was repaired offline without new inference.
     Character-count is 20/20 semantically evaluable with 15 correct and 5
     genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at
-    40%. Character-count remains PROMISING under the frozen rule. The bounded
-    published weekday positive control was then blocked before inference by
-    gated Llama model-content access (HTTP 401); no positive-control outcomes
-    were collected. The additive operator check passed separately.
+    40%. Character-count remains PROMISING under the frozen rule. An
+    authenticated retry of the frozen published weekday positive control
+    passed: manifold mean cumulative behavior distance was 0.3234 versus
+    1.3987 for linear steering, a 76.9% reduction, with 100% endpoint sanity.
+    This validates one published intervention stack only; it is not an
+    original Q1, Q2, or semantic-complementarity result.
   next_authorized_action: >-
-    Principal review. If desired, provide authenticated access to the exact
-    pinned Llama model and re-run only the frozen bounded Gate 2 control. Do not
-    run original Q1 steering, the substrate race, Q2, or the holdout.
+    Principal review of the completed Gate 2 positive control. Do not run the
+    substrate race, original Q1 steering, micro-Q1, Q2, or the holdout without
+    a new explicit authorization.
   runpod: STOPPED
   gpu_work_authorized: false
   new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: NOT_RUN_SCIENTIFICALLY
+  steering: ORIGINAL_Q1_NOT_RUN
+  published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: POSITIVE_CONTROL_WEEKDAYS_BLOCKED_MODEL_ACCESS
+  current_task: PRINCIPAL_REVIEW_AFTER_POSITIVE_CONTROL_PASS
 
 instrument_history:
   - id: Q1_V1_SERIES

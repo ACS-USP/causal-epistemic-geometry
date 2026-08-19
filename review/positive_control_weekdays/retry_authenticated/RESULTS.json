@@ -1,0 +1,42 @@
+{
+  "classification": "POSITIVE_CONTROL_PASS",
+  "frozen_primary_metric": "distance_from_behavior_manifold.mean",
+  "metric_semantics": "mean cumulative Bhattacharyya distance; lower is better",
+  "linear": {
+    "mean": 1.3987454175949097,
+    "se": 0.1289888620376587
+  },
+  "manifold_geometric": {
+    "mean": 0.32336652278900146,
+    "se": 0.019892308861017227
+  },
+  "relative_reduction": 0.7688167419736623,
+  "minimum_relative_reduction": 0.3,
+  "endpoint_sanity": {
+    "geometric": 1.0,
+    "linear": 1.0,
+    "threshold": 0.9
+  },
+  "baseline": {
+    "correct": 46,
+    "total": 49,
+    "accuracy": 0.9387755102040817
+  },
+  "integrity": {
+    "all_standard_and_extra_candidate_scores_finite": true,
+    "all_standard_and_extra_candidate_scores_nonnegative": true,
+    "geometric_candidate_mass_range": [0.6669857501983643, 0.8599650263786316],
+    "linear_candidate_mass_range": [0.5837013721466064, 0.8567872643470764],
+    "candidate_mass_note": "The upstream tensors retain probabilities for seven weekday tokens, not the remaining vocabulary, so their seven-entry sums are not expected to equal one.",
+    "gross_corruption": false
+  },
+  "criteria": {
+    "manifold_less_than_linear": true,
+    "relative_reduction_at_least_30_percent": true,
+    "endpoint_sanity_at_least_90_percent": true,
+    "no_gross_corruption": true
+  },
+  "original_q1_steering_run": false,
+  "q2_run": false,
+  "holdout_status": "UNTOUCHED"
+}

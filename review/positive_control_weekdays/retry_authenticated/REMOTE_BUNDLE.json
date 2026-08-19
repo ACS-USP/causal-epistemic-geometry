@@ -1,0 +1,8 @@
+{
+  "path": "remote_bundle/positive_control_weekdays_retry_20260819.tar.gz",
+  "size_bytes": 17502022,
+  "sha256": "2c420243c105226d1821d74c0f46697eb4a613a99dcc2b556a8e492b69386cdc",
+  "remote_and_local_hash_match": true,
+  "contents": "bounded upstream config, execution log, baseline metadata, primary criteria, pair metadata, endpoint distributions, and result summary",
+  "excluded": ["model weights", "Hugging Face cache", "virtual environment", "credentials", "large visualization corpus"]
+}

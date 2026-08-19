@@ -1,6 +1,6 @@
 # Published positive-control protocol
 
-Status: **PROSPECTIVE DEVELOPMENT LOCKED — NOT EXECUTED**
+Status: **COMPLETED DEVELOPMENT POSITIVE CONTROL — PASS**
 
 ## Selection
 
@@ -101,6 +101,24 @@ to our V4 centroid plot and call that a replication.
 - alpha-zero or identity replacement check;
 - exact hook cleanup and repeated-context isolation;
 - tokenization audit over weekday variants.
+
+## Execution result
+
+The authenticated retry completed on 2026-08-19 using the exact frozen model,
+model revision, CausaLab commit, A40 class, BF16 dtype, eager attention, layer,
+token position, paths, prompts, and primary metric. The upstream mean cumulative
+behavior distance was `0.32336652278900146` for manifold/geometric steering and
+`1.3987454175949097` for linear steering, a relative reduction of
+`0.7688167419736623` (76.9%). Endpoint top-1 weekday sanity was 672/672 (100%)
+for each path mode. The frozen 30% reduction and 90% endpoint thresholds both
+passed, so the classification is `POSITIVE_CONTROL_PASS`.
+
+The original HTTP-401 attempt remains preserved separately. Authentication,
+the exact gated-file probe, remote cache provenance, compatibility environment,
+cost, endpoint calculation, and compact upstream results are recorded under
+`review/positive_control_weekdays/retry_authenticated/`. The RunPod was stopped
+after artifact recovery. No original Q1 steering, substrate race, Q2, or
+holdout access occurred.
 
 ## Interpretation boundary
 

@@ -1,0 +1,16 @@
+{
+  "pod_id": "z8nilu9t5yh46w",
+  "gpu": "NVIDIA A40",
+  "gpu_rate_usd_per_hour": 0.44,
+  "started_at": "2026-08-19T19:58:38.598Z",
+  "reported_uptime_seconds": 4106,
+  "reported_runtime_hours": 1.1405555555555555,
+  "retry_compute_cost_usd": 0.5018444444444444,
+  "successful_pipeline_start": "2026-08-19T20:19:50.656Z",
+  "successful_pipeline_end": "2026-08-19T21:04:12.311Z",
+  "successful_pipeline_runtime_seconds": 2661.655,
+  "prior_blocked_attempt_cost_usd": 0.1732,
+  "cumulative_gate2_cost_usd": 0.6750444444444444,
+  "retry_hard_stop_usd": 1.25,
+  "final_pod_status": "EXITED"
+}

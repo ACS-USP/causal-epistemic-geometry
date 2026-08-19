@@ -25,7 +25,9 @@ def test_project_state_and_generated_status_are_current() -> None:
     assert state["project"]["claim_status"] == "NONE_FROZEN"
     assert state["scientific_firewall"]["confirmatory_holdout"] == "UNTOUCHED"
     assert state["current"]["gpu_work_authorized"] is False
-    assert state["current"]["workstream"] == "POSITIVE_CONTROL_WEEKDAYS_BLOCKED_MODEL_ACCESS"
+    assert state["current"]["workstream"] == "POSITIVE_CONTROL_WEEKDAYS_PASS_PRINCIPAL_REVIEW"
+    assert state["scientific_firewall"]["steering"] == "ORIGINAL_Q1_NOT_RUN"
+    assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
 
 def test_registry_and_document_audits_pass() -> None:

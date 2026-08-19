@@ -154,14 +154,27 @@ experiments:
     question: Can the environment reproduce a published weekday activation-to-behavior intervention?
     instrument: CausaLab manifold_steering weekdays_8b_pipeline
     model_policy: Llama-3.1-8B base, exact upstream policy pinned in the development lock
-    status: BLOCKED_MODEL_ACCESS
-    outcome: POSITIVE_CONTROL_BLOCKED_MODEL_ACCESS
+    status: COMPLETE_PASS
+    outcome: POSITIVE_CONTROL_PASS
     scientific_interpretation: >-
       Methodological positive control only. A pass validates the intervention
       stack; it does not establish Q1, semantic complementarity, Q2, or a
       manifold metric for this repository.
-    source_commit: 6d6a29d
-    artifact: review/positive_control_weekdays/
-    cost_usd: 0.1732
+    source_commit: ed96958
+    artifact: review/positive_control_weekdays/retry_authenticated/
+    cost_usd: 0.6750444444444444
     holdout_status: UNTOUCHED
-    next_action: Principal review; authenticated access to the exact pinned Llama model is required before any retry.
+    attempts:
+      - classification: POSITIVE_CONTROL_BLOCKED_MODEL_ACCESS
+        artifact: review/positive_control_weekdays/
+        cost_usd: 0.1732
+        outcomes_collected: false
+      - classification: POSITIVE_CONTROL_PASS
+        artifact: review/positive_control_weekdays/retry_authenticated/
+        cost_usd: 0.5018444444444444
+        outcomes_collected: true
+        linear_metric: 1.3987454175949097
+        manifold_metric: 0.32336652278900146
+        relative_reduction: 0.7688167419736623
+        endpoint_sanity: 1.0
+    next_action: Principal review; do not execute the substrate race, original Q1, Q2, or holdout.

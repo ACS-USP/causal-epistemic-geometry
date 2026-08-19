@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/goodfire-ai/causalab",
+  "branch_at_freeze": "manifold_steering",
+  "commit": "7dcc8ec4ffd11efec8b3cf9febd6b523df7637b6",
+  "paper": "arXiv:2605.05115v1",
+  "model_id": "meta-llama/Llama-3.1-8B",
+  "model_revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "tokenizer_revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "model_variant": "base",
+  "runner": "causalab/configs/runners/weekdays/weekdays_8b_bounded.yaml",
+  "bounded_runner_sha256": "3dcbaa442fe4159015aa1fe0cf6ca0f9090cc1897affa1c6e935bce839af6774",
+  "layer": 28,
+  "token_position": "last_token",
+  "path_modes": ["geometric", "linear"],
+  "n_extra_pairs": 29,
+  "n_interior_per_pair": 4,
+  "num_steps_along_path": 50,
+  "n_prompts": 16,
+  "n_eval_samples": 100,
+  "seed": 42,
+  "pullback": "omitted_not_required_for_primary_weekday_metric",
+  "project_execution_commit": "ed96958"
+}

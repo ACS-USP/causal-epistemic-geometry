@@ -1,0 +1,12 @@
+{
+  "pod_id": "z8nilu9t5yh46w",
+  "persistent_mount": "/workspace",
+  "volume_size_before_gb": 40,
+  "volume_size_after_gb": 80,
+  "redundant_cache_removed": "/workspace/hf-cache/models--Qwen--Qwen3-8B",
+  "preserved_historical_cache": "/workspace/hf-cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "llama_snapshot": "/workspace/hf-cache/models--meta-llama--Llama-3.1-8B/snapshots/d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "hf_cache_size_after_download_approx_gb": 46,
+  "scientific_artifacts_deleted": false,
+  "notes": "The duplicate Qwen cache was byte-recoverable and unreferenced. The historical hub-layout Qwen snapshot and all project artifacts were preserved before the volume was grown."
+}

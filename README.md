@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule. The bounded published weekday positive control was then blocked before inference by gated Llama model-content access (HTTP 401); no positive-control outcomes were collected. The additive operator check passed separately.
+Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule. An authenticated retry of the frozen published weekday positive control passed: manifold mean cumulative behavior distance was 0.3234 versus 1.3987 for linear steering, a 76.9% reduction, with 100% endpoint sanity. This validates one published intervention stack only; it is not an original Q1, Q2, or semantic-complementarity result.
 
-**Next authorized action:** Principal review. If desired, provide authenticated access to the exact pinned Llama model and re-run only the frozen bounded Gate 2 control. Do not run original Q1 steering, the substrate race, Q2, or the holdout.
+**Next authorized action:** Principal review of the completed Gate 2 positive control. Do not run the substrate race, original Q1 steering, micro-Q1, Q2, or the holdout without a new explicit authorization.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -75,6 +75,8 @@ as current plans.
   behavioral result.
 - V4 dense code: objective nested outcomes look promising, but secure execution
   is not production-ready and no model pilot ran.
+- Published weekday positive control: PASS under its frozen metric and endpoint
+  criteria; this validates one known intervention stack, not original Q1 or Q2.
 - Confirmatory holdout: untouched.
 
 These are instrument outcomes, not a positive or negative result for the full

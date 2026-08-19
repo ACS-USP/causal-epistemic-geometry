@@ -1,0 +1,15 @@
+{
+  "pod_id": "z8nilu9t5yh46w",
+  "gpu": "NVIDIA A40",
+  "gpu_memory_mib": 46068,
+  "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "torch": "2.4.1+cu124",
+  "transformers": "4.57.1",
+  "numpy": "2.3.4",
+  "scipy": "1.16.2",
+  "scikit_learn": "1.7.2",
+  "dtype": "bfloat16",
+  "attention_implementation": "eager",
+  "upstream_environment": "/workspace/causalab-positive-control/.venv",
+  "compatibility_note": "The first execution reached upstream PCA loading and failed because newer NumPy rejected conversion of a singleton 1-D array to float. The isolated environment was restored to the exact upstream lock versions; no scientific code or frozen setting changed."
+}

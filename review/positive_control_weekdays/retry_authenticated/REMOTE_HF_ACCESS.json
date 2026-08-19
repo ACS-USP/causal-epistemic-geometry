@@ -1,0 +1,13 @@
+{
+  "authenticated": true,
+  "username": "costaleirbag",
+  "repository": "meta-llama/Llama-3.1-8B",
+  "revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "gated_file_probe": "PASS",
+  "execution_host": "5ccf2e645a68",
+  "hf_home": "/workspace/hf-cache",
+  "cache_before_retry": "exact Llama weight shards absent",
+  "cache_for_scientific_pipeline": "complete exact revision",
+  "snapshot_path": "/workspace/hf-cache/models--meta-llama--Llama-3.1-8B/snapshots/d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "credentials_recorded": false
+}

@@ -1,0 +1,23 @@
+{
+  "method": "For each of 21 unordered weekday pairs, compare argmax over the seven stored weekday scores at path index 0 and 49 with the intended start and end weekday. Aggregate over 16 prompts per endpoint.",
+  "geometric": {
+    "start_correct": 336,
+    "start_total": 336,
+    "end_correct": 336,
+    "end_total": 336,
+    "endpoint_correct": 672,
+    "endpoint_total": 672,
+    "endpoint_sanity": 1.0
+  },
+  "linear": {
+    "start_correct": 336,
+    "start_total": 336,
+    "end_correct": 336,
+    "end_total": 336,
+    "endpoint_correct": 672,
+    "endpoint_total": 672,
+    "endpoint_sanity": 1.0
+  },
+  "threshold": 0.9,
+  "pass": true
+}
