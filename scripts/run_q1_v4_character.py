@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import re
 import sys
 import time
 from datetime import UTC, datetime
@@ -17,6 +16,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from epistemic_geometry.backends.huggingface import HuggingFaceBackend  # noqa: E402
+from epistemic_geometry.benchmarks.v4.character_parser import (  # noqa: E402
+    parse_final_integer,
+)
 from epistemic_geometry.config import BackendConfig  # noqa: E402
 from epistemic_geometry.reproducibility import (  # noqa: E402
     canonical_json,
@@ -29,7 +31,6 @@ from epistemic_geometry.types import BenchmarkItem  # noqa: E402
 
 MODEL_ID = "Qwen/Qwen3-8B"
 MODEL_REVISION = "b968826d9c46dd6066d109eabc6255188de91218"
-FINAL_RE = re.compile(r"^FINAL:\s*([+-]?\d+)\s*$")
 
 
 def _atomic_json(path: Path, payload: Any) -> None:
@@ -43,17 +44,6 @@ def _append(path: Path, payload: dict[str, Any]) -> None:
         handle.write(json.dumps(payload, sort_keys=True) + "\n")
         handle.flush()
         os.fsync(handle.fileno())
-
-
-def _parse(raw: str, *, truncated: bool) -> tuple[str, int | None, str | None]:
-    if truncated or re.search(r"<think>(?!.*?</think>)", raw, re.IGNORECASE | re.DOTALL):
-        return "TRUNCATED_THINKING", None, "token cap or unclosed thinking block"
-    visible = re.sub(r"<think>.*?</think>", "\n", raw, flags=re.IGNORECASE | re.DOTALL)
-    lines = [line.strip() for line in visible.splitlines() if line.strip()]
-    matches = [FINAL_RE.match(line) for line in lines if line.startswith("FINAL:")]
-    if len(matches) != 1 or not matches[0] or lines[-1] != matches[0].group(0):
-        return "INVALID_FORMAT", None, "expected one final integer as the last non-empty line"
-    return "PARSED", int(matches[0].group(1)), None
 
 
 def _load_rows(manifest_path: Path) -> dict[str, Any]:
@@ -75,17 +65,30 @@ def main() -> int:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--max-new-tokens", type=int, default=8192)
+    parser.add_argument("--stratum", default=None)
     args = parser.parse_args()
     if args.max_new_tokens != 8192:
         parser.error("V4 character-count cap is prospectively fixed at 8192")
     manifest = _load_rows(args.manifest)
+    selected_items = [
+        item
+        for item in manifest["items"]
+        if args.stratum is None or item["stratum"] == args.stratum
+    ]
+    if not selected_items:
+        parser.error(f"no manifest items found for stratum {args.stratum!r}")
     output = args.output
     output.mkdir(parents=True, exist_ok=True)
     journal = output / "journal.jsonl"
     identity = {
-        "instrument": "Q1_V4_CHARCOUNT",
+        "instrument": (
+            "Q1_V4_CHARCOUNT_LONG_FOLLOWUP"
+            if args.stratum is not None
+            else "Q1_V4_CHARCOUNT"
+        ),
         "manifest_hash": manifest["manifest_hash"],
-        "item_ids": [row["item_id"] for row in manifest["items"]],
+        "item_ids": [row["item_id"] for row in selected_items],
+        "stratum": args.stratum,
         "rollout_index": 0,
         "max_new_tokens": args.max_new_tokens,
         "model_id": MODEL_ID,
@@ -154,7 +157,7 @@ def main() -> int:
         batch_size=1,
     )
     backend = HuggingFaceBackend(config)
-    for item in manifest["items"]:
+    for item in selected_items:
         item_id = str(item["item_id"])
         if item_id in completed:
             continue
@@ -173,7 +176,7 @@ def main() -> int:
             )
             metadata = dict(output_row.metadata)
             token_count = int(metadata.get("generated_token_count", 0))
-            status, parsed, reason = _parse(
+            status, parsed, reason = parse_final_integer(
                 output_row.raw_output,
                 truncated=token_count >= args.max_new_tokens,
             )
@@ -218,8 +221,13 @@ def main() -> int:
     final_rows = [
         json.loads(line) for line in journal.read_text(encoding="utf-8").splitlines() if line
     ]
-    if len(final_rows) != 30 or len({row["item_id"] for row in final_rows}) != 30:
-        raise RuntimeError("V4 character run did not complete exactly 30 unique rows")
+    expected_count = len(selected_items)
+    expected_ids = {row["item_id"] for row in selected_items}
+    actual_ids = {row["item_id"] for row in final_rows}
+    if len(final_rows) != expected_count or actual_ids != expected_ids:
+        raise RuntimeError(
+            f"V4 character run did not complete exactly {expected_count} selected rows"
+        )
     prior = json.loads(manifest_path.read_text(encoding="utf-8"))
     prior.update(
         {

@@ -13,6 +13,7 @@ from epistemic_geometry.benchmarks.v4.character_count import (
     STRATA,
     generate_character_count_manifest,
 )
+from epistemic_geometry.benchmarks.v4.character_parser import parse_final_integer
 from epistemic_geometry.benchmarks.v4.geometry import (
     conceptual_distance,
     generate_geometry_manifest,
@@ -52,6 +53,18 @@ def test_type_aware_postmortem_distinguishes_string_format() -> None:
         reference_answer="'hello'",
     )
     assert diagnostic.diagnostic_status == "SEMANTIC_CORRECT_FORMAT_ERROR"
+
+
+def test_character_parser_accepts_only_explicit_final_variants() -> None:
+    assert parse_final_integer("**FINAL: 5**") == ("PARSED", 5, None)
+    assert parse_final_integer("`FINAL: -2`") == ("PARSED", -2, None)
+    assert parse_final_integer("### Final Answer: **7**") == ("PARSED", 7, None)
+    assert parse_final_integer("### Final Answer:\n**7**") == ("PARSED", 7, None)
+    assert parse_final_integer("FINAL: 3\n") == ("PARSED", 3, None)
+    assert parse_final_integer("The answer is 3") [0] == "INVALID_FORMAT"
+    assert parse_final_integer("FINAL: 3\nFINAL: 4")[0] == "INVALID_FORMAT"
+    assert parse_final_integer("FINAL: five")[0] == "INVALID_FORMAT"
+    assert parse_final_integer("<think>unfinished", truncated=False)[0] == "TRUNCATED_THINKING"
 
 
 def test_dense_code_vector_keeps_nested_test_identity() -> None:
