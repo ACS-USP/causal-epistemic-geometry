@@ -1,17 +1,70 @@
 schema_version: 1
 id: PUBLISHED_POSITIVE_CONTROL_WEEKDAYS
-status: PROSPECTIVE_DEVELOPMENT_LOCK_REQUIRED
+status: PROSPECTIVE_DEVELOPMENT_LOCKED
 stage: DEVELOPMENT_LOCK
 source:
-  paper: arXiv:2605.05115
+  paper: arXiv:2605.05115v1
   repository: https://github.com/goodfire-ai/causalab
   branch: manifold_steering
-  commit: RESOLVE_AND_FREEZE_BEFORE_EXECUTION
+  commit: 7dcc8ec4ffd11efec8b3cf9febd6b523df7637b6
 model:
-  id: meta-llama/Llama-3.1-8B-Instruct
-  revision: RESOLVE_AND_FREEZE_BEFORE_EXECUTION
+  id: meta-llama/Llama-3.1-8B
+  revision: d04e592bb4f6aa9cfee91e2e20afa771667e1d4b
+  tokenizer_revision: d04e592bb4f6aa9cfee91e2e20afa771667e1d4b
+  dtype: bfloat16
+  attention: eager
+  access: gated_manual_confirmation_pending
 task: upstream_weekdays_8b_pipeline
 method: upstream_manifold_path_steering
+upstream_config:
+  runner: causalab/configs/runners/weekdays/weekdays_8b_pipeline.yaml
+  task: causalab/configs/task/natural_domains_arithmetic_weekdays.yaml
+  model: causalab/configs/model/llama31_8b.yaml
+  path_steering: causalab/configs/analysis/path_steering.yaml
+  layer: 28
+  token_position: last_token
+  prompt_template: "Q: What day is {number} days after {entity}?\\nA:"
+  response_domain:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+  max_new_tokens: 1
+  path_modes:
+    - geometric
+    - linear
+  n_extra_pairs: 29
+  n_interior_per_pair: 4
+  num_steps_along_path: 50
+  n_prompts: 16
+  n_eval_samples: 100
+  pullback: omitted_not_required_for_primary_weekday_metric
+metric:
+  implementation: causalab/methods/scores/distance_from_behavior_manifold.py
+  name: mean_cumulative_bhattacharyya_distance
+  output_key: mean
+  direction: lower_is_better
+  formula: "sum over path steps of -log(sum_k sqrt(p_k * q_k)), then mean over pairs and prompts"
+pass_rule:
+  primary: "E_manifold < E_linear"
+  minimum_relative_reduction: 0.30
+  relative_reduction: "(E_linear - E_manifold) / E_linear"
+  endpoint_top1_weekday_match_fraction: 0.90
+  endpoint_corruption: no_nan_invalid_simplex_or_gross_intervention_corruption
+  freeze_status: FROZEN_BEFORE_OUTCOMES
+execution:
+  required_conditions:
+    - unintervened_reference_if_required_upstream
+    - geometric_manifold_path
+    - linear_path
+    - identity_or_alpha_zero_control_if_exposed_upstream
+  source_commit: bc2eb29
+  hardware: NVIDIA_A40
+  cost_target_usd: 0.75
+  cost_hard_stop_usd: 1.25
 outcomes:
   - weekday_output_probability_path
   - endpoint_target_probability
@@ -19,9 +72,7 @@ outcomes:
 controls:
   - unintervened
   - upstream_linear_path
-  - upstream_shuffled_or_off_structure_control
-  - identity_intervention
-pass_rule: FREEZE_FROM_PUBLISHED_EFFECT_AND_NUMERICAL_TOLERANCE_BEFORE_RUN
+  - identity_intervention_if_exposed_upstream
 interpretation:
   pass: intervention_stack_validated_on_published_adjacent_effect
   fail: original_q1_null_not_interpretable
@@ -29,4 +80,3 @@ forbidden:
   - adapting_result_to_qwen_during_replication
   - treating_replication_as_q1
   - importing_manifold_metric_as_default_q2
-

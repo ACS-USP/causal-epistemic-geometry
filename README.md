@@ -9,7 +9,7 @@ in a frozen model's semantic error profile.
 
 Gate 1 semantic accounting was repaired offline without new inference. Character-count is 20/20 semantically evaluable with 15 correct and 5 genuine wrong at 75%; CRUXEval is 20/20 with 8 correct and 12 wrong at 40%. Character-count remains PROMISING under the frozen rule.
 
-**Next authorized action:** Freeze and audit the published weekday positive-control lock, verify model access, then execute only the bounded Gate 2 reproduction. Do not run original Q1 steering, the substrate race, Q2, or the holdout.
+**Next authorized action:** Verify gated model access remotely and cost, then execute only the bounded Gate 2 weekday reproduction. Do not run original Q1 steering, the substrate race, Q2, or the holdout.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

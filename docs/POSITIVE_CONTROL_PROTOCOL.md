@@ -1,6 +1,6 @@
 # Published positive-control protocol
 
-Status: **PROSPECTIVE — NOT EXECUTED**
+Status: **PROSPECTIVE DEVELOPMENT LOCKED — NOT EXECUTED**
 
 ## Selection
 
@@ -8,11 +8,18 @@ The preferred positive control is the weekday path-steering result from
 Wurgaft et al., *Manifold Steering Reveals the Shared Geometry of Neural Network
 Representation and Behavior* (arXiv:2605.05115). The authors provide a public
 `manifold_steering` branch of
-[`goodfire-ai/causalab`](https://github.com/goodfire-ai/causalab/tree/manifold_steering)
+[`goodfire-ai/causalab`](https://github.com/goodfire-ai/causalab/tree/7dcc8ec4ffd11efec8b3cf9febd6b523df7637b6)
 and an end-to-end `weekdays_8b_pipeline` for Llama-3.1-8B on a GPU with at least
 24 GB VRAM. The published demonstration uses exact weekday concepts and tests
 whether representation-manifold interventions move output probability through
 the corresponding weekday behavior manifold.
+
+The frozen upstream revision is
+`7dcc8ec4ffd11efec8b3cf9febd6b523df7637b6`; the paper is frozen at
+[arXiv:2605.05115v1](https://arxiv.org/abs/2605.05115). The model is the
+authors' base `meta-llama/Llama-3.1-8B`, not an instruct variant, at model and
+tokenizer revision `d04e592bb4f6aa9cfee91e2e20afa771667e1d4b`. Hugging Face
+access is gated and must be confirmed remotely before any model download.
 
 This choice is prospective and methodological. It does not endorse manifold
 geometry as the metric for this repository's Q2.
@@ -56,7 +63,7 @@ must record:
 
 - exact CausaLab commit from the `manifold_steering` branch;
 - exact paper version and pipeline config;
-- exact Llama-3.1-8B-Instruct model revision and license/access approval;
+- exact `meta-llama/Llama-3.1-8B` model revision and license/access approval;
 - layer, token position, subspace/manifold construction, intervention operator,
   path points, and controls exactly as implemented upstream;
 - exact weekday prompt set and candidate tokenization;
@@ -64,6 +71,23 @@ must record:
 - seed schedule, dtype, attention engine, source commit, hardware, cost cap;
 - an outcome-independent pass/fail tolerance derived from the published result
   and numerical implementation, not from our observed run.
+
+The complete lock is recorded in
+`review/positive_control_weekdays/POSITIVE_CONTROL_LOCK.md` and
+`experiments/specs/positive_control_weekdays.yaml`. The pinned runner uses
+layer 28, the last prompt token, BF16, and the upstream default eager attention
+implementation. The bounded weekday path-steering subset includes baseline,
+subspace, activation-manifold, output-manifold, and path-steering stages. The
+pullback analysis is omitted because it is not required for the primary weekday
+metric and is outside this explicitly bounded reproduction; no upstream path or
+metric is changed by that omission.
+
+The frozen primary metric is the upstream
+`distance_from_behavior_manifold.mean`: mean cumulative Bhattacharyya distance
+along the behavior-probability path, where lower is better. The control passes
+only if manifold energy is below linear energy and the relative reduction is at
+least 30%, with endpoint top-1 weekday match fraction at least 90% and no gross
+probability/intervention corruption. These criteria are fixed before outcomes.
 
 Do not adapt the paper's method to Qwen during the replication. Do not simplify
 to our V4 centroid plot and call that a replication.
@@ -95,4 +119,3 @@ environment. The main Q2 ladder still starts with cosine/normalized Euclidean
 distance and only advances to richer metrics after pre-specified evidence. A
 positive control can be methodologically adjacent without becoming the theory
 under test.
-

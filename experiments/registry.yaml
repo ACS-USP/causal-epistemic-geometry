@@ -153,15 +153,15 @@ experiments:
     stage: DEVELOPMENT_LOCK
     question: Can the environment reproduce a published weekday activation-to-behavior intervention?
     instrument: CausaLab manifold_steering weekdays_8b_pipeline
-    model_policy: Llama-3.1-8B-Instruct, exact upstream policy to be frozen before execution
-    status: PROSPECTIVE_DEVELOPMENT_LOCK_REQUIRED
+    model_policy: Llama-3.1-8B base, exact upstream policy pinned in the development lock
+    status: PROSPECTIVE_DEVELOPMENT_LOCKED
     outcome: null
     scientific_interpretation: >-
       Methodological positive control only. A pass validates the intervention
       stack; it does not establish Q1, semantic complementarity, Q2, or a
       manifold metric for this repository.
-    source_commit: e843831
+    source_commit: bc2eb29
     artifact: review/positive_control_weekdays/
     cost_usd: null
     holdout_status: UNTOUCHED
-    next_action: Resolve and freeze upstream commit, model access, metric, and cost before GPU execution.
+    next_action: Verify gated model access remotely and cost, then execute only the bounded weekday reproduction.
