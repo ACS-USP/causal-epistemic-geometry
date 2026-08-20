@@ -359,7 +359,7 @@ experiments:
       order, allocates 32/16 deterministic reserves before new outputs,
       reuses only audited completed generations, permanently excludes
       sample_169, and uses no correctness or semantic outcomes for eligibility.
-    source_commit: 5a161eb
+    source_commit: 4765f70
     artifact: review/gate6_layer_source_rfm_atlas/
     cost_usd: 0.44
     holdout_status: UNTOUCHED
@@ -376,7 +376,7 @@ experiments:
       sample_169_retry: false
       correctness_used_for_selection: false
       semantic_outcomes_used_for_selection: false
-      gpu_authorized: false
+      gpu_authorized: true
     execution:
       screening: NOT_RUN
       activation_extraction: NOT_RUN

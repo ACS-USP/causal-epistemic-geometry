@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "selection_rule": "common_mechanical_eligibility_in_frozen_original_then_reserve_order",
+  "status": "FROZEN_PRE_OUTCOME",
+  "train": {
+    "candidate_order_file": "review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json",
+    "max_ineligible": 20,
+    "original_count": 104,
+    "reserve_count": 32,
+    "reserve_file": "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_RESERVE.json",
+    "target": 104
+  },
+  "unused_reserves_are_not_generated": true,
+  "validation": {
+    "candidate_order_file": "review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json",
+    "max_ineligible": 6,
+    "original_count": 32,
+    "reserve_count": 16,
+    "reserve_file": "review/gate6_layer_source_rfm_atlas/SOURCE_VALIDATION_RESERVE.json",
+    "target": 32
+  }
+}

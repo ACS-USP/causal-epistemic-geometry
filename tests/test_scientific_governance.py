@@ -44,6 +44,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "FIRST_MICRO_Q1_LOCKED",
             "GATE5_SOURCE_DURATION_LOCKED",
             "GATE6_LAYER_SOURCE_RFM_ATLAS_LOCKED",
+            "GATE6_SOURCE_ATTRITION_REPAIR",
         }
     )
     assert state["scientific_firewall"]["steering"] in {

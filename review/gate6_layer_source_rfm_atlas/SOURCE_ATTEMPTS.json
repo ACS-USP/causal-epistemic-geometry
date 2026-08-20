@@ -1,0 +1,73 @@
+{
+  "attempt_1": {
+    "attempt_id": "GATE6_SOURCE_ATTEMPT_1",
+    "classification": "GATE6_SOURCE_PHASE_INCOMPLETE",
+    "controller_construction_completed": false,
+    "cost_usd": 0.44,
+    "effective_execution_commit": "a3233771332687acfd3a30ac86011cdfed5c23bf",
+    "failed_condition": "CAREFUL",
+    "failed_item_id": "sample_169",
+    "failed_reason": "The careful source trajectory reached the frozen 4096-token ceiling without an unambiguous FINAL marker.",
+    "historical_lock_status": "FROZEN_PRE_OUTCOME",
+    "max_new_tokens": 4096,
+    "model": "Qwen/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "partial_journal_sha256": "d0c8fa5a792abd83b30689652ae1400e3add8a9e8b40687b0a8928751645febe",
+    "partial_log_sha256": "0ba75d1821b26ea430b918f47794e1b99c0c351900b90d3c8b6e172a2730c814",
+    "pod_id": "hc652rwff8st5e",
+    "protocol_lock_sha256": "8e47cd9a9bd4360eff41b77acbaa7772e7aea45c6b8cae6c06fe06c8eea2f523",
+    "protocol_lock_source_commit": "e4223f6a8910464f9df479f6cb270c673ad84f20",
+    "scientific_outcomes_collected": false,
+    "source_commit_recorded": "a3233771332687acfd3a30ac86011cdfed5c23bf",
+    "source_rows_expected": 136,
+    "source_rows_preserved": 2
+  },
+  "attempt_2": {
+    "attempt_id": "GATE6_SOURCE_ATTRITION_REPAIR",
+    "new_outputs": false,
+    "reuses": [
+      {
+        "action": "REUSE_SOURCE_GENERATIONS",
+        "checks": {
+          "careful_cap": true,
+          "careful_model": true,
+          "careful_prompt": true,
+          "careful_raw": true,
+          "careful_revision": true,
+          "careful_seed": true,
+          "careful_tokens": true,
+          "direct_cap": true,
+          "direct_model": true,
+          "direct_prompt": true,
+          "direct_raw": true,
+          "direct_revision": true,
+          "direct_seed": true,
+          "direct_tokens": true,
+          "item_id": true,
+          "ordinary_cap": true,
+          "ordinary_model": true,
+          "ordinary_prompt": true,
+          "ordinary_raw": true,
+          "ordinary_revision": true,
+          "ordinary_seed": true,
+          "ordinary_tokens": true,
+          "split": true,
+          "token_counts": true
+        },
+        "item_id": "sample_440",
+        "reason": "all frozen generation invariants match",
+        "source_commit": "a3233771332687acfd3a30ac86011cdfed5c23bf"
+      },
+      {
+        "action": "IMPORT_PERMANENT_INELIGIBLE",
+        "item_id": "sample_169",
+        "reason": "historical frozen-cap no-FINAL outcome; never retry",
+        "source_commit": "a3233771332687acfd3a30ac86011cdfed5c23bf"
+      }
+    ],
+    "sample_169_retry": false,
+    "source_commit": "4765f70e7fa7886186369bcd024bd032d018beb6",
+    "status": "LOCKED_PENDING_EXECUTION"
+  },
+  "schema_version": 1
+}

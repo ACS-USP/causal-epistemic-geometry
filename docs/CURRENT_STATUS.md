@@ -12,7 +12,7 @@ Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.
 
 - Workstream: `GATE6_SOURCE_ATTRITION_REPAIR`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
+- GPU work authorized: `true`
 - New scientific experiment authorized: `false`
 - Next authorized action: Execute only the frozen Gate 6.1 source screening after local validation; if attrition passes, continue the unchanged parent Gate 6 source pipeline.
 
