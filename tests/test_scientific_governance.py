@@ -25,8 +25,14 @@ def test_project_state_and_generated_status_are_current() -> None:
     assert state["project"]["claim_status"] == "NONE_FROZEN"
     assert state["scientific_firewall"]["confirmatory_holdout"] == "UNTOUCHED"
     workstream = state["current"]["workstream"]
-    assert workstream in {"SUBSTRATE_RACE", "SUBSTRATE_RACE_COMPLETE_PRINCIPAL_REVIEW"}
-    assert state["current"]["gpu_work_authorized"] is (workstream == "SUBSTRATE_RACE")
+    assert workstream in {
+        "SUBSTRATE_RACE",
+        "SUBSTRATE_RACE_COMPLETE_PRINCIPAL_REVIEW",
+        "FIRST_MICRO_Q1_LOCKED",
+    }
+    assert state["current"]["gpu_work_authorized"] is (
+        workstream in {"SUBSTRATE_RACE", "FIRST_MICRO_Q1_LOCKED"}
+    )
     assert state["scientific_firewall"]["steering"] == "ORIGINAL_Q1_NOT_RUN"
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
@@ -41,7 +47,11 @@ def test_registry_and_document_audits_pass() -> None:
 def test_prospective_specs_are_explicitly_unexecuted() -> None:
     for path in sorted((ROOT / "experiments" / "specs").glob("*.yaml")):
         spec = yaml.safe_load(path.read_text(encoding="utf-8"))
-        assert "PROSPECTIVE" in spec["status"] or spec["status"].startswith("CLOSED_")
+        assert (
+            "PROSPECTIVE" in spec["status"]
+            or "FROZEN" in spec["status"]
+            or spec["status"].startswith("CLOSED_")
+        )
 
 
 def test_dense_code_wrapper_rejects_unpinned_image_before_docker(tmp_path: Path) -> None:
