@@ -256,3 +256,29 @@ experiments:
         - recorded_source_commit_vs_effective_checkout
         - backend_stop_metadata_intervention_identity
     next_action: Gate 5 source-validity and temporal-persistence bridge; do not run Q2 or holdout.
+
+  - id: GATE5_SOURCE_DURATION_BRIDGE
+    version: GATE-5
+    stage: DEVELOPMENT_LOCK
+    question: Did the Gate-4 source text induce behavior, and can the same controller persist through decoding?
+    instrument: CRUXEval semantic output prediction; fresh source/manipulation/evaluation splits
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
+    status: FROZEN_PRE_OUTCOME
+    outcome: NOT_RUN
+    scientific_interpretation: >-
+      Prospective bridge only. It separates textual source validity from
+      temporal persistence of the exact Gate-4 controller. It does not reopen
+      layers, alpha, vectors, benchmark, Q2 geometry, or the holdout.
+    source_commit: 6de1261
+    artifact: review/gate5_source_duration/
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    lock:
+      protocol: review/gate5_source_duration/PROTOCOL_LOCK.json
+      source_items: 40
+      manipulation_items: 20
+      evaluation_items: 60
+      random_controls: 4
+      max_trajectories: 1500
+      gpu_authorized: true
+    next_action: Execute frozen Gate 5 only; stop before Gate 6, Q2, character count, or holdout.

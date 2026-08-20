@@ -7,10 +7,15 @@ import argparse
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from epistemic_geometry.experiments.gate5 import SYSTEM_CAREFUL, SYSTEM_DIRECT
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / "review" / "gate5_source_duration"
@@ -108,8 +113,8 @@ def main() -> int:
             "conditions": ["ORDINARY", "CAREFUL", "DIRECT"],
             "rollouts_per_item_condition": 2,
             "seed_regime": "INDEPENDENT_PRIMARY",
-            "careful_system_prompt": source["system_prompts"]["CAREFUL"],
-            "direct_system_prompt": source["system_prompts"]["DIRECT"],
+            "careful_system_prompt": SYSTEM_CAREFUL,
+            "direct_system_prompt": SYSTEM_DIRECT,
             "thresholds": {
                 "validity": 0.90,
                 "cross_disagreement_X": 0.10,

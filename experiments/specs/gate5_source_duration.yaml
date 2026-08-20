@@ -1,0 +1,44 @@
+schema_version: 1
+id: GATE5_SOURCE_DURATION_BRIDGE
+status: PROSPECTIVE_FROZEN_DEVELOPMENT_LOCK
+stage: DEVELOPMENT_LOCK
+source_commit: 6de1261f0f1fc9b588e7c2928c936b5bccbbbaba
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+policy:
+  enable_thinking: false
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  max_new_tokens: 4096
+  attention: sdpa
+  engine: hf_generate_serial_prefill_hook
+instrument:
+  benchmark: CRUXEval
+  dataset_repo: cruxeval-org/cruxeval
+  dataset_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  evaluator: corrected_deterministic_type_aware_python_literal
+  parser_version: external-semantic-v1
+layer: 17
+alpha: 8.39900588973121
+random_bank_metadata: review/gate5_source_duration/RANDOM_BANK_METADATA.json
+protocol_lock: review/gate5_source_duration/PROTOCOL_LOCK.json
+fresh_split_counts:
+  SOURCE_CHECK: 40
+  SUSTAINED_MANIPULATION: 20
+  SUSTAINED_EVALUATION: 60
+cost_gate:
+  max_trajectories: 1500
+  target_usd: 0.75
+  hard_stop_usd: 1.5
+firewall:
+  gate4: ACCEPTED_BOUNDED_NULL
+  q2: NOT_RUN
+  character_count: NOT_RUN
+  confirmatory_holdout: UNTOUCHED

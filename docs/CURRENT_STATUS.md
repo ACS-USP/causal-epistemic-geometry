@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. An independent forensic audit found 400/400 intact logical rows, no leakage or seed failures, and only minor non-scientific provenance issues. The frozen classification remains MICRO_Q1_NO_DETECTABLE_SIGNAL. Both meaningful signs remained valid and competence-preserving, but neither moved semantic error profiles beyond the random control under the pre-registered thresholds.
+Gate 4 is accepted as an audited bounded null. Gate 5 is now frozen pre-outcome to test source validity and temporal persistence using the exact Gate-4 Qwen3-8B controller, four random controls, and fresh development-only CRUXEval items. No Gate-5 model outcomes have been collected.
 
-- Workstream: `FIRST_MICRO_Q1_AUDITED`
+- Workstream: `GATE5_SOURCE_DURATION_LOCKED`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Gate 5 source-validity and temporal-persistence bridge on a new branch, after the audited Gate 4 state is accepted into main. Do not run character count, Q2, geometry, or holdout.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute only the frozen Gate-5 source/duration bridge after the lock is pushed. Do not run character count, Q2, geometry, or holdout.
 
 ## Scientific program
 
@@ -38,13 +38,13 @@ Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. An 
 
 ## Scientific firewall
 
-- `steering`: `ORIGINAL_Q1_MICRO_Q1_COMPLETE_DEVELOPMENT_NO_SIGNAL`
+- `steering`: `ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_LOCKED`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE4_FORENSIC_AUDIT_COMPLETE_MINOR_PROVENANCE_ISSUES`
+- `current_task`: `GATE5_SOURCE_DURATION_LOCKED_PRE_OUTCOME`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

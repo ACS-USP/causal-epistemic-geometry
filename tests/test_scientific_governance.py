@@ -31,13 +31,15 @@ def test_project_state_and_generated_status_are_current() -> None:
         "FIRST_MICRO_Q1_LOCKED",
         "FIRST_MICRO_Q1_COMPLETE",
         "FIRST_MICRO_Q1_AUDITED",
+        "GATE5_SOURCE_DURATION_LOCKED",
     }
     assert state["current"]["gpu_work_authorized"] is (
-        workstream in {"SUBSTRATE_RACE", "FIRST_MICRO_Q1_LOCKED"}
+        workstream in {"SUBSTRATE_RACE", "FIRST_MICRO_Q1_LOCKED", "GATE5_SOURCE_DURATION_LOCKED"}
     )
     assert state["scientific_firewall"]["steering"] in {
         "ORIGINAL_Q1_NOT_RUN",
         "ORIGINAL_Q1_MICRO_Q1_COMPLETE_DEVELOPMENT_NO_SIGNAL",
+        "ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_LOCKED",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

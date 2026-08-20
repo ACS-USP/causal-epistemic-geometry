@@ -9,6 +9,7 @@ current instruction source.
 | Document | Role |
 |---|---|
 | `docs/CURRENT_STATUS.md` | Generated live status; edit `project_state.yaml` |
+| `docs/PUBLICATION_ROADMAP.md` | Non-overlapping evidence gates for Programs A, B, and C |
 | `docs/SCIENTIFIC_CONSTITUTION.md` | Claim hierarchy and non-negotiable evidence rules |
 | `docs/METRICS_AND_STATISTICS.md` | Current estimands, seed semantics, and uncertainty |
 | `docs/EXPERIMENT_LADDER.md` | Prospective gated research sequence |

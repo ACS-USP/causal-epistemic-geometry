@@ -1,0 +1,13 @@
+{
+  "all_ids_digest": "b6aecd6d7b50179fddba5f4018bafc5a85b3fff98fce9f03954c9b536da7f9ec",
+  "allocation_counts": {
+    "SOURCE_CHECK": 40,
+    "SUSTAINED_EVALUATION": 60,
+    "SUSTAINED_MANIPULATION": 20
+  },
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "historical_excluded_count": 193,
+  "historical_exclusion_digest": "db55699b14721c6369e5a22dc80dd811c87e8362cedf99d93d38e8ae6c196103",
+  "source": "RunPod HF_HOME=/workspace/hf-cache; model not loaded"
+}
