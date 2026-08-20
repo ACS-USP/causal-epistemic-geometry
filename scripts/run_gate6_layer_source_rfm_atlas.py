@@ -55,6 +55,7 @@ from epistemic_geometry.experiments.gate6 import (  # noqa: E402
     vector_sha256,
 )
 from epistemic_geometry.reproducibility import (  # noqa: E402
+    git_metadata,
     require_remote_hf_execution,
     stable_digest,
     stable_seed,
@@ -1464,6 +1465,7 @@ def main() -> int:
             "CONTROLLER_EVALUATION",
             args.evaluation_manifest or review / "CONTROLLER_EVALUATION.json",
         )
+    provenance = git_metadata(ROOT)
     write_json(
         review / "RUN_METADATA.json",
         {
@@ -1472,7 +1474,8 @@ def main() -> int:
             "revision": MODEL_REVISION,
             "layers": list(LAYERS),
             "bootstrap_seed": BOOTSTRAP_SEED,
-            "source_commit": stable_digest("GATE6-SOURCE-COMMIT", Path.cwd().name),
+            "source_commit": provenance.get("git_commit"),
+            "worktree_dirty": provenance.get("git_dirty"),
         },
     )
     return 0
