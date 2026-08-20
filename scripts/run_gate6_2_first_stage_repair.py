@@ -176,7 +176,7 @@ def _load_source_items(review: Path, split: str) -> list[ExternalItem]:
 
 def _load_source_rows(review: Path) -> dict[str, dict[str, Any]]:
     rows = _load_jsonl(review / "SOURCE_GENERATIONS.jsonl")
-    result = {(str(row["split"]), str(row["item_id"])): row for row in rows}
+    result = {str(row["item_id"]): row for row in rows}
     if len(result) != len(rows):
         raise RuntimeError("duplicate source generation key")
     return result
