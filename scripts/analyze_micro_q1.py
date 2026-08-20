@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import sys
 from collections import Counter
@@ -136,6 +137,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--journal", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--pod-runtime-seconds", type=float, default=None)
     args = parser.parse_args()
     rows = _read(args.journal)
     ids, keyed = _validate(rows)
@@ -155,6 +157,13 @@ def main() -> int:
     classification, decisions = _classify(summaries, estimands)
     output = args.output
     output.mkdir(parents=True, exist_ok=True)
+    provenance = json.loads((output / "RUN_PROVENANCE.json").read_text(encoding="utf-8"))
+    correction_path = output / "PROVENANCE_CORRECTION.json"
+    if correction_path.exists():
+        correction = json.loads(correction_path.read_text(encoding="utf-8"))
+        provenance["source_commit"] = correction["corrected_execution_source_commit"]
+    gate = json.loads((output / "PRE_EVALUATION_GATE.json").read_text(encoding="utf-8"))
+    engineering = json.loads((output / "ENGINEERING_CHECKS.json").read_text(encoding="utf-8"))
     with (output / "TRAJECTORY_RESULTS.csv").open("w", newline="", encoding="utf-8") as handle:
         fields = [
             "item_id",
@@ -198,6 +207,47 @@ def main() -> int:
     (output / "BOOTSTRAP_INTERVALS.json").write_text(
         json.dumps(bootstrap, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
+    manifest_hashes = {}
+    for name in (
+        "PROTOCOL_LOCK.json",
+        "CONSTRUCTION_MANIFEST.json",
+        "VALIDATION_MANIFEST.json",
+        "EVALUATION_MANIFEST.json",
+        "HISTORICAL_EXCLUSION_DIGEST.json",
+        "DIRECTION.npy",
+        "RANDOM_DIRECTION.npy",
+        "journal.jsonl",
+        "PROVENANCE_CORRECTION.json",
+    ):
+        path = output / name
+        if path.exists():
+            manifest_hashes[name] = hashlib.sha256(path.read_bytes()).hexdigest()
+    (output / "manifest_hashes.json").write_text(
+        json.dumps(manifest_hashes, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    generation_seconds = float(sum(float(row.get("elapsed_seconds", 0.0)) for row in rows))
+    pod_seconds = args.pod_runtime_seconds or generation_seconds
+    (output / "COST.json").write_text(
+        json.dumps(
+            {
+                "rate_usd_per_a40_hour": 0.44,
+                "pod_runtime_seconds": pod_seconds,
+                "generation_seconds_sum": generation_seconds,
+                "estimated_a40_cost_usd": pod_seconds / 3600.0 * 0.44,
+                "scientific_trajectories": len(rows),
+                "activation_direction_extraction": True,
+                "model_download": False,
+                "note": (
+                    "Pod runtime is the conservative start-to-stop observation "
+                    "supplied by RunPod telemetry; analysis is local."
+                ),
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
     report = [
         "FIRST ORIGINAL MICRO-Q1",
         "======================================================================",
@@ -220,6 +270,29 @@ def main() -> int:
             f"{summary['accuracy']:.3f} | {summary['validity']:.3f} | "
             f"{summary['mean_tokens']:.1f} | {summary['median_tokens']:.1f} |"
         )
+    report += [
+        "",
+        "## Direction and engineering gates",
+        "",
+        f"- model: `{provenance['model']}` at `{provenance['model_revision']}`",
+        f"- source commit: `{provenance['source_commit']}`",
+        f"- layer: `{gate['layer']}`, alpha: `{gate['alpha']}`, Delta: `{gate['delta']}`",
+        f"- validation: `{gate['direction_gate']['validation_positive_count']}/16` positive; "
+        f"mean gap `{gate['direction_gate']['validation_mean_gap']:.6f}`",
+        f"- alpha-zero identity: `{engineering['alpha_zero_identity']['pass']}`",
+        f"- hook cleanup: `{engineering['hook_cleanup']['pass']}`",
+        f"- last-token scope: `{engineering['last_prompt_token_scope']}`",
+        "",
+        "## Baseline resampling reference",
+        "",
+        f"- repeated baseline double fault B00: `{estimands['baseline']['B00']:.6f}`",
+        f"- repeated baseline pair oracle O00: `{estimands['baseline']['O00']:.6f}`",
+        "",
+        "## Cost",
+        "",
+        f"- A40 observed runtime used for conservative estimate: `{pod_seconds:.1f}` seconds",
+        f"- estimated incremental cost: `${pod_seconds / 3600.0 * 0.44:.6f}`",
+    ]
     report += [
         "",
         "## Estimands",

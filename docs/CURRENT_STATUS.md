@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 3 was accepted into main. Gate 4 is now prospectively locked for one CRUXEval semantic development micro-Q1: one paired careful-minus-direct direction, one orthogonal norm-matched random control, four conditions, and two independent rollouts per item. No scientific evaluation outcome has yet been generated.
+Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. The paired direction and engineering gates passed, 400 trajectories were collected, and the frozen classification was MICRO_Q1_NO_DETECTABLE_SIGNAL. Both meaningful signs remained valid and competence-preserving, but neither moved semantic error profiles beyond the random control under the pre-registered thresholds.
 
-- Workstream: `FIRST_MICRO_Q1_LOCKED`
-- RunPod: `RUNNING_FOR_MANIFEST_PREPARATION`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Run the frozen Gate 4 pre-evaluation gates and, only if they pass, the 400 trajectory development experiment. Do not run character-count replication, Q2, geometry, or holdout.
+- Workstream: `FIRST_MICRO_Q1_COMPLETE`
+- RunPod: `STOPPED`
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: Principal review of the Gate 4 development result. Do not run character count, another direction/layer/alpha, Q2, geometry, or holdout.
 
 ## Scientific program
 
@@ -38,13 +38,13 @@ Gate 3 was accepted into main. Gate 4 is now prospectively locked for one CRUXEv
 
 ## Scientific firewall
 
-- `steering`: `ORIGINAL_Q1_NOT_RUN`
+- `steering`: `ORIGINAL_Q1_MICRO_Q1_COMPLETE_DEVELOPMENT_NO_SIGNAL`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE4_FIRST_MICRO_Q1_PRE_OUTCOME_LOCK`
+- `current_task`: `GATE4_FIRST_MICRO_Q1_COMPLETE_NO_DETECTABLE_SIGNAL`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

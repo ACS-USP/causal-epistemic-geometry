@@ -39,6 +39,7 @@ current instruction source.
 | `docs/Q1_V4_GEOMETRY_REANALYSIS.md` | Corrected offline tied-rank analysis |
 | `docs/Q1_V4_DENSE_CODE_PILOT.md` | Current dense-code infrastructure pause |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
+| `docs/GATE4_MICRO_Q1_CLOSEOUT.md` | First original development micro-Q1 closeout |
 
 ## Archival scientific protocols and closeouts
 

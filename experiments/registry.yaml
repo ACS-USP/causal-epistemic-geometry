@@ -225,15 +225,20 @@ experiments:
 
   - id: FIRST_MICRO_Q1
     version: GATE-4
-    stage: DEVELOPMENT_LOCK
+    stage: DEVELOPMENT
     question: Can one pre-specified activation direction change semantic error profiles beyond resampling and a norm-matched random control?
     instrument: CRUXEval semantic output prediction
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled
-    status: LOCKED_NOT_RUN
-    outcome: No scientific outcomes generated at lock time.
-    scientific_interpretation: Prospective development lock only; no Q1 conclusion is available.
-    source_commit: 7b5788d
+    status: COMPLETE_DEVELOPMENT_NO_SIGNAL
+    outcome: MICRO_Q1_NO_DETECTABLE_SIGNAL
+    scientific_interpretation: >-
+      Direction validation and intervention-engineering checks passed. The
+      meaningful plus and minus signs were valid and competence-preserving,
+      but neither exceeded the frozen propensity-movement threshold beyond the
+      norm-matched random control. This is a bounded development result, not a
+      null theorem about Q1.
+    source_commit: cf95566
     artifact: review/micro_q1/
-    cost_usd: null
+    cost_usd: 0.10388888888888889
     holdout_status: UNTOUCHED
-    next_action: Execute only the frozen pre-evaluation gates and Gate 4 development run.
+    next_action: Principal review; do not run another direction, layer, alpha, Q2, or holdout.
