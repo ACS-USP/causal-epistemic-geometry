@@ -351,17 +351,19 @@ experiments:
     question: Can the frozen Gate-6 source phase be completed after repairing mechanical marker attrition without changing scientific inputs?
     instrument: CRUXEval semantic source conditions with exact generated-token FINAL boundaries
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, serial batch-size 1
-    status: LOCKED_PRE_OUTCOME
-    outcome: PENDING_SOURCE_SCREEN
+    status: COMPLETE_SOURCE_SCREEN
+    outcome: GATE6_READOUT_WITHOUT_CAUSAL_FIRST_STAGE
     scientific_interpretation: >-
       Prospective engineering repair only. Attempt 1 remains immutable as
-      GATE6_SOURCE_PHASE_INCOMPLETE. The repair preserves original candidate
-      order, allocates 32/16 deterministic reserves before new outputs,
-      reuses only audited completed generations, permanently excludes
-      sample_169, and uses no correctness or semantic outcomes for eligibility.
-    source_commit: 4765f70
+      GATE6_SOURCE_PHASE_INCOMPLETE. Gate 6.1 reached the frozen 104/32 source
+      targets within the attrition limits and constructed the 12 frozen source
+      controller candidates plus paired-mean diagnostics. Readout was strong
+      for several candidates, but no individual RFM controller passed the
+      frozen symmetric teacher-forced first-stage gate. No manipulation or
+      evaluation outcome was collected.
+    source_commit: dc451ef4e9447e946486a48b0573d12807585a75
     artifact: review/gate6_layer_source_rfm_atlas/
-    cost_usd: 0.44
+    cost_usd: 0.70
     holdout_status: UNTOUCHED
     parent_experiment: GATE6_LAYER_SOURCE_RFM_ATLAS
     lock:
@@ -378,11 +380,15 @@ experiments:
       semantic_outcomes_used_for_selection: false
       gpu_authorized: true
     execution:
-      screening: NOT_RUN
-      activation_extraction: NOT_RUN
+      screening: PASS_TARGETS_WITHIN_ATTRITION_LIMITS
+      activation_extraction: PASS
+      controller_construction: PASS
+      source_readout: PASS_SOME_CANDIDATES
+      individual_rfm_first_stage: FAIL
+      source_phase_decision: DO_NOT_CONTINUE
       controller_manipulation: NOT_RUN
       controller_evaluation: NOT_RUN
       q2: NOT_RUN
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Run local validation, then execute only Gate 6.1 source screening after the lock commit.
+    next_action: Principal review; do not run manipulation/evaluation or redesign the source/controller gate automatically.

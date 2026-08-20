@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.1 freezes a prospective mechanical attrition repair: original candidate order is preserved, deterministic train/validation reserves are allocated before new output, sample_440 may be reused under audited invariants, and sample_169 is permanently ineligible and never retried. No new model output has been collected under the repair lock.
+Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.1 completed its frozen mechanical attrition repair and source/controller construction. Train and validation targets were reached within the frozen ineligibility limits, but no individual RFM controller passed the frozen symmetric first-stage gate. No manipulation or evaluation was run.
 
 - Workstream: `GATE6_SOURCE_ATTRITION_REPAIR`
 - RunPod: `STOPPED`
 - GPU work authorized: `true`
 - New scientific experiment authorized: `false`
-- Next authorized action: Execute only the frozen Gate 6.1 source screening after local validation; if attrition passes, continue the unchanged parent Gate 6 source pipeline.
+- Next authorized action: Principal review of the Gate 6.1 source-screen result. Do not run manipulation/evaluation or redesign the source/controller gate without a new prospective protocol.
 
 ## Scientific program
 
@@ -47,7 +47,7 @@ Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE6_SOURCE_ATTRITION_REPAIR_LOCKED`
+- `current_task`: `GATE6_SOURCE_ATTRITION_REPAIR_COMPLETE_SOURCE_SCREEN`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
