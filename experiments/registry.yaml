@@ -320,7 +320,7 @@ experiments:
       multi-layer current-token semantics, random controls, and phase gates are
       frozen before Gate-6 model outcomes. This is not Q2 and no semantic
       outcome has been collected.
-    source_commit: 4bd2230
+    source_commit: d05977a
     artifact: review/gate6_layer_source_rfm_atlas/
     cost_usd: null
     holdout_status: UNTOUCHED

@@ -21,7 +21,7 @@ project:
 current:
   workstream: GATE6_LAYER_SOURCE_RFM_ATLAS_LOCKED
   stage: DEVELOPMENT_LOCK
-  source_commit: 4bd2230
+  source_commit: d05977a
   summary: >-
     Gate 5 completed as a development source/duration bridge. The textual
     careful/direct source passed its frozen behavioral-separation gate, and
