@@ -651,6 +651,11 @@
     "path": "model.model.layers",
     "prefill_scope": "final_non_padding_prompt_token_only"
   },
+  "local_control_gain": {
+    "metric": "mean symmetric KL from ordinary baseline next-token distribution, divided by eta squared",
+    "outcome_labels_used": false,
+    "perturbation_eta": 0.05
+  },
   "manipulation": {
     "conditions": [
       "BASELINE",
@@ -688,7 +693,7 @@
     "top_p": 0.95
   },
   "schema_version": 1,
-  "source_commit": "4bd22305a3fe0b38d3e67eb150351924f882f718",
+  "source_commit": "d05977ae16f33a0a435320473c925da8c6a0d1da",
   "source_gate": {
     "auroc_min": 0.8,
     "heldout_items": 32,
@@ -807,10 +812,12 @@
       "PROMPT_BOUNDARY",
       "EXECUTION_BOUNDARY"
     ],
+    "manifest_path": "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_MANIFEST.json",
     "manifest_paths": [
       "review/micro_q1/CONSTRUCTION_MANIFEST.json",
       "review/gate5_source_duration/SOURCE_CHECK.json"
     ],
+    "manifest_sha256": "2113b2ccb03fa97ef4df1d6064a78eda83b8ff970ebb8ddfd7110547c5376f40",
     "outcome_labels_used": false
   },
   "standardized_budget": {
@@ -818,11 +825,13 @@
     "choose": "smallest_source_only_passing_budget_with_safety_guard",
     "distributed_delta": "eta * s_layer / sqrt(number_of_layers) * unit_direction",
     "eta_formula": "alpha_gate5 / s17_gate5",
+    "gate4_direction_sha256": "1304d6fc8dd0985895bc802885b156bc9be49d1afc58d00b013f51830cf9b9df",
     "ladder": [
       "eta0",
       "2eta0"
     ],
-    "mean_per_token_kl_max": 0.15
+    "mean_per_token_kl_max": 0.15,
+    "s17_gate5_reference": "projection standard deviation of the exact frozen Gate-4 layer-17 unit direction on ordinary SOURCE_TRAIN prompt-boundary activations"
   },
   "status": "FROZEN_PRE_OUTCOME",
   "teacher_forced_first_stage": {
