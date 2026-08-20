@@ -349,7 +349,7 @@ def _fit_rfm_with_source_cv(
 
 def _gate4_reference_scale(review: Path, ordinary_l17: np.ndarray) -> float:
     direction_path = ROOT / "review" / "micro_q1" / "DIRECTION.npy"
-    expected_hash = "1304d6fc8dd0985895bc802885b156bc9be49d1afc58d00b013f51830cf9b9df4"
+    expected_hash = "1304d6fc8dd0985895bc802885b156bc9be49d1afc58d00b013f51830cf9b9df"
     direction = np.load(direction_path, allow_pickle=False).astype(np.float64)
     if vector_sha256(direction) != expected_hash:
         raise RuntimeError("Gate-4 reference direction hash changed")
