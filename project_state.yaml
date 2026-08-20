@@ -106,13 +106,13 @@ instrument_history:
       not meet the frozen movement threshold; the minus sign showed a duration
       contrast below the full movement criterion. Gate 6 is drafted only.
   - id: GATE6_SOURCE_ATTRITION_REPAIR
-    status: DEVELOPMENT_LOCK
+    status: COMPLETE_SOURCE_SCREEN
     conclusion: >-
-      Prospective mechanical repair of the incomplete Gate 6 source phase.
-      Candidate order, model, cap, prompts, seeds, source labels, and downstream
-      scientific pipeline remain frozen. New reserves and condition-level
-      journaling address mechanical FINAL-marker attrition only. No model output
-      has been collected under this repair lock.
+      The frozen mechanical repair reached the 104/32 source targets within
+      attrition limits and constructed the source/controller atlas. Several
+      label-free readouts were strong, but no individual RFM controller passed
+      the frozen symmetric first-stage gate. Manipulation and evaluation were
+      not run; principal review is required before any redesign.
 
 workflow_regimes:
   EXPLORATION:
