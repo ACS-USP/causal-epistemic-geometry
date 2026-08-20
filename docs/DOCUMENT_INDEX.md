@@ -38,6 +38,7 @@ current instruction source.
 | `docs/BEFORE_TERMINATING_POD.md` | Artifact-recovery checklist |
 | `docs/Q1_V4_GEOMETRY_REANALYSIS.md` | Corrected offline tied-rank analysis |
 | `docs/Q1_V4_DENSE_CODE_PILOT.md` | Current dense-code infrastructure pause |
+| `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
 
 ## Archival scientific protocols and closeouts
 

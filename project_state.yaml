@@ -19,19 +19,20 @@ project:
     utility?
 
 current:
-  workstream: SUBSTRATE_RACE
-  source_commit: fa7cb86
+  workstream: SUBSTRATE_RACE_COMPLETE_PRINCIPAL_REVIEW
+  source_commit: 2b630c6
   summary: >-
-    Gate 3 is authorized as a bounded, baseline-only incremental race between
-    Qwen3-8B full non-thinking and Llama-3.1-8B-Instruct on two fresh common
-    objective instruments. The purpose is development substrate selection;
-    original activation steering, geometry, Q2, and the confirmatory holdout
-    remain forbidden.
+    Gate 3 completed as a bounded, baseline-only incremental race. Qwen3-8B
+    full non-thinking was the only model policy with eligible cells. The
+    recommended development substrate is Qwen3-8B full non-thinking with
+    CRUXEval semantic, with fresh long character count as backup. This is
+    substrate selection only; original activation steering, geometry, Q2, and
+    the confirmatory holdout remain forbidden.
   next_authorized_action: >-
-    Execute the frozen Gate 3 Stage 1 -> Stage 2 -> at most two-cell Stage 3
-    substrate race after local manifests, model access, and cost checks pass.
+    Principal review of the Gate 3 substrate recommendation. Do not execute
+    micro-Q1, steering, geometry, Q2, or holdout without a new authorization.
   runpod: STOPPED
-  gpu_work_authorized: true
+  gpu_work_authorized: false
   new_scientific_experiment_authorized: false
 
 scientific_firewall:
@@ -82,6 +83,13 @@ instrument_history:
       character-count 20/20 valid, 15 correct, 5 genuine wrong, 75%,
       PROMISING; CRUXEval 20/20 valid, 8 correct, 12 wrong, 40%, PROMISING.
       No steering occurred; this is still an exploration instrument result.
+  - id: MODEL_POLICY_BENCHMARK_SUBSTRATE_RACE
+    status: COMPLETE_EXPLORATION
+    conclusion: >-
+      The baseline-only Gate 3 race recommends Qwen3-8B full non-thinking with
+      CRUXEval semantic as the primary development substrate and fresh long
+      character count as backup. Llama-Instruct cells failed eligibility due to
+      completion/mechanical failures. No steering or geometry was run.
 
 workflow_regimes:
   EXPLORATION:

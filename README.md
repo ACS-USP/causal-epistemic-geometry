@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 3 is authorized as a bounded, baseline-only incremental race between Qwen3-8B full non-thinking and Llama-3.1-8B-Instruct on two fresh common objective instruments. The purpose is development substrate selection; original activation steering, geometry, Q2, and the confirmatory holdout remain forbidden.
+Gate 3 completed as a bounded, baseline-only incremental race. Qwen3-8B full non-thinking was the only model policy with eligible cells. The recommended development substrate is Qwen3-8B full non-thinking with CRUXEval semantic, with fresh long character count as backup. This is substrate selection only; original activation steering, geometry, Q2, and the confirmatory holdout remain forbidden.
 
-**Next authorized action:** Execute the frozen Gate 3 Stage 1 -> Stage 2 -> at most two-cell Stage 3 substrate race after local manifests, model access, and cost checks pass.
+**Next authorized action:** Principal review of the Gate 3 substrate recommendation. Do not execute micro-Q1, steering, geometry, Q2, or holdout without a new authorization.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -77,6 +77,9 @@ as current plans.
   is not production-ready and no model pilot ran.
 - Published weekday positive control: PASS under its frozen metric and endpoint
   criteria; this validates one known intervention stack, not original Q1 or Q2.
+- Gate 3 substrate race: baseline-only exploration complete; Qwen full
+  non-thinking × CRUXEval semantic is the provisional primary development
+  substrate, with fresh long character count as backup. No steering was run.
 - Confirmatory holdout: untouched.
 
 These are instrument outcomes, not a positive or negative result for the full

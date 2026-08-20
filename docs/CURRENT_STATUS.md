@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 3 is authorized as a bounded, baseline-only incremental race between Qwen3-8B full non-thinking and Llama-3.1-8B-Instruct on two fresh common objective instruments. The purpose is development substrate selection; original activation steering, geometry, Q2, and the confirmatory holdout remain forbidden.
+Gate 3 completed as a bounded, baseline-only incremental race. Qwen3-8B full non-thinking was the only model policy with eligible cells. The recommended development substrate is Qwen3-8B full non-thinking with CRUXEval semantic, with fresh long character count as backup. This is substrate selection only; original activation steering, geometry, Q2, and the confirmatory holdout remain forbidden.
 
-- Workstream: `SUBSTRATE_RACE`
+- Workstream: `SUBSTRATE_RACE_COMPLETE_PRINCIPAL_REVIEW`
 - RunPod: `STOPPED`
-- GPU work authorized: `true`
+- GPU work authorized: `false`
 - New scientific experiment authorized: `false`
-- Next authorized action: Execute the frozen Gate 3 Stage 1 -> Stage 2 -> at most two-cell Stage 3 substrate race after local manifests, model access, and cost checks pass.
+- Next authorized action: Principal review of the Gate 3 substrate recommendation. Do not execute micro-Q1, steering, geometry, Q2, or holdout without a new authorization.
 
 ## Scientific program
 
@@ -34,6 +34,7 @@ Gate 3 is authorized as a bounded, baseline-only incremental race between Qwen3-
 | `Q1_V4_MICROBENCH` | `CLOSED_DEVELOPMENT` | Character counting saturated semantically and exposed parser artifacts. A tiny weekday activation association is descriptive only and is being statistically reanalyzed for tied-rank correctness. |
 | `Q1_V4_DENSE_CODE` | `PAUSED_INFRASTRUCTURE` | Nested per-test outcomes are instrument-promising, but safe objective execution is not production-ready. No model pilot was run. |
 | `FULL_NONTHINKING_SMOKE` | `ACCEPTED_EXPLORATION` | Original outputs are preserved. Deterministic semantic reanalysis gives character-count 20/20 valid, 15 correct, 5 genuine wrong, 75%, PROMISING; CRUXEval 20/20 valid, 8 correct, 12 wrong, 40%, PROMISING. No steering occurred; this is still an exploration instrument result. |
+| `MODEL_POLICY_BENCHMARK_SUBSTRATE_RACE` | `COMPLETE_EXPLORATION` | The baseline-only Gate 3 race recommends Qwen3-8B full non-thinking with CRUXEval semantic as the primary development substrate and fresh long character count as backup. Llama-Instruct cells failed eligibility due to completion/mechanical failures. No steering or geometry was run. |
 
 ## Scientific firewall
 

@@ -188,13 +188,37 @@ experiments:
       micro-Q1?
     instrument: Fresh long character count and fresh CRUXEval semantic items
     model_policy: Qwen3-8B full non-thinking versus Llama-3.1-8B-Instruct full generation
-    status: PROSPECTIVE
-    outcome: NOT_RUN
+    status: COMPLETE_EXPLORATION
+    outcome: >-
+      105 baseline trajectories completed under the frozen staged design.
+      Qwen non-thinking qualified on both instruments; Llama-Instruct did not
+      qualify because completion failures dominated its cells. The primary
+      development recommendation is QWEN_NONTHINKING x CRUXEVAL_SEMANTIC, with
+      QWEN_NONTHINKING x FRESH_PSEUDOWORD_LONG as backup.
     scientific_interpretation: >-
-      Baseline-only substrate selection. This race cannot establish steering,
-      complementarity, geometry, Q1, Q2, or collective utility.
-    source_commit: fa7cb86
+      Baseline-only substrate selection. CRUXEval supplied 95% valid
+      completion, 9 correct and 10 wrong outcomes per seed, and a descriptive
+      two-rollout stable-hard pattern. Character count supplied 100% valid
+      completion but only 3-4 wrong outcomes and substantial ordinary
+      resampling headroom. These low-resolution diagnostics cannot establish
+      steering, complementarity, geometry, Q1, Q2, or collective utility.
+    source_commit: 2b630c6
     artifact: review/substrate_race/
-    cost_usd: null
+    cost_usd: 0.2767111111111111
     holdout_status: UNTOUCHED
-    next_action: Execute only the frozen Gate 3 staged race, then stop for principal review.
+    execution:
+      trajectory_rows: 105
+      qwen_revision: b968826d9c46dd6066d109eabc6255188de91218
+      llama_instruct_revision: 0e9e39f249a16976918f6564b8830bc894c89659
+      selected_cells:
+        - QWEN_NONTHINKING/FRESH_PSEUDOWORD_LONG
+        - QWEN_NONTHINKING/CRUXEVAL_SEMANTIC
+      primary_substrate: QWEN_NONTHINKING/CRUXEVAL_SEMANTIC
+      backup_substrate: QWEN_NONTHINKING/FRESH_PSEUDOWORD_LONG
+      generation_time_cost_usd: 0.13116469403083125
+      pod_wallclock_cost_estimate_usd: 0.2767111111111111
+      runpod_status: STOPPED
+      steering: NOT_RUN
+      geometry: NOT_RUN
+      q2: NOT_RUN
+    next_action: Principal review; do not execute micro-Q1 automatically.
