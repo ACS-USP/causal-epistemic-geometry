@@ -159,6 +159,7 @@ def main() -> int:
         "direction_layer": LAYER,
         "alpha": ALPHA,
         "scientific_outcomes_collected": False,
+        "records": records,
     }
     checks["pass"] = all(
         checks[name]
