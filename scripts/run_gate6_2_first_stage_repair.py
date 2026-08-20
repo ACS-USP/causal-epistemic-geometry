@@ -1022,7 +1022,7 @@ def main() -> int:
     args = parser.parse_args()
     require_remote_hf_execution(f"Gate 6.2 {args.phase} setup")
     backend = build_backend(args.model_path)
-    review = args.review_dir
+    review = args.review_dir.resolve()
     if args.phase == "SOURCE":
         source_phase(backend, review)
     elif args.phase == "MANIPULATION":
