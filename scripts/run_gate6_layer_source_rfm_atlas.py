@@ -1047,11 +1047,13 @@ def source_pipeline(backend: HuggingFaceBackend, review: Path, validation_path: 
             mean_path = review / "MEAN_DIRECTIONS" / location / f"L{layer}.npy"
             mean_path.parent.mkdir(parents=True, exist_ok=True)
             np.save(mean_path, mean_direction)
+            direction_provenance_path = direction_path.resolve().relative_to(ROOT.resolve())
+            mean_provenance_path = mean_path.resolve().relative_to(ROOT.resolve())
             controller_records[key] = {
                 "location": location,
                 "layer": layer,
                 "constructor": "RFM_AGOP",
-                "direction_path": str(direction_path.relative_to(ROOT)),
+                "direction_path": str(direction_provenance_path),
                 "vector_hash": source_metrics[key]["vector_hash"],
                 "readout": readout,
                 "scale": scale,
@@ -1061,7 +1063,7 @@ def source_pipeline(backend: HuggingFaceBackend, review: Path, validation_path: 
                 "location": location,
                 "layer": layer,
                 "constructor": "PAIRED_MEAN_DIFFERENCE",
-                "direction_path": str(mean_path.relative_to(ROOT)),
+                "direction_path": str(mean_provenance_path),
                 "vector_hash": source_metrics[key]["mean_vector_hash"],
                 "readout": mean_readout,
                 "scale": mean_scale,
