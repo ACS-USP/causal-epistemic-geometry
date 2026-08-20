@@ -34,7 +34,13 @@ def render_prompt(
                 "prompt_mode=chat requires a tokenizer with apply_chat_template; "
                 "choose prompt_mode=plain for a base model"
             )
-        messages = [{"role": "user", "content": item.prompt}]
+        system_prompt = item.metadata.get("system_prompt")
+        messages = []
+        if system_prompt is not None:
+            if not isinstance(system_prompt, str) or not system_prompt.strip():
+                raise ValueError("metadata.system_prompt must be a non-empty string")
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": item.prompt})
         template_kwargs = {"tokenize": False, "add_generation_prompt": True}
         if enable_thinking is not None:
             template_kwargs["enable_thinking"] = enable_thinking

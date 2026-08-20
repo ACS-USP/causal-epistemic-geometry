@@ -170,13 +170,17 @@ class HuggingFaceBackend(ModelBackend):
         return current
 
     def _locate_layer_stack(self, explicit_path: str | None) -> Any:
-        candidates = [explicit_path] if explicit_path else [
-            "model.model.layers",
-            "model.layers",
-            "transformer.h",
-            "gpt_neox.layers",
-            "base_model.model.layers",
-        ]
+        candidates = (
+            [explicit_path]
+            if explicit_path
+            else [
+                "model.model.layers",
+                "model.layers",
+                "transformer.h",
+                "gpt_neox.layers",
+                "base_model.model.layers",
+            ]
+        )
         failures: list[str] = []
         for path in candidates:
             if not path:
@@ -188,9 +192,7 @@ class HuggingFaceBackend(ModelBackend):
                     failures.append(f"{root_name}.{path}: {exc}")
                     continue
                 if hasattr(stack, "__len__") and len(stack) > 0:
-                    self._resolved_layer_path = (
-                        path if root_name == "backend" else f"model.{path}"
-                    )
+                    self._resolved_layer_path = path if root_name == "backend" else f"model.{path}"
                     return stack
                 failures.append(f"{root_name}.{path}: object is not a non-empty layer stack")
         detail = "; ".join(failures)
@@ -511,9 +513,7 @@ class HuggingFaceBackend(ModelBackend):
             parameter.kind == inspect.Parameter.VAR_KEYWORD
             for parameter in model_parameters.values()
         )
-        supports_cache_position = (
-            "cache_position" in model_parameters or model_has_var_kwargs
-        )
+        supports_cache_position = "cache_position" in model_parameters or model_has_var_kwargs
 
         for batch_index, batch_indices in enumerate(batches):
             # A deterministic max-token budget is used here.  The planner
@@ -572,9 +572,7 @@ class HuggingFaceBackend(ModelBackend):
                     # copies next-token logits to float32 before applying
                     # processors/warpers and sampling. Sampling directly from
                     # bf16 logits can diverge after many stochastic tokens.
-                    logits = logits.to(
-                        copy=True, dtype=self.torch.float32, device=self.device
-                    )
+                    logits = logits.to(copy=True, dtype=self.torch.float32, device=self.device)
                     next_tokens: list[int] = []
                     for row_index in range(len(batch_indices)):
                         if finished[row_index]:
@@ -612,9 +610,7 @@ class HuggingFaceBackend(ModelBackend):
                     decode_kwargs: dict[str, Any] = {
                         "input_ids": next_tensor,
                         "attention_mask": masks,
-                        "position_ids": (masks.sum(dim=1).long() - 1)
-                        .unsqueeze(1)
-                        .clamp_min(0),
+                        "position_ids": (masks.sum(dim=1).long() - 1).unsqueeze(1).clamp_min(0),
                         "past_key_values": past_key_values,
                         "use_cache": True,
                         "return_dict": True,
@@ -729,8 +725,10 @@ class HuggingFaceBackend(ModelBackend):
 
     def _candidate_labels(self, item: BenchmarkItem) -> list[str]:
         labels = item.metadata.get("candidate_labels", self.config.candidate_labels)
-        if not isinstance(labels, list) or not labels or not all(
-            isinstance(label, str) and label for label in labels
+        if (
+            not isinstance(labels, list)
+            or not labels
+            or not all(isinstance(label, str) and label for label in labels)
         ):
             raise ValueError(f"Item {item.id} does not provide valid candidate labels")
         return labels
@@ -796,9 +794,7 @@ class HuggingFaceBackend(ModelBackend):
                         prepared.context_compatible_candidate_ids[label]
                     ),
                     "standalone_token_count": len(prepared.candidate_token_ids[label]),
-                    "context_compatible": bool(
-                        prepared.context_compatible_candidate_ids[label]
-                    ),
+                    "context_compatible": bool(prepared.context_compatible_candidate_ids[label]),
                 }
                 for label in prepared.candidate_labels
             },
@@ -1055,9 +1051,7 @@ class HuggingFaceBackend(ModelBackend):
                 hidden = output
                 rest: tuple[Any, ...] | None = None
             elif (
-                isinstance(output, (tuple, list))
-                and output
-                and isinstance(output[0], torch.Tensor)
+                isinstance(output, (tuple, list)) and output and isinstance(output[0], torch.Tensor)
             ):
                 hidden = output[0]
                 rest = tuple(output[1:])
@@ -1109,16 +1103,11 @@ class HuggingFaceBackend(ModelBackend):
         }
         parameters = inspect.signature(module.forward).parameters
         has_var_kwargs = any(
-            parameter.kind == inspect.Parameter.VAR_KEYWORD
-            for parameter in parameters.values()
+            parameter.kind == inspect.Parameter.VAR_KEYWORD for parameter in parameters.values()
         )
-        if past_key_values is not None and (
-            "past_key_values" in parameters or has_var_kwargs
-        ):
+        if past_key_values is not None and ("past_key_values" in parameters or has_var_kwargs):
             kwargs["past_key_values"] = past_key_values
-        if cache_position is not None and (
-            "cache_position" in parameters or has_var_kwargs
-        ):
+        if cache_position is not None and ("cache_position" in parameters or has_var_kwargs):
             kwargs["cache_position"] = cache_position
         return kwargs
 
@@ -1137,8 +1126,7 @@ class HuggingFaceBackend(ModelBackend):
                 if isinstance(layer_cache, (tuple, list)):
                     layers.append(
                         type(layer_cache)(
-                            tensor.repeat_interleave(repeats, dim=0)
-                            for tensor in layer_cache
+                            tensor.repeat_interleave(repeats, dim=0) for tensor in layer_cache
                         )
                     )
                 else:
@@ -1188,9 +1176,7 @@ class HuggingFaceBackend(ModelBackend):
                 scores_tensor = scores_tensor + output_embeddings.bias[candidate_ids]
             score_semantics = "candidate_logits_no_vocab_normalization"
         else:
-            logits = output.logits[
-                torch.arange(len(rows), device=self.device), logit_positions, :
-            ]
+            logits = output.logits[torch.arange(len(rows), device=self.device), logit_positions, :]
             scores_tensor = self._choice_log_softmax(logits).gather(1, candidate_ids)
             score_semantics = "full_vocab_log_probability"
         results: list[BackendOutput] = []
@@ -1256,9 +1242,7 @@ class HuggingFaceBackend(ModelBackend):
                 )
                 for item in item_batch
             ]
-            input_ids, attention_mask, position_ids, lengths = self._pad_token_sequences(
-                sequences
-            )
+            input_ids, attention_mask, position_ids, lengths = self._pad_token_sequences(sequences)
             target_offset = 2 if self.config.serial_shape_reference else 1
             if self.config.padding_side == "left":
                 target_positions_by_item = [input_ids.shape[1] - target_offset] * len(lengths)
@@ -1455,9 +1439,7 @@ class HuggingFaceBackend(ModelBackend):
             prefix_ids, prefix_mask, prefix_positions, prefix_lengths = self._pad_token_sequences(
                 [item.prompt_ids[:-1]]
             )
-            query_ids = torch.tensor(
-                [[item.prompt_ids[-1]]], dtype=torch.long, device=self.device
-            )
+            query_ids = torch.tensor([[item.prompt_ids[-1]]], dtype=torch.long, device=self.device)
             with torch.inference_mode():
                 prefix_output = self._forward(
                     core,
@@ -1480,9 +1462,9 @@ class HuggingFaceBackend(ModelBackend):
             for spec, vector in conditions:
                 delta = self._expand_conditions([item], [(spec, vector)])
                 handle = self._rowwise_hook(
-                    int(spec.get("layer", self.config.layer)), delta, torch.zeros(
-                        (1,), dtype=torch.long, device=self.device
-                    )
+                    int(spec.get("layer", self.config.layer)),
+                    delta,
+                    torch.zeros((1,), dtype=torch.long, device=self.device),
                 )
                 try:
                     query_cache = self._clone_and_repeat_cache(prefix_cache, 1)
@@ -1551,16 +1533,15 @@ class HuggingFaceBackend(ModelBackend):
                                 ),
                                 "decode",
                             )
-                        total = total + self._choice_log_softmax(
-                            continuation_output.logits[:, -1, :]
-                        )[0, candidate_ids[offset]]
-                        continuation_cache = getattr(
-                            continuation_output, "past_key_values", None
+                        total = (
+                            total
+                            + self._choice_log_softmax(continuation_output.logits[:, -1, :])[
+                                0, candidate_ids[offset]
+                            ]
                         )
+                        continuation_cache = getattr(continuation_output, "past_key_values", None)
                         if continuation_cache is None:
-                            raise RuntimeError(
-                                "Multi-token fallback lost its continuation cache"
-                            )
+                            raise RuntimeError("Multi-token fallback lost its continuation cache")
                     scores[label] = float(total.item())
                 prediction = max(scores, key=scores.get)
                 results[(item.item_id, str(spec["condition"]))] = BackendOutput(
@@ -1749,6 +1730,73 @@ class HuggingFaceBackend(ModelBackend):
             handle.remove()
             self._choice_prompt_index = None
 
+    @contextmanager
+    def steer_prefill_once(self, intervention: Intervention) -> Iterator[None]:
+        """Apply one additive intervention to the first layer invocation only.
+
+        Generation performs one prompt prefill followed by one-token decode
+        calls.  Gate-4 interventions are defined at the final prompt token
+        during prefill, so the ordinary persistent hook is intentionally not
+        used for this path.  The hook removes its effect after the first
+        invocation and is always removed on exit.
+        """
+
+        validate_vector_dimension(intervention.vector, self)
+        layer = self.layer_module(intervention.layer)
+        vector = self.torch.as_tensor(
+            intervention.vector.values,
+            device=self.device,
+            dtype=next(self.model.parameters()).dtype,
+        ).view(1, 1, -1)
+        used = False
+
+        def hook(_module: Any, _inputs: Any, output: Any) -> Any:
+            nonlocal used
+            if used:
+                return output
+            used = True
+            if isinstance(output, self.torch.Tensor):
+                hidden = output
+                rest: tuple[Any, ...] | None = None
+            elif (
+                isinstance(output, (tuple, list))
+                and output
+                and isinstance(output[0], self.torch.Tensor)
+            ):
+                hidden = output[0]
+                rest = tuple(output[1:])
+            else:
+                raise TypeError(
+                    "Unsupported transformer layer output; expected Tensor or tuple[Tensor, ...]"
+                )
+            updated = hidden.clone()
+            delta = intervention.alpha * vector.to(device=hidden.device, dtype=hidden.dtype)
+            token_index = intervention.token_index
+            if token_index is None:
+                token_index = -1
+            if token_index < 0:
+                token_index += hidden.shape[1]
+            if token_index < 0 or token_index >= hidden.shape[1]:
+                raise ValueError(
+                    f"Intervention token index {token_index} is outside sequence length "
+                    f"{hidden.shape[1]}"
+                )
+            updated[:, token_index : token_index + 1, :] = (
+                updated[:, token_index : token_index + 1, :] + delta
+            )
+            if rest is None:
+                return updated
+            if isinstance(output, tuple):
+                return (updated, *rest)
+            return [updated, *rest]
+
+        handle = layer.register_forward_hook(hook)
+        try:
+            yield
+        finally:
+            handle.remove()
+            self._choice_prompt_index = None
+
     def provenance(self) -> dict[str, Any]:
         """Return model/tokenizer identity without exposing credentials."""
 
@@ -1782,8 +1830,7 @@ class HuggingFaceBackend(ModelBackend):
             "inference_mode": self.config.inference_mode,
             "execution_engine": self.config.execution_mode,
             "candidate_head_mode": self.config.candidate_head_mode,
-            "attention_implementation": attention_backend
-            or self.config.attention_implementation,
+            "attention_implementation": attention_backend or self.config.attention_implementation,
             "torch_compile": self.config.torch_compile,
             "cuda_graphs": self.config.cuda_graphs,
             "item_batch_size": self.config.item_batch_size,
@@ -1795,7 +1842,9 @@ class HuggingFaceBackend(ModelBackend):
             "cpu_offload_detected": any(device == "cpu" for device in devices),
             "injected_test_model": self._injected_model,
             "model_fingerprint": stable_digest(
-                self.model.__class__.__name__, self.hidden_size, len(self._layer_stack),
+                self.model.__class__.__name__,
+                self.hidden_size,
+                len(self._layer_stack),
                 sum(parameter.numel() for parameter in parameters),
             ),
         }

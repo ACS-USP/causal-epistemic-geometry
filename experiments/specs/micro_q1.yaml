@@ -1,45 +1,106 @@
-schema_version: 1
+schema_version: 2
 id: FIRST_MICRO_Q1
-status: PROSPECTIVE_REQUIRES_INSTRUMENT_AND_POSITIVE_CONTROL
+status: FROZEN_DEVELOPMENT_LOCK
 stage: DEVELOPMENT_LOCK
-sample:
-  problems_min: 20
-  problems_max: 50
-  exact_value_frozen_before_run: true
+question: >-
+  Can one prospectively constructed activation direction change where the
+  frozen model fails beyond ordinary baseline resampling and a norm-matched
+  random intervention without materially degrading competence?
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+policy:
+  enable_thinking: false
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  max_new_tokens: 4096
+  engine: hf_generate_serial_prefill_one_shot_hook
+  attention: sdpa
+instrument:
+  benchmark: CRUXEval
+  source_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  evaluator: corrected_deterministic_type_aware_python_literal
+  parser_version: external-semantic-v1
+allocation:
+  direction_construction: 64
+  direction_validation: 16
+  micro_q1_evaluation: 50
+  all_fresh_and_mutually_disjoint: true
+direction:
+  positive_prompt: >-
+    You are a meticulous program tracer. Carefully track every operation,
+    mutation, intermediate value, branch, and loop. Verify the result before
+    answering. End with exactly one line in the form FINAL: <answer>.
+  negative_prompt: >-
+    Answer the program-output question immediately. Do not trace, deliberate,
+    explain, or verify. End with exactly one line in the form FINAL: <answer>.
+  constructor: paired_careful_minus_direct_mean_difference
+  layer: 17
+  layer_path: model.model.layers
+  activation: block_output_residual_stream
+  token_position: final_non_padding_prompt_token
+  extraction: prompt_prefill_only
+  validation:
+    minimum_positive_gaps: 12
+    minimum_mean_signed_gap: 0.0
+  alpha_formula: 0.5 * construction_mean_projection_gap
+random_control:
+  constructor: gaussian_remove_parallel_component
+  seed: 20260819
+  same_alpha: true
+  max_abs_cosine: 1.0e-6
 conditions:
-  - baseline_independent_seed_bank_a
-  - baseline_independent_seed_bank_b
-  - positive_alpha_direction
-  - negative_alpha_direction
-  - norm_matched_random_direction
-  - alpha_zero_identity
-seed_regimes:
-  primary: INDEPENDENT_PRIMARY
-  secondary: MATCHED_COUPLING_SECONDARY
-required_controls:
-  - published_positive_control_implementation
-  - activation_manipulation_check
-  - hook_lifecycle
-  - alpha_zero_identity
-primary_estimands:
-  - mean_error_rate
-  - repeated_baseline_oracle
-  - oracle_gain_g_j
-  - competence_adjusted_complementarity_c_j
-  - unbiased_two_rollout_propensity_distance
-  - paired_hard_error_table
-requirements_to_freeze:
-  - qualified_objective_instrument
-  - competence_tolerance
-  - direction_constructor
-  - layer
-  - alpha
-  - parser_evaluator
-  - seed_banks
-  - prospective_futility_rule
-forbidden:
-  - layer_sweep
-  - alpha_sweep
-  - direction_selection_on_evaluation_outcomes
-  - confirmatory_language
-
+  - BASELINE
+  - CPLUS
+  - CMINUS
+  - CRANDOM
+rollouts:
+  count_per_item_condition: 2
+  seed_regime: INDEPENDENT_PRIMARY
+  matched_coupling_secondary: forbidden
+outcomes:
+  statuses:
+    - VALID_CORRECT
+    - VALID_WRONG
+    - INVALID_FORMAT
+    - TRUNCATED
+    - RUNTIME_ERROR
+    - INFRASTRUCTURE_ERROR
+  primary_error: all_non_valid_correct_except_infrastructure
+guards:
+  validity_minimum: 0.90
+  validity_drop_from_baseline_max: 0.05
+  competence_drop_max: 0.10
+estimands:
+  - repeated_baseline_double_fault_B00
+  - independent_cross_condition_double_fault_B0j
+  - excess_pair_oracle_gain_G
+  - competence_adjusted_U_statistic_C
+  - unbiased_propensity_distance_D
+  - independent_rescue_fraction
+  - independent_damage_fraction
+  - random_control_contrasts
+bootstrap:
+  unit: latent_item_cluster
+  resamples: 5000
+  seed: 20260819
+signal_thresholds:
+  movement_D: 0.05
+  movement_delta_D_random: 0.05
+  useful_G: 0.03
+  useful_C: 0.03
+  useful_delta_C_random: 0.05
+cost:
+  target_usd: 0.75
+  hard_stop_usd: 1.25
+firewall:
+  character_count_replication: NOT_RUN
+  q2: NOT_RUN
+  confirmatory_holdout: UNTOUCHED
+  steering_directions_other_than_one_plus_random: FORBIDDEN
