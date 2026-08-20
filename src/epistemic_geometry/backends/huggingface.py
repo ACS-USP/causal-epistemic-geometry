@@ -271,6 +271,7 @@ class HuggingFaceBackend(ModelBackend):
         *,
         sampling_seed: int,
         max_new_tokens: int | None = None,
+        intervention_metadata: dict[str, Any] | None = None,
     ) -> BackendOutput:
         """Generate one seeded full autoregressive trajectory without intervention.
 
@@ -320,43 +321,46 @@ class HuggingFaceBackend(ModelBackend):
         # Preserve the complete decoded trajectory; the parser is responsible
         # for whitespace normalization around the exact FINAL field.
         raw_output = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
+        metadata = {
+            "model": self.model_name,
+            "model_revision": self.model_revision or "UNKNOWN",
+            "prompt_mode": self.config.prompt_mode,
+            "enable_thinking": self.config.enable_thinking,
+            "rendered_prompt_hash": prompt_hash,
+            "input_token_count": input_length,
+            "generated_token_count": int(new_tokens.numel()),
+            "generated_token_ids": [int(token) for token in new_tokens.tolist()],
+            "generation_seed": int(sampling_seed),
+            "timing": {
+                "generation_seconds": generation_seconds,
+                **(
+                    {
+                        "peak_memory_allocated_bytes": int(
+                            self.torch.cuda.max_memory_allocated(self.device)
+                        ),
+                        "peak_memory_reserved_bytes": int(
+                            self.torch.cuda.max_memory_reserved(self.device)
+                        ),
+                    }
+                    if self.device.type == "cuda"
+                    else {}
+                ),
+            },
+            "generation": {
+                "do_sample": True,
+                "temperature": self.config.temperature,
+                "top_p": self.config.top_p,
+                "top_k": self.config.top_k,
+                "min_p": self.config.min_p,
+                "max_new_tokens": int(max_new_tokens or self.config.max_new_tokens),
+            },
+            "intervention": "none",
+        }
+        if intervention_metadata:
+            metadata.update(intervention_metadata)
         return BackendOutput(
             raw_output=raw_output,
-            metadata={
-                "model": self.model_name,
-                "model_revision": self.model_revision or "UNKNOWN",
-                "prompt_mode": self.config.prompt_mode,
-                "enable_thinking": self.config.enable_thinking,
-                "rendered_prompt_hash": prompt_hash,
-                "input_token_count": input_length,
-                "generated_token_count": int(new_tokens.numel()),
-                "generated_token_ids": [int(token) for token in new_tokens.tolist()],
-                "generation_seed": int(sampling_seed),
-                "timing": {
-                    "generation_seconds": generation_seconds,
-                    **(
-                        {
-                            "peak_memory_allocated_bytes": int(
-                                self.torch.cuda.max_memory_allocated(self.device)
-                            ),
-                            "peak_memory_reserved_bytes": int(
-                                self.torch.cuda.max_memory_reserved(self.device)
-                            ),
-                        }
-                        if self.device.type == "cuda"
-                        else {}
-                    ),
-                },
-                "generation": {
-                    "do_sample": True,
-                    "temperature": self.config.temperature,
-                    "top_p": self.config.top_p,
-                    "top_k": self.config.top_k,
-                    "min_p": self.config.min_p,
-                    "max_new_tokens": int(max_new_tokens or self.config.max_new_tokens),
-                },
-                "intervention": "none",
-            },
+            metadata=metadata,
         )
 
     def generate_reasoning_view(
@@ -1726,6 +1730,90 @@ class HuggingFaceBackend(ModelBackend):
         handle = self._hook_for(intervention)
         try:
             yield
+        finally:
+            handle.remove()
+            self._choice_prompt_index = None
+
+    @contextmanager
+    def steer_sustained_current_token(self, intervention: Intervention) -> Iterator[dict[str, Any]]:
+        """Shift only the current token on every prefill/decode forward.
+
+        The prefill current token is the final prompt token. A cached decode
+        forward contains one current token, so the same last-position rule
+        applies. Past KV states and historical sequence positions are never
+        edited.
+        """
+
+        validate_vector_dimension(intervention.vector, self)
+        layer = self.layer_module(intervention.layer)
+        vector = self.torch.as_tensor(
+            intervention.vector.values,
+            device=self.device,
+            dtype=next(self.model.parameters()).dtype,
+        ).view(1, 1, -1)
+        trace: dict[str, Any] = {
+            "forward_count": 0,
+            "prefill_applications": 0,
+            "decode_applications": 0,
+            "applications": [],
+            "max_abs_shift_error": 0.0,
+            "max_abs_non_current_change": 0.0,
+        }
+
+        def hook(_module: Any, _inputs: Any, output: Any) -> Any:
+            if isinstance(output, self.torch.Tensor):
+                hidden = output
+                rest: tuple[Any, ...] | None = None
+            elif (
+                isinstance(output, (tuple, list))
+                and output
+                and isinstance(output[0], self.torch.Tensor)
+            ):
+                hidden = output[0]
+                rest = tuple(output[1:])
+            else:
+                raise TypeError(
+                    "Unsupported transformer layer output; expected Tensor or tuple[Tensor, ...]"
+                )
+            if hidden.ndim != 3:
+                raise ValueError("sustained intervention expects [batch, sequence, hidden]")
+            trace["forward_count"] += 1
+            sequence_length = int(hidden.shape[1])
+            phase = "prefill" if sequence_length > 1 else "decode"
+            trace[f"{phase}_applications"] += 1
+            delta = intervention.alpha * vector.to(device=hidden.device, dtype=hidden.dtype)
+            updated = hidden.clone()
+            updated[:, -1:, :] = updated[:, -1:, :] + delta
+            expected = delta.expand_as(updated[:, -1:, :])
+            observed = updated[:, -1:, :] - hidden[:, -1:, :]
+            shift_error = float((observed.float() - expected.float()).abs().max().item())
+            non_current_change = (
+                0.0
+                if sequence_length == 1
+                else float((updated[:, :-1, :] - hidden[:, :-1, :]).abs().max().item())
+            )
+            trace["max_abs_shift_error"] = max(trace["max_abs_shift_error"], shift_error)
+            trace["max_abs_non_current_change"] = max(
+                trace["max_abs_non_current_change"], non_current_change
+            )
+            trace["applications"].append(
+                {
+                    "phase": phase,
+                    "sequence_length": sequence_length,
+                    "token_position": sequence_length - 1,
+                    "shift_error": shift_error,
+                    "non_current_change": non_current_change,
+                }
+            )
+            if rest is None:
+                return updated
+            if isinstance(output, tuple):
+                return (updated, *rest)
+            return [updated, *rest]
+
+        handle = layer.register_forward_hook(hook)
+        try:
+            yield trace
         finally:
             handle.remove()
             self._choice_prompt_index = None

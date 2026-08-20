@@ -152,6 +152,31 @@ def test_hook_cleanup_and_repeated_contexts_do_not_accumulate(tiny_backend) -> N
     assert len(tiny_backend.layer_module(0)._forward_hooks) == 0
 
 
+def test_sustained_current_token_hook_tracks_prefill_decode_and_cleans_up(tiny_backend) -> None:
+    tiny_backend.config = replace(
+        tiny_backend.config,
+        enable_thinking=False,
+        do_sample=True,
+        max_new_tokens=3,
+        temperature=0.6,
+        top_p=0.95,
+        top_k=20,
+        min_p=0.0,
+    )
+    item = BenchmarkItem(id="sustained-tiny", prompt="alpha beta gamma", target="3")
+    intervention = _intervention(0.5, "last_token", np.arange(32, dtype=np.float64) / 32)
+    with tiny_backend.steer_sustained_current_token(intervention) as trace:
+        output = tiny_backend.generate_reasoning(item, sampling_seed=321)
+    assert output.metadata["generated_token_ids"]
+    assert trace["forward_count"] >= 1
+    assert trace["prefill_applications"] + trace["decode_applications"] == trace["forward_count"]
+    assert trace["max_abs_non_current_change"] == 0.0
+    assert all(
+        entry["token_position"] == entry["sequence_length"] - 1 for entry in trace["applications"]
+    )
+    assert len(tiny_backend.layer_module(0)._forward_hooks) == 0
+
+
 def test_steer_preserves_choice_prompt_position_until_inference_finishes(tiny_backend) -> None:
     tiny_backend._choice_prompt_index = 2
     with tiny_backend.steer(_intervention(0.1, "last_token")):
@@ -217,7 +242,6 @@ def test_seeded_reasoning_generation_records_raw_trajectory_and_parse_fields(tin
     assert torch.equal(expected_after_generation, actual_after_generation)
     assert output_a.metadata["generation_seed"] == 123
     assert output_a.metadata["generated_token_ids"]
-
 
     view = ReasoningView(
         latent_id="MODREG-R:depth_4:tiny",
@@ -323,12 +347,8 @@ def test_batched_reasoning_preserves_per_row_seed_streams(tiny_backend) -> None:
         batch_size=2,
         max_prefill_tokens=256,
     )
-    assert shuffled[0].metadata["generated_token_ids"] == serial[1].metadata[
-        "generated_token_ids"
-    ]
-    assert shuffled[1].metadata["generated_token_ids"] == serial[0].metadata[
-        "generated_token_ids"
-    ]
+    assert shuffled[0].metadata["generated_token_ids"] == serial[1].metadata["generated_token_ids"]
+    assert shuffled[1].metadata["generated_token_ids"] == serial[0].metadata["generated_token_ids"]
 
 
 def test_choice_loglikelihood_scores_complete_candidates_and_targets_prompt_token(
@@ -517,26 +537,19 @@ def test_optimized_choice_engines_match_serial_predictions(tiny_backend, executi
     ]
     optimized = backend.predict_choice_batch(prepared, conditions)
     optimized_by_key = {
-        (item.item_id, spec["condition"]): output
-        for item, spec, output in optimized
+        (item.item_id, spec["condition"]): output for item, spec, output in optimized
     }
     for item in items:
         for spec, condition_vector in conditions:
-            serial = _serial_choice_output(
-                backend, item, condition_vector, float(spec["alpha"])
-            )
+            serial = _serial_choice_output(backend, item, condition_vector, float(spec["alpha"]))
             actual = optimized_by_key[(item.id, spec["condition"])]
             assert actual.raw_output == serial.raw_output
             assert set(actual.metadata["candidate_scores"]) == set(
                 serial.metadata["candidate_scores"]
             )
             for label, value in serial.metadata["candidate_scores"].items():
-                assert actual.metadata["candidate_scores"][label] == pytest.approx(
-                    value, abs=2e-5
-                )
-            assert actual.metadata["candidate_score_semantics"] == (
-                "full_vocab_log_probability"
-            )
+                assert actual.metadata["candidate_scores"][label] == pytest.approx(value, abs=2e-5)
+            assert actual.metadata["candidate_score_semantics"] == ("full_vocab_log_probability")
 
 
 def test_serial_shape_reference_matches_candidatewise_scores(tiny_backend) -> None:
