@@ -63,7 +63,7 @@ class RFMConfig:
     m_batch_size: int = 2048
     n_components: int = 1
     tuning_metric: str = "auc"
-    kernel: str = "l2"
+    kernel: str = "l2_high_dim"
 
 
 def vector_sha256(values: np.ndarray) -> str:
