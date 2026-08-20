@@ -1,0 +1,165 @@
+schema_version: 1
+experiment_id: GATE6_LAYER_SOURCE_RFM_ATLAS
+status: PROSPECTIVE_LOCAL_PREPARATION
+stage: DEVELOPMENT_LOCK
+question: >-
+  Do label-free, behaviorally validated source directions at pre-specified
+  layers produce causal control of semantic error profiles when distributed
+  with fixed standardized energy?
+
+upstream:
+  neural_controllers:
+    repository: https://github.com/dmbeaglehole/neural_controllers.git
+    branch: xrfm
+    commit: 5f655a5f26daeb984dfe6c622b8fe537e1aed966
+    requirements: >-
+      Python 3.10.15; PyTorch 2.4.0+cu118; Transformers 4.47.0; Datasets
+      3.1.0; NumPy 1.26.4; tqdm; torchmetrics; scikit-learn; xRFM.
+  xrfm:
+    repository: https://github.com/dmbeaglehole/xRFM.git
+    commit: 773fae81097ab000e6e7292a295e1d24adacca55
+  paper: arXiv:2502.03708
+  adaptation: >-
+    The official RFMToolkit call pattern is used for binary careful/direct
+    source labels: pinned xRFM RFM.fit with get_agop_best_model=True, followed
+    by the leading AGOP eigenvector. The repository's multi-layer and
+    current-token hook are execution adapters, not a replacement RFM.
+
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+  attention: sdpa
+
+policy:
+  enable_thinking: false
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  max_new_tokens: 4096
+  engine: one_frozen_engine_for_all_conditions
+
+instrument:
+  benchmark: CRUXEval
+  dataset_repo: cruxeval-org/cruxeval
+  dataset_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  subtask: output_prediction
+  evaluator: corrected_deterministic_type_aware_semantics
+
+layers:
+  indices_zero_based: [8, 12, 17, 22, 27, 32]
+  path: model.model.layers
+  activation: block output residual stream
+  intervention_duration: sustained_current_token
+  prefill_scope: final_non_padding_prompt_token_only
+  decode_scope: current_token_only
+  historical_kv_modified: false
+
+source_training:
+  gate4_direction_construction_items: 64
+  gate5_source_check_items: 40
+  total: 104
+  labels: careful_1_direct_0
+  correctness_labels_used: false
+  semantic_outcomes_used: false
+  locations: [PROMPT_BOUNDARY, EXECUTION_BOUNDARY]
+
+fresh_splits:
+  source_validation: 32
+  controller_manipulation: 20
+  controller_evaluation: 60
+  total: 112
+  allocation_rule: deterministic official ordering plus stable digest namespace
+  selection_by_outcome: false
+
+constructors:
+  paired_mean_difference: careful_minus_direct_normalized
+  rfm: pinned_neural_controllers_rfmtoolkit_plus_leading_agop_eigenvector
+  covariance: centered_activation_covariance
+  random_controls: four_per_layer_orthogonal_gram_schmidt_directions
+
+source_gate:
+  auroc_min: 0.8
+  positive_gaps_min: 24
+  heldout_items: 32
+
+teacher_forced_first_stage:
+  formula: mean_per_token_symmetric_careful_direct_log_likelihood_difference
+  positive_directional_contribution_min: 22
+  margin_over_random_mean_nats_per_token: 0.01
+  exceed_max_random: true
+  corruption_allowed: false
+
+standardized_budget:
+  alpha_gate5: 8.39900588973121
+  eta_formula: alpha_gate5 / s17_gate5
+  ladder: [eta0, 2eta0]
+  choose: smallest_source_only_passing_budget_with_safety_guard
+  mean_per_token_kl_max: 0.15
+  distributed_delta: eta * s_layer / sqrt(number_of_layers) * unit_direction
+
+manipulation:
+  items: 20
+  conditions:
+    - BASELINE
+    - TEXTUAL_CAREFUL_REFERENCE
+    - TEXTUAL_DIRECT_REFERENCE
+    - BEST_SINGLE_RFM_PLUS
+    - MULTILAYER_MEAN_PLUS
+    - MULTILAYER_RFM_PLUS
+    - MULTILAYER_RFM_MINUS
+    - MULTILAYER_RANDOM_R0
+    - MULTILAYER_RANDOM_R1
+    - MULTILAYER_RANDOM_R2
+    - MULTILAYER_RANDOM_R3
+  rollout_regime: MATCHED_COUPLING_SECONDARY
+  rollouts_per_item_condition: 1
+
+evaluation:
+  items: 60
+  conditions:
+    - BASELINE
+    - TEXTUAL_CAREFUL_REFERENCE
+    - BEST_SINGLE_RFM_PLUS
+    - MULTILAYER_MEAN_PLUS
+    - MULTILAYER_RFM_PLUS
+    - MULTILAYER_RFM_MINUS
+    - MULTILAYER_RANDOM_R0
+    - MULTILAYER_RANDOM_R1
+    - MULTILAYER_RANDOM_R2
+    - MULTILAYER_RANDOM_R3
+  rollout_regime: INDEPENDENT_PRIMARY
+  rollouts_per_item_condition: 2
+  maximum_trajectories: 1200
+
+estimands:
+  primary_binary_error: non_valid_correct_is_error
+  bootstrap: item_cluster_percentile_5000
+  validity_min: 0.90
+  validity_drop_max: 0.05
+  competence_drop_max: 0.10
+  movement_D_min: 0.05
+  movement_D_minus_random_mean_min: 0.05
+  movement_D_exceeds_random_max: true
+  movement_D_minus_best_single_min: 0.02
+  movement_D_minus_multilayer_mean_min: 0.02
+  useful_G_min: 0.03
+  useful_C_min: 0.03
+  useful_C_minus_random_mean_min: 0.05
+  useful_C_exceeds_random_max: true
+
+firewall:
+  q2: NOT_RUN
+  character_count: NOT_RUN
+  confirmatory_holdout: UNTOUCHED
+  outcome_dependent_layer_selection: false
+  semantic_outcome_labels_for_controller_construction: false
+
+cost_gate:
+  target_usd: 2.50
+  hard_stop_usd: 4.50
+  maximum_trajectories: 1500

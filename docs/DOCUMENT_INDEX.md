@@ -42,6 +42,7 @@ current instruction source.
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
 | `docs/GATE4_MICRO_Q1_CLOSEOUT.md` | First original development micro-Q1 closeout |
 | `docs/GATE5_SOURCE_DURATION_CLOSEOUT.md` | Source-validity and temporal-persistence bridge closeout |
+| `docs/GATE6_LAYER_SOURCE_RFM_ATLAS.md` | Prospective layer/source/RFM control atlas; no outcomes yet |
 
 ## Archival scientific protocols and closeouts
 
