@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.1 completed its frozen mechanical attrition repair and source/controller construction. Train and validation targets were reached within the frozen ineligibility limits, but no individual RFM controller passed the frozen symmetric first-stage gate. No manipulation or evaluation was run.
+Gate 6.1 remains immutable. Its 104/32 source-only artifacts passed an independent forensic audit, including the historical paired-mean prompt candidates. Gate 6.2 freezes corrected execution-boundary suffix scoring, source-train-only RFM cross-validation, and the paired-mean prompt bridge. No Gate 6.2 model outcome has been collected.
 
-- Workstream: `GATE6_SOURCE_ATTRITION_REPAIR`
+- Workstream: `GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE`
 - RunPod: `STOPPED`
 - GPU work authorized: `true`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the Gate 6.1 source-screen result. Do not run manipulation/evaluation or redesign the source/controller gate without a new prospective protocol.
+- New scientific experiment authorized: `true`
+- Next authorized action: Gate 6.2 source-only first-stage correction may run on the canonical A40; manipulation is gated on source-only controller selection and evaluation is gated on the frozen manipulation phase. Do not access holdout or Q2.
 
 ## Scientific program
 
@@ -38,6 +38,7 @@ Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.
 | `FIRST_MICRO_Q1` | `COMPLETE_DEVELOPMENT_NO_SIGNAL` | Gate 4 direction validation and intervention engineering passed, but the frozen one-shot direction did not exceed baseline resampling and the norm-matched random control. This remains a bounded development result. |
 | `GATE5_SOURCE_DURATION_BRIDGE` | `COMPLETE_DEVELOPMENT_DURATION_EFFECT_BELOW_MOVEMENT` | The careful/direct textual source passed behavioral separation and the sustained manipulation gate passed. The 60-item primary evaluation did not meet the frozen movement threshold; the minus sign showed a duration contrast below the full movement criterion. Gate 6 is drafted only. |
 | `GATE6_SOURCE_ATTRITION_REPAIR` | `COMPLETE_SOURCE_SCREEN` | The frozen mechanical repair reached the 104/32 source targets within attrition limits and constructed the source/controller atlas. Several label-free readouts were strong, but no individual RFM controller passed the frozen symmetric first-stage gate. Manipulation and evaluation were not run; principal review is required before any redesign. |
+| `GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE` | `LOCKED_PRE_OUTCOME` | Gate 6.1 source artifacts passed an offline source-only audit. Gate 6.2 freezes causal execution-boundary suffix scoring, source-train-only RFM cross-validation, and the independent paired-mean prompt L22/L27/L32 bridge. No model outcome has been collected; manipulation and evaluation remain gated. |
 
 ## Scientific firewall
 
@@ -47,7 +48,7 @@ Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE6_SOURCE_ATTRITION_REPAIR_COMPLETE_SOURCE_SCREEN`
+- `current_task`: `GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE_LOCKED`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

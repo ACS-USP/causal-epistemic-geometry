@@ -392,3 +392,47 @@ experiments:
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; do not run manipulation/evaluation or redesign the source/controller gate automatically.
+
+  - id: GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE
+    version: GATE-6.2
+    stage: DEVELOPMENT_LOCK
+    question: Do corrected causal suffix scoring and paired-mean prompt controllers yield a valid first-stage intervention?
+    instrument: CRUXEval semantic output prediction; exact Gate-6 development manifests
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
+    status: LOCKED_PRE_OUTCOME
+    outcome: NOT_RUN
+    scientific_interpretation: >-
+      Gate 6.1 source-only artifacts passed an offline integrity audit. This
+      prospective continuation repairs execution-boundary scoring, performs
+      source-train-only RFM cross-validation, and independently tests the
+      previously source-validated paired-mean prompt bridge. No manipulation or
+      evaluation outcome has been collected.
+    source_commit: cc06e20e311b6697736761fa04ad1ad3795feb66
+    artifact: review/gate6_2_first_stage_repair_mean_bridge/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE6_SOURCE_ATTRITION_REPAIR
+    lock:
+      protocol: review/gate6_2_first_stage_repair_mean_bridge/PROTOCOL_LOCK.json
+      offline_audit: review/gate6_2_first_stage_repair_mean_bridge/OFFLINE_SOURCE_AUDIT.json
+      manipulation_manifest: review/gate6_2_first_stage_repair_mean_bridge/MANIPULATION_MANIFEST.json
+      evaluation_manifest: review/gate6_2_first_stage_repair_mean_bridge/EVALUATION_MANIFEST.json
+      source_train_items: 104
+      source_validation_items: 32
+      layers: [8, 12, 17, 22, 27, 32]
+      paired_mean_layers: [22, 27, 32]
+      best_single_mean_layer: 27
+      random_mean_controls: 4
+      correctness_used_for_selection: false
+      semantic_outcomes_used_for_selection: false
+      gpu_authorized: true
+      target_cost_usd: 1.50
+      hard_stop_cost_usd: 3.00
+    execution:
+      source_phase_executed: false
+      manipulation_phase_executed: false
+      evaluation_phase_executed: false
+      q2: NOT_RUN
+      character_count: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Run source-only correction on A40; manipulation/evaluation remain phase-gated and stop for principal review afterward.

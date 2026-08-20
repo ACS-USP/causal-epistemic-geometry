@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.1 completed its frozen mechanical attrition repair and source/controller construction. Train and validation targets were reached within the frozen ineligibility limits, but no individual RFM controller passed the frozen symmetric first-stage gate. No manipulation or evaluation was run.
+Gate 6.1 remains immutable. Its 104/32 source-only artifacts passed an independent forensic audit, including the historical paired-mean prompt candidates. Gate 6.2 freezes corrected execution-boundary suffix scoring, source-train-only RFM cross-validation, and the paired-mean prompt bridge. No Gate 6.2 model outcome has been collected.
 
-**Next authorized action:** Principal review of the Gate 6.1 source-screen result. Do not run manipulation/evaluation or redesign the source/controller gate without a new prospective protocol.
+**Next authorized action:** Gate 6.2 source-only first-stage correction may run on the canonical A40; manipulation is gated on source-only controller selection and evaluation is gated on the frozen manipulation phase. Do not access holdout or Q2.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

@@ -19,23 +19,22 @@ project:
     utility?
 
 current:
-  workstream: GATE6_SOURCE_ATTRITION_REPAIR
-  stage: DEVELOPMENT_COMPLETE_SOURCE_SCREEN
-  source_commit: dc451ef4e9447e946486a48b0573d12807585a75
+  workstream: GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE
+  stage: DEVELOPMENT_LOCK
+  source_commit: cc06e20e311b6697736761fa04ad1ad3795feb66
   summary: >-
-    Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL.
-    Gate 6.1 completed its frozen mechanical attrition repair and
-    source/controller construction. Train and validation targets were reached within
-    the frozen ineligibility limits, but no individual RFM controller passed
-    the frozen symmetric first-stage gate. No manipulation or evaluation was
-    run.
+    Gate 6.1 remains immutable. Its 104/32 source-only artifacts passed an
+    independent forensic audit, including the historical paired-mean prompt
+    candidates. Gate 6.2 freezes corrected execution-boundary suffix scoring,
+    source-train-only RFM cross-validation, and the paired-mean prompt bridge.
+    No Gate 6.2 model outcome has been collected.
   next_authorized_action: >-
-    Principal review of the Gate 6.1 source-screen result. Do not run
-    manipulation/evaluation or redesign the source/controller gate without a
-    new prospective protocol.
+    Gate 6.2 source-only first-stage correction may run on the canonical A40;
+    manipulation is gated on source-only controller selection and evaluation is
+    gated on the frozen manipulation phase. Do not access holdout or Q2.
   runpod: STOPPED
   gpu_work_authorized: true
-  new_scientific_experiment_authorized: false
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
   steering: ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_DURATION_BELOW_MOVEMENT
@@ -44,7 +43,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE6_SOURCE_ATTRITION_REPAIR_COMPLETE_SOURCE_SCREEN
+  current_task: GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE_LOCKED
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -113,6 +112,14 @@ instrument_history:
       label-free readouts were strong, but no individual RFM controller passed
       the frozen symmetric first-stage gate. Manipulation and evaluation were
       not run; principal review is required before any redesign.
+  - id: GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE
+    status: LOCKED_PRE_OUTCOME
+    conclusion: >-
+      Gate 6.1 source artifacts passed an offline source-only audit. Gate 6.2
+      freezes causal execution-boundary suffix scoring, source-train-only RFM
+      cross-validation, and the independent paired-mean prompt L22/L27/L32
+      bridge. No model outcome has been collected; manipulation and evaluation
+      remain gated.
 
 workflow_regimes:
   EXPLORATION:

@@ -43,6 +43,7 @@ current instruction source.
 | `docs/GATE4_MICRO_Q1_CLOSEOUT.md` | First original development micro-Q1 closeout |
 | `docs/GATE5_SOURCE_DURATION_CLOSEOUT.md` | Source-validity and temporal-persistence bridge closeout |
 | `docs/GATE6_LAYER_SOURCE_RFM_ATLAS.md` | Prospective layer/source/RFM control atlas; no outcomes yet |
+| `docs/GATE6_2_FIRST_STAGE_REPAIR.md` | Gate 6.2 source-scoring repair and paired-mean bridge; outcome-gated |
 
 ## Archival scientific protocols and closeouts
 
