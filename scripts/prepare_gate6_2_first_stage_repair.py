@@ -283,6 +283,33 @@ def copy_frozen_manifests() -> dict[str, str]:
     return hashes
 
 
+def copy_immutable_source_inputs() -> dict[str, str]:
+    """Copy the audited Gate 6.1 inputs into the Gate 6.2 run directory.
+
+    The source phase must run from one self-contained review directory, while
+    the copied files remain byte-for-byte immutable inputs.  In particular,
+    this includes the compact activation archive; no source trajectory or
+    source item is regenerated here.
+    """
+    required = (
+        "SOURCE_SELECTED_TRAIN.json",
+        "SOURCE_SELECTED_VALIDATION.json",
+        "SOURCE_GENERATIONS.jsonl",
+        "SOURCE_CONDITION_JOURNAL.jsonl",
+        "SOURCE_ACTIVATIONS.npz",
+    )
+    hashes: dict[str, str] = {}
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    for name in required:
+        source = PARENT / name
+        if not source.exists():
+            raise RuntimeError(f"missing immutable Gate 6.1 source input: {source}")
+        destination = OUTPUT / name
+        shutil.copy2(source, destination)
+        hashes[name] = sha256_file(destination)
+    return hashes
+
+
 def write_lock(audit: dict[str, Any], manifest_hashes: dict[str, str]) -> None:
     lock = {
         "schema_version": 1,
@@ -389,8 +416,12 @@ def main() -> int:
     OUTPUT = args.output
     audit = audit_source_artifacts()
     manifest_hashes = copy_frozen_manifests()
+    source_input_hashes = copy_immutable_source_inputs()
     write_json(OUTPUT / "OFFLINE_SOURCE_AUDIT.json", audit)
-    write_json(OUTPUT / "MANIFEST_HASHES.json", manifest_hashes)
+    write_json(
+        OUTPUT / "MANIFEST_HASHES.json",
+        {"frozen_manifests": manifest_hashes, "immutable_source_inputs": source_input_hashes},
+    )
     write_lock(audit, manifest_hashes)
     report = [
         "# Gate 6.2 offline source-only audit",
