@@ -1,0 +1,113 @@
+schema_version: 1
+id: GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION
+status: PROSPECTIVE_FROZEN_DEVELOPMENT_LOCK
+stage: DEVELOPMENT_LOCK
+question: >-
+  Does the frozen Gate 6.2 single-mean prompt-boundary controller remain
+  behaviorally specific under strict semantic reanalysis and an architecture-
+  matched single-layer random null?
+parent_experiment: GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE
+parent_classification: GATE6_2_NO_BEHAVIORAL_FIRST_STAGE
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+  enable_thinking: false
+  max_new_tokens: 4096
+  sampling:
+    do_sample: true
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    min_p: 0.0
+  attention: sdpa
+instrument:
+  benchmark: CRUXEval
+  source_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  evaluator: corrected_deterministic_type_aware_python_literal
+  parser_version: external-semantic-v2
+parser_reanalysis:
+  input: review/gate6_2_first_stage_repair_mean_bridge/journal.jsonl
+  rows: 200
+  classification: GATE6_2A_PARSER_REANALYSIS_SINGLE_MEAN_PASS
+  inference_performed: false
+  original_artifacts_immutable: true
+controller:
+  name: BEST_SINGLE_MEAN_PLUS
+  location: PROMPT_BOUNDARY
+  layer: 27
+  constructor: FROZEN_GATE6_2_PAIRED_MEAN
+  duration: sustained_current_token_hook
+  vector_path: review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy
+  eta_source: review/gate6_2_first_stage_repair_mean_bridge/CONTROLLER_SELECTION_CORRECTED.json
+  standardized_dose_source: review/gate6_2_first_stage_repair_mean_bridge/MEAN_CONTROLLERS_RAW_CORRECTED.json
+random_bank:
+  conditions:
+    - SINGLE_L27_RANDOM_R0
+    - SINGLE_L27_RANDOM_R1
+    - SINGLE_L27_RANDOM_R2
+    - SINGLE_L27_RANDOM_R3
+  construction: gaussian_gram_schmidt_against_meaningful_and_previous_randoms
+  outcome_independent: true
+  unit_norm_tolerance: 1.0e-12
+  absolute_cosine_tolerance: 1.0e-6
+  seed_namespace: GATE6-3-SINGLE-L27-RANDOM-BANK
+phases:
+  offline_reanalysis:
+    rows: 200
+    gpu: false
+  matched_random_supplement:
+    items: 20
+    conditions: [SINGLE_L27_RANDOM_R0, SINGLE_L27_RANDOM_R1, SINGLE_L27_RANDOM_R2, SINGLE_L27_RANDOM_R3]
+    rollouts: 1
+    seed_regime: MATCHED_COUPLING_SECONDARY
+    trajectories: 80
+  conditional_evaluation:
+    items: 60
+    conditions: [BASELINE, TEXTUAL_CAREFUL_REFERENCE, BEST_SINGLE_MEAN_PLUS, SINGLE_L27_RANDOM_R0, SINGLE_L27_RANDOM_R1, SINGLE_L27_RANDOM_R2, SINGLE_L27_RANDOM_R3]
+    rollouts: 2
+    seed_regime: INDEPENDENT_PRIMARY
+    trajectories: 840
+    authorized_only_if: MATCHED_RANDOM_GATE_PASS
+gates:
+  matched_random:
+    validity_minimum: 0.85
+    semantic_change_minimum: 0.15
+    controller_minus_random_mean: 0.05
+    controller_greater_than_random_max: true
+    token_count_toward_textual_careful: true
+  conditional_evaluation:
+    validity_minimum: 0.90
+    validity_drop_max: 0.05
+    accuracy_drop_max: 0.10
+    propensity_distance_minimum: 0.05
+    propensity_distance_minus_random_mean: 0.05
+    propensity_distance_greater_than_random_max: true
+    pair_oracle_gain_minimum: 0.03
+    competence_adjusted_complementarity_minimum: 0.03
+    complementarity_minus_random_mean: 0.05
+    pair_oracle_greater_than_random_max: true
+    complementarity_greater_than_random_max: true
+estimands:
+  - accuracy
+  - validity
+  - repeated_baseline_double_fault
+  - pair_oracle_gain
+  - competence_adjusted_complementarity
+  - unbiased_propensity_distance
+  - rescue_fraction
+  - damage_fraction
+  - item_cluster_bootstrap
+bootstrap:
+  unit: latent_item_cluster
+  resamples: 5000
+  seed: 20260820
+cost:
+  target_usd: 0.75
+  hard_stop_usd: 1.50
+firewall:
+  gate6_2_original_rows: IMMUTABLE
+  character_count: NOT_RUN
+  q2: NOT_RUN
+  confirmatory_holdout: UNTOUCHED

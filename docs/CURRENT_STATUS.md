@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 6.1 remains immutable. Gate 6.2 source-only repair completed with corrected execution-boundary suffix scoring, source-train-only RFM cross-validation, and paired-mean prompt L22/L27/L32 controllers. The 20-item matched manipulation gate failed: plus controllers were mechanically destructive by the validity guard, while the minus controller did not exceed the random-mean semantic-change null. The 60-item evaluation was not run.
+Gate 6.2 remains immutable. Its raw 200-row journal was reanalyzed offline with the frozen external-semantic-v2 parser: harmless unambiguous Markdown wrappers are accepted, while ambiguity and substantive trailing content remain invalid. BEST_SINGLE_MEAN_PLUS passes the frozen parser-reanalysis gate. Gate 6.3 freezes an architecture-matched single-L27 random bank and authorizes an 80-row matched random supplement, with the 840-row evaluation conditional on that gate. No new model output has been collected.
 
-- Workstream: `GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE_COMPLETE`
+- Workstream: `GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION_LOCKED`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the Gate 6.2 first-stage closeout. Do not run the 60-item evaluation, character count, holdout, Q2, or another controller search without a new frozen authorization.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute only the frozen 80-row Gate 6.3 matched single-L27 random supplement. Analyze it offline before deciding whether the frozen 840-row evaluation is authorized. Do not run character count, Q2, or holdout.
 
 ## Scientific program
 
@@ -39,6 +39,7 @@ Gate 6.1 remains immutable. Gate 6.2 source-only repair completed with corrected
 | `GATE5_SOURCE_DURATION_BRIDGE` | `COMPLETE_DEVELOPMENT_DURATION_EFFECT_BELOW_MOVEMENT` | The careful/direct textual source passed behavioral separation and the sustained manipulation gate passed. The 60-item primary evaluation did not meet the frozen movement threshold; the minus sign showed a duration contrast below the full movement criterion. Gate 6 is drafted only. |
 | `GATE6_SOURCE_ATTRITION_REPAIR` | `COMPLETE_SOURCE_SCREEN` | The frozen mechanical repair reached the 104/32 source targets within attrition limits and constructed the source/controller atlas. Several label-free readouts were strong, but no individual RFM controller passed the frozen symmetric first-stage gate. Manipulation and evaluation were not run; principal review is required before any redesign. |
 | `GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE` | `COMPLETE_DEVELOPMENT_NO_FIRST_STAGE` | Gate 6.2 source-only repair completed and selected paired-mean prompt L27/L22-L27-L32 controllers. In the complete 20-item matched manipulation gate, the plus controllers produced large changes but failed validity, while the minus controller passed validity but did not exceed the random-mean change null. The 60-item evaluation was not run. |
+| `GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION` | `DEVELOPMENT_LOCK` | Gate 6.2 raw outputs were preserved and reanalyzed offline with the external-semantic-v2 parser. The corrected result passes for the frozen single-mean L27 controller: it is sufficiently valid, changes semantic outcomes, and exceeds the historical random-mean diagnostic. A new architecture-matched single-L27 random bank and 80-row matched supplement are frozen; the 840-row evaluation is conditional. No new model output, character-count run, Q2, or holdout access has occurred. |
 
 ## Scientific firewall
 
@@ -48,7 +49,7 @@ Gate 6.1 remains immutable. Gate 6.2 source-only repair completed with corrected
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE_COMPLETE_NO_FIRST_STAGE`
+- `current_task`: `GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION_LOCKED`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
