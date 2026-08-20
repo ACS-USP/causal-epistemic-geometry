@@ -19,25 +19,22 @@ project:
     utility?
 
 current:
-  workstream: GATE6_LAYER_SOURCE_RFM_ATLAS_LOCKED
-  stage: DEVELOPMENT_LOCK
+  workstream: GATE6_LAYER_SOURCE_RFM_ATLAS
+  stage: DEVELOPMENT_BLOCKED
   source_commit: cb5c1d1
   summary: >-
-    Gate 5 completed as a development source/duration bridge. The textual
-    careful/direct source passed its frozen behavioral-separation gate, and
-    the sustained engineering and manipulation gates passed. The 60-item
-    primary evaluation found no frozen movement or useful-complementarity
-    signal; the final classification is
-    GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD. Gate 6 is now locked
-    prospectively with six fixed layers, two source locations, source-only
-    RFM/AGOP gates, and fresh development splits. No Gate 6 model outcome, Q2,
-    character count, or holdout work has been run.
+    Gate 5 completed as a development source/duration bridge. The frozen
+    Gate 6 SOURCE phase was attempted once on an A40 but became technically
+    incomplete when the CAREFUL trajectory for sample_169 reached the frozen
+    4096-token ceiling without FINAL. No controller, manipulation, or
+    evaluation outcome was collected. The partial journal is preserved;
+    cap/item/prompt changes are not authorized retrospectively.
   next_authorized_action: >-
-    Execute only the frozen Gate 6 source/layer/RFM atlas on an A40. Stop
-    before any later gate.
+    Principal review of GATE6_SOURCE_PHASE_INCOMPLETE; do not run a later
+    Gate 6 phase or repair the source retrospectively.
   runpod: STOPPED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
   steering: ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_DURATION_BELOW_MOVEMENT
@@ -46,7 +43,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE6_LAYER_SOURCE_RFM_ATLAS_LOCKED_PRE_OUTCOME
+  current_task: GATE6_SOURCE_PHASE_INCOMPLETE_PRINCIPAL_REVIEW
 
 instrument_history:
   - id: Q1_V1_SERIES

@@ -312,8 +312,8 @@ experiments:
     question: Do label-free source directions at fixed layers yield source-validated causal control of semantic error profiles?
     instrument: CRUXEval semantic output prediction; fresh source/manipulation/evaluation splits
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: LOCKED_PRE_OUTCOME
-    outcome: null
+    status: BLOCKED_SOURCE_COMPLETION
+    outcome: GATE6_SOURCE_PHASE_INCOMPLETE
     scientific_interpretation: >-
       Prospective source/layer/RFM atlas. The six layers, two source locations,
       source-only readout and teacher-forced gates, standardized energy ladder,
@@ -322,7 +322,7 @@ experiments:
       outcome has been collected.
     source_commit: cb5c1d1
     artifact: review/gate6_layer_source_rfm_atlas/
-    cost_usd: null
+    cost_usd: 0.44
     holdout_status: UNTOUCHED
     lock:
       protocol: review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json
@@ -335,11 +335,12 @@ experiments:
       historical_exclusion_digest: 41863ff4a93e5cac012c91299a8ee905497cadc40ad28478f6f06acc13fa7baa
       gpu_authorized: true
     execution:
-      source_phase_executed: false
+      source_phase_executed: true
+      source_phase_status: INCOMPLETE_CAREFUL_SAMPLE_169_AT_4096_WITHOUT_FINAL
       manipulation_phase_executed: false
       evaluation_phase_executed: false
       steering_outcome: NOT_YET_RUN
       q2: NOT_RUN
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Run only the frozen Gate-6 source phase after A40 availability and cost preflight.
+    next_action: Principal review; do not run manipulation/evaluation or repair the frozen source retrospectively.

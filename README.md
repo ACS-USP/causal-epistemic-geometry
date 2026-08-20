@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 5 completed as a development source/duration bridge. The textual careful/direct source passed its frozen behavioral-separation gate, and the sustained engineering and manipulation gates passed. The 60-item primary evaluation found no frozen movement or useful-complementarity signal; the final classification is GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD. Gate 6 is now locked prospectively with six fixed layers, two source locations, source-only RFM/AGOP gates, and fresh development splits. No Gate 6 model outcome, Q2, character count, or holdout work has been run.
+Gate 5 completed as a development source/duration bridge. The frozen Gate 6 SOURCE phase was attempted once on an A40 but became technically incomplete when the CAREFUL trajectory for sample_169 reached the frozen 4096-token ceiling without FINAL. No controller, manipulation, or evaluation outcome was collected. The partial journal is preserved; cap/item/prompt changes are not authorized retrospectively.
 
-**Next authorized action:** Execute only the frozen Gate 6 source/layer/RFM atlas on an A40. Stop before any later gate.
+**Next authorized action:** Principal review of GATE6_SOURCE_PHASE_INCOMPLETE; do not run a later Gate 6 phase or repair the source retrospectively.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
