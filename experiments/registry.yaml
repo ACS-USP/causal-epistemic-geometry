@@ -222,3 +222,18 @@ experiments:
       geometry: NOT_RUN
       q2: NOT_RUN
     next_action: Principal review; do not execute micro-Q1 automatically.
+
+  - id: FIRST_MICRO_Q1
+    version: GATE-4
+    stage: DEVELOPMENT_LOCK
+    question: Can one pre-specified activation direction change semantic error profiles beyond resampling and a norm-matched random control?
+    instrument: CRUXEval semantic output prediction
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled
+    status: LOCKED_NOT_RUN
+    outcome: No scientific outcomes generated at lock time.
+    scientific_interpretation: Prospective development lock only; no Q1 conclusion is available.
+    source_commit: 7b5788d
+    artifact: review/micro_q1/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    next_action: Execute only the frozen pre-evaluation gates and Gate 4 development run.

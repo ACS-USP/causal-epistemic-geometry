@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 3 completed as a bounded, baseline-only incremental race. Qwen3-8B full non-thinking was the only model policy with eligible cells. The recommended development substrate is Qwen3-8B full non-thinking with CRUXEval semantic, with fresh long character count as backup. This is substrate selection only; original activation steering, geometry, Q2, and the confirmatory holdout remain forbidden.
+Gate 3 was accepted into main. Gate 4 is now prospectively locked for one CRUXEval semantic development micro-Q1: one paired careful-minus-direct direction, one orthogonal norm-matched random control, four conditions, and two independent rollouts per item. No scientific evaluation outcome has yet been generated.
 
-**Next authorized action:** Principal review of the Gate 3 substrate recommendation. Do not execute micro-Q1, steering, geometry, Q2, or holdout without a new authorization.
+**Next authorized action:** Run the frozen Gate 4 pre-evaluation gates and, only if they pass, the 400 trajectory development experiment. Do not run character-count replication, Q2, geometry, or holdout.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

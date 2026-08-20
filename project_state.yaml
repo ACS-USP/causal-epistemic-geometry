@@ -1,5 +1,5 @@
 schema_version: 1
-last_verified: "2026-08-19"
+last_verified: "2026-08-20"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
@@ -19,21 +19,22 @@ project:
     utility?
 
 current:
-  workstream: SUBSTRATE_RACE_COMPLETE_PRINCIPAL_REVIEW
-  source_commit: 2b630c6
+  workstream: FIRST_MICRO_Q1_LOCKED
+  stage: DEVELOPMENT_LOCK
+  source_commit: 7b5788d
   summary: >-
-    Gate 3 completed as a bounded, baseline-only incremental race. Qwen3-8B
-    full non-thinking was the only model policy with eligible cells. The
-    recommended development substrate is Qwen3-8B full non-thinking with
-    CRUXEval semantic, with fresh long character count as backup. This is
-    substrate selection only; original activation steering, geometry, Q2, and
-    the confirmatory holdout remain forbidden.
+    Gate 3 was accepted into main. Gate 4 is now prospectively locked for one
+    CRUXEval semantic development micro-Q1: one paired careful-minus-direct
+    direction, one orthogonal norm-matched random control, four conditions,
+    and two independent rollouts per item. No scientific evaluation outcome
+    has yet been generated.
   next_authorized_action: >-
-    Principal review of the Gate 3 substrate recommendation. Do not execute
-    micro-Q1, steering, geometry, Q2, or holdout without a new authorization.
-  runpod: STOPPED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+    Run the frozen Gate 4 pre-evaluation gates and, only if they pass, the 400
+    trajectory development experiment. Do not run character-count replication,
+    Q2, geometry, or holdout.
+  runpod: RUNNING_FOR_MANIFEST_PREPARATION
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
   steering: ORIGINAL_Q1_NOT_RUN
@@ -42,7 +43,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE3_SUBSTRATE_RACE_BASELINE_ONLY
+  current_task: GATE4_FIRST_MICRO_Q1_PRE_OUTCOME_LOCK
 
 instrument_history:
   - id: Q1_V1_SERIES

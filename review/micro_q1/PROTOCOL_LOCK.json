@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment": "FIRST_MICRO_Q1",
+  "status": "FROZEN_PRE_OUTCOME",
+  "source_commit": "7b5788dfcae0f67ecfa869c25e50693980c83e81",
+  "model": {"id": "Qwen/Qwen3-8B", "revision": "b968826d9c46dd6066d109eabc6255188de91218", "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218", "dtype": "bf16", "quantization": "none"},
+  "policy": {"enable_thinking": false, "do_sample": true, "temperature": 0.6, "top_p": 0.95, "top_k": 20, "min_p": 0.0, "max_new_tokens": 4096, "attention": "sdpa", "engine": "hf_generate_serial_prefill_one_shot_hook"},
+  "instrument": {"benchmark": "CRUXEval", "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f", "evaluator": "corrected_deterministic_type_aware_python_literal", "parser_version": "external-semantic-v1"},
+  "allocation": {"construction": 64, "validation": 16, "evaluation": 50, "construction_manifest_sha256": "aa5ed25a1b2d026181c9e72fc40a60dfaf9e8751ea9f2197c77406ff39757395", "validation_manifest_sha256": "beb3be5462df9838ddb2a3c16772b921892bc9695e27a7642920b6f96eecd604", "evaluation_manifest_sha256": "8661a14214832b58652768c59066d467b1239829dde2455502a7f196432d0", "historical_exclusion_sha256": "9a6a23481884e56ed27e42feebeea47bc238f112857780325de8174167cdc61c", "selection_namespace": "GATE4-MICRO-Q1-CRUX-FRESH-ALLOCATION", "selection_seed": 20260819, "all_mutually_disjoint": true},
+  "direction": {"layer": 17, "layer_path": "model.model.layers", "activation": "block_output_residual_stream", "token_position": "final_non_padding_prompt_token", "extraction": "prompt_prefill_only", "constructor": "paired_careful_minus_direct_mean_difference", "careful_system_prompt": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.", "direct_system_prompt": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>.", "validation": {"minimum_positive_gaps": 12, "mean_signed_gap_gt": 0.0}, "alpha": "0.5 * construction_mean_projection_gap"},
+  "random_control": {"constructor": "gaussian_remove_parallel_component", "seed": 20260819, "same_alpha": true, "max_abs_cosine": 1e-6},
+  "conditions": ["BASELINE", "CPLUS", "CMINUS", "CRANDOM"],
+  "rollouts": {"per_item_condition": 2, "seed_regime": "INDEPENDENT_PRIMARY"},
+  "thresholds": {"validity_min": 0.9, "validity_drop_max": 0.05, "competence_drop_max": 0.1, "movement_D": 0.05, "movement_Delta_D": 0.05, "useful_G": 0.03, "useful_C": 0.03, "useful_Delta_C": 0.05},
+  "bootstrap": {"unit": "latent_item_cluster", "resamples": 5000, "seed": 20260819},
+  "firewall": {"character_count": "NOT_RUN", "q2": "NOT_RUN", "confirmatory_holdout": "UNTOUCHED"}
+}
