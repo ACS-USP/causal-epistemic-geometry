@@ -1757,6 +1757,7 @@ class HuggingFaceBackend(ModelBackend):
             "decode_applications": 0,
             "applications": [],
             "max_abs_shift_error": 0.0,
+            "max_relative_shift_error": 0.0,
             "max_abs_non_current_change": 0.0,
         }
 
@@ -1787,12 +1788,25 @@ class HuggingFaceBackend(ModelBackend):
             expected = delta.expand_as(updated[:, -1:, :])
             observed = updated[:, -1:, :] - hidden[:, -1:, :]
             shift_error = float((observed.float() - expected.float()).abs().max().item())
+            scale = self.torch.maximum(hidden[:, -1:, :].abs(), updated[:, -1:, :].abs())
+            scale = self.torch.maximum(scale, expected.abs()).clamp_min(1.0)
+            relative_shift_error = float(
+                (
+                    (observed.float() - expected.float()).abs()
+                    / (self.torch.finfo(hidden.dtype).eps * scale.float())
+                )
+                .max()
+                .item()
+            )
             non_current_change = (
                 0.0
                 if sequence_length == 1
                 else float((updated[:, :-1, :] - hidden[:, :-1, :]).abs().max().item())
             )
             trace["max_abs_shift_error"] = max(trace["max_abs_shift_error"], shift_error)
+            trace["max_relative_shift_error"] = max(
+                trace["max_relative_shift_error"], relative_shift_error
+            )
             trace["max_abs_non_current_change"] = max(
                 trace["max_abs_non_current_change"], non_current_change
             )
@@ -1843,6 +1857,7 @@ class HuggingFaceBackend(ModelBackend):
             "decode_applications": 0,
             "applications": [],
             "max_abs_shift_error": 0.0,
+            "max_relative_shift_error": 0.0,
             "max_abs_non_current_change": 0.0,
         }
 
@@ -1890,6 +1905,19 @@ class HuggingFaceBackend(ModelBackend):
                 - hidden[:, token_index : token_index + 1, :]
             )
             shift_error = float((observed.float() - expected.float()).abs().max().item())
+            scale = self.torch.maximum(
+                hidden[:, token_index : token_index + 1, :].abs(),
+                updated[:, token_index : token_index + 1, :].abs(),
+            )
+            scale = self.torch.maximum(scale, expected.abs()).clamp_min(1.0)
+            relative_shift_error = float(
+                (
+                    (observed.float() - expected.float()).abs()
+                    / (self.torch.finfo(hidden.dtype).eps * scale.float())
+                )
+                .max()
+                .item()
+            )
             non_current_change = (
                 0.0
                 if hidden.shape[1] == 1
@@ -1902,6 +1930,9 @@ class HuggingFaceBackend(ModelBackend):
                 )
             )
             trace["max_abs_shift_error"] = max(trace["max_abs_shift_error"], shift_error)
+            trace["max_relative_shift_error"] = max(
+                trace["max_relative_shift_error"], relative_shift_error
+            )
             trace["max_abs_non_current_change"] = max(
                 trace["max_abs_non_current_change"], non_current_change
             )

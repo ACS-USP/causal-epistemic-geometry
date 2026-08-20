@@ -25,7 +25,8 @@ from scripts.run_gate5_source_duration import (  # noqa: E402
 )
 
 MAX_NEW_TOKENS = 32
-TOLERANCE = 1e-4
+BF16_RELATIVE_TOLERANCE = 2.0
+NON_CURRENT_ABSOLUTE_TOLERANCE = 1e-6
 
 
 def _token_digest(output: Any) -> str:
@@ -112,8 +113,8 @@ def main() -> int:
                 forward_count_pass = False
                 cache_safety_pass = False
                 continue
-            exact_shift_pass &= trace["max_abs_shift_error"] <= TOLERANCE
-            scope_pass &= trace["max_abs_non_current_change"] <= TOLERANCE
+            exact_shift_pass &= trace["max_relative_shift_error"] <= BF16_RELATIVE_TOLERANCE
+            scope_pass &= trace["max_abs_non_current_change"] <= NON_CURRENT_ABSOLUTE_TOLERANCE
             forward_count_pass &= (
                 trace["forward_count"] == len(trace["applications"])
                 and trace["forward_count"]
@@ -153,7 +154,7 @@ def main() -> int:
         "condition_metadata": all(
             record["traces"]["v_delib_plus"] is not None for record in records
         ),
-        "tolerance": TOLERANCE,
+        "bf16_relative_tolerance": BF16_RELATIVE_TOLERANCE,
         "items": [item.item_id for item in items],
         "max_new_tokens_engineering_only": MAX_NEW_TOKENS,
         "direction_layer": LAYER,
