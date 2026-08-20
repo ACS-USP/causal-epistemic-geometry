@@ -44,6 +44,7 @@ current instruction source.
 | `docs/GATE5_SOURCE_DURATION_CLOSEOUT.md` | Source-validity and temporal-persistence bridge closeout |
 | `docs/GATE6_LAYER_SOURCE_RFM_ATLAS.md` | Prospective layer/source/RFM control atlas; no outcomes yet |
 | `docs/GATE6_2_FIRST_STAGE_REPAIR.md` | Gate 6.2 source-scoring repair and paired-mean bridge; outcome-gated |
+| `docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md` | Gate 6.2 first-stage outcome and evaluation stop |
 
 ## Archival scientific protocols and closeouts
 

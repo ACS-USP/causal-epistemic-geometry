@@ -11,7 +11,7 @@ experiments:
     scientific_interpretation: Instrument non-qualification, not evidence for or against Q1.
     source_commit: 17429ff
     artifact: docs/Q1_V1_SERIES_CLOSEOUT.md
-    cost_usd: null
+    cost_usd: 0.419
     holdout_status: UNTOUCHED
     next_action: NONE; preserve for audit only.
 
@@ -399,15 +399,17 @@ experiments:
     question: Do corrected causal suffix scoring and paired-mean prompt controllers yield a valid first-stage intervention?
     instrument: CRUXEval semantic output prediction; exact Gate-6 development manifests
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: LOCKED_PRE_OUTCOME
-    outcome: NOT_RUN
+    status: COMPLETE_DEVELOPMENT_NO_FIRST_STAGE
+    outcome: GATE6_2_NO_BEHAVIORAL_FIRST_STAGE
     scientific_interpretation: >-
-      Gate 6.1 source-only artifacts passed an offline integrity audit. This
-      prospective continuation repairs execution-boundary scoring, performs
-      source-train-only RFM cross-validation, and independently tests the
-      previously source-validated paired-mean prompt bridge. No manipulation or
-      evaluation outcome has been collected.
-    source_commit: cc06e20e311b6697736761fa04ad1ad3795feb66
+      Gate 6.1 source-only artifacts passed an offline integrity audit. Gate
+      6.2 completed the corrected source-only repair and selected paired-mean
+      prompt L27/L22-L27-L32 controllers. The complete 20-item matched
+      manipulation gate failed: plus controllers failed validity, while the
+      minus controller did not exceed the random-mean semantic-change null.
+      The 60-item evaluation was not run.
+    source_commit: f3a0b18279074dbf8da9e376b5ecc396cb9d83c0
+    lock_commit: cc06e20e311b6697736761fa04ad1ad3795feb66
     artifact: review/gate6_2_first_stage_repair_mean_bridge/
     cost_usd: null
     holdout_status: UNTOUCHED
@@ -429,10 +431,12 @@ experiments:
       target_cost_usd: 1.50
       hard_stop_cost_usd: 3.00
     execution:
-      source_phase_executed: false
-      manipulation_phase_executed: false
+      source_phase_executed: true
+      source_phase_decision: PAIRED_MEAN_BRIDGE_SELECTED
+      manipulation_phase_executed: true
+      manipulation_gate: GATE6_2_NO_BEHAVIORAL_FIRST_STAGE
       evaluation_phase_executed: false
       q2: NOT_RUN
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Run source-only correction on A40; manipulation/evaluation remain phase-gated and stop for principal review afterward.
+    next_action: Principal review; do not run the 60-item evaluation or any new controller search without a new frozen authorization.
