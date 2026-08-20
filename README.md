@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. The paired direction and engineering gates passed, 400 trajectories were collected, and the frozen classification was MICRO_Q1_NO_DETECTABLE_SIGNAL. Both meaningful signs remained valid and competence-preserving, but neither moved semantic error profiles beyond the random control under the pre-registered thresholds.
+Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. An independent forensic audit found 400/400 intact logical rows, no leakage or seed failures, and only minor non-scientific provenance issues. The frozen classification remains MICRO_Q1_NO_DETECTABLE_SIGNAL. Both meaningful signs remained valid and competence-preserving, but neither moved semantic error profiles beyond the random control under the pre-registered thresholds.
 
-**Next authorized action:** Principal review of the Gate 4 development result. Do not run character count, another direction/layer/alpha, Q2, geometry, or holdout.
+**Next authorized action:** Gate 5 source-validity and temporal-persistence bridge on a new branch, after the audited Gate 4 state is accepted into main. Do not run character count, Q2, geometry, or holdout.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

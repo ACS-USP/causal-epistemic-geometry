@@ -30,6 +30,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "SUBSTRATE_RACE_COMPLETE_PRINCIPAL_REVIEW",
         "FIRST_MICRO_Q1_LOCKED",
         "FIRST_MICRO_Q1_COMPLETE",
+        "FIRST_MICRO_Q1_AUDITED",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream in {"SUBSTRATE_RACE", "FIRST_MICRO_Q1_LOCKED"}

@@ -241,4 +241,18 @@ experiments:
     artifact: review/micro_q1/
     cost_usd: 0.10388888888888889
     holdout_status: UNTOUCHED
-    next_action: Principal review; do not run another direction, layer, alpha, Q2, or holdout.
+    audit:
+      status: GATE4_AUDIT_MINOR_NONSCIENTIFIC_ISSUES
+      artifact: review/micro_q1/forensic_audit/
+      raw_rows: 400
+      unique_logical_rows: 400
+      duplicate_rows: 0
+      missing_rows: 0
+      seed_mismatches: 0
+      formula_crosscheck: PASS
+      scientific_result_changed: false
+      provenance_corrections:
+        - protocol_lock_evaluation_manifest_sha_transcription
+        - recorded_source_commit_vs_effective_checkout
+        - backend_stop_metadata_intervention_identity
+    next_action: Gate 5 source-validity and temporal-persistence bridge; do not run Q2 or holdout.

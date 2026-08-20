@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. The paired direction and engineering gates passed, 400 trajectories were collected, and the frozen classification was MICRO_Q1_NO_DETECTABLE_SIGNAL. Both meaningful signs remained valid and competence-preserving, but neither moved semantic error profiles beyond the random control under the pre-registered thresholds.
+Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. An independent forensic audit found 400/400 intact logical rows, no leakage or seed failures, and only minor non-scientific provenance issues. The frozen classification remains MICRO_Q1_NO_DETECTABLE_SIGNAL. Both meaningful signs remained valid and competence-preserving, but neither moved semantic error profiles beyond the random control under the pre-registered thresholds.
 
-- Workstream: `FIRST_MICRO_Q1_COMPLETE`
+- Workstream: `FIRST_MICRO_Q1_AUDITED`
 - RunPod: `STOPPED`
 - GPU work authorized: `false`
 - New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the Gate 4 development result. Do not run character count, another direction/layer/alpha, Q2, geometry, or holdout.
+- Next authorized action: Gate 5 source-validity and temporal-persistence bridge on a new branch, after the audited Gate 4 state is accepted into main. Do not run character count, Q2, geometry, or holdout.
 
 ## Scientific program
 
@@ -44,7 +44,7 @@ Gate 4 completed the first original CRUXEval micro-Q1 development kill-test. The
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE4_FIRST_MICRO_Q1_COMPLETE_NO_DETECTABLE_SIGNAL`
+- `current_task`: `GATE4_FORENSIC_AUDIT_COMPLETE_MINOR_PROVENANCE_ISSUES`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
