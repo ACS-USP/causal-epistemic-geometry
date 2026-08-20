@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 5 completed as a development source/duration bridge. The frozen Gate 6 SOURCE phase was attempted once on an A40 but became technically incomplete when the CAREFUL trajectory for sample_169 reached the frozen 4096-token ceiling without FINAL. No controller, manipulation, or evaluation outcome was collected. The partial journal is preserved; cap/item/prompt changes are not authorized retrospectively.
+Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.1 freezes a prospective mechanical attrition repair: original candidate order is preserved, deterministic train/validation reserves are allocated before new output, sample_440 may be reused under audited invariants, and sample_169 is permanently ineligible and never retried. No new model output has been collected under the repair lock.
 
-- Workstream: `GATE6_LAYER_SOURCE_RFM_ATLAS`
+- Workstream: `GATE6_SOURCE_ATTRITION_REPAIR`
 - RunPod: `STOPPED`
 - GPU work authorized: `false`
 - New scientific experiment authorized: `false`
-- Next authorized action: Principal review of GATE6_SOURCE_PHASE_INCOMPLETE; do not run a later Gate 6 phase or repair the source retrospectively.
+- Next authorized action: Execute only the frozen Gate 6.1 source screening after local validation; if attrition passes, continue the unchanged parent Gate 6 source pipeline.
 
 ## Scientific program
 
@@ -37,6 +37,7 @@ Gate 5 completed as a development source/duration bridge. The frozen Gate 6 SOUR
 | `MODEL_POLICY_BENCHMARK_SUBSTRATE_RACE` | `COMPLETE_EXPLORATION` | The baseline-only Gate 3 race recommends Qwen3-8B full non-thinking with CRUXEval semantic as the primary development substrate and fresh long character count as backup. Llama-Instruct cells failed eligibility due to completion/mechanical failures. No steering or geometry was run. |
 | `FIRST_MICRO_Q1` | `COMPLETE_DEVELOPMENT_NO_SIGNAL` | Gate 4 direction validation and intervention engineering passed, but the frozen one-shot direction did not exceed baseline resampling and the norm-matched random control. This remains a bounded development result. |
 | `GATE5_SOURCE_DURATION_BRIDGE` | `COMPLETE_DEVELOPMENT_DURATION_EFFECT_BELOW_MOVEMENT` | The careful/direct textual source passed behavioral separation and the sustained manipulation gate passed. The 60-item primary evaluation did not meet the frozen movement threshold; the minus sign showed a duration contrast below the full movement criterion. Gate 6 is drafted only. |
+| `GATE6_SOURCE_ATTRITION_REPAIR` | `DEVELOPMENT_LOCK` | Prospective mechanical repair of the incomplete Gate 6 source phase. Candidate order, model, cap, prompts, seeds, source labels, and downstream scientific pipeline remain frozen. New reserves and condition-level journaling address mechanical FINAL-marker attrition only. No model output has been collected under this repair lock. |
 
 ## Scientific firewall
 
@@ -46,7 +47,7 @@ Gate 5 completed as a development source/duration bridge. The frozen Gate 6 SOUR
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE6_SOURCE_PHASE_INCOMPLETE_PRINCIPAL_REVIEW`
+- `current_task`: `GATE6_SOURCE_ATTRITION_REPAIR_LOCKED`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

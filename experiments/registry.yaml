@@ -344,3 +344,45 @@ experiments:
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; do not run manipulation/evaluation or repair the frozen source retrospectively.
+
+  - id: GATE6_SOURCE_ATTRITION_REPAIR
+    version: GATE-6.1
+    stage: DEVELOPMENT_LOCK
+    question: Can the frozen Gate-6 source phase be completed after repairing mechanical marker attrition without changing scientific inputs?
+    instrument: CRUXEval semantic source conditions with exact generated-token FINAL boundaries
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, serial batch-size 1
+    status: LOCKED_PRE_OUTCOME
+    outcome: PENDING_SOURCE_SCREEN
+    scientific_interpretation: >-
+      Prospective engineering repair only. Attempt 1 remains immutable as
+      GATE6_SOURCE_PHASE_INCOMPLETE. The repair preserves original candidate
+      order, allocates 32/16 deterministic reserves before new outputs,
+      reuses only audited completed generations, permanently excludes
+      sample_169, and uses no correctness or semantic outcomes for eligibility.
+    source_commit: 5a161eb
+    artifact: review/gate6_layer_source_rfm_atlas/
+    cost_usd: 0.44
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE6_LAYER_SOURCE_RFM_ATLAS
+    lock:
+      protocol: review/gate6_layer_source_rfm_atlas/SOURCE_ATTRITION_REPAIR_LOCK.json
+      candidate_order: review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json
+      train_reserve_items: 32
+      validation_reserve_items: 16
+      train_target: 104
+      validation_target: 32
+      train_max_ineligible: 20
+      validation_max_ineligible: 6
+      sample_169_retry: false
+      correctness_used_for_selection: false
+      semantic_outcomes_used_for_selection: false
+      gpu_authorized: false
+    execution:
+      screening: NOT_RUN
+      activation_extraction: NOT_RUN
+      controller_manipulation: NOT_RUN
+      controller_evaluation: NOT_RUN
+      q2: NOT_RUN
+      character_count: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Run local validation, then execute only Gate 6.1 source screening after the lock commit.

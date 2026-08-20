@@ -1,0 +1,77 @@
+schema_version: 1
+experiment_id: GATE6_SOURCE_ATTRITION_REPAIR
+status: FROZEN_PRE_OUTCOME
+stage: DEVELOPMENT_LOCK
+parent_experiment: GATE6_LAYER_SOURCE_RFM_ATLAS
+question: Can the frozen Gate-6 source phase be completed after repairing mechanical marker attrition without changing scientific inputs?
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+policy:
+  enable_thinking: false
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  max_new_tokens: 4096
+  engine: serial_reference_batch_size_1
+instrument:
+  benchmark: CRUXEval
+  dataset_repo: cruxeval-org/cruxeval
+  dataset_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  evaluator: corrected_deterministic_type_aware_semantics
+source_order:
+  train_original: 104
+  validation_original: 32
+  train_reserve: 32
+  validation_reserve: 16
+  train_reserve_namespace: GATE6-SOURCE-TRAIN-RESERVE-V1
+  validation_reserve_namespace: GATE6-SOURCE-VALIDATION-RESERVE-V1
+  ordering: original_manifest_order_then_deterministic_reserve_order
+  selection: common_mechanical_eligibility
+eligibility:
+  conditions: [ORDINARY, CAREFUL, DIRECT]
+  requires_all_conditions: true
+  requires_completed_generation: true
+  requires_unambiguous_final_marker: true
+  requires_exact_generated_token_boundary: true
+  uses_correctness: false
+  uses_semantic_outcome: false
+  marker_locator: locate_final_commitment_boundary
+  no_prompt_position_fallback: true
+attrition:
+  train_target: 104
+  train_max_ineligible: 20
+  train_warning_ineligible: 10
+  validation_target: 32
+  validation_max_ineligible: 6
+  validation_warning_ineligible: 3
+  stop_classifications:
+    - GATE6_SOURCE_ATTRITION_EXCEEDS_LIMIT
+    - GATE6_SOURCE_RESERVE_EXHAUSTED
+reuse:
+  attempt_1_artifact: review/gate6_layer_source_rfm_atlas/SOURCE_GENERATION_JOURNAL_REMOTE_PARTIAL.jsonl
+  reusable_items: [sample_440]
+  permanent_ineligible_items: [sample_169]
+  sample_169_retry: false
+  condition_journal_key: [split, candidate_item_id, source_condition]
+  flush_and_fsync_each_row: true
+phases:
+  screening: mechanical_eligibility_only
+  activation_extraction: selected_common_eligible_items_only
+  controller_manipulation: parent_frozen_pipeline_if_source_repair_passes
+  controller_evaluation: parent_frozen_pipeline_if_source_repair_passes
+firewall:
+  correctness_for_source_selection: false
+  character_count: NOT_RUN
+  q2: NOT_RUN
+  confirmatory_holdout: UNTOUCHED
+  outcome_dependent_selection: false
+cost_gate:
+  attempt_1_cost_usd: 0.44
+  preferred_total_cost_usd: 2.50
+  hard_total_cost_usd: 4.50

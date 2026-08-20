@@ -54,6 +54,10 @@ from epistemic_geometry.experiments.gate6 import (  # noqa: E402
     symmetric_first_stage_contributions,
     vector_sha256,
 )
+from epistemic_geometry.experiments.gate6_source import (  # noqa: E402
+    FinalCommitmentBoundary,
+    locate_final_commitment_boundary,
+)
 from epistemic_geometry.reproducibility import (  # noqa: E402
     git_metadata,
     require_remote_hf_execution,
@@ -141,6 +145,25 @@ def load_external(path: Path) -> list[ExternalItem]:
 
 
 def load_source_training(review: Path) -> list[ExternalItem]:
+    selected_path = review / "SOURCE_SELECTED_TRAIN.json"
+    if selected_path.exists():
+        payload = json.loads(selected_path.read_text(encoding="utf-8"))
+        rows = list(payload["items"])
+        if len(rows) != SOURCE_TRAIN_COUNT:
+            raise RuntimeError("selected Gate-6.1 source training is not exactly 104 items")
+        return [
+            ExternalItem(
+                item_id=str(row["item_id"]),
+                benchmark="CRUXEval",
+                subtask="output_prediction",
+                prompt=str(row["prompt"]),
+                reference_answer=str(row.get("reference_answer", "")),
+                evaluator="python_literal",
+                source_revision=DATASET_REVISION,
+                metadata=dict(row.get("metadata", {})),
+            )
+            for row in rows
+        ]
     paths = (
         review.parent / "micro_q1" / "CONSTRUCTION_MANIFEST.json",
         review.parent / "gate5_source_duration" / "SOURCE_CHECK.json",
@@ -239,21 +262,21 @@ def prompt_tokens(backend: HuggingFaceBackend, item: BenchmarkItem) -> tuple[lis
     return [int(value) for value in values], rendered, prompt_hash
 
 
-def marker_position(tokenizer: Any, continuation: list[int], prompt_length: int) -> int:
-    start = marker_start(tokenizer, continuation)
-    if start is not None:
-        return prompt_length + start - 1 if start else prompt_length - 1
-    return prompt_length - 1
+def source_boundary(
+    tokenizer: Any, raw_output: str, continuation: list[int], metadata: dict[str, Any] | None = None
+) -> FinalCommitmentBoundary | None:
+    """Resolve a source marker without ever falling back to prompt position."""
 
-
-def marker_start(tokenizer: Any, continuation: list[int]) -> int | None:
-    marker = tokenizer.encode("FINAL:", add_special_tokens=False)
-    if not marker:
-        return None
-    for start in range(len(continuation)):
-        if continuation[start : start + len(marker)] == marker:
-            return start
-    return None
+    stored = (metadata or {}).get("source_marker_boundary")
+    if stored is not None:
+        return FinalCommitmentBoundary(
+            marker_text_span=tuple(stored["marker_text_span"]),
+            marker_token_index=int(stored["marker_token_index"]),
+            marker_text=str(stored["marker_text"]),
+            line_text=str(stored["line_text"]),
+            reason=str(stored["reason"]),
+        )
+    return locate_final_commitment_boundary(raw_output, continuation, tokenizer)
 
 
 def capture_layers(
@@ -261,11 +284,14 @@ def capture_layers(
     item: BenchmarkItem,
     layers: tuple[int, ...],
     continuation: list[int] | None = None,
+    marker_token_index: int | None = None,
 ) -> tuple[dict[int, np.ndarray], dict[str, Any]]:
     prompt_ids, rendered, prompt_hash = prompt_tokens(backend, item)
     full_ids = prompt_ids + (continuation or [])
+    if continuation is not None and marker_token_index is None:
+        raise RuntimeError("execution-boundary capture requires an exact FINAL token boundary")
     target = (
-        marker_position(backend.tokenizer, continuation or [], len(prompt_ids))
+        len(prompt_ids) + int(marker_token_index) - 1
         if continuation is not None
         else len(prompt_ids) - 1
     )
@@ -316,7 +342,15 @@ def generate_source(
     item: ExternalItem,
     condition: str,
     phase: str,
+    precomputed: dict[tuple[str, str, str], dict[str, Any]] | None = None,
 ) -> tuple[list[int], str, dict[str, Any]]:
+    cached = (precomputed or {}).get((phase, item.item_id, condition))
+    if cached is not None:
+        return (
+            list(map(int, cached["generated_token_ids"])),
+            str(cached["raw_output"]),
+            dict(cached["generation_metadata"]),
+        )
     system = {"CAREFUL": SYSTEM_CAREFUL, "DIRECT": SYSTEM_DIRECT}.get(condition)
     seed = source_seed(item.item_id, "GENERATION", condition)
     output = backend.generate_reasoning(
@@ -329,10 +363,305 @@ def generate_source(
             "source_generation_only": True,
         },
     )
+    metadata = dict(output.metadata)
+    boundary = locate_final_commitment_boundary(
+        output.raw_output,
+        list(map(int, output.metadata["generated_token_ids"])),
+        backend.tokenizer,
+    )
+    metadata["source_marker_boundary"] = (
+        {
+            "marker_text_span": list(boundary.marker_text_span),
+            "marker_token_index": boundary.marker_token_index,
+            "marker_text": boundary.marker_text,
+            "line_text": boundary.line_text,
+            "reason": boundary.reason,
+        }
+        if boundary is not None
+        else None
+    )
     return (
         list(map(int, output.metadata["generated_token_ids"])),
         output.raw_output,
-        output.metadata,
+        metadata,
+    )
+
+
+def _source_external_record(record: dict[str, Any]) -> ExternalItem:
+    item = record.get("item", record)
+    return ExternalItem(
+        item_id=str(item["item_id"]),
+        benchmark="CRUXEval",
+        subtask="output_prediction",
+        prompt=str(item["prompt"]),
+        reference_answer=str(item.get("reference_answer", "")),
+        evaluator="python_literal",
+        source_revision=DATASET_REVISION,
+        metadata=dict(item.get("metadata", {})),
+    )
+
+
+def _load_source_candidates(review: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    payload = json.loads((review / "SOURCE_CANDIDATE_ORDER.json").read_text(encoding="utf-8"))
+    return list(payload["train"]), list(payload["validation"])
+
+
+def _load_source_condition_journal(review: Path) -> dict[tuple[str, str, str], dict[str, Any]]:
+    path = review / "SOURCE_CONDITION_JOURNAL.jsonl"
+    rows: dict[tuple[str, str, str], dict[str, Any]] = {}
+    if not path.exists():
+        return rows
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            if line.strip():
+                row = json.loads(line)
+                key = (
+                    str(row["split"]),
+                    str(row["candidate_item_id"]),
+                    str(row["source_condition"]),
+                )
+                if key in rows:
+                    raise RuntimeError(f"duplicate source condition journal key: {key}")
+                rows[key] = row
+    return rows
+
+
+def _historical_condition_rows(
+    backend: HuggingFaceBackend,
+    review: Path,
+    candidate: dict[str, Any],
+    journal: dict[tuple[str, str, str], dict[str, Any]],
+) -> None:
+    """Import only the preserved item-level Attempt-1 rows, never regenerate them."""
+
+    partial = review / "SOURCE_GENERATION_JOURNAL_REMOTE_PARTIAL.jsonl"
+    if not partial.exists():
+        return
+    historical = {
+        json.loads(line)["item_id"]: json.loads(line)
+        for line in partial.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    }
+    item_id = str(candidate["item_id"])
+    row = historical.get(item_id)
+    if row is None:
+        return
+    for condition in ("ORDINARY", "CAREFUL", "DIRECT"):
+        key = (str(candidate["split"]), item_id, condition)
+        if key in journal:
+            continue
+        tokens = list(map(int, row[f"{condition.lower()}_token_ids"]))
+        raw = str(row[f"{condition.lower()}_raw_output"])
+        metadata = dict(row[f"{condition.lower()}_generation_metadata"])
+        boundary = locate_final_commitment_boundary(raw, tokens, backend.tokenizer)
+        metadata["source_marker_boundary"] = (
+            {
+                "marker_text_span": list(boundary.marker_text_span),
+                "marker_token_index": boundary.marker_token_index,
+                "marker_text": boundary.marker_text,
+                "line_text": boundary.line_text,
+                "reason": boundary.reason,
+            }
+            if boundary is not None
+            else None
+        )
+        journal_row = {
+            "split": str(candidate["split"]),
+            "candidate_order": int(candidate["candidate_order"]),
+            "allocation": str(candidate["allocation"]),
+            "candidate_item_id": item_id,
+            "source_condition": condition,
+            "completed": True,
+            "generation_seed": int(
+                metadata.get("generation_seed", source_seed(item_id, "GENERATION", condition))
+            ),
+            "generated_token_ids": tokens,
+            "generated_token_count": len(tokens),
+            "raw_output": raw,
+            "generation_metadata": metadata,
+            "prompt_hash": metadata.get("rendered_prompt_hash"),
+            "rendered_prompt_hash": metadata.get("rendered_prompt_hash"),
+            "marker_found": boundary is not None,
+            "marker_token_index": boundary.marker_token_index if boundary is not None else None,
+            "marker_text_span": list(boundary.marker_text_span) if boundary is not None else None,
+            "marker_reason": boundary.reason
+            if boundary is not None
+            else "no_unambiguous_final_marker",
+            "model": MODEL,
+            "model_revision": MODEL_REVISION,
+            "max_new_tokens": MAX_NEW_TOKENS,
+            "historical_import": True,
+            "source_commit": "a3233771332687acfd3a30ac86011cdfed5c23bf",
+        }
+        append_jsonl(review / "SOURCE_CONDITION_JOURNAL.jsonl", journal_row)
+        journal[key] = journal_row
+
+
+def screen_source_candidates(
+    backend: HuggingFaceBackend, review: Path
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[tuple[str, str, str], dict[str, Any]]]:
+    """Run/resume mechanical source screening before any activation extraction."""
+
+    candidates_by_split = dict(
+        zip(("train", "validation"), _load_source_candidates(review), strict=True)
+    )
+    journal = _load_source_condition_journal(review)
+    selected: dict[str, list[dict[str, Any]]] = {}
+    ledger: list[dict[str, Any]] = []
+    summaries: dict[str, Any] = {}
+    limits = {
+        "train": (SOURCE_TRAIN_COUNT, 20),
+        "validation": (32, 6),
+    }
+    for split, candidates in candidates_by_split.items():
+        target, max_ineligible = limits[split]
+        ineligible = 0
+        selected[split] = []
+        for candidate in candidates:
+            if len(selected[split]) >= target:
+                break
+            item_id = str(candidate["item_id"])
+            _historical_condition_rows(backend, review, candidate, journal)
+            item = _source_external_record(candidate)
+            condition_status: dict[str, str] = {}
+            for condition in ("ORDINARY", "CAREFUL", "DIRECT"):
+                key = (split, item_id, condition)
+                row = journal.get(key)
+                if row is None:
+                    tokens, raw, metadata = generate_source(backend, item, condition, split)
+                    boundary = source_boundary(backend.tokenizer, raw, tokens, metadata)
+                    row = {
+                        "split": split,
+                        "candidate_order": int(candidate["candidate_order"]),
+                        "allocation": str(candidate["allocation"]),
+                        "candidate_item_id": item_id,
+                        "source_condition": condition,
+                        "completed": True,
+                        "generation_seed": int(
+                            metadata.get(
+                                "generation_seed", source_seed(item_id, "GENERATION", condition)
+                            )
+                        ),
+                        "generated_token_ids": tokens,
+                        "generated_token_count": len(tokens),
+                        "raw_output": raw,
+                        "generation_metadata": metadata,
+                        "prompt_hash": metadata.get("rendered_prompt_hash"),
+                        "rendered_prompt_hash": metadata.get("rendered_prompt_hash"),
+                        "marker_found": boundary is not None,
+                        "marker_token_index": boundary.marker_token_index
+                        if boundary is not None
+                        else None,
+                        "marker_text_span": list(boundary.marker_text_span)
+                        if boundary is not None
+                        else None,
+                        "marker_reason": boundary.reason
+                        if boundary is not None
+                        else "no_unambiguous_final_marker",
+                        "model": MODEL,
+                        "model_revision": MODEL_REVISION,
+                        "max_new_tokens": MAX_NEW_TOKENS,
+                        "historical_import": False,
+                        "source_commit": git_metadata(ROOT).get("git_commit"),
+                    }
+                    append_jsonl(review / "SOURCE_CONDITION_JOURNAL.jsonl", row)
+                    journal[key] = row
+                condition_status[condition] = (
+                    "ELIGIBLE"
+                    if row.get("completed") and row.get("marker_found")
+                    else row.get("marker_reason", "INELIGIBLE")
+                )
+            eligible = all(value == "ELIGIBLE" for value in condition_status.values())
+            reason = (
+                "all_three_conditions_mechanical_eligible"
+                if eligible
+                else ";".join(
+                    f"{condition}={status}"
+                    for condition, status in condition_status.items()
+                    if status != "ELIGIBLE"
+                )
+            )
+            ledger.append(
+                {
+                    "split": split,
+                    "candidate_order": int(candidate["candidate_order"]),
+                    "allocation": candidate["allocation"],
+                    "item_id": item_id,
+                    "eligible": eligible,
+                    "reason": reason,
+                    **{
+                        f"{condition.lower()}_status": status
+                        for condition, status in condition_status.items()
+                    },
+                }
+            )
+            if eligible:
+                selected[split].append(candidate["item"])
+            else:
+                ineligible += 1
+                if ineligible > max_ineligible:
+                    _write_source_attrition_outputs(review, selected, ledger, summaries)
+                    raise RuntimeError(f"{split}: GATE6_SOURCE_ATTRITION_EXCEEDS_LIMIT")
+        if len(selected[split]) < target:
+            _write_source_attrition_outputs(review, selected, ledger, summaries)
+            raise RuntimeError(f"{split}: GATE6_SOURCE_RESERVE_EXHAUSTED")
+        summaries[split] = {
+            "target": target,
+            "selected": len(selected[split]),
+            "ineligible": ineligible,
+            "warning_threshold": 10 if split == "train" else 3,
+            "max_ineligible": max_ineligible,
+        }
+    _write_source_attrition_outputs(review, selected, ledger, summaries)
+    return selected["train"], selected["validation"], journal
+
+
+def _write_source_attrition_outputs(
+    review: Path,
+    selected: dict[str, list[dict[str, Any]]],
+    ledger: list[dict[str, Any]],
+    summaries: dict[str, Any],
+) -> None:
+    _write_csv(review / "SOURCE_ATTRITION_LEDGER.csv", ledger)
+    for split, items in selected.items():
+        target = SOURCE_TRAIN_COUNT if split == "train" else 32
+        write_json(
+            review / f"SOURCE_SELECTED_{split.upper()}.json",
+            {
+                "split": split,
+                "status": "SELECTED_IF_COMPLETE"
+                if len(items) < target
+                else "SELECTED_COMMON_ELIGIBLE",
+                "items": items,
+                "n_items": len(items),
+                "target": target,
+            },
+        )
+    write_json(review / "SOURCE_ATTRITION_SUMMARY.json", summaries)
+    write_json(
+        review / "SOURCE_ATTRITION_BIAS_DIAGNOSTIC.json",
+        {
+            "uses_correctness": False,
+            "uses_semantic_outcomes": False,
+            "reported_covariates": [
+                "split",
+                "candidate_order",
+                "allocation",
+                "condition_marker_status",
+            ],
+            "selection_status": "mechanical_only",
+            "ledger_rows": len(ledger),
+        },
+    )
+    (review / "SOURCE_ATTRITION_REPORT.md").write_text(
+        "# Gate 6.1 source attrition screening\n\n"
+        "Eligibility is mechanical and common to prompt-boundary and "
+        "execution-boundary activation extraction. No correctness, parsed "
+        "answer, or semantic outcome is used. The source condition journal is "
+        "append-only and each completed row is flushed and fsynced.\n\n"
+        + json.dumps(summaries, indent=2, sort_keys=True)
+        + "\n",
+        encoding="utf-8",
     )
 
 
@@ -365,12 +694,10 @@ def _next_token_log_probs(
     input_ids = full_ids if continuation is None else full_ids[:-1]
     target = len(prompt_ids) - 1 if target_position is None else target_position
     torch = backend.torch
-    tensors = (
-        {
-            layer: torch.tensor(value, dtype=torch.float32, device=backend.device).view(1, 1, -1)
-            for layer, value in (delta_map or {}).items()
-        }
-    )
+    tensors = {
+        layer: torch.tensor(value, dtype=torch.float32, device=backend.device).view(1, 1, -1)
+        for layer, value in (delta_map or {}).items()
+    }
     context = (
         Gate6HookTrace(
             layers={layer: backend.layer_module(layer) for layer in tensors},
@@ -425,13 +752,17 @@ def local_control_gain_rows(
         )
         if continuation is None:
             raise RuntimeError(f"missing ordinary source continuation for {item.item_id}")
-        target = (
-            marker_position(
-                backend.tokenizer, continuation, len(prompt_tokens(backend, item_row)[0])
+        target = None
+        if location == "EXECUTION_BOUNDARY":
+            source_row = next(
+                row
+                for row in continuation_rows
+                if row["item_id"] == item.item_id and row["split"] == "validation"
             )
-            if location == "EXECUTION_BOUNDARY"
-            else None
-        )
+            marker_index = source_row.get("ordinary_marker_token_index")
+            if marker_index is None:
+                raise RuntimeError(f"missing stored ordinary FINAL boundary for {item.item_id}")
+            target = len(prompt_tokens(backend, item_row)[0]) + int(marker_index) - 1
         delta = standardized_budget(direction, ordinary_values, eta, 1)
         teacher_tokens = continuation if location == "EXECUTION_BOUNDARY" else None
         plus = _next_token_log_probs(backend, item_row, teacher_tokens, {layer: delta}, target)
@@ -440,18 +771,20 @@ def local_control_gain_rows(
         p = np.exp(base)
         kl_plus = float(np.sum(p * (base - plus)))
         kl_minus = float(np.sum(p * (base - minus)))
-        rows.append({
-            "item_id": item.item_id,
-            "source_location": location,
-            "layer": layer,
-            "constructor": constructor,
-            "eta": eta,
-            "kl_plus": kl_plus,
-            "kl_minus": kl_minus,
-            "symmetric_kl": 0.5 * (kl_plus + kl_minus),
-            "local_control_gain": 0.5 * (kl_plus + kl_minus) / (eta * eta),
-            "vector_sha256": vector_sha256(direction),
-        })
+        rows.append(
+            {
+                "item_id": item.item_id,
+                "source_location": location,
+                "layer": layer,
+                "constructor": constructor,
+                "eta": eta,
+                "kl_plus": kl_plus,
+                "kl_minus": kl_minus,
+                "symmetric_kl": 0.5 * (kl_plus + kl_minus),
+                "local_control_gain": 0.5 * (kl_plus + kl_minus) / (eta * eta),
+                "vector_sha256": vector_sha256(direction),
+            }
+        )
     return rows
 
 
@@ -505,6 +838,13 @@ def teacher_forced_loglik(
 
 
 def source_pipeline(backend: HuggingFaceBackend, review: Path, validation_path: Path) -> None:
+    repaired = (review / "SOURCE_ATTRITION_REPAIR_LOCK.json").exists()
+    precomputed: dict[tuple[str, str, str], dict[str, Any]] = {}
+    if repaired:
+        screen_source_candidates(backend, review)
+        source_condition_rows = _load_source_condition_journal(review)
+        precomputed = source_condition_rows
+        validation_path = review / "SOURCE_SELECTED_VALIDATION.json"
     train = load_source_training(review)
     validation = load_external(validation_path)
     all_items = [("train", item) for item in train] + [("validation", item) for item in validation]
@@ -519,14 +859,21 @@ def source_pipeline(backend: HuggingFaceBackend, review: Path, validation_path: 
         item_row: dict[str, Any] = {"split": split, "item_id": item.item_id}
         ordinary_item = model_item(item)
         ordinary_tokens, ordinary_raw, ordinary_generation_meta = generate_source(
-            backend, item, "ORDINARY", split
+            backend, item, "ORDINARY", split, precomputed
+        )
+        ordinary_boundary = source_boundary(
+            backend.tokenizer, ordinary_raw, ordinary_tokens, ordinary_generation_meta
         )
         ordinary_prompt, _rendered, _hash = prompt_tokens(backend, ordinary_item)
         ordinary_captured, ordinary_prompt_meta = capture_layers(
             backend, ordinary_item, HIDDEN_LAYERS
         )
         ordinary_execution, ordinary_execution_meta = capture_layers(
-            backend, ordinary_item, HIDDEN_LAYERS, ordinary_tokens
+            backend,
+            ordinary_item,
+            HIDDEN_LAYERS,
+            ordinary_tokens,
+            ordinary_boundary.marker_token_index if ordinary_boundary is not None else None,
         )
         ordinary[split][item.item_id] = {
             "PROMPT_BOUNDARY": ordinary_captured,
@@ -538,11 +885,15 @@ def source_pipeline(backend: HuggingFaceBackend, review: Path, validation_path: 
         item_row["ordinary_generation_metadata"] = ordinary_generation_meta
         item_row["ordinary_prompt_meta"] = ordinary_prompt_meta
         item_row["ordinary_execution_meta"] = ordinary_execution_meta
-        item_row["ordinary_final_marker_found"] = marker_start(
-            backend.tokenizer, ordinary_tokens
-        ) is not None
+        item_row["ordinary_final_marker_found"] = ordinary_boundary is not None
+        item_row["ordinary_marker_token_index"] = (
+            ordinary_boundary.marker_token_index if ordinary_boundary is not None else None
+        )
         for condition in ("CAREFUL", "DIRECT"):
-            tokens, raw, generation_meta = generate_source(backend, item, condition, split)
+            tokens, raw, generation_meta = generate_source(
+                backend, item, condition, split, precomputed
+            )
+            boundary = source_boundary(backend.tokenizer, raw, tokens, generation_meta)
             item_row[f"{condition.lower()}_token_ids"] = tokens
             item_row[f"{condition.lower()}_raw_output"] = raw
             condition_item = model_item(
@@ -550,7 +901,11 @@ def source_pipeline(backend: HuggingFaceBackend, review: Path, validation_path: 
             )
             prompt_captured, prompt_meta = capture_layers(backend, condition_item, HIDDEN_LAYERS)
             execution_captured, execution_meta = capture_layers(
-                backend, condition_item, HIDDEN_LAYERS, tokens
+                backend,
+                condition_item,
+                HIDDEN_LAYERS,
+                tokens,
+                boundary.marker_token_index if boundary is not None else None,
             )
             for location, captured in (
                 ("PROMPT_BOUNDARY", prompt_captured),
@@ -560,13 +915,16 @@ def source_pipeline(backend: HuggingFaceBackend, review: Path, validation_path: 
             item_row[f"{condition.lower()}_generation_metadata"] = generation_meta
             item_row[f"{condition.lower()}_prompt_meta"] = prompt_meta
             item_row[f"{condition.lower()}_execution_meta"] = execution_meta
-            item_row[f"{condition.lower()}_final_marker_found"] = marker_start(
-                backend.tokenizer, tokens
-            ) is not None
-        item_row["source_pair_eligible"] = bool(
-            item_row["careful_final_marker_found"]
-            and item_row["direct_final_marker_found"]
-        )
+            item_row[f"{condition.lower()}_final_marker_found"] = boundary is not None
+            item_row[f"{condition.lower()}_marker_token_index"] = (
+                boundary.marker_token_index if boundary is not None else None
+            )
+        required_markers = (
+            "ordinary_final_marker_found",
+            "careful_final_marker_found",
+            "direct_final_marker_found",
+        ) if repaired else ("careful_final_marker_found", "direct_final_marker_found")
+        item_row["source_pair_eligible"] = all(item_row[key] for key in required_markers)
         continuation_rows.append(item_row)
         append_jsonl(source_journal, item_row)
         if not item_row["source_pair_eligible"]:
@@ -838,6 +1196,14 @@ def _teacher_forced_selection(
         for row in continuation_rows
         if row["split"] == "validation"
     }
+    marker_indices = {
+        row["item_id"]: {
+            "careful": row.get("careful_marker_token_index"),
+            "direct": row.get("direct_marker_token_index"),
+        }
+        for row in continuation_rows
+        if row["split"] == "validation"
+    }
     random_results: dict[str, list[float]] = {}
     random_bank_metadata: dict[str, Any] = {}
     first_stage: dict[str, Any] = {}
@@ -860,8 +1226,9 @@ def _teacher_forced_selection(
             [paired_mean]
             if record["constructor"] == "RFM_AGOP"
             else [
-                np.load(ROOT / controller_records[base_key]["direction_path"], allow_pickle=False)
-                .astype(np.float64)
+                np.load(
+                    ROOT / controller_records[base_key]["direction_path"], allow_pickle=False
+                ).astype(np.float64)
             ]
         )
         random_bank = orthogonal_random_bank(
@@ -871,10 +1238,7 @@ def _teacher_forced_selection(
         )
         random_results[key] = []
         ordinary_values = np.stack(
-            [
-                ordinary["train"][train_id][location][layer]
-                for train_id in ordinary["train"]
-            ]
+            [ordinary["train"][train_id][location][layer] for train_id in ordinary["train"]]
         )
 
         def symmetric_first_stage(
@@ -900,12 +1264,18 @@ def _teacher_forced_selection(
                     careful_item,
                     (bound_layer,),
                     careful_tokens if bound_location == "EXECUTION_BOUNDARY" else None,
+                    marker_indices[item.item_id]["careful"]
+                    if bound_location == "EXECUTION_BOUNDARY"
+                    else None,
                 )
                 _, direct_meta = capture_layers(
                     backend,
                     direct_item,
                     (bound_layer,),
                     direct_tokens if bound_location == "EXECUTION_BOUNDARY" else None,
+                    marker_indices[item.item_id]["direct"]
+                    if bound_location == "EXECUTION_BOUNDARY"
+                    else None,
                 )
                 target_careful = (
                     careful_meta["target_position"]
@@ -1039,9 +1409,7 @@ def _select_controllers(
     best = passing[0] if passing else None
     layers = sorted(int(records[key]["layer"]) for key, _values in passing)
     selected = {
-        "source_only_passes": [
-            {"key": key, **values} for key, values in passing
-        ],
+        "source_only_passes": [{"key": key, **values} for key, values in passing],
         "best_single": {"key": best[0]} if best else None,
         "multilayer_keys": [
             key
@@ -1112,11 +1480,7 @@ def _engineering_gate(
                 },
             )
         shift_traces[condition] = shift_trace.metadata()
-    applications = [
-        entry
-        for trace in shift_traces.values()
-        for entry in trace["applications"]
-    ]
+    applications = [entry for trace in shift_traces.values() for entry in trace["applications"]]
     records = json.loads((review / "CONTROLLERS_RAW.json").read_text(encoding="utf-8"))
     selection_records = json.loads(
         (review / "MEAN_CONTROLLERS_RAW.json").read_text(encoding="utf-8")
@@ -1237,9 +1601,7 @@ def selected_delta_maps(
     best_record = records[best_key]
     scales = {key: float(value["scale"]) for key, value in records.items()}
     eta = float(selection.get("eta0", 1.0))
-    single = {
-        int(best_record["layer"]): vectors[best_key] * scales[best_key] * eta
-    }
+    single = {int(best_record["layer"]): vectors[best_key] * scales[best_key] * eta}
     multi_keys = selection.get("multilayer_keys", [])
     layer_count = max(1, len(multi_keys))
     multi_rfm = {
@@ -1438,7 +1800,11 @@ def main() -> int:
     backend = build_backend(args.model_path)
     review = args.review_dir
     if args.phase == "SOURCE":
-        validation = args.source_validation or review / "SOURCE_VALIDATION.json"
+        validation = args.source_validation or (
+            review / "SOURCE_SELECTED_VALIDATION.json"
+            if (review / "SOURCE_SELECTED_VALIDATION.json").exists()
+            else review / "SOURCE_VALIDATION.json"
+        )
         source_pipeline(backend, review, validation)
         selection = json.loads((review / "CONTROLLER_SELECTION.json").read_text(encoding="utf-8"))
         write_json(

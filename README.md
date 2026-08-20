@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 5 completed as a development source/duration bridge. The frozen Gate 6 SOURCE phase was attempted once on an A40 but became technically incomplete when the CAREFUL trajectory for sample_169 reached the frozen 4096-token ceiling without FINAL. No controller, manipulation, or evaluation outcome was collected. The partial journal is preserved; cap/item/prompt changes are not authorized retrospectively.
+Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL. Gate 6.1 freezes a prospective mechanical attrition repair: original candidate order is preserved, deterministic train/validation reserves are allocated before new output, sample_440 may be reused under audited invariants, and sample_169 is permanently ineligible and never retried. No new model output has been collected under the repair lock.
 
-**Next authorized action:** Principal review of GATE6_SOURCE_PHASE_INCOMPLETE; do not run a later Gate 6 phase or repair the source retrospectively.
+**Next authorized action:** Execute only the frozen Gate 6.1 source screening after local validation; if attrition passes, continue the unchanged parent Gate 6 source pipeline.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

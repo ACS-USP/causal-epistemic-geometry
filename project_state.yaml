@@ -19,19 +19,19 @@ project:
     utility?
 
 current:
-  workstream: GATE6_LAYER_SOURCE_RFM_ATLAS
-  stage: DEVELOPMENT_BLOCKED
-  source_commit: cb5c1d1
+  workstream: GATE6_SOURCE_ATTRITION_REPAIR
+  stage: DEVELOPMENT_LOCK
+  source_commit: 5a161eb
   summary: >-
-    Gate 5 completed as a development source/duration bridge. The frozen
-    Gate 6 SOURCE phase was attempted once on an A40 but became technically
-    incomplete when the CAREFUL trajectory for sample_169 reached the frozen
-    4096-token ceiling without FINAL. No controller, manipulation, or
-    evaluation outcome was collected. The partial journal is preserved;
-    cap/item/prompt changes are not authorized retrospectively.
+    Gate 6 Attempt 1 remains immutable and incomplete at sample_169 CAREFUL.
+    Gate 6.1 freezes a prospective mechanical attrition repair: original
+    candidate order is preserved, deterministic train/validation reserves are
+    allocated before new output, sample_440 may be reused under audited
+    invariants, and sample_169 is permanently ineligible and never retried.
+    No new model output has been collected under the repair lock.
   next_authorized_action: >-
-    Principal review of GATE6_SOURCE_PHASE_INCOMPLETE; do not run a later
-    Gate 6 phase or repair the source retrospectively.
+    Execute only the frozen Gate 6.1 source screening after local validation;
+    if attrition passes, continue the unchanged parent Gate 6 source pipeline.
   runpod: STOPPED
   gpu_work_authorized: false
   new_scientific_experiment_authorized: false
@@ -43,7 +43,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE6_SOURCE_PHASE_INCOMPLETE_PRINCIPAL_REVIEW
+  current_task: GATE6_SOURCE_ATTRITION_REPAIR_LOCKED
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -104,6 +104,14 @@ instrument_history:
       sustained manipulation gate passed. The 60-item primary evaluation did
       not meet the frozen movement threshold; the minus sign showed a duration
       contrast below the full movement criterion. Gate 6 is drafted only.
+  - id: GATE6_SOURCE_ATTRITION_REPAIR
+    status: DEVELOPMENT_LOCK
+    conclusion: >-
+      Prospective mechanical repair of the incomplete Gate 6 source phase.
+      Candidate order, model, cap, prompts, seeds, source labels, and downstream
+      scientific pipeline remain frozen. New reserves and condition-level
+      journaling address mechanical FINAL-marker attrition only. No model output
+      has been collected under this repair lock.
 
 workflow_regimes:
   EXPLORATION:
