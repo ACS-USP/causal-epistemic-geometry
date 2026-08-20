@@ -57,14 +57,31 @@ def main() -> int:
     if len(all_ids) != len(set(all_ids)):
         raise RuntimeError("Gate-6 fresh manifests are not disjoint")
     source_items = []
+    source_records: list[dict[str, Any]] = []
     for path in (
         ROOT / "review" / "micro_q1" / "CONSTRUCTION_MANIFEST.json",
         review.parent / "gate5_source_duration" / "SOURCE_CHECK.json",
     ):
         payload = json.loads(path.read_text(encoding="utf-8"))
+        source_records.extend(payload["items"])
         source_items.extend(str(row["item_id"]) for row in payload["items"])
     if len(source_items) != 104 or len(source_items) != len(set(source_items)):
         raise RuntimeError("Gate-6 source-training pool is not exactly 104 unique items")
+    source_manifest = {
+        "allocation": "SOURCE_TRAIN",
+        "items": source_records,
+        "n_items": len(source_records),
+        "dataset_repo": spec["instrument"]["dataset_repo"],
+        "dataset_revision": spec["instrument"]["dataset_revision"],
+        "source": "historical non-evaluation source manifests; outcome-independent",
+    }
+    source_manifest["manifest_hash"] = hashlib.sha256(
+        json.dumps(source_manifest["items"], sort_keys=True).encode("utf-8")
+    ).hexdigest()
+    source_manifest_path = review / "SOURCE_TRAIN_MANIFEST.json"
+    source_manifest_path.write_text(
+        json.dumps(source_manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
     source_commit = subprocess.run(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, check=True, capture_output=True, text=True
     ).stdout.strip()
@@ -85,6 +102,8 @@ def main() -> int:
                 "review/micro_q1/CONSTRUCTION_MANIFEST.json",
                 "review/gate5_source_duration/SOURCE_CHECK.json",
             ],
+            "manifest_path": str(source_manifest_path.relative_to(ROOT)),
+            "manifest_sha256": digest(source_manifest_path),
             "locations": spec["source_training"]["locations"],
             "labels": "careful_1_direct_0",
             "outcome_labels_used": False,
@@ -100,6 +119,7 @@ def main() -> int:
         "source_gate": spec["source_gate"],
         "teacher_forced_first_stage": spec["teacher_forced_first_stage"],
         "standardized_budget": spec["standardized_budget"],
+        "local_control_gain": spec["local_control_gain"],
         "manipulation": spec["manipulation"],
         "evaluation": spec["evaluation"],
         "estimands": spec["estimands"],
@@ -123,7 +143,12 @@ def main() -> int:
     )
     (review / "manifest_hashes.json").write_text(
         json.dumps(
-            {name: data["sha256"] for name, data in manifests.items()}, indent=2, sort_keys=True
+            {
+                **{name: data["sha256"] for name, data in manifests.items()},
+                "SOURCE_TRAIN": digest(source_manifest_path),
+            },
+            indent=2,
+            sort_keys=True,
         )
         + "\n",
         encoding="utf-8",

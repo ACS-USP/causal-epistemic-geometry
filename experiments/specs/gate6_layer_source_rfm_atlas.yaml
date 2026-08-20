@@ -649,12 +649,20 @@ teacher_forced_first_stage:
 standardized_budget:
   alpha_gate5: 8.39900588973121
   eta_formula: alpha_gate5 / s17_gate5
+  s17_gate5_reference: projection standard deviation of the exact frozen Gate-4
+    layer-17 unit direction on ordinary SOURCE_TRAIN prompt-boundary activations
+  gate4_direction_sha256: 1304d6fc8dd0985895bc802885b156bc9be49d1afc58d00b013f51830cf9b9df
   ladder:
   - eta0
   - 2eta0
   choose: smallest_source_only_passing_budget_with_safety_guard
   mean_per_token_kl_max: 0.15
   distributed_delta: eta * s_layer / sqrt(number_of_layers) * unit_direction
+local_control_gain:
+  perturbation_eta: 0.05
+  metric: mean symmetric KL from ordinary baseline next-token distribution,
+    divided by eta squared
+  outcome_labels_used: false
 manipulation:
   items: 20
   conditions:

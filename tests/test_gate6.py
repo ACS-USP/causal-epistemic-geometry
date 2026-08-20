@@ -12,6 +12,7 @@ from epistemic_geometry.experiments.gate6 import (
     paired_mean_direction,
     source_readout_metrics,
     standardized_budget,
+    symmetric_first_stage_contributions,
     two_rollout_estimands,
 )
 from epistemic_geometry.steering.gate6 import Gate6HookTrace
@@ -62,6 +63,13 @@ def test_gate6_source_metrics_and_estimand_identities() -> None:
     )
     intervals = item_cluster_bootstrap(baseline, {"condition": condition}, resamples=25, seed=7)
     assert set(intervals["condition"]) == {"accuracy_change", "G", "C", "D", "rescue", "damage"}
+
+
+def test_gate6_symmetric_first_stage_formula_is_sign_sensitive() -> None:
+    values = symmetric_first_stage_contributions(
+        [3.0, 4.0], [1.0, 2.0], [1.0, 1.0], [2.0, 3.0]
+    )
+    assert np.allclose(values, [1.5, 2.0])
 
 
 def test_gate6_classification_uses_random_and_reference_controls() -> None:

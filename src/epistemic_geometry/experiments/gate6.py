@@ -253,9 +253,12 @@ def covariance_spectrum(values: np.ndarray) -> dict[str, Any]:
     if x.ndim != 2 or x.shape[0] < 2:
         raise ValueError("activation matrix must be [samples, hidden] with at least two samples")
     centered = x - x.mean(axis=0, keepdims=True)
-    covariance = centered.T @ centered / (len(x) - 1)
-    eigenvalues = np.linalg.eigvalsh(covariance)[::-1]
-    eigenvalues = np.maximum(eigenvalues, 0.0)
+    # The hidden dimension is 4096 while the source sample is only O(10^2).
+    # Diagonalising the full d x d covariance is both unnecessary and very
+    # expensive.  The non-zero covariance spectrum is exactly the squared
+    # singular-value spectrum of the centered sample matrix.
+    singular_values = np.linalg.svd(centered, full_matrices=False, compute_uv=False)
+    eigenvalues = np.maximum(np.square(singular_values) / (len(x) - 1), 0.0)
     total = float(eigenvalues.sum())
     top16 = eigenvalues[:16]
     positive = eigenvalues[eigenvalues > max(total, 1.0) * 1e-14]
@@ -271,7 +274,53 @@ def covariance_spectrum(values: np.ndarray) -> dict[str, Any]:
         "participation_ratio": float((eigenvalues.sum() ** 2) / np.square(eigenvalues).sum())
         if eigenvalues.any()
         else 0.0,
-        "covariance_sha256": matrix_sha256(covariance),
+        "covariance_sha256": matrix_sha256(
+            centered @ centered.T / (len(x) - 1)
+        ),
+        "spectrum_backend": "dual_gram_svd_exact_nonzero_spectrum",
+        "sample_count": int(x.shape[0]),
+        "hidden_size": int(x.shape[1]),
+    }
+
+
+def activation_pcs(values: np.ndarray, n_components: int = 16) -> dict[str, Any]:
+    """Return leading activation PCs without forming a hidden-by-hidden covariance."""
+
+    x = np.asarray(values, dtype=np.float64)
+    if x.ndim != 2 or x.shape[0] < 2:
+        raise ValueError("activation matrix must be [samples, hidden] with at least two samples")
+    centered = x - x.mean(axis=0, keepdims=True)
+    _u, singular_values, vh = np.linalg.svd(centered, full_matrices=False)
+    count = min(int(n_components), vh.shape[0])
+    eigenvalues = np.square(singular_values[:count]) / (len(x) - 1)
+    return {
+        "components": vh[:count],
+        "eigenvalues": eigenvalues,
+        "mean": x.mean(axis=0),
+    }
+
+
+def eigenvalue_spectrum(values: np.ndarray, n_components: int = 16) -> dict[str, Any]:
+    """Summarize an already-computed descending eigenvalue spectrum."""
+
+    eigenvalues = np.maximum(np.asarray(values, dtype=np.float64).reshape(-1), 0.0)
+    if eigenvalues.size == 0:
+        raise ValueError("eigenvalue spectrum cannot be empty")
+    total = float(eigenvalues.sum())
+    top = eigenvalues[:n_components]
+    positive = eigenvalues[eigenvalues > max(total, 1.0) * 1e-14]
+    return {
+        "eigenvalues_top16": top.tolist(),
+        "top1_top2_gap": float(eigenvalues[0] - eigenvalues[1])
+        if len(eigenvalues) > 1
+        else float("nan"),
+        "top16_cumulative_energy": float(top.sum() / total) if total else 0.0,
+        "effective_rank": float((positive.sum() ** 2) / np.square(positive).sum())
+        if len(positive)
+        else 0.0,
+        "participation_ratio": float((eigenvalues.sum() ** 2) / np.square(eigenvalues).sum())
+        if eigenvalues.any()
+        else 0.0,
     }
 
 
@@ -300,6 +349,23 @@ def standardized_budget(
     vector = unit_vector(direction)
     scale = standardize_scale(vector, ordinary_activations)
     return vector * (float(eta) * scale / math.sqrt(n_layers))
+
+
+def symmetric_first_stage_contributions(
+    plus_careful: Sequence[float],
+    plus_direct: Sequence[float],
+    minus_careful: Sequence[float],
+    minus_direct: Sequence[float],
+) -> np.ndarray:
+    """Return the frozen symmetric teacher-forced source contributions."""
+
+    arrays = [
+        np.asarray(values, dtype=np.float64).reshape(-1)
+        for values in (plus_careful, plus_direct, minus_careful, minus_direct)
+    ]
+    if any(array.shape != arrays[0].shape for array in arrays[1:]):
+        raise ValueError("first-stage likelihood arrays must have equal shape")
+    return 0.5 * ((arrays[0] - arrays[1]) - (arrays[2] - arrays[3]))
 
 
 def orthogonal_random_bank(

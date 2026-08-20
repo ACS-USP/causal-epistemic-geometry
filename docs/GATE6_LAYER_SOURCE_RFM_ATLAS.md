@@ -28,6 +28,20 @@ controller. A controller is eligible only through held-out careful/direct
 readout and teacher-forced source sensitivity. The standardized budget is
 selected from those source-only gates, not from generated semantic outcomes.
 
+For each source/layer pair the implementation retains both the paired
+mean-difference constructor and the pinned RFM/AGOP constructor.  The source
+first-stage score is the frozen symmetric contrast of plus and minus
+teacher-forced continuation likelihoods; it is not a separate plus/minus
+selection.  The Gate-5-equivalent scale is computed by projecting the exact
+frozen Gate-4 layer-17 vector onto ordinary Gate-6 source-training prompt
+activations.  Local control gain is a small, label-free symmetric next-token
+KL diagnostic at standardized perturbation `eta=0.05`.
+
+The six-layer covariance spectrum is computed through the exact dual
+Gram/SVD formulation, avoiding an unnecessary 4096-by-4096 eigendecomposition.
+Source generations are also journaled immediately, while scientific
+manipulation/evaluation rows use the append-only `journal.jsonl` resume key.
+
 ## RFM provenance
 
 The adapter follows the public `neural_controllers` RFMToolkit pattern at
