@@ -229,16 +229,24 @@ def classify_source(metrics: Mapping[str, float]) -> str:
 
 
 def classify_manipulation(metrics: Mapping[str, Mapping[str, float]]) -> bool:
+    def at_least(value: float, threshold: float) -> bool:
+        # The rates are exact rational counts, but their float representation
+        # can land one ulp below a frozen boundary (for example 1/20).
+        return value >= threshold or bool(np.isclose(value, threshold, rtol=0.0, atol=1e-12))
+
     random = [metrics[f"SUSTAINED_RANDOM_R{i}"]["semantic_change_rate"] for i in range(4)]
     mean_random = float(np.mean(random))
     for sign in ("PLUS", "MINUS"):
         sustained = metrics[f"SUSTAINED_{sign}"]
         one_shot = metrics[f"ONE_SHOT_{sign}"]
         if (
-            sustained["validity"] >= 0.85
-            and sustained["semantic_change_rate"] >= 0.15
-            and sustained["semantic_change_rate"] - one_shot["semantic_change_rate"] >= 0.05
-            and sustained["semantic_change_rate"] - mean_random >= 0.05
+            at_least(sustained["validity"], 0.85)
+            and at_least(sustained["semantic_change_rate"], 0.15)
+            and at_least(
+                sustained["semantic_change_rate"] - one_shot["semantic_change_rate"],
+                0.05,
+            )
+            and at_least(sustained["semantic_change_rate"] - mean_random, 0.05)
         ):
             return True
     return False

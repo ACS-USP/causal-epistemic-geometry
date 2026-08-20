@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 4 is accepted as an audited bounded null. Gate 5 is now frozen pre-outcome to test source validity and temporal persistence using the exact Gate-4 Qwen3-8B controller, four random controls, and fresh development-only CRUXEval items. No Gate-5 model outcomes have been collected.
+Gate 5 completed as a development source/duration bridge. The textual careful/direct source passed its frozen behavioral-separation gate, and the sustained engineering and manipulation gates passed. The 60-item primary evaluation found no frozen movement or useful-complementarity signal; the final classification is GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD. No Gate 6, Q2, character count, or holdout work was run.
 
-- Workstream: `GATE5_SOURCE_DURATION_LOCKED`
+- Workstream: `GATE5_SOURCE_DURATION_COMPLETE`
 - RunPod: `STOPPED`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Execute only the frozen Gate-5 source/duration bridge after the lock is pushed. Do not run character count, Q2, geometry, or holdout.
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: Principal review of the Gate-5 report. Do not execute Gate 6, Q2, character count, geometry, or holdout automatically.
 
 ## Scientific program
 
@@ -35,16 +35,18 @@ Gate 4 is accepted as an audited bounded null. Gate 5 is now frozen pre-outcome 
 | `Q1_V4_DENSE_CODE` | `PAUSED_INFRASTRUCTURE` | Nested per-test outcomes are instrument-promising, but safe objective execution is not production-ready. No model pilot was run. |
 | `FULL_NONTHINKING_SMOKE` | `ACCEPTED_EXPLORATION` | Original outputs are preserved. Deterministic semantic reanalysis gives character-count 20/20 valid, 15 correct, 5 genuine wrong, 75%, PROMISING; CRUXEval 20/20 valid, 8 correct, 12 wrong, 40%, PROMISING. No steering occurred; this is still an exploration instrument result. |
 | `MODEL_POLICY_BENCHMARK_SUBSTRATE_RACE` | `COMPLETE_EXPLORATION` | The baseline-only Gate 3 race recommends Qwen3-8B full non-thinking with CRUXEval semantic as the primary development substrate and fresh long character count as backup. Llama-Instruct cells failed eligibility due to completion/mechanical failures. No steering or geometry was run. |
+| `FIRST_MICRO_Q1` | `COMPLETE_DEVELOPMENT_NO_SIGNAL` | Gate 4 direction validation and intervention engineering passed, but the frozen one-shot direction did not exceed baseline resampling and the norm-matched random control. This remains a bounded development result. |
+| `GATE5_SOURCE_DURATION_BRIDGE` | `COMPLETE_DEVELOPMENT_DURATION_EFFECT_BELOW_MOVEMENT` | The careful/direct textual source passed behavioral separation and the sustained manipulation gate passed. The 60-item primary evaluation did not meet the frozen movement threshold; the minus sign showed a duration contrast below the full movement criterion. Gate 6 is drafted only. |
 
 ## Scientific firewall
 
-- `steering`: `ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_LOCKED`
+- `steering`: `ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_DURATION_BELOW_MOVEMENT`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE5_SOURCE_DURATION_LOCKED_PRE_OUTCOME`
+- `current_task`: `GATE5_COMPLETE_PRINCIPAL_REVIEW`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

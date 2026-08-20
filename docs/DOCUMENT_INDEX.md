@@ -41,6 +41,7 @@ current instruction source.
 | `docs/Q1_V4_DENSE_CODE_PILOT.md` | Current dense-code infrastructure pause |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
 | `docs/GATE4_MICRO_Q1_CLOSEOUT.md` | First original development micro-Q1 closeout |
+| `docs/GATE5_SOURCE_DURATION_CLOSEOUT.md` | Source-validity and temporal-persistence bridge closeout |
 
 ## Archival scientific protocols and closeouts
 

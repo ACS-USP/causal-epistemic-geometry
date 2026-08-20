@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 4 is accepted as an audited bounded null. Gate 5 is now frozen pre-outcome to test source validity and temporal persistence using the exact Gate-4 Qwen3-8B controller, four random controls, and fresh development-only CRUXEval items. No Gate-5 model outcomes have been collected.
+Gate 5 completed as a development source/duration bridge. The textual careful/direct source passed its frozen behavioral-separation gate, and the sustained engineering and manipulation gates passed. The 60-item primary evaluation found no frozen movement or useful-complementarity signal; the final classification is GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD. No Gate 6, Q2, character count, or holdout work was run.
 
-**Next authorized action:** Execute only the frozen Gate-5 source/duration bridge after the lock is pushed. Do not run character count, Q2, geometry, or holdout.
+**Next authorized action:** Principal review of the Gate-5 report. Do not execute Gate 6, Q2, character count, geometry, or holdout automatically.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -80,6 +80,13 @@ as current plans.
 - Gate 3 substrate race: baseline-only exploration complete; Qwen full
   non-thinking × CRUXEval semantic is the provisional primary development
   substrate, with fresh long character count as backup. No steering was run.
+- Gate 4 first original micro-Q1: audited bounded null; the one-shot
+  careful-minus-direct direction did not exceed baseline resampling and the
+  norm-matched random control.
+- Gate 5 source/duration bridge: textual careful/direct source separation and
+  sustained manipulation passed their frozen gates, but the 60-item primary
+  evaluation was below the frozen movement threshold. Gate 6 is drafted only;
+  it has not been executed.
 - Confirmatory holdout: untouched.
 
 These are instrument outcomes, not a positive or negative result for the full

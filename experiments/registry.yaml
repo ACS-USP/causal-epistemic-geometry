@@ -259,19 +259,24 @@ experiments:
 
   - id: GATE5_SOURCE_DURATION_BRIDGE
     version: GATE-5
-    stage: DEVELOPMENT_LOCK
+    stage: DEVELOPMENT
     question: Did the Gate-4 source text induce behavior, and can the same controller persist through decoding?
     instrument: CRUXEval semantic output prediction; fresh source/manipulation/evaluation splits
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: FROZEN_PRE_OUTCOME
-    outcome: NOT_RUN
+    status: COMPLETE_DEVELOPMENT_DURATION_EFFECT_BELOW_MOVEMENT
+    outcome: GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD
     scientific_interpretation: >-
-      Prospective bridge only. It separates textual source validity from
-      temporal persistence of the exact Gate-4 controller. It does not reopen
-      layers, alpha, vectors, benchmark, Q2 geometry, or the holdout.
+      The careful/direct textual source passed the frozen behavioral-separation
+      gate, and sustained current-token steering passed engineering and the
+      small manipulation gate. In the preregistered 60-item primary
+      evaluation, neither meaningful sign met the frozen movement threshold
+      beyond the four-direction random-control distribution. The minus sign
+      reached the frozen duration contrast but not the full movement gate.
+      This is a bounded development result, not evidence against the broader
+      Q1 hypothesis.
     source_commit: 6de1261
     artifact: review/gate5_source_duration/
-    cost_usd: 0.0
+    cost_usd: 0.6103777777777778
     holdout_status: UNTOUCHED
     lock:
       protocol: review/gate5_source_duration/PROTOCOL_LOCK.json
@@ -281,4 +286,22 @@ experiments:
       random_controls: 4
       max_trajectories: 1500
       gpu_authorized: true
-    next_action: Execute frozen Gate 5 only; stop before Gate 6, Q2, character count, or holdout.
+    execution:
+      source_classification: SOURCE_SEMANTIC_BEHAVIOR_PASS
+      sustained_engineering: PASS
+      manipulation_gate: PASS
+      primary_evaluation_executed: true
+      trajectories: 1500
+      evaluation_rows: 1080
+      pod_id: u78gx0pc1yvbqp
+      pod_wallclock_seconds: 4994
+      pod_wallclock_cost_usd: 0.6103777777777778
+      trajectory_elapsed_seconds: 1808.6676806509495
+      trajectory_elapsed_cost_usd: 0.22105938319067162
+      gate5_classification: GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD
+      gate6_protocol: GATE6_LAYER_SOURCE_ATLAS_PROTOCOL
+      steering: NOT_RUN_BEYOND_GATE5_BRIDGE
+      q2: NOT_RUN
+      character_count: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Principal review; do not execute Gate 6, Q2, character count, or holdout automatically.

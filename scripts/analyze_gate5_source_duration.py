@@ -492,6 +492,7 @@ def _report(
     gate5_classification: str,
     gate6_name: str,
     gate6_focus: str,
+    cost: dict[str, Any],
 ) -> None:
     lines = [
         "GATE 5 — SOURCE VALIDITY AND TEMPORAL PERSISTENCE",
@@ -569,12 +570,66 @@ def _report(
                 f"{values.get('D', 0.0):.4f} | {values.get('rescue', 0.0):.4f} | "
                 f"{values.get('damage', 0.0):.4f} |"
             )
+        random_conditions = [f"SUSTAINED_RANDOM_R{i}" for i in range(4)]
+        lines.extend(
+            [
+                "",
+                "### Random-control null",
+                "",
+                "| metric | mean | median | min | max |",
+                "|---|---:|---:|---:|---:|",
+            ]
+        )
+        for metric in ("G", "C", "D"):
+            values = [float(evaluation[name][metric]) for name in random_conditions]
+            lines.append(
+                f"| {metric} | {np.mean(values):.4f} | {np.median(values):.4f} | "
+                f"{np.min(values):.4f} | {np.max(values):.4f} |"
+            )
+        lines.extend(["", "### Duration contrasts", ""])
+        for sign in ("PLUS", "MINUS"):
+            sustained = evaluation[f"SUSTAINED_{sign}"]
+            one_shot = evaluation[f"ONE_SHOT_{sign}"]
+            lines.append(
+                f"- {sign}: D(sustained) - D(one-shot) = "
+                f"{sustained['D'] - one_shot['D']:.4f}; "
+                f"G contrast = {sustained['G'] - one_shot['G']:.4f}; "
+                f"C contrast = {sustained['C'] - one_shot['C']:.4f}."
+            )
+        baseline = evaluation["BASELINE"]
+        lines.extend(
+            [
+                "",
+                "### Frozen guards",
+                "",
+                f"- baseline accuracy: {baseline['accuracy']:.4f}",
+                f"- baseline validity: {baseline['validity']:.4f}",
+                "- meaningful signs satisfy validity and competence guards: "
+                + str(
+                    all(
+                        evaluation[f"SUSTAINED_{sign}"]["validity"] >= 0.90
+                        and evaluation[f"SUSTAINED_{sign}"]["validity"]
+                        >= baseline["validity"] - 0.05
+                        and evaluation[f"SUSTAINED_{sign}"]["accuracy"]
+                        >= baseline["accuracy"] - 0.10
+                        for sign in ("PLUS", "MINUS")
+                    )
+                ),
+            ]
+        )
     lines.extend(
         [
             "",
             "## Classification",
             "",
             gate5_classification,
+            "",
+            "## Cost",
+            "",
+            f"trajectory elapsed seconds: {cost['trajectory_elapsed_seconds']:.3f}",
+            f"generated tokens: {cost['generated_token_count']}",
+            f"Pod wall-clock seconds: {cost.get('pod_wallclock_runtime_seconds')}",
+            f"estimated A40 cost USD: {cost.get('pod_wallclock_cost_usd')}",
             "",
             "## Gate-6 draft",
             "",
@@ -597,6 +652,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--journal", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--pod-runtime-seconds", type=float, default=None)
+    parser.add_argument("--pod-id", default=None)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     rows = _read_jsonl(args.journal)
@@ -731,15 +788,31 @@ def main() -> int:
         )
     else:
         _write_csv(args.output / "CONDITION_SUMMARY.csv", [], ["condition", "status"])
+    trajectory_elapsed_seconds = float(sum(float(row.get("elapsed_seconds", 0.0)) for row in rows))
+    generated_token_count = int(sum(int(row.get("generated_token_count", 0)) for row in rows))
+    cost = {
+        "rate_usd_per_a40_hour": 0.44,
+        "scientific_trajectories_collected": len(rows),
+        "trajectory_elapsed_seconds": trajectory_elapsed_seconds,
+        "trajectory_elapsed_cost_usd": trajectory_elapsed_seconds / 3600.0 * 0.44,
+        "generated_token_count": generated_token_count,
+        "analysis_gpu_runtime_seconds": 0.0,
+        "analysis_gpu_cost_usd": 0.0,
+        "pod_id": args.pod_id,
+        "pod_wallclock_runtime_seconds": args.pod_runtime_seconds,
+        "pod_wallclock_cost_usd": (
+            None
+            if args.pod_runtime_seconds is None
+            else args.pod_runtime_seconds / 3600.0 * 0.44
+        ),
+        "note": (
+            "Analysis is CPU-only and performed after Pod shutdown; Pod wall-clock "
+            "cost is an external runtime estimate."
+        ),
+    }
     _write_json(
         args.output / "COST.json",
-        {
-            "rate_usd_per_a40_hour": 0.44,
-            "scientific_trajectories_collected": len(rows),
-            "analysis_gpu_runtime_seconds": 0.0,
-            "analysis_gpu_cost_usd": 0.0,
-            "note": "All Gate-5 analysis is CPU-only and performed after Pod shutdown.",
-        },
+        cost,
     )
     hash_names = (
         "PROTOCOL_LOCK.json",
@@ -782,6 +855,7 @@ def main() -> int:
         gate5_classification,
         gate6_name,
         gate6_focus,
+        cost,
     )
     (args.output / f"{gate6_name}.md").write_text(
         f"# {gate6_name}\n\n{gate6_focus}\n\nStatus: DRAFT ONLY; NOT EXECUTED.\n",

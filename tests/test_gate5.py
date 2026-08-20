@@ -85,3 +85,26 @@ def test_gate5_manipulation_and_primary_classification_are_outcome_independent()
         classify_gate5(estimands, engineering_pass=True, manipulation_pass=True)
         == "GATE5_NO_DURATION_EFFECT"
     )
+
+
+def test_gate5_manipulation_accepts_exact_frozen_boundary_after_float_rounding() -> None:
+    manipulation = {
+        name: {"validity": 1.0, "semantic_change_rate": 0.0}
+        for name in (
+            "ONE_SHOT_PLUS",
+            "ONE_SHOT_MINUS",
+            "SUSTAINED_PLUS",
+            "SUSTAINED_MINUS",
+            "SUSTAINED_RANDOM_R0",
+            "SUSTAINED_RANDOM_R1",
+            "SUSTAINED_RANDOM_R2",
+            "SUSTAINED_RANDOM_R3",
+        )
+    }
+    manipulation["ONE_SHOT_PLUS"]["semantic_change_rate"] = 0.05
+    manipulation["SUSTAINED_PLUS"]["semantic_change_rate"] = 0.15
+    manipulation["SUSTAINED_RANDOM_R0"]["semantic_change_rate"] = 0.10
+    manipulation["SUSTAINED_RANDOM_R1"]["semantic_change_rate"] = 0.05
+    manipulation["SUSTAINED_RANDOM_R2"]["semantic_change_rate"] = 0.20
+    manipulation["SUSTAINED_RANDOM_R3"]["semantic_change_rate"] = 0.05
+    assert classify_manipulation(manipulation)
