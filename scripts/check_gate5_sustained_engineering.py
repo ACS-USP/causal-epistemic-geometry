@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
 from epistemic_geometry.experiments.gate5 import ALPHA, LAYER  # noqa: E402
