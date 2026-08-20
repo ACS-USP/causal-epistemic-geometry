@@ -1,0 +1,716 @@
+{
+  "allocation": "SOURCE_VALIDATION",
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "historical_exclusion_digest": "41863ff4a93e5cac012c91299a8ee905497cadc40ad28478f6f06acc13fa7baa",
+  "items": [
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_141",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_141",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(li):\n    return [li.count(i) for i in li]\n```\n\nInput: ['k', 'x', 'c', 'x', 'x', 'b', 'l', 'f', 'r', 'n', 'g']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "7034f038e8e3cfb2620ecaf342a6ab95445071cde0853a91ff37b8185c924b24",
+      "reference_answer": "[1, 3, 1, 3, 3, 1, 1, 1, 1, 1, 1]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_572",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_572",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(data, num):\n    new_dict = {}\n    temp = list(data.items())\n    for i in range(len(temp) - 1, num - 1, -1):\n        new_dict[temp[i]] = None\n    return temp[num:] + list(new_dict.items())\n```\n\nInput: {1: 9, 2: 10, 3: 1}, 1\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b129723d42a322763aa5864cddd5b4aecb2298c96f0f89d476438be35102c019",
+      "reference_answer": "[(2, 10), (3, 1), ((3, 1), None), ((2, 10), None)]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_710",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_710",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(playlist, liker_name, song_index):\n    playlist[liker_name] = playlist.get(liker_name, [])\n    playlist[liker_name].append(song_index)\n    return playlist\n```\n\nInput: {'aki': ['1', '5']}, 'aki', '2'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "689415be5b8d89698ed6ccafa306f909b0293b21a6c2f0958da725b167cc73a7",
+      "reference_answer": "{'aki': ['1', '5', '2']}",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_331",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_331",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(strand, zmnc):\n    poz = strand.find(zmnc)\n    while poz != -1:\n        strand = strand[poz + 1:]\n        poz = strand.find(zmnc)\n    return strand.rfind(zmnc)\n```\n\nInput: '', 'abc'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "d05ebf0606689a60da6835877bb42b3bb766974639d8ebf8730fff2392be551d",
+      "reference_answer": "-1",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_398",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_398",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(counts):\n    dict = {}\n    for k, v in counts.items():\n        count = counts[k]\n        if count not in dict:\n            dict[count] = []\n        dict[count].append(k)\n    counts.update(dict)\n    return counts\n```\n\nInput: {'2': 2, '0': 1, '1': 2}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "d1fc799091288cfd8d8430a894480677c97b78b8dc3bb4800bfd2aef9296f2ce",
+      "reference_answer": "{'2': 2, '0': 1, '1': 2, 2: ['2', '1'], 1: ['0']}",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_495",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_495",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s):\n    if str.isascii(s[-5:]):\n        return s[-5:], s[0:][:3]\n    elif str.isascii(s[:5]):\n        return s[:5], s[-5:][3:]\n    else:\n        return s\n```\n\nInput: 'a1234\u00e5r'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "db454e6cd7f00c701d894e85138ff0da7d13cee1afe2d0250ba0fd25ccf9fbf3",
+      "reference_answer": "('a1234', '\u00e5r')",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_602",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_602",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums, target):\n    cnt = nums.count(target)\n    return cnt * 2\n```\n\nInput: [1, 1], 1\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "19cff21396c0116580a8cf2d782d892ab975cb7ff9ad980e2a36ee552e76b268",
+      "reference_answer": "4",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_429",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_429",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(d):\n    result = []\n    while len(d.keys()) > 0:\n        result.append(d.popitem())\n    return result\n```\n\nInput: {5: 1, 'abc': 2, 'defghi': 2, 87.29: 3}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "dab84340174cb6140eebd24037b9f835ed965d9e91f3442e4625fdab7d6c29b7",
+      "reference_answer": "[(87.29, 3), ('defghi', 2), ('abc', 2), (5, 1)]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_292",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_292",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    new_text = [c if c.isdigit() else '*' for c in text]\n    return ''.join(new_text)\n```\n\nInput: '5f83u23saa'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "3daf621bc8441c8adc6cae6ec90eb01bd208a1f07b139a813db0c878d420c135",
+      "reference_answer": "'5*83*23***'",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_110",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_110",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    a = ['']\n    b = ''\n    for i in text:\n        if not i.isspace():\n            a.append(b)\n            b = ''\n        else:\n            b += i\n    return len(a)\n```\n\nInput: \"       \"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "44e327d4a65074413a22af75112f8a4f13682d98807c80977d7c98f4ae2e98e5",
+      "reference_answer": "1",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_428",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_428",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    for i in range(len(nums)):\n        if not i % 2:\n            nums.append(nums[i] * nums[i + 1])\n    return nums\n```\n\nInput: []\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a36758dd2856e199560d397f98b522b98c1fb8957d511efc345149296b65e837",
+      "reference_answer": "[]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_63",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_63",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, prefix):\n    while text.startswith(prefix):\n        text = text[len(prefix):] or text\n    return text\n```\n\nInput: 'ndbtdabdahesyehu', 'n'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "e7219a4d7e9a8b7fdc302c1f1b5a4f1b256f8aa18a9ddc761d0a5b5265d22b0f",
+      "reference_answer": "'dbtdabdahesyehu'",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_663",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_663",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(container, cron):\n    if not cron in container:\n        return container\n    pref = container[:container.index(cron)].copy()\n    suff = container[container.index(cron) + 1:].copy()\n    return pref + suff\n```\n\nInput: [], 2\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "be44d5ee743abb0a3db8a001c6f6c21c733d18d49408224fe0a10e0c9a11be08",
+      "reference_answer": "[]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_535",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_535",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(n):\n    for n in str(n):\n        if n not in \"012\" and n not in list(range(5, 10)):\n            return False\n    return True\n```\n\nInput: 1341240312\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "42f0a3a78f422051213ea9dde37c0a53ccee0443f01ba5be8783f8748e3cd710",
+      "reference_answer": "False",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_171",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_171",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    count = len(nums) // 2\n    for _ in range(count):\n        nums.pop(0)\n    return nums\n```\n\nInput: [3, 4, 1, 2, 3]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a2eedc65bdc43553a18f47ef14672ddad8acf020eda9c0fd2df73a8495027bc2",
+      "reference_answer": "[1, 2, 3]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_20",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_20",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    result = ''\n    for i in range(len(text)-1, -1, -1):\n        result += text[i]\n    return result\n```\n\nInput: 'was,'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "412f14fc07eb5c5e1e1b48657b22c2918888d24cae307061eb7416429c748dcb",
+      "reference_answer": "',saw'",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_720",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_720",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(items, item):\n    while items[-1] == item:\n        items.pop()\n    items.append(item)\n    return len(items)\n```\n\nInput: 'bfreratrrbdbzagbretaredtroefcoiqrrneaosf'.split('-'), 'n'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "559c5a60f998e51ce65131e423e2946f2cf8c80402bc1078365ed1fab184c609",
+      "reference_answer": "2",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_278",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_278",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array1, array2):\n    result = dict.fromkeys(array1)\n    for key in result:\n        result[key] = [el for el in array2 if key * 2 > el]\n    return result\n```\n\nInput: [0, 132], [5, 991, 32, 997]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "ad316258cc90000077f977cac03b7bbdab3affb5e063c4ab76ba7219795cc6c5",
+      "reference_answer": "{0: [], 132: [5, 32]}",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_474",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_474",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(txt, marker):\n    a = []\n    lines = txt.split('\\n')\n    for line in lines:\n        a.append(line.center(marker))\n    return '\\n'.join(a)\n```\n\nInput: '#[)[]>[^e>\\n 8', -5\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f0318bf092630f0b548573f6ff72251f56c2bc802a1a26338e1eb01f08efb2c6",
+      "reference_answer": "'#[)[]>[^e>\\n 8'",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_188",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_188",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(strings):\n    new_strings = []\n    for string in strings:\n        first_two = string[:2]\n        if first_two.startswith('a') or first_two.startswith('p'):\n            new_strings.append(first_two)\n\n    return new_strings\n```\n\nInput: [\"a\", \"b\", \"car\", \"d\"]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "56e8b0e7035bbd53f29e1478d921c8e992593c9c6259bb260b8b9f094d554e5d",
+      "reference_answer": "['a']",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_250",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_250",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    count = len(text)\n    for i in range(-count+1, 0):\n        text = text + text[i]\n    return text\n```\n\nInput: 'wlace A'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "7dfcbc0e7c2de2bcd7cf67d7ad332c7d7613d6be7dba9d85f39b40628062b3ff",
+      "reference_answer": "'wlace Alc l  '",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_503",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_503",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(d):\n    result = [None] * len(d)\n    a = b = 0\n    while d:\n        result[a] = d.popitem(a == b)\n        a, b = b, (b+1) % len(result)\n    return result\n```\n\nInput: {}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b07db3b5fe87f4fe9bfb148f92a0cbb3e8af5c23159a5156f53ce282ea869618",
+      "reference_answer": "[]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_744",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_744",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, new_ending):\n    result = list(text)\n    result.extend(new_ending)\n    return ''.join(result)\n```\n\nInput: 'jro', 'wdlp'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "e93195cfe35b19423894fc10b9e1ea88139ab150c837fc90b7494ddd104ee975",
+      "reference_answer": "'jrowdlp'",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_277",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_277",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(lst, mode):\n    result = [el for el in lst]\n    if mode:\n        result.reverse()\n    return result\n```\n\nInput: [1, 2, 3, 4], 1\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "91eb9c0d554940fb1dbad8567fd849e3f74b172707b283ac9edda5f7bbb058fe",
+      "reference_answer": "[4, 3, 2, 1]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_697",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_697",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s, sep):\n    sep_index = s.find(sep)\n    prefix = s[:sep_index]\n    middle = s[sep_index:sep_index + len(sep)]\n    right_str = s[sep_index + len(sep):]\n    return prefix, middle, right_str\n```\n\nInput: \"not it\", \"\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "bc3081dbb7e311c6db5636b3be3cbfab823a05be82395d5239ee23ffcdbff634",
+      "reference_answer": "('', '', 'not it')",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_759",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_759",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, sub):\n    index = []\n    starting = 0\n    while starting != -1:\n        starting = text.find(sub, starting)\n        if starting != -1:\n            index.append(starting)\n            starting += len(sub)\n    return index\n```\n\nInput: 'egmdartoa', 'good'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "2c8a3f1caaffa9a28c8e85893e4a38d77de7b2e8351ff905a2a6e55f71eb1334",
+      "reference_answer": "[]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_703",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_703",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, char):\n    count = text.count(char*2)\n    return text[count:]\n```\n\nInput: 'vzzv2sg', 'z'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "9a40d5a3593c2d18d4c74acd7ec83088c2af20b1acdd6d27ecd172a6413292bf",
+      "reference_answer": "'zzv2sg'",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_121",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_121",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s):\n    nums = ''.join(filter(lambda c:c.isdecimal(), s))\n    if nums == '': return 'none'\n    m = max([int(num) for num in nums.split(',')])\n    return str(m)\n```\n\nInput: '01,001'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "3fc23b4ed96696ce27ad7e1c4ac670881153376b484befe15b53cf08c1496ccb",
+      "reference_answer": "'1001'",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_437",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_437",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(tap_hierarchy):\n    hierarchy = {}\n    for gift in tap_hierarchy:\n        hierarchy = hierarchy.fromkeys(gift, None)\n    return hierarchy\n```\n\nInput: ['john', 'doe', 'the', 'john', 'doe']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4f8abcd641f0bd7e82c4153f98892ae9921fda04470891ca2d996c1f0f04c4b8",
+      "reference_answer": "{'d': None, 'o': None, 'e': None}",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_498",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_498",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums, idx, added):\n    nums[idx:idx] = (added,)\n    return nums\n```\n\nInput: [2, 2, 2, 3, 3], 2, 3\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f95556bf23d8df057ecddbc5bda4156ab39c46a9b84c2b54757f6f70ac0aee71",
+      "reference_answer": "[2, 2, 3, 2, 3, 3]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_540",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_540",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(a):\n    b = a.copy()\n    for k in range(0, len(a) - 1, 2):\n        b.insert(k + 1, b[k])\n    b.append(b[0])\n    return b\n```\n\nInput: [5, 5, 5, 6, 4, 9]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "1461ab4ec37d2ccde0b3d55ced45e1ada63e2f0d54159599af4e8835164c90b2",
+      "reference_answer": "[5, 5, 5, 5, 5, 5, 6, 4, 9, 5]",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "SOURCE_VALIDATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_id": "sample_449",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_449",
+        "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+        "selection_seed": 20260820,
+        "source_system_prompts": {
+          "careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+          "direct": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+        }
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(x):\n    n = len(x)\n    i = 0\n    while i < n and x[i].isdigit():\n        i += 1\n    return i == n\n```\n\nInput: '1'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5addb9aa059e083f1b843d7ca422e512eac690e6c685dc4a2f161599a92828cd",
+      "reference_answer": "True",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    }
+  ],
+  "manifest_hash": "a15f77988c2b5a2e1425f6ecda9a1c393cdef2d6604e15a334e19e892594bd38",
+  "n_items": 32,
+  "selection_namespace": "GATE6-LAYER-SOURCE-RFM-ATLAS-CRUX-FRESH",
+  "selection_seed": 20260820
+}

@@ -30,7 +30,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--review-dir", type=Path, default=REVIEW)
     args = parser.parse_args()
-    review = args.review_dir
+    review = args.review_dir.resolve()
     spec = load_yaml(ROOT / "experiments" / "specs" / "gate6_layer_source_rfm_atlas.yaml")
     summary = json.loads((review / "ALLOCATION_SUMMARY.json").read_text(encoding="utf-8"))
     exclusion = json.loads(

@@ -204,6 +204,9 @@ def main() -> int:
         "--from-items", type=Path, help="JSON list or {items: [...]} for local deterministic tests"
     )
     parser.add_argument(
+        "--dataset-jsonl", type=Path, help="Pinned CRUXEval JSONL downloaded without model weights"
+    )
+    parser.add_argument(
         "--remote", action="store_true", help="load only the pinned CRUXEval dataset"
     )
     args = parser.parse_args()
@@ -212,6 +215,9 @@ def main() -> int:
     if args.from_items:
         payload = json.loads(args.from_items.read_text(encoding="utf-8"))
         candidates = payload["items"] if isinstance(payload, dict) else payload
+    elif args.dataset_jsonl:
+        with args.dataset_jsonl.open(encoding="utf-8") as handle:
+            candidates = [json.loads(line) for line in handle if line.strip()]
     elif args.remote:
         require_remote_hf_execution("Gate 6 CRUXEval manifest preparation")
         from datasets import load_dataset

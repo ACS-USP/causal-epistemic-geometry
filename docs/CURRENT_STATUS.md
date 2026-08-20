@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 5 completed as a development source/duration bridge. The textual careful/direct source passed its frozen behavioral-separation gate, and the sustained engineering and manipulation gates passed. The 60-item primary evaluation found no frozen movement or useful-complementarity signal; the final classification is GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD. No Gate 6, Q2, character count, or holdout work was run.
+Gate 5 completed as a development source/duration bridge. The textual careful/direct source passed its frozen behavioral-separation gate, and the sustained engineering and manipulation gates passed. The 60-item primary evaluation found no frozen movement or useful-complementarity signal; the final classification is GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD. Gate 6 is now locked prospectively with six fixed layers, two source locations, source-only RFM/AGOP gates, and fresh development splits. No Gate 6 model outcome, Q2, character count, or holdout work has been run.
 
-- Workstream: `GATE5_SOURCE_DURATION_COMPLETE`
+- Workstream: `GATE6_LAYER_SOURCE_RFM_ATLAS_LOCKED`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the Gate-5 report. Do not execute Gate 6, Q2, character count, geometry, or holdout automatically.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute only the frozen Gate 6 source/layer/RFM atlas on an A40. Stop before any later gate.
 
 ## Scientific program
 
@@ -46,7 +46,7 @@ Gate 5 completed as a development source/duration bridge. The textual careful/di
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE5_COMPLETE_PRINCIPAL_REVIEW`
+- `current_task`: `GATE6_LAYER_SOURCE_RFM_ATLAS_LOCKED_PRE_OUTCOME`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
