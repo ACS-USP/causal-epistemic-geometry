@@ -1819,7 +1819,7 @@ class HuggingFaceBackend(ModelBackend):
             self._choice_prompt_index = None
 
     @contextmanager
-    def steer_prefill_once(self, intervention: Intervention) -> Iterator[None]:
+    def steer_prefill_once(self, intervention: Intervention) -> Iterator[dict[str, Any]]:
         """Apply one additive intervention to the first layer invocation only.
 
         Generation performs one prompt prefill followed by one-token decode
@@ -1837,6 +1837,14 @@ class HuggingFaceBackend(ModelBackend):
             dtype=next(self.model.parameters()).dtype,
         ).view(1, 1, -1)
         used = False
+        trace: dict[str, Any] = {
+            "forward_count": 0,
+            "prefill_applications": 0,
+            "decode_applications": 0,
+            "applications": [],
+            "max_abs_shift_error": 0.0,
+            "max_abs_non_current_change": 0.0,
+        }
 
         def hook(_module: Any, _inputs: Any, output: Any) -> Any:
             nonlocal used
@@ -1857,6 +1865,10 @@ class HuggingFaceBackend(ModelBackend):
                 raise TypeError(
                     "Unsupported transformer layer output; expected Tensor or tuple[Tensor, ...]"
                 )
+            trace["forward_count"] += 1
+            sequence_length = int(hidden.shape[1])
+            phase = "prefill" if sequence_length > 1 else "decode"
+            trace[f"{phase}_applications"] += 1
             updated = hidden.clone()
             delta = intervention.alpha * vector.to(device=hidden.device, dtype=hidden.dtype)
             token_index = intervention.token_index
@@ -1872,6 +1884,36 @@ class HuggingFaceBackend(ModelBackend):
             updated[:, token_index : token_index + 1, :] = (
                 updated[:, token_index : token_index + 1, :] + delta
             )
+            expected = delta.expand_as(updated[:, token_index : token_index + 1, :])
+            observed = (
+                updated[:, token_index : token_index + 1, :]
+                - hidden[:, token_index : token_index + 1, :]
+            )
+            shift_error = float((observed.float() - expected.float()).abs().max().item())
+            non_current_change = (
+                0.0
+                if hidden.shape[1] == 1
+                else float(
+                    (updated[:, :token_index, :] - hidden[:, :token_index, :])
+                    .float()
+                    .abs()
+                    .max()
+                    .item()
+                )
+            )
+            trace["max_abs_shift_error"] = max(trace["max_abs_shift_error"], shift_error)
+            trace["max_abs_non_current_change"] = max(
+                trace["max_abs_non_current_change"], non_current_change
+            )
+            trace["applications"].append(
+                {
+                    "phase": phase,
+                    "sequence_length": sequence_length,
+                    "token_position": token_index,
+                    "shift_error": shift_error,
+                    "non_current_change": non_current_change,
+                }
+            )
             if rest is None:
                 return updated
             if isinstance(output, tuple):
@@ -1880,7 +1922,7 @@ class HuggingFaceBackend(ModelBackend):
 
         handle = layer.register_forward_hook(hook)
         try:
-            yield
+            yield trace
         finally:
             handle.remove()
             self._choice_prompt_index = None

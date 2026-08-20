@@ -287,6 +287,17 @@ def classify_gate5(
         return "GATE5_SUSTAINED_USEFUL_COMPLEMENTARITY_SIGNAL"
     if any(movement.values()):
         return "GATE5_SUSTAINED_ERROR_PROFILE_MOVEMENT_ONLY"
+    if all(
+        not (
+            estimands[f"SUSTAINED_{sign}"]["validity"] >= 0.90
+            and estimands[f"SUSTAINED_{sign}"]["validity"]
+            >= estimands["BASELINE"]["validity"] - 0.05
+            and estimands[f"SUSTAINED_{sign}"]["accuracy"]
+            >= estimands["BASELINE"]["accuracy"] - 0.10
+        )
+        for sign in ("PLUS", "MINUS")
+    ):
+        return "GATE5_SUSTAINED_DESTRUCTIVE"
     if any(
         estimands[f"SUSTAINED_{sign}"]["D"] - estimands[f"ONE_SHOT_{sign}"]["D"] >= 0.03
         for sign in ("PLUS", "MINUS")
