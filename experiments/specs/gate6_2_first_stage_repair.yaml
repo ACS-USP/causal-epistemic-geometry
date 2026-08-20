@@ -1,0 +1,135 @@
+schema_version: 1
+experiment_id: GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE
+status: FROZEN_PRE_OUTCOME
+stage: DEVELOPMENT_LOCK
+question: >-
+  Do corrected causal teacher-forced scoring, source-train-only RFM validation,
+  and independently frozen paired-mean prompt-boundary controllers yield a
+  valid free-generation first-stage manipulation beyond matched random mean
+  controls?
+parent_experiment: GATE6_SOURCE_ATTRITION_REPAIR
+parent_reviewed_head: c689688047391ecdad8707fba8cb21222210ae8e
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+  attention: sdpa
+policy:
+  enable_thinking: false
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  max_new_tokens: 4096
+  engine: one_frozen_engine_for_all_conditions
+instrument:
+  benchmark: CRUXEval
+  dataset_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  evaluator: corrected_deterministic_type_aware_semantics
+source:
+  reuse_gate6_1_items: true
+  train_items: 104
+  validation_items: 32
+  locations:
+  - PROMPT_BOUNDARY
+  - EXECUTION_BOUNDARY
+  layers:
+  - 8
+  - 12
+  - 17
+  - 22
+  - 27
+  - 32
+  labels: careful_1_direct_0
+  correctness_labels_used: false
+  semantic_outcomes_used: false
+scoring:
+  prompt_boundary:
+    intervention_position: final_prompt_token
+    score_start: continuation_index_0
+    score_end: continuation_end_exclusive
+  execution_boundary:
+    intervention_position: immediately_before_final_marker
+    score_start: first_final_marker_token
+    score_end: continuation_end_exclusive
+    pre_intervention_tokens_excluded: true
+rfm:
+  family: pinned_xRFM_AGOP
+  upstream_commit: 773fae81097ab000e6e7292a295e1d24adacca55
+  internal_validation: deterministic_stratified_4fold_source_train_only
+  config_grid:
+  - iters: 8
+    bandwidth: 10.0
+    exponent: 1.0
+    regularization: 0.001
+  final_fit_validation: first_deterministic_inner_fold_only
+  source_validation_use: held_out_readout_first_stage_random_null_only
+paired_mean:
+  constructor: careful_minus_direct_paired_difference_of_means
+  best_single:
+    location: PROMPT_BOUNDARY
+    layer: 27
+  multilayer:
+    location: PROMPT_BOUNDARY
+    layers:
+    - 22
+    - 27
+    - 32
+  selection_source: historical_source_only_result_and_preregistered_rule
+random_mean:
+  layers:
+  - 22
+  - 27
+  - 32
+  bank_size: 4
+  orthogonal_to: multilayer_paired_mean_subspace
+  seed_namespace: GATE6-2-RANDOM-MEAN-BANK
+phases:
+  manipulation:
+    items: 20
+    rollouts_per_condition: 1
+    seed_regime: MATCHED_COUPLING_SECONDARY
+    conditions:
+    - BASELINE
+    - TEXTUAL_CAREFUL_REFERENCE
+    - TEXTUAL_DIRECT_REFERENCE
+    - BEST_SINGLE_MEAN_PLUS
+    - MULTILAYER_MEAN_PLUS
+    - MULTILAYER_MEAN_MINUS
+    - MULTILAYER_RANDOM_MEAN_R0
+    - MULTILAYER_RANDOM_MEAN_R1
+    - MULTILAYER_RANDOM_MEAN_R2
+    - MULTILAYER_RANDOM_MEAN_R3
+    pass_gate:
+      validity_minimum: 0.85
+      semantic_change_minimum: 0.15
+      duration_not_applicable: true
+      meaningful_minus_random_mean_minimum: 0.05
+  evaluation:
+    items: 60
+    rollouts_per_condition: 2
+    seed_regime: INDEPENDENT_PRIMARY
+    conditions:
+    - BASELINE
+    - TEXTUAL_CAREFUL_REFERENCE
+    - BEST_SINGLE_MEAN_PLUS
+    - MULTILAYER_MEAN_PLUS
+    - MULTILAYER_MEAN_MINUS
+    - MULTILAYER_RANDOM_MEAN_R0
+    - MULTILAYER_RANDOM_MEAN_R1
+    - MULTILAYER_RANDOM_MEAN_R2
+    - MULTILAYER_RANDOM_MEAN_R3
+    only_if_manipulation_passes: true
+firewall:
+  character_count: NOT_RUN
+  q2: NOT_RUN
+  confirmatory_holdout: UNTOUCHED
+  semantic_label_controller: FORBIDDEN
+cost:
+  target_usd: 1.50
+  hard_stop_usd: 3.00
+  source_correction_and_manipulation_authorized: true
+  evaluation_authorized_only_after_manipulation_pass: true
