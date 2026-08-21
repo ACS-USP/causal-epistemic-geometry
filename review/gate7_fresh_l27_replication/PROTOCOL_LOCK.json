@@ -47,6 +47,14 @@
     "projected_rows": 1680,
     "target_usd": 2.0
   },
+  "engineering_gate": {
+    "all_meaningful_and_random_controllers_exercised": true,
+    "alpha_zero_token_identity": true,
+    "exact_shift_tolerance": "max error <= 2 BF16 eps-scaled units using max(|before|, |after|, |delta|, 1)",
+    "non_current_absolute_tolerance": 0.125,
+    "one_application_per_forward": true,
+    "vector_identity_from_frozen_vector_not_delta_roundtrip": true
+  },
   "estimands": [
     "accuracy",
     "commitment_validity",
@@ -93,7 +101,7 @@
     }
   },
   "lifecycle": "PROSPECTIVE_LOCK",
-  "lock_preparation_source_commit": "594eb22622ebacf3edc17c148ee821f1fa2196f1",
+  "lock_preparation_source_commit": "7c1a34e066f9d787c344d7397afd86ba2525b80a",
   "minimum_replication": {
     "C": 0.05,
     "C_minus_random_mean": 0.05,
