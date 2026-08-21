@@ -1,0 +1,380 @@
+{
+  "BEST_SINGLE_MEAN_PLUS:C": {
+    "cluster": "item_id",
+    "estimate": 0.11553672316384178,
+    "q025": 0.06807556497175139,
+    "q975": 0.16666843220338984,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:C_minus_random_max": {
+    "cluster": "item_id",
+    "estimate": 0.0891949152542373,
+    "q025": 0.032837217514124266,
+    "q975": 0.1449205508474575,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:C_minus_random_mean": {
+    "cluster": "item_id",
+    "estimate": 0.10469632768361581,
+    "q025": 0.05852621822033897,
+    "q975": 0.15381488347457625,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:D": {
+    "cluster": "item_id",
+    "estimate": 0.16666666666666666,
+    "q025": 0.06666666666666667,
+    "q975": 0.2833333333333333,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:D_minus_random_max": {
+    "cluster": "item_id",
+    "estimate": 0.11666666666666665,
+    "q025": 0.0,
+    "q975": 0.23333333333333334,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:D_minus_random_mean": {
+    "cluster": "item_id",
+    "estimate": 0.14166666666666666,
+    "q025": 0.037500000000000006,
+    "q975": 0.2583333333333333,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:G": {
+    "cluster": "item_id",
+    "estimate": 0.20416666666666666,
+    "q025": 0.11249999999999999,
+    "q975": 0.3041666666666667,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:G_minus_random_max": {
+    "cluster": "item_id",
+    "estimate": 0.18333333333333335,
+    "q025": 0.08739583333333334,
+    "q975": 0.28750000000000003,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:G_minus_random_mean": {
+    "cluster": "item_id",
+    "estimate": 0.20625,
+    "q025": 0.11458333333333333,
+    "q975": 0.30833333333333324,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:accuracy_difference": {
+    "cluster": "item_id",
+    "estimate": 0.18333333333333335,
+    "q025": 0.07500000000000007,
+    "q975": 0.29166666666666663,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:commitment_validity_difference": {
+    "cluster": "item_id",
+    "estimate": 0.0,
+    "q025": -0.04166666666666663,
+    "q975": 0.050000000000000044,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:damage": {
+    "cluster": "item_id",
+    "estimate": 0.03333333333333333,
+    "q025": 0.004166666666666667,
+    "q975": 0.08333333333333333,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:rescue": {
+    "cluster": "item_id",
+    "estimate": 0.22083333333333333,
+    "q025": 0.12916666666666668,
+    "q975": 0.32083333333333336,
+    "resamples": 5000
+  },
+  "BEST_SINGLE_MEAN_PLUS:semantic_evaluability_difference": {
+    "cluster": "item_id",
+    "estimate": 0.0,
+    "q025": -0.04166666666666663,
+    "q975": 0.050000000000000044,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:C": {
+    "cluster": "item_id",
+    "estimate": 0.02369350282485877,
+    "q025": -0.0046610169491524975,
+    "q975": 0.05875706214689269,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:D": {
+    "cluster": "item_id",
+    "estimate": 0.05,
+    "q025": 0.0,
+    "q975": 0.11666666666666667,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:G": {
+    "cluster": "item_id",
+    "estimate": 0.00833333333333336,
+    "q025": -0.033333333333333326,
+    "q975": 0.05833333333333335,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:accuracy_difference": {
+    "cluster": "item_id",
+    "estimate": -0.033333333333333326,
+    "q025": -0.09999999999999998,
+    "q975": 0.033333333333333326,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:commitment_validity_difference": {
+    "cluster": "item_id",
+    "estimate": 0.01666666666666672,
+    "q025": 0.0,
+    "q975": 0.04166666666666663,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:damage": {
+    "cluster": "item_id",
+    "estimate": 0.058333333333333334,
+    "q025": 0.016666666666666666,
+    "q975": 0.11666666666666667,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:rescue": {
+    "cluster": "item_id",
+    "estimate": 0.025,
+    "q025": 0.0,
+    "q975": 0.06666666666666667,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R0:semantic_evaluability_difference": {
+    "cluster": "item_id",
+    "estimate": 0.01666666666666672,
+    "q025": 0.0,
+    "q975": 0.04166666666666663,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:C": {
+    "cluster": "item_id",
+    "estimate": 0.01596045197740116,
+    "q025": -0.008192090395480217,
+    "q975": 0.04604519774011298,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:D": {
+    "cluster": "item_id",
+    "estimate": 0.016666666666666666,
+    "q025": -0.03333333333333333,
+    "q975": 0.08333333333333333,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:G": {
+    "cluster": "item_id",
+    "estimate": 0.012499999999999956,
+    "q025": -0.008333333333333304,
+    "q975": 0.04166666666666663,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:accuracy_difference": {
+    "cluster": "item_id",
+    "estimate": -0.008333333333333304,
+    "q025": -0.06666666666666665,
+    "q975": 0.04166666666666663,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:commitment_validity_difference": {
+    "cluster": "item_id",
+    "estimate": 0.01666666666666672,
+    "q025": 0.0,
+    "q975": 0.050000000000000044,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:damage": {
+    "cluster": "item_id",
+    "estimate": 0.03333333333333333,
+    "q025": 0.0,
+    "q975": 0.0875,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:rescue": {
+    "cluster": "item_id",
+    "estimate": 0.029166666666666667,
+    "q025": 0.004166666666666667,
+    "q975": 0.058333333333333334,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R1:semantic_evaluability_difference": {
+    "cluster": "item_id",
+    "estimate": 0.01666666666666672,
+    "q025": 0.0,
+    "q975": 0.050000000000000044,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:C": {
+    "cluster": "item_id",
+    "estimate": -0.0015536723163841748,
+    "q025": -0.018361581920903952,
+    "q975": 0.021613700564971774,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:D": {
+    "cluster": "item_id",
+    "estimate": 0.016666666666666666,
+    "q025": 0.0,
+    "q975": 0.05,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:G": {
+    "cluster": "item_id",
+    "estimate": -0.016666666666666663,
+    "q025": -0.04166666666666663,
+    "q975": 0.0,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:accuracy_difference": {
+    "cluster": "item_id",
+    "estimate": -0.033333333333333326,
+    "q025": -0.07500000000000007,
+    "q975": 0.0,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:commitment_validity_difference": {
+    "cluster": "item_id",
+    "estimate": 0.0,
+    "q025": -0.025000000000000022,
+    "q975": 0.025000000000000022,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:damage": {
+    "cluster": "item_id",
+    "estimate": 0.03333333333333333,
+    "q025": 0.0,
+    "q975": 0.075,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:rescue": {
+    "cluster": "item_id",
+    "estimate": 0.0,
+    "q025": 0.0,
+    "q975": 0.0,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R2:semantic_evaluability_difference": {
+    "cluster": "item_id",
+    "estimate": 0.0,
+    "q025": -0.025000000000000022,
+    "q975": 0.025000000000000022,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:C": {
+    "cluster": "item_id",
+    "estimate": 0.003107344632768294,
+    "q025": -0.015819209039548032,
+    "q975": 0.02627118644067794,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:D": {
+    "cluster": "item_id",
+    "estimate": 0.016666666666666666,
+    "q025": 0.0,
+    "q975": 0.05,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:G": {
+    "cluster": "item_id",
+    "estimate": -0.012499999999999956,
+    "q025": -0.033333333333333326,
+    "q975": 0.0,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:accuracy_difference": {
+    "cluster": "item_id",
+    "estimate": -0.033333333333333326,
+    "q025": -0.07500000000000007,
+    "q975": 0.0,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:commitment_validity_difference": {
+    "cluster": "item_id",
+    "estimate": 0.0,
+    "q025": 0.0,
+    "q975": 0.0,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:damage": {
+    "cluster": "item_id",
+    "estimate": 0.03333333333333333,
+    "q025": 0.004166666666666667,
+    "q975": 0.08333333333333333,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:rescue": {
+    "cluster": "item_id",
+    "estimate": 0.004166666666666667,
+    "q025": 0.0,
+    "q975": 0.0125,
+    "resamples": 5000
+  },
+  "SINGLE_L27_RANDOM_R3:semantic_evaluability_difference": {
+    "cluster": "item_id",
+    "estimate": 0.0,
+    "q025": 0.0,
+    "q975": 0.0,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:C": {
+    "cluster": "item_id",
+    "estimate": 0.12944915254237283,
+    "q025": 0.08071857344632767,
+    "q975": 0.1779661016949152,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:D": {
+    "cluster": "item_id",
+    "estimate": 0.21666666666666667,
+    "q025": 0.11666666666666667,
+    "q975": 0.31666666666666665,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:G": {
+    "cluster": "item_id",
+    "estimate": 0.24166666666666667,
+    "q025": 0.14166666666666664,
+    "q975": 0.35,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:accuracy_difference": {
+    "cluster": "item_id",
+    "estimate": 0.2333333333333334,
+    "q025": 0.125,
+    "q975": 0.3416666666666668,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:commitment_validity_difference": {
+    "cluster": "item_id",
+    "estimate": 0.01666666666666672,
+    "q025": -0.01666666666666672,
+    "q975": 0.05833333333333335,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:damage": {
+    "cluster": "item_id",
+    "estimate": 0.025,
+    "q025": 0.0,
+    "q975": 0.058333333333333334,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:rescue": {
+    "cluster": "item_id",
+    "estimate": 0.25833333333333336,
+    "q025": 0.15833333333333333,
+    "q975": 0.36666666666666664,
+    "resamples": 5000
+  },
+  "TEXTUAL_CAREFUL_REFERENCE:semantic_evaluability_difference": {
+    "cluster": "item_id",
+    "estimate": 0.01666666666666672,
+    "q025": -0.01666666666666672,
+    "q975": 0.05833333333333335,
+    "resamples": 5000
+  }
+}

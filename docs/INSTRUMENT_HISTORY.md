@@ -105,6 +105,20 @@ result, not a useful-complementarity claim, Q2 result, or test of the
 confirmatory holdout. See [the Gate 6.3 closeout](GATE6_3_SINGLE_MEAN_CLOSEOUT.md)
 and the raw [review artifacts](../review/gate6_3_single_mean_semantic_evaluation/).
 
+### Additive semantic-validity audit
+
+A later local-only, condition-blind `external-semantic-v3` audit separated the
+existence of a final commitment from its deterministic evaluability and
+correctness. It did not alter the historical files or classification. Under V3,
+the controller reached 0.9750 commitment validity/evaluability and 0.7000
+accuracy; its `G=0.2042`, `C=0.1177`, and `D=0.1667` exceeded the full
+four-direction random bank. The offline diagnostic classification is
+`GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL`.
+
+This is DEVELOPMENT evidence warranting a prospectively locked fresh
+replication, not a rescued historical result or a confirmatory claim. See the
+[audit report](../review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md).
+
 ## Cross-series conclusion
 
 The repository has learned a great deal about measurement failure and execution

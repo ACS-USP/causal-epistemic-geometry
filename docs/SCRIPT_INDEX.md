@@ -9,6 +9,10 @@ current action. No historical reproduction script is deleted by this reset.
 - `scripts/check_docs.py` — offline document/state audit.
 - `scripts/check_experiment_registry.py` — experiment-registry audit.
 - `scripts/validate_scientific_metrics.py` — synthetic estimand validation.
+- `scripts/validate_research_os.py` — policy, lifecycle, contract, and named-environment audit.
+- `scripts/prepare_gate6_3_semantic_validity_audit.py` — freezes the condition-masked V3 audit corpus.
+- `scripts/analyze_gate6_3_semantic_validity_audit.py` — local-only condition-symmetric V3 reanalysis.
+- `scripts/validate_gate6_3_semantic_validity_audit.py` — fail-closed V3 artifact validator.
 - `scripts/reanalyze_q1_v4_geometry.py` — corrected, artifact-only V4 analysis.
 - `scripts/run_mock_smoke.sh` — network-free package smoke.
 - `scripts/bootstrap_runpod.sh` — conservative remote environment bootstrap;
@@ -83,4 +87,3 @@ No script is declared safely dead. The historical entry points above encode
 frozen artifact schemas and source identities. Deleting them would weaken audit
 and reanalysis capability; invoking them as current protocol would also be
 unsafe. Their classification—not deletion—is the conservative resolution.
-

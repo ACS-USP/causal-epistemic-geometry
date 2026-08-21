@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 6.2 remains immutable. Gate 6.3 completed its frozen 80-row architecture-matched single-L27 random supplement and 840-row primary evaluation after external-semantic-v2 reanalysis. The matched gate passed. The meaningful controller exceeded the random null on point-estimate G/C/D and preserved the accuracy tolerance, but failed the frozen validity guard (0.9083 versus the required 0.9250), so the result is GATE6_3_SINGLE_MEAN_DESTRUCTIVE. No Q2, character-count replication, or holdout access occurred.
+The frozen Gate 6.3 result remains GATE6_3_SINGLE_MEAN_DESTRUCTIVE. A condition-blind, model-free external-semantic-v3 audit of all 920 preserved rows separated commitment validity, semantic evaluability, and correctness. The controller reached 0.9750 commitment validity/evaluability and 0.7000 accuracy; G=0.2042, C=0.1177, and D=0.1667 exceeded the four-vector random null, yielding the additive diagnostic GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL. This does not replace the frozen V2 result. A fresh replication protocol is drafted but not authorized.
 
-**Next authorized action:** Principal researcher review. Do not run another controller, alpha, layer, character-count replication, Q2, or holdout without a new frozen authorization.
+**Next authorized action:** Principal researcher review of the offline V3 diagnostic and the draft fresh-replication protocol. Do not collect new outputs or run another controller, dose, layer, character count, Q2, or holdout without a new prospective lock and explicit authorization.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -89,7 +89,10 @@ as current plans.
 - Gate 6.3 single-mean semantic evaluation: matched architecture-specific
   random gate passed, but the frozen L27 meaningful controller failed the
   primary validity guard (0.9083 versus 0.9250) and is classified
-  `GATE6_3_SINGLE_MEAN_DESTRUCTIVE`. No later experiment was authorized.
+  `GATE6_3_SINGLE_MEAN_DESTRUCTIVE`. A later condition-blind, model-free V3
+  audit preserved that historical classification but found 0.9750 commitment
+  validity/evaluability and a strong controller-specific G/C/D diagnostic.
+  Fresh replication is drafted, not authorized.
 - Confirmatory holdout: untouched.
 
 These are instrument outcomes, not a positive or negative result for the full

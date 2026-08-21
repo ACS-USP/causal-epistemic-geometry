@@ -98,6 +98,12 @@ validity guard despite point-estimate movement beyond the random controls.
 No follow-up controller, alpha, layer, benchmark, Q2, or holdout action is
 authorized without a new prospective lock and principal review.
 
+The additive, model-free semantic-validity audit subsequently produced
+`GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL` after globally separating final
+commitment, semantic evaluability, and correctness. The frozen V2 classification
+above remains unchanged. The only drafted continuation is a fresh same-controller
+replication with V3 frozen before collection; that draft is not authorized.
+
 ## Hard portfolio boundary
 
 Continue past the structured sprint only if all are true:

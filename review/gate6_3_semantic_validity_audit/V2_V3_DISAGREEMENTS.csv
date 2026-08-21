@@ -1,0 +1,70 @@
+phase,item_id,condition,rollout_index,v2_status,v2_parsed_answer,v2_correct,v3_status,v3_commitment_valid,v3_semantic_evaluable,v3_value_type,v3_canonical_value,v3_payload,v3_correct,v3_failure_reason,reason_for_change,reference_type,generated_token_count
+GATE6_3_PRIMARY_EVALUATION,sample_386,TEXTUAL_CAREFUL_REFERENCE,0,INVALID_FORMAT,,False,VALID_CORRECT,True,True,str,"[""str"",""Done!""]","""Done!""",True,,V3 represents one unambiguous commitment that matches the reference,str,451
+GATE6_3_PRIMARY_EVALUATION,sample_223,TEXTUAL_CAREFUL_REFERENCE,0,INVALID_FORMAT,,False,VALID_WRONG,True,True,str,"[""str"",""- `count = 1`\n- `i = 1`\n\n### Return:\n```python\nreturn count\n```\n\n### Output:\n```python\n1\n```\n\nFINAL: 1""]","- `count = 1`
+- `i = 1`
+
+### Return:
+```python
+return count
+```
+
+### Output:
+```python
+1
+```
+
+FINAL: 1",False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,507
+GATE6_3_PRIMARY_EVALUATION,sample_136,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,a,False,VALID_CORRECT,True,True,str,"[""str"",""  a  \n  bc \n     \n  d  \n  ef ""]","  a  
+  bc 
+     
+  d  
+  ef ",True,,V3 represents one unambiguous commitment that matches the reference,str,318
+GATE6_3_PRIMARY_EVALUATION,sample_136,BEST_SINGLE_MEAN_PLUS,1,INVALID_FORMAT,a,False,VALID_WRONG,True,True,str,"[""str"",""  a  \n  bc\n     \n  d  \n  ef""]","  a  
+  bc
+     
+  d  
+  ef",False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,str,408
+GATE6_3_PRIMARY_EVALUATION,sample_136,SINGLE_L27_RANDOM_R1,0,INVALID_FORMAT,a,False,VALID_WRONG,True,True,str,"[""str"","" a  \n  bc  \n  \n  d  \n  ef""]"," a  
+  bc  
+  
+  d  
+  ef",False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,str,15
+GATE6_3_PRIMARY_EVALUATION,sample_136,SINGLE_L27_RANDOM_R1,1,INVALID_FORMAT,a,False,VALID_WRONG,True,True,str,"[""str"","" a  \n  bc  \n   d  \n  e f""]"," a  
+  bc  
+   d  
+  e f",False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,str,15
+GATE6_3_PRIMARY_EVALUATION,sample_685,BEST_SINGLE_MEAN_PLUS,1,INVALID_FORMAT,0-2,False,VALID_WRONG,True,True,str,"[""str"",""0-2""]",0-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_685,SINGLE_L27_RANDOM_R0,0,INVALID_FORMAT,0-2,False,VALID_WRONG,True,True,str,"[""str"",""0-2""]",0-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_685,SINGLE_L27_RANDOM_R0,1,INVALID_FORMAT,0-2,False,VALID_WRONG,True,True,str,"[""str"",""0-2""]",0-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_685,SINGLE_L27_RANDOM_R1,0,INVALID_FORMAT,3-2,False,VALID_WRONG,True,True,str,"[""str"",""3-2""]",3-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_685,SINGLE_L27_RANDOM_R1,1,INVALID_FORMAT,3-2,False,VALID_WRONG,True,True,str,"[""str"",""3-2""]",3-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_685,SINGLE_L27_RANDOM_R2,0,INVALID_FORMAT,0-2,False,VALID_WRONG,True,True,str,"[""str"",""0-2""]",0-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_685,SINGLE_L27_RANDOM_R3,0,INVALID_FORMAT,3-2,False,VALID_WRONG,True,True,str,"[""str"",""3-2""]",3-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_685,SINGLE_L27_RANDOM_R3,1,INVALID_FORMAT,3-2,False,VALID_WRONG,True,True,str,"[""str"",""3-2""]",3-2,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,int,7
+GATE6_3_PRIMARY_EVALUATION,sample_591,TEXTUAL_CAREFUL_REFERENCE,0,INVALID_FORMAT,IndexError: list index out of range,False,VALID_WRONG,True,True,str,"[""str"",""IndexError: list index out of range""]",IndexError: list index out of range,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,tuple,503
+GATE6_3_PRIMARY_EVALUATION,sample_591,BEST_SINGLE_MEAN_PLUS,1,INVALID_FORMAT,IndexError: list index out of range,False,VALID_WRONG,True,True,str,"[""str"",""IndexError: list index out of range""]",IndexError: list index out of range,False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,tuple,528
+GATE6_3_PRIMARY_EVALUATION,sample_665,BEST_SINGLE_MEAN_PLUS,0,VALID_WRONG,acbced,False,VALID_WRONG,True,True,str,"[""str"",""acbced\n```\n\n### ✅ Final Output:\n```\nFINAL: acbced""]","acbced
+```
+
+### ✅ Final Output:
+```
+FINAL: acbced",False,,V3 extracts a different globally specified final payload,str,444
+GATE6_3_PRIMARY_EVALUATION,sample_135,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,,False,VALID_CORRECT,True,True,list,"[""list"",[[""str"",""Russia""],[""str"",""Kazakhstan""]]]","['Russia', 'Kazakhstan']",True,,V3 represents one unambiguous commitment that matches the reference,list,146
+GATE6_3_PRIMARY_EVALUATION,sample_115,TEXTUAL_CAREFUL_REFERENCE,0,INVALID_FORMAT,b'111; 115; 124; 124; 97; 103; 120; 53; ',False,VALID_CORRECT,True,True,bytes,"[""bytes"",""3131313b203131353b203132343b203132343b2039373b203130333b203132303b2035333b20""]",b'111; 115; 124; 124; 97; 103; 120; 53; ',True,,V3 represents one unambiguous commitment that matches the reference,bytes,979
+GATE6_3_PRIMARY_EVALUATION,sample_115,TEXTUAL_CAREFUL_REFERENCE,1,INVALID_FORMAT,b'111; 115; 124; 124; 97; 103; 120; 53; ',False,VALID_CORRECT,True,True,bytes,"[""bytes"",""3131313b203131353b203132343b203132343b2039373b203130333b203132303b2035333b20""]",b'111; 115; 124; 124; 97; 103; 120; 53; ',True,,V3 represents one unambiguous commitment that matches the reference,bytes,720
+GATE6_3_PRIMARY_EVALUATION,sample_115,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,b'111; 115; 124; 124; 97; 103; 120; 53; ',False,VALID_CORRECT,True,True,bytes,"[""bytes"",""3131313b203131353b203132343b203132343b2039373b203130333b203132303b2035333b20""]",b'111; 115; 124; 124; 97; 103; 120; 53; ',True,,V3 represents one unambiguous commitment that matches the reference,bytes,747
+GATE6_3_PRIMARY_EVALUATION,sample_115,BEST_SINGLE_MEAN_PLUS,1,INVALID_FORMAT,b'111; 115; 124; 124; 97; 103; 114; 53; ',False,VALID_WRONG,True,True,bytes,"[""bytes"",""3131313b203131353b203132343b203132343b2039373b203130333b203131343b2035333b20""]",b'111; 115; 124; 124; 97; 103; 114; 53; ',False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,bytes,700
+GATE6_3_PRIMARY_EVALUATION,sample_115,SINGLE_L27_RANDOM_R0,1,INVALID_FORMAT,b'45; 111; 115; 124; 124; 97; 103; 118; 51; ',False,VALID_WRONG,True,True,bytes,"[""bytes"",""34353b203131313b203131353b203132343b203132343b2039373b203130333b203131383b2035313b20""]",b'45; 111; 115; 124; 124; 97; 103; 118; 51; ',False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,bytes,47
+GATE6_3_PRIMARY_EVALUATION,sample_115,SINGLE_L27_RANDOM_R1,0,INVALID_FORMAT,b'61; 111; 44; 111; 95; 95; 97; 103; 120; 53;',False,VALID_WRONG,True,True,bytes,"[""bytes"",""36313b203131313b2034343b203131313b2039353b2039353b2039373b203130333b203132303b2035333b""]",b'61; 111; 44; 111; 95; 95; 97; 103; 120; 53;',False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,bytes,48
+GATE6_3_PRIMARY_EVALUATION,sample_115,SINGLE_L27_RANDOM_R1,1,INVALID_FORMAT,b'61; 111; 115; 124; 124; 97; 103; 120; 53; ',False,VALID_WRONG,True,True,bytes,"[""bytes"",""36313b203131313b203131353b203132343b203132343b2039373b203130333b203132303b2035333b20""]",b'61; 111; 115; 124; 124; 97; 103; 120; 53; ',False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,bytes,47
+GATE6_3_PRIMARY_EVALUATION,sample_115,SINGLE_L27_RANDOM_R2,1,INVALID_FORMAT,b'61; 111; 115; 124; 124; 97; 103; 120; 53; ',False,VALID_WRONG,True,True,bytes,"[""bytes"",""36313b203131313b203131353b203132343b203132343b2039373b203130333b203132303b2035333b20""]",b'61; 111; 115; 124; 124; 97; 103; 120; 53; ',False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,bytes,47
+GATE6_3_PRIMARY_EVALUATION,sample_592,BEST_SINGLE_MEAN_PLUS,1,INVALID_FORMAT,,False,VALID_WRONG,True,True,str,"[""str"",""<the exact Python output>` → `[3, 11]`\n\n**Step-by-step explanation:**\n- The function reverses the input list.\n- Input `[11, 3]` → Output `[3, 11]`.\n\n**Answer:**\n```\nFINAL: [3, 11]\n``""]","<the exact Python output>` → `[3, 11]`
+
+**Step-by-step explanation:**
+- The function reverses the input list.
+- Input `[11, 3]` → Output `[3, 11]`.
+
+**Answer:**
+```
+FINAL: [3, 11]
+``",False,,V3 represents one unambiguous wrong commitment instead of mechanical invalidity,list,308

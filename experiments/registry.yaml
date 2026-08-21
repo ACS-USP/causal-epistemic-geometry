@@ -494,3 +494,53 @@ experiments:
       estimated_cost_usd: 0.85
       runpod_status: EXITED
     next_action: Principal review; do not run another controller, alpha, layer, character-count replication, Q2, or holdout without a new frozen authorization.
+
+  - id: GATE6_3_SEMANTIC_VALIDITY_AUDIT
+    version: GATE-6.3-V3-AUDIT
+    stage: DEVELOPMENT
+    question: Did the frozen Gate 6.3 validity failure reflect absent commitments or deterministic evaluator representation limits?
+    instrument: Offline external-semantic-v3 commitment/evaluability/correctness audit of preserved CRUXEval outputs
+    model_policy: No model execution; preserved Qwen3-8B Gate 6.3 outputs only
+    status: COMPLETE_OFFLINE_DIAGNOSTIC_STRONG_SIGNAL
+    outcome: GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL
+    scientific_interpretation: >-
+      The original GATE6_3_SINGLE_MEAN_DESTRUCTIVE result remains immutable.
+      After condition-blind parser development and lock, V3 reclassified
+      unusual but unambiguous final values symmetrically across all conditions.
+      BEST_SINGLE_MEAN_PLUS reached 0.9750 commitment validity/evaluability and
+      0.7000 accuracy, with G=0.2042, C=0.1177, and D=0.1667 beyond the complete
+      four-direction random bank. This is an additive DEVELOPMENT diagnostic,
+      not confirmation or permission to collect new outputs.
+    source_commit: 9a5813fe07267310d3f3873fd61282864995c037
+    lock_commit: 78da68229713cbf42ff14d0083077fcc1636ec26
+    artifact: review/gate6_3_semantic_validity_audit/
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION
+    lock:
+      audit: review/gate6_3_semantic_validity_audit/AUDIT_LOCK.json
+      parser_version: external-semantic-v3
+      blinded_rows: 920
+      primary_rows: 840
+      matched_consistency_rows: 80
+      bootstrap_resamples: 5000
+      model_inference: false
+      gpu_authorized: false
+    execution:
+      v2_rows_crosschecked: 840
+      v2_crosscheck_failures: 0
+      rows_reclassified_or_reextracted: 29
+      primary_rows_reclassified_or_reextracted: 27
+      baseline_commitment_validity: 0.975
+      controller_commitment_validity: 0.975
+      baseline_semantic_evaluability: 0.975
+      controller_semantic_evaluability: 0.975
+      baseline_accuracy: 0.5166666666666667
+      controller_accuracy: 0.7
+      G: 0.20416666666666666
+      C: 0.11765536723163841
+      D: 0.16666666666666666
+      q2: NOT_RUN
+      character_count: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Principal review of the fresh-replication draft; no new collection without a new prospective lock and explicit authorization.

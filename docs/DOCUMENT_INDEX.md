@@ -23,6 +23,7 @@ current instruction source.
 | `docs/DOCUMENT_INDEX.md` | This classification and navigation page |
 | `docs/SCRIPT_INDEX.md` | Current/historical/wrapper/mergeable script inventory |
 | `docs/RESEARCH_OS_V1_REPORT.md` | Research OS v1 implementation and validation report |
+| `docs/RESEARCH_OS_INTEGRATION_REPORT.md` | Gate 6.3 integration amendments, fixture isolation, and environment profiles |
 
 ## Current supporting references
 
@@ -49,6 +50,7 @@ current instruction source.
 | `docs/GATE6_2_FIRST_STAGE_REPAIR.md` | Gate 6.2 source-scoring repair and paired-mean bridge; outcome-gated |
 | `docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md` | Gate 6.2 first-stage outcome and evaluation stop |
 | `docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md` | Gate 6.3 semantic-parser reanalysis, matched random gate, and primary closeout |
+| `review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md` | Additive condition-symmetric V3 audit; historical Gate 6.3 result unchanged |
 
 ## Archival scientific protocols and closeouts
 

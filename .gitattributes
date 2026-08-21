@@ -1,0 +1,3 @@
+# These forensic CSV fields preserve multiline string values byte-for-byte;
+# trailing spaces inside quoted payloads are scientifically meaningful.
+review/gate6_3_semantic_validity_audit/*.csv -whitespace

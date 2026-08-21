@@ -1,5 +1,11 @@
 # Research OS v1 report
 
+> Integration note (2026-08-21): this file documents the original Research OS
+> v1 commit. The scientific-branch integration subsequently replaced the
+> ignored historical-test dependency with a synthetic fixture, restricted
+> blocked-review transitions, and froze `CORE_QWEN`/`RFM_COMPAT` profiles. See
+> [the integration report](RESEARCH_OS_INTEGRATION_REPORT.md).
+
 ## Scope and outcome
 
 Research OS v1 adds a small, permanent governance and reliability layer for
