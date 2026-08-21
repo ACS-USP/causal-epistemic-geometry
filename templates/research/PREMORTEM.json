@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "contract": "PREMORTEM",
+  "gate_id": "REPLACE_ME",
+  "gate_state": "PREMORTEM",
+  "source_commit": "REPLACE_WITH_FULL_COMMIT",
+  "frozen_protocol": {"path": "REPLACE_ME", "sha256": "REPLACE_ME"},
+  "reviewer": "REPLACE_ME",
+  "date_utc": "YYYY-MM-DD",
+  "questions": {
+    "treatment_can_alter_formatting_and_parser_validity": {"answer": "UNKNOWN", "notes": ""},
+    "missingness_is_post_treatment": {"answer": "UNKNOWN", "notes": ""},
+    "single_mechanical_bad_item_can_abort_phase": {"answer": "UNKNOWN", "notes": ""},
+    "attrition_and_reserve_rules_frozen": {"answer": "UNKNOWN", "notes": ""},
+    "random_null_architecture_duration_energy_matched": {"answer": "UNKNOWN", "notes": ""},
+    "measured_outputs_causally_downstream": {"answer": "UNKNOWN", "notes": ""},
+    "silent_fallback_exists": {"answer": "UNKNOWN", "notes": ""},
+    "seed_and_resume_semantics_explicit": {"answer": "UNKNOWN", "notes": ""},
+    "auxiliary_arms_can_hide_important_result": {"answer": "UNKNOWN", "notes": ""},
+    "condition_can_change_token_count_and_instrument_behavior": {"answer": "UNKNOWN", "notes": ""}
+  },
+  "frozen_invariants": {
+    "hypothesis": "REPLACE_ME",
+    "estimand": "REPLACE_ME",
+    "model_revision": "REPLACE_ME",
+    "benchmark_revision": "REPLACE_ME",
+    "conditions": [],
+    "scientific_thresholds": {},
+    "parser_evaluator": "REPLACE_ME",
+    "attrition_reserve_rule": "REPLACE_ME",
+    "seed_resume_rule": "REPLACE_ME",
+    "random_null_matching": "REPLACE_ME",
+    "holdout_status": "UNTOUCHED",
+    "cost_ceiling": "REPLACE_ME"
+  },
+  "fault_suite_passed": false,
+  "environment_profile": "core_cuda",
+  "unresolved_risks": [],
+  "decision": "BLOCKED_SCIENTIFIC_REVIEW",
+  "incident_reason": "SCIENTIFIC_DESIGN_DECISION_REQUIRED",
+  "principal_researcher_items": []
+}

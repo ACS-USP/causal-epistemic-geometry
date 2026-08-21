@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://causal-epistemic-geometry.local/schemas/closeout-audit-v1.json",
+  "title": "Research Gate Closeout Audit v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "contract", "gate_id", "gate_state", "source_commit", "frozen_protocol", "artifact_manifest", "auditor", "date_utc", "questions", "integrity", "classification", "decision", "frozen_followup_authorized", "principal_researcher_items"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "contract": {"const": "CLOSEOUT_AUDIT"},
+    "gate_id": {"type": "string", "minLength": 1},
+    "gate_state": {"const": "FORENSIC_AUDIT"},
+    "source_commit": {"type": "string", "minLength": 7},
+    "frozen_protocol": {"$ref": "#/$defs/artifact"},
+    "artifact_manifest": {"$ref": "#/$defs/artifact"},
+    "auditor": {"type": "string", "minLength": 1},
+    "date_utc": {"type": "string", "minLength": 8},
+    "questions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code_implemented_frozen_protocol", "condition_dependent_formatting_affected_validity", "missing_or_duplicate_logical_rows", "retry_selection_occurred", "gate_classification_mechanism_mismatch"],
+      "properties": {
+        "code_implemented_frozen_protocol": {"$ref": "#/$defs/answer"},
+        "condition_dependent_formatting_affected_validity": {"$ref": "#/$defs/answer"},
+        "missing_or_duplicate_logical_rows": {"$ref": "#/$defs/answer"},
+        "retry_selection_occurred": {"$ref": "#/$defs/answer"},
+        "gate_classification_mechanism_mismatch": {"$ref": "#/$defs/answer"}
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["original_results_preserved", "offline_amendments_additive", "expected_rows", "observed_rows", "duplicate_keys", "missing_keys", "source_dirty", "holdout_status"]
+    },
+    "classification": {
+      "type": "object",
+      "required": ["stored", "recomputed", "observed_mechanism", "auxiliary_arms_reported_separately", "claim_impact"]
+    },
+    "decision": {"enum": ["READY_TO_CLOSE", "BLOCKED_RECOVERABLE", "BLOCKED_SCIENTIFIC_REVIEW"]},
+    "incident_reason": {"type": ["string", "null"]},
+    "frozen_followup_authorized": {"type": "boolean"},
+    "principal_researcher_items": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "answer": {"type": "object", "additionalProperties": false, "required": ["answer", "notes"], "properties": {"answer": {"enum": ["YES", "NO", "UNKNOWN"]}, "notes": {"type": "string"}}},
+    "artifact": {"type": "object", "additionalProperties": false, "required": ["path", "sha256"], "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "minLength": 1}}}
+  }
+}

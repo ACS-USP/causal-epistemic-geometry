@@ -14,12 +14,15 @@ current instruction source.
 | `docs/METRICS_AND_STATISTICS.md` | Current estimands, seed semantics, and uncertainty |
 | `docs/EXPERIMENT_LADDER.md` | Prospective gated research sequence |
 | `docs/ENGINEERING_POLICY.md` | Reproducibility, engine, security, and artifact policy |
+| `docs/RESEARCH_AUTONOMY_POLICY.md` | Operational autonomy classes and typed future-gate lifecycle |
+| `docs/RESEARCH_AGENT_WORKFLOW.md` | Preferred agent role split and handoff contract |
 | `docs/INSTRUMENT_HISTORY.md` | Current interpretation of V1–V4 evidence |
 | `docs/POSITIVE_CONTROL_PROTOCOL.md` | Prospective published-method replication |
 | `docs/PORTFOLIO_STRATEGY.md` | Hard continuation boundary and parallel-program logic |
 | `docs/REARCHITECTURE_REPORT.md` | 2026-08 offline reset report |
 | `docs/DOCUMENT_INDEX.md` | This classification and navigation page |
 | `docs/SCRIPT_INDEX.md` | Current/historical/wrapper/mergeable script inventory |
+| `docs/RESEARCH_OS_V1_REPORT.md` | Research OS v1 implementation and validation report |
 
 ## Current supporting references
 

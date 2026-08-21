@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://causal-epistemic-geometry.local/schemas/premortem-v1.json",
+  "title": "Research Gate Premortem v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "contract", "gate_id", "gate_state", "source_commit", "frozen_protocol", "reviewer", "date_utc", "questions", "frozen_invariants", "fault_suite_passed", "environment_profile", "unresolved_risks", "decision", "principal_researcher_items"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "contract": {"const": "PREMORTEM"},
+    "gate_id": {"type": "string", "minLength": 1},
+    "gate_state": {"const": "PREMORTEM"},
+    "source_commit": {"type": "string", "minLength": 7},
+    "frozen_protocol": {"$ref": "#/$defs/artifact"},
+    "reviewer": {"type": "string", "minLength": 1},
+    "date_utc": {"type": "string", "minLength": 8},
+    "questions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["treatment_can_alter_formatting_and_parser_validity", "missingness_is_post_treatment", "single_mechanical_bad_item_can_abort_phase", "attrition_and_reserve_rules_frozen", "random_null_architecture_duration_energy_matched", "measured_outputs_causally_downstream", "silent_fallback_exists", "seed_and_resume_semantics_explicit", "auxiliary_arms_can_hide_important_result", "condition_can_change_token_count_and_instrument_behavior"],
+      "properties": {
+        "treatment_can_alter_formatting_and_parser_validity": {"$ref": "#/$defs/answer"},
+        "missingness_is_post_treatment": {"$ref": "#/$defs/answer"},
+        "single_mechanical_bad_item_can_abort_phase": {"$ref": "#/$defs/answer"},
+        "attrition_and_reserve_rules_frozen": {"$ref": "#/$defs/answer"},
+        "random_null_architecture_duration_energy_matched": {"$ref": "#/$defs/answer"},
+        "measured_outputs_causally_downstream": {"$ref": "#/$defs/answer"},
+        "silent_fallback_exists": {"$ref": "#/$defs/answer"},
+        "seed_and_resume_semantics_explicit": {"$ref": "#/$defs/answer"},
+        "auxiliary_arms_can_hide_important_result": {"$ref": "#/$defs/answer"},
+        "condition_can_change_token_count_and_instrument_behavior": {"$ref": "#/$defs/answer"}
+      }
+    },
+    "frozen_invariants": {
+      "type": "object",
+      "required": ["hypothesis", "estimand", "model_revision", "benchmark_revision", "conditions", "scientific_thresholds", "parser_evaluator", "attrition_reserve_rule", "seed_resume_rule", "random_null_matching", "holdout_status", "cost_ceiling"]
+    },
+    "fault_suite_passed": {"type": "boolean"},
+    "environment_profile": {"type": "string", "minLength": 1},
+    "unresolved_risks": {"type": "array", "items": {"type": "string"}},
+    "decision": {"enum": ["READY_FOR_PROSPECTIVE_LOCK", "BLOCKED_RECOVERABLE", "BLOCKED_SCIENTIFIC_REVIEW"]},
+    "incident_reason": {"type": ["string", "null"]},
+    "principal_researcher_items": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "answer": {"type": "object", "additionalProperties": false, "required": ["answer", "notes"], "properties": {"answer": {"enum": ["YES", "NO", "UNKNOWN"]}, "notes": {"type": "string"}}},
+    "artifact": {"type": "object", "additionalProperties": false, "required": ["path", "sha256"], "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "minLength": 1}}}
+  }
+}

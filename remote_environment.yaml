@@ -1,0 +1,77 @@
+schema_version: 1
+evidence:
+  repository_python: pyproject.toml requires Python >=3.11
+  validated_remote: docs/PRE_RUNPOD_HANDOFF.md records Python 3.11.10, torch 2.4.1+cu124, transformers 4.57.6, and CUDA 12.4
+  hf_bounds: pyproject.toml records transformers >=4.45,<5 and accelerate >=0.33
+  xrfm: experiments/specs/gate6_layer_source_rfm_atlas.yaml pins the optional upstream environment and commits
+profiles:
+  core_cuda:
+    purpose: Canonical repository GPU execution environment; no inference is performed by preflight.
+    python: ">=3.11,<3.12"
+    packages:
+      torch:
+        distribution: torch
+        version: "==2.4.1+cu124"
+        required: true
+        evidence_level: exact_validated_remote
+      transformers:
+        distribution: transformers
+        version: "==4.57.6"
+        required: true
+        evidence_level: exact_validated_remote
+      accelerate:
+        distribution: accelerate
+        version: ">=0.33"
+        required: true
+        evidence_level: repository_lower_bound
+      huggingface_hub:
+        distribution: huggingface-hub
+        version: "*"
+        required: true
+        evidence_level: presence_required_version_not_frozen_by_repository_evidence
+    require_cuda: true
+    cuda_runtime: "==12.4"
+    minimum_disk_free_gb: 20
+    hf_cache:
+      required: true
+      canonical_remote_path: /workspace/hf-cache
+    models:
+      Qwen/Qwen3-8B:
+        revision: b968826d9c46dd6066d109eabc6255188de91218
+  xrfm_optional:
+    purpose: Pinned optional upstream xRFM reproduction environment; separate from core runtime.
+    python: "==3.10.15"
+    packages:
+      torch:
+        distribution: torch
+        version: "==2.4.0+cu118"
+        required: true
+      transformers:
+        distribution: transformers
+        version: "==4.47.0"
+        required: true
+      datasets:
+        distribution: datasets
+        version: "==3.1.0"
+        required: true
+      numpy:
+        distribution: numpy
+        version: "==1.26.4"
+        required: true
+      accelerate:
+        distribution: accelerate
+        version: "*"
+        required: false
+      huggingface_hub:
+        distribution: huggingface-hub
+        version: "*"
+        required: true
+    require_cuda: true
+    cuda_runtime: "==11.8"
+    minimum_disk_free_gb: 20
+    hf_cache:
+      required: true
+      canonical_remote_path: /workspace/hf-cache
+    upstream:
+      neural_controllers_commit: 5f655a5f26daeb984dfe6c622b8fe537e1aed966
+      xrfm_commit: 773fae81097ab000e6e7292a295e1d24adacca55

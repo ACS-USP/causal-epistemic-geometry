@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "contract": "CLOSEOUT_AUDIT",
+  "gate_id": "REPLACE_ME",
+  "gate_state": "FORENSIC_AUDIT",
+  "source_commit": "REPLACE_WITH_FULL_COMMIT",
+  "frozen_protocol": {"path": "REPLACE_ME", "sha256": "REPLACE_ME"},
+  "artifact_manifest": {"path": "REPLACE_ME", "sha256": "REPLACE_ME"},
+  "auditor": "REPLACE_ME",
+  "date_utc": "YYYY-MM-DD",
+  "questions": {
+    "code_implemented_frozen_protocol": {"answer": "UNKNOWN", "notes": ""},
+    "condition_dependent_formatting_affected_validity": {"answer": "UNKNOWN", "notes": ""},
+    "missing_or_duplicate_logical_rows": {"answer": "UNKNOWN", "notes": ""},
+    "retry_selection_occurred": {"answer": "UNKNOWN", "notes": ""},
+    "gate_classification_mechanism_mismatch": {"answer": "UNKNOWN", "notes": ""}
+  },
+  "integrity": {
+    "original_results_preserved": false,
+    "offline_amendments_additive": false,
+    "expected_rows": 0,
+    "observed_rows": 0,
+    "duplicate_keys": [],
+    "missing_keys": [],
+    "source_dirty": null,
+    "holdout_status": "UNTOUCHED"
+  },
+  "classification": {
+    "stored": "REPLACE_ME",
+    "recomputed": "REPLACE_ME",
+    "observed_mechanism": "REPLACE_ME",
+    "auxiliary_arms_reported_separately": false,
+    "claim_impact": "PRINCIPAL_RESEARCHER_REVIEW"
+  },
+  "decision": "BLOCKED_SCIENTIFIC_REVIEW",
+  "incident_reason": "SCIENTIFIC_DESIGN_DECISION_REQUIRED",
+  "frozen_followup_authorized": false,
+  "principal_researcher_items": []
+}

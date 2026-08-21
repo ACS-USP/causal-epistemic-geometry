@@ -1,7 +1,7 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python)
 RUFF ?= $(if $(wildcard .venv/bin/ruff),.venv/bin/ruff,ruff)
 
-.PHONY: test lint smoke doctor preflight preflight-v1-1 preflight-v1-2 tiny-smoke predeploy storage-check q1-v3-gate q1-v3-design q1-v3-engine-benchmark state-check docs-check registry-check metrics-check scientific-audit
+.PHONY: test lint smoke doctor preflight remote-preflight preflight-v1-1 preflight-v1-2 tiny-smoke predeploy storage-check q1-v3-gate q1-v3-design q1-v3-engine-benchmark state-check docs-check registry-check metrics-check research-os-check scientific-audit
 
 test:
 	$(PYTHON) -m pytest -q
@@ -17,6 +17,9 @@ doctor:
 
 preflight:
 	$(PYTHON) -m epistemic_geometry.cli preflight configs/mock_smoke.yaml
+
+remote-preflight:
+	$(PYTHON) scripts/remote_preflight.py --spec remote_environment.yaml
 
 preflight-v1-1:
 	$(PYTHON) -m epistemic_geometry.cli preflight-q1-v1-1 configs/q1_v1_1_qwen3_8b.yaml
@@ -54,4 +57,7 @@ registry-check:
 metrics-check:
 	$(PYTHON) scripts/validate_scientific_metrics.py
 
-scientific-audit: state-check docs-check registry-check metrics-check
+research-os-check:
+	$(PYTHON) scripts/validate_research_os.py
+
+scientific-audit: state-check docs-check registry-check metrics-check research-os-check

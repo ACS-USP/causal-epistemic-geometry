@@ -1,0 +1,107 @@
+schema_version: 1
+principle:
+  scientific_conservatism: HIGH
+  operational_autonomy: HIGH
+  summary: High scientific conservatism plus high operational autonomy.
+action_classes:
+  A:
+    name: AUTONOMOUS_ENGINEERING_RECOVERY
+    timing: any
+    allowed_sequence: [diagnose, repair, test, document, continue]
+    invariant: No scientific semantics change.
+    examples:
+      - SSH or proxy recovery
+      - RunPod restart or migration
+      - cache or path repair
+      - missing dependencies
+      - journal recovery
+      - Git transport
+      - transient infrastructure
+      - deterministic code bug
+      - crash-safe resume
+  B:
+    name: PROSPECTIVE_INSTRUMENT_AMENDMENT
+    timing: before affected scientific outcomes are observed
+    requirements:
+      - no outcome-based selection
+      - hypothesis unchanged
+      - estimand unchanged
+      - model and benchmark unchanged
+      - scientific thresholds unchanged
+      - amendment locked before new affected outcomes
+    examples:
+      - mechanical attrition rule
+      - deterministic reserve handling
+      - parser-contract implementation bug
+      - clearly incorrect code/spec mismatch
+  C:
+    name: OFFLINE_POST_OUTCOME_FORENSIC_REPAIR
+    timing: after outcomes
+    allowed:
+      - preserve original result
+      - diagnose parser, measurement, or estimator problems
+      - condition-symmetric offline reanalysis
+      - implement and test a corrected instrument
+      - prepare a prospective amendment
+    forbidden:
+      - collect additional model outputs unless already authorized by a frozen decision tree
+  D:
+    name: PRINCIPAL_RESEARCHER_REQUIRED
+    timing: always requires explicit principal review
+    examples:
+      - new scientific hypothesis or direction
+      - outcome-dependent layer or alpha choice
+      - model or benchmark change
+      - item replacement based on outcomes
+      - new scientific condition
+      - threshold modification
+      - Q2 or holdout access
+      - claim change
+      - material budget expansion
+states:
+  - PREPARE
+  - PREMORTEM
+  - PROSPECTIVE_LOCK
+  - ENGINEERING
+  - COLLECTION
+  - OFFLINE_ANALYSIS
+  - FORENSIC_AUDIT
+  - CLOSED
+  - BLOCKED_RECOVERABLE
+  - BLOCKED_SCIENTIFIC_REVIEW
+transitions:
+  PREPARE: [PREMORTEM, BLOCKED_RECOVERABLE, BLOCKED_SCIENTIFIC_REVIEW]
+  PREMORTEM: [PROSPECTIVE_LOCK, BLOCKED_RECOVERABLE, BLOCKED_SCIENTIFIC_REVIEW]
+  PROSPECTIVE_LOCK: [ENGINEERING, BLOCKED_RECOVERABLE, BLOCKED_SCIENTIFIC_REVIEW]
+  ENGINEERING: [COLLECTION, OFFLINE_ANALYSIS, BLOCKED_RECOVERABLE, BLOCKED_SCIENTIFIC_REVIEW]
+  COLLECTION: [OFFLINE_ANALYSIS, BLOCKED_RECOVERABLE, BLOCKED_SCIENTIFIC_REVIEW]
+  OFFLINE_ANALYSIS: [FORENSIC_AUDIT, CLOSED, BLOCKED_RECOVERABLE, BLOCKED_SCIENTIFIC_REVIEW]
+  FORENSIC_AUDIT: [CLOSED, BLOCKED_RECOVERABLE, BLOCKED_SCIENTIFIC_REVIEW]
+  BLOCKED_RECOVERABLE:
+    - PREPARE
+    - PREMORTEM
+    - PROSPECTIVE_LOCK
+    - ENGINEERING
+    - COLLECTION
+    - OFFLINE_ANALYSIS
+    - FORENSIC_AUDIT
+    - BLOCKED_SCIENTIFIC_REVIEW
+  BLOCKED_SCIENTIFIC_REVIEW: [PROSPECTIVE_LOCK, OFFLINE_ANALYSIS, FORENSIC_AUDIT, CLOSED]
+  CLOSED: []
+incident_reasons:
+  INFRASTRUCTURE_RECOVERABLE: {pre_outcome_class: A, post_outcome_class: A}
+  ENVIRONMENT_RECOVERABLE: {pre_outcome_class: A, post_outcome_class: A}
+  JOURNAL_RESUME: {pre_outcome_class: A, post_outcome_class: A}
+  MECHANICAL_ATTRITION: {pre_outcome_class: B, post_outcome_class: C}
+  INSTRUMENTATION_BUG: {pre_outcome_class: B, post_outcome_class: C}
+  SPEC_IMPLEMENTATION_MISMATCH: {pre_outcome_class: B, post_outcome_class: C}
+  MEASUREMENT_INTEGRITY_CONCERN: {pre_outcome_class: B, post_outcome_class: C}
+  SCIENTIFIC_GATE_FAIL: {pre_outcome_class: D, post_outcome_class: D}
+  SCIENTIFIC_DESIGN_DECISION_REQUIRED: {pre_outcome_class: D, post_outcome_class: D}
+  HOLDOUT_FIREWALL: {pre_outcome_class: D, post_outcome_class: D}
+firewalls:
+  historical_states_immutable: true
+  historical_results_immutable: true
+  holdout_requires_principal_researcher: true
+  q2_requires_principal_researcher: true
+  outcome_dependent_selection_forbidden: true

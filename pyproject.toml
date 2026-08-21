@@ -17,6 +17,7 @@ dependencies = [
   "typer>=0.9",
   "rich>=13.0",
   "matplotlib>=3.7",
+  "packaging>=23",
 ]
 
 [project.optional-dependencies]
@@ -36,6 +37,7 @@ hf = [
 
 [project.scripts]
 ceg = "epistemic_geometry.cli:app"
+remote-preflight = "epistemic_geometry.research.preflight:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
