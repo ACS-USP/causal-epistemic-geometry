@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "incidents": [
+    {
+      "incident_id": "GATE7-CLASS-A-001",
+      "class": "A",
+      "lifecycle": "PREPARE",
+      "affected_outputs_existed": false,
+      "symptom": "Precision projection expected a non-existent audit_set column in the accepted Gate-6.3 V3 row artifact.",
+      "root_cause": "The accepted artifact identifies primary rows with phase=GATE6_3_PRIMARY_EVALUATION.",
+      "repair": "Filter the preserved row artifact by its canonical phase field and require exactly 840 primary rows.",
+      "scientific_design_changed": false,
+      "model_outputs_collected": false,
+      "status": "RESOLVED"
+    }
+  ]
+}

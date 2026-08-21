@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import numpy as np
+from scripts.prepare_gate7_fresh_l27_replication import _gate63_arrays
 
 from epistemic_geometry.experiments.gate7 import (
     CONDITIONS,
@@ -124,3 +125,10 @@ def test_precision_projection_is_model_free_and_deterministic() -> None:
     second = pseudo_replication_projection(baseline, conditions, target_n=8, resamples=50, seed=11)
     assert first == second
     assert first["target_item_count"] == 8
+
+
+def test_precision_source_uses_preserved_primary_phase() -> None:
+    baseline, conditions = _gate63_arrays()
+    assert baseline.shape == (60, 2)
+    assert conditions[MEANINGFUL].shape == (60, 2)
+    assert all(values.shape == (60, 2) for values in conditions.values())

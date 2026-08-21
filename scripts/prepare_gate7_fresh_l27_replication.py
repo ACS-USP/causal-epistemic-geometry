@@ -105,7 +105,11 @@ def write_exclusion(output: Path) -> dict[str, Any]:
 def _gate63_arrays() -> tuple[np.ndarray, dict[str, np.ndarray]]:
     csv.field_size_limit(sys.maxsize)
     with V3_ROWS.open(encoding="utf-8", newline="") as handle:
-        rows = [row for row in csv.DictReader(handle) if row["audit_set"] == "PRIMARY"]
+        rows = [
+            row for row in csv.DictReader(handle) if row["phase"] == "GATE6_3_PRIMARY_EVALUATION"
+        ]
+    if len(rows) != 840:
+        raise RuntimeError(f"expected 840 preserved Gate-6.3 primary rows; found {len(rows)}")
     item_ids = sorted({row["item_id"] for row in rows})
     by_key = {
         (row["item_id"], row["condition"], int(row["rollout_index"])): int(
