@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 7 is accepted as a clean development replication of specific L27 controller movement with a validity cost. Gate 8 is prospectively locked to calibrate the minimum safe effective dose on 50 fresh CRUXEval items using matched coupling, four new random controls, and external-semantic-v3. It is calibration only: G/C/D evaluation and Gate 9 are not authorized.
+Gate 8 completed all 2,200 calibration trajectories and passed an independent forensic audit. Under the frozen lowest-eligible rule, D75 (eta 9.637427952852196) was selected: commitment validity and semantic evaluability were 1.000, semantic change Q was 0.430 versus random mean/max 0.2025/0.220, and CAREFUL token-regime recovery was 0.346. This is calibration only, not independent G/C/D replication evidence.
 
-**Next authorized action:** Execute only the frozen Gate-8 2,200-row dose-calibration schedule, stop the A40, analyze and audit offline, draft but do not execute the next protocol, then return to principal-researcher review.
+**Next authorized action:** Principal-researcher review of the audited Gate-8 D75 selection and the unexecuted Gate-9 fresh selected-dose evaluation draft. No further model inference is authorized.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

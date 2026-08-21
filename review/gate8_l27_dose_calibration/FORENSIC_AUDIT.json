@@ -1,0 +1,22 @@
+{
+  "G_C_D_used_as_primary_evidence": false,
+  "actual_rows": 2200,
+  "classification": "GATE8_FORENSIC_CLEAN",
+  "expected_rows": 2200,
+  "logical_keys_unique": true,
+  "metric_max_abs_difference": 0.0,
+  "parser_condition_symmetric_reparse": true,
+  "parser_mismatch_count": 0,
+  "post_treatment_filtering": false,
+  "provenance": {
+    "manifest_hash_exact": true,
+    "matched_seed_formula_exact": true,
+    "model_revision_exact": true,
+    "parser_version_exact": true,
+    "protocol_binding_exact": true,
+    "schedule_hash_exact": true,
+    "source_commit_exact": true
+  },
+  "schedule_complete": true,
+  "selection_agreement": true
+}

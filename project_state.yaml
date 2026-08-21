@@ -19,32 +19,33 @@ project:
     utility?
 
 current:
-  workstream: GATE8_L27_DOSE_CALIBRATION
-  lifecycle: PROSPECTIVE_LOCK
+  workstream: GATE8_L27_DOSE_CALIBRATION_COMPLETE
+  lifecycle: CLOSED
   stage: DEVELOPMENT_CALIBRATION
-  source_commit: PENDING_LOCK_COMMIT_BINDING
+  source_commit: 17e7ae043c60df211ebce6c4d5893d01f2fd5816
   summary: >-
-    Gate 7 is accepted as a clean development replication of specific L27
-    controller movement with a validity cost. Gate 8 is prospectively locked to
-    calibrate the minimum safe effective dose on 50 fresh CRUXEval items using
-    matched coupling, four new random controls, and external-semantic-v3. It is
-    calibration only: G/C/D evaluation and Gate 9 are not authorized.
+    Gate 8 completed all 2,200 calibration trajectories and passed an
+    independent forensic audit. Under the frozen lowest-eligible rule, D75
+    (eta 9.637427952852196) was selected: commitment validity and semantic
+    evaluability were 1.000, semantic change Q was 0.430 versus random mean/max
+    0.2025/0.220, and CAREFUL token-regime recovery was 0.346. This is
+    calibration only, not independent G/C/D replication evidence.
   next_authorized_action: >-
-    Execute only the frozen Gate-8 2,200-row dose-calibration schedule, stop the
-    A40, analyze and audit offline, draft but do not execute the next protocol,
-    then return to principal-researcher review.
+    Principal-researcher review of the audited Gate-8 D75 selection and the
+    unexecuted Gate-9 fresh selected-dose evaluation draft. No further model
+    inference is authorized.
   runpod: EXITED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE8_CALIBRATION_LOCKED_GATE7_REPLICATED_MOVEMENT_WITH_VALIDITY_LOSS
+  steering: GATE8_CALIBRATION_SELECTED_D75_GATE9_NOT_RUN
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE8_CALIBRATION_ONLY
+  current_task: PRINCIPAL_RESEARCHER_REVIEW
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -151,13 +152,14 @@ instrument_history:
       therefore failed the frozen relative guard. The independent audit was
       clean. This is a destructive development result, not confirmation.
   - id: GATE8_L27_DOSE_CALIBRATION
-    status: PROSPECTIVE_LOCK
+    status: COMPLETE_DEVELOPMENT_CALIBRATION
     conclusion: >-
-      Authorized calibration-only experiment on 50 fresh CRUXEval items. The
-      exact frozen L27 plus controller is evaluated at D25/D50/D75/D100 against
-      four new matched random directions; the lowest safe specific lower dose is
-      selected prospectively. No Gate-9 evaluation, G/C/D evidence, Q2,
-      character count, or holdout access is authorized.
+      The complete 2,200-row matched calibration selected D75 as the lowest
+      eligible lower dose. D75 preserved 100% commitment validity and semantic
+      evaluability, exceeded the dose-matched random bank on semantic change,
+      and recovered 34.6% of the CAREFUL token increase. The forensic audit was
+      clean. Gate 9, G/C/D evaluation, Q2, character count, and holdout access
+      were not run.
 
 workflow_regimes:
   EXPLORATION:

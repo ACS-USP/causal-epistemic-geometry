@@ -44,6 +44,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE7_FRESH_SINGLE_L27_REPLICATION",
         "GATE7_FRESH_SINGLE_L27_REPLICATION_COMPLETE",
         "GATE8_L27_DOSE_CALIBRATION",
+        "GATE8_L27_DOSE_CALIBRATION_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -66,6 +67,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_DURATION_BELOW_MOVEMENT",
         "GATE7_DEVELOPMENT_DESTRUCTIVE_SPECIFIC_MOVEMENT_WITH_VALIDITY_LOSS",
         "GATE8_CALIBRATION_LOCKED_GATE7_REPLICATED_MOVEMENT_WITH_VALIDITY_LOSS",
+        "GATE8_CALIBRATION_SELECTED_D75_GATE9_NOT_RUN",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
