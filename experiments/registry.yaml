@@ -652,3 +652,52 @@ experiments:
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review of D75 and the unexecuted Gate-9 fresh selected-dose evaluation draft.
+
+  - id: GATE9_SELECTED_D75_EVALUATION
+    version: GATE-9
+    stage: DEVELOPMENT_SELECTED_DOSE_EVALUATION
+    question: >-
+      Does the exact fixed L27 controller at the prospectively selected D75
+      dose produce safe, random-null-specific semantic error-profile movement
+      on a completely fresh sample under independent rollouts?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3 frozen before outputs
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
+    status: PROSPECTIVE_LOCK
+    outcome: PENDING_COLLECTION
+    scientific_interpretation: >-
+      Fresh DEVELOPMENT selected-dose evaluation only. D75 was selected in
+      Gate 8 without accuracy or G/C/D optimization. This is not controller,
+      dose, layer, benchmark, Q2, or holdout search.
+    source_commit: PENDING_LOCK_COMMIT_BINDING
+    artifact: review/gate9_selected_d75_evaluation/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE8_L27_DOSE_CALIBRATION
+    lock:
+      protocol: review/gate9_selected_d75_evaluation/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      parser_version: external-semantic-v3
+      items: 100
+      historical_excluded_ids: 643
+      remaining_fresh_ids: 57
+      conditions: 7
+      rollouts_per_item_condition: 2
+      seed_regime: INDEPENDENT_PRIMARY
+      logical_rows: 1400
+      random_controls: 4
+      controller: paired-mean L27 plus
+      selected_dose: D75
+      selected_eta: 9.637427952852196
+      target_cost_usd: 1.75
+      hard_stop_cost_usd: 3.50
+      gpu_authorized: true
+    execution:
+      engineering_gate: PENDING
+      collection: NOT_RUN
+      trajectories: 0
+      runpod_status: EXITED
+      gate10: NOT_RUN
+      q2: NOT_RUN
+      character_count: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Execute only the frozen Gate-9 schedule, then stop for principal review.

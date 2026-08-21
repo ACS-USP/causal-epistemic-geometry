@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 8 completed all 2,200 calibration trajectories and passed an independent forensic audit. Under the frozen lowest-eligible rule, D75 (eta 9.637427952852196) was selected: commitment validity and semantic evaluability were 1.000, semantic change Q was 0.430 versus random mean/max 0.2025/0.220, and CAREFUL token-regime recovery was 0.346. This is calibration only, not independent G/C/D replication evidence.
+Gate 8 is accepted as a clean prospective calibration that selected D75 without optimizing accuracy or G/C/D. Gate 9 is prospectively locked to evaluate that exact L27 controller and eta on 100 fresh CRUXEval items, against four new architecture-matched random controls and a textual CAREFUL reference, using two independent rollouts and external-semantic-v3.
 
-**Next authorized action:** Principal-researcher review of the audited Gate-8 D75 selection and the unexecuted Gate-9 fresh selected-dose evaluation draft. No further model inference is authorized.
+**Next authorized action:** Execute only the frozen 1,400-row Gate-9 selected-D75 evaluation, stop the A40, analyze and audit offline, draft but do not execute Gate 10, then return to principal-researcher review.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

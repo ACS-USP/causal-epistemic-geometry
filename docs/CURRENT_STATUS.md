@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 8 completed all 2,200 calibration trajectories and passed an independent forensic audit. Under the frozen lowest-eligible rule, D75 (eta 9.637427952852196) was selected: commitment validity and semantic evaluability were 1.000, semantic change Q was 0.430 versus random mean/max 0.2025/0.220, and CAREFUL token-regime recovery was 0.346. This is calibration only, not independent G/C/D replication evidence.
+Gate 8 is accepted as a clean prospective calibration that selected D75 without optimizing accuracy or G/C/D. Gate 9 is prospectively locked to evaluate that exact L27 controller and eta on 100 fresh CRUXEval items, against four new architecture-matched random controls and a textual CAREFUL reference, using two independent rollouts and external-semantic-v3.
 
-- Workstream: `GATE8_L27_DOSE_CALIBRATION_COMPLETE`
+- Workstream: `GATE9_SELECTED_D75_EVALUATION`
 - RunPod: `EXITED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal-researcher review of the audited Gate-8 D75 selection and the unexecuted Gate-9 fresh selected-dose evaluation draft. No further model inference is authorized.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute only the frozen 1,400-row Gate-9 selected-D75 evaluation, stop the A40, analyze and audit offline, draft but do not execute Gate 10, then return to principal-researcher review.
 
 ## Scientific program
 
@@ -43,16 +43,17 @@ Gate 8 completed all 2,200 calibration trajectories and passed an independent fo
 | `GATE6_3_SEMANTIC_VALIDITY_AUDIT` | `COMPLETE_OFFLINE_DIAGNOSTIC_STRONG_SIGNAL` | The immutable 920 Gate 6.3 outputs were reanalyzed condition-symmetrically with external-semantic-v3 after parser rules were frozen on a masked corpus. Controller commitment validity/evaluability rose to 0.9750 and the diagnostic G/C/D signal exceeded all four random controls. The additive classification is GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL; the historical Gate 6.3 classification remains destructive and no new inference occurred. |
 | `GATE7_FRESH_SINGLE_L27_REPLICATION` | `COMPLETE_DEVELOPMENT_DESTRUCTIVE` | On 120 fresh CRUXEval items, the frozen L27 controller produced large, random-null-specific G/C/D and a 14.58-point accuracy gain, but reduced commitment validity and semantic evaluability from 99.17% to 90.00% and therefore failed the frozen relative guard. The independent audit was clean. This is a destructive development result, not confirmation. |
 | `GATE8_L27_DOSE_CALIBRATION` | `COMPLETE_DEVELOPMENT_CALIBRATION` | The complete 2,200-row matched calibration selected D75 as the lowest eligible lower dose. D75 preserved 100% commitment validity and semantic evaluability, exceeded the dose-matched random bank on semantic change, and recovered 34.6% of the CAREFUL token increase. The forensic audit was clean. Gate 9, G/C/D evaluation, Q2, character count, and holdout access were not run. |
+| `GATE9_SELECTED_D75_EVALUATION` | `PROSPECTIVE_LOCK` | The exact Gate-8-selected D75 controller is locked for one independent 100-item evaluation with four new matched random controls and two independent rollouts. No Gate-9 model output exists at lock time; Q2, character count, Gate 10, and confirmatory holdout remain closed. |
 
 ## Scientific firewall
 
-- `steering`: `GATE8_CALIBRATION_SELECTED_D75_GATE9_NOT_RUN`
+- `steering`: `GATE9_SELECTED_D75_LOCKED_NOT_YET_RUN`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `PRINCIPAL_RESEARCHER_REVIEW`
+- `current_task`: `GATE9_SELECTED_D75_EVALUATION`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

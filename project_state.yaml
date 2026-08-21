@@ -19,33 +19,32 @@ project:
     utility?
 
 current:
-  workstream: GATE8_L27_DOSE_CALIBRATION_COMPLETE
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_CALIBRATION
-  source_commit: 17e7ae043c60df211ebce6c4d5893d01f2fd5816
+  workstream: GATE9_SELECTED_D75_EVALUATION
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_SELECTED_DOSE_EVALUATION
+  source_commit: PENDING_LOCK_COMMIT_BINDING
   summary: >-
-    Gate 8 completed all 2,200 calibration trajectories and passed an
-    independent forensic audit. Under the frozen lowest-eligible rule, D75
-    (eta 9.637427952852196) was selected: commitment validity and semantic
-    evaluability were 1.000, semantic change Q was 0.430 versus random mean/max
-    0.2025/0.220, and CAREFUL token-regime recovery was 0.346. This is
-    calibration only, not independent G/C/D replication evidence.
+    Gate 8 is accepted as a clean prospective calibration that selected D75
+    without optimizing accuracy or G/C/D. Gate 9 is prospectively locked to
+    evaluate that exact L27 controller and eta on 100 fresh CRUXEval items,
+    against four new architecture-matched random controls and a textual CAREFUL
+    reference, using two independent rollouts and external-semantic-v3.
   next_authorized_action: >-
-    Principal-researcher review of the audited Gate-8 D75 selection and the
-    unexecuted Gate-9 fresh selected-dose evaluation draft. No further model
-    inference is authorized.
+    Execute only the frozen 1,400-row Gate-9 selected-D75 evaluation, stop the
+    A40, analyze and audit offline, draft but do not execute Gate 10, then
+    return to principal-researcher review.
   runpod: EXITED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
-  steering: GATE8_CALIBRATION_SELECTED_D75_GATE9_NOT_RUN
+  steering: GATE9_SELECTED_D75_LOCKED_NOT_YET_RUN
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: PRINCIPAL_RESEARCHER_REVIEW
+  current_task: GATE9_SELECTED_D75_EVALUATION
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -160,6 +159,13 @@ instrument_history:
       and recovered 34.6% of the CAREFUL token increase. The forensic audit was
       clean. Gate 9, G/C/D evaluation, Q2, character count, and holdout access
       were not run.
+  - id: GATE9_SELECTED_D75_EVALUATION
+    status: PROSPECTIVE_LOCK
+    conclusion: >-
+      The exact Gate-8-selected D75 controller is locked for one independent
+      100-item evaluation with four new matched random controls and two
+      independent rollouts. No Gate-9 model output exists at lock time; Q2,
+      character count, Gate 10, and confirmatory holdout remain closed.
 
 workflow_regimes:
   EXPLORATION:

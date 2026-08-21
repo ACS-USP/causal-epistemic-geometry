@@ -1,0 +1,2026 @@
+{
+  "actual_n": 100,
+  "allocation": "GATE9_EVALUATION",
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "eligible_before_allocation": 157,
+  "experiment_id": "GATE9_SELECTED_D75_EVALUATION",
+  "historical_excluded_count": 643,
+  "historical_exclusion_digest": "8f888c21e1c10fae6da7131e4df110891ccf2f9cee853ec07927db091308d8e5",
+  "items": [
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "73ae01182393127b0b55559f9bae9d4d608c1412118fa3cdf35218f67e3ef0bf",
+      "item_id": "sample_75",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_75",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, elem):\n    ind = array.index(elem)\n    return ind * 2 + array[-ind - 1] * 3\n```\n\nInput: [-1, 2, 1, -8, 2], 2\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "89b285c3c09c44d4d1ff4a9ed8be1afbe084864be87d41bd6127ed7247ecc7eb",
+      "reference_answer": "-22",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "99c03b89187b853869c21019e469a29cf11ea766336bc91561a20cd394ad6b43",
+      "item_id": "sample_391",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_391",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(students):\n    seatlist = students\n    seatlist.reverse()\n    cnt = 0\n    for cnt in range(len(seatlist)):\n        cnt += 2\n        seatlist[cnt - 1:cnt] = ['+']\n    seatlist.append('+')\n    return seatlist\n```\n\nInput: ['r', '9']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4efc9ee6cce609b0fe23df2b41a7c2e83a9351cb4b96190ad3389bc8e44f157d",
+      "reference_answer": "['9', '+', '+', '+']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "841dad21c0257d7ea96810a9613f58d1378c17deed6acb5f565bb86a62826782",
+      "item_id": "sample_234",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_234",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, char):\n    position = len(text)\n    if char in text:\n        position = text.index(char)\n        if position > 1:\n            position = (position + 1) % len(text)\n    return position\n```\n\nInput: 'wduhzxlfk', 'w'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "e5ebd69c941b7203a8035a5beab5b281776a174e93b772080398fd3b724e7df1",
+      "reference_answer": "0",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "240593576f2b19ceabdaa71a8e749959853c6c7dc357e3d529ffb61f203565f3",
+      "item_id": "sample_61",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_61",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    texts = text.split()\n    if texts:\n        xtexts = [t for t in texts if t.isascii() and t not in ('nada', '0')]\n        return max(xtexts, key=len) if xtexts else 'nada'\n    return 'nada'\n```\n\nInput: \"\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "66ba61f24ddbfb807cec0db8216d8fedef3e23b24f5cb9605cf2e4f0f88b556a",
+      "reference_answer": "'nada'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "336d57bfb7a1b84aa648738ba062de57df31eee59f0d9c14ee0219f55e176cb5",
+      "item_id": "sample_452",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_452",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    counter = 0\n    for char in text:\n        if char.isalpha():\n            counter += 1\n    return counter\n```\n\nInput: 'l000*',\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5bba818c33e60300590168c2e7e7d55026e3e55521687ae3f27eb2712f4be310",
+      "reference_answer": "1",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9b8b6c41f73eb3e8a544c3d5b4f1d0f21ae3ce6a99bcb5c5869c4c1f22a2b708",
+      "item_id": "sample_122",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_122",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(string):\n    if string[:4] != 'Nuva':\n        return 'no'\n    else:\n        return string.rstrip()\n```\n\nInput: 'Nuva?dlfuyjys'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "755291a492ba075ae188fd4fd06d658299156950bdcd1e22269c3dcc3cdce865",
+      "reference_answer": "'Nuva?dlfuyjys'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "d0bd37a05bc992cee8e9320f14ccd36462eee0c6abcf345406bb5b2833ae7009",
+      "item_id": "sample_410",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_410",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    a = 0\n    for i in range(len(nums)):\n        nums.insert(i, nums[a])\n        a += 1\n    return nums\n```\n\nInput: [1, 3, -1, 1, -2, 6]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f923b9612bff4829a65f0facd9ab0624a622b851bbe88799f3a2a4faed5d1a2d",
+      "reference_answer": "[1, 1, 1, 1, 1, 1, 1, 3, -1, 1, -2, 6]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "3a04d7dcbb63ac53e11efb31563883f9b8624aaacc343e042c7ae0a68bdbfa99",
+      "item_id": "sample_166",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_166",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(graph):\n    new_graph = {}\n    for key, value in graph.items():\n        new_graph[key] = {}\n        for subkey in value:\n            new_graph[key][subkey] = ''\n    return new_graph\n```\n\nInput: {}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "cd6db0f8085d623adb45b3b1dbf01244c83f31c04032075da1a4bc79a550bf02",
+      "reference_answer": "{}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "cbf4049b4bed47ab3694910bb7df1d6119b2b8353478e7d1cec65d08915afa82",
+      "item_id": "sample_399",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_399",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, old, new):\n    if len(old) > 3:\n        return text\n    if old in text and ' ' not in text:\n        return text.replace(old, new*len(old))\n    while old in text:\n        text = text.replace(old, new)\n    return text\n```\n\nInput: 'avacado', 'va', '-'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "030b0d4730331c88a23d5ab7bebfdebdc057f0f3894758d78e79c2c6a7117e10",
+      "reference_answer": "'a--cado'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "10aad4caafb86813c8c19f6279931c1fdd0cb6da5fb9d9a091b4e36392add63f",
+      "item_id": "sample_494",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_494",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(num, l):\n    t = \"\"\n    while l > len(num):\n        t += '0'\n        l -= 1\n    return t + num\n```\n\nInput: \"1\", 3\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "46bbcd9a6aa43a461cd20effd0cd4405123caf8b8e2777404ccb941f3c3456e3",
+      "reference_answer": "'001'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "6b79eca7b577edfc2a7ddbfaa050a5b253214e621a7a259a7469b9e20bb818f9",
+      "item_id": "sample_104",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_104",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    dic = dict()\n    for char in text:\n        dic[char] = dic.get(char, 0) + 1\n    for key in dic:\n        if dic[key] > 1:\n            dic[key] = 1\n    return dic\n```\n\nInput: \"a\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "836c07a637aa26b6b2a987fd79df01f798dc57b108a0c3e7274ff2bdf7cbbbc9",
+      "reference_answer": "{'a': 1}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "29658ca30579a95caa747687db76827ace488b96e907bff47083684e1a843664",
+      "item_id": "sample_442",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_442",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(lst):\n    res = []\n    for i in range(len(lst)):\n        if lst[i] % 2 == 0:\n            res.append(lst[i])\n\n    return lst.copy()\n```\n\nInput: [1, 2, 3, 4]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "390b4ba20383e1fe88d73414890d046d74cd2b90d380fffe5fcc4588f5c6303f",
+      "reference_answer": "[1, 2, 3, 4]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "2d1aab4e884cac36e05af5080122760431af12e2ab13d67f476e3b34727ac3fc",
+      "item_id": "sample_485",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_485",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(tokens):\n    tokens = tokens.split()\n    if len(tokens) == 2:\n        tokens = list(reversed(tokens))\n    result = ' '.join([tokens[0].ljust(5), tokens[1].ljust(5)])\n    return result\n```\n\nInput: 'gsd avdropj'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "aa70c854035a9c3e021f3bbb5080e6c2c4d6db2ad3fb29ce75fa8901276cab0f",
+      "reference_answer": "'avdropj gsd  '",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "8f15a5f285ef495191a178e412f39715d86408d22b2289f1876f19732759f942",
+      "item_id": "sample_262",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_262",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    count = len(nums)\n    score = {0: \"F\", 1: \"E\", 2: \"D\", 3: \"C\", 4: \"B\", 5: \"A\", 6: \"\"}\n    result = []\n    for i in range(count):\n        result.append(score.get(nums[i]))\n    return ''.join(result)\n```\n\nInput: [4, 5]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "04577fa28017152596ed5233713a8697fcd8da947324efce406712b9b375a18a",
+      "reference_answer": "'BA'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "0ac083a9c97b8d15c3c96f505e79244fa41aa9a1af1c7318b7d6834bbbcef825",
+      "item_id": "sample_84",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_84",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    arr = text.split()\n    result = []\n    for item in arr:\n        if item.endswith('day'):\n            item += 'y'\n        else:\n            item += 'day'\n        result.append(item)\n    return ' '.join(result)\n```\n\nInput: \"nwv mef ofme bdryl\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5110ef9235504820b804e9ca0796288d23565510e4d3e698a36d0ce60f45922b",
+      "reference_answer": "'nwvday mefday ofmeday bdrylday'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "6f7b4c2c6980da84c514111a07d449584976dbe675743cbc060124668b11de1d",
+      "item_id": "sample_12",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_12",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s, x):\n    count = 0\n    while s[:len(x)] == x and count < len(s)-len(x):\n        s = s[len(x):]\n        count += len(x)\n    return s\n```\n\nInput: 'If you want to live a happy life! Daniel', 'Daniel'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a77293b9189c829cb1c1d98c2121306c8738ceae7d134e0774283b297935e9f7",
+      "reference_answer": "'If you want to live a happy life! Daniel'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "a9762e4bdf71881ce4281cc076280b5d2ddf0471a606e7f7f131429bb1b5621a",
+      "item_id": "sample_651",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_651",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, letter):\n    if letter.islower(): letter = letter.upper()\n    text = ''.join([letter if char == letter.lower() else char for char in text])\n    return text.capitalize()\n```\n\nInput: 'E wrestled evil until upperfeat', 'e'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a7828b6ad27a96599409a4f37f21cd739cced95e4c53fd1603e4c3e65a7d0245",
+      "reference_answer": "'E wrestled evil until upperfeat'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "3a716337557e404b89e8f78ad666efee68af9cc265c081aafecf1020e2e5aee7",
+      "item_id": "sample_679",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_679",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    if text == '':\n        return False\n    first_char = text[0]\n    if text[0].isdigit():\n        return False\n    for last_char in text:\n        if (last_char != '_') and not last_char.isidentifier():\n            return False\n    return True\n```\n\nInput: 'meet'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a11566a9a1715dc643a70e9113ebeb840aa61258f940d72146557b1c143b14b1",
+      "reference_answer": "True",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "834e4d2c6d467decc07697725f38d1a129434260ffc40eaa0a7cbb6ffd0d6419",
+      "item_id": "sample_224",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_224",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, value):\n    array.reverse()\n    array.pop()\n    odd = []\n    while len(array) > 0:\n        tmp = {}\n        tmp[array.pop()] = value\n        odd.append(tmp)\n    result = {}\n    while len(odd) > 0:\n        result.update(odd.pop())\n    return result\n```\n\nInput: ['23'], 123\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "848342ed9985ca9dea8751470f590096a62d20de311824867f63420a312c9f2d",
+      "reference_answer": "{}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "f21e04cad38eece9cca2fb7097c89da06d46e59439831ad18b56567257392d83",
+      "item_id": "sample_492",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_492",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, value):\n    ls = list(text)\n    if (ls.count(value)) % 2 == 0:\n        while value in ls:\n            ls.remove(value)\n    else:\n        ls.clear()\n    return ''.join(ls)\n```\n\nInput: 'abbkebaniuwurzvr', 'm'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "028f521cff43ec7b12be92c49a12318c028aa17942d7c4f4b930587c16dc0b5e",
+      "reference_answer": "'abbkebaniuwurzvr'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c6481064b044af656f49be0baf1bd0e027112cbcc76deac21d133689360b8ec3",
+      "item_id": "sample_766",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_766",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(values, value):\n    length = len(values)\n    new_dict = dict.fromkeys(values, value)\n    new_dict[''.join(sorted(values))] = value * 3\n    return new_dict\n```\n\nInput: ['0','3'], 117\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "77aac350f9281c1e3d8ff1a424d5e1d00e113c601811b76ce9d434244c359082",
+      "reference_answer": "{'0': 117, '3': 117, '03': 351}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "6636d870085fa78cded883229cbc29e3986a7b5f952e99680cce8db9008626c6",
+      "item_id": "sample_668",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_668",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    return text[-1] + text[:-1]\n```\n\nInput: 'hellomyfriendear'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "021c07fba9e2465152b8747d86fe0053e3396afaafcb36129340c128353db802",
+      "reference_answer": "'rhellomyfriendea'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "303c42cdef92c04924dcf1ba2f143df0061b5744ae733519a6cdb77cdf285e21",
+      "item_id": "sample_14",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_14",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s):\n    arr = list(s.strip())\n    arr.reverse()\n    return ''.join(arr)\n```\n\nInput: '   OOP   '\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5710fa6cf741b71f6b900812a42ea177bfe96114750b8afbab70747cd85d4926",
+      "reference_answer": "'POO'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "958776ec464f3870369ad95f5e29443d55aafc1a6bbfe9b28a5238271ba2fab5",
+      "item_id": "sample_272",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_272",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(base_list, nums):\n    base_list.extend(nums)\n    res = base_list.copy()\n    for i in range(-len(nums), 0):\n        res.append(res[i])\n    return res\n```\n\nInput: [9, 7, 5, 3, 1], [2, 4, 6, 8, 0]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "07da04f005399d4a11eb0e6e1cba0bd2006fe41945a133425630107c573b72a0",
+      "reference_answer": "[9, 7, 5, 3, 1, 2, 4, 6, 8, 0, 2, 6, 0, 6, 6]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "a7e40770a8bf2c0e5ac3a6c3b9ffd8a75059ccf9887e4b933926d46b99f21b18",
+      "item_id": "sample_664",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_664",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(tags):\n    resp = \"\"\n    for key in tags:\n        resp += key + \" \"\n    return resp\n```\n\nInput: {\"3\":\"3\",\"4\":\"5\"}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "010e5d21a32b70799d8b2d890fe2a009ef5f8e5c7f710627791c031793061490",
+      "reference_answer": "'3 4 '",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "a507840210e604e3c71d394ab307815d4480e7ff2b990b2c05938d97b6c9e712",
+      "item_id": "sample_190",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_190",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    short = ''\n    for c in text:\n        if(c.islower()):\n            short += c\n    return short\n```\n\nInput: '980jio80jic kld094398IIl '\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "bccb3b922cdd8c584bbf2e19de99c69ace34477ac14306b0f9a5b21d00217d0e",
+      "reference_answer": "'jiojickldl'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "19ab094a1adfa0c77163430dabdbbf74944f27d1daac0e118d9640d419be3a81",
+      "item_id": "sample_693",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_693",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    n = int(text.find('8'))\n    return 'x0'*n\n```\n\nInput: \"sa832d83r xd 8g 26a81xdf\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4fd64da4479565cea46bb9e2cf177bd6fb157a1c0a9941dfb4ae9a99c0278703",
+      "reference_answer": "'x0x0'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "20f02395a2a4238a962388e442dc2e37b996cf43625e594a7ca58d51ff32b910",
+      "item_id": "sample_18",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_18",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, elem):\n    k = 0\n    l = array.copy()\n    for i in l:\n        if i > elem:\n            array.insert(k, elem)\n            break\n        k += 1\n    return array\n```\n\nInput: [5, 4, 3, 2, 1, 0], 3\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "c1a121cf7b48bd5d61256a1169044933eb2a26dfe8f7253b155c5d33a9d7fbb0",
+      "reference_answer": "[3, 5, 4, 3, 2, 1, 0]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "f48f1616027815447df4f635a76507ce1603601d42982685a58b23fd71d278dd",
+      "item_id": "sample_613",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_613",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    result = ''\n    mid = (len(text) - 1) // 2\n    for i in range(mid):\n        result += text[i]\n    for i in range(mid, len(text)-1):\n        result += text[mid + len(text) - 1 - i]\n    return result.ljust(len(text), text[-1])\n```\n\nInput: 'eat!'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "763e5b6c3f917d7fa2bfa3ed55711f9635d71198a30e65a44ae3891cc5fbfe77",
+      "reference_answer": "'e!t!'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "bcc73d57f956612bbd8ca5f0f98c17108f860d420deed7ab0c7b4941955f7f1a",
+      "item_id": "sample_92",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_92",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    return text.isascii()\n```\n\nInput: 'wW\uc758IV]HDJjhgK[dGIUlVO@Ess$coZkBqu[Ct'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b479637426c713f6c3c50c66a3942820f1231fad28e53c7aa034a43281309d5c",
+      "reference_answer": "False",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9bde2862a2f0597cb0faf0a8f8864dbc87c24ae4d2cb681211d29859cd1f6b38",
+      "item_id": "sample_623",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_623",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, rules):\n    for rule in rules:\n        if rule == '@':\n            text = text[::-1]\n        elif rule == '~':\n            text = text.upper()\n        elif text and text[len(text)-1] == rule:\n            text = text[0:len(text)-1]\n    return text\n```\n\nInput: 'hi~!', ['~', '`', '!', '&']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f635a47971c491c3d00ebd4af0f34d530f7d81b81cae4142ad2e514873a6a9ee",
+      "reference_answer": "'HI~'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "54d62663737df53d7149a6a2b43d7c97d35d2e3611b89e1cd8c02bfe4f22f267",
+      "item_id": "sample_520",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_520",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(album_sales):\n    while len(album_sales) != 1:\n        album_sales.append(album_sales.pop(0))\n    return album_sales[0]\n```\n\nInput: [6]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b4de098136899fe292ebe4a9e42a04ae841d921c505502319d01eadd09f31b18",
+      "reference_answer": "6",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "ad58cd1c034db05a19329031825b5d0024c975828579bb9bbc2f127b70ae3928",
+      "item_id": "sample_133",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_133",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums, elements):\n    result = []\n    for i in range(len(elements)):\n        result.append(nums.pop())\n    return nums\n```\n\nInput: [7, 1, 2, 6, 0, 2], [9, 0, 3]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b73af503e7000a5bb4279e04e5e76b6c94271574fd8c6eb4c09e8bac4952842a",
+      "reference_answer": "[7, 1, 2]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9eb20b79d1c9a4705c914de61a4193905f7a85246bedb960c1b13f14b07305e7",
+      "item_id": "sample_571",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_571",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(input_string, spaces):\n    return input_string.expandtabs(spaces)\n```\n\nInput: r'a\\tb', 4\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4b6d578a94f7b35f6c8fe9df13d16979c74f3c7a8459f9a673cec7bf76306e56",
+      "reference_answer": "'a\\\\tb'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "0a74adb185fe094ab744ba04a9419537d4915c22e301d45a4ba9bf7f341b69ec",
+      "item_id": "sample_432",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_432",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(length, text):\n    if len(text) == length:\n        return text[::-1]\n    return False\n```\n\nInput: -5, 'G5ogb6f,c7e.EMm'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "ac38d9f22ac2c4287a5c6349d8b5e3e4b432fa193379fba9c63fd54178809006",
+      "reference_answer": "False",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "e3140795db1dfd80d3ce120f4995867262175ddf26b961fa43aae15ca06c00f4",
+      "item_id": "sample_156",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_156",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, limit, char):\n    if limit < len(text):\n        return text[0:limit]\n    return text.ljust(limit, char)\n```\n\nInput: 'tqzym', 5, 'c'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "8b65fcf3795104372adf10b84ff34cb6da5e87fb0eb3a10f257fc26847a9db67",
+      "reference_answer": "'tqzym'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "915cb032023dfb3bd653bebc75d9b216576b61c4a566497bef52b0d7c7cea090",
+      "item_id": "sample_193",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_193",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(string):\n    count = string.count(':')\n    return string.replace(':', '', count - 1)\n```\n\nInput: '1::1'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "8928ae09e8a3146fd728aad57cd5bc51063c738e563341ce80df3f6952bc2b8c",
+      "reference_answer": "'1:1'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "91a6f192beef512d3e7d657f710c07366f8c83a0549b7e583ba7a97408b87073",
+      "item_id": "sample_41",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_41",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, values):\n    array.reverse()\n    for value in values:\n        array.insert(len(array) // 2, value)\n    array.reverse()\n    return array\n```\n\nInput: [58], [21, 92]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "d4378a91dd34b475b72fc54bcb310ca43d218f81340eff8d38ae6bbb44cea7cf",
+      "reference_answer": "[58, 92, 21]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "647bc4007348aa99940155a38e9c0cc54b25fee93d8981f016631543b597351a",
+      "item_id": "sample_414",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_414",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(d):\n    dCopy = d.copy()\n    for key, value in dCopy.items():\n        for i in range(len(value)):\n            value[i] = value[i].upper()\n    return dCopy\n```\n\nInput: {'X': ['x', 'y']}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "6481b1410199feb1b0be51918aa1b742864c245b8a18d1c1c551219e8bcc4132",
+      "reference_answer": "{'X': ['X', 'Y']}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "1bd21b2d080eb7055b5b33b4bf555f6cca1721e3f5e6f1e7c7057e8dfff36a2a",
+      "item_id": "sample_86",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_86",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(instagram, imgur, wins):\n    photos = [instagram, imgur]\n    if instagram == imgur:\n        return wins\n    if wins == 1:\n        return photos.pop()\n    else:\n        photos.reverse()\n        return photos.pop()\n```\n\nInput: ['sdfs', 'drcr', '2e'], ['sdfs', 'dr2c', 'QWERTY'], 0\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5eeedfd0d6a03821c98cf9b58f885636c8d2bc0b3c15f72482eb611f7d2a6801",
+      "reference_answer": "['sdfs', 'drcr', '2e']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "3e681a0e8356ae543c2913d70af4c3f40606269f1a71bf142e7ad75158a185c9",
+      "item_id": "sample_727",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_727",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(numbers, prefix):\n    return sorted(n[len(prefix):] if (len(n) > len(prefix) and n.startswith(prefix)) else n\n                  for n in numbers)\n```\n\nInput: ['ix', 'dxh', 'snegi', 'wiubvu'], ''\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f6d885f7fe4aeffda60e8aa4007235a2211f8dbbd2ece81acc7167b31acc7cb0",
+      "reference_answer": "['dxh', 'ix', 'snegi', 'wiubvu']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "1d38cd6acfb4f6b8da64287bbd74b2c2f90cfd44eda2901457f07207d537aba7",
+      "item_id": "sample_147",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_147",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    middle = len(nums)//2\n    return nums[middle:] + nums[0:middle]\n```\n\nInput: [1, 1, 1]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "907088def5e1b46150e199db3106c58c563b7f52c338586e8aeb1f05399d26b7",
+      "reference_answer": "[1, 1, 1]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "105562d03e3a0bcef9711c41544dc629e7922a1cb4b5aa192b67b96981d90102",
+      "item_id": "sample_584",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_584",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(txt):\n    return txt.format(*('0'*20,))\n```\n\nInput: \"5123807309875480094949830\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "80f0ee674da55d73e840469c40d7381e780cd221dc05dcf6f59c6a2e5b940ff4",
+      "reference_answer": "'5123807309875480094949830'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "53a55d21e90f9900786c258acd109b08dc11c8fdf8c49c01f09ddec6c6f43e2f",
+      "item_id": "sample_306",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_306",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    digits = []\n    for num in nums:\n        if (isinstance(num, str) and num.isnumeric()) or isinstance(num, int):\n            digits.append(num)\n    digits = list(map(int, digits))\n    return digits\n```\n\nInput: [0, 6, '1', '2', 0]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "33d404591a1562be9eed629b551d92880ce924c4a7fff88a2e2379efaa18391c",
+      "reference_answer": "[0, 6, 1, 2, 0]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "1ed68803dad9132a9ad6169fa2b1ee793b5c51ee1b942579c263bdecad8d5a1e",
+      "item_id": "sample_406",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_406",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    ls = list(text)\n    ls[0], ls[-1] = ls[-1].upper(), ls[0].upper()\n    return ''.join(ls).istitle()\n```\n\nInput: 'Josh'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "9e000c18f27c37ccced47dd9f473e31c554ef8bac1dd55aba7cd7b0f6cfb2237",
+      "reference_answer": "False",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "1af4270cb5bfcee414fb1d1656f96f2674bf4a29700b597511d00e54eee555e2",
+      "item_id": "sample_538",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_538",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, width):\n    return text[:width].center(width, 'z')\n```\n\nInput: '0574', 9\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "eb3dc11553c2a4e3c4708a849e428213b0599ba37b8a07ef1de51e6125c5cfc6",
+      "reference_answer": "'zzz0574zz'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "28f56c35af857a2dc8758a5d0999364cf77e34df647ea73c8093a2e7a3847289",
+      "item_id": "sample_686",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_686",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(d, l):\n\tnew_d = {}\n\n\tfor k in l:\n\t\tif d.get(k) is not None:\n\t\t\tnew_d[k] = d[k]\n\n\treturn new_d.copy()\n```\n\nInput: {\"lorem ipsum\" : 12, \"dolor\" : 23}, [\"lorem ipsum\", \"dolor\"]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "e30dd29dffe725d96fb52212ffa2a7234c1bc5dc357fc228e8f424835294582b",
+      "reference_answer": "{'lorem ipsum': 12, 'dolor': 23}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "a287960252a9e0ca83d9d288ff60a923ce55571389f3f9a1cb20c8d7c9d86939",
+      "item_id": "sample_124",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_124",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(txt, sep, sep_count):\n    o = ''\n    while sep_count > 0 and txt.count(sep) > 0:\n        o += txt.rsplit(sep, 1)[0] + sep\n        txt = txt.rsplit(sep, 1)[1]\n        sep_count -= 1\n    return o + txt\n```\n\nInput: 'i like you', ' ', -1\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "14eef4609a9e31dd79cb9e29902b9213f482aa152c6e005cd3455741d96ee77d",
+      "reference_answer": "'i like you'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "18a51bf040f2b27c77a09bb1baf33559b22eff44f53880b40b14ee44f231d431",
+      "item_id": "sample_99",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_99",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, sep, num):\n    return '___'.join(text.rsplit(sep, num))\n```\n\nInput: 'aa+++bb', '+', 1\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b166df65e920f43641136f509bd96f6ae6b8f92f5917b00f2ad57cf4133fa961",
+      "reference_answer": "'aa++___bb'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "6481d40618dfed5904da3e66ea4a4d4f392d7e06b9b091a2b38022c26ccec03b",
+      "item_id": "sample_575",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_575",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums, val):\n    new_list = []\n    [new_list.extend([i] * val) for i in nums]\n    return sum(new_list)\n```\n\nInput: [10, 4], 3\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "144ac27ba6a0cde3b49b3be866f54ea57d87e2f6602ed2a5d75fa804ea766aca",
+      "reference_answer": "42",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "696376bb7cdac4c5459999e23be17eec0467812908afb9072d835e62d0210a6e",
+      "item_id": "sample_770",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_770",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(line, char):\n    count = line.count(char)\n    for i in range(count+1, 0, -1):\n        line = line.center(len(line)+i // len(char), char)\n    return line\n```\n\nInput: '$78'.upper(), '$'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b4d7f84b15a391f02c4cbcd5d22a85738eaf65832970524971d911f3bf70587e",
+      "reference_answer": "'$$78$$'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "1c2aecb33376a6b7b11d8bbc39011f232deac974c766a33b09e60fffe7a0c7e3",
+      "item_id": "sample_302",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_302",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(string):\n    return string.replace('needles', 'haystacks')\n```\n\nInput: 'wdeejjjzsjsjjsxjjneddaddddddefsfd'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f4a9fd184e26de1cc95db91a5e2531a58bbfa323985263489c84a43d0974a08b",
+      "reference_answer": "'wdeejjjzsjsjjsxjjneddaddddddefsfd'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "0121024cfbb2a8cba7601705b86e52ed9eea8aedb00d244acd751fd94347c0e9",
+      "item_id": "sample_529",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_529",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array):\n    prev = array[0]\n    newArray = array[:]\n    for i in range(1, len(array)):\n        if prev != array[i]:\n            newArray[i] = array[i]\n        else:\n            del newArray[i]\n        prev = array[i]\n    return newArray\n```\n\nInput: [1, 2, 3]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "32e21f89730e9f067747366beba3f357e397cdb3636b271f177b53d44f8bee53",
+      "reference_answer": "[1, 2, 3]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "31f971db00bfeaf8a8e0de90ee04952db52a6a43c74f9dc6f033f4d78b490ada",
+      "item_id": "sample_4",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_4",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array):\n    s = ' '\n    s += ''.join(array)\n    return s\n```\n\nInput: [' ', '  ', '    ', '   ']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "2ecd0df31cc7e7eceab3380f50164d9237d3825f2336839c503daad8943b42e0",
+      "reference_answer": "'           '",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "792c7a7eda2d19f1bd48c896a5ca31630be29209be5843b372821f31e73bbdd4",
+      "item_id": "sample_257",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_257",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    ls = []\n    for x in text:\n        ls.append(x.splitlines())\n    return ls\n```\n\nInput: ['Hello World\\n\"I am String\"']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "43f5c5d9ddeb760a8d4558f9ede65fb1e36c603ffb4848dbf8b0055fb85c7171",
+      "reference_answer": "[['Hello World', '\"I am String\"']]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "6b394f792c403a65910b43326c0d174109b56dad5da7aff3ad78516fe16c0350",
+      "item_id": "sample_648",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_648",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(list1, list2):\n    l = list1[:]\n    while len(l) > 0:\n        if l[-1] in list2:\n            l.pop()\n        else:\n            return l[-1]\n    return 'missing'\n```\n\nInput: [0, 4, 5, 6], [13, 23, -5, 0]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "6ad6994e936111737fbbe2244d52392bce584deb63990b7cb17ce1d6860f6277",
+      "reference_answer": "6",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "fb81e70420d63e1fa8af5ae048fa3d96eebf3993a79c8c55282abdb8b05d3d71",
+      "item_id": "sample_772",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_772",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(phrase):\n    result = ''\n    for i in phrase:\n        if not i.islower():\n            result += i\n    return result\n```\n\nInput: 'serjgpoDFdbcA.'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5399a545a65173ddcdb2537fc62d7a929f98a24b46649bdd3f459d399bbefdde",
+      "reference_answer": "'DFA.'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "4e94359cbf86be1fdcc9ac259d64cbf00c129c87ae985f0241b828e74240decf",
+      "item_id": "sample_448",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_448",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, suffix):\n    if suffix == '':\n        suffix = None\n    return text.endswith(suffix)\n```\n\nInput: 'uMeGndkGh', 'kG'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b518bd5f6317942ae1a0d1cf2a435c57c16d83f299dea80cc66a5673292e232c",
+      "reference_answer": "False",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c90eb6f0871e2d1ef59eb3ab6ba9e7bb0637892ee8e28d3b49326176feef0849",
+      "item_id": "sample_560",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_560",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    x = 0\n    if text.islower():\n        for c in text:\n            if int(c) in list(range(90)):\n                x+=1\n    return x\n```\n\nInput: \"591237865\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4893a329d0361bc95098cdaab209b7162b931350d19fcecd712851b13dc31069",
+      "reference_answer": "0",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "4bb4afd155f4da3dac88b29defc39723c75d6e333658e7f25d8d949db82155e1",
+      "item_id": "sample_638",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_638",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s, suffix):\n    if not suffix:\n        return s\n    while s.endswith(suffix):\n        s = s[:-len(suffix)]\n    return s\n```\n\nInput: 'ababa', 'ab'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "34c14c2c3e70d75a32e6b424ad802b13a9ecddc0065aafccde64304667f36084",
+      "reference_answer": "'ababa'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "2bf128392abbd12c01ae1a018b382e318cf055c8d8693e95fb136648c78dcc34",
+      "item_id": "sample_417",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_417",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(lst):\n    lst.reverse()\n    lst.pop()\n    lst.reverse()\n    return lst\n```\n\nInput: [7, 8, 2, 8]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "1710cd9f1885f648c5145764c3b5531e17915d0f94dfe45f9b995f74be5cae0b",
+      "reference_answer": "[8, 2, 8]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "cb5bb4df73124913760ab030813fce46f5c1e931e13af3b6901aa3e41e25d6d9",
+      "item_id": "sample_397",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_397",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(ls):\n    return dict.fromkeys(ls, 0)\n```\n\nInput: ['x', 'u', 'w', 'j', 3, 6]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "48913863182f08f377b1d711f8fed19ba8f5f81f0b06a587e32ee551ce63a915",
+      "reference_answer": "{'x': 0, 'u': 0, 'w': 0, 'j': 0, 3: 0, 6: 0}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "081ad77c738352771d8dfc8ad8c4fe4f50a250a69c2a30e24bbce7c8c6dd8472",
+      "item_id": "sample_564",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_564",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(lists):\n    lists[1].clear()\n    lists[2] += lists[1]\n    return lists[0]\n```\n\nInput: [[395, 666, 7, 4], [], [4223, 111]]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "ac751822c86f301cef649053b5f1fb31827450b70cbfbb6e5f03f6c3b1b74c3b",
+      "reference_answer": "[395, 666, 7, 4]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "0c1a8fec01f5767244a584590f29e717ac5a18b00f240ad35752ffdabe9e33c9",
+      "item_id": "sample_40",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_40",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    return text.ljust(len(text) + 1, \"#\")\n```\n\nInput: \"the cow goes moo\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "c4d9d731a938a78f932f8b389dde9fabf912c20c8396a61a54e8413d24e6a3f3",
+      "reference_answer": "'the cow goes moo#'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "17ef1e2f91b027f6fdcdd7421d1e4435b6ff677c852828feedee7d8fdbf08981",
+      "item_id": "sample_536",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_536",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(cat):\n    digits = 0\n    for char in cat:\n        if char.isdigit():\n            digits += 1\n    return digits\n```\n\nInput: 'C24Bxxx982ab'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "debfe62038862bdcdded4a224c049cbc13157ac5ae1b9833b46d78339be17d6c",
+      "reference_answer": "5",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "f2b8a3718ab9aa8dd7c528494827b5f7dce5e11864a8fc54e5b515c1e3ae1ac4",
+      "item_id": "sample_695",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_695",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(d):\n    result = {}\n    for ki, li in d.items():\n        result.update({ki: []})\n        for kj, dj in enumerate(li):\n            result[ki].append({})\n            for kk, l in dj.items():\n                result[ki][kj][kk] = l.copy()\n    return result\n```\n\nInput: {}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "35c0a2a12ac8836686b45a3400f00453582c1b0d4cbe6b38e143f0cee683911c",
+      "reference_answer": "{}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "158ab5b2a849e8c5d4e3cef831633fd407060ed3f06e60f65cbb440bfd54b894",
+      "item_id": "sample_311",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_311",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    text = text.replace('#', '1').replace('$', '5')\n    return 'yes' if text.isnumeric() else 'no'\n```\n\nInput: 'A'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "67812670642322e63beed048b213f9a74d80270dc7d24140cd5c539921c2a5a3",
+      "reference_answer": "'no'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "207f8dbfd8e3a79e82428ba1bb29a0523d3e2a60cfc67c68fd3776f21d232345",
+      "item_id": "sample_403",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_403",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(full, part):\n    length = len(part)\n    index = full.find(part)\n    count = 0\n    while index >= 0:\n        full = full[index + length:]\n        index = full.find(part)\n        count += 1\n    return count\n```\n\nInput: 'hrsiajiajieihruejfhbrisvlmmy', 'hr'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "2b0799c0500ce7f46efc8e2fbc11c775346be3fd525be20a446bb683f6ac7c7e",
+      "reference_answer": "2",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "ac1f30157a8425b7637c824213ac86c4e66ccbcec71eabba5a606637b9fbcc3d",
+      "item_id": "sample_370",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_370",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    for char in text:\n        if not char.isspace():\n            return False\n    return True\n```\n\nInput: '     i'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "e6f04fe6cc1336b69444f50c3be36e2c5e95c5117ff435ea7bf167b72a434994",
+      "reference_answer": "False",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "4199147e6ede0c5e80abf7293e480bd6aefc9799ce3877b82e43a0082c9d8059",
+      "item_id": "sample_750",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_750",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(char_map, text):\n    new_text = ''\n    for ch in text:\n        val = char_map.get(ch)\n        if val is None:\n            new_text += ch\n        else:\n            new_text += val\n    return new_text\n```\n\nInput: {}, 'hbd'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "41e78a13e34eb5cbd8f2c61728532af8d7d8c8d1c91895dc1a76159807687dc8",
+      "reference_answer": "'hbd'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9a68eb1b346c4028131e36ffad15dfe7c369c038c8c0766608318e63aa4e088c",
+      "item_id": "sample_404",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_404",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(no):\n    d = dict.fromkeys(no, False) \n    return sum([1 for i in d.keys()])\n```\n\nInput: ['l', 'f', 'h', 'g', 's', 'b']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f51614d978633e2e3c6cce07e23591eb8a6fc0aed3fa4447d575099f95cdf8c8",
+      "reference_answer": "6",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "1e14fae82e1688d865a93678accdd28b268600c3f8ab87377bc86c03a0c5145f",
+      "item_id": "sample_682",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_682",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, length, index):\n    ls = text.rsplit(None, index)\n    return '_'.join([l[:length] for l in ls])\n```\n\nInput: 'hypernimovichyp', 2, 2\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4b90f17822ef0afea7d009be6007d92d6422a321508096cd7592ae8705bd1481",
+      "reference_answer": "'hy'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "716217a7016f303cb121179b5a729335e5624db89161aadbab1ed2cf095d19fa",
+      "item_id": "sample_491",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_491",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(xs):\n    for i in range(-1, -len(xs)-1, -1):\n        xs.extend([xs[i], xs[i]])\n    return xs\n```\n\nInput: [4, 8, 8, 5]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "ce4638178b0c8db864fc913bcac67c68be8eb90d3bfd173ea287aeb50b4e83b8",
+      "reference_answer": "[4, 8, 8, 5, 5, 5, 5, 5, 5, 5, 5, 5]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "f4940cb1bcfa2616f10d629f7fcc10f9288ea52437132284d2b2e539ee70e02c",
+      "item_id": "sample_351",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_351",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):    \n    try:\n        while 'nnet lloP' in text:\n            text = text.replace('nnet lloP', 'nnet loLp')\n    finally:\n        return text\n```\n\nInput: 'a_A_b_B3 '\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "01bec8de0716e389d7a70b9d49eca2e54cd854b9b49014a74bd24e8ef67dcb44",
+      "reference_answer": "'a_A_b_B3 '",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c132c8300ef3f432dc9186583c8955324079283dfc09f73b61852444e8a2916a",
+      "item_id": "sample_415",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_415",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array):\n    d = dict(array)\n    for key, value in d.items():\n        if value < 0 or value > 9:\n            return None\n    return d\n```\n\nInput: ((8, 5), (8, 2), (5, 3))\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "3e1da63325b3c422e5bcdf79df88b47f39830786b87a7aa14da5b8ae00addc0c",
+      "reference_answer": "{8: 2, 5: 3}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "642b12792a109fdbf53a8686faaa62744f4a33bed16cca327b75c801ff358636",
+      "item_id": "sample_253",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_253",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, pref):\n    length = len(pref)\n    if pref == text[:length]:\n        return text[length:]\n    return text\n```\n\nInput: 'kumwwfv', 'k'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a83bff2f19c54e7c6f4100e5eefc23c394b48af3a2f2d765df920eb8d7d4a69b",
+      "reference_answer": "'umwwfv'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c12dfff9d17bb5bc629baa16fd5005fb108fe9409a5dea4887939ab09d6e5717",
+      "item_id": "sample_699",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_699",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, elem):\n    if elem != '':\n        while text.startswith(elem):\n            text = text.replace(elem, '')\n        while elem.startswith(text):\n            elem = elem.replace(text, '')\n    return [elem, text]\n```\n\nInput: \"some\", \"1\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5fbb6d6bf800aba2f2cfed555cc237810a5e4de179f017e5a3dc3c7128c8e4ee",
+      "reference_answer": "['1', 'some']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "d577cd608ba7cc6efcb87bae9dd38483c15418e43489ecbc3bf4a5caa2fe6c5c",
+      "item_id": "sample_635",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_635",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    valid_chars = ['-', '_', '+', '.', '/', ' ']\n    text = text.upper()\n    for char in text:\n        if char.isalnum() == False and char not in valid_chars:\n            return False\n    return True\n```\n\nInput: \"9.twCpTf.H7 HPeaQ^ C7I6U,C:YtW\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "512f17eafc81650d661bd29e2d72cdf29f493dce8bc52b5b081d47fbf60c1889",
+      "reference_answer": "False",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "abd224e4143f47121f476dd725e85b3ec20a7f6c445adb24b82bb6e3131ebe1d",
+      "item_id": "sample_603",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_603",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(sentences):\n    if all([sentence.isdecimal() for sentence in sentences.split('.')]):\n        return 'oscillating' \n    else:\n        return 'not oscillating'\n```\n\nInput: 'not numbers'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "1a6bad60ba60da731ddc6aed43886969cb30b5c2f008a154d3c0de66f0011484",
+      "reference_answer": "'not oscillating'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "6496cd868caa9f1d4a86f082b06c45c69cdca77dfb96218e07377778aa2c5cbe",
+      "item_id": "sample_241",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_241",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(postcode):\n    return postcode[postcode.index('C'):]\n```\n\nInput: 'ED20 CW'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "97754f3cf557be93f0ec5cb28215ca70b5a68c3e5166a078e706409a288fb001",
+      "reference_answer": "'CW'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9196e96ebdc9a99d87c802dc2f4004ff1923832661c1782b31cf99fbb04eedb3",
+      "item_id": "sample_489",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_489",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, value):\n    return text.removeprefix(value.lower())\n```\n\nInput: 'coscifysu', 'cos'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "98b40cba733e01ea73738aacfe89c4d07d0166a7d6d3ded095d3f73f2f71bda2",
+      "reference_answer": "'cifysu'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "4d4aba7178b57a98641ab16385697d0ea27495e8afd02f6806c85f1596305500",
+      "item_id": "sample_769",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_769",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    text_list = [char for char in text]\n    for i, char in enumerate(text_list):\n        text_list[i] = char.swapcase()\n    return ''.join(text_list)\n```\n\nInput: 'akA?riu'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "6411537149178a8d9cca844ed89d0198e52545486dea109f4536e2249590e76f",
+      "reference_answer": "'AKa?RIU'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "2f1cf33f74a3fb32ca5fe4274050537457e6f9045edc17aca88e1ab3be35834a",
+      "item_id": "sample_543",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_543",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(item):\n    modified = item.replace('. ', ' , ').replace('&#33; ', '! ').replace('. ', '? ').replace('. ', '. ')\n    return modified[0].upper() + modified[1:]\n```\n\nInput: '.,,,,,. \u0645\u0646\u0628\u062a'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "2f1c4bb5e355fd7fb6b299d15470ab474816266b6778ee198831b6dc02719bb8",
+      "reference_answer": "'.,,,,, , \u0645\u0646\u0628\u062a'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "55e4ae002eb19db680c92e73fba5a984030cb868edb4474d4831d250d2b1cdb7",
+      "item_id": "sample_756",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_756",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    if text.isalnum() and all(i.isdigit() for i in text):\n        return 'integer'\n    return 'string'\n```\n\nInput: ''\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f19c1bbd0030b3c426a805feaf7c8fd98a12b3df262605feedb8af9a78d36223",
+      "reference_answer": "'string'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "69aaed53b87cb922c5e3bed1c0fdf39de6a68a41736997436c2ebc4fc6623912",
+      "item_id": "sample_799",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_799",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(st):\n    if st[0] == '~':\n        e = st.rjust(10, 's')\n        return f(e)\n    else:\n        return st.rjust(10, 'n')\n```\n\nInput: 'eqe-;ew22'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "ccb0628a85551540e073776a6202b5fa8be27d9268deaf59d2844fd6c515438e",
+      "reference_answer": "'neqe-;ew22'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9d9a2435f8a72112272e41d2e523b952e763c0fb9062533b03b1dfa98db8eed9",
+      "item_id": "sample_359",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_359",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(lines):\n    for i in range(len(lines)):\n        lines[i] = lines[i].center(len(lines[-1]))\n    return lines\n```\n\nInput: ['dZwbSR', 'wijHeq', 'qluVok', 'dxjxbF']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "f8d2d350663ae22e8bd43d727338b489a63ca252e1e5dc1fc84db4fbf53c6db0",
+      "reference_answer": "['dZwbSR', 'wijHeq', 'qluVok', 'dxjxbF']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "7a8bbe4eb99300e949cc607147c0d80abcf2683b3f0360c824b368e24c20a3db",
+      "item_id": "sample_279",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_279",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    ans = ''\n    while text != '':\n        x, sep, text = text.partition('(')\n        ans = x + sep.replace('(', '|') + ans\n        ans = ans + text[0] + ans\n        text = text[1:]\n    return ans\n```\n\nInput: \"\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b7f19ec46642e572880fc181157a96b953f7555221fc3a72981b11cc896046c0",
+      "reference_answer": "''",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "27f07efcddd6addb7369dc41a7cf1a5cc3a921bc3221adf5a78a70b835dd5d1d",
+      "item_id": "sample_705",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_705",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(cities, name):\n    if not name:\n        return cities\n    if name and name != 'cities':\n        return []\n    return [name + city for city in cities]\n```\n\nInput: ['Sydney', 'Hong Kong', 'Melbourne', 'Sao Paolo', 'Istanbul', 'Boston'], 'Somewhere '\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "3d8fc2d4f167da6ee853d447f85b4e2a53bb55e755973b3fd253d8ec01fefb1b",
+      "reference_answer": "[]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "8033ef0e2cca61b2c95d3ccae270f0f046f40604384215c32701e0e7f1ebb2b9",
+      "item_id": "sample_189",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_189",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(out, mapping):\n    for key in mapping:\n        out.format_map(mapping)\n        if len(re.findall(r'{\\w}', out)) == 0:\n            break\n        mapping[key][1] = mapping[key][1][::-1]\n    return out\n```\n\nInput: \"{{{{}}}}\", {}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "36dc8477b123218ee4b75afb64e3b9d427a4e334c52ba4812af2f92af2ff7dd2",
+      "reference_answer": "'{{{{}}}}'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "7ffaadc30f8ea422e4c776491df0930f884ecf9d4ad58f2a8621a0314d3c1898",
+      "item_id": "sample_287",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_287",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(name):\n    if name.islower():\n        name = name.upper()\n    else:\n        name = name.lower()\n    return name\n```\n\nInput: 'Pinneaple'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "1dedc37c50abb10f538f160d17e58c393fc83f647acca4dec99bcbc07322ed5e",
+      "reference_answer": "'pinneaple'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "4a4f1bee4a703ddd0cb527b172705e089290d64f42baa34d17e042f939360690",
+      "item_id": "sample_775",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_775",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    count = len(nums)\n    for i in range(0, count // 2):\n        nums[i], nums[count-i-1] = nums[count-i-1], nums[i]\n    return nums\n```\n\nInput: [2, 6, 1, 3, 1]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4e6e3e858b89127fb8c28a3d2492b3ed1c4281fb993539945fa81e760aba0f70",
+      "reference_answer": "[1, 3, 1, 6, 2]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "00694eb49759e73848f6358b144679c3fafc03f52b805c86c2804e8682c1cea3",
+      "item_id": "sample_374",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_374",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(seq, v):\n    a = []\n    for i in seq:\n        if i.endswith(v):\n            a.append(i*2)\n    return a\n```\n\nInput: [ 'oH', 'ee', 'mb', 'deft', 'n', 'zz', 'f', 'abA' ], 'zz'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "36e787df56528e40c8f5baf5122e0dd87136b52bb68854ee4c615a2634e4ecd3",
+      "reference_answer": "['zzzz']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "415d74a1728ce9801feb16a4ffdd35c621a39fc8da5fc6c03f67ed1453c07d0b",
+      "item_id": "sample_352",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_352",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    return nums[len(nums)//2]\n```\n\nInput: [-1, -3, -5, -7, 0]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "57b72b6764bdbf0825acaad62aadec3d44179a2e7c9271f5de8a72e4370b9179",
+      "reference_answer": "-5",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "24942929e0110461ae02b744d028a7caaf0834990df462552c2a9949a22ab367",
+      "item_id": "sample_422",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_422",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array):\n    new_array = array.copy()\n    new_array = reversed(new_array)\n    return [x*x for x in new_array]\n```\n\nInput: [1, 2, 1]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4b2fa4ef13d511e998d7a944338a9db41a9ba49de6faee0ffac7c64529cd0e5e",
+      "reference_answer": "[1, 4, 1]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "d4748caff4aeba18e804da99be094a0a6e88c88fd0fd0659ced3fc28da63a602",
+      "item_id": "sample_195",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_195",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    for p in ['acs', 'asp', 'scn']:\n        text = text.removeprefix(p) + ' '\n    return text.removeprefix(' ')[:-1]\n```\n\nInput: 'ilfdoirwirmtoibsac'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "ab429d02d3ae7645cc743a241f22713e4d47ef8b26cfa1e0cf9c50744a63e703",
+      "reference_answer": "'ilfdoirwirmtoibsac  '",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "5f1767dbc974335842c70f09bfe9b1679a0ac143f070c43edfc5476a2165014b",
+      "item_id": "sample_202",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_202",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, list):\n    array.extend(list)\n    [e for e in array if e % 2 == 0]\n    return [e for e in array if e >= 10]\n```\n\nInput: [2, 15], [15, 1]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "547c0e18ce175aa5a58678c2250fdd5bd3eaa2d4c47641803813ac3eb53b36c1",
+      "reference_answer": "[15, 15]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "42c9d84178635ec061f19ae95e82617249bf6a5076ccf9be265fd182d2dbfba6",
+      "item_id": "sample_249",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_249",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s):\n    count = {}\n    for i in s:\n        if i.islower():\n            count[i.lower()] = s.count(i.lower()) + count.get(i.lower(), 0)\n        else:\n            count[i.lower()] = s.count(i.upper()) + count.get(i.lower(), 0)\n    return count\n```\n\nInput: \"FSA\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "bbb96e42c31f2ca5b6521ee0a6f6ab2d7cfe1c1adffda2d730131d3c5f32493b",
+      "reference_answer": "{'f': 1, 's': 1, 'a': 1}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "438414c74a0a131329389f83d2f23197cac04eda161d7dfaf564a11072058087",
+      "item_id": "sample_210",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_210",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(n, m, num):\n    x_list = list(range(n, m+1))\n    j = 0\n    while True:\n        j = (j + num) % len(x_list)\n        if x_list[j] % 2 == 0:\n            return x_list[j]\n```\n\nInput: 46, 48, 21\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "90ca42a658b57b4de328f17c4791b8aed288721a7b208a44ff111a02dd028326",
+      "reference_answer": "46",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "11bae77522b99de9e6e26a8d66ed31397f68d69b1ad2996ec041196b79a0e7bc",
+      "item_id": "sample_792",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_792",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(l1, l2):\n    if len(l1) != len(l2):\n        return {}\n    return dict.fromkeys(l1, l2)\n```\n\nInput: ['a', 'b'], ['car', 'dog']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "0051a69861a876602e7b389d8bf1a8c6eaff8a6094b84b2e1368f6b8f42405fe",
+      "reference_answer": "{'a': ['car', 'dog'], 'b': ['car', 'dog']}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE9_EVALUATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "63ab25c7c3f54908705c04569921448fca3f02c9161367b66d317a05c6313e75",
+      "item_id": "sample_477",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_477",
+        "reference_canonical_type": "tuple",
+        "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    topic, sep, problem = text.rpartition('|')\n    if problem == 'r':\n        problem = topic.replace('u', 'p')\n    return topic, problem\n```\n\nInput: '|xduaisf'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "3cefc1ceb0ff95126b92e19dbbcb91ae18759d07f916a091098381caa4cecccd",
+      "reference_answer": "('', 'xduaisf')",
+      "reference_canonical_type": "tuple",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    }
+  ],
+  "manifest_hash": "b9daf4b273b8628bcd5e6993c863b87229d0029d1ded341642165950be50fd7f",
+  "reference_type_distribution": {
+    "bool": 7,
+    "dict": 11,
+    "int": 12,
+    "list": 23,
+    "str": 46,
+    "tuple": 1
+  },
+  "remaining_unallocated_n": 57,
+  "requested_n": 100,
+  "schema_version": 1,
+  "selection_namespace": "GATE9-FRESH-D75-EVALUATION-V1",
+  "selection_outcome_independent": true
+}

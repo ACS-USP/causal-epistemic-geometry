@@ -1,0 +1,91 @@
+{
+  "construction": "new deterministic Gaussian orthonormal bank",
+  "geometry": {
+    "meaningful_absolute_cosines": {
+      "RANDOM_L27_D75_R0": 2.949029909160572e-17,
+      "RANDOM_L27_D75_R1": 3.469446951953614e-18,
+      "RANDOM_L27_D75_R2": 8.456776945386935e-18,
+      "RANDOM_L27_D75_R3": 8.673617379884035e-19
+    },
+    "meaningful_orthogonality_pass": true,
+    "norms": {
+      "RANDOM_L27_D75_R0": 0.9999999999999999,
+      "RANDOM_L27_D75_R1": 0.9999999999999999,
+      "RANDOM_L27_D75_R2": 1.0000000000000002,
+      "RANDOM_L27_D75_R3": 0.9999999999999999
+    },
+    "pairwise_absolute_cosines": {
+      "RANDOM_L27_D75_R0__RANDOM_L27_D75_R1": 6.938893903907228e-18,
+      "RANDOM_L27_D75_R0__RANDOM_L27_D75_R2": 6.071532165918825e-18,
+      "RANDOM_L27_D75_R0__RANDOM_L27_D75_R3": 1.5178830414797062e-18,
+      "RANDOM_L27_D75_R1__RANDOM_L27_D75_R2": 3.469446951953614e-18,
+      "RANDOM_L27_D75_R1__RANDOM_L27_D75_R3": 2.42861286636753e-17,
+      "RANDOM_L27_D75_R2__RANDOM_L27_D75_R3": 1.214306433183765e-17
+    },
+    "random_pairwise_orthogonality_pass": true,
+    "unit_norm_pass": true
+  },
+  "meaningful_controller_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+  "namespace": "GATE9-L27-RANDOM-BANK-V1",
+  "outcome_independent": true,
+  "prior_gate_randoms_reused": false,
+  "random_vectors": {
+    "RANDOM_L27_D75_R0": {
+      "canonical_float64_vector_sha256": "332ce5a0de26958186d077194a2e44d55e87fc591d4024744c87a91d599c75a9",
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 0.9999999999999999,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 227174265,
+      "vector_file_sha256": "25d24809ef74f17913e7d95a3f1f75b19bfc52cafe47556d0928fdfdef17c69e",
+      "vector_path": "review/gate9_selected_d75_evaluation/RANDOM_L27_D75_R0.npy",
+      "vector_sha256": "332ce5a0de26958186d077194a2e44d55e87fc591d4024744c87a91d599c75a9"
+    },
+    "RANDOM_L27_D75_R1": {
+      "canonical_float64_vector_sha256": "cad81c6c44d21e4313c32f81545665a2de5d5f9cdca5a8f414d210f99a480a42",
+      "delta_norm": 97.85168930581243,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 0.9999999999999999,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 2048946441,
+      "vector_file_sha256": "dd6974a2df7788da0d2181cb11a10a03b542cc7a92907eaeb4670c738774dbf4",
+      "vector_path": "review/gate9_selected_d75_evaluation/RANDOM_L27_D75_R1.npy",
+      "vector_sha256": "cad81c6c44d21e4313c32f81545665a2de5d5f9cdca5a8f414d210f99a480a42"
+    },
+    "RANDOM_L27_D75_R2": {
+      "canonical_float64_vector_sha256": "4fbfe4735fe6f2630bcd5725e138fdca88b16e5d273fd1b0b62b08edcd447525",
+      "delta_norm": 97.8516893058124,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 1.0000000000000002,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 2884349147,
+      "vector_file_sha256": "f7c42acd5886b963fcfc34cbc85c92a1d7ab17ba81d2a01df6fa9e9cecc48d68",
+      "vector_path": "review/gate9_selected_d75_evaluation/RANDOM_L27_D75_R2.npy",
+      "vector_sha256": "4fbfe4735fe6f2630bcd5725e138fdca88b16e5d273fd1b0b62b08edcd447525"
+    },
+    "RANDOM_L27_D75_R3": {
+      "canonical_float64_vector_sha256": "55cf3d68896681f44d237c3b3bc0d9abcb4de1c15beec83addc38f8ddec23341",
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 0.9999999999999999,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 1352735267,
+      "vector_file_sha256": "197b445dc019acd884f936bba22949607ee9b2c7326ffb13f9ccc5e56939aab6",
+      "vector_path": "review/gate9_selected_d75_evaluation/RANDOM_L27_D75_R3.npy",
+      "vector_sha256": "55cf3d68896681f44d237c3b3bc0d9abcb4de1c15beec83addc38f8ddec23341"
+    }
+  },
+  "schema_version": 1
+}
