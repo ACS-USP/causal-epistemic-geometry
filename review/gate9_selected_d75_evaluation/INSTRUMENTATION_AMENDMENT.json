@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "amendment_id": "GATE9-SEMANTIC-V3-TOTALITY-001",
+  "timing": "after 1233 preserved scientific rows and before deterministic resume",
+  "classification": "CLASS_C_DETERMINISTIC_MEASUREMENT_REPAIR_WITH_CLASS_A_RESUME",
+  "symptom": "ast.literal_eval raised TypeError for a set literal containing an unhashable dict, aborting before the generated row was journaled",
+  "repair": "Include TypeError in the same invalid-literal fallback already used for ValueError and SyntaxError; the payload remains an exact raw string semantic value",
+  "old_parser_sha256": "d3082512531b1105fb555333c131170d009fa20b4e1edb5eb62dfcfe2702750c",
+  "new_parser_sha256": "51ac492a6cea1284c36df6ef659520adf4a04e0595cf0e66bfd15ba172b960c3",
+  "parser_version": "external-semantic-v3",
+  "condition_symmetric": true,
+  "scientific_semantics_changed": false,
+  "previously_evaluable_outputs_changed": false,
+  "preserved_rows_modified": false,
+  "preserved_rows_before_incident": 1233,
+  "failed_logical_key": {
+    "item_id": "sample_189",
+    "condition": "RANDOM_L27_D75_R3",
+    "rollout_index": 0,
+    "seed": 4048982891
+  },
+  "failed_output_seen_by_researcher": false,
+  "failed_output_persisted": false,
+  "resume_policy": "regenerate only the unjournaled logical key with its identical frozen seed and then skip every preserved key",
+  "new_draw_added": false,
+  "controller_layer_dose_model_benchmark_conditions_estimands_thresholds_changed": false,
+  "amendment_source_commit": "PENDING_AMENDMENT_COMMIT_BINDING"
+}

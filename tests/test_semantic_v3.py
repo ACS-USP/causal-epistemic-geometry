@@ -117,6 +117,15 @@ def test_malicious_expression_is_never_executed_and_becomes_raw_string() -> None
     assert not result.correct
 
 
+def test_unhashable_nested_set_literal_is_total_and_becomes_raw_string() -> None:
+    payload = "{{'a': 1}}"
+    assert canonicalize_semantic_value(payload) == ["str", payload]
+    result = evaluate_external_answer_v3(f"FINAL: {payload}", "None")
+    assert result.commitment_valid
+    assert result.semantic_evaluable
+    assert not result.correct
+
+
 def test_parser_is_invariant_to_external_condition_labels() -> None:
     rows = [
         {"condition": "BASELINE", "raw_output": "FINAL: [1, 2]"},

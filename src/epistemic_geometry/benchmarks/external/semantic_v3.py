@@ -316,7 +316,7 @@ def canonicalize_semantic_value(payload: str) -> list[Any]:
     if bytearray_match is not None:
         try:
             inner = ast.literal_eval(bytearray_match.group("inner"))
-        except (ValueError, SyntaxError):
+        except (TypeError, ValueError, SyntaxError):
             inner = None
         if isinstance(inner, bytes):
             return _canonical_literal(bytearray(inner))
@@ -324,13 +324,13 @@ def canonicalize_semantic_value(payload: str) -> list[Any]:
     if frozenset_match is not None:
         try:
             inner = ast.literal_eval(frozenset_match.group("inner"))
-        except (ValueError, SyntaxError):
+        except (TypeError, ValueError, SyntaxError):
             inner = None
         if isinstance(inner, (set, list, tuple)):
             return _canonical_literal(frozenset(inner))
     try:
         value = ast.literal_eval(payload)
-    except (ValueError, SyntaxError):
+    except (TypeError, ValueError, SyntaxError):
         return ["str", payload]
     try:
         return _canonical_literal(value)

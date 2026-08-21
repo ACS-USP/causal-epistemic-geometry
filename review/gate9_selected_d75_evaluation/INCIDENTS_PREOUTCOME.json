@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "incidents": [
+    {
+      "incident_id": "GATE9-CLASS-A-001",
+      "class": "A",
+      "lifecycle": "ENGINEERING",
+      "affected_scientific_outputs_existed": false,
+      "symptom": "The stopped Gate-8 A40 Pod could not restart because its original host had no free GPU.",
+      "root_cause": "Host-local A40 capacity was unavailable although secure-cloud A40 fleet capacity remained available.",
+      "repair": "Provisioned an equivalent secure-cloud A40 Pod with the same image and 80 GB persistent workspace, restored the exact CORE_QWEN package profile, downloaded the exact pinned Qwen revision, verified the exact source checkout, reran remote preflight, and passed the frozen engineering gate before collection.",
+      "model_benchmark_controller_dose_parser_conditions_estimands_thresholds_changed": false,
+      "scientific_design_changed": false,
+      "gate9_scientific_outputs_existed_at_recovery": false,
+      "status": "RESOLVED_ENGINEERING_PASS"
+    },
+    {
+      "incident_id": "GATE9-CLASS-C-001",
+      "class": "C",
+      "lifecycle": "COLLECTION",
+      "affected_scientific_outputs_existed": true,
+      "preserved_rows": 1233,
+      "symptom": "A TypeError escaped semantic-V3 canonicalization for one unhashable nested set literal and aborted before that generated row was journaled.",
+      "root_cause": "The total deterministic raw-string fallback caught ValueError and SyntaxError from ast.literal_eval but omitted its TypeError failure mode.",
+      "repair": "Condition-symmetric totality repair adds TypeError to the identical raw-string fallback; all preserved rows remain immutable and the one unjournaled key resumes under its identical frozen seed.",
+      "scientific_semantics_changed": false,
+      "replacement_draw_added": false,
+      "model_benchmark_controller_dose_conditions_estimands_thresholds_changed": false,
+      "status": "RESOLVED_PENDING_AMENDMENT_BINDING_AND_DETERMINISTIC_RESUME"
+    }
+  ]
+}
