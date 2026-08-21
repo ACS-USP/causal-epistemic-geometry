@@ -41,6 +41,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION_LOCKED",
         "GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION_COMPLETE",
         "GATE6_3_SEMANTIC_VALIDITY_AUDIT_COMPLETE",
+        "GATE7_FRESH_SINGLE_L27_REPLICATION",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -52,6 +53,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE6_SOURCE_ATTRITION_REPAIR",
             "GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE",
             "GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION_LOCKED",
+            "GATE7_FRESH_SINGLE_L27_REPLICATION",
         }
     )
     assert state["scientific_firewall"]["steering"] in {

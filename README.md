@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-The frozen Gate 6.3 result remains GATE6_3_SINGLE_MEAN_DESTRUCTIVE. A condition-blind, model-free external-semantic-v3 audit of all 920 preserved rows separated commitment validity, semantic evaluability, and correctness. The controller reached 0.9750 commitment validity/evaluability and 0.7000 accuracy; G=0.2042, C=0.1177, and D=0.1667 exceeded the four-vector random null, yielding the additive diagnostic GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL. This does not replace the frozen V2 result. A fresh replication protocol is drafted but not authorized.
+Gate 7 is prospectively locked before model outputs. It reuses byte-for-byte the frozen Gate-6.3 L27 paired-mean controller and exact eta, freezes external-semantic-v3, allocates 120 fresh CRUXEval items after excluding 473 historical/reserved IDs, and compares baseline, textual CAREFUL, the meaningful controller, and four new orthogonal energy-matched random controllers with two independent rollouts each. The historical Gate-6.3 V2 result remains immutable.
 
-**Next authorized action:** Principal researcher review of the offline V3 diagnostic and the draft fresh-replication protocol. Do not collect new outputs or run another controller, dose, layer, character count, Q2, or holdout without a new prospective lock and explicit authorization.
+**Next authorized action:** Execute only the frozen Gate-7 engineering gate and, after it passes, the complete 1,680-row development replication. Then stop RunPod, analyze and audit independently, draft but do not execute one Gate-8 protocol, and return for principal review.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

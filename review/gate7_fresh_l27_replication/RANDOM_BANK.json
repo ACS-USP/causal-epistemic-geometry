@@ -1,0 +1,101 @@
+{
+  "construction": "deterministic Gaussian; remove meaningful component; ordered Gram-Schmidt; unit normalize",
+  "gate6_3_randoms_reused": false,
+  "geometry": {
+    "meaningful_absolute_cosines": {
+      "GATE7_RANDOM_R0": 5.204170427930421e-18,
+      "GATE7_RANDOM_R1": 5.204170427930421e-18,
+      "GATE7_RANDOM_R2": 1.734723475976807e-18,
+      "GATE7_RANDOM_R3": 9.107298248878237e-18
+    },
+    "meaningful_orthogonality_pass": true,
+    "norms": {
+      "GATE7_RANDOM_R0": 0.9999999999999999,
+      "GATE7_RANDOM_R1": 1.0,
+      "GATE7_RANDOM_R2": 1.0,
+      "GATE7_RANDOM_R3": 0.9999999999999999
+    },
+    "pairwise_absolute_cosines": {
+      "GATE7_RANDOM_R0__GATE7_RANDOM_R1": 2.168404344971009e-18,
+      "GATE7_RANDOM_R0__GATE7_RANDOM_R2": 3.469446951953614e-18,
+      "GATE7_RANDOM_R0__GATE7_RANDOM_R3": 1.431146867680866e-17,
+      "GATE7_RANDOM_R1__GATE7_RANDOM_R2": 8.673617379884035e-18,
+      "GATE7_RANDOM_R1__GATE7_RANDOM_R3": 1.3877787807814457e-17,
+      "GATE7_RANDOM_R2__GATE7_RANDOM_R3": 5.637851296924623e-18
+    },
+    "random_pairwise_orthogonality_pass": true,
+    "unit_norm_pass": true
+  },
+  "meaningful_controller": {
+    "canonical_float64_vector_sha256": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "constructor": "PAIRED_MEAN_DIFFERENCE",
+    "duration": "sustained_current_token",
+    "eta": 12.849903937136261,
+    "historical_protocol": "review/gate6_3_single_mean_semantic_evaluation/PROTOCOL_LOCK.json",
+    "layer": 27,
+    "name": "BEST_SINGLE_MEAN_PLUS",
+    "per_forward_delta_norm": 130.46891907441653,
+    "reference_scale": 10.153299177386142,
+    "source": "PROMPT_BOUNDARY",
+    "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "vector_norm": 1.0,
+    "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+  },
+  "namespace": "GATE7-L27-RANDOM-BANK-V1",
+  "outcome_independent": true,
+  "random_conditions": {
+    "GATE7_RANDOM_R0": {
+      "canonical_float64_vector_sha256": "67f9eff6cfcef3f983e9571e625c0c6f0d3613fcb16716fc5af3fb08c7f9c993",
+      "delta_norm": 130.46891907441656,
+      "duration": "sustained_current_token",
+      "eta": 12.849903937136261,
+      "layer": 27,
+      "norm": 0.9999999999999999,
+      "reference_scale": 10.153299177386142,
+      "seed": 4286524754,
+      "vector_file_sha256": "d4e716c00cdd321b66bc1230402d18fa3de536ca8a1bc056046deff9f4d37ef7",
+      "vector_path": "review/gate7_fresh_l27_replication/GATE7_RANDOM_R0.npy",
+      "vector_sha256": "67f9eff6cfcef3f983e9571e625c0c6f0d3613fcb16716fc5af3fb08c7f9c993"
+    },
+    "GATE7_RANDOM_R1": {
+      "canonical_float64_vector_sha256": "c52f25263643cc960263b0c4d9bcfbb923cf8a9ee6bfe6a58580796d5fea11db",
+      "delta_norm": 130.46891907441656,
+      "duration": "sustained_current_token",
+      "eta": 12.849903937136261,
+      "layer": 27,
+      "norm": 1.0,
+      "reference_scale": 10.153299177386142,
+      "seed": 1380731299,
+      "vector_file_sha256": "e666436fc5f23d71d3707c270750277bb34cac467e76fa63ea1a0a2ebf7c6b6a",
+      "vector_path": "review/gate7_fresh_l27_replication/GATE7_RANDOM_R1.npy",
+      "vector_sha256": "c52f25263643cc960263b0c4d9bcfbb923cf8a9ee6bfe6a58580796d5fea11db"
+    },
+    "GATE7_RANDOM_R2": {
+      "canonical_float64_vector_sha256": "89fb02c2e69c9a4989eba0f49a27dfdf2c4cca1da44f6eae6efb23d24c62e228",
+      "delta_norm": 130.46891907441656,
+      "duration": "sustained_current_token",
+      "eta": 12.849903937136261,
+      "layer": 27,
+      "norm": 1.0,
+      "reference_scale": 10.153299177386142,
+      "seed": 3348682915,
+      "vector_file_sha256": "86c39aa11e6fd4e39f477141fd3b5209999a158670211722c594ab5d322942dc",
+      "vector_path": "review/gate7_fresh_l27_replication/GATE7_RANDOM_R2.npy",
+      "vector_sha256": "89fb02c2e69c9a4989eba0f49a27dfdf2c4cca1da44f6eae6efb23d24c62e228"
+    },
+    "GATE7_RANDOM_R3": {
+      "canonical_float64_vector_sha256": "62c744755c4026af0133c76f44dc1e7b3df54548a21017bc070e2bd32304d68a",
+      "delta_norm": 130.46891907441656,
+      "duration": "sustained_current_token",
+      "eta": 12.849903937136261,
+      "layer": 27,
+      "norm": 0.9999999999999999,
+      "reference_scale": 10.153299177386142,
+      "seed": 889297073,
+      "vector_file_sha256": "56377df2f79741d66b997df8af86f1b002ea98950e80c95d15d25d86ae7d9183",
+      "vector_path": "review/gate7_fresh_l27_replication/GATE7_RANDOM_R3.npy",
+      "vector_sha256": "62c744755c4026af0133c76f44dc1e7b3df54548a21017bc070e2bd32304d68a"
+    }
+  },
+  "schema_version": 1
+}

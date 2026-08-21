@@ -544,3 +544,42 @@ experiments:
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review of the fresh-replication draft; no new collection without a new prospective lock and explicit authorization.
+
+  - id: GATE7_FRESH_SINGLE_L27_REPLICATION
+    version: GATE-7
+    stage: DEVELOPMENT_REPLICATION
+    question: Does the exact frozen L27 paired-mean controller reproduce specific semantic error-profile control on a fresh unseen CRUXEval sample beyond four new architecture-matched random controllers?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3 frozen before outputs
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
+    status: FROZEN_PROSPECTIVE
+    outcome: NOT_YET_COLLECTED
+    scientific_interpretation: >-
+      Independent development replication only. The exact Gate-6.3 controller,
+      layer, eta, sustained timing, model, parser, guards, estimands, and
+      classifications are frozen. This is not confirmatory and does not run Q2.
+    source_commit: 594eb22f0c99215df5ebf085e3d5778ff681fd47
+    artifact: review/gate7_fresh_l27_replication/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE6_3_SEMANTIC_VALIDITY_AUDIT
+    lock:
+      protocol: review/gate7_fresh_l27_replication/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      parser_version: external-semantic-v3
+      requested_items: 120
+      actual_items: 120
+      historical_excluded_ids: 473
+      conditions: 7
+      rollouts_per_item_condition: 2
+      logical_rows: 1680
+      random_controls: 4
+      target_cost_usd: 2.00
+      hard_stop_cost_usd: 4.00
+      gpu_authorized: true
+    execution:
+      engineering_gate: NOT_RUN
+      collection: NOT_RUN
+      q2: NOT_RUN
+      character_count: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Execute only the frozen Gate-7 engineering gate and complete collection; then stop, analyze, independently audit, and return for principal review.
