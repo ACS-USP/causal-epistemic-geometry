@@ -522,23 +522,41 @@ def analyze(review: Path) -> dict[str, Any]:
     }
     write_json(review / "COST.json", cost)
 
+    random_rows = "".join(
+        f"| `{name}` | {summaries[name]['accuracy']:.4f} | "
+        f"{estimands[name]['G']:.6f} | {estimands[name]['C']:.6f} | "
+        f"{estimands[name]['D']:.6f} |\n"
+        for name in RANDOM_NAMES
+    )
+    interval_rows = "".join(
+        f"| `{name}` | {record['q025']:.6f} | {record['q975']:.6f} |\n"
+        for name, record in sorted(intervals.items())
+    )
+    binding = read_json(review / "EXPERIMENT_SOURCE_COMMIT.json")
     report = f"""# Gate 7 — Fresh Single-L27 Replication
 
 Primary classification: `{classification}`.
 
 Source-policy classification: `{source_summary["classification"]}`.
 
+Experiment source commit: `{binding["experiment_source_commit"]}`.
+
+Fresh sample: {len(item_ids)} CRUXEval items; {len(rows)} trajectories; seven
+conditions; two independent rollouts per item-condition. Semantic evaluator:
+`{lock["instrument"]["evaluator"]["version"]}`.
+
 The historical Gate 6.3 classification remains
 `GATE6_3_SINGLE_MEAN_DESTRUCTIVE` and was not modified.
 
 ## Conditions
 
-| condition | commitment | evaluability | accuracy | mean tokens |
+| condition | commitment | evaluability | accuracy | mean / median / max tokens |
 |---|---:|---:|---:|---:|
 """ + "".join(
         f"| `{row['condition']}` | {row['commitment_validity']:.4f} | "
         f"{row['semantic_evaluability']:.4f} | {row['accuracy']:.4f} | "
-        f"{row['mean_tokens']:.2f} |\n"
+        f"{row['mean_tokens']:.2f} / {row['median_tokens']:.1f} / "
+        f"{row['max_tokens']} |\n"
         for row in summary_rows
     )
     report += f"""
@@ -560,12 +578,49 @@ The historical Gate 6.3 classification remains
   {meaningful_contrasts["D"]["minus_random_mean"]:.6f} /
   {meaningful_contrasts["D"]["minus_random_max"]:.6f}
 
+## Frozen guards
+
+- Commitment-validity guard: {gates["commitment_validity_guard"]}
+- Semantic-evaluability guard: {gates["semantic_evaluability_guard"]}
+- Competence guard: {gates["competence_guard"]}
+
+The controller improved primary accuracy by {full["accuracy_change"]:.4f} and
+showed large positive G/C/D beyond every new random controller, but commitment
+validity and semantic evaluability were 0.9000 versus a baseline of 0.9917.
+The frozen relative guard required at least 0.9417, so the exhaustive
+classification is mechanically `GATE7_DESTRUCTIVE`.
+
+## Random-controller null
+
+| random condition | accuracy | G | C | D |
+|---|---:|---:|---:|---:|
+{random_rows}
+
+## Textual CAREFUL source
+
+- Classification: `{source_summary["classification"]}`
+- Token-gain fraction recovered by activation controller:
+  {source_summary["token_gain_recovered_fraction"]:.6f}
+- Accuracy-gain fraction recovered by activation controller:
+  {source_summary["accuracy_gain_recovered_fraction"]:.6f}
+- Meaningful/textual semantic agreement:
+  {source_summary["meaningful_textual_semantic_agreement"]:.6f}
+
+## Item-cluster bootstrap (10,000 resamples)
+
+| estimand | 2.5% | 97.5% |
+|---|---:|---:|
+{interval_rows}
+
 ## Interpretation boundary
 
 This is an independent DEVELOPMENT replication under a parser frozen before
 collection. It is not confirmatory, Q2, character-count replication, or a
-general claim beyond Qwen3-8B × CRUXEval. The exhaustive frozen classification
-was applied mechanically after all rows were collected.
+general claim beyond Qwen3-8B × CRUXEval. The controller produced a strong,
+specific semantic-error-profile and accuracy signal, but it also induced a
+condition-specific commitment/evaluability loss that violated the frozen
+non-destructiveness guard. The exhaustive classification was applied
+mechanically after all rows were collected.
 """
     (review / "REPORT.md").write_text(report, encoding="utf-8")
     return result

@@ -1,0 +1,21 @@
+{
+  "estimated_generation_cost_usd_at_0_44": 1.0079979664390286,
+  "hard_ceiling_usd": 4.0,
+  "pod_id": "cnuh4tylu46s5c",
+  "pod_uptime_seconds_at_stop": 9912,
+  "pod_wallclock_hours_at_stop": 2.7533333333333334,
+  "estimated_total_gpu_cost_usd_at_0_44": 1.2114666666666667,
+  "target_ceiling_usd": 2.0,
+  "scientific_trajectories": 1680,
+  "startup_and_engineering_seconds_estimate": 1664.743910953403,
+  "migration": {
+    "original_pod": "sxtnr0lx4gw8ht",
+    "reason": "Original A40 host had no free capacity at restart.",
+    "replacement_pod": "cnuh4tylu46s5c",
+    "gpu_class_preserved": "NVIDIA A40",
+    "obsolete_original_terminated_after_artifact_and_cache_audit": true
+  },
+  "final_runpod_state": "EXITED",
+  "summed_generation_hours": 2.2909044691796105,
+  "summed_generation_seconds": 8247.256089046597
+}
