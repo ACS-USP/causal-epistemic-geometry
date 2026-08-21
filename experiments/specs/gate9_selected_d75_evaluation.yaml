@@ -1,0 +1,40 @@
+experiment_id: GATE9_SELECTED_D75_EVALUATION
+stage: DEVELOPMENT_SELECTED_DOSE_EVALUATION
+lifecycle: PREMORTEM
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+  attention: sdpa
+  enable_thinking: false
+  max_new_tokens: 4096
+controller:
+  name: paired-mean L27 plus
+  canonical_vector_hash: e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838
+  layer: 27
+  dose: D75
+  eta: 9.637427952852196
+  duration: sustained_current_token
+sample:
+  benchmark: CRUXEval
+  dataset_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  fresh_items: 100
+  conditions: 7
+  rollouts_per_item_condition: 2
+  seed_regime: INDEPENDENT_PRIMARY
+semantic_evaluator: external-semantic-v3
+random_controls:
+  count: 4
+  reuse_prior_randoms: false
+bootstrap:
+  resamples: 10000
+  unit: item
+cost:
+  target_usd: 1.75
+  hard_ceiling_usd: 3.50
+firewall:
+  q2: NOT_RUN
+  character_count: NOT_RUN
+  confirmatory_holdout: UNTOUCHED
+  gate10: NOT_RUN

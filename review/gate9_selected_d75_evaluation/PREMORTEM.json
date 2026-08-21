@@ -1,0 +1,23 @@
+{
+  "classification": "PREMORTEM_PASS",
+  "gate": "GATE9_SELECTED_D75_EVALUATION",
+  "model_outputs_existed_at_review": false,
+  "checks": {
+    "selection_leakage": "PASS: D75 and controller are imported exactly from Gate 8",
+    "sample_freshness": "PASS: all historical and reserved IDs excluded; 100 selected deterministically",
+    "controller_identity": "PASS: byte and canonical hashes required",
+    "random_null": "PASS: four new matched orthonormal L27 directions",
+    "semantic_v3": "PASS: frozen condition-symmetric evaluator",
+    "rollout_independence": "PASS: globally distinct condition-specific seeds",
+    "primary_estimands": "PASS: unbiased two-rollout G/C/D and invalid-as-error",
+    "attrition": "PASS: model outcomes journaled; only infrastructure retried",
+    "schedule": "PASS: frozen interleaving",
+    "resume": "PASS: logical-key idempotence and fsync",
+    "source_anchor": "PASS: contemporaneous and descriptive only",
+    "fresh_id_conservation": "PASS: remaining IDs recorded but not allocated for outcomes",
+    "environment": "PASS: exact CORE_QWEN remote preflight required"
+  },
+  "class_a_recoveries_before_lock": [],
+  "class_b_amendments_before_lock": [],
+  "scientific_design_changes_after_outcomes": "NONE"
+}
