@@ -66,9 +66,7 @@ def test_gate6_source_metrics_and_estimand_identities() -> None:
 
 
 def test_gate6_symmetric_first_stage_formula_is_sign_sensitive() -> None:
-    values = symmetric_first_stage_contributions(
-        [3.0, 4.0], [1.0, 2.0], [1.0, 1.0], [2.0, 3.0]
-    )
+    values = symmetric_first_stage_contributions([3.0, 4.0], [1.0, 2.0], [1.0, 1.0], [2.0, 3.0])
     assert np.allclose(values, [1.5, 2.0])
 
 
@@ -101,6 +99,7 @@ def test_gate6_multilayer_hook_shifts_only_current_positions_and_cleans_up() -> 
         assert torch.allclose(output[0, 0], torch.zeros(3))
         assert trace.forward_count == 1
         assert all(entry["shift_error"] == 0.0 for entry in trace.applications)
+        assert all(entry["relative_shift_error"] == 0.0 for entry in trace.applications)
         assert all(entry["non_current_change"] == 0.0 for entry in trace.applications)
     assert len(layer_a._forward_hooks) == 0
     assert len(layer_b._forward_hooks) == 0

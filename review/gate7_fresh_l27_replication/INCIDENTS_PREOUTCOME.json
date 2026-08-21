@@ -12,6 +12,20 @@
       "scientific_design_changed": false,
       "model_outputs_collected": false,
       "status": "RESOLVED"
+    },
+    {
+      "incident_id": "GATE7-CLASS-B-001",
+      "class": "B",
+      "lifecycle": "ENGINEERING",
+      "affected_scientific_outputs_existed": false,
+      "symptom": "The first non-scientific engineering run passed identity, scope, cache, cleanup, scheduling, and controller exercise but used an absolute exact-shift threshold that was not BF16 scale-aware.",
+      "root_cause": "The legacy trace exposed absolute rounding error only, while the accepted sustained-hook engineering oracle uses BF16 epsilon-scaled relative error. Vector hashes were also recomputed through a lossy delta multiply/divide round trip for metadata.",
+      "repair": "Add diagnostics-only BF16 relative error to the unchanged hook operation, apply the already established <=2 epsilon-unit gate, and record hashes directly from the frozen vectors.",
+      "hypothesis_estimands_model_benchmark_controller_conditions_thresholds_changed": false,
+      "hook_behavior_changed": false,
+      "gate7_scientific_model_outputs_collected": false,
+      "requires_relock_before_collection": true,
+      "status": "RESOLVED_PENDING_RELOCK"
     }
   ]
 }

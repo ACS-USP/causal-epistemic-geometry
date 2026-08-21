@@ -298,6 +298,16 @@ def freeze(candidates: list[dict[str, Any]], output: Path) -> dict[str, Any]:
             "outcome_independent_interleaving": True,
         },
         "primary_outcome": "invalid_as_error; correctness only is e=0",
+        "engineering_gate": {
+            "alpha_zero_token_identity": True,
+            "exact_shift_tolerance": (
+                "max error <= 2 BF16 eps-scaled units using max(|before|, |after|, |delta|, 1)"
+            ),
+            "non_current_absolute_tolerance": 0.125,
+            "one_application_per_forward": True,
+            "all_meaningful_and_random_controllers_exercised": True,
+            "vector_identity_from_frozen_vector_not_delta_roundtrip": True,
+        },
         "estimands": [
             "accuracy",
             "commitment_validity",

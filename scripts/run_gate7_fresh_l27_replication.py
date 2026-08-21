@@ -128,7 +128,11 @@ def deltas(vectors: dict[str, np.ndarray]) -> dict[str, np.ndarray]:
 
 
 def condition_context(
-    backend: Any, item: Any, condition: str, controller_deltas: dict[str, np.ndarray]
+    backend: Any,
+    item: Any,
+    condition: str,
+    controller_deltas: dict[str, np.ndarray],
+    controller_hashes: dict[str, str],
 ) -> tuple[Any, Any, dict[str, Any]]:
     system = SYSTEM_CAREFUL if condition == TEXTUAL else None
     row = model_item(item, system)
@@ -164,7 +168,7 @@ def condition_context(
             "intervention_layer": LAYER,
             "intervention_duration": "sustained_current_token",
             "intervention_scope": "final_prompt_token_then_current_decode_token",
-            "intervention_vector_hash": vector_sha256(delta / (ETA * REFERENCE_SCALE)),
+            "intervention_vector_hash": controller_hashes[condition],
             "eta": ETA,
             "reference_scale": REFERENCE_SCALE,
             "delta_norm": float(np.linalg.norm(delta)),
@@ -237,6 +241,7 @@ def engineering_gate(
     review: Path,
     lock: dict[str, Any],
     controller_deltas: dict[str, np.ndarray],
+    controller_hashes: dict[str, str],
 ) -> dict[str, Any]:
     old_manifest = ROOT / "review/gate6_2_first_stage_repair_mean_bridge/MANIPULATION_MANIFEST.json"
     items = load_external(old_manifest)[:5]
@@ -276,7 +281,7 @@ def engineering_gate(
         conditions_to_exercise = (MEANINGFUL, *RANDOM_NAMES) if index == 0 else (MEANINGFUL,)
         for offset, condition in enumerate(conditions_to_exercise):
             context, steered_row, _meta = condition_context(
-                backend, item, condition, controller_deltas
+                backend, item, condition, controller_deltas, controller_hashes
             )
             with context as trace:
                 backend.generate_reasoning(
@@ -301,15 +306,19 @@ def engineering_gate(
             "delta_norm": float(np.linalg.norm(delta)),
             "duration": "sustained_current_token",
             "scope": "current_token",
-            "vector_hash": vector_sha256(delta / (ETA * REFERENCE_SCALE)),
+            "vector_hash": controller_hashes[condition],
         }
     delta_norms = [record["delta_norm"] for record in checks["controller_checks"].values()]
+    max_abs_shift_error = max(float(row["shift_error"]) for row in all_trace_rows)
+    max_relative_shift_error = max(float(row["relative_shift_error"]) for row in all_trace_rows)
     checks.update(
         {
             "alpha_zero_identity": all(identity_passes),
             "hook_cleanup": all(cleanup_passes),
-            "per_forward_exact_shift": bool(all_trace_rows)
-            and max(float(row["shift_error"]) for row in all_trace_rows) <= 0.125,
+            "per_forward_exact_shift": bool(all_trace_rows) and max_relative_shift_error <= 2.0,
+            "max_abs_shift_error": max_abs_shift_error,
+            "max_relative_shift_error_bf16_eps": max_relative_shift_error,
+            "bf16_relative_tolerance": 2.0,
             "current_token_scope": bool(all_trace_rows)
             and max(abs(float(row["non_current_change"])) for row in all_trace_rows) <= 0.125,
             "one_application_per_forward": bool(trace_forward_counts)
@@ -353,6 +362,7 @@ def collect(
     review: Path,
     lock: dict[str, Any],
     controller_deltas: dict[str, np.ndarray],
+    controller_hashes: dict[str, str],
     experiment_source_commit: str,
 ) -> None:
     manifest = review / "EVALUATION_MANIFEST.json"
@@ -378,7 +388,7 @@ def collect(
         item = item_by_id[key[0]]
         condition = key[1]
         context, model_row, context_meta = condition_context(
-            backend, item, condition, controller_deltas
+            backend, item, condition, controller_deltas, controller_hashes
         )
         started = time.perf_counter()
         try:
@@ -508,15 +518,23 @@ def main() -> int:
     lock = load_lock(review, args.experiment_source_commit)
     vectors = load_vectors(review, lock)
     controller_deltas = deltas(vectors)
+    controller_hashes = {name: vector_sha256(vector) for name, vector in vectors.items()}
     backend = build_backend(args.model_path)
     if args.mode == "engineering":
-        result = engineering_gate(backend, review, lock, controller_deltas)
+        result = engineering_gate(backend, review, lock, controller_deltas, controller_hashes)
         print(json.dumps({"classification": result["classification"]}, indent=2))
     else:
         engineering = json.loads((review / "ENGINEERING_CHECKS.json").read_text(encoding="utf-8"))
         if engineering.get("classification") != "GATE7_ENGINEERING_PASS":
             raise RuntimeError("Gate 7 collection requires a passed engineering gate")
-        collect(backend, review, lock, controller_deltas, args.experiment_source_commit)
+        collect(
+            backend,
+            review,
+            lock,
+            controller_deltas,
+            controller_hashes,
+            args.experiment_source_commit,
+        )
         print(json.dumps({"collection": "complete", "rows": lock["schedule"]["logical_rows"]}))
     return 0
 

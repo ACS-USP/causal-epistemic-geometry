@@ -75,13 +75,24 @@ class Gate6HookTrace:
                     before = hidden[row, position, :].detach().clone()
                     updated[row, position, :] = before + delta
                     after = updated[row, position, :].detach()
+                    absolute_error = (after.float() - before.float() - delta.float()).abs()
+                    bf16_scale = hidden[row, position, :].float().abs()
+                    bf16_scale = (
+                        bf16_scale.maximum(after.float().abs())
+                        .maximum(delta.float().abs())
+                        .clamp_min(1.0)
+                    )
+                    relative_error = absolute_error / (
+                        self._dtype_epsilon(hidden.dtype) * bf16_scale
+                    )
                     self.applications.append(
                         {
                             "layer": layer,
                             "batch_row": row,
                             "sequence_length": int(hidden.shape[1]),
                             "token_position": int(position),
-                            "shift_error": float((after - before - delta).abs().max().item()),
+                            "shift_error": float(absolute_error.max().item()),
+                            "relative_shift_error": float(relative_error.max().item()),
                             "non_current_change": float(
                                 (updated[row, :, :] - hidden[row, :, :]).abs().sum().item()
                                 - (after - before).abs().sum().item()
@@ -98,6 +109,12 @@ class Gate6HookTrace:
             return _join_output(updated, remainder, was_tuple)
 
         return hook
+
+    @staticmethod
+    def _dtype_epsilon(dtype: Any) -> float:
+        import torch
+
+        return float(torch.finfo(dtype).eps)
 
     def __exit__(self, exc_type: Any, exc: Any, traceback: Any) -> None:
         for handle in reversed(self.handles):
