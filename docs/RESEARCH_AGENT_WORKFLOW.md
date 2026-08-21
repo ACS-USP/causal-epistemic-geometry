@@ -39,3 +39,8 @@ Operational recovery may proceed under Class A. A pre-outcome mechanical
 instrument correction follows Class B and must be relocked. Post-outcome work
 is offline Class C unless a frozen decision tree already authorizes more
 collection. See the [research autonomy policy](RESEARCH_AUTONOMY_POLICY.md).
+
+A gate in `BLOCKED_SCIENTIFIC_REVIEW` cannot return directly to collection or
+analysis. Principal review must route it through `PREMORTEM` or a new
+`PROSPECTIVE_LOCK`; collection remains impossible until the prospective
+lifecycle has been restored.

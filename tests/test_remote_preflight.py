@@ -4,7 +4,11 @@ from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
-from epistemic_geometry.research.preflight import SystemProbe, run_preflight
+from epistemic_geometry.research.preflight import (
+    SystemProbe,
+    load_environment_spec,
+    run_preflight,
+)
 
 
 class FakeProbe(SystemProbe):
@@ -46,9 +50,9 @@ SPEC = {
     "python": ">=3.11,<3.12",
     "packages": {
         "torch": {"distribution": "torch", "version": "==2.4.1+cu124"},
-        "transformers": {"distribution": "transformers", "version": "==4.57.6"},
-        "accelerate": {"distribution": "accelerate", "version": ">=0.33"},
-        "huggingface_hub": {"distribution": "huggingface-hub", "version": "*"},
+        "transformers": {"distribution": "transformers", "version": "==4.57.1"},
+        "accelerate": {"distribution": "accelerate", "version": "==1.14.0"},
+        "huggingface_hub": {"distribution": "huggingface-hub", "version": "==0.36.0"},
     },
     "require_cuda": True,
     "cuda_runtime": "==12.4",
@@ -61,9 +65,9 @@ SPEC = {
 def _packages() -> dict[str, str]:
     return {
         "torch": "2.4.1+cu124",
-        "transformers": "4.57.6",
-        "accelerate": "0.33.0",
-        "huggingface-hub": "0.34.0",
+        "transformers": "4.57.1",
+        "accelerate": "1.14.0",
+        "huggingface-hub": "0.36.0",
     }
 
 
@@ -121,3 +125,30 @@ def test_dirty_source_and_wrong_model_revision_fail_closed(tmp_path) -> None:
     assert not report.ready
     failed = {check.name for check in report.checks if not check.passed}
     assert {"model_revision", "source_worktree_clean"} <= failed
+
+
+def test_named_profiles_select_core_and_separate_rfm_environment() -> None:
+    root = Path(__file__).resolve().parents[1]
+    _payload, core = load_environment_spec(root / "remote_environment.yaml", "CORE_QWEN")
+    _payload, rfm = load_environment_spec(root / "remote_environment.yaml", "RFM_COMPAT")
+    assert core["packages"]["transformers"]["version"] == "==4.57.1"
+    assert core["attention_backend"] == "SDPA"
+    assert rfm["packages"]["transformers"]["version"] == "==4.47.0"
+    assert core != rfm
+
+
+def test_version_mismatch_reports_observed_and_expected(tmp_path) -> None:
+    cache = tmp_path / "hf-cache"
+    cache.mkdir()
+    packages = _packages()
+    packages["transformers"] = "4.57.6"
+    report = run_preflight(
+        SPEC,
+        root=tmp_path,
+        probe=FakeProbe(packages=packages),
+        hf_cache_path=cache,
+    )
+    mismatch = next(check for check in report.checks if check.name == "package:transformers")
+    assert not mismatch.passed
+    assert mismatch.observed == "4.57.6"
+    assert mismatch.expected == "==4.57.1"

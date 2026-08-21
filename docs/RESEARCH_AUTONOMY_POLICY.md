@@ -83,8 +83,10 @@ PREPARE -> PREMORTEM -> PROSPECTIVE_LOCK -> ENGINEERING -> COLLECTION
 
 `BLOCKED_RECOVERABLE` records Class A interruptions. It may return to the exact
 prior non-scientific state after repair. `BLOCKED_SCIENTIFIC_REVIEW` records a
-Class D boundary and cannot jump directly to collection; principal review must
-return through a prospective lock, offline audit, forensic audit, or closeout.
+Class D boundary and may transition only to `PREMORTEM` or `PROSPECTIVE_LOCK`.
+The transition `BLOCKED_SCIENTIFIC_REVIEW -> COLLECTION` is explicitly
+forbidden, as are shortcuts into post-outcome analysis or closeout. New
+collection requires a prospective lifecycle to be re-established first.
 
 Incident reasons are typed as:
 

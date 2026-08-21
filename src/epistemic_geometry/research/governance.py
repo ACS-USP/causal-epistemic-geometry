@@ -95,14 +95,12 @@ _TRANSITIONS: dict[GateState, frozenset[GateState]] = {
             GateState.BLOCKED_SCIENTIFIC_REVIEW,
         }
     ),
-    # Principal review must return through a lock/audit/close boundary; it may
-    # not jump directly into collection.
+    # A blocked scientific review may only restart the prospective lifecycle.
+    # In particular it cannot jump into collection or post-outcome analysis.
     GateState.BLOCKED_SCIENTIFIC_REVIEW: frozenset(
         {
+            GateState.PREMORTEM,
             GateState.PROSPECTIVE_LOCK,
-            GateState.OFFLINE_ANALYSIS,
-            GateState.FORENSIC_AUDIT,
-            GateState.CLOSED,
         }
     ),
     GateState.CLOSED: frozenset(),

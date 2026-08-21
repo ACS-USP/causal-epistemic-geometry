@@ -252,7 +252,7 @@ def _parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument("--spec", type=Path, default=Path("remote_environment.yaml"))
-    parser.add_argument("--profile", default="core_cuda")
+    parser.add_argument("--profile", default="CORE_QWEN")
     parser.add_argument("--root", type=Path, default=Path.cwd())
     parser.add_argument("--hf-cache", type=Path)
     parser.add_argument("--model-id")

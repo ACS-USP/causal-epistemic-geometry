@@ -19,7 +19,7 @@ preflight:
 	$(PYTHON) -m epistemic_geometry.cli preflight configs/mock_smoke.yaml
 
 remote-preflight:
-	$(PYTHON) scripts/remote_preflight.py --spec remote_environment.yaml
+	$(PYTHON) scripts/remote_preflight.py --spec remote_environment.yaml --profile CORE_QWEN
 
 preflight-v1-1:
 	$(PYTHON) -m epistemic_geometry.cli preflight-q1-v1-1 configs/q1_v1_1_qwen3_8b.yaml

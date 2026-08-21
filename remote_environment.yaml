@@ -1,13 +1,14 @@
 schema_version: 1
 evidence:
   repository_python: pyproject.toml requires Python >=3.11
-  validated_remote: docs/PRE_RUNPOD_HANDOFF.md records Python 3.11.10, torch 2.4.1+cu124, transformers 4.57.6, and CUDA 12.4
+  validated_remote: review/gate6_3_single_mean_semantic_evaluation/ENVIRONMENT_PROVENANCE.json records the exact Gate 6.3 CORE_QWEN environment
   hf_bounds: pyproject.toml records transformers >=4.45,<5 and accelerate >=0.33
   xrfm: experiments/specs/gate6_layer_source_rfm_atlas.yaml pins the optional upstream environment and commits
 profiles:
-  core_cuda:
+  CORE_QWEN:
     purpose: Canonical repository GPU execution environment; no inference is performed by preflight.
     python: ">=3.11,<3.12"
+    attention_backend: SDPA
     packages:
       torch:
         distribution: torch
@@ -16,19 +17,19 @@ profiles:
         evidence_level: exact_validated_remote
       transformers:
         distribution: transformers
-        version: "==4.57.6"
+        version: "==4.57.1"
         required: true
         evidence_level: exact_validated_remote
       accelerate:
         distribution: accelerate
-        version: ">=0.33"
+        version: "==1.14.0"
         required: true
-        evidence_level: repository_lower_bound
+        evidence_level: exact_validated_remote
       huggingface_hub:
         distribution: huggingface-hub
-        version: "*"
+        version: "==0.36.0"
         required: true
-        evidence_level: presence_required_version_not_frozen_by_repository_evidence
+        evidence_level: exact_validated_remote
     require_cuda: true
     cuda_runtime: "==12.4"
     minimum_disk_free_gb: 20
@@ -38,7 +39,7 @@ profiles:
     models:
       Qwen/Qwen3-8B:
         revision: b968826d9c46dd6066d109eabc6255188de91218
-  xrfm_optional:
+  RFM_COMPAT:
     purpose: Pinned optional upstream xRFM reproduction environment; separate from core runtime.
     python: "==3.10.15"
     packages:

@@ -32,11 +32,20 @@ def test_machine_policy_matches_typed_states_reasons_and_transitions() -> None:
 
 def test_transition_validator_blocks_collection_jump_and_closed_reopen() -> None:
     validate_transition(GateState.PREPARE, GateState.PREMORTEM)
+    validate_transition(GateState.BLOCKED_SCIENTIFIC_REVIEW, GateState.PREMORTEM)
     validate_transition(GateState.BLOCKED_SCIENTIFIC_REVIEW, GateState.PROSPECTIVE_LOCK)
     with pytest.raises(ValueError, match="invalid gate transition"):
         validate_transition(GateState.PREMORTEM, GateState.COLLECTION)
     with pytest.raises(ValueError, match="invalid gate transition"):
         validate_transition(GateState.CLOSED, GateState.PREPARE)
+    for forbidden in (
+        GateState.COLLECTION,
+        GateState.OFFLINE_ANALYSIS,
+        GateState.FORENSIC_AUDIT,
+        GateState.CLOSED,
+    ):
+        with pytest.raises(ValueError, match="invalid gate transition"):
+            validate_transition(GateState.BLOCKED_SCIENTIFIC_REVIEW, forbidden)
 
 
 def test_incident_timing_routes_amendment_to_b_before_and_c_after_outcomes() -> None:
