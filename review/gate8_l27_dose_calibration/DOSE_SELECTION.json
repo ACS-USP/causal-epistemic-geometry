@@ -1,0 +1,43 @@
+{
+  "D100_selectable": false,
+  "accuracy_G_C_D_used_for_selection": false,
+  "classification": "GATE8_SAFE_LOWER_DOSE_SELECTED",
+  "eligibility": {
+    "D100": {
+      "behavioral_first_stage": true,
+      "commitment_validity": true,
+      "competence_safety": true,
+      "eligible": true,
+      "semantic_evaluability": true,
+      "source_replicated": true
+    },
+    "D25": {
+      "behavioral_first_stage": false,
+      "commitment_validity": true,
+      "competence_safety": true,
+      "eligible": false,
+      "semantic_evaluability": true,
+      "source_replicated": true
+    },
+    "D50": {
+      "behavioral_first_stage": false,
+      "commitment_validity": true,
+      "competence_safety": true,
+      "eligible": false,
+      "semantic_evaluability": true,
+      "source_replicated": true
+    },
+    "D75": {
+      "behavioral_first_stage": true,
+      "commitment_validity": true,
+      "competence_safety": true,
+      "eligible": true,
+      "semantic_evaluability": true,
+      "source_replicated": true
+    }
+  },
+  "future_evaluation_executed": false,
+  "selected_dose": "D75",
+  "selection_rule": "lowest eligible lower dose: D25, then D50, then D75",
+  "source_classification": "CAREFUL_SOURCE_REPLICATED"
+}

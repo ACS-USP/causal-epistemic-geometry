@@ -1,0 +1,18 @@
+{
+  "attention": "sdpa",
+  "cuda_runtime": "12.4",
+  "data_center": "EU-SE-1",
+  "dtype": "bf16",
+  "environment_profile": "CORE_QWEN",
+  "experiment_source_commit": "17e7ae043c60df211ebce6c4d5893d01f2fd5816",
+  "gpu": "NVIDIA A40",
+  "huggingface_hub": "0.36.0",
+  "max_new_tokens": 4096,
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "pod_id": "9kfr0hkjmjdl2a",
+  "python": "3.11.10",
+  "remote_preflight": "PASS",
+  "torch": "2.4.1+cu124",
+  "transformers": "4.57.1"
+}

@@ -1,0 +1,62 @@
+{
+  "dose_order": [
+    "D25",
+    "D50",
+    "D75",
+    "D100"
+  ],
+  "expected_directions": {
+    "Q": "nondecreasing",
+    "accuracy": "reported_not_assumed",
+    "commitment_validity": "nonincreasing",
+    "no_commitment_rate": "nondecreasing",
+    "rho_tokens": "nondecreasing",
+    "semantic_evaluability": "nonincreasing",
+    "truncation_rate": "nondecreasing"
+  },
+  "values": {
+    "Q": [
+      0.05,
+      0.23,
+      0.43,
+      0.58
+    ],
+    "accuracy": [
+      0.45,
+      0.42,
+      0.49,
+      0.66
+    ],
+    "commitment_validity": [
+      1.0,
+      1.0,
+      1.0,
+      0.97
+    ],
+    "no_commitment_rate": [
+      0.0,
+      0.0,
+      0.0,
+      0.02
+    ],
+    "rho_tokens": [
+      0.0,
+      0.02818456104201928,
+      0.34628498540486174,
+      1.0109892805455394
+    ],
+    "semantic_evaluability": [
+      1.0,
+      1.0,
+      1.0,
+      0.97
+    ],
+    "truncation_rate": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "violations": []
+}
