@@ -1,0 +1,64 @@
+schema_version: 1
+experiment_id: GATE8_L27_DOSE_CALIBRATION
+status: PROSPECTIVE_PRE_OUTCOME
+stage: DEVELOPMENT_CALIBRATION
+lifecycle: PREMORTEM
+purpose: >-
+  Calibrate the minimum safe, specific lower dose of the exact frozen L27
+  paired-mean plus controller. This is not the later independent evaluation.
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  attention: sdpa
+  enable_thinking: false
+  max_new_tokens: 4096
+  sampling:
+    do_sample: true
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    min_p: 0.0
+controller:
+  canonical_vector_hash: e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838
+  layer: 27
+  sign: PLUS
+  duration: sustained_current_token
+  eta_full: 12.849903937136261
+doses:
+  D25: {fraction: 0.25, eta: 3.2124759842840653, selectable: true}
+  D50: {fraction: 0.50, eta: 6.4249519685681305, selectable: true}
+  D75: {fraction: 0.75, eta: 9.637427952852196, selectable: true}
+  D100: {fraction: 1.00, eta: 12.849903937136261, selectable: false}
+sample:
+  allocation: GATE8_DOSE_CALIBRATION
+  items: 50
+  minimum_eligible_before_allocation: 150
+  minimum_remaining_after_allocation: 100
+  namespace: GATE8-L27-DOSE-CALIBRATION-V1
+  future_evaluation_ids_allocated: false
+design:
+  conditions: 22
+  rollout_blocks: 2
+  trajectories: 2200
+  seed_regime: MATCHED_COUPLING_CALIBRATION
+  same_seed_across_conditions_within_item_rollout: true
+  random_vectors: 4
+  random_bank_new: true
+  random_bank_shared_across_doses: true
+selection:
+  rule: lowest eligible lower dose
+  priority: [D25, D50, D75]
+  accuracy_is_safety_only: true
+  G_C_D_forbidden: true
+bootstrap:
+  resamples: 5000
+  unit: item_cluster_all_conditions_both_rollout_blocks
+cost:
+  target_usd: 2.50
+  hard_stop_usd: 4.00
+firewall:
+  gate9: NOT_RUN
+  q2: NOT_RUN
+  character_count: NOT_RUN
+  confirmatory_holdout: UNTOUCHED

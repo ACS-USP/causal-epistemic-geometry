@@ -1,0 +1,1027 @@
+{
+  "actual_n": 50,
+  "allocation": "GATE8_DOSE_CALIBRATION",
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "eligible_before_allocation": 207,
+  "experiment_id": "GATE8_L27_DOSE_CALIBRATION",
+  "future_evaluation_ids_allocated": false,
+  "historical_excluded_count": 593,
+  "historical_exclusion_digest": "85e61f1d529c1622861dcf46627ea8512057b3c11a116df12a5b0c7753a29a05",
+  "items": [
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "01bec3a60e27d5d62d9ec778983daf2aba560d41a60d5a916fbca82765c67291",
+      "item_id": "sample_528",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_528",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s):\n    b = ''\n    c = ''\n    for i in s:\n        c = c + i\n        if s.rfind(c) > -1:\n            return s.rfind(c)\n    return 0\n```\n\nInput: 'papeluchis'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "aff94d081a108cc93d1b2562a27e593f14f3f12913ffba9193bb72b5099c8ad6",
+      "reference_answer": "2",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "e145b86adf9654b67e2363095e6b51fbd5a72ad84416c54564a50ad65db86403",
+      "item_id": "sample_793",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_793",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(list, start, end):\n    count = 0\n    for i in range(start, end):\n        for j in range(i, end):\n            if list[i] != list[j]:\n                count += 1\n    return count\n```\n\nInput: [1, 2, 4, 3, 2, 1], 0, 3\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "09bc5ea55e118009227a99a6bf4f3cbe7ea87870888dc71275f753da77d4675c",
+      "reference_answer": "3",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "78c95771b14ebc8738e404b50775c9b88800444a7845717b801cecd9b92cfa8f",
+      "item_id": "sample_667",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_667",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    new_text = []\n    for i in range(len(text) // 3):\n        new_text.append(f\"< {text[i * 3: i * 3 + 3]} level={i} >\")\n    last_item = text[len(text) // 3 * 3:]\n    new_text.append(f\"< {last_item} level={len(text) // 3} >\")\n    return new_text\n```\n\nInput: 'C7'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "2a689476fa596517c9e15b7e1fc1fe4fe77a6f15422fa47a5401d75f87864133",
+      "reference_answer": "['< C7 level=0 >']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "e02f6fd3444faebc2e6a6fb410187b4d8f963a9de5f59be5fb4f35d00408f1ca",
+      "item_id": "sample_738",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_738",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, characters):\n    for i in range(len(characters)):\n        text = text.rstrip(characters[i::len(characters)])\n    return text\n```\n\nInput: \"r;r;r;r;r;r;r;r;r\", \"x.r\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a6cf5090b9df286872bd04a0e213ae829e63d0f44fa56a8c5eb5e13098b7de6b",
+      "reference_answer": "'r;r;r;r;r;r;r;r;'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "4dad5cb83905b2058f41843ec7cbf9e96222c1e99e7e157dcfb7f50079cacadf",
+      "item_id": "sample_464",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_464",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(ans):\n    if ans.isdecimal():\n        total = int(ans) * 4 - 50\n        total -= len([c for c in list(ans) if c not in '02468']) * 100\n        return total\n    return 'NAN'\n```\n\nInput: '0'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "9d2034615404d15c0c07737e89c9f97b0c3cb289db505313edbf569e66d2c813",
+      "reference_answer": "-50",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "b82e2c243f80ff7bf31c24b4252e9b0bca556805958d64227a2506e7b02074c8",
+      "item_id": "sample_43",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_43",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(n):\n    for i in str(n):\n        if not i.isdigit():\n            n = -1\n            break\n    return n\n```\n\nInput: \"6 ** 2\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "c51c6edf028796138007114ca31ffbeb52cb6e9b199199cbb433caee6aa60cab",
+      "reference_answer": "-1",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "00a56ca167cb0d4c4fcd7e604a7ffc2852244577010f4972ba7e3b4e658267e5",
+      "item_id": "sample_590",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_590",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    for i in range(10, 0, -1):\n        text = text.lstrip(str(i))\n    return text\n```\n\nInput: \"25000   $\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b346f775f341c4c7b6d07284c221c685a936fbfee6418204c42567c44435f5e0",
+      "reference_answer": "'5000   $'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c19a1f06f39167c2b20d51bf3925114f2f90fc3f5cf195c8708cbe8570cff08d",
+      "item_id": "sample_470",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_470",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(number):\n    transl = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5}\n    result = []\n    for key, value in transl.items():\n        if value % number == 0:\n            result.append(key)\n    return result\n```\n\nInput: 2\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "2826298f2c85edefef2db8dc7a1de269e204d5b9fee6a1878b1818625a6771a6",
+      "reference_answer": "['B', 'D']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "eca0c5a9402690b1630710ba6f8150da8c3c8e343fd8365a23ef412243d5edeb",
+      "item_id": "sample_299",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_299",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, char):\n    if not text.endswith(char):\n        return f(char + text, char)\n    return text\n```\n\nInput: 'staovk', 'k'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "c064c5ffdb612a592341b241f93f1476e7ee3c2928c44a30c350f138d097e404",
+      "reference_answer": "'staovk'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "a603e7ec75d8719052f1f6f7e78f479e67c5ce4501d0eb42164da1584c044fe6",
+      "item_id": "sample_519",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_519",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(d):\n    d['luck'] = 42\n    d.clear()\n    return {1: False, 2 :0}\n```\n\nInput: {}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "c483894ac7540a666b1697c60fb566292b3046135d99b4bdc9112acd671a9d12",
+      "reference_answer": "{1: False, 2: 0}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9bcac28389676f1e2f4adb52093a66102c86fa60eee88dcff01533f8868136e0",
+      "item_id": "sample_220",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_220",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, m, n):\n    text = \"{}{}{}\".format(text, text[:m], text[n:])\n    result = \"\"\n    for i in range(n, len(text)-m):\n        result = text[i] + result\n    return result\n```\n\nInput: \"abcdefgabc\", 1, 2\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "34a27d58fddfe2813d1273b6fa2a5c5870656def0f642911f9747a762dd11dce",
+      "reference_answer": "'bagfedcacbagfedc'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "3e083b546fd6754a3dbec87ef4c9933737db5021623d000153f5673ca4bbcf92",
+      "item_id": "sample_340",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_340",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    uppercase_index = text.find('A')\n    if uppercase_index >= 0:\n        return text[:uppercase_index] + text[text.find('a') + 1 :]\n    else:\n        return ''.join(sorted(text))\n```\n\nInput: 'E jIkx HtDpV G'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "3c42eae3ccdf9d1946fb3008c4dfd74045662c6896dddb2da47f7408ec379a31",
+      "reference_answer": "'   DEGHIVjkptx'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "ccd6ad056738ebd565d8fc5474fe6a788371ea4ca55cfcec0ad92bf62b1edf24",
+      "item_id": "sample_293",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_293",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    s = text.lower()\n    for i in range(len(s)):\n        if s[i] == 'x':\n            return 'no'\n    return text.isupper()\n```\n\nInput: 'dEXE'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "cf736f7404aa4680ebc93ecbf17b10f9d9915efd0024715f17ce40919459d075",
+      "reference_answer": "'no'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "5fcdba6fcf62df7139b822262654098396b9b36175e3955423257df24ed8eabf",
+      "item_id": "sample_332",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_332",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    count = len(nums)\n    if count == 0:\n        nums = [0] * int(nums.pop())\n    elif count % 2 == 0:\n        nums.clear()\n    else:\n        del nums[:count//2:]\n    return nums\n```\n\nInput: [-6, -2, 1, -3, 0, 1]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b413a31d13629431c4ebe8d24c033a41687497516639e7e1b2e82d90907f4f96",
+      "reference_answer": "[]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c273da34b5ab3ddd25388ddf77d3d17f5fcb3621ccbda98160673b54df98f4ab",
+      "item_id": "sample_632",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_632",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(list):\n    for i in range(len(list) - 1, 0, -1):\n        for j in range(i):\n            if list[j] > list[j + 1]:\n                list[j], list[j + 1] = list[j + 1], list[j]\n                list.sort()\n    return list\n```\n\nInput: [63, 0, 1, 5, 9, 87, 0, 7, 25, 4]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "47b80920181bfaeb7b149351e5e1d568979314bbe6717b455ac27aa58d062492",
+      "reference_answer": "[0, 0, 1, 4, 5, 7, 9, 25, 63, 87]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "774a3bdc31bef906ae6bf763e224aebe15d9d61388879bedbcd709e167d835bf",
+      "item_id": "sample_588",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_588",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(items, target):\n    if target in items:\n        return items.index(target)\n    return -1\n```\n\nInput: ['''1''', '+', '-', '**', '//', '*', '+'], '**'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "9f76629fcd7787ae2b46e4c58b4e6e2f55a9f11f6f66ae02ef312411e8e2c28d",
+      "reference_answer": "3",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "6138dfce5c6ec513963f89ddf40b19ecb904009d4f14651277e544fb0dc397bf",
+      "item_id": "sample_337",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_337",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(txt):\n    d = []\n    for c in txt:\n        if c.isdigit():\n            continue\n        if c.islower():\n            d.append(c.upper())\n        elif c.isupper():\n            d.append(c.lower())\n    return ''.join(d)\n```\n\nInput: \"5ll6\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "7d2992745beae3b110fb30f48b99eaa9dba29cf504f75b1e3644b6778dc25f13",
+      "reference_answer": "'LL'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "aac6fb32c7b4ddbaa0848a37fb265aa1064cee5704675d33276411fa2cbc3f04",
+      "item_id": "sample_439",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_439",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(value):\n    parts = value.partition(' ')[::2]\n    return ''.join(parts)\n```\n\nInput: 'coscifysu'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "52e0d2d3fe9a4e0cdd47af940ea9dec3fcce900f8745c77b25d975ee3d6fa94c",
+      "reference_answer": "'coscifysu'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "d08055854c99cd8cee4abd250fbde4c76d2a6c46a5c7efded8aa04fe077f4884",
+      "item_id": "sample_335",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_335",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, to_remove):\n    new_text = list(text)\n    if to_remove in new_text:\n        index = new_text.index(to_remove)\n        new_text.remove(to_remove)\n        new_text.insert(index, '?')\n        new_text.remove('?')\n    return ''.join(new_text)\n```\n\nInput: 'sjbrlfqmw', 'l'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "cfce06ce7618f9bc57abd05ac185e3c1526f1a7cb72bf93637d493a88e219ad7",
+      "reference_answer": "'sjbrfqmw'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "e803dae1f6289ffca505221758bbb0763cad0dadf26393dca2896af4414c0e42",
+      "item_id": "sample_212",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_212",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    for _ in range(len(nums) - 1):\n        nums.reverse()\n    return nums\n```\n\nInput: [1, -9, 7, 2, 6, -3, 3]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b4b3992812917cb11557c9cb18597df136a0b3c2d3eb3eba4b6249acdbacd958",
+      "reference_answer": "[1, -9, 7, 2, 6, -3, 3]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "ab9d5970182edf8879a9b02174686dc744c09b4d43efbfb08cd9cb07a14c8e44",
+      "item_id": "sample_157",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_157",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(phrase):\n    ans = 0\n    for w in phrase.split():\n        for ch in w:\n            if ch == \"0\":\n                ans += 1\n    return ans\n```\n\nInput: \"aboba 212 has 0 digits\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "ded2931d523f05a47a02051dba768a562e6b85f066afe562f259bd2f19e9f56a",
+      "reference_answer": "1",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "a30bf9cfc033de36bd2750f2d192fdfa4e7fbba9a5446345b859735d22140aaf",
+      "item_id": "sample_129",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_129",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, search_string):\n    indexes = []\n    while search_string in text:\n        indexes.append(text.rindex(search_string))\n        text = text[:text.rindex(search_string)]\n    return indexes\n```\n\nInput: 'ONBPICJOHRHDJOSNCPNJ9ONTHBQCJ', 'J'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "6aaa2c43eb8ec70884aabcdbd6840d4e1bd93782cb0ae8c1fa5c62f3e6e749b8",
+      "reference_answer": "[28, 19, 12, 6]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "f9c74c6db1a5da243668fcfb54b8358065d725723cdc00e5fd3a1d9c002f39c2",
+      "item_id": "sample_593",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_593",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums, n):\n    pos = len(nums) - 1\n    for i in range(-len(nums), 0):\n        nums.insert(pos, nums[i])\n    return nums\n```\n\nInput: [], 14\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "963b2a9c7677a16ad829fecaa8561f8610f0aa2441db074d4762862c00e727a1",
+      "reference_answer": "[]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "ca2097d11d171f921ddacef330e7edb045c1fd61494469666f1d74a4b01c0ae3",
+      "item_id": "sample_487",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_487",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(dict):\n    even_keys = []\n    for key in dict.keys():\n        if key % 2 == 0:\n            even_keys.append(key)\n    return even_keys\n```\n\nInput: { 4: 'a' }\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "44e675adc937c7765b7fa3f27cc373fabd84714b3af23b4336b012f90cd74f4d",
+      "reference_answer": "[4]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "062390bb47de14a6fb56854258d56c030a7dcf2d43f2f34bf76544a83fedffc3",
+      "item_id": "sample_85",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_85",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(n):\n    values = {0: 3, 1: 4.5, 2: '-'}\n    res = {}\n    for i, j in values.items():\n        if i % n != 2:\n            res[j] = n // 2\n    return sorted(res)\n```\n\nInput: 12\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "81a39f131e4e6157c6273e37275af1c9bb97bcc95e98f69e6c6cffbe776f00ab",
+      "reference_answer": "[3, 4.5]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "217bba78770a95f72cdc31946131415ae502197b0ab84fa4012c72239007487b",
+      "item_id": "sample_762",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_762",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    text = text.lower()\n    capitalize = text.capitalize()\n    return text[:1] + capitalize[1:]\n```\n\nInput: 'this And cPanel'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "88de9a17bda9d22e5cd82ede2aef5a4c83ac1df5213b2c357ccf4dfa71b90142",
+      "reference_answer": "'this and cpanel'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "24d5d1644c717d4131b0f136a690bbef458b254cee9be6b6a9af958ecf9f7723",
+      "item_id": "sample_57",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_57",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    text = text.upper()\n    count_upper = 0\n    for char in text:\n        if char.isupper():\n            count_upper += 1\n        else:\n            return 'no'\n    return count_upper // 2\n```\n\nInput: 'ax'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "13861bee53f07cdb41b2d344690c7ccbce37fa6876ebc8617269b03913091a86",
+      "reference_answer": "1",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "2ed6bfc3cba5a94ab6c68195d53407144dbc45a0e097baef5b5f55c655a2e96c",
+      "item_id": "sample_418",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_418",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s, p):\n    arr = s.partition(p)\n    part_one, part_two, part_three = len(arr[0]), len(arr[1]), len(arr[2])\n    if part_one >= 2 and part_two <= 2 and part_three >= 2:\n        return (arr[0][::-1] + arr[1] + arr[2][::-1] + '#')\n    return (arr[0] + arr[1] + arr[2])\n```\n\nInput: \"qqqqq\", \"qqq\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "835862e7051c8bf3d997896447cbae169f21918117c16ba11b4740f915a44cd2",
+      "reference_answer": "'qqqqq'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c8e9aa5686750bfab975cfc3d7ef93bb1095227087cfe79347c378c966288642",
+      "item_id": "sample_285",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_285",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, ch):\n    \"\"\"Counting vowels in Pirates' Curse\"\"\"\n    return text.count(ch)\n```\n\nInput: \"This be Pirate's Speak for 'help'!\", ' '\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "df0200b376460c5fbf744f2705facedc127a3f5bb53102c6ca71cd19e880a630",
+      "reference_answer": "5",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "b286532492a1d73da52c5ca768f00cb31efa65b2b7c7ce2f3e1abf5d04f54340",
+      "item_id": "sample_76",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_76",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    nums = [y for y in nums if y > 0]\n    if len(nums) <= 3:\n        return nums\n    nums.reverse()\n    half = len(nums)//2\n    return nums[:half] + [0]*5 + nums[half:]\n```\n\nInput: [10, 3, 2, 2, 6, 0]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "5b8927248d3f171e9d0c638c4a0579720be84fe1f4b4a65b9707282344148290",
+      "reference_answer": "[6, 2, 0, 0, 0, 0, 0, 2, 3, 10]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "1bb40c3fce0916a847ca74d5e77138b99c52fac743bd448557cd73fe00088ea8",
+      "item_id": "sample_308",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_308",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(strings):\n    occurances = {}\n    for string in strings:\n        if string not in occurances:\n            occurances[string] = strings.count(string)\n    return occurances\n```\n\nInput: [\"La\", \"Q\", \"9\", \"La\", \"La\"]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "b5da558207f552114ee7780e8d40c93c670a01bd40033b449dd1591ea060707a",
+      "reference_answer": "{'La': 3, 'Q': 1, '9': 1}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "3655f90488ffc139e6b8c139406687a8b3587df3108db3313849508c52633500",
+      "item_id": "sample_65",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_65",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums, index):\n    return nums[index] % 42 + nums.pop(index) * 2\n```\n\nInput: [3, 2, 0, 3, 7], 3\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "d82530e050f46a79032caade766c69c6f90dbdc6e9105ee77e23bbef98c7bc29",
+      "reference_answer": "9",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "d0b0a04e247fe0c37aac884ad754b5bade3befc347421d82e21e3c8153127356",
+      "item_id": "sample_691",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_691",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, suffix):\n    if suffix and suffix[-1] in text:\n        return f(text.rstrip(suffix[-1]), suffix[:-1])\n    else:\n        return text\n```\n\nInput: 'rpyttc', 'cyt'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "912d354331b36c042129662c547d77528096a2322620809b215e230df64da562",
+      "reference_answer": "'rpytt'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "908a6517ce401a7895ca378de4f0631cadb6aee9765b1f5e1b7291e4d78ae446",
+      "item_id": "sample_346",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_346",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(filename):\n    suffix = filename.split('.')[-1]\n    f2 = filename + suffix[::-1]\n    return f2.endswith(suffix)\n```\n\nInput: 'docs.doc'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a8dd0d061dd876dec451bea35a1110f2da0d2133e473a368aa9bce0f5762d68e",
+      "reference_answer": "False",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9cbda974babc69893b49f7fed62dbc293bbc45f99efb1b13042218da261a1de4",
+      "item_id": "sample_321",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_321",
+        "reference_canonical_type": "dict",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(update, starting):\n    d = starting.copy()\n    for k in update:\n        if k in d:\n            d[k] += update[k]\n        else:\n            d[k] = update[k]\n    return d\n```\n\nInput: {}, {'desciduous': 2}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "2d1ad266962da7d020ca27d698c747ef0ec45d93030c27d46cda0cfcbbbbeb1f",
+      "reference_answer": "{'desciduous': 2}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "376a9a583965cc13ae3c3fc5d11f562109083087c8ada8e66b94d89106f36fbc",
+      "item_id": "sample_563",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_563",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text1, text2):\n    nums = []\n    for i in range(len(text2)):\n        nums.append(text1.count(text2[i]))\n    return sum(nums)\n```\n\nInput: 'jivespdcxc', 'sx'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "dae4a55385fa881f94ad0a475bd75340df181b1c0577e9d6350bce398f892683",
+      "reference_answer": "2",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "42a8df23f1d7c0142fc338a2dd72113777e7531b2246a98df8f027a32713c5f2",
+      "item_id": "sample_395",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_395",
+        "reference_canonical_type": "int",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s):\n    for i in range(len(s)):\n        if s[i].isdecimal():\n            return i + (s[i] == '0')\n        elif s[i] == '0':\n            return -1\n    return -1\n```\n\nInput: \"11\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "4f304a515e35eb4fcc2dcbb608ea76086699509d1d275c5d4cae5296589ea22d",
+      "reference_answer": "0",
+      "reference_canonical_type": "int",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "245effc2146d6841ca3e83eef9eb8cf32a57d1cac4e778c305facdd5cb6c1bdd",
+      "item_id": "sample_797",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_797",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(dct):\n    lst = []\n    for key in sorted(dct):\n        lst.append((key, dct[key]))\n    return lst\n```\n\nInput: {'a': 1, 'b': 2, 'c': 3}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "93184aafd2ae79fb439834e444a8955cc95fa53c8ea5ee6b74410e1fc9151056",
+      "reference_answer": "[('a', 1), ('b', 2), ('c', 3)]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "10da3537efc9b6811ed3b1c5badde72a6403dc470999d87191368bc72f7f363d",
+      "item_id": "sample_670",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_670",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(a, b):\n    d = dict(zip(a, b))\n    a.sort(key=d.get, reverse=True)\n    return [d.pop(x) for x in a]\n```\n\nInput: ['12','ab'], [2,2]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a79c1237871d344295f71d29ebf7644fa955b20863ddebfe1a807216a9af24ed",
+      "reference_answer": "[2, 2]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "d3db782f0a32f12ec2a7a0939a4453a2f30bad57deb42ce73794bcc4914e433c",
+      "item_id": "sample_194",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_194",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(matr, insert_loc):\n    matr.insert(insert_loc, [])\n    return matr\n```\n\nInput: [[5, 6, 2, 3], [1, 9, 5, 6]], 0\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "886cfc2683ef01e04a11a0563e5d973264ee66e0d86162c93a190f5f08329424",
+      "reference_answer": "[[], [5, 6, 2, 3], [1, 9, 5, 6]]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "2533e3ecea1194f122bda9568c055ea466e91348e2086c2eeb4ec3459bf4a585",
+      "item_id": "sample_113",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_113",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(line):\n    count = 0\n    a = []\n    for i in range(len(line)):\n        count += 1\n        if count%2==0:\n            a.append(line[i].swapcase())\n        else:\n            a.append(line[i])\n    return ''.join(a)\n```\n\nInput: \"987yhNSHAshd 93275yrgSgbgSshfbsfB\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "e268e1f2fa4e3ec5c345b5e114089667f0f4efd3007c1555d6167676050afcd1",
+      "reference_answer": "'987YhnShAShD 93275yRgsgBgssHfBsFB'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "865307e0c88dfb47e7b6608e8d166781e7928888eff97610a2be0c6bee8dc6b0",
+      "item_id": "sample_366",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_366",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(string):\n    tmp = string.lower()\n    for char in string.lower():\n        if char in tmp:\n            tmp = tmp.replace(char, '', 1)\n    return tmp\n```\n\nInput: '[ Hello ]+ Hello, World!!_ Hi'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "a1ef141a1fd448d439b938fadfa6458a0046e31a73ec10869b32ffcd2468bafb",
+      "reference_answer": "''",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "c1ca6cc7449444ac29b2eaecdd1a7d8ff1f426cb80f002369f04bc2045d1680b",
+      "item_id": "sample_722",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_722",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    out = \"\"\n    for i in range(len(text)):\n        if text[i].isupper():\n            out += text[i].lower()\n        else:\n            out += text[i].upper()\n    return out\n```\n\nInput: ',wPzPppdl/'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "596b217924aa672e53f9860d767d4e04acd2d2977d28d72fcf327c03dbf2ee63",
+      "reference_answer": "',WpZpPPDL/'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "661ff2aeb34bb551821771736bda5a50ccd644d6e998e1abb0f328abc925d565",
+      "item_id": "sample_44",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_44",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    ls = list(text)\n    for i in range(0, len(ls)):\n        if ls[i]!='+':\n            ls.insert(i, '+')\n            ls.insert(i, '*')\n            break\n    return '+'.join(ls)\n```\n\nInput: 'nzoh'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "133b224f5f83ec348653b28c63ac9215b50dede76c398cf0b5df45dde482717b",
+      "reference_answer": "'*+++n+z+o+h'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "f0137c04c40b71c02a1b9cb2a0759b0064114becdf5e4288aa3c4f971bdf485d",
+      "item_id": "sample_662",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_662",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(values):\n    names = ['Pete', 'Linda', 'Angela']\n    names.extend(values)\n    names.sort()\n    return names\n```\n\nInput: ['Dan', 'Joe', 'Dusty']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "277d2cc77d037ed767696aca429e9957c6604fbd02eca43d0f8057186067db96",
+      "reference_answer": "['Angela', 'Dan', 'Dusty', 'Joe', 'Linda', 'Pete']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "e6f3488f5ec0b586222b1397f7326e94c7bfdb4c3a14eae956afcaa5ca5116d6",
+      "item_id": "sample_541",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_541",
+        "reference_canonical_type": "bool",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    return ''.join(list(text)).isspace()\n```\n\nInput: ' \\t  \\u3000'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "07c71f365de28cbdf6e3eca0afd4a282e650d04be6b35ce2ea1bc8363ce026e6",
+      "reference_answer": "True",
+      "reference_canonical_type": "bool",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "06d0398d2491cb540626dcd03433ac6a2eb3ec475ff0d1d225f4824313b59d43",
+      "item_id": "sample_103",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_103",
+        "reference_canonical_type": "str",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s):\n    return ''.join((c.casefold() for c in s))\n```\n\nInput: 'abcDEFGhIJ'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "d2c4dae87563d99da7827f1c1f1bcadd05fa67793a6b11d72d30874ab6eeb38b",
+      "reference_answer": "'abcdefghij'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "d20caff292ddcfdd4be2f3d70601bf3bc20d54c5a89c597f770a680110acd26e",
+      "item_id": "sample_53",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_53",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    occ = {}\n    for ch in text:\n        name = {'a': 'b', 'b': 'c', 'c': 'd', 'd': 'e', 'e': 'f'}\n        name = name.get(ch, ch)\n        occ[name] = occ.get(name, 0) + 1\n    return [x for _, x in occ.items()]\n```\n\nInput: \"URW rNB\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "21ceb97dc39a72bee944f855bdc8ae4be32081006b6a3e8b357c44ed92d22dbb",
+      "reference_answer": "[1, 1, 1, 1, 1, 1, 1]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "acf41e1cd8c10d42bf8c7fa12fbf67b75eb0ef13d5d35c8d9a0fb9172ecc35e1",
+      "item_id": "sample_436",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_436",
+        "reference_canonical_type": "list",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s, characters):\n    return [s[i:i+1] for i in characters]\n```\n\nInput: 's7 6s 1ss', [1, 3, 6, 1, 2]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "7bb282b6ad40d41154c355f40eba9b03b7aee78a7e8d2975849b02c6c6d38a0d",
+      "reference_answer": "['7', '6', '1', '7', ' ']",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    },
+    {
+      "allocation": "GATE8_DOSE_CALIBRATION",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "0df8e14ebccb2eb50eab0902f4a2c01b4488097b50491b4662073c13f437fe7c",
+      "item_id": "sample_261",
+      "metadata": {
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_261",
+        "reference_canonical_type": "tuple",
+        "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums, target):\n    lows, higgs = [], []\n    for i in nums:\n        if i < target:\n            lows.append(i)\n        else:\n            higgs.append(i)\n    lows.clear()\n    return lows, higgs\n```\n\nInput: [12, 516, 5, 2, 3, 214, 51], 5\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "7fe21d2638a445558dd3542e5a390b787ecbc144f9a4ef54cd6721ed2df95c2f",
+      "reference_answer": "([], [12, 516, 5, 214, 51])",
+      "reference_canonical_type": "tuple",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    }
+  ],
+  "manifest_hash": "42df77e79cb9111b2d6115c1a794a6d709c71238ee222a78815283421437ab17",
+  "reference_type_distribution": {
+    "bool": 2,
+    "dict": 3,
+    "int": 11,
+    "list": 16,
+    "str": 17,
+    "tuple": 1
+  },
+  "remaining_unallocated_n": 157,
+  "requested_n": 50,
+  "schema_version": 1,
+  "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1",
+  "selection_outcome_independent": true
+}

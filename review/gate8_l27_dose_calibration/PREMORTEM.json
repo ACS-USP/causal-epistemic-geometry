@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "gate": "GATE8_L27_DOSE_CALIBRATION",
+  "lifecycle": "PREMORTEM",
+  "classification": "PREMORTEM_PASS",
+  "model_outputs_existed_when_completed": false,
+  "risks": {
+    "dose_selection_leakage": "RESOLVED_BY_FROZEN_SAFETY_FIRST_STAGE_RULE",
+    "freshness": "FAIL_CLOSED_150_BEFORE_100_AFTER",
+    "controller_identity": "BYTE_AND_CANONICAL_HASH_REQUIRED",
+    "random_matching": "ONE_NEW_ORTHONORMAL_BANK_REUSED_ACROSS_DOSES",
+    "parser_invariance": "EXTERNAL_SEMANTIC_V3_HASH_LOCKED",
+    "matched_design": "TWO_INDEPENDENT_BLOCKS_SHARED_SEED_WITHIN_BLOCK",
+    "output_length": "MODEL_OUTCOMES_RETAINED_NO_BEHAVIORAL_RETRY",
+    "monotonicity": "REPORTED_NOT_ASSUMED",
+    "source_anchor": "NONPOSITIVE_CAREFUL_DENOMINATOR_FAILS_SOURCE",
+    "resume": "LOGICAL_KEY_APPEND_FLUSH_FSYNC",
+    "future_evaluation": "NO_IDS_ALLOCATED_OR_INSPECTED"
+  },
+  "accuracy_used_for_selection": false,
+  "G_C_D_used_for_selection": false,
+  "D100_selectable": false,
+  "unresolved_class_a": [],
+  "unresolved_class_b": [],
+  "unresolved_scientific_design_ambiguities": []
+}
