@@ -2,7 +2,7 @@ schema_version: 1
 experiment_id: GATE8_L27_DOSE_CALIBRATION
 status: PROSPECTIVE_PRE_OUTCOME
 stage: DEVELOPMENT_CALIBRATION
-lifecycle: PREMORTEM
+lifecycle: PROSPECTIVE_LOCK
 purpose: >-
   Calibrate the minimum safe, specific lower dose of the exact frozen L27
   paired-mean plus controller. This is not the later independent evaluation.

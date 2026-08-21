@@ -1,0 +1,440 @@
+{
+  "bootstrap": {
+    "interval": "percentile_95",
+    "resamples": 5000,
+    "seed": 20260822,
+    "unit": "item_cluster_all_22_conditions_both_rollout_blocks"
+  },
+  "classifications": [
+    "GATE8_SAFE_LOWER_DOSE_SELECTED",
+    "GATE8_ORIGINAL_DOSE_ONLY_SPECIFIC",
+    "GATE8_EFFECT_VALIDITY_TRADEOFF_CONFIRMED",
+    "GATE8_LOWER_DOSES_NONSPECIFIC_OR_INERT",
+    "GATE8_SOURCE_POLICY_NOT_REPLICATED",
+    "GATE8_INSTRUMENT_FAILURE",
+    "GATE8_ENGINE_FAILURE"
+  ],
+  "condition_specs": {
+    "BASELINE": {
+      "dose": "D0",
+      "eta": 0.0,
+      "fraction": 0.0,
+      "kind": "baseline"
+    },
+    "MEAN_D100": {
+      "dose": "D100",
+      "eta": 12.849903937136261,
+      "fraction": 1.0,
+      "kind": "meaningful",
+      "vector": "BEST_SINGLE_MEAN_PLUS"
+    },
+    "MEAN_D25": {
+      "dose": "D25",
+      "eta": 3.2124759842840653,
+      "fraction": 0.25,
+      "kind": "meaningful",
+      "vector": "BEST_SINGLE_MEAN_PLUS"
+    },
+    "MEAN_D50": {
+      "dose": "D50",
+      "eta": 6.424951968568131,
+      "fraction": 0.5,
+      "kind": "meaningful",
+      "vector": "BEST_SINGLE_MEAN_PLUS"
+    },
+    "MEAN_D75": {
+      "dose": "D75",
+      "eta": 9.637427952852196,
+      "fraction": 0.75,
+      "kind": "meaningful",
+      "vector": "BEST_SINGLE_MEAN_PLUS"
+    },
+    "RANDOM_R0_D100": {
+      "dose": "D100",
+      "eta": 12.849903937136261,
+      "fraction": 1.0,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R0"
+    },
+    "RANDOM_R0_D25": {
+      "dose": "D25",
+      "eta": 3.2124759842840653,
+      "fraction": 0.25,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R0"
+    },
+    "RANDOM_R0_D50": {
+      "dose": "D50",
+      "eta": 6.424951968568131,
+      "fraction": 0.5,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R0"
+    },
+    "RANDOM_R0_D75": {
+      "dose": "D75",
+      "eta": 9.637427952852196,
+      "fraction": 0.75,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R0"
+    },
+    "RANDOM_R1_D100": {
+      "dose": "D100",
+      "eta": 12.849903937136261,
+      "fraction": 1.0,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R1"
+    },
+    "RANDOM_R1_D25": {
+      "dose": "D25",
+      "eta": 3.2124759842840653,
+      "fraction": 0.25,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R1"
+    },
+    "RANDOM_R1_D50": {
+      "dose": "D50",
+      "eta": 6.424951968568131,
+      "fraction": 0.5,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R1"
+    },
+    "RANDOM_R1_D75": {
+      "dose": "D75",
+      "eta": 9.637427952852196,
+      "fraction": 0.75,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R1"
+    },
+    "RANDOM_R2_D100": {
+      "dose": "D100",
+      "eta": 12.849903937136261,
+      "fraction": 1.0,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R2"
+    },
+    "RANDOM_R2_D25": {
+      "dose": "D25",
+      "eta": 3.2124759842840653,
+      "fraction": 0.25,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R2"
+    },
+    "RANDOM_R2_D50": {
+      "dose": "D50",
+      "eta": 6.424951968568131,
+      "fraction": 0.5,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R2"
+    },
+    "RANDOM_R2_D75": {
+      "dose": "D75",
+      "eta": 9.637427952852196,
+      "fraction": 0.75,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R2"
+    },
+    "RANDOM_R3_D100": {
+      "dose": "D100",
+      "eta": 12.849903937136261,
+      "fraction": 1.0,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R3"
+    },
+    "RANDOM_R3_D25": {
+      "dose": "D25",
+      "eta": 3.2124759842840653,
+      "fraction": 0.25,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R3"
+    },
+    "RANDOM_R3_D50": {
+      "dose": "D50",
+      "eta": 6.424951968568131,
+      "fraction": 0.5,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R3"
+    },
+    "RANDOM_R3_D75": {
+      "dose": "D75",
+      "eta": 9.637427952852196,
+      "fraction": 0.75,
+      "kind": "random",
+      "vector": "GATE8_RANDOM_R3"
+    },
+    "TEXTUAL_CAREFUL_REFERENCE": {
+      "dose": "D0",
+      "eta": 0.0,
+      "fraction": 0.0,
+      "kind": "textual"
+    }
+  },
+  "conditions": [
+    "BASELINE",
+    "TEXTUAL_CAREFUL_REFERENCE",
+    "MEAN_D25",
+    "MEAN_D50",
+    "MEAN_D75",
+    "MEAN_D100",
+    "RANDOM_R0_D25",
+    "RANDOM_R1_D25",
+    "RANDOM_R2_D25",
+    "RANDOM_R3_D25",
+    "RANDOM_R0_D50",
+    "RANDOM_R1_D50",
+    "RANDOM_R2_D50",
+    "RANDOM_R3_D50",
+    "RANDOM_R0_D75",
+    "RANDOM_R1_D75",
+    "RANDOM_R2_D75",
+    "RANDOM_R3_D75",
+    "RANDOM_R0_D100",
+    "RANDOM_R1_D100",
+    "RANDOM_R2_D100",
+    "RANDOM_R3_D100"
+  ],
+  "controller": {
+    "canonical_float64_vector_sha256": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "constructor": "PAIRED_MEAN_DIFFERENCE",
+    "duration": "sustained_current_token",
+    "eta_full": 12.849903937136261,
+    "full_dose_delta_norm": 130.46891907441653,
+    "gate7_protocol": "review/gate7_fresh_l27_replication/PROTOCOL_LOCK.json",
+    "layer": 27,
+    "name": "BEST_SINGLE_MEAN_PLUS",
+    "reference_scale": 10.153299177386142,
+    "sign": "PLUS",
+    "source": "PROMPT_BOUNDARY",
+    "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "vector_norm": 1.0,
+    "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+  },
+  "cost": {
+    "conservative_gate7_seconds_per_row": 6.306324623713432,
+    "hard_stop_usd": 4.0,
+    "projected_generation_cost_usd_at_0_44": 1.695700621042945,
+    "projected_generation_hours": 3.853865047824875,
+    "projected_rows": 2200,
+    "target_usd": 2.5
+  },
+  "dose_grid": {
+    "D100": {
+      "eta": 12.849903937136261,
+      "fraction": 1.0,
+      "selectable": false
+    },
+    "D25": {
+      "eta": 3.2124759842840653,
+      "fraction": 0.25,
+      "selectable": true
+    },
+    "D50": {
+      "eta": 6.424951968568131,
+      "fraction": 0.5,
+      "selectable": true
+    },
+    "D75": {
+      "eta": 9.637427952852196,
+      "fraction": 0.75,
+      "selectable": true
+    }
+  },
+  "experiment_id": "GATE8_L27_DOSE_CALIBRATION",
+  "experiment_source_commit_binding": {
+    "file": "EXPERIMENT_SOURCE_COMMIT.json",
+    "timing": "after lock commit and before Gate-8 model outputs"
+  },
+  "firewall": {
+    "G_C_D_primary_evidence": "NOT_RUN",
+    "calibration_only": true,
+    "character_count": "NOT_RUN",
+    "confirmatory_holdout": "UNTOUCHED",
+    "future_dose_evaluation": "NOT_RUN",
+    "q2": "NOT_RUN"
+  },
+  "first_stage_gate": {
+    "Q_greater_than_random_max": true,
+    "Q_minimum": 0.15,
+    "Q_minus_random_mean_minimum": 0.05,
+    "rho_tokens_maximum": 1.25,
+    "rho_tokens_minimum": 0.25
+  },
+  "instrument": {
+    "benchmark": "CRUXEval semantic output prediction",
+    "dataset_repo": "cruxeval-org/cruxeval",
+    "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "evaluator": {
+      "blinded_test_corpus_sha256": "20be4770921833a749b1a6722a1c7122e43edff856e77ed6490d34fcc23d0709",
+      "condition_invariance_test": "PASS",
+      "frozen_before_gate8_outputs": true,
+      "module_sha256": "d3082512531b1105fb555333c131170d009fa20b4e1edb5eb62dfcfe2702750c",
+      "specification_sha256": "e909e5504f6e50a4628261c5c1ce2d819a346d583d205c9932b3306f703a2807",
+      "version": "external-semantic-v3"
+    }
+  },
+  "lifecycle": "PROSPECTIVE_LOCK",
+  "lock_preparation_source_commit": "d164e30a1b370b97698832af9fd665b9acaf173e",
+  "model": {
+    "attention": "sdpa",
+    "dtype": "bf16",
+    "enable_thinking": false,
+    "environment_profile": "CORE_QWEN",
+    "id": "Qwen/Qwen3-8B",
+    "max_new_tokens": 4096,
+    "quantization": "none",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "sampling": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "primary_outcome": "invalid_as_error; correctness only is e=0",
+  "random_bank": {
+    "file_sha256": "2247687e731e5db14d607fbb5910a0106a3865579edd1f46b73863b3885b9fcf",
+    "geometry": {
+      "meaningful_absolute_cosines": {
+        "GATE8_RANDOM_R0": 6.938893903907228e-18,
+        "GATE8_RANDOM_R1": 6.5052130349130266e-18,
+        "GATE8_RANDOM_R2": 3.469446951953614e-18,
+        "GATE8_RANDOM_R3": 2.862293735361732e-17
+      },
+      "meaningful_orthogonality_pass": true,
+      "norms": {
+        "GATE8_RANDOM_R0": 1.0,
+        "GATE8_RANDOM_R1": 0.9999999999999999,
+        "GATE8_RANDOM_R2": 1.0000000000000004,
+        "GATE8_RANDOM_R3": 1.0
+      },
+      "pairwise_absolute_cosines": {
+        "GATE8_RANDOM_R0__GATE8_RANDOM_R1": 4.336808689942018e-18,
+        "GATE8_RANDOM_R0__GATE8_RANDOM_R2": 1.0408340855860843e-17,
+        "GATE8_RANDOM_R0__GATE8_RANDOM_R3": 1.5612511283791264e-17,
+        "GATE8_RANDOM_R1__GATE8_RANDOM_R2": 4.85722573273506e-17,
+        "GATE8_RANDOM_R1__GATE8_RANDOM_R3": 6.938893903907228e-18,
+        "GATE8_RANDOM_R2__GATE8_RANDOM_R3": 8.673617379884035e-18
+      },
+      "random_pairwise_orthogonality_pass": true,
+      "unit_norm_pass": true
+    },
+    "records": {
+      "GATE8_RANDOM_R0": {
+        "canonical_float64_vector_sha256": "59886c0c8f466220fd384b0c61c0f029861cd26ba2a4b2e5e6821a1dfd790a32",
+        "duration": "sustained_current_token",
+        "full_dose_delta_norm": 130.46891907441656,
+        "layer": 27,
+        "norm": 1.0,
+        "reference_scale": 10.153299177386142,
+        "seed": 2153896798,
+        "vector_file_sha256": "b48e865764edc4bc32cdedbf3a46f9711742be960fd6ec244abcc8528eaac188",
+        "vector_path": "review/gate8_l27_dose_calibration/GATE8_RANDOM_R0.npy",
+        "vector_sha256": "59886c0c8f466220fd384b0c61c0f029861cd26ba2a4b2e5e6821a1dfd790a32"
+      },
+      "GATE8_RANDOM_R1": {
+        "canonical_float64_vector_sha256": "14c265e128d8dcd06d43fd65948bcbcd0e0e4ec4ff76fbf5a94ae91fee246b0d",
+        "duration": "sustained_current_token",
+        "full_dose_delta_norm": 130.4689190744166,
+        "layer": 27,
+        "norm": 0.9999999999999999,
+        "reference_scale": 10.153299177386142,
+        "seed": 3536935238,
+        "vector_file_sha256": "000d7e90ac88aada3e1e2eccbab369be1f83349ecc9f5f243a4e970873b3a14d",
+        "vector_path": "review/gate8_l27_dose_calibration/GATE8_RANDOM_R1.npy",
+        "vector_sha256": "14c265e128d8dcd06d43fd65948bcbcd0e0e4ec4ff76fbf5a94ae91fee246b0d"
+      },
+      "GATE8_RANDOM_R2": {
+        "canonical_float64_vector_sha256": "604ecdea4b0e844a4ef3d0b31cc63b52c6d106877c29dc9ac80f92349b669a3a",
+        "duration": "sustained_current_token",
+        "full_dose_delta_norm": 130.46891907441656,
+        "layer": 27,
+        "norm": 1.0000000000000004,
+        "reference_scale": 10.153299177386142,
+        "seed": 2915509231,
+        "vector_file_sha256": "f8041616f71c49c5abafc7873db882af129b1d25a2535bce88ee82f5b98bb1b2",
+        "vector_path": "review/gate8_l27_dose_calibration/GATE8_RANDOM_R2.npy",
+        "vector_sha256": "604ecdea4b0e844a4ef3d0b31cc63b52c6d106877c29dc9ac80f92349b669a3a"
+      },
+      "GATE8_RANDOM_R3": {
+        "canonical_float64_vector_sha256": "06cc9968ba2eb021a9903234419a00d8855498e531bbada780dc7ca13ca12246",
+        "duration": "sustained_current_token",
+        "full_dose_delta_norm": 130.46891907441656,
+        "layer": 27,
+        "norm": 1.0,
+        "reference_scale": 10.153299177386142,
+        "seed": 575261168,
+        "vector_file_sha256": "c5d5ad13a35907a4b9201da96ba393dfa0314b2f9242e9d4d706ad18b4260e7a",
+        "vector_path": "review/gate8_l27_dose_calibration/GATE8_RANDOM_R3.npy",
+        "vector_sha256": "06cc9968ba2eb021a9903234419a00d8855498e531bbada780dc7ca13ca12246"
+      }
+    },
+    "vectors": [
+      "GATE8_RANDOM_R0",
+      "GATE8_RANDOM_R1",
+      "GATE8_RANDOM_R2",
+      "GATE8_RANDOM_R3"
+    ]
+  },
+  "rollouts_per_item_condition": 2,
+  "safety_guards": {
+    "accuracy_drop_max": 0.1,
+    "commitment_drop_max": 0.05,
+    "commitment_minimum": 0.9,
+    "evaluability_drop_max": 0.05,
+    "evaluability_minimum": 0.9
+  },
+  "sample": {
+    "actual_n": 50,
+    "dataset_repo": "cruxeval-org/cruxeval",
+    "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "eligible_before_allocation": 207,
+    "future_evaluation_ids_allocated": false,
+    "historical_excluded_count": 593,
+    "historical_exclusion_digest": "85e61f1d529c1622861dcf46627ea8512057b3c11a116df12a5b0c7753a29a05",
+    "manifest_file_sha256": "9d544d3d07016a85579d966ab76ae0532c54ab2dbef134f98c1452e11d8ccf06",
+    "manifest_hash": "42df77e79cb9111b2d6115c1a794a6d709c71238ee222a78815283421437ab17",
+    "reference_type_distribution": {
+      "bool": 2,
+      "dict": 3,
+      "int": 11,
+      "list": 16,
+      "str": 17,
+      "tuple": 1
+    },
+    "remaining_unallocated_n": 157,
+    "requested_n": 50,
+    "selection_namespace": "GATE8-L27-DOSE-CALIBRATION-V1"
+  },
+  "schedule": {
+    "file_sha256": "cf8fe3bd43abc801c96a9ae6927bc293d71c0ac36e70aeece04b54a08caf78fc",
+    "logical_rows": 2200,
+    "outcome_independent_interleaving": true,
+    "same_seed_within_item_rollout_block": true
+  },
+  "schema_version": 1,
+  "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+  "selection_rule": {
+    "D100_selectable": false,
+    "accuracy_G_C_D_forbidden_as_optimization_objectives": true,
+    "objective": "lowest eligible lower dose",
+    "priority": [
+      "D25",
+      "D50",
+      "D75"
+    ],
+    "selectable": [
+      "D25",
+      "D50",
+      "D75"
+    ]
+  },
+  "source_gate": {
+    "commitment_minimum": 0.9,
+    "evaluability_minimum": 0.9,
+    "mean_token_ratio_minimum": 1.5,
+    "median_token_increase_minimum": 10
+  },
+  "stage": "DEVELOPMENT_CALIBRATION",
+  "status": "FROZEN_PRE_OUTCOME"
+}

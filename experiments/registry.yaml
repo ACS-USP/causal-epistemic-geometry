@@ -597,3 +597,43 @@ experiments:
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; Gate-8 prospective dose calibration is drafted but not authorized or executed.
+
+  - id: GATE8_L27_DOSE_CALIBRATION
+    version: GATE-8
+    stage: DEVELOPMENT_CALIBRATION
+    question: What is the lowest safe lower dose of the exact frozen L27 plus controller that retains a specific careful-like behavioral first stage?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3 frozen before outputs
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
+    status: PROSPECTIVE_LOCK
+    outcome: NOT_YET_RUN
+    scientific_interpretation: >-
+      Calibration only. Fifty fresh items, two matched rollout blocks, four
+      frozen lower/full doses, and four new random directions are prospectively
+      scheduled. Accuracy is a safety guard only and G/C/D are forbidden for
+      dose selection or primary evidence.
+    source_commit: PENDING_LOCK_COMMIT_BINDING
+    artifact: review/gate8_l27_dose_calibration/
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE7_FRESH_SINGLE_L27_REPLICATION
+    lock:
+      protocol: review/gate8_l27_dose_calibration/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      parser_version: external-semantic-v3
+      items: 50
+      historical_excluded_ids: 593
+      remaining_fresh_ids: 157
+      conditions: 22
+      rollout_blocks: 2
+      logical_rows: 2200
+      random_controls: 4
+      target_cost_usd: 2.50
+      hard_stop_cost_usd: 4.00
+      gpu_authorized: true
+    execution:
+      collection: NOT_RUN
+      gate9: NOT_RUN
+      q2: NOT_RUN
+      character_count: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Execute only the prospectively locked Gate-8 calibration, then stop for principal review.

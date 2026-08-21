@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 7 completed 1,680 frozen development trajectories on 120 fresh CRUXEval items and passed an independent forensic audit. The exact L27 controller increased accuracy by 14.58 points and exceeded four new random controllers on G/C/D, but commitment validity and semantic evaluability fell from 99.17% to 90.00%, below the frozen relative guard of 94.17%. The mechanical classification is GATE7_DESTRUCTIVE. The historical Gate-6.3 result remains immutable and no confirmatory claim is frozen.
+Gate 7 is accepted as a clean development replication of specific L27 controller movement with a validity cost. Gate 8 is prospectively locked to calibrate the minimum safe effective dose on 50 fresh CRUXEval items using matched coupling, four new random controls, and external-semantic-v3. It is calibration only: G/C/D evaluation and Gate 9 are not authorized.
 
-**Next authorized action:** Principal-researcher review of the audited destructive Gate-7 result and the unexecuted Gate-8 prospective dose-calibration draft. No further model inference is authorized.
+**Next authorized action:** Execute only the frozen Gate-8 2,200-row dose-calibration schedule, stop the A40, analyze and audit offline, draft but do not execute the next protocol, then return to principal-researcher review.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

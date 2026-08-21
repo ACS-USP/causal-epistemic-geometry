@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 7 completed 1,680 frozen development trajectories on 120 fresh CRUXEval items and passed an independent forensic audit. The exact L27 controller increased accuracy by 14.58 points and exceeded four new random controllers on G/C/D, but commitment validity and semantic evaluability fell from 99.17% to 90.00%, below the frozen relative guard of 94.17%. The mechanical classification is GATE7_DESTRUCTIVE. The historical Gate-6.3 result remains immutable and no confirmatory claim is frozen.
+Gate 7 is accepted as a clean development replication of specific L27 controller movement with a validity cost. Gate 8 is prospectively locked to calibrate the minimum safe effective dose on 50 fresh CRUXEval items using matched coupling, four new random controls, and external-semantic-v3. It is calibration only: G/C/D evaluation and Gate 9 are not authorized.
 
-- Workstream: `GATE7_FRESH_SINGLE_L27_REPLICATION_COMPLETE`
+- Workstream: `GATE8_L27_DOSE_CALIBRATION`
 - RunPod: `EXITED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal-researcher review of the audited destructive Gate-7 result and the unexecuted Gate-8 prospective dose-calibration draft. No further model inference is authorized.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute only the frozen Gate-8 2,200-row dose-calibration schedule, stop the A40, analyze and audit offline, draft but do not execute the next protocol, then return to principal-researcher review.
 
 ## Scientific program
 
@@ -42,16 +42,17 @@ Gate 7 completed 1,680 frozen development trajectories on 120 fresh CRUXEval ite
 | `GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION` | `COMPLETE_DEVELOPMENT_DESTRUCTIVE` | Gate 6.2 raw outputs were preserved and reanalyzed offline with the external-semantic-v2 parser. The matched four-vector single-L27 random gate passed and the complete 840-row evaluation ran exactly as frozen. BEST_SINGLE_MEAN_PLUS exceeded the random mean and maximum on point estimates of G/C/D and preserved accuracy tolerance, but validity was 0.9083 versus the required 0.9250 guard. The frozen classification is GATE6_3_SINGLE_MEAN_DESTRUCTIVE. No Q2, character-count replication, or holdout access occurred. |
 | `GATE6_3_SEMANTIC_VALIDITY_AUDIT` | `COMPLETE_OFFLINE_DIAGNOSTIC_STRONG_SIGNAL` | The immutable 920 Gate 6.3 outputs were reanalyzed condition-symmetrically with external-semantic-v3 after parser rules were frozen on a masked corpus. Controller commitment validity/evaluability rose to 0.9750 and the diagnostic G/C/D signal exceeded all four random controls. The additive classification is GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL; the historical Gate 6.3 classification remains destructive and no new inference occurred. |
 | `GATE7_FRESH_SINGLE_L27_REPLICATION` | `COMPLETE_DEVELOPMENT_DESTRUCTIVE` | On 120 fresh CRUXEval items, the frozen L27 controller produced large, random-null-specific G/C/D and a 14.58-point accuracy gain, but reduced commitment validity and semantic evaluability from 99.17% to 90.00% and therefore failed the frozen relative guard. The independent audit was clean. This is a destructive development result, not confirmation. |
+| `GATE8_L27_DOSE_CALIBRATION` | `PROSPECTIVE_LOCK` | Authorized calibration-only experiment on 50 fresh CRUXEval items. The exact frozen L27 plus controller is evaluated at D25/D50/D75/D100 against four new matched random directions; the lowest safe specific lower dose is selected prospectively. No Gate-9 evaluation, G/C/D evidence, Q2, character count, or holdout access is authorized. |
 
 ## Scientific firewall
 
-- `steering`: `GATE7_DEVELOPMENT_DESTRUCTIVE_SPECIFIC_MOVEMENT_WITH_VALIDITY_LOSS`
+- `steering`: `GATE8_CALIBRATION_LOCKED_GATE7_REPLICATED_MOVEMENT_WITH_VALIDITY_LOSS`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `PRINCIPAL_RESEARCHER_REVIEW`
+- `current_task`: `GATE8_CALIBRATION_ONLY`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
