@@ -21,6 +21,12 @@ original 1,233 rows were untouched and the final journal contains exactly 1,400
 unique scheduled rows. Full records are under
 `review/gate9_selected_d75_evaluation/`.
 
+The independent forensic recomputation agreed with the primary classification
+and every audited metric (maximum absolute difference 0). Because the parser
+totality repair occurred after some raw outputs already existed, the audit
+honestly records `GATE9_FORENSIC_MINOR_NONSCIENTIFIC_ISSUES`, not a clean label;
+it found no scientific-integrity concern and no change to the result.
+
 This is not confirmatory evidence, Q2, character-count replication, or a
 general controller search. Gate 10 is drafted but not authorized; the
 confirmatory holdout remains untouched.

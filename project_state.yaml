@@ -28,16 +28,18 @@ current:
     on 100 fresh CRUXEval items. It preserved commitment/evaluability guards,
     raised accuracy from 47% to 60%, and produced G=0.1325, C=0.0643, and
     D=0.1200 beyond all four new random controllers. The frozen classification
-    is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION; this remains DEVELOPMENT.
+    is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION. Independent recomputation
+    agreed exactly; one documented parser-totality incident is classified as a
+    minor non-scientific issue. This remains DEVELOPMENT.
   next_authorized_action: >-
     Principal-researcher review of the Gate-9 result and the unexecuted Gate-10
     cross-domain fixed-controller replication draft.
-  runpod: EXITED
+  runpod: TERMINATED
   gpu_work_authorized: false
   new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION
+  steering: GATE9_SELECTED_D75_EVALUATION_COMPLETE
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
@@ -166,7 +168,9 @@ instrument_history:
       semantic evaluability at 97%. G=0.1325, C=0.0643, and D=0.1200 exceeded
       every one of four new random controls; rescue was 0.1525 versus damage
       0.0225. The frozen classification is a strong safe DEVELOPMENT
-      replication. Gate 10 is drafted only; Q2 and holdout remain closed.
+      replication. Independent metric recomputation agreed exactly; the
+      forensic classification records one minor non-scientific parser-totality
+      incident. Gate 10 is drafted only; Q2 and holdout remain closed.
 
 workflow_regimes:
   EXPLORATION:

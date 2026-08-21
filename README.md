@@ -7,7 +7,7 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 9 independently evaluated the prospectively selected D75 controller on 100 fresh CRUXEval items. It preserved commitment/evaluability guards, raised accuracy from 47% to 60%, and produced G=0.1325, C=0.0643, and D=0.1200 beyond all four new random controllers. The frozen classification is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION; this remains DEVELOPMENT.
+Gate 9 independently evaluated the prospectively selected D75 controller on 100 fresh CRUXEval items. It preserved commitment/evaluability guards, raised accuracy from 47% to 60%, and produced G=0.1325, C=0.0643, and D=0.1200 beyond all four new random controllers. The frozen classification is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION. Independent recomputation agreed exactly; one documented parser-totality incident is classified as a minor non-scientific issue. This remains DEVELOPMENT.
 
 **Next authorized action:** Principal-researcher review of the Gate-9 result and the unexecuted Gate-10 cross-domain fixed-controller replication draft.
 <!-- PROJECT_STATUS:END -->

@@ -492,7 +492,7 @@ experiments:
       primary_evaluation_seconds: 5758.015675807372
       estimated_billed_a40_hours: 1.93
       estimated_cost_usd: 0.85
-      runpod_status: EXITED
+      runpod_status: TERMINATED
     next_action: Principal review; do not run another controller, alpha, layer, character-count replication, Q2, or holdout without a new frozen authorization.
 
   - id: GATE6_3_SEMANTIC_VALIDITY_AUDIT
@@ -717,7 +717,9 @@ experiments:
       random_D_max: 0.02
       parser_totality_amendment_commit: 67d12cbb57ee36103b6903f9a7d6240f49b6961b
       parser_totality_incident_rows_written: 0
-      forensic_audit: PENDING_INDEPENDENT_AUDIT
+      forensic_audit: GATE9_FORENSIC_MINOR_NONSCIENTIFIC_ISSUES
+      forensic_metric_max_abs_difference: 0.0
+      forensic_classification_agreement: true
       runpod_status: EXITED
       gate10: NOT_RUN
       q2: NOT_RUN

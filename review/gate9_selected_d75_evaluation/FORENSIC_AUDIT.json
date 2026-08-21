@@ -1,0 +1,46 @@
+{
+  "actual_rows": 1400,
+  "bootstrap": {
+    "item_cluster_unit_required_by_lock": "item_cluster_all_7_conditions_both_rollouts",
+    "resamples": 10000
+  },
+  "classification": "GATE9_FORENSIC_MINOR_NONSCIENTIFIC_ISSUES",
+  "classification_agreement": true,
+  "expected_rows": 1400,
+  "instrumentation_amendment": {
+    "checks": {
+      "amended_runtime_rows": true,
+      "amendment_commit_bound": true,
+      "classification_exact": true,
+      "condition_symmetric_reparse": true,
+      "new_hash_matches_code": true,
+      "no_scientific_retry_row_written": true,
+      "old_hash_matches_lock": true,
+      "preserved_runtime_rows": true
+    },
+    "classification": "CLASS_C_DETERMINISTIC_MEASUREMENT_REPAIR_WITH_CLASS_A_RESUME",
+    "runtime_source_commit_counts": {
+      "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945": 1233,
+      "67d12cbb57ee36103b6903f9a7d6240f49b6961b": 167
+    },
+    "scientific_result_changed": false
+  },
+  "logical_keys_unique": true,
+  "metric_max_abs_difference": 0.0,
+  "parser_condition_symmetric_reparse": true,
+  "parser_mismatch_count": 0,
+  "post_treatment_filtering": false,
+  "provenance": {
+    "controller_hash_exact": true,
+    "manifest_hash_exact": true,
+    "model_revision_exact": true,
+    "parser_version_exact": true,
+    "random_hashes_exact": true,
+    "schedule_hash_exact": true,
+    "source_binding_lock_hash_exact": true,
+    "source_commit_exact": true
+  },
+  "schedule_complete": true,
+  "seed_formula_exact": true,
+  "seed_unique": true
+}

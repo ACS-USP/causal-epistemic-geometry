@@ -8,10 +8,10 @@
 
 ## Current work
 
-Gate 9 independently evaluated the prospectively selected D75 controller on 100 fresh CRUXEval items. It preserved commitment/evaluability guards, raised accuracy from 47% to 60%, and produced G=0.1325, C=0.0643, and D=0.1200 beyond all four new random controllers. The frozen classification is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION; this remains DEVELOPMENT.
+Gate 9 independently evaluated the prospectively selected D75 controller on 100 fresh CRUXEval items. It preserved commitment/evaluability guards, raised accuracy from 47% to 60%, and produced G=0.1325, C=0.0643, and D=0.1200 beyond all four new random controllers. The frozen classification is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION. Independent recomputation agreed exactly; one documented parser-totality incident is classified as a minor non-scientific issue. This remains DEVELOPMENT.
 
 - Workstream: `GATE9_SELECTED_D75_EVALUATION_COMPLETE`
-- RunPod: `EXITED`
+- RunPod: `TERMINATED`
 - GPU work authorized: `false`
 - New scientific experiment authorized: `false`
 - Next authorized action: Principal-researcher review of the Gate-9 result and the unexecuted Gate-10 cross-domain fixed-controller replication draft.
@@ -43,11 +43,11 @@ Gate 9 independently evaluated the prospectively selected D75 controller on 100 
 | `GATE6_3_SEMANTIC_VALIDITY_AUDIT` | `COMPLETE_OFFLINE_DIAGNOSTIC_STRONG_SIGNAL` | The immutable 920 Gate 6.3 outputs were reanalyzed condition-symmetrically with external-semantic-v3 after parser rules were frozen on a masked corpus. Controller commitment validity/evaluability rose to 0.9750 and the diagnostic G/C/D signal exceeded all four random controls. The additive classification is GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL; the historical Gate 6.3 classification remains destructive and no new inference occurred. |
 | `GATE7_FRESH_SINGLE_L27_REPLICATION` | `COMPLETE_DEVELOPMENT_DESTRUCTIVE` | On 120 fresh CRUXEval items, the frozen L27 controller produced large, random-null-specific G/C/D and a 14.58-point accuracy gain, but reduced commitment validity and semantic evaluability from 99.17% to 90.00% and therefore failed the frozen relative guard. The independent audit was clean. This is a destructive development result, not confirmation. |
 | `GATE8_L27_DOSE_CALIBRATION` | `COMPLETE_DEVELOPMENT_CALIBRATION` | The complete 2,200-row matched calibration selected D75 as the lowest eligible lower dose. D75 preserved 100% commitment validity and semantic evaluability, exceeded the dose-matched random bank on semantic change, and recovered 34.6% of the CAREFUL token increase. The forensic audit was clean. Gate 9, G/C/D evaluation, Q2, character count, and holdout access were not run. |
-| `GATE9_SELECTED_D75_EVALUATION` | `COMPLETE_DEVELOPMENT_STRONG_SAFE_REPLICATION` | On 100 fresh CRUXEval items, the exact Gate-8-selected D75 controller raised accuracy from 47% to 60% while preserving commitment validity and semantic evaluability at 97%. G=0.1325, C=0.0643, and D=0.1200 exceeded every one of four new random controls; rescue was 0.1525 versus damage 0.0225. The frozen classification is a strong safe DEVELOPMENT replication. Gate 10 is drafted only; Q2 and holdout remain closed. |
+| `GATE9_SELECTED_D75_EVALUATION` | `COMPLETE_DEVELOPMENT_STRONG_SAFE_REPLICATION` | On 100 fresh CRUXEval items, the exact Gate-8-selected D75 controller raised accuracy from 47% to 60% while preserving commitment validity and semantic evaluability at 97%. G=0.1325, C=0.0643, and D=0.1200 exceeded every one of four new random controls; rescue was 0.1525 versus damage 0.0225. The frozen classification is a strong safe DEVELOPMENT replication. Independent metric recomputation agreed exactly; the forensic classification records one minor non-scientific parser-totality incident. Gate 10 is drafted only; Q2 and holdout remain closed. |
 
 ## Scientific firewall
 
-- `steering`: `GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION`
+- `steering`: `GATE9_SELECTED_D75_EVALUATION_COMPLETE`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
