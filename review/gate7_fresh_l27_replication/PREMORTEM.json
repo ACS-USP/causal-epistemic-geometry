@@ -1,0 +1,35 @@
+{
+  "classification": "PREMORTEM_PASS",
+  "completed_before_gate7_model_outputs": true,
+  "risks": {
+    "A_parser_invariance": "CONTROLLED_BY_FROZEN_V3_HASHES_AND_CONDITION_INVARIANCE",
+    "B_data_freshness": "CONTROLLED_BY_COMPLETE_ARTIFACT_SCAN_AND_REMOTE_PINNED_DATASET",
+    "C_controller_identity": "CONTROLLED_BY_FILE_AND_CANONICAL_VECTOR_HASHES",
+    "D_random_null_matching": "CONTROLLED_BY_NEW_ORTHOGONAL_ENERGY_MATCHED_BANK",
+    "E_causal_timing": "CONTROLLED_BY_SUSTAINED_CURRENT_TOKEN_HOOK_GATE",
+    "F_attrition_missingness": "CONTROLLED_BY_INVALID_AS_ERROR_AND_INFRA_ONLY_RETRY",
+    "G_resume": "CONTROLLED_BY_FSYNC_AND_UNIQUE_LOGICAL_KEYS",
+    "H_schedule": "CONTROLLED_BY_PRECOMMITTED_HASH_INTERLEAVING",
+    "I_estimands": "CONTROLLED_BY_TWO_ROLLOUT_AND_ITEM_CLUSTER_TESTS",
+    "J_auxiliary_arms": "CONTROLLED_BY_SEPARATE_SOURCE_CLASSIFICATION",
+    "K_interpretation": "CONTROLLED_BY_EXHAUSTIVE_FROZEN_CLASSIFICATION",
+    "L_environment": "CONTROLLED_BY_CORE_QWEN_REMOTE_PREFLIGHT_AND_ROW_PROVENANCE"
+  },
+  "historical_cruxeval_ids_reconstructed": 473,
+  "prospective_eligible_ids": 327,
+  "requested_n_feasible": true,
+  "class_a_recoveries_required_before_lock": [
+    "resolve pinned CRUXEval revision on remote host without model loading"
+  ],
+  "class_b_amendments": [
+    {
+      "affected_component": "style-only exhaustive classification",
+      "change": "Require recovery of at least 50% of both mean and median textual CAREFUL token-count increases over baseline, conditional on CAREFUL source replication.",
+      "outcomes_existed": false,
+      "primary_estimands_or_replication_thresholds_changed": false
+    }
+  ],
+  "scientific_ambiguities_remaining": [],
+  "collection_authorized_by_premortem_alone": false,
+  "next_lifecycle": "PROSPECTIVE_LOCK"
+}

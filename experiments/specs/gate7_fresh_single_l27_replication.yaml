@@ -1,0 +1,80 @@
+schema_version: 1
+experiment_id: GATE7_FRESH_SINGLE_L27_REPLICATION
+status: PROSPECTIVE_PREMORTEM
+stage: DEVELOPMENT_REPLICATION
+lifecycle: PREMORTEM
+question: >-
+  Does the exact frozen layer-27 paired-mean controller reproduce specific,
+  competence-preserving semantic error-profile control on a fresh unseen
+  CRUXEval sample beyond four new architecture-matched random controllers?
+historical_boundary:
+  gate6_3_v2: GATE6_3_SINGLE_MEAN_DESTRUCTIVE
+  gate6_3_v3_diagnostic: GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL
+  historical_result_immutable: true
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: bf16
+  quantization: none
+  enable_thinking: false
+  max_new_tokens: 4096
+  attention: sdpa
+  environment_profile: CORE_QWEN
+  generation:
+    do_sample: true
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    min_p: 0.0
+instrument:
+  benchmark: CRUXEval semantic output prediction
+  dataset_repo: cruxeval-org/cruxeval
+  dataset_revision: b96af0450242eb4da433032b90998f25588a5d0f
+  evaluator: external-semantic-v3
+sample:
+  namespace: GATE7-FRESH-L27-REPLICATION-V1
+  requested_n: 120
+  availability_contingency:
+    at_least_120: 120
+    100_to_119: 100
+    below_100: GATE7_BLOCKED_INSUFFICIENT_FRESH_ITEMS
+  historical_and_reserved_ids_excluded: true
+controller:
+  name: BEST_SINGLE_MEAN_PLUS
+  source: PROMPT_BOUNDARY
+  layer: 27
+  constructor: PAIRED_MEAN_DIFFERENCE
+  eta: 12.849903937136261
+  reference_scale: 10.153299177386142
+  duration: sustained_current_token
+  prefill_scope: final_non_padding_prompt_token
+  decode_scope: current_token_once_per_forward
+random_bank:
+  count: 4
+  new_for_gate7: true
+  orthogonal_to_meaningful: true
+  mutually_orthogonal: true
+  energy_matched: true
+conditions:
+  - BASELINE
+  - TEXTUAL_CAREFUL_REFERENCE
+  - BEST_SINGLE_MEAN_PLUS
+  - GATE7_RANDOM_R0
+  - GATE7_RANDOM_R1
+  - GATE7_RANDOM_R2
+  - GATE7_RANDOM_R3
+rollouts_per_item_condition: 2
+seed_regime: INDEPENDENT_PRIMARY
+primary_error: invalid_as_error
+bootstrap:
+  resamples: 10000
+  unit: item_cluster_all_conditions_both_rollouts
+cost:
+  target_usd: 2.0
+  hard_stop_usd: 4.0
+firewall:
+  q2: NOT_RUN
+  character_count: NOT_RUN
+  confirmatory_holdout: UNTOUCHED
+  next_protocol_execution: FORBIDDEN
