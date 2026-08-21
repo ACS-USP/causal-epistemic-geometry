@@ -1,0 +1,5 @@
+condition,n,valid,validity,correct,wrong,invalid_format,truncated,runtime_error,accuracy,semantic_change_rate,raw_token_sequence_change_rate,mean_first_divergence_token,mean_tokens,median_tokens,max_tokens,status_counts
+SINGLE_L27_RANDOM_R0,20,19,0.95,11,8,1,0,0,0.55,0.4,0.4,2.75,8.6,6.0,20,"{'INVALID_FORMAT': 1, 'VALID_CORRECT': 11, 'VALID_WRONG': 8}"
+SINGLE_L27_RANDOM_R1,20,20,1.0,11,9,0,0,0,0.55,0.3,0.3,4.166666666666667,8.9,6.0,21,"{'VALID_CORRECT': 11, 'VALID_WRONG': 9}"
+SINGLE_L27_RANDOM_R2,20,19,0.95,10,9,1,0,0,0.5,0.25,0.25,3.2,8.8,6.0,20,"{'INVALID_FORMAT': 1, 'VALID_CORRECT': 10, 'VALID_WRONG': 9}"
+SINGLE_L27_RANDOM_R3,20,20,1.0,11,9,0,0,0,0.55,0.25,0.25,3.8,8.65,6.0,20,"{'VALID_CORRECT': 11, 'VALID_WRONG': 9}"
