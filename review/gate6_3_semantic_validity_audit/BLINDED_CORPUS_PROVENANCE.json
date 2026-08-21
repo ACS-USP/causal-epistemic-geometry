@@ -1,0 +1,27 @@
+{
+  "condition_labels_restored": false,
+  "corpus_sha256": "20be4770921833a749b1a6722a1c7122e43edff856e77ed6490d34fcc23d0709",
+  "excluded_fields": [
+    "condition",
+    "item_id",
+    "original_correctness",
+    "original_parser_status",
+    "G_C_D_contribution"
+  ],
+  "included_fields": [
+    "audit_row_id",
+    "generated_token_count",
+    "phase_family",
+    "raw_output",
+    "reference_type",
+    "runtime_error",
+    "truncated"
+  ],
+  "matched_consistency_rows": 80,
+  "model_inference": false,
+  "ordering": "lexical audit_row_id derived without condition or correctness",
+  "primary_rows": 840,
+  "rows": 920,
+  "schema_version": 1,
+  "source_journal_sha256": "593c89e8bf13d83d2fcfa27b2a9d7eec7d4c0b17918185f0554d37390ca601e1"
+}

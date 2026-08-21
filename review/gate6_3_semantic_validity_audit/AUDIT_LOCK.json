@@ -1,0 +1,58 @@
+{
+  "audit_id": "GATE6_3_SEMANTIC_VALIDITY_AUDIT",
+  "audit_source_commit": "9a5813fe07267310d3f3873fd61282864995c037",
+  "blinded_corpus_sha256": "20be4770921833a749b1a6722a1c7122e43edff856e77ed6490d34fcc23d0709",
+  "bootstrap": {
+    "cluster": "item_id",
+    "resamples": 5000,
+    "seed": 6313003
+  },
+  "condition_blind_rule_development": true,
+  "condition_labels_may_be_restored_only_after_lock": true,
+  "diagnostic_guards": {
+    "C_gt_random_max": true,
+    "C_minimum": 0.03,
+    "C_minus_random_mean_minimum": 0.05,
+    "D_gt_random_max": true,
+    "D_minimum": 0.05,
+    "D_minus_random_mean_minimum": 0.05,
+    "G_minimum": 0.03,
+    "accuracy_drop_max": 0.1,
+    "commitment_validity_drop_max": 0.05,
+    "commitment_validity_minimum": 0.9,
+    "semantic_evaluability_drop_max": 0.05,
+    "semantic_evaluability_minimum": 0.9
+  },
+  "firewall": {
+    "character_count": "NOT_RUN",
+    "confirmatory_holdout": "UNTOUCHED",
+    "new_trajectories": 0,
+    "q2": "NOT_RUN",
+    "runpod": "NOT_ACCESSED"
+  },
+  "gpu_authorized": false,
+  "historical_classification": "GATE6_3_SINGLE_MEAN_DESTRUCTIVE",
+  "historical_result_mutable": false,
+  "immutable_source_files": {
+    "BOOTSTRAP_INTERVALS.json": "98236396b658161cea3e6c22b1d0b91794131fea4fadc4ab20bc48791de89a80",
+    "CONDITION_SUMMARY.csv": "116ac062ab96f4410629ad960bfedb200569b80434717b5d14b7169c713daf42",
+    "ESTIMANDS.json": "d490bc9657b728cc9ebcf581102c888214a79917510b05920680fe2fe3d53438",
+    "EVALUATION_RESULTS.csv": "14a5d69dd6f2c85c144b4a55bd754acf651882208e70fc9cd151af88afddd869",
+    "FORENSIC_CLOSEOUT.json": "c253f78816f2a82205354b8d63ae3ab1acad307eaa27f17e96061e90aab1f19f",
+    "PROTOCOL_LOCK.json": "d194a4e274def476dc13a4d5c27d87c66cf8cb76d20bfbf4da44115a7e6d333f",
+    "PROTOCOL_LOCK.md": "49949b590bb0e3efadcf84b7e1db16e1cc7d71e4404d617c3218711f292dc3c3",
+    "REPORT.md": "c1649cd5d76ed9d3149c1d5c37483bf1042dbf3aba0f453e6301b88dfdbafc7f",
+    "journal.jsonl": "593c89e8bf13d83d2fcfa27b2a9d7eec7d4c0b17918185f0554d37390ca601e1"
+  },
+  "model_inference": false,
+  "parser": {
+    "module_sha256": "d3082512531b1105fb555333c131170d009fa20b4e1edb5eb62dfcfe2702750c",
+    "spec_sha256": "e909e5504f6e50a4628261c5c1ce2d819a346d583d205c9932b3306f703a2807",
+    "tests_sha256": "7eef3e9d3415c4d9a8ecf46f5a2b46dd8026f4614b675406a0b86ce7e63b7073",
+    "version": "external-semantic-v3"
+  },
+  "schema_version": 1,
+  "scientific_base": "32a3cd2f0ec303fcc7951fbaf694db46265cc321",
+  "source_journal_sha256": "593c89e8bf13d83d2fcfa27b2a9d7eec7d4c0b17918185f0554d37390ca601e1",
+  "stage": "OFFLINE_CLASS_C_LOCK"
+}
