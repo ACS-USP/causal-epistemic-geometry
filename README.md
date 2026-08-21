@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 6.2 remains immutable. Its raw 200-row journal was reanalyzed offline with the frozen external-semantic-v2 parser: harmless unambiguous Markdown wrappers are accepted, while ambiguity and substantive trailing content remain invalid. BEST_SINGLE_MEAN_PLUS passes the frozen parser-reanalysis gate. Gate 6.3 freezes an architecture-matched single-L27 random bank and authorizes an 80-row matched random supplement, with the 840-row evaluation conditional on that gate. No new model output has been collected.
+Gate 6.2 remains immutable. Gate 6.3 completed its frozen 80-row architecture-matched single-L27 random supplement and 840-row primary evaluation after external-semantic-v2 reanalysis. The matched gate passed. The meaningful controller exceeded the random null on point-estimate G/C/D and preserved the accuracy tolerance, but failed the frozen validity guard (0.9083 versus the required 0.9250), so the result is GATE6_3_SINGLE_MEAN_DESTRUCTIVE. No Q2, character-count replication, or holdout access occurred.
 
-**Next authorized action:** Execute only the frozen 80-row Gate 6.3 matched single-L27 random supplement. Analyze it offline before deciding whether the frozen 840-row evaluation is authorized. Do not run character count, Q2, or holdout.
+**Next authorized action:** Principal researcher review. Do not run another controller, alpha, layer, character-count replication, Q2, or holdout without a new frozen authorization.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -85,8 +85,11 @@ as current plans.
   norm-matched random control.
 - Gate 5 source/duration bridge: textual careful/direct source separation and
   sustained manipulation passed their frozen gates, but the 60-item primary
-  evaluation was below the frozen movement threshold. Gate 6 is drafted only;
-  it has not been executed.
+  evaluation was below the frozen movement threshold.
+- Gate 6.3 single-mean semantic evaluation: matched architecture-specific
+  random gate passed, but the frozen L27 meaningful controller failed the
+  primary validity guard (0.9083 versus 0.9250) and is classified
+  `GATE6_3_SINGLE_MEAN_DESTRUCTIVE`. No later experiment was authorized.
 - Confirmatory holdout: untouched.
 
 These are instrument outcomes, not a positive or negative result for the full

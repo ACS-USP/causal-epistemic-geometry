@@ -89,6 +89,15 @@ Compare intervention and error-distance matrices by direction-label
 permutation. Do not run an indiscriminate layer × vector × alpha sweep and do
 not introduce manifold machinery.
 
+## Gate 6.3 — single-mean semantic closeout
+
+Gate 6.3 completed the conditional single-L27 semantic evaluation with an
+architecture-matched random bank. Its frozen outcome was
+`GATE6_3_SINGLE_MEAN_DESTRUCTIVE` because the meaningful controller failed the
+validity guard despite point-estimate movement beyond the random controls.
+No follow-up controller, alpha, layer, benchmark, Q2, or holdout action is
+authorized without a new prospective lock and principal review.
+
 ## Hard portfolio boundary
 
 Continue past the structured sprint only if all are true:

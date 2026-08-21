@@ -1,0 +1,201 @@
+item_id,condition,rollout_index,original_status,v2_status,original_parsed_answer,v2_parsed_answer,reference_answer,v2_correct,v2_parse_reason,disagreement_reason
+sample_87,BASELINE,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,BEST_SINGLE_MEAN_PLUS,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_87,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_87,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,-2139-1,-2139-1,'-2139-1',True,,unchanged
+sample_66,BASELINE,0,VALID_WRONG,VALID_WRONG,'ap','ap','',False,,unchanged
+sample_66,TEXTUAL_CAREFUL_REFERENCE,0,VALID_WRONG,VALID_WRONG,ppah,ppah,'',False,,unchanged
+sample_66,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,'ap','ap','',False,,unchanged
+sample_66,BEST_SINGLE_MEAN_PLUS,0,VALID_WRONG,VALID_WRONG,ah**,ah,'',False,,V2 extracted a different final payload
+sample_66,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,h,h,'',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_66,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,'ppy','ppy','',False,,unchanged
+sample_66,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,'ppy','ppy','',False,,unchanged
+sample_66,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,'ap','ap','',False,,unchanged
+sample_66,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,'ap','ap','',False,,unchanged
+sample_66,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,'ppy','ppy','',False,,unchanged
+sample_400,BASELINE,0,VALID_CORRECT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,unchanged
+sample_400,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,unchanged
+sample_400,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,unchanged
+sample_400,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,"I, am, eat","I, am, eat","'I, am, hungry!, eat, food.'",False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_400,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_400,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,unchanged
+sample_400,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,unchanged
+sample_400,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,unchanged
+sample_400,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,"I, am, eat, food.","I, am, eat, food.","'I, am, hungry!, eat, food.'",False,,unchanged
+sample_400,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,"I, am, hungry!, eat, food.","I, am, hungry!, eat, food.","'I, am, hungry!, eat, food.'",True,,unchanged
+sample_294,BASELINE,0,VALID_WRONG,VALID_WRONG,2xz&5H3*1a@#a*1hris,2xz&5H3*1a@#a*1hris,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_294,TEXTUAL_CAREFUL_REFERENCE,0,VALID_WRONG,VALID_WRONG,2z$&5H3*1a@#a*1hrs,2z$&5H3*1a@#a*1hrs,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_294,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,2mz&5H3*1a@#a*1hris,2mz&5H3*1a@#a*1hris,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_294,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,2z$&5H3*1a@#a*1hr,2z$&5H3*1a@#a*1hr,'2$z&5H3*1a@#a*1hris',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_294,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,2$z&5H3*1a@#a*1hrs,2$z&5H3*1a@#a*1hrs,'2$z&5H3*1a@#a*1hris',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_294,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,2xz&5H3*1a@#a*1hris,2xz&5H3*1a@#a*1hris,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_294,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,2xz&5H3*1a@#a*1hris,2xz&5H3*1a@#a*1hris,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_294,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,2xz&5H3*1a@#a*1hris,2xz&5H3*1a@#a*1hris,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_294,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,2xz&5H3*1a@#a*1hris,2xz&5H3*1a@#a*1hris,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_294,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,2mz&5H3*1a@#a*1hris,2mz&5H3*1a@#a*1hris,'2$z&5H3*1a@#a*1hris',False,,unchanged
+sample_510,BASELINE,0,VALID_CORRECT,VALID_CORRECT,Wy,Wy,'Wy',True,,unchanged
+sample_510,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,Wy,Wy,'Wy',True,,unchanged
+sample_510,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,Wy,Wy,'Wy',True,,unchanged
+sample_510,BEST_SINGLE_MEAN_PLUS,0,VALID_CORRECT,VALID_CORRECT,'Wy','Wy','Wy',True,,unchanged
+sample_510,MULTILAYER_MEAN_PLUS,0,VALID_WRONG,VALID_CORRECT,Wy**,Wy,'Wy',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_510,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,Wy,Wy,'Wy',True,,unchanged
+sample_510,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,Wy,Wy,'Wy',True,,unchanged
+sample_510,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,Wy,Wy,'Wy',True,,unchanged
+sample_510,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,Wy,Wy,'Wy',True,,unchanged
+sample_510,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,'Wy','Wy','Wy',True,,unchanged
+sample_233,BASELINE,0,VALID_WRONG,VALID_WRONG,"[3, 2, 1]","[3, 2, 1]","[1, 2, 3]",False,,unchanged
+sample_233,TEXTUAL_CAREFUL_REFERENCE,0,VALID_WRONG,VALID_WRONG,"[2, 1, 3]","[2, 1, 3]","[1, 2, 3]",False,,unchanged
+sample_233,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,"[3, 2, 1]","[3, 2, 1]","[1, 2, 3]",False,,unchanged
+sample_233,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,"[2, 3, 1]","[2, 3, 1]","[1, 2, 3]",False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_233,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,"[1, 2, 3]**","[1, 2, 3]","[1, 2, 3]",True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_233,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,"[3, 2, 1]","[3, 2, 1]","[1, 2, 3]",False,,unchanged
+sample_233,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,"[3, 2, 1]","[3, 2, 1]","[1, 2, 3]",False,,unchanged
+sample_233,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,"[3, 2, 1]","[3, 2, 1]","[1, 2, 3]",False,,unchanged
+sample_233,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,"[3, 2, 1]","[3, 2, 1]","[1, 2, 3]",False,,unchanged
+sample_233,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,"[2, 3, 1]","[2, 3, 1]","[1, 2, 3]",False,,unchanged
+sample_634,BASELINE,0,VALID_CORRECT,VALID_CORRECT,biec,biec,'biec',True,,unchanged
+sample_634,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,biec,biec,'biec',True,,unchanged
+sample_634,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,'buec','buec','biec',False,,unchanged
+sample_634,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,biec,biec,'biec',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_634,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,INVALID_FORMAT,,,'biec',False,expected exactly one FINAL commitment,unchanged
+sample_634,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,'biuc','biuc','biec',False,,unchanged
+sample_634,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,biec,biec,'biec',True,,unchanged
+sample_634,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,biec,biec,'biec',True,,unchanged
+sample_634,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,biec,biec,'biec',True,,unchanged
+sample_634,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,'bioc','bioc','biec',False,,unchanged
+sample_203,BASELINE,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_203,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_203,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_203,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,INVALID_FORMAT,,,{},False,expected exactly one FINAL commitment,unchanged
+sample_203,MULTILAYER_MEAN_PLUS,0,TRUNCATED,TRUNCATED_THINKING,,,{},False,truncated response,V2 status changed TRUNCATED -> TRUNCATED_THINKING
+sample_203,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_203,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_203,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_203,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_203,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,{},{},{},True,,unchanged
+sample_273,BASELINE,0,VALID_WRONG,VALID_WRONG,.NET,.NET,'NET',False,,unchanged
+sample_273,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,NET,NET,'NET',True,,unchanged
+sample_273,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,.NET,.NET,'NET',False,,unchanged
+sample_273,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,TEN,TEN,'NET',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_273,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,T,T,'NET',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_273,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,ETN.,ETN.,'NET',False,,unchanged
+sample_273,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,.NET,.NET,'NET',False,,unchanged
+sample_273,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,.ETN,.ETN,'NET',False,,unchanged
+sample_273,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,.ET.,.ET.,'NET',False,,unchanged
+sample_273,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,.ET.,.ET.,'NET',False,,unchanged
+sample_628,BASELINE,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,BEST_SINGLE_MEAN_PLUS,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,MULTILAYER_MEAN_PLUS,0,TRUNCATED,TRUNCATED_THINKING,,,"[4, 3, 6, 1]",False,truncated response,V2 status changed TRUNCATED -> TRUNCATED_THINKING
+sample_628,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_628,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,"[4, 3, 6, 1]","[4, 3, 6, 1]","[4, 3, 6, 1]",True,,unchanged
+sample_327,BASELINE,0,VALID_CORRECT,VALID_CORRECT,"[-3, 1, 7, -1]","[-3, 1, 7, -1]","[-3, 1, 7, -1]",True,,unchanged
+sample_327,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"[-3, 1, 7, -1]","[-3, 1, 7, -1]","[-3, 1, 7, -1]",True,,unchanged
+sample_327,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"[-3, 1, 7, -1]","[-3, 1, 7, -1]","[-3, 1, 7, -1]",True,,unchanged
+sample_327,BEST_SINGLE_MEAN_PLUS,0,VALID_WRONG,VALID_WRONG,"[3, 1, -7, -1]","[3, 1, -7, -1]","[-3, 1, 7, -1]",False,,unchanged
+sample_327,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,INVALID_FORMAT,,,"[-3, 1, 7, -1]",False,expected exactly one FINAL commitment,unchanged
+sample_327,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,"[-3, -7, 1, -1]","[-3, -7, 1, -1]","[-3, 1, 7, -1]",False,,unchanged
+sample_327,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,"[-3, -7, 1, -1]","[-3, -7, 1, -1]","[-3, 1, 7, -1]",False,,unchanged
+sample_327,MULTILAYER_RANDOM_MEAN_R1,0,INVALID_FORMAT,INVALID_FORMAT,"[-3, -(-1), -7, -1]","[-3, -(-1), -7, -1]","[-3, 1, 7, -1]",False,typed evaluator rejected answer: ValueError,unchanged
+sample_327,MULTILAYER_RANDOM_MEAN_R2,0,INVALID_FORMAT,INVALID_FORMAT,"[-3, -(-1), -7, -1]","[-3, -(-1), -7, -1]","[-3, 1, 7, -1]",False,typed evaluator rejected answer: ValueError,unchanged
+sample_327,MULTILAYER_RANDOM_MEAN_R3,0,INVALID_FORMAT,INVALID_FORMAT,"[-3, -(-1), -7, -1]","[-3, -(-1), -7, -1]","[-3, 1, 7, -1]",False,typed evaluator rejected answer: ValueError,unchanged
+sample_243,BASELINE,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_243,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_243,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_243,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,True,True,True,True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_243,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,True,True,True,True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_243,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_243,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_243,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_243,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_243,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,True,True,True,True,,unchanged
+sample_350,BASELINE,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_350,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_350,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_350,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_350,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_350,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_350,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_350,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_350,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_350,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,"[1, 2, 3]","[1, 2, 3]","[1, 2, 3]",True,,unchanged
+sample_132,BASELINE,0,VALID_WRONG,VALID_WRONG,abcdabc,abcdabc,'abc',False,,unchanged
+sample_132,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,abc,abc,'abc',True,,unchanged
+sample_132,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,abcdabc,abcdabc,'abc',False,,unchanged
+sample_132,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,INVALID_FORMAT,,,'abc',False,expected exactly one FINAL commitment,unchanged
+sample_132,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,abc,abc,'abc',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_132,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,abcdabc,abcdabc,'abc',False,,unchanged
+sample_132,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,abcdabc,abcdabc,'abc',False,,unchanged
+sample_132,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,abcdabc,abcdabc,'abc',False,,unchanged
+sample_132,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,abcdabc,abcdabc,'abc',False,,unchanged
+sample_132,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,abcdabc,abcdabc,'abc',False,,unchanged
+sample_730,BASELINE,0,VALID_WRONG,VALID_WRONG,3,3,2,False,,unchanged
+sample_730,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,2,2,2,True,,unchanged
+sample_730,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,2,2,2,True,,unchanged
+sample_730,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,2,2,2,True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_730,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,1,1,2,False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_730,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,3,3,2,False,,unchanged
+sample_730,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,3,3,2,False,,unchanged
+sample_730,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,3,3,2,False,,unchanged
+sample_730,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,3,3,2,False,,unchanged
+sample_730,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,3,3,2,False,,unchanged
+sample_617,BASELINE,0,VALID_CORRECT,VALID_CORRECT,'ascii','ascii','ascii',True,,unchanged
+sample_617,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,ascii,ascii,'ascii',True,,unchanged
+sample_617,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,'non ascii','non ascii','ascii',False,,unchanged
+sample_617,BEST_SINGLE_MEAN_PLUS,0,VALID_WRONG,VALID_CORRECT,ascii**,ascii,'ascii',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_617,MULTILAYER_MEAN_PLUS,0,VALID_WRONG,VALID_CORRECT,'ascii'**,'ascii','ascii',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_617,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,'non ascii','non ascii','ascii',False,,unchanged
+sample_617,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,'ascii','ascii','ascii',True,,unchanged
+sample_617,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,'ascii','ascii','ascii',True,,unchanged
+sample_617,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,ascii,ascii,'ascii',True,,unchanged
+sample_617,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,'ascii','ascii','ascii',True,,unchanged
+sample_16,BASELINE,0,VALID_CORRECT,VALID_CORRECT,'zejrohaj','zejrohaj','zejrohaj',True,,unchanged
+sample_16,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,zejrohaj,zejrohaj,'zejrohaj',True,,unchanged
+sample_16,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,zejrohaj,zejrohaj,'zejrohaj',True,,unchanged
+sample_16,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_CORRECT,zejrohaj,zejrohaj,'zejrohaj',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_16,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,INVALID_FORMAT,,,'zejrohaj',False,empty FINAL commitment,unchanged
+sample_16,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,'zejrohaj','zejrohaj','zejrohaj',True,,unchanged
+sample_16,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,zejrohaj,zejrohaj,'zejrohaj',True,,unchanged
+sample_16,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,zejrohaj,zejrohaj,'zejrohaj',True,,unchanged
+sample_16,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,zejrohaj,zejrohaj,'zejrohaj',True,,unchanged
+sample_16,MULTILAYER_RANDOM_MEAN_R3,0,VALID_CORRECT,VALID_CORRECT,'zejrohaj','zejrohaj','zejrohaj',True,,unchanged
+sample_409,BASELINE,0,VALID_WRONG,VALID_WRONG,Querist,Querist,'querisT',False,,unchanged
+sample_409,TEXTUAL_CAREFUL_REFERENCE,0,VALID_WRONG,VALID_WRONG,queresT,queresT,'querisT',False,,unchanged
+sample_409,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,Querist,Querist,'querisT',False,,unchanged
+sample_409,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,queriS,queriS,'querisT',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_409,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,quersiT,quersiT,'querisT',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_409,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,Querist,Querist,'querisT',False,,unchanged
+sample_409,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,Querist,Querist,'querisT',False,,unchanged
+sample_409,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,Querist,Querist,'querisT',False,,unchanged
+sample_409,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,querist,querist,'querisT',False,,unchanged
+sample_409,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,querist,querist,'querisT',False,,unchanged
+sample_731,BASELINE,0,VALID_WRONG,VALID_WRONG,Chris requires  ride to the airport on Friday.,Chris requires  ride to the airport on Friday.,'Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_731,TEXTUAL_CAREFUL_REFERENCE,0,VALID_WRONG,VALID_WRONG,'Chris requires  ride to the airport on Friday.','Chris requires  ride to the airport on Friday.','Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_731,TEXTUAL_DIRECT_REFERENCE,0,VALID_WRONG,VALID_WRONG,Chris requires  ride to the airport on Friday.,Chris requires  ride to the airport on Friday.,'Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_731,BEST_SINGLE_MEAN_PLUS,0,INVALID_FORMAT,VALID_WRONG,'Chris requires ride to the airport on Friday.','Chris requires ride to the airport on Friday.','Chris requires  ride to the irport on Fridy.',False,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_731,MULTILAYER_MEAN_PLUS,0,TRUNCATED,TRUNCATED_THINKING,,,'Chris requires  ride to the irport on Fridy.',False,truncated response,V2 status changed TRUNCATED -> TRUNCATED_THINKING
+sample_731,MULTILAYER_MEAN_MINUS,0,VALID_WRONG,VALID_WRONG,Chris requires  ride to the airport on Friday.,Chris requires  ride to the airport on Friday.,'Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_731,MULTILAYER_RANDOM_MEAN_R0,0,VALID_WRONG,VALID_WRONG,Chris requires  ride to the airport on Friday.,Chris requires  ride to the airport on Friday.,'Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_731,MULTILAYER_RANDOM_MEAN_R1,0,VALID_WRONG,VALID_WRONG,Chris requires ride to the airport on Friday.,Chris requires ride to the airport on Friday.,'Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_731,MULTILAYER_RANDOM_MEAN_R2,0,VALID_WRONG,VALID_WRONG,Chris requires  ride to the airport on Friday.,Chris requires  ride to the airport on Friday.,'Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_731,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,Chris requires  ride to the airport on Friday.,Chris requires  ride to the airport on Friday.,'Chris requires  ride to the irport on Fridy.',False,,unchanged
+sample_227,BASELINE,0,VALID_CORRECT,VALID_CORRECT,Manolo,Manolo,'Manolo',True,,unchanged
+sample_227,TEXTUAL_CAREFUL_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,Manolo,Manolo,'Manolo',True,,unchanged
+sample_227,TEXTUAL_DIRECT_REFERENCE,0,VALID_CORRECT,VALID_CORRECT,Manolo,Manolo,'Manolo',True,,unchanged
+sample_227,BEST_SINGLE_MEAN_PLUS,0,VALID_WRONG,VALID_CORRECT,Manolo**,Manolo,'Manolo',True,,V2 accepted one unique FINAL commitment with allowed formatting
+sample_227,MULTILAYER_MEAN_PLUS,0,INVALID_FORMAT,INVALID_FORMAT,,,'Manolo',False,expected exactly one FINAL commitment,unchanged
+sample_227,MULTILAYER_MEAN_MINUS,0,VALID_CORRECT,VALID_CORRECT,Manolo,Manolo,'Manolo',True,,unchanged
+sample_227,MULTILAYER_RANDOM_MEAN_R0,0,VALID_CORRECT,VALID_CORRECT,Manolo,Manolo,'Manolo',True,,unchanged
+sample_227,MULTILAYER_RANDOM_MEAN_R1,0,VALID_CORRECT,VALID_CORRECT,Manolo,Manolo,'Manolo',True,,unchanged
+sample_227,MULTILAYER_RANDOM_MEAN_R2,0,VALID_CORRECT,VALID_CORRECT,Manolo,Manolo,'Manolo',True,,unchanged
+sample_227,MULTILAYER_RANDOM_MEAN_R3,0,VALID_WRONG,VALID_WRONG,Manno,Manno,'Manolo',False,,unchanged

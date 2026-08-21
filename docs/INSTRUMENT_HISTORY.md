@@ -87,6 +87,24 @@ gate.
 **Decision:** scientifically untested and operationally paused. Dense code is
 not the automatic next action. See [the pilot gate](Q1_V4_DENSE_CODE_PILOT.md).
 
+## Gate 6.3 — single-mean semantic evaluation
+
+Gate 6.3 reanalyzed the immutable Gate 6.2 rows with the strict
+`external-semantic-v2` parser, then tested the frozen paired-mean L27 controller
+against four architecture-matched single-layer random controls. The matched
+80-row manipulation gate passed, and the conditional 840-row evaluation was
+completed with two independent rollouts per item-condition.
+
+The meaningful controller exceeded the random mean and maximum on point
+estimates of `G`, `C`, and `D`, while remaining within the accuracy tolerance.
+It failed the pre-registered validity guard, however: validity was 0.9083,
+below the required 0.9250 relative to the 0.9750 baseline.
+
+**Decision:** `GATE6_3_SINGLE_MEAN_DESTRUCTIVE`. This is a bounded development
+result, not a useful-complementarity claim, Q2 result, or test of the
+confirmatory holdout. See [the Gate 6.3 closeout](GATE6_3_SINGLE_MEAN_CLOSEOUT.md)
+and the raw [review artifacts](../review/gate6_3_single_mean_semantic_evaluation/).
+
 ## Cross-series conclusion
 
 The repository has learned a great deal about measurement failure and execution
@@ -94,4 +112,3 @@ semantics, but it has not produced a scientific Q1 result. None of the closed
 instruments settles whether representation geometry can causally control error
 covariance. The next work is prospective and staged in
 [the experiment ladder](EXPERIMENT_LADDER.md).
-

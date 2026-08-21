@@ -1,0 +1,181 @@
+{
+  "classification": "GATE6_3_FORENSIC_CLEAN",
+  "comparison": {
+    "bootstrap_entries": 48,
+    "bootstrap_resamples": [
+      5000
+    ],
+    "main_estimator_file": "ESTIMANDS.json",
+    "main_estimator_mismatches": [],
+    "primary_values_recomputed_independently": true
+  },
+  "independent_estimands": {
+    "BASELINE": {
+      "B00": 0.4666666666666667,
+      "O00": 0.5333333333333333
+    },
+    "BEST_SINGLE_MEAN_PLUS": {
+      "B00": 0.4666666666666667,
+      "B0j": 0.2791666666666667,
+      "C": 0.11299435028248586,
+      "D": 0.16666666666666666,
+      "G": 0.1875,
+      "O00": 0.5333333333333333,
+      "O0j": 0.7208333333333333,
+      "U00": 0.22951977401129944,
+      "U0j": 0.1550141242937853,
+      "damage": 0.04583333333333333,
+      "rescue": 0.20416666666666666
+    },
+    "SINGLE_L27_RANDOM_R0": {
+      "B00": 0.4666666666666667,
+      "B0j": 0.4583333333333333,
+      "C": 0.025000000000000022,
+      "D": 0.05,
+      "G": 0.00833333333333336,
+      "O00": 0.5333333333333333,
+      "O0j": 0.5416666666666667,
+      "U00": 0.22951977401129944,
+      "U0j": 0.2461864406779661,
+      "damage": 0.058333333333333334,
+      "rescue": 0.025
+    },
+    "SINGLE_L27_RANDOM_R1": {
+      "B00": 0.4666666666666667,
+      "B0j": 0.45416666666666666,
+      "C": 0.01694915254237289,
+      "D": 0.016666666666666666,
+      "G": 0.012500000000000011,
+      "O00": 0.5333333333333333,
+      "O0j": 0.5458333333333334,
+      "U00": 0.22951977401129944,
+      "U0j": 0.23396892655367232,
+      "damage": 0.0375,
+      "rescue": 0.029166666666666667
+    },
+    "SINGLE_L27_RANDOM_R2": {
+      "B00": 0.4666666666666667,
+      "B0j": 0.48333333333333334,
+      "C": -0.00042372881355931535,
+      "D": 0.016666666666666666,
+      "G": -0.016666666666666663,
+      "O00": 0.5333333333333333,
+      "O0j": 0.5166666666666666,
+      "U00": 0.22951977401129944,
+      "U0j": 0.2457627118644068,
+      "damage": 0.03333333333333333,
+      "rescue": 0.0
+    },
+    "SINGLE_L27_RANDOM_R3": {
+      "B00": 0.4666666666666667,
+      "B0j": 0.4791666666666667,
+      "C": 0.003813559322033866,
+      "D": 0.016666666666666666,
+      "G": -0.012500000000000011,
+      "O00": 0.5333333333333333,
+      "O0j": 0.5208333333333333,
+      "U00": 0.22951977401129944,
+      "U0j": 0.24583333333333332,
+      "damage": 0.0375,
+      "rescue": 0.004166666666666667
+    },
+    "TEXTUAL_CAREFUL_REFERENCE": {
+      "B00": 0.4666666666666667,
+      "B0j": 0.24166666666666667,
+      "C": 0.12655367231638417,
+      "D": 0.2,
+      "G": 0.225,
+      "O00": 0.5333333333333333,
+      "O0j": 0.7583333333333333,
+      "U00": 0.22951977401129944,
+      "U0j": 0.1310734463276836,
+      "damage": 0.03333333333333333,
+      "rescue": 0.24166666666666667
+    }
+  },
+  "provenance": {
+    "eta0_values": [
+      12.849903937136261
+    ],
+    "expected_eta0": 12.849903937136261,
+    "expected_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "expected_parser": "external-semantic-v2",
+    "intervention_metadata_by_condition": {
+      "BASELINE": [
+        "none"
+      ],
+      "BEST_SINGLE_MEAN_PLUS": [
+        "BEST_SINGLE_MEAN_PLUS"
+      ],
+      "SINGLE_L27_RANDOM_R0": [
+        "SINGLE_L27_RANDOM_R0"
+      ],
+      "SINGLE_L27_RANDOM_R1": [
+        "SINGLE_L27_RANDOM_R1"
+      ],
+      "SINGLE_L27_RANDOM_R2": [
+        "SINGLE_L27_RANDOM_R2"
+      ],
+      "SINGLE_L27_RANDOM_R3": [
+        "SINGLE_L27_RANDOM_R3"
+      ],
+      "TEXTUAL_CAREFUL_REFERENCE": [
+        "none"
+      ]
+    },
+    "model_revisions": [
+      "b968826d9c46dd6066d109eabc6255188de91218"
+    ],
+    "parser_versions": [
+      "external-semantic-v2"
+    ],
+    "protocol_lock_commit": "958b5a24dc05e91f18405b7f0cca9baa644186bb",
+    "runtime_source_commits": {
+      "1a343e734fb6cfca995bc6ee99c51f0d6ec8d6fd": 80,
+      "3a2dc3ea3f31ec5898cf0c0e583dcdb1b46f572b": 840
+    },
+    "vector_hashes_by_condition": {
+      "BASELINE": [],
+      "BEST_SINGLE_MEAN_PLUS": [
+        "36f783f7c179318dba35e75af2ad987975eb6c19f63f577516b7131e9891a7a3"
+      ],
+      "SINGLE_L27_RANDOM_R0": [
+        "d76349806bdcc34d11d7ba3984d2cd2cebe12d7f2b72f4aaf96cb1e92b0acb95"
+      ],
+      "SINGLE_L27_RANDOM_R1": [
+        "d69e7a460c613b86333fbb06f00a16ec2629703ffcf634215277f51cb50f481d"
+      ],
+      "SINGLE_L27_RANDOM_R2": [
+        "682b7a317259b87c2eab0cbe4096d74af3d0098e516606e932e79d7f0d630963"
+      ],
+      "SINGLE_L27_RANDOM_R3": [
+        "f29452c52bf2118ae3640316a11ee7a9a182a1438cdf792379def732b6e8f658"
+      ],
+      "TEXTUAL_CAREFUL_REFERENCE": []
+    }
+  },
+  "raw_integrity": {
+    "duplicate_logical_rows": 0,
+    "evaluation_items": 60,
+    "evaluation_rows": 840,
+    "expected_rows": 920,
+    "journal_sha256": "593c89e8bf13d83d2fcfa27b2a9d7eec7d4c0b17918185f0554d37390ca601e1",
+    "matched_evaluation_item_overlap": [],
+    "matched_items": 20,
+    "matched_rows": 80,
+    "rows": 920,
+    "schedule_exact": true,
+    "unique_logical_rows": 920
+  },
+  "seed_and_schedule": {
+    "evaluation_seed_values_unique": true,
+    "evaluation_two_rollouts_per_item_condition": true,
+    "forward_count_metadata_failures": 0,
+    "matched_seed_coupling_exact": true,
+    "parser_reanalysis_mismatches": 0,
+    "seed_regimes": {
+      "INDEPENDENT_PRIMARY": 840,
+      "MATCHED_COUPLING_SECONDARY": 80
+    }
+  }
+}

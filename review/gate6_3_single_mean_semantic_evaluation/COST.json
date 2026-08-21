@@ -1,0 +1,14 @@
+{
+  "gpu_rate_usd_per_hour": 0.44,
+  "total_logical_trajectories": 920,
+  "matched_random_trajectories": 80,
+  "primary_evaluation_trajectories": 840,
+  "journal_generation_seconds_sum": 5799.334705194458,
+  "journal_generation_hours_sum": 1.610926307,
+  "pod_billed_hours_approximate": 1.93,
+  "estimated_gpu_cost_usd": 0.85,
+  "target_cost_usd": 0.75,
+  "hard_stop_cost_usd": 1.5,
+  "cost_gate": "WITHIN_HARD_STOP",
+  "note": "The estimate includes the inference Pod window and short operational restarts for artifact recovery and provenance capture; all scientific rows were generated once and the Pod is stopped."
+}

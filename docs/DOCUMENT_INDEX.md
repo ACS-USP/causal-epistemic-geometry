@@ -45,6 +45,7 @@ current instruction source.
 | `docs/GATE6_LAYER_SOURCE_RFM_ATLAS.md` | Prospective layer/source/RFM control atlas; no outcomes yet |
 | `docs/GATE6_2_FIRST_STAGE_REPAIR.md` | Gate 6.2 source-scoring repair and paired-mean bridge; outcome-gated |
 | `docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md` | Gate 6.2 first-stage outcome and evaluation stop |
+| `docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md` | Gate 6.3 semantic-parser reanalysis, matched random gate, and primary closeout |
 
 ## Archival scientific protocols and closeouts
 

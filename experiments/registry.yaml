@@ -443,22 +443,23 @@ experiments:
 
   - id: GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION
     version: GATE-6.3
-    stage: DEVELOPMENT_LOCK
+    stage: DEVELOPMENT
     question: Does the frozen single-mean L27 controller remain behaviorally specific after strict semantic parser reanalysis and an architecture-matched single-layer random null?
     instrument: CRUXEval semantic output prediction with external-semantic-v2 parser
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: FROZEN_PRE_OUTCOME
-    outcome: GATE6_2A_PARSER_REANALYSIS_SINGLE_MEAN_PASS
+    status: COMPLETE_DEVELOPMENT_DESTRUCTIVE
+    outcome: GATE6_3_SINGLE_MEAN_DESTRUCTIVE
     scientific_interpretation: >-
-      Offline parser-V2 reanalysis of the immutable Gate 6.2 journal passes for
-      BEST_SINGLE_MEAN_PLUS. The exact Gate 6.2 controller and dose are
-      preserved. A four-vector single-L27 random bank and matched 80-row
-      supplement are frozen before new model output; the 840-row evaluation is
-      conditional on the matched gate. This is a prospective development lock,
-      not a new causal result.
+      The immutable Gate 6.2 journal was reanalyzed with external-semantic-v2;
+      the matched four-vector single-L27 random gate passed and the frozen
+      840-row evaluation completed. BEST_SINGLE_MEAN_PLUS exceeded the random
+      mean and maximum on point-estimate G/C/D and preserved the accuracy
+      tolerance, but failed the frozen validity guard (0.9083 versus 0.9250).
+      The result is therefore GATE6_3_SINGLE_MEAN_DESTRUCTIVE, not a useful
+      complementarity signal and not a confirmatory result.
     source_commit: 958b5a24dc05e91f18405b7f0cca9baa644186bb
     artifact: review/gate6_3_single_mean_semantic_evaluation/
-    cost_usd: 0.0
+    cost_usd: 0.85
     holdout_status: UNTOUCHED
     parent_experiment: GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE
     lock:
@@ -473,14 +474,23 @@ experiments:
       parser_version: external-semantic-v2
       historical_gate6_2_immutable: true
       correctness_used_for_new_selection: false
-      gpu_authorized: true
+      gpu_authorized: false
       target_cost_usd: 0.75
       hard_stop_cost_usd: 1.50
     execution:
       offline_reanalysis: PASS
-      matched_random_supplement: NOT_RUN
-      conditional_evaluation: NOT_AUTHORIZED_YET
+      matched_random_supplement: GATE6_3_MATCHED_NULL_PASS
+      conditional_evaluation: COMPLETE_GATED_DESTRUCTIVE
+      total_trajectories: 920
+      journal_sha256: 593c89e8bf13d83d2fcfa27b2a9d7eec7d4c0b17918185f0554d37390ca601e1
+      forensic_closeout: GATE6_3_FORENSIC_CLEAN
       character_count: NOT_RUN
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Execute the frozen 80-row matched random supplement; analyze before conditional evaluation.
+    runtime:
+      matched_random_seconds: 43.80297800898552
+      primary_evaluation_seconds: 5758.015675807372
+      estimated_billed_a40_hours: 1.93
+      estimated_cost_usd: 0.85
+      runpod_status: EXITED
+    next_action: Principal review; do not run another controller, alpha, layer, character-count replication, Q2, or holdout without a new frozen authorization.
