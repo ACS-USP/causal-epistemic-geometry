@@ -2,7 +2,7 @@
 
 This is a branching decision map, not a claim that the project has already
 produced three papers. The current evidence is development-only and remains
-bounded by the audited Gate 4 result and the frozen Gate 5 bridge.
+bounded by the audited Gate-7 result.
 
 ## Program A — Distributed steering of blind spots
 
@@ -48,8 +48,20 @@ Evidence gate:
 
 ## Current branch point
 
-Gate 5 is designed to distinguish two explanations for the Gate 4 null:
-whether the careful/direct text source was behaviorally meaningful, and whether
-one-shot intervention duration was too short. It is not itself a publication
-program and does not authorize Q2 or confirmatory access. After its closeout,
-exactly one Gate-6 protocol will be drafted and submitted for principal review.
+Gate 7 found a reproducible, controller-specific shift in semantic errors and
+accuracy, beyond four new architecture-matched random controllers, but the same
+controller also caused a condition-specific loss of commitment validity and
+semantic evaluability. The frozen classification is therefore
+`GATE7_DESTRUCTIVE`, despite positive G/C/D and accuracy estimates.
+
+Program A remains scientifically interesting but has not passed its defining
+competence/mechanical-preservation gate. Program B remains viable because the
+project now has strong readout/source evidence alongside causal effects whose
+usefulness is limited by output validity. Program C remains a mechanistic
+follow-up, not an authorized Q2 result: the dose-dependent tradeoff between
+control and validity may reveal a geometry of controllability, but that must be
+tested prospectively.
+
+No program is publication-ready. The only drafted next step is a fresh,
+prospective dose calibration intended to locate whether a non-destructive dose
+exists before any later evaluation. It is not authorized or executed.

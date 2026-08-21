@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 7 is prospectively locked before model outputs. It reuses byte-for-byte the frozen Gate-6.3 L27 paired-mean controller and exact eta, freezes external-semantic-v3, allocates 120 fresh CRUXEval items after excluding 473 historical/reserved IDs, and compares baseline, textual CAREFUL, the meaningful controller, and four new orthogonal energy-matched random controllers with two independent rollouts each. The historical Gate-6.3 V2 result remains immutable.
+Gate 7 completed 1,680 frozen development trajectories on 120 fresh CRUXEval items and passed an independent forensic audit. The exact L27 controller increased accuracy by 14.58 points and exceeded four new random controllers on G/C/D, but commitment validity and semantic evaluability fell from 99.17% to 90.00%, below the frozen relative guard of 94.17%. The mechanical classification is GATE7_DESTRUCTIVE. The historical Gate-6.3 result remains immutable and no confirmatory claim is frozen.
 
-**Next authorized action:** Execute only the frozen Gate-7 engineering gate and, after it passes, the complete 1,680-row development replication. Then stop RunPod, analyze and audit independently, draft but do not execute one Gate-8 protocol, and return for principal review.
+**Next authorized action:** Principal-researcher review of the audited destructive Gate-7 result and the unexecuted Gate-8 prospective dose-calibration draft. No further model inference is authorized.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -92,7 +92,10 @@ as current plans.
   `GATE6_3_SINGLE_MEAN_DESTRUCTIVE`. A later condition-blind, model-free V3
   audit preserved that historical classification but found 0.9750 commitment
   validity/evaluability and a strong controller-specific G/C/D diagnostic.
-  Fresh replication is drafted, not authorized.
+  Gate 7 then tested the exact controller on 120 fresh items with semantic V3
+  frozen before collection. Accuracy and G/C/D improved beyond four new random
+  controls, but commitment/evaluability fell to 0.9000 and violated the frozen
+  relative guard; classification: `GATE7_DESTRUCTIVE`.
 - Confirmatory holdout: untouched.
 
 These are instrument outcomes, not a positive or negative result for the full

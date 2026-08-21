@@ -19,35 +19,34 @@ project:
     utility?
 
 current:
-  workstream: GATE7_FRESH_SINGLE_L27_REPLICATION
-  lifecycle: PROSPECTIVE_LOCK
+  workstream: GATE7_FRESH_SINGLE_L27_REPLICATION_COMPLETE
+  lifecycle: CLOSED
   stage: DEVELOPMENT_REPLICATION
-  source_commit: 594eb22f0c99215df5ebf085e3d5778ff681fd47
+  source_commit: 0dc9c3156bc86aebada93388a4e2fa28b2345f95
   summary: >-
-    Gate 7 is prospectively locked before model outputs. It reuses byte-for-byte
-    the frozen Gate-6.3 L27 paired-mean controller and exact eta, freezes
-    external-semantic-v3, allocates 120 fresh CRUXEval items after excluding 473
-    historical/reserved IDs, and compares baseline, textual CAREFUL, the
-    meaningful controller, and four new orthogonal energy-matched random
-    controllers with two independent rollouts each. The historical Gate-6.3 V2
-    result remains immutable.
+    Gate 7 completed 1,680 frozen development trajectories on 120 fresh CRUXEval
+    items and passed an independent forensic audit. The exact L27 controller
+    increased accuracy by 14.58 points and exceeded four new random controllers
+    on G/C/D, but commitment validity and semantic evaluability fell from 99.17%
+    to 90.00%, below the frozen relative guard of 94.17%. The mechanical
+    classification is GATE7_DESTRUCTIVE. The historical Gate-6.3 result remains
+    immutable and no confirmatory claim is frozen.
   next_authorized_action: >-
-    Execute only the frozen Gate-7 engineering gate and, after it passes, the
-    complete 1,680-row development replication. Then stop RunPod, analyze and
-    audit independently, draft but do not execute one Gate-8 protocol, and
-    return for principal review.
-  runpod: RUNNING_GATE7_PREPARATION
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+    Principal-researcher review of the audited destructive Gate-7 result and the
+    unexecuted Gate-8 prospective dose-calibration draft. No further model
+    inference is authorized.
+  runpod: EXITED
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_DURATION_BELOW_MOVEMENT
+  steering: GATE7_DEVELOPMENT_DESTRUCTIVE_SPECIFIC_MOVEMENT_WITH_VALIDITY_LOSS
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE7_FRESH_SINGLE_L27_REPLICATION_PROSPECTIVE_LOCK
+  current_task: PRINCIPAL_RESEARCHER_REVIEW
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -145,6 +144,14 @@ instrument_history:
       additive classification is GATE6_3_V3_STRONG_SPECIFIC_CONTROL_SIGNAL;
       the historical Gate 6.3 classification remains destructive and no new
       inference occurred.
+  - id: GATE7_FRESH_SINGLE_L27_REPLICATION
+    status: COMPLETE_DEVELOPMENT_DESTRUCTIVE
+    conclusion: >-
+      On 120 fresh CRUXEval items, the frozen L27 controller produced large,
+      random-null-specific G/C/D and a 14.58-point accuracy gain, but reduced
+      commitment validity and semantic evaluability from 99.17% to 90.00% and
+      therefore failed the frozen relative guard. The independent audit was
+      clean. This is a destructive development result, not confirmation.
 
 workflow_regimes:
   EXPLORATION:

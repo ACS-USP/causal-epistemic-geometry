@@ -42,6 +42,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION_COMPLETE",
         "GATE6_3_SEMANTIC_VALIDITY_AUDIT_COMPLETE",
         "GATE7_FRESH_SINGLE_L27_REPLICATION",
+        "GATE7_FRESH_SINGLE_L27_REPLICATION_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -61,6 +62,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "ORIGINAL_Q1_MICRO_Q1_COMPLETE_DEVELOPMENT_NO_SIGNAL",
         "ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_LOCKED",
         "ORIGINAL_Q1_GATE4_AUDITED_BOUNDED_NULL_GATE5_DURATION_BELOW_MOVEMENT",
+        "GATE7_DEVELOPMENT_DESTRUCTIVE_SPECIFIC_MOVEMENT_WITH_VALIDITY_LOSS",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

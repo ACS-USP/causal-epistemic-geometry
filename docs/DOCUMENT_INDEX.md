@@ -51,6 +51,7 @@ current instruction source.
 | `docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md` | Gate 6.2 first-stage outcome and evaluation stop |
 | `docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md` | Gate 6.3 semantic-parser reanalysis, matched random gate, and primary closeout |
 | `review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md` | Additive condition-symmetric V3 audit; historical Gate 6.3 result unchanged |
+| `docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md` | Fresh frozen-controller replication, destructive classification, and forensic closeout |
 
 ## Archival scientific protocols and closeouts
 

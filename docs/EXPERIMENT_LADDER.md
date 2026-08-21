@@ -104,6 +104,20 @@ commitment, semantic evaluability, and correctness. The frozen V2 classification
 above remains unchanged. The only drafted continuation is a fresh same-controller
 replication with V3 frozen before collection; that draft is not authorized.
 
+## Gate 7 — fresh single-L27 replication
+
+Complete DEVELOPMENT replication. The exact Gate-6.3 L27 paired-mean plus
+controller, eta, sustained timing, model, and external-semantic-v3 evaluator
+were frozen before collecting 1,680 trajectories on 120 fresh CRUXEval items.
+The controller produced a 14.58-point accuracy gain and G/C/D above all four
+new architecture-matched random controls, but commitment validity and semantic
+evaluability fell from 0.9917 to 0.9000, below the frozen relative guard of
+0.9417. The mechanical classification is `GATE7_DESTRUCTIVE`; the independent
+forensic audit was clean.
+
+The next protocol is only a draft for prospective dose calibration on a fresh
+calibration split. It is not authorized and does not open Q2 or the holdout.
+
 ## Hard portfolio boundary
 
 Continue past the structured sprint only if all are true:

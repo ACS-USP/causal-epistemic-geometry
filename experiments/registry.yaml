@@ -551,15 +551,18 @@ experiments:
     question: Does the exact frozen L27 paired-mean controller reproduce specific semantic error-profile control on a fresh unseen CRUXEval sample beyond four new architecture-matched random controllers?
     instrument: CRUXEval semantic output prediction with external-semantic-v3 frozen before outputs
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: FROZEN_PROSPECTIVE
-    outcome: NOT_YET_COLLECTED
+    status: COMPLETE_DEVELOPMENT_DESTRUCTIVE
+    outcome: GATE7_DESTRUCTIVE
     scientific_interpretation: >-
-      Independent development replication only. The exact Gate-6.3 controller,
-      layer, eta, sustained timing, model, parser, guards, estimands, and
-      classifications are frozen. This is not confirmatory and does not run Q2.
-    source_commit: 594eb22f0c99215df5ebf085e3d5778ff681fd47
+      Independent development replication only. The exact frozen L27 controller
+      raised accuracy from 0.3917 to 0.5375 and produced G=0.2375, C=0.1501,
+      and D=0.2167 beyond all four new random controllers. However, commitment
+      validity and semantic evaluability fell from 0.9917 to 0.9000, below the
+      frozen relative guard of 0.9417, so the result is mechanically destructive.
+      This is not confirmatory and does not establish Q2.
+    source_commit: 0dc9c3156bc86aebada93388a4e2fa28b2345f95
     artifact: review/gate7_fresh_l27_replication/
-    cost_usd: null
+    cost_usd: 1.2114666666666667
     holdout_status: UNTOUCHED
     parent_experiment: GATE6_3_SEMANTIC_VALIDITY_AUDIT
     lock:
@@ -575,11 +578,22 @@ experiments:
       random_controls: 4
       target_cost_usd: 2.00
       hard_stop_cost_usd: 4.00
-      gpu_authorized: true
+      gpu_authorized: false
     execution:
-      engineering_gate: NOT_RUN
-      collection: NOT_RUN
+      engineering_gate: PASS
+      collection: COMPLETE
+      trajectories: 1680
+      baseline_accuracy: 0.39166666666666666
+      meaningful_accuracy: 0.5375
+      meaningful_commitment_validity: 0.9
+      meaningful_semantic_evaluability: 0.9
+      G: 0.2375
+      C: 0.15007002801120445
+      D: 0.21666666666666667
+      forensic_audit: GATE7_FORENSIC_CLEAN
+      source_policy: CAREFUL_SOURCE_REPLICATED
+      runpod_status: EXITED
       q2: NOT_RUN
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Execute only the frozen Gate-7 engineering gate and complete collection; then stop, analyze, independently audit, and return for principal review.
+    next_action: Principal review; Gate-8 prospective dose calibration is drafted but not authorized or executed.

@@ -1,0 +1,30 @@
+{
+  "pod_id": "cnuh4tylu46s5c",
+  "gpu": "NVIDIA A40 48 GB",
+  "datacenter": "CA-MTL-1",
+  "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "environment_profile": "CORE_QWEN",
+  "python": "3.11.10",
+  "torch": "2.4.1+cu124",
+  "transformers": "4.57.1",
+  "accelerate": "1.14.0",
+  "huggingface_hub": "0.36.0",
+  "cuda_runtime": "12.4",
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "dtype": "bf16",
+  "attention_implementation": "sdpa",
+  "execution_engine": "serial_reference_sustained_current_token",
+  "experiment_source_commit": "0dc9c3156bc86aebada93388a4e2fa28b2345f95",
+  "journal_first_timestamp_utc": "2026-08-21T14:45:55.427288+00:00",
+  "journal_last_timestamp_utc": "2026-08-21T17:04:42.155322+00:00",
+  "migration": {
+    "from_pod": "sxtnr0lx4gw8ht",
+    "to_pod": "cnuh4tylu46s5c",
+    "reason": "Original A40 host had no free capacity at restart.",
+    "gpu_class_preserved": true,
+    "obsolete_source_pod_terminated_after_recovery_audit": true
+  },
+  "runpod_final_state": "EXITED"
+}

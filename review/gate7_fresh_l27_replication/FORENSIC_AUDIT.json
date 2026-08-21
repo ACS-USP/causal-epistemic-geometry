@@ -1,0 +1,29 @@
+{
+  "actual_rows": 1680,
+  "bootstrap": {
+    "item_cluster_unit_required_by_lock": "item_cluster_all_conditions_both_rollouts",
+    "resamples": 10000
+  },
+  "classification": "GATE7_FORENSIC_CLEAN",
+  "classification_agreement": true,
+  "expected_rows": 1680,
+  "historical_gate6_3_result_modified": false,
+  "logical_keys_unique": true,
+  "metric_max_abs_difference": 0.0,
+  "parser_condition_symmetric_reparse": true,
+  "parser_mismatch_count": 0,
+  "post_treatment_filtering": false,
+  "provenance": {
+    "controller_hash_exact": true,
+    "manifest_hash_exact": true,
+    "model_revision_exact": true,
+    "parser_version_exact": true,
+    "random_hashes_exact": true,
+    "schedule_hash_exact": true,
+    "source_binding_lock_hash_exact": true,
+    "source_commit_exact": true
+  },
+  "schedule_complete": true,
+  "seed_formula_exact": true,
+  "seed_unique": true
+}
