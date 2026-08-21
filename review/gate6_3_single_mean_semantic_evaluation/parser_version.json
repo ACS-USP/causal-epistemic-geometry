@@ -1,0 +1,19 @@
+{
+  "contract": "exactly one FINAL commitment; wrappers/fences only; no substantive suffix",
+  "historical_result_preserved": true,
+  "parser_version": "external-semantic-v2",
+  "row_count": 200,
+  "source_journal_sha256": "5254c493a2a1534d3a8bc2b2d58f3dc436951290dbd7bb5afa6365437c9d36da",
+  "status_counts_original": {
+    "INVALID_FORMAT": 31,
+    "TRUNCATED": 3,
+    "VALID_CORRECT": 91,
+    "VALID_WRONG": 75
+  },
+  "status_counts_v2": {
+    "INVALID_FORMAT": 9,
+    "TRUNCATED_THINKING": 3,
+    "VALID_CORRECT": 106,
+    "VALID_WRONG": 82
+  }
+}

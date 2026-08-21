@@ -1,0 +1,201 @@
+{
+  "controller": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE",
+    "delta_norm": 130.46891907441653,
+    "duration": "sustained_current_token_hook_already_used_by_gate6_2_engine",
+    "eta0": 12.849903937136261,
+    "layer": 27,
+    "location": "PROMPT_BOUNDARY",
+    "name": "BEST_SINGLE_MEAN_PLUS",
+    "reference_scale": 10.153299177386142,
+    "vector_sha256": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838"
+  },
+  "cost": {
+    "hard_stop_usd": 1.5,
+    "maximum_new_trajectories": 920,
+    "target_usd": 0.75
+  },
+  "experiment_id": "GATE6_3_SINGLE_MEAN_SEMANTIC_EVALUATION",
+  "firewall": {
+    "character_count": "NOT_RUN",
+    "confirmatory_holdout": "UNTOUCHED",
+    "gate6_2_original_immutable": true,
+    "q2": "NOT_RUN"
+  },
+  "gates": {
+    "evaluation": {
+      "C_gt_random_max": true,
+      "C_minus_random_mean": 0.05,
+      "C_single": 0.03,
+      "D_gt_random_max": true,
+      "D_minus_random_mean": 0.05,
+      "D_single": 0.05,
+      "G_gt_random_max": true,
+      "G_minus_random_mean": 0.05,
+      "G_single": 0.03,
+      "accuracy_drop_max": 0.1,
+      "validity_drop_max": 0.05,
+      "validity_minimum": 0.9
+    },
+    "matched_null": {
+      "controller_gt_random_max": true,
+      "controller_minus_random_mean": 0.05,
+      "semantic_change_minimum": 0.15,
+      "token_count_toward_textual_careful": true,
+      "validity_minimum": 0.85
+    },
+    "reanalysis": "BEST_SINGLE_MEAN_PLUS pass under frozen Gate6.2 logic"
+  },
+  "manifests": {
+    "evaluation_manifest_sha256": "d94761ed525d3803493c05822a61603bdf08d3bd57e0cf85232d67485148fdfd",
+    "evaluation_schedule_sha256": "4fc4bb4d37d7f075d33ea523784dd4b76bcf4fc2617e228249c1a35198c4340c",
+    "historical_exclusion_digest": "41863ff4a93e5cac012c91299a8ee905497cadc40ad28478f6f06acc13fa7baa",
+    "manipulation_manifest_sha256": "0ad414fdfcb4c25ed84f9a5c98ac0bd2824bef3ad594e5103c371573617284a6",
+    "matched_random_schedule_sha256": "5db527fbb30d1157ecf567ea42e540a06c1676d665c79798047d6130437fe8da"
+  },
+  "model": {
+    "dtype": "bf16",
+    "enable_thinking": false,
+    "id": "Qwen/Qwen3-8B",
+    "max_new_tokens": 4096,
+    "quantization": "none",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "sampling": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    }
+  },
+  "parent_classification": "GATE6_2_NO_BEHAVIORAL_FIRST_STAGE",
+  "parent_experiment": "GATE6_2_FIRST_STAGE_REPAIR_MEAN_BRIDGE",
+  "parser": {
+    "contract": "one unique FINAL commitment; harmless wrappers/fences only; no substantive suffix",
+    "module_sha256": "07020c7cf833b7ea9505c258d61eca68c8dba086a72d5fa3559a30f37e4c6d3b",
+    "tests_sha256": "18c5e7a2137c958e8a71bb5cd6d8c7c664c002088d659f14d241f0f157760216",
+    "version": "external-semantic-v2"
+  },
+  "phases": {
+    "conditional_evaluation": {
+      "conditions": [
+        "BASELINE",
+        "TEXTUAL_CAREFUL_REFERENCE",
+        "BEST_SINGLE_MEAN_PLUS",
+        "SINGLE_L27_RANDOM_R0",
+        "SINGLE_L27_RANDOM_R1",
+        "SINGLE_L27_RANDOM_R2",
+        "SINGLE_L27_RANDOM_R3"
+      ],
+      "items": 60,
+      "only_if_matched_null_passes": true,
+      "rollouts": 2,
+      "trajectories": 840
+    },
+    "matched_random_supplement": {
+      "conditions": [
+        "SINGLE_L27_RANDOM_R0",
+        "SINGLE_L27_RANDOM_R1",
+        "SINGLE_L27_RANDOM_R2",
+        "SINGLE_L27_RANDOM_R3"
+      ],
+      "items": 20,
+      "rollouts": 1,
+      "trajectories": 80
+    },
+    "offline_reanalysis": {
+      "gpu": false,
+      "rows": 200
+    }
+  },
+  "random_bank": {
+    "construction": "unit Gaussian, Gram-Schmidt against meaningful and prior random vectors",
+    "geometry": {
+      "meaningful_absolute_cosines": {
+        "R0": 0.0,
+        "R1": 2.0816681711721685e-17,
+        "R2": 6.938893903907228e-18,
+        "R3": 7.806255641895632e-18
+      },
+      "meaningful_orthogonality_pass": true,
+      "norms": {
+        "R0": 0.9999999999999998,
+        "R1": 0.9999999999999999,
+        "R2": 1.0000000000000002,
+        "R3": 1.0000000000000002
+      },
+      "pairwise_absolute_cosines": {
+        "R0__R1": 2.168404344971009e-18,
+        "R0__R2": 8.673617379884035e-18,
+        "R0__R3": 7.806255641895632e-18,
+        "R1__R2": 6.938893903907228e-18,
+        "R1__R3": 1.3010426069826053e-17,
+        "R2__R3": 8.673617379884035e-18
+      },
+      "random_pairwise_orthogonality_pass": true,
+      "unit_norm_pass": true
+    },
+    "meaningful_controller": {
+      "delta_norm": 130.46891907441653,
+      "eta0": 12.849903937136261,
+      "layer": 27,
+      "location": "PROMPT_BOUNDARY",
+      "name": "BEST_SINGLE_MEAN_PLUS",
+      "reference_scale": 10.153299177386142,
+      "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy",
+      "vector_sha256": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838"
+    },
+    "outcome_independent": true,
+    "random_conditions": {
+      "SINGLE_L27_RANDOM_R0": {
+        "delta_norm": 130.46891907441653,
+        "layer": 27,
+        "reference_scale": 10.153299177386142,
+        "seed": 1954332490,
+        "source": "deterministic_gaussian_gram_schmidt",
+        "standardized_eta": 12.849903937136261,
+        "unit_norm": 0.9999999999999998,
+        "vector_path": "review/gate6_3_single_mean_semantic_evaluation/SINGLE_L27_RANDOM_R0.npy",
+        "vector_sha256": "7bb909bac0b35a070b6fc90c659f39cda8cf127e4131e3ddddb0355ca1032cc1"
+      },
+      "SINGLE_L27_RANDOM_R1": {
+        "delta_norm": 130.46891907441656,
+        "layer": 27,
+        "reference_scale": 10.153299177386142,
+        "seed": 3267187242,
+        "source": "deterministic_gaussian_gram_schmidt",
+        "standardized_eta": 12.849903937136261,
+        "unit_norm": 0.9999999999999999,
+        "vector_path": "review/gate6_3_single_mean_semantic_evaluation/SINGLE_L27_RANDOM_R1.npy",
+        "vector_sha256": "200bda1f7d2b73cec7106418624b3d1a4c6586881ac37c7fca4d45280b82c026"
+      },
+      "SINGLE_L27_RANDOM_R2": {
+        "delta_norm": 130.46891907441656,
+        "layer": 27,
+        "reference_scale": 10.153299177386142,
+        "seed": 612512082,
+        "source": "deterministic_gaussian_gram_schmidt",
+        "standardized_eta": 12.849903937136261,
+        "unit_norm": 1.0000000000000002,
+        "vector_path": "review/gate6_3_single_mean_semantic_evaluation/SINGLE_L27_RANDOM_R2.npy",
+        "vector_sha256": "4dddaff8c810370d0f0ae46987e068740b85b4cdcceb5aff447cfc468162db2d"
+      },
+      "SINGLE_L27_RANDOM_R3": {
+        "delta_norm": 130.46891907441656,
+        "layer": 27,
+        "reference_scale": 10.153299177386142,
+        "seed": 3911194399,
+        "source": "deterministic_gaussian_gram_schmidt",
+        "standardized_eta": 12.849903937136261,
+        "unit_norm": 1.0000000000000002,
+        "vector_path": "review/gate6_3_single_mean_semantic_evaluation/SINGLE_L27_RANDOM_R3.npy",
+        "vector_sha256": "7d7057b44bd0c76ac823cd4554ac6c26ccb226ea38eb03aba7629bdcac88d3cd"
+      }
+    },
+    "seed_namespace": "GATE6-3-SINGLE-L27-RANDOM-BANK"
+  },
+  "schema_version": 1,
+  "source_commit": "958b5a24dc05e91f18405b7f0cca9baa644186bb",
+  "stage": "DEVELOPMENT_LOCK",
+  "status": "FROZEN_PRE_OUTCOME"
+}

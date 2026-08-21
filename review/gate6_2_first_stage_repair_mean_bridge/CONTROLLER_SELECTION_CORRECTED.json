@@ -1,0 +1,23 @@
+{
+  "best_single_mean": "PROMPT_BOUNDARY:L27",
+  "continue_to_manipulation": true,
+  "eta0": 12.849903937136261,
+  "multilayer_mean": [
+    "PROMPT_BOUNDARY:L22",
+    "PROMPT_BOUNDARY:L27",
+    "PROMPT_BOUNDARY:L32"
+  ],
+  "paired_mean_passes": [
+    "MEAN:PROMPT_BOUNDARY:L22",
+    "MEAN:PROMPT_BOUNDARY:L27",
+    "MEAN:PROMPT_BOUNDARY:L32"
+  ],
+  "rfm_passes": [],
+  "rfm_selected_layers": [],
+  "rfm_selected_source": null,
+  "selection_rule": {
+    "mean": "historical source-only prompt L22/L27/L32; L27 single and all three multilayer",
+    "rfm": "if at least two pass, largest source mean F then all passing layers",
+    "semantic_outcomes_used": false
+  }
+}

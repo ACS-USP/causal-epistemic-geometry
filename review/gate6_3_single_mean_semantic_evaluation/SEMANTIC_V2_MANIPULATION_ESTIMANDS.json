@@ -1,0 +1,318 @@
+{
+  "classification": "GATE6_2A_PARSER_REANALYSIS_SINGLE_MEAN_PASS",
+  "conditions": {
+    "BASELINE": {
+      "accuracy": 0.6,
+      "condition": "BASELINE",
+      "correct": 12,
+      "invalid_format": 0,
+      "max_tokens": 20,
+      "mean_first_divergence_token": null,
+      "mean_tokens": 8.75,
+      "median_tokens": 6.0,
+      "n": 20,
+      "original_statuses": {
+        "VALID_CORRECT": 12,
+        "VALID_WRONG": 8
+      },
+      "raw_token_sequence_change_rate": 0.0,
+      "semantic_change_rate": 0.0,
+      "truncated": 0,
+      "v2_statuses": {
+        "VALID_CORRECT": 12,
+        "VALID_WRONG": 8
+      },
+      "valid": 20,
+      "validity": 1.0,
+      "wrong": 8
+    },
+    "BEST_SINGLE_MEAN_PLUS": {
+      "accuracy": 0.5,
+      "condition": "BEST_SINGLE_MEAN_PLUS",
+      "correct": 10,
+      "invalid_format": 2,
+      "max_tokens": 458,
+      "mean_first_divergence_token": 0,
+      "mean_tokens": 271.2,
+      "median_tokens": 298.5,
+      "n": 20,
+      "original_statuses": {
+        "INVALID_FORMAT": 13,
+        "VALID_CORRECT": 3,
+        "VALID_WRONG": 4
+      },
+      "raw_token_sequence_change_rate": 0.9,
+      "semantic_change_rate": 0.7,
+      "truncated": 0,
+      "v2_statuses": {
+        "INVALID_FORMAT": 2,
+        "VALID_CORRECT": 10,
+        "VALID_WRONG": 8
+      },
+      "valid": 18,
+      "validity": 0.9,
+      "wrong": 8
+    },
+    "MULTILAYER_MEAN_MINUS": {
+      "accuracy": 0.45,
+      "condition": "MULTILAYER_MEAN_MINUS",
+      "correct": 9,
+      "invalid_format": 0,
+      "max_tokens": 20,
+      "mean_first_divergence_token": 3,
+      "mean_tokens": 8.95,
+      "median_tokens": 7.0,
+      "n": 20,
+      "original_statuses": {
+        "VALID_CORRECT": 9,
+        "VALID_WRONG": 11
+      },
+      "raw_token_sequence_change_rate": 0.25,
+      "semantic_change_rate": 0.25,
+      "truncated": 0,
+      "v2_statuses": {
+        "VALID_CORRECT": 9,
+        "VALID_WRONG": 11
+      },
+      "valid": 20,
+      "validity": 1.0,
+      "wrong": 11
+    },
+    "MULTILAYER_MEAN_PLUS": {
+      "accuracy": 0.4,
+      "condition": "MULTILAYER_MEAN_PLUS",
+      "correct": 8,
+      "invalid_format": 4,
+      "max_tokens": 4096,
+      "mean_first_divergence_token": 0,
+      "mean_tokens": 1000.4,
+      "median_tokens": 385.5,
+      "n": 20,
+      "original_statuses": {
+        "INVALID_FORMAT": 15,
+        "TRUNCATED": 3,
+        "VALID_WRONG": 2
+      },
+      "raw_token_sequence_change_rate": 1.0,
+      "semantic_change_rate": 0.7,
+      "truncated": 3,
+      "v2_statuses": {
+        "INVALID_FORMAT": 4,
+        "TRUNCATED_THINKING": 3,
+        "VALID_CORRECT": 8,
+        "VALID_WRONG": 5
+      },
+      "valid": 13,
+      "validity": 0.65,
+      "wrong": 5
+    },
+    "MULTILAYER_RANDOM_MEAN_R0": {
+      "accuracy": 0.55,
+      "condition": "MULTILAYER_RANDOM_MEAN_R0",
+      "correct": 11,
+      "invalid_format": 0,
+      "max_tokens": 20,
+      "mean_first_divergence_token": 3.3333333333333335,
+      "mean_tokens": 8.7,
+      "median_tokens": 6.0,
+      "n": 20,
+      "original_statuses": {
+        "VALID_CORRECT": 11,
+        "VALID_WRONG": 9
+      },
+      "raw_token_sequence_change_rate": 0.15,
+      "semantic_change_rate": 0.15,
+      "truncated": 0,
+      "v2_statuses": {
+        "VALID_CORRECT": 11,
+        "VALID_WRONG": 9
+      },
+      "valid": 20,
+      "validity": 1.0,
+      "wrong": 9
+    },
+    "MULTILAYER_RANDOM_MEAN_R1": {
+      "accuracy": 0.55,
+      "condition": "MULTILAYER_RANDOM_MEAN_R1",
+      "correct": 11,
+      "invalid_format": 1,
+      "max_tokens": 20,
+      "mean_first_divergence_token": 3.5,
+      "mean_tokens": 8.75,
+      "median_tokens": 6.0,
+      "n": 20,
+      "original_statuses": {
+        "INVALID_FORMAT": 1,
+        "VALID_CORRECT": 11,
+        "VALID_WRONG": 8
+      },
+      "raw_token_sequence_change_rate": 0.2,
+      "semantic_change_rate": 0.2,
+      "truncated": 0,
+      "v2_statuses": {
+        "INVALID_FORMAT": 1,
+        "VALID_CORRECT": 11,
+        "VALID_WRONG": 8
+      },
+      "valid": 19,
+      "validity": 0.95,
+      "wrong": 8
+    },
+    "MULTILAYER_RANDOM_MEAN_R2": {
+      "accuracy": 0.5,
+      "condition": "MULTILAYER_RANDOM_MEAN_R2",
+      "correct": 10,
+      "invalid_format": 1,
+      "max_tokens": 20,
+      "mean_first_divergence_token": 3.3333333333333335,
+      "mean_tokens": 8.55,
+      "median_tokens": 6.0,
+      "n": 20,
+      "original_statuses": {
+        "INVALID_FORMAT": 1,
+        "VALID_CORRECT": 10,
+        "VALID_WRONG": 9
+      },
+      "raw_token_sequence_change_rate": 0.3,
+      "semantic_change_rate": 0.3,
+      "truncated": 0,
+      "v2_statuses": {
+        "INVALID_FORMAT": 1,
+        "VALID_CORRECT": 10,
+        "VALID_WRONG": 9
+      },
+      "valid": 19,
+      "validity": 0.95,
+      "wrong": 9
+    },
+    "MULTILAYER_RANDOM_MEAN_R3": {
+      "accuracy": 0.45,
+      "condition": "MULTILAYER_RANDOM_MEAN_R3",
+      "correct": 9,
+      "invalid_format": 1,
+      "max_tokens": 21,
+      "mean_first_divergence_token": 2.888888888888889,
+      "mean_tokens": 9.05,
+      "median_tokens": 6.5,
+      "n": 20,
+      "original_statuses": {
+        "INVALID_FORMAT": 1,
+        "VALID_CORRECT": 9,
+        "VALID_WRONG": 10
+      },
+      "raw_token_sequence_change_rate": 0.45,
+      "semantic_change_rate": 0.45,
+      "truncated": 0,
+      "v2_statuses": {
+        "INVALID_FORMAT": 1,
+        "VALID_CORRECT": 9,
+        "VALID_WRONG": 10
+      },
+      "valid": 19,
+      "validity": 0.95,
+      "wrong": 10
+    },
+    "TEXTUAL_CAREFUL_REFERENCE": {
+      "accuracy": 0.75,
+      "condition": "TEXTUAL_CAREFUL_REFERENCE",
+      "correct": 15,
+      "invalid_format": 0,
+      "max_tokens": 590,
+      "mean_first_divergence_token": 0,
+      "mean_tokens": 271.55,
+      "median_tokens": 239.0,
+      "n": 20,
+      "original_statuses": {
+        "VALID_CORRECT": 15,
+        "VALID_WRONG": 5
+      },
+      "raw_token_sequence_change_rate": 1.0,
+      "semantic_change_rate": 0.5,
+      "truncated": 0,
+      "v2_statuses": {
+        "VALID_CORRECT": 15,
+        "VALID_WRONG": 5
+      },
+      "valid": 20,
+      "validity": 1.0,
+      "wrong": 5
+    },
+    "TEXTUAL_DIRECT_REFERENCE": {
+      "accuracy": 0.55,
+      "condition": "TEXTUAL_DIRECT_REFERENCE",
+      "correct": 11,
+      "invalid_format": 0,
+      "max_tokens": 21,
+      "mean_first_divergence_token": 2.8,
+      "mean_tokens": 8.95,
+      "median_tokens": 7.5,
+      "n": 20,
+      "original_statuses": {
+        "VALID_CORRECT": 11,
+        "VALID_WRONG": 9
+      },
+      "raw_token_sequence_change_rate": 0.25,
+      "semantic_change_rate": 0.25,
+      "truncated": 0,
+      "v2_statuses": {
+        "VALID_CORRECT": 11,
+        "VALID_WRONG": 9
+      },
+      "valid": 20,
+      "validity": 1.0,
+      "wrong": 9
+    }
+  },
+  "evaluation_authorized_by_reanalysis": true,
+  "gate_checks": {
+    "BEST_SINGLE_MEAN_PLUS": {
+      "meaningful_minus_random_max": 0.24999999999999994,
+      "meaningful_minus_random_mean_pass": true,
+      "pass": true,
+      "random_max_q": 0.45,
+      "random_mean_q": 0.275,
+      "semantic_change_pass": true,
+      "textual_careful_q": 0.5,
+      "textual_direct_q": 0.25,
+      "validity_pass": true
+    },
+    "MULTILAYER_MEAN_MINUS": {
+      "meaningful_minus_random_max": -0.2,
+      "meaningful_minus_random_mean_pass": false,
+      "pass": false,
+      "random_max_q": 0.45,
+      "random_mean_q": 0.275,
+      "semantic_change_pass": true,
+      "textual_careful_q": 0.5,
+      "textual_direct_q": 0.25,
+      "validity_pass": true
+    },
+    "MULTILAYER_MEAN_PLUS": {
+      "meaningful_minus_random_max": 0.24999999999999994,
+      "meaningful_minus_random_mean_pass": true,
+      "pass": false,
+      "random_max_q": 0.45,
+      "random_mean_q": 0.275,
+      "semantic_change_pass": true,
+      "textual_careful_q": 0.5,
+      "textual_direct_q": 0.25,
+      "validity_pass": false
+    }
+  },
+  "gate_thresholds": {
+    "meaningful_minus_random_mean_minimum": 0.05,
+    "semantic_change_minimum": 0.15,
+    "validity_minimum": 0.85
+  },
+  "input_journal": "/Users/costaleirbag/dev/causal-epistemic-geometry/review/gate6_2_first_stage_repair_mean_bridge/journal.jsonl",
+  "n_items": 20,
+  "n_rows": 200,
+  "parser_version": "external-semantic-v2",
+  "passed_meaningful_conditions": [
+    "BEST_SINGLE_MEAN_PLUS"
+  ],
+  "promotable_controller": "BEST_SINGLE_MEAN_PLUS",
+  "promotable_controller_pass": true,
+  "random_max_semantic_change_rate": 0.45,
+  "random_mean_semantic_change_rate": 0.275
+}

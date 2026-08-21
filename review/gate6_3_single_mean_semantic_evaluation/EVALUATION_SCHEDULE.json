@@ -1,0 +1,6722 @@
+[
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3391867592,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2325399128,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2587269528,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1061902102,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4225523013,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4228673417,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3513909314,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 253986188,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 851977925,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2873033974,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2541282823,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3143290795,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1524503126,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_741",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1008851730,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2132133427,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4260205802,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2718423201,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3782920256,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2965105455,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3713973865,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3892530325,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1110497916,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 217179959,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2659000403,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2098390555,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 604782792,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 571062756,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_72",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3794800855,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 18637816,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1744652889,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2503064152,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1195213250,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2334570717,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 46335974,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 294005046,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3909656750,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1138282982,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2623303860,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1607168596,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4164374024,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2524885602,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_761",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4274028827,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4245123765,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 602486389,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 352704000,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1020494599,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3228088219,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1424981174,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1402074930,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2458089948,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3571139763,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2187641719,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 972175164,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1541177951,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2251832006,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_213",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1687934108,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2153912579,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1029298570,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 228642463,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1281899260,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2557842492,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 930038618,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1582259349,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3844615879,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 820168392,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 469765036,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1458917225,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1332785215,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 978793777,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_296",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2813300035,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2962854970,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4007740794,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 810160705,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3428165559,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3643941761,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3925237767,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1227105078,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2199968682,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1679563087,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 975759140,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 923972199,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4218972279,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 301046771,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_396",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3724565486,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 6450852,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 991549861,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3414378717,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3729589000,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 248239280,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1650316033,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 706520457,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 858916785,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1058877019,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2020267319,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 463362340,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2992323962,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 135689151,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_459",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3257458344,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3855446884,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 367086948,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3561435160,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1657708087,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1523721107,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 763256354,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2754967554,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1185327307,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2122983885,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1202813112,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 237087002,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 609939939,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 116654842,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_688",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 30747943,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1660075104,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 345774002,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 377799127,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1202807484,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 11492797,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1035995158,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2696901438,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1161304498,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3909574517,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2114701457,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1846992931,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1510116027,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4069572226,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_283",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 384297111,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 933732542,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1958445873,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3665830802,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1819312613,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 223757850,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2886377755,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 548367308,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 698212340,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2118075106,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 385084510,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3878102767,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1447231882,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 779286192,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_743",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3063878682,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3956125115,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 329742987,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 85308588,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 53866823,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1738496779,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3017157749,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1355224188,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3967627141,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 903963979,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2912271285,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4035689828,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1327172860,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 702820553,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_50",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1591162695,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2384822719,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2830499038,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 670804874,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2904147789,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1187290641,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2855454000,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3120634627,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4164031671,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3775793067,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3994265727,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3334629106,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1831987598,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2240666245,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_713",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1444188073,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 13221334,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3576673843,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4231317482,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3001877731,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1168154509,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1500348141,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2982265902,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1949869904,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3106220411,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1098133906,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2264043166,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1149904052,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3102758557,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_746",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3068861782,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1599892393,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2113665056,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1040710125,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 558654836,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 730751722,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4199533242,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1035040585,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2099856362,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2786794732,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 30384670,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3589984304,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1124871041,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3603631724,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_386",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1372657302,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4093483092,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2708782308,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1627576723,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3251408,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3301553371,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2130328572,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3910823793,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1466399279,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1101083841,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 823627017,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3804674914,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4164542991,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3477504321,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_260",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1623124486,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3814288659,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3427099989,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1753244923,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1294305264,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3504553227,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1327940772,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 148997059,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1682760246,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 247150441,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3966769931,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2746350412,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3768504004,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 138857149,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_490",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2953186709,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1392107377,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1984516266,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1487177406,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2340455362,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3324937875,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 122729386,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3558961565,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3868753808,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4221181230,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 149950271,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1591137376,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2093894227,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2368149401,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_223",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 819925640,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3342276381,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 674396233,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4038078810,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3880842837,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3703638140,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1128104416,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1464458125,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2886728573,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1638509885,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2636845566,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1147996078,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1725843846,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 810322971,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_280",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2391681217,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4218255447,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2851551093,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4183023872,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3658885296,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1181646201,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3108415725,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 570690869,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4179346646,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 555233531,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1069443608,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4177962831,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 260994783,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2822405589,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_136",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 973683665,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3972118109,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2305680650,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3916505574,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3892647532,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2844137576,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1844038505,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2438001852,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2645552758,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 573903620,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3011426735,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3941381214,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 698652646,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 559566858,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_127",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2350660797,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3178400608,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1149797048,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 27076515,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3572265993,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1486013960,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3947016408,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2554713189,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 266887083,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 59301758,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1944107641,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 380736126,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 75275096,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3033002785,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_342",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 40087546,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2044372261,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2375801022,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2252430461,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3506617422,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4264024481,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1832862420,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3546351924,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1572773183,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 490201676,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1838647932,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1344401610,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1868661135,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4164237652,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_159",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2646130660,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3004858492,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2876720087,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1167148408,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3381065527,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3126434451,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3297740496,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2338380386,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3565455992,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4231041738,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 849382685,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4054462431,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 291366473,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1329095412,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_207",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1461180702,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3865841123,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2373513809,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1699195159,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3607918795,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2629666355,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 810319626,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 965467498,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3804665130,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3399216142,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3746306805,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 749935794,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 710652724,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3731941731,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_471",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 807904226,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 966322465,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3582772429,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1261979077,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 143630397,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1445958905,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3285342351,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2466713518,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2643281971,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1643040113,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 929803095,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2040384973,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3526839193,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2646758450,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_265",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3414566686,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2166511923,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 533722404,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 323992529,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1170882119,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3922136020,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4056285519,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2498687881,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1671431543,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3962090634,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 425220960,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2168928239,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1962242097,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3180006255,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_142",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4073376825,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2289746814,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2844893546,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3190409684,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1909887034,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 729664254,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2080182934,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2920084185,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2806915754,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2055319715,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2802297151,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2558274443,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3978076546,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2264559448,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_681",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 265894232,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 355552900,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 91429393,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2307089653,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 936146805,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1272185790,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 294942836,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1232121086,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4155107541,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 13703309,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3070789259,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 762947584,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4019655954,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3455255327,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_624",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1092055519,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3923704529,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3238254505,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4096618629,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 266648056,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 730466529,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4199582203,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 621936424,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2656339926,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3418803640,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1497081599,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2664294828,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 185024681,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 305147094,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_320",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1851864854,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1271605442,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1190669377,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3365426839,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3013362830,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1328246407,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 286132409,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3203838417,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3014694701,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2181962576,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4139923307,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1946488555,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 524592639,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1824045416,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_170",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2782132103,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2172891282,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1055977448,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 90444542,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 26379031,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1316746624,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3158250871,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3535599702,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3590316560,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3977934808,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 493254269,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 748202085,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1414280821,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3213965658,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_594",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2137869430,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 978224926,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 304720417,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2307427199,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3897679266,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3194639531,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1177516801,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 177611537,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2725218016,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3190552563,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 817080131,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2129639072,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 292085739,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3118390371,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_168",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1514537017,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 783053071,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2637021728,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 151026267,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1777921739,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 925910321,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3457768369,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1395191357,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2600628928,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1431006155,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4158170403,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4068147640,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1908385988,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2848606516,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_607",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1989633916,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1948184827,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4137347456,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2976530879,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1633993351,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3726523379,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 226268752,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2365095262,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1704091649,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4238275278,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3698568675,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2701901678,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1217016106,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1810429924,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_473",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1922876379,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2658612768,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4034851984,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 521275273,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1249181592,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1139251131,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 111382766,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3384858375,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 631045378,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 691521508,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2213380182,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1370720708,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 289463721,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 914180223,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_33",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4020227115,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2688812,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4098517887,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2365708146,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1180752545,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2127652648,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2595604301,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 833414349,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1504183559,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 723385339,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1769683394,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1582573833,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 604741792,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2418089144,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_0",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 686146541,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4119793965,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 615713575,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 463730118,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3388959805,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2672446685,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3138447017,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1957947181,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2205052866,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3051151808,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1958733595,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 585265711,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2220892173,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 380128388,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_685",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3529156902,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3742566913,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 288412180,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 726158202,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3491788488,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1362251247,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3274916360,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 271573665,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 143869531,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3989965552,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3754135393,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3118446118,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 841040527,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 840704797,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_196",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3205449804,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2200258632,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 555225780,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4156460822,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 702090633,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2750403253,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3898473893,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 776983333,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1270941905,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4188954100,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3531983692,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1643113034,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4051344489,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4175034188,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_497",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1973896488,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1736292937,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3020082633,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2241521318,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1576468033,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2897765286,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3441173888,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3042542202,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1250698378,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 875547096,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 135765686,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2873504518,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1965144618,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1067481658,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_324",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2752704313,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1201825284,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3033516218,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3619753466,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3410147632,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2326075685,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2443519709,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 241849763,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1186113831,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2198859757,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1980504020,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2025673547,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 158213594,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1782010091,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_430",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 697725017,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3988995967,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1146593294,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3206648513,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3830034854,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3295478449,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2815967231,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1176120518,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 965609821,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2739885625,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2770173214,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1895939475,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 287911166,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1576973436,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_755",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2398916693,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1660619183,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2684326699,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1559880856,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2789307444,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 817185009,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1361993266,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 724646988,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2217811004,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2364523688,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 165437233,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3571701634,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2337816334,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3208372133,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_591",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 183579612,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3265145715,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2238486104,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1807243551,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2537209227,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3727044459,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3306691394,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3486126717,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 856009726,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2005099480,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 58501592,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 846089135,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 416806617,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1291480118,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_27",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1336909996,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3399512966,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1519392307,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1238525838,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1395716274,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3830247986,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 154942970,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2704777329,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1978748811,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1565012934,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 11012623,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3379040102,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1865315936,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2689819051,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_687",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3573320360,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4100342907,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3798826710,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 919394059,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1711008377,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3987056361,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4004831613,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4147157612,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 492322398,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1971599465,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3074381306,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2581665652,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4196884300,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1226036693,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_59",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3620842668,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1435367423,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1959449150,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 412943192,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 540289239,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4132085222,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 429368761,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1122495311,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2550851827,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2358107007,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2494425054,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 913925985,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3963840208,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1519143303,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_694",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 638293855,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2659100981,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 456465506,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3531966729,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1318064229,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2717557364,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 506752648,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2852099017,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4007948201,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 871844008,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 502948323,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3729080001,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 854672992,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 95216032,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_675",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1197495162,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2840593539,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4026453850,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 551333374,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3289585683,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2147903371,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3996785248,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1555118324,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3367340592,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 857576356,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1565731240,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1416627468,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4272255512,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 774493073,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_155",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 108392273,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 568104552,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2253929001,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2767790426,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 676791948,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1614094373,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2713094830,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1887683106,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 224684643,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3407746170,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2594538569,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2538258496,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 582787803,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2190842244,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_549",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1698507792,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1091698916,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3924174148,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2481888848,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3155260349,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1457255717,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2566751168,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2837757993,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1788541748,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4058992033,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2303354131,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3346462767,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1167239436,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 562219474,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_665",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1833877166,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3080446938,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 273979910,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1799717668,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2875532698,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 569985707,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2156747942,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2409528949,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3968053529,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1873556510,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 617100487,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2918020435,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2710223653,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4076733391,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_107",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3039718064,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1750727243,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1995228953,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2425629588,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1257498894,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2324123037,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1845258272,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2149752193,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 248705514,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 66649303,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3710016825,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4093921322,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3779642302,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 971817496,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_135",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 712197685,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 957764280,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 30370117,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4166445370,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 25187905,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 631093356,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1817714748,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1103628246,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1631431077,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2704334688,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2750219663,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1520962307,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3338230342,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3687447552,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_504",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1709665497,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3559595308,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4165466660,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1914104290,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4013976550,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1310172356,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1227084104,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3731317026,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 538005857,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3611437210,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 130073504,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1646240771,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1560852969,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 202879730,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_115",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1035435297,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1264386705,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1314551558,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 549342143,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2957027936,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1016860718,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1068360505,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1692936719,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1350420638,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3204999340,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 347662392,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3328637368,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2247216579,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2118180727,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_425",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1012916278,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4288293553,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 4280540388,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4094887408,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 680386270,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2514379593,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2007106984,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 558421469,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 724061236,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 800002022,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 157977142,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 696975531,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3862784893,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 393404960,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_592",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 291761365,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1835475171,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 543346642,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 108289670,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 514400755,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2316656568,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1296081554,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3259795998,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1998382457,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1709125703,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3062633884,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 4283968834,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1816172615,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2330821009,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_274",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3664887184,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1868164206,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2847879092,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 943799685,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3383574890,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2665717945,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1610344384,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2850813476,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1543661472,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3105141015,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2066607925,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1776595450,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2454395138,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2720684581,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_307",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1328342975,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 431049997,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BASELINE",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2514707820,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2618895389,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "TEXTUAL_CAREFUL_REFERENCE",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3185469042,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 3971572083,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "BEST_SINGLE_MEAN_PLUS",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2135480581,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1173700236,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R0",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3677056922,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1147539911,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R1",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 1438769419,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 2904986705,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R2",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 3263572841,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 0,
+    "seed": 1024374011,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  {
+    "condition": "SINGLE_L27_RANDOM_R3",
+    "item_id": "sample_130",
+    "phase": "GATE6_3_PRIMARY_EVALUATION",
+    "rollout_index": 1,
+    "seed": 2899719200,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  }
+]

@@ -1,0 +1,218 @@
+{
+  "EXECUTION_BOUNDARY:L12": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/EXECUTION_BOUNDARY/L12.npy",
+    "key": "EXECUTION_BOUNDARY:L12",
+    "layer": 12,
+    "location": "EXECUTION_BOUNDARY",
+    "mean_delta_train": 43.570108343678086,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 43.830995889575874,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.982805871167578
+    },
+    "scale": 0.4971939461788322,
+    "semantic_outcomes_used": false,
+    "vector_hash": "2dd41e1b01f446d5ee1a6a36a29516e1ab77923ff0032f7976f41595f572fb00"
+  },
+  "EXECUTION_BOUNDARY:L17": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/EXECUTION_BOUNDARY/L17.npy",
+    "key": "EXECUTION_BOUNDARY:L17",
+    "layer": 17,
+    "location": "EXECUTION_BOUNDARY",
+    "mean_delta_train": 65.78856087256106,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 65.52978557349317,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9813054579550917
+    },
+    "scale": 0.8999892647235213,
+    "semantic_outcomes_used": false,
+    "vector_hash": "8a346011acd4e6de138e97a43a69b9a658e149cb93c574fb2fd8bce5cb4ceb35"
+  },
+  "EXECUTION_BOUNDARY:L22": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/EXECUTION_BOUNDARY/L22.npy",
+    "key": "EXECUTION_BOUNDARY:L22",
+    "layer": 22,
+    "location": "EXECUTION_BOUNDARY",
+    "mean_delta_train": 115.65214814575339,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 116.16269107012371,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9691938490554757
+    },
+    "scale": 1.4237746866229515,
+    "semantic_outcomes_used": false,
+    "vector_hash": "a0a3d9db2d85aa8c708a5645ca07f4a1aee48a625433f533684d759e16bee989"
+  },
+  "EXECUTION_BOUNDARY:L27": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/EXECUTION_BOUNDARY/L27.npy",
+    "key": "EXECUTION_BOUNDARY:L27",
+    "layer": 27,
+    "location": "EXECUTION_BOUNDARY",
+    "mean_delta_train": 178.31813851830825,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 182.66856684964742,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9517332776377425
+    },
+    "scale": 3.5271620986983327,
+    "semantic_outcomes_used": false,
+    "vector_hash": "70af224689d803c211fd58607ffde173c335c01c37429abd67e7432d173de9f3"
+  },
+  "EXECUTION_BOUNDARY:L32": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/EXECUTION_BOUNDARY/L32.npy",
+    "key": "EXECUTION_BOUNDARY:L32",
+    "layer": 32,
+    "location": "EXECUTION_BOUNDARY",
+    "mean_delta_train": 301.3137807923305,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 312.35735381561483,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9476384008826155
+    },
+    "scale": 9.229393588812892,
+    "semantic_outcomes_used": false,
+    "vector_hash": "368daadb4282245d3a206f45ec3a10ba78d7fdf4d2bf4ac3aa56638876a06d97"
+  },
+  "EXECUTION_BOUNDARY:L8": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/EXECUTION_BOUNDARY/L8.npy",
+    "key": "EXECUTION_BOUNDARY:L8",
+    "layer": 8,
+    "location": "EXECUTION_BOUNDARY",
+    "mean_delta_train": 31.61268368749357,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 32.01080101728988,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9816573392510335
+    },
+    "scale": 0.4250648173842279,
+    "semantic_outcomes_used": false,
+    "vector_hash": "5824a1e81440dad1133ae82828a2a81cfb536c8c53952b6ea7e51d3c32e72db6"
+  },
+  "PROMPT_BOUNDARY:L12": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L12.npy",
+    "key": "PROMPT_BOUNDARY:L12",
+    "layer": 12,
+    "location": "PROMPT_BOUNDARY",
+    "mean_delta_train": 7.292022364797171,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 7.26981747502141,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9806306956895767
+    },
+    "scale": 0.20935127547810642,
+    "semantic_outcomes_used": false,
+    "vector_hash": "2c37438ea7d473128cb2f210253112866290691af9403d9689a2f3bc9dfdcf63"
+  },
+  "PROMPT_BOUNDARY:L17": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L17.npy",
+    "key": "PROMPT_BOUNDARY:L17",
+    "layer": 17,
+    "location": "PROMPT_BOUNDARY",
+    "mean_delta_train": 16.755255121248528,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 16.6134946819289,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9791944072634315
+    },
+    "scale": 0.6521834822199182,
+    "semantic_outcomes_used": false,
+    "vector_hash": "e0896a0bf6ba0a137606a74d449754cff8d6923fc063e88767dd6fae7e88dcff"
+  },
+  "PROMPT_BOUNDARY:L22": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L22.npy",
+    "key": "PROMPT_BOUNDARY:L22",
+    "layer": 22,
+    "location": "PROMPT_BOUNDARY",
+    "mean_delta_train": 44.02624658976116,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 43.52771355153434,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.960705235770589
+    },
+    "scale": 3.095168651493116,
+    "semantic_outcomes_used": false,
+    "vector_hash": "55f74dae95c8a9d6acf5b649f66b71bde721a21971a6fc41ac9280d794862109"
+  },
+  "PROMPT_BOUNDARY:L27": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy",
+    "key": "PROMPT_BOUNDARY:L27",
+    "layer": 27,
+    "location": "PROMPT_BOUNDARY",
+    "mean_delta_train": 125.96747733425703,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 126.13574618624162,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9420207025504752
+    },
+    "scale": 10.153299177386142,
+    "semantic_outcomes_used": false,
+    "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838"
+  },
+  "PROMPT_BOUNDARY:L32": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L32.npy",
+    "key": "PROMPT_BOUNDARY:L32",
+    "layer": 32,
+    "location": "PROMPT_BOUNDARY",
+    "mean_delta_train": 273.4782303813033,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 274.7217945958175,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.9360769540467495
+    },
+    "scale": 18.534899382845904,
+    "semantic_outcomes_used": false,
+    "vector_hash": "3ebe21481f677787506443d238ed28b0eadaf2c664d0df596d39d883ec64eb00"
+  },
+  "PROMPT_BOUNDARY:L8": {
+    "constructor": "PAIRED_MEAN_DIFFERENCE_SOURCE_ONLY",
+    "direction_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L8.npy",
+    "key": "PROMPT_BOUNDARY:L8",
+    "layer": 8,
+    "location": "PROMPT_BOUNDARY",
+    "mean_delta_train": 4.024571662259011,
+    "readout": {
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "mean_signed_gap": 4.044216264351569,
+      "positive_gap_fraction": 1.0,
+      "projection_effect_size": 1.96915012123709
+    },
+    "scale": 0.2969940766001696,
+    "semantic_outcomes_used": false,
+    "vector_hash": "493e940cc202f0d565835c81efefcc3aefbc69f2faa41bf46ebf8b0d76476a7c"
+  }
+}
