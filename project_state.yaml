@@ -19,32 +19,31 @@ project:
     utility?
 
 current:
-  workstream: GATE9_SELECTED_D75_EVALUATION
-  lifecycle: PROSPECTIVE_LOCK
+  workstream: GATE9_SELECTED_D75_EVALUATION_COMPLETE
+  lifecycle: CLOSED
   stage: DEVELOPMENT_SELECTED_DOSE_EVALUATION
-  source_commit: PENDING_LOCK_COMMIT_BINDING
+  source_commit: 0eb5fd466ed78d2dcbc07a3f506e02c098cf2945
   summary: >-
-    Gate 8 is accepted as a clean prospective calibration that selected D75
-    without optimizing accuracy or G/C/D. Gate 9 is prospectively locked to
-    evaluate that exact L27 controller and eta on 100 fresh CRUXEval items,
-    against four new architecture-matched random controls and a textual CAREFUL
-    reference, using two independent rollouts and external-semantic-v3.
+    Gate 9 independently evaluated the prospectively selected D75 controller
+    on 100 fresh CRUXEval items. It preserved commitment/evaluability guards,
+    raised accuracy from 47% to 60%, and produced G=0.1325, C=0.0643, and
+    D=0.1200 beyond all four new random controllers. The frozen classification
+    is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION; this remains DEVELOPMENT.
   next_authorized_action: >-
-    Execute only the frozen 1,400-row Gate-9 selected-D75 evaluation, stop the
-    A40, analyze and audit offline, draft but do not execute Gate 10, then
-    return to principal-researcher review.
+    Principal-researcher review of the Gate-9 result and the unexecuted Gate-10
+    cross-domain fixed-controller replication draft.
   runpod: EXITED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE9_SELECTED_D75_LOCKED_NOT_YET_RUN
+  steering: GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE9_SELECTED_D75_EVALUATION
+  current_task: PRINCIPAL_RESEARCHER_REVIEW
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -160,12 +159,14 @@ instrument_history:
       clean. Gate 9, G/C/D evaluation, Q2, character count, and holdout access
       were not run.
   - id: GATE9_SELECTED_D75_EVALUATION
-    status: PROSPECTIVE_LOCK
+    status: COMPLETE_DEVELOPMENT_STRONG_SAFE_REPLICATION
     conclusion: >-
-      The exact Gate-8-selected D75 controller is locked for one independent
-      100-item evaluation with four new matched random controls and two
-      independent rollouts. No Gate-9 model output exists at lock time; Q2,
-      character count, Gate 10, and confirmatory holdout remain closed.
+      On 100 fresh CRUXEval items, the exact Gate-8-selected D75 controller
+      raised accuracy from 47% to 60% while preserving commitment validity and
+      semantic evaluability at 97%. G=0.1325, C=0.0643, and D=0.1200 exceeded
+      every one of four new random controls; rescue was 0.1525 versus damage
+      0.0225. The frozen classification is a strong safe DEVELOPMENT
+      replication. Gate 10 is drafted only; Q2 and holdout remain closed.
 
 workflow_regimes:
   EXPLORATION:

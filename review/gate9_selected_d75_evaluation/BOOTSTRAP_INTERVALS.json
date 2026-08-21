@@ -1,0 +1,86 @@
+{
+  "meaningful:C": {
+    "estimate": 0.06267676767676764,
+    "q025": 0.032020202020202004,
+    "q975": 0.09762878787878775,
+    "resamples": 10000
+  },
+  "meaningful:C_minus_random_max": {
+    "estimate": 0.051414141414141384,
+    "q025": 0.021817550505050482,
+    "q975": 0.0840915404040404,
+    "resamples": 10000
+  },
+  "meaningful:C_minus_random_mean": {
+    "estimate": 0.06056186868686871,
+    "q025": 0.03229782196969697,
+    "q975": 0.09231092171717167,
+    "resamples": 10000
+  },
+  "meaningful:D": {
+    "estimate": 0.12,
+    "q025": 0.06,
+    "q975": 0.18,
+    "resamples": 10000
+  },
+  "meaningful:D_minus_random_max": {
+    "estimate": 0.09,
+    "q025": 0.03,
+    "q975": 0.16,
+    "resamples": 10000
+  },
+  "meaningful:D_minus_random_mean": {
+    "estimate": 0.1075,
+    "q025": 0.05,
+    "q975": 0.17500000000000002,
+    "resamples": 10000
+  },
+  "meaningful:G": {
+    "estimate": 0.13,
+    "q025": 0.07250000000000001,
+    "q975": 0.19749999999999995,
+    "resamples": 10000
+  },
+  "meaningful:G_minus_random_max": {
+    "estimate": 0.10749999999999996,
+    "q025": 0.04749999999999999,
+    "q975": 0.17006249999999912,
+    "resamples": 10000
+  },
+  "meaningful:G_minus_random_mean": {
+    "estimate": 0.12375,
+    "q025": 0.06687499999999998,
+    "q975": 0.18689062499999978,
+    "resamples": 10000
+  },
+  "meaningful:accuracy_change": {
+    "estimate": 0.13,
+    "q025": 0.06000000000000005,
+    "q975": 0.19999999999999996,
+    "resamples": 10000
+  },
+  "meaningful:commitment_validity_change": {
+    "estimate": -0.015000000000000013,
+    "q025": -0.04499999999999993,
+    "q975": 0.010000000000000009,
+    "resamples": 10000
+  },
+  "meaningful:damage": {
+    "estimate": 0.02,
+    "q025": 0.0,
+    "q975": 0.0525,
+    "resamples": 10000
+  },
+  "meaningful:rescue": {
+    "estimate": 0.15,
+    "q025": 0.0925,
+    "q975": 0.215,
+    "resamples": 10000
+  },
+  "meaningful:semantic_evaluability_change": {
+    "estimate": -0.015000000000000013,
+    "q025": -0.04499999999999993,
+    "q975": 0.010000000000000009,
+    "resamples": 10000
+  }
+}

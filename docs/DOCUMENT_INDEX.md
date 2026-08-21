@@ -52,6 +52,7 @@ current instruction source.
 | `docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md` | Gate 6.3 semantic-parser reanalysis, matched random gate, and primary closeout |
 | `review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md` | Additive condition-symmetric V3 audit; historical Gate 6.3 result unchanged |
 | `docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md` | Fresh frozen-controller replication, destructive classification, and forensic closeout |
+| `docs/GATE9_SELECTED_D75_EVALUATION_CLOSEOUT.md` | Fresh selected-D75 strong-safe DEVELOPMENT replication and incident boundary |
 
 ## Archival scientific protocols and closeouts
 

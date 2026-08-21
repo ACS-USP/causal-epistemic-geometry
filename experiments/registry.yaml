@@ -662,15 +662,16 @@ experiments:
       on a completely fresh sample under independent rollouts?
     instrument: CRUXEval semantic output prediction with external-semantic-v3 frozen before outputs
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: PROSPECTIVE_LOCK
-    outcome: PENDING_COLLECTION
+    status: COMPLETE_DEVELOPMENT_STRONG_SAFE_REPLICATION
+    outcome: GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION
     scientific_interpretation: >-
-      Fresh DEVELOPMENT selected-dose evaluation only. D75 was selected in
-      Gate 8 without accuracy or G/C/D optimization. This is not controller,
-      dose, layer, benchmark, Q2, or holdout search.
-    source_commit: PENDING_LOCK_COMMIT_BINDING
+      Fresh DEVELOPMENT selected-dose evaluation only. D75 preserved the
+      commitment, evaluability, and competence guards and produced specific
+      semantic error-profile control beyond all four new random controllers.
+      This is not confirmatory, Q2, or holdout evidence.
+    source_commit: 0eb5fd466ed78d2dcbc07a3f506e02c098cf2945
     artifact: review/gate9_selected_d75_evaluation/
-    cost_usd: null
+    cost_usd: 0.7674333333333333
     holdout_status: UNTOUCHED
     parent_experiment: GATE8_L27_DOSE_CALIBRATION
     lock:
@@ -690,14 +691,36 @@ experiments:
       selected_eta: 9.637427952852196
       target_cost_usd: 1.75
       hard_stop_cost_usd: 3.50
-      gpu_authorized: true
+      gpu_authorized: false
     execution:
-      engineering_gate: PENDING
-      collection: NOT_RUN
-      trajectories: 0
+      engineering_gate: GATE9_ENGINEERING_PASS
+      collection: COMPLETE
+      trajectories: 1400
+      source_policy: CAREFUL_SOURCE_REPLICATED
+      baseline_commitment_validity: 0.985
+      baseline_semantic_evaluability: 0.985
+      baseline_accuracy: 0.47
+      meaningful_commitment_validity: 0.97
+      meaningful_semantic_evaluability: 0.97
+      meaningful_accuracy: 0.60
+      accuracy_difference: 0.13
+      G: 0.1325
+      C: 0.06434343434343434
+      D: 0.12
+      rescue: 0.1525
+      damage: 0.0225
+      random_G_mean: 0.0075000000000000205
+      random_G_max: 0.017500000000000016
+      random_C_mean: 0.0023232323232323243
+      random_C_max: 0.009747474747474727
+      random_D_mean: 0.01
+      random_D_max: 0.02
+      parser_totality_amendment_commit: 67d12cbb57ee36103b6903f9a7d6240f49b6961b
+      parser_totality_incident_rows_written: 0
+      forensic_audit: PENDING_INDEPENDENT_AUDIT
       runpod_status: EXITED
       gate10: NOT_RUN
       q2: NOT_RUN
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Execute only the frozen Gate-9 schedule, then stop for principal review.
+    next_action: Principal review; Gate-10 cross-domain replication is drafted only and is not authorized.
