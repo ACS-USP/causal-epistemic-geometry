@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "bf16_differentiability": "PASS: formal AD is distinct from rounded-BF16 finite differences",
+    "claim_boundary": "PASS: no predictive Fisher/pullback claim is authorized",
+    "finite_difference_scales": "PASS: fixed absolute FP32 ladder 1e-4 through 1e-1",
+    "fp32_lift": "PASS: load BF16 once, hash, cast those values in place, hash and round-trip",
+    "independent_identities": "PASS: forward JVP, independent JVP, VJP, Hessian, and KL",
+    "kernel_comparability": "PASS: dtype, kernel, and cache cells vary one factor at a time",
+    "semantic_vs_numerical_mismatch": "PASS: indexing/masks/cache fields captured separately"
+  },
+  "classification": "PREMORTEM_PASS",
+  "free_generation": false,
+  "historical_outcome_access": false,
+  "scientific_items": 0
+}

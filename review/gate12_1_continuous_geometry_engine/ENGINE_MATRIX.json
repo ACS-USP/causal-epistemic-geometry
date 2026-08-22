@@ -1,0 +1,65 @@
+{
+  "alphas": [
+    "NO_HOOK",
+    0.0,
+    0.01,
+    0.1,
+    97.85168930581241
+  ],
+  "cells": {
+    "E0": [
+      "BF16",
+      "historical/default SDPA",
+      "sequential KV",
+      "none"
+    ],
+    "E1": [
+      "BF16",
+      "SDPA math",
+      "sequential KV",
+      "none"
+    ],
+    "E2": [
+      "BF16",
+      "SDPA math",
+      "full sequence",
+      "none"
+    ],
+    "E3": [
+      "FP32 lift",
+      "eager preferred; SDPA-math frozen fallback",
+      "sequential KV",
+      "none"
+    ],
+    "E4": [
+      "FP32 lift",
+      "same as E3",
+      "full sequence",
+      "exact AD"
+    ]
+  },
+  "directions": [
+    {
+      "float64_sha256": "37fcd3e818aefc919d6a0c1d7b29d1f42f1d19da75b6afbb5f364455a9a64acd",
+      "index": 0,
+      "norm": 1.0,
+      "seed": 1201001
+    },
+    {
+      "float64_sha256": "c13f2937ea8ee134b4fbbd346473937ac1f63de312d5219c76fd8b70e19df7aa",
+      "index": 1,
+      "norm": 0.9999999999999999,
+      "seed": 1201002
+    }
+  ],
+  "eager_fallback_rule": "Before qualification metrics, use FP32 SDPA math iff an eager shape/forward availability probe fails; persist the reason.",
+  "epsilon_ladder": [
+    0.0001,
+    0.0003,
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ]
+}
