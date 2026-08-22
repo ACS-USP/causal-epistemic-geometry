@@ -75,6 +75,7 @@ current instruction source.
 | `docs/Q1_V3_REASONING_OPTIMIZATION_REPORT.md` | V3 engine gate, not current science |
 | `docs/Q1_V4_MICROBENCH.md` | Frozen V4 authorization snapshot |
 | `docs/EXTERNAL_BENCHMARK_QUALIFICATION.md` | Closed development search protocol |
+| `docs/GATE12_UTILITY_ALIGNED_PULLBACK_CLOSEOUT.md` | Gate-12 pre-collection JVP engine-failure closeout |
 
 ## Archival engineering and handoff reports
 

@@ -1,0 +1,53 @@
+{
+  "classification": "GATE12_JVP_ENGINE_FAILURE",
+  "direction_hashes": [
+    "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "10f04508f36b33f126c471b6fedddf8be92ae554cbdcc9d28e71a5a12d27163d",
+    "932ca6a1d098fdc6c1cb9ccc869fb7d47bc35ec9ae5fad0356c0b3130b2ef8cd",
+    "74271ef69a1eb5e2fc5a88be38f63e75dd48985896b5d6992420edd03c09b4b7",
+    "9659f1e15f0fd6435aceed323f898723bcab45417c52908aac9d9990d68ffd93"
+  ],
+  "exact_jvp": true,
+  "full_sequence_kv_cache": {
+    "max_abs_kl_difference": 0.557284537129118,
+    "max_abs_logit_difference": 0.8125,
+    "pass": false
+  },
+  "jvp_method": "torch.autograd.forward_ad",
+  "median_jvp_cosine": 0.6175740659236908,
+  "median_local_kl_quadratic_difference": 2.519263133579937,
+  "median_relative_fisher_difference": 0.8683199065403459,
+  "median_relative_utility_difference": 0.8306582677064829,
+  "outcome_firewall": "runner source contains no historical journal path",
+  "independent_exact_jvp_crosscheck": {
+    "forward_mode_vs_autograd_functional_jvp_cosine": 0.9999834,
+    "forward_mode_norm": 22.657024,
+    "autograd_functional_norm": 22.690151
+  },
+  "finite_difference_scale_diagnostic": [
+    {
+      "divisor": 128,
+      "epsilon": 0.7644663227016595,
+      "jvp_cosine": 0.14434732496738434,
+      "relative_fisher_difference": 4.663832995125298,
+      "relative_utility_difference": 3.380392832381882,
+      "relative_local_kl_difference": 19.87916529578554
+    },
+    {
+      "divisor": 64,
+      "epsilon": 1.528932645403319,
+      "jvp_cosine": 0.8152159452438354,
+      "relative_fisher_difference": 0.7267278207975746,
+      "relative_utility_difference": 0.9414946657856876,
+      "relative_local_kl_difference": 3.0978972377911145
+    },
+    {
+      "divisor": 32,
+      "epsilon": 3.057865290806638,
+      "jvp_cosine": 0.9416130185127258,
+      "relative_fisher_difference": 0.8903236461895769,
+      "relative_utility_difference": 0.5958084362706151,
+      "relative_local_kl_difference": 0.9782173207929082
+    }
+  ]
+}

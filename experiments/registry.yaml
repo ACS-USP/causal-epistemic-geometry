@@ -924,15 +924,15 @@ experiments:
       utility along frozen sustained-control paths?
     instrument: Exact full-sequence teacher-forced JVPs and categorical Fisher energy
     model_policy: Qwen3-8B BF16 SDPA, no sampling and no free generation
-    status: PROSPECTIVE_LOCK
-    outcome: NOT_YET_COLLECTED
+    status: COMPLETE_DEVELOPMENT_ENGINE_FAILURE
+    outcome: GATE12_JVP_ENGINE_FAILURE
     scientific_interpretation: >-
-      This Gate estimates one-dimensional local trajectory pullbacks along
-      historical meaningful/random directions. It does not estimate a full
-      pullback matrix, Fisher geometry of the model, Q2, or new semantic utility.
+      Exact autograd JVP paths agreed, but the frozen numerical and causal-
+      execution equivalence gates failed. No scientific geometry was collected,
+      so this is not evidence for or against predictive pullback geometry.
     source_commit: 9843fa9ec4ef2a734e60587ef31abca3440f200e
     artifact: review/gate12_utility_aligned_pullback/
-    cost_usd: null
+    cost_usd: 0.0893
     holdout_status: UNTOUCHED
     parent_experiment: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
     lock:
@@ -944,14 +944,19 @@ experiments:
       exact_jvp: true
       free_generation: false
       new_semantic_evaluation: false
-      gpu_authorized: true
+      gpu_authorized: false
       target_cost_usd: 1.75
       hard_stop_cost_usd: 3.50
     execution:
-      lifecycle: PROSPECTIVE_LOCK
+      lifecycle: CLOSED
       geometry_frozen: false
       historical_outcomes_revealed: false
       class_b_amendment: SDPA_MATH_KERNEL_FOR_EXACT_FORWARD_AD
+      engineering_classification: GATE12_JVP_ENGINE_FAILURE
+      exact_jvp_crosscheck_cosine: 0.9999834
+      scientific_geometry_shards: 0
+      forensic_audit: GATE12_FORENSIC_CLEAN
+      runpod_status: TERMINATED
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Pass differentiable engineering and collect outcome-blind geometry.
+    next_action: Principal review; Gate 13 draft is not authorized for execution.

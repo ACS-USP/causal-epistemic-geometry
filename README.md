@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 12 prospectively freezes exact local sustained-control JVPs, one-dimensional categorical Fisher energy, and correct-answer likelihood derivatives on existing Gate-9/Gate-10/Gate-11 items. Geometry collection is outcome-blind and performs no free generation or new semantic evaluation.
+Gate 12 stopped at the differentiable engineering gate. Two exact autograd JVP implementations agreed, but the frozen BF16 finite-difference, local-KL, and full-sequence/KV equivalence criteria failed. No scientific geometry was collected and historical outcomes remained sealed.
 
-**Next authorized action:** Run differentiable engineering validation and, only after it passes, collect the frozen Gate-12 geometry under the outcome firewall.
+**Next authorized action:** Principal review of the Gate-12 JVP engine-failure closeout.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

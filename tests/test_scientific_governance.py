@@ -54,6 +54,8 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE",
         "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION",
         "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_COMPLETE",
+        "GATE12_UTILITY_ALIGNED_PULLBACK",
+        "GATE12_UTILITY_ALIGNED_PULLBACK_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -89,6 +91,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_LOCKED",
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE",
         "GATE11_1_FORENSIC_REPLICATION_CLOSED",
+        "GATE12_JVP_ENGINE_FAILURE_CLOSED",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
