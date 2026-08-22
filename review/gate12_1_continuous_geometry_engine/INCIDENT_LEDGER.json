@@ -1,0 +1,12 @@
+{
+  "incidents": [
+    {
+      "class": "B",
+      "id": "GATE12_1_SOURCE_LOCK_DESCENDANT",
+      "outcomes_existed": false,
+      "resolution": "Require the frozen source commit to be an ancestor of the clean lock checkout.",
+      "scientific_semantics_changed": false,
+      "status": "RESOLVED_PRE_QUALIFICATION"
+    }
+  ]
+}

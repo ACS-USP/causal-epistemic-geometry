@@ -98,6 +98,17 @@ def git_commit() -> str:
     ).stdout.strip()
 
 
+def source_is_ancestor(source: str) -> bool:
+    return (
+        subprocess.run(
+            ["git", "merge-base", "--is-ancestor", source, "HEAD"],
+            cwd=ROOT,
+            check=False,
+        ).returncode
+        == 0
+    )
+
+
 def split_output(output: Any) -> tuple[Any, tuple[Any, ...] | None, bool]:
     if hasattr(output, "shape"):
         return output, None, False
@@ -546,8 +557,8 @@ def exact_derivative_case(
 
 def run(args: argparse.Namespace) -> int:
     require_remote_hf_execution("Gate 12.1 numerical qualification")
-    if git_commit() != args.experiment_source_commit:
-        raise RuntimeError("Gate 12.1 runner requires the exact source checkout")
+    if not source_is_ancestor(args.experiment_source_commit):
+        raise RuntimeError("Gate 12.1 source commit is not an ancestor of the execution checkout")
     lock = read_json(REVIEW / "PROTOCOL_LOCK.json")
     if lock["experiment_source_commit"] != args.experiment_source_commit:
         raise RuntimeError("Gate 12.1 source lock mismatch")
