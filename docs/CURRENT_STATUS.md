@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 10 completed all 2,800 frozen trajectories on 200 fresh long character-count items. Baseline opportunity passed, and the fixed L27-D75 controller remained valid, evaluable, and competence-preserving, but its G/C/D were negative and below the new random-controller bank. The frozen classification is GATE10_NO_CROSS_DOMAIN_TRANSFER; the independent forensic audit was clean. This bounds the controller's transfer beyond CRUXEval rather than negating its replicated within-domain effect.
+Gate 10 is accepted as a bounded cross-domain null. Gate 11 is prospectively locked to diagnose source-axis transfer, relative dose, downstream control gain, policy realization, and historical policy utility using prompt activations and fixed historical token sequences only.
 
-- Workstream: `GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE`
+- Workstream: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: PRINCIPAL_RESEARCHER_REVIEW. Gate 11 is drafted only and must not be executed without a new prospective lock and explicit authorization.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute the frozen Gate-11 prompt-activation and teacher-forcing diagnostics.
 
 ## Scientific program
 
@@ -48,13 +48,14 @@ Gate 10 completed all 2,800 frozen trajectories on 200 fresh long character-coun
 
 ## Scientific firewall
 
-- `steering`: `GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE`
+- `steering`: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_LOCKED`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE`
+- `current_task`: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM`
+- `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

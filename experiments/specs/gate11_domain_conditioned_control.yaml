@@ -1,0 +1,30 @@
+experiment_id: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
+status: FROZEN_PROSPECTIVE
+stage: DEVELOPMENT_MECHANISTIC_POSTMORTEM
+free_generation: false
+domains:
+- CRUXEval
+- FRESH_PSEUDOWORD_LONG
+source_items_per_domain: 40
+propagation_items_per_domain: 24
+source_layers:
+- 8
+- 12
+- 17
+- 22
+- 27
+- 32
+controller: fixed paired-mean L27 plus D75
+teacher_forcing_conditions:
+- TF_BASELINE
+- TF_TEXTUAL_CAREFUL
+- TF_MEANINGFUL_L27_D75
+- TF_RANDOM_R0
+- TF_RANDOM_R1
+- TF_RANDOM_R2
+- TF_RANDOM_R3
+sequence_cap: 256
+bootstrap_resamples: 5000
+hard_cost_ceiling_usd: 2.5
+q2: NOT_RUN
+holdout: UNTOUCHED

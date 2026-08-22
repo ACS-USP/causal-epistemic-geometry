@@ -1,0 +1,140 @@
+{
+  "bootstrap": {
+    "cross_domain": "independent_within_domain_resampling_per_replicate",
+    "resamples": 5000,
+    "seed": 20260825,
+    "unit": "item_with_all_conditions_and_checkpoints"
+  },
+  "classifications": [
+    "GATE11_SOURCE_AXIS_DOMAIN_MISMATCH",
+    "GATE11_DOWNSTREAM_CONTROL_GAIN_DOMAIN_MISMATCH",
+    "GATE11_POLICY_REALIZATION_DOMAIN_MISMATCH",
+    "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+    "GATE11_MULTIPLE_DOMAIN_CONDITIONING_FACTORS",
+    "GATE11_POSTMORTEM_INCONCLUSIVE",
+    "GATE11_ENGINE_FAILURE"
+  ],
+  "component_rules": {
+    "control_gain": "CRUX specific KL>0 and 2/3 positive domain-contrast lower bounds",
+    "policy_realization": "CRUX alignment>0 and domain-contrast lower bound>0",
+    "policy_utility": "both historical accuracy-effect contrast lower bounds>0",
+    "source_transfer": "gap>0; bootstrap lower>0; positive>=30/40; cosine>=0.20"
+  },
+  "controller": {
+    "analysis_only_domain_directions": true,
+    "canonical_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "delta_norm": 97.85168930581241,
+    "duration": "sustained_current_token",
+    "eta": 9.637427952852196,
+    "file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "layer": 27,
+    "reference_scale": 10.153299177386142,
+    "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+  },
+  "cost": {
+    "hard_ceiling_usd": 2.5,
+    "projected_hours": 0.4874611111111111,
+    "projected_teacher_forced_forwards": 42196,
+    "projected_usd_at_0_44": 0.2144828888888889,
+    "target_usd": 1.0
+  },
+  "experiment_id": "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
+  "experiment_source_commit_binding": "EXPERIMENT_SOURCE_COMMIT.json",
+  "firewall": {
+    "free_generation": "NOT_AUTHORIZED",
+    "holdout": "UNTOUCHED",
+    "new_controller": "NO",
+    "new_dose": "NO",
+    "new_semantic_evaluation": "NOT_RUN",
+    "q2": "NOT_RUN"
+  },
+  "historical_sources": {
+    "controller_file": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "gate10_journal": "967bde50c6432f93e748a84454a081a9ad699b4a084f7bdb7508229ed7d0edea",
+    "gate10_manifest": "e64506dd8c723c7824a461909fb49a1fcadd6d59d154a58ca75b32bd4346dd50",
+    "gate10_protocol": "f526589a3c675ae00b844ce8f706330b5ca1291461a388e7da956571fd39a52a",
+    "gate9_journal": "c17190c676da8a1aacb51f4058d875e8414782e3d08ee945ed57ddc4c5ed2888",
+    "gate9_manifest": "41064f1ac0b9d00ff54b86185dbbbcf70f23277a18a4efdaf7eaa6342d139f67",
+    "gate9_protocol": "806ed5e43eaad1c7082e047685fbbb1363b209d5bd0b2648b38b96d30242a55e"
+  },
+  "lifecycle": "PROSPECTIVE_LOCK",
+  "metrics": [
+    "next_token_kl",
+    "symmetric_js",
+    "logit_l2",
+    "logit_cosine",
+    "top1_flip",
+    "target_logprob_shift",
+    "downstream_hidden_amplification",
+    "careful_logit_alignment",
+    "random_specificity",
+    "historical_policy_utility"
+  ],
+  "model": {
+    "attention": "sdpa",
+    "dtype": "bf16",
+    "enable_thinking": false,
+    "environment": "CORE_QWEN",
+    "id": "Qwen/Qwen3-8B",
+    "quantization": "none",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "prompt_variants_sha256": "20bb72b32b5c68d6f28d6971edaefb3be200ca2e5bd051f752f21d64919641d9",
+  "propagation_layers": [
+    27,
+    28,
+    30,
+    32,
+    35
+  ],
+  "random_bank_sha256": "51ff3d228d07c46ec1e50e43a0b58ce667dc86e211d94768ebd9e0dfe49c6970",
+  "schema_version": 1,
+  "selection": {
+    "outcome_fields_used": [],
+    "propagation_items_per_domain": 24,
+    "rule": "SHA256(GATE11-SOURCE-AXIS|domain|item_id)",
+    "source_items_per_domain": 40
+  },
+  "source_layers": [
+    8,
+    12,
+    17,
+    22,
+    27,
+    32
+  ],
+  "stage": "DEVELOPMENT_MECHANISTIC_POSTMORTEM",
+  "status": "FROZEN_PRE_DIAGNOSTIC",
+  "teacher_forcing": {
+    "checkpoints": [
+      0,
+      1,
+      3,
+      7,
+      15,
+      31,
+      63,
+      127,
+      255
+    ],
+    "conditions": [
+      "TF_BASELINE",
+      "TF_TEXTUAL_CAREFUL",
+      "TF_MEANINGFUL_L27_D75",
+      "TF_RANDOM_R0",
+      "TF_RANDOM_R1",
+      "TF_RANDOM_R2",
+      "TF_RANDOM_R3"
+    ],
+    "logical_rows": 336,
+    "rollout_fallback": [
+      0,
+      1,
+      "missing_no_replacement"
+    ],
+    "same_sequence_within_item": true,
+    "sampling": false,
+    "sequence_cap": 256
+  }
+}

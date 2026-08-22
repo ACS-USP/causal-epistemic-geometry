@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 10 completed all 2,800 frozen trajectories on 200 fresh long character-count items. Baseline opportunity passed, and the fixed L27-D75 controller remained valid, evaluable, and competence-preserving, but its G/C/D were negative and below the new random-controller bank. The frozen classification is GATE10_NO_CROSS_DOMAIN_TRANSFER; the independent forensic audit was clean. This bounds the controller's transfer beyond CRUXEval rather than negating its replicated within-domain effect.
+Gate 10 is accepted as a bounded cross-domain null. Gate 11 is prospectively locked to diagnose source-axis transfer, relative dose, downstream control gain, policy realization, and historical policy utility using prompt activations and fixed historical token sequences only.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW. Gate 11 is drafted only and must not be executed without a new prospective lock and explicit authorization.
+**Next authorized action:** Execute the frozen Gate-11 prompt-activation and teacher-forcing diagnostics.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

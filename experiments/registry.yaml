@@ -800,3 +800,42 @@ experiments:
       C_minus_random_mean: -0.006548366834170855
       D_minus_random_mean: -0.02375
     next_action: Principal review; Gate 11 is drafted only and is not authorized.
+
+  - id: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
+    version: GATE-11
+    stage: DEVELOPMENT_MECHANISTIC_POSTMORTEM
+    question: >-
+      Which prospectively separated source, relative-dose, downstream-gain,
+      policy-realization, or policy-utility factors explain the fixed L27-D75
+      controller's CRUXEval versus character-count domain difference?
+    instrument: Prompt-only activations and fixed historical baseline token sequences
+    model_policy: Qwen3-8B BF16 SDPA, no sampling and no free generation
+    status: PROSPECTIVE_LOCK
+    outcome: NOT_YET_RUN
+    scientific_interpretation: >-
+      Prospectively locked DEVELOPMENT diagnostics only; no new semantic
+      outcome, controller optimization, Q2 analysis, or holdout access is
+      authorized.
+    source_commit: PENDING_GATE11_LOCK_COMMIT
+    artifact: review/gate11_domain_conditioned_control/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE10_CROSS_DOMAIN_CHARCOUNT
+    lock:
+      protocol: review/gate11_domain_conditioned_control/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      source_items_per_domain: 40
+      propagation_items_per_domain: 24
+      fixed_sequence_conditions: 7
+      sequence_cap: 256
+      source_layers: [8, 12, 17, 22, 27, 32]
+      propagation_layers: [27, 28, 30, 32, 35]
+      free_generation: false
+      gpu_authorized: true
+      target_cost_usd: 1.00
+      hard_stop_cost_usd: 2.50
+    execution:
+      collection: NOT_YET_RUN
+      q2: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Execute the frozen Gate-11 diagnostics only.

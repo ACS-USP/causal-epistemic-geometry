@@ -19,33 +19,30 @@ project:
     utility?
 
 current:
-  workstream: GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_CROSS_DOMAIN_REPLICATION
-  source_commit: 3a1cc739149235a7683ea837972ca9b40b7e8103
+  workstream: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_MECHANISTIC_POSTMORTEM
+  source_commit: PENDING_GATE11_LOCK_COMMIT
   summary: >-
-    Gate 10 completed all 2,800 frozen trajectories on 200 fresh long
-    character-count items. Baseline opportunity passed, and the fixed L27-D75
-    controller remained valid, evaluable, and competence-preserving, but its
-    G/C/D were negative and below the new random-controller bank. The frozen
-    classification is GATE10_NO_CROSS_DOMAIN_TRANSFER; the independent
-    forensic audit was clean. This bounds the controller's transfer beyond
-    CRUXEval rather than negating its replicated within-domain effect.
+    Gate 10 is accepted as a bounded cross-domain null. Gate 11 is
+    prospectively locked to diagnose source-axis transfer, relative dose,
+    downstream control gain, policy realization, and historical policy utility
+    using prompt activations and fixed historical token sequences only.
   next_authorized_action: >-
-    PRINCIPAL_RESEARCHER_REVIEW. Gate 11 is drafted only and must not be
-    executed without a new prospective lock and explicit authorization.
+    Execute the frozen Gate-11 prompt-activation and teacher-forcing diagnostics.
   runpod: STOPPED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
-  steering: GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE
+  steering: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_LOCKED
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE
+  current_task: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
+  free_generation: NOT_AUTHORIZED
 
 instrument_history:
   - id: Q1_V1_SERIES
