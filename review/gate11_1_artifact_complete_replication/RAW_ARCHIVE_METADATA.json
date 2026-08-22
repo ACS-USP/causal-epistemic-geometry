@@ -1,0 +1,12 @@
+{
+  "archive": "/private/tmp/ceg_gate11_1_raw_primitives.tgz",
+  "archive_bytes": 814597682,
+  "archive_sha256": "3fe24aab5ba5a60f39facb0f79f77a266988905bcb1d4f23a267a6421d929b86",
+  "remote_archive": "/workspace/gate11_1_raw_primitives.tgz",
+  "remote_sha256_verified": true,
+  "extracted_shards": 48,
+  "extracted_logical_rows": 336,
+  "raw_arrays": "float32 logits and hidden-difference vectors",
+  "compression": "gzip tar archive containing losslessly compressed NPZ shards",
+  "model_weights_or_cache_included": false
+}

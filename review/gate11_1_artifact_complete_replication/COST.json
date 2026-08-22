@@ -1,0 +1,16 @@
+{
+  "pod_id": "pdmiiro0rd63om",
+  "pod_name": "gate11-1-artifact-complete",
+  "gpu": "NVIDIA A40",
+  "data_center": "EU-SE-1",
+  "hourly_rate_usd": 0.44,
+  "runtime_seconds": 4084,
+  "runtime_hours": 1.1344444444,
+  "estimated_incremental_gpu_cost_usd": 0.4991555556,
+  "target_cost_usd": 0.60,
+  "hard_cost_ceiling_usd": 1.25,
+  "scientific_rows": 336,
+  "free_generation_rows": 0,
+  "runpod_status": "STOPPED_THEN_TERMINATION_PENDING",
+  "cost_gate_passed": true
+}

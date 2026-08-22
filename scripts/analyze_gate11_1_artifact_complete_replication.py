@@ -31,6 +31,10 @@ def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def read_text(path: Path) -> str:
+    return path.read_text(encoding="utf-8")
+
+
 def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
@@ -323,6 +327,7 @@ def main() -> int:
             "propagation": propagation,
         },
     )
+    historical_report = read_text(HISTORICAL / "REPORT.md")
     write_json(
         REVIEW / "PRIMARY_RECOMPUTATION.json",
         {
@@ -345,11 +350,11 @@ def main() -> int:
             "historical_gate11_classification": read_json(
                 HISTORICAL / "COMPONENT_DIAGNOSTICS.json"
             )["classification"],
-            "historical_primary_synthesis": read_json(HISTORICAL / "REPORT.md")
+            "historical_primary_synthesis": historical_report
             .split("PRIMARY SYNTHESIS", 1)[1]
             .splitlines()[2]
             .strip()
-            if "PRIMARY SYNTHESIS" in (HISTORICAL / "REPORT.md").read_text(encoding="utf-8")
+            if "PRIMARY SYNTHESIS" in historical_report
             else None,
             "historical_result_changed": False,
             "primitive_metrics_from_persisted_arrays": True,

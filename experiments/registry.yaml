@@ -867,16 +867,18 @@ experiments:
       hidden-difference vectors?
     instrument: Artifact-complete fixed-sequence teacher-forcing diagnostics
     model_policy: Qwen3-8B BF16 SDPA, no sampling and no free generation
-    status: LOCKED_PROSPECTIVE
-    outcome: PENDING_COLLECTION
+    status: COMPLETE_DEVELOPMENT_FORENSIC_REPLICATION
+    outcome: GATE11_POLICY_UTILITY_DOMAIN_MISMATCH
     scientific_interpretation: >-
-      This is a forensic replication of Gate 11, not a redesign or new
-      scientific evaluation. It reuses all historical items, sequences,
+      This was a forensic replication of Gate 11, not a redesign or new
+      scientific evaluation. It reused all historical items, sequences,
       conditions, controller parameters, random directions, layers, and
-      checkpoints. The historical Gate-11 result remains immutable.
+      checkpoints. Full raw propagation artifacts were persisted and the
+      independent audit agreed exactly with the primary recomputation. The
+      historical Gate-11 result remains immutable.
     source_commit: c4c6c77
     artifact: review/gate11_1_artifact_complete_replication/
-    cost_usd: null
+    cost_usd: 0.4991555556
     holdout_status: UNTOUCHED
     parent_experiment: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
     lock:
@@ -889,13 +891,26 @@ experiments:
       full_vocab_logits: true
       hidden_difference_vectors: true
       free_generation: false
-      gpu_authorized: true
+      gpu_authorized: false
       target_cost_usd: 0.60
       hard_stop_cost_usd: 1.25
     execution:
-      collection: NOT_RUN
-      replacement_free_generation: NOT_AUTHORIZED
+      collection: COMPLETE
+      logical_rows: 336
+      raw_shards: 48
+      full_vocab_logits: true
+      hidden_difference_vectors: true
+      source_axis: SOURCE_AXIS_TRANSFER_SUPPORTED
+      control_gain: CONTROL_GAIN_SHIFT_NOT_ESTABLISHED
+      policy_realization: POLICY_REALIZATION_SHIFT_NOT_ESTABLISHED
+      policy_utility: POLICY_UTILITY_DOMAIN_SHIFT_SUPPORTED
+      scientific_classification: GATE11_POLICY_UTILITY_DOMAIN_MISMATCH
+      forensic_audit: GATE11_1_FORENSIC_REPLICATION_CLEAN_AGREEMENT
+      primary_independent_max_abs_difference: 0.0
+      replacement_free_generation: NOT_RUN
+      new_semantic_evaluation: NOT_RUN
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-      runpod_status: GATE11_1_PREPARATION
-    next_action: Complete the frozen collection, stop RunPod, independently audit, and return for principal review.
+      runpod_status: STOPPED
+      raw_archive_sha256: 3fe24aab5ba5a60f39facb0f79f77a266988905bcb1d4f23a267a6421d929b86
+    next_action: Principal review; no Gate 12 execution authorized.

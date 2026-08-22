@@ -1,0 +1,128 @@
+{
+  "classification": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "control_gain": {
+    "contrasts": {
+      "A35": {
+        "point": -69.16941294069238,
+        "q025": -86.10446531167408,
+        "q975": -51.800198662911924
+      },
+      "alignment": {
+        "point": -0.3105253904148192,
+        "q025": -0.3942934157515072,
+        "q975": -0.22973610790743146
+      },
+      "next_token_kl": {
+        "point": 0.1298582050899162,
+        "q025": 0.0357638969317394,
+        "q975": 0.23724195366144124
+      },
+      "top1_flip": {
+        "point": 0.053166335978835966,
+        "q025": -0.004232804232804227,
+        "q975": 0.1161873759920635
+      }
+    },
+    "summary": [
+      {
+        "domain": "CRUXEval",
+        "meaningful": 0.21232722433117276,
+        "meaningful_minus_random_max": 0.16577247663485553,
+        "meaningful_minus_random_mean": 0.1831728412451511,
+        "metric": "next_token_kl",
+        "random_max": 0.04655474769631724,
+        "random_mean": 0.029154383086021664
+      },
+      {
+        "domain": "CRUXEval",
+        "meaningful": 300.7450868420327,
+        "meaningful_minus_random_max": 97.24865833504771,
+        "meaningful_minus_random_mean": 101.96760411231648,
+        "metric": "A35",
+        "random_max": 203.496428506985,
+        "random_mean": 198.77748272971624
+      },
+      {
+        "domain": "CRUXEval",
+        "meaningful": 0.11884920634920633,
+        "meaningful_minus_random_max": 0.07023809523809521,
+        "meaningful_minus_random_mean": 0.08812003968253966,
+        "metric": "top1_flip",
+        "random_max": 0.04861111111111111,
+        "random_mean": 0.03072916666666667
+      },
+      {
+        "domain": "CHARCOUNT",
+        "meaningful": 0.06766350901994612,
+        "meaningful_minus_random_max": 0.0474436935136586,
+        "meaningful_minus_random_mean": 0.05331463615523487,
+        "metric": "next_token_kl",
+        "random_max": 0.020219815506287524,
+        "random_mean": 0.014348872864711251
+      },
+      {
+        "domain": "CHARCOUNT",
+        "meaningful": 355.7536404428383,
+        "meaningful_minus_random_max": 167.57228522097867,
+        "meaningful_minus_random_mean": 171.13701705300892,
+        "metric": "A35",
+        "random_max": 188.1813552218596,
+        "random_mean": 184.61662338982936
+      },
+      {
+        "domain": "CHARCOUNT",
+        "meaningful": 0.06527777777777778,
+        "meaningful_minus_random_max": 0.01712962962962964,
+        "meaningful_minus_random_mean": 0.03495370370370371,
+        "metric": "top1_flip",
+        "random_max": 0.04814814814814814,
+        "random_mean": 0.030324074074074073
+      }
+    ]
+  },
+  "historical_gate11_classification": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "historical_primary_synthesis": "",
+  "historical_result_changed": false,
+  "item_rows": 336,
+  "policy_realization": {
+    "contrast": {
+      "point": -0.3105253904148192,
+      "q025": -0.3942934157515072,
+      "q975": -0.22973610790743146
+    },
+    "summary": [
+      {
+        "domain": "CRUXEval",
+        "mean_careful_logit_alignment": 0.24498207174466402
+      },
+      {
+        "domain": "CHARCOUNT",
+        "mean_careful_logit_alignment": 0.5555074621594832
+      }
+    ]
+  },
+  "policy_utility": {
+    "historical_artifact_sha256": "779ac7c069bbb3ecadffa7caab4bf44a37c58e0118ab716c7e33f9cdda214ada",
+    "supported": true
+  },
+  "primitive_metrics_from_persisted_arrays": true,
+  "raw_rows": 2415,
+  "raw_shards": 48,
+  "source_axis": {
+    "CHARCOUNT": {
+      "bootstrap_lower": 111.03104745729865,
+      "cosine_domain_direction_to_frozen": 0.6593678019622763,
+      "item_count": 40,
+      "mean_frozen_gap": 112.17015036771677,
+      "positive_gap_fraction": 1.0
+    },
+    "CRUXEval": {
+      "bootstrap_lower": 121.60077598967152,
+      "cosine_domain_direction_to_frozen": 0.9982780426300173,
+      "item_count": 40,
+      "mean_frozen_gap": 124.4308745568854,
+      "positive_gap_fraction": 1.0
+    },
+    "source_transfer_supported": true
+  }
+}

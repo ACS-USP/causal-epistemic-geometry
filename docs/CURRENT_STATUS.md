@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 11.1 is a frozen artifact-complete forensic replication of the historical Gate 11 fixed-sequence propagation diagnostics. It reruns no free generation and changes no items, controller, dose, layer, random bank, or semantic evaluation. GPU work is authorized only for the 336 fixed teacher-forced rows, with full logits and hidden-difference shards persisted for independent recomputation.
+Gate 11.1 completed the artifact-complete forensic replication of the historical Gate 11 fixed-sequence propagation diagnostics. The historical result remains immutable. Full logits and hidden-difference shards were persisted and independently recomputed with exact synthesis agreement.
 
 - Workstream: `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION`
-- RunPod: `RUNNING_GATE11_1_ONLY`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Complete Gate 11.1 engineering and fixed-sequence collection only; then perform offline recomputation, independent audit, and principal review.
+- RunPod: `STOPPED`
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: Principal review of the Gate 11.1 forensic closeout.
 
 ## Scientific program
 
@@ -45,17 +45,17 @@ Gate 11.1 is a frozen artifact-complete forensic replication of the historical G
 | `GATE8_L27_DOSE_CALIBRATION` | `COMPLETE_DEVELOPMENT_CALIBRATION` | The complete 2,200-row matched calibration selected D75 as the lowest eligible lower dose. D75 preserved 100% commitment validity and semantic evaluability, exceeded the dose-matched random bank on semantic change, and recovered 34.6% of the CAREFUL token increase. The forensic audit was clean. Gate 9, G/C/D evaluation, Q2, character count, and holdout access were not run. |
 | `GATE9_SELECTED_D75_EVALUATION` | `COMPLETE_DEVELOPMENT_STRONG_SAFE_REPLICATION` | On 100 fresh CRUXEval items, the exact Gate-8-selected D75 controller raised accuracy from 47% to 60% while preserving commitment validity and semantic evaluability at 97%. G=0.1325, C=0.0643, and D=0.1200 exceeded every one of four new random controls; rescue was 0.1525 versus damage 0.0225. The frozen classification is a strong safe DEVELOPMENT replication. Independent metric recomputation agreed exactly; the forensic classification records one minor non-scientific parser-totality incident. At Gate-9 closeout, Gate 10 was drafted only; Q2 and holdout remained closed. |
 | `GATE10_CROSS_DOMAIN_CHARCOUNT` | `COMPLETE_DEVELOPMENT_NO_TRANSFER` | On 200 fresh FRESH_PSEUDOWORD_LONG items, baseline opportunity passed with accuracy 0.8625 and B00=0.045. The exact CRUXEval-derived L27-D75 controller was safe but did not transfer specific error control: G=-0.01625, C=-0.01230, D=-0.025, with rescue below damage and all three estimands below the random-controller mean. The textual careful source also did not replicate under its frozen rule. The independent forensic audit was clean. Gate 11 is drafted only; Q2 and holdout remain closed. |
-| `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION` | `LOCKED_DEVELOPMENT_FORENSIC_REPLICATION` | Gate 11.1 reuses the immutable Gate 11 source selections, fixed baseline sequences, controller, dose, layer, random bank, conditions, and checkpoints. It authorizes no free generation or semantic evaluation and exists only to persist full propagation logits and hidden-difference vectors for independent forensic recomputation. |
+| `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION` | `COMPLETE_DEVELOPMENT_FORENSIC_REPLICATION` | Gate 11.1 reused the immutable Gate 11 source selections, fixed baseline sequences, controller, dose, layer, random bank, conditions, and checkpoints. It performed no free generation or semantic evaluation. Full propagation logits and hidden-difference vectors were persisted; the independent audit agreed exactly with the primary recomputation. The synthesis remains GATE11_POLICY_UTILITY_DOMAIN_MISMATCH, with the historical result preserved and the forensic artifact concern repaired. |
 
 ## Scientific firewall
 
-- `steering`: `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_ONLY`
+- `steering`: `GATE11_1_FORENSIC_REPLICATION_CLOSED`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION`
+- `current_task`: `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_CLOSED`
 - `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement

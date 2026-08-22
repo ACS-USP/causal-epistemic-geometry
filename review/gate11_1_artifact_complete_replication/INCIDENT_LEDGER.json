@@ -1,0 +1,50 @@
+{
+  "experiment": "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION",
+  "incidents": [
+    {
+      "id": "G11.1-001",
+      "class": "A",
+      "phase": "PREPARE",
+      "summary": "macOS AppleDouble metadata entered the remote source archive",
+      "resolution": "Removed only ._* and __MACOSX metadata from the remote checkout and recompiled",
+      "scientific_outputs_affected": false,
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G11.1-002",
+      "class": "A",
+      "phase": "PREPARE",
+      "summary": "The archived source checkout had no .git metadata for official preflight",
+      "resolution": "Transferred and verified a Git bundle, then used a clean worktree at the exact source commit",
+      "scientific_outputs_affected": false,
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G11.1-003",
+      "class": "B",
+      "phase": "ENGINEERING",
+      "summary": "The runner expects the abbreviated source commit recorded by the frozen lock",
+      "resolution": "Re-ran the unchanged engineering command with the exact frozen abbreviation c4c6c77",
+      "scientific_outputs_affected": false,
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G11.1-004",
+      "class": "C",
+      "phase": "OFFLINE_ANALYSIS",
+      "summary": "Primary analysis attempted to parse historical REPORT.md as JSON",
+      "resolution": "Changed only the reader to load the immutable report as text; no raw data or estimand changed",
+      "scientific_outputs_affected": false,
+      "status": "RESOLVED"
+    },
+    {
+      "id": "G11.1-005",
+      "class": "C",
+      "phase": "FORENSIC_AUDIT",
+      "summary": "Independent audit initially used the historical component schema and float32 norm accumulation",
+      "resolution": "Read the immutable nested component field and use float64 norm accumulation for the persisted float32 arrays; rerun yielded exact agreement",
+      "scientific_outputs_affected": false,
+      "status": "RESOLVED"
+    }
+  ]
+}

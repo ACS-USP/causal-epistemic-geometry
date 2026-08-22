@@ -20,31 +20,28 @@ project:
 
 current:
   workstream: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
-  lifecycle: PROSPECTIVE_LOCK
-  stage: DEVELOPMENT_FORENSIC_REPLICATION
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_FORENSIC_CLOSEOUT
   source_commit: c4c6c77
   summary: >-
-    Gate 11.1 is a frozen artifact-complete forensic replication of the
-    historical Gate 11 fixed-sequence propagation diagnostics. It reruns no
-    free generation and changes no items, controller, dose, layer, random bank,
-    or semantic evaluation. GPU work is authorized only for the 336 fixed
-    teacher-forced rows, with full logits and hidden-difference shards persisted
-    for independent recomputation.
+    Gate 11.1 completed the artifact-complete forensic replication of the
+    historical Gate 11 fixed-sequence propagation diagnostics. The historical
+    result remains immutable. Full logits and hidden-difference shards were
+    persisted and independently recomputed with exact synthesis agreement.
   next_authorized_action: >-
-    Complete Gate 11.1 engineering and fixed-sequence collection only; then
-    perform offline recomputation, independent audit, and principal review.
-  runpod: RUNNING_GATE11_1_ONLY
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+    Principal review of the Gate 11.1 forensic closeout.
+  runpod: STOPPED
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_ONLY
+  steering: GATE11_1_FORENSIC_REPLICATION_CLOSED
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
+  current_task: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_CLOSED
   free_generation: NOT_AUTHORIZED
 
 instrument_history:
@@ -183,20 +180,39 @@ instrument_history:
       also did not replicate under its frozen rule. The independent forensic
       audit was clean. Gate 11 is drafted only; Q2 and holdout remain closed.
   - id: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
-    status: LOCKED_DEVELOPMENT_FORENSIC_REPLICATION
+    status: COMPLETE_DEVELOPMENT_FORENSIC_REPLICATION
     conclusion: >-
-      Gate 11.1 reuses the immutable Gate 11 source selections, fixed baseline
+      Gate 11.1 reused the immutable Gate 11 source selections, fixed baseline
       sequences, controller, dose, layer, random bank, conditions, and
-      checkpoints. It authorizes no free generation or semantic evaluation and
-      exists only to persist full propagation logits and hidden-difference
-      vectors for independent forensic recomputation.
+      checkpoints. It performed no free generation or semantic evaluation.
+      Full propagation logits and hidden-difference vectors were persisted; the
+      independent audit agreed exactly with the primary recomputation. The
+      synthesis remains GATE11_POLICY_UTILITY_DOMAIN_MISMATCH, with the
+      historical result preserved and the forensic artifact concern repaired.
     source_commit: c4c6c77
     artifact: review/gate11_1_artifact_complete_replication/
     holdout_status: UNTOUCHED
-    gpu_authorized: true
+    gpu_authorized: false
     free_generation: NOT_AUTHORIZED
     q2: NOT_RUN
-    next_action: Complete the frozen Gate 11.1 collection, stop RunPod, audit, and return for principal review.
+    execution:
+      collection: COMPLETE
+      logical_rows: 336
+      raw_shards: 48
+      source_axis: SOURCE_AXIS_TRANSFER_SUPPORTED
+      control_gain: CONTROL_GAIN_SHIFT_NOT_ESTABLISHED
+      policy_realization: POLICY_REALIZATION_SHIFT_NOT_ESTABLISHED
+      policy_utility: POLICY_UTILITY_DOMAIN_SHIFT_SUPPORTED
+      scientific_classification: GATE11_POLICY_UTILITY_DOMAIN_MISMATCH
+      forensic_audit: GATE11_1_FORENSIC_REPLICATION_CLEAN_AGREEMENT
+      primary_independent_max_abs_difference: 0.0
+      raw_archive_sha256: 3fe24aab5ba5a60f39facb0f79f77a266988905bcb1d4f23a267a6421d929b86
+      free_generation: NOT_RUN
+      new_semantic_evaluation: NOT_RUN
+      runpod_status: STOPPED
+      q2: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Principal review; no Gate 12 execution authorized.
 
 workflow_regimes:
   EXPLORATION:

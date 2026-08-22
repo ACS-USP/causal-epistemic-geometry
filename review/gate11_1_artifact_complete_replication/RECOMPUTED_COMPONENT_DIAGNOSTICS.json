@@ -1,0 +1,50 @@
+{
+  "classification": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "control_gain_shift": false,
+  "policy_realization_shift": false,
+  "policy_utility_shift": true,
+  "propagation": {
+    "contrasts": {
+      "A35": {
+        "point": -69.16941294069238,
+        "q025": -86.10446531167408,
+        "q975": -51.800198662911924
+      },
+      "alignment": {
+        "point": -0.3105253904148192,
+        "q025": -0.3942934157515072,
+        "q975": -0.22973610790743146
+      },
+      "next_token_kl": {
+        "point": 0.1298582050899162,
+        "q025": 0.0357638969317394,
+        "q975": 0.23724195366144124
+      },
+      "top1_flip": {
+        "point": 0.053166335978835966,
+        "q025": -0.004232804232804227,
+        "q975": 0.1161873759920635
+      }
+    },
+    "control_gain_shift_supported": false,
+    "policy_realization_shift_supported": false
+  },
+  "source": {
+    "CHARCOUNT": {
+      "bootstrap_lower": 111.03104745729865,
+      "cosine_domain_direction_to_frozen": 0.6593678019622763,
+      "item_count": 40,
+      "mean_frozen_gap": 112.17015036771677,
+      "positive_gap_fraction": 1.0
+    },
+    "CRUXEval": {
+      "bootstrap_lower": 121.60077598967152,
+      "cosine_domain_direction_to_frozen": 0.9982780426300173,
+      "item_count": 40,
+      "mean_frozen_gap": 124.4308745568854,
+      "positive_gap_fraction": 1.0
+    },
+    "source_transfer_supported": true
+  },
+  "source_transfer": true
+}

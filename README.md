@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 11.1 is a frozen artifact-complete forensic replication of the historical Gate 11 fixed-sequence propagation diagnostics. It reruns no free generation and changes no items, controller, dose, layer, random bank, or semantic evaluation. GPU work is authorized only for the 336 fixed teacher-forced rows, with full logits and hidden-difference shards persisted for independent recomputation.
+Gate 11.1 completed the artifact-complete forensic replication of the historical Gate 11 fixed-sequence propagation diagnostics. The historical result remains immutable. Full logits and hidden-difference shards were persisted and independently recomputed with exact synthesis agreement.
 
-**Next authorized action:** Complete Gate 11.1 engineering and fixed-sequence collection only; then perform offline recomputation, independent audit, and principal review.
+**Next authorized action:** Principal review of the Gate 11.1 forensic closeout.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

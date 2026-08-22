@@ -52,6 +52,8 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE10_CROSS_DOMAIN_CHARCOUNT_BLOCKED_COST",
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE",
+        "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION",
+        "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -86,6 +88,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE10_CROSS_DOMAIN_CHARCOUNT_RESUME_AUTHORIZED",
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_LOCKED",
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE",
+        "GATE11_1_FORENSIC_REPLICATION_CLOSED",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
