@@ -1,0 +1,12 @@
+{
+  "checkpoint_token_indices": true,
+  "full_vocabulary_baseline_logits": false,
+  "full_vocabulary_condition_logits": false,
+  "hidden_state_difference_vectors": false,
+  "normalization_metadata": true,
+  "per_checkpoint_hidden_displacement_norms": true,
+  "per_checkpoint_scalar_logit_metrics": true,
+  "primitive_metric_recomputation_possible": false,
+  "replacement_collection_run": false,
+  "source_prompt_activations_float32": true
+}

@@ -19,29 +19,32 @@ project:
     utility?
 
 current:
-  workstream: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
-  lifecycle: PROSPECTIVE_LOCK
+  workstream: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE
+  lifecycle: CLOSED
   stage: DEVELOPMENT_MECHANISTIC_POSTMORTEM
-  source_commit: PENDING_GATE11_LOCK_COMMIT
+  source_commit: e47d3f66a5a96d38431ff3b023a501159798b6b4
   summary: >-
-    Gate 10 is accepted as a bounded cross-domain null. Gate 11 is
-    prospectively locked to diagnose source-axis transfer, relative dose,
-    downstream control gain, policy realization, and historical policy utility
-    using prompt activations and fixed historical token sequences only.
+    Gate 11 completed prompt-only activation and fixed-sequence diagnostics
+    without free generation. The source axis transferred, while prospective
+    downstream-gain and policy-realization shifts were not established;
+    historical policy utility differed by domain. The primary synthesis is
+    GATE11_POLICY_UTILITY_DOMAIN_MISMATCH. Independent scalar aggregation and
+    synthesis agreed, but incomplete raw propagation-vector persistence yields
+    GATE11_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN and blocks Gate 12.
   next_authorized_action: >-
-    Execute the frozen Gate-11 prompt-activation and teacher-forcing diagnostics.
+    PRINCIPAL_RESEARCHER_REVIEW. No replacement collection or Gate 12 is authorized.
   runpod: STOPPED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_LOCKED
+  steering: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
+  current_task: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE
   free_generation: NOT_AUTHORIZED
 
 instrument_history:

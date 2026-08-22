@@ -1,0 +1,11 @@
+{
+  "agreement": true,
+  "component_flags": {
+    "control_gain_shift": false,
+    "policy_realization_shift": false,
+    "policy_utility_shift": true,
+    "source_transfer": true
+  },
+  "independent": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "primary": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH"
+}

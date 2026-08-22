@@ -54,6 +54,7 @@ current instruction source.
 | `docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md` | Fresh frozen-controller replication, destructive classification, and forensic closeout |
 | `docs/GATE9_SELECTED_D75_EVALUATION_CLOSEOUT.md` | Fresh selected-D75 strong-safe DEVELOPMENT replication and incident boundary |
 | `docs/GATE10_CROSS_DOMAIN_CHARCOUNT_CLOSEOUT.md` | Fixed-controller cross-domain character-count null and forensic closeout |
+| `docs/GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_CLOSEOUT.md` | Domain-conditioned source/control/utility postmortem and raw-persistence audit boundary |
 
 ## Archival scientific protocols and closeouts
 

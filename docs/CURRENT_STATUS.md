@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 10 is accepted as a bounded cross-domain null. Gate 11 is prospectively locked to diagnose source-axis transfer, relative dose, downstream control gain, policy realization, and historical policy utility using prompt activations and fixed historical token sequences only.
+Gate 11 completed prompt-only activation and fixed-sequence diagnostics without free generation. The source axis transferred, while prospective downstream-gain and policy-realization shifts were not established; historical policy utility differed by domain. The primary synthesis is GATE11_POLICY_UTILITY_DOMAIN_MISMATCH. Independent scalar aggregation and synthesis agreed, but incomplete raw propagation-vector persistence yields GATE11_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN and blocks Gate 12.
 
-- Workstream: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM`
+- Workstream: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE`
 - RunPod: `STOPPED`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Execute the frozen Gate-11 prompt-activation and teacher-forcing diagnostics.
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: PRINCIPAL_RESEARCHER_REVIEW. No replacement collection or Gate 12 is authorized.
 
 ## Scientific program
 
@@ -48,13 +48,13 @@ Gate 10 is accepted as a bounded cross-domain null. Gate 11 is prospectively loc
 
 ## Scientific firewall
 
-- `steering`: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_LOCKED`
+- `steering`: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM`
+- `current_task`: `GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE`
 - `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement

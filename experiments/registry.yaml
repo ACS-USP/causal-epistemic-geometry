@@ -810,15 +810,20 @@ experiments:
       controller's CRUXEval versus character-count domain difference?
     instrument: Prompt-only activations and fixed historical baseline token sequences
     model_policy: Qwen3-8B BF16 SDPA, no sampling and no free generation
-    status: PROSPECTIVE_LOCK
-    outcome: NOT_YET_RUN
+    status: COMPLETE_DEVELOPMENT_FORENSIC_CONCERN
+    outcome: GATE11_POLICY_UTILITY_DOMAIN_MISMATCH
     scientific_interpretation: >-
-      Prospectively locked DEVELOPMENT diagnostics only; no new semantic
-      outcome, controller optimization, Q2 analysis, or holdout access is
-      authorized.
-    source_commit: PENDING_GATE11_LOCK_COMMIT
+      Prompt-only activations show that the careful/direct representation axis
+      transfers to character count. Frozen finite-displacement diagnostics did
+      not establish downstream-gain or policy-realization domain shifts, while
+      preserved Gate-9/Gate-10 outcomes support a policy-utility shift. The
+      independent audit reproduced scalar aggregation and synthesis but could
+      not recompute primitive logit/hidden metrics because full propagation
+      vectors were not persisted; the result is preserved with a scientific-
+      integrity concern and no replacement collection.
+    source_commit: e47d3f66a5a96d38431ff3b023a501159798b6b4
     artifact: review/gate11_domain_conditioned_control/
-    cost_usd: null
+    cost_usd: 0.2849
     holdout_status: UNTOUCHED
     parent_experiment: GATE10_CROSS_DOMAIN_CHARCOUNT
     lock:
@@ -831,11 +836,24 @@ experiments:
       source_layers: [8, 12, 17, 22, 27, 32]
       propagation_layers: [27, 28, 30, 32, 35]
       free_generation: false
-      gpu_authorized: true
+      gpu_authorized: false
       target_cost_usd: 1.00
       hard_stop_cost_usd: 2.50
     execution:
-      collection: NOT_YET_RUN
+      engineering_gate: GATE11_ENGINEERING_PASS
+      collection: COMPLETE
+      source_activation_rows: 320
+      fixed_sequence_rows: 336
+      source_axis: SOURCE_AXIS_TRANSFER_SUPPORTED
+      control_gain: CONTROL_GAIN_SHIFT_NOT_ESTABLISHED
+      policy_realization: POLICY_REALIZATION_SHIFT_NOT_ESTABLISHED
+      policy_utility: POLICY_UTILITY_DOMAIN_SHIFT_SUPPORTED
+      scientific_classification: GATE11_POLICY_UTILITY_DOMAIN_MISMATCH
+      forensic_audit: GATE11_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN
+      forensic_scalar_max_abs_difference: 4.440892098500626e-16
+      raw_propagation_vectors_complete: false
+      replacement_collection: NOT_RUN
+      runpod_status: STOPPED
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Execute the frozen Gate-11 diagnostics only.
+    next_action: Principal review; Gate 12 and replacement collection are not authorized.

@@ -249,3 +249,15 @@ INTERPRETATION BOUNDARY
 This DEVELOPMENT postmortem localizes candidate domain conditioning. It does
 not establish Q2, optimize a controller, score new semantic responses, or touch
 the confirmatory holdout.
+
+FORENSIC AUDIT
+----------------------------------------------------------------------
+
+`GATE11_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN`
+
+The independent audit reproduced scalar checkpoint aggregation with maximum
+absolute difference 4.44e-16 and independently recovered the same primary
+synthesis. It could not recompute primitive KL/JS or hidden-vector metrics
+because complete propagation logits and hidden-difference vectors were not
+persisted. The original diagnostics are preserved; no replacement collection,
+silent repair, Gate 12, Q2, or holdout access occurred.

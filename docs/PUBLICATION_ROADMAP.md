@@ -2,7 +2,7 @@
 
 This is a branching decision map, not a claim that the project has already
 produced three papers. The current evidence is development-only and now
-includes Gate 10's fixed-controller cross-domain test.
+includes the Gate-11 domain-conditioned postmortem.
 
 ## Program A — Distributed steering of blind spots
 
@@ -68,7 +68,21 @@ audited clean.
 Program A therefore retains strong within-CRUXEval DEVELOPMENT support but is
 downgraded as a domain-general publication program: the present controller is
 better described as domain-conditioned, plausibly tied to program tracing.
-Programs B and C now receive higher priority for explaining why a readable and
-causally effective controller has domain-dependent control gain. The next
-protocol is a domain-conditioned control postmortem draft only. Q2 remains
-closed and the confirmatory holdout remains untouched.
+Gate 11 then found strong representation transfer: the frozen L27 axis had a
+positive character-count careful-minus-direct gap on every selected item and
+the descriptive character-count L27 direction had cosine 0.659 with the frozen
+controller. Finite-displacement diagnostics did not support a downstream-gain
+or policy-realization domain shift under the prospective rules. Historical
+outcomes did support a policy-utility shift: careful-like computation helped
+CRUXEval and harmed character count. Gate 11 did not measure an exact local
+pullback/Fisher metric; KL/JS and hidden displacement are finite-shift control
+diagnostics, while accuracy and G/C/D are task-utility measures.
+
+The primary synthesis is `GATE11_POLICY_UTILITY_DOMAIN_MISMATCH`. Its forensic
+status is bounded by a scientific-integrity concern: full per-checkpoint logits
+and hidden-difference vectors were not persisted, so primitive propagation
+metrics cannot be independently recomputed. Program A remains strong within
+CRUXEval but domain-conditioned. Program B gains evidence from the separation
+between representation, control diagnostics, and utility. Program C remains a
+future hypothesis, not an established Fisher/pullback result. No Gate-12 draft
+is executable until principal review; Q2 and the holdout remain closed.

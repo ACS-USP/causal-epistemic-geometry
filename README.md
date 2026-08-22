@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 10 is accepted as a bounded cross-domain null. Gate 11 is prospectively locked to diagnose source-axis transfer, relative dose, downstream control gain, policy realization, and historical policy utility using prompt activations and fixed historical token sequences only.
+Gate 11 completed prompt-only activation and fixed-sequence diagnostics without free generation. The source axis transferred, while prospective downstream-gain and policy-realization shifts were not established; historical policy utility differed by domain. The primary synthesis is GATE11_POLICY_UTILITY_DOMAIN_MISMATCH. Independent scalar aggregation and synthesis agreed, but incomplete raw propagation-vector persistence yields GATE11_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN and blocks Gate 12.
 
-**Next authorized action:** Execute the frozen Gate-11 prompt-activation and teacher-forcing diagnostics.
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW. No replacement collection or Gate 12 is authorized.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

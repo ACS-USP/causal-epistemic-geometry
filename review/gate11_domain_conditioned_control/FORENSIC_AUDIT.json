@@ -1,0 +1,27 @@
+{
+  "checkpoint_schema_and_finiteness": true,
+  "classification": "GATE11_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN",
+  "classification_agreement": true,
+  "classification_recomputed": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "item_groups": 48,
+  "primary_aggregation_max_abs_difference": 4.440892098500626e-16,
+  "propagation_rows": 336,
+  "propagation_unique_keys": 336,
+  "raw_persistence": {
+    "checkpoint_token_indices": true,
+    "full_vocabulary_baseline_logits": false,
+    "full_vocabulary_condition_logits": false,
+    "hidden_state_difference_vectors": false,
+    "normalization_metadata": true,
+    "per_checkpoint_hidden_displacement_norms": true,
+    "per_checkpoint_scalar_logit_metrics": true,
+    "primitive_metric_recomputation_possible": false,
+    "replacement_collection_run": false,
+    "source_prompt_activations_float32": true
+  },
+  "scientific_result_repaired": false,
+  "sequence_condition_symmetry": true,
+  "source_activation_hashes_valid": true,
+  "source_rows": 320,
+  "source_unique_keys": 320
+}
