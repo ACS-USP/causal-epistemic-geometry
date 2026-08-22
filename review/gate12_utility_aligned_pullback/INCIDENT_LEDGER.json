@@ -1,0 +1,18 @@
+{
+  "incidents": [
+    {
+      "action_class": "B",
+      "affected_outcomes_observed": false,
+      "gate_id": "GATE12_UTILITY_ALIGNED_PULLBACK",
+      "incident": "Torch 2.4 flash SDPA does not implement forward-mode AD",
+      "mathematical_quantity_changed": false,
+      "next_state": "PROSPECTIVE_LOCK",
+      "preserved_items": true,
+      "preserved_directions": true,
+      "preserved_estimands": true,
+      "reason": "SPEC_IMPLEMENTATION_MISMATCH",
+      "repair": "Freeze SDPA math kernel for every full-sequence primal/JVP/finite-difference call",
+      "state": "DIFFERENTIABLE_ENGINEERING"
+    }
+  ]
+}

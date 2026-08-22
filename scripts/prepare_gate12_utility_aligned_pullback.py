@@ -206,7 +206,10 @@ def premortem() -> tuple[str, dict[str, Any]]:
         "classification": "PREMORTEM_PASS",
         "checks": checks,
         "class_a_recoveries": [],
-        "class_b_amendments": [],
+        "class_b_amendments": [
+            "Pre-geometry: froze SDPA math kernel because torch 2.4 flash SDPA lacks "
+            "forward-AD support; mathematical JVP, model, items, directions, and tests unchanged"
+        ],
         "unresolved_scientific_ambiguities": [],
     }
     markdown = "# Gate 12 adversarial premortem\n\nClassification: `PREMORTEM_PASS`\n\n"
@@ -264,6 +267,7 @@ def main() -> int:
         REVIEW / "JVP_ENGINE_SPEC.json",
         {
             "primary": "torch.autograd.forward_ad scalar-alpha JVP",
+            "sdpa_kernel": "math (flash disabled; exact forward AD in torch 2.4)",
             "alpha_origin": 0.0,
             "unit_direction": True,
             "historical_d75_scalar": gate12.D75_SCALAR,
@@ -414,6 +418,12 @@ def main() -> int:
             "holdout": "UNTOUCHED",
         },
         "cost": cost_projection,
+        "prospective_amendment": {
+            "class": "B",
+            "affected_geometry_outputs_existed": False,
+            "change": "SDPA math kernel frozen for exact forward-mode AD",
+            "scientific_definition_changed": False,
+        },
     }
     write_json(REVIEW / "PROTOCOL_LOCK.json", lock)
     (REVIEW / "PROTOCOL_LOCK.md").write_text(

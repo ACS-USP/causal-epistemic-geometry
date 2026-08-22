@@ -144,7 +144,15 @@ class FullSequenceJVP:
         }
 
     def _base_logits(self, tensors: dict[str, Any], alpha: Any, vector: Any) -> Any:
-        with AlphaHook(self.backend, alpha, vector, tensors["intervention_mask"]) as hook:
+        # Torch 2.4 does not implement forward AD for the SDPA flash kernel.
+        # Freeze the mathematically identical SDPA math backend for every
+        # Gate-12 full-sequence primal, JVP, and finite-difference call.
+        with (
+            self.torch.backends.cuda.sdp_kernel(
+                enable_flash=False, enable_math=True, enable_mem_efficient=False
+            ),
+            AlphaHook(self.backend, alpha, vector, tensors["intervention_mask"]) as hook,
+        ):
             output = self.backend.model.model(
                 input_ids=tensors["input_ids"],
                 attention_mask=tensors["attention_mask"],
