@@ -8,11 +8,27 @@
   "huggingface_hub": "0.36.0",
   "gpu": "NVIDIA A40",
   "cloud": "SECURE",
-  "data_center": "EU-SE-1",
-  "pod_id": "54zpaa9kr4w8zq",
+  "execution_segments": [
+    {
+      "data_center": "EU-SE-1",
+      "pod_id": "54zpaa9kr4w8zq",
+      "runtime_seconds": 1177,
+      "final_status": "EXITED"
+    },
+    {
+      "data_center": "CA-MTL-1",
+      "pod_id": "hyznysg9x87ex3",
+      "runtime_seconds": 41299,
+      "final_status": "EXITED",
+      "resume": "exact missing logical keys only"
+    }
+  ],
   "source_commit": "3a1cc739149235a7683ea837972ca9b40b7e8103",
   "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
   "remote_preflight": "PASS",
   "engineering_gate": "GATE10_ENGINEERING_PASS",
-  "runpod_final_status": "EXITED"
+  "collection_rows": 2800,
+  "collection_unique_logical_keys": 2800,
+  "runpod_final_status": "STOPPED",
+  "obsolete_pods": "EXITED; permanent volume deletion was not authorized"
 }

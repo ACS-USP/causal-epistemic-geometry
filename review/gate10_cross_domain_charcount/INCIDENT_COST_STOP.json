@@ -13,7 +13,17 @@
   "projected_generation_cost_usd": 5.331722723337071,
   "hard_ceiling_usd": 5.0,
   "action": "COLLECTION_INTERRUPTED_AND_POD_STOPPED",
-  "resume_authorized": false,
-  "scientific_classification_assigned": false,
+  "resume_authorized": true,
+  "resume_authorization": {
+    "total_hard_ceiling_usd": 6.0,
+    "scope": "exact deterministic completion of missing frozen logical keys",
+    "record": "PRINCIPAL_COST_AMENDMENT.json"
+  },
+  "final_collection_rows": 2800,
+  "final_collection_unique_logical_keys": 2800,
+  "final_incremental_gpu_cost_usd": 5.191511111111112,
+  "final_runpod_status": "STOPPED",
+  "scientific_classification_assigned_after_complete_collection":
+    "GATE10_NO_CROSS_DOMAIN_TRANSFER",
   "next_action": "PRINCIPAL_RESEARCHER_REVIEW"
 }

@@ -533,6 +533,10 @@ def analyze(review: Path) -> dict[str, Any]:
         for name, record in sorted(intervals.items())
     )
     binding = read_json(review / "EXPERIMENT_SOURCE_COMMIT.json")
+    accuracy_gain_recovered = source_summary["accuracy_gain_recovered_fraction"]
+    accuracy_gain_recovered_display = (
+        "N/A" if accuracy_gain_recovered is None else f"{accuracy_gain_recovered:.6f}"
+    )
     report = f"""# Gate 7 — Fresh Single-L27 Replication
 
 Primary classification: `{classification}`.
@@ -602,7 +606,7 @@ classification is mechanically `GATE7_DESTRUCTIVE`.
 - Token-gain fraction recovered by activation controller:
   {source_summary["token_gain_recovered_fraction"]:.6f}
 - Accuracy-gain fraction recovered by activation controller:
-  {source_summary["accuracy_gain_recovered_fraction"]:.6f}
+  {accuracy_gain_recovered_display}
 - Meaningful/textual semantic agreement:
   {source_summary["meaningful_textual_semantic_agreement"]:.6f}
 

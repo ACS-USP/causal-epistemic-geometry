@@ -1,0 +1,93 @@
+{
+  "meaningful:C": {
+    "estimate": -0.012688442211055272,
+    "q025": -0.033216080402010045,
+    "q975": 0.010785646984924612,
+    "resamples": 10000
+  },
+  "meaningful:C_minus_random_max": {
+    "estimate": -0.014409547738693462,
+    "q025": -0.03138222361809046,
+    "q975": -0.00020100502512562782,
+    "resamples": 10000
+  },
+  "meaningful:C_minus_random_mean": {
+    "estimate": -0.006363065326633161,
+    "q025": -0.01885399654522613,
+    "q975": 0.006038198806532638,
+    "resamples": 10000
+  },
+  "meaningful:D": {
+    "estimate": -0.025,
+    "q025": -0.06,
+    "q975": 0.005,
+    "resamples": 10000
+  },
+  "meaningful:D_minus_random_max": {
+    "estimate": -0.055,
+    "q025": -0.1,
+    "q975": -0.015,
+    "resamples": 10000
+  },
+  "meaningful:D_minus_random_mean": {
+    "estimate": -0.02375,
+    "q025": -0.0575,
+    "q975": 0.0075000000000000015,
+    "resamples": 10000
+  },
+  "meaningful:G": {
+    "estimate": -0.01625,
+    "q025": -0.038781249999999975,
+    "q975": 0.010000000000000002,
+    "resamples": 10000
+  },
+  "meaningful:G_minus_random_max": {
+    "estimate": -0.013750000000000002,
+    "q025": -0.03375,
+    "q975": 0.0024999999999999953,
+    "resamples": 10000
+  },
+  "meaningful:G_minus_random_mean": {
+    "estimate": -0.005312499999999994,
+    "q025": -0.0206328125,
+    "q975": 0.010312499999999999,
+    "resamples": 10000
+  },
+  "meaningful:G_norm": {
+    "estimate": -0.375,
+    "finite_resamples": 10000,
+    "q025": -1.7,
+    "q975": 0.1666666666666666,
+    "resamples": 10000
+  },
+  "meaningful:accuracy_change": {
+    "estimate": -0.02749999999999997,
+    "q025": -0.0675,
+    "q975": 0.012500000000000067,
+    "resamples": 10000
+  },
+  "meaningful:commitment_validity_change": {
+    "estimate": 0.0,
+    "q025": -0.007499999999999951,
+    "q975": 0.007499999999999951,
+    "resamples": 10000
+  },
+  "meaningful:damage": {
+    "estimate": 0.10375,
+    "q025": 0.0775,
+    "q975": 0.13125,
+    "resamples": 10000
+  },
+  "meaningful:rescue": {
+    "estimate": 0.07625,
+    "q025": 0.05125,
+    "q975": 0.10375,
+    "resamples": 10000
+  },
+  "meaningful:semantic_evaluability_change": {
+    "estimate": 0.0,
+    "q025": -0.007499999999999951,
+    "q975": 0.007499999999999951,
+    "resamples": 10000
+  }
+}

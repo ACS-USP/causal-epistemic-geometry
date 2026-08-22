@@ -1,0 +1,32 @@
+{
+  "MEANINGFUL_L27_D75": {
+    "G_norm": -0.36111111111111116,
+    "damage_on_correct": 0.12028985507246376,
+    "rescue_efficiency": 0.5545454545454547
+  },
+  "RANDOM_L27_D75_R0": {
+    "G_norm": -0.19444444444444448,
+    "damage_on_correct": 0.1318840579710145,
+    "rescue_efficiency": 0.6090909090909093
+  },
+  "RANDOM_L27_D75_R1": {
+    "G_norm": -0.13888888888888887,
+    "damage_on_correct": 0.15217391304347827,
+    "rescue_efficiency": 0.6272727272727274
+  },
+  "RANDOM_L27_D75_R2": {
+    "G_norm": -0.19444444444444448,
+    "damage_on_correct": 0.1144927536231884,
+    "rescue_efficiency": 0.6090909090909093
+  },
+  "RANDOM_L27_D75_R3": {
+    "G_norm": -0.44444444444444453,
+    "damage_on_correct": 0.14782608695652175,
+    "rescue_efficiency": 0.5272727272727274
+  },
+  "TEXTUAL_CAREFUL_CHARCOUNT_REFERENCE": {
+    "G_norm": 0.27777777777777773,
+    "damage_on_correct": 0.18840579710144928,
+    "rescue_efficiency": 0.7636363636363639
+  }
+}
