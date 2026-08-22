@@ -45,7 +45,7 @@
     0.03,
     0.1
   ],
-  "experiment_source_commit": "2786887e67e7bb889cfbb60cc0c89045a466e4cf",
+  "experiment_source_commit": "0e7e1505a2456c0a78ee9a8ba63d2eaf5f1f8d43",
   "fixture_count": 12,
   "fixtures_sha256": "164bdb9e8d336c0445f9754bb917ad7a9a96caaf20df8f2027300b8495429155",
   "fp32_sequence_thresholds": {
@@ -62,7 +62,7 @@
   "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
   "parameter_rule": "load exact BF16 checkpoint values once; cast those values to FP32",
   "qualified_object": "local directional geometry of the FP32 computational lift of the frozen BF16-valued Qwen3-8B parameters",
-  "runner_sha256": "cf87932871c3f40611d37485f3b02bfea43c1fcbf4253f84f1e91ec99317684b",
+  "runner_sha256": "0c13f82e394f8ac928996d62d02d1cc4502a2370c4ec694e01a2ea66208e644c",
   "scientific_firewall": {
     "free_generation": false,
     "historical_outcomes": false,
