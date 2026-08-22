@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 12 stopped at the differentiable engineering gate. Two exact autograd JVP implementations agreed, but the frozen BF16 finite-difference, local-KL, and full-sequence/KV equivalence criteria failed. No scientific geometry was collected and historical outcomes remained sealed.
+Gate 12.1 prospectively qualifies sequence semantics, the FP32 computational lift, exact directional derivatives, Fisher/Hessian identity, utility derivatives, and local finite-difference behavior on synthetic engineering fixtures only.
 
-- Workstream: `GATE12_UTILITY_ALIGNED_PULLBACK`
+- Workstream: `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
+- GPU work authorized: `true`
 - New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the Gate-12 JVP engine-failure closeout.
+- Next authorized action: Run the frozen Gate-12.1 numerical qualification without scientific items or historical-outcome access.
 
 ## Scientific program
 
@@ -47,16 +47,17 @@ Gate 12 stopped at the differentiable engineering gate. Two exact autograd JVP i
 | `GATE10_CROSS_DOMAIN_CHARCOUNT` | `COMPLETE_DEVELOPMENT_NO_TRANSFER` | On 200 fresh FRESH_PSEUDOWORD_LONG items, baseline opportunity passed with accuracy 0.8625 and B00=0.045. The exact CRUXEval-derived L27-D75 controller was safe but did not transfer specific error control: G=-0.01625, C=-0.01230, D=-0.025, with rescue below damage and all three estimands below the random-controller mean. The textual careful source also did not replicate under its frozen rule. The independent forensic audit was clean. Gate 11 is drafted only; Q2 and holdout remain closed. |
 | `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION` | `COMPLETE_DEVELOPMENT_FORENSIC_REPLICATION` | Gate 11.1 reused the immutable Gate 11 source selections, fixed baseline sequences, controller, dose, layer, random bank, conditions, and checkpoints. It performed no free generation or semantic evaluation. Full propagation logits and hidden-difference vectors were persisted; the independent audit agreed exactly with the primary recomputation. The synthesis remains GATE11_POLICY_UTILITY_DOMAIN_MISMATCH, with the historical result preserved and the forensic artifact concern repaired. |
 | `GATE12_UTILITY_ALIGNED_PULLBACK` | `COMPLETE_DEVELOPMENT_ENGINE_FAILURE` | Exact forward-mode and independent autograd JVPs agreed, but the frozen BF16 finite-difference, local-KL quadratic, and full-sequence/KV-cache engineering criteria did not pass. The run stopped before geometry collection and before historical-outcome reveal. |
+| `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE` | `PROSPECTIVE_ENGINEERING_LOCK` | Twelve synthetic token fixtures and two engineering-only random directions are frozen to localize full-sequence/KV mismatch and qualify an FP32 computational lift. No scientific item, historical outcome, free generation, Q2 analysis, or holdout access is authorized. |
 
 ## Scientific firewall
 
-- `steering`: `GATE12_JVP_ENGINE_FAILURE_CLOSED`
+- `steering`: `GATE12_1_ENGINEERING_ONLY_LOCKED`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE12_JVP_ENGINE_FAILURE_CLOSED`
+- `current_task`: `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_LOCKED`
 - `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement

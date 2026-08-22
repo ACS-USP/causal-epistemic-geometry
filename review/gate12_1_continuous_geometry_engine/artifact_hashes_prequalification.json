@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "ENGINEERING_DIRECTIONS.npz": {
+      "bytes": 63227,
+      "sha256": "ae4b895bc373f72714e2cbccd681e1ceb8aa0dcaf8035d65a1e6c33f15b87c69"
+    },
+    "ENGINEERING_FIXTURES.json": {
+      "bytes": 20983,
+      "sha256": "164bdb9e8d336c0445f9754bb917ad7a9a96caaf20df8f2027300b8495429155"
+    },
+    "ENGINE_MATRIX.json": {
+      "bytes": 1222,
+      "sha256": "0d79b4fb4dffb42f31e9829952decf093a9b0bba96c1344e2bbbca18c5a9048d"
+    },
+    "PREMORTEM.json": {
+      "bytes": 790,
+      "sha256": "2da72d501d18edccc65f3fad89e6a3aaeb3ff987ece7fbc173cebbb984fa7e79"
+    },
+    "PREMORTEM.md": {
+      "bytes": 786,
+      "sha256": "61bf8d02b3ad2ab734695f71bd9e886c401b996cf183841abc21a926b71af7db"
+    },
+    "PROTOCOL_LOCK.json": {
+      "bytes": 2377,
+      "sha256": "f36bbe18eef8a7978e5cb90ef886553a83046acfc3cfa7c1957d853c38a02c1a"
+    },
+    "PROTOCOL_LOCK.md": {
+      "bytes": 288,
+      "sha256": "3caf341b34d303c3828921ece2e36038ca0ddd7f31423f007da3f6e10f6018da"
+    }
+  },
+  "experiment_source_commit": "0bce22f35233eeee0f63f8e858f0452ed5616c7c"
+}

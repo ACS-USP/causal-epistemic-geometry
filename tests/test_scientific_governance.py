@@ -56,6 +56,8 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_COMPLETE",
         "GATE12_UTILITY_ALIGNED_PULLBACK",
         "GATE12_UTILITY_ALIGNED_PULLBACK_COMPLETE",
+        "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
+        "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -71,7 +73,8 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE8_L27_DOSE_CALIBRATION",
             "GATE9_SELECTED_D75_EVALUATION",
             "GATE10_CROSS_DOMAIN_CHARCOUNT",
-            "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
+                "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
+                "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
         }
     )
     assert state["scientific_firewall"]["steering"] in {
@@ -92,6 +95,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE",
         "GATE11_1_FORENSIC_REPLICATION_CLOSED",
         "GATE12_JVP_ENGINE_FAILURE_CLOSED",
+        "GATE12_1_ENGINEERING_ONLY_LOCKED",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

@@ -19,29 +19,30 @@ project:
     utility?
 
 current:
-  workstream: GATE12_UTILITY_ALIGNED_PULLBACK
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_ENGINE_FAILURE_CLOSEOUT
-  source_commit: 9843fa9ec4ef2a734e60587ef31abca3440f200e
+  workstream: GATE12_1_CONTINUOUS_GEOMETRY_ENGINE
+  lifecycle: PROSPECTIVE_LOCK
+  stage: ENGINEERING_NUMERICAL_QUALIFICATION
+  source_commit: 0bce22f35233eeee0f63f8e858f0452ed5616c7c
   summary: >-
-    Gate 12 stopped at the differentiable engineering gate. Two exact autograd
-    JVP implementations agreed, but the frozen BF16 finite-difference,
-    local-KL, and full-sequence/KV equivalence criteria failed. No scientific
-    geometry was collected and historical outcomes remained sealed.
+    Gate 12.1 prospectively qualifies sequence semantics, the FP32
+    computational lift, exact directional derivatives, Fisher/Hessian identity,
+    utility derivatives, and local finite-difference behavior on synthetic
+    engineering fixtures only.
   next_authorized_action: >-
-    Principal review of the Gate-12 JVP engine-failure closeout.
+    Run the frozen Gate-12.1 numerical qualification without scientific items or
+    historical-outcome access.
   runpod: STOPPED
-  gpu_work_authorized: false
+  gpu_work_authorized: true
   new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE12_JVP_ENGINE_FAILURE_CLOSED
+  steering: GATE12_1_ENGINEERING_ONLY_LOCKED
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE12_JVP_ENGINE_FAILURE_CLOSED
+  current_task: GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_LOCKED
   free_generation: NOT_AUTHORIZED
 
 instrument_history:
@@ -239,6 +240,28 @@ instrument_history:
       runpod_status: TERMINATED
       cost_usd: 0.0893
     next_action: Principal review; no Gate 13 execution authorized.
+  - id: GATE12_1_CONTINUOUS_GEOMETRY_ENGINE
+    status: PROSPECTIVE_ENGINEERING_LOCK
+    conclusion: >-
+      Twelve synthetic token fixtures and two engineering-only random directions
+      are frozen to localize full-sequence/KV mismatch and qualify an FP32
+      computational lift. No scientific item, historical outcome, free
+      generation, Q2 analysis, or holdout access is authorized.
+    source_commit: 0bce22f35233eeee0f63f8e858f0452ed5616c7c
+    artifact: review/gate12_1_continuous_geometry_engine/
+    holdout_status: UNTOUCHED
+    gpu_authorized: true
+    free_generation: NOT_AUTHORIZED
+    q2: NOT_RUN
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      synthetic_fixtures: 12
+      engineering_directions: 2
+      scientific_items: 0
+      historical_outcomes_revealed: false
+      target_cost_usd: 0.50
+      hard_ceiling_usd: 1.50
+    next_action: Frozen numerical qualification only; scientific Gate 12 remains closed.
 
 workflow_regimes:
   EXPLORATION:

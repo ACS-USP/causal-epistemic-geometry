@@ -960,3 +960,38 @@ experiments:
       q2: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; Gate 13 draft is not authorized for execution.
+
+  - id: GATE12_1_CONTINUOUS_GEOMETRY_ENGINE
+    version: GATE-12.1
+    stage: ENGINEERING_NUMERICAL_QUALIFICATION
+    question: >-
+      Can sequence semantics and exact local derivatives be numerically
+      qualified for an FP32 computational lift of frozen BF16-valued Qwen3-8B
+      parameters before scientific geometry is retried?
+    instrument: Synthetic token fixtures with exact JVP/VJP/Hessian/KL identities
+    model_policy: Qwen3-8B frozen BF16 values, BF16 historical and FP32-lift cells
+    status: PROSPECTIVE_ENGINEERING_LOCK
+    outcome: NOT_YET_QUALIFIED
+    scientific_interpretation: >-
+      Engineering and numerical analysis only. No scientific geometry,
+      historical semantic outcome, free generation, Q2, or holdout access.
+    source_commit: 0bce22f35233eeee0f63f8e858f0452ed5616c7c
+    artifact: review/gate12_1_continuous_geometry_engine/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE12_UTILITY_ALIGNED_PULLBACK
+    lock:
+      synthetic_fixtures: 12
+      engineering_directions: 2
+      scientific_items: 0
+      exact_jvp_required: true
+      free_generation: false
+      gpu_authorized: true
+      target_cost_usd: 0.50
+      hard_stop_cost_usd: 1.50
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      historical_outcomes_revealed: false
+      q2: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Run the frozen engineering qualification only.

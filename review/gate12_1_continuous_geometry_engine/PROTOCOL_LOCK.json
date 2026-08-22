@@ -1,0 +1,76 @@
+{
+  "alphas": [
+    0.0,
+    0.01,
+    0.1,
+    97.85168930581241
+  ],
+  "bf16_bridge_thresholds": {
+    "median_js": 0.0001,
+    "median_target_logp_abs": 0.02,
+    "p95_js": 0.005,
+    "top1": 0.99
+  },
+  "classifications": [
+    "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_QUALIFIED",
+    "GATE12_1_SEQUENCE_SEMANTICS_BUG_REPAIRED_AND_ENGINE_QUALIFIED",
+    "GATE12_1_SEQUENCE_SEMANTICS_BUG_FOUND_NOT_REPAIRED",
+    "GATE12_1_FP32_ENGINE_QUALIFIED_BF16_BRIDGE_FAILED",
+    "GATE12_1_DERIVATIVE_ENGINE_NOT_QUALIFIED",
+    "GATE12_1_NUMERICAL_ANALYSIS_INCONCLUSIVE",
+    "GATE12_1_ENGINE_FAILURE"
+  ],
+  "cost": {
+    "hard_ceiling_usd": 1.5,
+    "target_usd": 0.5
+  },
+  "derivative_thresholds": {
+    "finite_jvp_cosine": 0.999,
+    "finite_relative": 0.05,
+    "finite_window_length": 3,
+    "fisher_hessian_relative": 0.01,
+    "jvp_cosine": 0.99999,
+    "jvp_relative_norm": 0.005,
+    "utility_autograd_relative": 0.01,
+    "vjp_duality_relative": 0.0001
+  },
+  "directions_sha256": "ae4b895bc373f72714e2cbccd681e1ceb8aa0dcaf8035d65a1e6c33f15b87c69",
+  "engine_matrix_sha256": "0d79b4fb4dffb42f31e9829952decf093a9b0bba96c1344e2bbbca18c5a9048d",
+  "epsilons": [
+    0.0001,
+    0.0003,
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "experiment_source_commit": "0bce22f35233eeee0f63f8e858f0452ed5616c7c",
+  "fixture_count": 12,
+  "fixtures_sha256": "164bdb9e8d336c0445f9754bb917ad7a9a96caaf20df8f2027300b8495429155",
+  "fp32_sequence_thresholds": {
+    "max_target_logp_abs": 0.001,
+    "median_js": 1e-08,
+    "median_logit_cosine": 0.999999,
+    "median_target_logp_abs": 1e-05,
+    "p99_js": 1e-06,
+    "top1": 1.0
+  },
+  "historical_outcomes_revealed": false,
+  "layer": 27,
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "parameter_rule": "load exact BF16 checkpoint values once; cast those values to FP32",
+  "qualified_object": "local directional geometry of the FP32 computational lift of the frozen BF16-valued Qwen3-8B parameters",
+  "runner_sha256": "59cf76f06a02cb443d79921a173e3fe872f591bc7152d0982d19b85e855ad718",
+  "scientific_firewall": {
+    "free_generation": false,
+    "historical_outcomes": false,
+    "holdout": "UNTOUCHED",
+    "q2": "NOT_RUN",
+    "scientific_gate12_collection": false,
+    "semantic_evaluation": false
+  },
+  "scientific_item_count": 0,
+  "status": "FROZEN_PRE_QUALIFICATION"
+}
