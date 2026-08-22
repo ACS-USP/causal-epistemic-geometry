@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 10 passed its prospective, environment, generator, parser, and controller-engineering gates. Collection preserved 10 of 2,800 scheduled rows before operational timing projected US$5.33 generation cost alone, above the US$5.00 hard ceiling. The pod was stopped and no scientific outcomes or condition metrics were inspected. Gate 10 has no scientific classification and requires principal review before any resume.
+Gate 10 passed its prospective, environment, generator, parser, and controller-engineering gates. Collection preserved 10 of 2,800 scheduled rows before operational timing projected US$5.33 generation cost alone, above the original US$5.00 hard ceiling. No outcomes were inspected. The principal then authorized an operational budget expansion to US$6.00 and exact deterministic resume of only the missing frozen logical keys.
 
-**Next authorized action:** Principal-researcher review of the Gate-10 cost stop. Do not resume, redesign, analyze the partial outcomes, or execute Gate 11 automatically.
+**Next authorized action:** Resume and complete only the original frozen Gate-10 schedule, stop the A40, analyze and audit offline, and return for principal review.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

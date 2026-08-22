@@ -736,8 +736,8 @@ experiments:
       four new architecture-matched random controllers?
     instrument: FRESH_PSEUDOWORD_LONG with character-count-semantic-v3
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: BLOCKED_COST_PRE_ANALYSIS
-    outcome: NO_SCIENTIFIC_CLASSIFICATION_INCOMPLETE_COLLECTION
+    status: COLLECTION_RESUME_AUTHORIZED
+    outcome: NOT_YET_COMPLETE
     scientific_interpretation: >-
       Prospective cross-domain DEVELOPMENT replication only. The exact vector,
       dose, layer, timing, generator stratum, evaluator, 200 items, conditions,
@@ -763,18 +763,19 @@ experiments:
       selected_eta: 9.637427952852196
       target_cost_usd: 2.50
       hard_stop_cost_usd: 5.00
-      gpu_authorized: false
+      amended_total_hard_stop_cost_usd: 6.00
+      gpu_authorized: true
     execution:
       engineering_gate: GATE10_ENGINEERING_PASS
-      collection: INCOMPLETE_HARD_COST_RISK
+      collection: RESUME_AUTHORIZED_FROM_ROW_10
       trajectories: 10
       expected_trajectories: 2800
       projected_generation_hours: 12.11755164394789
       projected_generation_cost_usd: 5.331722723337071
       scientific_outcomes_inspected: false
       scientific_classification: NOT_ASSIGNED
-      runpod_status: EXITED
+      runpod_status: START_AUTHORIZED
       gate11: NOT_RUN
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Principal review of cost stop; resume and Gate 11 are unauthorized.
+    next_action: Complete only the frozen Gate-10 schedule, then stop and review.

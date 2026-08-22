@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "classification": "PRINCIPAL_OPERATIONAL_BUDGET_EXPANSION",
+  "authorized_by": "principal",
+  "authorization_text": "Retomar o gate 10 com teto ampliado.",
+  "authorized_before_resume": true,
+  "previous_hard_ceiling_usd": 5.0,
+  "amended_total_hard_ceiling_usd": 6.0,
+  "projected_total_cost_usd": 5.5,
+  "resume_policy": "resume_only_missing_frozen_logical_keys",
+  "existing_rows_preserved": 10,
+  "scientific_semantics_changed": false,
+  "controller_changed": false,
+  "dose_changed": false,
+  "items_changed": false,
+  "conditions_changed": false,
+  "seeds_changed": false,
+  "schedule_changed": false,
+  "parser_changed": false,
+  "estimands_changed": false,
+  "thresholds_changed": false,
+  "execution_source_commit_remains": "3a1cc739149235a7683ea837972ca9b40b7e8103"
+}

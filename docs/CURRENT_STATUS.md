@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 10 passed its prospective, environment, generator, parser, and controller-engineering gates. Collection preserved 10 of 2,800 scheduled rows before operational timing projected US$5.33 generation cost alone, above the US$5.00 hard ceiling. The pod was stopped and no scientific outcomes or condition metrics were inspected. Gate 10 has no scientific classification and requires principal review before any resume.
+Gate 10 passed its prospective, environment, generator, parser, and controller-engineering gates. Collection preserved 10 of 2,800 scheduled rows before operational timing projected US$5.33 generation cost alone, above the original US$5.00 hard ceiling. No outcomes were inspected. The principal then authorized an operational budget expansion to US$6.00 and exact deterministic resume of only the missing frozen logical keys.
 
-- Workstream: `GATE10_CROSS_DOMAIN_CHARCOUNT_BLOCKED_COST`
-- RunPod: `EXITED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal-researcher review of the Gate-10 cost stop. Do not resume, redesign, analyze the partial outcomes, or execute Gate 11 automatically.
+- Workstream: `GATE10_CROSS_DOMAIN_CHARCOUNT`
+- RunPod: `START_AUTHORIZED`
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Resume and complete only the original frozen Gate-10 schedule, stop the A40, analyze and audit offline, and return for principal review.
 
 ## Scientific program
 
@@ -47,13 +47,13 @@ Gate 10 passed its prospective, environment, generator, parser, and controller-e
 
 ## Scientific firewall
 
-- `steering`: `GATE10_CROSS_DOMAIN_CHARCOUNT_INCOMPLETE_COST_STOP`
+- `steering`: `GATE10_CROSS_DOMAIN_CHARCOUNT_RESUME_AUTHORIZED`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `PRINCIPAL_RESEARCHER_REVIEW`
+- `current_task`: `GATE10_CROSS_DOMAIN_CHARCOUNT`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
