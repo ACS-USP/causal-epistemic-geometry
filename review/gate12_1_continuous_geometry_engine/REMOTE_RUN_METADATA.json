@@ -1,0 +1,16 @@
+{
+  "cuda": "12.4",
+  "elapsed_seconds": 480.40813660621643,
+  "fp32_attention": "eager",
+  "free_generation_outputs": 0,
+  "gpu": "NVIDIA A40",
+  "historical_outcomes_revealed": false,
+  "model": "Qwen/Qwen3-8B",
+  "parameter_hash_bf16": "5ca5cc2402f157ed725f321122e66a4639b2d96daa1abc464bda1458906b586b",
+  "parameter_hash_fp32_lift": "3ff553b1b0a9060da408b2ea1f2162b463a4e94e6d9002bcad780dbb3bc470aa",
+  "parameter_hash_fp32_roundtrip_bf16": "5ca5cc2402f157ed725f321122e66a4639b2d96daa1abc464bda1458906b586b",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "scientific_items_processed": 0,
+  "source_commit": "0e7e1505a2456c0a78ee9a8ba63d2eaf5f1f8d43",
+  "torch": "2.4.1+cu124"
+}

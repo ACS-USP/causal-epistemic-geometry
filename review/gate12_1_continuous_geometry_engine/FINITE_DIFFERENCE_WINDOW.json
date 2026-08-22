@@ -1,0 +1,56 @@
+{
+  "convergence_degradation_pattern_pass": false,
+  "pass": false,
+  "per_epsilon_pooled_medians": [
+    {
+      "epsilon": 0.0001,
+      "fisher_relative_error": 20.524959723099315,
+      "jvp_cosine": 0.23588444670333297,
+      "local_kl_relative_error": 72.6794850409196,
+      "utility_relative_error": 8.425238152283764
+    },
+    {
+      "epsilon": 0.0003,
+      "fisher_relative_error": 3.8806023761100183,
+      "jvp_cosine": 0.5999737567623755,
+      "local_kl_relative_error": 10.685918872788942,
+      "utility_relative_error": 2.654723877999997
+    },
+    {
+      "epsilon": 0.001,
+      "fisher_relative_error": 0.7384295158426332,
+      "jvp_cosine": 0.8532738273812376,
+      "local_kl_relative_error": 2.009220295097947,
+      "utility_relative_error": 0.6526286837132126
+    },
+    {
+      "epsilon": 0.003,
+      "fisher_relative_error": 0.06630237660900759,
+      "jvp_cosine": 0.9743991849520636,
+      "local_kl_relative_error": 0.43988868783587626,
+      "utility_relative_error": 0.5028024261208569
+    },
+    {
+      "epsilon": 0.01,
+      "fisher_relative_error": 0.01961536718557687,
+      "jvp_cosine": 0.9968950127497085,
+      "local_kl_relative_error": 0.1013900855492417,
+      "utility_relative_error": 0.10250736420346157
+    },
+    {
+      "epsilon": 0.03,
+      "fisher_relative_error": 0.006039606563788497,
+      "jvp_cosine": 0.9996832002635833,
+      "local_kl_relative_error": 0.01628591347044378,
+      "utility_relative_error": 0.04739782166685057
+    },
+    {
+      "epsilon": 0.1,
+      "fisher_relative_error": 0.0011611672950465448,
+      "jvp_cosine": 0.9999646023324251,
+      "local_kl_relative_error": 0.002549070450762734,
+      "utility_relative_error": 0.017930027425533505
+    }
+  ],
+  "three_consecutive_window": null
+}

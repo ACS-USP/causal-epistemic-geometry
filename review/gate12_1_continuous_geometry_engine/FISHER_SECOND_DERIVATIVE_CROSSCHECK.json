@@ -1,0 +1,78 @@
+{
+  "fixtures": [
+    {
+      "fixture_id": "G12_1_FIXTURE_00",
+      "q_hessian": 1.1103596989414655e-05,
+      "q_jvp": 1.1103599683249083e-05,
+      "relative_error": 2.426091092476515e-07
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_01",
+      "q_hessian": 2.219271209469298e-06,
+      "q_jvp": 2.219271151485e-06,
+      "relative_error": 2.6127630985091958e-08
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_02",
+      "q_hessian": 3.515443495416548e-06,
+      "q_jvp": 3.5154427697866826e-06,
+      "relative_error": 2.0641208321676814e-07
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_03",
+      "q_hessian": 1.595654794073198e-05,
+      "q_jvp": 1.5956630242384513e-05,
+      "relative_error": 5.15783415941289e-06
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_04",
+      "q_hessian": 2.8283775463933125e-06,
+      "q_jvp": 2.828376877281623e-06,
+      "relative_error": 2.365709092443611e-07
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_05",
+      "q_hessian": 3.9674941945122555e-06,
+      "q_jvp": 3.96749346750214e-06,
+      "relative_error": 1.832416667722084e-07
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_06",
+      "q_hessian": 2.420890723442426e-06,
+      "q_jvp": 2.420890816202209e-06,
+      "relative_error": 3.831638433975454e-08
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_07",
+      "q_hessian": 3.180907697242219e-06,
+      "q_jvp": 3.180906798305972e-06,
+      "relative_error": 2.8260376810656475e-07
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_08",
+      "q_hessian": 7.060253892632318e-07,
+      "q_jvp": 7.060251017646808e-07,
+      "relative_error": 4.072072653746269e-07
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_09",
+      "q_hessian": 2.372910785197746e-06,
+      "q_jvp": 2.3729105450268478e-06,
+      "relative_error": 1.0121363350227733e-07
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_10",
+      "q_hessian": 2.1111322894284967e-06,
+      "q_jvp": 2.11113214696982e-06,
+      "relative_error": 6.747975340888673e-08
+    },
+    {
+      "fixture_id": "G12_1_FIXTURE_11",
+      "q_hessian": 4.223226824251469e-06,
+      "q_jvp": 4.223227905569199e-06,
+      "relative_error": 2.56040581721783e-07
+    }
+  ],
+  "maximum_relative_error": 5.15783415941289e-06,
+  "pass": true
+}

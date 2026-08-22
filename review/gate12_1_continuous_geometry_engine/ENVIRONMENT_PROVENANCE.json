@@ -1,0 +1,23 @@
+{
+  "accelerate": "1.14.0",
+  "attention_fp32": "eager/manual attention",
+  "cloud": "SECURE",
+  "cuda_runtime": "12.4",
+  "data_center": "CA-MTL-1",
+  "effective_checkout": "5d49f6f",
+  "environment_profile": "CORE_QWEN",
+  "gpu": "NVIDIA A40 48GB",
+  "huggingface_hub": "0.36.0",
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "numpy": "<3",
+  "parameter_hash_bf16": "5ca5cc2402f157ed725f321122e66a4639b2d96daa1abc464bda1458906b586b",
+  "parameter_hash_fp32_lift": "3ff553b1b0a9060da408b2ea1f2162b463a4e94e6d9002bcad780dbb3bc470aa",
+  "parameter_roundtrip_verified": true,
+  "python": "3.11.10",
+  "remote_preflight": "PASS",
+  "runpod_final_status": "TERMINATED",
+  "source_commit": "0e7e1505a2456c0a78ee9a8ba63d2eaf5f1f8d43",
+  "torch": "2.4.1+cu124",
+  "transformers": "4.57.1"
+}

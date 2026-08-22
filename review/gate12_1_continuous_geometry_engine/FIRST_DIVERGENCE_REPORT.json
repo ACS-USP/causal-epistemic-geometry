@@ -1,0 +1,39 @@
+{
+  "captured_fixtures": [
+    "G12_1_FIXTURE_00",
+    "G12_1_FIXTURE_07",
+    "G12_1_FIXTURE_09",
+    "G12_1_FIXTURE_10"
+  ],
+  "first_exceedance": {
+    "BF16": {
+      "component": "mlp",
+      "dtype": "BF16",
+      "fixture_id": "G12_1_FIXTURE_07",
+      "layer": "0",
+      "max_abs_difference": "0.015625",
+      "rms_difference": "0.0008990354677140253",
+      "token_index": "0"
+    },
+    "FP32": {
+      "component": "mlp",
+      "dtype": "FP32",
+      "fixture_id": "G12_1_FIXTURE_07",
+      "layer": "0",
+      "max_abs_difference": "2.09808349609375e-05",
+      "rms_difference": "5.963124626361969e-07",
+      "token_index": "0"
+    }
+  },
+  "semantic_checks": {
+    "cache_position": "same absolute positions as position_ids",
+    "causal_mask_shape": "full attention length for sequential; full sequence for E2/E4",
+    "continuation_lengths_match": true,
+    "intervention_mask": "prompt_last through every continuation input",
+    "output_positions": "prompt_last through every continuation input",
+    "position_ids": "absolute zero-based sequence positions",
+    "prompt_lengths_match": true,
+    "semantic_bug_found": false
+  },
+  "source_classification": "mixed BF16 kernel, cache/reduction-order, and dtype effects; no sequence-semantic bug"
+}

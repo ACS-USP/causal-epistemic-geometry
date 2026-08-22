@@ -1,0 +1,14 @@
+{
+  "bf16_bridge_pass": false,
+  "classification": "GATE12_1_DERIVATIVE_ENGINE_NOT_QUALIFIED",
+  "exact_jvp_pass": true,
+  "finite_difference_window_pass": false,
+  "fisher_hessian_pass": true,
+  "fp32_sequence_pass": true,
+  "historical_outcomes_revealed": false,
+  "jvp_vjp_pass": true,
+  "local_kl_quadratic_pass": false,
+  "qualified_geometry_object": null,
+  "scientific_items_processed": 0,
+  "utility_derivative_pass": true
+}

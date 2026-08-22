@@ -1,0 +1,67 @@
+{
+  "fixtures": [
+    {
+      "cosine": 0.9999999999999256,
+      "fixture_id": "G12_1_FIXTURE_00",
+      "relative_norm_difference": 0.0
+    },
+    {
+      "cosine": 0.9999999999999677,
+      "fixture_id": "G12_1_FIXTURE_01",
+      "relative_norm_difference": 6.394000074937681e-08
+    },
+    {
+      "cosine": 0.9999999999998263,
+      "fixture_id": "G12_1_FIXTURE_02",
+      "relative_norm_difference": 7.736319016088759e-08
+    },
+    {
+      "cosine": 0.9999999999989938,
+      "fixture_id": "G12_1_FIXTURE_03",
+      "relative_norm_difference": 0.0
+    },
+    {
+      "cosine": 0.9999999999996845,
+      "fixture_id": "G12_1_FIXTURE_04",
+      "relative_norm_difference": 7.6027467507571e-08
+    },
+    {
+      "cosine": 0.999999999999933,
+      "fixture_id": "G12_1_FIXTURE_05",
+      "relative_norm_difference": 0.0
+    },
+    {
+      "cosine": 0.9999999999998284,
+      "fixture_id": "G12_1_FIXTURE_06",
+      "relative_norm_difference": 0.0
+    },
+    {
+      "cosine": 0.9999999999995546,
+      "fixture_id": "G12_1_FIXTURE_07",
+      "relative_norm_difference": 2.2786668249580554e-07
+    },
+    {
+      "cosine": 0.9999999999999208,
+      "fixture_id": "G12_1_FIXTURE_08",
+      "relative_norm_difference": 6.25249005416407e-08
+    },
+    {
+      "cosine": 0.9999999999995282,
+      "fixture_id": "G12_1_FIXTURE_09",
+      "relative_norm_difference": 9.844545762321754e-08
+    },
+    {
+      "cosine": 0.9999999999996343,
+      "fixture_id": "G12_1_FIXTURE_10",
+      "relative_norm_difference": 0.0
+    },
+    {
+      "cosine": 0.9999999999996099,
+      "fixture_id": "G12_1_FIXTURE_11",
+      "relative_norm_difference": 2.0815328074548847e-07
+    }
+  ],
+  "maximum_relative_norm_difference": 2.2786668249580554e-07,
+  "minimum_cosine": 0.9999999999989938,
+  "pass": true
+}

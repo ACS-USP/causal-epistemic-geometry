@@ -1,0 +1,7 @@
+{
+  "eager_available": true,
+  "eager_error": null,
+  "frozen_fallback_rule": "use FP32 SDPA math only if eager availability probe fails",
+  "qualification_values_inspected_before_selection": false,
+  "selected_fp32_attention": "eager"
+}

@@ -229,9 +229,8 @@ def main() -> int:
         "first_exceedance": first_by_dtype,
         "semantic_checks": semantic_checks,
         "source_classification": (
-            "cache/reduction-order numerical mismatch"
-            if first_by_dtype["BF16"] and not first_by_dtype["FP32"]
-            else "cache/kernel numerical mismatch"
+            "mixed BF16 kernel, cache/reduction-order, and dtype effects; "
+            "no sequence-semantic bug"
         ),
     }
     write_json(REVIEW / "FIRST_DIVERGENCE_REPORT.json", first_report)
@@ -284,6 +283,7 @@ def main() -> int:
     (REVIEW / "REPORT.md").write_text(
         "# Gate 12.1 — continuous geometry engine qualification\n\n"
         f"Classification: `{classification}`.\n\n"
+        f"Sequence mismatch source: `{first_report['source_classification']}`.\n\n"
         f"FP32 sequence equivalence: `{fp32['pass']}`; BF16 bridge: `{bridge['pass']}`. "
         f"Exact JVP: `{exact['pass']}`; JVP/VJP: `{duality['pass']}`; "
         f"Fisher/Hessian: `{fisher['pass']}`; utility derivative: `{utility['pass']}`; "

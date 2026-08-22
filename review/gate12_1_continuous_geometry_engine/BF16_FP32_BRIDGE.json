@@ -1,0 +1,23 @@
+{
+  "d75_diagnostic": {
+    "max_abs_logit_difference": 0.7979698181152344,
+    "max_target_logp_abs_difference": 0.1130383672516011,
+    "median_logit_cosine": 0.9999874718258734,
+    "median_target_logp_abs_difference": 0.008419450556051089,
+    "median_vocabulary_js": 4.541128016333245e-05,
+    "p95_vocabulary_js": 0.00013398030768319895,
+    "p99_vocabulary_js": 0.00033351542516528714,
+    "rows": 266,
+    "top1_agreement": 0.9774436090225563
+  },
+  "max_abs_logit_difference": 0.7839336395263672,
+  "max_target_logp_abs_difference": 0.2449616258687417,
+  "median_logit_cosine": 0.9999889930205919,
+  "median_target_logp_abs_difference": 0.008523515079813748,
+  "median_vocabulary_js": 4.259856073202406e-05,
+  "p95_vocabulary_js": 0.00011069854571642786,
+  "p99_vocabulary_js": 0.0002884255567043422,
+  "pass": false,
+  "rows": 266,
+  "top1_agreement": 0.9774436090225563
+}

@@ -1,0 +1,12 @@
+{
+  "max_abs_logit_difference": 7.62939453125e-05,
+  "max_target_logp_abs_difference": 6.190531144678602e-05,
+  "median_logit_cosine": 0.9999999999994678,
+  "median_target_logp_abs_difference": 1.5717519135094449e-06,
+  "median_vocabulary_js": 5.003293256787355e-12,
+  "p95_vocabulary_js": 1.277063102632962e-11,
+  "p99_vocabulary_js": 2.5062196372242113e-11,
+  "pass": true,
+  "rows": 532,
+  "top1_agreement": 1.0
+}

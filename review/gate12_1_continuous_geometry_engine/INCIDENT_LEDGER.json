@@ -15,6 +15,13 @@
       "resolution": "Use the accepted backend enum plain; the runner consumes explicit token IDs and never renders prompts.",
       "scientific_semantics_changed": false,
       "status": "RESOLVED_PRE_QUALIFICATION"
+    },
+    {
+      "class": "A",
+      "id": "GATE12_1_REMOTE_RSYNC_UNAVAILABLE",
+      "resolution": "Recovered the complete engineering directory with SCP and verified all twelve raw derivative archives locally.",
+      "scientific_semantics_changed": false,
+      "status": "RESOLVED_POST_COLLECTION"
     }
   ]
 }
