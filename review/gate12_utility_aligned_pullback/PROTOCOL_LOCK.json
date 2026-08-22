@@ -27,7 +27,7 @@
     "target_usd": 1.75
   },
   "experiment_id": "GATE12_UTILITY_ALIGNED_PULLBACK",
-  "experiment_source_commit": "074fd69351d72579fbf987a6a6e77da5aa351e35",
+  "experiment_source_commit": "9843fa9ec4ef2a734e60587ef31abca3440f200e",
   "firewall": {
     "free_generation": "NOT_AUTHORIZED",
     "historical_outcomes_before_geometry_freeze": "FORBIDDEN",
@@ -49,6 +49,7 @@
     "intervention_positions": "final prompt and every continuation input token",
     "layer": 27,
     "primary": "torch.autograd.forward_ad scalar-alpha JVP",
+    "sdpa_kernel": "math (flash disabled; exact forward AD in torch 2.4)",
     "selected_outputs": "positions predicting frozen continuation targets/checkpoints",
     "unit_direction": true
   },
@@ -61,6 +62,12 @@
     "quantization": "none",
     "revision": "b968826d9c46dd6066d109eabc6255188de91218",
     "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "prospective_amendment": {
+    "affected_geometry_outputs_existed": false,
+    "change": "SDPA math kernel frozen for exact forward-mode AD",
+    "class": "B",
+    "scientific_definition_changed": false
   },
   "raw_persistence": "complete float32 baseline/careful logits and JVP vectors, one compressed shard per item/path",
   "schema_version": 1,

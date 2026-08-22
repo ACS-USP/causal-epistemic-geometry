@@ -6,6 +6,7 @@
   "intervention_positions": "final prompt and every continuation input token",
   "layer": 27,
   "primary": "torch.autograd.forward_ad scalar-alpha JVP",
+  "sdpa_kernel": "math (flash disabled; exact forward AD in torch 2.4)",
   "selected_outputs": "positions predicting frozen continuation targets/checkpoints",
   "unit_direction": true
 }

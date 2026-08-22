@@ -930,7 +930,7 @@ experiments:
       This Gate estimates one-dimensional local trajectory pullbacks along
       historical meaningful/random directions. It does not estimate a full
       pullback matrix, Fisher geometry of the model, Q2, or new semantic utility.
-    source_commit: 074fd69351d72579fbf987a6a6e77da5aa351e35
+    source_commit: 9843fa9ec4ef2a734e60587ef31abca3440f200e
     artifact: review/gate12_utility_aligned_pullback/
     cost_usd: null
     holdout_status: UNTOUCHED
@@ -951,6 +951,7 @@ experiments:
       lifecycle: PROSPECTIVE_LOCK
       geometry_frozen: false
       historical_outcomes_revealed: false
+      class_b_amendment: SDPA_MATH_KERNEL_FOR_EXACT_FORWARD_AD
       q2: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Pass differentiable engineering and collect outcome-blind geometry.

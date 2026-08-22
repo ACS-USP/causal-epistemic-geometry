@@ -22,7 +22,7 @@ current:
   workstream: GATE12_UTILITY_ALIGNED_PULLBACK
   lifecycle: PROSPECTIVE_LOCK
   stage: DEVELOPMENT_GEOMETRY
-  source_commit: 074fd69351d72579fbf987a6a6e77da5aa351e35
+  source_commit: 9843fa9ec4ef2a734e60587ef31abca3440f200e
   summary: >-
     Gate 12 prospectively freezes exact local sustained-control JVPs,
     one-dimensional categorical Fisher energy, and correct-answer likelihood
@@ -221,7 +221,7 @@ instrument_history:
       before geometry collection. Historical semantic outcomes remain sealed
       until GEOMETRY_FREEZE; no free generation, new controller, dose, Q2, or
       holdout access is authorized.
-    source_commit: 074fd69351d72579fbf987a6a6e77da5aa351e35
+    source_commit: 9843fa9ec4ef2a734e60587ef31abca3440f200e
     artifact: review/gate12_utility_aligned_pullback/
     holdout_status: UNTOUCHED
     gpu_authorized: true
@@ -233,6 +233,7 @@ instrument_history:
       utility_prediction_items: 64
       geometry_logical_rows: 560
       historical_outcomes_revealed: false
+      class_b_amendment: SDPA_MATH_KERNEL_FOR_EXACT_FORWARD_AD
     next_action: Differentiable engineering gate, then frozen geometry collection only.
 
 workflow_regimes:

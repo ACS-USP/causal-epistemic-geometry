@@ -15,7 +15,9 @@
     "utility_functional": "globally canonical minimal correct FINAL continuation"
   },
   "class_a_recoveries": [],
-  "class_b_amendments": [],
+  "class_b_amendments": [
+    "Pre-geometry: froze SDPA math kernel because torch 2.4 flash SDPA lacks forward-AD support; mathematical JVP, model, items, directions, and tests unchanged"
+  ],
   "classification": "PREMORTEM_PASS",
   "unresolved_scientific_ambiguities": []
 }
