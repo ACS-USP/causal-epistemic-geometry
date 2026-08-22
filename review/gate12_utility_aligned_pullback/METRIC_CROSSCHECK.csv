@@ -1,0 +1,7 @@
+metric,primary_value,independent_value,agreement,status
+exact_jvp_method,torch.autograd.forward_ad,torch.autograd.functional.jvp,NA,EXACT_AUTODIFF_METHODS
+jvp_vector_cosine,1.0,0.9999834,0.9999834,AGREES
+jvp_vector_norm,22.657024,22.690151,0.033127,AGREES_WITHIN_BF16
+scientific_geometry_shards,0,0,0,EXACT
+historical_outcomes_revealed,0,0,0,EXACT
+primary_classification,GATE12_JVP_ENGINE_FAILURE,GATE12_JVP_ENGINE_FAILURE,NA,EXACT

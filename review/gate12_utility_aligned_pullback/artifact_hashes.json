@@ -1,0 +1,110 @@
+{
+  "artifacts": {
+    "CANONICAL_ANSWER_POLICY.json": {
+      "bytes": 319,
+      "sha256": "a5b1f70362b35c7544f224a1de68fda43736f5abe170aa74a52b42fa43a37d8b"
+    },
+    "CLASSIFICATION_CROSSCHECK.json": {
+      "bytes": 420,
+      "sha256": "4d66e0e30ac1ad3f2937902d97ad1368ce8c73fa2836ecc1f807490df9881fd8"
+    },
+    "CONTROL_VALIDATION_ITEMS.json": {
+      "bytes": 134560,
+      "sha256": "4c3039d8f05a389434d2582819771fd143ce4fef9615917de18b4efd1ab6cf0b"
+    },
+    "COST.json": {
+      "bytes": 317,
+      "sha256": "4bbfa60abecaf760e6fa3a6e5e0c690abc9375b7a12f10d262007def4716716d"
+    },
+    "COST_PROJECTION.json": {
+      "bytes": 300,
+      "sha256": "e68f51368f7458df0889d345de04a74658ce8fb03ee71a57430eca37929cee06"
+    },
+    "ENVIRONMENT_PROVENANCE.json": {
+      "bytes": 761,
+      "sha256": "4db829fa3ad2a34dca7771570cb8cd389d5a5b37c6712247c0ce5ffbaf70d34c"
+    },
+    "FORENSIC_AUDIT.json": {
+      "bytes": 597,
+      "sha256": "8d3c56a43ab1b1162850578201733fed91817690d59947d4d4d4265e06ba32f0"
+    },
+    "FORENSIC_AUDIT.md": {
+      "bytes": 678,
+      "sha256": "45b07ee4ed0f12e57528e68b398f0d8d51ae21ebfc19a0b6e7830d5a1d739ed3"
+    },
+    "GEOMETRY_SCHEDULE.json": {
+      "bytes": 121868,
+      "sha256": "769530962ea33f2e1652ab2867b82337a489672f3cf69e6d1fa02c1b1d697570"
+    },
+    "HISTORICAL_DIRECTION_MANIFEST.json": {
+      "bytes": 6602,
+      "sha256": "e8955871cd522115aa3b3a03d1bb6a25ca8f7205a0730b2c13d88c4159baa2db"
+    },
+    "INCIDENT_LEDGER.json": {
+      "bytes": 617,
+      "sha256": "124d07f03f127a05ec2f77f501df94fc84de18d3ae5c87f3ea950e00a486c561"
+    },
+    "JVP_ENGINE_SPEC.json": {
+      "bytes": 496,
+      "sha256": "4f9aa2c241ae9b7d0c7ac7bfd2fb32d15f9832ae2e5fbd7a53ac98e43c8265d5"
+    },
+    "METRIC_CROSSCHECK.csv": {
+      "bytes": 432,
+      "sha256": "51d4ba60fd16035475f15d4dae39c23e03f0b004adcdc3cc15e9033fa81ca40e"
+    },
+    "NEXT_PROTOCOL_DRAFT.md": {
+      "bytes": 729,
+      "sha256": "ab8f91d95cdf990a5b171b54220afb98bfa32f82f1f168eccfc7493ea54b288b"
+    },
+    "NUMERICAL_VALIDATION.json": {
+      "bytes": 2019,
+      "sha256": "9dd1cb67f1b70a04d38bd82f08d391bd6c93f3b7df88115836a2ddc587667606"
+    },
+    "NUMERICAL_VALIDATION_PLAN.json": {
+      "bytes": 387,
+      "sha256": "6d9bdf37867251b38384be00a5700ec3819c60f0af306037871581d53851b71d"
+    },
+    "PREMORTEM.json": {
+      "bytes": 1478,
+      "sha256": "7d849ff5c81f40635f2e1b630f989dc9ffd0d88babb592e8583fc7c3af9461de"
+    },
+    "PREMORTEM.md": {
+      "bytes": 1306,
+      "sha256": "22bc2cc62456174a2b9d2ae9837d79bde05d62e65145ac9d9e4e0fa3d41e1bc6"
+    },
+    "PROTOCOL_LOCK.json": {
+      "bytes": 3656,
+      "sha256": "b2c3467274ae91d94542b10b16d980aaeb2690245378b272c8a0905356212840"
+    },
+    "PROTOCOL_LOCK.md": {
+      "bytes": 273,
+      "sha256": "5402cc657443a00c13ceaf58933abf3433b565dd2347aa67ca35fd3b37566c07"
+    },
+    "RAW_GEOMETRY_MANIFEST.json": {
+      "bytes": 216,
+      "sha256": "3f607ff4b2b4e2f7174992315664700b1b67e2294d88a5ab05b73ee81c07ee65"
+    },
+    "REPORT.md": {
+      "bytes": 3411,
+      "sha256": "720b8e73a834d42339cc6163db307ff010199593f2d8f949a5cf816df7adae80"
+    },
+    "UTILITY_PREDICTION_ITEMS.json": {
+      "bytes": 103081,
+      "sha256": "1835d4de5633417a585470ba5e2f3c530a67ea9769e81b913b12a2d6d2ffe771"
+    },
+    "artifact_hashes_preoutcome.json": {
+      "bytes": 1163,
+      "sha256": "0e913bbabc2522d6ee751f9b8ebcd4c4ecc7ebd07d7e38b01e3930a189ece16c"
+    },
+    "raw_geometry.sha256": {
+      "bytes": 87,
+      "sha256": "9e5677369503b405353430945f0d17cc234325fc41435dcccf790a6917fe4c27"
+    },
+    "raw_geometry.tar.zst": {
+      "bytes": 1517,
+      "sha256": "c615a6b2f09788e64884ca92a642a89894a02cb412034bc29271f1af472a008c"
+    }
+  },
+  "classification": "GATE12_JVP_ENGINE_FAILURE",
+  "raw_scientific_shards": 0
+}

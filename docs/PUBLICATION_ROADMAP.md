@@ -85,6 +85,9 @@ the synthesis with exact metric agreement. This repairs the artifact concern;
 it does not change the historical Gate-11 result. Program A remains strong
 within CRUXEval but domain-conditioned. Program B gains evidence from the
 separation between representation, finite-displacement control diagnostics,
-and task utility. Program C remains a future hypothesis, not an established
-Fisher/pullback result. No Gate-12 protocol is authorized for execution; Q2
-and the holdout remain closed pending principal review.
+and task utility. Gate 12 then attempted to qualify exact local directional
+JVP/Fisher diagnostics prospectively. Exact autograd implementations agreed,
+but the frozen BF16 finite-difference, local-KL, and full-sequence/KV engineering
+gates failed before scientific geometry collection. Program C is therefore not
+promoted: no predictive pullback result, positive or negative, was obtained.
+Q2 and the holdout remain closed pending principal review.

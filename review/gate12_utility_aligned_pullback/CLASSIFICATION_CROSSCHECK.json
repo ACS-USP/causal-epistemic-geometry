@@ -1,0 +1,9 @@
+{
+  "engineering_gate_passed": false,
+  "frozen_rule": "If exact differentiable JVP cannot pass engineering validation, return GATE12_JVP_ENGINE_FAILURE and do not collect scientific geometry",
+  "historical_outcomes_revealed": false,
+  "independent_classification": "GATE12_JVP_ENGINE_FAILURE",
+  "primary_classification": "GATE12_JVP_ENGINE_FAILURE",
+  "scientific_geometry_shards": 0,
+  "status": "EXACT_AGREEMENT"
+}

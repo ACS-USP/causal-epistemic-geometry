@@ -1,0 +1,16 @@
+{
+  "classification": "GATE12_FORENSIC_CLEAN",
+  "checks": {
+    "direction_hashes_exact": true,
+    "forward_and_reverse_over_reverse_exact_jvp_agree": true,
+    "free_generation_outputs": 0,
+    "geometry_collection_started": false,
+    "historical_outcomes_revealed": false,
+    "no_raw_geometry_shards": true,
+    "pod_terminated": true,
+    "primary_classification_mechanical": true,
+    "q2_not_run": true
+  },
+  "maximum_primary_audit_scientific_metric_difference": null,
+  "reason": "No scientific geometry metric exists; the audit reproduces the pre-collection engine-failure decision"
+}
