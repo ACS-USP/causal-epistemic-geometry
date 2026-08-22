@@ -7,6 +7,14 @@
       "resolution": "Require the frozen source commit to be an ancestor of the clean lock checkout.",
       "scientific_semantics_changed": false,
       "status": "RESOLVED_PRE_QUALIFICATION"
+    },
+    {
+      "class": "A",
+      "id": "GATE12_1_BACKEND_PROMPT_MODE_ENUM",
+      "model_loaded": false,
+      "resolution": "Use the accepted backend enum plain; the runner consumes explicit token IDs and never renders prompts.",
+      "scientific_semantics_changed": false,
+      "status": "RESOLVED_PRE_QUALIFICATION"
     }
   ]
 }

@@ -49,7 +49,7 @@ def build_backend(model_path: str | None) -> HuggingFaceBackend:
         dtype="bf16",
         layer=gate12_1.LAYER,
         layer_path="model.model.layers",
-        prompt_mode="raw",
+        prompt_mode="plain",
         max_new_tokens=1,
         do_sample=False,
         enable_thinking=False,
