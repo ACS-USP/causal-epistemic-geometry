@@ -1,0 +1,3929 @@
+{
+  "control_rows": 240,
+  "logical_rows": 560,
+  "outcome_fields_used": [],
+  "rows": [
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_006|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_006|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_006|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_006|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_006|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_008|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_008|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_008|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_008|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_008|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_021|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_021|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_021|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_021|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_021|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_022|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_022|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_022|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_022|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_022|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_025|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_025|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_025|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_025|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_025|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_035|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_035|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_035|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_035|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_035|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_052|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_052|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_052|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_052|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_052|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_054|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_054|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_054|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_054|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_054|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_056|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_056|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_056|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_056|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_056|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_066|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_066|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_066|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_066|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_066|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_067|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_067|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_067|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_067|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_067|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_078|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_078|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_078|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_078|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_078|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_079|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_079|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_079|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_079|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_079|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_080|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_080|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_080|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_080|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_080|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_124|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_124|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_124|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_124|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_124|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_131|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_131|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_131|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_131|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_131|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_135|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_135|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_135|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_135|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_135|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_137|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_137|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_137|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_137|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_137|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_142|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_142|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_142|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_142|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_142|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_143|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_143|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_143|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_143|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_143|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_151|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_151|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_151|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_151|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_151|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_161|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_161|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_161|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_161|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_161|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_176|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_176|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_176|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_176|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_176|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_186|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_186|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_186|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_186|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "logical_key": "CONTROL|CHARCOUNT|gate10_charcount_186|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "logical_key": "CONTROL|CRUXEval|sample_104|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "logical_key": "CONTROL|CRUXEval|sample_104|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "logical_key": "CONTROL|CRUXEval|sample_104|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "logical_key": "CONTROL|CRUXEval|sample_104|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "logical_key": "CONTROL|CRUXEval|sample_104|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "logical_key": "CONTROL|CRUXEval|sample_12|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "logical_key": "CONTROL|CRUXEval|sample_12|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "logical_key": "CONTROL|CRUXEval|sample_12|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "logical_key": "CONTROL|CRUXEval|sample_12|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "logical_key": "CONTROL|CRUXEval|sample_12|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "logical_key": "CONTROL|CRUXEval|sample_133|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "logical_key": "CONTROL|CRUXEval|sample_133|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "logical_key": "CONTROL|CRUXEval|sample_133|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "logical_key": "CONTROL|CRUXEval|sample_133|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "logical_key": "CONTROL|CRUXEval|sample_133|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "logical_key": "CONTROL|CRUXEval|sample_166|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "logical_key": "CONTROL|CRUXEval|sample_166|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "logical_key": "CONTROL|CRUXEval|sample_166|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "logical_key": "CONTROL|CRUXEval|sample_166|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "logical_key": "CONTROL|CRUXEval|sample_166|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "logical_key": "CONTROL|CRUXEval|sample_18|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "logical_key": "CONTROL|CRUXEval|sample_18|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "logical_key": "CONTROL|CRUXEval|sample_18|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "logical_key": "CONTROL|CRUXEval|sample_18|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "logical_key": "CONTROL|CRUXEval|sample_18|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "logical_key": "CONTROL|CRUXEval|sample_189|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "logical_key": "CONTROL|CRUXEval|sample_189|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "logical_key": "CONTROL|CRUXEval|sample_189|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "logical_key": "CONTROL|CRUXEval|sample_189|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "logical_key": "CONTROL|CRUXEval|sample_189|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "logical_key": "CONTROL|CRUXEval|sample_202|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "logical_key": "CONTROL|CRUXEval|sample_202|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "logical_key": "CONTROL|CRUXEval|sample_202|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "logical_key": "CONTROL|CRUXEval|sample_202|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "logical_key": "CONTROL|CRUXEval|sample_202|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "logical_key": "CONTROL|CRUXEval|sample_210|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "logical_key": "CONTROL|CRUXEval|sample_210|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "logical_key": "CONTROL|CRUXEval|sample_210|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "logical_key": "CONTROL|CRUXEval|sample_210|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "logical_key": "CONTROL|CRUXEval|sample_210|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "logical_key": "CONTROL|CRUXEval|sample_279|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "logical_key": "CONTROL|CRUXEval|sample_279|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "logical_key": "CONTROL|CRUXEval|sample_279|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "logical_key": "CONTROL|CRUXEval|sample_279|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "logical_key": "CONTROL|CRUXEval|sample_279|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "logical_key": "CONTROL|CRUXEval|sample_287|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "logical_key": "CONTROL|CRUXEval|sample_287|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "logical_key": "CONTROL|CRUXEval|sample_287|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "logical_key": "CONTROL|CRUXEval|sample_287|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "logical_key": "CONTROL|CRUXEval|sample_287|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "logical_key": "CONTROL|CRUXEval|sample_352|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "logical_key": "CONTROL|CRUXEval|sample_352|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "logical_key": "CONTROL|CRUXEval|sample_352|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "logical_key": "CONTROL|CRUXEval|sample_352|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "logical_key": "CONTROL|CRUXEval|sample_352|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "logical_key": "CONTROL|CRUXEval|sample_391|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "logical_key": "CONTROL|CRUXEval|sample_391|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "logical_key": "CONTROL|CRUXEval|sample_391|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "logical_key": "CONTROL|CRUXEval|sample_391|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "logical_key": "CONTROL|CRUXEval|sample_391|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "logical_key": "CONTROL|CRUXEval|sample_410|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "logical_key": "CONTROL|CRUXEval|sample_410|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "logical_key": "CONTROL|CRUXEval|sample_410|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "logical_key": "CONTROL|CRUXEval|sample_410|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "logical_key": "CONTROL|CRUXEval|sample_410|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "logical_key": "CONTROL|CRUXEval|sample_414|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "logical_key": "CONTROL|CRUXEval|sample_414|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "logical_key": "CONTROL|CRUXEval|sample_414|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "logical_key": "CONTROL|CRUXEval|sample_414|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "logical_key": "CONTROL|CRUXEval|sample_414|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "logical_key": "CONTROL|CRUXEval|sample_491|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "logical_key": "CONTROL|CRUXEval|sample_491|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "logical_key": "CONTROL|CRUXEval|sample_491|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "logical_key": "CONTROL|CRUXEval|sample_491|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "logical_key": "CONTROL|CRUXEval|sample_491|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "logical_key": "CONTROL|CRUXEval|sample_536|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "logical_key": "CONTROL|CRUXEval|sample_536|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "logical_key": "CONTROL|CRUXEval|sample_536|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "logical_key": "CONTROL|CRUXEval|sample_536|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "logical_key": "CONTROL|CRUXEval|sample_536|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "logical_key": "CONTROL|CRUXEval|sample_575|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "logical_key": "CONTROL|CRUXEval|sample_575|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "logical_key": "CONTROL|CRUXEval|sample_575|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "logical_key": "CONTROL|CRUXEval|sample_575|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "logical_key": "CONTROL|CRUXEval|sample_575|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "logical_key": "CONTROL|CRUXEval|sample_603|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "logical_key": "CONTROL|CRUXEval|sample_603|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "logical_key": "CONTROL|CRUXEval|sample_603|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "logical_key": "CONTROL|CRUXEval|sample_603|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "logical_key": "CONTROL|CRUXEval|sample_603|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "logical_key": "CONTROL|CRUXEval|sample_623|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "logical_key": "CONTROL|CRUXEval|sample_623|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "logical_key": "CONTROL|CRUXEval|sample_623|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "logical_key": "CONTROL|CRUXEval|sample_623|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "logical_key": "CONTROL|CRUXEval|sample_623|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "logical_key": "CONTROL|CRUXEval|sample_682|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "logical_key": "CONTROL|CRUXEval|sample_682|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "logical_key": "CONTROL|CRUXEval|sample_682|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "logical_key": "CONTROL|CRUXEval|sample_682|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "logical_key": "CONTROL|CRUXEval|sample_682|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "logical_key": "CONTROL|CRUXEval|sample_686|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "logical_key": "CONTROL|CRUXEval|sample_686|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "logical_key": "CONTROL|CRUXEval|sample_686|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "logical_key": "CONTROL|CRUXEval|sample_686|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "logical_key": "CONTROL|CRUXEval|sample_686|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "logical_key": "CONTROL|CRUXEval|sample_750|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "logical_key": "CONTROL|CRUXEval|sample_750|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "logical_key": "CONTROL|CRUXEval|sample_750|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "logical_key": "CONTROL|CRUXEval|sample_750|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "logical_key": "CONTROL|CRUXEval|sample_750|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "logical_key": "CONTROL|CRUXEval|sample_86|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "logical_key": "CONTROL|CRUXEval|sample_86|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "logical_key": "CONTROL|CRUXEval|sample_86|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "logical_key": "CONTROL|CRUXEval|sample_86|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "logical_key": "CONTROL|CRUXEval|sample_86|RANDOM_R3"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "logical_key": "CONTROL|CRUXEval|sample_99|MEANINGFUL"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "logical_key": "CONTROL|CRUXEval|sample_99|RANDOM_R0"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "logical_key": "CONTROL|CRUXEval|sample_99|RANDOM_R1"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "logical_key": "CONTROL|CRUXEval|sample_99|RANDOM_R2"
+    },
+    {
+      "component": "CONTROL_VALIDATION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "logical_key": "CONTROL|CRUXEval|sample_99|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_397",
+      "logical_key": "UTILITY|CRUXEval|sample_397|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_397",
+      "logical_key": "UTILITY|CRUXEval|sample_397|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_397",
+      "logical_key": "UTILITY|CRUXEval|sample_397|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_397",
+      "logical_key": "UTILITY|CRUXEval|sample_397|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_397",
+      "logical_key": "UTILITY|CRUXEval|sample_397|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_664",
+      "logical_key": "UTILITY|CRUXEval|sample_664|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_664",
+      "logical_key": "UTILITY|CRUXEval|sample_664|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_664",
+      "logical_key": "UTILITY|CRUXEval|sample_664|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_664",
+      "logical_key": "UTILITY|CRUXEval|sample_664|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_664",
+      "logical_key": "UTILITY|CRUXEval|sample_664|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_432",
+      "logical_key": "UTILITY|CRUXEval|sample_432|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_432",
+      "logical_key": "UTILITY|CRUXEval|sample_432|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_432",
+      "logical_key": "UTILITY|CRUXEval|sample_432|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_432",
+      "logical_key": "UTILITY|CRUXEval|sample_432|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_432",
+      "logical_key": "UTILITY|CRUXEval|sample_432|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_668",
+      "logical_key": "UTILITY|CRUXEval|sample_668|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_668",
+      "logical_key": "UTILITY|CRUXEval|sample_668|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_668",
+      "logical_key": "UTILITY|CRUXEval|sample_668|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_668",
+      "logical_key": "UTILITY|CRUXEval|sample_668|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_668",
+      "logical_key": "UTILITY|CRUXEval|sample_668|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_272",
+      "logical_key": "UTILITY|CRUXEval|sample_272|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_272",
+      "logical_key": "UTILITY|CRUXEval|sample_272|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_272",
+      "logical_key": "UTILITY|CRUXEval|sample_272|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_272",
+      "logical_key": "UTILITY|CRUXEval|sample_272|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_272",
+      "logical_key": "UTILITY|CRUXEval|sample_272|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_257",
+      "logical_key": "UTILITY|CRUXEval|sample_257|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_257",
+      "logical_key": "UTILITY|CRUXEval|sample_257|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_257",
+      "logical_key": "UTILITY|CRUXEval|sample_257|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_257",
+      "logical_key": "UTILITY|CRUXEval|sample_257|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_257",
+      "logical_key": "UTILITY|CRUXEval|sample_257|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_638",
+      "logical_key": "UTILITY|CRUXEval|sample_638|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_638",
+      "logical_key": "UTILITY|CRUXEval|sample_638|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_638",
+      "logical_key": "UTILITY|CRUXEval|sample_638|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_638",
+      "logical_key": "UTILITY|CRUXEval|sample_638|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_638",
+      "logical_key": "UTILITY|CRUXEval|sample_638|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_766",
+      "logical_key": "UTILITY|CRUXEval|sample_766|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_766",
+      "logical_key": "UTILITY|CRUXEval|sample_766|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_766",
+      "logical_key": "UTILITY|CRUXEval|sample_766|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_766",
+      "logical_key": "UTILITY|CRUXEval|sample_766|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_766",
+      "logical_key": "UTILITY|CRUXEval|sample_766|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_770",
+      "logical_key": "UTILITY|CRUXEval|sample_770|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_770",
+      "logical_key": "UTILITY|CRUXEval|sample_770|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_770",
+      "logical_key": "UTILITY|CRUXEval|sample_770|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_770",
+      "logical_key": "UTILITY|CRUXEval|sample_770|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_770",
+      "logical_key": "UTILITY|CRUXEval|sample_770|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_351",
+      "logical_key": "UTILITY|CRUXEval|sample_351|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_351",
+      "logical_key": "UTILITY|CRUXEval|sample_351|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_351",
+      "logical_key": "UTILITY|CRUXEval|sample_351|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_351",
+      "logical_key": "UTILITY|CRUXEval|sample_351|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_351",
+      "logical_key": "UTILITY|CRUXEval|sample_351|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_14",
+      "logical_key": "UTILITY|CRUXEval|sample_14|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_14",
+      "logical_key": "UTILITY|CRUXEval|sample_14|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_14",
+      "logical_key": "UTILITY|CRUXEval|sample_14|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_14",
+      "logical_key": "UTILITY|CRUXEval|sample_14|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_14",
+      "logical_key": "UTILITY|CRUXEval|sample_14|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_695",
+      "logical_key": "UTILITY|CRUXEval|sample_695|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_695",
+      "logical_key": "UTILITY|CRUXEval|sample_695|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_695",
+      "logical_key": "UTILITY|CRUXEval|sample_695|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_695",
+      "logical_key": "UTILITY|CRUXEval|sample_695|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_695",
+      "logical_key": "UTILITY|CRUXEval|sample_695|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_775",
+      "logical_key": "UTILITY|CRUXEval|sample_775|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_775",
+      "logical_key": "UTILITY|CRUXEval|sample_775|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_775",
+      "logical_key": "UTILITY|CRUXEval|sample_775|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_775",
+      "logical_key": "UTILITY|CRUXEval|sample_775|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_775",
+      "logical_key": "UTILITY|CRUXEval|sample_775|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_417",
+      "logical_key": "UTILITY|CRUXEval|sample_417|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_417",
+      "logical_key": "UTILITY|CRUXEval|sample_417|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_417",
+      "logical_key": "UTILITY|CRUXEval|sample_417|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_417",
+      "logical_key": "UTILITY|CRUXEval|sample_417|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_417",
+      "logical_key": "UTILITY|CRUXEval|sample_417|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_693",
+      "logical_key": "UTILITY|CRUXEval|sample_693|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_693",
+      "logical_key": "UTILITY|CRUXEval|sample_693|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_693",
+      "logical_key": "UTILITY|CRUXEval|sample_693|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_693",
+      "logical_key": "UTILITY|CRUXEval|sample_693|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_693",
+      "logical_key": "UTILITY|CRUXEval|sample_693|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_370",
+      "logical_key": "UTILITY|CRUXEval|sample_370|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_370",
+      "logical_key": "UTILITY|CRUXEval|sample_370|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_370",
+      "logical_key": "UTILITY|CRUXEval|sample_370|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_370",
+      "logical_key": "UTILITY|CRUXEval|sample_370|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_370",
+      "logical_key": "UTILITY|CRUXEval|sample_370|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_122",
+      "logical_key": "UTILITY|CRUXEval|sample_122|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_122",
+      "logical_key": "UTILITY|CRUXEval|sample_122|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_122",
+      "logical_key": "UTILITY|CRUXEval|sample_122|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_122",
+      "logical_key": "UTILITY|CRUXEval|sample_122|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_122",
+      "logical_key": "UTILITY|CRUXEval|sample_122|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_489",
+      "logical_key": "UTILITY|CRUXEval|sample_489|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_489",
+      "logical_key": "UTILITY|CRUXEval|sample_489|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_489",
+      "logical_key": "UTILITY|CRUXEval|sample_489|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_489",
+      "logical_key": "UTILITY|CRUXEval|sample_489|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_489",
+      "logical_key": "UTILITY|CRUXEval|sample_489|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_40",
+      "logical_key": "UTILITY|CRUXEval|sample_40|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_40",
+      "logical_key": "UTILITY|CRUXEval|sample_40|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_40",
+      "logical_key": "UTILITY|CRUXEval|sample_40|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_40",
+      "logical_key": "UTILITY|CRUXEval|sample_40|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_40",
+      "logical_key": "UTILITY|CRUXEval|sample_40|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_190",
+      "logical_key": "UTILITY|CRUXEval|sample_190|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_190",
+      "logical_key": "UTILITY|CRUXEval|sample_190|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_190",
+      "logical_key": "UTILITY|CRUXEval|sample_190|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_190",
+      "logical_key": "UTILITY|CRUXEval|sample_190|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_190",
+      "logical_key": "UTILITY|CRUXEval|sample_190|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_415",
+      "logical_key": "UTILITY|CRUXEval|sample_415|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_415",
+      "logical_key": "UTILITY|CRUXEval|sample_415|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_415",
+      "logical_key": "UTILITY|CRUXEval|sample_415|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_415",
+      "logical_key": "UTILITY|CRUXEval|sample_415|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_415",
+      "logical_key": "UTILITY|CRUXEval|sample_415|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_769",
+      "logical_key": "UTILITY|CRUXEval|sample_769|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_769",
+      "logical_key": "UTILITY|CRUXEval|sample_769|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_769",
+      "logical_key": "UTILITY|CRUXEval|sample_769|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_769",
+      "logical_key": "UTILITY|CRUXEval|sample_769|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_769",
+      "logical_key": "UTILITY|CRUXEval|sample_769|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_648",
+      "logical_key": "UTILITY|CRUXEval|sample_648|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_648",
+      "logical_key": "UTILITY|CRUXEval|sample_648|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_648",
+      "logical_key": "UTILITY|CRUXEval|sample_648|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_648",
+      "logical_key": "UTILITY|CRUXEval|sample_648|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_648",
+      "logical_key": "UTILITY|CRUXEval|sample_648|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_193",
+      "logical_key": "UTILITY|CRUXEval|sample_193|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_193",
+      "logical_key": "UTILITY|CRUXEval|sample_193|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_193",
+      "logical_key": "UTILITY|CRUXEval|sample_193|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_193",
+      "logical_key": "UTILITY|CRUXEval|sample_193|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_193",
+      "logical_key": "UTILITY|CRUXEval|sample_193|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_452",
+      "logical_key": "UTILITY|CRUXEval|sample_452|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_452",
+      "logical_key": "UTILITY|CRUXEval|sample_452|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_452",
+      "logical_key": "UTILITY|CRUXEval|sample_452|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_452",
+      "logical_key": "UTILITY|CRUXEval|sample_452|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_452",
+      "logical_key": "UTILITY|CRUXEval|sample_452|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_147",
+      "logical_key": "UTILITY|CRUXEval|sample_147|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_147",
+      "logical_key": "UTILITY|CRUXEval|sample_147|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_147",
+      "logical_key": "UTILITY|CRUXEval|sample_147|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_147",
+      "logical_key": "UTILITY|CRUXEval|sample_147|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_147",
+      "logical_key": "UTILITY|CRUXEval|sample_147|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_403",
+      "logical_key": "UTILITY|CRUXEval|sample_403|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_403",
+      "logical_key": "UTILITY|CRUXEval|sample_403|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_403",
+      "logical_key": "UTILITY|CRUXEval|sample_403|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_403",
+      "logical_key": "UTILITY|CRUXEval|sample_403|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_403",
+      "logical_key": "UTILITY|CRUXEval|sample_403|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_61",
+      "logical_key": "UTILITY|CRUXEval|sample_61|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_61",
+      "logical_key": "UTILITY|CRUXEval|sample_61|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_61",
+      "logical_key": "UTILITY|CRUXEval|sample_61|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_61",
+      "logical_key": "UTILITY|CRUXEval|sample_61|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_61",
+      "logical_key": "UTILITY|CRUXEval|sample_61|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_156",
+      "logical_key": "UTILITY|CRUXEval|sample_156|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_156",
+      "logical_key": "UTILITY|CRUXEval|sample_156|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_156",
+      "logical_key": "UTILITY|CRUXEval|sample_156|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_156",
+      "logical_key": "UTILITY|CRUXEval|sample_156|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_156",
+      "logical_key": "UTILITY|CRUXEval|sample_156|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_311",
+      "logical_key": "UTILITY|CRUXEval|sample_311|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_311",
+      "logical_key": "UTILITY|CRUXEval|sample_311|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_311",
+      "logical_key": "UTILITY|CRUXEval|sample_311|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_311",
+      "logical_key": "UTILITY|CRUXEval|sample_311|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_311",
+      "logical_key": "UTILITY|CRUXEval|sample_311|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_92",
+      "logical_key": "UTILITY|CRUXEval|sample_92|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_92",
+      "logical_key": "UTILITY|CRUXEval|sample_92|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_92",
+      "logical_key": "UTILITY|CRUXEval|sample_92|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_92",
+      "logical_key": "UTILITY|CRUXEval|sample_92|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_92",
+      "logical_key": "UTILITY|CRUXEval|sample_92|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CRUXEval",
+      "item_id": "sample_492",
+      "logical_key": "UTILITY|CRUXEval|sample_492|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CRUXEval",
+      "item_id": "sample_492",
+      "logical_key": "UTILITY|CRUXEval|sample_492|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CRUXEval",
+      "item_id": "sample_492",
+      "logical_key": "UTILITY|CRUXEval|sample_492|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CRUXEval",
+      "item_id": "sample_492",
+      "logical_key": "UTILITY|CRUXEval|sample_492|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CRUXEval",
+      "item_id": "sample_492",
+      "logical_key": "UTILITY|CRUXEval|sample_492|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_031",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_031|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_031",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_031|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_031",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_031|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_031",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_031|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_031",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_031|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_045",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_045|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_045",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_045|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_045",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_045|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_045",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_045|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_045",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_045|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_051",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_051|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_051",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_051|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_051",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_051|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_051",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_051|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_051",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_051|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_074",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_074|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_074",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_074|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_074",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_074|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_074",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_074|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_074",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_074|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_118",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_118|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_118",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_118|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_118",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_118|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_118",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_118|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_118",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_118|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_136",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_136|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_136",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_136|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_136",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_136|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_136",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_136|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_136",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_136|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_184",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_184|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_184",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_184|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_184",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_184|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_184",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_184|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_184",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_184|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_012",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_012|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_012",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_012|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_012",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_012|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_012",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_012|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_012",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_012|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_083",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_083|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_083",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_083|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_083",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_083|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_083",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_083|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_083",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_083|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_094",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_094|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_094",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_094|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_094",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_094|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_094",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_094|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_094",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_094|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_169",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_169|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_169",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_169|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_169",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_169|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_169",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_169|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_169",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_169|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_160",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_160|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_160",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_160|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_160",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_160|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_160",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_160|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_160",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_160|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_019",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_019|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_019",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_019|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_019",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_019|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_019",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_019|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_019",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_019|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_109",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_109|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_109",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_109|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_109",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_109|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_109",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_109|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_109",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_109|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_193",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_193|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_193",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_193|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_193",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_193|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_193",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_193|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_193",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_193|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_106",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_106|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_106",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_106|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_106",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_106|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_106",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_106|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_106",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_106|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_073",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_073|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_073",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_073|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_073",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_073|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_073",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_073|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_073",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_073|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_179",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_179|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_179",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_179|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_179",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_179|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_179",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_179|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_179",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_179|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_016",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_016|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_016",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_016|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_016",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_016|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_016",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_016|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_016",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_016|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_049",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_049|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_049",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_049|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_049",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_049|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_049",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_049|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_049",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_049|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_126",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_126|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_126",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_126|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_126",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_126|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_126",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_126|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_126",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_126|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_121",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_121|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_121",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_121|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_121",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_121|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_121",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_121|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_121",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_121|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_156",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_156|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_156",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_156|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_156",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_156|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_156",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_156|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_156",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_156|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_141",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_141|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_141",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_141|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_141",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_141|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_141",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_141|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_141",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_141|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_081",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_081|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_081",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_081|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_081",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_081|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_081",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_081|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_081",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_081|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_173",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_173|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_173",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_173|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_173",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_173|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_173",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_173|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_173",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_173|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_115",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_115|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_115",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_115|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_115",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_115|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_115",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_115|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_115",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_115|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_199",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_199|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_199",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_199|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_199",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_199|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_199",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_199|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_199",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_199|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_174",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_174|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_174",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_174|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_174",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_174|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_174",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_174|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_174",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_174|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_123",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_123|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_123",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_123|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_123",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_123|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_123",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_123|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_123",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_123|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_130",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_130|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_130",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_130|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_130",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_130|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_130",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_130|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_130",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_130|RANDOM_R3"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "MEANINGFUL",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_090",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_090|MEANINGFUL"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R0",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_090",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_090|RANDOM_R0"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R1",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_090",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_090|RANDOM_R1"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R2",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_090",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_090|RANDOM_R2"
+    },
+    {
+      "component": "UTILITY_PREDICTION",
+      "direction": "RANDOM_R3",
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_090",
+      "logical_key": "UTILITY|CHARCOUNT|gate10_charcount_090|RANDOM_R3"
+    }
+  ],
+  "schedule_hash": "2968998d6d1e090114ce1e079fcac601def87b436db348741d904fcadd72dd34",
+  "utility_rows": 320
+}

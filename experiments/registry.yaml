@@ -914,3 +914,43 @@ experiments:
       runpod_status: STOPPED
       raw_archive_sha256: 3fe24aab5ba5a60f39facb0f79f77a266988905bcb1d4f23a267a6421d929b86
     next_action: Principal review; no Gate 12 execution authorized.
+
+  - id: GATE12_UTILITY_ALIGNED_PULLBACK
+    version: GATE-12
+    stage: DEVELOPMENT_GEOMETRY
+    question: >-
+      Do exact local directional pullback energy and correct-answer likelihood
+      derivatives predict finite control magnitude and preserved historical
+      utility along frozen sustained-control paths?
+    instrument: Exact full-sequence teacher-forced JVPs and categorical Fisher energy
+    model_policy: Qwen3-8B BF16 SDPA, no sampling and no free generation
+    status: PROSPECTIVE_LOCK
+    outcome: NOT_YET_COLLECTED
+    scientific_interpretation: >-
+      This Gate estimates one-dimensional local trajectory pullbacks along
+      historical meaningful/random directions. It does not estimate a full
+      pullback matrix, Fisher geometry of the model, Q2, or new semantic utility.
+    source_commit: 074fd69351d72579fbf987a6a6e77da5aa351e35
+    artifact: review/gate12_utility_aligned_pullback/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
+    lock:
+      protocol: review/gate12_utility_aligned_pullback/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      control_validation_items: 48
+      utility_prediction_items: 64
+      directions_per_domain: 5
+      exact_jvp: true
+      free_generation: false
+      new_semantic_evaluation: false
+      gpu_authorized: true
+      target_cost_usd: 1.75
+      hard_stop_cost_usd: 3.50
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      geometry_frozen: false
+      historical_outcomes_revealed: false
+      q2: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Pass differentiable engineering and collect outcome-blind geometry.

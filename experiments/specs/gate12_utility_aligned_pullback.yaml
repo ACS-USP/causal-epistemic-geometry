@@ -1,0 +1,14 @@
+experiment_id: GATE12_UTILITY_ALIGNED_PULLBACK
+status: FROZEN_PROSPECTIVE
+stage: DEVELOPMENT_GEOMETRY
+model_revision: b968826d9c46dd6066d109eabc6255188de91218
+layer: 27
+control_items: 48
+utility_items: 64
+directions_per_domain: 5
+exact_jvp: true
+free_generation: false
+new_semantic_evaluation: false
+hard_cost_ceiling_usd: 3.5
+q2: NOT_RUN
+holdout: UNTOUCHED

@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 11.1 completed the artifact-complete forensic replication of the historical Gate 11 fixed-sequence propagation diagnostics. The historical result remains immutable. Full logits and hidden-difference shards were persisted and independently recomputed with exact synthesis agreement.
+Gate 12 prospectively freezes exact local sustained-control JVPs, one-dimensional categorical Fisher energy, and correct-answer likelihood derivatives on existing Gate-9/Gate-10/Gate-11 items. Geometry collection is outcome-blind and performs no free generation or new semantic evaluation.
 
-- Workstream: `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION`
+- Workstream: `GATE12_UTILITY_ALIGNED_PULLBACK`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the Gate 11.1 forensic closeout.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Run differentiable engineering validation and, only after it passes, collect the frozen Gate-12 geometry under the outcome firewall.
 
 ## Scientific program
 
@@ -46,16 +46,17 @@ Gate 11.1 completed the artifact-complete forensic replication of the historical
 | `GATE9_SELECTED_D75_EVALUATION` | `COMPLETE_DEVELOPMENT_STRONG_SAFE_REPLICATION` | On 100 fresh CRUXEval items, the exact Gate-8-selected D75 controller raised accuracy from 47% to 60% while preserving commitment validity and semantic evaluability at 97%. G=0.1325, C=0.0643, and D=0.1200 exceeded every one of four new random controls; rescue was 0.1525 versus damage 0.0225. The frozen classification is a strong safe DEVELOPMENT replication. Independent metric recomputation agreed exactly; the forensic classification records one minor non-scientific parser-totality incident. At Gate-9 closeout, Gate 10 was drafted only; Q2 and holdout remained closed. |
 | `GATE10_CROSS_DOMAIN_CHARCOUNT` | `COMPLETE_DEVELOPMENT_NO_TRANSFER` | On 200 fresh FRESH_PSEUDOWORD_LONG items, baseline opportunity passed with accuracy 0.8625 and B00=0.045. The exact CRUXEval-derived L27-D75 controller was safe but did not transfer specific error control: G=-0.01625, C=-0.01230, D=-0.025, with rescue below damage and all three estimands below the random-controller mean. The textual careful source also did not replicate under its frozen rule. The independent forensic audit was clean. Gate 11 is drafted only; Q2 and holdout remain closed. |
 | `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION` | `COMPLETE_DEVELOPMENT_FORENSIC_REPLICATION` | Gate 11.1 reused the immutable Gate 11 source selections, fixed baseline sequences, controller, dose, layer, random bank, conditions, and checkpoints. It performed no free generation or semantic evaluation. Full propagation logits and hidden-difference vectors were persisted; the independent audit agreed exactly with the primary recomputation. The synthesis remains GATE11_POLICY_UTILITY_DOMAIN_MISMATCH, with the historical result preserved and the forensic artifact concern repaired. |
+| `GATE12_UTILITY_ALIGNED_PULLBACK` | `PROSPECTIVE_LOCK` | Exact local JVP and one-dimensional Fisher/utility geometry are frozen before geometry collection. Historical semantic outcomes remain sealed until GEOMETRY_FREEZE; no free generation, new controller, dose, Q2, or holdout access is authorized. |
 
 ## Scientific firewall
 
-- `steering`: `GATE11_1_FORENSIC_REPLICATION_CLOSED`
+- `steering`: `GATE12_DIAGNOSTIC_GEOMETRY_ONLY`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_CLOSED`
+- `current_task`: `GATE12_UTILITY_ALIGNED_PULLBACK_PROSPECTIVE_LOCK`
 - `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement

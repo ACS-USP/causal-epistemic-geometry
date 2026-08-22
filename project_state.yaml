@@ -19,29 +19,30 @@ project:
     utility?
 
 current:
-  workstream: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_FORENSIC_CLOSEOUT
-  source_commit: c4c6c77
+  workstream: GATE12_UTILITY_ALIGNED_PULLBACK
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_GEOMETRY
+  source_commit: 074fd69351d72579fbf987a6a6e77da5aa351e35
   summary: >-
-    Gate 11.1 completed the artifact-complete forensic replication of the
-    historical Gate 11 fixed-sequence propagation diagnostics. The historical
-    result remains immutable. Full logits and hidden-difference shards were
-    persisted and independently recomputed with exact synthesis agreement.
+    Gate 12 prospectively freezes exact local sustained-control JVPs,
+    one-dimensional categorical Fisher energy, and correct-answer likelihood
+    derivatives on existing Gate-9/Gate-10/Gate-11 items. Geometry collection
+    is outcome-blind and performs no free generation or new semantic evaluation.
   next_authorized_action: >-
-    Principal review of the Gate 11.1 forensic closeout.
+    Run differentiable engineering validation and, only after it passes,
+    collect the frozen Gate-12 geometry under the outcome firewall.
   runpod: STOPPED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
-  steering: GATE11_1_FORENSIC_REPLICATION_CLOSED
+  steering: GATE12_DIAGNOSTIC_GEOMETRY_ONLY
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_CLOSED
+  current_task: GATE12_UTILITY_ALIGNED_PULLBACK_PROSPECTIVE_LOCK
   free_generation: NOT_AUTHORIZED
 
 instrument_history:
@@ -213,6 +214,26 @@ instrument_history:
       q2: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; no Gate 12 execution authorized.
+  - id: GATE12_UTILITY_ALIGNED_PULLBACK
+    status: PROSPECTIVE_LOCK
+    conclusion: >-
+      Exact local JVP and one-dimensional Fisher/utility geometry are frozen
+      before geometry collection. Historical semantic outcomes remain sealed
+      until GEOMETRY_FREEZE; no free generation, new controller, dose, Q2, or
+      holdout access is authorized.
+    source_commit: 074fd69351d72579fbf987a6a6e77da5aa351e35
+    artifact: review/gate12_utility_aligned_pullback/
+    holdout_status: UNTOUCHED
+    gpu_authorized: true
+    free_generation: NOT_AUTHORIZED
+    q2: NOT_RUN
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      control_validation_items: 48
+      utility_prediction_items: 64
+      geometry_logical_rows: 560
+      historical_outcomes_revealed: false
+    next_action: Differentiable engineering gate, then frozen geometry collection only.
 
 workflow_regimes:
   EXPLORATION:

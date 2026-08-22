@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "claim_boundary": "one-dimensional sustained-control pullback, not full matrix/Gramian",
+    "direction_matching": "all meaningful/random hashes imported from Gate 9/10/11",
+    "full_sequence_equivalence": "must pass remote KV-cache equivalence before collection",
+    "item_selection": "manifest-only SHA256 selection with Gate-11 exclusions",
+    "jvp_exactness": "forward-mode autograd JVP primary; finite differences validation only",
+    "local_vs_finite": "JVP is at alpha=0; Gate-11.1 D75 KL is a finite target only",
+    "outcome_blindness": "runner reads frozen manifests and vectors but no historical journals",
+    "output_geometry": "categorical Fisher q and q/4 Hellinger convention both reported",
+    "q2_firewall": "no semantic-error geometry or direction-pair matrix claim",
+    "raw_persistence": "float32 complete logits/JVPs with masks, positions and hashes",
+    "storage": "lossless per-item shards; local verified archive required before Pod deletion",
+    "trajectory_semantics": "final prompt plus every continuation input token is shifted",
+    "utility_functional": "globally canonical minimal correct FINAL continuation"
+  },
+  "class_a_recoveries": [],
+  "class_b_amendments": [],
+  "classification": "PREMORTEM_PASS",
+  "unresolved_scientific_ambiguities": []
+}

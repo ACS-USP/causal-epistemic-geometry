@@ -1,0 +1,11 @@
+{
+  "alpha_origin": 0.0,
+  "finite_difference_primary": false,
+  "full_sequence_causal_teacher_forcing": true,
+  "historical_d75_scalar": 97.85168930581241,
+  "intervention_positions": "final prompt and every continuation input token",
+  "layer": 27,
+  "primary": "torch.autograd.forward_ad scalar-alpha JVP",
+  "selected_outputs": "positions predicting frozen continuation targets/checkpoints",
+  "unit_direction": true
+}

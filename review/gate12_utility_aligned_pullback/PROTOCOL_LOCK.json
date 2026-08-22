@@ -1,0 +1,101 @@
+{
+  "classifications": [
+    "GATE12_UTILITY_ALIGNED_PULLBACK_SUPPORTED",
+    "GATE12_PULLBACK_CONTROL_WITH_DOMAIN_LEVEL_UTILITY_ALIGNMENT",
+    "GATE12_PULLBACK_CONTROL_WITHOUT_UTILITY_PREDICTION",
+    "GATE12_UTILITY_ALIGNMENT_WITHOUT_PULLBACK_CONTROL_PREDICTION",
+    "GATE12_LOCAL_GEOMETRY_NOT_PREDICTIVE",
+    "GATE12_GEOMETRY_INCONCLUSIVE",
+    "GATE12_JVP_ENGINE_FAILURE",
+    "GATE12_SCIENTIFIC_INTEGRITY_CONCERN"
+  ],
+  "controller": {
+    "d75_scalar": 97.85168930581241,
+    "eta_d75": 9.637427952852196,
+    "hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "layer": 27,
+    "reference_scale": 10.153299177386142,
+    "semantics": "sustained current-token path; local derivative at alpha=0"
+  },
+  "cost": {
+    "a40_hourly_rate_usd": 0.44,
+    "basis": "560 exact directional JVP rows plus baseline/careful reuse, scaled from the audited Gate-11.1 A40 fixed-sequence runtime",
+    "cost_gate": "PASS",
+    "hard_ceiling_usd": 3.5,
+    "projected_a40_hours": 3.5,
+    "projected_gpu_usd": 1.54,
+    "target_usd": 1.75
+  },
+  "experiment_id": "GATE12_UTILITY_ALIGNED_PULLBACK",
+  "experiment_source_commit": "074fd69351d72579fbf987a6a6e77da5aa351e35",
+  "firewall": {
+    "free_generation": "NOT_AUTHORIZED",
+    "historical_outcomes_before_geometry_freeze": "FORBIDDEN",
+    "holdout": "UNTOUCHED",
+    "new_semantic_evaluation": "NOT_AUTHORIZED",
+    "q2": "NOT_RUN"
+  },
+  "fisher": {
+    "complete_pullback_matrix": false,
+    "epsilon_q": 1e-12,
+    "hellinger": "q/4",
+    "q": "Var_{k~softmax(z0)} r_k"
+  },
+  "jvp": {
+    "alpha_origin": 0.0,
+    "finite_difference_primary": false,
+    "full_sequence_causal_teacher_forcing": true,
+    "historical_d75_scalar": 97.85168930581241,
+    "intervention_positions": "final prompt and every continuation input token",
+    "layer": 27,
+    "primary": "torch.autograd.forward_ad scalar-alpha JVP",
+    "selected_outputs": "positions predicting frozen continuation targets/checkpoints",
+    "unit_direction": true
+  },
+  "lifecycle": "PROSPECTIVE_LOCK",
+  "model": {
+    "attention": "sdpa",
+    "dtype": "bf16",
+    "environment": "CORE_QWEN",
+    "id": "Qwen/Qwen3-8B",
+    "quantization": "none",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "raw_persistence": "complete float32 baseline/careful logits and JVP vectors, one compressed shard per item/path",
+  "schema_version": 1,
+  "sets": {
+    "control": "24+24 historical",
+    "utility": "32+32 held-out existing"
+  },
+  "stage": "DEVELOPMENT_GEOMETRY",
+  "statistics": {
+    "bootstrap_resamples": 5000,
+    "control_seed": 20260827,
+    "primary_control": "domain-centered Spearman logQ vs logKL_D75",
+    "primary_utility": "domain-centered Spearman U_mean vs historical Y",
+    "unit": "item with every direction",
+    "utility_seed": 20260826
+  },
+  "status": "FROZEN_PRE_GEOMETRY",
+  "thresholds": {
+    "control": {
+      "bootstrap_lower": 0.25,
+      "rho": 0.5
+    },
+    "domain_utility": "five frozen sign/contrast rules",
+    "item_utility": {
+      "bootstrap_lower": 0.0,
+      "rho": 0.2,
+      "slope_lower": 0.0
+    }
+  },
+  "utility": {
+    "primary": "U_mean correct-token log-likelihood directional derivative",
+    "secondary": [
+      "U_sum",
+      "eta_utility",
+      "Fisher careful alignment"
+    ]
+  }
+}

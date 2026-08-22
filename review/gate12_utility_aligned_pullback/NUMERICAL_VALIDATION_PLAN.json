@@ -1,0 +1,15 @@
+{
+  "bf16_equivalence_tolerances": {
+    "kl_atol": 0.01,
+    "logit_atol": 0.25
+  },
+  "finite_difference_scalars": [
+    0.7644663227016595,
+    1.528932645403319,
+    3.057865290806638
+  ],
+  "local_kl_identity": "2*KL(p0||p_epsilon)/epsilon^2 -> q",
+  "maximum_median_relative_q_difference": 0.1,
+  "maximum_median_relative_u_difference": 0.1,
+  "minimum_median_jvp_cosine": 0.995
+}

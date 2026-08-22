@@ -1,0 +1,8 @@
+{
+  "assistant_prefix_chat_template": "same accepted Qwen chat rendering as Gate 9/10",
+  "charcount": "exact base-10 integer oracle",
+  "cruxeval": "exact semantic-V3 reference representation without item choice",
+  "policy": "FINAL: <canonical exact answer>",
+  "reasoning_text": false,
+  "terminal_newline": false
+}
