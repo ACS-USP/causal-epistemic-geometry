@@ -1,0 +1,17 @@
+{
+  "classification": "CLASS_B_PROSPECTIVE_INSTRUMENTATION_AMENDMENT",
+  "id": "GATE10-PREOUTCOME-GOVERNANCE-TEST-ALLOWLIST",
+  "affected_outcomes_existed": false,
+  "scientific_semantics_changed": false,
+  "change": "Allow Gate-10 locked and complete workstream names in the project-state governance test.",
+  "reason": "The new canonical workstream was prospectively added to project_state.yaml but its test allowlist was not updated in the initial lock commit.",
+  "controller_changed": false,
+  "dose_changed": false,
+  "items_changed": false,
+  "conditions_changed": false,
+  "seeds_changed": false,
+  "schedule_changed": false,
+  "parser_changed": false,
+  "estimands_changed": false,
+  "thresholds_changed": false
+}

@@ -4,6 +4,14 @@
     "seed": 20260824,
     "unit": "item_cluster_all_7_conditions_both_rollouts"
   },
+  "class_b_amendments": [
+    {
+      "id": "GATE10-PREOUTCOME-GOVERNANCE-TEST-ALLOWLIST",
+      "timing": "before scientific collection",
+      "scientific_semantics_changed": false,
+      "description": "Added the already-frozen Gate-10 workstream names to the governance test allowlist."
+    }
+  ],
   "classifications": [
     "GATE10_STRONG_CROSS_DOMAIN_USEFUL_COMPLEMENTARITY",
     "GATE10_MINIMUM_CROSS_DOMAIN_CONTROL_SIGNAL",

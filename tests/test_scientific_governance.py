@@ -47,6 +47,8 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE8_L27_DOSE_CALIBRATION_COMPLETE",
         "GATE9_SELECTED_D75_EVALUATION",
         "GATE9_SELECTED_D75_EVALUATION_COMPLETE",
+        "GATE10_CROSS_DOMAIN_CHARCOUNT",
+        "GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -61,6 +63,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE7_FRESH_SINGLE_L27_REPLICATION",
             "GATE8_L27_DOSE_CALIBRATION",
             "GATE9_SELECTED_D75_EVALUATION",
+            "GATE10_CROSS_DOMAIN_CHARCOUNT",
         }
     )
     assert state["scientific_firewall"]["steering"] in {
@@ -73,6 +76,8 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE8_CALIBRATION_SELECTED_D75_GATE9_NOT_RUN",
         "GATE9_SELECTED_D75_LOCKED_NOT_YET_RUN",
         "GATE9_SELECTED_D75_EVALUATION_COMPLETE",
+        "GATE10_CROSS_DOMAIN_CHARCOUNT_LOCKED_NOT_YET_RUN",
+        "GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
