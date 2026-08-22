@@ -736,15 +736,15 @@ experiments:
       four new architecture-matched random controllers?
     instrument: FRESH_PSEUDOWORD_LONG with character-count-semantic-v3
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: PROSPECTIVE_LOCK
-    outcome: NOT_YET_RUN
+    status: BLOCKED_COST_PRE_ANALYSIS
+    outcome: NO_SCIENTIFIC_CLASSIFICATION_INCOMPLETE_COLLECTION
     scientific_interpretation: >-
       Prospective cross-domain DEVELOPMENT replication only. The exact vector,
       dose, layer, timing, generator stratum, evaluator, 200 items, conditions,
       seeds, schedule, estimands, and thresholds are frozen before outputs.
-    source_commit: PENDING_LOCK_COMMIT_BINDING
+    source_commit: 3a1cc739149235a7683ea837972ca9b40b7e8103
     artifact: review/gate10_cross_domain_charcount/
-    cost_usd: null
+    cost_usd: 0.14385555555555554
     holdout_status: UNTOUCHED
     parent_experiment: GATE9_SELECTED_D75_EVALUATION
     lock:
@@ -763,9 +763,18 @@ experiments:
       selected_eta: 9.637427952852196
       target_cost_usd: 2.50
       hard_stop_cost_usd: 5.00
-      gpu_authorized: true
+      gpu_authorized: false
     execution:
-      collection: NOT_RUN
+      engineering_gate: GATE10_ENGINEERING_PASS
+      collection: INCOMPLETE_HARD_COST_RISK
+      trajectories: 10
+      expected_trajectories: 2800
+      projected_generation_hours: 12.11755164394789
+      projected_generation_cost_usd: 5.331722723337071
+      scientific_outcomes_inspected: false
+      scientific_classification: NOT_ASSIGNED
+      runpod_status: EXITED
+      gate11: NOT_RUN
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Execute only frozen Gate 10; Gate 11 remains unauthorized.
+    next_action: Principal review of cost stop; resume and Gate 11 are unauthorized.

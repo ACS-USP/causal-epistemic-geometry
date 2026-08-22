@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 9's strong safe selected-dose replication is accepted. Gate 10 is prospectively locked to transport the exact CRUXEval-derived L27-D75 controller without adaptation to 200 fresh FRESH_PSEUDOWORD_LONG character counts, against four new matched random controls and a textual careful reference, with two independent rollouts and an exact integer evaluator.
+Gate 10 passed its prospective, environment, generator, parser, and controller-engineering gates. Collection preserved 10 of 2,800 scheduled rows before operational timing projected US$5.33 generation cost alone, above the US$5.00 hard ceiling. The pod was stopped and no scientific outcomes or condition metrics were inspected. Gate 10 has no scientific classification and requires principal review before any resume.
 
-- Workstream: `GATE10_CROSS_DOMAIN_CHARCOUNT`
-- RunPod: `STOPPED`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Execute only the frozen 2,800-row Gate-10 cross-domain evaluation, stop the A40, analyze and audit offline, draft but do not execute Gate 11, then return to principal-researcher review.
+- Workstream: `GATE10_CROSS_DOMAIN_CHARCOUNT_BLOCKED_COST`
+- RunPod: `EXITED`
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: Principal-researcher review of the Gate-10 cost stop. Do not resume, redesign, analyze the partial outcomes, or execute Gate 11 automatically.
 
 ## Scientific program
 
@@ -47,13 +47,13 @@ Gate 9's strong safe selected-dose replication is accepted. Gate 10 is prospecti
 
 ## Scientific firewall
 
-- `steering`: `GATE10_CROSS_DOMAIN_CHARCOUNT_LOCKED_NOT_YET_RUN`
+- `steering`: `GATE10_CROSS_DOMAIN_CHARCOUNT_INCOMPLETE_COST_STOP`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE10_CROSS_DOMAIN_CHARCOUNT`
+- `current_task`: `PRINCIPAL_RESEARCHER_REVIEW`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

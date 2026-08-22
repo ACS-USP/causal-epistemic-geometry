@@ -1,0 +1,16 @@
+{
+  "classification": "GATE10_COLLECTION_INCOMPLETE_COST_STOP",
+  "scope": "provenance_and_schedule_only_no_scientific_metrics",
+  "expected_rows": 2800,
+  "actual_rows": 10,
+  "logical_keys_unique": true,
+  "duplicate_logical_keys": 0,
+  "journal_sha256": "d3c2f12e246fc721429676b2f4699c67367fab36ae4be8d138bdc3a6a32bc797",
+  "engineering_checks_sha256": "44b2ebdb42da477cea38369395d1f73566aaad8736a2d26afb047aa33f64c69c",
+  "remote_bundle_sha256": "94e2f9a70e02dafa8c73f119e8fa965328b8d4f5f241567d158bcf2efdb14113",
+  "primary_metrics_computed": false,
+  "classification_applied": false,
+  "scientific_outcomes_inspected": false,
+  "resume_authorized": false,
+  "next_action": "PRINCIPAL_RESEARCHER_REVIEW"
+}

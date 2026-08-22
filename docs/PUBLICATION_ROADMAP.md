@@ -60,6 +60,10 @@ damage 0.0225. The frozen classification is
 Program A is therefore the leading publication program, but it is not yet
 publication-ready: the evidence remains DEVELOPMENT and presently covers one
 model, one semantic benchmark, and one controller family. The next draft tests
-the same fixed controller and dose in a second exact domain. Programs B and C
-remain valuable mechanistic follow-ups. Q2 remains closed and the confirmatory
-holdout remains untouched.
+the same fixed controller and dose in a second exact domain. Gate 10 locked that
+test on fresh long character counting, but collection was stopped after 10 of
+2,800 rows because observed runtime projected above the hard cost ceiling. No
+Gate-10 outcomes were analyzed, so this operational stop adds no cross-domain
+evidence and does not change the branch ranking. Programs B and C remain
+valuable mechanistic follow-ups. Q2 remains closed and the confirmatory holdout
+remains untouched.

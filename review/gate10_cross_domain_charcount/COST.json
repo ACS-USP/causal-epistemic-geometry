@@ -1,0 +1,14 @@
+{
+  "expected_scientific_trajectories": 2800,
+  "completed_scientific_trajectories": 10,
+  "pod_uptime_seconds_at_stop": 1177,
+  "observed_incremental_gpu_cost_usd": 0.14385555555555554,
+  "hourly_gpu_rate_usd": 0.44,
+  "summed_completed_generation_seconds": 155.7970925650443,
+  "projected_full_generation_hours": 12.11755164394789,
+  "projected_full_generation_cost_usd": 5.331722723337071,
+  "target_usd": 2.5,
+  "hard_ceiling_usd": 5.0,
+  "cost_gate": "STOPPED_PROJECTED_HARD_CEILING_RISK",
+  "runpod_status": "EXITED"
+}

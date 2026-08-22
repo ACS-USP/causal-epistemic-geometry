@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "incident_class": "CLASS_A_COST_PROJECTION_RISK",
+  "lifecycle_state": "COLLECTION",
+  "detected_before_scientific_analysis": true,
+  "scientific_outcomes_inspected": false,
+  "expected_rows": 2800,
+  "completed_rows_preserved": 10,
+  "duplicate_logical_keys": 0,
+  "summed_completed_generation_seconds": 155.7970925650443,
+  "mean_completed_generation_seconds": 15.57970925650443,
+  "projected_generation_hours": 12.11755164394789,
+  "projected_generation_cost_usd": 5.331722723337071,
+  "hard_ceiling_usd": 5.0,
+  "action": "COLLECTION_INTERRUPTED_AND_POD_STOPPED",
+  "resume_authorized": false,
+  "scientific_classification_assigned": false,
+  "next_action": "PRINCIPAL_RESEARCHER_REVIEW"
+}

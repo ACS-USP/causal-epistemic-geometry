@@ -49,6 +49,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE9_SELECTED_D75_EVALUATION_COMPLETE",
         "GATE10_CROSS_DOMAIN_CHARCOUNT",
         "GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE",
+        "GATE10_CROSS_DOMAIN_CHARCOUNT_BLOCKED_COST",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -78,6 +79,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE9_SELECTED_D75_EVALUATION_COMPLETE",
         "GATE10_CROSS_DOMAIN_CHARCOUNT_LOCKED_NOT_YET_RUN",
         "GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE",
+        "GATE10_CROSS_DOMAIN_CHARCOUNT_INCOMPLETE_COST_STOP",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

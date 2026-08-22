@@ -1,0 +1,18 @@
+{
+  "profile": "CORE_QWEN",
+  "python": "3.11.10",
+  "torch": "2.4.1+cu124",
+  "cuda_runtime": "12.4",
+  "transformers": "4.57.1",
+  "accelerate": "1.14.0",
+  "huggingface_hub": "0.36.0",
+  "gpu": "NVIDIA A40",
+  "cloud": "SECURE",
+  "data_center": "EU-SE-1",
+  "pod_id": "54zpaa9kr4w8zq",
+  "source_commit": "3a1cc739149235a7683ea837972ca9b40b7e8103",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "remote_preflight": "PASS",
+  "engineering_gate": "GATE10_ENGINEERING_PASS",
+  "runpod_final_status": "EXITED"
+}

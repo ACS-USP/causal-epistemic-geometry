@@ -1,0 +1,67 @@
+{
+  "all_controllers_exercised": true,
+  "alpha_zero_identity": true,
+  "bf16_relative_tolerance": 2.0,
+  "cache_safety": true,
+  "classification": "GATE10_ENGINEERING_PASS",
+  "condition_metadata": true,
+  "controller_checks": {
+    "MEANINGFUL_L27_D75": {
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838"
+    },
+    "RANDOM_L27_D75_R0": {
+      "delta_norm": 97.85168930581243,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "72bef65f41d779efe647c7700b6079ca5f5ec843ec490b2b78be1494bb27243f"
+    },
+    "RANDOM_L27_D75_R1": {
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "f32eeb392b85db1f389289231cd5e6ef2890a8addfaa8fdd44db57776398e2d9"
+    },
+    "RANDOM_L27_D75_R2": {
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "3fcc1b7614bc5595da1133e2ce673d295685b6d93c8f4d2c4fe1071f1e9f1b41"
+    },
+    "RANDOM_L27_D75_R3": {
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "165c1227eb29a83c24a13827314ae8d57180b863d87985a88d05ad7e1601468c"
+    }
+  },
+  "current_token_scope": true,
+  "engineering_prompt_count": 5,
+  "environment_profile": "CORE_QWEN",
+  "exercised_controller_conditions": [
+    "MEANINGFUL_L27_D75",
+    "RANDOM_L27_D75_R0",
+    "RANDOM_L27_D75_R1",
+    "RANDOM_L27_D75_R2",
+    "RANDOM_L27_D75_R3"
+  ],
+  "gate7_evaluation_items_used": false,
+  "generator_integrity": true,
+  "hook_cleanup": true,
+  "hook_trace_application_count": 112,
+  "hook_trace_forward_count": 112,
+  "max_abs_shift_error": 0.7421875,
+  "max_relative_shift_error_bf16_eps": 0.5,
+  "one_application_per_forward": true,
+  "parser_integrity": true,
+  "pass": true,
+  "per_forward_exact_shift": true,
+  "random_matching": true
+}
