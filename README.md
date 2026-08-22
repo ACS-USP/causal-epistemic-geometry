@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 10 passed its prospective, environment, generator, parser, and controller-engineering gates. Collection preserved 10 of 2,800 scheduled rows before operational timing projected US$5.33 generation cost alone, above the original US$5.00 hard ceiling. No outcomes were inspected. The principal then authorized an operational budget expansion to US$6.00 and exact deterministic resume of only the missing frozen logical keys.
+Gate 10 completed all 2,800 frozen trajectories on 200 fresh long character-count items. Baseline opportunity passed, and the fixed L27-D75 controller remained valid, evaluable, and competence-preserving, but its G/C/D were negative and below the new random-controller bank. The frozen classification is GATE10_NO_CROSS_DOMAIN_TRANSFER; the independent forensic audit was clean. This bounds the controller's transfer beyond CRUXEval rather than negating its replicated within-domain effect.
 
-**Next authorized action:** Resume and complete only the original frozen Gate-10 schedule, stop the A40, analyze and audit offline, and return for principal review.
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW. Gate 11 is drafted only and must not be executed without a new prospective lock and explicit authorization.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -96,6 +96,15 @@ as current plans.
   frozen before collection. Accuracy and G/C/D improved beyond four new random
   controls, but commitment/evaluability fell to 0.9000 and violated the frozen
   relative guard; classification: `GATE7_DESTRUCTIVE`.
+- Gate 8 prospectively calibrated the same controller and selected D75 as the
+  lowest safe dose with a specific behavioral first stage. Gate 9 then tested
+  D75 on 100 fresh CRUXEval items and obtained a strong safe DEVELOPMENT
+  replication beyond four new random controls.
+- Gate 10 transported the fixed L27-D75 controller without adaptation to 200
+  fresh long character-count items. Baseline opportunity and safety passed,
+  but G/C/D were negative and below the random null; classification:
+  `GATE10_NO_CROSS_DOMAIN_TRANSFER`. This bounds domain generality without
+  overturning the fresh CRUXEval replication.
 - Confirmatory holdout: untouched.
 
 These are instrument outcomes, not a positive or negative result for the full

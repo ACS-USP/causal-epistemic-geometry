@@ -1,5 +1,5 @@
 schema_version: 1
-last_verified: "2026-08-21"
+last_verified: "2026-08-22"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
@@ -19,32 +19,33 @@ project:
     utility?
 
 current:
-  workstream: GATE10_CROSS_DOMAIN_CHARCOUNT
-  lifecycle: COLLECTION
+  workstream: GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE
+  lifecycle: CLOSED
   stage: DEVELOPMENT_CROSS_DOMAIN_REPLICATION
   source_commit: 3a1cc739149235a7683ea837972ca9b40b7e8103
   summary: >-
-    Gate 10 passed its prospective, environment, generator, parser, and
-    controller-engineering gates. Collection preserved 10 of 2,800 scheduled
-    rows before operational timing projected US$5.33 generation cost alone,
-    above the original US$5.00 hard ceiling. No outcomes were inspected. The
-    principal then authorized an operational budget expansion to US$6.00 and
-    exact deterministic resume of only the missing frozen logical keys.
+    Gate 10 completed all 2,800 frozen trajectories on 200 fresh long
+    character-count items. Baseline opportunity passed, and the fixed L27-D75
+    controller remained valid, evaluable, and competence-preserving, but its
+    G/C/D were negative and below the new random-controller bank. The frozen
+    classification is GATE10_NO_CROSS_DOMAIN_TRANSFER; the independent
+    forensic audit was clean. This bounds the controller's transfer beyond
+    CRUXEval rather than negating its replicated within-domain effect.
   next_authorized_action: >-
-    Resume and complete only the original frozen Gate-10 schedule, stop the
-    A40, analyze and audit offline, and return for principal review.
-  runpod: START_AUTHORIZED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+    PRINCIPAL_RESEARCHER_REVIEW. Gate 11 is drafted only and must not be
+    executed without a new prospective lock and explicit authorization.
+  runpod: STOPPED
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE10_CROSS_DOMAIN_CHARCOUNT_RESUME_AUTHORIZED
+  steering: GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE10_CROSS_DOMAIN_CHARCOUNT
+  current_task: GATE10_CROSS_DOMAIN_CHARCOUNT_COMPLETE
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -169,7 +170,18 @@ instrument_history:
       0.0225. The frozen classification is a strong safe DEVELOPMENT
       replication. Independent metric recomputation agreed exactly; the
       forensic classification records one minor non-scientific parser-totality
-      incident. Gate 10 is drafted only; Q2 and holdout remain closed.
+      incident. At Gate-9 closeout, Gate 10 was drafted only; Q2 and holdout
+      remained closed.
+  - id: GATE10_CROSS_DOMAIN_CHARCOUNT
+    status: COMPLETE_DEVELOPMENT_NO_TRANSFER
+    conclusion: >-
+      On 200 fresh FRESH_PSEUDOWORD_LONG items, baseline opportunity passed
+      with accuracy 0.8625 and B00=0.045. The exact CRUXEval-derived L27-D75
+      controller was safe but did not transfer specific error control:
+      G=-0.01625, C=-0.01230, D=-0.025, with rescue below damage and all three
+      estimands below the random-controller mean. The textual careful source
+      also did not replicate under its frozen rule. The independent forensic
+      audit was clean. Gate 11 is drafted only; Q2 and holdout remain closed.
 
 workflow_regimes:
   EXPLORATION:

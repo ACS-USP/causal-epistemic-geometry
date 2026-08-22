@@ -736,15 +736,17 @@ experiments:
       four new architecture-matched random controllers?
     instrument: FRESH_PSEUDOWORD_LONG with character-count-semantic-v3
     model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
-    status: COLLECTION_RESUME_AUTHORIZED
-    outcome: NOT_YET_COMPLETE
+    status: COMPLETE_DEVELOPMENT_NO_TRANSFER
+    outcome: GATE10_NO_CROSS_DOMAIN_TRANSFER
     scientific_interpretation: >-
-      Prospective cross-domain DEVELOPMENT replication only. The exact vector,
-      dose, layer, timing, generator stratum, evaluator, 200 items, conditions,
-      seeds, schedule, estimands, and thresholds are frozen before outputs.
+      The exact CRUXEval-derived controller remained mechanically safe on fresh
+      long character counting, and the instrument provided adequate baseline
+      error opportunity, but G/C/D were negative and below the four-controller
+      random null. This is a bounded cross-domain DEVELOPMENT null, not a
+      reversal of the replicated CRUXEval effect and not confirmatory evidence.
     source_commit: 3a1cc739149235a7683ea837972ca9b40b7e8103
     artifact: review/gate10_cross_domain_charcount/
-    cost_usd: 0.14385555555555554
+    cost_usd: 5.191511111111112
     holdout_status: UNTOUCHED
     parent_experiment: GATE9_SELECTED_D75_EVALUATION
     lock:
@@ -767,15 +769,34 @@ experiments:
       gpu_authorized: true
     execution:
       engineering_gate: GATE10_ENGINEERING_PASS
-      collection: RESUME_AUTHORIZED_FROM_ROW_10
-      trajectories: 10
+      collection: COMPLETE_AFTER_EXACT_RESUME_FROM_ROW_10
+      trajectories: 2800
       expected_trajectories: 2800
-      projected_generation_hours: 12.11755164394789
-      projected_generation_cost_usd: 5.331722723337071
-      scientific_outcomes_inspected: false
-      scientific_classification: NOT_ASSIGNED
-      runpod_status: START_AUTHORIZED
+      a40_runtime_seconds: 42476
+      a40_runtime_hours: 11.79888888888889
+      scientific_outcomes_inspected_only_after_collection: true
+      baseline_opportunity: CHARCOUNT_OPPORTUNITY_PASS
+      source_policy: CHARCOUNT_CAREFUL_SOURCE_NOT_REPLICATED
+      scientific_classification: GATE10_NO_CROSS_DOMAIN_TRANSFER
+      forensic_audit: GATE10_FORENSIC_CLEAN
+      forensic_metric_max_abs_difference: 0.0
+      runpod_status: STOPPED
       gate11: NOT_RUN
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Complete only the frozen Gate-10 schedule, then stop and review.
+    result:
+      baseline_accuracy: 0.8625
+      baseline_B00: 0.045
+      controller_accuracy: 0.835
+      controller_commitment_validity: 0.9975
+      controller_semantic_evaluability: 0.9975
+      controller_G: -0.01625
+      controller_C: -0.012298994974874373
+      controller_D: -0.025
+      controller_G_norm: -0.36111111111111116
+      controller_rescue: 0.07625
+      controller_damage: 0.10375
+      G_minus_random_mean: -0.0053124999999999995
+      C_minus_random_mean: -0.006548366834170855
+      D_minus_random_mean: -0.02375
+    next_action: Principal review; Gate 11 is drafted only and is not authorized.

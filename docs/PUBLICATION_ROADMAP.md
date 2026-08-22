@@ -1,8 +1,8 @@
 # Publication roadmap
 
 This is a branching decision map, not a claim that the project has already
-produced three papers. The current evidence is development-only and remains
-bounded by Gate 9's fresh selected-dose evaluation.
+produced three papers. The current evidence is development-only and now
+includes Gate 10's fixed-controller cross-domain test.
 
 ## Program A — Distributed steering of blind spots
 
@@ -49,21 +49,26 @@ Evidence gate:
 ## Current branch point
 
 Gate 7 found controller-specific semantic movement at full dose but failed its
-relative validity guard. Gate 8 then selected D75 prospectively using safety and
-first-stage criteria only. Gate 9 evaluated that fixed choice on 100 fresh items:
-accuracy rose from 0.47 to 0.60, commitment validity and semantic evaluability
-were 0.97, and G/C/D were 0.1325/0.0643/0.1200. All three exceeded the maxima of
-four new architecture-matched random controllers, with rescue 0.1525 versus
-damage 0.0225. The frozen classification is
+relative validity guard. Gate 8 selected D75 prospectively using safety and
+first-stage criteria only. Gate 9 evaluated that fixed choice on 100 fresh
+CRUXEval items: accuracy rose from 0.47 to 0.60, commitment validity and
+semantic evaluability were 0.97, and G/C/D were 0.1325/0.0643/0.1200. All three
+exceeded four new architecture-matched random controls, with rescue 0.1525
+versus damage 0.0225. Its frozen classification is
 `GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION`.
 
-Program A is therefore the leading publication program, but it is not yet
-publication-ready: the evidence remains DEVELOPMENT and presently covers one
-model, one semantic benchmark, and one controller family. The next draft tests
-the same fixed controller and dose in a second exact domain. Gate 10 locked that
-test on fresh long character counting, but collection was stopped after 10 of
-2,800 rows because observed runtime projected above the hard cost ceiling. No
-Gate-10 outcomes were analyzed, so this operational stop adds no cross-domain
-evidence and does not change the branch ranking. Programs B and C remain
-valuable mechanistic follow-ups. Q2 remains closed and the confirmatory holdout
-remains untouched.
+Gate 10 then transported the exact vector, D75 dose, layer, timing, model, and
+policy without adaptation to 200 fresh long character-count items. Baseline
+opportunity passed and the controller remained safe, but G/C/D were
+-0.01625/-0.01230/-0.025, below the random-controller mean; rescue was below
+damage. The textual careful source also failed its frozen replication rule.
+The frozen classification is `GATE10_NO_CROSS_DOMAIN_TRANSFER`, independently
+audited clean.
+
+Program A therefore retains strong within-CRUXEval DEVELOPMENT support but is
+downgraded as a domain-general publication program: the present controller is
+better described as domain-conditioned, plausibly tied to program tracing.
+Programs B and C now receive higher priority for explaining why a readable and
+causally effective controller has domain-dependent control gain. The next
+protocol is a domain-conditioned control postmortem draft only. Q2 remains
+closed and the confirmatory holdout remains untouched.

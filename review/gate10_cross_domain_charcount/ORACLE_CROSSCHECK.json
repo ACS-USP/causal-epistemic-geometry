@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "exact_integer_oracles": true,
+    "journal_manifest_binding": true,
+    "manifest_n_200": true,
+    "no_historical_hash_collision": true,
+    "no_historical_id_collision": true,
+    "no_historical_seed_collision": true,
+    "no_historical_string_collision": true,
+    "unique_generator_seeds": true,
+    "unique_item_hashes": true,
+    "unique_item_ids": true,
+    "unique_strings": true
+  },
+  "classification": "PASS"
+}

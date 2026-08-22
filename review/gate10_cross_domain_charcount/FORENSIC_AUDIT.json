@@ -1,16 +1,49 @@
 {
-  "classification": "GATE10_COLLECTION_INCOMPLETE_COST_STOP",
-  "scope": "provenance_and_schedule_only_no_scientific_metrics",
+  "G_norm_crosscheck": {
+    "audit": -0.36111111111111116,
+    "difference": 0.0,
+    "primary": -0.36111111111111116
+  },
+  "actual_rows": 2800,
+  "bootstrap": {
+    "item_cluster_unit_required_by_lock": "item_cluster_all_7_conditions_both_rollouts",
+    "resamples": 10000
+  },
+  "classification": "GATE10_FORENSIC_CLEAN",
+  "classification_agreement": true,
   "expected_rows": 2800,
-  "actual_rows": 10,
   "logical_keys_unique": true,
-  "duplicate_logical_keys": 0,
-  "journal_sha256": "d3c2f12e246fc721429676b2f4699c67367fab36ae4be8d138bdc3a6a32bc797",
-  "engineering_checks_sha256": "44b2ebdb42da477cea38369395d1f73566aaad8736a2d26afb047aa33f64c69c",
-  "remote_bundle_sha256": "94e2f9a70e02dafa8c73f119e8fa965328b8d4f5f241567d158bcf2efdb14113",
-  "primary_metrics_computed": false,
-  "classification_applied": false,
-  "scientific_outcomes_inspected": false,
-  "resume_authorized": false,
-  "next_action": "PRINCIPAL_RESEARCHER_REVIEW"
+  "metric_max_abs_difference": 0.0,
+  "oracle_generator_crosscheck": {
+    "checks": {
+      "exact_integer_oracles": true,
+      "journal_manifest_binding": true,
+      "manifest_n_200": true,
+      "no_historical_hash_collision": true,
+      "no_historical_id_collision": true,
+      "no_historical_seed_collision": true,
+      "no_historical_string_collision": true,
+      "unique_generator_seeds": true,
+      "unique_item_hashes": true,
+      "unique_item_ids": true,
+      "unique_strings": true
+    },
+    "classification": "PASS"
+  },
+  "parser_condition_symmetric_reparse": true,
+  "parser_mismatch_count": 0,
+  "post_treatment_filtering": false,
+  "provenance": {
+    "controller_hash_exact": true,
+    "manifest_hash_exact": true,
+    "model_revision_exact": true,
+    "parser_version_exact": true,
+    "random_hashes_exact": true,
+    "schedule_hash_exact": true,
+    "source_binding_lock_hash_exact": true,
+    "source_commit_exact": true
+  },
+  "schedule_complete": true,
+  "seed_formula_exact": true,
+  "seed_unique": true
 }

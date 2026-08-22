@@ -1,14 +1,14 @@
-# Gate 10 partial-collection forensic record
+# Gate 10 independent forensic audit
 
-Classification: `GATE10_COLLECTION_INCOMPLETE_COST_STOP`.
+Classification: `GATE10_FORENSIC_CLEAN`.
 
-This is an operational status, not a Gate-10 scientific classification. The
-frozen schedule expected 2,800 rows; 10 unique logical rows were journaled and
-recovered before the projected full cost crossed the US$5.00 hard ceiling.
-No correctness, validity, token-length, G/C/D, rescue/damage, random ranking, or
-condition comparison was inspected.
+- Frozen/observed rows: 2800/2800
+- Unique logical keys: True
+- Exact independent seed schedule: True
+- Condition-symmetric character semantic-v3 reparse: True
+- Maximum primary/audit metric difference: 0
+- G_norm difference: 0
+- Generator/oracle crosscheck: PASS
+- Classification agreement: True
 
-The recovered journal and engineering artifacts match the independently
-recorded transfer SHA-256. Resumption is not authorized without principal
-review because it would require a material budget expansion or a new
-prospective execution design.
+All causal estimands were independently recomputed from raw binary outcome arrays without calling the Gate-10 primary analysis path. The exact integer oracle and historical collision firewall were also independently checked.

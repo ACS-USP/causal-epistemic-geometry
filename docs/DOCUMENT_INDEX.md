@@ -53,6 +53,7 @@ current instruction source.
 | `review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md` | Additive condition-symmetric V3 audit; historical Gate 6.3 result unchanged |
 | `docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md` | Fresh frozen-controller replication, destructive classification, and forensic closeout |
 | `docs/GATE9_SELECTED_D75_EVALUATION_CLOSEOUT.md` | Fresh selected-D75 strong-safe DEVELOPMENT replication and incident boundary |
+| `docs/GATE10_CROSS_DOMAIN_CHARCOUNT_CLOSEOUT.md` | Fixed-controller cross-domain character-count null and forensic closeout |
 
 ## Archival scientific protocols and closeouts
 
