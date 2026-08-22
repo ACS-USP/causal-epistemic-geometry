@@ -415,6 +415,28 @@ PRIMARY SYNTHESIS
 
 {classification}
 
+MEASUREMENT DISTINCTIONS
+----------------------------------------------------------------------
+
+1. Source-axis gaps, AUROC, and direction cosines measure representation
+   transfer.
+2. D75 next-token KL/JS and downstream hidden displacement are finite-
+   displacement control-gain diagnostics.
+3. Gate 11 did not measure an exact local pullback metric and did not establish
+   Fisher geometry.
+4. Historical accuracy and G/C/D measure task utility, not control energy.
+
+RAW-PERSISTENCE BOUNDARY
+----------------------------------------------------------------------
+
+Prompt-boundary activations were preserved in float32. The fixed-sequence
+journal preserved per-item/per-condition/per-checkpoint scalar logit metrics,
+hidden displacement norms, token checkpoints, target-token indexing, D75
+normalization, and provenance. It did not preserve complete per-checkpoint
+vocabulary-logit arrays or hidden-state difference vectors. Consequently the
+primitive KL/JS/vector calculations cannot be independently recomputed from
+the recovered artifact alone; no replacement diagnostic collection was run.
+
 INTERPRETATION BOUNDARY
 ----------------------------------------------------------------------
 

@@ -1,0 +1,148 @@
+{
+  "rows": [
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.7752591407335498,
+      "domain": "CRUXEval",
+      "layer": 8,
+      "mean_gap": 4.037360256950909,
+      "median_gap": 4.019404525620073,
+      "paired_standardized_effect": 20.149060108278672,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.759710701739004,
+      "domain": "CRUXEval",
+      "layer": 12,
+      "mean_gap": 7.265357399001952,
+      "median_gap": 7.2835474887235225,
+      "paired_standardized_effect": 36.71880307652711,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.7771803217625116,
+      "domain": "CRUXEval",
+      "layer": 17,
+      "mean_gap": 16.619270904043606,
+      "median_gap": 16.514986781064582,
+      "paired_standardized_effect": 33.54455109055835,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.7679450220586612,
+      "domain": "CRUXEval",
+      "layer": 22,
+      "mean_gap": 43.46538017039501,
+      "median_gap": 43.587385302452475,
+      "paired_standardized_effect": 18.55679359657286,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cosine_to_frozen": 0.9982780426300173,
+      "cross_domain_direction_cosine": 0.6485582444376512,
+      "domain": "CRUXEval",
+      "layer": 27,
+      "mean_gap": 124.64550880941503,
+      "median_gap": 126.4031225079389,
+      "paired_standardized_effect": 13.989166536190599,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.6927667739887569,
+      "domain": "CRUXEval",
+      "layer": 32,
+      "mean_gap": 272.10599215250755,
+      "median_gap": 278.17160785871897,
+      "paired_standardized_effect": 10.431179163725366,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "axis": "FROZEN_L27",
+      "cosine_to_frozen": 0.9982780426300173,
+      "domain": "CRUXEval",
+      "layer": 27,
+      "mean_gap": 124.4308745568854,
+      "median_gap": 126.42978402255723,
+      "paired_standardized_effect": 13.598051344945219,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.7752591407335498,
+      "domain": "CHARCOUNT",
+      "layer": 8,
+      "mean_gap": 5.26918111120773,
+      "median_gap": 5.259546604270453,
+      "paired_standardized_effect": 45.19175251794006,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.759710701739004,
+      "domain": "CHARCOUNT",
+      "layer": 12,
+      "mean_gap": 9.441744902708546,
+      "median_gap": 9.463597048746658,
+      "paired_standardized_effect": 69.65203654290025,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.7771803217625116,
+      "domain": "CHARCOUNT",
+      "layer": 17,
+      "mean_gap": 21.380362596207927,
+      "median_gap": 21.456351538698172,
+      "paired_standardized_effect": 48.31510078109304,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.7679450220586612,
+      "domain": "CHARCOUNT",
+      "layer": 22,
+      "mean_gap": 65.50077715696156,
+      "median_gap": 65.52003138901739,
+      "paired_standardized_effect": 50.29597739459255,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cosine_to_frozen": 0.6593678019622763,
+      "cross_domain_direction_cosine": 0.6485582444376512,
+      "domain": "CHARCOUNT",
+      "layer": 27,
+      "mean_gap": 170.1177249387956,
+      "median_gap": 170.9317000314182,
+      "paired_standardized_effect": 45.00570006203634,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "cross_domain_direction_cosine": 0.6927667739887569,
+      "domain": "CHARCOUNT",
+      "layer": 32,
+      "mean_gap": 341.6664335717296,
+      "median_gap": 342.7348550295067,
+      "paired_standardized_effect": 49.96376283975203,
+      "positive_gap_fraction": 1.0
+    },
+    {
+      "auroc": 1.0,
+      "axis": "FROZEN_L27",
+      "cosine_to_frozen": 0.6593678019622763,
+      "domain": "CHARCOUNT",
+      "layer": 27,
+      "mean_gap": 112.17015036771677,
+      "median_gap": 112.23847811261803,
+      "paired_standardized_effect": 30.29297749501243,
+      "positive_gap_fraction": 1.0
+    }
+  ]
+}

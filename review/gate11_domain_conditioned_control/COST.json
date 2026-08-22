@@ -1,0 +1,12 @@
+{
+  "a40_runtime_seconds": 2331,
+  "a40_runtime_hours": 0.6475,
+  "gpu_rate_usd_per_hour": 0.44,
+  "incremental_gpu_cost_usd": 0.2849,
+  "target_cost_usd": 1.0,
+  "hard_ceiling_usd": 2.5,
+  "hard_ceiling_pass": true,
+  "free_generation_trajectories": 0,
+  "source_activation_logical_rows": 320,
+  "fixed_sequence_logical_rows": 336
+}

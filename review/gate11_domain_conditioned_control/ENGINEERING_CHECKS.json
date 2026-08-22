@@ -1,0 +1,48 @@
+{
+  "all_controllers_exercised": true,
+  "alpha_zero_identity": true,
+  "cache_safety": true,
+  "classification": "GATE11_ENGINEERING_PASS",
+  "controller_checks": {
+    "TF_MEANINGFUL_L27_D75": {
+      "application_count": 3,
+      "forward_count": 3,
+      "max_noncurrent_change": 0.0,
+      "max_relative_shift_error": 0.9175597429275513,
+      "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838"
+    },
+    "TF_RANDOM_R0": {
+      "application_count": 3,
+      "forward_count": 3,
+      "max_noncurrent_change": 0.0,
+      "max_relative_shift_error": 0.8951351046562195,
+      "vector_hash": "10f04508f36b33f126c471b6fedddf8be92ae554cbdcc9d28e71a5a12d27163d"
+    },
+    "TF_RANDOM_R1": {
+      "application_count": 3,
+      "forward_count": 3,
+      "max_noncurrent_change": 0.0,
+      "max_relative_shift_error": 0.8841819763183594,
+      "vector_hash": "932ca6a1d098fdc6c1cb9ccc869fb7d47bc35ec9ae5fad0356c0b3130b2ef8cd"
+    },
+    "TF_RANDOM_R2": {
+      "application_count": 3,
+      "forward_count": 3,
+      "max_noncurrent_change": 0.0,
+      "max_relative_shift_error": 0.7645710110664368,
+      "vector_hash": "74271ef69a1eb5e2fc5a88be38f63e75dd48985896b5d6992420edd03c09b4b7"
+    },
+    "TF_RANDOM_R3": {
+      "application_count": 3,
+      "forward_count": 3,
+      "max_noncurrent_change": 0.0,
+      "max_relative_shift_error": 0.9438251256942749,
+      "vector_hash": "9659f1e15f0fd6435aceed323f898723bcab45417c52908aac9d9990d68ffd93"
+    }
+  },
+  "current_token_scope": true,
+  "exact_shift": true,
+  "free_generation": false,
+  "hook_cleanup": true,
+  "one_application_per_forward": true
+}

@@ -1,0 +1,24 @@
+{
+  "profile": "CORE_QWEN",
+  "python": "3.11.10",
+  "torch": "2.4.1+cu124",
+  "cuda_runtime": "12.4",
+  "transformers": "4.57.1",
+  "accelerate": "1.14.0",
+  "huggingface_hub": "0.36.0",
+  "gpu": "NVIDIA A40",
+  "cloud": "SECURE",
+  "data_center": "CA-MTL-1",
+  "pod_id": "9xbvxknn0uipjq",
+  "source_commit": "e47d3f66a5a96d38431ff3b023a501159798b6b4",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "remote_preflight": "PASS",
+  "engineering_gate": "GATE11_ENGINEERING_PASS",
+  "runpod_final_gpu_status": "EXITED",
+  "class_a_recoveries": [
+    "CA-MTL-1 stopped Gate-10 host had no free GPU; created equivalent A40 Pod",
+    "restored exact CORE_QWEN dependencies and exact Qwen revision cache",
+    "recovered from a transient post-collection SSH transport hang without modifying collection"
+  ],
+  "class_b_amendments": []
+}

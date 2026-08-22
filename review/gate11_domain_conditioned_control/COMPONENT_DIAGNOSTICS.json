@@ -1,0 +1,9 @@
+{
+  "classification": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "components": {
+    "control_gain": "CONTROL_GAIN_SHIFT_NOT_ESTABLISHED",
+    "policy_realization": "POLICY_REALIZATION_SHIFT_NOT_ESTABLISHED",
+    "policy_utility": "POLICY_UTILITY_DOMAIN_SHIFT_SUPPORTED",
+    "source_axis": "SOURCE_AXIS_TRANSFER_SUPPORTED"
+  }
+}

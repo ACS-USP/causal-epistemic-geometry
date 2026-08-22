@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "source": {
+    "logical_rows": 320,
+    "new_physical_forwards": 280
+  },
+  "teacher_forcing": {
+    "logical_rows": 336,
+    "new_rows": 336
+  }
+}

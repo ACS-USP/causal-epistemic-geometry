@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "delta_d75": 97.85168930581241,
+      "delta_over_gap": 0.7863939689749434,
+      "delta_over_scale": 11.728892152661475,
+      "domain": "CRUXEval",
+      "fraction_moved_toward_careful_centroid": 1.0,
+      "natural_gap": 124.4308745568854,
+      "ordinary_projection_scale": 8.342790438533301,
+      "ordinary_to_careful_distance_after": 23.089594136849126,
+      "ordinary_to_careful_distance_before": 120.94128344266153
+    },
+    {
+      "delta_d75": 97.85168930581241,
+      "delta_over_gap": 0.8723505227106721,
+      "delta_over_scale": 32.57722460157871,
+      "domain": "CHARCOUNT",
+      "fraction_moved_toward_careful_centroid": 1.0,
+      "natural_gap": 112.17015036771677,
+      "ordinary_projection_scale": 3.0036840308695436,
+      "ordinary_to_careful_distance_after": 41.40878722067654,
+      "ordinary_to_careful_distance_before": 56.44290208513587
+    }
+  ]
+}
