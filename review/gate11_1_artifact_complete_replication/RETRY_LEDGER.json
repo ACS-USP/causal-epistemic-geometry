@@ -1,0 +1,13 @@
+{
+  "experiment": "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION",
+  "scientific_logical_row_retries": 0,
+  "scientific_rows_regenerated": 0,
+  "infrastructure_retries": 0,
+  "model_outcome_retries": 0,
+  "completed_logical_rows": 336,
+  "duplicate_logical_rows": 0,
+  "notes": [
+    "All 336 teacher-forced rows were collected once under their frozen logical keys.",
+    "The recorded incidents were transport, provenance, and offline-analysis repairs only; none changed model outputs or raw shards."
+  ]
+}

@@ -78,11 +78,13 @@ CRUXEval and harmed character count. Gate 11 did not measure an exact local
 pullback/Fisher metric; KL/JS and hidden displacement are finite-shift control
 diagnostics, while accuracy and G/C/D are task-utility measures.
 
-The primary synthesis is `GATE11_POLICY_UTILITY_DOMAIN_MISMATCH`. Its forensic
-status is bounded by a scientific-integrity concern: full per-checkpoint logits
-and hidden-difference vectors were not persisted, so primitive propagation
-metrics cannot be independently recomputed. Program A remains strong within
-CRUXEval but domain-conditioned. Program B gains evidence from the separation
-between representation, control diagnostics, and utility. Program C remains a
-future hypothesis, not an established Fisher/pullback result. No Gate-12 draft
-is executable until principal review; Q2 and the holdout remain closed.
+The primary synthesis is `GATE11_POLICY_UTILITY_DOMAIN_MISMATCH`. Gate 11.1
+repaired the forensic artifact boundary by persisting complete per-checkpoint
+vocabulary logits and hidden-difference vectors and independently reproducing
+the synthesis with exact metric agreement. This repairs the artifact concern;
+it does not change the historical Gate-11 result. Program A remains strong
+within CRUXEval but domain-conditioned. Program B gains evidence from the
+separation between representation, finite-displacement control diagnostics,
+and task utility. Program C remains a future hypothesis, not an established
+Fisher/pullback result. No Gate-12 protocol is authorized for execution; Q2
+and the holdout remain closed pending principal review.

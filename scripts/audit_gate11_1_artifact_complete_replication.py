@@ -109,7 +109,9 @@ def load_independent() -> tuple[dict[tuple[str, str, str], dict[str, float]], di
             values[condition] = {
                 "next_token_kl": float(metric["next_token_kl"].mean()),
                 "A35": float(
-                    np.linalg.norm(diffs[condition_index, :, LAYERS.index(35), :], axis=1).mean()
+                    np.linalg.norm(
+                        diffs[condition_index, :, LAYERS.index(35), :].astype(np.float64), axis=1
+                    ).mean()
                 ),
                 "top1_flip": float(metric["top1_flip"].mean()),
                 "alignment": float(
@@ -173,7 +175,8 @@ def independent_summary(
 
 def source_transfer_flag() -> bool:
     component = read_json(HISTORICAL / "COMPONENT_DIAGNOSTICS.json")
-    return component["source_transfer_supported"] is True
+    components = component.get("components", {})
+    return components.get("source_axis") == "SOURCE_AXIS_TRANSFER_SUPPORTED"
 
 
 def main() -> int:

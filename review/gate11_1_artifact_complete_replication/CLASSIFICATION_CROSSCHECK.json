@@ -1,0 +1,10 @@
+{
+  "agreement": true,
+  "control_gain_shift": false,
+  "forensic": "GATE11_1_FORENSIC_REPLICATION_CLEAN_AGREEMENT",
+  "independent": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "policy_realization_shift": false,
+  "policy_utility_shift": true,
+  "primary": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "source_transfer": true
+}

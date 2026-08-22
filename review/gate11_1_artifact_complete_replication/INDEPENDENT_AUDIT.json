@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "condition_symmetry": true,
+    "item_groups": 48,
+    "journal_rows": 336,
+    "journal_unique_rows": 336,
+    "primitive_arrays": true,
+    "shard_entries": 48,
+    "shard_hashes": true,
+    "source_sequence_symmetry": true
+  },
+  "classification": "GATE11_1_FORENSIC_REPLICATION_CLEAN_AGREEMENT",
+  "exact_local_fisher_or_pullback_measured": false,
+  "historical_gate11_result_preserved": true,
+  "independent_classification": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "logical_rows": 336,
+  "primary_classification": "GATE11_POLICY_UTILITY_DOMAIN_MISMATCH",
+  "primary_independent_max_abs_difference": 0.0,
+  "raw_shards": 48,
+  "raw_source": "persisted float32 logits and hidden-difference arrays only"
+}
