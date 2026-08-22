@@ -970,14 +970,15 @@ experiments:
       parameters before scientific geometry is retried?
     instrument: Synthetic token fixtures with exact JVP/VJP/Hessian/KL identities
     model_policy: Qwen3-8B frozen BF16 values, BF16 historical and FP32-lift cells
-    status: PROSPECTIVE_ENGINEERING_LOCK
-    outcome: NOT_YET_QUALIFIED
+    status: COMPLETE_ENGINEERING_NOT_QUALIFIED
+    outcome: GATE12_1_DERIVATIVE_ENGINE_NOT_QUALIFIED
     scientific_interpretation: >-
-      Engineering and numerical analysis only. No scientific geometry,
-      historical semantic outcome, free generation, Q2, or holdout access.
+      FP32 sequence equivalence and exact-AD identities passed, but the BF16
+      bridge and the frozen three-scale finite-difference window failed. This is
+      engineering evidence only, not scientific geometry evidence.
     source_commit: 0e7e1505a2456c0a78ee9a8ba63d2eaf5f1f8d43
     artifact: review/gate12_1_continuous_geometry_engine/
-    cost_usd: null
+    cost_usd: 0.11
     holdout_status: UNTOUCHED
     parent_experiment: GATE12_UTILITY_ALIGNED_PULLBACK
     lock:
@@ -986,13 +987,22 @@ experiments:
       scientific_items: 0
       exact_jvp_required: true
       free_generation: false
-      gpu_authorized: true
+      gpu_authorized: false
       target_cost_usd: 0.50
       hard_stop_cost_usd: 1.50
     execution:
-      lifecycle: PROSPECTIVE_LOCK
+      lifecycle: CLOSED
       historical_outcomes_revealed: false
       class_b_amendment: SOURCE_COMMIT_ANCESTOR_OF_LOCK_CHECKOUT
+      classification: GATE12_1_DERIVATIVE_ENGINE_NOT_QUALIFIED
+      fp32_sequence_equivalence: PASS
+      historical_bf16_bridge: FAIL
+      exact_derivative_identities: PASS
+      finite_difference_window: FAIL
+      scientific_items_processed: 0
+      forensic_audit: GATE12_1_FORENSIC_CLEAN
+      runpod_status: TERMINATED
+      retained_volumes: 0
       q2: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Run the frozen engineering qualification only.
+    next_action: Principal review; revised Gate-12 execution remains draft only.

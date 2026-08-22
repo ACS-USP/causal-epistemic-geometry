@@ -96,6 +96,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE11_1_FORENSIC_REPLICATION_CLOSED",
         "GATE12_JVP_ENGINE_FAILURE_CLOSED",
         "GATE12_1_ENGINEERING_ONLY_LOCKED",
+        "GATE12_1_ENGINE_NOT_QUALIFIED_CLOSED",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

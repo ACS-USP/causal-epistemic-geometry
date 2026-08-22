@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 12.1 prospectively qualifies sequence semantics, the FP32 computational lift, exact directional derivatives, Fisher/Hessian identity, utility derivatives, and local finite-difference behavior on synthetic engineering fixtures only.
+Gate 12.1 qualified FP32 sequence equivalence and exact AD identities, but the historical BF16 bridge and the required three-scale finite-difference window failed. No scientific item or historical outcome was accessed.
 
-**Next authorized action:** Run the frozen Gate-12.1 numerical qualification without scientific items or historical-outcome access.
+**Next authorized action:** Principal review of the Gate-12.1 numerical-engine closeout.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

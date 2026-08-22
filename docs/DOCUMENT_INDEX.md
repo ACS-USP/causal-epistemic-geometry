@@ -76,6 +76,7 @@ current instruction source.
 | `docs/Q1_V4_MICROBENCH.md` | Frozen V4 authorization snapshot |
 | `docs/EXTERNAL_BENCHMARK_QUALIFICATION.md` | Closed development search protocol |
 | `docs/GATE12_UTILITY_ALIGNED_PULLBACK_CLOSEOUT.md` | Gate-12 pre-collection JVP engine-failure closeout |
+| `docs/GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_CLOSEOUT.md` | Gate-12.1 numerical-engine qualification closeout |
 
 ## Archival engineering and handoff reports
 

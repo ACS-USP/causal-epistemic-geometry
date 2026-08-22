@@ -91,3 +91,11 @@ but the frozen BF16 finite-difference, local-KL, and full-sequence/KV engineerin
 gates failed before scientific geometry collection. Program C is therefore not
 promoted: no predictive pullback result, positive or negative, was obtained.
 Q2 and the holdout remain closed pending principal review.
+
+Gate 12.1 subsequently showed that the FP32 computational lift has coherent
+full-sequence/KV semantics and mutually consistent exact JVP/VJP,
+Fisher/Hessian, and utility-derivative identities on synthetic fixtures. The
+complete engine nevertheless did not qualify because the historical BF16
+bridge and the frozen three-consecutive-scale finite-difference rule failed.
+Program C is not promoted: no scientific geometry or utility-prediction values
+were collected, and historical outcomes remained sealed.
