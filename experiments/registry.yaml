@@ -857,3 +857,45 @@ experiments:
       q2: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; Gate 12 and replacement collection are not authorized.
+
+  - id: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
+    version: GATE-11.1
+    stage: DEVELOPMENT_FORENSIC_REPLICATION
+    question: >-
+      Can the immutable Gate-11 fixed-sequence propagation diagnostics be
+      independently recomputed from complete persisted vocabulary logits and
+      hidden-difference vectors?
+    instrument: Artifact-complete fixed-sequence teacher-forcing diagnostics
+    model_policy: Qwen3-8B BF16 SDPA, no sampling and no free generation
+    status: LOCKED_PROSPECTIVE
+    outcome: PENDING_COLLECTION
+    scientific_interpretation: >-
+      This is a forensic replication of Gate 11, not a redesign or new
+      scientific evaluation. It reuses all historical items, sequences,
+      conditions, controller parameters, random directions, layers, and
+      checkpoints. The historical Gate-11 result remains immutable.
+    source_commit: c4c6c77
+    artifact: review/gate11_1_artifact_complete_replication/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM
+    lock:
+      protocol: review/gate11_1_artifact_complete_replication/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      propagation_items_per_domain: 24
+      fixed_sequence_conditions: 7
+      fixed_sequence_rows: 336
+      raw_shards: 48
+      full_vocab_logits: true
+      hidden_difference_vectors: true
+      free_generation: false
+      gpu_authorized: true
+      target_cost_usd: 0.60
+      hard_stop_cost_usd: 1.25
+    execution:
+      collection: NOT_RUN
+      replacement_free_generation: NOT_AUTHORIZED
+      q2: NOT_RUN
+      holdout_status: UNTOUCHED
+      runpod_status: GATE11_1_PREPARATION
+    next_action: Complete the frozen collection, stop RunPod, independently audit, and return for principal review.

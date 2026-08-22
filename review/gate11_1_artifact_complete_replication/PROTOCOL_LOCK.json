@@ -1,0 +1,138 @@
+{
+  "audit": {
+    "abs_tolerance": 1e-10,
+    "independent_reads_raw_shards_only": true,
+    "primary_reads_raw_shards_only": true,
+    "relative_tolerance": 1e-08
+  },
+  "controller": {
+    "canonical_float64_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "delta_norm": 97.85168930581241,
+    "duration": "sustained_current_token",
+    "eta": 9.637427952852196,
+    "file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "layer": 27,
+    "reference_scale": 10.153299177386142,
+    "source": "CRUXEval careful-minus-direct prompt-boundary paired mean"
+  },
+  "cost": {
+    "hard_ceiling_usd": 1.25,
+    "target_usd": 0.6
+  },
+  "design": {
+    "captured_layers": [
+      27,
+      28,
+      30,
+      32,
+      35
+    ],
+    "checkpoints": [
+      0,
+      1,
+      3,
+      7,
+      15,
+      31,
+      63,
+      127,
+      255
+    ],
+    "conditions": [
+      "TF_BASELINE",
+      "TF_TEXTUAL_CAREFUL",
+      "TF_MEANINGFUL_L27_D75",
+      "TF_RANDOM_R0",
+      "TF_RANDOM_R1",
+      "TF_RANDOM_R2",
+      "TF_RANDOM_R3"
+    ],
+    "domains": [
+      "CRUXEval",
+      "CHARCOUNT"
+    ],
+    "free_generation": false,
+    "logical_rows": 336,
+    "new_controller": false,
+    "new_dose": false,
+    "new_items": false,
+    "new_layer": false,
+    "new_random_bank": false,
+    "propagation_items_per_domain": 24,
+    "semantic_evaluator": "NOT_RUN",
+    "sequence_cap": 256,
+    "source_sequences": "historical Gate-9/Gate-10 baseline rollout fallback, unchanged"
+  },
+  "experiment_id": "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION",
+  "firewall": {
+    "free_generation": "NOT_AUTHORIZED",
+    "holdout": "UNTOUCHED",
+    "new_semantic_evaluation": "NOT_RUN",
+    "q2": "NOT_RUN"
+  },
+  "historical_copies": {
+    "CHARCOUNT_ITEM_SELECTION.json": {
+      "path": "review/gate11_1_artifact_complete_replication/CHARCOUNT_ITEM_SELECTION.json",
+      "sha256": "1342bf29505713b222c30388e30842e43ae87b51b7fe56f754e8e5fae8bd1071"
+    },
+    "CRUX_ITEM_SELECTION.json": {
+      "path": "review/gate11_1_artifact_complete_replication/CRUX_ITEM_SELECTION.json",
+      "sha256": "6cdf0c02a52f80d423e0f2e88d428dc4e055f758784cf9913b588a56ba45af46"
+    },
+    "FIXED_SEQUENCE_SCHEDULE.json": {
+      "path": "review/gate11_1_artifact_complete_replication/FIXED_SEQUENCE_SCHEDULE.json",
+      "sha256": "8a7fdd8f6f0da9522d0a7aebb0ca931715797bf01620b7ffd5df0bbdb2f6385c"
+    },
+    "GATE11_RANDOM_R0.npy": {
+      "path": "review/gate11_1_artifact_complete_replication/GATE11_RANDOM_R0.npy",
+      "sha256": "d33bb9e260b4c18ca1f9f0c6d81f6b35e0a3534dea665b9321cb1f5c56da95b8"
+    },
+    "GATE11_RANDOM_R1.npy": {
+      "path": "review/gate11_1_artifact_complete_replication/GATE11_RANDOM_R1.npy",
+      "sha256": "8f4bf3e86d467282950b517e18495dc215b8ec584c409215e012b8511138e051"
+    },
+    "GATE11_RANDOM_R2.npy": {
+      "path": "review/gate11_1_artifact_complete_replication/GATE11_RANDOM_R2.npy",
+      "sha256": "622a7469f199ae6fa082bf9b3db7d7c307fc1ce084d094a47b349a68bb797e49"
+    },
+    "GATE11_RANDOM_R3.npy": {
+      "path": "review/gate11_1_artifact_complete_replication/GATE11_RANDOM_R3.npy",
+      "sha256": "7a23a6263a220e033369e6349122366d5be95eb38f1ec0ff6e7bff5c62bfbfdf"
+    },
+    "RANDOM_BANK.json": {
+      "path": "review/gate11_1_artifact_complete_replication/RANDOM_BANK.json",
+      "sha256": "51ff3d228d07c46ec1e50e43a0b58ce667dc86e211d94768ebd9e0dfe49c6970"
+    }
+  },
+  "historical_experiment_id": "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
+  "lifecycle": "PROSPECTIVE_LOCK",
+  "manifest_digest": "65aeccc48b016f1e7a18a924d90554525806dfb8017db23736336571b977e611",
+  "model": {
+    "attention": "sdpa",
+    "dtype": "bf16",
+    "enable_thinking": false,
+    "environment": "CORE_QWEN",
+    "id": "Qwen/Qwen3-8B",
+    "quantization": "none",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "raw_persistence": {
+    "hidden": "float32 complete current-token differences relative to baseline at L27/L28/L30/L32/L35",
+    "logits": "float32 complete vocabulary arrays before softmax",
+    "metadata": [
+      "prompt_token_ids",
+      "continuation_token_ids",
+      "checkpoint_token_indices",
+      "target_next_token_ids",
+      "attention/position policy",
+      "condition/vector/eta/layer/source sequence hashes"
+    ],
+    "storage": "one losslessly compressed shard per domain/item"
+  },
+  "schema_version": 1,
+  "source_commit": "c4c6c77",
+  "source_commit_note": "implementation/source commit; lock is committed as a descendant before collection",
+  "stage": "DEVELOPMENT_FORENSIC_REPLICATION",
+  "status": "FROZEN_PRE_COLLECTION"
+}

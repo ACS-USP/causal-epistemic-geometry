@@ -19,32 +19,32 @@ project:
     utility?
 
 current:
-  workstream: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_MECHANISTIC_POSTMORTEM
-  source_commit: e47d3f66a5a96d38431ff3b023a501159798b6b4
+  workstream: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_FORENSIC_REPLICATION
+  source_commit: c4c6c77
   summary: >-
-    Gate 11 completed prompt-only activation and fixed-sequence diagnostics
-    without free generation. The source axis transferred, while prospective
-    downstream-gain and policy-realization shifts were not established;
-    historical policy utility differed by domain. The primary synthesis is
-    GATE11_POLICY_UTILITY_DOMAIN_MISMATCH. Independent scalar aggregation and
-    synthesis agreed, but incomplete raw propagation-vector persistence yields
-    GATE11_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN and blocks Gate 12.
+    Gate 11.1 is a frozen artifact-complete forensic replication of the
+    historical Gate 11 fixed-sequence propagation diagnostics. It reruns no
+    free generation and changes no items, controller, dose, layer, random bank,
+    or semantic evaluation. GPU work is authorized only for the 336 fixed
+    teacher-forced rows, with full logits and hidden-difference shards persisted
+    for independent recomputation.
   next_authorized_action: >-
-    PRINCIPAL_RESEARCHER_REVIEW. No replacement collection or Gate 12 is authorized.
-  runpod: STOPPED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+    Complete Gate 11.1 engineering and fixed-sequence collection only; then
+    perform offline recomputation, independent audit, and principal review.
+  runpod: RUNNING_GATE11_1_ONLY
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
-  steering: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE
+  steering: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION_ONLY
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_COMPLETE
+  current_task: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
   free_generation: NOT_AUTHORIZED
 
 instrument_history:
@@ -182,6 +182,21 @@ instrument_history:
       estimands below the random-controller mean. The textual careful source
       also did not replicate under its frozen rule. The independent forensic
       audit was clean. Gate 11 is drafted only; Q2 and holdout remain closed.
+  - id: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
+    status: LOCKED_DEVELOPMENT_FORENSIC_REPLICATION
+    conclusion: >-
+      Gate 11.1 reuses the immutable Gate 11 source selections, fixed baseline
+      sequences, controller, dose, layer, random bank, conditions, and
+      checkpoints. It authorizes no free generation or semantic evaluation and
+      exists only to persist full propagation logits and hidden-difference
+      vectors for independent forensic recomputation.
+    source_commit: c4c6c77
+    artifact: review/gate11_1_artifact_complete_replication/
+    holdout_status: UNTOUCHED
+    gpu_authorized: true
+    free_generation: NOT_AUTHORIZED
+    q2: NOT_RUN
+    next_action: Complete the frozen Gate 11.1 collection, stop RunPod, audit, and return for principal review.
 
 workflow_regimes:
   EXPLORATION:

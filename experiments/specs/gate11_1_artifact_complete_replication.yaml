@@ -1,0 +1,25 @@
+experiment_id: GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION
+status: FROZEN_PROSPECTIVE
+stage: DEVELOPMENT_FORENSIC_REPLICATION
+free_generation: false
+historical_gate11_head: 55c895b12e1b8e65dac72eb8c27e312e13fd70b3
+propagation_items_per_domain: 24
+conditions:
+- TF_BASELINE
+- TF_TEXTUAL_CAREFUL
+- TF_MEANINGFUL_L27_D75
+- TF_RANDOM_R0
+- TF_RANDOM_R1
+- TF_RANDOM_R2
+- TF_RANDOM_R3
+captured_layers:
+- 27
+- 28
+- 30
+- 32
+- 35
+raw_dtype: float32
+bootstrap: not required for primitive agreement; historical scalar aggregation reproduced
+q2: NOT_RUN
+holdout: UNTOUCHED
+hard_cost_ceiling_usd: 1.25

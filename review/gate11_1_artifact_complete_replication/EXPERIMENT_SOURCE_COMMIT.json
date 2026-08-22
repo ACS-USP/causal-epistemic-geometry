@@ -1,0 +1,7 @@
+{
+  "experiment_id": "GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION",
+  "experiment_source_commit": "c4c6c77",
+  "historical_gate11_head": "55c895b12e1b8e65dac72eb8c27e312e13fd70b3",
+  "protocol_lock_sha256": "2defd052f3a796b8f3d42e08d61c0091053675893922228a4832b9a9483905e0",
+  "note": "The source commit is the implementation commit; the prospective lock and state authorization are committed as its descendant before collection."
+}
