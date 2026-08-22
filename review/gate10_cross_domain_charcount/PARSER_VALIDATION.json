@@ -1,0 +1,161 @@
+{
+  "cases": [
+    {
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "raw": "FINAL: 7"
+    },
+    {
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "raw": "FINAL: -2"
+    },
+    {
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "raw": "FINAL: 0"
+    },
+    {
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "raw": "```\nFINAL: 7\n```"
+    },
+    {
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "raw": "### FINAL: 7"
+    },
+    {
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "raw": "### Final Answer:\nFINAL: 7"
+    },
+    {
+      "expected": [
+        true,
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        true,
+        false
+      ],
+      "pass": true,
+      "raw": "FINAL: \"7\""
+    },
+    {
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "pass": true,
+      "raw": "FINAL: 7\nFINAL: 8"
+    },
+    {
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "pass": true,
+      "raw": "answer 7"
+    },
+    {
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "pass": true,
+      "raw": "FINAL: 7"
+    },
+    {
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "raw": "**FINAL: 7**"
+    }
+  ],
+  "condition_invariance": true,
+  "parser_version": "character-count-semantic-v3",
+  "pass": true
+}

@@ -1,0 +1,22 @@
+{
+  "historical_hash_overlap": 0,
+  "historical_string_overlap": 0,
+  "length": {
+    "max": 60,
+    "mean": 45.875,
+    "min": 31
+  },
+  "n": 200,
+  "oracle_pass": true,
+  "pass": true,
+  "target_count_distribution": {
+    "2": 40,
+    "3": 40,
+    "4": 40,
+    "5": 40,
+    "6": 40
+  },
+  "unique_hashes": 200,
+  "unique_ids": 200,
+  "unique_strings": 200
+}

@@ -1,0 +1,88 @@
+{
+  "geometry": {
+    "meaningful_absolute_cosines": {
+      "RANDOM_L27_D75_R0": 1.1058862159352145e-17,
+      "RANDOM_L27_D75_R1": 4.336808689942018e-18,
+      "RANDOM_L27_D75_R2": 2.862293735361732e-17,
+      "RANDOM_L27_D75_R3": 6.938893903907228e-18
+    },
+    "meaningful_orthogonality_pass": true,
+    "norms": {
+      "RANDOM_L27_D75_R0": 1.0,
+      "RANDOM_L27_D75_R1": 1.0,
+      "RANDOM_L27_D75_R2": 1.0000000000000002,
+      "RANDOM_L27_D75_R3": 1.0000000000000002
+    },
+    "pairwise_absolute_cosines": {
+      "RANDOM_L27_D75_R0__RANDOM_L27_D75_R1": 6.938893903907228e-18,
+      "RANDOM_L27_D75_R0__RANDOM_L27_D75_R2": 1.734723475976807e-18,
+      "RANDOM_L27_D75_R0__RANDOM_L27_D75_R3": 7.806255641895632e-18,
+      "RANDOM_L27_D75_R1__RANDOM_L27_D75_R2": 1.5612511283791264e-17,
+      "RANDOM_L27_D75_R1__RANDOM_L27_D75_R3": 1.8214596497756474e-17,
+      "RANDOM_L27_D75_R2__RANDOM_L27_D75_R3": 8.673617379884035e-18
+    },
+    "random_pairwise_orthogonality_pass": true,
+    "unit_norm_pass": true
+  },
+  "meaningful_controller_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+  "namespace": "GATE10-L27-RANDOM-BANK-V1",
+  "prior_randoms_reused": false,
+  "records": {
+    "RANDOM_L27_D75_R0": {
+      "canonical_float64_vector_sha256": "72bef65f41d779efe647c7700b6079ca5f5ec843ec490b2b78be1494bb27243f",
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 1.0,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 205154915,
+      "vector_file_sha256": "6589ba18d2b8d96c10094897a0bdb8a6d9501d3795ffe68516334cc626774849",
+      "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R0.npy",
+      "vector_sha256": "72bef65f41d779efe647c7700b6079ca5f5ec843ec490b2b78be1494bb27243f"
+    },
+    "RANDOM_L27_D75_R1": {
+      "canonical_float64_vector_sha256": "f32eeb392b85db1f389289231cd5e6ef2890a8addfaa8fdd44db57776398e2d9",
+      "delta_norm": 97.8516893058124,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 1.0,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 3707459244,
+      "vector_file_sha256": "95f7fc90e1ebf46ff0e64df7fb0cbe31c142bd06e6205426ec3159549d80528f",
+      "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R1.npy",
+      "vector_sha256": "f32eeb392b85db1f389289231cd5e6ef2890a8addfaa8fdd44db57776398e2d9"
+    },
+    "RANDOM_L27_D75_R2": {
+      "canonical_float64_vector_sha256": "3fcc1b7614bc5595da1133e2ce673d295685b6d93c8f4d2c4fe1071f1e9f1b41",
+      "delta_norm": 97.85168930581239,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 1.0000000000000002,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 2729856247,
+      "vector_file_sha256": "04fab6a83db5fa204ae4e155d77c0a3d3dbbf78715f3e925e7f93d5716bed2ba",
+      "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R2.npy",
+      "vector_sha256": "3fcc1b7614bc5595da1133e2ce673d295685b6d93c8f4d2c4fe1071f1e9f1b41"
+    },
+    "RANDOM_L27_D75_R3": {
+      "canonical_float64_vector_sha256": "165c1227eb29a83c24a13827314ae8d57180b863d87985a88d05ad7e1601468c",
+      "delta_norm": 97.8516893058124,
+      "duration": "sustained_current_token",
+      "eta": 9.637427952852196,
+      "layer": 27,
+      "norm": 1.0000000000000002,
+      "reference_scale": 10.153299177386142,
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 953484728,
+      "vector_file_sha256": "6a341fb76d5a6faf11404502231d33fc096cd2e2b8233a835fd1349e04619da3",
+      "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R3.npy",
+      "vector_sha256": "165c1227eb29a83c24a13827314ae8d57180b863d87985a88d05ad7e1601468c"
+    }
+  }
+}

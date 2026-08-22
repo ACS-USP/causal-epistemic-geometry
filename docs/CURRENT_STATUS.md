@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 9 independently evaluated the prospectively selected D75 controller on 100 fresh CRUXEval items. It preserved commitment/evaluability guards, raised accuracy from 47% to 60%, and produced G=0.1325, C=0.0643, and D=0.1200 beyond all four new random controllers. The frozen classification is GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION. Independent recomputation agreed exactly; one documented parser-totality incident is classified as a minor non-scientific issue. This remains DEVELOPMENT.
+Gate 9's strong safe selected-dose replication is accepted. Gate 10 is prospectively locked to transport the exact CRUXEval-derived L27-D75 controller without adaptation to 200 fresh FRESH_PSEUDOWORD_LONG character counts, against four new matched random controls and a textual careful reference, with two independent rollouts and an exact integer evaluator.
 
-- Workstream: `GATE9_SELECTED_D75_EVALUATION_COMPLETE`
-- RunPod: `TERMINATED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal-researcher review of the Gate-9 result and the unexecuted Gate-10 cross-domain fixed-controller replication draft.
+- Workstream: `GATE10_CROSS_DOMAIN_CHARCOUNT`
+- RunPod: `STOPPED`
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Execute only the frozen 2,800-row Gate-10 cross-domain evaluation, stop the A40, analyze and audit offline, draft but do not execute Gate 11, then return to principal-researcher review.
 
 ## Scientific program
 
@@ -47,13 +47,13 @@ Gate 9 independently evaluated the prospectively selected D75 controller on 100 
 
 ## Scientific firewall
 
-- `steering`: `GATE9_SELECTED_D75_EVALUATION_COMPLETE`
+- `steering`: `GATE10_CROSS_DOMAIN_CHARCOUNT_LOCKED_NOT_YET_RUN`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `PRINCIPAL_RESEARCHER_REVIEW`
+- `current_task`: `GATE10_CROSS_DOMAIN_CHARCOUNT`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

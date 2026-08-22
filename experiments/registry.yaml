@@ -726,3 +726,46 @@ experiments:
       character_count: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; Gate-10 cross-domain replication is drafted only and is not authorized.
+
+  - id: GATE10_CROSS_DOMAIN_CHARCOUNT
+    version: GATE-10
+    stage: DEVELOPMENT_CROSS_DOMAIN_REPLICATION
+    question: >-
+      Does the exact CRUXEval-derived L27-D75 controller transfer without
+      adaptation to fresh long character counting beyond repeated baseline and
+      four new architecture-matched random controllers?
+    instrument: FRESH_PSEUDOWORD_LONG with character-count-semantic-v3
+    model_policy: Qwen3-8B full non-thinking generation, BF16, sampled, SDPA
+    status: PROSPECTIVE_LOCK
+    outcome: NOT_YET_RUN
+    scientific_interpretation: >-
+      Prospective cross-domain DEVELOPMENT replication only. The exact vector,
+      dose, layer, timing, generator stratum, evaluator, 200 items, conditions,
+      seeds, schedule, estimands, and thresholds are frozen before outputs.
+    source_commit: PENDING_LOCK_COMMIT_BINDING
+    artifact: review/gate10_cross_domain_charcount/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE9_SELECTED_D75_EVALUATION
+    lock:
+      protocol: review/gate10_cross_domain_charcount/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      parser_version: character-count-semantic-v3
+      generator: FRESH_PSEUDOWORD_LONG
+      items: 200
+      conditions: 7
+      rollouts_per_item_condition: 2
+      seed_regime: INDEPENDENT_PRIMARY
+      logical_rows: 2800
+      random_controls: 4
+      controller: paired-mean L27 plus
+      selected_dose: D75
+      selected_eta: 9.637427952852196
+      target_cost_usd: 2.50
+      hard_stop_cost_usd: 5.00
+      gpu_authorized: true
+    execution:
+      collection: NOT_RUN
+      q2: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Execute only frozen Gate 10; Gate 11 remains unauthorized.

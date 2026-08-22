@@ -1,0 +1,256 @@
+{
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20260824,
+    "unit": "item_cluster_all_7_conditions_both_rollouts"
+  },
+  "classifications": [
+    "GATE10_STRONG_CROSS_DOMAIN_USEFUL_COMPLEMENTARITY",
+    "GATE10_MINIMUM_CROSS_DOMAIN_CONTROL_SIGNAL",
+    "GATE10_CROSS_DOMAIN_ERROR_PROFILE_MOVEMENT_ONLY",
+    "GATE10_CROSS_DOMAIN_COMPETENCE_GAIN_WITHOUT_COMPLEMENTARITY",
+    "GATE10_CAREFUL_STYLE_TRANSFER_ONLY",
+    "GATE10_NO_CROSS_DOMAIN_TRANSFER",
+    "GATE10_CROSS_DOMAIN_DESTRUCTIVE",
+    "GATE10_INSTRUMENT_CEILING_OR_FLOOR",
+    "GATE10_INSTRUMENT_FAILURE",
+    "GATE10_ENGINE_FAILURE"
+  ],
+  "conditions": [
+    "BASELINE",
+    "TEXTUAL_CAREFUL_CHARCOUNT_REFERENCE",
+    "MEANINGFUL_L27_D75",
+    "RANDOM_L27_D75_R0",
+    "RANDOM_L27_D75_R1",
+    "RANDOM_L27_D75_R2",
+    "RANDOM_L27_D75_R3"
+  ],
+  "controller": {
+    "canonical_float64_vector_sha256": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "constructor": "PAIRED_MEAN_DIFFERENCE",
+    "delta_norm": 97.85168930581241,
+    "dose": "D75",
+    "duration": "sustained_current_token",
+    "eta": 9.637427952852196,
+    "gate9_provenance": "review/gate9_selected_d75_evaluation/PROTOCOL_LOCK.json",
+    "layer": 27,
+    "name": "MEANINGFUL_L27_D75",
+    "reference_scale": 10.153299177386142,
+    "scope": "final_prompt_token_then_current_decode_token",
+    "sign": "PLUS",
+    "source": "PROMPT_BOUNDARY",
+    "source_domain": "CRUXEval",
+    "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "vector_norm": 1.0,
+    "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+  },
+  "cost": {
+    "hard_stop_usd": 5.0,
+    "projected_cost_usd_at_0_44": 2.15816442678193,
+    "projected_rows": 2800,
+    "seconds_per_row": 6.306324623713432,
+    "target_usd": 2.5
+  },
+  "experiment_id": "GATE10_CROSS_DOMAIN_CHARCOUNT",
+  "experiment_source_commit_binding": {
+    "file": "EXPERIMENT_SOURCE_COMMIT.json",
+    "timing": "after lock commit before outputs"
+  },
+  "firewall": {
+    "confirmatory_holdout": "UNTOUCHED",
+    "controller_search": "NOT_RUN",
+    "dose_search": "NOT_RUN",
+    "gate11": "NOT_RUN",
+    "layer_search": "NOT_RUN",
+    "q2": "NOT_RUN"
+  },
+  "guards": {
+    "accuracy_drop_max": 0.05,
+    "commitment_drop_max": 0.03,
+    "commitment_min": 0.95,
+    "evaluability_drop_max": 0.03,
+    "evaluability_min": 0.95
+  },
+  "instrument": {
+    "benchmark": "FRESH_PSEUDOWORD_LONG character counting",
+    "evaluator": {
+      "condition_invariance": "PASS",
+      "external_semantic_v3_sha256": "51ac492a6cea1284c36df6ef659520adf4a04e0595cf0e66bfd15ba172b960c3",
+      "module_sha256": "4171fe721d07b765fc145b6c7f233df3fe23f32c7ed9a1bb59c6a2f6097086ca",
+      "semantic_spec_sha256": "8ab45645b7228095e7d4838ef8d2c3dbf14f3d27d26052c84d98fa898365c17d",
+      "validation_sha256": "ea7678371d1ecdf22184303693fbc06fae74bd909c68dc8451d2f3bfad927494",
+      "version": "character-count-semantic-v3"
+    },
+    "generator_version": "v4-charcount-gate10-cross-domain-1",
+    "namespace": "GATE10-CROSS-DOMAIN-CHARCOUNT-V1",
+    "stratum": "FRESH_PSEUDOWORD_LONG"
+  },
+  "lifecycle": "PROSPECTIVE_LOCK",
+  "lock_preparation_source_commit": "2762f9bbcd1410213d9deddc8d140d2c71019ca0",
+  "minimum_thresholds": {
+    "G_norm_min": 0.08,
+    "above_random_mean": true,
+    "positive_G_C_D": true,
+    "rescue_ge_damage": true,
+    "two_above_random_max": true
+  },
+  "model": {
+    "attention": "sdpa",
+    "dtype": "bf16",
+    "enable_thinking": false,
+    "environment_profile": "CORE_QWEN",
+    "id": "Qwen/Qwen3-8B",
+    "max_new_tokens": 4096,
+    "quantization": "none",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "sampling": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "opportunity_gate": {
+    "B00_min": 0.04,
+    "accuracy_range": [
+      0.55,
+      0.95
+    ],
+    "any_correct_items_min": 20,
+    "commitment_min": 0.95,
+    "double_wrong_items_min": 8,
+    "evaluability_min": 0.95
+  },
+  "random_bank": {
+    "file_sha256": "d0c292ee626134d6f3e9aa1bce90694139faa421f5ded7e3ef47c46082dbfe6f",
+    "geometry": {
+      "meaningful_absolute_cosines": {
+        "RANDOM_L27_D75_R0": 1.1058862159352145e-17,
+        "RANDOM_L27_D75_R1": 4.336808689942018e-18,
+        "RANDOM_L27_D75_R2": 2.862293735361732e-17,
+        "RANDOM_L27_D75_R3": 6.938893903907228e-18
+      },
+      "meaningful_orthogonality_pass": true,
+      "norms": {
+        "RANDOM_L27_D75_R0": 1.0,
+        "RANDOM_L27_D75_R1": 1.0,
+        "RANDOM_L27_D75_R2": 1.0000000000000002,
+        "RANDOM_L27_D75_R3": 1.0000000000000002
+      },
+      "pairwise_absolute_cosines": {
+        "RANDOM_L27_D75_R0__RANDOM_L27_D75_R1": 6.938893903907228e-18,
+        "RANDOM_L27_D75_R0__RANDOM_L27_D75_R2": 1.734723475976807e-18,
+        "RANDOM_L27_D75_R0__RANDOM_L27_D75_R3": 7.806255641895632e-18,
+        "RANDOM_L27_D75_R1__RANDOM_L27_D75_R2": 1.5612511283791264e-17,
+        "RANDOM_L27_D75_R1__RANDOM_L27_D75_R3": 1.8214596497756474e-17,
+        "RANDOM_L27_D75_R2__RANDOM_L27_D75_R3": 8.673617379884035e-18
+      },
+      "random_pairwise_orthogonality_pass": true,
+      "unit_norm_pass": true
+    },
+    "records": {
+      "RANDOM_L27_D75_R0": {
+        "canonical_float64_vector_sha256": "72bef65f41d779efe647c7700b6079ca5f5ec843ec490b2b78be1494bb27243f",
+        "delta_norm": 97.85168930581241,
+        "duration": "sustained_current_token",
+        "eta": 9.637427952852196,
+        "layer": 27,
+        "norm": 1.0,
+        "reference_scale": 10.153299177386142,
+        "scope": "final_prompt_token_then_current_decode_token",
+        "seed": 205154915,
+        "vector_file_sha256": "6589ba18d2b8d96c10094897a0bdb8a6d9501d3795ffe68516334cc626774849",
+        "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R0.npy",
+        "vector_sha256": "72bef65f41d779efe647c7700b6079ca5f5ec843ec490b2b78be1494bb27243f"
+      },
+      "RANDOM_L27_D75_R1": {
+        "canonical_float64_vector_sha256": "f32eeb392b85db1f389289231cd5e6ef2890a8addfaa8fdd44db57776398e2d9",
+        "delta_norm": 97.8516893058124,
+        "duration": "sustained_current_token",
+        "eta": 9.637427952852196,
+        "layer": 27,
+        "norm": 1.0,
+        "reference_scale": 10.153299177386142,
+        "scope": "final_prompt_token_then_current_decode_token",
+        "seed": 3707459244,
+        "vector_file_sha256": "95f7fc90e1ebf46ff0e64df7fb0cbe31c142bd06e6205426ec3159549d80528f",
+        "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R1.npy",
+        "vector_sha256": "f32eeb392b85db1f389289231cd5e6ef2890a8addfaa8fdd44db57776398e2d9"
+      },
+      "RANDOM_L27_D75_R2": {
+        "canonical_float64_vector_sha256": "3fcc1b7614bc5595da1133e2ce673d295685b6d93c8f4d2c4fe1071f1e9f1b41",
+        "delta_norm": 97.85168930581239,
+        "duration": "sustained_current_token",
+        "eta": 9.637427952852196,
+        "layer": 27,
+        "norm": 1.0000000000000002,
+        "reference_scale": 10.153299177386142,
+        "scope": "final_prompt_token_then_current_decode_token",
+        "seed": 2729856247,
+        "vector_file_sha256": "04fab6a83db5fa204ae4e155d77c0a3d3dbbf78715f3e925e7f93d5716bed2ba",
+        "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R2.npy",
+        "vector_sha256": "3fcc1b7614bc5595da1133e2ce673d295685b6d93c8f4d2c4fe1071f1e9f1b41"
+      },
+      "RANDOM_L27_D75_R3": {
+        "canonical_float64_vector_sha256": "165c1227eb29a83c24a13827314ae8d57180b863d87985a88d05ad7e1601468c",
+        "delta_norm": 97.8516893058124,
+        "duration": "sustained_current_token",
+        "eta": 9.637427952852196,
+        "layer": 27,
+        "norm": 1.0000000000000002,
+        "reference_scale": 10.153299177386142,
+        "scope": "final_prompt_token_then_current_decode_token",
+        "seed": 953484728,
+        "vector_file_sha256": "6a341fb76d5a6faf11404502231d33fc096cd2e2b8233a835fd1349e04619da3",
+        "vector_path": "review/gate10_cross_domain_charcount/RANDOM_L27_D75_R3.npy",
+        "vector_sha256": "165c1227eb29a83c24a13827314ae8d57180b863d87985a88d05ad7e1601468c"
+      }
+    }
+  },
+  "rollouts_per_item_condition": 2,
+  "sample": {
+    "actual_n": 200,
+    "historical_exclusion_sha256": "56fce6868fbee2ef39930e5e486b2891bc7988f53858331b3ab2404f35075ff9",
+    "manifest_file_sha256": "e64506dd8c723c7824a461909fb49a1fcadd6d59d154a58ca75b32bd4346dd50",
+    "manifest_hash": "29ab2902d32af56cf3c39e98ce0e7e262b5d46b816e233051210d671c1766a1a"
+  },
+  "schedule": {
+    "file_sha256": "97563ed504362af6e4d9a9e8f673e9b8553af6afd7e8b4dd44c17177c9a1ed51",
+    "globally_distinct_seeds": true,
+    "logical_rows": 2800,
+    "outcome_independent_interleaving": true
+  },
+  "schema_version": 1,
+  "seed_regime": "INDEPENDENT_PRIMARY",
+  "stage": "DEVELOPMENT_CROSS_DOMAIN_REPLICATION",
+  "status": "FROZEN_PRE_OUTCOME",
+  "strong_thresholds": {
+    "C_min": 0.015,
+    "C_random_mean_delta_min": 0.015,
+    "D_min": 0.04,
+    "D_random_mean_delta_min": 0.03,
+    "G_min": 0.03,
+    "G_norm_min": 0.15,
+    "G_random_mean_delta_min": 0.025,
+    "all_above_random_max": true,
+    "bootstrap_positive": [
+      "G",
+      "C",
+      "D",
+      "G_random_mean",
+      "C_random_mean"
+    ],
+    "loo_sign_stable": [
+      "G",
+      "C",
+      "D"
+    ],
+    "rescue_ge_damage": true
+  },
+  "style_transfer_threshold": {
+    "mean_token_recovery_fraction_min": 0.25
+  },
+  "textual_careful_instruction": "You are a meticulous character counter. Scan the entire string systematically, keep a running count of every occurrence of the requested character, verify the count with an independent second pass, and end with exactly one line in the form FINAL: <integer>."
+}
