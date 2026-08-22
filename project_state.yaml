@@ -22,7 +22,7 @@ current:
   workstream: GATE12_1_CONTINUOUS_GEOMETRY_ENGINE
   lifecycle: PROSPECTIVE_LOCK
   stage: ENGINEERING_NUMERICAL_QUALIFICATION
-  source_commit: 0bce22f35233eeee0f63f8e858f0452ed5616c7c
+  source_commit: 2786887e67e7bb889cfbb60cc0c89045a466e4cf
   summary: >-
     Gate 12.1 prospectively qualifies sequence semantics, the FP32
     computational lift, exact directional derivatives, Fisher/Hessian identity,
@@ -247,7 +247,7 @@ instrument_history:
       are frozen to localize full-sequence/KV mismatch and qualify an FP32
       computational lift. No scientific item, historical outcome, free
       generation, Q2 analysis, or holdout access is authorized.
-    source_commit: 0bce22f35233eeee0f63f8e858f0452ed5616c7c
+    source_commit: 2786887e67e7bb889cfbb60cc0c89045a466e4cf
     artifact: review/gate12_1_continuous_geometry_engine/
     holdout_status: UNTOUCHED
     gpu_authorized: true
@@ -259,6 +259,7 @@ instrument_history:
       engineering_directions: 2
       scientific_items: 0
       historical_outcomes_revealed: false
+      class_b_amendment: SOURCE_COMMIT_ANCESTOR_OF_LOCK_CHECKOUT
       target_cost_usd: 0.50
       hard_ceiling_usd: 1.50
     next_action: Frozen numerical qualification only; scientific Gate 12 remains closed.

@@ -975,7 +975,7 @@ experiments:
     scientific_interpretation: >-
       Engineering and numerical analysis only. No scientific geometry,
       historical semantic outcome, free generation, Q2, or holdout access.
-    source_commit: 0bce22f35233eeee0f63f8e858f0452ed5616c7c
+    source_commit: 2786887e67e7bb889cfbb60cc0c89045a466e4cf
     artifact: review/gate12_1_continuous_geometry_engine/
     cost_usd: null
     holdout_status: UNTOUCHED
@@ -992,6 +992,7 @@ experiments:
     execution:
       lifecycle: PROSPECTIVE_LOCK
       historical_outcomes_revealed: false
+      class_b_amendment: SOURCE_COMMIT_ANCESTOR_OF_LOCK_CHECKOUT
       q2: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Run the frozen engineering qualification only.
