@@ -1,0 +1,2255 @@
+{
+  "layers": [
+    8,
+    12,
+    17,
+    22,
+    27,
+    32
+  ],
+  "logical_rows": 320,
+  "physical_forwards": 280,
+  "rows": [
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_18",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_104",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_86",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_623",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_287",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_166",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_575",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_536",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_210",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_99",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_279",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_414",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_603",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_352",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_686",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_750",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_133",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_391",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_202",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_682",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_189",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_410",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_491",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_12",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_560",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_560",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_560",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_560",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_4",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_4",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_4",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_4",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_241",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_241",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_241",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_241",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_485",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_485",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_485",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_485",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_679",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_679",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_679",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_679",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_448",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_448",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_448",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_448",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_306",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_306",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_306",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_306",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_374",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_374",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_374",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_374",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_543",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_543",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_543",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_543",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_422",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_422",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_422",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_422",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_406",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_406",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_406",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_406",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_75",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_75",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_75",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_75",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_494",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_494",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_494",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_494",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_124",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_124",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_124",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_124",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_477",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_477",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_477",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_477",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_442",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_442",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_442",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CRUXEval",
+      "item_id": "sample_442",
+      "physical_forward_required": false,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_080",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_006",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_035",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_054",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_131",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_079",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_186",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_151",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_135",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_124",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_143",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_052",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_066",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_022",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_176",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_008",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_161",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_137",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_142",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_025",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_078",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_056",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_067",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_021",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_192",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_192",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_192",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_192",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_182",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_182",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_182",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_182",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_040",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_040",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_040",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_040",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_011",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_011",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_011",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_011",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_089",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_089",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_089",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_089",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_150",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_150",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_150",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_150",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_101",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_101",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_101",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_101",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_042",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_042",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_042",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_042",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_172",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_172",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_172",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_172",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_187",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_187",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_187",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_187",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_004",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_004",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_004",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_004",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_036",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_036",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_036",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_036",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_108",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_108",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_108",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_108",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_023",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_023",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_023",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_023",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_120",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_120",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_120",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_120",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_084",
+      "physical_forward_required": true,
+      "physical_variant": "P0_ORDINARY",
+      "variant": "P0_ORDINARY"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_084",
+      "physical_forward_required": true,
+      "physical_variant": "P1_SOURCE_CAREFUL",
+      "variant": "P1_SOURCE_CAREFUL"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_084",
+      "physical_forward_required": true,
+      "physical_variant": "P2_SOURCE_DIRECT",
+      "variant": "P2_SOURCE_DIRECT"
+    },
+    {
+      "domain": "CHARCOUNT",
+      "item_id": "gate10_charcount_084",
+      "physical_forward_required": true,
+      "physical_variant": "P3_DOMAIN_TEXTUAL_CAREFUL",
+      "variant": "P3_DOMAIN_TEXTUAL_CAREFUL"
+    }
+  ],
+  "schedule_hash": "32278fbd3a795d1da57968c83f4fd08f7d3faded769a0af0ccd2c6086a361b53"
+}

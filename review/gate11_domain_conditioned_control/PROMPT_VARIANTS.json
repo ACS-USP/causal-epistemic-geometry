@@ -1,0 +1,20 @@
+{
+  "P0_ORDINARY": {
+    "system_prompt": null
+  },
+  "P1_SOURCE_CAREFUL": {
+    "system_prompt": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>."
+  },
+  "P2_SOURCE_DIRECT": {
+    "system_prompt": "Answer the program-output question immediately. Do not trace, deliberate, explain, or verify. End with exactly one line in the form FINAL: <answer>."
+  },
+  "P3_DOMAIN_TEXTUAL_CAREFUL": {
+    "CHARCOUNT": "You are a meticulous character counter. Scan the entire string systematically, keep a running count of every occurrence of the requested character, verify the count with an independent second pass, and end with exactly one line in the form FINAL: <integer>.",
+    "CRUXEval": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>."
+  },
+  "hash": "da2378e5366b9ad8f0e55eadb63a7901fc25ab2f8259a00ebae0aa8d087ef697",
+  "physical_identity": {
+    "CHARCOUNT:P1_SOURCE_CAREFUL=P3_DOMAIN_TEXTUAL_CAREFUL": false,
+    "CRUXEval:P1_SOURCE_CAREFUL=P3_DOMAIN_TEXTUAL_CAREFUL": true
+  }
+}
