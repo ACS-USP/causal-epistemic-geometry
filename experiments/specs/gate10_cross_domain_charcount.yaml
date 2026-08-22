@@ -1,0 +1,27 @@
+schema_version: 1
+id: GATE10_CROSS_DOMAIN_CHARCOUNT
+version: GATE-10
+status: PROSPECTIVE_CROSS_DOMAIN_REPLICATION
+stage: DEVELOPMENT_CROSS_DOMAIN_REPLICATION
+model: Qwen/Qwen3-8B
+model_revision: b968826d9c46dd6066d109eabc6255188de91218
+instrument: FRESH_PSEUDOWORD_LONG
+items: 200
+conditions: 7
+rollouts_per_item_condition: 2
+logical_rows: 2800
+controller:
+  source_domain: CRUXEval
+  layer: 27
+  sign: plus
+  dose: D75
+  eta: 9.637427952852196
+  vector_hash: e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838
+  duration: sustained_current_token
+evaluator: character-count-semantic-v3
+bootstrap_resamples: 10000
+target_cost_usd: 2.50
+hard_cost_usd: 5.00
+q2: NOT_RUN
+confirmatory_holdout: UNTOUCHED
+

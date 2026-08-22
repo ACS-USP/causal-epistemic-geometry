@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "GATE10_CROSS_DOMAIN_CHARCOUNT",
+  "classification": "PREMORTEM_PASS",
+  "cross_domain_fixed_controller": true,
+  "controller_reconstruction": false,
+  "difficulty_adaptation": false,
+  "historical_id_seed_text_hash_exclusion_required": true,
+  "oracle_recomputed_independently": true,
+  "baseline_opportunity_gate_frozen": true,
+  "parser_condition_invariant": true,
+  "random_null_architecture_matched": true,
+  "textual_reference_selection_role": false,
+  "invalid_and_truncated_are_scientific_errors": true,
+  "schedule_outcome_independent": true,
+  "resume_key": ["item_id", "condition", "rollout_index"],
+  "bootstrap_unit": "item_cluster_all_conditions_both_rollouts",
+  "environment_profile": "CORE_QWEN",
+  "class_a_issues_open": [],
+  "class_b_amendments": [],
+  "scientific_ambiguities_open": []
+}

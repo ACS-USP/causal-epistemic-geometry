@@ -98,11 +98,11 @@ def load_external(path: Path) -> list[ExternalItem]:
     return [
         ExternalItem(
             item_id=str(row["item_id"]),
-            benchmark="CRUXEval",
-            subtask="output_prediction",
+            benchmark=str(row.get("benchmark", "CRUXEval")),
+            subtask=str(row.get("subtask", "output_prediction")),
             prompt=str(row["prompt"]),
             reference_answer=str(row["reference_answer"]),
-            evaluator="python_literal",
+            evaluator=str(row.get("evaluator", "python_literal")),
             source_revision=str(row["source_revision"]),
             metadata=dict(row.get("metadata", {})),
         )
@@ -111,7 +111,10 @@ def load_external(path: Path) -> list[ExternalItem]:
 
 
 def model_item(item: ExternalItem, system_prompt: str | None = None) -> BenchmarkItem:
-    metadata = {"source_prompt_hash": item.prompt_hash, "response_channel": "cruxeval_semantic"}
+    metadata = {
+        "source_prompt_hash": item.prompt_hash,
+        "response_channel": item.metadata.get("response_channel", "cruxeval_semantic"),
+    }
     if system_prompt is not None:
         metadata["system_prompt"] = system_prompt
     return BenchmarkItem(
@@ -156,9 +159,7 @@ def build_backend(model_path: str | None) -> HuggingFaceBackend:
     )
 
 
-def prompt_tokens(
-    backend: HuggingFaceBackend, item: BenchmarkItem
-) -> tuple[list[int], str, str]:
+def prompt_tokens(backend: HuggingFaceBackend, item: BenchmarkItem) -> tuple[list[int], str, str]:
     encoded, rendered, prompt_hash = backend._encode_item(item)  # noqa: SLF001
     values = encoded["input_ids"][0].detach().cpu().tolist()
     return [int(value) for value in values], rendered, prompt_hash
@@ -204,9 +205,7 @@ def _activation_arrays(
         ordinary = np.stack(
             [ordinary_cache[(item.item_id, location, layer)] for item in items]
         ).astype(np.float64)
-    if careful.shape != direct.shape or (
-        require_ordinary and ordinary.shape != (len(items), 4096)
-    ):
+    if careful.shape != direct.shape or (require_ordinary and ordinary.shape != (len(items), 4096)):
         raise RuntimeError(f"malformed source activation arrays {split}:{location}:L{layer}")
     return careful, direct, ordinary
 
@@ -272,9 +271,7 @@ def _fit_rfm_with_source_cv(
     location: str,
     layer: int,
 ) -> tuple[np.ndarray, dict[str, Any]]:
-    configs = config_product(
-        iters=(8,), bandwidth=(10.0,), exponent=(1.0,), regularization=(1e-3,)
-    )
+    configs = config_product(iters=(8,), bandwidth=(10.0,), exponent=(1.0,), regularization=(1e-3,))
     folds = paired_stratified_kfold_indices(
         len(careful), n_splits=4, seed=stable_seed("GATE6-2-RFM-CV", location, layer)
     )
@@ -315,8 +312,7 @@ def _fit_rfm_with_source_cv(
             )
     selected = select_source_cv_config(fold_results)
     selected_base = {
-        key: selected[key]
-        for key in ("iters", "bandwidth", "exponent", "regularization")
+        key: selected[key] for key in ("iters", "bandwidth", "exponent", "regularization")
     }
     config = RFMConfig(**selected_base)
     # The final fit sees every SOURCE_TRAIN item, but its validation argument
@@ -388,9 +384,7 @@ def _teacher_forced_loglik_window(
     context = (
         Gate6HookTrace(
             layers={layer: backend.layer_module(layer)},
-            deltas={
-                layer: torch.tensor(delta, dtype=torch.float32, device=backend.device)
-            },
+            deltas={layer: torch.tensor(delta, dtype=torch.float32, device=backend.device)},
             target_positions=[target_position],
         )
         if delta is not None
@@ -715,14 +709,11 @@ def select_controller_hierarchy(
         "rfm_selected_layers": rfm_layers,
         "best_single_mean": "PROMPT_BOUNDARY:L27",
         "multilayer_mean": mean_keys,
-        "continue_to_manipulation": bool(
-            len(mean_passes) == 3 or bool(eligible_groups)
-        ),
+        "continue_to_manipulation": bool(len(mean_passes) == 3 or bool(eligible_groups)),
         "selection_rule": {
             "rfm": "if at least two pass, largest source mean F then all passing layers",
             "mean": (
-                "historical source-only prompt L22/L27/L32; "
-                "L27 single and all three multilayer"
+                "historical source-only prompt L22/L27/L32; L27 single and all three multilayer"
             ),
             "semantic_outcomes_used": False,
         },
@@ -846,9 +837,7 @@ def _completed(path: Path) -> set[tuple[str, str, int]]:
     if not path.exists():
         return set()
     rows = _load_jsonl(path)
-    return {
-        (str(row["item_id"]), str(row["condition"]), int(row["rollout_index"])) for row in rows
-    }
+    return {(str(row["item_id"]), str(row["condition"]), int(row["rollout_index"])) for row in rows}
 
 
 def _condition_context(
@@ -876,11 +865,15 @@ def _condition_context(
         deltas=delta_tensors,
         target_positions=[len(prompt_ids) - 1],
     )
-    return context, model_row, {
-        "prompt_length": len(prompt_ids),
-        "system_prompt": system,
-        "intervention_duration": "one_shot_prefill",
-    }
+    return (
+        context,
+        model_row,
+        {
+            "prompt_length": len(prompt_ids),
+            "system_prompt": system,
+            "intervention_duration": "one_shot_prefill",
+        },
+    )
 
 
 def execute_phase(
