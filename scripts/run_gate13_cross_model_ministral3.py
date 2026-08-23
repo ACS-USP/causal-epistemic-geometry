@@ -137,6 +137,7 @@ def build_backend(model_path: str, model: str, revision: str) -> HuggingFaceBack
         item_batch_size=1,
         condition_chunk_size=1,
         model_loader="auto_image_text_to_text",
+        fix_mistral_regex=True,
     )
     return HuggingFaceBackend(
         config,
@@ -290,7 +291,7 @@ def engineering_gate(backend: HuggingFaceBackend, review: Path, model: str, revi
         BenchmarkItem(
             id=f"gate13-engineering-{index:02d}",
             prompt=prompt,
-            target="",
+            target="engineering-only",
             metadata={"response_channel": "engineering_only"},
         )
         for index, prompt in enumerate(ENGINEERING_FIXTURE_PROMPTS)

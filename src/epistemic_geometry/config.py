@@ -61,6 +61,7 @@ class BackendConfig:
     padding_side: str = "left"
     attention_implementation: str = "auto"
     model_loader: str = "auto_causal_lm"
+    fix_mistral_regex: bool = False
     torch_compile: bool = False
     cuda_graphs: bool = False
     serial_shape_reference: bool = False

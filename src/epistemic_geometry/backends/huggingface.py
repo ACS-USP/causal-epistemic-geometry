@@ -90,9 +90,13 @@ class HuggingFaceBackend(ModelBackend):
                     "pip install -e '.[hf]' after confirming the appropriate Torch build."
                 ) from exc
             tokenizer_source = config.tokenizer_id or model_name
+            tokenizer_kwargs: dict[str, Any] = {}
+            if config.fix_mistral_regex:
+                tokenizer_kwargs["fix_mistral_regex"] = True
             self.tokenizer = AutoTokenizer.from_pretrained(
                 tokenizer_source,
                 revision=config.tokenizer_revision or config.model_revision,
+                **tokenizer_kwargs,
             )
         else:
             self.tokenizer = tokenizer
