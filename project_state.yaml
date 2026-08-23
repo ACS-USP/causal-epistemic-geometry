@@ -19,29 +19,31 @@ project:
     utility?
 
 current:
-  workstream: GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_COMPLETE
-  lifecycle: CLOSED
-  stage: ENGINEERING_NOT_QUALIFIED_CLOSEOUT
-  source_commit: 0e7e1505a2456c0a78ee9a8ba63d2eaf5f1f8d43
+  workstream: GATE13_CROSS_MODEL_MINISTRAL3
+  lifecycle: PROSPECTIVE_MASTER_LOCK
+  stage: DEVELOPMENT_CROSS_MODEL_REPLICATION
+  source_commit: 1b9ab2a24934c877bdfd2908bb2b62dfe0372256
   summary: >-
-    Gate 12.1 qualified FP32 sequence equivalence and exact AD identities, but
-    the historical BF16 bridge and the required three-scale finite-difference
-    window failed. No scientific item or historical outcome was accessed.
+    Gate 12.1 is accepted. Gate 13 prospectively freezes a staged replication
+    of the careful/direct paired-mean control procedure in Ministral-3 8B,
+    using only historically consumed or reserved DEVELOPMENT CRUXEval items.
+    The 57 untouched CRUXEval IDs remain sealed.
   next_authorized_action: >-
-    Principal review of the Gate-12.1 numerical-engine closeout.
+    Gate-13 adapter engineering and primary 8B substrate screen under the
+    committed master protocol lock.
   runpod: STOPPED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
-  steering: GATE12_1_ENGINE_NOT_QUALIFIED_CLOSED
+  steering: GATE13_CROSS_MODEL_PROSPECTIVE_LOCK
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE12_1_ENGINE_NOT_QUALIFIED_CLOSED
-  free_generation: NOT_AUTHORIZED
+  current_task: GATE13_CROSS_MODEL_MINISTRAL3
+  free_generation: GATE13_ONLY
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -274,6 +276,32 @@ instrument_history:
       target_cost_usd: 0.50
       hard_ceiling_usd: 1.50
     next_action: Principal review; scientific Gate 12 remains closed.
+  - id: GATE13_CROSS_MODEL_MINISTRAL3
+    status: PROSPECTIVE_MASTER_LOCK
+    conclusion: >-
+      The cross-family procedure replication is locked before model outputs.
+      Ministral-3 8B is primary; the 14B fallback is conditional only on the
+      frozen competence-floor rule. All allocations use outcome-free records
+      from consumed/reserved DEVELOPMENT items, with the 57 untouched IDs
+      explicitly excluded.
+    source_commit: 1b9ab2a24934c877bdfd2908bb2b62dfe0372256
+    artifact: review/gate13_cross_model_ministral3/
+    holdout_status: UNTOUCHED
+    gpu_authorized: true
+    free_generation: GATE13_ONLY
+    q2: NOT_RUN
+    q3: NOT_RUN
+    execution:
+      lifecycle: PROSPECTIVE_MASTER_LOCK
+      eligible_reused_development_pool: 720
+      allocated_items: 320
+      untouched_cruxeval_ids: 57
+      primary_model: mistralai/Ministral-3-8B-Instruct-2512-BF16
+      primary_revision: f6fae9795746f63c9be8344932f01275f3c63734
+      target_cost_usd: 6.50
+      hard_ceiling_usd: 9.50
+      runpod_status: STOPPED
+    next_action: Adapter engineering and complete primary 8B substrate screen.
 
 workflow_regimes:
   EXPLORATION:

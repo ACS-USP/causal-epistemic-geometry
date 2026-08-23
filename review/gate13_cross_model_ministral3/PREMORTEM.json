@@ -1,0 +1,16 @@
+{
+  "classification": "PREMORTEM_PASS",
+  "risks": {
+    "adapter": "multimodal wrapper must remain text-only and prove zero vision calls",
+    "cost": "25% projection recomputed before every stage",
+    "fallback": "14B is conditional only on the exact 8B floor rule",
+    "freshness": "fresh-model evidence reuses consumed DEVELOPMENT items only",
+    "parser": "external-semantic-v3 code/spec/tests frozen before outputs",
+    "resume": "stage/model/item/condition/rollout keys are append-only",
+    "selection_leakage": "allocation, source shortlist, layer, and dose rules are frozen",
+    "source_verbosity": "concise-careful and verbose-direct are diagnostic only",
+    "untouched_firewall": "explicit 57-ID intersection is empty"
+  },
+  "scientific_outputs_observed": false,
+  "unresolved_class_d_ambiguities": []
+}

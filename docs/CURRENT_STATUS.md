@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 12.1 qualified FP32 sequence equivalence and exact AD identities, but the historical BF16 bridge and the required three-scale finite-difference window failed. No scientific item or historical outcome was accessed.
+Gate 12.1 is accepted. Gate 13 prospectively freezes a staged replication of the careful/direct paired-mean control procedure in Ministral-3 8B, using only historically consumed or reserved DEVELOPMENT CRUXEval items. The 57 untouched CRUXEval IDs remain sealed.
 
-- Workstream: `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_COMPLETE`
+- Workstream: `GATE13_CROSS_MODEL_MINISTRAL3`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Principal review of the Gate-12.1 numerical-engine closeout.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Gate-13 adapter engineering and primary 8B substrate screen under the committed master protocol lock.
 
 ## Scientific program
 
@@ -48,17 +48,18 @@ Gate 12.1 qualified FP32 sequence equivalence and exact AD identities, but the h
 | `GATE11_1_ARTIFACT_COMPLETE_FORENSIC_REPLICATION` | `COMPLETE_DEVELOPMENT_FORENSIC_REPLICATION` | Gate 11.1 reused the immutable Gate 11 source selections, fixed baseline sequences, controller, dose, layer, random bank, conditions, and checkpoints. It performed no free generation or semantic evaluation. Full propagation logits and hidden-difference vectors were persisted; the independent audit agreed exactly with the primary recomputation. The synthesis remains GATE11_POLICY_UTILITY_DOMAIN_MISMATCH, with the historical result preserved and the forensic artifact concern repaired. |
 | `GATE12_UTILITY_ALIGNED_PULLBACK` | `COMPLETE_DEVELOPMENT_ENGINE_FAILURE` | Exact forward-mode and independent autograd JVPs agreed, but the frozen BF16 finite-difference, local-KL quadratic, and full-sequence/KV-cache engineering criteria did not pass. The run stopped before geometry collection and before historical-outcome reveal. |
 | `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE` | `COMPLETE_ENGINEERING_NOT_QUALIFIED` | FP32 full-sequence/KV equivalence and exact JVP/VJP, Fisher/Hessian, and utility-derivative identities passed. The historical BF16 bridge missed its top-1 threshold, and only two consecutive finite-difference scales passed rather than three. No scientific item or historical outcome was accessed. |
+| `GATE13_CROSS_MODEL_MINISTRAL3` | `PROSPECTIVE_MASTER_LOCK` | The cross-family procedure replication is locked before model outputs. Ministral-3 8B is primary; the 14B fallback is conditional only on the frozen competence-floor rule. All allocations use outcome-free records from consumed/reserved DEVELOPMENT items, with the 57 untouched IDs explicitly excluded. |
 
 ## Scientific firewall
 
-- `steering`: `GATE12_1_ENGINE_NOT_QUALIFIED_CLOSED`
+- `steering`: `GATE13_CROSS_MODEL_PROSPECTIVE_LOCK`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE12_1_ENGINE_NOT_QUALIFIED_CLOSED`
-- `free_generation`: `NOT_AUTHORIZED`
+- `current_task`: `GATE13_CROSS_MODEL_MINISTRAL3`
+- `free_generation`: `GATE13_ONLY`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

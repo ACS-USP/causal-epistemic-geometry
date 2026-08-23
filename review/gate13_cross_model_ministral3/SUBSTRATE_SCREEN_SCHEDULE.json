@@ -1,0 +1,3002 @@
+[
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3358984670,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3411606786,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2537461626,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1569655112,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1548162977,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 827110228,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3032695137,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 4202883190,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2755864945,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_762",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2767762381,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 992241719,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 1,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4263297149,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1520178406,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 476660473,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2994956697,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1949837858,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 1,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1258215258,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 27664249,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 895291827,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_355",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2738969851,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3588675649,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 682313364,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3467234449,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3940657870,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 173941960,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2525690549,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 283436766,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3235715715,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2899350667,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_760",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1085017891,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3815316666,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 1,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2093156509,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1174537854,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 844884484,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 505768713,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2479510377,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 1,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 958574686,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3745461880,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1802607321,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_674",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1208843459,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2842739226,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2950098719,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4082879695,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1262894558,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1150944098,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 43192429,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1068270848,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3309816686,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1807139486,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_462",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3899246391,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3139645050,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4122106374,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1349314661,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1518595808,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3614494750,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 715817089,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3709211017,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 216035700,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 108942186,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_303",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 708325786,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4239974491,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 956658201,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1585542209,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2780725308,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 886898027,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 201031359,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 273786439,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1927245862,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2782148896,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_390",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2441450177,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3902093652,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 693888565,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 43594240,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1958659599,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 816444401,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2585869928,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 15709117,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3305796228,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2680057411,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_223",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2275433883,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 438922790,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 1,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1450175380,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 491888059,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2742719176,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 800700084,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1666907048,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3377836364,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3389918374,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3314170079,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_202",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 4141663425,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 63216804,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4207948786,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1520159963,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 51386276,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3021926741,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3333760107,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3831879481,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 11393899,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2793914833,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_289",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1842855479,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2886241098,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3815382988,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2529807090,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2123060019,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 121779308,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1152125565,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 671643369,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2867401863,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2189948502,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_0",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1053789022,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1912347724,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 446038407,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2264378113,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1810628165,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 707945583,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2327934674,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3068561398,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 28813085,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2983702597,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_727",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2722095579,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2782200381,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4160993120,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2119287918,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 392374155,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2245905114,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2531690123,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 4243220156,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 445212540,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 813441672,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_369",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1967450898,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1352698311,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2195339820,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3533647882,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3679413085,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1368540641,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1155847021,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2827228920,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2800358629,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 535538638,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_679",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1745545629,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1604032151,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4244517503,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1846396562,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3007508418,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2713217117,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3245850503,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 4026729116,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1762076412,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3198830833,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_692",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3131446617,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3027972094,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4194567484,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1162744545,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 102898324,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1781589207,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2388431370,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1775016049,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 534930628,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3842247168,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_320",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 4022561543,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3516122345,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1549325476,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 852179028,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1381881316,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 576927924,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 647974802,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 186866412,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1311347739,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 331824946,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_99",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2932318810,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2247179769,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 867673367,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 833123499,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3219519511,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 914391393,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 968562643,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1494601546,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 4034709624,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3004332072,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_329",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1654310569,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1705053555,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 1,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3958761741,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2274675793,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 837857893,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2439261940,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3002091704,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1729529597,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2906462314,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3071585887,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_171",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 200895964,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1571705939,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3616387325,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3439369831,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 119090208,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 594036050,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2006949919,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1536869425,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 741682224,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1471444119,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_128",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 385739095,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2552696097,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2894203872,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2338601978,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2896516511,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 132559159,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3385938973,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1220705407,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 956889246,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 788281838,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_413",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1635915302,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 657825406,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1699856916,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 882779630,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3018483335,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2899907336,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3745054604,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2872424206,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3410747612,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1940447700,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_115",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3690798604,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1186245325,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2485571316,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1903129887,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2585750887,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 760356774,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2802990299,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3647565180,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1823838684,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2914355101,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_407",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3972189292,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 518053689,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2211004185,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3253200065,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2386474587,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 206580969,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3309389086,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2643968650,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 589113481,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2881374488,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_663",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 956189622,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2606929383,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 316518622,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1999705780,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4178347115,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3316098954,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3109726840,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2524592158,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1430539471,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2007537257,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_561",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2503636150,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4166071717,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1971388041,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1169146729,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3855835178,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 4,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 987390152,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 43875118,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1916181183,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3543610331,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 833602439,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_621",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3452458235,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 304933195,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 314807469,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 2,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3093103530,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1684399048,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 4,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1234744951,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2914204185,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 1,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3047086178,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3524728850,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2732472681,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_620",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3229776242,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1044320607,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4234274936,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1535689676,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 3,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1579057457,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 931951967,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3919801128,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 8360642,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 4224945381,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 3,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2743365700,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_484",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2887062693,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 0,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4268898947,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2222076191,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2902306559,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1284766364,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 789951826,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2350910977,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 1,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3789245223,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 2,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1699103586,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 2209043378,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_605",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3046608838,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 0,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4255281937,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1287197941,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 2,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2339714062,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1389471374,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4183645581,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "CAREFUL_CONCISE",
+    "condition_order": 0,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 261193587,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "VERBOSE_DIRECT",
+    "condition_order": 1,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1136374433,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 1512859482,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_CAREFUL",
+    "condition_order": 3,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3626444837,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  },
+  {
+    "condition": "SOURCE_DIRECT",
+    "condition_order": 4,
+    "item_id": "sample_578",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 1,
+    "seed": 3973306433,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "stage": "SUBSTRATE_SCREEN"
+  }
+]

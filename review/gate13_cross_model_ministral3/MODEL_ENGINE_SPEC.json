@@ -1,0 +1,25 @@
+{
+  "attention": "SDPA",
+  "dtype": "BF16",
+  "engine": "serial_transformers_generate",
+  "environment_profile": "CORE_MINISTRAL3",
+  "expected_hidden_size": 4096,
+  "expected_layers": 34,
+  "generation": {
+    "do_sample": true,
+    "enable_thinking": null,
+    "max_new_tokens": 4096,
+    "min_p": 0.0,
+    "native_no_reasoning_channel": true,
+    "temperature": 0.3,
+    "tools": false,
+    "top_k": 0,
+    "top_p": 0.95,
+    "vision": false
+  },
+  "layer_path": "model.language_model.layers",
+  "model_loader": "AutoModelForImageTextToText",
+  "text_only": true,
+  "vision_inputs": false,
+  "vision_tower_call_count_required": 0
+}

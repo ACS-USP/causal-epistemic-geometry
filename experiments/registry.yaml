@@ -1006,3 +1006,42 @@ experiments:
       q2: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal review; revised Gate-12 execution remains draft only.
+
+  - id: GATE13_CROSS_MODEL_MINISTRAL3
+    version: GATE-13
+    stage: DEVELOPMENT_CROSS_MODEL_REPLICATION
+    question: >-
+      Does the careful/direct paired-mean causal-control procedure replicate in
+      the Ministral-3 family under source-only layer selection, prospective dose
+      calibration, and strong architecture-matched nulls?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3
+    model_policy: Ministral-3 8B BF16 text-only direct generation, 14B floor-only fallback
+    status: PROSPECTIVE_MASTER_LOCK
+    outcome: NOT_YET_RUN
+    scientific_interpretation: >-
+      Fresh-model evidence on reused DEVELOPMENT items only; no outcome has
+      been observed and no cross-family claim exists yet.
+    source_commit: 1b9ab2a24934c877bdfd2908bb2b62dfe0372256
+    artifact: review/gate13_cross_model_ministral3/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE9_SELECTED_D75_EVALUATION
+    lock:
+      protocol: review/gate13_cross_model_ministral3/MASTER_PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      reused_development_pool: 720
+      allocated_items: 320
+      untouched_cruxeval_ids: 57
+      target_cost_usd: 6.50
+      hard_stop_cost_usd: 9.50
+    execution:
+      lifecycle: PROSPECTIVE_MASTER_LOCK
+      primary_model: mistralai/Ministral-3-8B-Instruct-2512-BF16
+      primary_revision: f6fae9795746f63c9be8344932f01275f3c63734
+      adapter_engineering: NOT_YET_RUN
+      substrate_screen: NOT_YET_RUN
+      runpod_status: STOPPED
+      q2: NOT_RUN
+      q3: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Adapter engineering and primary 8B substrate screen.

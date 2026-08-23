@@ -1,0 +1,18 @@
+{
+  "a40_hourly_rate_assumption_usd": 0.44,
+  "hard_total_usd": 9.5,
+  "initial_projected_total_usd_with_25pct_margin": 5.75,
+  "maximum_trajectory_counts": {
+    "dose_calibration": 1760,
+    "final_evaluation": 1400,
+    "layer_first_stage_at_four_candidates": 312,
+    "substrate_screen": 300,
+    "total_generation": 3772
+  },
+  "projected_under_hard_ceiling": true,
+  "recompute_before_each_stage": true,
+  "safety_margin": 0.25,
+  "source_activation_forwards": 192,
+  "target_total_usd": 6.5,
+  "wallet_balance_reported_by_principal_usd": 10.79
+}

@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 12.1 qualified FP32 sequence equivalence and exact AD identities, but the historical BF16 bridge and the required three-scale finite-difference window failed. No scientific item or historical outcome was accessed.
+Gate 12.1 is accepted. Gate 13 prospectively freezes a staged replication of the careful/direct paired-mean control procedure in Ministral-3 8B, using only historically consumed or reserved DEVELOPMENT CRUXEval items. The 57 untouched CRUXEval IDs remain sealed.
 
-**Next authorized action:** Principal review of the Gate-12.1 numerical-engine closeout.
+**Next authorized action:** Gate-13 adapter engineering and primary 8B substrate screen under the committed master protocol lock.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
