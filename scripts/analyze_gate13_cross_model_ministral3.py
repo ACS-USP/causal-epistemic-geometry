@@ -340,10 +340,47 @@ def analyze_first_stage(review: Path) -> dict[str, Any]:
             "null_max_Q": float(np.max(null_q)),
         }
         detail[str(layer)] = {**layer_metrics[int(layer)], "null_Q": null_q}
-    selected, passed = gate13.select_first_stage_layer(
-        layer_metrics,
-        {layer: float(atlas[layer]["standardized_paired_effect"]) for layer in layer_metrics},
-    )
+    gate_checks = {
+        layer: {
+            "commitment_validity": metric["commitment_validity"] >= 0.90,
+            "semantic_evaluability": metric["semantic_evaluability"] >= 0.90,
+            "competence_safety": metric["accuracy"] >= metric["baseline_accuracy"] - 0.10,
+            "semantic_change": metric["Q"] >= 0.15,
+            "null_mean_specificity": metric["Q"] - metric["null_mean_Q"] >= 0.05,
+            "null_max_specificity": metric["Q"] > metric["null_max_Q"],
+        }
+        for layer, metric in layer_metrics.items()
+    }
+    try:
+        selected, passed = gate13.select_first_stage_layer(
+            layer_metrics,
+            {layer: float(atlas[layer]["standardized_paired_effect"]) for layer in layer_metrics},
+        )
+    except RuntimeError as exc:
+        if str(exc) != "GATE13_NO_CAUSAL_LAYER_FIRST_STAGE":
+            raise
+        passed = {layer: all(checks.values()) for layer, checks in gate_checks.items()}
+        result = {
+            "classification": "GATE13_NO_CAUSAL_LAYER_FIRST_STAGE",
+            "layer_metrics": detail,
+            "candidate_gate_checks": {str(key): value for key, value in gate_checks.items()},
+            "candidate_pass": {str(key): value for key, value in passed.items()},
+            "selected_layer": None,
+            "later_stages_authorized": False,
+            "random_bank_constructed": False,
+            "dose_calibration_executed": False,
+            "final_evaluation_executed": False,
+        }
+        write_json(review / "LAYER_FIRST_STAGE_REPORT.json", result)
+        (review / "LAYER_FIRST_STAGE_REPORT.md").write_text(
+            "# Gate 13 causal layer first-stage\n\n"
+            "Classification: `GATE13_NO_CAUSAL_LAYER_FIRST_STAGE`.\n\n"
+            "No candidate layer passed every frozen causal first-stage gate. No layer was "
+            "selected, and random-bank construction, dose calibration, and final evaluation "
+            "were not authorized.\n",
+            encoding="utf-8",
+        )
+        return result
     direction_source = review / f"SOURCE_DIRECTIONS/L{selected}.npy"
     selected_path = review / "SOURCE_DIRECTIONS/SELECTED_MEANINGFUL.npy"
     shutil.copyfile(direction_source, selected_path)

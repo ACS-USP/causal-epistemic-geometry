@@ -110,6 +110,22 @@ def test_first_stage_layer_selection_ignores_accuracy_as_ranker() -> None:
     assert selected == 4
 
 
+def test_first_stage_stops_when_no_candidate_passes() -> None:
+    metrics = {
+        4: {
+            "commitment_validity": 1.0,
+            "semantic_evaluability": 1.0,
+            "accuracy": 0.5,
+            "baseline_accuracy": 0.5,
+            "Q": 0.10,
+            "null_mean_Q": 0.08,
+            "null_max_Q": 0.09,
+        }
+    }
+    with pytest.raises(RuntimeError, match="GATE13_NO_CAUSAL_LAYER_FIRST_STAGE"):
+        gate13.select_first_stage_layer(metrics, {4: 1.0})
+
+
 def test_first_stage_schedule_is_matched() -> None:
     schedule = gate13.build_first_stage_schedule(["x", "y"], gate13.PRIMARY_MODEL, [2, 9])
     assert len(schedule) == 14
