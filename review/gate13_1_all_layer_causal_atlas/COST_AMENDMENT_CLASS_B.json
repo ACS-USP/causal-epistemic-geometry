@@ -1,0 +1,50 @@
+{
+  "amendment_id": "GATE13_1_COST_AMENDMENT_CLASS_B_2026-08-23",
+  "authorized_by": "PRINCIPAL_RESEARCHER",
+  "authorized_at_utc": "2026-08-23T12:55:46Z",
+  "amendment_class": "CLASS_B_OPERATIONAL_FINANCIAL",
+  "affected_outcomes_observed_at_authorization": false,
+  "historical_protocol_lock_sha256": "e899241fb384e37eef500b3d2cd145789e91da47c1b3612adfdb37ef4c65b381",
+  "source_commit": "3e9ee5c822884caeff2d1a171ea9c51dc6925361",
+  "implementation_commit": "164fd26e41a159e7664bb8970a512008c6f3d1ce",
+  "financial_change": {
+    "previous_cumulative_target_usd": 4.5,
+    "previous_cumulative_hard_ceiling_usd": 7.0,
+    "new_cumulative_target_usd": 8.0,
+    "new_cumulative_hard_ceiling_usd": 9.5,
+    "minimum_wallet_reserve_usd": 3.0,
+    "reserve_is_hard_constraint": false
+  },
+  "scientific_design_unchanged": true,
+  "unchanged_fields": [
+    "items",
+    "layers",
+    "doses",
+    "nulls",
+    "thresholds",
+    "selection_rules",
+    "stage_c_item_count",
+    "conditions",
+    "rollouts",
+    "model",
+    "parser",
+    "seeds",
+    "estimands"
+  ],
+  "stage_c_rule": "Proceed automatically only if observed-throughput projection with frozen 25% margin is <= 9.50 USD; otherwise stop for principal review.",
+  "stage_b_rule": "Continue exactly as frozen; do not inspect scientific metrics until all 1036 rows are complete.",
+  "post_completion_action": "Recompute Stage-C projection before any Stage-C output.",
+  "wallet_reserve_instruction": "Maintain at least 3.00 USD after projected completion if feasible.",
+  "scientific_firewall": {
+    "q2": "NOT_RUN",
+    "q3": "NOT_RUN",
+    "holdout": "UNTOUCHED",
+    "additional_items": false,
+    "additional_directions": false,
+    "additional_doses": false,
+    "additional_layers": false,
+    "additional_rollouts": false,
+    "additional_models": false,
+    "exploratory_conditions": false
+  }
+}

@@ -1086,15 +1086,16 @@ experiments:
       layer_dose_items: 28
       final_evaluation_items: 100
       untouched_cruxeval_ids: 57
-      target_incremental_cost_usd: 4.50
-      hard_incremental_cost_usd: 7.00
+      target_incremental_cost_usd: 8.00
+      hard_incremental_cost_usd: 9.50
+      cost_amendment: COST_AMENDMENT_CLASS_B_2026-08-23
     execution:
       lifecycle: PROSPECTIVE_LOCK
-      stage_a: NOT_YET_RUN
-      stage_b: NOT_YET_RUN
+      stage_a: COMPLETE_420_ROWS
+      stage_b: COLLECTING_1036_ROWS
       stage_c: NOT_YET_RUN
-      runpod_status: STOPPED
+      runpod_status: RUNNING
       q2: NOT_RUN
       q3: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Engineering gate and complete Stage-A all-layer sweep.
+    next_action: Complete Stage-B collection without outcome inspection; then apply frozen eligibility and cost gates.

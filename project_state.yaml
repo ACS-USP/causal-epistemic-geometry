@@ -340,11 +340,15 @@ instrument_history:
       stage_a_max_trajectories: 420
       stage_b_max_trajectories: 1372
       stage_c_max_trajectories: 1400
-      target_incremental_cost_usd: 4.50
-      hard_incremental_cost_usd: 7.00
-      runpod_status: STOPPED
+      target_incremental_cost_usd: 8.00
+      hard_incremental_cost_usd: 9.50
+      cost_amendment: COST_AMENDMENT_CLASS_B_2026-08-23
+      stage_a_status: COMPLETE_420_ROWS
+      stage_b_status: COLLECTING_1036_ROWS
+      stage_c_rule: OBSERVED_THROUGHPUT_PLUS_25PCT_MUST_BE_LE_9_50
+      runpod_status: RUNNING
       retained_volume: PRINCIPAL_AUTHORIZED_HANDOFF_FROM_GATE13
-    next_action: Engineering gate and complete Stage-A all-layer sweep.
+    next_action: Complete Stage-B collection without outcome inspection; then apply frozen eligibility and cost gates.
 
 workflow_regimes:
   EXPLORATION:
