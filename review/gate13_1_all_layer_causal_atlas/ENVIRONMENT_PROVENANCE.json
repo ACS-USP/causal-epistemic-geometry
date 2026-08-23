@@ -1,0 +1,18 @@
+{
+  "attention": "SDPA",
+  "cuda_runtime": "12.8",
+  "dtype": "BF16",
+  "environment_profile": "MINISTRAL3_8B_CORE",
+  "generation_engine": "serial_transformers_generate",
+  "gpu": "NVIDIA A40 48 GB",
+  "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "model_revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "pod_id": "k24b28wmbcdm2q",
+  "pod_name": "aggressive_azure_aardwolf-migration",
+  "python": "3.11.10",
+  "runpod_data_center": "CA-MTL-1",
+  "source_commit": "3e9ee5c822884caeff2d1a171ea9c51dc6925361",
+  "tokenizer_revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.15.0"
+}

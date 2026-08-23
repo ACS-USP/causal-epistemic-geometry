@@ -1,0 +1,70 @@
+{
+  "cosine_matrix": [
+    [
+      0.9999999999999999,
+      -2.168404344971009e-19,
+      -2.6020852139652106e-18,
+      6.279698983036042e-16,
+      4.722784663346857e-16
+    ],
+    [
+      -2.168404344971009e-19,
+      1.0000000000000004,
+      -5.204170427930421e-18,
+      -2.168404344971009e-18,
+      -1.3010426069826053e-18
+    ],
+    [
+      -2.6020852139652106e-18,
+      -5.204170427930421e-18,
+      1.0000000000000002,
+      -8.239936510889834e-18,
+      8.456776945386935e-18
+    ],
+    [
+      6.279698983036042e-16,
+      -2.168404344971009e-18,
+      -8.239936510889834e-18,
+      0.9999999999999997,
+      -1.9255430583342559e-16
+    ],
+    [
+      4.722784663346857e-16,
+      -1.3010426069826053e-18,
+      8.456776945386935e-18,
+      -1.9255430583342559e-16,
+      0.9999999999999999
+    ]
+  ],
+  "meaningful_vector_hash": "0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94",
+  "records": {
+    "R0": {
+      "file_sha256": "24c6da2bdb0124f874d0b9a3879374858afe837af9662382840b4d60331526cf",
+      "kind": "ISOTROPIC",
+      "seed": 385143269,
+      "vector_hash": "24cd2fa63343871630627bcb276af618cc1555269ed3de3836afdd605870516c",
+      "vector_path": "FINAL_RANDOM_DIRECTIONS/R0.npy"
+    },
+    "R1": {
+      "file_sha256": "07ff5056c08ab6056db75fe602a44bd97ccf0467c3a88cb92b92123649d1e8bf",
+      "kind": "ISOTROPIC",
+      "seed": 2579975894,
+      "vector_hash": "c5581ec63bffb95b70e98e29d15cd3f928c2a761b6f400a5a812c63fc0c72fb8",
+      "vector_path": "FINAL_RANDOM_DIRECTIONS/R1.npy"
+    },
+    "R2": {
+      "file_sha256": "90e646dedd4b331108f42aca9d38c2348053124866614dcec85cc564688f7c26",
+      "kind": "SHUFFLED",
+      "seed": 1104496080,
+      "vector_hash": "eb3285dc86ea81a2b27cdb5ffee34c151b11e4c3f770222a1bc5f23914fd575b",
+      "vector_path": "FINAL_RANDOM_DIRECTIONS/R2.npy"
+    },
+    "R3": {
+      "file_sha256": "e763a0e29b62f8193c258370d4cbfa3c579ddc8dd8c602ab409a160c89f628eb",
+      "kind": "SHUFFLED",
+      "seed": 1232496524,
+      "vector_hash": "dcde6248e1f475ee5d4ae4945c4de2391a8453cd102a8fde6937520081ca61c3",
+      "vector_path": "FINAL_RANDOM_DIRECTIONS/R3.npy"
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "candidate_layers": [
+    16,
+    18,
+    27
+  ],
+  "classification": "GATE13_1_LAYER_DOSE_PASS",
+  "eligibility_proof": {
+    "L16_D100": {
+      "checks": {
+        "commitment_validity": false,
+        "competence_safety": true,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": false
+      },
+      "eligible": false
+    },
+    "L16_D25": {
+      "checks": {
+        "commitment_validity": true,
+        "competence_safety": true,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": true
+      },
+      "eligible": true
+    },
+    "L16_D50": {
+      "checks": {
+        "commitment_validity": true,
+        "competence_safety": true,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": true
+      },
+      "eligible": true
+    },
+    "L16_D75": {
+      "checks": {
+        "commitment_validity": true,
+        "competence_safety": true,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": true
+      },
+      "eligible": true
+    },
+    "L18_D100": {
+      "checks": {
+        "commitment_validity": false,
+        "competence_safety": false,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": false
+      },
+      "eligible": false
+    },
+    "L18_D25": {
+      "checks": {
+        "commitment_validity": true,
+        "competence_safety": true,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": true
+      },
+      "eligible": true
+    },
+    "L18_D50": {
+      "checks": {
+        "commitment_validity": true,
+        "competence_safety": true,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": true
+      },
+      "eligible": true
+    },
+    "L18_D75": {
+      "checks": {
+        "commitment_validity": false,
+        "competence_safety": true,
+        "null_max_specificity": false,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": false
+      },
+      "eligible": false
+    },
+    "L27_D100": {
+      "checks": {
+        "commitment_validity": false,
+        "competence_safety": false,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": false
+      },
+      "eligible": false
+    },
+    "L27_D25": {
+      "checks": {
+        "commitment_validity": true,
+        "competence_safety": true,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": true
+      },
+      "eligible": true
+    },
+    "L27_D50": {
+      "checks": {
+        "commitment_validity": true,
+        "competence_safety": true,
+        "null_max_specificity": false,
+        "null_mean_specificity": false,
+        "semantic_change": true,
+        "semantic_evaluability": true
+      },
+      "eligible": false
+    },
+    "L27_D75": {
+      "checks": {
+        "commitment_validity": false,
+        "competence_safety": false,
+        "null_max_specificity": true,
+        "null_mean_specificity": true,
+        "semantic_change": true,
+        "semantic_evaluability": false
+      },
+      "eligible": false
+    }
+  },
+  "metrics": {
+    "L16_D100": {
+      "Q": 0.39285714285714285,
+      "Q_minus_null_max": 0.10714285714285715,
+      "Q_minus_null_mean": 0.17857142857142858,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.8928571428571429,
+      "isotropic_Q": 0.2857142857142857,
+      "max_tokens": 4096.0,
+      "mean_tokens": 614.3928571428571,
+      "median_tokens": 372.0,
+      "n": 28,
+      "no_commitment": 0.10714285714285714,
+      "null_max_Q": 0.2857142857142857,
+      "null_mean_Q": 0.21428571428571427,
+      "semantic_evaluability": 0.8928571428571429,
+      "shuffled_Q": 0.14285714285714285,
+      "truncation": 0.07142857142857142
+    },
+    "L16_D25": {
+      "Q": 0.17857142857142858,
+      "Q_minus_null_max": 0.07142857142857144,
+      "Q_minus_null_mean": 0.07142857142857144,
+      "accuracy": 0.7142857142857143,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.9642857142857143,
+      "isotropic_Q": 0.10714285714285714,
+      "max_tokens": 4096.0,
+      "mean_tokens": 307.39285714285717,
+      "median_tokens": 16.5,
+      "n": 28,
+      "no_commitment": 0.03571428571428571,
+      "null_max_Q": 0.10714285714285714,
+      "null_mean_Q": 0.10714285714285714,
+      "semantic_evaluability": 0.9642857142857143,
+      "shuffled_Q": 0.10714285714285714,
+      "truncation": 0.03571428571428571
+    },
+    "L16_D50": {
+      "Q": 0.2857142857142857,
+      "Q_minus_null_max": 0.14285714285714285,
+      "Q_minus_null_mean": 0.14285714285714285,
+      "accuracy": 0.6785714285714286,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 1.0,
+      "isotropic_Q": 0.14285714285714285,
+      "max_tokens": 2113.0,
+      "mean_tokens": 241.67857142857142,
+      "median_tokens": 143.5,
+      "n": 28,
+      "no_commitment": 0.0,
+      "null_max_Q": 0.14285714285714285,
+      "null_mean_Q": 0.14285714285714285,
+      "semantic_evaluability": 1.0,
+      "shuffled_Q": 0.14285714285714285,
+      "truncation": 0.0
+    },
+    "L16_D75": {
+      "Q": 0.39285714285714285,
+      "Q_minus_null_max": 0.21428571428571427,
+      "Q_minus_null_mean": 0.23214285714285715,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.9642857142857143,
+      "isotropic_Q": 0.14285714285714285,
+      "max_tokens": 1315.0,
+      "mean_tokens": 328.4642857142857,
+      "median_tokens": 270.0,
+      "n": 28,
+      "no_commitment": 0.03571428571428571,
+      "null_max_Q": 0.17857142857142858,
+      "null_mean_Q": 0.1607142857142857,
+      "semantic_evaluability": 0.9642857142857143,
+      "shuffled_Q": 0.17857142857142858,
+      "truncation": 0.0
+    },
+    "L18_D100": {
+      "Q": 0.7142857142857143,
+      "Q_minus_null_max": 0.39285714285714285,
+      "Q_minus_null_mean": 0.39285714285714285,
+      "accuracy": 0.5,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.5714285714285714,
+      "isotropic_Q": 0.32142857142857145,
+      "max_tokens": 4096.0,
+      "mean_tokens": 1965.107142857143,
+      "median_tokens": 1697.5,
+      "n": 28,
+      "no_commitment": 0.42857142857142855,
+      "null_max_Q": 0.32142857142857145,
+      "null_mean_Q": 0.32142857142857145,
+      "semantic_evaluability": 0.5714285714285714,
+      "shuffled_Q": 0.32142857142857145,
+      "truncation": 0.2857142857142857
+    },
+    "L18_D25": {
+      "Q": 0.32142857142857145,
+      "Q_minus_null_max": 0.1785714285714286,
+      "Q_minus_null_mean": 0.2142857142857143,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 1.0,
+      "isotropic_Q": 0.14285714285714285,
+      "max_tokens": 622.0,
+      "mean_tokens": 215.17857142857142,
+      "median_tokens": 186.5,
+      "n": 28,
+      "no_commitment": 0.0,
+      "null_max_Q": 0.14285714285714285,
+      "null_mean_Q": 0.10714285714285714,
+      "semantic_evaluability": 1.0,
+      "shuffled_Q": 0.07142857142857142,
+      "truncation": 0.0
+    },
+    "L18_D50": {
+      "Q": 0.39285714285714285,
+      "Q_minus_null_max": 0.17857142857142858,
+      "Q_minus_null_mean": 0.19642857142857142,
+      "accuracy": 0.8571428571428571,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.9642857142857143,
+      "isotropic_Q": 0.17857142857142858,
+      "max_tokens": 1637.0,
+      "mean_tokens": 393.42857142857144,
+      "median_tokens": 306.5,
+      "n": 28,
+      "no_commitment": 0.03571428571428571,
+      "null_max_Q": 0.21428571428571427,
+      "null_mean_Q": 0.19642857142857142,
+      "semantic_evaluability": 0.9642857142857143,
+      "shuffled_Q": 0.21428571428571427,
+      "truncation": 0.0
+    },
+    "L18_D75": {
+      "Q": 0.5,
+      "Q_minus_null_max": 0.0,
+      "Q_minus_null_mean": 0.125,
+      "accuracy": 0.6785714285714286,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.8571428571428571,
+      "isotropic_Q": 0.25,
+      "max_tokens": 3753.0,
+      "mean_tokens": 750.0714285714286,
+      "median_tokens": 492.0,
+      "n": 28,
+      "no_commitment": 0.14285714285714285,
+      "null_max_Q": 0.5,
+      "null_mean_Q": 0.375,
+      "semantic_evaluability": 0.8571428571428571,
+      "shuffled_Q": 0.5,
+      "truncation": 0.0
+    },
+    "L27_D100": {
+      "Q": 1.0,
+      "Q_minus_null_max": 0.3571428571428571,
+      "Q_minus_null_mean": 0.4107142857142857,
+      "accuracy": 0.0,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.0,
+      "isotropic_Q": 0.5357142857142857,
+      "max_tokens": 4096.0,
+      "mean_tokens": 4096.0,
+      "median_tokens": 4096.0,
+      "n": 28,
+      "no_commitment": 1.0,
+      "null_max_Q": 0.6428571428571429,
+      "null_mean_Q": 0.5892857142857143,
+      "semantic_evaluability": 0.0,
+      "shuffled_Q": 0.6428571428571429,
+      "truncation": 1.0
+    },
+    "L27_D25": {
+      "Q": 0.35714285714285715,
+      "Q_minus_null_max": 0.2142857142857143,
+      "Q_minus_null_mean": 0.23214285714285715,
+      "accuracy": 0.7857142857142857,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 1.0,
+      "isotropic_Q": 0.14285714285714285,
+      "max_tokens": 2134.0,
+      "mean_tokens": 290.4642857142857,
+      "median_tokens": 192.5,
+      "n": 28,
+      "no_commitment": 0.0,
+      "null_max_Q": 0.14285714285714285,
+      "null_mean_Q": 0.125,
+      "semantic_evaluability": 1.0,
+      "shuffled_Q": 0.10714285714285714,
+      "truncation": 0.0
+    },
+    "L27_D50": {
+      "Q": 0.32142857142857145,
+      "Q_minus_null_max": -0.0357142857142857,
+      "Q_minus_null_mean": 0.01785714285714285,
+      "accuracy": 0.8214285714285714,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.9642857142857143,
+      "isotropic_Q": 0.35714285714285715,
+      "max_tokens": 4096.0,
+      "mean_tokens": 416.7857142857143,
+      "median_tokens": 241.5,
+      "n": 28,
+      "no_commitment": 0.03571428571428571,
+      "null_max_Q": 0.35714285714285715,
+      "null_mean_Q": 0.3035714285714286,
+      "semantic_evaluability": 0.9642857142857143,
+      "shuffled_Q": 0.25,
+      "truncation": 0.03571428571428571
+    },
+    "L27_D75": {
+      "Q": 0.5,
+      "Q_minus_null_max": 0.0357142857142857,
+      "Q_minus_null_mean": 0.0714285714285714,
+      "accuracy": 0.5714285714285714,
+      "baseline_accuracy": 0.6785714285714286,
+      "commitment_validity": 0.6428571428571429,
+      "isotropic_Q": 0.39285714285714285,
+      "max_tokens": 4096.0,
+      "mean_tokens": 1381.5,
+      "median_tokens": 742.0,
+      "n": 28,
+      "no_commitment": 0.35714285714285715,
+      "null_max_Q": 0.4642857142857143,
+      "null_mean_Q": 0.4285714285714286,
+      "semantic_evaluability": 0.6428571428571429,
+      "shuffled_Q": 0.4642857142857143,
+      "truncation": 0.17857142857142858
+    }
+  },
+  "n_items": 28,
+  "selected": {
+    "dose": "D25",
+    "layer": 27
+  }
+}

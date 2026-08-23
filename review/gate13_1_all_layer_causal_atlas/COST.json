@@ -1,0 +1,23 @@
+{
+  "billing_source": "RUNPOD_ACCOUNT_BILLING_API",
+  "cost_window_utc": {
+    "end": "2026-08-23T21:00:00Z",
+    "start": "2026-08-23T03:00:00Z"
+  },
+  "gate13_1_pod_cost_usd": 7.1325116456719115,
+  "hard_cumulative_ceiling_usd": 11.0,
+  "journal_generation_seconds": {
+    "all_layer_sweep": 5516.3019,
+    "final_evaluation": 13052.2517,
+    "layer_dose_qualification": 17653.3614,
+    "total": 36221.9149
+  },
+  "journal_wall_seconds": 58692.121706,
+  "old_gate13_pod_overlap_cost_usd": 0.19571251550223678,
+  "principal_amendment": "PRINCIPAL_REVIEWED_MATERIAL_BUDGET_OPERATIONAL",
+  "projected_cumulative_before_amendment_usd": 9.647440280719954,
+  "simple_remaining_wallet_estimate_usd": 9.04,
+  "simple_remaining_wallet_estimate_note": "Estimate from user-reported US$6.37 balance plus US$10.00 top-up less listed Gate-13.1-day pod charges; not an authoritative RunPod balance.",
+  "target_cumulative_cost_usd": 8.0,
+  "total_listed_gate13_related_cost_usd": 7.328224161174148
+}
