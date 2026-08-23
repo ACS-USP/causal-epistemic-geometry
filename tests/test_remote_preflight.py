@@ -4,6 +4,7 @@ from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
+from epistemic_geometry.experiments import gate13
 from epistemic_geometry.research.preflight import (
     SystemProbe,
     load_environment_spec,
@@ -135,6 +136,16 @@ def test_named_profiles_select_core_and_separate_rfm_environment() -> None:
     assert core["attention_backend"] == "SDPA"
     assert rfm["packages"]["transformers"]["version"] == "==4.47.0"
     assert core != rfm
+
+
+def test_ministral_profile_is_separate_and_pins_exact_model_revision() -> None:
+    root = Path(__file__).resolve().parents[1]
+    _payload, profile = load_environment_spec(root / "remote_environment.yaml", "CORE_MINISTRAL3")
+    assert profile["packages"]["transformers"]["version"] == "==5.15.0"
+    assert profile["attention_backend"] == "SDPA"
+    assert profile["models"][
+        "mistralai/Ministral-3-8B-Instruct-2512-BF16"
+    ]["revision"] == gate13.PRIMARY_REVISION
 
 
 def test_version_mismatch_reports_observed_and_expected(tmp_path) -> None:

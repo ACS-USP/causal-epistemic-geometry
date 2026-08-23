@@ -1,0 +1,34 @@
+id: GATE13_CROSS_MODEL_MINISTRAL3
+status: PROSPECTIVE_MASTER_LOCK
+stage: DEVELOPMENT_CROSS_MODEL_REPLICATION
+primary_model: mistralai/Ministral-3-8B-Instruct-2512-BF16
+primary_revision: f6fae9795746f63c9be8344932f01275f3c63734
+fallback_model: mistralai/Ministral-3-14B-Instruct-2512-BF16
+fallback_revision: 3cea74c1ebaf5ce5f5a2553de470e2ceab825142
+fallback_rule: MINISTRAL3_8B_COMPETENCE_FLOOR_ONLY
+precision: BF16
+quantization: none
+instrument: CRUXEval semantic output prediction
+semantic_evaluator: external-semantic-v3
+development_item_policy: REUSED_CONSUMED_OR_RESERVED_ONLY
+untouched_cruxeval_ids: 57
+allocations:
+  primary_screen: 30
+  fallback_screen: 30
+  source_construction: 64
+  source_validation: 32
+  layer_first_stage: 24
+  dose_calibration: 40
+  final_evaluation: 100
+source_constructor: paired careful-minus-direct mean difference
+source_layers: all 34 language layers
+layer_selection: source-quartile shortlist then matched semantic-change specificity
+dose_selection: lowest eligible Gate-8 dose
+final_conditions: 7
+final_rollouts: 2 independent
+bootstrap_resamples: 10000
+target_cost_usd: 6.50
+hard_ceiling_usd: 9.50
+q2: NOT_RUN
+q3: NOT_RUN
+holdout: UNTOUCHED

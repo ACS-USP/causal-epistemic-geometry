@@ -63,7 +63,7 @@ def main() -> int:
 
     errors.extend(_contract_errors("PREMORTEM.json", "premortem.schema.json"))
     errors.extend(_contract_errors("CLOSEOUT_AUDIT.json", "closeout_audit.schema.json"))
-    for profile in ("CORE_QWEN", "RFM_COMPAT"):
+    for profile in ("CORE_QWEN", "CORE_MINISTRAL3", "RFM_COMPAT"):
         try:
             load_environment_spec(ROOT / "remote_environment.yaml", profile)
         except ValueError as exc:

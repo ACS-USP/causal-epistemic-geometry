@@ -79,7 +79,11 @@ class HuggingFaceBackend(ModelBackend):
         if model is None:
             require_remote_hf_execution("HuggingFace model/tokenizer loading")
             try:
-                from transformers import AutoModelForCausalLM, AutoTokenizer
+                from transformers import (
+                    AutoModelForCausalLM,
+                    AutoModelForImageTextToText,
+                    AutoTokenizer,
+                )
             except ImportError as exc:
                 raise OptionalDependencyError(
                     "HuggingFace mode requires transformers. Install with "
@@ -110,7 +114,12 @@ class HuggingFaceBackend(ModelBackend):
             if config.attention_implementation != "auto":
                 load_kwargs["attn_implementation"] = config.attention_implementation
             try:
-                self.model = AutoModelForCausalLM.from_pretrained(
+                model_loader = (
+                    AutoModelForCausalLM
+                    if config.model_loader == "auto_causal_lm"
+                    else AutoModelForImageTextToText
+                )
+                self.model = model_loader.from_pretrained(
                     model_name,
                     revision=config.model_revision,
                     **load_kwargs,
@@ -136,6 +145,11 @@ class HuggingFaceBackend(ModelBackend):
         self.device = next(self.model.parameters()).device
         self._layer_stack = self._locate_layer_stack(config.layer_path)
         config_hidden_size = getattr(self.model.config, "hidden_size", None)
+        if (
+            config_hidden_size is None
+            and getattr(self.model.config, "text_config", None) is not None
+        ):
+            config_hidden_size = getattr(self.model.config.text_config, "hidden_size", None)
         if config_hidden_size is None:
             config_hidden_size = getattr(self.model.config, "n_embd", None)
         if config_hidden_size is None:

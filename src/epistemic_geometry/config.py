@@ -60,6 +60,7 @@ class BackendConfig:
     max_prefill_tokens: int = 8192
     padding_side: str = "left"
     attention_implementation: str = "auto"
+    model_loader: str = "auto_causal_lm"
     torch_compile: bool = False
     cuda_graphs: bool = False
     serial_shape_reference: bool = False
@@ -116,6 +117,10 @@ class BackendConfig:
         if self.attention_implementation not in {"auto", "eager", "sdpa", "flash_attention_2"}:
             raise ConfigError(
                 "backend.attention_implementation must be auto, eager, sdpa, or flash_attention_2"
+            )
+        if self.model_loader not in {"auto_causal_lm", "auto_image_text_to_text"}:
+            raise ConfigError(
+                "backend.model_loader must be auto_causal_lm or auto_image_text_to_text"
             )
 
 

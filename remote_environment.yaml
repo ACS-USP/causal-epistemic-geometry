@@ -39,6 +39,42 @@ profiles:
     models:
       Qwen/Qwen3-8B:
         revision: b968826d9c46dd6066d109eabc6255188de91218
+  CORE_MINISTRAL3:
+    purpose: Exact text-only Ministral-3 Gate-13 GPU environment; no vision execution permitted.
+    python: ">=3.11,<3.12"
+    attention_backend: SDPA
+    packages:
+      torch:
+        distribution: torch
+        version: "==2.8.0+cu128"
+        required: true
+        evidence_level: prospectively_pinned_gate13
+      transformers:
+        distribution: transformers
+        version: "==5.15.0"
+        required: true
+        evidence_level: prospectively_pinned_gate13
+      accelerate:
+        distribution: accelerate
+        version: "==1.14.0"
+        required: true
+        evidence_level: prospectively_pinned_gate13
+      huggingface_hub:
+        distribution: huggingface-hub
+        version: "==1.27.0"
+        required: true
+        evidence_level: prospectively_pinned_gate13
+    require_cuda: true
+    cuda_runtime: "==12.8"
+    minimum_disk_free_gb: 20
+    hf_cache:
+      required: true
+      canonical_remote_path: /workspace/hf-cache
+    models:
+      mistralai/Ministral-3-8B-Instruct-2512-BF16:
+        revision: f6fae9795746f63c9be8344932f01275f3c63734
+      mistralai/Ministral-3-14B-Instruct-2512-BF16:
+        revision: 3cea74c1ebaf5ce5f5a2553de470e2ceab825142
   RFM_COMPAT:
     purpose: Pinned optional upstream xRFM reproduction environment; separate from core runtime.
     python: "==3.10.15"
