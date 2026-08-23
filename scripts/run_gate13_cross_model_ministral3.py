@@ -33,6 +33,14 @@ from epistemic_geometry.types import BenchmarkItem  # noqa: E402
 
 REVIEW = ROOT / "review/gate13_cross_model_ministral3"
 
+ENGINEERING_FIXTURE_PROMPTS = (
+    "Reply with exactly one line: FINAL: 0",
+    "Reply with exactly one line containing the result of 2 + 3 as FINAL: <integer>.",
+    "Read this neutral text and end with exactly FINAL: ok — alpha beta gamma.",
+    "Return the last symbol in 'a b c' using exactly FINAL: <symbol>.",
+    "Echo the word ready using exactly one line: FINAL: ready",
+)
+
 
 def git_commit() -> str:
     return subprocess.run(
@@ -278,21 +286,29 @@ def completed_keys(path: Path, source_commit: str) -> set[tuple[str, str, str, s
 
 
 def engineering_gate(backend: HuggingFaceBackend, review: Path, model: str, revision: str) -> None:
-    manifest = review / "SUBSTRATE_SCREEN_MANIFEST.json"
-    items = load_external(manifest)[:5]
+    items = [
+        BenchmarkItem(
+            id=f"gate13-engineering-{index:02d}",
+            prompt=prompt,
+            target="",
+            metadata={"response_channel": "engineering_only"},
+        )
+        for index, prompt in enumerate(ENGINEERING_FIXTURE_PROMPTS)
+    ]
     layer_count = len(backend._layer_stack)  # noqa: SLF001
     if layer_count != gate13.NUM_LAYERS or backend.hidden_size != gate13.HIDDEN_SIZE:
         raise RuntimeError("Gate 13 discovered layer count/hidden size differs from lock")
     identity: list[bool] = []
     cleanup: list[bool] = []
     traces: list[dict[str, Any]] = []
+    fixture_provenance: list[dict[str, Any]] = []
     vision_calls = 0
     rng = np.random.default_rng(130013)
     unit = rng.normal(size=gate13.HIDDEN_SIZE)
     unit /= np.linalg.norm(unit)
     delta = unit * 0.1
     for index, item in enumerate(items):
-        row = model_item(item)
+        row = item
         seed = 13_000_000 + index
         clean, calls = generate_with_vision_audit(
             backend,
@@ -303,6 +319,14 @@ def engineering_gate(backend: HuggingFaceBackend, review: Path, model: str, revi
         )
         vision_calls += calls
         prompt_ids, _hash = prompt_tokens(backend, row)
+        fixture_provenance.append(
+            {
+                "fixture_id": row.id,
+                "prompt_hash": _hash,
+                "prompt_token_count": len(prompt_ids),
+                "benchmark_item": False,
+            }
+        )
         zero = backend.torch.zeros(
             (1, 1, gate13.HIDDEN_SIZE), dtype=backend.torch.float32, device=backend.device
         )
@@ -362,6 +386,8 @@ def engineering_gate(backend: HuggingFaceBackend, review: Path, model: str, revi
         "resolved_layer_path": backend._resolved_layer_path,  # noqa: SLF001
         "language_layer_count": layer_count,
         "hidden_size": backend.hidden_size,
+        "fixtures": fixture_provenance,
+        "scientific_item_ids_processed": [],
         "alpha_zero_token_identity": all(identity),
         "hook_cleanup": all(cleanup),
         "exact_shift": bool(applications)
