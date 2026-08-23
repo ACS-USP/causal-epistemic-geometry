@@ -1,0 +1,3122 @@
+[
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 0,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 1,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 3,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 4,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 6,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 8,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 9,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 11,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 12,
+    "item_id": "sample_319",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2790456410,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 1,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 3,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 6,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 7,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 8,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 11,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 12,
+    "item_id": "sample_757",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 248257654,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 0,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 1,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 2,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 3,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 4,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 5,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 6,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 7,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 8,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 11,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_708",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2794693476,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 0,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 1,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 3,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 5,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 6,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 7,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 8,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 11,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 12,
+    "item_id": "sample_254",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1812114198,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 2,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 4,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 5,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 6,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 7,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 10,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 11,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 12,
+    "item_id": "sample_266",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 460384861,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 0,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 4,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 7,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 9,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 10,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 11,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_199",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2384042705,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 1,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 4,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 9,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 11,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 12,
+    "item_id": "sample_371",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3941547119,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 1,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 3,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 4,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 6,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 7,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 8,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 9,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 11,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 12,
+    "item_id": "sample_570",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 713253908,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 0,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 1,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 3,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 4,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 6,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 8,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 9,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 11,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_797",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 578517324,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 2,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 3,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 4,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 6,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 7,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 8,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 11,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 12,
+    "item_id": "sample_408",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2027529955,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 2,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 4,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 8,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 10,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 11,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 12,
+    "item_id": "sample_307",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2826187042,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 0,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 1,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 2,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 6,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 7,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 9,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 10,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 11,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_363",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 535316985,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 0,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 1,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 2,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 4,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 5,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 6,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 8,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 9,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 10,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 11,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 12,
+    "item_id": "sample_740",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 1955940578,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 2,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 3,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 7,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 8,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 9,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 11,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 12,
+    "item_id": "sample_633",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3924990963,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 0,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 1,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 2,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 4,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 8,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 11,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 12,
+    "item_id": "sample_214",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 4291031430,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 0,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 1,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 2,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 3,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 7,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 8,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 11,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_85",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 194695034,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 0,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 4,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 6,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 7,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 9,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 11,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 12,
+    "item_id": "sample_613",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 641141218,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 1,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 2,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 4,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 6,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 8,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 11,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 12,
+    "item_id": "sample_211",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2649987760,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 0,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 3,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 7,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 8,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 9,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 10,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 11,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 12,
+    "item_id": "sample_53",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2144885611,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 0,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 1,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 4,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 6,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 7,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 9,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 10,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 11,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 12,
+    "item_id": "sample_406",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 603785327,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 0,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 1,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 2,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 3,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 5,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 6,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 7,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 9,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 10,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 11,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_378",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 2218928276,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 0,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 1,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 2,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 3,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 4,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 5,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 6,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 7,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 8,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 9,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 10,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 11,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_722",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 176943889,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 0,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 1,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 2,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 3,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 4,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 5,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 6,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 7,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 8,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 9,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 11,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 12,
+    "item_id": "sample_604",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 3378180004,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L22_D50",
+    "condition_order": 0,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L22_D50",
+    "condition_order": 1,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L26_D50",
+    "condition_order": 2,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L22_D50",
+    "condition_order": 3,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L26_D50",
+    "condition_order": 4,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "BASELINE",
+    "condition_order": 5,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L8_D50",
+    "condition_order": 6,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L8_D50",
+    "condition_order": 7,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L8_D50",
+    "condition_order": 8,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "MEANINGFUL_L12_D50",
+    "condition_order": 9,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L26_D50",
+    "condition_order": 10,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "SHUFFLED_L12_D50",
+    "condition_order": 11,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  },
+  {
+    "condition": "ISOTROPIC_L12_D50",
+    "condition_order": 12,
+    "item_id": "sample_582",
+    "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "rollout_index": 0,
+    "seed": 848445001,
+    "seed_regime": "MATCHED_COUPLING_CALIBRATION",
+    "stage": "LAYER_FIRST_STAGE"
+  }
+]

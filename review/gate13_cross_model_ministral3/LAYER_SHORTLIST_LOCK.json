@@ -1,0 +1,100 @@
+{
+  "candidate_layers": [
+    8,
+    12,
+    22,
+    26
+  ],
+  "conditions": [
+    {
+      "alpha": 0.4394417647975505,
+      "condition": "MEANINGFUL_L8_D50",
+      "layer": 8,
+      "vector_hash": "1f97e612a0f95830663f8e22ee5e34feaf33b065470335e4078660e604273db8",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L8_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 0.4394417647975505,
+      "condition": "ISOTROPIC_L8_D50",
+      "layer": 8,
+      "vector_hash": "716ffd9f5955a907ce6d2f0d982742c6e24bc47e6b3002a4514bb31cf7e2fda6",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L8_ISOTROPIC.npy"
+    },
+    {
+      "alpha": 0.4394417647975505,
+      "condition": "SHUFFLED_L8_D50",
+      "layer": 8,
+      "vector_hash": "f6635cba37cf14105228c55b6077db9d031b39d753df1396d35c5007abca6cf7",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L8_SHUFFLED.npy"
+    },
+    {
+      "alpha": 0.6578861342312223,
+      "condition": "MEANINGFUL_L12_D50",
+      "layer": 12,
+      "vector_hash": "1fc7867914edce101d34c3e56dbc8ec1dbe5d486e38925c48da96d88d52e0496",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L12_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 0.6578861342312223,
+      "condition": "ISOTROPIC_L12_D50",
+      "layer": 12,
+      "vector_hash": "d1228b6ebf43ea759b7d4293307489493722489b8854f043928fd8e22842cbc6",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L12_ISOTROPIC.npy"
+    },
+    {
+      "alpha": 0.6578861342312223,
+      "condition": "SHUFFLED_L12_D50",
+      "layer": 12,
+      "vector_hash": "098f79d764fa9daa669619cb80653bfe2f004b6abe487db24581c109678a6114",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L12_SHUFFLED.npy"
+    },
+    {
+      "alpha": 5.101993381696204,
+      "condition": "MEANINGFUL_L22_D50",
+      "layer": 22,
+      "vector_hash": "b8b013b3936bdcee4c43b737031cc15730ee15412f414d55f84ae7cffa949758",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L22_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 5.101993381696204,
+      "condition": "ISOTROPIC_L22_D50",
+      "layer": 22,
+      "vector_hash": "f837f061537b450a91c5b6c9ae3ff0250ea7f7d314032711e2459408df17e360",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L22_ISOTROPIC.npy"
+    },
+    {
+      "alpha": 5.101993381696204,
+      "condition": "SHUFFLED_L22_D50",
+      "layer": 22,
+      "vector_hash": "876ed330ef105d6c397fbe8d96b3f313171a75dd85f2eaa50b1211ab9fc7eed2",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L22_SHUFFLED.npy"
+    },
+    {
+      "alpha": 7.891484720344298,
+      "condition": "MEANINGFUL_L26_D50",
+      "layer": 26,
+      "vector_hash": "a69023b2873d5af92937ab4e7a9f841b73e26279c8c28e20d0747293911da01b",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L26_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 7.891484720344298,
+      "condition": "ISOTROPIC_L26_D50",
+      "layer": 26,
+      "vector_hash": "31612a3cdbcd09482e8afe658d589e3dc22a825cccb54e2b76b1b16419fa31ad",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L26_ISOTROPIC.npy"
+    },
+    {
+      "alpha": 7.891484720344298,
+      "condition": "SHUFFLED_L26_D50",
+      "layer": 26,
+      "vector_hash": "c3e2bbd401baed8deb09a0fd55b27ffe7c1d97b6bcd2b7f2463a05413435b4f0",
+      "vector_path": "LAYER_FIRST_STAGE_DIRECTIONS/L26_SHUFFLED.npy"
+    }
+  ],
+  "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "selection_rule": "largest meaningful Q-null mean; source effect; lower layer",
+  "semantic_correctness_used": false,
+  "source_labels_only": true,
+  "status": "FROZEN_PRE_FIRST_STAGE"
+}
