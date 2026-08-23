@@ -1,0 +1,31 @@
+{
+  "clarification_id": "GATE13_1_STAGE_C_TRANSITION_2026-08-23",
+  "authorized_by": "PRINCIPAL_RESEARCHER",
+  "authorized_at_utc": "2026-08-23T14:53:42Z",
+  "issued_before_stage_b_metric_inspection": true,
+  "source_commit": "3e9ee5c822884caeff2d1a171ea9c51dc6925361",
+  "implementation_commit_at_recording": "12c75fa5e7cf9581a15c4762fb74c1852d8674ec",
+  "stage_b_zero_eligible_rule": "STOP; preserve GATE13_1_NO_SAFE_SPECIFIC_LAYER_DOSE; do not execute Stage C.",
+  "stage_b_at_least_one_eligible_rule": "Apply the frozen selection rule, freeze exactly one layer-dose cell, construct the specified fresh four-direction null bank, and execute Stage C mandatorily.",
+  "stage_c_discretion": "NONE",
+  "stage_c_blockers": [
+    "projected cumulative Gate-13.1 cost exceeds US$9.50 after frozen 25% safety margin",
+    "scientific-integrity issue",
+    "unrecoverable infrastructure failure"
+  ],
+  "stage_c_design": {
+    "items": 100,
+    "conditions": 7,
+    "rollouts_per_item_condition": 2,
+    "trajectories": 1400,
+    "items_source": "untouched Gate-13 final-evaluation items",
+    "controller_layer_dose_seeds_parser_thresholds_estimands": "UNCHANGED"
+  },
+  "scientific_firewall": {
+    "stage_b_peeking": false,
+    "q2": "NOT_RUN",
+    "q3": "NOT_RUN",
+    "holdout": "UNTOUCHED",
+    "additional_go_no_go": false
+  }
+}

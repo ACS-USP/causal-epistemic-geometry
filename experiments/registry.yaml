@@ -1094,6 +1094,8 @@ experiments:
       stage_a: COMPLETE_420_ROWS
       stage_b: COLLECTING_1036_ROWS
       stage_c: NOT_YET_RUN
+      stage_c_transition: MANDATORY_IF_ELIGIBLE_CELL
+      stage_c_trajectories: 1400
       runpod_status: RUNNING
       q2: NOT_RUN
       q3: NOT_RUN
