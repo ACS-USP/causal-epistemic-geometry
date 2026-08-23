@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 12.1 is accepted. Gate 13 prospectively freezes a staged replication of the careful/direct paired-mean control procedure in Ministral-3 8B, using only historically consumed or reserved DEVELOPMENT CRUXEval items. The 57 untouched CRUXEval IDs remain sealed.
+Gate 13 closed as GATE13_NO_CAUSAL_LAYER_FIRST_STAGE. Ministral-3 8B passed the substrate screen and all 34 layers carried the careful/direct source axis, but none of the four prospectively shortlisted D50 interventions passed every safe-specific causal gate. Later stages were not run; the independent forensic audit is clean and the 57 untouched IDs remain sealed.
 
-**Next authorized action:** Gate-13 adapter engineering and primary 8B substrate screen under the committed master protocol lock.
+**Next authorized action:** Accept the clean Gate-13 closeout and prospectively lock the separately authorized Gate 13.1 all-layer causal atlas before any new model output.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

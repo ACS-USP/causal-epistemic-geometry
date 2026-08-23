@@ -99,3 +99,18 @@ complete engine nevertheless did not qualify because the historical BF16
 bridge and the frozen three-consecutive-scale finite-difference rule failed.
 Program C is not promoted: no scientific geometry or utility-prediction values
 were collected, and historical outcomes remained sealed.
+
+Gate 13 then tested the careful/direct paired-mean procedure in the Ministral-3
+8B family. The substrate and behavioral source passed, and all 34 language
+layers showed held-out source eligibility. However, none of the four
+prospectively source-selected D50 interventions passed the complete safety and
+random-specificity gate. The frozen result is
+`GATE13_NO_CAUSAL_LAYER_FIRST_STAGE`, independently audited clean. This does
+not show that Ministral has no causally effective layer or dose; it is a clean
+negative for the source-decodability shortlist plus fixed-D50 procedure.
+
+Program B is therefore the leading interpretive branch at this point: strong
+readability did not identify a qualified causal handle under the frozen
+cross-model selection procedure. Program A retains its strong Qwen/CRUXEval
+DEVELOPMENT evidence but has not yet replicated across model families. Program
+C remains paused; Q2 and Q3 remain closed.

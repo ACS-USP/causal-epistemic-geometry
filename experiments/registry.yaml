@@ -1016,14 +1016,16 @@ experiments:
       calibration, and strong architecture-matched nulls?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Ministral-3 8B BF16 text-only direct generation, 14B floor-only fallback
-    status: PROSPECTIVE_MASTER_LOCK
-    outcome: NOT_YET_RUN
+    status: COMPLETE_DEVELOPMENT_NO_CAUSAL_FIRST_STAGE
+    outcome: GATE13_NO_CAUSAL_LAYER_FIRST_STAGE
     scientific_interpretation: >-
-      Fresh-model evidence on reused DEVELOPMENT items only; no outcome has
-      been observed and no cross-family claim exists yet.
-    source_commit: 1b9ab2a24934c877bdfd2908bb2b62dfe0372256
+      The careful/direct source transferred behaviorally and representationally
+      to Ministral-3 8B, but none of the four source-selected D50 layers passed
+      the complete safe-specific causal first-stage rule. This is a bounded
+      DEVELOPMENT negative for the frozen shortlist-plus-dose procedure.
+    source_commit: 43b66fe908cd7fdb3661f11ef6b55972d6083bff
     artifact: review/gate13_cross_model_ministral3/
-    cost_usd: null
+    cost_usd: 0.90
     holdout_status: UNTOUCHED
     parent_experiment: GATE9_SELECTED_D75_EVALUATION
     lock:
@@ -1035,13 +1037,24 @@ experiments:
       target_cost_usd: 6.50
       hard_stop_cost_usd: 9.50
     execution:
-      lifecycle: PROSPECTIVE_MASTER_LOCK
+      lifecycle: CLOSED
       primary_model: mistralai/Ministral-3-8B-Instruct-2512-BF16
       primary_revision: f6fae9795746f63c9be8344932f01275f3c63734
-      adapter_engineering: NOT_YET_RUN
-      substrate_screen: NOT_YET_RUN
+      adapter_engineering: GATE13_ENGINEERING_PASS
+      substrate_screen: MINISTRAL3_8B_SUBSTRATE_PASS
+      fallback_14b_executed: false
+      source_eligible_layers: 34
+      shortlisted_layers: [8, 12, 22, 26]
+      selected_layer: null
+      selected_dose: null
+      scientific_trajectories: 612
+      dose_calibration_executed: false
+      final_evaluation_executed: false
+      classification: GATE13_NO_CAUSAL_LAYER_FIRST_STAGE
+      forensic_audit: GATE13_FORENSIC_CLEAN
       runpod_status: STOPPED
+      retained_volume: AUTHORIZED_HANDOFF_TO_GATE13_1
       q2: NOT_RUN
       q3: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Adapter engineering and primary 8B substrate screen.
+    next_action: Accept the clean closeout; Gate 13.1 requires a new prospective lock.

@@ -1,0 +1,20 @@
+{
+  "accelerate": "1.14.0",
+  "dtype": "BF16",
+  "engineering_classification": "GATE13_ENGINEERING_PASS",
+  "experiment_source_commit": "43b66fe908cd7fdb3661f11ef6b55972d6083bff",
+  "gpu": "NVIDIA A40 48 GB",
+  "gpu_location": "CA-MTL-1",
+  "hidden_size": 4096,
+  "huggingface_hub": "1.27.0",
+  "language_layers": 34,
+  "layer_path": "model.model.language_model.layers",
+  "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "profile": "CORE_MINISTRAL3",
+  "python": "3.11.10",
+  "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "runtime_lock_commit": "59b64b75e1d69baa720082bd201c276c32d1fb40",
+  "tokenizer_revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.15.0"
+}

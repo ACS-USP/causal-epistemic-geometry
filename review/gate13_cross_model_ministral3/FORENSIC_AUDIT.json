@@ -1,0 +1,49 @@
+{
+  "allocation_disjoint": true,
+  "classification": "GATE13_FORENSIC_CLEAN",
+  "classification_agreement": true,
+  "dose_calibration_allocation_untouched_by_steering": true,
+  "final_evaluation_allocation_untouched_by_steering": true,
+  "historically_untouched_cruxeval_ids": 57,
+  "holdout": "UNTOUCHED",
+  "independent_shortlist": [
+    8,
+    12,
+    22,
+    26
+  ],
+  "later_stage_rows": 0,
+  "logical_key_unique": true,
+  "maximum_primary_audit_metric_difference": 1.9184653865522705e-13,
+  "model_revision_provenance_clean": true,
+  "parser_reanalysis_mismatches": 0,
+  "primary_classification": "GATE13_NO_CAUSAL_LAYER_FIRST_STAGE",
+  "q2": "NOT_RUN",
+  "q3": "NOT_RUN",
+  "schedule_checks": [
+    {
+      "duplicate_logical_rows": 0,
+      "expected_rows": 300,
+      "extra_rows": 0,
+      "missing_rows": 0,
+      "observed_rows": 300,
+      "seed_mismatches": 0,
+      "stage": "SUBSTRATE_SCREEN"
+    },
+    {
+      "duplicate_logical_rows": 0,
+      "expected_rows": 312,
+      "extra_rows": 0,
+      "missing_rows": 0,
+      "observed_rows": 312,
+      "seed_mismatches": 0,
+      "stage": "LAYER_FIRST_STAGE"
+    }
+  ],
+  "scientific_rows": 612,
+  "seed_provenance_clean": true,
+  "source_direction_hashes_match": true,
+  "source_layers_eligible": 34,
+  "source_layers_recomputed": 34,
+  "untouched_firewall_clean": true
+}

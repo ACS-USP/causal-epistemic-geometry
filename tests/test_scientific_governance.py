@@ -58,6 +58,10 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE12_UTILITY_ALIGNED_PULLBACK_COMPLETE",
         "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
         "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE_COMPLETE",
+        "GATE13_CROSS_MODEL_MINISTRAL3",
+        "GATE13_CROSS_MODEL_MINISTRAL3_COMPLETE",
+        "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
+        "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -73,8 +77,9 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE8_L27_DOSE_CALIBRATION",
             "GATE9_SELECTED_D75_EVALUATION",
             "GATE10_CROSS_DOMAIN_CHARCOUNT",
-                "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
-                "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
+            "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
+            "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
+            "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
         }
     )
     assert state["scientific_firewall"]["steering"] in {
@@ -97,6 +102,8 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE12_JVP_ENGINE_FAILURE_CLOSED",
         "GATE12_1_ENGINEERING_ONLY_LOCKED",
         "GATE12_1_ENGINE_NOT_QUALIFIED_CLOSED",
+        "GATE13_BOUNDED_CROSS_MODEL_NULL",
+        "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

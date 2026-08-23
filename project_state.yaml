@@ -1,5 +1,5 @@
 schema_version: 1
-last_verified: "2026-08-22"
+last_verified: "2026-08-23"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
@@ -20,30 +20,31 @@ project:
 
 current:
   workstream: GATE13_CROSS_MODEL_MINISTRAL3
-  lifecycle: PROSPECTIVE_MASTER_LOCK
+  lifecycle: CLOSED
   stage: DEVELOPMENT_CROSS_MODEL_REPLICATION
-  source_commit: 1b9ab2a24934c877bdfd2908bb2b62dfe0372256
+  source_commit: 43b66fe908cd7fdb3661f11ef6b55972d6083bff
   summary: >-
-    Gate 12.1 is accepted. Gate 13 prospectively freezes a staged replication
-    of the careful/direct paired-mean control procedure in Ministral-3 8B,
-    using only historically consumed or reserved DEVELOPMENT CRUXEval items.
-    The 57 untouched CRUXEval IDs remain sealed.
+    Gate 13 closed as GATE13_NO_CAUSAL_LAYER_FIRST_STAGE. Ministral-3 8B passed
+    the substrate screen and all 34 layers carried the careful/direct source
+    axis, but none of the four prospectively shortlisted D50 interventions
+    passed every safe-specific causal gate. Later stages were not run; the
+    independent forensic audit is clean and the 57 untouched IDs remain sealed.
   next_authorized_action: >-
-    Gate-13 adapter engineering and primary 8B substrate screen under the
-    committed master protocol lock.
+    Accept the clean Gate-13 closeout and prospectively lock the separately
+    authorized Gate 13.1 all-layer causal atlas before any new model output.
   runpod: STOPPED
-  gpu_work_authorized: true
+  gpu_work_authorized: false
   new_scientific_experiment_authorized: true
 
 scientific_firewall:
-  steering: GATE13_CROSS_MODEL_PROSPECTIVE_LOCK
+  steering: GATE13_BOUNDED_CROSS_MODEL_NULL
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
   current_task: GATE13_CROSS_MODEL_MINISTRAL3
-  free_generation: GATE13_ONLY
+  free_generation: GATE13_1_ONLY_AFTER_PROSPECTIVE_LOCK
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -277,31 +278,42 @@ instrument_history:
       hard_ceiling_usd: 1.50
     next_action: Principal review; scientific Gate 12 remains closed.
   - id: GATE13_CROSS_MODEL_MINISTRAL3
-    status: PROSPECTIVE_MASTER_LOCK
+    status: COMPLETE_DEVELOPMENT_NO_CAUSAL_FIRST_STAGE
     conclusion: >-
-      The cross-family procedure replication is locked before model outputs.
-      Ministral-3 8B is primary; the 14B fallback is conditional only on the
-      frozen competence-floor rule. All allocations use outcome-free records
-      from consumed/reserved DEVELOPMENT items, with the 57 untouched IDs
-      explicitly excluded.
-    source_commit: 1b9ab2a24934c877bdfd2908bb2b62dfe0372256
+      Ministral-3 8B passed the substrate screen and all 34 source directions
+      passed held-out eligibility. None of the prospectively shortlisted L8,
+      L12, L22, or L26 D50 cells passed every safety and null-specificity gate,
+      so dose calibration and final evaluation were not run. The independent
+      audit is clean and the historical result remains bounded to the frozen
+      shortlist-plus-D50 procedure.
+    source_commit: 43b66fe908cd7fdb3661f11ef6b55972d6083bff
     artifact: review/gate13_cross_model_ministral3/
     holdout_status: UNTOUCHED
-    gpu_authorized: true
-    free_generation: GATE13_ONLY
+    gpu_authorized: false
+    free_generation: NOT_AUTHORIZED
     q2: NOT_RUN
     q3: NOT_RUN
     execution:
-      lifecycle: PROSPECTIVE_MASTER_LOCK
+      lifecycle: CLOSED
       eligible_reused_development_pool: 720
       allocated_items: 320
       untouched_cruxeval_ids: 57
       primary_model: mistralai/Ministral-3-8B-Instruct-2512-BF16
       primary_revision: f6fae9795746f63c9be8344932f01275f3c63734
+      substrate_screen: MINISTRAL3_8B_SUBSTRATE_PASS
+      source_eligible_layers: 34
+      shortlisted_layers: [8, 12, 22, 26]
+      selected_layer: null
+      selected_dose: null
+      classification: GATE13_NO_CAUSAL_LAYER_FIRST_STAGE
+      forensic_audit: GATE13_FORENSIC_CLEAN
+      scientific_trajectories: 612
+      cost_usd_estimate: 0.90
       target_cost_usd: 6.50
       hard_ceiling_usd: 9.50
       runpod_status: STOPPED
-    next_action: Adapter engineering and complete primary 8B substrate screen.
+      retained_volume: AUTHORIZED_HANDOFF_TO_GATE13_1
+    next_action: Accept closeout; Gate 13.1 requires a new prospective lock.
 
 workflow_regimes:
   EXPLORATION:
