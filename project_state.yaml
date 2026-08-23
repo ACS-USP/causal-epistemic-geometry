@@ -19,33 +19,30 @@ project:
     utility?
 
 current:
-  workstream: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
-  lifecycle: COLLECTION
-  stage: DEVELOPMENT_CROSS_MODEL_LAYER_DOSE_IDENTIFICATION
+  workstream: GATE13_1_ALL_LAYER_CAUSAL_ATLAS_COMPLETE
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_CROSS_MODEL_REPLICATION
   source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
   summary: >-
-    Gate 13 is accepted as the clean bounded
-    GATE13_NO_CAUSAL_LAYER_FIRST_STAGE result. Gate 13.1 prospectively freezes
-    an all-34-layer D50 causal sweep followed by a disjoint joint layer-dose
-    qualification and, only if qualified, the untouched 100-item final
-    evaluation. The 57 untouched CRUXEval IDs remain sealed.
-  next_authorized_action: >-
-    Resume the frozen Gate-13.1 Stage-C final evaluation from the crash-safe
-    journal under the principal-authorized US$11.00 cumulative hard ceiling;
-    never duplicate completed logical rows.
-  runpod: RUNNING
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+    Gate 13 remains the bounded source-shortlist plus D50 null. Gate 13.1 then
+    tested all 34 Ministral layers, selected L27-D25 without correctness-based
+    ranking, and strongly replicated safe, random-specific CRUXEval error
+    control on 100 untouched final-evaluation items. This is DEVELOPMENT
+    cross-model evidence, not domain-general or confirmatory evidence.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW; no next experiment authorized.
+  runpod: TERMINATED
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED
+  steering: GATE13_1_CLOSED_STRONG_CROSS_MODEL_REPLICATION
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
-  free_generation: GATE13_1_ONLY
+  current_task: PRINCIPAL_RESEARCHER_REVIEW
+  free_generation: NOT_AUTHORIZED
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -316,22 +313,24 @@ instrument_history:
       retained_volume: AUTHORIZED_HANDOFF_TO_GATE13_1
     next_action: Accept closeout; Gate 13.1 requires a new prospective lock.
   - id: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
-    status: PROSPECTIVE_LOCK
+    status: COMPLETE_DEVELOPMENT_STRONG_CROSS_MODEL_REPLICATION
     conclusion: >-
-      Gate 13.1 freezes an all-layer D50 candidate sweep and a disjoint joint
-      layer-dose qualification using the accepted Ministral-3 8B model, all 34
-      historical source directions, architecture-matched nulls, and no
-      correctness-based ranking. Final evaluation is conditional on an eligible
-      cell and remains unopened.
+      The all-layer D50 sweep advanced L16/L18/L27, and disjoint layer-dose
+      qualification selected L27-D25 without correctness ranking. On 100
+      untouched final items, accuracy rose from 0.445 to 0.575; G/C/D were
+      0.1650/0.0940/0.1400 and exceeded four fresh random controls. Validity
+      and evaluability passed exactly at the five-point relative boundary. The
+      audit reproduced all metrics exactly and records one non-scientific
+      operational cost/Git incident.
     source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
     artifact: review/gate13_1_all_layer_causal_atlas/
     holdout_status: UNTOUCHED
-    gpu_authorized: true
-    free_generation: GATE13_1_ONLY
+    gpu_authorized: false
+    free_generation: NOT_AUTHORIZED
     q2: NOT_RUN
     q3: NOT_RUN
     execution:
-      lifecycle: PROSPECTIVE_LOCK
+      lifecycle: CLOSED
       model: mistralai/Ministral-3-8B-Instruct-2512-BF16
       revision: f6fae9795746f63c9be8344932f01275f3c63734
       all_layer_sweep_items: 12
@@ -342,15 +341,28 @@ instrument_history:
       stage_b_max_trajectories: 1372
       stage_c_max_trajectories: 1400
       target_incremental_cost_usd: 8.00
-      hard_incremental_cost_usd: 9.50
-      cost_amendment: COST_AMENDMENT_CLASS_B_2026-08-23
+      hard_incremental_cost_usd: 11.00
+      cost_amendment: PRINCIPAL_REVIEWED_MATERIAL_BUDGET_OPERATIONAL
       stage_a_status: COMPLETE_420_ROWS
-      stage_b_status: COLLECTING_1036_ROWS
+      stage_b_status: COMPLETE_1036_ROWS
       stage_c_rule: MANDATORY_IF_STAGE_B_HAS_ELIGIBLE_CELL; BLOCK_ONLY_COST_INTEGRITY_OR_INFRASTRUCTURE
       stage_c_trajectories: 1400
-      runpod_status: RUNNING
-      retained_volume: PRINCIPAL_AUTHORIZED_HANDOFF_FROM_GATE13
-    next_action: Complete Stage-B collection without outcome inspection; then apply frozen eligibility and cost gates.
+      selected_layer: 27
+      selected_dose: D25
+      selected_alpha: 4.469907677389362
+      final_accuracy_baseline: 0.445
+      final_accuracy_meaningful: 0.575
+      final_g: 0.165
+      final_c: 0.09401515151515152
+      final_d: 0.14
+      final_rescue: 0.21
+      final_damage: 0.08
+      classification: GATE13_1_STRONG_CROSS_MODEL_REPLICATION
+      forensic_audit: GATE13_1_FORENSIC_MINOR_NONSCIENTIFIC_ISSUES
+      cost_usd: 7.1325116456719115
+      runpod_status: TERMINATED
+      retained_volume: DELETED
+    next_action: Principal researcher review; next protocol drafted only.
 
 workflow_regimes:
   EXPLORATION:

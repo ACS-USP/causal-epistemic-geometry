@@ -109,8 +109,22 @@ random-specificity gate. The frozen result is
 not show that Ministral has no causally effective layer or dose; it is a clean
 negative for the source-decodability shortlist plus fixed-D50 procedure.
 
-Program B is therefore the leading interpretive branch at this point: strong
-readability did not identify a qualified causal handle under the frozen
-cross-model selection procedure. Program A retains its strong Qwen/CRUXEval
-DEVELOPMENT evidence but has not yet replicated across model families. Program
-C remains paused; Q2 and Q3 remain closed.
+Gate 13.1 preserved that historical bounded null and tested a broader,
+prospectively frozen causal identification procedure. The all-layer sweep and
+disjoint layer-dose qualification selected Ministral L27-D25 without using
+accuracy for ranking. On 100 untouched final-evaluation items, accuracy rose
+from 0.445 to 0.575; G/C/D were 0.1650/0.0940/0.1400 and exceeded all four new
+random controls. The frozen classification is
+`GATE13_1_STRONG_CROSS_MODEL_REPLICATION`. Validity and evaluability passed at
+the exact five-percentage-point relative guard boundary, which remains an
+important cost of the intervention.
+
+Program A is therefore substantially strengthened within CRUXEval: useful
+semantic blind-spot control now has strong DEVELOPMENT replications in Qwen and
+Ministral under independently selected, architecture-specific controllers.
+This does not overturn Gate 10's character-count null and does not establish a
+domain-general careful-computation controller. The next drafted priority is a
+second task where textual CAREFUL is prospectively useful, with fixed
+controllers and no task-outcome controller search. Program B remains important
+because source readability weakly ranked causal-Q across Ministral layers.
+Program C remains paused; Q2 and Q3 remain closed.

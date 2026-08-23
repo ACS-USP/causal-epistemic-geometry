@@ -1068,15 +1068,17 @@ experiments:
       prospective selection?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Ministral-3 8B BF16 text-only serial generation only
-    status: COLLECTION_IN_PROGRESS
-    outcome: NOT_YET_RUN
+    status: COMPLETE_DEVELOPMENT_STRONG_CROSS_MODEL_REPLICATION
+    outcome: GATE13_1_STRONG_CROSS_MODEL_REPLICATION
     scientific_interpretation: >-
-      All 34 frozen source directions are tested at D50 for candidate generation;
-      candidate layers then enter a disjoint D25-D100 null-controlled
-      qualification. Correctness cannot rank layers or eligible cells.
+      The historical Gate-13 shortlist-plus-D50 null remains intact. A broader
+      prospectively frozen all-layer and dose procedure selected L27-D25 and
+      strongly replicated useful, random-specific CRUXEval error control on a
+      fresh 100-item final sample. This is cross-model DEVELOPMENT evidence,
+      not domain-general or confirmatory evidence.
     source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
     artifact: review/gate13_1_all_layer_causal_atlas/
-    cost_usd: null
+    cost_usd: 7.1325116456719115
     holdout_status: UNTOUCHED
     parent_experiment: GATE13_CROSS_MODEL_MINISTRAL3
     lock:
@@ -1090,14 +1092,28 @@ experiments:
       hard_incremental_cost_usd: 11.00
       cost_amendment: GATE13_1_PRINCIPAL_REVIEWED_USD11_2026-08-23
     execution:
-      lifecycle: COLLECTION
+      lifecycle: CLOSED
       stage_a: COMPLETE_420_ROWS
       stage_b: COMPLETE_1036_ROWS
-      stage_c: RESUMING_FROM_JOURNAL
+      stage_c: COMPLETE_1400_ROWS
       stage_c_transition: MANDATORY_AFTER_ELIGIBLE_CELL; AMENDED_COST_CEILING_USD_11.00
       stage_c_trajectories: 1400
-      runpod_status: RUNNING
+      selected_layer: 27
+      selected_dose: D25
+      selected_alpha: 4.469907677389362
+      accuracy_baseline: 0.445
+      accuracy_meaningful: 0.575
+      g: 0.165
+      c: 0.09401515151515152
+      d: 0.14
+      rescue: 0.21
+      damage: 0.08
+      classification: GATE13_1_STRONG_CROSS_MODEL_REPLICATION
+      forensic_audit: GATE13_1_FORENSIC_MINOR_NONSCIENTIFIC_ISSUES
+      operational_incident: NONSCIENTIFIC_OPERATIONAL_PROTOCOL_INCIDENT
+      runpod_status: TERMINATED
+      retained_volume: DELETED
       q2: NOT_RUN
       q3: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Resume Stage-C collection from the crash-safe journal; never duplicate completed logical rows.
+    next_action: Principal researcher review; next protocol drafted only and not authorized.

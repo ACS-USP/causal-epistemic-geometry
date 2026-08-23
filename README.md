@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 13 is accepted as the clean bounded GATE13_NO_CAUSAL_LAYER_FIRST_STAGE result. Gate 13.1 prospectively freezes an all-34-layer D50 causal sweep followed by a disjoint joint layer-dose qualification and, only if qualified, the untouched 100-item final evaluation. The 57 untouched CRUXEval IDs remain sealed.
+Gate 13 remains the bounded source-shortlist plus D50 null. Gate 13.1 then tested all 34 Ministral layers, selected L27-D25 without correctness-based ranking, and strongly replicated safe, random-specific CRUXEval error control on 100 untouched final-evaluation items. This is DEVELOPMENT cross-model evidence, not domain-general or confirmatory evidence.
 
-**Next authorized action:** Resume the frozen Gate-13.1 Stage-C final evaluation from the crash-safe journal under the principal-authorized US$11.00 cumulative hard ceiling; never duplicate completed logical rows.
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW; no next experiment authorized.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

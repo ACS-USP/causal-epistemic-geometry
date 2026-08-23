@@ -55,6 +55,7 @@ current instruction source.
 | `docs/GATE9_SELECTED_D75_EVALUATION_CLOSEOUT.md` | Fresh selected-D75 strong-safe DEVELOPMENT replication and incident boundary |
 | `docs/GATE10_CROSS_DOMAIN_CHARCOUNT_CLOSEOUT.md` | Fixed-controller cross-domain character-count null and forensic closeout |
 | `docs/GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM_CLOSEOUT.md` | Domain-conditioned source/control/utility postmortem and raw-persistence audit boundary |
+| `docs/GATE13_1_ALL_LAYER_CAUSAL_ATLAS_CLOSEOUT.md` | All-layer Ministral causal atlas, L27-D25 selection, strong cross-model replication, and operational-incident audit |
 
 ## Archival scientific protocols and closeouts
 

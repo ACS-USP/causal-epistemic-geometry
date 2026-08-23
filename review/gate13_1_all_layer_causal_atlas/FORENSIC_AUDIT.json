@@ -1,0 +1,76 @@
+{
+  "bootstrap_maximum_difference": 0.0,
+  "classification": "GATE13_1_FORENSIC_MINOR_NONSCIENTIFIC_ISSUES",
+  "classification_agreement": true,
+  "final_random_bank_fresh_and_matched": true,
+  "final_seed_independence": true,
+  "historical_gate13_classification_preserved": "GATE13_NO_CAUSAL_LAYER_FIRST_STAGE",
+  "historically_untouched_cruxeval_ids": 57,
+  "holdout": "UNTOUCHED",
+  "independent_classification": "GATE13_1_STRONG_CROSS_MODEL_REPLICATION",
+  "logical_key_unique": true,
+  "maximum_primary_audit_metric_difference": 0.0,
+  "operational_incident_interpretation": "NONSCIENTIFIC_OPERATIONAL_PROTOCOL_INCIDENT",
+  "operational_incident_verified": true,
+  "parser_reanalysis_mismatches": 0,
+  "pre_amendment_stage_c_rows": {
+    "authorization_timestamp": "2026-08-23T16:50:41Z",
+    "count": 121,
+    "expected_sha256": "6b9527d6fb8b44a19b4e11232d25e54770a5557db440216738124c9490a12e51",
+    "first_resumed_timestamp": "2026-08-23T16:55:43.047351+00:00",
+    "included_unchanged": true,
+    "last_pre_amendment_timestamp": "2026-08-23T16:48:54.790876+00:00",
+    "no_completed_key_regenerated": true,
+    "no_scientific_metric_or_condition_comparison_inspected": true,
+    "observed_sha256": "6b9527d6fb8b44a19b4e11232d25e54770a5557db440216738124c9490a12e51"
+  },
+  "primary_classification": "GATE13_1_STRONG_CROSS_MODEL_REPLICATION",
+  "provenance_clean": true,
+  "q2": "NOT_RUN",
+  "q3": "NOT_RUN",
+  "schedule_checks": [
+    {
+      "duplicate_logical_rows": 0,
+      "expected_rows": 420,
+      "extra_rows": 0,
+      "missing_rows": 0,
+      "observed_rows": 420,
+      "seed_mismatches": 0,
+      "stage": "ALL_LAYER_SWEEP"
+    },
+    {
+      "duplicate_logical_rows": 0,
+      "expected_rows": 1036,
+      "extra_rows": 0,
+      "missing_rows": 0,
+      "observed_rows": 1036,
+      "seed_mismatches": 0,
+      "stage": "LAYER_DOSE_QUALIFICATION"
+    },
+    {
+      "duplicate_logical_rows": 0,
+      "expected_rows": 1400,
+      "extra_rows": 0,
+      "missing_rows": 0,
+      "observed_rows": 1400,
+      "seed_mismatches": 0,
+      "stage": "FINAL_EVALUATION"
+    }
+  ],
+  "scientific_rows": 2856,
+  "stage_a_candidates": [
+    16,
+    18,
+    27
+  ],
+  "stage_b_accuracy_used_for_ranking": false,
+  "stage_b_selected": {
+    "dose": "D25",
+    "layer": 27
+  },
+  "stage_counts": {
+    "ALL_LAYER_SWEEP": 420,
+    "FINAL_EVALUATION": 1400,
+    "LAYER_DOSE_QUALIFICATION": 1036
+  }
+}

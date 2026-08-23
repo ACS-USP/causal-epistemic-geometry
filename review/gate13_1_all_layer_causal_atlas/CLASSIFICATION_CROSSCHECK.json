@@ -1,0 +1,26 @@
+{
+  "agreement": true,
+  "independent": "GATE13_1_STRONG_CROSS_MODEL_REPLICATION",
+  "minimum_gate_independent": true,
+  "movement_gate_independent": true,
+  "primary": "GATE13_1_STRONG_CROSS_MODEL_REPLICATION",
+  "stage_a_candidates_independent": [
+    16,
+    18,
+    27
+  ],
+  "stage_a_candidates_primary": [
+    16,
+    18,
+    27
+  ],
+  "stage_b_selected_independent": {
+    "dose": "D25",
+    "layer": 27
+  },
+  "stage_b_selected_primary": {
+    "dose": "D25",
+    "layer": 27
+  },
+  "strong_gate_independent": true
+}

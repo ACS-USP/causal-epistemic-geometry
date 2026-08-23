@@ -104,6 +104,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE12_1_ENGINE_NOT_QUALIFIED_CLOSED",
         "GATE13_BOUNDED_CROSS_MODEL_NULL",
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED",
+        "GATE13_1_CLOSED_STRONG_CROSS_MODEL_REPLICATION",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 13 is accepted as the clean bounded GATE13_NO_CAUSAL_LAYER_FIRST_STAGE result. Gate 13.1 prospectively freezes an all-34-layer D50 causal sweep followed by a disjoint joint layer-dose qualification and, only if qualified, the untouched 100-item final evaluation. The 57 untouched CRUXEval IDs remain sealed.
+Gate 13 remains the bounded source-shortlist plus D50 null. Gate 13.1 then tested all 34 Ministral layers, selected L27-D25 without correctness-based ranking, and strongly replicated safe, random-specific CRUXEval error control on 100 untouched final-evaluation items. This is DEVELOPMENT cross-model evidence, not domain-general or confirmatory evidence.
 
-- Workstream: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS`
-- RunPod: `RUNNING`
-- GPU work authorized: `true`
-- New scientific experiment authorized: `true`
-- Next authorized action: Resume the frozen Gate-13.1 Stage-C final evaluation from the crash-safe journal under the principal-authorized US$11.00 cumulative hard ceiling; never duplicate completed logical rows.
+- Workstream: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS_COMPLETE`
+- RunPod: `TERMINATED`
+- GPU work authorized: `false`
+- New scientific experiment authorized: `false`
+- Next authorized action: PRINCIPAL_RESEARCHER_REVIEW; no next experiment authorized.
 
 ## Scientific program
 
@@ -49,18 +49,18 @@ Gate 13 is accepted as the clean bounded GATE13_NO_CAUSAL_LAYER_FIRST_STAGE resu
 | `GATE12_UTILITY_ALIGNED_PULLBACK` | `COMPLETE_DEVELOPMENT_ENGINE_FAILURE` | Exact forward-mode and independent autograd JVPs agreed, but the frozen BF16 finite-difference, local-KL quadratic, and full-sequence/KV-cache engineering criteria did not pass. The run stopped before geometry collection and before historical-outcome reveal. |
 | `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE` | `COMPLETE_ENGINEERING_NOT_QUALIFIED` | FP32 full-sequence/KV equivalence and exact JVP/VJP, Fisher/Hessian, and utility-derivative identities passed. The historical BF16 bridge missed its top-1 threshold, and only two consecutive finite-difference scales passed rather than three. No scientific item or historical outcome was accessed. |
 | `GATE13_CROSS_MODEL_MINISTRAL3` | `COMPLETE_DEVELOPMENT_NO_CAUSAL_FIRST_STAGE` | Ministral-3 8B passed the substrate screen and all 34 source directions passed held-out eligibility. None of the prospectively shortlisted L8, L12, L22, or L26 D50 cells passed every safety and null-specificity gate, so dose calibration and final evaluation were not run. The independent audit is clean and the historical result remains bounded to the frozen shortlist-plus-D50 procedure. |
-| `GATE13_1_ALL_LAYER_CAUSAL_ATLAS` | `PROSPECTIVE_LOCK` | Gate 13.1 freezes an all-layer D50 candidate sweep and a disjoint joint layer-dose qualification using the accepted Ministral-3 8B model, all 34 historical source directions, architecture-matched nulls, and no correctness-based ranking. Final evaluation is conditional on an eligible cell and remains unopened. |
+| `GATE13_1_ALL_LAYER_CAUSAL_ATLAS` | `COMPLETE_DEVELOPMENT_STRONG_CROSS_MODEL_REPLICATION` | The all-layer D50 sweep advanced L16/L18/L27, and disjoint layer-dose qualification selected L27-D25 without correctness ranking. On 100 untouched final items, accuracy rose from 0.445 to 0.575; G/C/D were 0.1650/0.0940/0.1400 and exceeded four fresh random controls. Validity and evaluability passed exactly at the five-point relative boundary. The audit reproduced all metrics exactly and records one non-scientific operational cost/Git incident. |
 
 ## Scientific firewall
 
-- `steering`: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED`
+- `steering`: `GATE13_1_CLOSED_STRONG_CROSS_MODEL_REPLICATION`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS`
-- `free_generation`: `GATE13_1_ONLY`
+- `current_task`: `PRINCIPAL_RESEARCHER_REVIEW`
+- `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
