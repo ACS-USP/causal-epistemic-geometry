@@ -1,0 +1,52 @@
+{
+  "amendment_id": "GATE13_1_COST_AMENDMENT_CLASS_B_11_2026-08-23",
+  "authorized_by": "PRINCIPAL_RESEARCHER",
+  "authorized_at_utc": "2026-08-23T16:50:41Z",
+  "amendment_class": "CLASS_B_OPERATIONAL_FINANCIAL",
+  "affected_outcomes_observed_at_authorization": true,
+  "scientific_metrics_inspected_at_authorization": false,
+  "previous_cumulative_hard_ceiling_usd": 9.5,
+  "new_cumulative_hard_ceiling_usd": 11.0,
+  "previous_projected_cumulative_usd": 9.647440280719954,
+  "projection_includes_frozen_25pct_margin": true,
+  "minimum_wallet_reserve_usd": 3.0,
+  "reserve_is_hard_constraint": false,
+  "scientific_design_unchanged": true,
+  "unchanged_fields": [
+    "items",
+    "layers",
+    "doses",
+    "nulls",
+    "thresholds",
+    "selection_rules",
+    "stage_c_item_count",
+    "conditions",
+    "rollouts",
+    "model",
+    "parser",
+    "seeds",
+    "estimands"
+  ],
+  "stage_c_rule_after_amendment": "Proceed automatically when the observed-throughput projection with the frozen 25pct safety margin is <= 11.00 USD cumulatively, unless a scientific-integrity issue or unrecoverable infrastructure failure occurs.",
+  "resume_rule": "Resume the frozen Stage-C schedule from the crash-safe journal; never duplicate completed logical rows or add a third rollout.",
+  "operational_incident": {
+    "prior_gate": "BLOCKED_PROJECTED_COST",
+    "stage_c_rows_present_before_amendment": 121,
+    "stage_c_rows_preserved": true,
+    "stage_c_metrics_inspected_before_amendment": false,
+    "cause": "Stage-C supervisor failed to enforce the prior cost-gate stop after a remote Git commit/push failure.",
+    "scientific_design_changed": false
+  },
+  "scientific_firewall": {
+    "q2": "NOT_RUN",
+    "q3": "NOT_RUN",
+    "holdout": "UNTOUCHED",
+    "additional_items": false,
+    "additional_directions": false,
+    "additional_doses": false,
+    "additional_layers": false,
+    "additional_rollouts": false,
+    "additional_models": false,
+    "exploratory_conditions": false
+  }
+}

@@ -20,7 +20,7 @@ project:
 
 current:
   workstream: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
-  lifecycle: PROSPECTIVE_LOCK
+  lifecycle: COLLECTION
   stage: DEVELOPMENT_CROSS_MODEL_LAYER_DOSE_IDENTIFICATION
   source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
   summary: >-
@@ -30,9 +30,10 @@ current:
     qualification and, only if qualified, the untouched 100-item final
     evaluation. The 57 untouched CRUXEval IDs remain sealed.
   next_authorized_action: >-
-    Run the Gate-13.1 engineering gate and complete the frozen 420-row all-layer
-    Stage-A sweep on the retained Gate-13 A40 volume.
-  runpod: STOPPED
+    Resume the frozen Gate-13.1 Stage-C final evaluation from the crash-safe
+    journal under the principal-authorized US$11.00 cumulative hard ceiling;
+    never duplicate completed logical rows.
+  runpod: RUNNING
   gpu_work_authorized: true
   new_scientific_experiment_authorized: true
 

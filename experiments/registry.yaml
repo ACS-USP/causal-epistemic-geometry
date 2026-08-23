@@ -1068,7 +1068,7 @@ experiments:
       prospective selection?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Ministral-3 8B BF16 text-only serial generation only
-    status: PROSPECTIVE_LOCK
+    status: COLLECTION_IN_PROGRESS
     outcome: NOT_YET_RUN
     scientific_interpretation: >-
       All 34 frozen source directions are tested at D50 for candidate generation;
@@ -1087,17 +1087,17 @@ experiments:
       final_evaluation_items: 100
       untouched_cruxeval_ids: 57
       target_incremental_cost_usd: 8.00
-      hard_incremental_cost_usd: 9.50
-      cost_amendment: COST_AMENDMENT_CLASS_B_2026-08-23
+      hard_incremental_cost_usd: 11.00
+      cost_amendment: COST_AMENDMENT_CLASS_B_11_2026-08-23
     execution:
-      lifecycle: PROSPECTIVE_LOCK
+      lifecycle: COLLECTION
       stage_a: COMPLETE_420_ROWS
-      stage_b: COLLECTING_1036_ROWS
-      stage_c: NOT_YET_RUN
-      stage_c_transition: MANDATORY_IF_ELIGIBLE_CELL
+      stage_b: COMPLETE_1036_ROWS
+      stage_c: RESUMING_FROM_JOURNAL
+      stage_c_transition: MANDATORY_AFTER_ELIGIBLE_CELL; AMENDED_COST_CEILING_USD_11.00
       stage_c_trajectories: 1400
       runpod_status: RUNNING
       q2: NOT_RUN
       q3: NOT_RUN
       holdout_status: UNTOUCHED
-    next_action: Complete Stage-B collection without outcome inspection; then apply frozen eligibility and cost gates.
+    next_action: Resume Stage-C collection from the crash-safe journal; never duplicate completed logical rows.
