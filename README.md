@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 13 closed as GATE13_NO_CAUSAL_LAYER_FIRST_STAGE. Ministral-3 8B passed the substrate screen and all 34 layers carried the careful/direct source axis, but none of the four prospectively shortlisted D50 interventions passed every safe-specific causal gate. Later stages were not run; the independent forensic audit is clean and the 57 untouched IDs remain sealed.
+Gate 13 is accepted as the clean bounded GATE13_NO_CAUSAL_LAYER_FIRST_STAGE result. Gate 13.1 prospectively freezes an all-34-layer D50 causal sweep followed by a disjoint joint layer-dose qualification and, only if qualified, the untouched 100-item final evaluation. The 57 untouched CRUXEval IDs remain sealed.
 
-**Next authorized action:** Accept the clean Gate-13 closeout and prospectively lock the separately authorized Gate 13.1 all-layer causal atlas before any new model output.
+**Next authorized action:** Run the Gate-13.1 engineering gate and complete the frozen 420-row all-layer Stage-A sweep on the retained Gate-13 A40 volume.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

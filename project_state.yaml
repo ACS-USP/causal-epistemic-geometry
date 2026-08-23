@@ -19,32 +19,32 @@ project:
     utility?
 
 current:
-  workstream: GATE13_CROSS_MODEL_MINISTRAL3
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_CROSS_MODEL_REPLICATION
-  source_commit: 43b66fe908cd7fdb3661f11ef6b55972d6083bff
+  workstream: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_CROSS_MODEL_LAYER_DOSE_IDENTIFICATION
+  source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
   summary: >-
-    Gate 13 closed as GATE13_NO_CAUSAL_LAYER_FIRST_STAGE. Ministral-3 8B passed
-    the substrate screen and all 34 layers carried the careful/direct source
-    axis, but none of the four prospectively shortlisted D50 interventions
-    passed every safe-specific causal gate. Later stages were not run; the
-    independent forensic audit is clean and the 57 untouched IDs remain sealed.
+    Gate 13 is accepted as the clean bounded
+    GATE13_NO_CAUSAL_LAYER_FIRST_STAGE result. Gate 13.1 prospectively freezes
+    an all-34-layer D50 causal sweep followed by a disjoint joint layer-dose
+    qualification and, only if qualified, the untouched 100-item final
+    evaluation. The 57 untouched CRUXEval IDs remain sealed.
   next_authorized_action: >-
-    Accept the clean Gate-13 closeout and prospectively lock the separately
-    authorized Gate 13.1 all-layer causal atlas before any new model output.
+    Run the Gate-13.1 engineering gate and complete the frozen 420-row all-layer
+    Stage-A sweep on the retained Gate-13 A40 volume.
   runpod: STOPPED
-  gpu_work_authorized: false
+  gpu_work_authorized: true
   new_scientific_experiment_authorized: true
 
 scientific_firewall:
-  steering: GATE13_BOUNDED_CROSS_MODEL_NULL
+  steering: GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
   confirmatory_holdout: UNTOUCHED
   model_downloads_local: FORBIDDEN
-  current_task: GATE13_CROSS_MODEL_MINISTRAL3
-  free_generation: GATE13_1_ONLY_AFTER_PROSPECTIVE_LOCK
+  current_task: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
+  free_generation: GATE13_1_ONLY
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -314,6 +314,37 @@ instrument_history:
       runpod_status: STOPPED
       retained_volume: AUTHORIZED_HANDOFF_TO_GATE13_1
     next_action: Accept closeout; Gate 13.1 requires a new prospective lock.
+  - id: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
+    status: PROSPECTIVE_LOCK
+    conclusion: >-
+      Gate 13.1 freezes an all-layer D50 candidate sweep and a disjoint joint
+      layer-dose qualification using the accepted Ministral-3 8B model, all 34
+      historical source directions, architecture-matched nulls, and no
+      correctness-based ranking. Final evaluation is conditional on an eligible
+      cell and remains unopened.
+    source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
+    artifact: review/gate13_1_all_layer_causal_atlas/
+    holdout_status: UNTOUCHED
+    gpu_authorized: true
+    free_generation: GATE13_1_ONLY
+    q2: NOT_RUN
+    q3: NOT_RUN
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      model: mistralai/Ministral-3-8B-Instruct-2512-BF16
+      revision: f6fae9795746f63c9be8344932f01275f3c63734
+      all_layer_sweep_items: 12
+      layer_dose_items: 28
+      final_evaluation_items: 100
+      untouched_cruxeval_ids: 57
+      stage_a_max_trajectories: 420
+      stage_b_max_trajectories: 1372
+      stage_c_max_trajectories: 1400
+      target_incremental_cost_usd: 4.50
+      hard_incremental_cost_usd: 7.00
+      runpod_status: STOPPED
+      retained_volume: PRINCIPAL_AUTHORIZED_HANDOFF_FROM_GATE13
+    next_action: Engineering gate and complete Stage-A all-layer sweep.
 
 workflow_regimes:
   EXPLORATION:

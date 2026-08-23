@@ -1,0 +1,12 @@
+id: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
+status: FROZEN_PROSPECTIVE_LOCK
+stage: DEVELOPMENT_CROSS_MODEL_LAYER_DOSE_IDENTIFICATION
+model: mistralai/Ministral-3-8B-Instruct-2512-BF16
+revision: f6fae9795746f63c9be8344932f01275f3c63734
+source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
+protocol: review/gate13_1_all_layer_causal_atlas/PROTOCOL_LOCK.json
+scientific_firewall:
+  untouched_cruxeval_ids: 57
+  q2: NOT_RUN
+  q3: NOT_RUN
+  holdout: UNTOUCHED

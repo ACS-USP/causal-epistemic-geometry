@@ -1058,3 +1058,43 @@ experiments:
       q3: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Accept the clean closeout; Gate 13.1 requires a new prospective lock.
+
+  - id: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
+    version: GATE-13.1
+    stage: DEVELOPMENT_CROSS_MODEL_LAYER_DOSE_IDENTIFICATION
+    question: >-
+      Did Gate 13 miss a causally sensitive Ministral layer or safe-specific
+      layer-dose cell because source decodability and fixed D50 were used for
+      prospective selection?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3
+    model_policy: Ministral-3 8B BF16 text-only serial generation only
+    status: PROSPECTIVE_LOCK
+    outcome: NOT_YET_RUN
+    scientific_interpretation: >-
+      All 34 frozen source directions are tested at D50 for candidate generation;
+      candidate layers then enter a disjoint D25-D100 null-controlled
+      qualification. Correctness cannot rank layers or eligible cells.
+    source_commit: 3e9ee5c822884caeff2d1a171ea9c51dc6925361
+    artifact: review/gate13_1_all_layer_causal_atlas/
+    cost_usd: null
+    holdout_status: UNTOUCHED
+    parent_experiment: GATE13_CROSS_MODEL_MINISTRAL3
+    lock:
+      protocol: review/gate13_1_all_layer_causal_atlas/PROTOCOL_LOCK.json
+      premortem: PREMORTEM_PASS
+      all_layer_sweep_items: 12
+      layer_dose_items: 28
+      final_evaluation_items: 100
+      untouched_cruxeval_ids: 57
+      target_incremental_cost_usd: 4.50
+      hard_incremental_cost_usd: 7.00
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      stage_a: NOT_YET_RUN
+      stage_b: NOT_YET_RUN
+      stage_c: NOT_YET_RUN
+      runpod_status: STOPPED
+      q2: NOT_RUN
+      q3: NOT_RUN
+      holdout_status: UNTOUCHED
+    next_action: Engineering gate and complete Stage-A all-layer sweep.

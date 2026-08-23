@@ -1,0 +1,16 @@
+{
+  "classification": "PREMORTEM_PASS",
+  "risks": {
+    "budget": "reprojection before every later stage",
+    "decode_control_conflation": "source metrics cannot select causal layer",
+    "dose_layer_interaction": "Stage A fixed D50; Stage B joint prospective grid",
+    "model_shopping": "Ministral-3 8B only; no fallback",
+    "null_specificity": "two matched null families per Stage-B cell",
+    "outcome_leakage": "final 100 items remain unopened until cell lock",
+    "post_hoc_L22_L26_cherry_picking": "all 34 layers required",
+    "safety": "validity/evaluability/competence gates frozen",
+    "small_sweep_sample": "candidate generation only"
+  },
+  "unresolved_class_a": [],
+  "unresolved_class_b": []
+}

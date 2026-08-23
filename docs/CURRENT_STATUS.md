@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 13 closed as GATE13_NO_CAUSAL_LAYER_FIRST_STAGE. Ministral-3 8B passed the substrate screen and all 34 layers carried the careful/direct source axis, but none of the four prospectively shortlisted D50 interventions passed every safe-specific causal gate. Later stages were not run; the independent forensic audit is clean and the 57 untouched IDs remain sealed.
+Gate 13 is accepted as the clean bounded GATE13_NO_CAUSAL_LAYER_FIRST_STAGE result. Gate 13.1 prospectively freezes an all-34-layer D50 causal sweep followed by a disjoint joint layer-dose qualification and, only if qualified, the untouched 100-item final evaluation. The 57 untouched CRUXEval IDs remain sealed.
 
-- Workstream: `GATE13_CROSS_MODEL_MINISTRAL3`
+- Workstream: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS`
 - RunPod: `STOPPED`
-- GPU work authorized: `false`
+- GPU work authorized: `true`
 - New scientific experiment authorized: `true`
-- Next authorized action: Accept the clean Gate-13 closeout and prospectively lock the separately authorized Gate 13.1 all-layer causal atlas before any new model output.
+- Next authorized action: Run the Gate-13.1 engineering gate and complete the frozen 420-row all-layer Stage-A sweep on the retained Gate-13 A40 volume.
 
 ## Scientific program
 
@@ -49,17 +49,18 @@ Gate 13 closed as GATE13_NO_CAUSAL_LAYER_FIRST_STAGE. Ministral-3 8B passed the 
 | `GATE12_UTILITY_ALIGNED_PULLBACK` | `COMPLETE_DEVELOPMENT_ENGINE_FAILURE` | Exact forward-mode and independent autograd JVPs agreed, but the frozen BF16 finite-difference, local-KL quadratic, and full-sequence/KV-cache engineering criteria did not pass. The run stopped before geometry collection and before historical-outcome reveal. |
 | `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE` | `COMPLETE_ENGINEERING_NOT_QUALIFIED` | FP32 full-sequence/KV equivalence and exact JVP/VJP, Fisher/Hessian, and utility-derivative identities passed. The historical BF16 bridge missed its top-1 threshold, and only two consecutive finite-difference scales passed rather than three. No scientific item or historical outcome was accessed. |
 | `GATE13_CROSS_MODEL_MINISTRAL3` | `COMPLETE_DEVELOPMENT_NO_CAUSAL_FIRST_STAGE` | Ministral-3 8B passed the substrate screen and all 34 source directions passed held-out eligibility. None of the prospectively shortlisted L8, L12, L22, or L26 D50 cells passed every safety and null-specificity gate, so dose calibration and final evaluation were not run. The independent audit is clean and the historical result remains bounded to the frozen shortlist-plus-D50 procedure. |
+| `GATE13_1_ALL_LAYER_CAUSAL_ATLAS` | `PROSPECTIVE_LOCK` | Gate 13.1 freezes an all-layer D50 candidate sweep and a disjoint joint layer-dose qualification using the accepted Ministral-3 8B model, all 34 historical source directions, architecture-matched nulls, and no correctness-based ranking. Final evaluation is conditional on an eligible cell and remains unopened. |
 
 ## Scientific firewall
 
-- `steering`: `GATE13_BOUNDED_CROSS_MODEL_NULL`
+- `steering`: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `UNTOUCHED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `GATE13_CROSS_MODEL_MINISTRAL3`
-- `free_generation`: `GATE13_1_ONLY_AFTER_PROSPECTIVE_LOCK`
+- `current_task`: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS`
+- `free_generation`: `GATE13_1_ONLY`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry

@@ -1,0 +1,453 @@
+{
+  "accepted_main_head": "a3f68a52f76ac68170d99b1fcc1a3e63f78bbe55",
+  "cost": {
+    "a40_hourly_rate_usd": 0.45,
+    "hard_incremental_usd": 7.0,
+    "historical_gate13_cost_usd_estimate": 0.9,
+    "maximum_gate13_1_trajectories": 3192,
+    "minimum_wallet_reserve_usd": 0.5,
+    "passes_pre_stage_a_cost_gate": true,
+    "projected_incremental_usd_with_25pct_margin": 3.6,
+    "stage_a_max_trajectories": 420,
+    "stage_b_max_trajectories": 1372,
+    "stage_c_max_trajectories": 1400,
+    "target_incremental_usd": 4.5,
+    "wallet_balance_pre_lock_usd": 9.89
+  },
+  "experiment_id": "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
+  "experiment_source_commit": "3e9ee5c822884caeff2d1a171ea9c51dc6925361",
+  "firewall": {
+    "holdout": "UNTOUCHED",
+    "no_other_model": true,
+    "q2": "NOT_RUN",
+    "q3": "NOT_RUN",
+    "untouched_cruxeval_ids": 57
+  },
+  "historical_gate13": {
+    "classification": "GATE13_NO_CAUSAL_LAYER_FIRST_STAGE",
+    "forensic": "GATE13_FORENSIC_CLEAN",
+    "result_modified": false
+  },
+  "item_manifests": {
+    "ALL_LAYER_SWEEP_ITEMS.json": "b1a1a7f82da220d83b199ff68cdb1008fe1c24f967edda2260502710d2aacf4e",
+    "FINAL_EVALUATION_ITEMS.json": "dac973e6e3dd102389c9aeac7108263129caaef51f1ab47d039504a253f8e0de",
+    "LAYER_DOSE_ITEMS.json": "07b89bed7ab88760c5eab55691122f72e8466b6d76cabb431f3c6fad0433d98b"
+  },
+  "lifecycle": "PROSPECTIVE_LOCK",
+  "model": {
+    "dtype": "BF16",
+    "engine": "serial Transformers",
+    "environment": "CORE_MINISTRAL3",
+    "fix_mistral_regex": true,
+    "id": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+    "tokenizer_revision": "f6fae9795746f63c9be8344932f01275f3c63734"
+  },
+  "schema_version": 1,
+  "source_direction_manifest_sha256": "359dd952689f57a91f1e8c7dd6b885c2332077c1e6e3daab28effa41c9b43b9c",
+  "stage_a": {
+    "dose": "D50",
+    "items": 12,
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "seed_regime": "MATCHED_COUPLING",
+    "trajectories": 420
+  },
+  "stage_b": {
+    "doses": [
+      "D25",
+      "D50",
+      "D75",
+      "D100"
+    ],
+    "items": 28,
+    "maximum_trajectories": 1372,
+    "random_seeds": {
+      "L0": {
+        "final": {
+          "R0": 3888741691,
+          "R1": 2215985456,
+          "R2": 1732747124,
+          "R3": 570466281
+        },
+        "stage_b_isotropic": 834845614,
+        "stage_b_shuffled": 1118381839
+      },
+      "L1": {
+        "final": {
+          "R0": 864944704,
+          "R1": 2970874418,
+          "R2": 2493996727,
+          "R3": 3947306734
+        },
+        "stage_b_isotropic": 1257434418,
+        "stage_b_shuffled": 2628519070
+      },
+      "L10": {
+        "final": {
+          "R0": 489974765,
+          "R1": 1497358639,
+          "R2": 2588107272,
+          "R3": 1064941622
+        },
+        "stage_b_isotropic": 1982213880,
+        "stage_b_shuffled": 1812663759
+      },
+      "L11": {
+        "final": {
+          "R0": 471618894,
+          "R1": 3630300260,
+          "R2": 537723955,
+          "R3": 3809498861
+        },
+        "stage_b_isotropic": 2513807322,
+        "stage_b_shuffled": 4006736550
+      },
+      "L12": {
+        "final": {
+          "R0": 2161695478,
+          "R1": 1125450937,
+          "R2": 1124156819,
+          "R3": 114944276
+        },
+        "stage_b_isotropic": 971688236,
+        "stage_b_shuffled": 113526123
+      },
+      "L13": {
+        "final": {
+          "R0": 2292636020,
+          "R1": 2688415028,
+          "R2": 373811984,
+          "R3": 2791027819
+        },
+        "stage_b_isotropic": 4150724143,
+        "stage_b_shuffled": 560212126
+      },
+      "L14": {
+        "final": {
+          "R0": 3399239724,
+          "R1": 1351398715,
+          "R2": 3824491433,
+          "R3": 432395877
+        },
+        "stage_b_isotropic": 3393796852,
+        "stage_b_shuffled": 4130902211
+      },
+      "L15": {
+        "final": {
+          "R0": 728412917,
+          "R1": 2224263693,
+          "R2": 315816057,
+          "R3": 776081614
+        },
+        "stage_b_isotropic": 495671862,
+        "stage_b_shuffled": 4150232782
+      },
+      "L16": {
+        "final": {
+          "R0": 1411721150,
+          "R1": 4262067390,
+          "R2": 3474104029,
+          "R3": 3437817273
+        },
+        "stage_b_isotropic": 1718898627,
+        "stage_b_shuffled": 3886840347
+      },
+      "L17": {
+        "final": {
+          "R0": 2834069644,
+          "R1": 3654761510,
+          "R2": 2950774629,
+          "R3": 2293901027
+        },
+        "stage_b_isotropic": 1251357108,
+        "stage_b_shuffled": 451536151
+      },
+      "L18": {
+        "final": {
+          "R0": 2526247629,
+          "R1": 1820232215,
+          "R2": 512256666,
+          "R3": 2487902377
+        },
+        "stage_b_isotropic": 1530315712,
+        "stage_b_shuffled": 724234983
+      },
+      "L19": {
+        "final": {
+          "R0": 2099383629,
+          "R1": 3266261590,
+          "R2": 1316554127,
+          "R3": 1328012017
+        },
+        "stage_b_isotropic": 1996789774,
+        "stage_b_shuffled": 254007196
+      },
+      "L2": {
+        "final": {
+          "R0": 1422885343,
+          "R1": 3195850860,
+          "R2": 3510992586,
+          "R3": 3367644404
+        },
+        "stage_b_isotropic": 3928951002,
+        "stage_b_shuffled": 3553775799
+      },
+      "L20": {
+        "final": {
+          "R0": 721174277,
+          "R1": 73820372,
+          "R2": 671618494,
+          "R3": 638285499
+        },
+        "stage_b_isotropic": 1318452005,
+        "stage_b_shuffled": 1755736272
+      },
+      "L21": {
+        "final": {
+          "R0": 979208703,
+          "R1": 1732070809,
+          "R2": 2800116786,
+          "R3": 2385457718
+        },
+        "stage_b_isotropic": 2706669844,
+        "stage_b_shuffled": 3232860281
+      },
+      "L22": {
+        "final": {
+          "R0": 2728442348,
+          "R1": 2880678902,
+          "R2": 1453967929,
+          "R3": 1128449643
+        },
+        "stage_b_isotropic": 48073770,
+        "stage_b_shuffled": 465727578
+      },
+      "L23": {
+        "final": {
+          "R0": 851032987,
+          "R1": 1315590531,
+          "R2": 3775482573,
+          "R3": 2088484416
+        },
+        "stage_b_isotropic": 4284215194,
+        "stage_b_shuffled": 235806415
+      },
+      "L24": {
+        "final": {
+          "R0": 2328507575,
+          "R1": 1583713617,
+          "R2": 490702736,
+          "R3": 1621635015
+        },
+        "stage_b_isotropic": 2390072179,
+        "stage_b_shuffled": 2501738759
+      },
+      "L25": {
+        "final": {
+          "R0": 4272017747,
+          "R1": 3730582975,
+          "R2": 2114089691,
+          "R3": 1432253924
+        },
+        "stage_b_isotropic": 1133203945,
+        "stage_b_shuffled": 3241743654
+      },
+      "L26": {
+        "final": {
+          "R0": 3685325422,
+          "R1": 2441400008,
+          "R2": 408548997,
+          "R3": 4128318026
+        },
+        "stage_b_isotropic": 3044575678,
+        "stage_b_shuffled": 1989599892
+      },
+      "L27": {
+        "final": {
+          "R0": 385143269,
+          "R1": 2579975894,
+          "R2": 1104496080,
+          "R3": 1232496524
+        },
+        "stage_b_isotropic": 3630725935,
+        "stage_b_shuffled": 3221444436
+      },
+      "L28": {
+        "final": {
+          "R0": 3031877444,
+          "R1": 1879290202,
+          "R2": 3592351265,
+          "R3": 2638541324
+        },
+        "stage_b_isotropic": 3390700872,
+        "stage_b_shuffled": 818725209
+      },
+      "L29": {
+        "final": {
+          "R0": 307945060,
+          "R1": 1586927875,
+          "R2": 2216202564,
+          "R3": 1212962622
+        },
+        "stage_b_isotropic": 2899082322,
+        "stage_b_shuffled": 2199101707
+      },
+      "L3": {
+        "final": {
+          "R0": 2070067864,
+          "R1": 1261705483,
+          "R2": 2546860073,
+          "R3": 1591733927
+        },
+        "stage_b_isotropic": 4052038149,
+        "stage_b_shuffled": 3258685469
+      },
+      "L30": {
+        "final": {
+          "R0": 491028528,
+          "R1": 2085804117,
+          "R2": 1203432028,
+          "R3": 3308465348
+        },
+        "stage_b_isotropic": 2815883047,
+        "stage_b_shuffled": 2972477501
+      },
+      "L31": {
+        "final": {
+          "R0": 2652734886,
+          "R1": 8524175,
+          "R2": 1110557520,
+          "R3": 3580756264
+        },
+        "stage_b_isotropic": 1512680007,
+        "stage_b_shuffled": 3904128345
+      },
+      "L32": {
+        "final": {
+          "R0": 966343877,
+          "R1": 1414739909,
+          "R2": 4132150691,
+          "R3": 1863039007
+        },
+        "stage_b_isotropic": 1066859730,
+        "stage_b_shuffled": 2345381247
+      },
+      "L33": {
+        "final": {
+          "R0": 1308045389,
+          "R1": 2289786480,
+          "R2": 1000390034,
+          "R3": 527260340
+        },
+        "stage_b_isotropic": 310114320,
+        "stage_b_shuffled": 2319015673
+      },
+      "L4": {
+        "final": {
+          "R0": 3249767487,
+          "R1": 3314775632,
+          "R2": 2550361773,
+          "R3": 3961706438
+        },
+        "stage_b_isotropic": 780287961,
+        "stage_b_shuffled": 2764938787
+      },
+      "L5": {
+        "final": {
+          "R0": 2040243052,
+          "R1": 1693818534,
+          "R2": 2682896273,
+          "R3": 3212114749
+        },
+        "stage_b_isotropic": 1598431005,
+        "stage_b_shuffled": 594833238
+      },
+      "L6": {
+        "final": {
+          "R0": 3923151244,
+          "R1": 481217908,
+          "R2": 690739074,
+          "R3": 2722751220
+        },
+        "stage_b_isotropic": 3924969054,
+        "stage_b_shuffled": 803018417
+      },
+      "L7": {
+        "final": {
+          "R0": 1494225919,
+          "R1": 2572268302,
+          "R2": 4032015425,
+          "R3": 2406343835
+        },
+        "stage_b_isotropic": 194496617,
+        "stage_b_shuffled": 2407702732
+      },
+      "L8": {
+        "final": {
+          "R0": 50487719,
+          "R1": 3973159732,
+          "R2": 2402213164,
+          "R3": 2060084345
+        },
+        "stage_b_isotropic": 3204629253,
+        "stage_b_shuffled": 826922330
+      },
+      "L9": {
+        "final": {
+          "R0": 1768034236,
+          "R1": 3708237647,
+          "R2": 3973825959,
+          "R3": 3134432816
+        },
+        "stage_b_isotropic": 635572621,
+        "stage_b_shuffled": 1618077961
+      }
+    },
+    "seed_regime": "MATCHED_COUPLING"
+  },
+  "stage_c": {
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260825,
+    "conditions": 7,
+    "items": 100,
+    "rollouts": 2,
+    "seed_regime": "INDEPENDENT_PRIMARY",
+    "trajectories": 1400
+  },
+  "status": "FROZEN_PRE_STAGE_A"
+}

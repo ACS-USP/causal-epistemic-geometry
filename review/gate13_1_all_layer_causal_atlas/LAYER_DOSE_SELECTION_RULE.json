@@ -1,0 +1,29 @@
+{
+  "accuracy_used_for_ranking": false,
+  "between_layers": "maximum Q-minus-null-mean",
+  "doses": [
+    "D25",
+    "D50",
+    "D75",
+    "D100"
+  ],
+  "eligibility": {
+    "Q_min": 0.15,
+    "Q_minus_null_mean_min": 0.05,
+    "Q_strictly_above_null_max": true,
+    "commitment_validity_min": 0.9,
+    "competence_tolerance": -0.1,
+    "semantic_evaluability_min": 0.9
+  },
+  "nulls_per_cell": [
+    "ISOTROPIC_NULL",
+    "SHUFFLED_NULL"
+  ],
+  "tie_breaks": [
+    "larger Q",
+    "larger historical source effect",
+    "lower dose fraction",
+    "lower layer index"
+  ],
+  "within_layer": "lowest eligible dose"
+}
