@@ -1,0 +1,40 @@
+{
+  "engine": {
+    "attention": "SDPA",
+    "dtype": "BF16",
+    "engine": "serial_transformers_generate",
+    "environment_profile": "CORE_MINISTRAL3",
+    "expected_hidden_size": 4096,
+    "expected_layers": 34,
+    "generation": {
+      "do_sample": true,
+      "enable_thinking": null,
+      "max_new_tokens": 4096,
+      "min_p": 0.0,
+      "native_no_reasoning_channel": true,
+      "temperature": 0.3,
+      "tools": false,
+      "top_k": 0,
+      "top_p": 0.95,
+      "vision": false
+    },
+    "layer_path": "model.language_model.layers",
+    "model_loader": "AutoModelForImageTextToText",
+    "text_only": true,
+    "vision_inputs": false,
+    "vision_tower_call_count_required": 0
+  },
+  "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "no_later_model_switch": true,
+  "parser": {
+    "condition_invariance_required": true,
+    "module": "src/epistemic_geometry/benchmarks/external/semantic_v3.py",
+    "module_sha256": "51ac492a6cea1284c36df6ef659520adf4a04e0595cf0e66bfd15ba172b960c3",
+    "spec_sha256": "e909e5504f6e50a4628261c5c1ce2d819a346d583d205c9932b3306f703a2807",
+    "test_corpus_sha256": "07e8022a0e6ed23a1a880ba6fd18b7b7aad842f057f1b5546b40906d30b59735",
+    "version": "external-semantic-v3"
+  },
+  "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "screen_classification": "MINISTRAL3_8B_SUBSTRATE_PASS",
+  "status": "FROZEN_PRE_SOURCE_ATLAS"
+}

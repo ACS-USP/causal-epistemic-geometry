@@ -1,0 +1,96 @@
+{
+  "classification": "MINISTRAL3_8B_SUBSTRATE_PASS",
+  "condition_summaries": {
+    "BASELINE": {
+      "accuracy": 0.45,
+      "commitment_validity": 1.0,
+      "max_tokens": 495.0,
+      "mean_tokens": 87.15,
+      "median_tokens": 10.5,
+      "n": 60,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "CAREFUL_CONCISE": {
+      "accuracy": 0.5833333333333334,
+      "commitment_validity": 1.0,
+      "max_tokens": 678.0,
+      "mean_tokens": 226.85,
+      "median_tokens": 187.0,
+      "n": 60,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "SOURCE_CAREFUL": {
+      "accuracy": 0.7333333333333333,
+      "commitment_validity": 0.9833333333333333,
+      "max_tokens": 1880.0,
+      "mean_tokens": 406.3666666666667,
+      "median_tokens": 332.5,
+      "n": 60,
+      "no_commitment": 0.016666666666666666,
+      "semantic_change_vs_direct": 0.675,
+      "semantic_evaluability": 0.9833333333333333,
+      "truncation": 0.0
+    },
+    "SOURCE_DIRECT": {
+      "accuracy": 0.35,
+      "commitment_validity": 1.0,
+      "max_tokens": 427.0,
+      "mean_tokens": 18.55,
+      "median_tokens": 9.5,
+      "n": 60,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "VERBOSE_DIRECT": {
+      "accuracy": 0.5166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 405.0,
+      "mean_tokens": 139.76666666666668,
+      "median_tokens": 137.0,
+      "n": 60,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    }
+  },
+  "diagnostics_do_not_select": {
+    "careful_concise": {
+      "accuracy": 0.5833333333333334,
+      "commitment_validity": 1.0,
+      "max_tokens": 678.0,
+      "mean_tokens": 226.85,
+      "median_tokens": 187.0,
+      "n": 60,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "verbose_direct": {
+      "accuracy": 0.5166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 405.0,
+      "mean_tokens": 139.76666666666668,
+      "median_tokens": 137.0,
+      "n": 60,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    }
+  },
+  "fallback_authorized": false,
+  "gates": {
+    "competence_ceiling": false,
+    "competence_floor": false,
+    "mechanical": true,
+    "pass": true,
+    "source_accuracy": true,
+    "source_behavior": true
+  },
+  "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "model_role": "primary"
+}
