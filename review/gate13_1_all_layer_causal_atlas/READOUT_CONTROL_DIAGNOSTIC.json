@@ -1,0 +1,212 @@
+{
+  "development_only": true,
+  "rank_table": [
+    {
+      "causal_Q": 0.0,
+      "layer": 0,
+      "source_auroc": 0.8984375,
+      "source_effect": 5.850934448085817
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 1,
+      "source_auroc": 1.0,
+      "source_effect": 15.19984523794342
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 2,
+      "source_auroc": 1.0,
+      "source_effect": 16.95003322483968
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 3,
+      "source_auroc": 1.0,
+      "source_effect": 26.021283688815966
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 4,
+      "source_auroc": 1.0,
+      "source_effect": 24.500358052788023
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 5,
+      "source_auroc": 1.0,
+      "source_effect": 22.563943507593198
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 6,
+      "source_auroc": 1.0,
+      "source_effect": 26.238734498008565
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 7,
+      "source_auroc": 1.0,
+      "source_effect": 30.300625674604113
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 8,
+      "source_auroc": 1.0,
+      "source_effect": 30.39404658100352
+    },
+    {
+      "causal_Q": 0.08333333333333333,
+      "layer": 9,
+      "source_auroc": 1.0,
+      "source_effect": 26.467746865501297
+    },
+    {
+      "causal_Q": 0.0,
+      "layer": 10,
+      "source_auroc": 1.0,
+      "source_effect": 38.22433625088493
+    },
+    {
+      "causal_Q": 0.08333333333333333,
+      "layer": 11,
+      "source_auroc": 1.0,
+      "source_effect": 37.39616193718767
+    },
+    {
+      "causal_Q": 0.08333333333333333,
+      "layer": 12,
+      "source_auroc": 1.0,
+      "source_effect": 43.48602535963797
+    },
+    {
+      "causal_Q": 0.16666666666666666,
+      "layer": 13,
+      "source_auroc": 1.0,
+      "source_effect": 32.595041283432664
+    },
+    {
+      "causal_Q": 0.25,
+      "layer": 14,
+      "source_auroc": 1.0,
+      "source_effect": 24.820454284704685
+    },
+    {
+      "causal_Q": 0.5,
+      "layer": 15,
+      "source_auroc": 1.0,
+      "source_effect": 20.569399814282562
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 16,
+      "source_auroc": 1.0,
+      "source_effect": 24.981607889118806
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 17,
+      "source_auroc": 1.0,
+      "source_effect": 24.72678877896629
+    },
+    {
+      "causal_Q": 0.6666666666666666,
+      "layer": 18,
+      "source_auroc": 1.0,
+      "source_effect": 19.184615503203055
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 19,
+      "source_auroc": 1.0,
+      "source_effect": 16.6883531798293
+    },
+    {
+      "causal_Q": 0.6666666666666666,
+      "layer": 20,
+      "source_auroc": 1.0,
+      "source_effect": 23.205968684268427
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 21,
+      "source_auroc": 1.0,
+      "source_effect": 26.50219347789866
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 22,
+      "source_auroc": 1.0,
+      "source_effect": 35.9638475270888
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 23,
+      "source_auroc": 1.0,
+      "source_effect": 34.97558000623892
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 24,
+      "source_auroc": 1.0,
+      "source_effect": 31.989240251049694
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 25,
+      "source_auroc": 1.0,
+      "source_effect": 32.67951203838758
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 26,
+      "source_auroc": 1.0,
+      "source_effect": 29.089063257854686
+    },
+    {
+      "causal_Q": 0.6666666666666666,
+      "layer": 27,
+      "source_auroc": 1.0,
+      "source_effect": 21.10735366789534
+    },
+    {
+      "causal_Q": 0.6666666666666666,
+      "layer": 28,
+      "source_auroc": 1.0,
+      "source_effect": 24.15953765830718
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 29,
+      "source_auroc": 1.0,
+      "source_effect": 25.901823908035567
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 30,
+      "source_auroc": 1.0,
+      "source_effect": 27.161012070025638
+    },
+    {
+      "causal_Q": 0.5,
+      "layer": 31,
+      "source_auroc": 1.0,
+      "source_effect": 24.890714192363333
+    },
+    {
+      "causal_Q": 0.5833333333333334,
+      "layer": 32,
+      "source_auroc": 1.0,
+      "source_effect": 25.729696083351165
+    },
+    {
+      "causal_Q": 0.6666666666666666,
+      "layer": 33,
+      "source_auroc": 1.0,
+      "source_effect": 24.815653929360206
+    }
+  ],
+  "spearman_source_auroc_vs_causal_Q": 0.2211159971291128,
+  "spearman_source_effect_vs_causal_Q": -0.08583884609636644,
+  "used_for_selection": false
+}

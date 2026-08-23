@@ -1,0 +1,704 @@
+{
+  "accuracy_used_for_ranking": false,
+  "candidate_generation_only": true,
+  "classification": "GATE13_1_ALL_LAYER_SWEEP_PASS",
+  "eligibility": {
+    "0": false,
+    "1": false,
+    "10": false,
+    "11": false,
+    "12": false,
+    "13": true,
+    "14": true,
+    "15": true,
+    "16": true,
+    "17": true,
+    "18": true,
+    "19": true,
+    "2": false,
+    "20": true,
+    "21": true,
+    "22": true,
+    "23": true,
+    "24": true,
+    "25": true,
+    "26": true,
+    "27": true,
+    "28": true,
+    "29": true,
+    "3": false,
+    "30": true,
+    "31": true,
+    "32": true,
+    "33": true,
+    "4": false,
+    "5": false,
+    "6": false,
+    "7": false,
+    "8": false,
+    "9": false
+  },
+  "layers_tested": 34,
+  "metrics": {
+    "0": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 395.0,
+      "mean_tokens": 61.416666666666664,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "1": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 397.0,
+      "mean_tokens": 61.5,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "10": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 222.0,
+      "mean_tokens": 46.166666666666664,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "11": {
+      "Q": 0.08333333333333333,
+      "accuracy": 0.3333333333333333,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 216.0,
+      "mean_tokens": 44.916666666666664,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "12": {
+      "Q": 0.08333333333333333,
+      "accuracy": 0.3333333333333333,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 768.0,
+      "mean_tokens": 94.75,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "13": {
+      "Q": 0.16666666666666666,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 249.0,
+      "mean_tokens": 49.75,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "14": {
+      "Q": 0.25,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 710.0,
+      "mean_tokens": 114.08333333333333,
+      "median_tokens": 15.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "15": {
+      "Q": 0.5,
+      "accuracy": 0.5,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.9166666666666666,
+      "max_tokens": 4096.0,
+      "mean_tokens": 464.5833333333333,
+      "median_tokens": 19.5,
+      "n": 12,
+      "no_commitment": 0.08333333333333333,
+      "semantic_evaluability": 0.9166666666666666,
+      "truncation": 0.08333333333333333
+    },
+    "16": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.5,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 1033.0,
+      "mean_tokens": 228.0,
+      "median_tokens": 127.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "17": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.5,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 1658.0,
+      "mean_tokens": 328.4166666666667,
+      "median_tokens": 275.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "18": {
+      "Q": 0.6666666666666666,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.8333333333333334,
+      "max_tokens": 4096.0,
+      "mean_tokens": 880.6666666666666,
+      "median_tokens": 319.5,
+      "n": 12,
+      "no_commitment": 0.16666666666666666,
+      "semantic_evaluability": 0.8333333333333334,
+      "truncation": 0.08333333333333333
+    },
+    "19": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.9166666666666666,
+      "max_tokens": 1592.0,
+      "mean_tokens": 437.0833333333333,
+      "median_tokens": 310.0,
+      "n": 12,
+      "no_commitment": 0.08333333333333333,
+      "semantic_evaluability": 0.9166666666666666,
+      "truncation": 0.0
+    },
+    "2": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 385.0,
+      "mean_tokens": 60.583333333333336,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "20": {
+      "Q": 0.6666666666666666,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.75,
+      "max_tokens": 4096.0,
+      "mean_tokens": 1455.75,
+      "median_tokens": 355.5,
+      "n": 12,
+      "no_commitment": 0.25,
+      "semantic_evaluability": 0.75,
+      "truncation": 0.25
+    },
+    "21": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.8333333333333334,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 2347.0,
+      "mean_tokens": 485.0833333333333,
+      "median_tokens": 242.0,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "22": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.8333333333333334,
+      "max_tokens": 4096.0,
+      "mean_tokens": 1093.0833333333333,
+      "median_tokens": 259.0,
+      "n": 12,
+      "no_commitment": 0.16666666666666666,
+      "semantic_evaluability": 0.8333333333333334,
+      "truncation": 0.08333333333333333
+    },
+    "23": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.9166666666666666,
+      "max_tokens": 4096.0,
+      "mean_tokens": 873.5833333333334,
+      "median_tokens": 220.5,
+      "n": 12,
+      "no_commitment": 0.08333333333333333,
+      "semantic_evaluability": 0.9166666666666666,
+      "truncation": 0.08333333333333333
+    },
+    "24": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 1640.0,
+      "mean_tokens": 364.0833333333333,
+      "median_tokens": 241.0,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "25": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 3349.0,
+      "mean_tokens": 567.9166666666666,
+      "median_tokens": 267.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "26": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.8333333333333334,
+      "max_tokens": 4096.0,
+      "mean_tokens": 796.4166666666666,
+      "median_tokens": 200.5,
+      "n": 12,
+      "no_commitment": 0.16666666666666666,
+      "semantic_evaluability": 0.8333333333333334,
+      "truncation": 0.08333333333333333
+    },
+    "27": {
+      "Q": 0.6666666666666666,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 953.0,
+      "mean_tokens": 296.1666666666667,
+      "median_tokens": 233.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "28": {
+      "Q": 0.6666666666666666,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 2090.0,
+      "mean_tokens": 593.0,
+      "median_tokens": 243.0,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "29": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.8333333333333334,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 2239.0,
+      "mean_tokens": 444.8333333333333,
+      "median_tokens": 221.0,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "3": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 397.0,
+      "mean_tokens": 61.25,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "30": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.8333333333333334,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.9166666666666666,
+      "max_tokens": 4096.0,
+      "mean_tokens": 722.3333333333334,
+      "median_tokens": 226.5,
+      "n": 12,
+      "no_commitment": 0.08333333333333333,
+      "semantic_evaluability": 0.9166666666666666,
+      "truncation": 0.08333333333333333
+    },
+    "31": {
+      "Q": 0.5,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.9166666666666666,
+      "max_tokens": 1914.0,
+      "mean_tokens": 499.4166666666667,
+      "median_tokens": 229.5,
+      "n": 12,
+      "no_commitment": 0.08333333333333333,
+      "semantic_evaluability": 0.9166666666666666,
+      "truncation": 0.0
+    },
+    "32": {
+      "Q": 0.5833333333333334,
+      "accuracy": 0.75,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 957.0,
+      "mean_tokens": 283.0833333333333,
+      "median_tokens": 180.0,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "33": {
+      "Q": 0.6666666666666666,
+      "accuracy": 0.6666666666666666,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 0.9166666666666666,
+      "max_tokens": 4096.0,
+      "mean_tokens": 660.8333333333334,
+      "median_tokens": 238.0,
+      "n": 12,
+      "no_commitment": 0.08333333333333333,
+      "semantic_evaluability": 0.9166666666666666,
+      "truncation": 0.08333333333333333
+    },
+    "4": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 385.0,
+      "mean_tokens": 60.75,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "5": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 399.0,
+      "mean_tokens": 61.916666666666664,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "6": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 220.0,
+      "mean_tokens": 29.083333333333332,
+      "median_tokens": 9.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "7": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 385.0,
+      "mean_tokens": 60.5,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "8": {
+      "Q": 0.0,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 395.0,
+      "mean_tokens": 61.833333333333336,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    },
+    "9": {
+      "Q": 0.08333333333333333,
+      "accuracy": 0.4166666666666667,
+      "baseline_accuracy": 0.4166666666666667,
+      "commitment_validity": 1.0,
+      "max_tokens": 441.0,
+      "mean_tokens": 65.66666666666667,
+      "median_tokens": 12.5,
+      "n": 12,
+      "no_commitment": 0.0,
+      "semantic_evaluability": 1.0,
+      "truncation": 0.0
+    }
+  },
+  "n_items": 12,
+  "quartile_candidates": [
+    16,
+    18,
+    27
+  ],
+  "readout_control_diagnostic": {
+    "development_only": true,
+    "rank_table": [
+      {
+        "causal_Q": 0.0,
+        "layer": 0,
+        "source_auroc": 0.8984375,
+        "source_effect": 5.850934448085817
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 1,
+        "source_auroc": 1.0,
+        "source_effect": 15.19984523794342
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 2,
+        "source_auroc": 1.0,
+        "source_effect": 16.95003322483968
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 3,
+        "source_auroc": 1.0,
+        "source_effect": 26.021283688815966
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 4,
+        "source_auroc": 1.0,
+        "source_effect": 24.500358052788023
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 5,
+        "source_auroc": 1.0,
+        "source_effect": 22.563943507593198
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 6,
+        "source_auroc": 1.0,
+        "source_effect": 26.238734498008565
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 7,
+        "source_auroc": 1.0,
+        "source_effect": 30.300625674604113
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 8,
+        "source_auroc": 1.0,
+        "source_effect": 30.39404658100352
+      },
+      {
+        "causal_Q": 0.08333333333333333,
+        "layer": 9,
+        "source_auroc": 1.0,
+        "source_effect": 26.467746865501297
+      },
+      {
+        "causal_Q": 0.0,
+        "layer": 10,
+        "source_auroc": 1.0,
+        "source_effect": 38.22433625088493
+      },
+      {
+        "causal_Q": 0.08333333333333333,
+        "layer": 11,
+        "source_auroc": 1.0,
+        "source_effect": 37.39616193718767
+      },
+      {
+        "causal_Q": 0.08333333333333333,
+        "layer": 12,
+        "source_auroc": 1.0,
+        "source_effect": 43.48602535963797
+      },
+      {
+        "causal_Q": 0.16666666666666666,
+        "layer": 13,
+        "source_auroc": 1.0,
+        "source_effect": 32.595041283432664
+      },
+      {
+        "causal_Q": 0.25,
+        "layer": 14,
+        "source_auroc": 1.0,
+        "source_effect": 24.820454284704685
+      },
+      {
+        "causal_Q": 0.5,
+        "layer": 15,
+        "source_auroc": 1.0,
+        "source_effect": 20.569399814282562
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 16,
+        "source_auroc": 1.0,
+        "source_effect": 24.981607889118806
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 17,
+        "source_auroc": 1.0,
+        "source_effect": 24.72678877896629
+      },
+      {
+        "causal_Q": 0.6666666666666666,
+        "layer": 18,
+        "source_auroc": 1.0,
+        "source_effect": 19.184615503203055
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 19,
+        "source_auroc": 1.0,
+        "source_effect": 16.6883531798293
+      },
+      {
+        "causal_Q": 0.6666666666666666,
+        "layer": 20,
+        "source_auroc": 1.0,
+        "source_effect": 23.205968684268427
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 21,
+        "source_auroc": 1.0,
+        "source_effect": 26.50219347789866
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 22,
+        "source_auroc": 1.0,
+        "source_effect": 35.9638475270888
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 23,
+        "source_auroc": 1.0,
+        "source_effect": 34.97558000623892
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 24,
+        "source_auroc": 1.0,
+        "source_effect": 31.989240251049694
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 25,
+        "source_auroc": 1.0,
+        "source_effect": 32.67951203838758
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 26,
+        "source_auroc": 1.0,
+        "source_effect": 29.089063257854686
+      },
+      {
+        "causal_Q": 0.6666666666666666,
+        "layer": 27,
+        "source_auroc": 1.0,
+        "source_effect": 21.10735366789534
+      },
+      {
+        "causal_Q": 0.6666666666666666,
+        "layer": 28,
+        "source_auroc": 1.0,
+        "source_effect": 24.15953765830718
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 29,
+        "source_auroc": 1.0,
+        "source_effect": 25.901823908035567
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 30,
+        "source_auroc": 1.0,
+        "source_effect": 27.161012070025638
+      },
+      {
+        "causal_Q": 0.5,
+        "layer": 31,
+        "source_auroc": 1.0,
+        "source_effect": 24.890714192363333
+      },
+      {
+        "causal_Q": 0.5833333333333334,
+        "layer": 32,
+        "source_auroc": 1.0,
+        "source_effect": 25.729696083351165
+      },
+      {
+        "causal_Q": 0.6666666666666666,
+        "layer": 33,
+        "source_auroc": 1.0,
+        "source_effect": 24.815653929360206
+      }
+    ],
+    "spearman_source_auroc_vs_causal_Q": 0.2211159971291128,
+    "spearman_source_effect_vs_causal_Q": -0.08583884609636644,
+    "used_for_selection": false
+  }
+}

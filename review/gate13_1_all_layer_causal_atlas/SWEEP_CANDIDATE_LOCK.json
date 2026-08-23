@@ -1,0 +1,12 @@
+{
+  "accuracy_used_for_ranking": false,
+  "candidate_layers": [
+    16,
+    18,
+    27
+  ],
+  "selection_rule": "maximum eligible Q per historical depth quartile",
+  "stage_b_direction_manifest": "STAGE_B_DIRECTION_MANIFEST.json",
+  "stage_b_schedule": "LAYER_DOSE_SCHEDULE.json",
+  "status": "FROZEN_PRE_STAGE_B"
+}

@@ -1,0 +1,53 @@
+{
+  "adapter": "AutoModelForImageTextToText text-only",
+  "alpha_zero_token_identity": true,
+  "cache_safety": true,
+  "chat_template_deterministic": true,
+  "classification": "GATE13_ENGINEERING_PASS",
+  "current_token_scope": true,
+  "exact_shift": true,
+  "fixtures": [
+    {
+      "benchmark_item": false,
+      "fixture_id": "gate13-engineering-00",
+      "prompt_hash": "62dcf173e506b7f088c9689f8f25479cfd9a751132dd913ae43779726e8b7be1",
+      "prompt_token_count": 537
+    },
+    {
+      "benchmark_item": false,
+      "fixture_id": "gate13-engineering-01",
+      "prompt_hash": "bf9dd251fa9b32cd0f2cc86fe3901931291c94ea802fd938f7b8c0e382c46e55",
+      "prompt_token_count": 547
+    },
+    {
+      "benchmark_item": false,
+      "fixture_id": "gate13-engineering-02",
+      "prompt_hash": "2d2bc7cd6e1a985fd99985a223d7503a76e8ce3fe7e120a30737167fb92aa5a8",
+      "prompt_token_count": 543
+    },
+    {
+      "benchmark_item": false,
+      "fixture_id": "gate13-engineering-03",
+      "prompt_hash": "31c428d291a453235ee2512c9f28be33c9fcd584c18d9f3902d9c331950c5fe7",
+      "prompt_token_count": 544
+    },
+    {
+      "benchmark_item": false,
+      "fixture_id": "gate13-engineering-04",
+      "prompt_hash": "f9793bb2832562b64328e7f7aea54551640654eaebc69f8c9f66a96454e2fbfd",
+      "prompt_token_count": 539
+    }
+  ],
+  "hidden_reasoning_channel": false,
+  "hidden_size": 4096,
+  "hook_cleanup": true,
+  "language_layer_count": 34,
+  "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "one_application_per_forward": true,
+  "resolved_layer_path": "model.model.language_model.layers",
+  "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "scientific_item_ids_processed": [],
+  "tool_output": false,
+  "vision_invoked": false,
+  "vision_tower_calls": 0
+}

@@ -1,0 +1,298 @@
+{
+  "candidate_layers": [
+    16,
+    18,
+    27
+  ],
+  "conditions": [
+    {
+      "alpha": 0.687603018942374,
+      "condition": "MEANINGFUL_L16_D25",
+      "dose": "D25",
+      "layer": 16,
+      "vector_hash": "7e8eeb2effc29acb3d02fb114724837ae99dbbb105e820c3248e39c6f6cf5de8",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 1.375206037884748,
+      "condition": "MEANINGFUL_L16_D50",
+      "dose": "D50",
+      "layer": 16,
+      "vector_hash": "7e8eeb2effc29acb3d02fb114724837ae99dbbb105e820c3248e39c6f6cf5de8",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 2.062809056827122,
+      "condition": "MEANINGFUL_L16_D75",
+      "dose": "D75",
+      "layer": 16,
+      "vector_hash": "7e8eeb2effc29acb3d02fb114724837ae99dbbb105e820c3248e39c6f6cf5de8",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 2.750412075769496,
+      "condition": "MEANINGFUL_L16_D100",
+      "dose": "D100",
+      "layer": 16,
+      "vector_hash": "7e8eeb2effc29acb3d02fb114724837ae99dbbb105e820c3248e39c6f6cf5de8",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 0.687603018942374,
+      "condition": "ISOTROPIC_NULL_L16_D25",
+      "dose": "D25",
+      "layer": 16,
+      "vector_hash": "ea28ed099c6b23c7712130eed088c98b201f99bb29587b542c9c446c5067e2c0",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 1.375206037884748,
+      "condition": "ISOTROPIC_NULL_L16_D50",
+      "dose": "D50",
+      "layer": 16,
+      "vector_hash": "ea28ed099c6b23c7712130eed088c98b201f99bb29587b542c9c446c5067e2c0",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 2.062809056827122,
+      "condition": "ISOTROPIC_NULL_L16_D75",
+      "dose": "D75",
+      "layer": 16,
+      "vector_hash": "ea28ed099c6b23c7712130eed088c98b201f99bb29587b542c9c446c5067e2c0",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 2.750412075769496,
+      "condition": "ISOTROPIC_NULL_L16_D100",
+      "dose": "D100",
+      "layer": 16,
+      "vector_hash": "ea28ed099c6b23c7712130eed088c98b201f99bb29587b542c9c446c5067e2c0",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 0.687603018942374,
+      "condition": "SHUFFLED_NULL_L16_D25",
+      "dose": "D25",
+      "layer": 16,
+      "vector_hash": "97042bb715ab97d29949da04e09feeadb7bb756738cf7a1dcee92f866504dc9c",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 1.375206037884748,
+      "condition": "SHUFFLED_NULL_L16_D50",
+      "dose": "D50",
+      "layer": 16,
+      "vector_hash": "97042bb715ab97d29949da04e09feeadb7bb756738cf7a1dcee92f866504dc9c",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 2.062809056827122,
+      "condition": "SHUFFLED_NULL_L16_D75",
+      "dose": "D75",
+      "layer": 16,
+      "vector_hash": "97042bb715ab97d29949da04e09feeadb7bb756738cf7a1dcee92f866504dc9c",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 2.750412075769496,
+      "condition": "SHUFFLED_NULL_L16_D100",
+      "dose": "D100",
+      "layer": 16,
+      "vector_hash": "97042bb715ab97d29949da04e09feeadb7bb756738cf7a1dcee92f866504dc9c",
+      "vector_path": "STAGE_B_DIRECTIONS/L16_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 1.1877427408412249,
+      "condition": "MEANINGFUL_L18_D25",
+      "dose": "D25",
+      "layer": 18,
+      "vector_hash": "19e45a639669987c90b76d70bfbe1d76ea00fbb9a18c6fced9f59630088b17ae",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 2.3754854816824498,
+      "condition": "MEANINGFUL_L18_D50",
+      "dose": "D50",
+      "layer": 18,
+      "vector_hash": "19e45a639669987c90b76d70bfbe1d76ea00fbb9a18c6fced9f59630088b17ae",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 3.5632282225236747,
+      "condition": "MEANINGFUL_L18_D75",
+      "dose": "D75",
+      "layer": 18,
+      "vector_hash": "19e45a639669987c90b76d70bfbe1d76ea00fbb9a18c6fced9f59630088b17ae",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 4.7509709633648995,
+      "condition": "MEANINGFUL_L18_D100",
+      "dose": "D100",
+      "layer": 18,
+      "vector_hash": "19e45a639669987c90b76d70bfbe1d76ea00fbb9a18c6fced9f59630088b17ae",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 1.1877427408412249,
+      "condition": "ISOTROPIC_NULL_L18_D25",
+      "dose": "D25",
+      "layer": 18,
+      "vector_hash": "d8853edcf04214612cf237c4acad1c2c5bccf0ad4ad17aee8daf413ba9bb8ce8",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 2.3754854816824498,
+      "condition": "ISOTROPIC_NULL_L18_D50",
+      "dose": "D50",
+      "layer": 18,
+      "vector_hash": "d8853edcf04214612cf237c4acad1c2c5bccf0ad4ad17aee8daf413ba9bb8ce8",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 3.5632282225236747,
+      "condition": "ISOTROPIC_NULL_L18_D75",
+      "dose": "D75",
+      "layer": 18,
+      "vector_hash": "d8853edcf04214612cf237c4acad1c2c5bccf0ad4ad17aee8daf413ba9bb8ce8",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 4.7509709633648995,
+      "condition": "ISOTROPIC_NULL_L18_D100",
+      "dose": "D100",
+      "layer": 18,
+      "vector_hash": "d8853edcf04214612cf237c4acad1c2c5bccf0ad4ad17aee8daf413ba9bb8ce8",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 1.1877427408412249,
+      "condition": "SHUFFLED_NULL_L18_D25",
+      "dose": "D25",
+      "layer": 18,
+      "vector_hash": "3a21fb1c7a7212e8271f3c7d57c80f0c8ee31003b7b55d570f9ace14a7204d05",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 2.3754854816824498,
+      "condition": "SHUFFLED_NULL_L18_D50",
+      "dose": "D50",
+      "layer": 18,
+      "vector_hash": "3a21fb1c7a7212e8271f3c7d57c80f0c8ee31003b7b55d570f9ace14a7204d05",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 3.5632282225236747,
+      "condition": "SHUFFLED_NULL_L18_D75",
+      "dose": "D75",
+      "layer": 18,
+      "vector_hash": "3a21fb1c7a7212e8271f3c7d57c80f0c8ee31003b7b55d570f9ace14a7204d05",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 4.7509709633648995,
+      "condition": "SHUFFLED_NULL_L18_D100",
+      "dose": "D100",
+      "layer": 18,
+      "vector_hash": "3a21fb1c7a7212e8271f3c7d57c80f0c8ee31003b7b55d570f9ace14a7204d05",
+      "vector_path": "STAGE_B_DIRECTIONS/L18_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 4.469907677389362,
+      "condition": "MEANINGFUL_L27_D25",
+      "dose": "D25",
+      "layer": 27,
+      "vector_hash": "0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 8.939815354778723,
+      "condition": "MEANINGFUL_L27_D50",
+      "dose": "D50",
+      "layer": 27,
+      "vector_hash": "0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 13.409723032168085,
+      "condition": "MEANINGFUL_L27_D75",
+      "dose": "D75",
+      "layer": 27,
+      "vector_hash": "0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 17.879630709557446,
+      "condition": "MEANINGFUL_L27_D100",
+      "dose": "D100",
+      "layer": 27,
+      "vector_hash": "0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_MEANINGFUL.npy"
+    },
+    {
+      "alpha": 4.469907677389362,
+      "condition": "ISOTROPIC_NULL_L27_D25",
+      "dose": "D25",
+      "layer": 27,
+      "vector_hash": "0c34f414f3b831d6525500f85c6ca701263ddb6159d1597fde251040b4a71816",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 8.939815354778723,
+      "condition": "ISOTROPIC_NULL_L27_D50",
+      "dose": "D50",
+      "layer": 27,
+      "vector_hash": "0c34f414f3b831d6525500f85c6ca701263ddb6159d1597fde251040b4a71816",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 13.409723032168085,
+      "condition": "ISOTROPIC_NULL_L27_D75",
+      "dose": "D75",
+      "layer": 27,
+      "vector_hash": "0c34f414f3b831d6525500f85c6ca701263ddb6159d1597fde251040b4a71816",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 17.879630709557446,
+      "condition": "ISOTROPIC_NULL_L27_D100",
+      "dose": "D100",
+      "layer": 27,
+      "vector_hash": "0c34f414f3b831d6525500f85c6ca701263ddb6159d1597fde251040b4a71816",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_ISOTROPIC_NULL.npy"
+    },
+    {
+      "alpha": 4.469907677389362,
+      "condition": "SHUFFLED_NULL_L27_D25",
+      "dose": "D25",
+      "layer": 27,
+      "vector_hash": "4ef474c8064586dc484866c4cab5e17fa6c4b746422109e08a89205bb06aaf8a",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 8.939815354778723,
+      "condition": "SHUFFLED_NULL_L27_D50",
+      "dose": "D50",
+      "layer": 27,
+      "vector_hash": "4ef474c8064586dc484866c4cab5e17fa6c4b746422109e08a89205bb06aaf8a",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 13.409723032168085,
+      "condition": "SHUFFLED_NULL_L27_D75",
+      "dose": "D75",
+      "layer": 27,
+      "vector_hash": "4ef474c8064586dc484866c4cab5e17fa6c4b746422109e08a89205bb06aaf8a",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_SHUFFLED_NULL.npy"
+    },
+    {
+      "alpha": 17.879630709557446,
+      "condition": "SHUFFLED_NULL_L27_D100",
+      "dose": "D100",
+      "layer": 27,
+      "vector_hash": "4ef474c8064586dc484866c4cab5e17fa6c4b746422109e08a89205bb06aaf8a",
+      "vector_path": "STAGE_B_DIRECTIONS/L27_SHUFFLED_NULL.npy"
+    }
+  ],
+  "nulls_frozen_before_stage_b": true
+}

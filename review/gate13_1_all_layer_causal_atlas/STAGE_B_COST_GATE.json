@@ -1,0 +1,22 @@
+{
+  "a40_hourly_rate_usd_conservative": 0.45,
+  "candidate_layers": [
+    16,
+    18,
+    27
+  ],
+  "estimated_incremental_cost_at_stage_a_close_usd": 3.56,
+  "estimated_old_volume_overlap_usd": 0.085,
+  "hard_incremental_ceiling_usd": 7.0,
+  "observed_at_utc": "2026-08-23T11:22:25Z",
+  "observed_mean_trajectory_seconds": 13.134052106221429,
+  "observed_pod_uptime_seconds": 27800,
+  "passes_pre_stage_b_cost_gate": true,
+  "projected_incremental_cost_through_stage_b_usd": 5.685,
+  "projected_stage_b_cost_usd_with_25pct_margin": 2.125,
+  "stage_a_rows": 420,
+  "stage_b_rows": 1036,
+  "target_incremental_usd": 4.5,
+  "wallet_balance_pre_lock_usd": 9.89,
+  "wallet_reserve_after_projected_stage_b_usd": 4.205
+}
