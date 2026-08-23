@@ -1,0 +1,23 @@
+{
+  "artifact": "STAGE_C_PRE_AMENDMENT_121_ANCHOR",
+  "created_at_utc": "2026-08-23T16:50:41Z",
+  "journal_path": "review/gate13_1_all_layer_causal_atlas/journal.jsonl",
+  "journal_rows_before_stage_c": 1456,
+  "stage_c_line_start_one_based": 1457,
+  "stage_c_line_end_one_based": 1577,
+  "stage_c_row_count": 121,
+  "hash_scope": "Exact UTF-8 journal lines, including newline terminators, for one-based lines 1457 through 1577.",
+  "hash_algorithm": "SHA-256",
+  "raw_lines_sha256": "6b9527d6fb8b44a19b4e11232d25e54770a5557db440216738124c9490a12e51",
+  "stage_c_scientific_metrics_inspected_before_anchor": false,
+  "stage_c_condition_comparisons_inspected_before_anchor": false,
+  "stage_c_interim_outcomes_inspected_before_anchor": false,
+  "required_final_audit": {
+    "verify_row_count": 121,
+    "verify_raw_lines_sha256": true,
+    "verify_rows_included_unchanged_in_final_stage_c": true,
+    "verify_no_regeneration_of_completed_logical_keys": true,
+    "verify_no_pre_amendment_scientific_inspection": true
+  },
+  "incident_classification_if_verified": "NONSCIENTIFIC_OPERATIONAL_PROTOCOL_INCIDENT"
+}

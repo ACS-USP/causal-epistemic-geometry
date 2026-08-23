@@ -1,9 +1,11 @@
 {
-  "amendment_id": "GATE13_1_COST_AMENDMENT_CLASS_B_11_2026-08-23",
+  "amendment_id": "GATE13_1_PRINCIPAL_REVIEWED_USD11_2026-08-23",
   "authorized_by": "PRINCIPAL_RESEARCHER",
   "authorized_at_utc": "2026-08-23T16:50:41Z",
-  "amendment_class": "CLASS_B_OPERATIONAL_FINANCIAL",
-  "affected_outcomes_observed_at_authorization": true,
+  "amendment_class": "PRINCIPAL_REVIEWED_MATERIAL_BUDGET_OPERATIONAL",
+  "scientific_design_amendment": false,
+  "stage_b_metrics_had_been_inspected_at_authorization": true,
+  "stage_c_outputs_existed_at_authorization": true,
   "scientific_metrics_inspected_at_authorization": false,
   "previous_cumulative_hard_ceiling_usd": 9.5,
   "new_cumulative_hard_ceiling_usd": 11.0,
@@ -12,6 +14,16 @@
   "minimum_wallet_reserve_usd": 3.0,
   "reserve_is_hard_constraint": false,
   "scientific_design_unchanged": true,
+  "chronology": [
+    "The mandatory Stage-C transition rule was frozen before Stage-B metric inspection.",
+    "Stage B completed and mechanically selected L27-D25.",
+    "The projected cumulative cost was 9.647440280719954 USD, exceeding the then-current 9.50 USD operational ceiling.",
+    "Due to an operational supervisor/Git incident, Stage C began prematurely and produced 121 rows.",
+    "No Stage-C scientific metric, condition comparison, or interim outcome was inspected.",
+    "Collection was stopped and all 121 rows were preserved.",
+    "The principal researcher explicitly authorized a new cumulative hard ceiling of 11.00 USD.",
+    "Stage C resumed from the immutable journal without regenerating completed logical rows."
+  ],
   "unchanged_fields": [
     "items",
     "layers",
@@ -37,6 +49,15 @@
     "cause": "Stage-C supervisor failed to enforce the prior cost-gate stop after a remote Git commit/push failure.",
     "scientific_design_changed": false
   },
+  "pre_amendment_stage_c_anchor": {
+    "journal_path": "review/gate13_1_all_layer_causal_atlas/journal.jsonl",
+    "line_start_one_based": 1457,
+    "line_end_one_based": 1577,
+    "row_count": 121,
+    "raw_lines_sha256": "6b9527d6fb8b44a19b4e11232d25e54770a5557db440216738124c9490a12e51",
+    "scientific_metrics_inspected": false
+  },
+  "final_forensic_requirement": "Verify that the 121 anchored pre-amendment Stage-C rows were included byte-for-byte unchanged in the final 1400-row evaluation and that no Stage-C scientific metric, condition comparison, or interim outcome was inspected before the amendment.",
   "scientific_firewall": {
     "q2": "NOT_RUN",
     "q3": "NOT_RUN",

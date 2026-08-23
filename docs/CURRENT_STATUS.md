@@ -11,10 +11,10 @@
 Gate 13 is accepted as the clean bounded GATE13_NO_CAUSAL_LAYER_FIRST_STAGE result. Gate 13.1 prospectively freezes an all-34-layer D50 causal sweep followed by a disjoint joint layer-dose qualification and, only if qualified, the untouched 100-item final evaluation. The 57 untouched CRUXEval IDs remain sealed.
 
 - Workstream: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS`
-- RunPod: `STOPPED`
+- RunPod: `RUNNING`
 - GPU work authorized: `true`
 - New scientific experiment authorized: `true`
-- Next authorized action: Run the Gate-13.1 engineering gate and complete the frozen 420-row all-layer Stage-A sweep on the retained Gate-13 A40 volume.
+- Next authorized action: Resume the frozen Gate-13.1 Stage-C final evaluation from the crash-safe journal under the principal-authorized US$11.00 cumulative hard ceiling; never duplicate completed logical rows.
 
 ## Scientific program
 
