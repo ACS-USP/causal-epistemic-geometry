@@ -14,6 +14,14 @@ current action. No historical reproduction script is deleted by this reset.
 - `scripts/analyze_gate6_3_semantic_validity_audit.py` — local-only condition-symmetric V3 reanalysis.
 - `scripts/validate_gate6_3_semantic_validity_audit.py` — fail-closed V3 artifact validator.
 - `scripts/reanalyze_q1_v4_geometry.py` — corrected, artifact-only V4 analysis.
+- `scripts/summarize_posthoc_ministral_invalidity.py` — local raw-journal reader
+  that emits remote-safe post-hoc aggregates only.
+- `scripts/generate_paper1_figures.py` — deterministic Paper 1 figures from
+  canonical aggregate artifacts, with source/output hashes.
+- `scripts/dgx_spark_doctor.sh` — read-only DGX host and software diagnostic;
+  network probes are opt-in.
+- `scripts/dgx_spark_smoke.py` — explicit tiny CUDA tensor smoke with no model
+  or download.
 - `scripts/run_mock_smoke.sh` — network-free package smoke.
 - `scripts/bootstrap_runpod.sh` — conservative remote environment bootstrap;
   not execution authorization.

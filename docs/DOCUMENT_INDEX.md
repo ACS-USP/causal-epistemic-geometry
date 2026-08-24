@@ -16,6 +16,7 @@ current instruction source.
 | `docs/ENGINEERING_POLICY.md` | Reproducibility, engine, security, and artifact policy |
 | `docs/RESEARCH_AUTONOMY_POLICY.md` | Operational autonomy classes and typed future-gate lifecycle |
 | `docs/RESEARCH_AGENT_WORKFLOW.md` | Preferred agent role split and handoff contract |
+| `docs/EVIDENCE_INTERPRETATION_POLICY.md` | Normative separation of terminal decisions, evidence vectors, and post-hoc discovery |
 | `docs/INSTRUMENT_HISTORY.md` | Current interpretation of V1–V4 evidence |
 | `docs/POSITIVE_CONTROL_PROTOCOL.md` | Prospective published-method replication |
 | `docs/PORTFOLIO_STRATEGY.md` | Hard continuation boundary and parallel-program logic |
@@ -24,6 +25,7 @@ current instruction source.
 | `docs/SCRIPT_INDEX.md` | Current/historical/wrapper/mergeable script inventory |
 | `docs/RESEARCH_OS_V1_REPORT.md` | Research OS v1 implementation and validation report |
 | `docs/RESEARCH_OS_INTEGRATION_REPORT.md` | Gate 6.3 integration amendments, fixture isolation, and environment profiles |
+| `docs/POST_Q1_RESEARCH_ROADMAP.md` | Focused Paper 1, Q2, DGX, and later-Q3 horizons after Q1 closeout |
 
 ## Current supporting references
 
@@ -43,6 +45,17 @@ current instruction source.
 | `docs/BEFORE_TERMINATING_POD.md` | Artifact-recovery checklist |
 | `docs/Q1_V4_GEOMETRY_REANALYSIS.md` | Corrected offline tied-rank analysis |
 | `docs/Q1_V4_DENSE_CODE_PILOT.md` | Current dense-code infrastructure pause |
+| `docs/MINISTRAL_INVALIDITY_POSTHOC.md` | Remote-safe aggregate post-hoc account of confirmatory Ministral invalidity |
+| `docs/PAPER1_REVISION_MEMO.md` | Exact revision package for the external Paper 1 manuscript |
+| `docs/PAPER1_CLAIMS_AND_EVIDENCE.md` | Claim-by-claim evidence status and caveats |
+| `docs/PAPER1_FIGURE_PLAN.md` | Reproducible main-figure and appendix plan |
+| `docs/PAPER1_GAP_REVIEW.md` | Skeptical review of remaining Paper 1 evidence gaps |
+| `docs/Q2_GRAND_DESIGN.md` | Formal intervention-to-error geometry research program |
+| `docs/Q2_CONTROLLER_BANK_DESIGN.md` | Existing controller inventory and prospective minimum/ambitious banks |
+| `docs/Q2_AMBITION_LADDER.md` | Evidence ladder from geometry nulls to prospective controller construction |
+| `docs/Q2_FIRST_EXPERIMENT_OPTIONS.md` | Compared Q2 entry points and recommended finite-secant prediction study |
+| `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
+| `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
 | `docs/GATE4_MICRO_Q1_CLOSEOUT.md` | First original development micro-Q1 closeout |
 | `docs/GATE5_SOURCE_DURATION_CLOSEOUT.md` | Source-validity and temporal-persistence bridge closeout |
