@@ -1,0 +1,40 @@
+{
+  "analysis_status": "POST_HOC_DESCRIPTIVE_ONLY",
+  "confirmatory_classification_changed": false,
+  "confirmatory_classification": "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL",
+  "human_recoverability": {
+    "ambiguous_or_no_answer": 1,
+    "correct": 9,
+    "wrong": 3
+  },
+  "input_provenance": {
+    "canonical_confirmatory_closeout": "0a6127eb6bff68b27f64bbbbdf8d813561e00e76",
+    "journal_bytes": 32170782,
+    "journal_sha256": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+    "preserved_local_forensic_commit": "8682607dde267827c9fa5367cbc63d92510f3da4"
+  },
+  "invalidity": {
+    "meaningful_invalid_rows": 13,
+    "meaningful_rows": 114,
+    "one_of_two_invalid_items": 9,
+    "two_of_two_invalid_items": 2,
+    "unique_affected_items": 11
+  },
+  "pair_context": {
+    "all_damage_pairs": 16,
+    "damage_pairs_from_invalid_meaningful": 11,
+    "rescues_from_invalid_meaningful": 0
+  },
+  "taxonomy": {
+    "malformed_final": 4,
+    "multiple_or_contradictory_finals": 3,
+    "semantic_answer_present_outside_accepted_commitment": 3,
+    "token_cap_truncation": 3
+  },
+  "token_counts": {
+    "meaningful_invalid_mean": 1500.38,
+    "meaningful_invalid_median": 840.0,
+    "meaningful_valid_mean": 339.86,
+    "meaningful_valid_median": 222.0
+  }
+}
