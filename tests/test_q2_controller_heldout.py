@@ -71,6 +71,7 @@ def test_engineering_fixtures_use_external_manifest_envelope() -> None:
     assert payload["allocation"] == "Q2_ENGINEERING_ONLY"
     assert len(manifest_rows(payload)) == 5
     assert all(not row["metadata"]["scientific_item"] for row in payload["items"])
+    assert all(row["reference_answer"] == "ENGINEERING_NO_ORACLE" for row in payload["items"])
 
 
 def test_bank_canonicalization_has_frozen_order_and_unit_norm() -> None:

@@ -345,7 +345,7 @@ def engineering_fixtures() -> dict[str, Any]:
             "benchmark": "SYNTHETIC_ENGINEERING",
             "subtask": "no_oracle_fixture",
             "prompt": prompt,
-            "reference_answer": "",
+            "reference_answer": "ENGINEERING_NO_ORACLE",
             "evaluator": "none",
             "source_revision": "q2-engineering-fixtures-v1",
             "prompt_hash": stable_digest(NAMESPACE, "ENGINEERING_PROMPT", prompt),
