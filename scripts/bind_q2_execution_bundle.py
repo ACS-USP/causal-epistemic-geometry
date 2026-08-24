@@ -39,6 +39,12 @@ def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def manifest_rows(payload: Any) -> list[dict[str, Any]]:
+    if not isinstance(payload, dict) or not isinstance(payload.get("items"), list):
+        raise RuntimeError("materialized manifest lacks canonical items envelope")
+    return payload["items"]
+
+
 def source_tree_hashes() -> dict[str, str]:
     records = {name: sha256(ROOT / name) for name in SOURCE_FILES}
     for path in sorted((ROOT / "src/epistemic_geometry").rglob("*.py")):
@@ -60,7 +66,8 @@ def main() -> int:
     if materialization["classification"] != "Q2_PUBLIC_DATASET_MATERIALIZATION_PASS":
         raise RuntimeError("public dataset materialization did not pass")
     for role, filename in FILENAMES.items():
-        rows = json.loads((review / filename).read_text(encoding="utf-8"))
+        payload = json.loads((review / filename).read_text(encoding="utf-8"))
+        rows = manifest_rows(payload)
         expected_ids = json.loads(
             (review / "REMOTE_PUBLIC_DATASET_ALLOCATION.json").read_text(encoding="utf-8")
         )["allocations"][role]

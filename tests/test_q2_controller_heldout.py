@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import numpy as np
+import pytest
+from scripts.bind_q2_execution_bundle import manifest_rows
 
 from epistemic_geometry.analysis.q2_geometries import (
     finite_secant_geometry,
@@ -53,6 +55,13 @@ def test_bank_has_twelve_meaningful_four_nulls_and_exact_sign_pairs() -> None:
     assert checks["sign_pair_pass"]
     assert checks["base_diversity_pass"]
     assert checks["null_orthogonality_pass"]
+
+
+def test_public_materialization_uses_external_manifest_envelope() -> None:
+    rows = [{"item_id": "engineering-only"}]
+    assert manifest_rows({"items": rows}) == rows
+    with pytest.raises(RuntimeError, match="canonical items envelope"):
+        manifest_rows(rows)
 
 
 def test_controller_split_is_source_family_heldout_ten_six() -> None:

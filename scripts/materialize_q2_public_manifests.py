@@ -60,7 +60,19 @@ def main() -> int:
             row["allocation"] = role
             row["metadata"] = {**row["metadata"], "q2_allocation": role}
             rows.append(row)
-        write_json(review / FILENAMES[role], rows)
+        # Match the canonical external-manifest envelope consumed by
+        # ``load_external``. The ID-only allocation deliberately has a
+        # different shape and must never leak into the execution interface.
+        write_json(
+            review / FILENAMES[role],
+            {
+                "schema_version": 1,
+                "allocation": role,
+                "dataset_repo": allocation["dataset_repo"],
+                "dataset_revision": allocation["dataset_revision"],
+                "items": rows,
+            },
+        )
         allocated_ids.extend(ids)
         summaries[role] = {
             "n": len(rows),
