@@ -284,17 +284,17 @@ def _disagreement_metrics(rows: list[dict[str, Any]], axis_id: str) -> dict[str,
 
 def finalize_source_bank(review: Path) -> None:
     source_commit = candidate_lock(review)["source_commit_at_preparation"]
-    # Remote-safe source bundles may be executed at a later commit with identical frozen files.
+    # Later deterministic artifact repairs may run at a newer execution commit;
+    # the journal identity remains the commit that actually collected the source rows.
     source_rows = _journal_rows(
         review / "source_behavior_journal.jsonl",
         identity={
             "experiment_id": EXPERIMENT_ID,
             "phase": "SOURCE_BEHAVIOR_QUALIFICATION",
-            "source_commit": git_head(),
+            "source_commit": source_commit,
         },
         keys=("item_id", "axis_id", "polarity", "rollout_index"),
     )
-    del source_commit
     archive = np.load(review / "SOURCE_ACTIVATIONS.npz", allow_pickle=False)
     base: dict[tuple[str, str], np.ndarray] = {}
     pairs: dict[tuple[str, str], np.ndarray] = {}

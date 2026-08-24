@@ -56,6 +56,10 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--review-dir", type=Path, default=REVIEW)
     parser.add_argument("--source-commit", required=True)
+    parser.add_argument(
+        "--source-qualification-commit",
+        help="commit identity of an already collected immutable source journal",
+    )
     args = parser.parse_args()
     review = args.review_dir.resolve()
     lock_path = review / "CANDIDATE_PROTOCOL_LOCK.json"
@@ -84,7 +88,9 @@ def main() -> int:
     (review / "EXECUTION_SOURCE_COMMIT.txt").write_text(
         args.source_commit + "\n", encoding="utf-8"
     )
-    lock["source_commit_at_preparation"] = args.source_commit
+    lock["source_commit_at_preparation"] = (
+        args.source_qualification_commit or args.source_commit
+    )
     lock["public_dataset_materialization"] = {
         "record_sha256": sha256(review / "PUBLIC_DATASET_MATERIALIZATION.json"),
         "completed_before_model_outputs": True,
@@ -106,6 +112,7 @@ def main() -> int:
             "timing": "before all Q2 model outputs",
             "resolution": "allowlisted source files plus public-dataset materialization",
             "source_commit": args.source_commit,
+            "source_qualification_commit": lock["source_commit_at_preparation"],
             "source_bundle_hashes_sha256": sha256(review / "SOURCE_BUNDLE_HASHES.json"),
             "raw_historical_outputs_transferred": False,
             "scientific_design_changed": False,
