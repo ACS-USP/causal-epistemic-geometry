@@ -1,0 +1,48 @@
+{
+  "G_C_D_used": false,
+  "accuracy_used": false,
+  "causal_direction_count": 12,
+  "checks": {
+    "causal_directions_at_least_minimum": true,
+    "dose_dynamic_range_non_degenerate": true,
+    "each_family_has_two_directions": true,
+    "families_at_least_minimum": true,
+    "meaningful_count_at_least_minimum": true,
+    "null_pair_orthogonality": true,
+    "null_span_orthogonality": true,
+    "source_axes_at_least_minimum": true
+  },
+  "classification": "Q2_V2_CONTROLLER_BANK_QUALIFIED",
+  "directions_per_family": {
+    "COUNTERFACTUAL_CHECKING": 4,
+    "DECOMPOSE_THEN_SOLVE": 4,
+    "EXPLICIT_STATE_TRACKING": 4,
+    "INDEPENDENT_VERIFICATION": 4,
+    "INVARIANT_CHECKING": 4,
+    "TYPE_REPRESENTATION_DISCIPLINE": 4
+  },
+  "families": [
+    "COUNTERFACTUAL_CHECKING",
+    "DECOMPOSE_THEN_SOLVE",
+    "EXPLICIT_STATE_TRACKING",
+    "INDEPENDENT_VERIFICATION",
+    "INVARIANT_CHECKING",
+    "TYPE_REPRESENTATION_DISCIPLINE"
+  ],
+  "family_count": 6,
+  "meaningful_count": 24,
+  "qualified_source_axes": [
+    "COUNTERFACTUAL_CHECKING",
+    "DECOMPOSE_THEN_SOLVE",
+    "EXPLICIT_STATE_TRACKING",
+    "INDEPENDENT_VERIFICATION",
+    "INVARIANT_CHECKING",
+    "TYPE_REPRESENTATION_DISCIPLINE"
+  ],
+  "selected_dose_bins": [
+    "D_HIGH",
+    "D_LOW",
+    "D_MEDIUM",
+    "D_VERY_HIGH"
+  ]
+}

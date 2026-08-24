@@ -1,0 +1,91 @@
+{
+  "checks": {
+    "meaningful_span_rank": 12,
+    "pairwise_null_cosines": {
+      "NULL_V2_R0__NULL_V2_R1": 1.0842021724855044e-17,
+      "NULL_V2_R0__NULL_V2_R2": 3.122502256758253e-17,
+      "NULL_V2_R0__NULL_V2_R3": 4.336808689942018e-18,
+      "NULL_V2_R1__NULL_V2_R2": 0.0,
+      "NULL_V2_R1__NULL_V2_R3": 3.469446951953614e-18,
+      "NULL_V2_R2__NULL_V2_R3": 1.734723475976807e-17
+    },
+    "pairwise_null_orthogonality_pass": true,
+    "span_cosines": {
+      "NULL_V2_R0": 3.935653886122381e-17,
+      "NULL_V2_R1": 5.64327230778705e-17,
+      "NULL_V2_R2": 8.413408858487514e-17,
+      "NULL_V2_R3": 4.901949072350087e-17
+    },
+    "span_orthogonality_max": 8.413408858487514e-17,
+    "span_orthogonality_pass": true,
+    "tolerance": 1e-06,
+    "unit_norm_pass": true
+  },
+  "construction": {
+    "basis_rank": 12,
+    "records": {
+      "NULL_V2_R0": {
+        "seed": 2173173588,
+        "vector_hash": "8ec2425a2eeed0198facd3a0365e3accd593c0c48210ea3f78fa887cccc04b0a"
+      },
+      "NULL_V2_R1": {
+        "seed": 1734367745,
+        "vector_hash": "8999dd103de25d32b54bdae9f863d54954cf33321fd410db4f483b188d743edf"
+      },
+      "NULL_V2_R2": {
+        "seed": 2249821499,
+        "vector_hash": "9609683dd38b18760db211268a59f65428e75c23276b91d5b435f26362ef6168"
+      },
+      "NULL_V2_R3": {
+        "seed": 782147853,
+        "vector_hash": "fd20ddbbeb85df9d799443fb0976197053b764533e5188dc6eb524dc1ed268c9"
+      }
+    },
+    "span_projector": "SVD orthonormal basis; r_perp=r-Q(Q^T r)"
+  },
+  "controllers": {
+    "NULL_V2_R0": {
+      "controller": "NULL_V2_R0",
+      "delta_norm": 18.270444490090064,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "path": "review/q2_controller_bank_v2/V2_FINAL_NULL_VECTORS/NULL_V2_R0.npy",
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 2173173588,
+      "vector_hash": "8ec2425a2eeed0198facd3a0365e3accd593c0c48210ea3f78fa887cccc04b0a"
+    },
+    "NULL_V2_R1": {
+      "controller": "NULL_V2_R1",
+      "delta_norm": 18.270444490090064,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "path": "review/q2_controller_bank_v2/V2_FINAL_NULL_VECTORS/NULL_V2_R1.npy",
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 1734367745,
+      "vector_hash": "8999dd103de25d32b54bdae9f863d54954cf33321fd410db4f483b188d743edf"
+    },
+    "NULL_V2_R2": {
+      "controller": "NULL_V2_R2",
+      "delta_norm": 18.270444490090064,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "path": "review/q2_controller_bank_v2/V2_FINAL_NULL_VECTORS/NULL_V2_R2.npy",
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 2249821499,
+      "vector_hash": "9609683dd38b18760db211268a59f65428e75c23276b91d5b435f26362ef6168"
+    },
+    "NULL_V2_R3": {
+      "controller": "NULL_V2_R3",
+      "delta_norm": 18.270444490090064,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "path": "review/q2_controller_bank_v2/V2_FINAL_NULL_VECTORS/NULL_V2_R3.npy",
+      "scope": "final_prompt_token_then_current_decode_token",
+      "seed": 782147853,
+      "vector_hash": "fd20ddbbeb85df9d799443fb0976197053b764533e5188dc6eb524dc1ed268c9"
+    }
+  },
+  "correctness_used": false,
+  "delta_norm_rule": "median selected meaningful delta norm",
+  "source_meaningful_count": 24
+}

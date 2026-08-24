@@ -3,7 +3,7 @@ last_verified: "2026-08-24"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_DEVELOPMENT_V2_DOSE_CALIBRATION_LOCK
+  scientific_stage: Q2_DEVELOPMENT_V2_FINAL_BANK_LOCK
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -21,20 +21,21 @@ project:
 current:
   workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
   lifecycle: PROSPECTIVE_LOCK
-  stage: DEVELOPMENT_DOSE_CALIBRATION
+  stage: DEVELOPMENT_FINAL_BANK_LOCK
   source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
   summary: >-
     Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel
     outcomes. Q2 V2 source qualification completed exactly 576 rows: all six
     frozen conceptual axes qualified, yielding 24 signed/location directions.
-    The dose-calibration lock is now frozen for 1,164 matched label-free rows;
-    the unchanged 120-item common panel remains blocked until final bank lock.
-    No correctness or common-panel outcome has been used. Q1 remains immutable
-    and Q3 is not run.
+    The 1,164-row matched label-free calibration completed. The final bank
+    qualifies with 24 meaningful directions across six families, 12 causal
+    directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item
+    common panel is now locked but remains unrun. No correctness or common-panel
+    outcome has been used. Q1 remains immutable and Q3 is not run.
   next_authorized_action: >-
-    Push the completed source qualification and frozen dose-calibration lock,
-    then collect the complete matched label-free dose-calibration schedule.
-    No common-panel inference is authorized before the final V2 bank lock.
+    Push the final bank lock, pass the engineering gate, and then collect the
+    frozen common panel. No geometry analysis is authorized before all common
+    panel rows are complete.
   runpod: ACTIVE_A40
   gpu_work_authorized: true
   new_scientific_experiment_authorized: Q2_V2_DEVELOPMENT_PROTOCOL_ONLY
@@ -46,7 +47,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V2_CALIBRATED_BANK_REBUILD_DOSE_CALIBRATION
+  current_task: Q2_V2_CALIBRATED_BANK_REBUILD_FINAL_BANK_LOCK
   free_generation: NOT_AUTHORIZED; ONLY_FROZEN_Q2_V2_PHASES
 
 confirmatory_program:
