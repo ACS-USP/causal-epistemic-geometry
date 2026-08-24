@@ -1,0 +1,17 @@
+{
+  "correctness_used": false,
+  "direction_count": 24,
+  "minimum_qualified_axes": 4,
+  "parser_version": "external-semantic-v3",
+  "qualified_axes": [
+    "INDEPENDENT_VERIFICATION",
+    "EXPLICIT_STATE_TRACKING",
+    "TYPE_REPRESENTATION_DISCIPLINE",
+    "DECOMPOSE_THEN_SOLVE",
+    "INVARIANT_CHECKING",
+    "COUNTERFACTUAL_CHECKING"
+  ],
+  "source_activation_sha256": "f18d5cdfdf96b0922b0610765cd0aba747f849d4b547a0deefae89e415181226",
+  "source_commit": "6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed",
+  "source_journal_sha256": "0508973e4b519d4a1e676f6edde21d87c41488e37a1f5a4a9630f0e5a2f8d366"
+}

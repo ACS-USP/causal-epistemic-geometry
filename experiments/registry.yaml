@@ -1266,20 +1266,21 @@ experiments:
 
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
     version: Q2-V2
-    stage: DEVELOPMENT_SOURCE_QUALIFICATION
+    stage: DEVELOPMENT_DOSE_CALIBRATION
     question: >-
       Can a calibrated bank of conceptually distinct L27 intervention families
       support a controller-family-held-out test of simple geometry, without
       opening the common panel until the bank is dynamically qualified?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
-    status: LOCKED_PRE_SOURCE_QUALIFICATION
-    outcome: NOT_YET_RUN
+    status: SOURCE_QUALIFICATION_COMPLETE_DOSE_LOCKED
+    outcome: SOURCE_PHASE_COMPLETE_NO_COMMON_OUTCOMES
     scientific_interpretation: >-
       Q2 V2 is a new DEVELOPMENT protocol, not a predictive result. V1's common
       panel was never run. V2 freezes six source-axis candidates, per-direction
       label-free dose calibration, SVD span-orthogonal nulls, and a family-held-out
-      M0/M1/M2 prediction design before new source outputs.
+      M0/M1/M2 prediction design. Source qualification completed with all six axes
+      qualifying; dose calibration is now the only authorized next phase.
     source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
     artifact: review/q2_controller_bank_v2/
     cost_usd: null
@@ -1311,8 +1312,10 @@ experiments:
       bootstrap_resamples: 10000
     execution:
       lifecycle: PROSPECTIVE_LOCK
-      source_qualification: NOT_RUN
-      dose_calibration: BLOCKED_UNTIL_SOURCE_QUALIFICATION
+      source_qualification: COMPLETE_576_ROWS_ALL_6_AXES_QUALIFIED
+      source_journal_rows: 576
+      source_correctness_used: false
+      dose_calibration: FROZEN_PRE_DOSE_CALIBRATION_1164_ROWS
       bank_qualification: BLOCKED_UNTIL_DOSE_CALIBRATION
       common_panel: BLOCKED
       common_panel_rows: 0
@@ -1321,8 +1324,8 @@ experiments:
       Q2_V1_common_panel_outcomes_read: false
       Q1: IMMUTABLE
       Q3: NOT_RUN
-      runpod_status: TERMINATED
-      active_pods: 0
+      runpod_status: ACTIVE_A40
+      active_pods: 1
     next_action: >-
-      Publish the pre-source lock, then collect only the frozen source
-      qualification phase. Stop before dose calibration if fewer than four axes qualify.
+      Collect the complete frozen matched label-free dose-calibration phase;
+      stop before final bank/common panel if its frozen bank rule is not met.
