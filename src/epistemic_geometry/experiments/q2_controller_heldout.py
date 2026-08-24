@@ -245,6 +245,14 @@ def validate_bank(bank: Mapping[str, np.ndarray]) -> dict[str, Any]:
     }
 
 
+def canonicalize_bank(bank: Mapping[str, np.ndarray]) -> dict[str, np.ndarray]:
+    """Normalize each frozen controller exactly once in canonical ID order."""
+
+    if set(bank) != set(CONTROLLER_IDS):
+        raise ValueError("Q2 bank must contain exactly the frozen controller IDs")
+    return {name: unit_vector(bank[name]) for name in CONTROLLER_IDS}
+
+
 def controller_split() -> dict[str, Any]:
     """Freeze a 10/6 source-family-held-out controller split."""
 

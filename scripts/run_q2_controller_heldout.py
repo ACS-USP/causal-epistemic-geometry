@@ -33,10 +33,7 @@ from epistemic_geometry.benchmarks.external.semantic_v3 import (  # noqa: E402
     evaluate_external_answer_v3,
     extract_final_commitment,
 )
-from epistemic_geometry.experiments.gate6 import (  # noqa: E402
-    paired_mean_direction,
-    unit_vector,
-)
+from epistemic_geometry.experiments.gate6 import paired_mean_direction  # noqa: E402
 from epistemic_geometry.experiments.gate6_3 import vector_sha256  # noqa: E402
 from epistemic_geometry.experiments.q2_controller_heldout import (  # noqa: E402
     BASELINE,
@@ -51,6 +48,7 @@ from epistemic_geometry.experiments.q2_controller_heldout import (  # noqa: E402
     MODEL_REVISION,
     SOURCE_AXES,
     build_null_bank,
+    canonicalize_bank,
     expand_meaningful_bank,
     qualification_decision,
     validate_bank,
@@ -354,9 +352,12 @@ def finalize_source_bank(review: Path) -> None:
     bank = expand_meaningful_bank(base)
     nulls, null_metadata = build_null_bank(base, pairs)
     bank.update(nulls)
+    bank = canonicalize_bank(bank)
+    for name, record in null_metadata["records"].items():
+        record["canonical_float64_vector_sha256"] = vector_sha256(bank[name])
     bank_checks = validate_bank(bank)
     for name, vector in bank.items():
-        np.save(vector_dir / f"{name}.npy", unit_vector(vector).astype(np.float64))
+        np.save(vector_dir / f"{name}.npy", vector.astype(np.float64))
     write_json(review / "SOURCE_QUALIFICATION.json", source_records)
     write_json(review / "NULL_BANK.json", null_metadata)
     write_json(review / "BANK_VALIDATION.json", bank_checks)
@@ -388,7 +389,9 @@ def load_bank(review: Path) -> tuple[dict[str, np.ndarray], dict[str, str]]:
         values = np.load(ROOT / record["path"], allow_pickle=False).astype(np.float64)
         if vector_sha256(values) != record["canonical_float64_vector_sha256"]:
             raise RuntimeError(f"Q2 controller vector hash mismatch: {name}")
-        vectors[name] = unit_vector(values)
+        if abs(float(np.linalg.norm(values)) - 1.0) > 1e-10:
+            raise RuntimeError(f"Q2 persisted controller is not unit norm: {name}")
+        vectors[name] = values
         hashes[name] = vector_sha256(values)
     return vectors, hashes
 

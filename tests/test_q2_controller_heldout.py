@@ -24,6 +24,7 @@ from epistemic_geometry.experiments.q2_controller_heldout import (
     SOURCE_AXES,
     build_null_bank,
     build_schedule,
+    canonicalize_bank,
     controller_split,
     expand_meaningful_bank,
     pairwise_unbiased_distance_matrix,
@@ -62,6 +63,16 @@ def test_public_materialization_uses_external_manifest_envelope() -> None:
     assert manifest_rows({"items": rows}) == rows
     with pytest.raises(RuntimeError, match="canonical items envelope"):
         manifest_rows(rows)
+
+
+def test_bank_canonicalization_has_frozen_order_and_unit_norm() -> None:
+    base, pairs = synthetic_base()
+    bank = expand_meaningful_bank(base)
+    bank.update(build_null_bank(base, pairs)[0])
+    perturbed = {name: vector * (1.0 + 1e-12) for name, vector in bank.items()}
+    canonical = canonicalize_bank(perturbed)
+    assert tuple(canonical) == CONTROLLER_IDS
+    assert all(abs(np.linalg.norm(canonical[name]) - 1.0) <= 1e-10 for name in CONTROLLER_IDS)
 
 
 def test_controller_split_is_source_family_heldout_ten_six() -> None:
