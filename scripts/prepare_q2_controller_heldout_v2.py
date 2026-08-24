@@ -313,8 +313,42 @@ def premortem() -> tuple[dict[str, Any], str]:
     return data, "\n".join(lines)
 
 
+def engineering_fixtures() -> dict[str, Any]:
+    prompts = (
+        "Continue the neutral token pattern A B A B and end with FINAL: done.",
+        "Read this punctuation-only sample: []{}(),.; and end with FINAL: done.",
+        "Inspect the numeric string 001122334455 and end with FINAL: done.",
+        "Repeat the neutral word twice and end with FINAL: done.",
+        "Use the short code-like text x = [1, 2, 3] and end with FINAL: done.",
+        "Read the multilingual-neutral pattern alpha beta gamma and end with FINAL: done.",
+    )
+    return {
+        "schema_version": 1,
+        "allocation": "Q2_V2_ENGINEERING_ONLY",
+        "scientific_items": False,
+        "oracles": False,
+        "items": [
+            {
+                "item_id": f"q2_v2_engineering_{index}",
+                "benchmark": "SYNTHETIC_ENGINEERING",
+                "subtask": "no_oracle_fixture",
+                "prompt": prompt,
+                "reference_answer": "ENGINEERING_NO_ORACLE",
+                "evaluator": "none",
+                "source_revision": "q2-v2-engineering-fixtures-v1",
+                "prompt_hash": stable_digest(NAMESPACE, "ENGINEERING_PROMPT", prompt),
+                "item_hash": stable_digest(NAMESPACE, "ENGINEERING_ITEM", index, prompt),
+                "metadata": {"scientific_item": False, "oracle_exists": False},
+            }
+            for index, prompt in enumerate(prompts)
+        ],
+    }
+
+
 def main() -> int:
     REVIEW.mkdir(parents=True, exist_ok=True)
+    fixtures = engineering_fixtures()
+    write_json(REVIEW / "V2_ENGINEERING_FIXTURES.json", fixtures)
     eligible, provenance = historical_catalog()
     allocations = allocate(eligible)
     filenames = {
@@ -325,7 +359,15 @@ def main() -> int:
         "V2_FINITE_SECANT_PROBES": "V2_FINITE_SECANT_MANIFEST.json",
     }
     for role, rows in allocations.items():
-        write_json(REVIEW / filenames[role], rows)
+        write_json(
+            REVIEW / filenames[role],
+            {
+                "schema_version": 1,
+                "allocation": role,
+                "selection_namespace": NAMESPACE,
+                "items": rows,
+            },
+        )
 
     common = common_panel_reuse()
     write_json(REVIEW / "V2_COMMON_PANEL_MANIFEST.json", common)
@@ -404,6 +446,13 @@ def main() -> int:
             "invalid_as_error": True,
             "source_qualification_correctness_forbidden": True,
             "v1_common_panel_outcomes_read": False,
+        },
+        "engineering_fixtures": {
+            "file": "V2_ENGINEERING_FIXTURES.json",
+            "sha256": sha256(REVIEW / "V2_ENGINEERING_FIXTURES.json"),
+            "n": len(fixtures["items"]),
+            "scientific_items": False,
+            "oracles": False,
         },
         "source_axes": {
             "axes": source_axis_payload(),

@@ -61,7 +61,7 @@ def main() -> int:
     if len(qualified_axes) < 4:
         raise RuntimeError("Q2_V2_SOURCE_BANK_TOO_NARROW")
     controller_ids = sorted(directions)
-    items = read_json(REVIEW / "V2_DOSE_CALIBRATION_MANIFEST.json")
+    items = read_json(REVIEW / "V2_DOSE_CALIBRATION_MANIFEST.json")["items"]
     item_ids = [str(item["item_id"]) for item in items]
     if len(item_ids) != len(set(item_ids)):
         raise RuntimeError("dose calibration items are not unique")
