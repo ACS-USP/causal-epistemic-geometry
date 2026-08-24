@@ -1,0 +1,59 @@
+{
+  "adequacy_rule": "BOTH_MODELS_PRIMARY_C_POWER_AT_N57_GE_0.80",
+  "adequacy_threshold": 0.8,
+  "batch_size": 32,
+  "confidence": 0.95,
+  "development_sources": {
+    "Ministral": {
+      "baseline": "BASELINE",
+      "development_n": 100,
+      "expected_c_values": [
+        0.09401515151515152,
+        0.022979797979797933,
+        0.036186868686868656,
+        0.011161616161616206,
+        0.010606060606060619
+      ],
+      "journal_path": "review/gate13_1_all_layer_causal_atlas/journal.jsonl",
+      "journal_sha256": "ce632d7f84655a0e96ef74a5cdd545294e1d445494c8d1787afcd0545a29b5cd",
+      "meaningful": "MEANINGFUL_SELECTED",
+      "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+      "nulls": ["RANDOM_R0", "RANDOM_R1", "RANDOM_R2", "RANDOM_R3"],
+      "stage": "FINAL_EVALUATION"
+    },
+    "Qwen": {
+      "baseline": "BASELINE",
+      "development_n": 100,
+      "expected_c_values": [
+        0.06434343434343434,
+        0.00500000000000006,
+        -0.004646464646464676,
+        -0.0008080808080808133,
+        0.009747474747474727
+      ],
+      "journal_path": "review/gate9_selected_d75_evaluation/journal.jsonl",
+      "journal_sha256": "c17190c676da8a1aacb51f4058d875e8414782e3d08ee945ed57ddc4c5ed2888",
+      "meaningful": "MEANINGFUL_L27_D75",
+      "model": "Qwen/Qwen3-8B",
+      "nulls": [
+        "RANDOM_L27_D75_R0",
+        "RANDOM_L27_D75_R1",
+        "RANDOM_L27_D75_R2",
+        "RANDOM_L27_D75_R3"
+      ],
+      "stage": "GATE9_SELECTED_D75_EVALUATION"
+    }
+  },
+  "holdout_access_permitted": false,
+  "inner_resamples_per_pseudoexperiment": 1999,
+  "interval": "TWO_SIDED_95_PERCENT_ITEM_PERCENTILE_BOOTSTRAP",
+  "n_items": 57,
+  "null_specificity_endpoint": "C_MEANINGFUL_MINUS_MEAN_C_OF_FOUR_DEVELOPMENT_NULLS",
+  "null_specificity_role": "DESCRIPTIVE_PLANNING_ONLY",
+  "outer_replications": 20000,
+  "planning_seed": 2026082301,
+  "primary_endpoint": "C_MEANINGFUL_GT_ZERO",
+  "safety_power_used_for_decision": false,
+  "source_scope": "IMMUTABLE_DEVELOPMENT_FINAL_EVALUATIONS_ONLY",
+  "status": "PROSPECTIVELY_FROZEN_BEFORE_POWER_SIMULATION"
+}
