@@ -23,6 +23,7 @@ current:
   lifecycle: PROSPECTIVE_LOCK
   stage: DEVELOPMENT_FINAL_BANK_LOCK
   source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
+  execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
   summary: >-
     Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel
     outcomes. Q2 V2 source qualification completed exactly 576 rows: all six

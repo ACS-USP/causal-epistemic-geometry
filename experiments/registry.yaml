@@ -1284,6 +1284,7 @@ experiments:
       nondegenerate four-bin operating-dose distribution. The final 24-direction
       bank and fresh null bank are locked; the common panel is still unrun.
     source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
+    execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
     cost_usd: null
     cost_envelope_usd: 15.0
