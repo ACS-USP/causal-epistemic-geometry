@@ -53,6 +53,7 @@ current instruction source.
 | `docs/Q2_GRAND_DESIGN.md` | Formal intervention-to-error geometry research program |
 | `docs/Q2_CONTROLLER_BANK_DESIGN.md` | Existing controller inventory and prospective minimum/ambitious banks |
 | `docs/Q2_AMBITION_LADDER.md` | Evidence ladder from geometry nulls to prospective controller construction |
+| `docs/Q2_CONTROLLER_BANK_QUALIFICATION_CLOSEOUT.md` | First Q2 bank-qualification failure, pre-panel stop, and predictive-claim boundary |
 | `docs/Q2_FIRST_EXPERIMENT_OPTIONS.md` | Compared Q2 entry points and recommended finite-secant prediction study |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |

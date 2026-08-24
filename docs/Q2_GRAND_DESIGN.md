@@ -1,7 +1,10 @@
 # Q2 grand design: geometry that predicts and engineers complementarity
 
-Status: design only. Q2 scientific outcomes have not been accessed and no Q2
-experiment is authorized by this document.
+Status: governing design. The first prospective controller-bank qualification
+closed as `Q2_CONTROLLER_BANK_NOT_QUALIFIED`; only source and manipulation
+qualification outcomes were accessed. The 120-item common panel was not run,
+and no controller-held-out predictive geometry outcome exists. Any rebuilt bank
+requires a new prospective lock and principal authorization.
 
 ## Grand question
 

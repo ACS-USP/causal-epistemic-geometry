@@ -25,11 +25,13 @@ complementarity can become deployable collective utility.
 
 ### Q2 design
 
-- Principal-review the proposed controller-held-out finite-secant experiment.
-- Decide which two additional behaviorally validated source axes may join the
-  bank without outcome-based selection.
-- Freeze a controller bank, development item pool, metric comparison, and
-  held-out-controller split before new outputs.
+- Principal-review the failed first-bank qualification and the frozen rebuild
+  draft; do not treat it as a predictive Q2 null.
+- Repair controller-bank construction prospectively, including a correct
+  projector for null orthogonality, and require a stronger causal first stage
+  before any common-panel collection.
+- Freeze any rebuilt controller bank under a new lock before new outputs; the
+  existing 120-item panel remains unrun and cannot be opened by this roadmap.
 - Treat finite secants as finite control geometry, not local Fisher/pullback
   geometry.
 
@@ -39,14 +41,14 @@ complementarity can become deployable collective utility.
 - Run the read-only doctor, review its output, then run the tiny CUDA smoke.
 - Pin a named environment and storage plan before any scientific protocol.
 
-## Next — first Q2 DEVELOPMENT test
+## Next — Q2 bank rebuild review
 
-Subject to principal approval, run one controller-held-out predictive study on
-Qwen/CRUXEval with a minimum bank of 16 controllers. Compare cosine, whitened,
-and finite behavioral secant metrics on their ability to predict held-out
-pairwise error-profile distance. Use item-cluster uncertainty and
-controller-aware permutations. Do not optimize controller outcomes in this
-stage.
+The first prospective K=16 bank failed before the shared panel: only 3/16
+controllers passed the frozen causal manipulation threshold and the shuffled
+nulls were not orthogonal to the meaningful span. Subject to principal approval,
+qualify a rebuilt bank under a fresh lock. Only a bank that passes all source,
+engineering, manipulation, and vector-geometry gates may proceed to the
+controller-held-out predictive study.
 
 Decision branches:
 
@@ -86,6 +88,5 @@ Do **not** pursue yet:
 - Q3 routing experiments before controller-held-out geometry prediction;
 - any use of confirmatory holdout rows for Q2 development.
 
-The next scientific action is principal review of the first Q2 protocol. This
+The next scientific action is principal review of the bank-rebuild draft. This
 roadmap does not authorize execution.
-

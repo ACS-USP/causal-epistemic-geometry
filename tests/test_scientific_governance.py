@@ -69,6 +69,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION",
         "Q1_CONFIRMATORY_FIXED_CONTROLLERS",
         "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
+        "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT_COMPLETE",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream

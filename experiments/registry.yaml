@@ -1205,25 +1205,26 @@ experiments:
 
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
     version: Q2-PILOT-V1
-    stage: DEVELOPMENT
+    stage: DEVELOPMENT_BANK_QUALIFICATION_CLOSED
     question: >-
       Do pre-specified flat, covariance-whitened, or finite behavioral secant
       geometries predict unbiased semantic error-profile distances for
       controller families held out before outcomes?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
-    status: PROSPECTIVE_LOCK
-    outcome: PENDING
+    status: COMPLETE_DEVELOPMENT_BANK_NOT_QUALIFIED
+    outcome: Q2_CONTROLLER_BANK_NOT_QUALIFIED
     scientific_interpretation: >-
-      This is the first Q2 DEVELOPMENT experiment. It does not modify the
-      immutable Q1 result and cannot establish confirmatory Q2 or Q3. The
-      candidate bank contains three conceptual source axes, two L27 source
-      locations, both signs, and four frozen nulls at one common displacement
-      norm. A full conceptual source family is held out.
-    source_commit: 411de44c5c5229f9a5c9081de1e102517191543a
+      The first Q2 DEVELOPMENT pilot stopped at the frozen controller-bank
+      qualification. All three source axes and engineering passed, but only
+      3/16 controllers met the complete causal-movement gate and the null bank
+      failed orthogonality to the meaningful span. The common panel and all
+      predictive geometry outcomes were not run. This is not a predictive Q2
+      null and does not alter immutable Q1 or authorize Q3.
+    source_commit: 4a28bf1d42d845ed053da60587acd56f94800d42
     artifact: review/q2_controller_heldout_geometry/
-    cost_usd: null
-    cost_status: PRE_OUTCOME_PREFLIGHT_REQUIRED
+    cost_usd: 0.833554012345679
+    cost_status: ESTIMATED_FROM_RECORDED_RUNTIME_WITHIN_CEILING
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED
     parent_experiment: Q1_CONFIRMATORY_FIXED_CONTROLLERS
     lock:
@@ -1240,12 +1241,25 @@ experiments:
       geometry_families: [M0_FLAT, M1_WHITENED, M2_FINITE_SECANT]
       hard_cost_ceiling_usd: 15.0
     execution:
-      lifecycle: PROSPECTIVE_LOCK
-      bank_qualification: PENDING
-      common_panel: NOT_STARTED
-      midrun_scientific_peeking: FORBIDDEN
+      lifecycle: CLOSED
+      bank_qualification: Q2_CONTROLLER_BANK_NOT_QUALIFIED
+      source_axes_passed: 3
+      source_axes_total: 3
+      controllers_passed: 3
+      controllers_total: 16
+      representation_geometry_pass: false
+      source_trajectories: 144
+      manipulation_trajectories: 204
+      common_panel: NOT_RUN
+      common_panel_rows: 0
+      predictive_geometry_analysis: NOT_RUN
+      forensic_audit: Q2_FORENSIC_MINOR_NONSCIENTIFIC_ISSUES
+      midrun_scientific_peeking: NONE
       confirmatory_outcomes_read: false
-      q3: NOT_AUTHORIZED
+      runpod_status: TERMINATED
+      active_pods: 0
+      retained_volumes: 0
+      q3: NOT_RUN
     next_action: >-
-      Run source/manipulation qualification under the frozen rules; stop as
-      Q2_CONTROLLER_BANK_NOT_QUALIFIED if any required bank gate fails.
+      Principal review of the offline bank-rebuild draft; no new inference,
+      second Q2 experiment, or Q3 is authorized.

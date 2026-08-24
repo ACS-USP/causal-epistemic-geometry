@@ -1,7 +1,11 @@
 # Q2 controller bank design
 
-Status: inventory and prospective design only. “Usable” means eligible for a
-future DEVELOPMENT bank under a new lock, not already authorized for Q2.
+Status: inventory and prospective design. The first frozen K=16 candidate bank
+failed its pre-panel qualification: 3/16 controllers passed the causal
+manipulation gate and the shuffled-null construction failed the frozen
+orthogonality requirement. The 120-item common panel and predictive geometry
+analysis were not run. “Usable” means eligible for a future DEVELOPMENT bank
+under a new lock, not already authorized for another Q2 experiment.
 
 ## Existing artifact inventory
 

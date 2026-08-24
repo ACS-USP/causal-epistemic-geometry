@@ -3,6 +3,10 @@
 Q2 should be judged by predictive and constructive generalization, not by the
 most favorable retrospective correlation.
 
+Current status: the first K=16 bank did not qualify for the common-panel test,
+so no rung below was evaluated. This is a controller-bank qualification failure,
+not a Level-0 predictive result.
+
 ## Level 0 — no stable geometry-error relation
 
 Candidate metrics fail controller-held-out prediction, are unstable under item

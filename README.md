@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_DEVELOPMENT_BANK_QUALIFICATION_CLOSED` — **scientific claim:** `NONE_FROZEN`.
 
-Q1 remains closed as Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The first Q2 DEVELOPMENT pilot is prospectively locked before qualification outcomes: a K=16 same-L27 controller bank, a 120-item common CRUXEval development panel, flat/whitened/finite-secant geometries, and a source-family-held-out 10/6 prediction split. Qualification cannot use accuracy, G, C, D, rescue, damage, or complementarity. The consumed 57-item confirmatory pool is identity-excluded and its outcomes are not used.
+The first Q2 DEVELOPMENT pilot stopped at its frozen controller-bank gate as Q2_CONTROLLER_BANK_NOT_QUALIFIED. All three source axes passed and engineering passed, but only 3/16 controllers met the causal first-stage rule and the null bank failed its representation-space orthogonality gate. The 120-item common panel, M0/M1/M2 predictive analysis, QAP, and outcome reveal were not run. Q1 remains immutable and Q3 remains unauthorized.
 
-**Next authorized action:** Execute only the frozen Q2 bank qualification; proceed to the common panel only if the bank and cost gates pass. Do not run a second Q2 experiment or Q3.
+**Next authorized action:** Principal review of the offline controller-bank rebuild draft. No new model inference, second Q2 experiment, or Q3 is authorized.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
