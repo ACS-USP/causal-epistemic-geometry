@@ -1,0 +1,91 @@
+{
+  "construction_outcomes_used": false,
+  "cosine_matrix": [
+    [
+      0.9999999999999997,
+      2.168404344971009e-18,
+      -1.0191500421363742e-17,
+      2.964208739575369e-16,
+      3.5778671692021646e-17
+    ],
+    [
+      2.168404344971009e-18,
+      0.9999999999999996,
+      -8.239936510889834e-18,
+      6.5052130349130266e-18,
+      5.637851296924623e-18
+    ],
+    [
+      -1.0191500421363742e-17,
+      -8.239936510889834e-18,
+      0.9999999999999994,
+      -2.0599841277224584e-17,
+      -3.198396408832238e-18
+    ],
+    [
+      2.964208739575369e-16,
+      6.5052130349130266e-18,
+      -2.0599841277224584e-17,
+      1.0000000000000002,
+      -4.119968255444917e-17
+    ],
+    [
+      3.5778671692021646e-17,
+      5.637851296924623e-18,
+      -3.198396408832238e-18,
+      -4.119968255444917e-17,
+      1.0
+    ]
+  ],
+  "meaningful_vector_hash": "5b82230f481a009f9ba568a2c2757cd0d7f88d2d6d0fb3c8c9102f293306124e",
+  "model_role": "Ministral",
+  "paired_difference_count": 64,
+  "records": {
+    "RANDOM_R0": {
+      "canonical_float64_vector_sha256": "dec1eed7f0114f6b7de5cc2389470362a1a0ee2bf1c6e8b63d17374bc9a52ad4",
+      "effective_delta_norm": 4.469907677389362,
+      "eta": 4.469907677389362,
+      "file_sha256": "eccd83005f337f86fd7ea73489ab18a0ff2e7807be72de1e87a421ff87b8a3a5",
+      "kind": "ISOTROPIC",
+      "layer": 27,
+      "reference_scale": 1.0,
+      "seed": 1240519181,
+      "vector_path": "review/q1_confirmatory_fixed_controllers/NULL_DIRECTIONS_MINISTRAL/RANDOM_R0.npy"
+    },
+    "RANDOM_R1": {
+      "canonical_float64_vector_sha256": "584195091f662fc6507bcc65e4a646c76d62258782ff0fda89d91952411c1918",
+      "effective_delta_norm": 4.469907677389362,
+      "eta": 4.469907677389362,
+      "file_sha256": "6f9bba8bfd8e8e0bbe9c7e89b93af03873c53a7dfe8610253d9ad603fba087eb",
+      "kind": "ISOTROPIC",
+      "layer": 27,
+      "reference_scale": 1.0,
+      "seed": 4065002181,
+      "vector_path": "review/q1_confirmatory_fixed_controllers/NULL_DIRECTIONS_MINISTRAL/RANDOM_R1.npy"
+    },
+    "RANDOM_R2": {
+      "canonical_float64_vector_sha256": "2cc7f831ad0ab169308fa68186bd22c02f33f89431c59b0b6c01ece87227663a",
+      "effective_delta_norm": 4.469907677389362,
+      "eta": 4.469907677389362,
+      "file_sha256": "de6f4fe513eec11b53479b135a795dc85eda264e998e54a8e6b4152e7d72d367",
+      "kind": "CONSTRUCTION_MATCHED_SIGN_SHUFFLED",
+      "layer": 27,
+      "reference_scale": 1.0,
+      "seed": 3234656433,
+      "vector_path": "review/q1_confirmatory_fixed_controllers/NULL_DIRECTIONS_MINISTRAL/RANDOM_R2.npy"
+    },
+    "RANDOM_R3": {
+      "canonical_float64_vector_sha256": "3c8482cfaac9f69b57088d68493bcc1d749a378a21c35564e49f8e70f554dd3a",
+      "effective_delta_norm": 4.469907677389362,
+      "eta": 4.469907677389362,
+      "file_sha256": "63e1e1064d11fb1a802b8cee8bf3ae4eef59876599bd1cc668a66275e8e6b64b",
+      "kind": "CONSTRUCTION_MATCHED_SIGN_SHUFFLED",
+      "layer": 27,
+      "reference_scale": 1.0,
+      "seed": 1139829275,
+      "vector_path": "review/q1_confirmatory_fixed_controllers/NULL_DIRECTIONS_MINISTRAL/RANDOM_R3.npy"
+    }
+  },
+  "source_pair_archive": "review/gate13_cross_model_ministral3/SOURCE_ACTIVATIONS.npz",
+  "source_pair_archive_sha256": "d59691e4212cf5c4c4486d2ae5c503f56f218b3a83676c6fc8594ca002acc358"
+}

@@ -1,0 +1,153 @@
+{
+  "classification": "Q1_CONFIRMATORY_N57_POWER_QUALIFIED",
+  "decision_explanation": "Both models meet the prospectively frozen N=57 primary-C power threshold; dress-rehearsal and lock preparation may proceed without holdout access.",
+  "holdout": {
+    "content_accessed": false,
+    "model_inference": false,
+    "outcomes_accessed": false,
+    "status": "SEALED_ASSIGNED_UNACCESSED"
+  },
+  "models": {
+    "Ministral": {
+      "confidence": 0.95,
+      "development_n": 100,
+      "development_point_c_meaningful": 0.09401515151515152,
+      "development_point_c_minus_null_mean": 0.07378156565656567,
+      "development_point_c_nulls": [
+        0.022979797979797933,
+        0.036186868686868656,
+        0.011161616161616206,
+        0.010606060606060619
+      ],
+      "inner_resamples_per_pseudoexperiment": 1999,
+      "meaningful_c_distribution": {
+        "maximum": 0.25148809523809523,
+        "mean": 0.09287935072055138,
+        "median": 0.0924968671679198,
+        "minimum": -0.015507518796992484,
+        "q025": 0.040100250626566414,
+        "q05": 0.04832393483709274,
+        "q95": 0.1391799812030075,
+        "q975": 0.1488898026315788,
+        "standard_deviation": 0.0277184921874864
+      },
+      "meaningful_c_expected_interval_width": 0.10610713874530074,
+      "meaningful_c_interval_width_distribution": {
+        "maximum": 0.1518013784461153,
+        "mean": 0.10610713874530074,
+        "median": 0.10645559210526315,
+        "minimum": 0.06141917293233082,
+        "q025": 0.08353657581453632,
+        "q05": 0.08726092575187967,
+        "q95": 0.12361763784461151,
+        "q975": 0.12661360432330823,
+        "standard_deviation": 0.01103254092007785
+      },
+      "meaningful_c_power_lower_bound_gt_zero": 0.9441,
+      "meaningful_c_power_monte_carlo_se": 0.0016244258985869432,
+      "method": "nested_item_percentile_bootstrap_power",
+      "n_items": 57,
+      "outer_replications": 20000,
+      "seed": 2026082301,
+      "specificity_c_distribution": {
+        "maximum": 0.16842888471177944,
+        "mean": 0.07316511885181705,
+        "median": 0.07277960526315788,
+        "minimum": -0.010201284461152881,
+        "q025": 0.0330313087406015,
+        "q05": 0.039238721804511274,
+        "q95": 0.10825892857142858,
+        "q975": 0.11495535714285712,
+        "standard_deviation": 0.02093249485370059
+      },
+      "specificity_c_expected_interval_width": 0.07959553086818609,
+      "specificity_c_interval_width_distribution": {
+        "maximum": 0.12122591635338344,
+        "mean": 0.07959553086818609,
+        "median": 0.07961113721804512,
+        "minimum": 0.041059680451127824,
+        "q025": 0.06006060072055135,
+        "q05": 0.06307742011278196,
+        "q95": 0.09636797070802004,
+        "q975": 0.0995103236607142,
+        "standard_deviation": 0.010145051843871782
+      },
+      "specificity_c_power_lower_bound_gt_zero": 0.9638,
+      "specificity_c_power_monte_carlo_se": 0.0013207868866702153
+    },
+    "Qwen": {
+      "confidence": 0.95,
+      "development_n": 100,
+      "development_point_c_meaningful": 0.06434343434343434,
+      "development_point_c_minus_null_mean": 0.06202020202020202,
+      "development_point_c_nulls": [
+        0.00500000000000006,
+        -0.004646464646464676,
+        -0.0008080808080808133,
+        0.009747474747474727
+      ],
+      "inner_resamples_per_pseudoexperiment": 1999,
+      "meaningful_c_distribution": {
+        "maximum": 0.16541353383458648,
+        "mean": 0.06360033677944861,
+        "median": 0.06281328320802004,
+        "minimum": -0.018562030075187974,
+        "q025": 0.02169486215538846,
+        "q05": 0.02772556390977443,
+        "q95": 0.10150375939849623,
+        "q975": 0.10870927318295738,
+        "standard_deviation": 0.022508402086095218
+      },
+      "meaningful_c_expected_interval_width": 0.08509633674028821,
+      "meaningful_c_interval_width_distribution": {
+        "maximum": 0.1269736842105263,
+        "mean": 0.08509633674028821,
+        "median": 0.0854754072681704,
+        "minimum": 0.03336466165413533,
+        "q025": 0.06124539865288222,
+        "q05": 0.06533110119047618,
+        "q95": 0.10378289473684207,
+        "q975": 0.10695567042606506,
+        "standard_deviation": 0.01176331142114132
+      },
+      "meaningful_c_power_lower_bound_gt_zero": 0.87905,
+      "meaningful_c_power_monte_carlo_se": 0.0023056571460214983,
+      "method": "nested_item_percentile_bootstrap_power",
+      "n_items": 57,
+      "outer_replications": 20000,
+      "seed": 2027082304,
+      "specificity_c_distribution": {
+        "maximum": 0.1535870927318296,
+        "mean": 0.06134579221491227,
+        "median": 0.06038533834586465,
+        "minimum": -0.00669642857142857,
+        "q025": 0.023809523809523808,
+        "q05": 0.028801495927318295,
+        "q95": 0.09637472587719297,
+        "q975": 0.10342261904761903,
+        "standard_deviation": 0.020546508803231976
+      },
+      "specificity_c_expected_interval_width": 0.07758972063948934,
+      "specificity_c_interval_width_distribution": {
+        "maximum": 0.12338659147869672,
+        "mean": 0.07758972063948934,
+        "median": 0.07809367167919798,
+        "minimum": 0.021428571428571425,
+        "q025": 0.053698969102443594,
+        "q05": 0.05797266604010025,
+        "q95": 0.09589922070802,
+        "q975": 0.09878710447994984,
+        "standard_deviation": 0.011603390267775932
+      },
+      "specificity_c_power_lower_bound_gt_zero": 0.9426,
+      "specificity_c_power_monte_carlo_se": 0.0016447680687562002
+    }
+  },
+  "planning": {
+    "adequacy_threshold": 0.8,
+    "inner_resamples": 1999,
+    "n_items": 57,
+    "outer_replications": 20000,
+    "seed": 2026082301
+  }
+}

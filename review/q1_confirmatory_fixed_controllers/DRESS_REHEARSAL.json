@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "C_G_D_independent_recomputation": true,
+    "bootstrap_determinism": true,
+    "classification_deterministic": true,
+    "exact_expected_row_count": true,
+    "holdout_content_accessed": false,
+    "independent_seed_collision_check": true,
+    "model_inference": false,
+    "no_midrun_scientific_metric_access_required": true,
+    "null_hashes_stable": true,
+    "resume_semantics": true,
+    "zero_duplicate_logical_keys": true
+  },
+  "classification": "DRESS_REHEARSAL_PASS",
+  "maximum_primary_independent_metric_difference": 0.0,
+  "models": {
+    "Ministral": {
+      "classification_deterministic": true,
+      "rows": 798,
+      "unique_keys": 798
+    },
+    "Qwen": {
+      "classification_deterministic": true,
+      "rows": 798,
+      "unique_keys": 798
+    }
+  },
+  "synthetic_fixture_items": 57
+}

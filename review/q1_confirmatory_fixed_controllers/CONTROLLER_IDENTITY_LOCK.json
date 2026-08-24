@@ -1,0 +1,66 @@
+{
+  "constructor": "PAIRED_CAREFUL_MINUS_DIRECT_MEAN_DIFFERENCE",
+  "controller_recomputed": false,
+  "controllers": {
+    "Ministral": {
+      "development_source": "Gate 13.1",
+      "dose": "D25",
+      "effective_delta_norm": 4.469907677389362,
+      "eta": 4.469907677389362,
+      "generation": {
+        "attention": "SDPA",
+        "do_sample": true,
+        "dtype": "BF16",
+        "environment": "CORE_MINISTRAL3",
+        "fix_mistral_regex": true,
+        "max_new_tokens": 4096,
+        "min_p": 0.0,
+        "temperature": 0.3,
+        "text_only": true,
+        "top_k": 0,
+        "top_p": 0.95,
+        "vision": false
+      },
+      "layer": 27,
+      "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+      "reference_scale": 1.0,
+      "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+      "textual_careful_sha256": "d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388",
+      "tokenizer_revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+      "vector_file_sha256": "c6a68967644ae51e60ffe879f6a2e126dc97630f8e6225eeef5ac8911803c9fc",
+      "vector_hash": "0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94",
+      "vector_path": "review/gate13_cross_model_ministral3/SOURCE_DIRECTIONS/L27.npy"
+    },
+    "Qwen": {
+      "development_source": "Gate 9",
+      "dose": "D75",
+      "effective_delta_norm": 97.85168930581241,
+      "eta": 9.637427952852196,
+      "generation": {
+        "attention": "SDPA",
+        "do_sample": true,
+        "dtype": "BF16",
+        "enable_thinking": false,
+        "environment": "CORE_QWEN",
+        "max_new_tokens": 4096,
+        "min_p": 0.0,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "layer": 27,
+      "model": "Qwen/Qwen3-8B",
+      "reference_scale": 10.153299177386142,
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "textual_careful_sha256": "d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388",
+      "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+      "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+      "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+    }
+  },
+  "holdout_activations_used": false,
+  "scope": "FINAL_PROMPT_TOKEN_PREFILL_AND_CURRENT_TOKEN_EACH_DECODE_FORWARD",
+  "status": "FIXED_DEVELOPMENT_CONTROLLERS_VERIFIED",
+  "timing": "SUSTAINED_CURRENT_TOKEN"
+}

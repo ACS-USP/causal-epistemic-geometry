@@ -1,0 +1,16 @@
+{
+  "classification": "PREMORTEM_PASS",
+  "dress_rehearsal": "DRESS_REHEARSAL_PASS",
+  "risks_checked": [
+    "holdout_leakage",
+    "controller_identity",
+    "null_selection",
+    "seed_independence",
+    "parser_invariance",
+    "attrition",
+    "cross_model_peeking",
+    "resume",
+    "cost"
+  ],
+  "scientific_ambiguity_remaining": false
+}

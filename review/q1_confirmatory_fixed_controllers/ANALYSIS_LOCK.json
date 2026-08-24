@@ -1,0 +1,28 @@
+{
+  "C_definition": "B00-B0j-U00+U0j_CANONICAL_TWO_ROLLOUT_U_STATISTIC",
+  "G_D_role": "SECONDARY_DESCRIPTIVE_ONLY",
+  "P1": "LOWER_95_CI_C_MEANINGFUL_GT_ZERO",
+  "P2": [
+    "LOWER_95_CI_C_MEANINGFUL_MINUS_MEAN_C_NULLS_GT_ZERO",
+    "POINT_C_MEANINGFUL_GT_MAX_C_NULLS"
+  ],
+  "bootstrap": {
+    "method": "TWO_SIDED_95_PERCENT_PERCENTILE",
+    "move_all_conditions_and_both_rollouts_together": true,
+    "resamples": 50000,
+    "seeds": {
+      "Ministral": 2026091102,
+      "Qwen": 2026091101
+    },
+    "unit": "ITEM"
+  },
+  "cross_model_rule": "BOTH_MODEL_SPECIFIC_HYPOTHESES_MUST_PASS",
+  "no_complete_case_filtering": true,
+  "primary_estimand": "C_MEANINGFUL",
+  "safety": {
+    "accuracy_relative_margin": -0.1,
+    "commitment_relative_margin": -0.05,
+    "evaluability_relative_margin": -0.05
+  },
+  "textual_careful_role": "DESCRIPTIVE_ONLY"
+}

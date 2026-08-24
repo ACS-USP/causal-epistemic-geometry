@@ -1,0 +1,75 @@
+experiment_id: Q1_CONFIRMATORY_FIXED_CONTROLLERS
+status: FROZEN_CONFIRMATORY_LOCK_PRE_HOLDOUT
+stage: CONFIRMATORY_PROSPECTIVE_LOCK
+holdout:
+  role: Q1_FIXED_CONTROLLER_CONFIRMATORY_HOLDOUT
+  status: SEALED_ASSIGNED_UNACCESSED
+  n: 57
+  ordered_id_list_sha256: a012b4d203d88d807a146ebbe8429c55a1834c6b8e0df5751a12b677ff7b2462
+  content_accessed: false
+models:
+  Qwen:
+    model: Qwen/Qwen3-8B
+    revision: b968826d9c46dd6066d109eabc6255188de91218
+    tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+    vector_path: review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy
+    vector_hash: e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838
+    vector_file_sha256: b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772
+    layer: 27
+    dose: D75
+    eta: 9.637427952852196
+    reference_scale: 10.153299177386142
+    effective_delta_norm: 97.85168930581241
+    development_source: Gate 9
+    generation:
+      dtype: BF16
+      attention: SDPA
+      environment: CORE_QWEN
+      enable_thinking: false
+      do_sample: true
+      temperature: 0.6
+      top_p: 0.95
+      top_k: 20
+      min_p: 0.0
+      max_new_tokens: 4096
+    textual_careful_sha256: d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388
+  Ministral:
+    model: mistralai/Ministral-3-8B-Instruct-2512-BF16
+    revision: f6fae9795746f63c9be8344932f01275f3c63734
+    tokenizer_revision: f6fae9795746f63c9be8344932f01275f3c63734
+    vector_path: review/gate13_cross_model_ministral3/SOURCE_DIRECTIONS/L27.npy
+    vector_hash: 0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94
+    vector_file_sha256: c6a68967644ae51e60ffe879f6a2e126dc97630f8e6225eeef5ac8911803c9fc
+    layer: 27
+    dose: D25
+    eta: 4.469907677389362
+    reference_scale: 1.0
+    effective_delta_norm: 4.469907677389362
+    development_source: Gate 13.1
+    generation:
+      dtype: BF16
+      attention: SDPA
+      environment: CORE_MINISTRAL3
+      fix_mistral_regex: true
+      text_only: true
+      vision: false
+      do_sample: true
+      temperature: 0.3
+      top_p: 0.95
+      top_k: 0
+      min_p: 0.0
+      max_new_tokens: 4096
+    textual_careful_sha256: d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388
+conditions:
+- BASELINE
+- TEXTUAL_CAREFUL
+- MEANINGFUL_FIXED
+- RANDOM_R0
+- RANDOM_R1
+- RANDOM_R2
+- RANDOM_R3
+rows:
+  per_model: 798
+  total: 1596
+analysis: review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json
+cost: review/q1_confirmatory_fixed_controllers/COST_LOCK.json

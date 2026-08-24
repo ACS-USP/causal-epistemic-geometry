@@ -1,0 +1,124 @@
+{
+  "analysis": "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json",
+  "conditions": [
+    "BASELINE",
+    "TEXTUAL_CAREFUL",
+    "MEANINGFUL_FIXED",
+    "RANDOM_R0",
+    "RANDOM_R1",
+    "RANDOM_R2",
+    "RANDOM_R3"
+  ],
+  "confirmatory_source_commit_binding": {
+    "file": "CONFIRMATORY_SOURCE_COMMIT.json",
+    "timing": "after this lock commit and before any holdout content access"
+  },
+  "cost": "review/q1_confirmatory_fixed_controllers/COST_LOCK.json",
+  "dress_rehearsal": {
+    "classification": "DRESS_REHEARSAL_PASS",
+    "maximum_primary_independent_metric_difference": 0.0
+  },
+  "exclusions": {
+    "allowed_only": [
+      "CORRUPTED_SOURCE_RECORD_INDEPENDENT_OF_MODEL_OUTPUT",
+      "IMPOSSIBLE_MISSING_REFERENCE_DUE_TO_REPOSITORY_DAMAGE"
+    ],
+    "default": "NO_POST_COLLECTION_ITEM_EXCLUSIONS",
+    "immutable_ledger_required": true,
+    "model_output_failures_retained_as_errors": true
+  },
+  "experiment_id": "Q1_CONFIRMATORY_FIXED_CONTROLLERS",
+  "holdout": {
+    "content_accessed": false,
+    "n": 57,
+    "ordered_id_list_sha256": "a012b4d203d88d807a146ebbe8429c55a1834c6b8e0df5751a12b677ff7b2462",
+    "role": "Q1_FIXED_CONTROLLER_CONFIRMATORY_HOLDOUT",
+    "status": "SEALED_ASSIGNED_UNACCESSED"
+  },
+  "holdout_content_accessed": false,
+  "lifecycle": "PROSPECTIVE_LOCK",
+  "models": {
+    "Ministral": {
+      "development_source": "Gate 13.1",
+      "dose": "D25",
+      "effective_delta_norm": 4.469907677389362,
+      "eta": 4.469907677389362,
+      "generation": {
+        "attention": "SDPA",
+        "do_sample": true,
+        "dtype": "BF16",
+        "environment": "CORE_MINISTRAL3",
+        "fix_mistral_regex": true,
+        "max_new_tokens": 4096,
+        "min_p": 0.0,
+        "temperature": 0.3,
+        "text_only": true,
+        "top_k": 0,
+        "top_p": 0.95,
+        "vision": false
+      },
+      "layer": 27,
+      "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+      "reference_scale": 1.0,
+      "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+      "textual_careful_sha256": "d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388",
+      "tokenizer_revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+      "vector_file_sha256": "c6a68967644ae51e60ffe879f6a2e126dc97630f8e6225eeef5ac8911803c9fc",
+      "vector_hash": "0c467b7a452619d058afb07c96fd0cd8e20abb19a58d89674ab0a42e00ef2b94",
+      "vector_path": "review/gate13_cross_model_ministral3/SOURCE_DIRECTIONS/L27.npy"
+    },
+    "Qwen": {
+      "development_source": "Gate 9",
+      "dose": "D75",
+      "effective_delta_norm": 97.85168930581241,
+      "eta": 9.637427952852196,
+      "generation": {
+        "attention": "SDPA",
+        "do_sample": true,
+        "dtype": "BF16",
+        "enable_thinking": false,
+        "environment": "CORE_QWEN",
+        "max_new_tokens": 4096,
+        "min_p": 0.0,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "layer": 27,
+      "model": "Qwen/Qwen3-8B",
+      "reference_scale": 10.153299177386142,
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "textual_careful_sha256": "d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388",
+      "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+      "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+      "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+    }
+  },
+  "null_bank_hashes": {
+    "Ministral": {
+      "RANDOM_R0": "dec1eed7f0114f6b7de5cc2389470362a1a0ee2bf1c6e8b63d17374bc9a52ad4",
+      "RANDOM_R1": "584195091f662fc6507bcc65e4a646c76d62258782ff0fda89d91952411c1918",
+      "RANDOM_R2": "2cc7f831ad0ab169308fa68186bd22c02f33f89431c59b0b6c01ece87227663a",
+      "RANDOM_R3": "3c8482cfaac9f69b57088d68493bcc1d749a378a21c35564e49f8e70f554dd3a"
+    },
+    "Qwen": {
+      "RANDOM_R0": "14068796823e3fe7bff714e4574efb0134a74e0ea5607191f5838fb98e74395b",
+      "RANDOM_R1": "bd035b5be25ec2a56d3d2602b5d7964006896d5f9223fea9734afe5259d49c31",
+      "RANDOM_R2": "783039b801dab9fb595129529e99dd6e35ac12b5dc7cff70f0683f8230a1d4e1",
+      "RANDOM_R3": "52fbae1bc7e0104d9a21b48710ce97b703633837e61235508deb3c10ed0ae5dc"
+    }
+  },
+  "power_classification": "Q1_CONFIRMATORY_N57_POWER_QUALIFIED",
+  "prepared_from_commit": "dba1eec2b5bf1beb2456566220bdce7843d24523",
+  "rows": {
+    "per_model": 798,
+    "total": 1596
+  },
+  "scientific_firewall": {
+    "q2": "NOT_RUN",
+    "q3": "NOT_RUN"
+  },
+  "stage": "CONFIRMATORY_PRE_HOLDOUT_LOCK_PREPARATION",
+  "status": "CONFIRMATORY_LOCKED_PRE_HOLDOUT"
+}
