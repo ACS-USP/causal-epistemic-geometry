@@ -1,9 +1,32 @@
 {
+  "artifact_recovery_and_audit_support_allowance_seconds": 3600,
+  "base_projected_cumulative_cost_usd": 2.284688590128073,
+  "base_projected_cumulative_runtime_hours": 5.030782662935538,
   "desired_wallet_reserve_usd": 3.0,
+  "estimated_disk_hourly_rate_usd": 0.014141779361806682,
+  "estimated_generation_seconds": {
+    "Ministral": 7439.783454266065,
+    "Qwen": 3123.0341323018724,
+    "total": 10562.817586567937
+  },
+  "generation_projection_basis": {
+    "Ministral": "Gate 13.1 final evaluation: 13052.25167415099 seconds / 1400 rows",
+    "Qwen": "Gate 9 final evaluation: 5479.007249652408 seconds / 1400 rows"
+  },
   "hard_cumulative_runpod_ceiling_usd": 8.75,
   "mandatory_projection_safety_margin": 0.25,
+  "observed_preflight_runtime_seconds": 3948,
+  "pod_hourly_rate_usd": 0.44,
   "preflight_must_use_non_holdout_or_consumed_development_fixtures": true,
-  "projection_status": "PENDING_REMOTE_PREFLIGHT",
+  "projected_cumulative_cost_with_margin_usd": 2.8558607376600915,
+  "projected_wallet_reserve_usd": 9.234139262339909,
+  "projection_status": "PASS_AUTHORIZED_COMPLETE_FIXED_DESIGN",
+  "recorded_at_utc": "2026-08-24T02:47:25Z",
+  "remote_preflight": {
+    "Ministral": "PASS",
+    "Qwen": "PASS",
+    "holdout_items_processed": 0
+  },
   "target_cumulative_runpod_cost_usd": 6.5,
   "wallet_observation_usd": 12.09
 }

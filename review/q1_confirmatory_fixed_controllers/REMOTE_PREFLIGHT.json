@@ -1,0 +1,27 @@
+{
+  "classification": "Q1_CONFIRMATORY_REMOTE_PREFLIGHT_PASS",
+  "confirmatory_source_commit": "2fd165e20a1116835097e4867d0d7d652c5227ab",
+  "engineering": {
+    "Ministral": {
+      "artifact": "ENGINEERING_CHECKS_MINISTRAL.json",
+      "artifact_sha256": "c9edbdd7d8dc9f6932dc0201b922871642f91d60d69412f1cff7e4e99fdb0435",
+      "classification": "GATE13_ENGINEERING_PASS",
+      "environment_profile": "CORE_MINISTRAL3",
+      "model_revision": "f6fae9795746f63c9be8344932f01275f3c63734"
+    },
+    "Qwen": {
+      "artifact": "ENGINEERING_CHECKS_QWEN.json",
+      "artifact_sha256": "84a865f10cb4af21070c92dd707e4395bef6a4c0d2962b281db88d9b8906e9f4",
+      "classification": "GATE7_ENGINEERING_PASS",
+      "environment_profile": "CORE_QWEN",
+      "model_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+    }
+  },
+  "gpu": "NVIDIA A40 48 GB",
+  "holdout_content_accessed": false,
+  "holdout_items_processed": 0,
+  "pod_id": "tz3geqdblhz24t",
+  "recorded_at_utc": "2026-08-24T02:47:25Z",
+  "runtime_checkout_clean_before_engineering": true,
+  "runtime_source_commit": "2fd165e20a1116835097e4867d0d7d652c5227ab"
+}

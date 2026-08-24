@@ -1,0 +1,65 @@
+{
+  "all_controllers_exercised": true,
+  "alpha_zero_identity": true,
+  "bf16_relative_tolerance": 2.0,
+  "cache_safety": true,
+  "classification": "GATE7_ENGINEERING_PASS",
+  "condition_metadata": true,
+  "controller_checks": {
+    "MEANINGFUL_FIXED": {
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838"
+    },
+    "RANDOM_R0": {
+      "delta_norm": 97.85168930581244,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "14068796823e3fe7bff714e4574efb0134a74e0ea5607191f5838fb98e74395b"
+    },
+    "RANDOM_R1": {
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "bd035b5be25ec2a56d3d2602b5d7964006896d5f9223fea9734afe5259d49c31"
+    },
+    "RANDOM_R2": {
+      "delta_norm": 97.8516893058124,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "783039b801dab9fb595129529e99dd6e35ac12b5dc7cff70f0683f8230a1d4e1"
+    },
+    "RANDOM_R3": {
+      "delta_norm": 97.85168930581241,
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "scope": "current_token",
+      "vector_hash": "52fbae1bc7e0104d9a21b48710ce97b703633837e61235508deb3c10ed0ae5dc"
+    }
+  },
+  "current_token_scope": true,
+  "engineering_prompt_count": 5,
+  "environment_profile": "CORE_QWEN",
+  "exercised_controller_conditions": [
+    "MEANINGFUL_FIXED",
+    "RANDOM_R0",
+    "RANDOM_R1",
+    "RANDOM_R2",
+    "RANDOM_R3"
+  ],
+  "gate7_evaluation_items_used": false,
+  "hook_cleanup": true,
+  "hook_trace_application_count": 112,
+  "hook_trace_forward_count": 112,
+  "max_abs_shift_error": 0.7421875,
+  "max_relative_shift_error_bf16_eps": 0.5,
+  "one_application_per_forward": true,
+  "pass": true,
+  "per_forward_exact_shift": true,
+  "random_matching": true
+}

@@ -1,0 +1,25 @@
+{
+  "holdout_content_accessed": false,
+  "incidents": [
+    {
+      "classification": "CLASS_A_PATH_CANONICALIZATION",
+      "effect_on_scientific_computation": "NONE",
+      "resolution": "Moved the clean source checkout to /workspace/causal-epistemic-geometry before model download or inference.",
+      "scientific_items_processed": 0
+    },
+    {
+      "classification": "CLASS_A_HF_TRANSFER_CONFIGURATION",
+      "effect_on_scientific_computation": "NONE",
+      "resolution": "Disabled the unavailable optional hf_transfer accelerator and used the standard Hugging Face downloader.",
+      "scientific_items_processed": 0
+    },
+    {
+      "classification": "CLASS_A_NETWORK_FILESYSTEM_RUNTIME_MIGRATION",
+      "effect_on_scientific_computation": "NONE",
+      "resolution": "Recreated the exact CORE_MINISTRAL3 Python environment on container-local storage after an empty preflight blocked in FUSE; model cache remained at the canonical path.",
+      "scientific_items_processed": 0
+    }
+  ],
+  "recorded_at_utc": "2026-08-24T02:47:25Z",
+  "scientific_design_changed": false
+}
