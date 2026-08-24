@@ -8,6 +8,7 @@ import hashlib
 import json
 import subprocess
 import sys
+from contextlib import nullcontext
 from pathlib import Path
 from typing import Any
 
@@ -32,6 +33,9 @@ from epistemic_geometry.benchmarks.external.semantic_v3 import (  # noqa: E402
 from epistemic_geometry.experiments.gate6 import paired_mean_direction  # noqa: E402
 from epistemic_geometry.experiments.gate6_3 import vector_sha256  # noqa: E402
 from epistemic_geometry.experiments.q2_controller_heldout_v2 import (  # noqa: E402
+    BASELINE,
+    DOSE_FRACTIONS,
+    DOSE_NAMES,
     EXECUTION_TEACHER_TEXT,
     EXPERIMENT_ID,
     LAYER,
@@ -40,10 +44,14 @@ from epistemic_geometry.experiments.q2_controller_heldout_v2 import (  # noqa: E
     MODEL_REVISION,
     SIGNS,
     SOURCE_AXES,
+    dose_condition_id,
+    dose_is_causal,
+    dose_is_safe,
     source_pass,
 )
 from epistemic_geometry.reproducibility import require_remote_hf_execution  # noqa: E402
 from epistemic_geometry.research.reliability import CrashSafeJournal  # noqa: E402
+from epistemic_geometry.steering.gate6 import Gate6HookTrace  # noqa: E402
 
 REVIEW = ROOT / "review/q2_controller_bank_v2"
 MAX_NEW_TOKENS = 4096
@@ -380,9 +388,260 @@ def finalize_source(review: Path, source_commit: str) -> None:
         raise RuntimeError("Q2_V2_SOURCE_BANK_TOO_NARROW")
 
 
+def dose_lock(review: Path) -> dict[str, Any]:
+    lock = read_json(review / "V2_DOSE_CALIBRATION_LOCK.json")
+    if lock["status"] != "FROZEN_PRE_DOSE_CALIBRATION":
+        raise RuntimeError("Q2 V2 dose-calibration lock is not frozen")
+    return lock
+
+
+def _load_source_directions(review: Path) -> tuple[dict[str, np.ndarray], dict[str, Any]]:
+    bank = read_json(review / "V2_SOURCE_DIRECTION_BANK.json")
+    vectors: dict[str, np.ndarray] = {}
+    for name, metadata in bank["directions"].items():
+        path = ROOT / metadata["path"]
+        vector = np.load(path, allow_pickle=False).astype(np.float64).reshape(-1)
+        if vector_sha256(vector) != metadata["vector_hash"]:
+            raise RuntimeError(f"V2 source direction hash mismatch: {name}")
+        if abs(float(np.linalg.norm(vector)) - 1.0) > 1e-10:
+            raise RuntimeError(f"V2 source direction is not unit norm: {name}")
+        vectors[name] = vector
+    return vectors, bank["directions"]
+
+
+def _calibration_context(
+    backend: Any,
+    item: Any,
+    condition: str,
+    vectors: dict[str, np.ndarray],
+    metadata: dict[str, Any],
+) -> tuple[Any, Any, dict[str, Any]]:
+    row = model_item(item)
+    prompt_ids, _rendered, prompt_hash = prompt_tokens(backend, row)
+    if condition == BASELINE:
+        return (
+            nullcontext(),
+            row,
+            {
+                "intervention": "none",
+                "prompt_length": len(prompt_ids),
+                "rendered_prompt_hash_preflight": prompt_hash,
+            },
+        )
+    lookup = metadata[condition]
+    direction = vectors[lookup["controller"]]
+    delta_norm = float(lookup["fraction"] * lookup["reference_scale"])
+    delta = direction * delta_norm
+    tensor = backend.torch.tensor(delta, dtype=backend.torch.float32, device=backend.device).view(
+        1, 1, -1
+    )
+    return (
+        Gate6HookTrace(
+            layers={LAYER: backend.layer_module(LAYER)},
+            deltas={LAYER: tensor},
+            target_positions=[len(prompt_ids) - 1],
+        ),
+        row,
+        {
+            "intervention": lookup["controller"],
+            "controller": lookup["controller"],
+            "dose": lookup["dose"],
+            "dose_fraction": lookup["fraction"],
+            "reference_scale": lookup["reference_scale"],
+            "delta_norm": delta_norm,
+            "layer": LAYER,
+            "duration": "sustained_current_token",
+            "scope": "final_prompt_token_then_current_decode_token",
+            "vector_hash": lookup["vector_hash"],
+            "prompt_length": len(prompt_ids),
+            "rendered_prompt_hash_preflight": prompt_hash,
+        },
+    )
+
+
+def _calibration_condition_map(
+    directions: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    conditions: dict[str, dict[str, Any]] = {}
+    for controller, record in directions.items():
+        for dose, fraction in zip(DOSE_NAMES, DOSE_FRACTIONS, strict=True):
+            conditions[dose_condition_id(controller, dose)] = {
+                "controller": controller,
+                "dose": dose,
+                "fraction": float(fraction),
+                "reference_scale": float(record["reference_scale"]),
+                "vector_hash": record["vector_hash"],
+            }
+    return conditions
+
+
+def calibration_phase(backend: Any, review: Path, source_commit: str) -> None:
+    lock = dose_lock(review)
+    vectors, directions = _load_source_directions(review)
+    condition_map = _calibration_condition_map(directions)
+    items = {
+        item.item_id: item for item in load_external(review / lock["calibration_manifest"]["file"])
+    }
+    schedule = read_json(review / lock["schedule"]["file"])
+    journal = CrashSafeJournal(
+        review / "V2_DOSE_CALIBRATION_JOURNAL.jsonl",
+        identity={
+            "experiment_id": EXPERIMENT_ID,
+            "phase": "V2_DOSE_CALIBRATION",
+            "source_commit": source_commit,
+            "dose_lock_sha256": sha256(review / "V2_DOSE_CALIBRATION_LOCK.json"),
+        },
+        key_fields=("item_id", "condition", "rollout_index"),
+    )
+    for row in schedule:
+        key = (row["item_id"], row["condition"], row["rollout_index"])
+        if key in journal.rows:
+            continue
+        condition = row["condition"]
+        if condition != BASELINE and condition not in condition_map:
+            raise RuntimeError(f"unknown calibration condition: {condition}")
+        context, model_row, condition_metadata = _calibration_context(
+            backend, items[row["item_id"]], condition, vectors, condition_map
+        )
+        with context as trace:
+            output = backend.generate_reasoning(
+                model_row,
+                sampling_seed=int(row["seed"]),
+                max_new_tokens=MAX_NEW_TOKENS,
+                intervention_metadata={
+                    "experiment_id": EXPERIMENT_ID,
+                    "phase": "V2_DOSE_CALIBRATION",
+                    "correctness_not_evaluated": True,
+                    **condition_metadata,
+                },
+            )
+        metadata = dict(output.metadata)
+        token_count = int(metadata.get("generated_token_count", 0))
+        journal.append(
+            {
+                **row,
+                **_mechanical_parse(output.raw_output, token_count),
+                "raw_output": output.raw_output,
+                "generated_token_ids": metadata.get("generated_token_ids", []),
+                "generated_token_count": token_count,
+                "condition_metadata": condition_metadata,
+                "hook_trace": trace.metadata() if condition != BASELINE else None,
+                "model": MODEL,
+                "model_revision": MODEL_REVISION,
+                "parser_version": PARSER_VERSION,
+                "source_commit": source_commit,
+                "correctness_evaluated": False,
+            }
+        )
+    if len(journal.rows) != len(schedule):
+        raise RuntimeError("V2 dose calibration journal is incomplete")
+    finalize_calibration(review, source_commit)
+    print(json.dumps({"phase": "dose_calibration", "rows": len(journal.rows)}), flush=True)
+
+
+def finalize_calibration(review: Path, source_commit: str) -> None:
+    dose_lock(review)
+    source_bank = read_json(review / "V2_SOURCE_DIRECTION_BANK.json")
+    directions = source_bank["directions"]
+    rows = _journal_rows(
+        review / "V2_DOSE_CALIBRATION_JOURNAL.jsonl",
+        identity={
+            "experiment_id": EXPERIMENT_ID,
+            "phase": "V2_DOSE_CALIBRATION",
+            "source_commit": source_commit,
+            "dose_lock_sha256": sha256(review / "V2_DOSE_CALIBRATION_LOCK.json"),
+        },
+        keys=("item_id", "condition", "rollout_index"),
+    )
+    by_key = {(row["item_id"], row["condition"]): row for row in rows}
+    items = sorted({row["item_id"] for row in rows})
+    records: dict[str, Any] = {}
+    for controller, source_metadata in sorted(directions.items()):
+        doses: dict[str, Any] = {}
+        baseline_rows = [by_key[(item_id, BASELINE)] for item_id in items]
+        baseline = {
+            "validity": float(np.mean([row["commitment_valid"] for row in baseline_rows])),
+            "evaluability": float(np.mean([row["semantic_evaluable"] for row in baseline_rows])),
+        }
+        for dose in DOSE_NAMES:
+            condition = dose_condition_id(controller, dose)
+            selected = [by_key[(item_id, condition)] for item_id in items]
+            record = {
+                "controller": controller,
+                "source_axis": source_metadata["source_axis"],
+                "source_location": source_metadata["source_location"],
+                "sign": source_metadata["sign"],
+                "dose": dose,
+                "fraction": float(DOSE_FRACTIONS[DOSE_NAMES.index(dose)]),
+                "reference_scale": float(source_metadata["reference_scale"]),
+                "delta_norm": float(
+                    DOSE_FRACTIONS[DOSE_NAMES.index(dose)] * source_metadata["reference_scale"]
+                ),
+                "validity": float(np.mean([row["commitment_valid"] for row in selected])),
+                "evaluability": float(np.mean([row["semantic_evaluable"] for row in selected])),
+                "truncation_rate": float(
+                    np.mean([row["generated_token_count"] >= MAX_NEW_TOKENS for row in selected])
+                ),
+                "raw_sequence_movement": float(
+                    np.mean(
+                        [
+                            row["generated_token_ids"] != base["generated_token_ids"]
+                            for row, base in zip(selected, baseline_rows, strict=True)
+                        ]
+                    )
+                ),
+                "semantic_movement": float(
+                    np.mean(
+                        [
+                            row["canonical_value"] != base["canonical_value"]
+                            for row, base in zip(selected, baseline_rows, strict=True)
+                        ]
+                    )
+                ),
+                "mean_token_delta": float(
+                    np.mean(
+                        [
+                            row["generated_token_count"] - base["generated_token_count"]
+                            for row, base in zip(selected, baseline_rows, strict=True)
+                        ]
+                    )
+                ),
+            }
+            record["safe_pass"] = dose_is_safe(record, baseline)
+            record["causal_pass"] = dose_is_causal(record, baseline)
+            doses[dose] = record
+        causal = [dose for dose in DOSE_NAMES if doses[dose]["causal_pass"]]
+        safe = [dose for dose in DOSE_NAMES if doses[dose]["safe_pass"]]
+        selected_dose = causal[0] if causal else (safe[0] if safe else None)
+        records[controller] = {
+            "controller": controller,
+            "source_axis": source_metadata["source_axis"],
+            "source_location": source_metadata["source_location"],
+            "sign": source_metadata["sign"],
+            "baseline": baseline,
+            "doses": doses,
+            "causal_doses": causal,
+            "safe_doses": safe,
+            "selected_dose": selected_dose,
+            "causal_pass": bool(causal),
+            "correctness_used": False,
+        }
+    write_json(
+        review / "V2_DOSE_CALIBRATION.json",
+        {
+            "status": "COMPLETE_LABEL_FREE_CALIBRATION",
+            "source_commit": source_commit,
+            "controllers": records,
+            "accuracy_used": False,
+            "G_C_D_used": False,
+            "common_panel_outcomes_read": False,
+        },
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", required=True, choices=("source",))
+    parser.add_argument("--mode", required=True, choices=("source", "calibration"))
     parser.add_argument("--model-path", required=True)
     parser.add_argument("--review-dir", type=Path, default=REVIEW)
     parser.add_argument("--source-commit", required=True)
@@ -390,7 +649,10 @@ def main() -> int:
     require_remote_hf_execution(f"Q2 V2 {args.mode}")
     review = args.review_dir.resolve()
     backend = build_backend(args.model_path)
-    source_phase(backend, review, args.source_commit)
+    if args.mode == "source":
+        source_phase(backend, review, args.source_commit)
+    else:
+        calibration_phase(backend, review, args.source_commit)
     return 0
 
 
