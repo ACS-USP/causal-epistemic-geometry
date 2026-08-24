@@ -57,8 +57,9 @@ def main() -> int:
     if state["scientific_firewall"]["confirmatory_holdout"] not in {
         "UNTOUCHED",
         "SEALED_ASSIGNED_UNACCESSED",
+        "CONSUMED_CONFIRMATORY_CLOSED",
     }:
-        errors.append("confirmatory holdout firewall is not sealed")
+        errors.append("confirmatory holdout firewall has an unknown state")
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1

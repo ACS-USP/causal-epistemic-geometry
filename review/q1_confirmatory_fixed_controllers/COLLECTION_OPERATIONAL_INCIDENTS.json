@@ -1,0 +1,31 @@
+{
+  "classification": "NONSCIENTIFIC_CLASS_A_OPERATIONAL_INCIDENTS",
+  "incidents": [
+    {
+      "affected_model": "Qwen",
+      "description": "The Python environment on the /workspace FUSE filesystem blocked during startup before any journal row existed. The process was terminated and the exact frozen CORE_QWEN environment was reconstructed on local container disk.",
+      "scientific_rows_existed_at_detection": 0,
+      "scientific_semantics_changed": false,
+      "resolution": "Rebuilt Python 3.11.16 with torch 2.4.1+cu124, transformers 4.57.1, accelerate 1.14.0, and huggingface-hub 0.36.0; CORE_QWEN preflight passed."
+    },
+    {
+      "affected_model": "Qwen",
+      "description": "The resumed runner loaded from the FUSE Hugging Face cache and produced three rows before another FUSE read stall was diagnosed. The process was terminated only after the three append-and-fsync journal rows were observed operationally.",
+      "completed_rows_preserved": 3,
+      "scientific_metrics_inspected": false,
+      "scientific_semantics_changed": false,
+      "resolution": "Copied the byte-identical 34,253,075,304-byte cache to local container disk, exposed it at the canonical /workspace/hf-cache path, reran CORE_QWEN preflight, and resumed from immutable logical keys without regenerating the three rows."
+    }
+  ],
+  "journal_crosscheck": {
+    "qwen_rows": 798,
+    "qwen_unique_logical_keys": 798,
+    "ministral_rows": 798,
+    "ministral_unique_logical_keys": 798,
+    "duplicate_logical_keys": 0,
+    "rows_with_retry_provenance": 0
+  },
+  "outcome_leakage": false,
+  "source_commit_changed": false,
+  "final_forensic_classification": "Q1_CONFIRMATORY_FORENSIC_CLEAN"
+}

@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `CONFIRMATORY_COMPLETE` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now prospectively assigned the exact previously reserved, unseen 57-ID set as the Q1 fixed-controller confirmatory holdout. Offline N=57 power qualified for both fixed models (Qwen 0.87905; Ministral 0.94410), the complete synthetic dress rehearsal passed, and all scientific code, controllers, fresh null banks, seeds, parser, estimands, and criteria are frozen at the confirmatory source commit. The holdout remains sealed.
+The fixed-controller Q1 confirmatory test consumed the prospectively assigned 57-ID holdout only after the frozen cost gate passed. Qwen passed every frozen safety, positive-C, and random-null criterion (C=0.05435, 95% bootstrap interval 0.01441 to 0.09680). Ministral showed positive and null-specific complementarity but failed the frozen commitment-validity and semantic-evaluability guards at 0.88596. The exact terminal classification is Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The independent forensic audit was clean with zero metric discrepancy.
 
-**Next authorized action:** Run non-holdout remote engineering and throughput preflight, apply the frozen cost gate with the 25% safety margin, and access holdout content only if the complete two-model design remains within the authorized envelope.
+**Next authorized action:** Principal researcher review. No new experiment, Q2, or Q3 is authorized.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

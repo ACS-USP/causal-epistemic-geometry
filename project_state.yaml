@@ -1,9 +1,9 @@
 schema_version: 1
-last_verified: "2026-08-23"
+last_verified: "2026-08-24"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: DEVELOPMENT
+  scientific_stage: CONFIRMATORY_COMPLETE
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -20,33 +20,32 @@ project:
 
 current:
   workstream: Q1_CONFIRMATORY_FIXED_CONTROLLERS
-  lifecycle: PROSPECTIVE_LOCK
-  stage: CONFIRMATORY
+  lifecycle: CLOSED
+  stage: CONFIRMATORY_COMPLETE
   source_commit: 2fd165e20a1116835097e4867d0d7d652c5227ab
   summary: >-
-    Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has
-    now prospectively assigned the exact previously reserved, unseen 57-ID set
-    as the Q1 fixed-controller confirmatory holdout. Offline N=57 power
-    qualified for both fixed models (Qwen 0.87905; Ministral 0.94410), the
-    complete synthetic dress rehearsal passed, and all scientific code,
-    controllers, fresh null banks, seeds, parser, estimands, and criteria are
-    frozen at the confirmatory source commit. The holdout remains sealed.
+    The fixed-controller Q1 confirmatory test consumed the prospectively
+    assigned 57-ID holdout only after the frozen cost gate passed. Qwen passed
+    every frozen safety, positive-C, and random-null criterion (C=0.05435,
+    95% bootstrap interval 0.01441 to 0.09680). Ministral showed positive and
+    null-specific complementarity but failed the frozen commitment-validity and
+    semantic-evaluability guards at 0.88596. The exact terminal classification
+    is Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The independent forensic audit
+    was clean with zero metric discrepancy.
   next_authorized_action: >-
-    Run non-holdout remote engineering and throughput preflight, apply the
-    frozen cost gate with the 25% safety margin, and access holdout content only
-    if the complete two-model design remains within the authorized envelope.
+    Principal researcher review. No new experiment, Q2, or Q3 is authorized.
   runpod: TERMINATED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: true
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: false
 
 scientific_firewall:
-  steering: Q1_CONFIRMATORY_LOCKED_PRE_HOLDOUT_COST_GATE_PENDING
+  steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
   geometry_q2: NOT_RUN
   committee_q3: NOT_RUN
-  confirmatory_holdout: SEALED_ASSIGNED_UNACCESSED
+  confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q1_CONFIRMATORY_REMOTE_PREFLIGHT_AND_COST_GATE
+  current_task: PRINCIPAL_RESEARCHER_REVIEW
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -55,20 +54,35 @@ confirmatory_program:
     role: Q1_FIXED_CONTROLLER_CONFIRMATORY_HOLDOUT
     exact_set: 57_reserved_cruxeval_ids
     ordered_id_list_sha256: a012b4d203d88d807a146ebbe8429c55a1834c6b8e0df5751a12b677ff7b2462
-    status: SEALED_ASSIGNED_UNACCESSED
+    status: CONSUMED_CONFIRMATORY_CLOSED
     designation_semantics: PROSPECTIVE_ROLE_ASSIGNMENT_AFTER_DEVELOPMENT_BEFORE_CONTENT_OR_OUTCOME_ACCESS
     provenance_audit_commit: 2aff0a8f3e9006731066f4d91ebaa638d84fe2e0
     phase_zero_block: RESOLVED_BY_PROSPECTIVE_PRINCIPAL_ASSIGNMENT
-    prompts_inspected: false
-    references_inspected: false
-    outcomes_inspected: false
-    confirmatory_inference: NOT_RUN
+    prompts_inspected: true
+    references_inspected: true
+    outcomes_inspected: true
+    confirmatory_inference: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
     power_qualification: Q1_CONFIRMATORY_N57_POWER_QUALIFIED
     qwen_n57_primary_c_power: 0.87905
     ministral_n57_primary_c_power: 0.94410
     dress_rehearsal: DRESS_REHEARSAL_PASS
     confirmatory_source_commit: 2fd165e20a1116835097e4867d0d7d652c5227ab
-    protocol_status: CONFIRMATORY_LOCKED_PRE_HOLDOUT
+    protocol_status: CONFIRMATORY_CLOSED_FORENSIC_CLEAN
+    scientific_rows: 1596
+    qwen_model_result: PASS
+    qwen_c: 0.05435463659147877
+    qwen_c_interval_95: [0.014411027568922305, 0.09680451127819548]
+    qwen_delta_c_nullmean: 0.03871005639097745
+    qwen_delta_c_nullmean_interval_95: [0.00601112155388471, 0.07456140350877193]
+    ministral_model_result: FAIL_VALIDITY_EVALUABILITY_GUARDS
+    ministral_c: 0.07299498746867167
+    ministral_c_interval_95: [0.02177318295739348, 0.12280897556390988]
+    ministral_commitment_validity: 0.8859649122807017
+    ministral_semantic_evaluability: 0.8859649122807017
+    forensic_classification: Q1_CONFIRMATORY_FORENSIC_CLEAN
+    runpod_status: TERMINATED
+    active_pods: 0
+    retained_volumes: 0
 
 instrument_history:
   - id: Q1_V1_SERIES
@@ -390,22 +404,22 @@ instrument_history:
       retained_volume: DELETED
     next_action: Principal researcher review; next protocol drafted only.
   - id: Q1_CONFIRMATORY_FIXED_CONTROLLERS
-    status: HOLDOUT_ASSIGNED_POWER_PENDING
+    status: CLOSED_QWEN_PASS_MINISTRAL_FAIL
     conclusion: >-
-      The exact 57 IDs that remained reserved, unseen, and unallocated during
-      DEVELOPMENT were prospectively assigned to the Q1 fixed-controller
-      confirmatory role after a clean provenance audit. The assignment is not
-      retroactive, the set remains sealed, and no confirmatory inference or
-      evidence exists. Offline N=57 power qualification is the only current
-      authorized action.
-    source_commit: 2aff0a8f3e9006731066f4d91ebaa638d84fe2e0
+      On the prospectively assigned 57-ID holdout, the frozen Qwen controller
+      passed every confirmatory criterion. The frozen Ministral controller had
+      positive C and exceeded its random null bank, but failed the absolute and
+      relative commitment-validity/evaluability guards. The exact cross-model
+      classification is Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL; this must not
+      be softened into a partial cross-model pass. The forensic audit was clean.
+    source_commit: 2fd165e20a1116835097e4867d0d7d652c5227ab
     artifact: review/q1_confirmatory_fixed_controllers/
-    holdout_status: SEALED_ASSIGNED_UNACCESSED
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
     gpu_authorized: false
     free_generation: NOT_AUTHORIZED
     q2: NOT_RUN
     q3: NOT_RUN
-    next_action: Offline power qualification only.
+    next_action: Principal researcher review; no next experiment authorized.
 
 workflow_regimes:
   EXPLORATION:

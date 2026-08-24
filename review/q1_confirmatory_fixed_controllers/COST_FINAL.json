@@ -1,0 +1,15 @@
+{
+  "billing_observation": {
+    "observed_amount_usd": 1.735800081398338,
+    "observation_status": "PARTIAL_LAGGING_RUNPOD_BILLING_BUCKETS",
+    "pod_count": 1
+  },
+  "estimated_final_cost_usd": 2.17,
+  "estimate_basis": "Pod tz3geqdblhz24t ran from 2026-08-24T01:40:21Z until approximately 2026-08-24T06:18Z at US$0.44/GPU-hour plus observed disk billing near US$0.02778/hour.",
+  "hard_ceiling_usd": 8.75,
+  "projection_with_25_percent_margin_usd": 2.8558607376600915,
+  "status": "WITHIN_FROZEN_COST_GATE",
+  "runpod": "TERMINATED",
+  "active_pods": 0,
+  "retained_network_volumes": 0
+}

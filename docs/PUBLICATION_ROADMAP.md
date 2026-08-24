@@ -128,3 +128,23 @@ second task where textual CAREFUL is prospectively useful, with fixed
 controllers and no task-outcome controller search. Program B remains important
 because source readability weakly ranked causal-Q across Ministral layers.
 Program C remains paused; Q2 and Q3 remain closed.
+
+## Q1 confirmatory fixed-controller result
+
+The prospectively assigned 57-item CRUXEval holdout has now been consumed by
+the frozen two-model confirmatory test. Qwen passed every frozen safety,
+positive-complementarity, and fresh-random-null criterion: C was 0.05435 with a
+95% item-bootstrap interval of 0.01441 to 0.09680, and the meaningful-minus-null
+mean C contrast also had a positive lower bound. Ministral likewise showed
+positive, null-specific complementarity, but its commitment validity and
+semantic evaluability were both 0.88596 and therefore failed the frozen safety
+guards.
+
+The exact terminal classification is
+`Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL`. It is not a partial cross-model
+pass. Program A gains confirmatory support for the fixed Qwen controller, but
+the strict cross-model confirmatory claim is not established. The Ministral
+result localizes the failure to output safety rather than absence of measured
+complementarity; that distinction is descriptive and does not override the
+failed confirmatory decision rule. Programs B and C remain mechanistic research
+directions, but Q2 and Q3 are not authorized by this closeout.

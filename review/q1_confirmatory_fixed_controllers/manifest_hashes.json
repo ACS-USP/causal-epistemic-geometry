@@ -1,0 +1,206 @@
+{
+  "ANALYSIS_LOCK.json": {
+    "bytes": 856,
+    "sha256": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145"
+  },
+  "COLLECTION_METADATA_MINISTRAL.json": {
+    "bytes": 198,
+    "sha256": "df197d306709e59cf1b37bb08233d2c6688bfb184541f9714906b9d87ffdb4fd"
+  },
+  "COLLECTION_METADATA_QWEN.json": {
+    "bytes": 193,
+    "sha256": "32524dd26827c1a79472f10b44b4d4f809efbb025e68ff0854dd4eb3914cf3aa"
+  },
+  "COLLECTION_OPERATIONAL_INCIDENTS.json": {
+    "bytes": 1692,
+    "sha256": "4e802b73b509b1b109c520bafda4bb66e070d70fa531241a817a062e2b1cfb24"
+  },
+  "CONFIRMATORY_RESULTS.json": {
+    "bytes": 13476,
+    "sha256": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+  },
+  "CONFIRMATORY_SOURCE_COMMIT.json": {
+    "bytes": 318,
+    "sha256": "3d8f858d55ead541d4b60b870d8f54fec2e1caa17e0a2601431a712c53a34268"
+  },
+  "CONTROLLER_IDENTITY_LOCK.json": {
+    "bytes": 2582,
+    "sha256": "42a2b57dc1df786eaa3452036007541d256c0882125add8721c12de7534059db"
+  },
+  "COST_FINAL.json": {
+    "bytes": 592,
+    "sha256": "fa36e3a471ccd9a9e3baecbafe0619793cc08fbf8086ba103ee205a8ebe12c16"
+  },
+  "COST_LOCK.json": {
+    "bytes": 1289,
+    "sha256": "48173c12ef62ea0c1372bd5d9295e5badc85ba1267403c12742ce552c534616e"
+  },
+  "CROSS_MODEL_CONFIRMATORY_REPORT.json": {
+    "bytes": 115,
+    "sha256": "8e546661cae3b18eeb1a1fcf9bc100f17fbb5a5b96af8c96416d6ba390e2725c"
+  },
+  "DESIGN_REVIEW.md": {
+    "bytes": 350,
+    "sha256": "d64bc775bcd3d6ad13cedfdbd8b78bde07bd14f1c88a0b589bdd5c13766648d0"
+  },
+  "DRESS_REHEARSAL.json": {
+    "bytes": 830,
+    "sha256": "63d37c3bd35da38ecc276ef61e2b6ee1ae4f5849bc29d4e95ed668e242bdaf97"
+  },
+  "ENGINEERING_CHECKS_MINISTRAL.json": {
+    "bytes": 1776,
+    "sha256": "c9edbdd7d8dc9f6932dc0201b922871642f91d60d69412f1cff7e4e99fdb0435"
+  },
+  "ENGINEERING_CHECKS_QWEN.json": {
+    "bytes": 2057,
+    "sha256": "84a865f10cb4af21070c92dd707e4395bef6a4c0d2962b281db88d9b8906e9f4"
+  },
+  "FORENSIC_AUDIT.json": {
+    "bytes": 4392,
+    "sha256": "470219775b71770e3b62fe2271f2a7c9fed0154d00bf1811cf2f1e79c0c9dcb7"
+  },
+  "HOLDOUT_ACCESS_EVENT.json": {
+    "bytes": 280,
+    "sha256": "3aab0f40fdbc5b897a849caadf0ac7c321ac3d5f28ff19a1fd7130b65912365f"
+  },
+  "HOLDOUT_CONTENT_MANIFEST.json": {
+    "bytes": 68992,
+    "sha256": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283"
+  },
+  "HOLDOUT_IDENTITY_LOCK.json": {
+    "bytes": 978,
+    "sha256": "1ff1ecf593729b3e6996cb15cedb8d6220dc5a6572b55a6d085fcc60af33d9ea"
+  },
+  "HOLDOUT_IDENTITY_LOCK.md": {
+    "bytes": 921,
+    "sha256": "3009693441f52b16c35d68799f883aead7ae9d9b85996406df360ca841b24141"
+  },
+  "HOLDOUT_PROVENANCE_AUDIT.json": {
+    "bytes": 4711,
+    "sha256": "146be38ab1ad0ec69fa92c73302b0515678a1828f035103fec4da587fddc8703"
+  },
+  "HOLDOUT_PROVENANCE_AUDIT.md": {
+    "bytes": 2640,
+    "sha256": "d94923b30b7c01309eee322cf7c3f86ea44469daf27e01d98e20411e550c21bd"
+  },
+  "HYPOTHESIS_LOCK.md": {
+    "bytes": 487,
+    "sha256": "0fe5284c03fe958c185ad0941a330860e5bffafc407fd93641f5c45f230fab99"
+  },
+  "LOO_SENSITIVITY.csv": {
+    "bytes": 11212,
+    "sha256": "6f9e49d47d719abb80455a4b3e1c62119e89e257d493e8559a856728ba71cd5f"
+  },
+  "MINISTRAL_CONFIRMATORY_REPORT.json": {
+    "bytes": 5938,
+    "sha256": "51dfa2dde8ea0b2f050ec3882bbe70a2712e317989e3c707df06526a3a938769"
+  },
+  "NULL_BANK_LOCK_MINISTRAL.json": {
+    "bytes": 3299,
+    "sha256": "7b5725f3118dc46d7a019d40a8f0c96071b28dd09b2e11aa8b79332734d1ad9d"
+  },
+  "NULL_BANK_LOCK_QWEN.json": {
+    "bytes": 3333,
+    "sha256": "6ec601441e9e291a40ee8c63cdda461f7cb172a1de9ed4ced6e52a71861ea0e4"
+  },
+  "NULL_DIRECTIONS_MINISTRAL/RANDOM_R0.npy": {
+    "bytes": 32896,
+    "sha256": "eccd83005f337f86fd7ea73489ab18a0ff2e7807be72de1e87a421ff87b8a3a5"
+  },
+  "NULL_DIRECTIONS_MINISTRAL/RANDOM_R1.npy": {
+    "bytes": 32896,
+    "sha256": "6f9bba8bfd8e8e0bbe9c7e89b93af03873c53a7dfe8610253d9ad603fba087eb"
+  },
+  "NULL_DIRECTIONS_MINISTRAL/RANDOM_R2.npy": {
+    "bytes": 32896,
+    "sha256": "de6f4fe513eec11b53479b135a795dc85eda264e998e54a8e6b4152e7d72d367"
+  },
+  "NULL_DIRECTIONS_MINISTRAL/RANDOM_R3.npy": {
+    "bytes": 32896,
+    "sha256": "63e1e1064d11fb1a802b8cee8bf3ae4eef59876599bd1cc668a66275e8e6b64b"
+  },
+  "NULL_DIRECTIONS_QWEN/RANDOM_R0.npy": {
+    "bytes": 32896,
+    "sha256": "366b01ff047b38602f078052cadac3c5456604dcc343db23f4936505f90acbba"
+  },
+  "NULL_DIRECTIONS_QWEN/RANDOM_R1.npy": {
+    "bytes": 32896,
+    "sha256": "ca0464ff2968d9cd71e8e1117ac48c268ba14dec62bd2ef231c4299cb3e80f46"
+  },
+  "NULL_DIRECTIONS_QWEN/RANDOM_R2.npy": {
+    "bytes": 32896,
+    "sha256": "aac53fdefc522c4b7bda1fa327822b34c2686669e85b10bf27b7995d7ddd2a9a"
+  },
+  "NULL_DIRECTIONS_QWEN/RANDOM_R3.npy": {
+    "bytes": 32896,
+    "sha256": "9f3865f60f84966ca9730b2a29e7801a5a96feca04d40dfc84dc2ee813a129f4"
+  },
+  "POWER_ANALYSIS.json": {
+    "bytes": 5707,
+    "sha256": "9edfb7f5961e851d7888146fb04cb1c7fa0df3d2b7b17719c420946438726232"
+  },
+  "POWER_ANALYSIS.md": {
+    "bytes": 1249,
+    "sha256": "d26676873666391bfd862767c5957ab111719cb9bb99538b955f00aa3d4b6aa5"
+  },
+  "POWER_ANALYSIS_LOCK.json": {
+    "bytes": 2100,
+    "sha256": "4115865514266fd62811f9f624f682bf765d130f6638b7aa88bb9188b357251c"
+  },
+  "POWER_ANALYSIS_LOCK.md": {
+    "bytes": 886,
+    "sha256": "718bc8aba91dfa0d53c2d221f4a2543c48f18cca9f0d16ec1ea0989ef3c25d1d"
+  },
+  "PREMORTEM.json": {
+    "bytes": 346,
+    "sha256": "74fe032cfdeaae573c21e377df95eab30806e4c2865eed225dbc381b12ae7ad1"
+  },
+  "PREMORTEM.md": {
+    "bytes": 632,
+    "sha256": "e7abfcda69590f75f72948f0e06851596e661f5e2ebe9b17d9e0ec415ce155a4"
+  },
+  "PRE_HOLDOUT_OPERATIONAL_INCIDENTS.json": {
+    "bytes": 1087,
+    "sha256": "19959c455bd7f1d9666c1ae51d130ab1d9e6f99d15c210e504939211e60dc200"
+  },
+  "PROTOCOL_LOCK.json": {
+    "bytes": 4717,
+    "sha256": "971ee8d29f54106dee74c0fe3f099a8c892ddf9e260e616e67beb481ef6bb96c"
+  },
+  "PROTOCOL_LOCK.md": {
+    "bytes": 795,
+    "sha256": "05a9001033c2cf01bbdb67d93c11955ce24d6b24e36854fa304ae0d17b21f1bd"
+  },
+  "QWEN_CONFIRMATORY_REPORT.json": {
+    "bytes": 5774,
+    "sha256": "6d316d6606a7a802e481754b2193325226708b509b8a5b98d4f5ffbabad96bf9"
+  },
+  "REMOTE_PREFLIGHT.json": {
+    "bytes": 1123,
+    "sha256": "470300d4972c83b27c029254339444944d84aed3d849558f49aee9441837f9d6"
+  },
+  "REPORT.md": {
+    "bytes": 2114,
+    "sha256": "3f852a3ca6ed32bf87ddf709c99fbd9526bbd9819603aa4e5788722c6aa43cf9"
+  },
+  "RESPONSE_PARSER_LOCK.json": {
+    "bytes": 475,
+    "sha256": "6255c1ad7e0763fbf9542023f179c3ca73fd652d8dae67cbaf610233165f7d05"
+  },
+  "SEED_SCHEDULE_LOCK.json": {
+    "bytes": 496326,
+    "sha256": "3868495a782aaecc74ce3e011a7a37595474f4ee4db25c9d48d094e972121146"
+  },
+  "artifact_hashes_preholdout.json": {
+    "bytes": 2483,
+    "sha256": "8e89af32a4c64c5ca98012a26301bb953ecdc46863b6734364feb69be449016d"
+  },
+  "journal_ministral.jsonl": {
+    "bytes": 32170782,
+    "sha256": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d"
+  },
+  "journal_qwen.jsonl": {
+    "bytes": 5995795,
+    "sha256": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2"
+  }
+}

@@ -26,6 +26,7 @@ def test_project_state_and_generated_status_are_current() -> None:
     assert state["scientific_firewall"]["confirmatory_holdout"] in {
         "UNTOUCHED",
         "SEALED_ASSIGNED_UNACCESSED",
+        "CONSUMED_CONFIRMATORY_CLOSED",
     }
     workstream = state["current"]["workstream"]
     assert workstream in {
@@ -66,6 +67,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_COMPLETE",
         "Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION",
+        "Q1_CONFIRMATORY_FIXED_CONTROLLERS",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -86,6 +88,16 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
         }
     )
+    if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":
+        assert state["current"]["lifecycle"] == "CLOSED"
+        assert (
+            state["scientific_firewall"]["confirmatory_holdout"]
+            == "CONSUMED_CONFIRMATORY_CLOSED"
+        )
+        assert (
+            state["scientific_firewall"]["steering"]
+            == "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL"
+        )
     assert state["scientific_firewall"]["steering"] in {
         "ORIGINAL_Q1_NOT_RUN",
         "ORIGINAL_Q1_MICRO_Q1_COMPLETE_DEVELOPMENT_NO_SIGNAL",
@@ -110,6 +122,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED",
         "GATE13_1_CLOSED_STRONG_CROSS_MODEL_REPLICATION",
         "Q1_CONFIRMATORY_HOLDOUT_ASSIGNED_POWER_PENDING",
+        "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
