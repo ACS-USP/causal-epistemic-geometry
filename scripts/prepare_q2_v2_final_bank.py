@@ -82,7 +82,9 @@ def main() -> int:
             "sign": record["sign"],
             "selected_dose": dose,
             "causal_pass": bool(record["causal_pass"]),
-            "reference_scale": record["reference_scale"],
+            # finalize_calibration stores the scale on the selected dose record;
+            # keep the final-bank provenance identical to the applied dose.
+            "reference_scale": dose_record["reference_scale"],
             "delta_norm": dose_record["delta_norm"],
             "vector_hash": read_json(REVIEW / "V2_SOURCE_DIRECTION_BANK.json")["directions"][
                 controller
