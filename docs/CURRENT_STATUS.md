@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now prospectively assigned the exact previously reserved, unseen 57-ID set as the Q1 fixed-controller confirmatory holdout. This assignment is not retroactive and produces no confirmatory evidence. The set remains sealed pending offline N=57 power qualification.
+Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now prospectively assigned the exact previously reserved, unseen 57-ID set as the Q1 fixed-controller confirmatory holdout. Offline N=57 power qualified for both fixed models (Qwen 0.87905; Ministral 0.94410), the complete synthetic dress rehearsal passed, and all scientific code, controllers, fresh null banks, seeds, parser, estimands, and criteria are frozen at the confirmatory source commit. The holdout remains sealed.
 
-- Workstream: `Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION`
+- Workstream: `Q1_CONFIRMATORY_FIXED_CONTROLLERS`
 - RunPod: `TERMINATED`
-- GPU work authorized: `false`
-- New scientific experiment authorized: `false`
-- Next authorized action: Run the authorized offline N=57 power analysis using immutable Gate-9 and Gate-13.1 DEVELOPMENT outcomes only; no holdout content or model access.
+- GPU work authorized: `true`
+- New scientific experiment authorized: `true`
+- Next authorized action: Run non-holdout remote engineering and throughput preflight, apply the frozen cost gate with the 25% safety margin, and access holdout content only if the complete two-model design remains within the authorized envelope.
 
 ## Scientific program
 
@@ -54,13 +54,13 @@ Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now p
 
 ## Scientific firewall
 
-- `steering`: `Q1_CONFIRMATORY_HOLDOUT_ASSIGNED_POWER_PENDING`
+- `steering`: `Q1_CONFIRMATORY_LOCKED_PRE_HOLDOUT_COST_GATE_PENDING`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
 - `confirmatory_holdout`: `SEALED_ASSIGNED_UNACCESSED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION`
+- `current_task`: `Q1_CONFIRMATORY_REMOTE_PREFLIGHT_AND_COST_GATE`
 - `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement

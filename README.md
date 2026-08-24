@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now prospectively assigned the exact previously reserved, unseen 57-ID set as the Q1 fixed-controller confirmatory holdout. This assignment is not retroactive and produces no confirmatory evidence. The set remains sealed pending offline N=57 power qualification.
+Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now prospectively assigned the exact previously reserved, unseen 57-ID set as the Q1 fixed-controller confirmatory holdout. Offline N=57 power qualified for both fixed models (Qwen 0.87905; Ministral 0.94410), the complete synthetic dress rehearsal passed, and all scientific code, controllers, fresh null banks, seeds, parser, estimands, and criteria are frozen at the confirmatory source commit. The holdout remains sealed.
 
-**Next authorized action:** Run the authorized offline N=57 power analysis using immutable Gate-9 and Gate-13.1 DEVELOPMENT outcomes only; no holdout content or model access.
+**Next authorized action:** Run non-holdout remote engineering and throughput preflight, apply the frozen cost gate with the 25% safety margin, and access holdout content only if the complete two-model design remains within the authorized envelope.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

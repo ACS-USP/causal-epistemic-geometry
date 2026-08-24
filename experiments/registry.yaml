@@ -1127,14 +1127,16 @@ experiments:
       sealed CRUXEval holdout under frozen null and safety criteria?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Fixed accepted Qwen3-8B and Ministral-3-8B policies; no inference yet
-    status: HOLDOUT_ASSIGNED_POWER_PENDING
+    status: PROSPECTIVE_LOCK_COST_GATE_PENDING
     outcome: NOT_RUN
     scientific_interpretation: >-
       The principal prospectively assigned the exact previously reserved,
       unseen, unallocated 57-ID set to the Q1 fixed-controller confirmatory
-      role. This is not retroactive and is not confirmatory evidence. The set
-      remains sealed pending offline N=57 power qualification.
-    source_commit: 2aff0a8f3e9006731066f4d91ebaa638d84fe2e0
+      role. Offline power at N=57 qualified for both fixed models, and the
+      synthetic dress rehearsal passed. The complete confirmatory design is
+      now frozen before holdout content access. This remains no confirmatory
+      evidence until the locked evaluation is collected and analyzed.
+    source_commit: 2fd165e20a1116835097e4867d0d7d652c5227ab
     artifact: review/q1_confirmatory_fixed_controllers/
     cost_usd: 0.0
     holdout_status: SEALED_ASSIGNED_UNACCESSED
@@ -1146,14 +1148,19 @@ experiments:
       provenance_audit_commit: 2aff0a8f3e9006731066f4d91ebaa638d84fe2e0
       designation_semantics: PROSPECTIVE_ROLE_ASSIGNMENT_AFTER_DEVELOPMENT_BEFORE_CONTENT_OR_OUTCOME_ACCESS
       phase_zero_block: RESOLVED_BY_PROSPECTIVE_PRINCIPAL_ASSIGNMENT
+      power_classification: Q1_CONFIRMATORY_N57_POWER_QUALIFIED
+      qwen_primary_c_power_n57: 0.87905
+      ministral_primary_c_power_n57: 0.94410
+      dress_rehearsal: DRESS_REHEARSAL_PASS
+      protocol_status: CONFIRMATORY_LOCKED_PRE_HOLDOUT
     execution:
-      lifecycle: DESIGN_REVIEW
+      lifecycle: PROSPECTIVE_LOCK
       holdout_content_inspected: false
       holdout_outcomes_inspected: false
       model_weights_loaded: false
       runpod_started: false
-      power_analysis: PENDING
+      power_analysis: COMPLETE_20000_NESTED_ITEM_RESAMPLES_PER_MODEL
       confirmatory_inference: NOT_RUN
       q2: NOT_RUN
       q3: NOT_RUN
-    next_action: Run offline N=57 power qualification; keep the holdout sealed.
+    next_action: Run non-holdout remote preflight and frozen cost gate; keep holdout sealed until pass.
