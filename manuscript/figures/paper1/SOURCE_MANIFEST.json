@@ -1,0 +1,24 @@
+{
+  "contains_raw_outputs": false,
+  "generator": "scripts/generate_paper1_figures.py",
+  "generator_sha256": "12ceb0381d6d19cd8e030ec1ab778e6733484bc0418e5f8d329bb3f66ad796a2",
+  "output_artifacts": {
+    "manuscript/figures/paper1/figure1_conceptual_framework.png": "c49f716cc1bfe01e748d2fd319be3476ac0a1ed5629767c7f4e7133baa15a361",
+    "manuscript/figures/paper1/figure1_conceptual_framework.svg": "948b979fc805bd43ba58938f881fa11971029b1024f3d159f32c848b559a2f43",
+    "manuscript/figures/paper1/figure2_qwen_development_confirmation.png": "09cad5e635d13ed009c162889044d8f2085cd3de08cc98cad74b9f9d4e71e03e",
+    "manuscript/figures/paper1/figure2_qwen_development_confirmation.svg": "7a6529d97a6f0af03c52bbd2420ab24ad11f3612aa1bfbfc4fef6abed24c7bc7",
+    "manuscript/figures/paper1/figure3_ministral_development_confirmation.png": "70cd9721776ff2990f0827f330c45664f142202419b6774b728b4ad841bb0000",
+    "manuscript/figures/paper1/figure3_ministral_development_confirmation.svg": "26ec7ca66f232765ab52134f8baf50da7a92fb6e166a39a54287f8f58b206ae0",
+    "manuscript/figures/paper1/figure4_complementarity_safety_dissociation.png": "e68d7b68d1b6397129d6609915e2295146f46ba9cd609329d09e749c07e50705",
+    "manuscript/figures/paper1/figure4_complementarity_safety_dissociation.svg": "8676d8012bd3556e2f82fce62f2e7615074d1ac97366fae3e2f9223628f09d2c",
+    "manuscript/figures/paper1/figure5_cross_domain_boundary.png": "ac138807f95f1d7c87a16fc0e9cbf76f3172eeb5918f2dbf858746ce94163604",
+    "manuscript/figures/paper1/figure5_cross_domain_boundary.svg": "caae3f270125ba42dab27e93a7b715f3bdcba30ae52573893d1bb19b39f23e79"
+  },
+  "source_artifacts": {
+    "review/gate10_cross_domain_charcount/ESTIMANDS.json": "d40dd7973750f8787d0815acfea44f72b43241d3846259cb32a84f7b0e86bc74",
+    "review/gate13_1_all_layer_causal_atlas/ESTIMANDS.json": "fb19cff627edc5d026b6cc2ea1b4bfc9074a147f46bc2c4657ed68d733a53fd5",
+    "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258",
+    "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
+    "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+  }
+}
