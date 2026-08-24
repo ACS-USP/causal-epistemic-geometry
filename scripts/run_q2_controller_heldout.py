@@ -428,9 +428,7 @@ def _condition_context(
 def engineering_gate(backend: Any, review: Path) -> None:
     candidate_lock(review)
     vectors, hashes = load_bank(review)
-    fixtures = load_external(
-        ROOT / "review/gate6_2_first_stage_repair_mean_bridge/MANIPULATION_MANIFEST.json"
-    )[:5]
+    fixtures = load_external(review / "ENGINEERING_FIXTURES.json")
     identity: list[bool] = []
     cleanup: list[bool] = []
     traces: list[dict[str, Any]] = []
@@ -775,9 +773,7 @@ def geometry_capture(backend: Any, review: Path) -> None:
 
 def preflight(backend: Any, review: Path) -> None:
     vectors, hashes = load_bank(review)
-    items = load_external(
-        ROOT / "review/gate6_2_first_stage_repair_mean_bridge/MANIPULATION_MANIFEST.json"
-    )[:5]
+    items = load_external(review / "ENGINEERING_FIXTURES.json")
     durations: list[float] = []
     tokens: list[int] = []
     for item in items:

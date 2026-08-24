@@ -330,8 +330,35 @@ def premortem() -> tuple[dict[str, Any], str]:
     return data, "\n".join(lines)
 
 
+def engineering_fixtures() -> list[dict[str, Any]]:
+    prompts = (
+        "Continue the neutral token pattern A B A B and end with FINAL: done.",
+        "Read this punctuation-only sample: []{}(),.; and end with FINAL: done.",
+        "Inspect the numeric string 001122334455 and end with FINAL: done.",
+        "Paraphrase the short phrase 'calm blue stone' and end with FINAL: done.",
+        "Repeat the word neutral twice and end with FINAL: done.",
+    )
+    return [
+        {
+            "allocation": "Q2_ENGINEERING_ONLY",
+            "item_id": f"q2_engineering_{index}",
+            "benchmark": "SYNTHETIC_ENGINEERING",
+            "subtask": "no_oracle_fixture",
+            "prompt": prompt,
+            "reference_answer": "",
+            "evaluator": "none",
+            "source_revision": "q2-engineering-fixtures-v1",
+            "prompt_hash": stable_digest(NAMESPACE, "ENGINEERING_PROMPT", prompt),
+            "item_hash": stable_digest(NAMESPACE, "ENGINEERING_ITEM", index, prompt),
+            "metadata": {"scientific_item": False, "oracle_exists": False},
+        }
+        for index, prompt in enumerate(prompts)
+    ]
+
+
 def main() -> int:
     REVIEW.mkdir(parents=True, exist_ok=True)
+    write_json(REVIEW / "ENGINEERING_FIXTURES.json", engineering_fixtures())
     catalog, provenance = historical_manifest_catalog()
     roles = allocate_roles(catalog)
     filenames = {
@@ -446,6 +473,13 @@ def main() -> int:
                 "file_sha256": sha256(REVIEW / filenames[role]),
             }
             for role, rows in roles.items()
+        },
+        "engineering_fixtures": {
+            "file": "ENGINEERING_FIXTURES.json",
+            "n": 5,
+            "file_sha256": sha256(REVIEW / "ENGINEERING_FIXTURES.json"),
+            "benchmark_items": False,
+            "oracles": False,
         },
         "controller_candidates": {
             "common_layer": LAYER,
