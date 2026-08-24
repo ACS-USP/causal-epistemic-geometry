@@ -1,254 +1,259 @@
-[
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "b02295085572cfa340766aa060efa50b5fcf04d217a40ff1f4be7ddadbaa5b4f",
-    "item_id": "sample_202",
-    "metadata": {
-      "catalog_signature_frequency": 3,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_202",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+{
+  "allocation": "V2_FINITE_SECANT_PROBES",
+  "items": [
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "b02295085572cfa340766aa060efa50b5fcf04d217a40ff1f4be7ddadbaa5b4f",
+      "item_id": "sample_202",
+      "metadata": {
+        "catalog_signature_frequency": 3,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_202",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, list):\n    array.extend(list)\n    [e for e in array if e % 2 == 0]\n    return [e for e in array if e >= 10]\n```\n\nInput: [2, 15], [15, 1]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "7d86c12289c382a792929707544607fcfa3aa0f9214e0ed4721fcb1cf338fada",
+      "reference_answer": "[15, 15]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, list):\n    array.extend(list)\n    [e for e in array if e % 2 == 0]\n    return [e for e in array if e >= 10]\n```\n\nInput: [2, 15], [15, 1]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "7d86c12289c382a792929707544607fcfa3aa0f9214e0ed4721fcb1cf338fada",
-    "reference_answer": "[15, 15]",
-    "reference_canonical_type": "list",
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "e62c886c6fe69a4e6039f9d35a971512f9e4a5870ee44fa94379e3fc1abb5ecb",
-    "item_id": "sample_507",
-    "metadata": {
-      "catalog_signature_frequency": 1,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_507",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "e62c886c6fe69a4e6039f9d35a971512f9e4a5870ee44fa94379e3fc1abb5ecb",
+      "item_id": "sample_507",
+      "metadata": {
+        "catalog_signature_frequency": 1,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_507",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, search):\n    result = text.lower()\n    return result.find(search.lower())\n```\n\nInput: 'car hat', 'car'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "7b3930d18bd8c7c299b15f530d1805cd7372b678f2ea93e2168ec2b3348b5720",
+      "reference_answer": "0",
+      "reference_canonical_type": null,
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, search):\n    result = text.lower()\n    return result.find(search.lower())\n```\n\nInput: 'car hat', 'car'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "7b3930d18bd8c7c299b15f530d1805cd7372b678f2ea93e2168ec2b3348b5720",
-    "reference_answer": "0",
-    "reference_canonical_type": null,
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "a4627a4a7551b16a8824fd45d30fe6c2f79e48efaea012b2dd8a9c4601cc8cf5",
-    "item_id": "sample_311",
-    "metadata": {
-      "catalog_signature_frequency": 2,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_311",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "a4627a4a7551b16a8824fd45d30fe6c2f79e48efaea012b2dd8a9c4601cc8cf5",
+      "item_id": "sample_311",
+      "metadata": {
+        "catalog_signature_frequency": 2,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_311",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    text = text.replace('#', '1').replace('$', '5')\n    return 'yes' if text.isnumeric() else 'no'\n```\n\nInput: 'A'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "da345c76d45f79ca0e823e5b44bddac67dc23fbdeaac71b8e044287081966240",
+      "reference_answer": "'no'",
+      "reference_canonical_type": "str",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    text = text.replace('#', '1').replace('$', '5')\n    return 'yes' if text.isnumeric() else 'no'\n```\n\nInput: 'A'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "da345c76d45f79ca0e823e5b44bddac67dc23fbdeaac71b8e044287081966240",
-    "reference_answer": "'no'",
-    "reference_canonical_type": "str",
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "0312ed4df1f9fbe1f9f68bfb9208b78d65d3780c153534a788c089e0f9f2dd16",
-    "item_id": "sample_681",
-    "metadata": {
-      "catalog_signature_frequency": 3,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_681",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "0312ed4df1f9fbe1f9f68bfb9208b78d65d3780c153534a788c089e0f9f2dd16",
+      "item_id": "sample_681",
+      "metadata": {
+        "catalog_signature_frequency": 3,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_681",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, ind, elem):\n    array.insert(-5 if ind < 0 else len(array) if ind > len(array) else ind + 1, elem)\n    return array\n```\n\nInput: [1, 5, 8, 2, 0, 3], 2, 7\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "c8d7476f487230da932e238f1d895de00714965d20602deee65cdb8fd67b24e5",
+      "reference_answer": "[1, 5, 8, 7, 2, 0, 3]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array, ind, elem):\n    array.insert(-5 if ind < 0 else len(array) if ind > len(array) else ind + 1, elem)\n    return array\n```\n\nInput: [1, 5, 8, 2, 0, 3], 2, 7\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "c8d7476f487230da932e238f1d895de00714965d20602deee65cdb8fd67b24e5",
-    "reference_answer": "[1, 5, 8, 7, 2, 0, 3]",
-    "reference_canonical_type": "list",
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "9b4eee834175c16d5219fa5b3ccf52e6818a1b288b479f9c6111b5450caa0882",
-    "item_id": "sample_266",
-    "metadata": {
-      "catalog_signature_frequency": 2,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_266",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "9b4eee834175c16d5219fa5b3ccf52e6818a1b288b479f9c6111b5450caa0882",
+      "item_id": "sample_266",
+      "metadata": {
+        "catalog_signature_frequency": 2,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_266",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    for i in range(len(nums)-1, -1, -1):\n        if nums[i] % 2 == 1:\n            nums.insert(i+1, nums[i])\n    return nums\n```\n\nInput: [2, 3, 4, 6, -2]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "eb21f8c8801187e4b6b0d9e98e72bb547b9d5d02b70167234674e1a4c732dbce",
+      "reference_answer": "[2, 3, 3, 4, 6, -2]",
+      "reference_canonical_type": "list",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    for i in range(len(nums)-1, -1, -1):\n        if nums[i] % 2 == 1:\n            nums.insert(i+1, nums[i])\n    return nums\n```\n\nInput: [2, 3, 4, 6, -2]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "eb21f8c8801187e4b6b0d9e98e72bb547b9d5d02b70167234674e1a4c732dbce",
-    "reference_answer": "[2, 3, 3, 4, 6, -2]",
-    "reference_canonical_type": "list",
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "18e624e4ecb4ab184b8bcc0dbb6677d10f0032c8fbf65fad52d56b5b975f5ed8",
-    "item_id": "sample_463",
-    "metadata": {
-      "catalog_signature_frequency": 1,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_463",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "18e624e4ecb4ab184b8bcc0dbb6677d10f0032c8fbf65fad52d56b5b975f5ed8",
+      "item_id": "sample_463",
+      "metadata": {
+        "catalog_signature_frequency": 1,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_463",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(dict):\n    result = dict.copy()\n    remove_keys = []\n    for k, v in dict.items():\n        if v in dict:\n            del result[k]\n    return result\n```\n\nInput: {-1: -1, 5: 5, 3: 6, -4: -4}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "436abbfc6bf4bccc2862db61ad1867488c6be2b44e756092704a8a488c366cea",
+      "reference_answer": "{3: 6}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(dict):\n    result = dict.copy()\n    remove_keys = []\n    for k, v in dict.items():\n        if v in dict:\n            del result[k]\n    return result\n```\n\nInput: {-1: -1, 5: 5, 3: 6, -4: -4}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "436abbfc6bf4bccc2862db61ad1867488c6be2b44e756092704a8a488c366cea",
-    "reference_answer": "{3: 6}",
-    "reference_canonical_type": "dict",
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "62e5bfa803479a50b71417f0222657a004c2cb87953ac6152a22abd486c79d26",
-    "item_id": "sample_348",
-    "metadata": {
-      "catalog_signature_frequency": 2,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_348",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "62e5bfa803479a50b71417f0222657a004c2cb87953ac6152a22abd486c79d26",
+      "item_id": "sample_348",
+      "metadata": {
+        "catalog_signature_frequency": 2,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_348",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(dictionary):\n    return dictionary.copy()\n```\n\nInput: {563: 555, 133: None}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "1d15f0cae532405d1fa05830251b3689c36a259fc4f08ff6c4c1601f12536b3e",
+      "reference_answer": "{563: 555, 133: None}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(dictionary):\n    return dictionary.copy()\n```\n\nInput: {563: 555, 133: None}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "1d15f0cae532405d1fa05830251b3689c36a259fc4f08ff6c4c1601f12536b3e",
-    "reference_answer": "{563: 555, 133: None}",
-    "reference_canonical_type": "dict",
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "79fec1c941bd2da58f4567e6fd08582100dd8bef38d07996ace78996261a9400",
-    "item_id": "sample_258",
-    "metadata": {
-      "catalog_signature_frequency": 1,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_258",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "79fec1c941bd2da58f4567e6fd08582100dd8bef38d07996ace78996261a9400",
+      "item_id": "sample_258",
+      "metadata": {
+        "catalog_signature_frequency": 1,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_258",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\nthigh_o_one = [1, 2, 7, 8, 9]\nthigh_o_two = [1, 2, 7, 9]\ndef f(L, m, start, step):\n    L.insert(start, m)\n    for x in range(start-1, 0, -step):\n        start -= 1\n        L.insert(start, L.pop(L.index(m)-1))\n    return L\n```\n\nInput: thigh_o_two[:], 3, 3, 2\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "29fdfa348ada470e2a429923cdda15fc2b51839b73b0e1b86f5035ceba8006b7",
+      "reference_answer": "[1, 2, 7, 3, 9]",
+      "reference_canonical_type": null,
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\nthigh_o_one = [1, 2, 7, 8, 9]\nthigh_o_two = [1, 2, 7, 9]\ndef f(L, m, start, step):\n    L.insert(start, m)\n    for x in range(start-1, 0, -step):\n        start -= 1\n        L.insert(start, L.pop(L.index(m)-1))\n    return L\n```\n\nInput: thigh_o_two[:], 3, 3, 2\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "29fdfa348ada470e2a429923cdda15fc2b51839b73b0e1b86f5035ceba8006b7",
-    "reference_answer": "[1, 2, 7, 3, 9]",
-    "reference_canonical_type": null,
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "512f0c94b489a12c32e00bd2c7cc57313a199e44cc98c5350b70e042f8edfa99",
-    "item_id": "sample_158",
-    "metadata": {
-      "catalog_signature_frequency": 2,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_158",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "512f0c94b489a12c32e00bd2c7cc57313a199e44cc98c5350b70e042f8edfa99",
+      "item_id": "sample_158",
+      "metadata": {
+        "catalog_signature_frequency": 2,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_158",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(arr):\n    n = [item for item in arr if item%2 == 0]\n    m = n+arr\n    for i in m:\n        if m.index(i) >= len(n):\n            m.remove(i)\n    return m\n```\n\nInput: [3, 6, 4, -2, 5]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "83794b137c4045357879e28f89d6848ebac61f2af48a81cd3d7124883c6ff6a8",
+      "reference_answer": "[6, 4, -2, 6, 4, -2]",
+      "reference_canonical_type": null,
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(arr):\n    n = [item for item in arr if item%2 == 0]\n    m = n+arr\n    for i in m:\n        if m.index(i) >= len(n):\n            m.remove(i)\n    return m\n```\n\nInput: [3, 6, 4, -2, 5]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "83794b137c4045357879e28f89d6848ebac61f2af48a81cd3d7124883c6ff6a8",
-    "reference_answer": "[6, 4, -2, 6, 4, -2]",
-    "reference_canonical_type": null,
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "237d6e82c961da24430a036c68bc903cef2f39abb7cd1a0bb9d8643b12048a55",
-    "item_id": "sample_502",
-    "metadata": {
-      "catalog_signature_frequency": 1,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_502",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "237d6e82c961da24430a036c68bc903cef2f39abb7cd1a0bb9d8643b12048a55",
+      "item_id": "sample_502",
+      "metadata": {
+        "catalog_signature_frequency": 1,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_502",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(name):\n    return '*'.join(name.split(' '))\n```\n\nInput: 'Fred Smith'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "511198574f75cbbb42b9d61ee4581af07b1361c645747519b4be944e422bde15",
+      "reference_answer": "'Fred*Smith'",
+      "reference_canonical_type": null,
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(name):\n    return '*'.join(name.split(' '))\n```\n\nInput: 'Fred Smith'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "511198574f75cbbb42b9d61ee4581af07b1361c645747519b4be944e422bde15",
-    "reference_answer": "'Fred*Smith'",
-    "reference_canonical_type": null,
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "3615832cf480ff5da98761ce43a3f511095c14ab851e05f267f87c302d11eefc",
-    "item_id": "sample_729",
-    "metadata": {
-      "catalog_signature_frequency": 2,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_729",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "3615832cf480ff5da98761ce43a3f511095c14ab851e05f267f87c302d11eefc",
+      "item_id": "sample_729",
+      "metadata": {
+        "catalog_signature_frequency": 2,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_729",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s1,s2):\n    res = []\n    i = s1.rfind(s2)\n    while i != -1:\n        res.append(i+len(s2)-1)\n        i = s1.rfind(s2, 0, i)\n    return res\n```\n\nInput: 'abcdefghabc', 'abc'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "c5956717303b3eac13e53967b23c9917d75333cf03a6feb06bc90760a0015a62",
+      "reference_answer": "[10, 2]",
+      "reference_canonical_type": null,
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
     },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(s1,s2):\n    res = []\n    i = s1.rfind(s2)\n    while i != -1:\n        res.append(i+len(s2)-1)\n        i = s1.rfind(s2, 0, i)\n    return res\n```\n\nInput: 'abcdefghabc', 'abc'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "c5956717303b3eac13e53967b23c9917d75333cf03a6feb06bc90760a0015a62",
-    "reference_answer": "[10, 2]",
-    "reference_canonical_type": null,
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  },
-  {
-    "allocation": "V2_FINITE_SECANT_PROBES",
-    "benchmark": "CRUXEval",
-    "evaluator": "python_literal",
-    "item_hash": "2b9fabedd5ed3c2e62ccfa040a552343e83468a1c817ffb73dda4d841aed2523",
-    "item_id": "sample_441",
-    "metadata": {
-      "catalog_signature_frequency": 3,
-      "dataset_repo": "cruxeval-org/cruxeval",
-      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-      "official_id": "sample_441",
-      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
-      "v2_allocation": "V2_FINITE_SECANT_PROBES"
-    },
-    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(base, k, v):\n    base[k] = v\n    return base\n```\n\nInput: {37: 'forty-five'}, '23', 'what?'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
-    "prompt_hash": "d0e4d2a55737672f631fb5660316c34e771e4c268e6532655a9d63997b6bbfe4",
-    "reference_answer": "{37: 'forty-five', '23': 'what?'}",
-    "reference_canonical_type": "dict",
-    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
-    "subtask": "output_prediction"
-  }
-]
+    {
+      "allocation": "V2_FINITE_SECANT_PROBES",
+      "benchmark": "CRUXEval",
+      "evaluator": "python_literal",
+      "item_hash": "2b9fabedd5ed3c2e62ccfa040a552343e83468a1c817ffb73dda4d841aed2523",
+      "item_id": "sample_441",
+      "metadata": {
+        "catalog_signature_frequency": 3,
+        "dataset_repo": "cruxeval-org/cruxeval",
+        "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+        "official_id": "sample_441",
+        "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+        "v2_allocation": "V2_FINITE_SECANT_PROBES"
+      },
+      "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(base, k, v):\n    base[k] = v\n    return base\n```\n\nInput: {37: 'forty-five'}, '23', 'what?'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+      "prompt_hash": "d0e4d2a55737672f631fb5660316c34e771e4c268e6532655a9d63997b6bbfe4",
+      "reference_answer": "{37: 'forty-five', '23': 'what?'}",
+      "reference_canonical_type": "dict",
+      "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "subtask": "output_prediction"
+    }
+  ],
+  "schema_version": 1,
+  "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2"
+}

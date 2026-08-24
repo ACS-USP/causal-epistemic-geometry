@@ -1280,7 +1280,7 @@ experiments:
       panel was never run. V2 freezes six source-axis candidates, per-direction
       label-free dose calibration, SVD span-orthogonal nulls, and a family-held-out
       M0/M1/M2 prediction design before new source outputs.
-    source_commit: a386952cb76642281447ac0bb32f36fb466af520
+    source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
     artifact: review/q2_controller_bank_v2/
     cost_usd: null
     cost_envelope_usd: 15.0

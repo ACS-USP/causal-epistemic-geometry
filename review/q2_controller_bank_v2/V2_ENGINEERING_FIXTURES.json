@@ -1,0 +1,98 @@
+{
+  "allocation": "Q2_V2_ENGINEERING_ONLY",
+  "items": [
+    {
+      "benchmark": "SYNTHETIC_ENGINEERING",
+      "evaluator": "none",
+      "item_hash": "6e3a1d1e960dbde4e555b7dfa6373cfeebfbed64a0572a2835cedf0f1f0d2cdc",
+      "item_id": "q2_v2_engineering_0",
+      "metadata": {
+        "oracle_exists": false,
+        "scientific_item": false
+      },
+      "prompt": "Continue the neutral token pattern A B A B and end with FINAL: done.",
+      "prompt_hash": "0d0d44b8be80e021a64e4d4ae2cd8f81ff5fa17afd88ee8efd2dfc0d58d15ac6",
+      "reference_answer": "ENGINEERING_NO_ORACLE",
+      "source_revision": "q2-v2-engineering-fixtures-v1",
+      "subtask": "no_oracle_fixture"
+    },
+    {
+      "benchmark": "SYNTHETIC_ENGINEERING",
+      "evaluator": "none",
+      "item_hash": "6dc517f2c7de388e89792e44dbc7ca39f64d79698e64d750c514f4f58be65d10",
+      "item_id": "q2_v2_engineering_1",
+      "metadata": {
+        "oracle_exists": false,
+        "scientific_item": false
+      },
+      "prompt": "Read this punctuation-only sample: []{}(),.; and end with FINAL: done.",
+      "prompt_hash": "c49fe1e4d7a737785ecade75409fcbe6f8bd80882d52ce5d79da483f592ee79d",
+      "reference_answer": "ENGINEERING_NO_ORACLE",
+      "source_revision": "q2-v2-engineering-fixtures-v1",
+      "subtask": "no_oracle_fixture"
+    },
+    {
+      "benchmark": "SYNTHETIC_ENGINEERING",
+      "evaluator": "none",
+      "item_hash": "bbeafd00426ec585f308d7b0a48a74b053e6364bd4d4010cf16cf395ebf24b62",
+      "item_id": "q2_v2_engineering_2",
+      "metadata": {
+        "oracle_exists": false,
+        "scientific_item": false
+      },
+      "prompt": "Inspect the numeric string 001122334455 and end with FINAL: done.",
+      "prompt_hash": "e88275276d3878cf7fce5b5fb801c9be485095bfaff8745505019277040c834a",
+      "reference_answer": "ENGINEERING_NO_ORACLE",
+      "source_revision": "q2-v2-engineering-fixtures-v1",
+      "subtask": "no_oracle_fixture"
+    },
+    {
+      "benchmark": "SYNTHETIC_ENGINEERING",
+      "evaluator": "none",
+      "item_hash": "2da7319f9d6e2e34c8047eaa289a3e40b213ce3472b299b424e51a374ecb53c8",
+      "item_id": "q2_v2_engineering_3",
+      "metadata": {
+        "oracle_exists": false,
+        "scientific_item": false
+      },
+      "prompt": "Repeat the neutral word twice and end with FINAL: done.",
+      "prompt_hash": "cd0b79756db2dd8976deac51435e8d348107000f0a8bce0298d3d1b847ad7e81",
+      "reference_answer": "ENGINEERING_NO_ORACLE",
+      "source_revision": "q2-v2-engineering-fixtures-v1",
+      "subtask": "no_oracle_fixture"
+    },
+    {
+      "benchmark": "SYNTHETIC_ENGINEERING",
+      "evaluator": "none",
+      "item_hash": "96f0fa88adfdaf1a62f78738771c7aec0905dbe2bd19e092b9adfa5704de0cfd",
+      "item_id": "q2_v2_engineering_4",
+      "metadata": {
+        "oracle_exists": false,
+        "scientific_item": false
+      },
+      "prompt": "Use the short code-like text x = [1, 2, 3] and end with FINAL: done.",
+      "prompt_hash": "412f7bf1d41225df1f119bfb51b8f65fa5b8683f265dbe9a4b4e957499432ffe",
+      "reference_answer": "ENGINEERING_NO_ORACLE",
+      "source_revision": "q2-v2-engineering-fixtures-v1",
+      "subtask": "no_oracle_fixture"
+    },
+    {
+      "benchmark": "SYNTHETIC_ENGINEERING",
+      "evaluator": "none",
+      "item_hash": "d3f72117da0776c7673696e4aa2ff864e0844c48162322e7b4c0ea4c9d1c903e",
+      "item_id": "q2_v2_engineering_5",
+      "metadata": {
+        "oracle_exists": false,
+        "scientific_item": false
+      },
+      "prompt": "Read the multilingual-neutral pattern alpha beta gamma and end with FINAL: done.",
+      "prompt_hash": "1d390970ea130e8b924d8ab130f04c6aeeb38bfb4b13e680b1a4b6a7894efae9",
+      "reference_answer": "ENGINEERING_NO_ORACLE",
+      "source_revision": "q2-v2-engineering-fixtures-v1",
+      "subtask": "no_oracle_fixture"
+    }
+  ],
+  "oracles": false,
+  "schema_version": 1,
+  "scientific_items": false
+}

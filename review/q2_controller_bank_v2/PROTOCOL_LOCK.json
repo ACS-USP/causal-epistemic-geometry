@@ -14,27 +14,27 @@
   "allocations": {
     "V2_COVARIANCE_POOL": {
       "file": "V2_COVARIANCE_MANIFEST.json",
-      "file_sha256": "6edf70263893ccae167e4d3bf1453c34b24aca48197aa99662bf4e4457c4c3a9",
+      "file_sha256": "70bf7e288c58e5cfd5270d516d39bbf86f609687336fcd1d8d5de68fdd6f9cc6",
       "n": 64
     },
     "V2_DOSE_CALIBRATION": {
       "file": "V2_DOSE_CALIBRATION_MANIFEST.json",
-      "file_sha256": "81505067835350756ef944c899fc378edd59238ae014040d1aa2c13c0a5ba541",
+      "file_sha256": "0ed3989ec35004a3afeb9ce52c6633c6ccf9a3f582163e6c9a670264a71281d5",
       "n": 12
     },
     "V2_FINITE_SECANT_PROBES": {
       "file": "V2_FINITE_SECANT_MANIFEST.json",
-      "file_sha256": "e8bc2458f91ad1cb8fa82b79d9196d86655fa6d19fc96476eb910c376a91e754",
+      "file_sha256": "4bb3f495181473bfe59d8aabf37faf7a0ee487ea822d1a8d57cf441c7fe4f059",
       "n": 12
     },
     "V2_SOURCE_CONSTRUCTION": {
       "file": "V2_SOURCE_CONSTRUCTION_MANIFEST.json",
-      "file_sha256": "2e2a9cdbe0487ff960a80d2b131fef92483f5ad36a8ad87d323422207d695102",
+      "file_sha256": "15e242f563fa6b6122ea90762ec6a03532855f3a9874a4b6d3cb8660219a65e0",
       "n": 24
     },
     "V2_SOURCE_VALIDATION": {
       "file": "V2_SOURCE_VALIDATION_MANIFEST.json",
-      "file_sha256": "273bd0b4d7da961f850f26315642839e0d30ad0b754174be3f0568844dfe0e20",
+      "file_sha256": "442e219bc80f549c44ee409a4d6eaab2678331ecdedfc22a2438b0878fdbb200",
       "n": 24
     }
   },
@@ -89,6 +89,13 @@
     "safe_evaluability_min": 0.9,
     "safe_validity_min": 0.9,
     "selection_rule": "lowest causal dose; otherwise lowest safe dose; no accuracy/G/C/D/ranking"
+  },
+  "engineering_fixtures": {
+    "file": "V2_ENGINEERING_FIXTURES.json",
+    "n": 6,
+    "oracles": false,
+    "scientific_items": false,
+    "sha256": "5a0fdceb8fd6e07f2096bed4590cb9ecaddfbc5655c134ab402c93396c6e7285"
   },
   "experiment_id": "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
   "family_split": {
@@ -192,7 +199,7 @@
       "MINUS"
     ]
   },
-  "source_commit_at_preparation": "a386952cb76642281447ac0bb32f36fb466af520",
+  "source_commit_at_preparation": "6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed",
   "source_qualification": {
     "activation_positive_gap_fraction_min": 0.6,
     "activation_standardized_gap_min": 0.2,
