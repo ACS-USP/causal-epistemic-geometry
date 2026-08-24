@@ -330,7 +330,7 @@ def premortem() -> tuple[dict[str, Any], str]:
     return data, "\n".join(lines)
 
 
-def engineering_fixtures() -> list[dict[str, Any]]:
+def engineering_fixtures() -> dict[str, Any]:
     prompts = (
         "Continue the neutral token pattern A B A B and end with FINAL: done.",
         "Read this punctuation-only sample: []{}(),.; and end with FINAL: done.",
@@ -338,7 +338,7 @@ def engineering_fixtures() -> list[dict[str, Any]]:
         "Paraphrase the short phrase 'calm blue stone' and end with FINAL: done.",
         "Repeat the word neutral twice and end with FINAL: done.",
     )
-    return [
+    rows = [
         {
             "allocation": "Q2_ENGINEERING_ONLY",
             "item_id": f"q2_engineering_{index}",
@@ -354,6 +354,11 @@ def engineering_fixtures() -> list[dict[str, Any]]:
         }
         for index, prompt in enumerate(prompts)
     ]
+    return {
+        "schema_version": 1,
+        "allocation": "Q2_ENGINEERING_ONLY",
+        "items": rows,
+    }
 
 
 def main() -> int:

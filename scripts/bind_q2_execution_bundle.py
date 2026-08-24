@@ -83,6 +83,14 @@ def main() -> int:
             "file_sha256": sha256(review / filename),
             "content_source": "pinned public dataset materialized on execution host",
         }
+    fixtures_path = review / "ENGINEERING_FIXTURES.json"
+    fixtures = manifest_rows(json.loads(fixtures_path.read_text(encoding="utf-8")))
+    wrong_fixture_kind = any(
+        row.get("benchmark") != "SYNTHETIC_ENGINEERING" for row in fixtures
+    )
+    if len(fixtures) != 5 or wrong_fixture_kind:
+        raise RuntimeError("Q2 engineering fixtures differ from the five frozen synthetic rows")
+    lock["engineering_fixtures"]["file_sha256"] = sha256(fixtures_path)
     bundle_hashes = source_tree_hashes()
     write_json(review / "SOURCE_BUNDLE_HASHES.json", bundle_hashes)
     (review / "EXECUTION_SOURCE_COMMIT.txt").write_text(

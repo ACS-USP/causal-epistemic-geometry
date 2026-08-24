@@ -3,6 +3,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 from scripts.bind_q2_execution_bundle import manifest_rows
+from scripts.prepare_q2_controller_heldout import engineering_fixtures
 
 from epistemic_geometry.analysis.q2_geometries import (
     finite_secant_geometry,
@@ -63,6 +64,13 @@ def test_public_materialization_uses_external_manifest_envelope() -> None:
     assert manifest_rows({"items": rows}) == rows
     with pytest.raises(RuntimeError, match="canonical items envelope"):
         manifest_rows(rows)
+
+
+def test_engineering_fixtures_use_external_manifest_envelope() -> None:
+    payload = engineering_fixtures()
+    assert payload["allocation"] == "Q2_ENGINEERING_ONLY"
+    assert len(manifest_rows(payload)) == 5
+    assert all(not row["metadata"]["scientific_item"] for row in payload["items"])
 
 
 def test_bank_canonicalization_has_frozen_order_and_unit_norm() -> None:
