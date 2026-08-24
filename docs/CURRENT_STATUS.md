@@ -8,13 +8,13 @@
 
 ## Current work
 
-Gate 13 remains the bounded source-shortlist plus D50 null. Gate 13.1 then tested all 34 Ministral layers, selected L27-D25 without correctness-based ranking, and strongly replicated safe, random-specific CRUXEval error control on 100 untouched final-evaluation items. This is DEVELOPMENT cross-model evidence, not domain-general or confirmatory evidence.
+Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now prospectively assigned the exact previously reserved, unseen 57-ID set as the Q1 fixed-controller confirmatory holdout. This assignment is not retroactive and produces no confirmatory evidence. The set remains sealed pending offline N=57 power qualification.
 
-- Workstream: `GATE13_1_ALL_LAYER_CAUSAL_ATLAS_COMPLETE`
+- Workstream: `Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION`
 - RunPod: `TERMINATED`
 - GPU work authorized: `false`
 - New scientific experiment authorized: `false`
-- Next authorized action: PRINCIPAL_RESEARCHER_REVIEW; no next experiment authorized.
+- Next authorized action: Run the authorized offline N=57 power analysis using immutable Gate-9 and Gate-13.1 DEVELOPMENT outcomes only; no holdout content or model access.
 
 ## Scientific program
 
@@ -50,21 +50,23 @@ Gate 13 remains the bounded source-shortlist plus D50 null. Gate 13.1 then teste
 | `GATE12_1_CONTINUOUS_GEOMETRY_ENGINE` | `COMPLETE_ENGINEERING_NOT_QUALIFIED` | FP32 full-sequence/KV equivalence and exact JVP/VJP, Fisher/Hessian, and utility-derivative identities passed. The historical BF16 bridge missed its top-1 threshold, and only two consecutive finite-difference scales passed rather than three. No scientific item or historical outcome was accessed. |
 | `GATE13_CROSS_MODEL_MINISTRAL3` | `COMPLETE_DEVELOPMENT_NO_CAUSAL_FIRST_STAGE` | Ministral-3 8B passed the substrate screen and all 34 source directions passed held-out eligibility. None of the prospectively shortlisted L8, L12, L22, or L26 D50 cells passed every safety and null-specificity gate, so dose calibration and final evaluation were not run. The independent audit is clean and the historical result remains bounded to the frozen shortlist-plus-D50 procedure. |
 | `GATE13_1_ALL_LAYER_CAUSAL_ATLAS` | `COMPLETE_DEVELOPMENT_STRONG_CROSS_MODEL_REPLICATION` | The all-layer D50 sweep advanced L16/L18/L27, and disjoint layer-dose qualification selected L27-D25 without correctness ranking. On 100 untouched final items, accuracy rose from 0.445 to 0.575; G/C/D were 0.1650/0.0940/0.1400 and exceeded four fresh random controls. Validity and evaluability passed exactly at the five-point relative boundary. The audit reproduced all metrics exactly and records one non-scientific operational cost/Git incident. |
+| `Q1_CONFIRMATORY_FIXED_CONTROLLERS` | `HOLDOUT_ASSIGNED_POWER_PENDING` | The exact 57 IDs that remained reserved, unseen, and unallocated during DEVELOPMENT were prospectively assigned to the Q1 fixed-controller confirmatory role after a clean provenance audit. The assignment is not retroactive, the set remains sealed, and no confirmatory inference or evidence exists. Offline N=57 power qualification is the only current authorized action. |
 
 ## Scientific firewall
 
-- `steering`: `GATE13_1_CLOSED_STRONG_CROSS_MODEL_REPLICATION`
+- `steering`: `Q1_CONFIRMATORY_HOLDOUT_ASSIGNED_POWER_PENDING`
 - `published_positive_control`: `PASS`
 - `geometry_q2`: `NOT_RUN`
 - `committee_q3`: `NOT_RUN`
-- `confirmatory_holdout`: `UNTOUCHED`
+- `confirmatory_holdout`: `SEALED_ASSIGNED_UNACCESSED`
 - `model_downloads_local`: `FORBIDDEN`
-- `current_task`: `PRINCIPAL_RESEARCHER_REVIEW`
+- `current_task`: `Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION`
 - `free_generation`: `NOT_AUTHORIZED`
 
 Historical failures above are failures or non-qualification of measurement
 instruments. They are not positive or negative tests of the full causal-geometry
-theory. The confirmatory holdout remains untouched.
+theory. The current confirmatory-holdout status is
+`SEALED_ASSIGNED_UNACCESSED`.
 
 ## Canonical navigation
 

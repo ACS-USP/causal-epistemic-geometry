@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "role": "Q1_FIXED_CONTROLLER_CONFIRMATORY_HOLDOUT",
+  "status": "SEALED_ASSIGNED_UNACCESSED",
+  "n_items": 57,
+  "ordered_id_list_sha256": "a012b4d203d88d807a146ebbe8429c55a1834c6b8e0df5751a12b677ff7b2462",
+  "ordered_id_list_source": "review/q1_confirmatory_fixed_controllers/HOLDOUT_PROVENANCE_AUDIT.json",
+  "provenance_audit_commit": "2aff0a8f3e9006731066f4d91ebaa638d84fe2e0",
+  "designation_date": "2026-08-23",
+  "designation_semantics": "PROSPECTIVE_ROLE_ASSIGNMENT_AFTER_DEVELOPMENT_BEFORE_CONTENT_OR_OUTCOME_ACCESS",
+  "historical_status_before_designation": "RESERVED_UNSEEN_UNALLOCATED_NOT_CANONICALLY_MAPPED_TO_CONFIRMATORY_HOLDOUT",
+  "phase_zero_block": "RESOLVED_BY_PROSPECTIVE_PRINCIPAL_ASSIGNMENT",
+  "prompts_inspected": false,
+  "references_inspected": false,
+  "outcomes_inspected": false,
+  "prior_model_inference": false,
+  "development_overlap": 0,
+  "q2": "NOT_RUN",
+  "q3": "NOT_RUN",
+  "confirmatory_inference": "NOT_RUN"
+}

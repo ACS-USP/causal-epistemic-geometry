@@ -48,7 +48,11 @@ def main() -> int:
         identifiers.add(identifier)
         if item.get("stage") == "CONFIRMATORY":
             errors.append(f"{identifier}: no confirmatory experiment is registered as executed")
-        if item.get("holdout_status") not in {"UNTOUCHED", "NOT_APPLICABLE"}:
+        if item.get("holdout_status") not in {
+            "UNTOUCHED",
+            "NOT_APPLICABLE",
+            "SEALED_ASSIGNED_UNACCESSED",
+        }:
             errors.append(f"{identifier}: unexpected holdout status")
     required_ids = {
         "Q1_V1_MMLU_PRO",
@@ -71,4 +75,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

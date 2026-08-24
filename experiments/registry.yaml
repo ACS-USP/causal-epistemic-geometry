@@ -1117,3 +1117,43 @@ experiments:
       q3: NOT_RUN
       holdout_status: UNTOUCHED
     next_action: Principal researcher review; next protocol drafted only and not authorized.
+
+  - id: Q1_CONFIRMATORY_FIXED_CONTROLLERS
+    version: Q1-CONFIRMATORY-DESIGN-REVIEW
+    stage: CONFIRMATORY_DESIGN_REVIEW
+    question: >-
+      Do the already-fixed Qwen L27-D75 and Ministral L27-D25 controllers both
+      show positive competence-adjusted complementarity on one prospectively
+      sealed CRUXEval holdout under frozen null and safety criteria?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3
+    model_policy: Fixed accepted Qwen3-8B and Ministral-3-8B policies; no inference yet
+    status: HOLDOUT_ASSIGNED_POWER_PENDING
+    outcome: NOT_RUN
+    scientific_interpretation: >-
+      The principal prospectively assigned the exact previously reserved,
+      unseen, unallocated 57-ID set to the Q1 fixed-controller confirmatory
+      role. This is not retroactive and is not confirmatory evidence. The set
+      remains sealed pending offline N=57 power qualification.
+    source_commit: 2aff0a8f3e9006731066f4d91ebaa638d84fe2e0
+    artifact: review/q1_confirmatory_fixed_controllers/
+    cost_usd: 0.0
+    holdout_status: SEALED_ASSIGNED_UNACCESSED
+    parent_experiment: GATE13_1_ALL_LAYER_CAUSAL_ATLAS
+    lock:
+      role: Q1_FIXED_CONTROLLER_CONFIRMATORY_HOLDOUT
+      n_items: 57
+      ordered_id_list_sha256: a012b4d203d88d807a146ebbe8429c55a1834c6b8e0df5751a12b677ff7b2462
+      provenance_audit_commit: 2aff0a8f3e9006731066f4d91ebaa638d84fe2e0
+      designation_semantics: PROSPECTIVE_ROLE_ASSIGNMENT_AFTER_DEVELOPMENT_BEFORE_CONTENT_OR_OUTCOME_ACCESS
+      phase_zero_block: RESOLVED_BY_PROSPECTIVE_PRINCIPAL_ASSIGNMENT
+    execution:
+      lifecycle: DESIGN_REVIEW
+      holdout_content_inspected: false
+      holdout_outcomes_inspected: false
+      model_weights_loaded: false
+      runpod_started: false
+      power_analysis: PENDING
+      confirmatory_inference: NOT_RUN
+      q2: NOT_RUN
+      q3: NOT_RUN
+    next_action: Run offline N=57 power qualification; keep the holdout sealed.

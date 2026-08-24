@@ -23,7 +23,10 @@ def test_project_state_and_generated_status_are_current() -> None:
     assert result.returncode == 0, result.stderr
     state = yaml.safe_load((ROOT / "project_state.yaml").read_text(encoding="utf-8"))
     assert state["project"]["claim_status"] == "NONE_FROZEN"
-    assert state["scientific_firewall"]["confirmatory_holdout"] == "UNTOUCHED"
+    assert state["scientific_firewall"]["confirmatory_holdout"] in {
+        "UNTOUCHED",
+        "SEALED_ASSIGNED_UNACCESSED",
+    }
     workstream = state["current"]["workstream"]
     assert workstream in {
         "SUBSTRATE_RACE",
@@ -62,6 +65,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE13_CROSS_MODEL_MINISTRAL3_COMPLETE",
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_COMPLETE",
+        "Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -105,6 +109,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE13_BOUNDED_CROSS_MODEL_NULL",
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_LOCKED",
         "GATE13_1_CLOSED_STRONG_CROSS_MODEL_REPLICATION",
+        "Q1_CONFIRMATORY_HOLDOUT_ASSIGNED_POWER_PENDING",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

@@ -54,8 +54,11 @@ def main() -> int:
     sandbox_status = state["infrastructure"]["dense_code_sandbox"]["status"]
     if "REPLACE_WITH_REVIEWED_DIGEST" in dockerfile and sandbox_status == "PRODUCTION_READY":
         errors.append("placeholder Docker digest cannot be production-ready")
-    if state["scientific_firewall"]["confirmatory_holdout"] != "UNTOUCHED":
-        errors.append("confirmatory holdout firewall changed")
+    if state["scientific_firewall"]["confirmatory_holdout"] not in {
+        "UNTOUCHED",
+        "SEALED_ASSIGNED_UNACCESSED",
+    }:
+        errors.append("confirmatory holdout firewall is not sealed")
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
@@ -65,4 +68,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

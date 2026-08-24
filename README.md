@@ -7,9 +7,9 @@ in a frozen model's semantic error profile.
 <!-- PROJECT_STATUS:START -->
 **Current stage:** `DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-Gate 13 remains the bounded source-shortlist plus D50 null. Gate 13.1 then tested all 34 Ministral layers, selected L27-D25 without correctness-based ranking, and strongly replicated safe, random-specific CRUXEval error control on 100 untouched final-evaluation items. This is DEVELOPMENT cross-model evidence, not domain-general or confirmatory evidence.
+Gate 9 and Gate 13.1 remain strong DEVELOPMENT evidence. The principal has now prospectively assigned the exact previously reserved, unseen 57-ID set as the Q1 fixed-controller confirmatory holdout. This assignment is not retroactive and produces no confirmatory evidence. The set remains sealed pending offline N=57 power qualification.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW; no next experiment authorized.
+**Next authorized action:** Run the authorized offline N=57 power analysis using immutable Gate-9 and Gate-13.1 DEVELOPMENT outcomes only; no holdout content or model access.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
