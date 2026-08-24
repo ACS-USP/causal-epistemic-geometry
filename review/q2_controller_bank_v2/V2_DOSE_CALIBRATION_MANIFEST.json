@@ -1,0 +1,254 @@
+[
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "e19affcd307f9ea6b15d490cba4aa2ddc27f4d9c930c70015599c1e3bce80cd1",
+    "item_id": "sample_613",
+    "metadata": {
+      "catalog_signature_frequency": 2,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_613",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    result = ''\n    mid = (len(text) - 1) // 2\n    for i in range(mid):\n        result += text[i]\n    for i in range(mid, len(text)-1):\n        result += text[mid + len(text) - 1 - i]\n    return result.ljust(len(text), text[-1])\n```\n\nInput: 'eat!'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "0ca947dc2333a3d2ef39470bb39f1b6ce029cb1ec5f95a4d9b21203e8a5bafdd",
+    "reference_answer": "'e!t!'",
+    "reference_canonical_type": "str",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "47db4e9670cf401ef31dcb17af105556d394494f7bb52d3ee300e34f82f7cdd6",
+    "item_id": "sample_182",
+    "metadata": {
+      "catalog_signature_frequency": 3,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_182",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(dic):\n    return sorted(dic.items(), key=lambda x: x[0])\n```\n\nInput: {'b': 1, 'a': 2}\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "522d9b692ee3fddd1bf898313503d50e7e0c04e8ea51b3a6a28604adf10a559b",
+    "reference_answer": "[('a', 2), ('b', 1)]",
+    "reference_canonical_type": "list",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "e3ba96f021299c63832d3c1dfd1e88446fee42f3a23048a89f5b33eb12bdfc83",
+    "item_id": "sample_239",
+    "metadata": {
+      "catalog_signature_frequency": 1,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_239",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, froms):\n    text = text.lstrip(froms)\n    text = text.rstrip(froms)\n    return text\n```\n\nInput: '0 t 1cos ', 'st ' + '0\\t\\n  '\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "ab7ce132c7c0f553ab43b6eb550a8f86a6406bb8481cd8caef7799be0428bd10",
+    "reference_answer": "'1co'",
+    "reference_canonical_type": "str",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "ee3377d1a2679ef40d5b0f1c641911f834ffb9cef9d2ef9ffb8807bc6fd97452",
+    "item_id": "sample_671",
+    "metadata": {
+      "catalog_signature_frequency": 2,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_671",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, char1, char2):\n    t1a = []\n    t2a = []\n    for i in range(len(char1)):\n        t1a.append(char1[i])\n        t2a.append(char2[i])\n    t1 = text.maketrans(dict(zip(t1a, t2a)))\n    return text.translate(t1)\n```\n\nInput: \"ewriyat emf rwto segya\", \"tey\", \"dgo\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "9da0e914dce85d4372bdfbe70fac469e5ac71d049e6547efd8fa72d64a5a194c",
+    "reference_answer": "'gwrioad gmf rwdo sggoa'",
+    "reference_canonical_type": null,
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "cbcf60762c27ee75e2f39cbdf7b962c1d07ccea840ade20c73928dc7bfb5aed5",
+    "item_id": "sample_416",
+    "metadata": {
+      "catalog_signature_frequency": 1,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_416",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, old, new):\n    index = text.rfind(old, 0, text.find(old))\n    result = list(text)\n    while index > 0:\n        result[index:index+len(old)] = new\n        index = text.rfind(old, 0, index)\n    return ''.join(result)\n```\n\nInput: 'jysrhfm ojwesf xgwwdyr dlrul ymba bpq', 'j', '1'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "bdbb0c5eb9c3f71d520900c00d04645bd9df6dda97cca8f22e0a1e9a30d3821c",
+    "reference_answer": "'jysrhfm ojwesf xgwwdyr dlrul ymba bpq'",
+    "reference_canonical_type": "str",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "1193a20ff634c1e930ca0674c15ace4a53c3b099b58f463a0ea9dba6ef42dd46",
+    "item_id": "sample_372",
+    "metadata": {
+      "catalog_signature_frequency": 2,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_372",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(list_, num):\n    temp = []\n    for i in list_:\n        i = num // 2 * ('%s,' % i)\n        temp.append(i)\n    return temp\n```\n\nInput: ['v'], 1\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "946f592cf4bfd2c259cb40ff181a0c1ea0f27ee80807e32fa96201bea089b96f",
+    "reference_answer": "['']",
+    "reference_canonical_type": "list",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "3f04a08aeeaf33cd1650809bcbe8c5ff729fafa332023465d1d0cbcc7cb0feea",
+    "item_id": "sample_459",
+    "metadata": {
+      "catalog_signature_frequency": 3,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_459",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(arr, d):\n    for i in range(1, len(arr), 2):\n        d.update({arr[i]: arr[i-1]})\n\n    return d\n```\n\nInput: ['b', 'vzjmc', 'f', 'ae', '0'], dict()\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "483b739d0860d68a80612c17be8fe9ddda1cfeac7804f7f211bb8aff062697ef",
+    "reference_answer": "{'vzjmc': 'b', 'ae': 'f'}",
+    "reference_canonical_type": "dict",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "98a41c45d2ae35f223716d47105f7d6f9193aa3f16ed17993147b751a48c9366",
+    "item_id": "sample_329",
+    "metadata": {
+      "catalog_signature_frequency": 2,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_329",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    for i in range(len(text)):\n        if text[i] == text[i].upper() and text[i-1].islower():\n            return True\n    return False\n```\n\nInput: 'jh54kkk6'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "379b147b4ec3d989e7bf801ccd106ff0e8250e66140884a20a9fa8f9a4b89a31",
+    "reference_answer": "True",
+    "reference_canonical_type": "bool",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "fd64606698edbd5c19ddebeaf3047ccf8fb87d7cddb1fffb58d601f9a5d7af5d",
+    "item_id": "sample_599",
+    "metadata": {
+      "catalog_signature_frequency": 3,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_599",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(a, b):\n    a = b.join(a)\n    lst = []\n    for i in range(1, len(a)+1, 2):\n        lst.append(a[i-1:][:i])\n        lst.append(a[i-1:][i:])\n    return lst\n```\n\nInput: [\"a\", \"b\", \"c\"], \" \"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "718dded43f44092da7d7f7e795b5b51345f882f1a4f0b01bf3417a26c2facf80",
+    "reference_answer": "['a', ' b c', 'b c', '', 'c', '']",
+    "reference_canonical_type": "list",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "2e60187b0ba63f1806707c491cde94d50628ef39c4d13ae1ade5be762694d142",
+    "item_id": "sample_161",
+    "metadata": {
+      "catalog_signature_frequency": 1,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_161",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, value):\n    left, _, right = text.partition(value)\n    return right + left\n```\n\nInput: 'difkj rinpx', 'k'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "929e20cb4398b24eb9bd1863163b80c726f72eef6a277a9765f07bf6e3bf64fc",
+    "reference_answer": "'j rinpxdif'",
+    "reference_canonical_type": null,
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "d4a6f04a2c662f2bc397157e1a00836b55b6a945b77d67d170f6f8fa0d4860a8",
+    "item_id": "sample_699",
+    "metadata": {
+      "catalog_signature_frequency": 2,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_699",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text, elem):\n    if elem != '':\n        while text.startswith(elem):\n            text = text.replace(elem, '')\n        while elem.startswith(text):\n            elem = elem.replace(text, '')\n    return [elem, text]\n```\n\nInput: \"some\", \"1\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "a18465a14a9160fd6523ea6f5519b571d8d725b49c4d9562b03a3d00bc32acb6",
+    "reference_answer": "['1', 'some']",
+    "reference_canonical_type": "list",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  },
+  {
+    "allocation": "V2_DOSE_CALIBRATION",
+    "benchmark": "CRUXEval",
+    "evaluator": "python_literal",
+    "item_hash": "2a43c3ab3bd46f8acc63ba1b590e0ef1b96d9d3b671873cc23eb6c4e0a506087",
+    "item_id": "sample_571",
+    "metadata": {
+      "catalog_signature_frequency": 2,
+      "dataset_repo": "cruxeval-org/cruxeval",
+      "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+      "official_id": "sample_571",
+      "selection_namespace": "Q2-CONTROLLER-HELDOUT-GEOMETRY-V2",
+      "v2_allocation": "V2_DOSE_CALIBRATION"
+    },
+    "prompt": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(input_string, spaces):\n    return input_string.expandtabs(spaces)\n```\n\nInput: r'a\\tb', 4\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "prompt_hash": "40f3f67e376237339a7d4de191907a7aac560f396d9017da6632147e1a187a2a",
+    "reference_answer": "'a\\\\tb'",
+    "reference_canonical_type": "str",
+    "source_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "subtask": "output_prediction"
+  }
+]

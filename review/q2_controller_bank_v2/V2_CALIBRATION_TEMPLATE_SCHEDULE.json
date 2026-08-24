@@ -1,0 +1,31 @@
+{
+  "dose_fractions": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "dose_names": [
+    "D_LOW",
+    "D_MEDIUM",
+    "D_HIGH",
+    "D_VERY_HIGH"
+  ],
+  "items": [
+    "sample_613",
+    "sample_182",
+    "sample_239",
+    "sample_671",
+    "sample_416",
+    "sample_372",
+    "sample_459",
+    "sample_329",
+    "sample_599",
+    "sample_161",
+    "sample_699",
+    "sample_571"
+  ],
+  "note": "The controller list is populated only after source qualification; no calibration output exists.",
+  "rollouts": 1,
+  "status": "TEMPLATE_BEFORE_SOURCE_QUALIFICATION"
+}

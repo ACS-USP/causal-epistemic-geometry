@@ -1263,3 +1263,66 @@ experiments:
     next_action: >-
       Principal review of the offline bank-rebuild draft; no new inference,
       second Q2 experiment, or Q3 is authorized.
+
+  - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
+    version: Q2-V2
+    stage: DEVELOPMENT_SOURCE_QUALIFICATION
+    question: >-
+      Can a calibrated bank of conceptually distinct L27 intervention families
+      support a controller-family-held-out test of simple geometry, without
+      opening the common panel until the bank is dynamically qualified?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3
+    model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
+    status: LOCKED_PRE_SOURCE_QUALIFICATION
+    outcome: NOT_YET_RUN
+    scientific_interpretation: >-
+      Q2 V2 is a new DEVELOPMENT protocol, not a predictive result. V1's common
+      panel was never run. V2 freezes six source-axis candidates, per-direction
+      label-free dose calibration, SVD span-orthogonal nulls, and a family-held-out
+      M0/M1/M2 prediction design before new source outputs.
+    source_commit: a386952cb76642281447ac0bb32f36fb466af520
+    artifact: review/q2_controller_bank_v2/
+    cost_usd: null
+    cost_envelope_usd: 15.0
+    hard_cost_ceiling_usd: 25.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    parent_experiment: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
+    lock:
+      role: DEVELOPMENT
+      lifecycle: PROSPECTIVE_LOCK
+      model: Qwen3-8B
+      layer: 27
+      source_axes_proposed: 6
+      source_qualification_items: 24
+      dose_calibration_items: 12
+      covariance_items: 64
+      finite_secant_items: 12
+      common_panel_n: 120
+      common_panel_reuse: V1_FROZEN_WITHOUT_OUTCOMES
+      meaningful_target: 18-24
+      meaningful_minimum: 14
+      source_family_minimum: 4
+      causal_direction_minimum: 8
+      dose_grid: [D_LOW, D_MEDIUM, D_HIGH, D_VERY_HIGH]
+      null_projector: SVD_ORTHONORMAL_MEANINGFUL_SPAN
+      geometries: [M0_FLAT, M1_WHITENED, M2_FINITE_SECANT]
+      family_split: LEAVE_ONE_SOURCE_FAMILY_OUT
+      qap_permutations: 10000
+      bootstrap_resamples: 10000
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      source_qualification: NOT_RUN
+      dose_calibration: BLOCKED_UNTIL_SOURCE_QUALIFICATION
+      bank_qualification: BLOCKED_UNTIL_DOSE_CALIBRATION
+      common_panel: BLOCKED
+      common_panel_rows: 0
+      predictive_geometry_analysis: NOT_RUN
+      correctness_used_for_qualification: false
+      Q2_V1_common_panel_outcomes_read: false
+      Q1: IMMUTABLE
+      Q3: NOT_RUN
+      runpod_status: TERMINATED
+      active_pods: 0
+    next_action: >-
+      Publish the pre-source lock, then collect only the frozen source
+      qualification phase. Stop before dose calibration if fewer than four axes qualify.

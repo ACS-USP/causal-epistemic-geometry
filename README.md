@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_DEVELOPMENT_BANK_QUALIFICATION_CLOSED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_DEVELOPMENT_V2_PRE_SOURCE_LOCK` — **scientific claim:** `NONE_FROZEN`.
 
-The first Q2 DEVELOPMENT pilot stopped at its frozen controller-bank gate as Q2_CONTROLLER_BANK_NOT_QUALIFIED. All three source axes passed and engineering passed, but only 3/16 controllers met the causal first-stage rule and the null bank failed its representation-space orthogonality gate. The 120-item common panel, M0/M1/M2 predictive analysis, QAP, and outcome reveal were not run. Q1 remains immutable and Q3 remains unauthorized.
+Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel outcomes. Q2 V2 has a pre-source lock with six frozen conceptual axes, fresh disjoint source/dose/geometry qualification pools, corrected SVD null projection, and the unchanged 120-item common panel blocked until a final bank lock. No V2 model output exists yet. Q1 remains immutable and Q3 is not run.
 
-**Next authorized action:** Principal review of the offline controller-bank rebuild draft. No new model inference, second Q2 experiment, or Q3 is authorized.
+**Next authorized action:** Push and principal review of the Q2 V2 pre-source lock, then run source qualification only. No common-panel inference is authorized before the final V2 bank lock.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

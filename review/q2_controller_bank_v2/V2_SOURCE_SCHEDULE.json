@@ -1,0 +1,5762 @@
+[
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 0,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1963336995,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 540907608,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 866576838,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3085887109,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2341212639,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1158090190,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 6,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3624801494,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2072287486,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 8,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2726090119,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 9,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 555707598,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1175280080,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1402799754,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 17831288,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4116172016,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1040118630,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 3,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3717984323,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 4,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1496387967,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2968342004,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2309452903,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 202500023,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 8,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 569594723,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1630027789,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2852408683,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_750",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1212756949,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4263030739,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 1,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2831547962,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2893652920,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2272994884,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1116834157,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2339359039,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3310655679,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 524119996,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 49041444,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 239790688,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2488132421,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2165693760,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 0,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1662078169,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3240358456,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 2,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1159852833,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2589678422,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1919696395,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 88113238,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3470695642,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3953416576,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 8,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2215372415,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 9,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2319070032,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3738047481,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_620",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1818024569,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2174723387,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2673303995,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2339463682,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 372601112,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2838301401,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4168339724,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 288096038,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4157008836,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 8,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 995757720,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3263736571,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4026406239,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 11,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1570859827,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2636965634,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2499035799,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 2,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2539256446,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 878444508,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 4,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1926194817,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 5,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1863647516,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 6,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 241474201,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4152924654,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 8,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3342810328,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2303968683,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2504855620,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_335",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2220301330,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3336850870,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 1,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 956227413,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3492772665,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1752293166,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2076613320,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3018267485,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1375554492,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2449685729,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2631246461,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4011620541,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 934694378,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 122150616,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4217696768,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3849452630,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 2,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1707359996,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3313135279,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 616638428,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2820702272,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2302857605,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1565789342,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 587387792,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2528183882,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 313542589,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 11,
+    "item_id": "sample_720",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1871583063,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1798904450,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1283354571,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1001582415,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3142786705,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1640099345,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 5,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2750047483,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 6,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2827849868,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2495725461,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 8,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1462242406,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1230620643,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3044116650,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1396036231,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3649522818,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2498515783,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 191914963,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 3,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 389503854,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4291056887,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1777120572,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3660384246,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 167956341,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 8,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3540297107,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2501115721,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 556918829,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_458",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1761725338,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2497873633,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1711104420,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 2,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 802101086,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3862835444,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3440260235,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 5,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2054812257,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 6,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1769319434,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2407095415,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2488747436,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 9,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2730907564,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 117974278,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1219108732,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4125208683,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2946974339,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2366972419,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1838021921,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2954892812,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3947609448,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 871816403,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3055813131,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 8,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 905257943,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2886372698,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2009505070,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_119",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4084385853,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 15465309,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 1,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 569201114,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1072879361,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2717088028,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 4,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4102699014,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1355459596,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3484011167,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2707961269,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3594337536,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 14415251,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3919666125,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 11,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 75525486,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1131846210,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 859751369,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1027663719,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 869270675,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 4,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1310544484,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 877507067,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3177742417,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1485889324,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 8,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2324359574,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2554525313,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1247048462,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_555",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2372762453,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2633959284,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2993404778,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 938584871,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3832936707,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 658327557,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1294375507,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1176242742,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 807928375,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 8,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3351666111,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3795204444,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2926931579,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 556512833,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2517249101,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 351382680,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1091671541,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3061826739,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3176807143,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 5,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 892126116,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1386847124,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4283672305,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3462085991,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1295861091,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2627333879,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 11,
+    "item_id": "sample_90",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 451422161,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 0,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3869757532,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 1,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 251161906,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2419818894,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1253330510,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1546886925,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3772741635,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 768595622,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 162040126,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1933872244,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 200825130,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 10,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3358570740,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 11,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3534490096,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2278873671,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 1,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4037381499,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 696447738,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3460671342,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 873728433,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 5,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2754885958,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3206037030,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2908454345,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1565490447,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2610144,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2057604162,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_425",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2812975495,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1449613773,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 621523065,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1145080721,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 961417253,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3718106339,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1537029463,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3491166124,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3308147838,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3838231690,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1667690011,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 150751189,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4093378312,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2236777930,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2454156543,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 2,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 620493152,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1819978979,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3962598610,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 5,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 657551860,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 680856466,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1360026049,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 8,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2894712760,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 173249551,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3416065154,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_703",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 868058808,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3727678959,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 696754412,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 155489763,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1880024599,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 433519929,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2189922882,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2868361611,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3628589925,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3952739160,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2369011138,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2199137139,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1129897038,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3369944766,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3392304563,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2030124581,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2847131115,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4209122702,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 28321511,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3079181370,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2153820105,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 540840692,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4135217316,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3437202607,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_471",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2521429282,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3022664153,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3491559891,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 2,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2257220419,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 3,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3632006231,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 4,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3467188957,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 5,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3502508031,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2674931899,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 641473458,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1833434150,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1027016421,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 652149817,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 64014942,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 623741805,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1889510297,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 120911794,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2289859319,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3851255871,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4080363174,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 6,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2520828663,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3812136697,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 8,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3291422824,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 9,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1945615576,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2292702725,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 11,
+    "item_id": "sample_719",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 310550668,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1709278266,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1872247079,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 453684917,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 3,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3753813807,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3191818092,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2029596245,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1488307765,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3034149896,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 8,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1791507040,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 370207954,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 165011243,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1673645224,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4143639568,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3932779472,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1422690338,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2029374719,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1033257101,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2716360023,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1041279830,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4163706363,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 8,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2080599249,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2846141646,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 560902362,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 11,
+    "item_id": "sample_716",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3914919829,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1964606058,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 659906984,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 2,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2295039641,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 3,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 517330914,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 845228558,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2104484553,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3328266503,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 576563552,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3320944365,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1651894694,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3242778899,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2516141639,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3475004492,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2261925190,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3132526869,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 3,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2858006247,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3288159843,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1172396984,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1859620965,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3749051758,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1696603786,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4212698052,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3957343631,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_639",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2284224444,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 47881074,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 840952049,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3168898286,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3045365970,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 4,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 69429324,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2698598010,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3190267930,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2654479670,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2288386197,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4245892957,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 10,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1273270955,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 11,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2198914088,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3524639708,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4107126388,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 2,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 678178686,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 3,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3779113493,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1481704506,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 5,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 559451046,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3242437366,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3772238267,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2713809948,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 9,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1840238667,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3306203187,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_583",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 748589243,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1219345975,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 1,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 242088039,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2371335845,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2519301227,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1704471614,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3661124898,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1105757893,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2767115468,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 8,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3685060263,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2302958718,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1785619438,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2162340426,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3939562414,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 1,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2953384525,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2043682505,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1419688550,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3219275198,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2502082452,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2769515915,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1109927991,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2634699183,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3127071156,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2602250778,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 11,
+    "item_id": "sample_758",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1597194604,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3259703587,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1646435679,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 2,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2977294577,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4110024074,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1891979465,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 5,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3205446153,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2665241603,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4062980813,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 383048253,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 216174166,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 10,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4084034696,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3149426701,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3411264616,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2634475327,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 2,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2234789970,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 3,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1960137759,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 4,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4228729601,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1177632016,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1532714433,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2216640274,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 8,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 126779835,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1207721732,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2395215065,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_16",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1205039716,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 0,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2954280225,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3487967309,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 2,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1848368624,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2757545297,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1111976945,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 5,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1378435267,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 732692156,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1443739243,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 8,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 977869066,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 9,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4079937905,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 100665023,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3961516585,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3947977070,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3548494522,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 2,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1334588978,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3616083001,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1761100419,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2171976576,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1847724808,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3901601074,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2498875973,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 9,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1927123471,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2383481609,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_352",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 625408614,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1154678476,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3355182275,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 2,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2837698159,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 348934404,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 4,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1007927904,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 5,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3487969248,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3973866396,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 7,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3434932202,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2225117024,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1867954701,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 17556850,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3829231243,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2892754675,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3711457927,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 2,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 311354629,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 3,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1368708812,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3194206802,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2330908345,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1289400957,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3306034930,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 294690903,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 9,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3149483436,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 10,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3202617895,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_111",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 476275417,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 0,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 291765582,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 1,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2473406057,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 2,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4244967972,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 902444816,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2114332900,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 80303010,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2886036374,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1256718659,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 510124948,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1362312840,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 341569674,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1157450207,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 0,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1395820595,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 1,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1713312304,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 610951978,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4189176799,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 368656478,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 5,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1929093228,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1707780100,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1496074264,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1193844778,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 562607989,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 10,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3812525716,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_452",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1727301549,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1796776660,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2896462905,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 2,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 500457174,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1654673278,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 367627048,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 173399347,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 6,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3784010387,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1533077915,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 718868184,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 9,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 902336768,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 621196405,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1371834719,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2919765550,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 1,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1781190558,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 637948303,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1527697193,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3217792384,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 4254197124,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2392264779,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3743424213,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 8,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 314748451,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 9,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1816826058,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2153727577,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_669",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3600759210,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1681461955,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 1,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3863684526,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2610025281,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 3,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2745380518,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 4,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 551051874,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 5,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2112755496,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4212824375,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 7,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1161446885,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 8,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3859731362,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2146297935,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 10,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1576381265,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 11,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1400455583,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2913213586,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2116890111,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 2,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3434153680,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 3,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3473480571,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 4,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1205695804,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2584148208,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 6,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 914791116,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 7,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 231152391,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4195194912,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1791139063,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 10,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1992110267,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_64",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2205051324,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2304670230,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 884606334,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3898743444,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 3,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 534473041,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 4,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3351438483,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 5,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1032066612,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1392114181,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 2507356937,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 8,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 4271443816,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 9,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 1798692271,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2609232072,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 42663611,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 0,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2729379010,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 1,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1576370161,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 2,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2342625044,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3796874518,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 4,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3099882258,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 5,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3413669952,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 824727877,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 224107612,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 8,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2981619657,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 9,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3654133369,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 78810172,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 11,
+    "item_id": "sample_679",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3776309482,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 0,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 4274000980,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 1,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3351270146,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 2,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1858519121,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 3,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 974846889,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 4,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 632708662,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 517675567,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 6,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3534467892,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 7,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 290091036,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 8,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 3878283632,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 9,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 2938284428,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 0,
+    "seed": 3403809834,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 0,
+    "seed": 1438967954,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 0,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1716490615,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 1,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 995423236,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "TYPE_REPRESENTATION_DISCIPLINE",
+    "condition_order": 2,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3184909396,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 3,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3928423627,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 4,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 4133630077,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 5,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 1188708037,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "COUNTERFACTUAL_CHECKING",
+    "condition_order": 6,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 2909993677,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INDEPENDENT_VERIFICATION",
+    "condition_order": 7,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 2271160865,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 8,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 3832084078,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "EXPLICIT_STATE_TRACKING",
+    "condition_order": 9,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 3911393592,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "INVARIANT_CHECKING",
+    "condition_order": 10,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "PLUS",
+    "rollout_index": 1,
+    "seed": 697487382,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  },
+  {
+    "axis_id": "DECOMPOSE_THEN_SOLVE",
+    "condition_order": 11,
+    "item_id": "sample_384",
+    "phase": "V2_SOURCE_QUALIFICATION",
+    "polarity": "MINUS",
+    "rollout_index": 1,
+    "seed": 1533633243,
+    "seed_regime": "INDEPENDENT_SOURCE_QUALIFICATION"
+  }
+]
