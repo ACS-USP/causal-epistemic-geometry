@@ -1202,3 +1202,50 @@ experiments:
       q2: NOT_RUN
       q3: NOT_RUN
     next_action: Principal researcher review; no next experiment authorized.
+
+  - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
+    version: Q2-PILOT-V1
+    stage: DEVELOPMENT
+    question: >-
+      Do pre-specified flat, covariance-whitened, or finite behavioral secant
+      geometries predict unbiased semantic error-profile distances for
+      controller families held out before outcomes?
+    instrument: CRUXEval semantic output prediction with external-semantic-v3
+    model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
+    status: PROSPECTIVE_LOCK
+    outcome: PENDING
+    scientific_interpretation: >-
+      This is the first Q2 DEVELOPMENT experiment. It does not modify the
+      immutable Q1 result and cannot establish confirmatory Q2 or Q3. The
+      candidate bank contains three conceptual source axes, two L27 source
+      locations, both signs, and four frozen nulls at one common displacement
+      norm. A full conceptual source family is held out.
+    source_commit: 411de44c5c5229f9a5c9081de1e102517191543a
+    artifact: review/q2_controller_heldout_geometry/
+    cost_usd: null
+    cost_status: PRE_OUTCOME_PREFLIGHT_REQUIRED
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    parent_experiment: Q1_CONFIRMATORY_FIXED_CONTROLLERS
+    lock:
+      role: DEVELOPMENT
+      model: Qwen/Qwen3-8B
+      layer: 27
+      controller_bank_k: 16
+      meaningful_controllers: 12
+      null_controllers: 4
+      common_panel_n: 120
+      expected_common_panel_rows: 4080
+      controller_split: 10_train_6_heldout
+      primary_score: heldout_controller_edge_spearman_with_controller_label_QAP
+      geometry_families: [M0_FLAT, M1_WHITENED, M2_FINITE_SECANT]
+      hard_cost_ceiling_usd: 15.0
+    execution:
+      lifecycle: PROSPECTIVE_LOCK
+      bank_qualification: PENDING
+      common_panel: NOT_STARTED
+      midrun_scientific_peeking: FORBIDDEN
+      confirmatory_outcomes_read: false
+      q3: NOT_AUTHORIZED
+    next_action: >-
+      Run source/manipulation qualification under the frozen rules; stop as
+      Q2_CONTROLLER_BANK_NOT_QUALIFIED if any required bank gate fails.

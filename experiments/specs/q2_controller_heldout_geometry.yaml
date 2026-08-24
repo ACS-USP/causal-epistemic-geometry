@@ -1,0 +1,109 @@
+experiment_id: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
+status: FROZEN_PRE_QUALIFICATION
+role: DEVELOPMENT
+question: >-
+  Do pre-specified flat, covariance-whitened, or finite behavioral secant
+  geometries predict unbiased semantic error-profile distances for controllers
+  held out as complete source families?
+
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: BF16
+  quantization: none
+  enable_thinking: false
+  attention: sdpa
+  generation:
+    do_sample: true
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    min_p: 0.0
+    max_new_tokens: 4096
+
+instrument:
+  benchmark: CRUXEval semantic output prediction
+  evaluator: external-semantic-v3
+  development_panel_n: 120
+  confirmatory_holdout: CLOSED_AND_EXCLUDED
+
+controller_bank:
+  common_layer: 27
+  duration: sustained_current_token
+  eta: 9.637427952852196
+  reference_scale: 10.153299177386142
+  absolute_delta_norm: 97.85168930581241
+  conceptual_axes:
+    - INDEPENDENT_VERIFICATION
+    - EXPLICIT_STATE_TRACKING
+    - TYPE_REPRESENTATION_DISCIPLINE
+  source_locations:
+    - PROMPT_BOUNDARY
+    - EXECUTION_BOUNDARY
+  signs:
+    - PLUS
+    - MINUS
+  meaningful_n: 12
+  nulls:
+    isotropic: 2
+    construction_matched_sign_shuffled: 2
+  total_k: 16
+  qualification_uses_correctness: false
+  qualification_uses_G_C_D: false
+
+geometries:
+  M0:
+    name: FLAT
+    primary: normalized_euclidean_on_unit_directions
+    secondary: cosine_distance
+  M1:
+    name: WHITENED
+    covariance_pool_n: 64
+    regularization_fraction: 0.10
+    primary: normalized_euclidean_in_regularized_inverse_covariance_inner_product
+  M2:
+    name: FINITE_BEHAVIORAL_SECANT
+    probe_n: 12
+    checkpoints: [first, one_third, two_thirds, last]
+    primary: sqrt_mean_full_vocabulary_JS
+    exact_local_geometry: false
+
+controller_split:
+  train_n: 10
+  heldout_n: 6
+  train_edges: 45
+  heldout_edges: 75
+  heldout_unit: complete_conceptual_source_family_plus_two_nulls
+
+common_panel:
+  conditions: 17
+  rollouts_per_item_condition: 2
+  seed_regime: INDEPENDENT_PRIMARY
+  expected_rows: 4080
+  midrun_scientific_peeking: forbidden
+
+prediction:
+  primary: heldout_edge_spearman_rho
+  inference: controller_label_QAP
+  permutations: 10000
+  secondary: train_affine_calibrated_heldout_standardized_RMSE
+  item_cluster_bootstrap_resamples: 5000
+
+classifications:
+  - Q2_PILOT_HELDOUT_PREDICTION_SIGNAL
+  - Q2_PILOT_SIMPLE_GEOMETRY_SIGNAL
+  - Q2_PILOT_CONTROL_GEOMETRY_OUTPERFORMS_FLAT
+  - Q2_PILOT_NO_HELDOUT_GEOMETRY_SIGNAL
+  - Q2_CONTROLLER_BANK_NOT_QUALIFIED
+
+cost:
+  target_usd: 8.50
+  soft_ceiling_usd: 12.00
+  hard_ceiling_usd: 15.00
+  projection_margin: 0.20
+
+firewall:
+  Q1: IMMUTABLE
+  Q3: NOT_AUTHORIZED
+  JVP_Fisher_pullback_manifold: NOT_RUN
+  no_second_experiment_without_principal_review: true

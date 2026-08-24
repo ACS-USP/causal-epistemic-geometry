@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `CONFIRMATORY_COMPLETE` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_DEVELOPMENT` — **scientific claim:** `NONE_FROZEN`.
 
-The fixed-controller Q1 confirmatory test consumed the prospectively assigned 57-ID holdout only after the frozen cost gate passed. Qwen passed every frozen safety, positive-C, and random-null criterion (C=0.05435, 95% bootstrap interval 0.01441 to 0.09680). Ministral showed positive and null-specific complementarity but failed the frozen commitment-validity and semantic-evaluability guards at 0.88596. The exact terminal classification is Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The independent forensic audit was clean with zero metric discrepancy.
+Q1 remains closed as Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The first Q2 DEVELOPMENT pilot is prospectively locked before qualification outcomes: a K=16 same-L27 controller bank, a 120-item common CRUXEval development panel, flat/whitened/finite-secant geometries, and a source-family-held-out 10/6 prediction split. Qualification cannot use accuracy, G, C, D, rescue, damage, or complementarity. The consumed 57-item confirmatory pool is identity-excluded and its outcomes are not used.
 
-**Next authorized action:** Principal researcher review. No new experiment, Q2, or Q3 is authorized.
+**Next authorized action:** Execute only the frozen Q2 bank qualification; proceed to the common panel only if the bank and cost gates pass. Do not run a second Q2 experiment or Q3.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

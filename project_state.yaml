@@ -3,7 +3,7 @@ last_verified: "2026-08-24"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: CONFIRMATORY_COMPLETE
+  scientific_stage: Q2_DEVELOPMENT
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,34 +19,34 @@ project:
     utility?
 
 current:
-  workstream: Q1_CONFIRMATORY_FIXED_CONTROLLERS
-  lifecycle: CLOSED
-  stage: CONFIRMATORY_COMPLETE
-  source_commit: 2fd165e20a1116835097e4867d0d7d652c5227ab
+  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_GEOMETRY
+  source_commit: 411de44c5c5229f9a5c9081de1e102517191543a
   summary: >-
-    The fixed-controller Q1 confirmatory test consumed the prospectively
-    assigned 57-ID holdout only after the frozen cost gate passed. Qwen passed
-    every frozen safety, positive-C, and random-null criterion (C=0.05435,
-    95% bootstrap interval 0.01441 to 0.09680). Ministral showed positive and
-    null-specific complementarity but failed the frozen commitment-validity and
-    semantic-evaluability guards at 0.88596. The exact terminal classification
-    is Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The independent forensic audit
-    was clean with zero metric discrepancy.
+    Q1 remains closed as Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The first Q2
+    DEVELOPMENT pilot is prospectively locked before qualification outcomes:
+    a K=16 same-L27 controller bank, a 120-item common CRUXEval development
+    panel, flat/whitened/finite-secant geometries, and a source-family-held-out
+    10/6 prediction split. Qualification cannot use accuracy, G, C, D, rescue,
+    damage, or complementarity. The consumed 57-item confirmatory pool is
+    identity-excluded and its outcomes are not used.
   next_authorized_action: >-
-    Principal researcher review. No new experiment, Q2, or Q3 is authorized.
+    Execute only the frozen Q2 bank qualification; proceed to the common panel
+    only if the bank and cost gates pass. Do not run a second Q2 experiment or Q3.
   runpod: TERMINATED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: false
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: true
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: NOT_RUN
+  geometry_q2: AUTHORIZED_DEVELOPMENT_PROSPECTIVE_LOCK
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: PRINCIPAL_RESEARCHER_REVIEW
-  free_generation: NOT_AUTHORIZED
+  current_task: Q2_CONTROLLER_BANK_QUALIFICATION
+  free_generation: Q2_ONLY
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT

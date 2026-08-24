@@ -68,6 +68,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE13_1_ALL_LAYER_CAUSAL_ATLAS_COMPLETE",
         "Q1_CONFIRMATORY_OFFLINE_POWER_QUALIFICATION",
         "Q1_CONFIRMATORY_FIXED_CONTROLLERS",
+        "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -86,6 +87,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
             "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
             "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
+            "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
         }
     )
     if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":
