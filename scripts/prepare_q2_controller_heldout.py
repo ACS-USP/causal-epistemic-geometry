@@ -371,6 +371,20 @@ def main() -> int:
     }
     for role, rows in roles.items():
         write_json(REVIEW / filenames[role], rows)
+    write_json(
+        REVIEW / "REMOTE_PUBLIC_DATASET_ALLOCATION.json",
+        {
+            "dataset_repo": DATASET_REPO,
+            "dataset_revision": DATASET_REVISION,
+            "split": "test",
+            "selection_namespace": NAMESPACE,
+            "allocations": {
+                role: [row["item_id"] for row in rows] for role, rows in roles.items()
+            },
+            "content_transfer": False,
+            "materialization": "deterministic download from pinned public dataset",
+        },
+    )
     split = controller_split()
     write_json(REVIEW / "CONTROLLER_SPLIT_LOCK.json", split)
     write_json(
@@ -473,6 +487,14 @@ def main() -> int:
                 "file_sha256": sha256(REVIEW / filenames[role]),
             }
             for role, rows in roles.items()
+        },
+        "remote_public_dataset_materialization": {
+            "allocation_file": "REMOTE_PUBLIC_DATASET_ALLOCATION.json",
+            "allocation_file_sha256": sha256(
+                REVIEW / "REMOTE_PUBLIC_DATASET_ALLOCATION.json"
+            ),
+            "content_source": "pinned public Hugging Face dataset on execution host",
+            "must_complete_before_model_outputs": True,
         },
         "engineering_fixtures": {
             "file": "ENGINEERING_FIXTURES.json",
