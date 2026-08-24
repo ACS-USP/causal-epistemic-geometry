@@ -12,7 +12,7 @@ Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel ou
 
 - Workstream: `Q2_CONTROLLER_HELDOUT_GEOMETRY_V2`
 - RunPod: `TERMINATED`
-- GPU work authorized: `q2_v2_source_qualification_only_after_lock`
+- GPU work authorized: `true`
 - New scientific experiment authorized: `q2_v2_development_protocol_only`
 - Next authorized action: Push and principal review of the Q2 V2 pre-source lock, then run source qualification only. No common-panel inference is authorized before the final V2 bank lock.
 

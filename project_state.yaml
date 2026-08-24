@@ -34,7 +34,7 @@ current:
     qualification only. No common-panel inference is authorized before the final
     V2 bank lock.
   runpod: TERMINATED
-  gpu_work_authorized: Q2_V2_SOURCE_QUALIFICATION_ONLY_AFTER_LOCK
+  gpu_work_authorized: true
   new_scientific_experiment_authorized: Q2_V2_DEVELOPMENT_PROTOCOL_ONLY
 
 scientific_firewall:

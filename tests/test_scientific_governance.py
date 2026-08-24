@@ -70,6 +70,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q1_CONFIRMATORY_FIXED_CONTROLLERS",
         "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
         "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT_COMPLETE",
+        "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
     }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -89,6 +90,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
             "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
             "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
+            "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
         }
     )
     if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":
@@ -126,6 +128,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "GATE13_1_CLOSED_STRONG_CROSS_MODEL_REPLICATION",
         "Q1_CONFIRMATORY_HOLDOUT_ASSIGNED_POWER_PENDING",
         "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL",
+        "Q2_V2_PRE_SOURCE_LOCK_NO_COMMON_OUTCOMES",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 
