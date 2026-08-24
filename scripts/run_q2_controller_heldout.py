@@ -82,6 +82,9 @@ def sha256(path: Path) -> str:
 
 
 def git_head() -> str:
+    marker = REVIEW / "EXECUTION_SOURCE_COMMIT.txt"
+    if not (ROOT / ".git").exists() and marker.exists():
+        return marker.read_text(encoding="utf-8").strip()
     return subprocess.run(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, check=True, capture_output=True, text=True
     ).stdout.strip()
