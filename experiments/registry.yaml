@@ -1540,7 +1540,7 @@ experiments:
 
   - id: Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE
     version: V3-FREEZE-V1
-    stage: DEVELOPMENT_EXECUTION_AUTHORIZED
+    stage: DEVELOPMENT_PREPANEL_STOP
     question: >-
       After matching implemented intervention amplitude, does pre-outcome
       internal geometry prospectively predict which semantic blind spots differ
@@ -1768,30 +1768,45 @@ experiments:
       shells, M0/M1/M2, and a 200-item Class-C semantic panel if every frozen
       pre-panel gate passes.
     model_policy: Frozen Qwen3-8B BF16/SDPA sustained-current-token execution
-    status: APPROVED_TO_EXECUTE_Q2_V3_AMENDMENT1
-    outcome: NOT_YET_RUN
+    status: Q2_V3_CONTROLLER_QUALIFICATION_FAILED
+    outcome: PREPANEL_SOURCE_GATE_FAILED
     scientific_interpretation: >-
-      This entry records prospective execution authority only. It is not a Q2
-      result and does not authorize changes to prompts, controllers, thresholds,
-      M3, transfer panels, Q3, or any post-hoc rescue.
+      Four of five source families passed. API_CONTRACT_EXACTNESS missed only
+      the frozen excess-disagreement threshold (0.020833 versus 0.03), so the
+      all-five-family stop rule fired. Shell calibration, identifiability,
+      M0/M1/M2, prediction lock, and the common semantic panel were not run.
+      This is a source-bank qualification failure, not a relational-geometry
+      null, and it does not authorize post-hoc repair or rerun.
     source_branch: experiment/q2-v3-amendment1-execution
     source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
     execution_source_commit: ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b
     amendment1_frozen_head: c0a1ed890ccc0a37bba083d0c920a9150ea3ec1e
-    artifact: review/q2_v3_amendment1_execution/EXECUTION_AUTHORIZATION.md
+    artifact: review/q2_v3_amendment1_execution/REPORT.md
     pre_execution_audit: Q2_V3_AMENDMENT1_PRE_EXECUTION_PASS
     prompt_preflight: Q2_V3_AMENDMENT1_CPU_PREFLIGHT_PASS
     prompt_records: 336
     panel_n: 200
     panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
     expected_semantic_rows: 10000
+    source_qualification_rows: 480
+    source_unique_keys: 480
+    source_families_passed: 4
+    source_families_total: 5
+    failing_family: API_CONTRACT_EXACTNESS
+    failing_excess_disagreement: 0.020833333333333315
+    frozen_excess_disagreement_minimum: 0.03
+    shell_rows: 0
     scientific_rows: 0
     prediction_matrices: []
-    cost_usd: 0.0
+    cost_upper_bound_usd: 0.4950648148148148
+    cost_usd: 0.4950648148148148
     hard_cost_ceiling_usd: 15.0
     q1: UNCHANGED
     q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
     m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
     q3: NOT_RUN
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED
-    next_action: REMOTE_PREFLIGHT_THEN_FROZEN_PREPANEL_PHASES
+    forensic_classification: Q2_V3_AMENDMENT1_FORENSIC_CLEAN
+    active_pods: 0
+    retained_volumes: 0
+    next_action: PRINCIPAL_RESEARCHER_REVIEW

@@ -1,0 +1,103 @@
+{
+  "artifacts": {
+    "COST.json": {
+      "bytes": 591,
+      "sha256": "cff27ecefe12358b0cfc0a6a6735b65b7484755350071a7b47f44f889b2e466e"
+    },
+    "ENVIRONMENT_PROVENANCE.json": {
+      "bytes": 732,
+      "sha256": "e69593f4ec3479951588baf84ba6422a9431cd6da076342a7853288af397d5e4"
+    },
+    "EXECUTION_AUTHORIZATION.json": {
+      "bytes": 692,
+      "sha256": "c1c042faabc71e009226f3522e5788c3da5c829f400da28e180d367744a7954e"
+    },
+    "EXECUTION_AUTHORIZATION.md": {
+      "bytes": 484,
+      "sha256": "f5370b7712c61f492f42a060840156e0dccc887676f9defc66205b4e6bf0d65d"
+    },
+    "FORENSIC_AUDIT.json": {
+      "bytes": 7636,
+      "sha256": "fdfcf75a03fd6b713a8d3ebf9b4fb606425fa31b872964f791ef6554ac931939"
+    },
+    "FORENSIC_AUDIT.md": {
+      "bytes": 384,
+      "sha256": "b1a5ae0415581ca617e53cd9bf282deb7cd70d063e9aecb36622ba66c3fe20b4"
+    },
+    "PRE_EXECUTION_AUDIT.json": {
+      "bytes": 1147,
+      "sha256": "4d0aae2d7e9bc307381891509519714e7add6f17c5d537d2c268c40574266219"
+    },
+    "Q2_V3_DIRECTION_BANK.json": {
+      "bytes": 5494,
+      "sha256": "cefe02a388b4929a3c07914768318f958810c93dd194ed3e700a8e679ab73838"
+    },
+    "Q2_V3_MATERIALIZED_ITEMS.json": {
+      "bytes": 330333,
+      "sha256": "5cc5ca8d581e9d71c202aa0acef8c8947ed7184d9e8b1a55dfdafe829cf70920"
+    },
+    "Q2_V3_SOURCE_ACTIVATIONS.npz": {
+      "bytes": 7416524,
+      "sha256": "4e48f9cfcfa6dcc2d3c6bd806ca086ea583b97efc4a5a1addfcfa41f018212ce"
+    },
+    "Q2_V3_SOURCE_JOURNAL.jsonl": {
+      "bytes": 1016679,
+      "sha256": "ecd3e135a4a4a94c1db6cbf40b843c3fd41a41a1931947078dec9aff40cffa95"
+    },
+    "Q2_V3_SOURCE_QUALIFICATION.json": {
+      "bytes": 7028,
+      "sha256": "f87dca600ab0c5af397cd15f69d6b23cbe579d2ac2cab3e97243ffa5f309c370"
+    },
+    "Q2_V3_VECTORS/MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "c9dcb6f4ce82ec35bd2c2b6c7300037ca65b9828c6649a855d1e3443ca255219"
+    },
+    "Q2_V3_VECTORS/MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "582f4e8b4e32b5b2279b93b7bddcf32da50bf76a9abff21e1c7f8b6e49ff72bf"
+    },
+    "Q2_V3_VECTORS/MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "e23355d9bf4d5b5a4a3ff791897b10c36fe1d811032d1629d65b73b7034c89aa"
+    },
+    "Q2_V3_VECTORS/MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "561ba8a266ced0ea01de90a0102488f433accf2f7c1a7d06af3ac3d2ac7644e8"
+    },
+    "Q2_V3_VECTORS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "ae9c3979d76ead9e7ecd6a5221d7d7d50e010f7e60487a54c1a39733b52fbbf5"
+    },
+    "Q2_V3_VECTORS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "23d4e49af23478aabd087206b7346f2cc25294bfc2f185757ba5cd7b2fe05b71"
+    },
+    "Q2_V3_VECTORS/MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "d5cd0fb5dd4f2f7dc3902821078e09649fc925759358615cdb23224f5ff4c436"
+    },
+    "Q2_V3_VECTORS/MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "537a212054ebe43316dd19459eac4e02911887c30775003517f7970bf6dd27f2"
+    },
+    "Q2_V3_VECTORS/MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "6fc942b4e938edfb98762b4d48b68664b9624bc1058105c68ce744e883d997ff"
+    },
+    "Q2_V3_VECTORS/MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY.npy": {
+      "bytes": 32896,
+      "sha256": "d1cdceee82a1af78e1881647ec5fb84232859820ba6c5b90133384744fbf3249"
+    },
+    "REPORT.md": {
+      "bytes": 1668,
+      "sha256": "c3794f9e45195a415f9e3b444cb3e02838bd514551ffc6c049ca80de40d17653"
+    },
+    "SOURCE_METRIC_CROSSCHECK.csv": {
+      "bytes": 732,
+      "sha256": "e797eab07b73ce449b835229c35d5dfd263fb4cf42635fc838e91bc170d91623"
+    }
+  },
+  "classification": "Q2_V3_CONTROLLER_QUALIFICATION_FAILED",
+  "schema_version": "q2-v3-amendment1-execution-artifact-hashes-v1",
+  "self_excluding": true
+}

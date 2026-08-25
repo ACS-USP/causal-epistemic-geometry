@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_AMENDMENT1_EXECUTION_AUTHORIZED
+  scientific_stage: Q2_V3_CONTROLLER_QUALIFICATION_FAILED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,22 +19,22 @@ project:
     utility?
 
 current:
-  workstream: Q2_V3_AMENDMENT1_EXECUTION
-  lifecycle: ENGINEERING
-  stage: DEVELOPMENT_EXECUTION
+  workstream: Q2_V3_AMENDMENT1_EXECUTION_COMPLETE
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_PREPANEL_STOP
   source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
   execution_source_commit: ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b
   summary: >-
-    The principal researcher authorized exact mechanical execution of Q2 V3
-    Freeze Amendment 1. Repository, 336/336 prompt provenance, inherited
-    artifacts, and the 200-item Class-C panel passed CPU preflight with zero
-    mismatches before provisioning. The execution branch physically separates
-    frozen inputs from generated outputs. Pre-panel phases and wallet/cost gates
-    remain mandatory; no semantic outcome or prediction matrix exists yet.
-  next_authorized_action: REMOTE_PREFLIGHT_THEN_FROZEN_PREPANEL_PHASES
+    Q2 V3 Amendment 1 stopped at its prospectively frozen source gate. Four of
+    five conceptual families passed; API_CONTRACT_EXACTNESS missed only the
+    excess-disagreement minimum (0.020833 versus 0.03). The 480-row label-free
+    journal is complete, unique, retry-free, and independently audited clean.
+    Shell calibration, M0/M1/M2, prediction lock, and the 10,000-row semantic
+    panel were not run, so this is not a relational-geometry result.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q2_V3_AMENDMENT1_ONLY
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: NONE
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -43,7 +43,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_AMENDMENT1_EXECUTION_AUTHORIZED
+  current_task: Q2_V3_CONTROLLER_QUALIFICATION_FAILED
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -84,24 +84,39 @@ confirmatory_program:
 
 instrument_history:
   - id: Q2_V3_AMENDMENT1_EXECUTION
-    status: APPROVED_TO_EXECUTE_Q2_V3_AMENDMENT1
+    status: Q2_V3_CONTROLLER_QUALIFICATION_FAILED
     conclusion: >-
-      Execution authorization is bound to the exact Amendment-1 freeze and an
-      execution branch that writes outside the immutable freeze directory. The
-      CPU preflight reproduced all 336 prompt records, the independent panel
-      check found 200/200 Class-C IDs with zero Class-D or Q2 V2 overlap, and no
-      semantic outcome or prediction matrix existed at authorization.
+      The exact Amendment-1 execution passed repository, prompt, panel, and
+      environment preflight, then stopped at the frozen all-five-family source
+      gate. Four families passed. API_CONTRACT_EXACTNESS had excess disagreement
+      0.020833 below 0.03 despite passing validity, cross-disagreement, and both
+      representation gates. No shell, geometry, prediction lock, or semantic
+      panel was run; this is a pre-panel qualification failure, not a Q2
+      predictive-geometry null.
     amendment1_frozen_head: c0a1ed890ccc0a37bba083d0c920a9150ea3ec1e
     source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
     execution_source_commit: ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b
     branch: experiment/q2-v3-amendment1-execution
-    artifact: review/q2_v3_amendment1_execution/EXECUTION_AUTHORIZATION.md
+    artifact: review/q2_v3_amendment1_execution/REPORT.md
     prompt_preflight: Q2_V3_AMENDMENT1_CPU_PREFLIGHT_PASS
     prompt_records: 336
     panel_n: 200
     panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
     scientific_trajectories_at_authorization: 0
     prediction_matrices_at_authorization: false
+    source_rows: 480
+    source_unique_keys: 480
+    source_families_passed: 4
+    source_families_total: 5
+    failing_family: API_CONTRACT_EXACTNESS
+    failing_excess_disagreement: 0.020833333333333315
+    frozen_excess_disagreement_minimum: 0.03
+    shell_calibration_run: false
+    prediction_lock_created: false
+    semantic_panel_rows: 0
+    forensic_classification: Q2_V3_AMENDMENT1_FORENSIC_CLEAN
+    estimated_cost_upper_bound_usd: 0.4950648148148148
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
     hard_cost_ceiling_usd: 15.0
     m3: EXCLUDED_NOT_QUALIFIED
     q3: NOT_RUN

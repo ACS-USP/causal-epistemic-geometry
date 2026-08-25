@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_AMENDMENT1_EXECUTION_AUTHORIZED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_CONTROLLER_QUALIFICATION_FAILED` — **scientific claim:** `NONE_FROZEN`.
 
-The principal researcher authorized exact mechanical execution of Q2 V3 Freeze Amendment 1. Repository, 336/336 prompt provenance, inherited artifacts, and the 200-item Class-C panel passed CPU preflight with zero mismatches before provisioning. The execution branch physically separates frozen inputs from generated outputs. Pre-panel phases and wallet/cost gates remain mandatory; no semantic outcome or prediction matrix exists yet.
+Q2 V3 Amendment 1 stopped at its prospectively frozen source gate. Four of five conceptual families passed; API_CONTRACT_EXACTNESS missed only the excess-disagreement minimum (0.020833 versus 0.03). The 480-row label-free journal is complete, unique, retry-free, and independently audited clean. Shell calibration, M0/M1/M2, prediction lock, and the 10,000-row semantic panel were not run, so this is not a relational-geometry result.
 
-**Next authorized action:** REMOTE_PREFLIGHT_THEN_FROZEN_PREPANEL_PHASES
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

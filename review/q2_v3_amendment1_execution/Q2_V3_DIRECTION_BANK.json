@@ -1,0 +1,107 @@
+{
+  "classification": "Q2_V3_CONTROLLER_QUALIFICATION_FAILED",
+  "controller_order_base": [
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY",
+    "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY",
+    "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY"
+  ],
+  "directions": {
+    "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY": {
+      "family_id": "API_CONTRACT_EXACTNESS",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 73.59267025763565,
+      "standardized_gap": 22.596986865841803,
+      "vector_hash": "016f6898f777eb6c221dc20d2f3b3ad1ac18aebda38bda2d94e7694fe8edf1d2"
+    },
+    "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY": {
+      "family_id": "API_CONTRACT_EXACTNESS",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 56.019685020231194,
+      "standardized_gap": 9.733847865580474,
+      "vector_hash": "b1943a81ef249ced9637fc0f269da454ee58af126b6687c99c832bc87df23bbd"
+    },
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY": {
+      "family_id": "CONTROL_FLOW_PATH_COVERAGE",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 79.04247377448473,
+      "standardized_gap": 19.521753026273508,
+      "vector_hash": "4966d23f61ee53a9c6130371fdbd06f71e1a9de01e8bb5d9b31b54a83f4ad939"
+    },
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY": {
+      "family_id": "CONTROL_FLOW_PATH_COVERAGE",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 70.05571795719142,
+      "standardized_gap": 9.267917160820286,
+      "vector_hash": "c610fe2ae1cfc83fb0142c38f8eb60b4906e03c5b08edea82f595cdbe8c183a1"
+    },
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY": {
+      "family_id": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 88.00292071583021,
+      "standardized_gap": 25.87570233916358,
+      "vector_hash": "8012e959cba6290eedc923a228212a7efd31b1acf6b2dc00b573a7b2707c5646"
+    },
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY": {
+      "family_id": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 65.85367061795604,
+      "standardized_gap": 18.201917543137778,
+      "vector_hash": "f54fbc4648ea542a547be1a76f422aca580aa6085ce5dd815b6c1003e5a1cde5"
+    },
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY": {
+      "family_id": "LOOP_BOUNDARY_ACCOUNTING",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 83.00207185801693,
+      "standardized_gap": 17.734822633167763,
+      "vector_hash": "7ef4e2ada027c149dbe5b43e66ddac0bc722c7ca146884c057b979e224cf300f"
+    },
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY": {
+      "family_id": "LOOP_BOUNDARY_ACCOUNTING",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 68.01989157411408,
+      "standardized_gap": 6.940055534015844,
+      "vector_hash": "5b6541d81bbdcbd5a3ad3545da1e9e61afe261e02c86b52fcf1b71e69044c98e"
+    },
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY": {
+      "family_id": "MUTATION_ALIAS_CAUSALITY",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 77.74196724166364,
+      "standardized_gap": 17.59654345975866,
+      "vector_hash": "2c74dea59680be6b73dcf3f74fc5eef79387695ec2a696710156e19f0be8c6f9"
+    },
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY": {
+      "family_id": "MUTATION_ALIAS_CAUSALITY",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v3_amendment1_execution/Q2_V3_VECTORS/MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 83.0504949845395,
+      "standardized_gap": 10.991261812716312,
+      "vector_hash": "2e3b2c2e9c1ff2364f125a0ce512014aef7c2128beca603194a1dbf69a527bd0"
+    }
+  }
+}

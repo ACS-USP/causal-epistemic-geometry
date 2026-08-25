@@ -1,0 +1,179 @@
+{
+  "checks": {
+    "correctness_never_evaluated": true,
+    "journal_rows_480": true,
+    "journal_unique_keys_480": true,
+    "no_operational_retries": true,
+    "no_post_source_artifacts": true,
+    "primary_audit_classification_match": true,
+    "primary_audit_metric_match": true,
+    "schedule_exact": true,
+    "single_identity": true,
+    "stored_vectors_exact": true
+  },
+  "classification": "Q2_V3_AMENDMENT1_FORENSIC_CLEAN",
+  "correctness_outcomes_opened": false,
+  "families": {
+    "API_CONTRACT_EXACTNESS": {
+      "behavior_pass": false,
+      "cross_disagreement": 0.375,
+      "excess_disagreement": 0.020833333333333315,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 73.59267025763566,
+          "standardized_gap": 22.59698686584179,
+          "stored_vector_hash": "016f6898f777eb6c221dc20d2f3b3ad1ac18aebda38bda2d94e7694fe8edf1d2",
+          "stored_vector_max_abs_difference": 1.3877787807814457e-17,
+          "vector_hash": "049f8396f971b4f838c602721b6376e1ca8bd9d809e5446b2bae06c789466535"
+        },
+        "PROMPT_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 56.01968502023118,
+          "standardized_gap": 9.733847865580476,
+          "stored_vector_hash": "b1943a81ef249ced9637fc0f269da454ee58af126b6687c99c832bc87df23bbd",
+          "stored_vector_max_abs_difference": 1.3877787807814457e-17,
+          "vector_hash": "2e9c617374048e4eeb7da59f223b9e501af25c3a307226b8618acdccba4c3972"
+        }
+      },
+      "negative_evaluability": 1.0,
+      "negative_validity": 1.0,
+      "pass": false,
+      "positive_evaluability": 0.9583333333333334,
+      "positive_validity": 0.9583333333333334,
+      "representation_pass": true,
+      "within_disagreement": 0.3541666666666667
+    },
+    "CONTROL_FLOW_PATH_COVERAGE": {
+      "behavior_pass": true,
+      "cross_disagreement": 0.4583333333333333,
+      "excess_disagreement": 0.24999999999999997,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 79.04247377448476,
+          "standardized_gap": 19.5217530262735,
+          "stored_vector_hash": "4966d23f61ee53a9c6130371fdbd06f71e1a9de01e8bb5d9b31b54a83f4ad939",
+          "stored_vector_max_abs_difference": 2.7755575615628914e-17,
+          "vector_hash": "33325f6c0a12c5b006b67a95eae38371726daba20ba31807b759741234f1bbc4"
+        },
+        "PROMPT_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 70.05571795719142,
+          "standardized_gap": 9.267917160820284,
+          "stored_vector_hash": "c610fe2ae1cfc83fb0142c38f8eb60b4906e03c5b08edea82f595cdbe8c183a1",
+          "stored_vector_max_abs_difference": 0.0,
+          "vector_hash": "c610fe2ae1cfc83fb0142c38f8eb60b4906e03c5b08edea82f595cdbe8c183a1"
+        }
+      },
+      "negative_evaluability": 1.0,
+      "negative_validity": 1.0,
+      "pass": true,
+      "positive_evaluability": 1.0,
+      "positive_validity": 1.0,
+      "representation_pass": true,
+      "within_disagreement": 0.20833333333333334
+    },
+    "HYPOTHESIS_BRANCH_ELIMINATION": {
+      "behavior_pass": true,
+      "cross_disagreement": 0.3229166666666667,
+      "excess_disagreement": 0.11458333333333334,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 88.00292071583026,
+          "standardized_gap": 25.875702339163595,
+          "stored_vector_hash": "8012e959cba6290eedc923a228212a7efd31b1acf6b2dc00b573a7b2707c5646",
+          "stored_vector_max_abs_difference": 8.326672684688674e-17,
+          "vector_hash": "e841ad2e120193aa63a6e1d2a5fe6b24d4f7d46ed137c3241f34991f822d7aad"
+        },
+        "PROMPT_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 65.85367061795601,
+          "standardized_gap": 18.201917543137775,
+          "stored_vector_hash": "f54fbc4648ea542a547be1a76f422aca580aa6085ce5dd815b6c1003e5a1cde5",
+          "stored_vector_max_abs_difference": 4.163336342344337e-17,
+          "vector_hash": "25810cd8c6a969c9a128d3a8671719524b2aa2c18192c0f27c6ff12794b1b13b"
+        }
+      },
+      "negative_evaluability": 0.9791666666666666,
+      "negative_validity": 0.9791666666666666,
+      "pass": true,
+      "positive_evaluability": 0.9583333333333334,
+      "positive_validity": 0.9583333333333334,
+      "representation_pass": true,
+      "within_disagreement": 0.20833333333333334
+    },
+    "LOOP_BOUNDARY_ACCOUNTING": {
+      "behavior_pass": true,
+      "cross_disagreement": 0.375,
+      "excess_disagreement": 0.08333333333333331,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 83.00207185801698,
+          "standardized_gap": 17.734822633167745,
+          "stored_vector_hash": "7ef4e2ada027c149dbe5b43e66ddac0bc722c7ca146884c057b979e224cf300f",
+          "stored_vector_max_abs_difference": 5.551115123125783e-17,
+          "vector_hash": "cfe7ffb7ba2cb7fceb8f5ff6ec874f9a8263901bbc663e2b85f3e044263a7746"
+        },
+        "PROMPT_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 68.01989157411406,
+          "standardized_gap": 6.9400555340158485,
+          "stored_vector_hash": "5b6541d81bbdcbd5a3ad3545da1e9e61afe261e02c86b52fcf1b71e69044c98e",
+          "stored_vector_max_abs_difference": 2.7755575615628914e-17,
+          "vector_hash": "7c4df6e00d4a0cfd720b967ad8604379abd3c3c3bde15db8df9eab9462bdb060"
+        }
+      },
+      "negative_evaluability": 1.0,
+      "negative_validity": 1.0,
+      "pass": true,
+      "positive_evaluability": 0.9791666666666666,
+      "positive_validity": 0.9791666666666666,
+      "representation_pass": true,
+      "within_disagreement": 0.2916666666666667
+    },
+    "MUTATION_ALIAS_CAUSALITY": {
+      "behavior_pass": true,
+      "cross_disagreement": 0.3541666666666667,
+      "excess_disagreement": 0.0625,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 77.74196724166369,
+          "standardized_gap": 17.596543459758635,
+          "stored_vector_hash": "2c74dea59680be6b73dcf3f74fc5eef79387695ec2a696710156e19f0be8c6f9",
+          "stored_vector_max_abs_difference": 5.551115123125783e-17,
+          "vector_hash": "4f3a86d6a07208efa76ef33abf6f591b23df48e2161fdaf5d0947de33cbc6ddf"
+        },
+        "PROMPT_BOUNDARY": {
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 83.05049498453954,
+          "standardized_gap": 10.991261812716308,
+          "stored_vector_hash": "2e3b2c2e9c1ff2364f125a0ce512014aef7c2128beca603194a1dbf69a527bd0",
+          "stored_vector_max_abs_difference": 4.163336342344337e-17,
+          "vector_hash": "431f945302e8f65e0cbcb27ec398fbabca7fcac2db0020d3d55dedceb629c797"
+        }
+      },
+      "negative_evaluability": 0.9583333333333334,
+      "negative_validity": 0.9583333333333334,
+      "pass": true,
+      "positive_evaluability": 0.9791666666666666,
+      "positive_validity": 0.9791666666666666,
+      "representation_pass": true,
+      "within_disagreement": 0.2916666666666667
+    }
+  },
+  "forbidden_post_source_artifacts": [],
+  "identity_hashes": 1,
+  "missing_keys": 0,
+  "prediction_matrices_created": false,
+  "primary_audit_maximum_numeric_difference": 4.263256414560601e-14,
+  "rows": 480,
+  "schema_version": "q2-v3-amendment1-source-stop-forensic-v1",
+  "scientific_semantic_trajectories": 0,
+  "terminal_state": "Q2_V3_CONTROLLER_QUALIFICATION_FAILED",
+  "unexpected_keys": 0,
+  "unique_keys": 480
+}

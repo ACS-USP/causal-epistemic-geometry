@@ -1,0 +1,22 @@
+{
+  "accelerate": "1.14.0",
+  "active_pods_after_closeout": 0,
+  "artifact_recovery_files": 18,
+  "artifact_recovery_sha256_manifest_match": true,
+  "cuda_runtime": "12.4",
+  "datacenter": "CA-MTL-1",
+  "execution_source_commit": "ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b",
+  "gpu": "NVIDIA A40 48 GB",
+  "huggingface_hub": "0.36.0",
+  "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "pod_deleted": true,
+  "pod_id": "ywg2z9k6x6vrhy",
+  "profile": "CORE_QWEN",
+  "python": "3.11.10",
+  "remote_preflight": "PASS",
+  "retained_network_volumes_after_closeout": 0,
+  "torch": "2.4.1+cu124",
+  "transformers": "4.57.1"
+}

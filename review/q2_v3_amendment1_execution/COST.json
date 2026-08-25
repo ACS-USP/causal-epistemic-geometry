@@ -1,0 +1,13 @@
+{
+  "billing_note": "Live billing was lagging at deletion; this is a conservative wall-clock upper bound.",
+  "estimated_100gb_volume_cost_upper_bound_usd": 0.029398148148148145,
+  "estimated_gpu_cost_upper_bound_usd": 0.4656666666666667,
+  "estimated_incremental_total_upper_bound_usd": 0.4950648148148148,
+  "gpu_hourly_rate_usd": 0.44,
+  "gpu_hours_upper_bound": 1.0583333333333333,
+  "hard_ceiling_usd": 15.0,
+  "pod_created_utc": "2026-08-25T21:09:51.947Z",
+  "pod_deleted_upper_bound_utc": "2026-08-25T22:13:22Z",
+  "runtime_seconds_upper_bound": 3810,
+  "within_hard_ceiling": true
+}
