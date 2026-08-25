@@ -75,6 +75,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DESIGN",
             "Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN",
             "Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE",
+            "Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE",
         }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
