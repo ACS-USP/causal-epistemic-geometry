@@ -42,7 +42,6 @@ from epistemic_geometry.benchmarks.external.semantic_v3 import (  # noqa: E402
     extract_final_commitment,
 )
 from epistemic_geometry.experiments.gate6_3 import vector_sha256  # noqa: E402
-from epistemic_geometry.experiments.gate7 import task_prompt  # noqa: E402
 from epistemic_geometry.experiments.q2_v3 import (  # noqa: E402
     DATASET_REPO,
     DATASET_REVISION,
@@ -62,14 +61,17 @@ from epistemic_geometry.experiments.q2_v3 import (  # noqa: E402
     null_controller_ids,
     ordered_id_hash,
 )
+from epistemic_geometry.experiments.q2_v3_prompt_provenance import (  # noqa: E402
+    AMENDMENT1_PROVENANCE_SCHEMA,
+    GATE7_CANONICAL_TEMPLATE_VERSION,
+    canonical_q2_v3_task_prompt,
+)
 from epistemic_geometry.reproducibility import require_remote_hf_execution  # noqa: E402
 from epistemic_geometry.research.reliability import CrashSafeJournal  # noqa: E402
 from epistemic_geometry.steering.gate6 import Gate6HookTrace  # noqa: E402
 
-REVIEW = ROOT / "review/q2_v3_radial_angular_freeze"
+REVIEW = ROOT / "review/q2_v3_amendment1_freeze"
 MAX_NEW_TOKENS = 4096
-EXPERIMENT_SOURCE_COMMIT = "9a748de3706a788f8c6c5a1d12c09489808006e8"
-FROZEN_HEAD = "c9292d2baecb41de786912b77c39734855ed46cb"
 MATERIALIZED = "Q2_V3_MATERIALIZED_ITEMS.json"
 
 
@@ -104,10 +106,11 @@ def git_head() -> str:
 
 def _assert_frozen(review: Path) -> dict[str, Any]:
     lock = read_json(review / "PROTOCOL_LOCK.json")
-    if lock["status"] != "Q2_V3_FROZEN_NOT_RUN":
+    if lock["status"] != "Q2_V3_AMENDMENT1_FROZEN_NOT_RUN":
         raise RuntimeError("Q2_V3_INSTRUMENT_FAILURE: protocol status changed")
-    if lock["experiment_source_commit"] != EXPERIMENT_SOURCE_COMMIT:
-        raise RuntimeError("Q2_V3_INSTRUMENT_FAILURE: source commit mismatch")
+    source_commit = str(lock["experiment_source_commit"])
+    if len(source_commit) != 40 or any(value not in "0123456789abcdef" for value in source_commit):
+        raise RuntimeError("Q2_V3_INSTRUMENT_FAILURE: invalid source commit")
     if lock["M3"] != "EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED":
         raise RuntimeError("Q2_V3_INSTRUMENT_FAILURE: M3 exclusion mismatch")
     for name, expected in lock["artifact_hashes"].items():
@@ -116,10 +119,16 @@ def _assert_frozen(review: Path) -> dict[str, Any]:
     return lock
 
 
+def _source_commit(review: Path) -> str:
+    return str(_assert_frozen(review)["experiment_source_commit"])
+
+
 def _normalize_public(row: dict[str, Any]) -> dict[str, Any]:
     item_id = str(row.get("id", row.get("item_id")))
     prompt = (
-        str(row["prompt"]) if "prompt" in row else task_prompt(str(row["code"]), str(row["input"]))
+        str(row["prompt"])
+        if "prompt" in row
+        else canonical_q2_v3_task_prompt(str(row["code"]), str(row["input"]))
     )
     reference = str(row.get("output", row.get("reference_answer")))
     canonical = canonicalize_semantic_value(reference)
@@ -165,7 +174,17 @@ def materialize_phase(review: Path) -> None:
             if item_id not in public:
                 raise RuntimeError(f"Q2_V3_PANEL_PROVENANCE_MISMATCH: missing {item_id}")
             item = dict(public[item_id])
-            if bytes_sha256(item["prompt"]) != frozen["prompt_sha256"]:
+            provenance = frozen.get("prompt_provenance")
+            if not isinstance(provenance, dict):
+                raise RuntimeError(
+                    f"Q2_V3_PANEL_PROVENANCE_MISMATCH: untyped prompt provenance {item_id}"
+                )
+            if provenance["template_version"] != GATE7_CANONICAL_TEMPLATE_VERSION:
+                raise RuntimeError(f"Q2_V3_PANEL_PROVENANCE_MISMATCH: template {item_id}")
+            if provenance["provenance_schema_version"] != AMENDMENT1_PROVENANCE_SCHEMA:
+                raise RuntimeError(f"Q2_V3_PANEL_PROVENANCE_MISMATCH: schema {item_id}")
+            expected_prompt_hash = provenance["model_visible_prompt"]["prompt_bytes_sha256"]
+            if bytes_sha256(item["prompt"]) != expected_prompt_hash:
                 raise RuntimeError(f"Q2_V3_PANEL_PROVENANCE_MISMATCH: prompt {item_id}")
             if bytes_sha256(item["reference_answer"]) != frozen["reference_sha256"]:
                 raise RuntimeError(f"Q2_V3_PANEL_PROVENANCE_MISMATCH: reference {item_id}")
@@ -310,7 +329,7 @@ def source_phase(backend: Any, review: Path, code_commit: str) -> None:
     identity = {
         "experiment_id": EXPERIMENT_ID,
         "phase": "SOURCE_QUALIFICATION",
-        "experiment_source_commit": EXPERIMENT_SOURCE_COMMIT,
+        "experiment_source_commit": _source_commit(review),
         "code_commit": code_commit,
     }
     journal = CrashSafeJournal(
@@ -704,7 +723,7 @@ def shell_phase(backend: Any, review: Path, code_commit: str) -> None:
     identity = {
         "experiment_id": EXPERIMENT_ID,
         "phase": "SHELL_SAFETY",
-        "experiment_source_commit": EXPERIMENT_SOURCE_COMMIT,
+        "experiment_source_commit": _source_commit(review),
         "code_commit": code_commit,
     }
     journal = CrashSafeJournal(
@@ -992,7 +1011,7 @@ def geometry_phase(backend: Any, review: Path, code_commit: str) -> None:
     )
     matrices_path = review / "Q2_V3_PREDICTION_MATRICES.npz"
     metadata = {
-        "source_commit": EXPERIMENT_SOURCE_COMMIT,
+        "source_commit": _source_commit(review),
         "code_commit": code_commit,
         "controller_order": names,
         "controller_order_hash": bytes_sha256(json.dumps(names, separators=(",", ":"))),
@@ -1179,7 +1198,7 @@ def prediction_lock_phase(review: Path, code_commit: str, seal_commit: str | Non
     payload = {
         "schema_version": "q2-v3-prediction-lock-v1",
         "classification": "Q2_V3_PREDICTION_LOCK_PASS",
-        "source_commit": EXPERIMENT_SOURCE_COMMIT,
+        "source_commit": _source_commit(review),
         "code_commit": code_commit,
         "seal_commit": seal_commit or "PENDING_COMMIT",
         "matrix_archive_sha256": sha256(review / "Q2_V3_PREDICTION_MATRICES.npz"),
@@ -1331,7 +1350,7 @@ def collect_phase(
     identity = {
         "experiment_id": EXPERIMENT_ID,
         "phase": "PRIMARY_SEMANTIC_PANEL",
-        "experiment_source_commit": EXPERIMENT_SOURCE_COMMIT,
+        "experiment_source_commit": _source_commit(review),
         "code_commit": code_commit,
         "prediction_seal_commit": prediction_seal_commit,
         "prediction_lock_sha256": sha256(review / "Q2_V3_PREDICTION_LOCK.json"),
@@ -1357,7 +1376,7 @@ def collect_phase(
                 intervention_metadata={
                     "experiment_id": EXPERIMENT_ID,
                     "phase": "PRIMARY_SEMANTIC_PANEL",
-                    "experiment_source_commit": EXPERIMENT_SOURCE_COMMIT,
+                    "experiment_source_commit": _source_commit(review),
                     "prediction_seal_commit": prediction_seal_commit,
                     "parser_version": PARSER_VERSION,
                     "environment_profile": "CORE_QWEN",
@@ -1390,7 +1409,7 @@ def collect_phase(
                 "model": MODEL,
                 "model_revision": MODEL_REVISION,
                 "parser_version": PARSER_VERSION,
-                "experiment_source_commit": EXPERIMENT_SOURCE_COMMIT,
+                "experiment_source_commit": _source_commit(review),
                 "code_commit": code_commit,
                 "prediction_seal_commit": prediction_seal_commit,
                 "schedule_index": schedule_index,
@@ -1418,7 +1437,7 @@ def collect_phase(
             "expected_rows": 10_000,
             "logical_keys": 10_000,
             "prediction_lock_sha256": sha256(review / "Q2_V3_PREDICTION_LOCK.json"),
-            "experiment_source_commit": EXPERIMENT_SOURCE_COMMIT,
+            "experiment_source_commit": _source_commit(review),
             "code_commit": code_commit,
             "prediction_seal_commit": prediction_seal_commit,
         },

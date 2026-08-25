@@ -6,12 +6,16 @@ from pathlib import Path
 
 from epistemic_geometry.experiments.q2_v3 import ordered_id_hash
 from epistemic_geometry.experiments.q2_v3_prompt_provenance import (
+    AMENDMENT1_PROVENANCE_SCHEMA,
     CURRENT_TEMPLATE_VERSION,
+    GATE7_CANONICAL_TEMPLATE_VERSION,
     LEGACY_HASH_SCHEMA,
     LEGACY_TEMPLATE_VERSION,
     PROPOSED_CONTRACT_SCHEMA,
     RAW_HASH_SCHEMA,
+    amendment1_contract,
     canonical_contract,
+    canonical_q2_v3_task_prompt,
     current_task_prompt,
     decode_contract_prompt,
     legacy_external_prompt_digest,
@@ -98,6 +102,35 @@ def test_candidate_contract_round_trips_exact_bytes_and_purpose() -> None:
     assert contract["purpose"] == "M2_LABEL_FREE_PROBES"
     assert contract["user_prompt_bytes_sha256"] == hashlib.sha256(user).hexdigest()
     assert contract["rendering"]["rendered_prompt_bytes_sha256"] is None
+
+
+def test_amendment1_contract_is_typed_and_locks_gate7_bytes() -> None:
+    contract = amendment1_contract(
+        item_id="sample_fixture",
+        purpose="PRIMARY_SEMANTIC_PANEL",
+        code="def f(x):\n    return x",
+        value="1",
+        reference="1",
+        official_index=1,
+        dataset_repo="fixture/repo",
+        dataset_revision="fixture-revision",
+        historical_prompt_hash="0" * 64,
+        historical_prompt_schema="fixture-historical-v1",
+    )
+    expected = canonical_q2_v3_task_prompt("def f(x):\n    return x", "1").encode()
+    assert contract["provenance_schema_version"] == AMENDMENT1_PROVENANCE_SCHEMA
+    assert contract["template_version"] == GATE7_CANONICAL_TEMPLATE_VERSION
+    assert contract["model_visible_prompt"]["prompt_bytes_sha256"] == hashlib.sha256(
+        expected
+    ).hexdigest()
+    assert "prompt_sha256" not in contract
+
+
+def test_q2_v3_execution_path_uses_only_authoritative_gate7_constructor() -> None:
+    runner = (ROOT / "scripts/run_q2_v3.py").read_text(encoding="utf-8")
+    assert "canonical_q2_v3_task_prompt" in runner
+    assert "legacy_task_prompt" not in runner
+    assert 'REVIEW = ROOT / "review/q2_v3_amendment1_freeze"' in runner
 
 
 def test_q2_v3_prompt_purpose_coverage_and_primary_identity() -> None:
