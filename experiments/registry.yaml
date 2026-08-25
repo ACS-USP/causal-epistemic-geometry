@@ -1564,6 +1564,7 @@ experiments:
       fresh-item confirmation. M3 remains excluded because its BF16-stack
       instrument did not qualify; this is not evidence against Fisher geometry.
     source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+    execution_source_commit: ba7c91e03295c664788e6ede0dd643f6d446404b
     artifact: review/q2_v3_radial_angular_freeze/
     cost_usd: 0.0
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED
