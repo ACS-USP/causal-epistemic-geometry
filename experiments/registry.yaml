@@ -1592,3 +1592,53 @@ experiments:
       Principal researcher review and separate execution authorization. Do not
       run source, shell, geometry, semantic-panel, Q3, RunPod, or DGX work from
       this freeze entry.
+
+  - id: Q2_V3_RADIAL_ANGULAR_EXECUTION
+    version: V3-EXECUTION-V1
+    stage: DEVELOPMENT_EXECUTION_STOPPED_PREPANEL
+    question: >-
+      After matching implemented intervention amplitude, does pre-outcome
+      internal geometry prospectively predict which semantic blind spots differ
+      across genuinely new causal controllers?
+    instrument: >-
+      Frozen Qwen3-8B L27 Q2 V3 protocol; execution stopped during exact public
+      CRUXEval content-hash verification before model inference
+    model_policy: Frozen Qwen3-8B BF16/SDPA; model inference not reached
+    status: Q2_V3_PANEL_PROVENANCE_MISMATCH
+    outcome: >-
+      All 336 allocated IDs and reference hashes matched the exact public
+      dataset revision, but nine frozen prompt hashes did not match the frozen
+      task prompt reconstruction. The mismatches comprise two M1 items, two
+      shell-calibration items, and five primary-panel items. Every mismatching
+      value equals the legacy namespaced EXTERNAL-PROMPT hash of an older prompt
+      template. The prospectively frozen stop rule fired and no panel repair was
+      attempted.
+    scientific_interpretation: >-
+      This is a pre-panel provenance terminal state, not a predictive Q2 null.
+      No source/controller qualification, shell calibration, M0/M1/M2 matrix,
+      prediction lock, semantic outcome, or G/R classification exists for Q2 V3.
+      Q2 V2 and M3 remain unchanged and Q3 remains not run.
+    source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+    execution_source_commit: ba7c91e03295c664788e6ede0dd643f6d446404b
+    code_commit: 27d28c46d93f8a00b5674c5f1f331243ced8e3f5
+    artifact: review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md
+    cost_usd: 0.0726
+    cost_semantics: CONSERVATIVE_UPTIME_DERIVED_ESTIMATE_PENDING_FINAL_BILLING_BUCKET
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    manifest_records_checked: 336
+    prompt_hashes_matching: 327
+    prompt_hashes_mismatching: 9
+    reference_hashes_mismatching: 0
+    primary_panel_prompt_mismatches: 5
+    scientific_rows: 0
+    semantic_trajectories: 0
+    inference_performed: false
+    semantic_outcomes_opened: false
+    prediction_lock_created: false
+    geometries_constructed: []
+    q1: UNCHANGED
+    q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    next_action: PRINCIPAL_RESEARCHER_REVIEW

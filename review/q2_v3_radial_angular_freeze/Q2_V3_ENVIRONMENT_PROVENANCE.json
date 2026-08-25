@@ -1,0 +1,22 @@
+{
+  "accelerate": "1.14.0",
+  "attention": "SDPA",
+  "code_commit": "27d28c46d93f8a00b5674c5f1f331243ced8e3f5",
+  "cuda_available": true,
+  "cuda_runtime": "12.4",
+  "dtype": "BF16",
+  "environment_profile": "CORE_QWEN",
+  "execution_source_commit": "ba7c91e03295c664788e6ede0dd643f6d446404b",
+  "experiment_source_commit": "9a748de3706a788f8c6c5a1d12c09489808006e8",
+  "gpu": "NVIDIA A40",
+  "huggingface_hub": "0.36.0",
+  "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "model_loaded_for_inference": false,
+  "pod_id": "cyn5lptpyyd6pl",
+  "python": "3.11.10",
+  "remote_preflight": "PASS",
+  "torch": "2.4.1+cu124",
+  "transformers": "4.57.1"
+}

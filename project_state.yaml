@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_EXECUTION_AUTHORIZED
+  scientific_stage: Q2_V3_EXECUTION_STOPPED_PROVENANCE
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,26 +19,23 @@ project:
     utility?
 
 current:
-  workstream: Q2_V3_RADIAL_ANGULAR_EXECUTION
-  lifecycle: ENGINEERING
-  stage: DEVELOPMENT_EXECUTION
+  workstream: Q2_V3_PANEL_PROVENANCE_MISMATCH
+  lifecycle: CLOSED_PREPANEL_TERMINAL
+  stage: DEVELOPMENT_EXECUTION_STOPPED
   source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
   execution_source_commit: ba7c91e03295c664788e6ede0dd643f6d446404b
   summary: >-
-    Q2 V3 is prospectively frozen and now separately authorized for one mechanical
-    execution. The exact design uses five new
-    conceptual source families, prompt/execution-boundary L27 paired means,
-    implemented-amplitude shells 0.25/0.50, 20 meaningful controllers, four
-    fresh span-orthogonal nulls, and M0/M1/M2 only. M2 uses a separate
-    label-free Class-B probe set and all prediction matrices must be hashed
-    before the 200-item Class-C semantic panel opens. The primary evidence is
-    historical-item/prospective-controller same-domain validation. M3 remains
-    excluded as NOT_QUALIFIED. Semantic trajectories remain zero before execution;
-    Q3 is NOT RUN.
-  next_authorized_action: EXECUTE_FROZEN_Q2_V3_ONLY
+    The one authorized Q2 V3 execution stopped at the frozen provenance gate.
+    Of 336 allocation records, 327 reconstructed prompt hashes matched and nine
+    did not, including five primary-panel items. The nine frozen values came
+    from a legacy namespaced prompt hash and older prompt template; all reference
+    hashes matched. No model inference, geometry, prediction lock, or semantic
+    trajectory occurred. This is Q2_V3_PANEL_PROVENANCE_MISMATCH, not a Q2
+    relational result. Q2 V2 and M3 remain unchanged; Q3 is NOT RUN.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q2_V3_ONLY
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: NONE
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -47,8 +44,8 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_EXECUTION_AUTHORIZED
-  free_generation: AUTHORIZED_Q2_V3_ONLY_AFTER_ALL_FROZEN_PREPANEL_GATES
+  current_task: Q2_V3_PANEL_PROVENANCE_MISMATCH
+  free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -87,6 +84,36 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V3_RADIAL_ANGULAR_EXECUTION
+    status: Q2_V3_PANEL_PROVENANCE_MISMATCH
+    conclusion: >-
+      The authorized mechanical execution stopped at the first frozen pre-panel
+      gate. All 336 allocated IDs and reference hashes matched the exact public
+      dataset revision, but nine prompt hashes did not match the frozen task
+      prompt reconstruction: two M1 covariance items, two shell-calibration
+      items, and five primary-panel items. Those nine values reproduce the
+      legacy namespaced EXTERNAL-PROMPT hash of an older prompt template.
+    source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+    execution_source_commit: ba7c91e03295c664788e6ede0dd643f6d446404b
+    code_commit: 27d28c46d93f8a00b5674c5f1f331243ced8e3f5
+    artifact: review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md
+    manifest_records_checked: 336
+    prompt_hashes_matching: 327
+    prompt_hashes_mismatching: 9
+    primary_panel_prompt_mismatches: 5
+    scientific_rows: 0
+    semantic_trajectories: 0
+    model_inference_performed: false
+    semantic_outcomes_opened: false
+    geometries_constructed: false
+    prediction_lock_created: false
+    q2_v3_scientific_classification: NOT_REACHED
+    q1: UNCHANGED
+    q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+
   - id: Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE
     status: Q2_V3_FROZEN_NOT_RUN
     conclusion: >-

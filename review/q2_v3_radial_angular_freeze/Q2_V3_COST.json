@@ -1,0 +1,15 @@
+{
+  "billing_semantics": "conservative uptime-derived estimate pending final RunPod bucket settlement",
+  "gpu": "NVIDIA A40",
+  "hourly_rate_usd": 0.44,
+  "model_inference_rows": 0,
+  "observed_gpu_uptime_seconds_upper_bound": 594,
+  "estimated_gpu_cost_usd": 0.0726,
+  "hard_ceiling_usd": 15.0,
+  "wallet_at_preflight_usd": 33.65,
+  "wallet_gate": "PASS",
+  "network_volumes": 0,
+  "active_pods_after_teardown": 0,
+  "retained_experimental_volumes_after_teardown": 0,
+  "runpod_status": "TERMINATED_ZERO_ACTIVE_RESOURCES"
+}

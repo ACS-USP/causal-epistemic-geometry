@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_EXECUTION_AUTHORIZED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_EXECUTION_STOPPED_PROVENANCE` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V3 is prospectively frozen and now separately authorized for one mechanical execution. The exact design uses five new conceptual source families, prompt/execution-boundary L27 paired means, implemented-amplitude shells 0.25/0.50, 20 meaningful controllers, four fresh span-orthogonal nulls, and M0/M1/M2 only. M2 uses a separate label-free Class-B probe set and all prediction matrices must be hashed before the 200-item Class-C semantic panel opens. The primary evidence is historical-item/prospective-controller same-domain validation. M3 remains excluded as NOT_QUALIFIED. Semantic trajectories remain zero before execution; Q3 is NOT RUN.
+The one authorized Q2 V3 execution stopped at the frozen provenance gate. Of 336 allocation records, 327 reconstructed prompt hashes matched and nine did not, including five primary-panel items. The nine frozen values came from a legacy namespaced prompt hash and older prompt template; all reference hashes matched. No model inference, geometry, prediction lock, or semantic trajectory occurred. This is Q2_V3_PANEL_PROVENANCE_MISMATCH, not a Q2 relational result. Q2 V2 and M3 remain unchanged; Q3 is NOT RUN.
 
-**Next authorized action:** EXECUTE_FROZEN_Q2_V3_ONLY
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

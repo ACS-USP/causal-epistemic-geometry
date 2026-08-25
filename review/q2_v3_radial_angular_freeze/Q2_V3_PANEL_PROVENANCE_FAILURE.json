@@ -1,0 +1,112 @@
+{
+  "classification": "Q2_V3_PANEL_PROVENANCE_MISMATCH",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "manifest_records_checked": 336,
+  "matching_prompt_hashes": 327,
+  "mismatching_prompt_hashes": 9,
+  "reference_hash_mismatches": [],
+  "mismatches": [
+    {
+      "allocation": "M1_COVARIANCE",
+      "frozen_prompt_sha256": "5ab5edb666183aeb22b925eeb0452dc3aba62c56d34f902a0ffdfe69c4b12e04",
+      "item_id": "sample_300",
+      "legacy_external_prompt_hash": "5ab5edb666183aeb22b925eeb0452dc3aba62c56d34f902a0ffdfe69c4b12e04",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "M1_COVARIANCE_MANIFEST.json",
+      "official_index": 300,
+      "official_prompt_sha256": "db171bc51c81c40684c466f8003b23ed6bc6ded946c15adc6a0c126dfa3be95f",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "frozen_prompt_sha256": "8a1288689d8f71aacfc263b9f2be0e21a9b5c02f66fb9b9814bf16ee41283847",
+      "item_id": "sample_74",
+      "legacy_external_prompt_hash": "8a1288689d8f71aacfc263b9f2be0e21a9b5c02f66fb9b9814bf16ee41283847",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "M1_COVARIANCE_MANIFEST.json",
+      "official_index": 74,
+      "official_prompt_sha256": "439f8594b417269c79aef2d9e7960e284f4d5677f98ba9dc1bc6ecb2cb5b9241",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "PRIMARY_SEMANTIC_PANEL",
+      "frozen_prompt_sha256": "761cab1917553066cb0354bd388a0744ee14f699be1dfbabed9f44a541936c98",
+      "item_id": "sample_659",
+      "legacy_external_prompt_hash": "761cab1917553066cb0354bd388a0744ee14f699be1dfbabed9f44a541936c98",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 659,
+      "official_prompt_sha256": "e0706e9152f42160e2442468e4033f483bc6a5864addff5c0197f62a14a86f68",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "PRIMARY_SEMANTIC_PANEL",
+      "frozen_prompt_sha256": "24acf0234c1edcb40a19f80d36cfcce2856b0febaedff85b3580d8e294061c69",
+      "item_id": "sample_777",
+      "legacy_external_prompt_hash": "24acf0234c1edcb40a19f80d36cfcce2856b0febaedff85b3580d8e294061c69",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 777,
+      "official_prompt_sha256": "e964f67b629dd0d7ee18a2674cdcc1056f6b1787c064575382f6f94ffad5542e",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "PRIMARY_SEMANTIC_PANEL",
+      "frozen_prompt_sha256": "333537b661e4e1e7347260e88b242f08100893aedd8a058b1850eda2561570fd",
+      "item_id": "sample_145",
+      "legacy_external_prompt_hash": "333537b661e4e1e7347260e88b242f08100893aedd8a058b1850eda2561570fd",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 145,
+      "official_prompt_sha256": "21e1c5835316699848c6b28a4e288c8265940b6c92eb9fcc6aa9079441bd0276",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "PRIMARY_SEMANTIC_PANEL",
+      "frozen_prompt_sha256": "eb1d8648f26a9150b00ac0361600179db24c530d151d95eef6b8d9a786a8dab9",
+      "item_id": "sample_698",
+      "legacy_external_prompt_hash": "eb1d8648f26a9150b00ac0361600179db24c530d151d95eef6b8d9a786a8dab9",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 698,
+      "official_prompt_sha256": "ea794a79ef0e1562605d10a78a11d00a5b66cd950d9e347061b419d0ea5b861e",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "PRIMARY_SEMANTIC_PANEL",
+      "frozen_prompt_sha256": "9ad6244f70f20671a1974aec6c94806d43d04112db26deb10c0350dc36842a09",
+      "item_id": "sample_21",
+      "legacy_external_prompt_hash": "9ad6244f70f20671a1974aec6c94806d43d04112db26deb10c0350dc36842a09",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 21,
+      "official_prompt_sha256": "7a9db1cda5f551cb017da5e299f180a21014d0d74e287881c279be811f6b8777",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "frozen_prompt_sha256": "7d22746e39c1364db01d176b6b1b240d7e235f5ea3b2cbb20dccb2586d89ee65",
+      "item_id": "sample_745",
+      "legacy_external_prompt_hash": "7d22746e39c1364db01d176b6b1b240d7e235f5ea3b2cbb20dccb2586d89ee65",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "SHELL_CALIBRATION_MANIFEST.json",
+      "official_index": 745,
+      "official_prompt_sha256": "062157c8f4370b7352df4b949ab3bb365e55893594ba008457b6a66f64936428",
+      "reference_hash_matches": true
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "frozen_prompt_sha256": "25be1660917f7f0820d919d9996071e154268952f92855f77a6656579e939684",
+      "item_id": "sample_700",
+      "legacy_external_prompt_hash": "25be1660917f7f0820d919d9996071e154268952f92855f77a6656579e939684",
+      "legacy_hash_matches_frozen": true,
+      "manifest": "SHELL_CALIBRATION_MANIFEST.json",
+      "official_index": 700,
+      "official_prompt_sha256": "11a4fab4f658da70df2990282b5752c8b53ae50168356bccb4eb9b03706448f1",
+      "reference_hash_matches": true
+    }
+  ],
+  "schema_version": "q2-v3-panel-provenance-failure-v1",
+  "scientific_model_inference_rows": 0,
+  "semantic_outcomes_opened": false
+}
