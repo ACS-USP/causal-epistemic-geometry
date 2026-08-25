@@ -10,6 +10,9 @@ current action. No historical reproduction script is deleted by this reset.
 - `scripts/check_experiment_registry.py` — experiment-registry audit.
 - `scripts/validate_scientific_metrics.py` — synthetic estimand validation.
 - `scripts/validate_research_os.py` — policy, lifecycle, contract, and named-environment audit.
+- `scripts/design_q2_v3_replacement_family.py` — outcome-free static source
+  inventory for the closed Q2 V3 replacement-family design sprint; explicitly
+  excludes benchmark outputs and model behavior.
 - `scripts/prepare_gate6_3_semantic_validity_audit.py` — freezes the condition-masked V3 audit corpus.
 - `scripts/analyze_gate6_3_semantic_validity_audit.py` — local-only condition-symmetric V3 reanalysis.
 - `scripts/validate_gate6_3_semantic_validity_audit.py` — fail-closed V3 artifact validator.

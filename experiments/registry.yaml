@@ -1810,3 +1810,56 @@ experiments:
     active_pods: 0
     retained_volumes: 0
     next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_V3_REPLACEMENT_FAMILY_DESIGN
+    version: V3-POST-AMENDMENT-1-DESIGN
+    stage: DEVELOPMENT_DESIGN_ONLY
+    question: >-
+      Does exactly one scientifically defensible replacement exist for the
+      failed API_CONTRACT_EXACTNESS source family using only conceptual and
+      source-level information and no new model behavior?
+    instrument: >-
+      CPU-only static taxonomy and provenance audit over 88 records disjoint
+      from the unopened primary panel and prior source construction/validation
+      sets.
+    model_policy: NO_MODEL_CPU_ONLY_DESIGN
+    status: Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED
+    outcome: PATH_B_FOUR_FAMILY
+    scientific_interpretation: >-
+      No candidate simultaneously had adequate unambiguous source support,
+      clear mechanistic distinction from the four surviving families, and no
+      relevant prior behavioral exposure. No fifth family was frozen. A future
+      four-family protocol requires principal-reviewed rederivation of its
+      family-consistency, leverage, rank, precision, and M2-superiority gates.
+      This is not a predictive geometry result.
+    source_branch: research/q2-v3-replacement-family-design
+    source_commit: ddee9646a046426fd2f4d47ddff4c9a2e7ae464b
+    artifact: review/q2_v3_replacement_family_design/REPORT.md
+    static_input_records: 336
+    unopened_primary_panel_excluded: 200
+    prior_source_construction_excluded: 24
+    prior_source_validation_excluded: 24
+    disjoint_inventory_records: 88
+    available_static_projection_sha256: c8cbe0a271091e07d9090bb79d389549ab6bb0af0ccf44cdeb37e8be1ead970d
+    replacement_family_frozen: false
+    four_family_meaningful_controllers: 16
+    four_family_primary_cross_family_dyads: 48
+    four_family_semantic_trajectory_projection: 8400
+    model_inference: false
+    candidate_behavioral_qualification: false
+    correctness_inspected_for_selection: false
+    q2_v3_semantic_rows: 0
+    shell_rows: 0
+    geometries_constructed: []
+    prediction_lock_created: false
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    q1: UNCHANGED
+    q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
+    original_q2_v3_provenance_abort: PRESERVED
+    amendment1_qualification_failure: PRESERVED
+    q3: NOT_RUN
+    active_pods: 0
+    retained_volumes: 0
+    next_action: PRINCIPAL_RESEARCHER_REVIEW

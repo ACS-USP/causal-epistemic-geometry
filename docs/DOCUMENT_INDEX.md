@@ -64,6 +64,7 @@ current instruction source.
 | `review/q2_v3_provenance_reconciliation/Q2_V3_PROVENANCE_RECONCILIATION_REPORT.md` | Byte-level P2 diagnosis of nine mixed-template/hash records; Amendment 1 not created pending principal prompt decision |
 | `review/q2_v3_amendment1_freeze/PROTOCOL_LOCK.md` | Principal-authorized Gate-7-global Q2 V3 Freeze Amendment 1; 336/336 exact-byte provenance audit passed; execution not authorized |
 | `review/q2_v3_amendment1_execution/REPORT.md` | Amendment-1 pre-panel closeout: 4/5 source families passed; frozen source gate failed; no shell, geometry, prediction lock, or semantic panel |
+| `review/q2_v3_replacement_family_design/REPORT.md` | CPU-only outcome-free replacement-family audit: no unique fifth family; four-family redesign required; no inference or semantic outcomes |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |

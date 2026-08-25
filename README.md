@@ -5,9 +5,9 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_CONTROLLER_QUALIFICATION_FAILED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V3 Amendment 1 stopped at its prospectively frozen source gate. Four of five conceptual families passed; API_CONTRACT_EXACTNESS missed only the excess-disagreement minimum (0.020833 versus 0.03). The 480-row label-free journal is complete, unique, retry-free, and independently audited clean. Shell calibration, M0/M1/M2, prediction lock, and the 10,000-row semantic panel were not run, so this is not a relational-geometry result.
+The CPU-only prospective replacement-family audit found no unique fifth family with adequate static source support, mechanistic distinctness, and freedom from relevant prior behavioral exposure. No replacement was frozen. A four-family redesign is required for principal review; it would contain 16 meaningful controllers, 48 primary shell-stratified cross-family dyads, and 8,400 semantic trajectories. No model inference, geometry, or semantic panel was run, so the Q2 V3 relational hypothesis remains untested.
 
 **Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
 <!-- PROJECT_STATUS:END -->

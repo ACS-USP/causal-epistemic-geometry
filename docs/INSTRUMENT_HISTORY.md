@@ -119,6 +119,25 @@ This is DEVELOPMENT evidence warranting a prospectively locked fresh
 replication, not a rescued historical result or a confirmatory claim. See the
 [audit report](../review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md).
 
+## Q2 V3 — source-bank stop and replacement-family design
+
+Q2 V3 Amendment 1 stopped at its frozen all-five-family source gate. Four
+families passed; `API_CONTRACT_EXACTNESS` remained strongly representation-
+readable but missed the excess behavioral/textual disagreement minimum. No
+shell, M0/M1/M2 geometry, prediction lock, or semantic-panel outcome was
+opened, so the relational hypothesis remains untested.
+
+A subsequent CPU-only, outcome-free audit considered eight natural replacement
+concepts on 88 records disjoint from the unopened panel and earlier source
+sets. No concept uniquely combined adequate source coverage, mechanistic
+distinctness, and freedom from relevant prior behavioral exposure.
+
+**Decision:** `Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED`. No fifth family was
+frozen. The non-executing redesign memo projects 16 meaningful controllers, 48
+primary cross-family shell-stratified dyads, and 8,400 semantic trajectories,
+with new family-level precision and QAP rules required before any freeze. See
+the [design closeout](../review/q2_v3_replacement_family_design/REPORT.md).
+
 ## Cross-series conclusion
 
 The repository has learned a great deal about measurement failure and execution

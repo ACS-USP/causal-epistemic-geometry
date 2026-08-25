@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_CONTROLLER_QUALIFICATION_FAILED
+  scientific_stage: Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,18 +19,19 @@ project:
     utility?
 
 current:
-  workstream: Q2_V3_AMENDMENT1_EXECUTION_COMPLETE
+  workstream: Q2_V3_REPLACEMENT_FAMILY_DESIGN_COMPLETE
   lifecycle: CLOSED
-  stage: DEVELOPMENT_PREPANEL_STOP
-  source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
-  execution_source_commit: ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b
+  stage: DEVELOPMENT_DESIGN_ONLY
+  source_commit: ddee9646a046426fd2f4d47ddff4c9a2e7ae464b
+  execution_source_commit: null
   summary: >-
-    Q2 V3 Amendment 1 stopped at its prospectively frozen source gate. Four of
-    five conceptual families passed; API_CONTRACT_EXACTNESS missed only the
-    excess-disagreement minimum (0.020833 versus 0.03). The 480-row label-free
-    journal is complete, unique, retry-free, and independently audited clean.
-    Shell calibration, M0/M1/M2, prediction lock, and the 10,000-row semantic
-    panel were not run, so this is not a relational-geometry result.
+    The CPU-only prospective replacement-family audit found no unique fifth
+    family with adequate static source support, mechanistic distinctness, and
+    freedom from relevant prior behavioral exposure. No replacement was frozen.
+    A four-family redesign is required for principal review; it would contain
+    16 meaningful controllers, 48 primary shell-stratified cross-family dyads,
+    and 8,400 semantic trajectories. No model inference, geometry, or semantic
+    panel was run, so the Q2 V3 relational hypothesis remains untested.
   next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
@@ -43,7 +44,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_CONTROLLER_QUALIFICATION_FAILED
+  current_task: Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -83,6 +84,35 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V3_REPLACEMENT_FAMILY_DESIGN
+    status: Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED
+    conclusion: >-
+      An outcome-free static audit of eight plausible replacement concepts over
+      88 records disjoint from the unopened panel and prior source sets found no
+      unique fifth family. The only well-populated candidate was adjacent to
+      behaviorally exposed Q2 V2 source policies; cleanly novel candidates were
+      sparse or redundant with the four surviving families. No replacement was
+      frozen. The four-family redesign sketch has 16 meaningful controllers,
+      48 primary cross-family shell-stratified dyads, and 8,400 semantic rows.
+    branch: research/q2-v3-replacement-family-design
+    source_commit: ddee9646a046426fd2f4d47ddff4c9a2e7ae464b
+    artifact: review/q2_v3_replacement_family_design/REPORT.md
+    decision: PATH_B_FOUR_FAMILY
+    replacement_family_frozen: false
+    static_records_available: 88
+    model_inference: false
+    candidate_behavioral_qualification: false
+    correctness_inspected_for_selection: false
+    q2_v3_semantic_rows: 0
+    shell_calibration_run: false
+    geometries_constructed: []
+    q1: UNCHANGED
+    q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V3_AMENDMENT1_EXECUTION
     status: Q2_V3_CONTROLLER_QUALIFICATION_FAILED
     conclusion: >-
