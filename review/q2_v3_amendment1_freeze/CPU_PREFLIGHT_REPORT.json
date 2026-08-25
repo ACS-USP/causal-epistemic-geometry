@@ -1,0 +1,19 @@
+{
+  "classification": "Q2_V3_AMENDMENT1_CPU_PREFLIGHT_PASS",
+  "failures": [],
+  "legacy_executable_records": 0,
+  "mismatch_count": 0,
+  "pass": true,
+  "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+  "purpose_counts": {
+    "M1_COVARIANCE": 64,
+    "M2_LABEL_FREE_PROBES": 12,
+    "PRIMARY_SEMANTIC_PANEL": 200,
+    "SHELL_CALIBRATION": 12,
+    "SOURCE_CONSTRUCTION": 24,
+    "SOURCE_VALIDATION": 24
+  },
+  "records_checked": 336,
+  "schema_version": "q2-v3-amendment1-cpu-preflight-v1",
+  "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+}

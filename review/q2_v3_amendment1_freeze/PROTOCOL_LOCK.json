@@ -1,0 +1,97 @@
+{
+  "M3": "EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED",
+  "amendment": {
+    "canonical_prompt_template": "gate7-cruxeval-semantic-task-prompt-v1",
+    "decision": "CANONICALIZE_Q2_V3_ON_GATE7_PROMPT_TEMPLATE",
+    "legacy_executable_records": 0,
+    "number": 1,
+    "other_scientific_changes": [],
+    "prompt_provenance_schema": "q2-v3-amendment1-prompt-provenance-v1",
+    "prompt_records": 336
+  },
+  "artifact_hashes": {
+    "AMENDED_PROMPT_MANIFEST.json": "7f55db4042b1d0233d595454499c3f250331abe5da22dff85e144b7f4145098e",
+    "CANONICAL_GATE7_PROMPT_SPEC.json": "ef4d8c9a8520a798239783ea1e56b77d25287462ed15f8903c266c637f9e912a",
+    "CANONICAL_GATE7_PROMPT_SPEC.md": "7609fc67bcf83ac80bdb1adeb851b3031408fdd8f119b0f2565ab68616283822",
+    "M1_COVARIANCE_MANIFEST.json": "b363b28943c9160b2fa4512f18499b0bcfcc781d33715de1bbabe7e5a1d8ac94",
+    "M2_PROBE_MANIFEST.json": "80ceed356100e56f20c6758b49119ebc560b3cda19256ea07ae459cca13b9c02",
+    "PRIMARY_PANEL_MANIFEST.json": "6803422d069ecc325dc4a9caec38738e22f8655e8ef1d9e6bca74acf889e01c3",
+    "PRINCIPAL_RESEARCHER_DECISION.json": "f55d5b1f123c489bb850257b40e40c3c8a567d5f85baefcab82f951622473aa9",
+    "PRINCIPAL_RESEARCHER_DECISION.md": "2251550c4177e0ce272281c5a8905f223f72e608e3b082165604b81a89a8aaed",
+    "PROMPT_PROVENANCE_SCHEMA.json": "de5c747e347ed09e3940efc2cc30d8c1fe804310c803c10bce9697d42ba8a102",
+    "PROMPT_PROVENANCE_SCHEMA.md": "b429e0271cd1cd06db18e825889c6b49a3087536ce5dee0224dc2c02bdba0a75",
+    "SCIENTIFIC_DIFF_AUDIT.json": "ad35b7ac02e07c1107d9c20f550b81d1d8b5ab6b30215c48e098f72c337c7721",
+    "SHELL_CALIBRATION_MANIFEST.json": "b870b64de4d7ec59ac5e674b74e31bb4f7f52d7fb102bddbb0bbac67791a4964",
+    "SOURCE_CONSTRUCTION_MANIFEST.json": "b0037d0b3e380527c9beec146dee087bd1ff53668f67e4ad522efe9a6261b228",
+    "SOURCE_VALIDATION_MANIFEST.json": "dc8016a7b9a6a1d9310145bffa8887ee1b2ec5fd63c665d09db808e8d211a9d4",
+    "TECHNICAL_MODEL_INPUT_LOCK.json": "d2b566c34d7fa440902a5cba003658720e114e033bfd93d6a4e767e63781ea37",
+    "ZERO_OUTCOME_VERIFICATION.json": "457411634e78ca8f09ae3fdf70e7b3f725703e59f1c80b5fd89de0ac1941fb30"
+  },
+  "bank": {
+    "base_directions": 10,
+    "families": 5,
+    "meaningful": 20,
+    "nulls": 4,
+    "shells": {
+      "MEDIUM": 0.25,
+      "STRONG": 0.5
+    }
+  },
+  "evidence_class": "HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION",
+  "execution_authorized": false,
+  "experiment_id": "Q2_V3_RADIAL_ANGULAR_OUT_OF_BANK",
+  "experiment_source_commit": "80d81259ae52c47b0b03330d80e386b092f80359",
+  "geometries": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "history": {
+    "failed_execution_head": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+    "failed_execution_state": "Q2_V3_PANEL_PROVENANCE_MISMATCH",
+    "original_freeze_head": "c9292d2baecb41de786912b77c39734855ed46cb",
+    "reconciliation_head": "c226adadeab04e296135349150a6fcbfd35af2b7",
+    "reconciliation_state": "Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION"
+  },
+  "inherited_artifact_hashes": {
+    "review/q2_v3_radial_angular_freeze/CLASSIFICATION_TAXONOMY.json": "1003c4d8ee6aad45c37d480224752513049fb8086867bbfc10a56d3835309856",
+    "review/q2_v3_radial_angular_freeze/CONTROLLER_BANK_SPEC.json": "ae04b679be9b895818dd837818f0e4c1f18e3d831186963b2d2efefe7bf09a32",
+    "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json": "b88af9e84adc6a793d5ede5504fbd4fc5824b43cbf3236fed3d9700a5465e420",
+    "review/q2_v3_radial_angular_freeze/EXECUTION_CHECKLIST.md": "50dcfa3a12b8d324053071515195817c25629190826b8e3d3846c4289391121b",
+    "review/q2_v3_radial_angular_freeze/EXECUTION_COST_PLAN.json": "d3900a9f679628fd973b92b8a38982fa42ebabe1226c69e472a4b7755896147d",
+    "review/q2_v3_radial_angular_freeze/GEOMETRY_DEFINITIONS.json": "cc758bb35a334d49c4609dd932d65112ccceab7bb27482b84179ed820e64820c",
+    "review/q2_v3_radial_angular_freeze/IDENTIFIABILITY_GATE.json": "ae344f96f0defd9a56acfc9e7e45f033a37bca03d01279faf8c048bdc84f4d9b",
+    "review/q2_v3_radial_angular_freeze/PREDICTION_LOCK_SPEC.json": "4d597a4bd734fbfc23541562fb9a2dead5541c1ac3965034f9691dfc18bdb599",
+    "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_PROVENANCE_PROOF.json": "8680616c1afc3639734d311b98dc09c6282a01302800e55bb2942f8e4212ccc0",
+    "review/q2_v3_radial_angular_freeze/PROVENANCE_STATEMENT.md": "2c672620ec742cd82ce326fea81b998bdeb754827ef670b24b8e54ec64ecd49f",
+    "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json": "59f63eb89bd67a56fd9471e49035cc61982f93650cf638d4045ef116acd9b258",
+    "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SPEC.json": "19f782619b568eea5571e597dac5794cf8d75f1a5aa2110ddaf7a162d87af11f",
+    "review/q2_v3_radial_angular_freeze/SOURCE_QUALIFICATION_SCHEDULE.json": "54d588755b2537021546c7b3a2b4c9de074524766cfc7af8ffe35872e8082a52",
+    "review/q2_v3_radial_angular_freeze/STATISTICAL_ANALYSIS_PLAN.json": "212e175cb6e6eef65576a36abc97e5e9191928ccdbd68c60d18d6b4d1e0a22c0"
+  },
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "layer": 27,
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "original_experiment_source_commit": "9a748de3706a788f8c6c5a1d12c09489808006e8",
+  "panel": {
+    "class": "C",
+    "n": 200,
+    "ordered_ids_sha256": "969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf"
+  },
+  "q3": "NOT_RUN",
+  "reviewed_base_commit": "9c2ea31c449a6874d4ae47337dd3b913d5bee559",
+  "schema_version": "q2-v3-amendment1-prospective-lock-v1",
+  "scientific_question": "After matching implemented intervention amplitude, does pre-outcome internal geometry prospectively predict which semantic blind spots differ across genuinely new causal controllers?",
+  "semantic_outcomes_in_this_freeze": 0,
+  "semantic_panel": {
+    "conditions": 25,
+    "executed": false,
+    "items": 200,
+    "rollouts": 2,
+    "rows": 10000
+  },
+  "source_or_shell_outputs_in_this_freeze": 0,
+  "status": "Q2_V3_AMENDMENT1_FROZEN_NOT_RUN"
+}

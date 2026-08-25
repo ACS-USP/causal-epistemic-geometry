@@ -1,0 +1,24 @@
+{
+  "classification": "Q2_V3_AMENDMENT1_FREEZE_AUDIT_PASS",
+  "failures": [],
+  "inherited_scientific_artifact_mismatches": [],
+  "legacy_executable_records": 0,
+  "pass": true,
+  "prediction_matrices": "NONE",
+  "primary_n": 200,
+  "primary_ordered_ids_sha256": "969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf",
+  "prompt_byte_mismatches": 0,
+  "prompt_lock_mismatches": 0,
+  "purpose_counts": {
+    "M1_COVARIANCE": 64,
+    "M2_LABEL_FREE_PROBES": 12,
+    "PRIMARY_SEMANTIC_PANEL": 200,
+    "SHELL_CALIBRATION": 12,
+    "SOURCE_CONSTRUCTION": 24,
+    "SOURCE_VALIDATION": 24
+  },
+  "records_checked": 336,
+  "schema_version": "q2-v3-amendment1-independent-freeze-audit-v1",
+  "semantic_trajectories": 0,
+  "unresolved_provenance_records": 0
+}

@@ -1,0 +1,21 @@
+{
+  "canonical_template_version": "gate7-cruxeval-semantic-task-prompt-v1",
+  "decision": "CANONICALIZE_Q2_V3_ON_GATE7_PROMPT_TEMPLATE",
+  "decision_timing": "PROSPECTIVE_AFTER_ZERO_OUTCOME_CLEAN_ABORT",
+  "history": {
+    "amendment1_source_commit": "80d81259ae52c47b0b03330d80e386b092f80359",
+    "failed_execution_head": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+    "original_freeze_head": "c9292d2baecb41de786912b77c39734855ed46cb",
+    "reconciliation_head": "c226adadeab04e296135349150a6fcbfd35af2b7"
+  },
+  "legacy_template_executable": false,
+  "outcome_independent": true,
+  "rationale": [
+    "327 of 336 frozen records already used the Gate-7 prompt",
+    "the nine legacy records were historical residues, not planned conditions",
+    "Q2 V3 does not study prompt-template robustness",
+    "the scientific variable is causal-controller geometry",
+    "zero Q2 V3 scientific outcomes existed at the decision"
+  ],
+  "schema_version": "q2-v3-amendment1-principal-decision-v1"
+}

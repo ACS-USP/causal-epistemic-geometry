@@ -1,0 +1,26 @@
+{
+  "authoritative_constructor": "epistemic_geometry.experiments.q2_v3_prompt_provenance.canonical_q2_v3_task_prompt",
+  "decision": "CANONICALIZE_Q2_V3_ON_GATE7_PROMPT_TEMPLATE",
+  "fixture": {
+    "byte_length": 218,
+    "code": "def f(x):\n    return x",
+    "encoding": "UTF-8",
+    "exact_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(x):\n    return x\n```\n\nInput: 1\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+    "input": "1",
+    "newline_convention": "LF",
+    "sha256": "4246e0a5921d8c448696979e6801cfbd8f79e496228d648b0b6b50865579e514",
+    "unicode_normalization": "NONE",
+    "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih4KToKICAgIHJldHVybiB4CmBgYAoKSW5wdXQ6IDEKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+  },
+  "schema_version": "q2-v3-gate7-prompt-spec-v1",
+  "template_segments": [
+    "Solve this Python code-output prediction problem.\\n\\n",
+    "Function:\\n",
+    "```python\\n{code}\\n```\\n\\n",
+    "Input: {input}\\n\\n",
+    "Return exactly one final line in this form:\\n",
+    "FINAL: <the exact Python output>\\n",
+    "Do not add any text after FINAL."
+  ],
+  "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+}

@@ -1,0 +1,65 @@
+{
+  "allowed_changes": {
+    "dependent_prompt_manifest_hashes": "RECOMPUTED",
+    "prompt_provenance_schema": "q2-v3-amendment1-prompt-provenance-v1",
+    "prompt_serialization_contract": "VERSIONED_EXACT_UTF8_BYTES",
+    "prompt_template": {
+      "after": "gate7-cruxeval-semantic-task-prompt-v1",
+      "before": "ACCIDENTAL_MIXED_GATE7_327_LEGACY_9"
+    }
+  },
+  "classification": "Q2_V3_AMENDMENT1_EXPECTED_PROMPT_ONLY_DIFF",
+  "original_lock_invariants": {
+    "M3": "EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED",
+    "bank": {
+      "base_directions": 10,
+      "families": 5,
+      "meaningful": 20,
+      "nulls": 4,
+      "shells": {
+        "MEDIUM": 0.25,
+        "STRONG": 0.5
+      }
+    },
+    "evidence_class": "HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION",
+    "geometries": [
+      "M0",
+      "M1",
+      "M2"
+    ],
+    "model": {
+      "id": "Qwen/Qwen3-8B",
+      "layer": 27,
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+    },
+    "panel": {
+      "class": "C",
+      "n": 200,
+      "ordered_ids_sha256": "969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf"
+    },
+    "q3": "NOT_RUN",
+    "scientific_question": "After matching implemented intervention amplitude, does pre-outcome internal geometry prospectively predict which semantic blind spots differ across genuinely new causal controllers?",
+    "semantic_panel": {
+      "conditions": 25,
+      "executed": false,
+      "items": 200,
+      "rollouts": 2,
+      "rows": 10000
+    }
+  },
+  "other_scientific_changes": [],
+  "primary_panel": {
+    "n": 200,
+    "ordered_ids_sha256": "969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf",
+    "unchanged": true
+  },
+  "purpose_counts": {
+    "M1_COVARIANCE": 64,
+    "M2_LABEL_FREE_PROBES": 12,
+    "PRIMARY_SEMANTIC_PANEL": 200,
+    "SHELL_CALIBRATION": 12,
+    "SOURCE_CONSTRUCTION": 24,
+    "SOURCE_VALIDATION": 24
+  },
+  "schema_version": "q2-v3-amendment1-scientific-diff-v1"
+}

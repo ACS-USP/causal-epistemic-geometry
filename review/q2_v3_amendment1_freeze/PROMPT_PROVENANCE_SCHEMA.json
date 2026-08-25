@@ -1,0 +1,26 @@
+{
+  "ambiguous_prompt_hash_field_forbidden": true,
+  "digest_binding": [
+    "provenance_schema_version",
+    "template_version",
+    "purpose",
+    "item_id",
+    "exact_model_visible_utf8_base64"
+  ],
+  "legacy_fields_are_historical_only": true,
+  "required_fields": [
+    "item_id",
+    "purpose",
+    "template_version",
+    "provenance_schema_version",
+    "model_visible_prompt.utf8_base64",
+    "model_visible_prompt.prompt_bytes_sha256",
+    "reference.identity",
+    "reference.utf8_sha256",
+    "source_artifact.dataset_repo",
+    "source_artifact.dataset_revision",
+    "source_artifact.source_record_sha256",
+    "provenance_digest_sha256"
+  ],
+  "schema_version": "q2-v3-amendment1-prompt-provenance-v1"
+}

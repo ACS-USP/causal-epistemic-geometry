@@ -1,0 +1,125 @@
+{
+  "execution_teacher_continuation": {
+    "byte_length": 95,
+    "encoding": "UTF-8",
+    "exact_text": "I will now apply the requested reasoning policy to the program before committing to one answer.",
+    "newline_convention": "LF",
+    "sha256": "922ede4db06a1223e72e7f0681a45d3ce1d4c8378fd1a3a5b1454c2e2436c8b5",
+    "unicode_normalization": "NONE",
+    "utf8_base64": "SSB3aWxsIG5vdyBhcHBseSB0aGUgcmVxdWVzdGVkIHJlYXNvbmluZyBwb2xpY3kgdG8gdGhlIHByb2dyYW0gYmVmb3JlIGNvbW1pdHRpbmcgdG8gb25lIGFuc3dlci4="
+  },
+  "schema_version": "q2-v3-amendment1-technical-model-input-lock-v1",
+  "scientific_content_changed": false,
+  "source_system_instructions": [
+    {
+      "byte_length": 194,
+      "encoding": "UTF-8",
+      "exact_text": "Enumerate every feasible control-flow path that can affect the return value, trace each path to completion, reconcile the path results, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "CONTROL_FLOW_PATH_COVERAGE",
+      "newline_convention": "LF",
+      "polarity": "POSITIVE",
+      "sha256": "7f085c4ea8f146a8086e618303f18ad649e01fd7966c1f0e3ed191dc0a2201cd",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "RW51bWVyYXRlIGV2ZXJ5IGZlYXNpYmxlIGNvbnRyb2wtZmxvdyBwYXRoIHRoYXQgY2FuIGFmZmVjdCB0aGUgcmV0dXJuIHZhbHVlLCB0cmFjZSBlYWNoIHBhdGggdG8gY29tcGxldGlvbiwgcmVjb25jaWxlIHRoZSBwYXRoIHJlc3VsdHMsIGFuZCBlbmQgd2l0aCBleGFjdGx5IG9uZSBsaW5lIGluIHRoZSBmb3JtIEZJTkFMOiA8YW5zd2VyPi4="
+    },
+    {
+      "byte_length": 157,
+      "encoding": "UTF-8",
+      "exact_text": "Follow only the most immediately apparent control-flow path without enumerating alternative paths, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "CONTROL_FLOW_PATH_COVERAGE",
+      "newline_convention": "LF",
+      "polarity": "NEGATIVE",
+      "sha256": "abccd261358271c8a372ca07ef38b50f5808d44c2aeae0fdfcc7bd4aaec1edd3",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "Rm9sbG93IG9ubHkgdGhlIG1vc3QgaW1tZWRpYXRlbHkgYXBwYXJlbnQgY29udHJvbC1mbG93IHBhdGggd2l0aG91dCBlbnVtZXJhdGluZyBhbHRlcm5hdGl2ZSBwYXRocywgYW5kIGVuZCB3aXRoIGV4YWN0bHkgb25lIGxpbmUgaW4gdGhlIGZvcm0gRklOQUw6IDxhbnN3ZXI+Lg=="
+    },
+    {
+      "byte_length": 178,
+      "encoding": "UTF-8",
+      "exact_text": "Track every mutation and alias relation causally: record which objects share storage, apply updates in execution order, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "MUTATION_ALIAS_CAUSALITY",
+      "newline_convention": "LF",
+      "polarity": "POSITIVE",
+      "sha256": "45067493e6e22babc774ef3a2e41c6f12737064a018166bbf74e044032b82735",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "VHJhY2sgZXZlcnkgbXV0YXRpb24gYW5kIGFsaWFzIHJlbGF0aW9uIGNhdXNhbGx5OiByZWNvcmQgd2hpY2ggb2JqZWN0cyBzaGFyZSBzdG9yYWdlLCBhcHBseSB1cGRhdGVzIGluIGV4ZWN1dGlvbiBvcmRlciwgYW5kIGVuZCB3aXRoIGV4YWN0bHkgb25lIGxpbmUgaW4gdGhlIGZvcm0gRklOQUw6IDxhbnN3ZXI+Lg=="
+    },
+    {
+      "byte_length": 157,
+      "encoding": "UTF-8",
+      "exact_text": "Treat each variable update locally without maintaining an explicit alias or shared-storage ledger, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "MUTATION_ALIAS_CAUSALITY",
+      "newline_convention": "LF",
+      "polarity": "NEGATIVE",
+      "sha256": "b0d0f04fd3ccc2672f5515bbc5e5e11ebb9a1b0e6e1b3e7a59ce0f7b8ec2401e",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "VHJlYXQgZWFjaCB2YXJpYWJsZSB1cGRhdGUgbG9jYWxseSB3aXRob3V0IG1haW50YWluaW5nIGFuIGV4cGxpY2l0IGFsaWFzIG9yIHNoYXJlZC1zdG9yYWdlIGxlZGdlciwgYW5kIGVuZCB3aXRoIGV4YWN0bHkgb25lIGxpbmUgaW4gdGhlIGZvcm0gRklOQUw6IDxhbnN3ZXI+Lg=="
+    },
+    {
+      "byte_length": 196,
+      "encoding": "UTF-8",
+      "exact_text": "For every operation, check the exact API contract, runtime type, return value, side effect, and exceptional case before composing the result. End with exactly one line in the form FINAL: <answer>.",
+      "family_id": "API_CONTRACT_EXACTNESS",
+      "newline_convention": "LF",
+      "polarity": "POSITIVE",
+      "sha256": "71e1b2576cc003558ab65a12beb260cdd1584d6df2b101947fa5999015d07d1d",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "Rm9yIGV2ZXJ5IG9wZXJhdGlvbiwgY2hlY2sgdGhlIGV4YWN0IEFQSSBjb250cmFjdCwgcnVudGltZSB0eXBlLCByZXR1cm4gdmFsdWUsIHNpZGUgZWZmZWN0LCBhbmQgZXhjZXB0aW9uYWwgY2FzZSBiZWZvcmUgY29tcG9zaW5nIHRoZSByZXN1bHQuIEVuZCB3aXRoIGV4YWN0bHkgb25lIGxpbmUgaW4gdGhlIGZvcm0gRklOQUw6IDxhbnN3ZXI+Lg=="
+    },
+    {
+      "byte_length": 188,
+      "encoding": "UTF-8",
+      "exact_text": "Infer each operation's ordinary intent without checking its exact API contract, runtime type, side effects, or exceptional cases, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "API_CONTRACT_EXACTNESS",
+      "newline_convention": "LF",
+      "polarity": "NEGATIVE",
+      "sha256": "8392b8a5a462cbfab1af5641aaf73267a903b93c86a5e1701ea458175be2d882",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "SW5mZXIgZWFjaCBvcGVyYXRpb24ncyBvcmRpbmFyeSBpbnRlbnQgd2l0aG91dCBjaGVja2luZyBpdHMgZXhhY3QgQVBJIGNvbnRyYWN0LCBydW50aW1lIHR5cGUsIHNpZGUgZWZmZWN0cywgb3IgZXhjZXB0aW9uYWwgY2FzZXMsIGFuZCBlbmQgd2l0aCBleGFjdGx5IG9uZSBsaW5lIGluIHRoZSBmb3JtIEZJTkFMOiA8YW5zd2VyPi4="
+    },
+    {
+      "byte_length": 191,
+      "encoding": "UTF-8",
+      "exact_text": "Audit every loop boundary explicitly: initialization, first iteration, last included iteration, update order, and termination condition. End with exactly one line in the form FINAL: <answer>.",
+      "family_id": "LOOP_BOUNDARY_ACCOUNTING",
+      "newline_convention": "LF",
+      "polarity": "POSITIVE",
+      "sha256": "b1b2f3a12929006d424699b112429b5878beaa74c5c7822c0d9bf6314b3bb977",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "QXVkaXQgZXZlcnkgbG9vcCBib3VuZGFyeSBleHBsaWNpdGx5OiBpbml0aWFsaXphdGlvbiwgZmlyc3QgaXRlcmF0aW9uLCBsYXN0IGluY2x1ZGVkIGl0ZXJhdGlvbiwgdXBkYXRlIG9yZGVyLCBhbmQgdGVybWluYXRpb24gY29uZGl0aW9uLiBFbmQgd2l0aCBleGFjdGx5IG9uZSBsaW5lIGluIHRoZSBmb3JtIEZJTkFMOiA8YW5zd2VyPi4="
+    },
+    {
+      "byte_length": 194,
+      "encoding": "UTF-8",
+      "exact_text": "Reason from the loop's overall pattern without separately auditing initialization, first/last iterations, update order, or termination, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "LOOP_BOUNDARY_ACCOUNTING",
+      "newline_convention": "LF",
+      "polarity": "NEGATIVE",
+      "sha256": "9214088bad651a2e1554879d50ca7c461cfafeca1eb5c20bcf3aced3240c30d2",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "UmVhc29uIGZyb20gdGhlIGxvb3AncyBvdmVyYWxsIHBhdHRlcm4gd2l0aG91dCBzZXBhcmF0ZWx5IGF1ZGl0aW5nIGluaXRpYWxpemF0aW9uLCBmaXJzdC9sYXN0IGl0ZXJhdGlvbnMsIHVwZGF0ZSBvcmRlciwgb3IgdGVybWluYXRpb24sIGFuZCBlbmQgd2l0aCBleGFjdGx5IG9uZSBsaW5lIGluIHRoZSBmb3JtIEZJTkFMOiA8YW5zd2VyPi4="
+    },
+    {
+      "byte_length": 182,
+      "encoding": "UTF-8",
+      "exact_text": "Maintain all plausible candidate outcomes, test each against every branch and operation, eliminate contradicted candidates, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "newline_convention": "LF",
+      "polarity": "POSITIVE",
+      "sha256": "6a7374491d4a6990029ad1da36f9387fc94efeaba3bb005dbfdba780a648971f",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "TWFpbnRhaW4gYWxsIHBsYXVzaWJsZSBjYW5kaWRhdGUgb3V0Y29tZXMsIHRlc3QgZWFjaCBhZ2FpbnN0IGV2ZXJ5IGJyYW5jaCBhbmQgb3BlcmF0aW9uLCBlbGltaW5hdGUgY29udHJhZGljdGVkIGNhbmRpZGF0ZXMsIGFuZCBlbmQgd2l0aCBleGFjdGx5IG9uZSBsaW5lIGluIHRoZSBmb3JtIEZJTkFMOiA8YW5zd2VyPi4="
+    },
+    {
+      "byte_length": 164,
+      "encoding": "UTF-8",
+      "exact_text": "Commit to the first plausible outcome without maintaining or eliminating an explicit set of alternatives, and end with exactly one line in the form FINAL: <answer>.",
+      "family_id": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "newline_convention": "LF",
+      "polarity": "NEGATIVE",
+      "sha256": "73a3dda628a290596e2b9fbce5cc017527ac2257e04e812be8e89470b5ceb0d8",
+      "unicode_normalization": "NONE",
+      "utf8_base64": "Q29tbWl0IHRvIHRoZSBmaXJzdCBwbGF1c2libGUgb3V0Y29tZSB3aXRob3V0IG1haW50YWluaW5nIG9yIGVsaW1pbmF0aW5nIGFuIGV4cGxpY2l0IHNldCBvZiBhbHRlcm5hdGl2ZXMsIGFuZCBlbmQgd2l0aCBleGFjdGx5IG9uZSBsaW5lIGluIHRoZSBmb3JtIEZJTkFMOiA8YW5zd2VyPi4="
+    }
+  ]
+}

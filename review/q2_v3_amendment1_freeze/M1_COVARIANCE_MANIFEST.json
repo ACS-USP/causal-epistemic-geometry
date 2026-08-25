@@ -1,0 +1,2517 @@
+{
+  "allocation": "M1_COVARIANCE",
+  "amendment": 1,
+  "canonical_prompt_template": "gate7-cruxeval-semantic-task-prompt-v1",
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "item_count": 64,
+  "item_ids": [
+    "sample_159",
+    "sample_544",
+    "sample_58",
+    "sample_433",
+    "sample_300",
+    "sample_228",
+    "sample_0",
+    "sample_137",
+    "sample_502",
+    "sample_645",
+    "sample_55",
+    "sample_290",
+    "sample_488",
+    "sample_119",
+    "sample_669",
+    "sample_217",
+    "sample_127",
+    "sample_760",
+    "sample_101",
+    "sample_255",
+    "sample_503",
+    "sample_385",
+    "sample_570",
+    "sample_374",
+    "sample_742",
+    "sample_606",
+    "sample_332",
+    "sample_735",
+    "sample_761",
+    "sample_26",
+    "sample_411",
+    "sample_341",
+    "sample_50",
+    "sample_379",
+    "sample_576",
+    "sample_81",
+    "sample_152",
+    "sample_112",
+    "sample_5",
+    "sample_123",
+    "sample_14",
+    "sample_301",
+    "sample_63",
+    "sample_529",
+    "sample_148",
+    "sample_216",
+    "sample_449",
+    "sample_629",
+    "sample_766",
+    "sample_515",
+    "sample_579",
+    "sample_23",
+    "sample_74",
+    "sample_744",
+    "sample_181",
+    "sample_616",
+    "sample_391",
+    "sample_248",
+    "sample_116",
+    "sample_327",
+    "sample_665",
+    "sample_136",
+    "sample_8",
+    "sample_171"
+  ],
+  "items": [
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_159",
+      "official_index": 159,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "dc983a6f5e025a453dcb2b696a4afa8b8958abf27a6422156bfa9893c328eff1"
+        },
+        "item_id": "sample_159",
+        "model_visible_prompt": {
+          "byte_length": 309,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "dc983a6f5e025a453dcb2b696a4afa8b8958abf27a6422156bfa9893c328eff1",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzdCk6CiAgICBzd2FwcGVkID0gJycKICAgIGZvciBjaCBpbiByZXZlcnNlZChzdCk6CiAgICAgICAgc3dhcHBlZCArPSBjaC5zd2FwY2FzZSgpCiAgICByZXR1cm4gc3dhcHBlZApgYGAKCklucHV0OiAnUlRpR00nCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "5f77436bb9404d681985a77dc4f04059fe7d3256d7ba8aff5784a55389530c74",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "bf7b6b3fb19ea19ebdee50e72dbd8f31b319529c16fa5a4be473ddd3d47e873c"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 159,
+          "source_record_sha256": "2287c6973e080b8f9653302b95cbd9124ba35b59d59f5ae02e0b5732f9f2dabb"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "bf7b6b3fb19ea19ebdee50e72dbd8f31b319529c16fa5a4be473ddd3d47e873c",
+      "selection_rank": "00117608375d76ee4418ec4b17a5a6abfbff28dfba251a8a6d74910eb5ee9515"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_544",
+      "official_index": 544,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "11511c06b7138fa506ded97f6adb58e54e42fbfa92d00aa3d6eceb1a331bd33d"
+        },
+        "item_id": "sample_544",
+        "model_visible_prompt": {
+          "byte_length": 379,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "11511c06b7138fa506ded97f6adb58e54e42fbfa92d00aa3d6eceb1a331bd33d",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIGEgPSB0ZXh0LnNwbGl0KCdcbicpCiAgICBiID0gW10KICAgIGZvciBpIGluIHJhbmdlKGxlbihhKSk6CiAgICAgICAgYyA9IGFbaV0ucmVwbGFjZSgnXHQnLCAnICAgICcpCiAgICAgICAgYi5hcHBlbmQoYykKICAgIHJldHVybiAnXG4nLmpvaW4oYikKYGBgCgpJbnB1dDogIlx0XHRcdHRhYiB0YWIgdGFidWxhdGVzIgoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "4cb76085e0f958e45ce993c3e8af622c68cf6fca06cb68de9b2a7a4b927d3596",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "2629cbc22de7525a5c1cdbd1cfe33e150bf1a58e1aff3cf1cb2b565ed5c8655c"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 544,
+          "source_record_sha256": "2093860d99b2fcbfcc185b39f1bf661bbd3fb0f31566884636650994cc99fddd"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "2629cbc22de7525a5c1cdbd1cfe33e150bf1a58e1aff3cf1cb2b565ed5c8655c",
+      "selection_rank": "01fd3079772863a6235b2f671ffa9f4b2af72012b7e4528aa7eac8127faa0cce"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_58",
+      "official_index": 58,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "b72bd66b50d66fdc64176a199f2e4df8890dc901406653e1b33baafd4a8220f7"
+        },
+        "item_id": "sample_58",
+        "model_visible_prompt": {
+          "byte_length": 334,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "b72bd66b50d66fdc64176a199f2e4df8890dc901406653e1b33baafd4a8220f7",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gbGVuKG51bXMpCiAgICBmb3IgaSBpbiBbaSAlIDIgZm9yIGkgaW4gcmFuZ2UoY291bnQpXToKICAgICAgICBudW1zLmFwcGVuZChudW1zW2ldKQogICAgcmV0dXJuIG51bXMKYGBgCgpJbnB1dDogWy0xLCAwLCAwLCAxLCAxXQoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "11727449eec2e225f9f49feedf1e008191bc5567601f39666308485fd2b76b55",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "b48ff2bfd0224ccc46bd6c4e44fc2cd9c0775919e56fe8caa0a08235caa791f2"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 58,
+          "source_record_sha256": "79ea577ce9ad9fdfd8a96db921ddfd15601ddf7ed8b6318966f870ef214fe354"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "b48ff2bfd0224ccc46bd6c4e44fc2cd9c0775919e56fe8caa0a08235caa791f2",
+      "selection_rank": "02a09f3e14c75c153af5639b0ea94e67c521482a5663943a8834d73b4e190d2a"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_433",
+      "official_index": 433,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "d979c960e3d43986416e77e3c6d41ef74ef7a0b0024d06e0c14a16687a0253b6"
+        },
+        "item_id": "sample_433",
+        "model_visible_prompt": {
+          "byte_length": 363,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "d979c960e3d43986416e77e3c6d41ef74ef7a0b0024d06e0c14a16687a0253b6",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIHRleHQgPSB0ZXh0LnNwbGl0KCcsJykKICAgIHRleHQucG9wKDApCiAgICB0ZXh0Lmluc2VydCgwLCB0ZXh0LnBvcCh0ZXh0LmluZGV4KCdUJykpKQogICAgcmV0dXJuICdUJyArICcsJyArICcsJy5qb2luKHRleHQpCmBgYAoKSW5wdXQ6ICJEbXJlaCxTc3BwLFQsRyAsLnRCLFZ4ayxDY3QiCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "02ef846b68b7a354f650b8444c0b298213853f03bce8b446a432c890fb9c74bd",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "0b2e0d8e99e3468849a68d85e404ed6bc2226a0f87e1e4c1319d4c7b91d72626"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 433,
+          "source_record_sha256": "631c1929343641e47e863f0ab3c3de2b2052585a770938f480236d43c4072d56"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "0b2e0d8e99e3468849a68d85e404ed6bc2226a0f87e1e4c1319d4c7b91d72626",
+      "selection_rank": "02e75a997d4370792688df73ec5941f019b231355ef9ba036e1727cad1270549"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_300",
+      "official_index": 300,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "stable-digest-v1:EXTERNAL-PROMPT:external-benchmark-cruxeval-prompt-v1",
+          "prompt_hash": "5ab5edb666183aeb22b925eeb0452dc3aba62c56d34f902a0ffdfe69c4b12e04"
+        },
+        "item_id": "sample_300",
+        "model_visible_prompt": {
+          "byte_length": 356,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "db171bc51c81c40684c466f8003b23ed6bc6ded946c15adc6a0c126dfa3be95f",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gMQogICAgZm9yIGkgaW4gcmFuZ2UoY291bnQsIGxlbihudW1zKSAtIDEsIDIpOgogICAgICAgIG51bXNbaV0gPSBtYXgobnVtc1tpXSwgbnVtc1tjb3VudC0xXSkKICAgICAgICBjb3VudCArPSAxCiAgICByZXR1cm4gbnVtcwpgYGAKCklucHV0OiBbMSwgMiwgM10KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "7a63682ff8dc843dfca354f00134ea258bbee49964da8020d751149d5719e4d4",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 300,
+          "source_record_sha256": "121a439dc94880935475330d031c4175ccf30013d1031cf254bd039b82430bd1"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3",
+      "selection_rank": "03454e5aa1822ea528ad5bbe49a1a9e9824a3cd5e2f84c64503ecbfff4a3f3f0"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_228",
+      "official_index": 228,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "6bec346df0e92692a8cfa47fc628c7c48a731fe96624c43eb33cb9ebe565fc87"
+        },
+        "item_id": "sample_228",
+        "model_visible_prompt": {
+          "byte_length": 290,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "6bec346df0e92692a8cfa47fc628c7c48a731fe96624c43eb33cb9ebe565fc87",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBzcGxpdHRlcik6CiAgICByZXR1cm4gc3BsaXR0ZXIuam9pbih0ZXh0Lmxvd2VyKCkuc3BsaXQoKSkKYGBgCgpJbnB1dDogJ0xsVEhIIHNBZkxBUGtQaHRzV1AnLCAnIycKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "1ea9c7901876bde59ae6ba93847208e452ed29a16859f0111bd66a77ed18a8ae",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "fbbce3d701a87be36ffdc60543729b4d617c23c1703c061299af1a11f048b684"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 228,
+          "source_record_sha256": "17b85705621f312e62ea2ccdb5828c126819f1d30a5f91a291bcfbe427407cf2"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "fbbce3d701a87be36ffdc60543729b4d617c23c1703c061299af1a11f048b684",
+      "selection_rank": "0358e121d4b3c07bf2094ad2614dd2bcc594fe10303fbbd572add0143442e812"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_0",
+      "official_index": 0,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ed8cc93c591e863fabcf7c5fab72e62fef5aa6dd99af10076eff60521ddf42f5"
+        },
+        "item_id": "sample_0",
+        "model_visible_prompt": {
+          "byte_length": 350,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ed8cc93c591e863fabcf7c5fab72e62fef5aa6dd99af10076eff60521ddf42f5",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIG91dHB1dCA9IFtdCiAgICBmb3IgbiBpbiBudW1zOgogICAgICAgIG91dHB1dC5hcHBlbmQoKG51bXMuY291bnQobiksIG4pKQogICAgb3V0cHV0LnNvcnQocmV2ZXJzZT1UcnVlKQogICAgcmV0dXJuIG91dHB1dApgYGAKCklucHV0OiBbMSwgMSwgMywgMSwgMywgMV0KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "942f73cd6bb40df01467c080a186a73fe3ffcc163f9176258fc8a23729f185c1",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "eeb5744ea5fab497a3b48320d8fb9b8daca99ad5964aa05efeb17ff59757db4e"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 0,
+          "source_record_sha256": "f9017a636028e95c59515d590e12afe6975e89ac9065097fa032a23a79c989e9"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "eeb5744ea5fab497a3b48320d8fb9b8daca99ad5964aa05efeb17ff59757db4e",
+      "selection_rank": "057d7ecc4e06b60033489565bfa6cc7e70a65857eb2bd9ca85c143ce76e41e39"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_137",
+      "official_index": 137,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "8bf1fea948cc8bc0d9e763c19269ba281536b28b1a6034743ecfb4318ddde495"
+        },
+        "item_id": "sample_137",
+        "model_visible_prompt": {
+          "byte_length": 438,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "8bf1fea948cc8bc0d9e763c19269ba281536b28b1a6034743ecfb4318ddde495",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gMAogICAgZm9yIGkgaW4gcmFuZ2UobGVuKG51bXMpKToKICAgICAgICBpZiBsZW4obnVtcykgPT0gMDoKICAgICAgICAgICAgYnJlYWsKICAgICAgICBpZiBjb3VudCAlIDIgPT0gMDoKICAgICAgICAgICAgbnVtcy5wb3AoKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIG51bXMucG9wKDApCiAgICAgICAgY291bnQgKz0gMQogICAgcmV0dXJuIG51bXMKYGBgCgpJbnB1dDogWzMsIDIsIDAsIDAsIDIsIDNdCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "21b9ad44c10f54b36d17caa767fb8155c799588e6935e8e116c22629d09b3c4d",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 137,
+          "source_record_sha256": "1bd4d406e0b2e323094bda0bee92121b7b3a05d8187c8cb89b0fe824a303d535"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "0615c29d72ce9f1d1b8e102037eb00050d7909905cbbad6f370b3642e6a9f440"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_502",
+      "official_index": 502,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "5588fd7962dd48fb9c8d1b5ac679cf5dec30e7246374095154ce47a9dd3a12aa"
+        },
+        "item_id": "sample_502",
+        "model_visible_prompt": {
+          "byte_length": 256,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "5588fd7962dd48fb9c8d1b5ac679cf5dec30e7246374095154ce47a9dd3a12aa",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihuYW1lKToKICAgIHJldHVybiAnKicuam9pbihuYW1lLnNwbGl0KCcgJykpCmBgYAoKSW5wdXQ6ICdGcmVkIFNtaXRoJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "a32b908d4971ea6d44d9d3bd9f38c723c27e858cabcffaa7d207b51c1775db7d",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "bc949cd778d36a83ab782ad883d706e01fb1932087f2f882b3168b48355605a2"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 502,
+          "source_record_sha256": "f0ced242e0e2b1112408bf501a8065576aa474ae0625a8cd4f0f6cc5335661e8"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "bc949cd778d36a83ab782ad883d706e01fb1932087f2f882b3168b48355605a2",
+      "selection_rank": "065140b269c0264a27b2500fc7623f12d0eb6c2f38550d0d021fd9b091f3c7d6"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_645",
+      "official_index": 645,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ce0ad9437d0df129c77fcb6f4addd40c886810a9c25471624cea005ae42ef220"
+        },
+        "item_id": "sample_645",
+        "model_visible_prompt": {
+          "byte_length": 363,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ce0ad9437d0df129c77fcb6f4addd40c886810a9c25471624cea005ae42ef220",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zLCB0YXJnZXQpOgogICAgaWYgbnVtcy5jb3VudCgwKToKICAgICAgICByZXR1cm4gMAogICAgZWxpZiBudW1zLmNvdW50KHRhcmdldCkgPCAzOgogICAgICAgIHJldHVybiAxCiAgICBlbHNlOgogICAgICAgIHJldHVybiBudW1zLmluZGV4KHRhcmdldCkKYGBgCgpJbnB1dDogWzEsIDEsIDEsIDJdLCAzCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "1cd20d02d5053d755c33ea4b96ca57dd7ccf844dc32adff0d3d88eea0a927264",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 645,
+          "source_record_sha256": "1bd1cf955817790678cc2098735b43e3c65aa26f127ae50dc2bbd811948142d8"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "selection_rank": "066698836729d2eeae3bb200d40c29e526b48be1bc4c103b1252d6a4b1993c20"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_55",
+      "official_index": 55,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ed7d9a5e3e64c10ef81521ca622315abeb63693835f679b2e0af84a089c7d7e3"
+        },
+        "item_id": "sample_55",
+        "model_visible_prompt": {
+          "byte_length": 360,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ed7d9a5e3e64c10ef81521ca622315abeb63693835f679b2e0af84a089c7d7e3",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSk6CiAgICBhcnJheV8yID0gW10KICAgIGZvciBpIGluIGFycmF5OgogICAgICAgIGlmIGk+MDoKICAgICAgICAgICAgYXJyYXlfMiArPSBbaV0KICAgIGFycmF5XzIuc29ydChyZXZlcnNlPVRydWUpCiAgICByZXR1cm4gYXJyYXlfMgpgYGAKCklucHV0OiBbNCwgOCwgMTcsIDg5LCA0MywgMTRdCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "498ea46573758e6a3170dd06a4d35b1b6e899bb9e3ac6ec4e734d2187275be03",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "7223341d0e27d854a93a81245a2d333e0c2eab13f62b67d6a351f68523167a40"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 55,
+          "source_record_sha256": "f91c89128fcc61e810af473640ffee1b47d00dd94681ad688878a82230f2f2a1"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "7223341d0e27d854a93a81245a2d333e0c2eab13f62b67d6a351f68523167a40",
+      "selection_rank": "06e8dc9d45aa8b6cbdacd2743b56e8cb7835e9f756b951784bd7a207660504f2"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_290",
+      "official_index": 290,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "91c1f1b85f62255fa426203d8432761b138c4ec637e112e269b0241a3d6c6472"
+        },
+        "item_id": "sample_290",
+        "model_visible_prompt": {
+          "byte_length": 401,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "91c1f1b85f62255fa426203d8432761b138c4ec637e112e269b0241a3d6c6472",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBwcmVmaXgpOgogICAgaWYgdGV4dC5zdGFydHN3aXRoKHByZWZpeCk6CiAgICAgICAgcmV0dXJuIHRleHQucmVtb3ZlcHJlZml4KHByZWZpeCkKICAgIGlmIHByZWZpeCBpbiB0ZXh0OgogICAgICAgIHJldHVybiB0ZXh0LnJlcGxhY2UocHJlZml4LCAnJykuc3RyaXAoKQogICAgcmV0dXJuIHRleHQudXBwZXIoKQpgYGAKCklucHV0OiAnYWJpeGFhYWlseScsICdhbCcKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "8efd008f9f8000e48fe2bdbecbd0bb8a5139fae788115796fa22303980822609",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "501b20e4f07ed0adad70f0dc74f9f3bb3916f193a26bf46e1f67bab8c5349094"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 290,
+          "source_record_sha256": "081567dd2aef5a6a41756902ce84dae3de2b32be6d62addce852a1dcd2f3eb82"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "501b20e4f07ed0adad70f0dc74f9f3bb3916f193a26bf46e1f67bab8c5349094",
+      "selection_rank": "07076ca44f952193f2afa75045a1d91a2baabf84260b91c9e1360b15e43f9fdf"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_488",
+      "official_index": 488,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "7f6ed224ae89835931c06ffe6b2151eb05617fb852bbfcfa91d40a5543b13fec"
+        },
+        "item_id": "sample_488",
+        "model_visible_prompt": {
+          "byte_length": 438,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "7f6ed224ae89835931c06ffe6b2151eb05617fb852bbfcfa91d40a5543b13fec",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBjaGFyKToKICAgIGNvdW50ID0gdGV4dC5jb3VudChjaGFyKQogICAgY2hhcnMgPSBsaXN0KHRleHQpCiAgICBpZiBjb3VudCA+IDA6CiAgICAgICAgaW5kZXggPSBjaGFycy5pbmRleChjaGFyKSArIDEKICAgICAgICBjaGFyc1s6aW5kZXg6aW5kZXgrMV0gPSBbYyBmb3IgYyBpbiBjaGFyc1tpbmRleDppbmRleCtjb3VudDoxXV0KICAgIHJldHVybiAnJy5qb2luKGNoYXJzKQpgYGAKCklucHV0OiAndGV6bWd2biA2NTFoJywgJzYnCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "aff6d125d10b6ba3c1303cce412ba8a36aa78e1759a2a2b7cba8f8da5af69441",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "ec0478afaed25369361a13d256ed9ba07e6687096d5ec7952ee55463ace33e5f"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 488,
+          "source_record_sha256": "430ea66f796dcc94d6be271cf9ab5fc73635b62ddae0bed37fda48311da01b9c"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "ec0478afaed25369361a13d256ed9ba07e6687096d5ec7952ee55463ace33e5f",
+      "selection_rank": "0726ce98ee989392dfd6c9fa19b500650e09eeb96d68ed0b1dc6bdc03edbcbb0"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_119",
+      "official_index": 119,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "9c2fb6c646990936df43ba397e2ca73fb259e8a39eb8f2854709b3ffd4908092"
+        },
+        "item_id": "sample_119",
+        "model_visible_prompt": {
+          "byte_length": 392,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "9c2fb6c646990936df43ba397e2ca73fb259e8a39eb8f2854709b3ffd4908092",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIHJlc3VsdCA9ICIiCiAgICBmb3IgaSBpbiByYW5nZShsZW4odGV4dCkpOgogICAgICAgIGlmIGkgJSAyID09IDA6CiAgICAgICAgICAgIHJlc3VsdCArPSB0ZXh0W2ldLnN3YXBjYXNlKCkKICAgICAgICBlbHNlOgogICAgICAgICAgICByZXN1bHQgKz0gdGV4dFtpXQogICAgcmV0dXJuIHJlc3VsdApgYGAKCklucHV0OiAidnNubHlnbHRhdyIKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "0e91e9a496eec0ad300e46c471db4ec134e50f8f6581f6300ac3808ebd5d1a19",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "aefbb57293ad11013dfcdfacb0a96d9f19ce40df85955582696a452f706231ac"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 119,
+          "source_record_sha256": "07f292989c86a643e5e5891b97998214e050bed28f6ed4e9a159104fea549e86"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "aefbb57293ad11013dfcdfacb0a96d9f19ce40df85955582696a452f706231ac",
+      "selection_rank": "072b0326d03914833e89f9bd08e1ed290fe632d29315ea8b65e5c3d8f9b8bcb3"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_669",
+      "official_index": 669,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "60127942f172d7b42f13f225fcd037f206b93096c22c85b291489b903c42f77e"
+        },
+        "item_id": "sample_669",
+        "model_visible_prompt": {
+          "byte_length": 335,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "60127942f172d7b42f13f225fcd037f206b93096c22c85b291489b903c42f77e",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0KToKICAgIGEsIHNlcCwgYiA9IHQucnBhcnRpdGlvbignLScpCiAgICBpZiBsZW4oYikgPT0gbGVuKGEpOgogICAgICAgIHJldHVybiAnaW1iYWxhbmNlZCcKICAgIHJldHVybiBhICsgYi5yZXBsYWNlKHNlcCwgJycpCmBgYAoKSW5wdXQ6ICJmdWJhcmJheiIKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "b9d3e93c6a7409fa4977f6e5e3809a425e0bf8872412f81387db05f0d258a9b7",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "ea2d4bfbdad2f1b7b3cdba76a272dadf0f28b6e42a60ead41ae083e8f5c5b7c5"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 669,
+          "source_record_sha256": "e4a01e8d453d340e7a8a0bc100798d352ee6cd66edc4c893ecf2d91d73b54ecc"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "ea2d4bfbdad2f1b7b3cdba76a272dadf0f28b6e42a60ead41ae083e8f5c5b7c5",
+      "selection_rank": "07e9685b2b3dc201a6e028bbc62a722506d487173e80ff629ce2f4f8a552d2da"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_217",
+      "official_index": 217,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "0851add04e88fbc59152c6167d6284ab53be1d35326a83d67373f0c0b37da530"
+        },
+        "item_id": "sample_217",
+        "model_visible_prompt": {
+          "byte_length": 377,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "0851add04e88fbc59152c6167d6284ab53be1d35326a83d67373f0c0b37da530",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzdHJpbmcpOgogICAgaWYgc3RyaW5nLmlzYWxudW0oKToKICAgICAgICByZXR1cm4gImFzY2lpIGVuY29kZWQgaXMgYWxsb3dlZCBmb3IgdGhpcyBsYW5ndWFnZSIKICAgIHJldHVybiAibW9yZSB0aGFuIEFTQ0lJIgpgYGAKCklucHV0OiAnU3RyIHphaHJudWplIGFuZ2xvLWFtZXJpw6Zza2UgdmFzaSBwaXNjaW5hIGFuZCBrdWNhIScKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "fa5fb3d847f4076a4aeba168b302ecb097b6f5de491d968b1d48a790a465b22a",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "62a0284ba725361c87783163bb4380e9d8ad74efec790f142cb29eee123b5414"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 217,
+          "source_record_sha256": "4599fc8cb74fa604cd213814660bbebf60765c335adfc22bfda8fdded1daf9b7"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "62a0284ba725361c87783163bb4380e9d8ad74efec790f142cb29eee123b5414",
+      "selection_rank": "07f0387676e42acbfc5f3e453399116213c4d8fa3c69110f1abfe768676ea9f9"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_127",
+      "official_index": 127,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "61e56193e06977bd5cd28dda4b50c4894a76215b6c11623ab35b64e47415da70"
+        },
+        "item_id": "sample_127",
+        "model_visible_prompt": {
+          "byte_length": 267,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "61e56193e06977bd5cd28dda4b50c4894a76215b6c11623ab35b64e47415da70",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIHMgPSB0ZXh0LnNwbGl0bGluZXMoKQogICAgcmV0dXJuIGxlbihzKQpgYGAKCklucHV0OiAiMTQ1XG5cbjEyZmpramciCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "479e5ec9cfe979e844d5b9a9c940584e1caaa52200f880b68309173188a30744",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 127,
+          "source_record_sha256": "8029a33d99bca06329ec426ec477dd40e61082a9db40232dbfa97c742cef8828"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "selection_rank": "084de16281d0ad2f6faea610a451ae4f8fad4e19688a960809bacc535cf0adab"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_760",
+      "official_index": 760,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ec6d8a35699340269f5aeb9489f0b98e306b73aa9fce94ccbb0c63f310bd6683"
+        },
+        "item_id": "sample_760",
+        "model_visible_prompt": {
+          "byte_length": 334,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ec6d8a35699340269f5aeb9489f0b98e306b73aa9fce94ccbb0c63f310bd6683",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihkKToKICAgIGwgPSBbXQogICAgd2hpbGUgbGVuKGQpID4gMDoKICAgICAgICBrZXkgPSBkLnBvcGl0ZW0oKVswXQogICAgICAgIGwuYXBwZW5kKGtleSkKICAgIHJldHVybiBsOwpgYGAKCklucHV0OiBkaWN0KGYgPSAxLCBoID0gMiwgaiA9IDMsIGsgPSA0KQoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "1445de1d9bb006d41f0ceba7e4ddf8e64391279ed72d95056544d7a4385972c9",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "07c3afe9d340b1496722bcc8cf208edd80369584c1160bb7653a3f659ed9b5d0"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 760,
+          "source_record_sha256": "1dce9ad70c375f302297203bb9da700d04c1b67d07582985b068c4c27955437d"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "07c3afe9d340b1496722bcc8cf208edd80369584c1160bb7653a3f659ed9b5d0",
+      "selection_rank": "0958a7b8084cff694a6338e2793473b6ebe3f8d75ff6f6e18a74f04cc1c43097"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_101",
+      "official_index": 101,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "06083b3ba40c551703951152dc9b0cb3960e69018f96b8341255024eacd8120d"
+        },
+        "item_id": "sample_101",
+        "model_visible_prompt": {
+          "byte_length": 288,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "06083b3ba40c551703951152dc9b0cb3960e69018f96b8341255024eacd8120d",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSwgaV9udW0sIGVsZW0pOgogICAgYXJyYXkuaW5zZXJ0KGlfbnVtLCBlbGVtKQogICAgcmV0dXJuIGFycmF5CmBgYAoKSW5wdXQ6IFsgLTQsICAgMSwgIDBdLCAxLCA0CgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "7d27dd92fa141211b23f4eef63b6dba1a32f7e3a6830fa0a9a696f0a9a43159a",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "a205ee214dba2e8216a07ff269d25f0d6138d8e374884a11d621a1c76c6704e0"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 101,
+          "source_record_sha256": "7c2b751fe875e5586722ddf0ae0937158e4200b7adf4c47716f94c95bed21432"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "a205ee214dba2e8216a07ff269d25f0d6138d8e374884a11d621a1c76c6704e0",
+      "selection_rank": "09fc4da15f4c3a98d1af11ee0b1abb7924760c7d0a4d647eb5b721f2534bb7d5"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_255",
+      "official_index": 255,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "58ce248ac53c54e445baf17ea3df07d8059da469db5fa18666bbcfdf4476a7bf"
+        },
+        "item_id": "sample_255",
+        "model_visible_prompt": {
+          "byte_length": 371,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "58ce248ac53c54e445baf17ea3df07d8059da469db5fa18666bbcfdf4476a7bf",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBmaWxsLCBzaXplKToKICAgIGlmIHNpemUgPCAwOgogICAgICAgIHNpemUgPSAtc2l6ZQogICAgaWYgbGVuKHRleHQpID4gc2l6ZToKICAgICAgICByZXR1cm4gdGV4dFtsZW4odGV4dCkgLSBzaXplOl0KICAgIHJldHVybiB0ZXh0LnJqdXN0KHNpemUsIGZpbGwpCmBgYAoKSW5wdXQ6ICdubyBhc3cnLCAnaicsIDEKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "bc7fcc8de925e594dce96ba7098841607be4052aa853f90b42afafd88228ab7f",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "780f9446d41c5571523f6b628f219b47bcc226d25790c734ab0125c14c18c73c"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 255,
+          "source_record_sha256": "f944f7aed537f37c495ddc3e525fe612da8c5b8ae4c3212d573fbe8c7725ee12"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "780f9446d41c5571523f6b628f219b47bcc226d25790c734ab0125c14c18c73c",
+      "selection_rank": "0a722fce2f87e9c6250d31b3e898d98455e161aa9dbc1a45cd7705514a2f933f"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_503",
+      "official_index": 503,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "60dada81e3642ab4177ddfb7d86f794696b6a237f169f24ac9e4abe68b109535"
+        },
+        "item_id": "sample_503",
+        "model_visible_prompt": {
+          "byte_length": 356,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "60dada81e3642ab4177ddfb7d86f794696b6a237f169f24ac9e4abe68b109535",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihkKToKICAgIHJlc3VsdCA9IFtOb25lXSAqIGxlbihkKQogICAgYSA9IGIgPSAwCiAgICB3aGlsZSBkOgogICAgICAgIHJlc3VsdFthXSA9IGQucG9waXRlbShhID09IGIpCiAgICAgICAgYSwgYiA9IGIsIChiKzEpICUgbGVuKHJlc3VsdCkKICAgIHJldHVybiByZXN1bHQKYGBgCgpJbnB1dDoge30KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "c63f812b87c7f5f6339d6c843052b547d39ed770f47f280c1759e5131163afdb",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 503,
+          "source_record_sha256": "07fe05b764393ba7c8c552a97f68a1b2973495604f5e5c3db1adeb8fa5782024"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "0a7ea8efceee42897d56aa1be1483e8437fc85649fe57badbfa51803da0f1a78"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_385",
+      "official_index": 385,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "c740994e61b41ffd49dd96c7469e616a277bc6273c3165df758d574956ba59c6"
+        },
+        "item_id": "sample_385",
+        "model_visible_prompt": {
+          "byte_length": 455,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "c740994e61b41ffd49dd96c7469e616a277bc6273c3165df758d574956ba59c6",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihsc3QpOgogICAgaSA9IDAKICAgIG5ld19saXN0ID0gW10KICAgIHdoaWxlIGkgPCBsZW4obHN0KToKICAgICAgICBpZiBsc3RbaV0gaW4gbHN0W2krMTpdOgogICAgICAgICAgICBuZXdfbGlzdC5hcHBlbmQobHN0W2ldKQogICAgICAgICAgICBpZiBsZW4obmV3X2xpc3QpID09IDM6CiAgICAgICAgICAgICAgICByZXR1cm4gbmV3X2xpc3QKICAgICAgICBpICs9IDEKICAgIHJldHVybiBuZXdfbGlzdApgYGAKCklucHV0OiBbMCwgMiwgMSwgMiwgNiwgMiwgNiwgMywgMF0KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "de11f68eae6708d1a532605cef2f0bb7593b75705a3b0968b8c61a2a3bce7cb9",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "a20d43910814330db029a210095f5df2c3cbb94d95b59f516ed40e70a3edc5de"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 385,
+          "source_record_sha256": "a63b654698d09c94bc57a7468fc04dd2b258442db934e396b856d8bc7daf4473"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "a20d43910814330db029a210095f5df2c3cbb94d95b59f516ed40e70a3edc5de",
+      "selection_rank": "0acd7c303946582ab004a896671b7256bdd4247bbf49dd1aa60c7e8edfed03f4"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_570",
+      "official_index": 570,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "794c802262cbbbc36db47c5cf84fe843f34871e1b06731c563a70bce0e503bcd"
+        },
+        "item_id": "sample_570",
+        "model_visible_prompt": {
+          "byte_length": 333,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "794c802262cbbbc36db47c5cf84fe843f34871e1b06731c563a70bce0e503bcd",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSwgaW5kZXgsIHZhbHVlKToKICAgIGFycmF5Lmluc2VydCgwLCBpbmRleCArIDEpCiAgICBpZiB2YWx1ZSA+PSAxOgogICAgICAgIGFycmF5Lmluc2VydChpbmRleCwgdmFsdWUpCiAgICByZXR1cm4gYXJyYXkKYGBgCgpJbnB1dDogWzJdLCAwLCAyCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "7442e8b642da8892f934685e32014a6bf222cc2ec5a08d0f043e768c0d564579",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "01ab8e4b29a808e557d52dcbb01c4e11ca9ff477ff7d3c9b04dcbd41093f6a79"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 570,
+          "source_record_sha256": "673bda1180ad14d6b559cc737e98306386cd2ccfb69cf4efa2f4f6d22cfc230c"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "01ab8e4b29a808e557d52dcbb01c4e11ca9ff477ff7d3c9b04dcbd41093f6a79",
+      "selection_rank": "0b42b398b6ab868f9a7fc46393a7d1df3177ecd21345003723cfc5a962e86732"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_374",
+      "official_index": 374,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "351787245fb54be4582b7f742bdbcb7e88964246d72ff080d384df33c2ffcc49"
+        },
+        "item_id": "sample_374",
+        "model_visible_prompt": {
+          "byte_length": 360,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "351787245fb54be4582b7f742bdbcb7e88964246d72ff080d384df33c2ffcc49",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzZXEsIHYpOgogICAgYSA9IFtdCiAgICBmb3IgaSBpbiBzZXE6CiAgICAgICAgaWYgaS5lbmRzd2l0aCh2KToKICAgICAgICAgICAgYS5hcHBlbmQoaSoyKQogICAgcmV0dXJuIGEKYGBgCgpJbnB1dDogWyAnb0gnLCAnZWUnLCAnbWInLCAnZGVmdCcsICduJywgJ3p6JywgJ2YnLCAnYWJBJyBdLCAnenonCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "62278c4f85b5e4c301b43b1e16f30dbf9f646c3fef3112db3812bc6c8545dcc1",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "65e8c96516460f454ac53a19d3876f52f42f0f19bd8097e0c3951b6fe9fb1d45"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 374,
+          "source_record_sha256": "244d0eb9a3955a275aa8cbba1fee53594e80056cf0e1fdf2d825f3517ecd14b0"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "65e8c96516460f454ac53a19d3876f52f42f0f19bd8097e0c3951b6fe9fb1d45",
+      "selection_rank": "0ce0f78443e83ea036e325b18fc93019831d24fb03368aeeec86f8acb03b567d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_742",
+      "official_index": 742,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "84dd1a614e8b4363aea946bf7a6cc568cfb6717bf53681d3664c9dd1146857f9"
+        },
+        "item_id": "sample_742",
+        "model_visible_prompt": {
+          "byte_length": 357,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "84dd1a614e8b4363aea946bf7a6cc568cfb6717bf53681d3664c9dd1146857f9",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIGIgPSBUcnVlCiAgICBmb3IgeCBpbiB0ZXh0OgogICAgICAgIGlmIHguaXNkaWdpdCgpOgogICAgICAgICAgICBiID0gVHJ1ZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGIgPSBGYWxzZQogICAgICAgICAgICBicmVhawogICAgcmV0dXJuIGIKYGBgCgpJbnB1dDogIi0xLTMiCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "d96a017eb46694e5a99f6096242f88499b481d085c693954e864e7402eba9b19",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 742,
+          "source_record_sha256": "63713482ba45645b6c87b97c91b72ba13cdcf03d3678d168941c39e40550c77b"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe",
+      "selection_rank": "0efedc2b2023b237556bee66b9e255f598399bdccfe4975da06d115d266fbbf1"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_606",
+      "official_index": 606,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "252aa27cc657e25e3050489fa02618afd92e234763b61b33da6d1d8539f48ce1"
+        },
+        "item_id": "sample_606",
+        "model_visible_prompt": {
+          "byte_length": 280,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "252aa27cc657e25e3050489fa02618afd92e234763b61b33da6d1d8539f48ce1",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih2YWx1ZSk6CiAgICBscyA9IGxpc3QodmFsdWUpCiAgICBscy5hcHBlbmQoJ05ISUInKQogICAgcmV0dXJuICcnLmpvaW4obHMpCmBgYAoKSW5wdXQ6ICdydWFtJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "660ac2c4f710b8f901d70467f66f4c337e090b1a8d4104f3192b9018caf4e696",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "196777c7b20c0116251526a5c3253ea19971caba54efde96002fe9e527dc7a12"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 606,
+          "source_record_sha256": "67247586680a9622c9be0a0baf4b964598c5ccd815dfe951b3f2a709800593a8"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "196777c7b20c0116251526a5c3253ea19971caba54efde96002fe9e527dc7a12",
+      "selection_rank": "12be98fd9e4deabde280316bb9cc7ca2a4caeaaf4fb84db9ca3282019c40f272"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_332",
+      "official_index": 332,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "66a13852487c92d88fab85ce3430ba80835047482de7d93ed8946c99a1b08f0a"
+        },
+        "item_id": "sample_332",
+        "model_visible_prompt": {
+          "byte_length": 407,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "66a13852487c92d88fab85ce3430ba80835047482de7d93ed8946c99a1b08f0a",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gbGVuKG51bXMpCiAgICBpZiBjb3VudCA9PSAwOgogICAgICAgIG51bXMgPSBbMF0gKiBpbnQobnVtcy5wb3AoKSkKICAgIGVsaWYgY291bnQgJSAyID09IDA6CiAgICAgICAgbnVtcy5jbGVhcigpCiAgICBlbHNlOgogICAgICAgIGRlbCBudW1zWzpjb3VudC8vMjpdCiAgICByZXR1cm4gbnVtcwpgYGAKCklucHV0OiBbLTYsIC0yLCAxLCAtMywgMCwgMV0KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "7b770d18d4d68b759db0b299d8d3c2332b11fb04f971334720e536384fcb8916",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 332,
+          "source_record_sha256": "cb93e5575b050ac30dd5461876756399bbcca08dc4595ecb2bccb2a660115eae"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "135ff22d707c3bdde6b9464d7998e7f5935ff13a8ed8dda45a44bc1b2ea2bfd1"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_735",
+      "official_index": 735,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "adaeee3972d9e740fa12514cab7fbb01da237ff4564bc64c8bfbe0c2e21b3b4d"
+        },
+        "item_id": "sample_735",
+        "model_visible_prompt": {
+          "byte_length": 395,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "adaeee3972d9e740fa12514cab7fbb01da237ff4564bc64c8bfbe0c2e21b3b4d",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzZW50ZW5jZSk6CiAgICBpZiBzZW50ZW5jZSA9PSAnJzoKICAgICAgICByZXR1cm4gJycKICAgIHNlbnRlbmNlID0gc2VudGVuY2UucmVwbGFjZSgnKCcsICcnKQogICAgc2VudGVuY2UgPSBzZW50ZW5jZS5yZXBsYWNlKCcpJywgJycpCiAgICByZXR1cm4gc2VudGVuY2UuY2FwaXRhbGl6ZSgpLnJlcGxhY2UoJyAnLCAnJykKYGBgCgpJbnB1dDogJyhBIChiIEIpKScKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "cc89fa0bee765d8b4dbb8955d59ae7ae9dbba6ef823f955cee94c405c2d49c07",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "3885eb428f55cdab7201f815a4fc8d6efbcad18f2f4c7dd08bd297d6cca4ea93"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 735,
+          "source_record_sha256": "64956ccb0f8a1ebda64cfe88588e41d0220557f13afa06d9a31db27bfa879eec"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "3885eb428f55cdab7201f815a4fc8d6efbcad18f2f4c7dd08bd297d6cca4ea93",
+      "selection_rank": "13b72c481140c8ed7ea8dbcc21361503d9403b894a01c76092c94748188057ab"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_761",
+      "official_index": 761,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "f5e3ad611c1c4881b024d834a710798ba9b2bbb07a9df70422bb9b401b63147a"
+        },
+        "item_id": "sample_761",
+        "model_visible_prompt": {
+          "byte_length": 309,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "f5e3ad611c1c4881b024d834a710798ba9b2bbb07a9df70422bb9b401b63147a",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSk6CiAgICBvdXRwdXQgPSBhcnJheS5jb3B5KCkKICAgIG91dHB1dFswOjoyXSA9IG91dHB1dFstMTo6LTJdCiAgICBvdXRwdXQucmV2ZXJzZSgpCiAgICByZXR1cm4gb3V0cHV0CmBgYAoKSW5wdXQ6IFtdCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "c8d7a43474e92a6d448454d8ba19e63604591c51f7315784cb806a81ad04b78f",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 761,
+          "source_record_sha256": "2e39fd23c2cb9e26ec212a703feea00a0f0efdc0abf61e9435dc1e8c010f867d"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "14899309f32e53d57498f619c4a2acd8e94024807ed0ee333081eb76a3d0daf0"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_26",
+      "official_index": 26,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ce64228ce83fccc9d05cbbfbfcb22396c500d9dd2ea4c6107e8e56c059d7bb1d"
+        },
+        "item_id": "sample_26",
+        "model_visible_prompt": {
+          "byte_length": 449,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ce64228ce83fccc9d05cbbfbfcb22396c500d9dd2ea4c6107e8e56c059d7bb1d",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihpdGVtcywgdGFyZ2V0KToKICAgIGZvciBpIGluIGl0ZW1zLnNwbGl0KCk6CiAgICAgICAgaWYgaSBpbiB0YXJnZXQ6CiAgICAgICAgICAgIHJldHVybiBpdGVtcy5pbmRleChpKSsxCiAgICAgICAgaWYgaS5pbmRleCgnLicpID09IGxlbihpKS0xIG9yIGkuaW5kZXgoJy4nKSA9PSAwOgogICAgICAgICAgICByZXR1cm4gJ2Vycm9yJwogICAgcmV0dXJuICcuJwpgYGAKCklucHV0OiAicXkuIGRnLiBybnZwcnQgcnNlLi4gaXJ0d3YgdHguLiIsICJ3dHdkb2FjYiIKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "50aa6745e105e3cda043f97bd3164f299bfa495bc69ea7745be90cd9dfe43cda",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "6401a22ddfd527fac40d1a02f113333cdb16644b271a1abaf20b60cd0c901a49"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 26,
+          "source_record_sha256": "bc56c77d8c425d0176061ded9c2d1595f7cdddd928aa4129c143da34cb33b3b2"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "6401a22ddfd527fac40d1a02f113333cdb16644b271a1abaf20b60cd0c901a49",
+      "selection_rank": "148f7034638bd40680dc7acf16d27f118d282fb1dcc65746af1298366a4a8cbb"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_411",
+      "official_index": 411,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "d5059c8152a690a8ce784792b6374c5d6796e6b7a34100e790714828555d1fd0"
+        },
+        "item_id": "sample_411",
+        "model_visible_prompt": {
+          "byte_length": 368,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "d5059c8152a690a8ce784792b6374c5d6796e6b7a34100e790714828555d1fd0",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBwcmVmKToKICAgIGlmIGlzaW5zdGFuY2UocHJlZiwgbGlzdCk6CiAgICAgICAgcmV0dXJuICcsICcuam9pbih0ZXh0LnN0YXJ0c3dpdGgoeCkgZm9yIHggaW4gcHJlZikKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIHRleHQuc3RhcnRzd2l0aChwcmVmKQpgYGAKCklucHV0OiAnSGVsbG8gV29ybGQnLCAnVycKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "fed79c3ebabd8098d16287158ae13b78ece5684802fff897902b32f2fe853b7b",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 411,
+          "source_record_sha256": "017df4bdb13a06cfbacbf1f657f837e5ccb1aa29ab4a5b950fe667b29c8d636f"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe",
+      "selection_rank": "1525f6d045aa73015e398b73d52b3bba5f65f6b1b95176e4cbf5d23cbf314bc8"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_341",
+      "official_index": 341,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "935bd31b489bb425078171af97822fa397b31e76e08009431cd1d0b791c5578b"
+        },
+        "item_id": "sample_341",
+        "model_visible_prompt": {
+          "byte_length": 273,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "935bd31b489bb425078171af97822fa397b31e76e08009431cd1d0b791c5578b",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihjYXJ0KToKICAgIHdoaWxlIGxlbihjYXJ0KSA+IDU6CiAgICAgICAgY2FydC5wb3BpdGVtKCkKICAgIHJldHVybiBjYXJ0CmBgYAoKSW5wdXQ6IHt9CgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "53fa192e2591b8508d4356ad34cca5eac494fb63dd0e1045da5625f434fc8402",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 341,
+          "source_record_sha256": "b14f2cf4efee8cf167f125776c27f97d8924f6ed74c767f49cbe824ef996842c"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "selection_rank": "15533b0d3005d887e33de60561edf9067b9952ee4a8776c7e2b59fd7be669013"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_50",
+      "official_index": 50,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "0473f5ddcf78dda22088885af6c28d20ae318ef5012cfa9a2cd359c4a3ca06fe"
+        },
+        "item_id": "sample_50",
+        "model_visible_prompt": {
+          "byte_length": 284,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "0473f5ddcf78dda22088885af6c28d20ae318ef5012cfa9a2cd359c4a3ca06fe",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihsc3QpOgogICAgbHN0LmNsZWFyKCkKICAgIGxzdCArPSBbMV0gKiAobGVuKGxzdCkgKyAxKQogICAgcmV0dXJuIGxzdApgYGAKCklucHV0OiBbJ2EnLCAnYycsICd2J10KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "595229a6697f9505dc12dbfb5b6b40bfff71b07a47d9f9ba8ceb2feb13015cf2",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 50,
+          "source_record_sha256": "d3b5aa035e37d8b943b60b10b4d005f1f829e59864b2ae08c573207f382140a6"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+      "selection_rank": "15b5946532e37022e60f17392c7ecd9c83b51542c6545211ea7c4834ea69e602"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_379",
+      "official_index": 379,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "2c141795d9035ace84c0edc04134f6d1e8a369c3c1aad82ef7570902f364d44c"
+        },
+        "item_id": "sample_379",
+        "model_visible_prompt": {
+          "byte_length": 356,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "2c141795d9035ace84c0edc04134f6d1e8a369c3c1aad82ef7570902f364d44c",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGZvciBpIGluIHJhbmdlKGxlbihudW1zKSAtIDEsIC0xLCAtMyk6CiAgICAgICAgaWYgbnVtc1tpXSA9PSAwOgogICAgICAgICAgICBudW1zLmNsZWFyKCkKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICByZXR1cm4gbnVtcwpgYGAKCklucHV0OiBbMCwgMCwgMSwgMiwgMV0KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "b24946a98c390d035099081858419da3eebb45751ddaec206a25490a8696ac3e",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 379,
+          "source_record_sha256": "3452a4c167a65a1d31886860938987f70a98d3d5d2d67e397d30ede95ba43fe4"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe",
+      "selection_rank": "1706c1397b3da42c2c8e39c1a130eaabecb0ef2da592ec92a286e58a0c4a6edf"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_576",
+      "official_index": 576,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "87e1573cda0d055d5b9bf4215f51d027d283db7d9c5f668936f288b3b5af7fc8"
+        },
+        "item_id": "sample_576",
+        "model_visible_prompt": {
+          "byte_length": 419,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "87e1573cda0d055d5b9bf4215f51d027d283db7d9c5f668936f288b3b5af7fc8",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSwgY29uc3QpOgogICAgb3V0cHV0ID0gWyd4J10KICAgIGZvciBpIGluIHJhbmdlKDEsIGxlbihhcnJheSkgKyAxKToKICAgICAgICBpZiBpICUgMiAhPSAwOgogICAgICAgICAgICBvdXRwdXQuYXBwZW5kKGFycmF5W2kgLSAxXSAqIC0yKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIG91dHB1dC5hcHBlbmQoY29uc3QpCiAgICByZXR1cm4gb3V0cHV0CmBgYAoKSW5wdXQ6IFsxLCAyLCAzXSwgLTEKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "3b30a2025809b66f569156e3b4476d4aa395a75cd4b8489e30c457718f3c5033",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "a05649e228ce06be88e3421e897b07bfc4dccadaddaa3f445ddd90f6cfa768f1"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 576,
+          "source_record_sha256": "a06b03a8f59ea45e444f88548f4622095eda2fe962a15415303bfcbdc11d5eec"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "a05649e228ce06be88e3421e897b07bfc4dccadaddaa3f445ddd90f6cfa768f1",
+      "selection_rank": "174e82d6d4197182ef8c742b633d0f93c57410659f0b12553307a10b91ff304a"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_81",
+      "official_index": 81,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ae3824ec25ba9f15fc1f0f7a82a9c1f4608330cbf187146df084df9ffd5fad44"
+        },
+        "item_id": "sample_81",
+        "model_visible_prompt": {
+          "byte_length": 411,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ae3824ec25ba9f15fc1f0f7a82a9c1f4608330cbf187146df084df9ffd5fad44",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihkaWMsIGlueCk6CiAgICB0cnk6CiAgICAgICAgZGljW2xpc3QoZGljKVtsaXN0KGRpYykuaW5kZXgoaW54KV1dID0gbGlzdChkaWMpW2xpc3QoZGljKS5pbmRleChpbngpXS5sb3dlcigpCiAgICBleGNlcHQgVmFsdWVFcnJvcjoKICAgICAgICBwYXNzCiAgICByZXR1cm4gbGlzdChkaWMuaXRlbXMoKSkKYGBgCgpJbnB1dDogeyJCdWxscyI6IDIzLCAiV2hpdGUgU294IjogNDV9LCAiQnVsbHMiCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "00d0b198861d6e6ba4c5840e6035201875011e1d9bedaf1807a4f7ff17241344",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "e72680edaa138f4d8d9487b37a2e8760899a45e3e891d3482a9a92791076f8bd"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 81,
+          "source_record_sha256": "da38a0c7c3a43e6dad6326ae5b9340662090bcf2da4ab4d1d532c97b8916a04c"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "e72680edaa138f4d8d9487b37a2e8760899a45e3e891d3482a9a92791076f8bd",
+      "selection_rank": "186915ac2802f345ba5571aaa5fa9160761488175437ba807594c25167d09fb3"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_152",
+      "official_index": 152,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "c83abc8b5a21e86363b937bd726a130683b965785aea5abcb148e58399099e4b"
+        },
+        "item_id": "sample_152",
+        "model_visible_prompt": {
+          "byte_length": 317,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "c83abc8b5a21e86363b937bd726a130683b965785aea5abcb148e58399099e4b",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIG4gPSAwCiAgICBmb3IgY2hhciBpbiB0ZXh0OgogICAgICAgIGlmIGNoYXIuaXN1cHBlcigpOgogICAgICAgICAgICBuICs9IDEKICAgIHJldHVybiBuCmBgYAoKSW5wdXQ6ICcnLmpvaW4oWydBJ10gKiAyMCkKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "fb7bb23580a3470af2fed439be695b38c74434123e1e29e2039e53bf15c19852",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 152,
+          "source_record_sha256": "be185ea125f16a84c3d33ffe35d2619649f529937780c070d2388bc705f20d3e"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+      "selection_rank": "1908f9d49b36e3a0bea12c1f6373e2b402c92107b6ae43c61077bd6303d42bcb"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_112",
+      "official_index": 112,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "77cbe148a6543bb3687500e644dbf9e32644f1c5f92900e0a8f9c26ace27dffb"
+        },
+        "item_id": "sample_112",
+        "model_visible_prompt": {
+          "byte_length": 390,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "77cbe148a6543bb3687500e644dbf9e32644f1c5f92900e0a8f9c26ace27dffb",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzZW50ZW5jZSk6CiAgICBscyA9IGxpc3Qoc2VudGVuY2UpCiAgICBmb3IgbGV0dGVyIGluIGxzOgogICAgICAgIGlmIG5vdCBsZXR0ZXIuaXN0aXRsZSgpOgogICAgICAgICAgICBscy5yZW1vdmUobGV0dGVyKQogICAgcmV0dXJuICcnLmpvaW4obHMpCmBgYAoKSW5wdXQ6ICdYWVogTGl0dGxlUmVkUmlkaW5nSG9vZCBMaVRUbGVCSUdHZVhFaVQgZmF1bHQnCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "6490c110da847f5c71f33aeb4c653fb1d1c86b752a4170320631a78720d02b02",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "5cdf14c7465fa670349ceff5d5e4dc4e878fc088812e094cec71d03563f516cc"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 112,
+          "source_record_sha256": "3c9492f29880e8ed9fccf141675b271c6e607cc8fe576cd01ed84102ad2351a8"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "5cdf14c7465fa670349ceff5d5e4dc4e878fc088812e094cec71d03563f516cc",
+      "selection_rank": "1b023597966a3acf147df1c6a2f93727f208a622bf91e1de1585070b6945b605"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_5",
+      "official_index": 5,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "1f88605bbc0a40cb1aa15ebf70ed5a92fd1cbc34e915690ee60026a36792d2e5"
+        },
+        "item_id": "sample_5",
+        "model_visible_prompt": {
+          "byte_length": 481,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "1f88605bbc0a40cb1aa15ebf70ed5a92fd1cbc34e915690ee60026a36792d2e5",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBsb3dlciwgdXBwZXIpOgogICAgY291bnQgPSAwCiAgICBuZXdfdGV4dCA9IGxpc3QoKQogICAgZm9yIGNoYXIgaW4gdGV4dDoKICAgICAgICBjaGFyID0gbG93ZXIgaWYgY2hhci5pc2RlY2ltYWwoKSBlbHNlIHVwcGVyCiAgICAgICAgaWYgY2hhciBpbiBbJ3AnLCAnQyddOgogICAgICAgICAgICBjb3VudCArPSAxCiAgICAgICAgbmV3X3RleHQuYXBwZW5kKGNoYXIpCiAgICByZXR1cm4gY291bnQsICcnLmpvaW4obmV3X3RleHQpCmBgYAoKSW5wdXQ6ICdEU1VXZXFFeFRRZENNR3BxdXInLCAnYScsICd4JwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "72e0a205ebaa16679fd907ff42fee1dabdeeeac741d14ec4ddf0848738dc18d3",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "0f1616e8846cd626ca4c2fcc5c805f533ff6dcedb5009ed20cc49dabd892cdf7"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 5,
+          "source_record_sha256": "21f0edfce0319985fd28c27141b789ef4cae374907ad2e5caf1a209028c99194"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "0f1616e8846cd626ca4c2fcc5c805f533ff6dcedb5009ed20cc49dabd892cdf7",
+      "selection_rank": "1b0fb55e6ac8b694f56f572a339dc433c3d7a7430c37b444ef72f5d86433b18d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_123",
+      "official_index": 123,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ea16fa26071d6a1e7ceb7fd725a25e7d571b6b78a164bfac748700783413c8c4"
+        },
+        "item_id": "sample_123",
+        "model_visible_prompt": {
+          "byte_length": 368,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ea16fa26071d6a1e7ceb7fd725a25e7d571b6b78a164bfac748700783413c8c4",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSwgZWxlbSk6CiAgICBmb3IgaWR4LCBlIGluIGVudW1lcmF0ZShhcnJheSk6CiAgICAgICAgaWYgZSA+IGVsZW0gYW5kIGFycmF5W2lkeCAtIDFdIDwgZWxlbToKICAgICAgICAgICAgYXJyYXkuaW5zZXJ0KGlkeCwgZWxlbSkKICAgIHJldHVybiBhcnJheQpgYGAKCklucHV0OiBbMSwgMiwgMywgNSwgOF0sIDYKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "23cbfbb8920d4fe4e6ae74bd96206088b96cc5ceec6446ff551b240f326b756f",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "40898303b39a09baee65a6fab44f333f7eebaa04e257a94d6219756e739a6dd9"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 123,
+          "source_record_sha256": "b0709dd8342a1de46e3a4078d88ad8aefbcf88e7f32ef7dd70e2097445dbe4ca"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "40898303b39a09baee65a6fab44f333f7eebaa04e257a94d6219756e739a6dd9",
+      "selection_rank": "1b9227b25f52db834446bfebcbae93435a3b73ec1cb0253fb7d3e5c420f5f7ff"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_14",
+      "official_index": 14,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "06963480155001637fa7caea67c00151bebef52f61ce2078548bba144d87b79c"
+        },
+        "item_id": "sample_14",
+        "model_visible_prompt": {
+          "byte_length": 283,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "06963480155001637fa7caea67c00151bebef52f61ce2078548bba144d87b79c",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzKToKICAgIGFyciA9IGxpc3Qocy5zdHJpcCgpKQogICAgYXJyLnJldmVyc2UoKQogICAgcmV0dXJuICcnLmpvaW4oYXJyKQpgYGAKCklucHV0OiAnICAgT09QICAgJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "4f24a0d099044130e114a70f0cb5a0c8f1bc048b1b7eaa1894273c2ce2a0600c",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "318e1df2765b536e067b33044368e287e4c258d7853277cb5bb90a78b7315e0e"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 14,
+          "source_record_sha256": "d103e27ea8a0f8168f6890c6e78432667fa19ff0227ea7c3f7f27cf6efeb3098"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "318e1df2765b536e067b33044368e287e4c258d7853277cb5bb90a78b7315e0e",
+      "selection_rank": "1b9e95d356f57a028047219cc7964bef90e846cd2cc41dfa8ae44d249de19643"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_301",
+      "official_index": 301,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "49452f5979f4c3f47d42be8fd5c778b66b053fecaa892e5358bc1d08cdbf3107"
+        },
+        "item_id": "sample_301",
+        "model_visible_prompt": {
+          "byte_length": 335,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "49452f5979f4c3f47d42be8fd5c778b66b053fecaa892e5358bc1d08cdbf3107",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gbGVuKG51bXMpCiAgICBmb3IgaSBpbiByYW5nZSgtY291bnQrMSwgMCk6CiAgICAgICAgbnVtcy5leHRlbmQoW251bXNbaV0sIG51bXNbaV1dKQogICAgcmV0dXJuIG51bXMKYGBgCgpJbnB1dDogWzAsIDYsIDIsIC0xLCAtMl0KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "c48b0fdb4c3f54849eee7f38a46bc046c4ea0045fb698ed46d30074a2467099d",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "c306ed6afdf2d08235196925bfb75df99d75223784d5ec310b3e95861aeab58b"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 301,
+          "source_record_sha256": "b868ecd1e2d5bcefc1d13fd34453b4804785ebc83a139378f90f5a01a65b48a5"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "c306ed6afdf2d08235196925bfb75df99d75223784d5ec310b3e95861aeab58b",
+      "selection_rank": "1c6713d5e1dc3f794a4ac9c9e061f4a2170f12f7916cf1d484b2fcd283c08e12"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_63",
+      "official_index": 63,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "b4544f05d0cb5b8df21c3ad158f9658203e3067ba06a8c7dab86063f26291f34"
+        },
+        "item_id": "sample_63",
+        "model_visible_prompt": {
+          "byte_length": 331,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "b4544f05d0cb5b8df21c3ad158f9658203e3067ba06a8c7dab86063f26291f34",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBwcmVmaXgpOgogICAgd2hpbGUgdGV4dC5zdGFydHN3aXRoKHByZWZpeCk6CiAgICAgICAgdGV4dCA9IHRleHRbbGVuKHByZWZpeCk6XSBvciB0ZXh0CiAgICByZXR1cm4gdGV4dApgYGAKCklucHV0OiAnbmRidGRhYmRhaGVzeWVodScsICduJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "801f28c248c4ccc8b369dd07a4ab555298f33aadeaef0968d6ade708f9d898bb",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "4591c036689d388570f130297dfe8826030c1255e3b957610e3e097ad07986c7"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 63,
+          "source_record_sha256": "f62c80f086c14ed251e1d164d196f6ae8ef23fcacf46f1ecbccb5e442d255b1a"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "4591c036689d388570f130297dfe8826030c1255e3b957610e3e097ad07986c7",
+      "selection_rank": "1cf2dbdc3ecf3bf0e2adc43903f0f15204124abcfe90d1f783c200d5d2e0337b"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_529",
+      "official_index": 529,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "cf7d7139d7e1227df3576b62ceebe94de5fc599c651e7ff5c6d7a5f8fe6ed7d1"
+        },
+        "item_id": "sample_529",
+        "model_visible_prompt": {
+          "byte_length": 446,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "cf7d7139d7e1227df3576b62ceebe94de5fc599c651e7ff5c6d7a5f8fe6ed7d1",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSk6CiAgICBwcmV2ID0gYXJyYXlbMF0KICAgIG5ld0FycmF5ID0gYXJyYXlbOl0KICAgIGZvciBpIGluIHJhbmdlKDEsIGxlbihhcnJheSkpOgogICAgICAgIGlmIHByZXYgIT0gYXJyYXlbaV06CiAgICAgICAgICAgIG5ld0FycmF5W2ldID0gYXJyYXlbaV0KICAgICAgICBlbHNlOgogICAgICAgICAgICBkZWwgbmV3QXJyYXlbaV0KICAgICAgICBwcmV2ID0gYXJyYXlbaV0KICAgIHJldHVybiBuZXdBcnJheQpgYGAKCklucHV0OiBbMSwgMiwgM10KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "51ca617286e464470f4720a05aa3727d945da1ff42006291e256a8b2fee621c4",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 529,
+          "source_record_sha256": "a29860d4611dd9f095ff60933a51346c39cb7b069aa7e3320ee7c493741bc02e"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3",
+      "selection_rank": "1da795225e36df00c96078473ae7479e822db2797c6a0b78f9d45664083c0bce"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_148",
+      "official_index": 148,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "ca8c3c8046079fcde89db8f92d0c6ed1ebbea09708ba3c1addf2bef1ccb4082f"
+        },
+        "item_id": "sample_148",
+        "model_visible_prompt": {
+          "byte_length": 475,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "ca8c3c8046079fcde89db8f92d0c6ed1ebbea09708ba3c1addf2bef1ccb4082f",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihmb3Jlc3QsIGFuaW1hbCk6CiAgICBpbmRleCA9IGZvcmVzdC5pbmRleChhbmltYWwpCiAgICByZXN1bHQgPSBsaXN0KGZvcmVzdCkKICAgIHdoaWxlIGluZGV4IDwgbGVuKGZvcmVzdCktMToKICAgICAgICByZXN1bHRbaW5kZXhdID0gZm9yZXN0W2luZGV4KzFdCiAgICAgICAgaW5kZXggKz0gMQogICAgaWYgaW5kZXggPT0gbGVuKGZvcmVzdCktMToKICAgICAgICByZXN1bHRbaW5kZXhdID0gJy0nCiAgICByZXR1cm4gJycuam9pbihyZXN1bHQpCmBgYAoKSW5wdXQ6ICcyaW1vIDEyIHRmaXFyLicsICdtJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "842bed96ea57f70d1633833398a71397ae8915f4e433177fb6df4fbc2aade8ce",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "44745a822467d76d6189f40b09c2a983eca726fffa90c72375b19029fa019a86"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 148,
+          "source_record_sha256": "f8da7aa637cdbfd78e9ed34ef117f88640ae35e98533f015d34bd122314ded72"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "44745a822467d76d6189f40b09c2a983eca726fffa90c72375b19029fa019a86",
+      "selection_rank": "1df636f982a6886e5dbdf353a80d5e6c18004f421f48b8335f0a122d9c429ffd"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_216",
+      "official_index": 216,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "cbba8b3756c95aad3dfe3d69bd629b747fd63c37cc0aa6d45bf7e44f84ec3520"
+        },
+        "item_id": "sample_216",
+        "model_visible_prompt": {
+          "byte_length": 322,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "cbba8b3756c95aad3dfe3d69bd629b747fd63c37cc0aa6d45bf7e44f84ec3520",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihsZXR0ZXJzKToKICAgIGNvdW50ID0gMAogICAgZm9yIGwgaW4gbGV0dGVyczoKICAgICAgICBpZiBsLmlzZGlnaXQoKToKICAgICAgICAgICAgY291bnQgKz0gMQogICAgcmV0dXJuIGNvdW50CmBgYAoKSW5wdXQ6ICJkcCBlZjEgZ2gyIgoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "8093427e2a5794eca3b97ae14dcd43a3cfecf7a634350a9c983bb84aba62ebf5",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 216,
+          "source_record_sha256": "313186c600980e2bbf2fd26190312f59169767274002f8a786eb9a9a9b7f6bef"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "selection_rank": "1f44e1b57332a14d516189adb4520c98243560c6b35c22717daa53a4668d3f3d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_449",
+      "official_index": 449,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "94e0186ef4f9e53e0ec634c2a6636ddd2d4ec9b9b3fdce17aaa1ffc389f13112"
+        },
+        "item_id": "sample_449",
+        "model_visible_prompt": {
+          "byte_length": 301,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "94e0186ef4f9e53e0ec634c2a6636ddd2d4ec9b9b3fdce17aaa1ffc389f13112",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih4KToKICAgIG4gPSBsZW4oeCkKICAgIGkgPSAwCiAgICB3aGlsZSBpIDwgbiBhbmQgeFtpXS5pc2RpZ2l0KCk6CiAgICAgICAgaSArPSAxCiAgICByZXR1cm4gaSA9PSBuCmBgYAoKSW5wdXQ6ICcxJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "4b26b4a27ac40a71da0f59f88aa907ff08d56f7f4e2845f2c6aab707b0a493be",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 449,
+          "source_record_sha256": "ad41792f86f66caafaf5a1741677d6fe47e4834bec24f891e2e02d668de50da9"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18",
+      "selection_rank": "1fbbfcdbb9e53f44f14145f3f67fc5e1b7f14da4fa3dc15d9d02ef00a15e5d31"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_629",
+      "official_index": 629,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "5fe98f33e4e3dea50a5b867c133379ed449c53147cb3bd3e7ab889a34a52650c"
+        },
+        "item_id": "sample_629",
+        "model_visible_prompt": {
+          "byte_length": 374,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "5fe98f33e4e3dea50a5b867c133379ed449c53147cb3bd3e7ab889a34a52650c",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBkbmcpOgogICAgaWYgZG5nIG5vdCBpbiB0ZXh0OgogICAgICAgIHJldHVybiB0ZXh0CiAgICBpZiB0ZXh0Wy1sZW4oZG5nKTpdID09IGRuZzoKICAgICAgICByZXR1cm4gdGV4dFs6LWxlbihkbmcpXQogICAgcmV0dXJuIHRleHRbOi0xXSArIGYodGV4dFs6LTJdLCBkbmcpCmBgYAoKSW5wdXQ6ICdjYXRORycsICdORycKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "7f59c621b35d1408c5dedb31ff849baa7ac937fff6bc7b138a9f4b9580023728",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "2eb1de2bf541e971b33622168f40746a6ba1e383340228c59a55b66e9725810f"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 629,
+          "source_record_sha256": "f09806c1eeac682bdceef382ac3586fe0b8e366d99455885a706e95ca9975598"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "2eb1de2bf541e971b33622168f40746a6ba1e383340228c59a55b66e9725810f",
+      "selection_rank": "209e336bd2af4c44c1d7e344ef593e8a77e0b8ec8e4e9da39b4a1431f9fa28d3"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_766",
+      "official_index": 766,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "18cb74b836d11acf53d7188f0a8e2da7b9e96df30d0ea52b1a563834cca21e36"
+        },
+        "item_id": "sample_766",
+        "model_visible_prompt": {
+          "byte_length": 369,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "18cb74b836d11acf53d7188f0a8e2da7b9e96df30d0ea52b1a563834cca21e36",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih2YWx1ZXMsIHZhbHVlKToKICAgIGxlbmd0aCA9IGxlbih2YWx1ZXMpCiAgICBuZXdfZGljdCA9IGRpY3QuZnJvbWtleXModmFsdWVzLCB2YWx1ZSkKICAgIG5ld19kaWN0WycnLmpvaW4oc29ydGVkKHZhbHVlcykpXSA9IHZhbHVlICogMwogICAgcmV0dXJuIG5ld19kaWN0CmBgYAoKSW5wdXQ6IFsnMCcsJzMnXSwgMTE3CgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "8b603f9b87dd574fa986d00ce00d59aa4b730ee16497cc8974a114ea0a3256cc",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "ed1f9ed03ca155c131acb9df600d4ffc3678be7be871e0ebc060f486ef8eb133"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 766,
+          "source_record_sha256": "dfe9e021520d261e7697f2bc6f3e3cd62cefd47e4dae51dae9342e8eddce9678"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "ed1f9ed03ca155c131acb9df600d4ffc3678be7be871e0ebc060f486ef8eb133",
+      "selection_rank": "20d32700c70a1c629d61308c1fa4a7beb85178225f4193518733dee1683f7c70"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_515",
+      "official_index": 515,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "a39393d325978f1c89465b4346bee0727630cabf236ea74c7d4c3b2da721fe51"
+        },
+        "item_id": "sample_515",
+        "model_visible_prompt": {
+          "byte_length": 334,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "a39393d325978f1c89465b4346bee0727630cabf236ea74c7d4c3b2da721fe51",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSk6CiAgICByZXN1bHQgPSBhcnJheS5jb3B5KCkKICAgIHJlc3VsdC5yZXZlcnNlKCkKICAgIHJlc3VsdFs6XSA9IFtpdGVtICogMiBmb3IgaXRlbSBpbiByZXN1bHRdCiAgICByZXR1cm4gcmVzdWx0CmBgYAoKSW5wdXQ6IFsxLCAyLCAzLCA0LCA1XQoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "df0b9b75f5d4413f6c89430757bc8d3c7417a641998e9e63b6362a4fb1e4165b",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "18e6b27be6cc7dfafba6b7cd8956efde9a941e05ddf979cb8b902c051b0bcaaf"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 515,
+          "source_record_sha256": "1230653595a9ba1aa6f9208f7582be5833c3d9ab9123b8ba933968e00b766b27"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "18e6b27be6cc7dfafba6b7cd8956efde9a941e05ddf979cb8b902c051b0bcaaf",
+      "selection_rank": "21a76d9b3004d5f81145c6a1168fc13f88bb7f11a87838381475fe3c47bddd18"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_579",
+      "official_index": 579,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "1c3fd74fb8d4901c28ce5543704b279c0bc3f313db301c2ecce28ea7f1534ef1"
+        },
+        "item_id": "sample_579",
+        "model_visible_prompt": {
+          "byte_length": 403,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "1c3fd74fb8d4901c28ce5543704b279c0bc3f313db301c2ecce28ea7f1534ef1",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIGlmIHRleHQuaXN0aXRsZSgpOgogICAgICAgIGlmIGxlbih0ZXh0KSA+IDEgYW5kIHRleHQubG93ZXIoKSAhPSB0ZXh0OgogICAgICAgICAgICByZXR1cm4gdGV4dFswXS5sb3dlcigpICsgdGV4dFsxOl0KICAgIGVsaWYgdGV4dC5pc2FscGhhKCk6CiAgICAgICAgcmV0dXJuIHRleHQuY2FwaXRhbGl6ZSgpCiAgICByZXR1cm4gdGV4dApgYGAKCklucHV0OiAnJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "9556e3e63c32fa353c5d8347386d82c77090ea52751c5aa02f12b8366234d6d6",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "6f49cdbd80e1b95d5e6427e1501fc217790daee87055fa5b4e71064288bddede"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 579,
+          "source_record_sha256": "ccdc1938447518d77f77e532dfd9f9b223b4842c12a14558ecf459705add0ce3"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "6f49cdbd80e1b95d5e6427e1501fc217790daee87055fa5b4e71064288bddede",
+      "selection_rank": "21aa6ecff149df511e94d89a1780531bfff8618765555e1fa819f69943331520"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_23",
+      "official_index": 23,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "3d76ce0261508343f322249640a07d3d31c7dbe18cb71430fff0d2d8349b67d2"
+        },
+        "item_id": "sample_23",
+        "model_visible_prompt": {
+          "byte_length": 421,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "3d76ce0261508343f322249640a07d3d31c7dbe18cb71430fff0d2d8349b67d2",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBjaGFycyk6CiAgICBpZiBjaGFyczoKICAgICAgICB0ZXh0ID0gdGV4dC5yc3RyaXAoY2hhcnMpCiAgICBlbHNlOgogICAgICAgIHRleHQgPSB0ZXh0LnJzdHJpcCgnICcpCiAgICBpZiB0ZXh0ID09ICcnOgogICAgICAgIHJldHVybiAnLScKICAgIHJldHVybiB0ZXh0CmBgYAoKSW5wdXQ6ICduZXctbWVkaXVtLXBlcmZvcm1pbmctYXBwbGljYXRpb24gLSBYUXVlcnkgMi4yJywgJzAxMjM0NTY3ODktJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "a75c155b944b8fd09dfc1a119d40d980adeb145128856de0a72e99cf5aa033a3",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "8ad5bc5d0f22f750ee821d22e415297941f1390bc4c04f759856671ce1c4ef1e"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 23,
+          "source_record_sha256": "93a29ce0e69de11deb2bbf9becf159d9083a848e3147b5f642d8dc4e362857df"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "8ad5bc5d0f22f750ee821d22e415297941f1390bc4c04f759856671ce1c4ef1e",
+      "selection_rank": "21f23b9d0d443944bcf12b81441955f58032f89f3956f257babef645f75a3d45"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_74",
+      "official_index": 74,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "stable-digest-v1:EXTERNAL-PROMPT:external-benchmark-cruxeval-prompt-v1",
+          "prompt_hash": "8a1288689d8f71aacfc263b9f2be0e21a9b5c02f66fb9b9814bf16ee41283847"
+        },
+        "item_id": "sample_74",
+        "model_visible_prompt": {
+          "byte_length": 287,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "439f8594b417269c79aef2d9e7960e284f4d5677f98ba9dc1bc6ecb2cb5b9241",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihsc3QsIGksIG4pOgogICAgbHN0Lmluc2VydChpLCBuKQogICAgcmV0dXJuIGxzdApgYGAKCklucHV0OiBbNDQsIDM0LCAyMywgODIsIDI0LCAxMSwgNjMsIDk5XSwgNCwgMTUKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "37e4e73e3d8dc75cad3fefec8e5943127e28b5edccc7b905eba4afe9ae94e255",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "b76864b239fb98d77e1988e88099a27e327690488298dc3fcf97345769f493bd"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 74,
+          "source_record_sha256": "ca1fa5a85ebe2485fc75db92f6f7c24c9cc6fd3f4ce51cedc700ce104e4452c4"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "b76864b239fb98d77e1988e88099a27e327690488298dc3fcf97345769f493bd",
+      "selection_rank": "220ad15934791b6dec8eeaf31e2205ca7e18ebdf22c5529f19a049e55423dc28"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_744",
+      "official_index": 744,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "892f5fa885c4eb919f11060afe140c7974d9f8ecbd2429b1b50ee4aea8bda54d"
+        },
+        "item_id": "sample_744",
+        "model_visible_prompt": {
+          "byte_length": 313,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "892f5fa885c4eb919f11060afe140c7974d9f8ecbd2429b1b50ee4aea8bda54d",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCBuZXdfZW5kaW5nKToKICAgIHJlc3VsdCA9IGxpc3QodGV4dCkKICAgIHJlc3VsdC5leHRlbmQobmV3X2VuZGluZykKICAgIHJldHVybiAnJy5qb2luKHJlc3VsdCkKYGBgCgpJbnB1dDogJ2pybycsICd3ZGxwJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "d178a6a2b9949553f8836301dd704a81980f41b7d21f77c6852071688f3469de",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "42f098396cd57b165bcf0e9da60533e958fd0bd8a1f350d68aff374c3150cd69"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 744,
+          "source_record_sha256": "14f84622cae35d6cad92fa3960ebca7fe0d2296765c64e9111aefba32ccb3922"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "42f098396cd57b165bcf0e9da60533e958fd0bd8a1f350d68aff374c3150cd69",
+      "selection_rank": "229bf709e1dca8f789386df03380dd2759925cb644c362d439f2b7ef859b8981"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_181",
+      "official_index": 181,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "79999831c283be807500fdb4bdc8f086ef14c63f673d24e2b54657c4c048e6a4"
+        },
+        "item_id": "sample_181",
+        "model_visible_prompt": {
+          "byte_length": 369,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "79999831c283be807500fdb4bdc8f086ef14c63f673d24e2b54657c4c048e6a4",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzKToKICAgIGNvdW50ID0gMAogICAgZGlnaXRzID0gIiIKICAgIGZvciBjIGluIHM6CiAgICAgICAgaWYgYy5pc2RpZ2l0KCk6CiAgICAgICAgICAgIGNvdW50ICs9IDEKICAgICAgICAgICAgZGlnaXRzICs9IGMKICAgIHJldHVybiBbZGlnaXRzLCBjb3VudF0KYGBgCgpJbnB1dDogInF3ZmFzZ2FoaDMyOWtuMTJhMjMiCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "d3f3fdf01d6499f83eec0b8c662c441f0140d9edfbe004ee2d310729354fa76d",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "5df9be80d8f96f955535f87b14852cb945b6d91eff5581fe0396b9a2e4a0c123"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 181,
+          "source_record_sha256": "702bdd30a023331f08e1683c530d0aac5836be818f1c8c533401e92d89096e6c"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "5df9be80d8f96f955535f87b14852cb945b6d91eff5581fe0396b9a2e4a0c123",
+      "selection_rank": "22a9e415bc2da452bc426fdf90cb7d08aba1a61f771eab7e7618eb79511f9a8d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_616",
+      "official_index": 616,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "44c084d1bbb02df682bf3ca8caa9441290e987e3366f4422ea381b371e626133"
+        },
+        "item_id": "sample_616",
+        "model_visible_prompt": {
+          "byte_length": 466,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "44c084d1bbb02df682bf3ca8caa9441290e987e3366f4422ea381b371e626133",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihib2R5KToKICAgIGxzID0gbGlzdChib2R5KQogICAgZGlzdCA9IDAKICAgIGZvciBpIGluIHJhbmdlKDAsIGxlbihscykgLSAxKToKICAgICAgICBpZiBsc1tpIC0gMiBpZiBpIC0gMiA+PSAwIGVsc2UgMF0gPT0gJ1x0JzoKICAgICAgICAgICAgZGlzdCArPSAoMSArIGxzW2kgLSAxXS5jb3VudCgnXHQnKSkgKiAzCiAgICAgICAgbHNbaV0gPSAnWycgKyBsc1tpXSArICddJwogICAgcmV0dXJuICcnLmpvaW4obHMpLmV4cGFuZHRhYnMoNCArIGRpc3QpCmBgYAoKSW5wdXQ6ICdcblxueVxuJwoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "8900ffbd1852d09e28b430fec05963ec4a2cfbc9c8b7c37b73a65b32e003aec9",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "f8a7423475c0a0f1a6c902e3fdc61283d0a64bf1f07de45e2ae21595d2877ed4"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 616,
+          "source_record_sha256": "96dd8512368b989d955a4d097b3047cb72557528a461d6d95af7b14469b12094"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "f8a7423475c0a0f1a6c902e3fdc61283d0a64bf1f07de45e2ae21595d2877ed4",
+      "selection_rank": "230a064c8a255c01440e08b00f7b07c608b20057e6b38081201c5ac09d22d675"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_391",
+      "official_index": 391,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "745e1248e590a160c5d576167bf5da77b248b46222f0a50f7b2e669b59cfcc51"
+        },
+        "item_id": "sample_391",
+        "model_visible_prompt": {
+          "byte_length": 417,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "745e1248e590a160c5d576167bf5da77b248b46222f0a50f7b2e669b59cfcc51",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzdHVkZW50cyk6CiAgICBzZWF0bGlzdCA9IHN0dWRlbnRzCiAgICBzZWF0bGlzdC5yZXZlcnNlKCkKICAgIGNudCA9IDAKICAgIGZvciBjbnQgaW4gcmFuZ2UobGVuKHNlYXRsaXN0KSk6CiAgICAgICAgY250ICs9IDIKICAgICAgICBzZWF0bGlzdFtjbnQgLSAxOmNudF0gPSBbJysnXQogICAgc2VhdGxpc3QuYXBwZW5kKCcrJykKICAgIHJldHVybiBzZWF0bGlzdApgYGAKCklucHV0OiBbJ3InLCAnOSddCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "f003b200fb4ba52dc2379f613c29d06daec7ef23b8f37fa4750c132f56a54f8d",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "8e7b89894b5d6fc9e68805d6711d74faf20ea4dd14da98ce50c2b320e2dc5e38"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 391,
+          "source_record_sha256": "68ba985a444eeca29e4fcce8e01e423d9dc343d82979e7f27eb7aa8ed8feaeef"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "8e7b89894b5d6fc9e68805d6711d74faf20ea4dd14da98ce50c2b320e2dc5e38",
+      "selection_rank": "2343a8dd49ffdfcce9adbb30be2a58090481ca80c4865959b7fe6ba98b8b31bd"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_248",
+      "official_index": 248,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "14e5508fee3eae13a943965832e1d8443140a124238b2ab1bde31458900903e1"
+        },
+        "item_id": "sample_248",
+        "model_visible_prompt": {
+          "byte_length": 271,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "14e5508fee3eae13a943965832e1d8443140a124238b2ab1bde31458900903e1",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhLCBiKToKICAgIGEuc29ydCgpCiAgICBiLnNvcnQocmV2ZXJzZT1UcnVlKQogICAgcmV0dXJuIGEgKyBiCmBgYAoKSW5wdXQ6IFs2NjZdLCBbXQoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "b80ac3e1d7acbb9225534a2ce9874099bb76bb9ef16db116455481f33ad3a445",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "b14e923491a2a7f12f7153733653e0ab121def56fc3b1ef8642ed4692eaf2d64"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 248,
+          "source_record_sha256": "5aebf4ab93d5251e6801ce1354e5a294e154d2590bce3ac0a3dcb115efd3f371"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "b14e923491a2a7f12f7153733653e0ab121def56fc3b1ef8642ed4692eaf2d64",
+      "selection_rank": "238d5b5521345940480338e2999903f4ee337c4a0f76477021db37873fe9db3c"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_116",
+      "official_index": 116,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "2ef1e646e49a3fd3549b86769e84b648cf7b0e5a3227bd59bc1aac5b7efe58ac"
+        },
+        "item_id": "sample_116",
+        "model_visible_prompt": {
+          "byte_length": 316,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "2ef1e646e49a3fd3549b86769e84b648cf7b0e5a3227bd59bc1aac5b7efe58ac",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihkLCBjb3VudCk6CiAgICBmb3IgaSBpbiByYW5nZShjb3VudCk6CiAgICAgICAgaWYgZCA9PSB7fToKICAgICAgICAgICAgYnJlYWsKICAgICAgICBkLnBvcGl0ZW0oKQogICAgcmV0dXJuIGQKYGBgCgpJbnB1dDoge30sIDIwMAoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg=="
+        },
+        "provenance_digest_sha256": "bdecbc15d4ce944a278457d15ad4e88665dd0f4c2a810b10b867d2be98f63789",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 116,
+          "source_record_sha256": "f7235faac90b386583ede436d014b95f403a39104888bba2d2b6cb4cb1be5f08"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "selection_rank": "249bbaf40f5908ab9f0716558f0bf8e5501839f653a16f21feb4f9fa807a96f1"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_327",
+      "official_index": 327,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "38a4ed272616e5c4e8d5f7bf5d7c7fe9e260157af74322b206296ac3545db30e"
+        },
+        "item_id": "sample_327",
+        "model_visible_prompt": {
+          "byte_length": 414,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "38a4ed272616e5c4e8d5f7bf5d7c7fe9e260157af74322b206296ac3545db30e",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihsc3QpOgogICAgbmV3ID0gbGlzdCgpCiAgICBpID0gbGVuKGxzdCktMQogICAgZm9yIF8gaW4gcmFuZ2UobGVuKGxzdCkpOgogICAgICAgIGlmIGklMiA9PSAwOgogICAgICAgICAgICBuZXcuYXBwZW5kKC1sc3RbaV0pCiAgICAgICAgZWxzZToKICAgICAgICAgICAgbmV3LmFwcGVuZChsc3RbaV0pCiAgICAgICAgaSAtPSAxCiAgICByZXR1cm4gbmV3CmBgYAoKSW5wdXQ6IFsxLCA3LCAtMSwgLTNdCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "8c18c49cbc36e231686188929c00f621870d9ab7670a0ba2c133e4cb9a63c0cf",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "4cc722a96aa82a28b8f7c545091fa4a254e7ce093ef93d727dbdb5dd4e00f8f6"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 327,
+          "source_record_sha256": "0333edca90fe97a8af04301abcf9396a8e56739485432e3fc988f492dff76619"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "4cc722a96aa82a28b8f7c545091fa4a254e7ce093ef93d727dbdb5dd4e00f8f6",
+      "selection_rank": "25f49b7d2d1e77555f99b453ae76bc4c6ded27893509a168c3b22b8235593ca5"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_665",
+      "official_index": 665,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "74b15fff0acf015e16ebd709be3f5bf3cbb0d47130c7c2e5234e5e0f39e580e7"
+        },
+        "item_id": "sample_665",
+        "model_visible_prompt": {
+          "byte_length": 360,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "74b15fff0acf015e16ebd709be3f5bf3cbb0d47130c7c2e5234e5e0f39e580e7",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihjaGFycyk6CiAgICBzID0gIiIKICAgIGZvciBjaCBpbiBjaGFyczoKICAgICAgICBpZiBjaGFycy5jb3VudChjaCkgJSAyID09IDA6CiAgICAgICAgICAgIHMgKz0gY2gudXBwZXIoKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHMgKz0gY2gKICAgIHJldHVybiBzCmBgYAoKSW5wdXQ6ICJhY2JjZWQiCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "9b41bbdd0d76253d77c217747cd0b7442d1dfb04a8bdb2b015b01d20f6ae933d",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "ff76761542549533968e913027cefded6cbcb1e5375cf43e5d58f2227ea0667c"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 665,
+          "source_record_sha256": "8266b18912a91a7cae2c5a67a627e35c0c83bf601b10946be0a123f97e8599de"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "ff76761542549533968e913027cefded6cbcb1e5375cf43e5d58f2227ea0667c",
+      "selection_rank": "2628bd93e2856a5f3ffee466303bd725db29432fdcfab97b286e0d3995e10ea2"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_136",
+      "official_index": 136,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "793b27e9c1a5ed0010cf2f7f618f1f23a6e57d5c8f154e988b103a9f31c73a43"
+        },
+        "item_id": "sample_136",
+        "model_visible_prompt": {
+          "byte_length": 323,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "793b27e9c1a5ed0010cf2f7f618f1f23a6e57d5c8f154e988b103a9f31c73a43",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0LCB3aWR0aCk6CiAgICBsaW5lcyA9IFtsaW5lLmNlbnRlcih3aWR0aCkgZm9yIGxpbmUgaW4gdGV4dC5zcGxpdCgnXG4nKV0KICAgIHJldHVybiAnXG4nLmpvaW4obGluZXMpCmBgYAoKSW5wdXQ6ICJhXG5iY1xuXG5kXG5lZiIsIDUKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4="
+        },
+        "provenance_digest_sha256": "cc249b6dc8639683b734d999320605cc09f0aa45287fa70fe3e5c6022226625e",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "f5cf828b5e975f75fa182e0ed1901e10224fd59e88335ed15c619b7cb4e2e789"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 136,
+          "source_record_sha256": "f2e30512ed2ba3338d910412aabe289565b762bd8caba914f92b365e8561e5df"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "f5cf828b5e975f75fa182e0ed1901e10224fd59e88335ed15c619b7cb4e2e789",
+      "selection_rank": "269e1bd0fde05a144440eb4a947bd24aea74a2f1d261aecbed68739f86b48afa"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_8",
+      "official_index": 8,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "9b1095255217e224a6a2e576b1416f61a6567e30856b6854d709d0952fc8751d"
+        },
+        "item_id": "sample_8",
+        "model_visible_prompt": {
+          "byte_length": 333,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "9b1095255217e224a6a2e576b1416f61a6567e30856b6854d709d0952fc8751d",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihzdHJpbmcsIGVuY3J5cHRpb24pOgogICAgaWYgZW5jcnlwdGlvbiA9PSAwOgogICAgICAgIHJldHVybiBzdHJpbmcKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIHN0cmluZy51cHBlcigpLmVuY29kZSgncm90MTMnKQpgYGAKCklucHV0OiAnVXBwRXInLCAwCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "0557f6d043cb25ba05c57c29d9be5da86d1a39be94a57e7611889c53cc02f2d9",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "8977fe35f5194977c473ab6601baabc99cc3aa4b27729e3eccddb54587cc086c"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 8,
+          "source_record_sha256": "2a388c23746b0953350320b8343927f75caaf785e3e633f6e3319b41013dac3a"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "8977fe35f5194977c473ab6601baabc99cc3aa4b27729e3eccddb54587cc086c",
+      "selection_rank": "26d44669d6a5c4a2c034ae690fab9a986c567441039af70c133b28c1f6a351ae"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_171",
+      "official_index": 171,
+      "prompt_provenance": {
+        "historical_freeze_provenance": {
+          "classified_schema": "sha256-utf8-raw-v1:gate7-cruxeval-semantic-task-prompt-v1",
+          "prompt_hash": "7203d217a7d467745e847f2cada6e025576a55cbb2be763f5fe1f0e90ec56868"
+        },
+        "item_id": "sample_171",
+        "model_visible_prompt": {
+          "byte_length": 312,
+          "encoding": "UTF-8",
+          "newline_convention": "LF",
+          "prompt_bytes_sha256": "7203d217a7d467745e847f2cada6e025576a55cbb2be763f5fe1f0e90ec56868",
+          "unicode_normalization": "NONE",
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gbGVuKG51bXMpIC8vIDIKICAgIGZvciBfIGluIHJhbmdlKGNvdW50KToKICAgICAgICBudW1zLnBvcCgwKQogICAgcmV0dXJuIG51bXMKYGBgCgpJbnB1dDogWzMsIDQsIDEsIDIsIDNdCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu"
+        },
+        "provenance_digest_sha256": "84b21de46c3b21423c18d7079ea27d91a21e9ffeabcd24dd1ef896af9f6a254e",
+        "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+        "purpose": "M1_COVARIANCE",
+        "reference": {
+          "identity": "CRUXEval.output",
+          "utf8_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3"
+        },
+        "source_artifact": {
+          "dataset_repo": "cruxeval-org/cruxeval",
+          "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+          "official_index": 171,
+          "source_record_sha256": "84dd37010c6dd3c8f976a3d52e2597205ab6d0456c46304210b3dc081ea2c0cb"
+        },
+        "task_namespace": "Q2-V3-CRUXEVAL",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "provenance_class": "C",
+      "reference_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3",
+      "selection_rank": "2716e878332693c14719a2fe0e5c7beacd1dff88655485813e2a8bfde05fe21b"
+    }
+  ],
+  "ordered_ids_sha256": "db2c9d7255bd6f36dc73de7c0aa284a5aa000d18332d26b897edb9913a9767a5",
+  "outcome_values_read_or_used": false,
+  "provenance_class": "C",
+  "provenance_schema_version": "q2-v3-amendment1-prompt-provenance-v1",
+  "rng": "NONE_SHA256_TOTAL_ORDER",
+  "schema_version": "q2-v3-amendment1-allocation-manifest-v1",
+  "selection_algorithm": "filter exact provenance class and prior exclusions; sort ascending by SHA256(namespace + U+001F + item_id), then item_id; take first N",
+  "selection_namespace": "Q2-V3-M1-COVARIANCE-V1",
+  "status": "FROZEN_NOT_RUN"
+}
