@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_AMENDMENT1_FROZEN_NOT_RUN` — **scientific claim:** `NONE_FROZEN`.
 
-CPU-only byte reconstruction classified all nine Q2 V3 prompt discrepancies as P2: the legacy and Gate-7 user prompts differ in behaviorally plausible wording and final-answer instructions, as well as hash schema. Across all 336 frozen item records, 327 are Gate-7-template raw SHA-256 and nine are legacy-template EXTERNAL-PROMPT digests; all reference hashes match. The original freeze did not prospectively select one global prompt template, so Amendment 1 was not created. The clean abort remains immutable, with zero inference/outcomes/matrices. Q3 is NOT RUN.
+After the clean zero-inference provenance abort and P2 reconciliation, the principal researcher prospectively selected the Gate-7 task prompt globally. Freeze Amendment 1 rebuilds all 336 prompt records with one exact-byte constructor and one typed provenance schema. The independent audit found zero byte, lock, identity, inherited-science, or legacy-execution mismatches; the 200-item panel and ordered-ID hash are unchanged. Execution remains unauthorized, with zero outcomes or prediction matrices. Q3 is NOT RUN.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_DECISION_ON_CANONICAL_Q2_V3_PROMPT
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_AND_SEPARATE_EXECUTION_AUTHORIZATION
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

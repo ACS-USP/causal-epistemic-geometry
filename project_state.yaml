@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION
+  scientific_stage: Q2_V3_AMENDMENT1_FROZEN_NOT_RUN
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,21 +19,20 @@ project:
     utility?
 
 current:
-  workstream: Q2_V3_PROMPT_PROVENANCE_RECONCILIATION
-  lifecycle: CLOSED_PROVENANCE_DECISION_REQUIRED
-  stage: DEVELOPMENT_REFREEZE_REVIEW
-  source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
-  execution_source_commit: ba7c91e03295c664788e6ede0dd643f6d446404b
+  workstream: Q2_V3_AMENDMENT1_FREEZE
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_FREEZE_AMENDMENT
+  source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
+  execution_source_commit: NOT_AUTHORIZED
   summary: >-
-    CPU-only byte reconstruction classified all nine Q2 V3 prompt discrepancies
-    as P2: the legacy and Gate-7 user prompts differ in behaviorally plausible
-    wording and final-answer instructions, as well as hash schema. Across all
-    336 frozen item records, 327 are Gate-7-template raw SHA-256 and nine are
-    legacy-template EXTERNAL-PROMPT digests; all reference hashes match. The
-    original freeze did not prospectively select one global prompt template, so
-    Amendment 1 was not created. The clean abort remains immutable, with zero
-    inference/outcomes/matrices. Q3 is NOT RUN.
-  next_authorized_action: PRINCIPAL_RESEARCHER_DECISION_ON_CANONICAL_Q2_V3_PROMPT
+    After the clean zero-inference provenance abort and P2 reconciliation, the
+    principal researcher prospectively selected the Gate-7 task prompt globally.
+    Freeze Amendment 1 rebuilds all 336 prompt records with one exact-byte
+    constructor and one typed provenance schema. The independent audit found
+    zero byte, lock, identity, inherited-science, or legacy-execution mismatches;
+    the 200-item panel and ordered-ID hash are unchanged. Execution remains
+    unauthorized, with zero outcomes or prediction matrices. Q3 is NOT RUN.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_AND_SEPARATE_EXECUTION_AUTHORIZATION
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE
@@ -45,7 +44,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION
+  current_task: Q2_V3_AMENDMENT1_FROZEN_NOT_RUN
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -85,6 +84,41 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V3_AMENDMENT1_FREEZE
+    status: Q2_V3_AMENDMENT1_FROZEN_NOT_RUN
+    conclusion: >-
+      The principal researcher prospectively selected the Gate-7 prompt template
+      for every Q2 V3 purpose after the original execution had cleanly stopped
+      with zero inference and after all nine discrepancies were classified P2.
+      Amendment 1 reconstructs 336/336 records through one authoritative Gate-7
+      constructor and one typed exact-byte provenance schema. The independent
+      audit found zero prompt-byte, prompt-lock, inherited scientific-artifact,
+      legacy-executable, or unresolved-provenance mismatches.
+    source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
+    branch: research/q2-v3-amendment1-freeze
+    artifact: review/q2_v3_amendment1_freeze/PROTOCOL_LOCK.md
+    original_freeze_head: c9292d2baecb41de786912b77c39734855ed46cb
+    failed_execution_head: 9b1bc16ea6893ed798575a6850f6db602532ef69
+    reconciliation_head: c226adadeab04e296135349150a6fcbfd35af2b7
+    canonical_template: gate7-cruxeval-semantic-task-prompt-v1
+    provenance_schema: q2-v3-amendment1-prompt-provenance-v1
+    prompt_records: 336
+    legacy_executable_records: 0
+    primary_panel_n: 200
+    primary_panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+    other_scientific_changes: []
+    cpu_preflight: Q2_V3_AMENDMENT1_CPU_PREFLIGHT_PASS
+    independent_audit: Q2_V3_AMENDMENT1_FREEZE_AUDIT_PASS
+    model_inference: false
+    semantic_trajectories: 0
+    prediction_matrices: false
+    execution_authorized: false
+    q1: UNCHANGED
+    q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+
   - id: Q2_V3_PROMPT_PROVENANCE_RECONCILIATION
     status: Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION
     conclusion: >-

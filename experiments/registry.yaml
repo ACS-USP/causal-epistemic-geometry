@@ -1694,3 +1694,63 @@ experiments:
     q3: NOT_RUN
     runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
     next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_V3_AMENDMENT1_FREEZE
+    version: V3-AMENDMENT-1
+    stage: DEVELOPMENT_PROSPECTIVE_FREEZE_AMENDMENT
+    question: >-
+      Can the outcome-free Q2 V3 protocol be prospectively refrozen with one
+      principal-selected Gate-7 prompt template and an exact typed provenance
+      contract while preserving every other scientific element?
+    instrument: >-
+      CPU-only reconstruction and independent byte-level audit of all 336 Q2 V3
+      prompt records, all six purpose sets, the original scientific artifacts,
+      the primary panel identity, and the zero-outcome firewall.
+    model_policy: NO_MODEL_CPU_ONLY_PROVENANCE_FREEZE
+    status: Q2_V3_AMENDMENT1_FROZEN_NOT_RUN
+    outcome: >-
+      The principal researcher prospectively selected the Gate-7 prompt globally.
+      Amendment 1 rebuilt 336/336 records under one exact-byte constructor and
+      q2-v3-amendment1-prompt-provenance-v1. The CPU preflight and independent
+      audit found zero prompt-byte, prompt-lock, identity, inherited-science,
+      legacy-executable, or unresolved-provenance mismatches.
+    scientific_interpretation: >-
+      This is a prospective freeze amendment, not a Q2 geometry result. The only
+      scientific stimulus change from the accidentally mixed original freeze is
+      global Gate-7 prompt canonicalization; all controllers, geometries, panel,
+      seeds, thresholds, estimands, stop rules, and costs are unchanged.
+    source_branch: research/q2-v3-amendment1-freeze
+    source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
+    original_freeze_head: c9292d2baecb41de786912b77c39734855ed46cb
+    failed_execution_head: 9b1bc16ea6893ed798575a6850f6db602532ef69
+    reconciliation_head: c226adadeab04e296135349150a6fcbfd35af2b7
+    artifact: review/q2_v3_amendment1_freeze/PROTOCOL_LOCK.md
+    canonical_template: gate7-cruxeval-semantic-task-prompt-v1
+    provenance_schema: q2-v3-amendment1-prompt-provenance-v1
+    prompt_records: 336
+    purpose_counts:
+      SOURCE_CONSTRUCTION: 24
+      SOURCE_VALIDATION: 24
+      SHELL_CALIBRATION: 12
+      M1_COVARIANCE: 64
+      M2_LABEL_FREE_PROBES: 12
+      PRIMARY_SEMANTIC_PANEL: 200
+    legacy_executable_records: 0
+    primary_panel_n: 200
+    primary_panel_class: C
+    primary_panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+    other_scientific_changes: []
+    cpu_preflight: Q2_V3_AMENDMENT1_CPU_PREFLIGHT_PASS
+    independent_audit: Q2_V3_AMENDMENT1_FREEZE_AUDIT_PASS
+    cost_usd: 0.0
+    inference_performed: false
+    semantic_trajectories: 0
+    prediction_matrices: []
+    execution_authorized: false
+    q1: UNCHANGED
+    q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_AND_SEPARATE_EXECUTION_AUTHORIZATION
