@@ -1,0 +1,828 @@
+{
+  "batching": "SERIAL_REFERENCE_NO_BATCHING",
+  "candidate": "RTX6000_ADA_SECURE",
+  "candidate_engineering_hook_audit_pass": true,
+  "candidate_qualified": false,
+  "candidate_rows": 174,
+  "cross_row_rng_contamination": false,
+  "exact_discrete_equivalence": false,
+  "logical_keys_identical": true,
+  "logical_seeds_unique": true,
+  "mismatch_count": 116,
+  "mismatches": [
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_1",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "BASELINE"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "BASELINE"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "BASELINE"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "BASELINE"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_count",
+      "key": [
+        "q2_v2_engineering_2",
+        "NULL_V2_R0"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_2",
+        "NULL_V2_R0"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "NULL_V2_R0"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_2",
+        "NULL_V2_R0"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_2",
+        "NULL_V2_R0"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_2",
+        "NULL_V2_R0"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_2",
+        "NULL_V2_R0"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "generated_token_ids_sha256",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "raw_output_sha256",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "commitment_valid",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "parser_failure_reason",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    },
+    {
+      "field": "canonical_value",
+      "key": [
+        "q2_v2_engineering_5",
+        "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS"
+      ]
+    }
+  ],
+  "reference": "A40_SECURE_REFERENCE",
+  "reference_rows": 174
+}

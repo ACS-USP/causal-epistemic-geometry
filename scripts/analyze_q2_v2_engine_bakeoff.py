@@ -132,6 +132,8 @@ def main() -> int:
     parser.add_argument("--a40-startup-seconds", type=float, required=True)
     parser.add_argument("--rtx-startup-seconds", type=float, required=True)
     parser.add_argument("--rtx-engineering-pass", action="store_true")
+    parser.add_argument("--wallet-balance-usd", type=float, required=True)
+    parser.add_argument("--wallet-buffer-fraction", type=float, default=0.10)
     args = parser.parse_args()
 
     a40 = read_json(REVIEW / "V2_ENGINE_BENCHMARK_A40_SECURE_REFERENCE.json")
@@ -197,6 +199,13 @@ def main() -> int:
             pair[1]["projected_common_hours_with_25pct_margin"],
         ),
     )
+    wallet_required_usd = max(
+        0.0, selected["projected_common_cost_usd"] - args.wallet_balance_usd
+    )
+    operational_buffer_usd = (
+        selected["projected_common_cost_usd"] * args.wallet_buffer_fraction
+    )
+    recommended_top_up_usd = wallet_required_usd + operational_buffer_usd
     bakeoff = {
         "selection_rule": (
             "lowest projected complete common-panel dollar cost among qualified engines; "
@@ -225,6 +234,10 @@ def main() -> int:
         "preferred_cost_pass": selected["projected_cumulative_cost_usd"] <= 30.0,
         "hard_cost_pass": selected["projected_cumulative_cost_usd"] <= 45.0,
         "wallet_gate": "PENDING_ACCOUNT_BALANCE_VERIFICATION",
+        "wallet_balance_usd_principal_reported": args.wallet_balance_usd,
+        "minimum_additional_wallet_usd": wallet_required_usd,
+        "operational_buffer_usd": operational_buffer_usd,
+        "recommended_top_up_usd": recommended_top_up_usd,
         "equivalence_artifact": "ENGINE_EQUIVALENCE.json",
         "bakeoff_artifact": "GPU_BAKEOFF.json",
         "tail_artifact": "EXECUTION_COST_TAIL.json",
@@ -233,6 +246,11 @@ def main() -> int:
         "common_panel_rows_at_lock": 0,
         "qualification_source_commit": "e73a3ef",
     }
+    lock["wallet_gate"] = (
+        "PASS"
+        if args.wallet_balance_usd >= selected["projected_common_cost_usd"]
+        else "FAIL_INSUFFICIENT_WALLET"
+    )
     write_json(REVIEW / "EXECUTION_ENGINE_LOCK.json", lock)
     print(json.dumps({"selected": selected_name, **selected}, sort_keys=True))
     return 0

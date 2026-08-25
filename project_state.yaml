@@ -1,9 +1,9 @@
 schema_version: 1
-last_verified: "2026-08-24"
+last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_DEVELOPMENT_V2_EXECUTION_COST_QUALIFICATION
+  scientific_stage: Q2_DEVELOPMENT_V2_ENGINE_QUALIFIED_WALLET_BLOCKED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,9 +19,9 @@ project:
     utility?
 
 current:
-  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
-  lifecycle: ENGINEERING
-  stage: DEVELOPMENT_EXECUTION_COST_QUALIFICATION
+  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
   source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
   execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
   summary: >-
@@ -33,27 +33,30 @@ current:
     directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item
     common panel is locked and remains scientifically untouched. The original
     US$25 gate correctly stopped collection. A subsequent principal-reviewed
-    material budget amendment now authorizes execution-engine cost qualification
+    material budget amendment authorized execution-engine cost qualification
     with a preferred cumulative projection of US$30 and a hard RunPod ceiling
-    of US$45, before any common-panel row. No correctness or common-panel outcome
-    has been used. Q1 remains immutable and Q3 is not run.
+    of US$45. The exact serial A40 reference engine qualified and was selected;
+    the faster RTX 6000 Ada failed exact discrete equivalence. The A40 projects
+    US$32.1623 for the complete common panel and US$36.1105 cumulatively, within
+    the hard ceiling but above the available US$5.42 wallet. The common panel
+    remains at zero rows. No correctness or common-panel outcome has been used.
+    Q1 remains immutable and Q3 is not run.
   next_authorized_action: >-
-    Qualify execution platforms using non-scientific fixtures, freeze the
-    cheapest exactly equivalent engine, and run the unchanged common panel only
-    if projected cumulative cost is at most US$45 and wallet is sufficient.
-  runpod: ENGINE_QUALIFICATION_AUTHORIZED_RETAINED_A40_STOPPED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q2_V2_COMMON_PANEL_AFTER_ENGINE_AND_COST_PASS
+    Principal review and wallet top-up of at least US$26.7423, with a recommended
+    US$3.2162 operational buffer, before any unchanged common-panel collection.
+  runpod: STOPPED_ENGINE_QUALIFIED_PENDING_ARTIFACT_VERIFICATION
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: NONE_PENDING_WALLET_TOP_UP
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: Q2_V2_BANK_QUALIFIED_EXECUTION_COST_QUALIFICATION
+  geometry_q2: Q2_V2_ENGINE_QUALIFIED_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V2_EXECUTION_ENGINE_COST_QUALIFICATION_COMMON_PANEL_UNTOUCHED
-  free_generation: NOT_AUTHORIZED; ONLY_FROZEN_Q2_V2_PHASES
+  current_task: Q2_V2_WALLET_BLOCKED_COMMON_PANEL_UNTOUCHED
+  free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -93,15 +96,19 @@ confirmatory_program:
 
 instrument_history:
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
-    status: BLOCKED_PROJECTED_COST
+    status: ENGINE_QUALIFIED_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
     conclusion: >-
       Six of six conceptual source axes qualified, and label-free per-direction
       calibration produced a qualified bank of 24 meaningful controllers across
       six families, including 12 causal directions and four dose bins. Four
-      fresh nulls are SVD-span-orthogonal. The synthetic throughput preflight
-      projected a US$37.3499 cumulative cost, above the frozen US$25 ceiling,
-      so the 120-item common panel and predictive M0/M1/M2 analyses were not run.
-      This is an operational cost block, not a predictive Q2 null.
+      fresh nulls are SVD-span-orthogonal. The original US$25 gate correctly
+      stopped collection. Under the prospective US$45 amendment, an exact A40
+      engine benchmark projected US$36.1105 cumulatively, while RTX 6000 Ada
+      failed exact discrete equivalence. The hard ceiling passes, but the
+      principal-reported US$5.42 wallet is insufficient for the US$32.1623
+      common-panel projection. The 120-item common panel and predictive M0/M1/M2
+      analyses remain unrun. This is an operational wallet block, not a
+      predictive Q2 null.
     source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
     source_qualification_rows: 576
@@ -111,7 +118,7 @@ instrument_history:
     runpod_status: STOPPED
     active_pods: 0
     retained_pod_disk_gb: 20
-    cost_usd: 2.579460696550086
+    cost_usd: 3.948212791234255
     q3: NOT_RUN
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
     status: COMPLETE_DEVELOPMENT_BANK_NOT_QUALIFIED

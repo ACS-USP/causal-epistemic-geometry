@@ -1,0 +1,23 @@
+{
+  "schema_version": "q2-v2-execution-engine-incidents-v1",
+  "scientific_design_changed": false,
+  "scientific_items_used": false,
+  "incidents": [
+    {
+      "classification": "CLASS_A_DEPENDENCY_RESTORATION",
+      "platform": "RTX6000_ADA_SECURE",
+      "outcomes_existing_at_incident": 0,
+      "description": "Initial engineering launch stopped before fixtures because accelerate was absent.",
+      "repair": "Restored the exact A40 environment version accelerate==1.14.0, reran the engineering gate, and restarted the benchmark from zero.",
+      "scientific_effect": "NONE"
+    },
+    {
+      "classification": "CLASS_A_ARTIFACT_COMPLETENESS",
+      "platform": "A40_SECURE_REFERENCE",
+      "outcomes_existing_at_incident": 0,
+      "description": "The historical preflight retained aggregate timing statistics but not immutable row-level timing arrays.",
+      "repair": "Repeated the exact frozen non-scientific fixture schedule prospectively and persisted row-level token and runtime data.",
+      "scientific_effect": "NONE"
+    }
+  ]
+}

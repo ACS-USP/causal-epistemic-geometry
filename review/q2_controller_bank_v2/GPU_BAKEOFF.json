@@ -1,0 +1,39 @@
+{
+  "candidates": {
+    "A40_SECURE_REFERENCE": {
+      "hourly_rate_usd": 0.44,
+      "mean_seconds_per_row": 30.24666773472463,
+      "model_load_seconds": 69.1893305319827,
+      "projected_common_cost_usd": 32.162290024590526,
+      "projected_common_hours_with_25pct_margin": 73.0961136922512,
+      "projected_cumulative_cost_usd": 36.11050281582478,
+      "qualification_reason": "frozen serial reference engine",
+      "qualified": true,
+      "startup_and_model_prep_seconds": 177.406,
+      "steady_state_tokens_per_second": 23.587095303847487
+    },
+    "H100_SXM_SECURE": {
+      "benchmarked": false,
+      "hourly_rate_usd": 3.29,
+      "qualification_reason": "economically implausible: requires more than 7.47x A40 throughput to beat the reference dollar cost",
+      "qualified": false
+    },
+    "RTX6000_ADA_SECURE": {
+      "hourly_rate_usd": 0.84,
+      "mean_seconds_per_row": 18.349890922292552,
+      "model_load_seconds": 14.397387996315956,
+      "projected_common_cost_usd": 37.250278572253876,
+      "projected_common_hours_with_25pct_margin": 44.34556972887366,
+      "projected_cumulative_cost_usd": 41.19849136348813,
+      "qualification_reason": "rejected by exact discrete equivalence or hook audit",
+      "qualified": false,
+      "startup_and_model_prep_seconds": 303.502,
+      "steady_state_tokens_per_second": 38.80132056452823
+    }
+  },
+  "common_panel_rows_existing": 0,
+  "observed_cumulative_q2_v2_cost_usd": 3.948212791234255,
+  "scientific_outputs_used": false,
+  "selected": "A40_SECURE_REFERENCE",
+  "selection_rule": "lowest projected complete common-panel dollar cost among qualified engines; tie-break lower projected wall-clock"
+}

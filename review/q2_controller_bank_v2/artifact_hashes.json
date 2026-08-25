@@ -1,11 +1,35 @@
 {
   "COMPLIANCE_AUDIT.json": {
-    "bytes": 2471,
-    "sha256": "cfd52ed4ce1fbddd4e067de5e83fadaf8bbf9746bab41608237eb786248f459d"
+    "bytes": 2626,
+    "sha256": "9760427930f00014082d499fb7b6bec01d39772339483e1a55508c904a1d2d22"
+  },
+  "ENGINE_EQUIVALENCE.json": {
+    "bytes": 19429,
+    "sha256": "0053305e866bc22d0459df549291c2c0df929f2e3f176ff6992beec28f0a6e6e"
+  },
+  "EXECUTION_COST_AMENDMENT.md": {
+    "bytes": 2257,
+    "sha256": "b852e23451a687a3540f71a0bd349ef1ae14ed7593f83a085727f44474fffd4a"
+  },
+  "EXECUTION_COST_TAIL.json": {
+    "bytes": 1713,
+    "sha256": "5036120629db1005c13e04ab5b2749afbd0a16447daecf916b8d71144d620ba2"
+  },
+  "EXECUTION_ENGINE_INCIDENTS.json": {
+    "bytes": 1053,
+    "sha256": "7e90393e27074e936405184f3e64353b19aa511ce89df005665cbc9dbb1ad749"
+  },
+  "EXECUTION_ENGINE_LOCK.json": {
+    "bytes": 1054,
+    "sha256": "193c0de2d056705495583cef76e0b503e2cd41f60ac4762ed805d6d4a7e4468e"
   },
   "EXECUTION_SOURCE_COMMIT.txt": {
     "bytes": 41,
     "sha256": "a9b7365578c9ec97885929118baf6d9142dc46de213029ceeeb45fc42c4ead27"
+  },
+  "GPU_BAKEOFF.json": {
+    "bytes": 1684,
+    "sha256": "087dff8914dbd3103e115504c9181b6729dd86cb6224b1c28e310149cdb7360b"
   },
   "PREMORTEM.json": {
     "bytes": 2225,
@@ -24,12 +48,12 @@
     "sha256": "65f2ceeed6c4585f023b9ac73b265fbb5209b44559b3a9ce723aad216b20312d"
   },
   "REPORT.md": {
-    "bytes": 4483,
-    "sha256": "2f43813d6ce9e326a735eab2d17c771ef19ef77b54428af03d7e9d9f9a6cdc1a"
+    "bytes": 6140,
+    "sha256": "1c423e7e4d9e53f6ddc7f7a880e17bffaf2c082d9a5f2c16fbdb2ab7719a44f9"
   },
   "RUNPOD_STATUS.json": {
-    "bytes": 560,
-    "sha256": "d586eb75673e5dc48911365c9669d2677acb191c013d89e9ae0c55dca18ac750"
+    "bytes": 648,
+    "sha256": "3f0858758c3fa990ace52eef5f45823431bf6e3ecba874736362cce13e459d10"
   },
   "V1_CONTROLLER_MOVEMENT.csv": {
     "bytes": 5749,
@@ -119,9 +143,21 @@
     "bytes": 3775,
     "sha256": "ce0cf7e1c705dc4f517d627e578846f853312e24c46e8bb337230690901185d9"
   },
+  "V2_ENGINEERING_CHECKS_RTX6000_ADA.json": {
+    "bytes": 3775,
+    "sha256": "ce0cf7e1c705dc4f517d627e578846f853312e24c46e8bb337230690901185d9"
+  },
   "V2_ENGINEERING_FIXTURES.json": {
     "bytes": 3900,
     "sha256": "5a0fdceb8fd6e07f2096bed4590cb9ecaddfbc5655c134ab402c93396c6e7285"
+  },
+  "V2_ENGINE_BENCHMARK_A40_SECURE_REFERENCE.json": {
+    "bytes": 1719199,
+    "sha256": "f549a04a5837480e2332ae2a89b4d583e54b1325b98127d74930f48d9cf3607d"
+  },
+  "V2_ENGINE_BENCHMARK_RTX6000_ADA_SECURE.json": {
+    "bytes": 1715804,
+    "sha256": "ce6ee6cd1f7138b63bef8eadae20bee9727231453fe4931c1f38831d2de150ee"
   },
   "V2_FINAL_NULL_VECTORS/NULL_V2_R0.npy": {
     "bytes": 32896,
