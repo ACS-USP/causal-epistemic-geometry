@@ -102,10 +102,12 @@ def main() -> int:
         and shell_schedule["expected_rows"] == 504
         and stats["bootstrap"]["seed"] is not None
         and len(bank["nulls"]["seeds"]) == 2,
-        "controller_construction_fully_specified": bank["candidate_count"] == 10
+        "controller_construction_fully_specified": bool(
+            bank["candidate_count"] == 10
         and bank["meaningful_controller_count"] == 20
         and len(bank["families"]) == 5
-        and bank["usable_rule"],
+            and bank["usable_rule"]
+        ),
         "shell_calibration_fully_specified": shell["targets"] == {"MEDIUM": 0.25, "STRONG": 0.5}
         and shell["root_finding"]["maximum_iterations"] == 40,
         "geometry_inputs_fully_specified": geometry["M1"]["lambda"] == 0.10
@@ -122,9 +124,11 @@ def main() -> int:
         "schedule_complete_unique": len(schedule["rows"]) == 10_000
         and len(logical) == 10_000
         and len(seeds) == 10_000,
-        "execution_requires_no_scientific_judgment": taxonomy["precedence"]
-        and execution["recovery_boundary"]
-        and prediction["post_outcome_recomputation"],
+        "execution_requires_no_scientific_judgment": bool(
+            taxonomy["precedence"]
+            and execution["recovery_boundary"]
+            and prediction["post_outcome_recomputation"]
+        ),
         "source_commit_is_committed_ancestor": source_is_ancestor,
         "source_state_clean_at_audit_start": clean_at_start,
         "artifact_hashes_match": referenced_hashes_pass,

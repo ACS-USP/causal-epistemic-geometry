@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "all_rng_seeds_specified": true,
+    "all_thresholds_specified": true,
+    "artifact_hashes_match": true,
+    "controller_construction_fully_specified": "all five families must pass source behavior and both location-specific representation gates; any failure stops the bank with no replacement, sign flip, or exclusion",
+    "execution_requires_no_scientific_judgment": "forensic exact reproduction from identical frozen inputs only",
+    "geometry_inputs_fully_specified": true,
+    "geometry_semantic_separation": true,
+    "m3_excluded": true,
+    "metric_and_analysis_fully_specified": true,
+    "no_q2_v3_semantic_outcomes_exist": true,
+    "primary_panel_class_c": true,
+    "primary_panel_hash_matches": true,
+    "primary_panel_n_200": true,
+    "q3_not_run": true,
+    "schedule_complete_unique": true,
+    "selection_provenance_clean": true,
+    "semantic_trajectory_count_zero": true,
+    "shell_calibration_fully_specified": true,
+    "source_commit_is_committed_ancestor": true,
+    "source_state_clean_at_audit_start": true,
+    "stop_rules_specified": true
+  },
+  "classification": "Q2_V3_FREEZE_AUDIT_PASS",
+  "experiment_source_commit": "9a748de3706a788f8c6c5a1d12c09489808006e8",
+  "head_at_audit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+  "journal_or_outcome_files_found": [],
+  "model_inference_performed": false,
+  "q2_v3_status": "Q2_V3_FROZEN_NOT_RUN",
+  "required_thresholds": {
+    "bootstrap": 10000,
+    "families": 4,
+    "m2_delta_m0": 0.1,
+    "m2_delta_m1": 0.1,
+    "qap": 0.05,
+    "rho": 0.25,
+    "shells": 2
+  },
+  "schema_version": "q2-v3-independent-freeze-audit-v1",
+  "semantic_trajectories": 0
+}
