@@ -1,0 +1,759 @@
+{
+  "source_files": [
+    {
+      "path": "review/external_benchmark_qualification/ERROR_MATRIX_DIAGNOSTICS.csv",
+      "sha256": "e369f105a2b898874e6ce4fcfad77039b6f1befe98893c7a86bd03c43297782d",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/external_benchmark_qualification/cruxeval_completion_diagnostic/journal.jsonl",
+      "sha256": "18c2523b8c4eed36aa80b6935c7b0c1ffbcd9ff317b7a8006d8d824c75d5c012",
+      "structured_item_rows": 3
+    },
+    {
+      "path": "review/external_benchmark_qualification/cruxeval_q1_corrected_16384/journal.jsonl",
+      "sha256": "a45dd06f0dce606052c29bd94620c1fdcd48a5b90cadcafb6a9fc933277c1ae5",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/external_benchmark_qualification/cruxeval_q1_corrected_16384/results.json",
+      "sha256": "7acd5823b6794bde961d53213fd5cbf5501ca59762ac42d2c85518a04532eca4",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/full_nonthinking_smoke/RESULTS.csv",
+      "sha256": "eb7509ae0b600d73ca0976b263c9f3fb1761cabc60e20cfde853b89c25c66032",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/full_nonthinking_smoke/cruxeval.json.manifest.json",
+      "sha256": "647f9a893c6a3b883446905ac6457a012819f0fd9889362b2ba8530b19de68e5",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/full_nonthinking_smoke/journal.jsonl",
+      "sha256": "f0f7cc47550398f07db08ee8ba479485671a4c3691e38b32c4ef5634445b5734",
+      "structured_item_rows": 40
+    },
+    {
+      "path": "review/full_nonthinking_smoke/run/RESULTS.csv",
+      "sha256": "eb7509ae0b600d73ca0976b263c9f3fb1761cabc60e20cfde853b89c25c66032",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/full_nonthinking_smoke/run/journal.jsonl",
+      "sha256": "f0f7cc47550398f07db08ee8ba479485671a4c3691e38b32c4ef5634445b5734",
+      "structured_item_rows": 40
+    },
+    {
+      "path": "review/full_nonthinking_smoke_reanalysis/SEMANTIC_REANALYSIS.csv",
+      "sha256": "91f35fce837eca7a9c19b2ffc8e0953c95001459b2af4da20e27dc0cd0b274e4",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/gate11_1_artifact_complete_replication/CRUX_ITEM_SELECTION.json",
+      "sha256": "6cdf0c02a52f80d423e0f2e88d428dc4e055f758784cf9913b588a56ba45af46",
+      "structured_item_rows": 40
+    },
+    {
+      "path": "review/gate11_1_artifact_complete_replication/FIXED_SEQUENCE_SCHEDULE.json",
+      "sha256": "8a7fdd8f6f0da9522d0a7aebb0ca931715797bf01620b7ffd5df0bbdb2f6385c",
+      "structured_item_rows": 168
+    },
+    {
+      "path": "review/gate11_1_artifact_complete_replication/RAW_SHARD_MANIFEST.json",
+      "sha256": "35363cfbe82202058bf6f24511c84b578c15ba67bcdc4c046ac735756f25a95f",
+      "structured_item_rows": 24
+    },
+    {
+      "path": "review/gate11_1_artifact_complete_replication/journal.jsonl",
+      "sha256": "710076ed1f51d80936f7995bf84035fe87ba4eb8d2084c7181507751147f02be",
+      "structured_item_rows": 168
+    },
+    {
+      "path": "review/gate11_domain_conditioned_control/CRUX_ITEM_SELECTION.json",
+      "sha256": "6cdf0c02a52f80d423e0f2e88d428dc4e055f758784cf9913b588a56ba45af46",
+      "structured_item_rows": 40
+    },
+    {
+      "path": "review/gate11_domain_conditioned_control/FIXED_SEQUENCE_PROPAGATION.csv",
+      "sha256": "39e615db0c4a392e0034f8771310c93a2cb76cbf1f9a7e649937a3d80c8d9b87",
+      "structured_item_rows": 805
+    },
+    {
+      "path": "review/gate11_domain_conditioned_control/FIXED_SEQUENCE_SCHEDULE.json",
+      "sha256": "8a7fdd8f6f0da9522d0a7aebb0ca931715797bf01620b7ffd5df0bbdb2f6385c",
+      "structured_item_rows": 168
+    },
+    {
+      "path": "review/gate11_domain_conditioned_control/SOURCE_ACTIVATION_SCHEDULE.json",
+      "sha256": "47428cdd0bccdf9aaaf9c25552306e21c938f4fd36fc421310002115fc7c61b5",
+      "structured_item_rows": 160
+    },
+    {
+      "path": "review/gate11_domain_conditioned_control/fixed_sequence_journal.jsonl",
+      "sha256": "41dd63ddb1a486fd757d65e000040484f000046d6830c956345bd8660c3aaa11",
+      "structured_item_rows": 168
+    },
+    {
+      "path": "review/gate11_domain_conditioned_control/source_activation_journal.jsonl",
+      "sha256": "00b562c1187e8a4be7bf26f502d6bf66c077ce9442f4a07183d9a10885bfff45",
+      "structured_item_rows": 160
+    },
+    {
+      "path": "review/gate12_utility_aligned_pullback/CONTROL_VALIDATION_ITEMS.json",
+      "sha256": "4c3039d8f05a389434d2582819771fd143ce4fef9615917de18b4efd1ab6cf0b",
+      "structured_item_rows": 48
+    },
+    {
+      "path": "review/gate12_utility_aligned_pullback/GEOMETRY_SCHEDULE.json",
+      "sha256": "769530962ea33f2e1652ab2867b82337a489672f3cf69e6d1fa02c1b1d697570",
+      "structured_item_rows": 280
+    },
+    {
+      "path": "review/gate12_utility_aligned_pullback/UTILITY_PREDICTION_ITEMS.json",
+      "sha256": "1835d4de5633417a585470ba5e2f3c530a67ea9769e81b913b12a2d6d2ffe771",
+      "structured_item_rows": 32
+    },
+    {
+      "path": "review/gate13_1_all_layer_causal_atlas/ALL_LAYER_SWEEP_ITEMS.json",
+      "sha256": "b1a1a7f82da220d83b199ff68cdb1008fe1c24f967edda2260502710d2aacf4e",
+      "structured_item_rows": 12
+    },
+    {
+      "path": "review/gate13_1_all_layer_causal_atlas/ALL_LAYER_SWEEP_SCHEDULE.json",
+      "sha256": "84e65e755c383c56ad1f376ed3bbd0c2d8f7d759e5a536137a3bd83ed162ecc7",
+      "structured_item_rows": 420
+    },
+    {
+      "path": "review/gate13_1_all_layer_causal_atlas/FINAL_EVALUATION_ITEMS.json",
+      "sha256": "dac973e6e3dd102389c9aeac7108263129caaef51f1ab47d039504a253f8e0de",
+      "structured_item_rows": 100
+    },
+    {
+      "path": "review/gate13_1_all_layer_causal_atlas/FINAL_EVALUATION_SCHEDULE.json",
+      "sha256": "523b68707f070340394afd83cf5cde7f83ad0b14abf198e0cb491962fbd1f6cc",
+      "structured_item_rows": 1400
+    },
+    {
+      "path": "review/gate13_1_all_layer_causal_atlas/ITEM_CONTRIBUTIONS.csv",
+      "sha256": "d579f7719c20605278df9c80fd07d47f4dda59c7fe9514229e024ef1c4bf8968",
+      "structured_item_rows": 600
+    },
+    {
+      "path": "review/gate13_1_all_layer_causal_atlas/LAYER_DOSE_ITEMS.json",
+      "sha256": "07b89bed7ab88760c5eab55691122f72e8466b6d76cabb431f3c6fad0433d98b",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/gate13_1_all_layer_causal_atlas/LAYER_DOSE_SCHEDULE.json",
+      "sha256": "2ff92443d828947bdfce1209d85be352c629b90b9b96c24d304ef3eac951aad0",
+      "structured_item_rows": 1036
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/DOSE_CALIBRATION_MANIFEST.json",
+      "sha256": "1e169971371d0ac60360991e266b030d44b08158d03c0a4090997b2124a0ea3f",
+      "structured_item_rows": 40
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/FALLBACK_SCREEN_MANIFEST.json",
+      "sha256": "82a1e363807417c3b8ba31197a713cc927504aa765d523fa89889ea824bed993",
+      "structured_item_rows": 30
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/FINAL_EVALUATION_MANIFEST.json",
+      "sha256": "7b7887709bb05139740d1e0fc68d64d91ee9daa970df5461fc2c4212697c90d2",
+      "structured_item_rows": 100
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_MANIFEST.json",
+      "sha256": "956b3889e20c65f57cb6038fc7a1c7ce3caab6ab4529e79f12d1c15242399c4a",
+      "structured_item_rows": 24
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_SCHEDULE.json",
+      "sha256": "5feace38980fba58dbf8e57525623198b575168e3e0a02e5495225aa28e65694",
+      "structured_item_rows": 312
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/SOURCE_ACTIVATION_MANIFEST.json",
+      "sha256": "cf81c2a6decdbb2814cfc2dc16f1e56f5d2de0da168f9d862f4595df9fe37306",
+      "structured_item_rows": 192
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/SOURCE_CONSTRUCTION_MANIFEST.json",
+      "sha256": "bd0f7ab51ea0a429dbb7211f49e8c094cc2d6ca7fb3764bfd6856dc0dcd9db7e",
+      "structured_item_rows": 64
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/SOURCE_VALIDATION_MANIFEST.json",
+      "sha256": "bdbef70430e44027a4d49f7a2eae0f31246042113ed4d52148f39cf8b720947f",
+      "structured_item_rows": 32
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/SUBSTRATE_SCREEN_MANIFEST.json",
+      "sha256": "35257c4ce818583a1cc4ff30d7abbf841f2ff420f97dc9e5554b323abb9682f5",
+      "structured_item_rows": 30
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/SUBSTRATE_SCREEN_SCHEDULE.json",
+      "sha256": "ddc312a74b5f6e0b02d22ef0f3546a0610c9f2869f57af75dfb2be1493137949",
+      "structured_item_rows": 300
+    },
+    {
+      "path": "review/gate13_cross_model_ministral3/journal.jsonl",
+      "sha256": "2dc5a8adaca735830e3cfdc62526fe333755447c124b5298b88b02bab3fc5bc4",
+      "structured_item_rows": 612
+    },
+    {
+      "path": "review/gate5_source_duration/SOURCE_CHECK.json",
+      "sha256": "e1f9b725775713aa05a8a53b07016e1716c4a03f7fb67ef5b6f308e44e283797",
+      "structured_item_rows": 40
+    },
+    {
+      "path": "review/gate5_source_duration/SUSTAINED_ENGINEERING_CHECKS.json",
+      "sha256": "45245428e69cc7684e861e917eb756b915d623856005a4e6a954d826dc1e2087",
+      "structured_item_rows": 5
+    },
+    {
+      "path": "review/gate5_source_duration/SUSTAINED_EVALUATION.json",
+      "sha256": "79de55de314841f658495bdf830fcff696e404344947e4fd8a50ffc339b59d09",
+      "structured_item_rows": 60
+    },
+    {
+      "path": "review/gate5_source_duration/SUSTAINED_MANIPULATION.json",
+      "sha256": "f8d69b1dfdb2ad575317757e1da150c4fe448ffb9137a720291e2fb073adf112",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/gate5_source_duration/forensic_audit/INTERVENTION_AUDIT.json",
+      "sha256": "1b81472b4221eb8da0cbbdfb863e74e34091aceafb9d1b67bb150a085c64f1f8",
+      "structured_item_rows": 5
+    },
+    {
+      "path": "review/gate5_source_duration/journal.jsonl",
+      "sha256": "7f8c8e1d11de5d5c2eb06aaf82087e21428acf79408e542d768fc05cb52e4840",
+      "structured_item_rows": 1500
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/CONTROLLER_MANIPULATION_SCHEDULE.json",
+      "sha256": "faf655aaf3365e03b13d6568ce699b520f53ab5a1a46c6d4d080c559e1370a61",
+      "structured_item_rows": 200
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/EVALUATION_MANIFEST.json",
+      "sha256": "d94761ed525d3803493c05822a61603bdf08d3bd57e0cf85232d67485148fdfd",
+      "structured_item_rows": 60
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/FIRST_STAGE_DETAILS.json",
+      "sha256": "77b6d7a103b93587a6cbfb001439717b932c62979e50b22900d87ff083a1db10",
+      "structured_item_rows": 2080
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/MANIPULATION_MANIFEST.json",
+      "sha256": "0ad414fdfcb4c25ed84f9a5c98ac0bd2824bef3ad594e5103c371573617284a6",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/SOURCE_GENERATIONS.jsonl",
+      "sha256": "c67772b99b015c578fd2c907163e99e3d78c171589200a2b8bfddab25c9b44d0",
+      "structured_item_rows": 136
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/SOURCE_SELECTED_TRAIN.json",
+      "sha256": "54ddd87d56310bf6e0d6cf595f62bab4a7e55aa22684df4d69ebc86e261f5cdc",
+      "structured_item_rows": 104
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/SOURCE_SELECTED_VALIDATION.json",
+      "sha256": "7409ffc0ab9c726c8bab5d8c23569eac4c1ccd570301a57d9761ed1aaf9c312e",
+      "structured_item_rows": 32
+    },
+    {
+      "path": "review/gate6_2_first_stage_repair_mean_bridge/journal.jsonl",
+      "sha256": "5254c493a2a1534d3a8bc2b2d58f3dc436951290dbd7bb5afa6365437c9d36da",
+      "structured_item_rows": 200
+    },
+    {
+      "path": "review/gate6_3_semantic_validity_audit/ROW_CONTRIBUTIONS.csv",
+      "sha256": "b96da9583aeabad0bb61c814a13b464b810cc60f01a259825115b188e54e263e",
+      "structured_item_rows": 27
+    },
+    {
+      "path": "review/gate6_3_semantic_validity_audit/ROW_REANALYSIS_V3.csv",
+      "sha256": "8a196b7dde13e1e366b5115c833a5ba6d5c3260b83c46e8e0f56c1a5713f3a09",
+      "structured_item_rows": 920
+    },
+    {
+      "path": "review/gate6_3_semantic_validity_audit/V2_V3_DISAGREEMENTS.csv",
+      "sha256": "62acacd4d76dc18e2f1d93c50222089c7d41b0b82359c0a521a2cb6e032e8330",
+      "structured_item_rows": 27
+    },
+    {
+      "path": "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_SCHEDULE.json",
+      "sha256": "4fc4bb4d37d7f075d33ea523784dd4b76bcf4fc2617e228249c1a35198c4340c",
+      "structured_item_rows": 840
+    },
+    {
+      "path": "review/gate6_3_single_mean_semantic_evaluation/MATCHED_RANDOM_SCHEDULE.json",
+      "sha256": "5db527fbb30d1157ecf567ea42e540a06c1676d665c79798047d6130437fe8da",
+      "structured_item_rows": 80
+    },
+    {
+      "path": "review/gate6_3_single_mean_semantic_evaluation/SEMANTIC_V2_ROW_REANALYSIS.csv",
+      "sha256": "9b903c193c8d4c70974e6fa3c0fade06138748300859a12bc55dde076e5ebb66",
+      "structured_item_rows": 200
+    },
+    {
+      "path": "review/gate6_3_single_mean_semantic_evaluation/journal.jsonl",
+      "sha256": "593c89e8bf13d83d2fcfa27b2a9d7eec7d4c0b17918185f0554d37390ca601e1",
+      "structured_item_rows": 920
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/CONTROLLER_EVALUATION.json",
+      "sha256": "d94761ed525d3803493c05822a61603bdf08d3bd57e0cf85232d67485148fdfd",
+      "structured_item_rows": 60
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/CONTROLLER_MANIPULATION.json",
+      "sha256": "0ad414fdfcb4c25ed84f9a5c98ac0bd2824bef3ad594e5103c371573617284a6",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/LOCAL_CONTROL_GAIN.csv",
+      "sha256": "1f06dad703b572bd5269633de002d96a682f633d6384f9f483846a6caf68011c",
+      "structured_item_rows": 768
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_ATTEMPTS.json",
+      "sha256": "1fd9b8a6ca617280b2bb2c6bb993da10dc00fc02650fb92c4993d6ba5144af7c",
+      "structured_item_rows": 2
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_ATTRITION_LEDGER.csv",
+      "sha256": "57c850b2ad5256b7d7ae1c168fca73d0177cce775eae0e64501115d736618eaf",
+      "structured_item_rows": 142
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_ATTRITION_REPAIR_LOCK.json",
+      "sha256": "ab3f44c573cefcc711e9c640718f02c2c3636cbc7f42d6ad8d30a088371720cb",
+      "structured_item_rows": 2
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json",
+      "sha256": "8b7b054e1cd4b0e3ada9fd66291ca1cc4039b20d7467cb8816f7c5e1e25e2aff",
+      "structured_item_rows": 368
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_GENERATIONS.jsonl",
+      "sha256": "c67772b99b015c578fd2c907163e99e3d78c171589200a2b8bfddab25c9b44d0",
+      "structured_item_rows": 136
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_GENERATION_JOURNAL.jsonl",
+      "sha256": "28b52e6dbd5c3f825435d367d8ed570dec9ea45a1179a7454445b89493f6b4e9",
+      "structured_item_rows": 544
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_GENERATION_JOURNAL_REMOTE_PARTIAL.jsonl",
+      "sha256": "d0c8fa5a792abd83b30689652ae1400e3add8a9e8b40687b0a8928751645febe",
+      "structured_item_rows": 2
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_SELECTED_TRAIN.json",
+      "sha256": "54ddd87d56310bf6e0d6cf595f62bab4a7e55aa22684df4d69ebc86e261f5cdc",
+      "structured_item_rows": 104
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_SELECTED_VALIDATION.json",
+      "sha256": "7409ffc0ab9c726c8bab5d8c23569eac4c1ccd570301a57d9761ed1aaf9c312e",
+      "structured_item_rows": 32
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_MANIFEST.json",
+      "sha256": "2113b2ccb03fa97ef4df1d6064a78eda83b8ff970ebb8ddfd7110547c5376f40",
+      "structured_item_rows": 104
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_RESERVE.json",
+      "sha256": "a0b274571a99a09ecbff65ff078b4acd6ddbd7221f5bd8e7410751bb4bea291c",
+      "structured_item_rows": 32
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_VALIDATION.json",
+      "sha256": "0896cf22b8be64b0486984d0f03a0b17ebbb3ecfdd49bf092cead0042287c9db",
+      "structured_item_rows": 32
+    },
+    {
+      "path": "review/gate6_layer_source_rfm_atlas/SOURCE_VALIDATION_RESERVE.json",
+      "sha256": "a85c409bc0d98e1245e86f896733282d01f54014520149085e317c8d6eaeb265",
+      "structured_item_rows": 16
+    },
+    {
+      "path": "review/gate7_fresh_l27_replication/EVALUATION_MANIFEST.json",
+      "sha256": "108c8b0b55e0e971a7d898f391d6841e19b6db5f8d5afd00981409c1847e2497",
+      "structured_item_rows": 120
+    },
+    {
+      "path": "review/gate7_fresh_l27_replication/EVALUATION_SCHEDULE.json",
+      "sha256": "9351168e7824272a43fafbf02304d7a4d324a244a64cc75dea9490b5c3c9eceb",
+      "structured_item_rows": 1680
+    },
+    {
+      "path": "review/gate7_fresh_l27_replication/ITEM_CONTRIBUTIONS.csv",
+      "sha256": "208de74fef4fa065d308406314d292297375435c88d1781677a76726be8e65c7",
+      "structured_item_rows": 720
+    },
+    {
+      "path": "review/gate8_l27_dose_calibration/CALIBRATION_MANIFEST.json",
+      "sha256": "9d544d3d07016a85579d966ab76ae0532c54ab2dbef134f98c1452e11d8ccf06",
+      "structured_item_rows": 50
+    },
+    {
+      "path": "review/gate8_l27_dose_calibration/CALIBRATION_SCHEDULE.json",
+      "sha256": "cf8fe3bd43abc801c96a9ae6927bc293d71c0ac36e70aeece04b54a08caf78fc",
+      "structured_item_rows": 2200
+    },
+    {
+      "path": "review/gate9_selected_d75_evaluation/EVALUATION_MANIFEST.json",
+      "sha256": "41064f1ac0b9d00ff54b86185dbbbcf70f23277a18a4efdaf7eaa6342d139f67",
+      "structured_item_rows": 100
+    },
+    {
+      "path": "review/gate9_selected_d75_evaluation/EVALUATION_SCHEDULE.json",
+      "sha256": "4a10c708cfdb876456c150db8fcdc4554348fe642ca7cac83f56fea99bcd021e",
+      "structured_item_rows": 1400
+    },
+    {
+      "path": "review/gate9_selected_d75_evaluation/INSTRUMENTATION_AMENDMENT.json",
+      "sha256": "ad1e9945c6516c2f88b35ab55d19abccb4a34b49bdef7f5c04a64372607a5893",
+      "structured_item_rows": 1
+    },
+    {
+      "path": "review/gate9_selected_d75_evaluation/ITEM_CONTRIBUTIONS.csv",
+      "sha256": "475d9fbbce1f524362318e2ced9b123565c63b84467e16caa1a349795a4e893f",
+      "structured_item_rows": 600
+    },
+    {
+      "path": "review/gate9_selected_d75_evaluation/RETRY_LEDGER.jsonl",
+      "sha256": "8586b9d753623ffc712b42bc67a8603f365ff129fae5a0663a98d5ab4b89a334",
+      "structured_item_rows": 1
+    },
+    {
+      "path": "review/gate9_selected_d75_evaluation/journal.jsonl",
+      "sha256": "c17190c676da8a1aacb51f4058d875e8414782e3d08ee945ed57ddc4c5ed2888",
+      "structured_item_rows": 1400
+    },
+    {
+      "path": "review/micro_q1/CONSTRUCTION_MANIFEST.json",
+      "sha256": "aa5ed25a1b2d026181c9e72fc40a60dfaf9e8751ea9f2197c77406ff39757395",
+      "structured_item_rows": 64
+    },
+    {
+      "path": "review/micro_q1/DIRECTION_CONSTRUCTION.json",
+      "sha256": "aa5ed25a1b2d026181c9e72fc40a60dfaf9e8751ea9f2197c77406ff39757395",
+      "structured_item_rows": 64
+    },
+    {
+      "path": "review/micro_q1/DIRECTION_VALIDATION.csv",
+      "sha256": "da48387b65e42f242193696be5e453d1da44fc6cdcf079f8710c03e665653388",
+      "structured_item_rows": 16
+    },
+    {
+      "path": "review/micro_q1/DIRECTION_VALIDATION.json",
+      "sha256": "beb3be5462df9838ddb2a3c16772b921892bc9695e27a7642920b6f96eecd604",
+      "structured_item_rows": 16
+    },
+    {
+      "path": "review/micro_q1/EVALUATION_MANIFEST.json",
+      "sha256": "8661a14214832b58652768c59066d467b1239829dde2454135502a7f196432d0",
+      "structured_item_rows": 50
+    },
+    {
+      "path": "review/micro_q1/MICRO_Q1_EVALUATION.json",
+      "sha256": "8661a14214832b58652768c59066d467b1239829dde2454135502a7f196432d0",
+      "structured_item_rows": 50
+    },
+    {
+      "path": "review/micro_q1/PRE_EVALUATION_GATE.json",
+      "sha256": "136079266a0d745ea905719e04a6a00d2d281489f721e2535b49d16a812f571a",
+      "structured_item_rows": 16
+    },
+    {
+      "path": "review/micro_q1/TRAJECTORY_RESULTS.csv",
+      "sha256": "dd465173447054af1f5083a280fa0e43dd18888ed953d2ad5270596eca5c2abe",
+      "structured_item_rows": 400
+    },
+    {
+      "path": "review/micro_q1/VALIDATION_MANIFEST.json",
+      "sha256": "beb3be5462df9838ddb2a3c16772b921892bc9695e27a7642920b6f96eecd604",
+      "structured_item_rows": 16
+    },
+    {
+      "path": "review/micro_q1/allocation/DIRECTION_CONSTRUCTION.json",
+      "sha256": "aa5ed25a1b2d026181c9e72fc40a60dfaf9e8751ea9f2197c77406ff39757395",
+      "structured_item_rows": 64
+    },
+    {
+      "path": "review/micro_q1/allocation/DIRECTION_VALIDATION.json",
+      "sha256": "beb3be5462df9838ddb2a3c16772b921892bc9695e27a7642920b6f96eecd604",
+      "structured_item_rows": 16
+    },
+    {
+      "path": "review/micro_q1/allocation/MICRO_Q1_EVALUATION.json",
+      "sha256": "8661a14214832b58652768c59066d467b1239829dde2454135502a7f196432d0",
+      "structured_item_rows": 50
+    },
+    {
+      "path": "review/micro_q1/journal.jsonl",
+      "sha256": "6c881064e18c32b3c497421a43f932c76ffe0e54af1e203b0027075172219965",
+      "structured_item_rows": 400
+    },
+    {
+      "path": "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json",
+      "sha256": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283",
+      "structured_item_rows": 57
+    },
+    {
+      "path": "review/q1_confirmatory_fixed_controllers/SEED_SCHEDULE_LOCK.json",
+      "sha256": "3868495a782aaecc74ce3e011a7a37595474f4ee4db25c9d48d094e972121146",
+      "structured_item_rows": 1596
+    },
+    {
+      "path": "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl",
+      "sha256": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+      "structured_item_rows": 798
+    },
+    {
+      "path": "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl",
+      "sha256": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2",
+      "structured_item_rows": 798
+    },
+    {
+      "path": "review/q1_v4_microbench/cruxeval_postmortem.json",
+      "sha256": "2759f5bddaaad8c5a6b4673a0814746b64a933f0e64f29209e4a36bcd14ff671",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_CALIBRATION_SCHEDULE.json",
+      "sha256": "d4cf161c46327e44578bc6da29199eb0d981ac9b80a50932e528b9d326d1ca8e",
+      "structured_item_rows": 1164
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_COMMON_PANEL_JOURNAL.jsonl",
+      "sha256": "9a635787561d5bc6e56cf2c7ffae9e391bebc817488f38369ffc8c0fea14a5b7",
+      "structured_item_rows": 6960
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_COMMON_PANEL_MANIFEST.json",
+      "sha256": "365f10c5e88069079f43afb4f7a7845bf702c62dbcb44d19c97241ab7358a91b",
+      "structured_item_rows": 120
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE.json",
+      "sha256": "f0a9b69af9befa1ac38737ef9042fe4d9cd315abc4f5e3c190788594c7bc5256",
+      "structured_item_rows": 6960
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_COVARIANCE_CAPTURE_METADATA.json",
+      "sha256": "350424f1b8e58c3d144ad0215044fb521ee3d5b62f774a33287a798ecc51a6e8",
+      "structured_item_rows": 64
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_COVARIANCE_MANIFEST.json",
+      "sha256": "70bf7e288c58e5cfd5270d516d39bbf86f609687336fcd1d8d5de68fdd6f9cc6",
+      "structured_item_rows": 64
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_DOSE_CALIBRATION_JOURNAL.jsonl",
+      "sha256": "6d532c5b728c99b4778ea6b7d829e012fbc1d1f11afe1d51633c2321c5af70e7",
+      "structured_item_rows": 1164
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_DOSE_CALIBRATION_MANIFEST.json",
+      "sha256": "0ed3989ec35004a3afeb9ce52c6633c6ccf9a3f582163e6c9a670264a71281d5",
+      "structured_item_rows": 12
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_ARCHIVE.json",
+      "sha256": "b461e4ad6ec48a8044bd70be146c4bdf8b12620729ccff3242790ea13c633824",
+      "structured_item_rows": 12
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_158.json",
+      "sha256": "8b7231e33d29716c7fef63a3046ad01f073657d2cbba8962b684797c2387c95f",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_202.json",
+      "sha256": "4ef4678345e6ccd167507d3f08055407a002f2ac391277613f6f11d7fc8845c8",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_258.json",
+      "sha256": "cf9b1c47f3715f30a2f8463cd185cff829e6455e4d9101b4e9e04821b2ed71cd",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_266.json",
+      "sha256": "a398425d00b94be4d85e3051ff5ea817e61f7ef4c976aa296d8b142991853000",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_311.json",
+      "sha256": "3501c845fd3ff0928c59bd1bc83ca6b0e642ddcaf3ada996f4d0c4029ecaff28",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_348.json",
+      "sha256": "23319dc8683e409cb08c662e6199d72900579d82c5de011b78fbeed6f6d22992",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_441.json",
+      "sha256": "9b60ba94fb10b5d2a9ccf23d8a0508aca13dd313ab6b261342d461d64cb6524d",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_463.json",
+      "sha256": "dbd6d394794b586454c550e9a4fe6bf7eee2b51296bc9ed2ce238af5406a8dc9",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_502.json",
+      "sha256": "0d1c30c554c9f474fafd011e8035bd768a9f07017490051dafc9c0239837460c",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_507.json",
+      "sha256": "d6ad305d9a5d0450c60392ebf923895ac6d3e004021051f7da2b9f18466e7979",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_681.json",
+      "sha256": "02e11aa4f5c13624dcaf8eaea46a1b9b8bf3fba194d4f5bc748cfd91c8222e2f",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_LOGITS/sample_729.json",
+      "sha256": "b42fb659c6bb8740ccb1675262dbc4b760a00c420ac77fbe061cda9d2af9bef5",
+      "structured_item_rows": 28
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_FINITE_SECANT_MANIFEST.json",
+      "sha256": "4bb3f495181473bfe59d8aabf37faf7a0ee487ea822d1a8d57cf441c7fe4f059",
+      "structured_item_rows": 12
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_SOURCE_CONSTRUCTION_MANIFEST.json",
+      "sha256": "15e242f563fa6b6122ea90762ec6a03532855f3a9874a4b6d3cb8660219a65e0",
+      "structured_item_rows": 24
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_SOURCE_JOURNAL.jsonl",
+      "sha256": "0508973e4b519d4a1e676f6edde21d87c41488e37a1f5a4a9630f0e5a2f8d366",
+      "structured_item_rows": 576
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_SOURCE_SCHEDULE.json",
+      "sha256": "585b97620441a32373621b0303b7ecc583bf9127cc7a643e233b4390cd76edf5",
+      "structured_item_rows": 576
+    },
+    {
+      "path": "review/q2_controller_bank_v2/V2_SOURCE_VALIDATION_MANIFEST.json",
+      "sha256": "442e219bc80f549c44ee409a4d6eaab2678331ecdedfc22a2438b0878fdbb200",
+      "structured_item_rows": 24
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/COMMON_PANEL_SCHEDULE.json",
+      "sha256": "7ad6c36815da4370cf2da24493c713be3dd149f376a4664188fec072ec37ba38",
+      "structured_item_rows": 4080
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/COVARIANCE_MANIFEST.json",
+      "sha256": "6305d07960b1db6a7f7709b78316ce4c0f586c93f59534e039ec336b0861338a",
+      "structured_item_rows": 64
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/DEVELOPMENT_PANEL_MANIFEST.json",
+      "sha256": "707876cd3c507a108656db5f735b5f7c9cfbf95366a52dacd15277181043796e",
+      "structured_item_rows": 120
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/FINITE_SECANT_PROBE_MANIFEST.json",
+      "sha256": "2d1e71dc0dbd869514273f40a55ddf837287815051d06c1b8231ebdc23b6a9a9",
+      "structured_item_rows": 12
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/MANIPULATION_MANIFEST.json",
+      "sha256": "53378fea2f3e9045a76f139c1dc268f5ceb7decb0eb48f58196d2e3b8c151120",
+      "structured_item_rows": 12
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/MANIPULATION_SCHEDULE.json",
+      "sha256": "74dd8868b48e736564a733e8d477193345af5f18edd245a4a0ba630aca8a4f9c",
+      "structured_item_rows": 204
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/SOURCE_BEHAVIOR_SCHEDULE.json",
+      "sha256": "d2f1c9d18d00b24382900480055bd6f05444d18ac5231fdb2c89624929871dc2",
+      "structured_item_rows": 144
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/SOURCE_CONSTRUCTION_MANIFEST.json",
+      "sha256": "128139758ee75718ec6de74f2478d6744106d15cc8374cd334f3b6bfc41a261a",
+      "structured_item_rows": 24
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/SOURCE_VALIDATION_MANIFEST.json",
+      "sha256": "c47f58e8e0ac24f4591d5308d875cd393e5896d0097c1883612f997d3c33eaee",
+      "structured_item_rows": 12
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/manipulation_journal.jsonl",
+      "sha256": "1eb7b6d91139a9a348d2cb5e5272668592b3f6ed7776de5975bdc6b1a9a0aa2a",
+      "structured_item_rows": 204
+    },
+    {
+      "path": "review/q2_controller_heldout_geometry/source_behavior_journal.jsonl",
+      "sha256": "7cc02f468642d18289ba54485534f41fd8029bd88647de37a84d80d6d79c6356",
+      "structured_item_rows": 144
+    },
+    {
+      "path": "review/substrate_race/CRUXEVAL_MANIFEST.json",
+      "sha256": "ff2fa6ee7d973786d7205e386f2199a4d21dae25c533729dea8f18cdf53f4b82",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+      "sha256": "7ee08189955861e49cdc54a63cdd01095ba15179ccb5f7f3b3d81c1eaafa77f7",
+      "structured_item_rows": 20
+    },
+    {
+      "path": "review/substrate_race/journal.jsonl",
+      "sha256": "12ba76b6b57b23d61715626c61d9d0647457271d5e6299ee5ef908673690a670",
+      "structured_item_rows": 120
+    }
+  ],
+  "summary": {
+    "ambiguous_content_signatures": {},
+    "class_counts": {
+      "A": 0,
+      "B": 25,
+      "C": 655,
+      "D": 120,
+      "UNRESOLVED": 0
+    },
+    "classification_uses_outcome_values": false,
+    "dataset_repo": "cruxeval-org/cruxeval",
+    "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+    "q2_v2_common_panel_count": 120,
+    "q2_v2_common_panel_manifest_sha256": "365f10c5e88069079f43afb4f7a7845bf702c62dbcb44d19c97241ab7358a91b",
+    "schema_version": 1,
+    "source_file_count": 147,
+    "source_files_digest": "5d8087f8a9a9b742c1f80ea06541d160f615bc2c32912d006c7353a77790ac6c",
+    "universe_count": 800,
+    "unresolved_ids": []
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "bf16_bridge_epsilon": 3.0,
+  "classifications": [
+    "M3_DIRECTIONAL_ENGINE_QUALIFIED",
+    "M3_FP32_COHERENT_BF16_SURROGATE_NOT_QUALIFIED",
+    "M3_DERIVATIVE_IDENTITIES_FAILED",
+    "M3_FINITE_LOCAL_WINDOW_FAILED",
+    "M3_SEQUENCE_SEMANTICS_FAILED",
+    "M3_ENGINE_FAILURE"
+  ],
+  "cost": {
+    "hard_incremental_ceiling_usd": 2.0,
+    "target_usd": 0.75
+  },
+  "engineering_direction_count": 6,
+  "epsilons": [
+    0.003,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0
+  ],
+  "firewall": {
+    "free_generation": false,
+    "q2_v3_behavioral_outcomes": false,
+    "q3": "NOT_RUN",
+    "scientific_items": 0,
+    "semantic_correctness": false
+  },
+  "fixture_count": 16,
+  "layer": 27,
+  "literal_estimand": "Gamma_ij is the uniform mean over frozen synthetic fixture/checkpoint rows of (J_z v_i)^T (diag(p)-p p^T) (J_z v_j), conditioned on one fixed teacher-forced token sequence per fixture in the FP32 computational lift of BF16-valued parameters.",
+  "local_epsilon_max": 1.0,
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "object_name": "teacher-forced multi-checkpoint categorical-Fisher controller-span Gram",
+  "parameter_realization": "load exact BF16 checkpoint values once and cast those already-rounded values to FP32; do not load a different FP32 checkpoint",
+  "qualification_cases": {
+    "batch_order_sensitivity": "repeat direction passes, reverse direction order, and compare single-pass versus two-chunk sufficient-statistic aggregation",
+    "bf16_geometry_bridge_fixture_indices": [
+      0,
+      3,
+      7,
+      11
+    ],
+    "exact_gram_fixture_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "finite_difference_fixture_indices": [
+      0,
+      3,
+      7,
+      11
+    ],
+    "independent_exact_crosscheck_cases": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        11,
+        3
+      ]
+    ],
+    "polarization_fixture_indices": [
+      0,
+      3,
+      7,
+      11
+    ],
+    "sequence_equivalence_fixture_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "schema_version": 1,
+  "sequence_context": {
+    "attention": "eager, with prospectively declared SDPA-math fallback only on unavailability",
+    "averaging": "uniform over all persisted fixture/checkpoint rows",
+    "checkpoint_offsets": [
+      0,
+      1,
+      3,
+      7,
+      15,
+      31,
+      63
+    ],
+    "checkpoints": "final prompt token and frozen continuation offsets available per fixture",
+    "claim_boundary": "local output-information geometry along a fixed teacher-forced technical trajectory; not Fisher geometry of the full free-running sequence distribution",
+    "execution": "FP32 full-sequence use_cache=False",
+    "trajectory": "fixed arbitrary synthetic continuation; no generation"
+  },
+  "status": "PROSPECTIVE_DRAFT_NOT_YET_COMMITTED",
+  "threshold_rationale": {
+    "bf16_bridge": "retains the prior top-1/JS bridge and adds rank preservation of controller-span radii/distances; failure excludes M3 from Q2 V3",
+    "exact_derivatives": "retain Gate-12.1 tolerances that passed independently",
+    "finite_window": "requires three consecutive scales bounded by epsilon<=1; expanded ladder is fixed from historical cancellation evidence, not from new qualification values",
+    "psd": "permits only roundoff-scale negative eigenvalues; no PSD clipping is allowed"
+  },
+  "thresholds": {
+    "alpha_zero_max_js": 1e-12,
+    "batch_gram_relative_frobenius": 0.0005,
+    "bf16_bridge_curvature_median_relative": 0.15,
+    "bf16_bridge_distance_spearman": 0.95,
+    "bf16_bridge_median_js": 0.0001,
+    "bf16_bridge_p95_js": 0.005,
+    "bf16_bridge_radius_spearman": 0.95,
+    "bf16_bridge_top1": 0.99,
+    "direct_polarization_relative_frobenius": 0.01,
+    "finite_angular_max_abs_error": 0.05,
+    "finite_jvp_cosine": 0.999,
+    "finite_local_rms_logit_movement": 0.01,
+    "finite_relative_error": 0.05,
+    "finite_window_length": 3,
+    "fp32_sequence_max_target_logp": 0.001,
+    "fp32_sequence_median_js": 1e-08,
+    "fp32_sequence_median_logit_cosine": 0.999999,
+    "fp32_sequence_median_target_logp": 1e-05,
+    "fp32_sequence_p99_js": 1e-06,
+    "fp32_sequence_top1": 1.0,
+    "independent_jvp_cosine": 0.99999,
+    "independent_jvp_relative_norm": 0.005,
+    "jvp_vjp_relative_error": 0.0001,
+    "order_gram_relative_frobenius": 5e-05,
+    "psd_relative_negative_eigenvalue": 1e-08,
+    "repeat_gram_relative_frobenius": 5e-05
+  }
+}

@@ -1,0 +1,41 @@
+experiment_id: Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE
+status: PROSPECTIVE_ENGINEERING_QUALIFICATION_AND_OFFLINE_PROVENANCE_AUDIT
+execution_authorized: true
+scientific_objectives:
+  - QUALIFY_OR_REJECT_M3_ON_REAL_QWEN_STACK
+  - AUDIT_CRUXEVAL_ITEM_LEVEL_PROVENANCE
+forbidden:
+  q2_v3_behavioral_outcomes: true
+  q3: true
+  semantic_correctness_for_m3: true
+  free_generation_for_m3: true
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  loaded_dtype: BF16
+  derivative_realization: FP32_COMPUTATIONAL_LIFT_OF_BF16_VALUES
+geometry:
+  id: M3
+  definition: TEACHER_FORCED_MULTICHECKPOINT_CATEGORICAL_FISHER_CONTROLLER_SPAN_GRAM
+  layer: 27
+  engineering_directions: 6
+  engineering_fixtures: 16
+  sequence: FIXED_SYNTHETIC_TEACHER_FORCED
+  full_sequence: true
+  use_cache: false
+  bf16_bridge_required: true
+  psd_clipping: forbidden
+provenance:
+  universe: CRUXEVAL_OUTPUT_PREDICTION_800
+  classification: [A_PRISTINE, B_LABEL_FREE, C_HISTORICAL_BEHAVIORAL, D_Q2_DISCOVERY]
+  selection_by_historical_outcome: forbidden
+resource:
+  provider: RunPod
+  preferred_gpu: NVIDIA_A40_48GB
+  target_incremental_usd: 0.75
+  hard_incremental_usd: 2.00
+  retained_resources_at_close: 0
+outputs:
+  q2_v3_status: DRAFT_NOT_RUN
+  q3_status: NOT_RUN
+  next_action: PRINCIPAL_RESEARCHER_REVIEW

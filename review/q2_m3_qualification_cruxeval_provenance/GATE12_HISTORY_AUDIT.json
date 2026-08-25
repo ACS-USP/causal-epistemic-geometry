@@ -1,0 +1,21 @@
+{
+  "bf16_bridge_pass": false,
+  "bf16_bridge_top1": 0.9774436090225563,
+  "exact_jvp_pass": true,
+  "finite_window_pass": false,
+  "fisher_hessian_pass": true,
+  "fp32_sequence_pass": true,
+  "gate12_1_classification": "GATE12_1_DERIVATIVE_ENGINE_NOT_QUALIFIED",
+  "gate12_classification": "GATE12_JVP_ENGINE_FAILURE",
+  "gate12_historical_outcomes_revealed": false,
+  "gate12_scientific_geometry_shards": 0,
+  "historical_interpretation": "Exact FP32 automatic-differentiation identities and sequence semantics passed. The BF16 behavioral bridge and the prespecified three-scale finite-difference window failed. This is engineering evidence, not evidence about predictive geometry.",
+  "historical_passing_epsilons": [
+    0.03,
+    0.1
+  ],
+  "historical_required_window_length": 3,
+  "historical_window": null,
+  "jvp_vjp_pass": true,
+  "utility_derivative_pass": true
+}
