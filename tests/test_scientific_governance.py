@@ -78,6 +78,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE",
             "Q2_V3_RADIAL_ANGULAR_EXECUTION",
             "Q2_V3_PANEL_PROVENANCE_MISMATCH",
+            "Q2_V3_PROMPT_PROVENANCE_RECONCILIATION",
         }
     assert state["current"]["gpu_work_authorized"] is (
         workstream

@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_EXECUTION_STOPPED_PROVENANCE` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION` — **scientific claim:** `NONE_FROZEN`.
 
-The one authorized Q2 V3 execution stopped at the frozen provenance gate. Of 336 allocation records, 327 reconstructed prompt hashes matched and nine did not, including five primary-panel items. The nine frozen values came from a legacy namespaced prompt hash and older prompt template; all reference hashes matched. No model inference, geometry, prediction lock, or semantic trajectory occurred. This is Q2_V3_PANEL_PROVENANCE_MISMATCH, not a Q2 relational result. Q2 V2 and M3 remain unchanged; Q3 is NOT RUN.
+CPU-only byte reconstruction classified all nine Q2 V3 prompt discrepancies as P2: the legacy and Gate-7 user prompts differ in behaviorally plausible wording and final-answer instructions, as well as hash schema. Across all 336 frozen item records, 327 are Gate-7-template raw SHA-256 and nine are legacy-template EXTERNAL-PROMPT digests; all reference hashes match. The original freeze did not prospectively select one global prompt template, so Amendment 1 was not created. The clean abort remains immutable, with zero inference/outcomes/matrices. Q3 is NOT RUN.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
+**Next authorized action:** PRINCIPAL_RESEARCHER_DECISION_ON_CANONICAL_Q2_V3_PROMPT
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

@@ -61,6 +61,7 @@ current instruction source.
 | `review/q2_m3_qualification_cruxeval_provenance/REPORT.md` | Real-Qwen M3 non-qualification, complete CRUXEval provenance census, and freeze-ready Q2 V3 handoff |
 | `review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl` | Complete machine-readable item-level CRUXEval exposure ledger |
 | `review/q2_v3_radial_angular_freeze/PROTOCOL_LOCK.md` | Fully specified Q2 V3 radial/angular prospective freeze; semantic panel not run |
+| `review/q2_v3_provenance_reconciliation/Q2_V3_PROVENANCE_RECONCILIATION_REPORT.md` | Byte-level P2 diagnosis of nine mixed-template/hash records; Amendment 1 not created pending principal prompt decision |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |

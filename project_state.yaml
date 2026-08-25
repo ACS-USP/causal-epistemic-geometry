@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_EXECUTION_STOPPED_PROVENANCE
+  scientific_stage: Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,20 +19,21 @@ project:
     utility?
 
 current:
-  workstream: Q2_V3_PANEL_PROVENANCE_MISMATCH
-  lifecycle: CLOSED_PREPANEL_TERMINAL
-  stage: DEVELOPMENT_EXECUTION_STOPPED
+  workstream: Q2_V3_PROMPT_PROVENANCE_RECONCILIATION
+  lifecycle: CLOSED_PROVENANCE_DECISION_REQUIRED
+  stage: DEVELOPMENT_REFREEZE_REVIEW
   source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
   execution_source_commit: ba7c91e03295c664788e6ede0dd643f6d446404b
   summary: >-
-    The one authorized Q2 V3 execution stopped at the frozen provenance gate.
-    Of 336 allocation records, 327 reconstructed prompt hashes matched and nine
-    did not, including five primary-panel items. The nine frozen values came
-    from a legacy namespaced prompt hash and older prompt template; all reference
-    hashes matched. No model inference, geometry, prediction lock, or semantic
-    trajectory occurred. This is Q2_V3_PANEL_PROVENANCE_MISMATCH, not a Q2
-    relational result. Q2 V2 and M3 remain unchanged; Q3 is NOT RUN.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
+    CPU-only byte reconstruction classified all nine Q2 V3 prompt discrepancies
+    as P2: the legacy and Gate-7 user prompts differ in behaviorally plausible
+    wording and final-answer instructions, as well as hash schema. Across all
+    336 frozen item records, 327 are Gate-7-template raw SHA-256 and nine are
+    legacy-template EXTERNAL-PROMPT digests; all reference hashes match. The
+    original freeze did not prospectively select one global prompt template, so
+    Amendment 1 was not created. The clean abort remains immutable, with zero
+    inference/outcomes/matrices. Q3 is NOT RUN.
+  next_authorized_action: PRINCIPAL_RESEARCHER_DECISION_ON_CANONICAL_Q2_V3_PROMPT
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE
@@ -44,7 +45,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_PANEL_PROVENANCE_MISMATCH
+  current_task: Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -84,6 +85,34 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V3_PROMPT_PROVENANCE_RECONCILIATION
+    status: Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION
+    conclusion: >-
+      Independent byte-level reconstruction proved that all nine mismatches are
+      P2 rather than hash-only or inert serialization differences. The old
+      external-qualification prompt and the Gate-7 prompt change model-visible
+      wording and final-answer instructions. The original freeze did not bind a
+      global template version; the executor selected Gate-7 only after freeze.
+      Therefore no Amendment 1 was created and principal prompt selection is
+      required before any prospective refreeze.
+    artifact: review/q2_v3_provenance_reconciliation/Q2_V3_PROVENANCE_RECONCILIATION_REPORT.md
+    frozen_item_prompt_records: 336
+    gate7_raw_sha256_records: 327
+    legacy_external_prompt_records: 9
+    p0: 0
+    p1: 0
+    p2: 9
+    p3: 0
+    primary_panel_n: 200
+    primary_panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+    amendment1_created: false
+    reconciliation_audit: Q2_V3_PROVENANCE_RECONCILIATION_AUDIT_PASS
+    model_inference: false
+    semantic_trajectories: 0
+    prediction_matrices: false
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+
   - id: Q2_V3_RADIAL_ANGULAR_EXECUTION
     status: Q2_V3_PANEL_PROVENANCE_MISMATCH
     conclusion: >-

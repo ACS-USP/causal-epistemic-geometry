@@ -1593,6 +1593,57 @@ experiments:
       run source, shell, geometry, semantic-panel, Q3, RunPod, or DGX work from
       this freeze entry.
 
+  - id: Q2_V3_PROMPT_PROVENANCE_RECONCILIATION
+    version: V1
+    stage: DEVELOPMENT_PROVENANCE_ONLY
+    question: >-
+      Why did nine frozen Q2 V3 prompt-provenance checks disagree, and can the
+      discrepancy be prospectively amended without making a new scientific
+      prompt choice?
+    instrument: >-
+      CPU-only reconstruction of official CRUXEval source fields, both exact
+      historical prompt templates, raw and namespaced SHA-256 procedures, all
+      six Q2 V3 item manifests, source system instructions, teacher text, code,
+      and Git provenance; no behavioral outcomes.
+    model_policy: NO_MODEL_CPU_ONLY_PROVENANCE
+    status: Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION
+    outcome: >-
+      All nine discrepancies are P2. The legacy external-qualification prompt
+      and Gate-7 prompt differ in model-visible wording and final-answer
+      instructions, not merely hash namespace or serialization. Across 336
+      item records, 327 use Gate-7 prompt raw SHA-256 and nine use the legacy
+      EXTERNAL-PROMPT digest; all 336 references match. The original freeze did
+      not select one global template, and the executor imported Gate-7 only
+      after freeze, so Amendment 1 was not created.
+    scientific_interpretation: >-
+      This is a provenance/design-resolution terminal state, not a Q2 geometry
+      result. A principal-researcher decision on the exact global task prompt is
+      required before a new prospective refreeze. The original clean abort and
+      all scientific components remain immutable.
+    source_branch: research/q2-v3-amendment1-provenance
+    source_commit: 9b1bc16ea6893ed798575a6850f6db602532ef69
+    original_freeze_source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+    original_freeze_head: c9292d2baecb41de786912b77c39734855ed46cb
+    original_failed_execution_head: 9b1bc16ea6893ed798575a6850f6db602532ef69
+    artifact: review/q2_v3_provenance_reconciliation/Q2_V3_PROVENANCE_RECONCILIATION_REPORT.md
+    frozen_item_prompt_records: 336
+    prompt_schema_counts:
+      gate7_template_raw_sha256: 327
+      legacy_template_external_prompt: 9
+    mismatch_classes: {P0: 0, P1: 0, P2: 9, P3: 0}
+    primary_panel_n: 200
+    primary_panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+    amendment1_created: false
+    independent_audit: Q2_V3_PROVENANCE_RECONCILIATION_AUDIT_PASS
+    inference_performed: false
+    semantic_trajectories: 0
+    prediction_matrices: []
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    next_action: PRINCIPAL_RESEARCHER_DECISION_ON_CANONICAL_Q2_V3_PROMPT
+
   - id: Q2_V3_RADIAL_ANGULAR_EXECUTION
     version: V3-EXECUTION-V1
     stage: DEVELOPMENT_EXECUTION_STOPPED_PREPANEL
