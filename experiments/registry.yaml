@@ -1266,31 +1266,32 @@ experiments:
 
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
     version: Q2-V2
-    stage: DEVELOPMENT_FROZEN_COMMON_PANEL_EXECUTION
+    stage: DEVELOPMENT_COMPLETE
     question: >-
       Can a calibrated bank of conceptually distinct L27 intervention families
       support a controller-family-held-out test of simple geometry, without
       opening the common panel until the bank is dynamically qualified?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
-    status: FROZEN_COMMON_PANEL_COLLECTION_AUTHORIZED
-    outcome: BANK_AND_A40_ENGINE_QUALIFIED_COLLECTION_PENDING
+    status: COMPLETE_DEVELOPMENT_COMPOSITE_NULL
+    outcome: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
     scientific_interpretation: >-
-      Q2 V2 is a new DEVELOPMENT protocol, not a predictive result. V1's common
-      panel was never run. V2 freezes six source-axis candidates, per-direction
-      label-free dose calibration, SVD span-orthogonal nulls, and a family-held-out
-      M0/M1/M2 prediction design. Source qualification completed with all six axes
-      qualifying. Dose calibration completed with 12 causal directions and a
-      nondegenerate four-bin operating-dose distribution. The final 24-direction
-      bank and fresh null bank are locked. Under the prospective US$45 amendment,
-      the serial A40 reference qualified and projected US$36.1105 cumulatively.
-      RTX 6000 Ada failed exact discrete equivalence. The hard ceiling passes. A
-      subsequent US$30 principal top-up, before any common-panel row, produced a
-      corrected US$35.23 balance and authorized exact frozen collection.
+      Q2 V2 completed the frozen 120-item common panel with 6,960 trajectories
+      and zero missing, duplicate, or retried scientific rows. M0 flat and M1
+      whitened showed weak held-out association and negligible calibrated RMSE
+      improvement. M2 finite secant was materially stronger: mean family-held-out
+      rho 0.4279, all six family folds positive, and p_QAP 0.00220. Its RMSE ratio
+      was 0.9067, however, and therefore narrowly failed the frozen maximum of
+      0.90. No geometry passed every composite threshold, so the mechanical
+      classification is Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL. The M2
+      association remains part of the DEVELOPMENT evidence vector and is not
+      erased by the composite classification. The independent audit was clean.
     source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
     execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
-    cost_usd: 3.948212791234255
+    cost_usd: 5.133510112762451
+    prior_cost_usd: 3.948212791234255
+    common_panel_pod_cost_usd: 1.1852973215281963
     preferred_cumulative_cost_usd: 30.0
     hard_cost_ceiling_usd: 45.0
     budget_amendment:
@@ -1302,7 +1303,7 @@ experiments:
     parent_experiment: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
     lock:
       role: DEVELOPMENT
-      lifecycle: ENGINEERING_COST_QUALIFICATION
+      lifecycle: CLOSED
       model: Qwen3-8B
       layer: 27
       source_axes_proposed: 6
@@ -1323,7 +1324,7 @@ experiments:
       qap_permutations: 10000
       bootstrap_resamples: 10000
     execution:
-      lifecycle: PROSPECTIVE_LOCK_COMMON_PANEL_AUTHORIZED
+      lifecycle: CLOSED
       source_qualification: COMPLETE_576_ROWS_ALL_6_AXES_QUALIFIED
       source_journal_rows: 576
       source_correctness_used: false
@@ -1348,18 +1349,30 @@ experiments:
       wallet_gate: PASS_AFTER_PRINCIPAL_30_USD_TOP_UP
       minimum_top_up_usd: 26.742290024590524
       recommended_top_up_with_buffer_usd: 29.958519027049576
-      common_panel: AUTHORIZED_ZERO_ROWS_PRE_COLLECTION
-      common_panel_rows: 0
-      predictive_geometry_analysis: NOT_RUN
+      common_panel: COMPLETE
+      common_panel_rows: 6960
+      predictive_geometry_analysis: COMPLETE
+      classification: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+      forensic_classification: Q2_V2_FORENSIC_CLEAN
+      primary_audit_maximum_numeric_difference: 1.5543122344752192e-15
+      M0_mean_family_heldout_rho: 0.2013250847370143
+      M0_rmse_ratio: 0.9867096750868305
+      M0_qap_p: 0.0006999300069993001
+      M1_mean_family_heldout_rho: 0.19017803063847938
+      M1_rmse_ratio: 0.9881517323817838
+      M1_qap_p: 0.0008999100089991
+      M2_mean_family_heldout_rho: 0.4279201714356426
+      M2_rmse_ratio: 0.9067437236801725
+      M2_qap_p: 0.0021997800219978004
       correctness_used_for_qualification: false
       Q2_V1_common_panel_outcomes_read: false
       Q1: IMMUTABLE
       Q3: NOT_RUN
-      runpod_status: A40_PROVISIONING_AUTHORIZED
+      runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
       active_pods: 0
       retained_stopped_pods: 0
       retained_pod_disk_gb: 0
       network_volumes: 0
     next_action: >-
-      Execute the exact frozen common panel without scientific peeking, then run
-      the frozen M0/M1/M2 analysis and independent forensic audit.
+      Principal researcher review. Do not execute Q3 or a follow-up geometry
+      experiment automatically.

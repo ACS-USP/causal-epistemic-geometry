@@ -20,6 +20,24 @@ def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def read_journal_rows(path: Path) -> list[dict[str, Any]]:
+    """Read scientific rows from the frozen Research-OS JSONL envelopes."""
+
+    wrappers = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+    rows: list[dict[str, Any]] = []
+    for index, wrapper in enumerate(wrappers):
+        if not isinstance(wrapper, dict) or wrapper.get("version") != "research-os-jsonl-v1":
+            raise RuntimeError(f"unsupported Q2 V2 journal wrapper at line {index + 1}")
+        row = wrapper.get("row")
+        key_fields = wrapper.get("key_fields")
+        if not isinstance(row, dict) or not isinstance(key_fields, list):
+            raise RuntimeError(f"invalid Q2 V2 journal envelope at line {index + 1}")
+        if wrapper.get("key") != [row[field] for field in key_fields]:
+            raise RuntimeError(f"Q2 V2 journal key mismatch at line {index + 1}")
+        rows.append(row)
+    return rows
+
+
 def write_json(path: Path, value: Any) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -125,7 +143,7 @@ def main() -> int:
         raise RuntimeError("Q2 V2 frozen uncertainty lock mismatch")
 
     journal_path = REVIEW / "V2_COMMON_PANEL_JOURNAL.jsonl"
-    rows = [json.loads(line) for line in journal_path.read_text().splitlines() if line.strip()]
+    rows = read_journal_rows(journal_path)
     expected = int(lock["common_panel"]["expected_rows"])
     if len(rows) != expected:
         raise RuntimeError("Q2 V2 bootstrap requires the complete common panel")

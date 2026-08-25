@@ -2,141 +2,151 @@
 
 ## Outcome
 
-Q2 V2 retains a prospectively qualified controller bank and now also has a
-qualified execution engine, but the frozen 120-item common panel remains
-untouched because the available RunPod wallet is insufficient.
+The frozen 120-item DEVELOPMENT common panel completed with all 6,960 expected
+trajectories. The independent audit reproduced the primary analysis to floating-
+point tolerance and returned `Q2_V2_FORENSIC_CLEAN`.
 
-- Operational status: `Q2_V2_ENGINE_QUALIFIED_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET`
-- Scientific classification: DEVELOPMENT; no predictive Q2 result exists
-- Q1: unchanged
-- Q3: not run
-- Common-panel correctness outcomes read: no
-- Common-panel rows: 0 / 6,960
-- RunPod active GPUs after benchmark recovery: 0
+The mechanically frozen classification is:
 
-## Frozen bank and predictive design
+`Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL`
 
-The previously qualified bank remains unchanged:
+No metric passed all three frozen criteria simultaneously: mean family-held-out
+Spearman at least 0.30, one-sided family-aware QAP p-value at most 0.05, and
+held-out RMSE ratio to the constant predictor at most 0.90.
+
+That composite classification does not erase a supported sub-result. M2 finite
+secant showed a substantially stronger and fold-consistent association than M0
+or M1: mean held-out rho was 0.4279, every family fold was positive, and
+`p_QAP=0.00220`. It missed the composite gate only because its RMSE ratio was
+0.9067 rather than at most 0.90. This is DEVELOPMENT evidence of association,
+not a qualifying predictive-geometry claim.
+
+## Frozen design and collection integrity
 
 - source axes proposed / qualified: 6 / 6;
-- signed/location meaningful controllers: 24 across six conceptual families;
-- controllers satisfying the frozen causal rule: 12;
-- selected dose bins represented: 4;
-- fresh random controls: 4, projected against an SVD orthonormal basis of the
-  meaningful span;
-- maximum absolute null-to-span cosine: `8.413408858487514e-17`;
-- common panel: 120 items, 29 conditions, two independent rollouts, 6,960 rows;
-- primary prediction: leave one source family out;
-- metrics: M0 cosine, M1 covariance-whitened, and M2 finite secant;
-- target: canonical unbiased two-rollout error-profile distance.
+- meaningful controllers: 24 across six conceptual families;
+- fresh random controls: 4;
+- common panel: 120 items, 29 conditions, two independent rollouts;
+- scientific trajectories: 6,960 / 6,960;
+- logical-key duplicates, missing rows, and unexpected rows: 0 / 0 / 0;
+- unique seeds: 6,960;
+- scientific retries or regenerated keys: 0;
+- execution source commit: `080dfc83a6c51711f782fa889c6ffff4fcec13e1`;
+- journal SHA-256: `9a635787561d5bc6e56cf2c7ffae9e391bebc817488f38369ffc8c0fea14a5b7`;
+- model/revision, manifest, schedule, protocol, and identity hashes: exact;
+- scientific peeking during collection: none.
 
-No controller, source axis, dose, null, family fold, item, seed, generation
-setting, estimator, or threshold changed during execution qualification.
+The corrected pre-collection RunPod wallet value was US$35.23. The frozen
+scientific design, execution engine, cost ceiling, and all estimators remained
+unchanged.
 
-## Budget chronology
+## Primary family-held-out prediction
 
-The original US$25 ceiling correctly stopped Q2 V2 before the common panel.
-After that clean stop, and still at zero common-panel rows, the principal
-authorized an operational amendment with a preferred cumulative projection of
-US$30 and a hard cumulative ceiling of US$45. The amendment did not alter the
-scientific design.
+| Metric | Mean rho | Median rho | One-sided QAP p | Mean RMSE | Constant RMSE | RMSE ratio | Mean-rho bootstrap 95% interval |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| M0 flat | 0.2013 | 0.2218 | 0.000700 | 0.016088 | 0.016305 | 0.9867 | [0.0541, 0.2513] |
+| M1 whitened | 0.1902 | 0.1970 | 0.000900 | 0.016112 | 0.016305 | 0.9882 | [0.0543, 0.2376] |
+| M2 finite secant | 0.4279 | 0.4025 | 0.002200 | 0.014785 | 0.016305 | 0.9067 | [0.1205, 0.4826] |
 
-## A40 cost-tail qualification
+The bootstrap RMSE-ratio intervals were respectively `[0.9709, 1.0048]`,
+`[0.9743, 1.0045]`, and `[0.8537, 1.0074]`. Bootstrap intervals are descriptive;
+the frozen classification uses the prespecified point-estimate decision rule.
 
-The exact serial A40 reference runner processed the same 174 non-scientific
-fixture rows. The persisted distribution was:
+### M2 fold stability
 
-| Statistic | Runtime (s) | Generated tokens |
-|---|---:|---:|
-| p50 | 0.594274 | 16 |
-| p75 | 4.214919 | 114 |
-| p90 | 174.216478 | 4,096 |
-| p95 | 174.747427 | 4,096 |
-| p99 | 176.230632 | 4,096 |
-| max | 177.583943 | 4,096 |
+All six held-out source-family correlations were positive:
 
-Exactly 29/174 rows reached 4,096 generated tokens. Those 16.67% of rows
-accounted for 96.22% of fixture runtime and 95.69% of generated tokens. No row
-was excluded and `max_new_tokens=4096` remains frozen.
+| Held-out family | M2 rho |
+|---|---:|
+| Counterfactual checking | 0.3785 |
+| Decompose then solve | 0.4185 |
+| Explicit state tracking | 0.5243 |
+| Independent verification | 0.3321 |
+| Invariant checking | 0.3864 |
+| Type/representation discipline | 0.5277 |
 
-## GPU bakeoff and equivalence
+M0 and M1 were both statistically associated under the QAP diagnostic but had
+small held-out correlations and essentially no calibrated RMSE improvement.
+Whitening did not improve over flat geometry. M2 improved both rank association
+and RMSE, but not enough to cross the frozen 0.90 RMSE-ratio threshold.
 
-The platform selection rule was frozen before benchmark results: choose the
-qualified platform with the lowest projected complete common-panel dollar cost,
-breaking ties by wall-clock time.
+## Controller-bank evidence vector
 
-| Platform | Price | Mean s/row | Tokens/s | Projected hours | Projected panel cost | Qualification |
-|---|---:|---:|---:|---:|---:|---|
-| A40 secure | US$0.44/h | 30.246668 | 23.5871 | 73.0961 | US$32.1623 | PASS, serial reference |
-| RTX 6000 Ada secure | US$0.84/h | 18.349891 | 38.8013 | 44.3456 | US$37.2503 | FAIL, not exact-equivalent |
-| H100 SXM secure | US$3.29/h | not run | not run | not run | not run | Not economically plausible for bounded bakeoff |
+The final bank retained the prospectively qualified dynamic range. At selected
+doses, semantic movement ranged from 0 to 0.25 (mean 0.0903; median 0.0833), and
+12 of 24 directions met the frozen causal rule. All 24 met the calibration
+safety rule. Selected displacement norms spanned 7.819 to 66.800 across all
+four dose bins.
 
-The RTX engineering hook audit passed, but exact discrete equivalence failed:
-116 compared-field mismatches occurred across 21 of 174 fixture-condition
-rows, including generated token sequences and parser results. The RTX platform
-was therefore rejected. No equivalence criterion was weakened.
+On the common panel, the 24 meaningful controllers remained mechanically safe:
+commitment validity and semantic evaluability ranged from 0.9833 to 1.0000.
+Their accuracy changes ranged from -0.0167 to +0.0292. The bank was not selected
+on accuracy, G, C, D, rescue, damage, or common-panel outcomes.
 
-Microbatching was not introduced because exact per-logical-row autoregressive
-RNG and hook equivalence was not a straightforward bounded change. The frozen
-serial reference runner was retained.
+Descriptively:
 
-## Engine and wallet decision
+- calibration movement versus mean common-panel error distance: rho 0.4760;
+- displacement norm versus mean error distance: rho 0.4086;
+- all-edge geometry/error-distance rho: M0 0.1521, M1 0.1476, M2 0.4326;
+- the four random controls had near-zero or negative mean G/C/D and remained
+  secondary controls rather than the primary prediction population.
 
-Selected engine: `A40_SECURE_REFERENCE`, serial, no batching.
+These descriptive results do not modify the frozen classification and are not
+controller-selection evidence.
 
-- observed cumulative Q2-V2 RunPod billing snapshot: US$3.9482;
-- projected common-panel cost with frozen 25% margin: US$32.1623;
-- projected cumulative cost: US$36.1105;
-- preferred US$30 projection: FAIL;
-- hard US$45 ceiling: PASS;
-- principal-reported available wallet: US$5.42;
-- minimum additional wallet for the projected panel: US$26.7423;
-- reasonable 10% operational buffer: US$3.2162;
-- recommended top-up: US$29.9585, practically US$30.00.
+## Analysis and forensic incidents
 
-Because the wallet gate failed, no common-panel process was started. This is an
-operational funding block, not a scientific or predictive geometry result.
+Before outcomes, M1 was corrected to match the already frozen lock: shrinkage
+uses `(1-lambda) Sigma + lambda * mean_variance * I`, and distances use normalized
+whitened vectors. The amendment was prospective and changed no scientific
+object or threshold.
 
-## Predictive results
+After collection, the first analysis invocation stopped before producing any
+metric because the crash-safe journal stores each scientific row inside a
+versioned envelope. The three analysis paths were independently repaired to
+unwrap and validate the immutable envelope and logical key. No output was
+regenerated, no parser value changed, and no metric had been produced or
+inspected before the repair. This is a deterministic non-scientific I/O repair.
 
-| Metric | Family-held-out rho | Permutation | RMSE |
-|---|---|---|---|
-| M0 flat | NOT RUN | NOT RUN | NOT RUN |
-| M1 whitened | NOT RUN | NOT RUN | NOT RUN |
-| M2 finite secant | NOT RUN | NOT RUN | NOT RUN |
+The independent audit then verified schedule completeness, unique keys and
+seeds, exact source/model/provenance, zero retries, estimands, geometries,
+family folds, QAP values, and the final classification. Maximum primary/audit
+numeric difference was `1.5543122344752192e-15`.
 
-No correctness, D matrix, G, C, controller accuracy, geometry association,
-family ranking, or predictive common-panel outcome has been computed or read.
+## Cost and infrastructure
 
-## Evidence vector
+The selected A40 serial reference engine accumulated 2.6602 billed GPU-hours.
+The final post-deletion RunPod billing snapshot attributes US$1.1853 to the
+common-panel Pod, bringing cumulative Q2 V2 cost to US$5.1335. Summed
+per-trajectory generation duration was 2.8978 hours. The complete accounting is
+persisted in `V2_COST_CLOSEOUT.json`; actual cost was far below the US$32.1623
+panel projection and the US$45 cumulative ceiling.
 
-- Controller bank: QUALIFIED.
-- Meaningful source-family breadth: six families, 24 controllers.
-- Null geometry: QUALIFIED.
-- A40 serial execution engine: QUALIFIED.
-- RTX 6000 Ada alternative: REJECTED by exact-equivalence gate.
-- Hard cumulative cost ceiling: PASS.
-- Available wallet gate: FAIL.
-- Common panel: SCIENTIFICALLY UNTOUCHED, 0 / 6,960.
-- Predictive M0/M1/M2 evidence: DOES NOT EXIST.
+After journal recovery and SHA verification, the Pod was deleted. The dedicated
+RunPod control plane reports zero Pods and zero network volumes.
 
-## Infrastructure incidents
+## Scientific interpretation
 
-The first RTX attempt stopped before fixture generation because the cloned
-environment lacked `accelerate`. The exact A40 version, `accelerate==1.14.0`,
-was restored, the engineering gate was rerun, and the RTX benchmark restarted
-from zero. No scientific item was involved. The historical A40 preflight had
-persisted summary statistics but not row-level timing arrays; the exact frozen
-non-scientific fixture schedule was therefore rerun prospectively to persist the
-cost tail. Neither incident changed scientific semantics.
+Q2 V2 is a DEVELOPMENT composite null under its frozen decision rule. It is not
+evidence that all intervention geometry is unrelated to error geometry. The
+evidence vector instead separates three observations:
 
-The temporary RTX Pod was terminated after artifact recovery. The A40 Pod was
-stopped immediately after its benchmark artifact was recovered, then terminated
-only after local artifact verification and branch push. The dedicated RunPod
-MCP subsequently verified zero Pods, zero active GPUs, and zero network volumes.
+1. flat and covariance-whitened representation geometry showed weak held-out
+   rank association and negligible RMSE improvement;
+2. finite behavioral secant geometry showed a stronger, family-consistent,
+   permutation-supported association;
+3. that M2 association narrowly missed the frozen calibrated-prediction gate.
 
-## Next action
+The next scientific question is whether the M2 association is reproducible and
+can clear a prospectively justified calibration criterion on fresh families or
+models, without selecting a geometry after outcomes. No next experiment is
+authorized or executed here.
 
-`PRINCIPAL_RESEARCHER_REVIEW`: top up the RunPod wallet before authorizing an
-immediate continuation from the frozen A40 engine lock. Q3 and all further
-experiments remain unauthorized.
+## Firewall
+
+- Q1: `Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL`, unchanged;
+- Q2 role: DEVELOPMENT;
+- Q3: not run;
+- confirmatory holdout: already consumed by Q1 and not reused;
+- new inference after Q2 V2: none;
+- next action: `PRINCIPAL_RESEARCHER_REVIEW`.

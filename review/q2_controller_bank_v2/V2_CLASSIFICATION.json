@@ -1,0 +1,11 @@
+{
+  "all_metrics_reported": true,
+  "best_metric_cherry_picking": false,
+  "classification": "Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL",
+  "qualifying_metrics": [],
+  "thresholds": {
+    "qap_one_sided_p_max": 0.05,
+    "rmse_ratio_to_constant_max": 0.9,
+    "spearman_min": 0.3
+  }
+}

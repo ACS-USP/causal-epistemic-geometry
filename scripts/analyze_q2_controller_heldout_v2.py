@@ -30,6 +30,25 @@ def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def read_journal_rows(path: Path) -> list[dict[str, Any]]:
+    """Read rows from the frozen Research-OS crash-safe JSONL envelope."""
+
+    wrappers = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+    rows: list[dict[str, Any]] = []
+    for index, wrapper in enumerate(wrappers):
+        if not isinstance(wrapper, dict) or wrapper.get("version") != "research-os-jsonl-v1":
+            raise RuntimeError(f"unsupported Q2 V2 journal wrapper at line {index + 1}")
+        row = wrapper.get("row")
+        key_fields = wrapper.get("key_fields")
+        if not isinstance(row, dict) or not isinstance(key_fields, list):
+            raise RuntimeError(f"invalid Q2 V2 journal envelope at line {index + 1}")
+        expected_key = [row[field] for field in key_fields]
+        if wrapper.get("key") != expected_key:
+            raise RuntimeError(f"Q2 V2 journal key mismatch at line {index + 1}")
+        rows.append(row)
+    return rows
+
+
 def write_json(path: Path, value: Any) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -88,11 +107,7 @@ def load_journal() -> tuple[dict[str, Any], list[dict[str, Any]]]:
     lock = read_json(REVIEW / "V2_FINAL_PROTOCOL_LOCK.json")
     if lock["status"] != "FROZEN_PRE_COMMON_PANEL":
         raise RuntimeError("Q2 V2 final lock is not frozen")
-    rows = [
-        json.loads(line)
-        for line in (REVIEW / "V2_COMMON_PANEL_JOURNAL.jsonl").read_text().splitlines()
-        if line.strip()
-    ]
+    rows = read_journal_rows(REVIEW / "V2_COMMON_PANEL_JOURNAL.jsonl")
     expected = int(lock["common_panel"]["expected_rows"])
     keys = [(row["item_id"], row["condition"], int(row["rollout_index"])) for row in rows]
     if len(rows) != expected or len(keys) != len(set(keys)):

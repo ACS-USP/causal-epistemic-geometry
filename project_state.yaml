@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_DEVELOPMENT_V2_COMMON_PANEL_COLLECTION_AUTHORIZED
+  scientific_stage: Q2_DEVELOPMENT_V2_COMPLETE
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,46 +19,37 @@ project:
     utility?
 
 current:
-  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
-  lifecycle: PROSPECTIVE_LOCK
-  stage: DEVELOPMENT_FROZEN_COMMON_PANEL_EXECUTION
+  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_COMPLETE
   source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
   execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
   summary: >-
-    Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel
-    outcomes. Q2 V2 source qualification completed exactly 576 rows: all six
-    frozen conceptual axes qualified, yielding 24 signed/location directions.
-    The 1,164-row matched label-free calibration completed. The final bank
-    qualifies with 24 meaningful directions across six families, 12 causal
-    directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item
-    common panel is locked and remains scientifically untouched. The original
-    US$25 gate correctly stopped collection. A subsequent principal-reviewed
-    material budget amendment authorized execution-engine cost qualification
-    with a preferred cumulative projection of US$30 and a hard RunPod ceiling
-    of US$45. The exact serial A40 reference engine qualified and was selected;
-    the faster RTX 6000 Ada failed exact discrete equivalence. The A40 projects
-    US$32.1623 for the complete common panel and US$36.1105 cumulatively. The
-    principal subsequently added US$30; the corrected current wallet is US$35.23,
-    removing the financial block before any common-panel row. Collection
-    of the exact frozen 6,960-row panel is authorized on the A40 serial reference
-    engine. No correctness or common-panel outcome has been used. Q1 remains
-    immutable and Q3 is not run.
-  next_authorized_action: >-
-    Execute and operationally monitor the complete frozen 6,960-row common panel
-    without scientific peeking, then run the frozen analysis and forensic audit.
-  runpod: A40_PROVISIONING_AUTHORIZED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q2_V2_FROZEN_COMMON_PANEL_CONTINUATION
+    Q2 V2 completed its exact frozen 6,960-row common panel on 120 DEVELOPMENT
+    items with 24 meaningful controllers across six held-out source families
+    and four fresh null controls. The forensic audit was clean and reproduced
+    every primary metric to 1.56e-15. M0 flat and M1 whitened showed weak
+    held-out rank association and negligible RMSE improvement. M2 finite secant
+    was stronger and positive in all six family folds (mean rho 0.4279,
+    p_QAP 0.00220), but its RMSE ratio of 0.9067 narrowly missed the frozen
+    maximum of 0.90. The mechanical classification is
+    Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL. This is a DEVELOPMENT composite
+    null with a preserved M2 association sub-result, not a claim that no
+    geometric structure exists. Q1 remains immutable and Q3 was not run.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
+  runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: NONE
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: Q2_V2_FROZEN_COMMON_PANEL_COLLECTION_AUTHORIZED
+  geometry_q2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V2_FROZEN_COMMON_PANEL_COLLECTION
-  free_generation: NOT_AUTHORIZED; ONLY_FROZEN_6960_ROW_Q2_V2_PANEL
+  current_task: PRINCIPAL_RESEARCHER_REVIEW
+  free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -98,31 +89,30 @@ confirmatory_program:
 
 instrument_history:
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
-    status: FROZEN_COMMON_PANEL_COLLECTION_AUTHORIZED
+    status: COMPLETE_DEVELOPMENT_COMPOSITE_NULL
     conclusion: >-
       Six of six conceptual source axes qualified, and label-free per-direction
       calibration produced a qualified bank of 24 meaningful controllers across
       six families, including 12 causal directions and four dose bins. Four
-      fresh nulls are SVD-span-orthogonal. The original US$25 gate correctly
-      stopped collection. Under the prospective US$45 amendment, an exact A40
-      engine benchmark projected US$36.1105 cumulatively, while RTX 6000 Ada
-      failed exact discrete equivalence. The hard ceiling passes, but the
-      principal-reported US$5.42 wallet was initially insufficient for the
-      US$32.1623 common-panel projection. A subsequent US$30 principal top-up
-      removed the financial block while the common panel remained at zero rows.
-      The exact frozen 6,960-row panel is now authorized on the A40 serial
-      reference engine; predictive M0/M1/M2 remain unrun until collection is
-      complete.
+      fresh nulls are SVD-span-orthogonal. The complete 6,960-row common panel
+      then ran without scientific peeking. M0/M1 did not approach the frozen
+      predictive gate. M2 finite secant produced mean family-held-out rho
+      0.4279 with all six folds positive and p_QAP 0.00220, but its RMSE ratio
+      0.9067 missed the frozen 0.90 threshold. The exact classification is
+      Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL, with the stronger M2 association
+      retained explicitly as DEVELOPMENT evidence.
     source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
     source_qualification_rows: 576
     dose_calibration_rows: 1164
-    common_panel_rows: 0
+    common_panel_rows: 6960
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED_NOT_REUSED
-    runpod_status: TERMINATED
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
     active_pods: 0
     retained_pod_disk_gb: 0
-    cost_usd: 3.948212791234255
+    cost_usd: 5.133510112762451
+    forensic_classification: Q2_V2_FORENSIC_CLEAN
+    predictive_classification: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
     q3: NOT_RUN
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
     status: COMPLETE_DEVELOPMENT_BANK_NOT_QUALIFIED

@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_DEVELOPMENT_V2_COMMON_PANEL_COLLECTION_AUTHORIZED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_DEVELOPMENT_V2_COMPLETE` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel outcomes. Q2 V2 source qualification completed exactly 576 rows: all six frozen conceptual axes qualified, yielding 24 signed/location directions. The 1,164-row matched label-free calibration completed. The final bank qualifies with 24 meaningful directions across six families, 12 causal directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item common panel is locked and remains scientifically untouched. The original US$25 gate correctly stopped collection. A subsequent principal-reviewed material budget amendment authorized execution-engine cost qualification with a preferred cumulative projection of US$30 and a hard RunPod ceiling of US$45. The exact serial A40 reference engine qualified and was selected; the faster RTX 6000 Ada failed exact discrete equivalence. The A40 projects US$32.1623 for the complete common panel and US$36.1105 cumulatively. The principal subsequently added US$30; the corrected current wallet is US$35.23, removing the financial block before any common-panel row. Collection of the exact frozen 6,960-row panel is authorized on the A40 serial reference engine. No correctness or common-panel outcome has been used. Q1 remains immutable and Q3 is not run.
+Q2 V2 completed its exact frozen 6,960-row common panel on 120 DEVELOPMENT items with 24 meaningful controllers across six held-out source families and four fresh null controls. The forensic audit was clean and reproduced every primary metric to 1.56e-15. M0 flat and M1 whitened showed weak held-out rank association and negligible RMSE improvement. M2 finite secant was stronger and positive in all six family folds (mean rho 0.4279, p_QAP 0.00220), but its RMSE ratio of 0.9067 narrowly missed the frozen maximum of 0.90. The mechanical classification is Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL. This is a DEVELOPMENT composite null with a preserved M2 association sub-result, not a claim that no geometric structure exists. Q1 remains immutable and Q3 was not run.
 
-**Next authorized action:** Execute and operationally monitor the complete frozen 6,960-row common panel without scientific peeking, then run the frozen analysis and forensic audit.
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

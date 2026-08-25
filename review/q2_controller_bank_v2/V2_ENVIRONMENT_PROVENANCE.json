@@ -1,0 +1,32 @@
+{
+  "schema_version": "q2-v2-environment-provenance-v1",
+  "platform": "RunPod",
+  "pod_id": "1yf9s3vnlf2812",
+  "data_center": "CA-MTL-1",
+  "gpu": "NVIDIA A40 48GB SECURE",
+  "rate_usd_per_hour": 0.44,
+  "engine": "SERIAL_REFERENCE",
+  "environment_profile": "CORE_QWEN",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "transformers": "4.57.1",
+    "accelerate": "1.14.0",
+    "huggingface_hub": "0.36.0"
+  },
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "execution_source_commit": "080dfc83a6c51711f782fa889c6ffff4fcec13e1",
+  "manifest_sha256": "365f10c5e88069079f43afb4f7a7845bf702c62dbcb44d19c97241ab7358a91b",
+  "schedule_sha256": "f0a9b69af9befa1ac38737ef9042fe4d9cd315abc4f5e3c190788594c7bc5256",
+  "protocol_lock_sha256": "c0665efc96c4dbc06f9cc201aaac700f3485ff62dcc82a3002bfddd2a7e7b0f3",
+  "journal_sha256": "9a635787561d5bc6e56cf2c7ffae9e391bebc817488f38369ffc8c0fea14a5b7",
+  "remote_preflight": "PASS",
+  "scientific_rows": 6960,
+  "no_midrun_scientific_peeking": true,
+  "collection_integrity": "PASS",
+  "resource_closeout": {
+    "pod_deleted_after_local_hash_verification": true,
+    "active_pods": 0,
+    "network_volumes": 0
+  }
+}

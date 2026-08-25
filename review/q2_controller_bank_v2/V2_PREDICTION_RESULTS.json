@@ -1,0 +1,293 @@
+{
+  "M0_FLAT": {
+    "aggregate": {
+      "M0_FLAT": {
+        "mean_constant_rmse": 0.016305085334629325,
+        "mean_rmse": 0.016088385452795145,
+        "mean_spearman": 0.2013250847370143,
+        "median_spearman": 0.22183027975409902,
+        "qap_null_mean": 0.0009043058891526087,
+        "qap_null_p95": 0.08741154225512225,
+        "qap_p_one_sided": 0.0006999300069993001,
+        "rmse_ratio_to_constant": 0.9867096750868305
+      }
+    },
+    "families": [
+      "COUNTERFACTUAL_CHECKING",
+      "DECOMPOSE_THEN_SOLVE",
+      "EXPLICIT_STATE_TRACKING",
+      "INDEPENDENT_VERIFICATION",
+      "INVARIANT_CHECKING",
+      "TYPE_REPRESENTATION_DISCIPLINE"
+    ],
+    "folds": {
+      "COUNTERFACTUAL_CHECKING": {
+        "metrics": {
+          "M0_FLAT": {
+            "constant_rmse": 0.013685510790676524,
+            "rmse": 0.014040072655627492,
+            "spearman": -0.0049920903612308025,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "DECOMPOSE_THEN_SOLVE": {
+        "metrics": {
+          "M0_FLAT": {
+            "constant_rmse": 0.01760704083718121,
+            "rmse": 0.017174819008465896,
+            "spearman": 0.3794781452181398,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "EXPLICIT_STATE_TRACKING": {
+        "metrics": {
+          "M0_FLAT": {
+            "constant_rmse": 0.020259692496261885,
+            "rmse": 0.019734711794634305,
+            "spearman": 0.26515205959013327,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "INDEPENDENT_VERIFICATION": {
+        "metrics": {
+          "M0_FLAT": {
+            "constant_rmse": 0.0171894576587342,
+            "rmse": 0.016930732663511628,
+            "spearman": 0.1959645186608808,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "INVARIANT_CHECKING": {
+        "metrics": {
+          "M0_FLAT": {
+            "constant_rmse": 0.014793255640142073,
+            "rmse": 0.014414826912413727,
+            "spearman": 0.24769604084731722,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "TYPE_REPRESENTATION_DISCIPLINE": {
+        "metrics": {
+          "M0_FLAT": {
+            "constant_rmse": 0.014295554584780074,
+            "rmse": 0.014235149682117844,
+            "spearman": 0.12465183446684573,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      }
+    },
+    "geometry_name": "M0_FLAT"
+  },
+  "M1_WHITENED": {
+    "aggregate": {
+      "M1_WHITENED": {
+        "mean_constant_rmse": 0.016305085334629325,
+        "mean_rmse": 0.016111898320046784,
+        "mean_spearman": 0.19017803063847938,
+        "median_spearman": 0.19699991950629228,
+        "qap_null_mean": 0.0008868713347742542,
+        "qap_null_p95": 0.08755444073559143,
+        "qap_p_one_sided": 0.0008999100089991,
+        "rmse_ratio_to_constant": 0.9881517323817838
+      }
+    },
+    "families": [
+      "COUNTERFACTUAL_CHECKING",
+      "DECOMPOSE_THEN_SOLVE",
+      "EXPLICIT_STATE_TRACKING",
+      "INDEPENDENT_VERIFICATION",
+      "INVARIANT_CHECKING",
+      "TYPE_REPRESENTATION_DISCIPLINE"
+    ],
+    "folds": {
+      "COUNTERFACTUAL_CHECKING": {
+        "metrics": {
+          "M1_WHITENED": {
+            "constant_rmse": 0.013685510790676524,
+            "rmse": 0.013913083851764171,
+            "spearman": 0.025629248600960053,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "DECOMPOSE_THEN_SOLVE": {
+        "metrics": {
+          "M1_WHITENED": {
+            "constant_rmse": 0.01760704083718121,
+            "rmse": 0.017246318220911026,
+            "spearman": 0.3628329026264059,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "EXPLICIT_STATE_TRACKING": {
+        "metrics": {
+          "M1_WHITENED": {
+            "constant_rmse": 0.020259692496261885,
+            "rmse": 0.01979745806390138,
+            "spearman": 0.2455032656864754,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "INDEPENDENT_VERIFICATION": {
+        "metrics": {
+          "M1_WHITENED": {
+            "constant_rmse": 0.0171894576587342,
+            "rmse": 0.016990614582245565,
+            "spearman": 0.16989617147647426,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "INVARIANT_CHECKING": {
+        "metrics": {
+          "M1_WHITENED": {
+            "constant_rmse": 0.014793255640142073,
+            "rmse": 0.014427488987653643,
+            "spearman": 0.2241036675361103,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "TYPE_REPRESENTATION_DISCIPLINE": {
+        "metrics": {
+          "M1_WHITENED": {
+            "constant_rmse": 0.014295554584780074,
+            "rmse": 0.014296426213804914,
+            "spearman": 0.1131029279044504,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      }
+    },
+    "geometry_name": "M1_WHITENED"
+  },
+  "M2_FINITE_SECANT": {
+    "aggregate": {
+      "M2_FINITE_SECANT": {
+        "mean_constant_rmse": 0.016305085334629325,
+        "mean_rmse": 0.014784533791244767,
+        "mean_spearman": 0.4279201714356426,
+        "median_spearman": 0.4024632824005515,
+        "qap_null_mean": 0.05200174351281023,
+        "qap_null_p95": 0.30663518520907007,
+        "qap_p_one_sided": 0.0021997800219978004,
+        "rmse_ratio_to_constant": 0.9067437236801725
+      }
+    },
+    "families": [
+      "COUNTERFACTUAL_CHECKING",
+      "DECOMPOSE_THEN_SOLVE",
+      "EXPLICIT_STATE_TRACKING",
+      "INDEPENDENT_VERIFICATION",
+      "INVARIANT_CHECKING",
+      "TYPE_REPRESENTATION_DISCIPLINE"
+    ],
+    "folds": {
+      "COUNTERFACTUAL_CHECKING": {
+        "metrics": {
+          "M2_FINITE_SECANT": {
+            "constant_rmse": 0.013685510790676524,
+            "rmse": 0.013143346359991485,
+            "spearman": 0.3785218815184451,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "DECOMPOSE_THEN_SOLVE": {
+        "metrics": {
+          "M2_FINITE_SECANT": {
+            "constant_rmse": 0.01760704083718121,
+            "rmse": 0.015577858281198745,
+            "spearman": 0.41854878161162673,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "EXPLICIT_STATE_TRACKING": {
+        "metrics": {
+          "M2_FINITE_SECANT": {
+            "constant_rmse": 0.020259692496261885,
+            "rmse": 0.018234565316359298,
+            "spearman": 0.5242912781674759,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "INDEPENDENT_VERIFICATION": {
+        "metrics": {
+          "M2_FINITE_SECANT": {
+            "constant_rmse": 0.0171894576587342,
+            "rmse": 0.015491295891333285,
+            "spearman": 0.33209138073702593,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "INVARIANT_CHECKING": {
+        "metrics": {
+          "M2_FINITE_SECANT": {
+            "constant_rmse": 0.014793255640142073,
+            "rmse": 0.013285107589955592,
+            "spearman": 0.3863777831894763,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      },
+      "TYPE_REPRESENTATION_DISCIPLINE": {
+        "metrics": {
+          "M2_FINITE_SECANT": {
+            "constant_rmse": 0.014295554584780074,
+            "rmse": 0.012975029308630193,
+            "spearman": 0.5276899233898051,
+            "test_edges": 80
+          }
+        },
+        "test_count": 4,
+        "train_count": 20
+      }
+    },
+    "geometry_name": "M2_FINITE_SECANT"
+  }
+}

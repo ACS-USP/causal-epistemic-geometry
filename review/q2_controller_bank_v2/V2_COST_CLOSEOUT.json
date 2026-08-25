@@ -1,0 +1,30 @@
+{
+  "schema_version": "q2-v2-cost-closeout-v1",
+  "wallet_usd_before_collection": 35.23,
+  "wallet_value_role": "PRINCIPAL_CORRECTED_PRE_COLLECTION_WALLET_GATE_VALUE",
+  "panel_projected_cost_usd_with_25pct_margin": 32.162290024590526,
+  "projected_cumulative_cost_usd": 36.11050281582478,
+  "hard_cumulative_ceiling_usd": 45.0,
+  "prior_q2_v2_cost_usd": 3.948212791234255,
+  "common_panel_pod_id": "1yf9s3vnlf2812",
+  "common_panel_gpu": "NVIDIA A40 48GB SECURE",
+  "pod_rate_usd_per_hour": 0.44,
+  "pod_started_at": "2026-08-25T03:38:16.489Z",
+  "billed_gpu_hours_equivalent": 2.6601873877569523,
+  "summed_generation_seconds": 10432.149724135175,
+  "summed_generation_hours": 2.8978193678153264,
+  "generation_time_cost_equivalent_usd": 1.2750405218387437,
+  "runpod_billing_snapshot": {
+    "queried_at_closeout": "2026-08-25",
+    "recognized_common_panel_pod_cost_usd": 1.1852973215281963,
+    "status": "FINAL_POST_DELETION_SNAPSHOT",
+    "note": "Sum of all billing records for Pod 1yf9s3vnlf2812 after deletion; excludes the separate pre-existing Pod record in the same hourly query."
+  },
+  "actual_panel_pod_cost_usd": 1.1852973215281963,
+  "actual_cumulative_q2_v2_cost_usd": 5.133510112762451,
+  "cost_gate_pass": true,
+  "resources_after_closeout": {
+    "active_pods": 0,
+    "network_volumes": 0
+  }
+}

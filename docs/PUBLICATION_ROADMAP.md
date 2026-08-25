@@ -90,7 +90,8 @@ JVP/Fisher diagnostics prospectively. Exact autograd implementations agreed,
 but the frozen BF16 finite-difference, local-KL, and full-sequence/KV engineering
 gates failed before scientific geometry collection. Program C is therefore not
 promoted: no predictive pullback result, positive or negative, was obtained.
-Q2 and the holdout remain closed pending principal review.
+At that historical point Q2 remained closed pending principal review; the later
+Q2 V2 authorization and result are recorded below.
 
 Gate 12.1 subsequently showed that the FP32 computational lift has coherent
 full-sequence/KV semantics and mutually consistent exact JVP/VJP,
@@ -127,7 +128,8 @@ domain-general careful-computation controller. The next drafted priority is a
 second task where textual CAREFUL is prospectively useful, with fixed
 controllers and no task-outcome controller search. Program B remains important
 because source readability weakly ranked causal-Q across Ministral layers.
-Program C remains paused; Q2 and Q3 remain closed.
+Program C remained paused at Gate 13.1; the later Q2 V2 DEVELOPMENT result is
+recorded below. Q3 remains closed.
 
 ## Q1 confirmatory fixed-controller result
 
@@ -148,3 +150,27 @@ result localizes the failure to output safety rather than absence of measured
 complementarity; that distinction is descriptive and does not override the
 failed confirmatory decision rule. Programs B and C remain mechanistic research
 directions, but Q2 and Q3 are not authorized by this closeout.
+
+## Q2 V2 controller-family-held-out DEVELOPMENT result
+
+A later, separately authorized Q2 V2 built a prospectively qualified bank of 24
+meaningful L27 controllers across six conceptual source families, with
+per-direction label-free dose calibration and four fresh span-orthogonal nulls.
+The full 120-item common panel completed with 6,960 trajectories and a clean
+independent audit.
+
+No prespecified geometry passed the complete composite prediction gate. M0 flat
+and M1 covariance-whitened geometry had mean family-held-out correlations of
+0.2013 and 0.1902 with RMSE ratios of 0.9867 and 0.9882. M2 finite behavioral
+secant geometry was materially stronger: mean held-out rho 0.4279, all six
+family folds positive, and one-sided QAP p=0.00220. Its RMSE ratio was 0.9067,
+narrowly above the frozen maximum of 0.90. The exact classification is
+`Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL`.
+
+For Program C, this is a composite DEVELOPMENT null with a meaningful
+dissociation: static flat/whitened representation geometry did not qualify,
+whereas finite behavioral secants showed reproducible rank structure but fell
+short of the calibrated-prediction requirement. Program C is therefore not a
+paper claim. Its next evidence gate is a fresh, prospectively frozen replication
+of the M2 association and calibration performance across unseen controller
+families or models, without post-outcome metric selection. Q3 remains not run.

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import numpy as np
 import pytest
 from scripts.bind_q2_execution_bundle import manifest_rows
@@ -258,3 +260,25 @@ def test_v2_primary_m1_uses_frozen_shrinkage_and_normalized_geometry(tmp_path, m
     fit = fit_whitening(activations, regularization_fraction=0.1)
     expected = whitened_geometry(np.stack(list(vectors.values())), fit)["normalized_euclidean"]
     assert np.allclose(analysis.m1_geometry(lock, vectors), expected)
+
+
+def test_v2_analysis_unwraps_and_validates_crash_safe_journal(tmp_path) -> None:
+    import scripts.analyze_q2_controller_heldout_v2 as analysis
+
+    path = tmp_path / "journal.jsonl"
+    row = {"item_id": "item-1", "condition": "BASELINE", "rollout_index": 0}
+    wrapper = {
+        "version": "research-os-jsonl-v1",
+        "identity": {"experiment_id": "Q2"},
+        "identity_hash": "frozen",
+        "key_fields": ["item_id", "condition", "rollout_index"],
+        "key": ["item-1", "BASELINE", 0],
+        "row": row,
+    }
+    path.write_text(json.dumps(wrapper) + "\n", encoding="utf-8")
+    assert analysis.read_journal_rows(path) == [row]
+
+    wrapper["key"] = ["wrong", "BASELINE", 0]
+    path.write_text(json.dumps(wrapper) + "\n", encoding="utf-8")
+    with pytest.raises(RuntimeError, match="key mismatch"):
+        analysis.read_journal_rows(path)

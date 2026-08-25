@@ -35,6 +35,10 @@
     "bytes": 1684,
     "sha256": "087dff8914dbd3103e115504c9181b6729dd86cb6224b1c28e310149cdb7360b"
   },
+  "POST_COLLECTION_ANALYSIS_IO_REPAIR.md": {
+    "bytes": 1209,
+    "sha256": "d39900a537b9ac0348bb0b57d51641be5590c98c02a4250806537411b7615be3"
+  },
   "PREMORTEM.json": {
     "bytes": 2225,
     "sha256": "5823381bbe61d7fb22a1b2abbb35b119d60234f7ca4265c479e9ecaa7e908641"
@@ -56,8 +60,8 @@
     "sha256": "65f2ceeed6c4585f023b9ac73b265fbb5209b44559b3a9ce723aad216b20312d"
   },
   "REPORT.md": {
-    "bytes": 6183,
-    "sha256": "1c30e357d3db69a3ea0f65db4f10396426ba13abab0f75fa582c8b3aec1d801f"
+    "bytes": 7139,
+    "sha256": "bd1c165c63c1d1f002bf4d2d3eea20ed4824220a63a6b27996f399c9ad2d1426"
   },
   "RUNPOD_STATUS.json": {
     "bytes": 707,
@@ -83,6 +87,10 @@
     "bytes": 1299,
     "sha256": "bcd66618420b9c07fe3d1cf30cf6c68f54036c14c2aeb1cd8b89b09cf5fb851a"
   },
+  "V2_BOOTSTRAP_INTERVALS.json": {
+    "bytes": 6001,
+    "sha256": "8643852e3613eed9c0081d228747682d1cd07a4197d911425f0fe9849feddf95"
+  },
   "V2_CALIBRATION_SCHEDULE.json": {
     "bytes": 329017,
     "sha256": "d4cf161c46327e44578bc6da29199eb0d981ac9b80a50932e528b9d326d1ca8e"
@@ -90,6 +98,30 @@
   "V2_CALIBRATION_TEMPLATE_SCHEDULE.json": {
     "bytes": 562,
     "sha256": "e69fe6e77a84b5f6d0724305a1b240c4115c4e9b34224b6e664a6ce2e8940226"
+  },
+  "V2_CLASSIFICATION.json": {
+    "bytes": 284,
+    "sha256": "028d1ff9e963147e90ec3e86eb7763f00aadbb81daaf79292502f93385a88fbd"
+  },
+  "V2_CLOSEOUT_EVIDENCE.json": {
+    "bytes": 30120,
+    "sha256": "cda4f3bc313586d8f9ba3a57fee5908ccf1948dd726cda327fef785f98298288"
+  },
+  "V2_COLLECTION_INTEGRITY.json": {
+    "bytes": 553,
+    "sha256": "8495fde86cf9b759933ad3d2ca73571782ca3eed49b82b261ed19c8ed1c6b2d2"
+  },
+  "V2_COLLECTION_METADATA.json": {
+    "bytes": 211,
+    "sha256": "15498fe8c0d99a412f4261bd6cbb88d3af6b101f2c0856eff75e3282636d6d14"
+  },
+  "V2_COMMON_PANEL_EXECUTION.log": {
+    "bytes": 3989,
+    "sha256": "32a9d2e4d3c2eed55c7827cdce82102fae15d83a4fa02aa2448dd4ae010949d5"
+  },
+  "V2_COMMON_PANEL_JOURNAL.jsonl": {
+    "bytes": 49257624,
+    "sha256": "9a635787561d5bc6e56cf2c7ffae9e391bebc817488f38369ffc8c0fea14a5b7"
   },
   "V2_COMMON_PANEL_MANIFEST.json": {
     "bytes": 159429,
@@ -102,6 +134,14 @@
   "V2_COMMON_PANEL_SCHEDULE_TEMPLATE.json": {
     "bytes": 2332,
     "sha256": "5cf6c2004e1473cfea0e613fc6d46ec2a178ad97dfc6bac874f30d9196ea7de2"
+  },
+  "V2_CONDITION_SUMMARY.json": {
+    "bytes": 8854,
+    "sha256": "3aed42201c158d589fa513fe4987e0dcae544b639e0b6484adec2344dab360ee"
+  },
+  "V2_COST_CLOSEOUT.json": {
+    "bytes": 1318,
+    "sha256": "5ee82cc3d4f0f1f75f303b0ac4341fa61677f593c9e08e18c206caa285a87eb6"
   },
   "V2_COST_GATE.json": {
     "bytes": 966,
@@ -147,6 +187,10 @@
     "bytes": 447,
     "sha256": "49b87c565413959cc2783324ed83c37b83a9ec41a37b17beb4c95d5fd71adb2a"
   },
+  "V2_D_MATRIX.json": {
+    "bytes": 14782,
+    "sha256": "f72424d83a657c82a49b6f4a3169191f837106cb0b4be1ec2a7b8042c2251147"
+  },
   "V2_ENGINEERING_CHECKS.json": {
     "bytes": 3775,
     "sha256": "ce0cf7e1c705dc4f517d627e578846f853312e24c46e8bb337230690901185d9"
@@ -166,6 +210,18 @@
   "V2_ENGINE_BENCHMARK_RTX6000_ADA_SECURE.json": {
     "bytes": 1715804,
     "sha256": "ce6ee6cd1f7138b63bef8eadae20bee9727231453fe4931c1f38831d2de150ee"
+  },
+  "V2_ENVIRONMENT_PROVENANCE.json": {
+    "bytes": 1202,
+    "sha256": "53728ff42d7ddbe9e9370ea043f4bfe55d10dd6e25e01f204726e6f0529aa6e5"
+  },
+  "V2_ESTIMANDS.json": {
+    "bytes": 13416,
+    "sha256": "9bba7f17c9781ef9c7b922eaba6070ffb1afa3bf103f504a712a1e501ce7532c"
+  },
+  "V2_EVIDENCE_VECTOR.json": {
+    "bytes": 30120,
+    "sha256": "cda4f3bc313586d8f9ba3a57fee5908ccf1948dd726cda327fef785f98298288"
   },
   "V2_FINAL_NULL_VECTORS/NULL_V2_R0.npy": {
     "bytes": 32896,
@@ -302,6 +358,30 @@
   "V2_FINITE_SECANT_MANIFEST.json": {
     "bytes": 15020,
     "sha256": "4bb3f495181473bfe59d8aabf37faf7a0ee487ea822d1a8d57cf441c7fe4f059"
+  },
+  "V2_FORENSIC_AUDIT.json": {
+    "bytes": 980,
+    "sha256": "1241458dec4c1f3978eaf3dcce9e954f713aa1d7880dc88b80a20a3d6b42559a"
+  },
+  "V2_GEOMETRY_METRICS.json": {
+    "bytes": 44629,
+    "sha256": "f3c36654589109836d0c2a18d5def5063eb0e4613fbe0ce192c0db4f537f06a8"
+  },
+  "V2_METRIC_CROSSCHECK.csv": {
+    "bytes": 168005,
+    "sha256": "97cd3eec90c5a6a64ef4d83783ee7404c2ea70d6c56b68eab28ea4e992644de4"
+  },
+  "V2_PREDICTION_RESULTS.json": {
+    "bytes": 8214,
+    "sha256": "e2dd1d20a70a7f43eb3c36c6d2250c25bd50f40a286994bdfb0754e5e1bc0e45"
+  },
+  "V2_REPORT.md": {
+    "bytes": 1495,
+    "sha256": "6f6e7b5bf0cf153ca3a680ee3aac8f97c02800ec9bd81f14cd2b9c3c0ba20889"
+  },
+  "V2_RETRY_LEDGER.json": {
+    "bytes": 105,
+    "sha256": "798435eb25c89cb6137ea77befc98a5a9c05a123b51ff50d6ff6ae52b96badc7"
   },
   "V2_SOURCE_ACTIVATIONS.npz": {
     "bytes": 8899025,

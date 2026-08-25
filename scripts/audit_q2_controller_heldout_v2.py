@@ -30,6 +30,32 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def independently_read_journal(path: Path) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Validate and unwrap crash-safe records without primary-analysis helpers."""
+
+    rows: list[dict[str, Any]] = []
+    identity_hashes: set[str] = set()
+    for index, line in enumerate(path.read_text().splitlines()):
+        if not line.strip():
+            continue
+        wrapper = json.loads(line)
+        if wrapper.get("version") != "research-os-jsonl-v1":
+            raise RuntimeError(f"unsupported forensic journal wrapper at line {index + 1}")
+        row = wrapper.get("row")
+        fields = wrapper.get("key_fields")
+        if not isinstance(row, dict) or not isinstance(fields, list):
+            raise RuntimeError(f"invalid forensic journal envelope at line {index + 1}")
+        if wrapper.get("key") != [row[field] for field in fields]:
+            raise RuntimeError(f"forensic journal key mismatch at line {index + 1}")
+        identity_hashes.add(str(wrapper.get("identity_hash")))
+        rows.append(row)
+    return rows, {
+        "envelope_count": len(rows),
+        "identity_hash_count": len(identity_hashes),
+        "single_identity_hash": len(identity_hashes) == 1,
+    }
+
+
 def ranks(values: np.ndarray) -> np.ndarray:
     values = np.asarray(values, dtype=np.float64)
     order = np.argsort(values, kind="mergesort")
@@ -215,11 +241,9 @@ def main() -> int:
     lock = read_json(REVIEW / "V2_FINAL_PROTOCOL_LOCK.json")
     schedule = read_json(REVIEW / "V2_COMMON_PANEL_SCHEDULE.json")
     manifest = read_json(REVIEW / "V2_COMMON_PANEL_MANIFEST.json")
-    rows = [
-        json.loads(line)
-        for line in (REVIEW / "V2_COMMON_PANEL_JOURNAL.jsonl").read_text().splitlines()
-        if line.strip()
-    ]
+    rows, envelope_integrity = independently_read_journal(
+        REVIEW / "V2_COMMON_PANEL_JOURNAL.jsonl"
+    )
     keys = [(row["item_id"], row["condition"], int(row["rollout_index"])) for row in rows]
     expected_keys = [
         (row["item_id"], row["condition"], int(row["rollout_index"])) for row in schedule
@@ -227,6 +251,7 @@ def main() -> int:
     schedule_by_key = {key: row for key, row in zip(expected_keys, schedule, strict=True)}
     row_by_key = {key: row for key, row in zip(keys, rows, strict=True)}
     integrity = {
+        **envelope_integrity,
         "expected_rows": int(lock["common_panel"]["expected_rows"]),
         "observed_rows": len(rows),
         "unique_keys": len(set(keys)),
@@ -251,6 +276,8 @@ def main() -> int:
     integrity_pass = (
         integrity["observed_rows"] == integrity["expected_rows"]
         and integrity["unique_keys"] == integrity["expected_rows"]
+        and integrity["envelope_count"] == integrity["expected_rows"]
+        and integrity["single_identity_hash"]
         and all(
             integrity[key] == 0
             for key in (
@@ -261,6 +288,7 @@ def main() -> int:
                 "source_commit_mismatches",
                 "model_mismatches",
                 "revision_mismatches",
+                "retry_rows",
             )
         )
         and integrity["manifest_sha256"] == lock["common_panel"]["manifest_sha256"]
@@ -375,7 +403,9 @@ def main() -> int:
 
     with (REVIEW / "V2_METRIC_CROSSCHECK.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
-            handle, fieldnames=["metric", "primary", "audit", "absolute_difference"]
+            handle,
+            fieldnames=["metric", "primary", "audit", "absolute_difference"],
+            lineterminator="\n",
         )
         writer.writeheader()
         for key in shared:
