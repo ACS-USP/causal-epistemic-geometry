@@ -1,0 +1,39 @@
+experiment_id: Q2_V3_RADIAL_ANGULAR_OUT_OF_BANK
+status: Q2_V3_FROZEN_NOT_RUN
+execution_authorized: false
+experiment_source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+evidence_class: HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: BF16
+  attention: SDPA
+  enable_thinking: false
+  max_new_tokens: 4096
+controller_bank:
+  layer: 27
+  families: 5
+  source_locations: [PROMPT_BOUNDARY, EXECUTION_BOUNDARY]
+  shells: {MEDIUM: 0.25, STRONG: 0.50}
+  meaningful_controllers: 20
+  null_controllers: 4
+geometries: [M0, M1, M2]
+m3: EXCLUDED_NOT_QUALIFIED
+primary_panel:
+  provenance_class: C
+  items: 200
+  ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+common_panel:
+  conditions: 25
+  rollouts_per_item_condition: 2
+  expected_rows: 10000
+  seed_regime: INDEPENDENT_PRIMARY
+cost:
+  expected_usd: [4.0, 7.0]
+  conservative_usd: 12.0
+  hard_ceiling_usd: 15.0
+  wallet_gate_minimum_usd: 18.0
+firewall:
+  semantic_panel_run: false
+  q3: NOT_RUN

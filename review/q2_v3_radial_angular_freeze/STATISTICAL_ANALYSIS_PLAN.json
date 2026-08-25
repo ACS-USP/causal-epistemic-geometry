@@ -1,0 +1,80 @@
+{
+  "bootstrap": {
+    "ci": "percentile [2.5%,97.5%]",
+    "dependence": "move all 25 conditions and both rollouts for each sampled item together",
+    "resamples": 10000,
+    "seed": 2026082603,
+    "unit": "item_id"
+  },
+  "distance": {
+    "formula": "D_ij=N^-1 sum_t (e_i,t,0-e_j,t,0)*(e_i,t,1-e_j,t,1)",
+    "missingness": "no complete-case filtering; model outcomes retained as errors",
+    "rollouts": "two independent draws per item-condition",
+    "shrinkage": "none"
+  },
+  "error": "e=0 iff external-semantic-v3 correct; valid-wrong, invalid, unevaluable, truncation, and model runtime outcome are e=1",
+  "leave_one_direction_out": "ten diagnostics; remove one base direction and all incident pairs, recompute aggregate family-balanced rho",
+  "m2_required": {
+    "M2_relational_gate_pass": true,
+    "delta_rho_over_M0_min": 0.1,
+    "delta_rho_over_M1_min": 0.1,
+    "exact_stepdown_family_qap_p_each_max": 0.05,
+    "paired_item_bootstrap_lower_bound_each_strictly_greater_than": 0.0
+  },
+  "multiplicity": {
+    "alternative": "one-sided positive association",
+    "choice": "OMNIBUS_EXISTENCE_THEN_METRIC_IDENTIFICATION",
+    "justification": "M0/M1/M2 are three competing pre-outcome hypotheses; an exact max-statistic family QAP controls their shared existence claim before metric attribution",
+    "max_statistic": "maximum aggregate family-balanced rho across M0/M1/M2",
+    "p_value": "number of exact null statistics >= observed divided by 3840, identity included",
+    "qap_space": "exact 5! family-block permutations x 2^5 within-family location swaps = 3840",
+    "rng": "none; exhaustive lexicographic enumeration",
+    "shell_handling": "same family/location mapping applied to both shells"
+  },
+  "primary_claim": "RELATIONAL_GEOMETRY_WITHIN_MATCHED_IMPLEMENTED_AMPLITUDE_SHELLS",
+  "primary_pairs": "40 cross-family base-direction dyads per shell; 80 shell-stratified dyads",
+  "radial_claim": {
+    "aggregate": "median over ten base directions",
+    "aggregate_strictly_positive": true,
+    "direction_value": "D(strong,baseline)-D(medium,baseline)",
+    "item_bootstrap_lower_bound_strictly_greater_than": 0.0,
+    "p_max": 0.05,
+    "permutation": "exact 2^5 family-block sign flips; p=count(null>=observed)/32",
+    "positive_directions_min": 8,
+    "role": "secondary control claim, reported independently as R+ or R-"
+  },
+  "relational_gate": {
+    "aggregate_family_balanced_rho_min": 0.25,
+    "item_bootstrap_lower_bound_strictly_greater_than": 0.0,
+    "leave_one_direction_out_all_strictly_positive": true,
+    "max_qap_corrected_p_max": 0.05,
+    "positive_family_summaries_min": 4,
+    "positive_family_summary_definition": "mean of that family's two shell-specific incident-dyad rhos > 0",
+    "positive_shells_required": 2
+  },
+  "schema_version": "q2-v3-statistical-analysis-plan-v1",
+  "secondary": [
+    "all metric-specific rhos",
+    "same-direction cross-shell distances",
+    "null dyads",
+    "RMSE/calibration without fitted primary coefficients"
+  ],
+  "spearman": {
+    "aggregate": "arithmetic mean of MEDIUM and STRONG shell summaries",
+    "correlation": "Pearson correlation of average ranks",
+    "family_summary": "for each family and shell, rho over 16 incident cross-family dyads",
+    "rank_ties": "average ranks",
+    "shell_summary": "arithmetic mean of five family incident-dyad rhos",
+    "undefined": "metric fails relational gate"
+  },
+  "status": "FROZEN_NOT_RUN",
+  "threshold_justifications": {
+    "bootstrap_lower_0": "Item-cluster uncertainty must exclude a nonpositive aggregate association while preserving all condition/rollout dependence.",
+    "both_shells": "The relation must survive the twofold radial manipulation and therefore cannot be a single-shell accident.",
+    "four_of_five_families": "A relational claim must be distributed across new conceptual families rather than driven by one or two families.",
+    "lodo_positive": "No one of the ten prospectively constructed directions may determine the sign.",
+    "m2_delta_0_10": "Specific necessity of finite output response requires a scientifically material paired rank improvement, not merely nominal significance.",
+    "qap_0_05": "The exact family-constrained max statistic provides finite-sample family-wise control across all three prespecified metrics.",
+    "rho_0_25": "A moderate rank effect is required because N=200 chiefly reduces item noise; prior dependence-preserving simulations showed family novelty remains dominant and did not justify a smaller scientific effect."
+  }
+}

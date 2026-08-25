@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_FREEZE_READY_M3_EXCLUDED_PROVENANCE_RESOLVED
+  scientific_stage: Q2_V3_FROZEN_NOT_RUN
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,22 +19,21 @@ project:
     utility?
 
 current:
-  workstream: Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE
-  lifecycle: CLOSED
-  stage: ENGINEERING_QUALIFICATION_AND_PROVENANCE_AUDIT_COMPLETE
-  source_commit: b3f9a7ffa48d205d1ea242b953afca0910e34283
-  execution_source_commit: 3792a119a8916f450c20022e2937b18e8f5047fc
+  workstream: Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_FROZEN_NOT_RUN
+  source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+  execution_source_commit: NOT_RUN
   summary: >-
-    M3 real-Qwen engineering qualification closed as
-    M3_DERIVATIVE_IDENTITIES_FAILED. Exact FP32 sequence/JVP/VJP/PSD checks
-    passed, but the frozen polarization and finite-window gates failed and the
-    mandatory BF16 bridge failed independently; M3 is excluded from Q2 V3. The
-    item-level audit classified all 800 CRUXEval items as A=0, B=25, C=655,
-    D=120, unresolved=0. A deterministic 200-item Class-C panel can support
-    historical-item/prospective-controller same-domain validation, not
-    fresh-item confirmation. Q2 V3 is freeze-ready but not frozen or run. Q2 V2
-    is unchanged; Q3 remains NOT RUN.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_AND_OPTIONAL_Q2_V3_FREEZE
+    Q2 V3 is prospectively frozen but not run. The exact design uses five new
+    conceptual source families, prompt/execution-boundary L27 paired means,
+    implemented-amplitude shells 0.25/0.50, 20 meaningful controllers, four
+    fresh span-orthogonal nulls, and M0/M1/M2 only. M2 uses a separate
+    label-free Class-B probe set and all prediction matrices must be hashed
+    before the 200-item Class-C semantic panel opens. The primary evidence is
+    historical-item/prospective-controller same-domain validation. M3 remains
+    excluded as NOT_QUALIFIED. Semantic trajectories are zero; Q3 is NOT RUN.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_AND_SEPARATE_Q2_V3_EXECUTION_AUTHORIZATION
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE
@@ -46,7 +45,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_FREEZE_READY_AWAITING_PRINCIPAL_RESEARCHER_REVIEW
+  current_task: Q2_V3_FROZEN_NOT_RUN
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -86,6 +85,32 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE
+    status: Q2_V3_FROZEN_NOT_RUN
+    conclusion: >-
+      The outcome-independent 200-item Class-C panel, five source families,
+      ten oriented L27 directions, two implemented-amplitude shells, four
+      fresh null controllers, separate label-free M1/M2 geometry inputs,
+      prediction-lock chronology, exact family-QAP, item bootstrap, radial
+      claim, classification hierarchy, schedule, seeds, costs, and stop rules
+      are fully specified. No source, shell, geometry, or semantic inference
+      occurred. M3 remains excluded and Q3 remains not run.
+    source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+    artifact: review/q2_v3_radial_angular_freeze/
+    scientific_rows: 0
+    semantic_trajectories: 0
+    model_inference_performed: false
+    primary_panel_n: 200
+    primary_panel_class: C
+    primary_panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+    evidence_claim: HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION
+    meaningful_controllers: 20
+    null_controllers: 4
+    geometries: [M0, M1, M2]
+    m3: EXCLUDED_NOT_QUALIFIED
+    expected_semantic_rows_if_later_authorized: 10000
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
   - id: Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE
     status: COMPLETE_ENGINEERING_NOT_QUALIFIED_PROVENANCE_RESOLVED
     conclusion: >-

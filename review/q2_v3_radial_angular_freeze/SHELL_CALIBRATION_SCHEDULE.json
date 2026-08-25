@@ -1,0 +1,3034 @@
+{
+  "correctness_forbidden": true,
+  "coupling": "MATCHED_WITHIN_ITEM_ROLLOUT_CALIBRATION_ONLY",
+  "expected_rows": 504,
+  "rows": [
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 908436843,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_798",
+      "matched_seed": 1611992129,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 436197821,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_745",
+      "matched_seed": 1928017803,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 66123915,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_673",
+      "matched_seed": 815192841,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 1934921772,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_139",
+      "matched_seed": 2009464431,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1359686043,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_410",
+      "matched_seed": 1259986367,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1362904792,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_514",
+      "matched_seed": 1208989326,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_266",
+      "matched_seed": 574615746,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_266",
+      "matched_seed": 1508009831,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 905706876,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_613",
+      "matched_seed": 1003410844,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 319347711,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_700",
+      "matched_seed": 53637678,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 216890673,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_769",
+      "matched_seed": 147358279,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 432294720,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_460",
+      "matched_seed": 347062896,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 574222451,
+      "rollout_index": 0
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "BASELINE",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    },
+    {
+      "condition": "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+      "item_id": "sample_589",
+      "matched_seed": 1677650973,
+      "rollout_index": 1
+    }
+  ],
+  "schema_version": "q2-v3-shell-calibration-schedule-v1",
+  "seed_namespace": "Q2-V3-SHELL-SAFETY-V1",
+  "status": "FROZEN_NOT_RUN"
+}

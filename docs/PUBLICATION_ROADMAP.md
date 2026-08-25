@@ -188,7 +188,12 @@ precomputed direction in M0/M1/M2 predict which semantic blind spots differ?
 The real-Qwen M3 qualification failed its frozen derivative/local-window and
 BF16-bridge gates, so M3 is excluded. The item-level CRUXEval audit supports a
 200-item Class-C historical-item/prospective-controller same-domain panel; it
-does not support a fresh-item claim. The revised Q2 V3 protocol is freeze-ready
-but awaits principal review and is not authorized for execution. If angular
-identifiability cannot be established before outcomes, Q2 should stop. Q3
-remains not run.
+does not support a fresh-item claim. Q2 V3 is now prospectively frozen but not
+run. Its five source families, ten oriented L27 directions,
+implemented-amplitude shells 0.25/0.50, four fresh nulls, separate label-free
+M1/M2 inputs, pre-outcome prediction lock, exact family-QAP, item bootstrap,
+classification hierarchy, and 10,000-row semantic schedule have no remaining
+scientific choices. Execution still requires a separate principal
+authorization. If controller qualification, angular identifiability,
+prediction locking, or the wallet gate fails, the semantic panel must remain
+closed. This freeze creates no Program C evidence; Q3 remains not run.

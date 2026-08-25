@@ -1,0 +1,48 @@
+{
+  "classification": "Q2_V3_PANEL_SELECTION_PROVENANCE_CLEAN",
+  "classification_counts": {
+    "A": 0,
+    "B": 25,
+    "C": 655,
+    "D": 120,
+    "UNRESOLVED": 0
+  },
+  "classification_uses_outcome_values": false,
+  "code_paths": [
+    "scripts/audit_cruxeval_provenance.py",
+    "src/epistemic_geometry/analysis/cruxeval_provenance.py",
+    "src/epistemic_geometry/experiments/q2_v3.py"
+  ],
+  "content_hash_fallback": {
+    "fields_read": [
+      "item_id",
+      "prompt_hash",
+      "reference_answer"
+    ],
+    "outcome_fields_read_or_used": false,
+    "role": "post-selection manifest completion only",
+    "source": "tracked external_benchmark_qualification journal/results artifacts"
+  },
+  "eligibility": "provenance_class == C",
+  "explicitly_not_used": [
+    "historical accuracy",
+    "baseline correctness",
+    "item difficulty",
+    "controller performance",
+    "complementarity",
+    "error profiles",
+    "M0/M1/M2 behavior",
+    "manual examples",
+    "outcome variance"
+  ],
+  "forbidden_fields_loaded_by_selector": [],
+  "matches_proposed_panel_byte_order": true,
+  "ordering": "SHA256(namespace + U+001F + item_id), then item_id",
+  "rng_algorithm": "NONE; cryptographic hash total order",
+  "schema_version": "q2-v3-panel-provenance-proof-v1",
+  "seed_equivalent": "Q2-V3-HISTORICAL-C-PROSPECTIVE-CONTROLLER-V1",
+  "selected_n": 200,
+  "selected_ordered_ids_sha256": "969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf",
+  "selection_namespace": "Q2-V3-HISTORICAL-C-PROSPECTIVE-CONTROLLER-V1",
+  "selection_outcome_independent": true
+}

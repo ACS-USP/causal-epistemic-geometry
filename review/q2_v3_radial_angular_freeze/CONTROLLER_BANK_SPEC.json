@@ -1,0 +1,122 @@
+{
+  "candidate_count": 10,
+  "construction": {
+    "finite_required": true,
+    "formula": "v_raw=mean_x(h_positive(x)-h_negative(x)); v=v_raw/||v_raw||_2",
+    "items": 24,
+    "minimum_raw_norm": 1e-06,
+    "pairing": "same item under positive and negative instructions",
+    "precision": "capture float32; pair and average float64; persist vector float32"
+  },
+  "constructor": "PAIRED_MEAN_DIFFERENCE",
+  "decode_scope": "current token exactly once per forward; cached history unchanged",
+  "duration": "SUSTAINED_CURRENT_TOKEN",
+  "execution_teacher_text": "I will now apply the requested reasoning policy to the program before committing to one answer.",
+  "failure": "Q2_V3_CONTROLLER_QUALIFICATION_FAILED; semantic panel forbidden",
+  "families": [
+    {
+      "family_id": "CONTROL_FLOW_PATH_COVERAGE",
+      "negative_instruction": "Follow only the most immediately apparent control-flow path without enumerating alternative paths, and end with exactly one line in the form FINAL: <answer>.",
+      "positive_instruction": "Enumerate every feasible control-flow path that can affect the return value, trace each path to completion, reconcile the path results, and end with exactly one line in the form FINAL: <answer>.",
+      "rationale": "complete feasible-path coverage versus single apparent-path tracing"
+    },
+    {
+      "family_id": "MUTATION_ALIAS_CAUSALITY",
+      "negative_instruction": "Treat each variable update locally without maintaining an explicit alias or shared-storage ledger, and end with exactly one line in the form FINAL: <answer>.",
+      "positive_instruction": "Track every mutation and alias relation causally: record which objects share storage, apply updates in execution order, and end with exactly one line in the form FINAL: <answer>.",
+      "rationale": "causal mutation/alias ledger versus local variable-update reasoning"
+    },
+    {
+      "family_id": "API_CONTRACT_EXACTNESS",
+      "negative_instruction": "Infer each operation's ordinary intent without checking its exact API contract, runtime type, side effects, or exceptional cases, and end with exactly one line in the form FINAL: <answer>.",
+      "positive_instruction": "For every operation, check the exact API contract, runtime type, return value, side effect, and exceptional case before composing the result. End with exactly one line in the form FINAL: <answer>.",
+      "rationale": "exact operation contracts versus intent-level API reasoning"
+    },
+    {
+      "family_id": "LOOP_BOUNDARY_ACCOUNTING",
+      "negative_instruction": "Reason from the loop's overall pattern without separately auditing initialization, first/last iterations, update order, or termination, and end with exactly one line in the form FINAL: <answer>.",
+      "positive_instruction": "Audit every loop boundary explicitly: initialization, first iteration, last included iteration, update order, and termination condition. End with exactly one line in the form FINAL: <answer>.",
+      "rationale": "explicit boundary accounting versus loop-gist reasoning"
+    },
+    {
+      "family_id": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "negative_instruction": "Commit to the first plausible outcome without maintaining or eliminating an explicit set of alternatives, and end with exactly one line in the form FINAL: <answer>.",
+      "positive_instruction": "Maintain all plausible candidate outcomes, test each against every branch and operation, eliminate contradicted candidates, and end with exactly one line in the form FINAL: <answer>.",
+      "rationale": "explicit candidate elimination versus first-plausible commitment"
+    }
+  ],
+  "heldout_representation_qualification": {
+    "applies_to_each_of_ten_base_directions": true,
+    "items": 24,
+    "positive_projection_fraction_min": 0.6,
+    "standardized_gap_formula": "mean_x(<h_pos-h_neg,v>)/std_x(<h_pos-h_neg,v>,ddof=1)",
+    "standardized_gap_min": 0.2
+  },
+  "label_free_source_behavior_qualification": {
+    "commitment_validity_each_polarity_min": 0.9,
+    "correctness_reference_access": "FORBIDDEN",
+    "cross_disagreement": "mean of the four positive-vs-negative rollout comparisons",
+    "cross_disagreement_min": 0.1,
+    "excess_disagreement": "cross_disagreement-within_disagreement",
+    "excess_disagreement_min": 0.03,
+    "rollouts_per_item_polarity": 2,
+    "semantic_evaluability_each_polarity_min": 0.9,
+    "within_disagreement": "mean of positive rollout0-vs-rollout1 and negative rollout0-vs-rollout1"
+  },
+  "layer_zero_based": 27,
+  "meaningful_controller_count": 20,
+  "meaningful_controller_ids": [
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+    "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG"
+  ],
+  "normalization": "float64 Euclidean unit norm after paired mean",
+  "nulls": {
+    "algorithm": "Gaussian PCG64; project with SVD orthonormal basis Q of the ten meaningful directions as r-Q(Q^T r); Gram-Schmidt against prior null; normalize",
+    "base_direction_count": 2,
+    "controller_count": 4,
+    "ids": [
+      "NULL_Q2_V3_R0_MEDIUM",
+      "NULL_Q2_V3_R1_MEDIUM",
+      "NULL_Q2_V3_R0_STRONG",
+      "NULL_Q2_V3_R1_STRONG"
+    ],
+    "seeds": [
+      2026082601,
+      2026082602
+    ],
+    "span_and_pairwise_absolute_cosine_max": 1e-06,
+    "svd_rank_tolerance": 1e-10
+  },
+  "orientation": "POSITIVE_MINUS_NEGATIVE",
+  "prefill_scope": "final non-padding prompt token",
+  "schema_version": "q2-v3-controller-bank-spec-v1",
+  "semantic_correctness_used": false,
+  "shells": {
+    "MEDIUM": 0.25,
+    "STRONG": 0.5
+  },
+  "source_locations": {
+    "EXECUTION_BOUNDARY": "layer-27 block output at final token of the frozen teacher continuation appended to the same rendered prompt",
+    "PROMPT_BOUNDARY": "layer-27 block output at final non-padding rendered-prompt token"
+  },
+  "status": "FROZEN_NOT_RUN",
+  "usable_rule": "all five families must pass source behavior and both location-specific representation gates; any failure stops the bank with no replacement, sign flip, or exclusion"
+}

@@ -1,0 +1,3369 @@
+{
+  "correctness_forbidden": true,
+  "expected_rows": 480,
+  "rows": [
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2080547445
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 992173965
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1291046592
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1411093179
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 496535744
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 347066672
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1966673658
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1224022245
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1110699322
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 868990982
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1319551070
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1771108811
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1092096869
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1038954500
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1269506660
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 812973027
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 465878379
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1666961351
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1332345593
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 377900701
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1156143012
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 385534911
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1420955686
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 855102498
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1530935071
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1153550358
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 158519721
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1591642870
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 859454017
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1065754317
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 808872082
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1479408656
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1148185645
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 305558435
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 413553886
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 196058514
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 322383604
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 634825096
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 229244847
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 650900748
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1521768015
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1068264662
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1262263969
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1096675464
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1574025947
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 88894157
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1976811350
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 588041391
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 266825649
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1079976527
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1403712162
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2073313532
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 620697615
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 620176972
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1883908939
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2135984891
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 188623827
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1692498174
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 142470518
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1479145246
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1323384326
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2107476669
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 2133092057
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 177465613
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1564971676
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 249112581
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1885220719
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 392111440
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1789577753
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1459679563
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 594759394
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1327968253
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1984455030
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1676279243
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1280839867
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 947450512
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1165184214
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1404440707
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1481565069
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 93147907
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1361151803
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 723047855
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1128392331
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 39645527
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 433420046
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1017056189
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1930126844
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2109858903
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2089054632
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 268852014
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 367663632
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 426502873
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1943608
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1956906811
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1249293540
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2094611681
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 821898224
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1582391814
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1034426931
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 37968584
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1875684823
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1827090515
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 956167867
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1695794736
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 111862789
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1021390706
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1932539228
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1589338866
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2109968624
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 600968216
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1171663229
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1672507678
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2062871470
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1769129655
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1964155395
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2097728168
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 919470140
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2143875248
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 441011000
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1177215715
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1609369040
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 28565591
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 832569619
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1235245325
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 692359930
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 540550084
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 593537480
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 231816659
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1165413246
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1805421650
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 16367570
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2075929873
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 7838520
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2097720677
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1306436105
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1964781890
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1020810612
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1866456989
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 942397777
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 762883262
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 840624555
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1854588884
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1323555474
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1673841459
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 108161234
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1518074265
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1720539330
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 594712921
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1987565134
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1317871749
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1098547618
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1834536333
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1688445545
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1152355752
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1209998573
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1341740951
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 23717144
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1049354939
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 792691576
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1336218392
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 464121495
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 24482204
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 964364751
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1087644348
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1551487642
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1556718266
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 730455674
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 133247571
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2028351337
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1230432765
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 975631643
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1835752270
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 650367220
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 883180538
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 555170409
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1123439198
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1437715849
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 812330723
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1871558994
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 871318416
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1941242784
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2087241165
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 353357315
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1664383630
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1456970971
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 328853167
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 188373907
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1767948846
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 356792964
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1718382762
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1206971955
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 362761730
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 657783274
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 231144101
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1141377202
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2105965183
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 738465279
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 806008631
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 811358520
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 585917020
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 401518020
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2069226849
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 653368222
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1459018985
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1410958477
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 913035641
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1075209861
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 672616422
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1950214768
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1289877776
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 156451030
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1072623789
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1389358624
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 142926100
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 815944554
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1230728885
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1327899493
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 214923839
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1575059129
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 417208068
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 477413737
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2136807971
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 838286141
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 94875117
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 990595924
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1771104284
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1219716742
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2113874858
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 656093240
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 241007644
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 954682738
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1913679953
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1223535071
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1986458299
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1306182772
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 928636153
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1443225156
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 471728505
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1159934713
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1704280163
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1539539949
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 271987844
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 593259549
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2014284294
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1848836167
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2113320887
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 573061571
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2014790833
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1263707567
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1341701150
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1732701020
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 478430190
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1166600475
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1280632856
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1144641572
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1210148108
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 636023680
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 602606371
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 790600022
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 944760243
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1786268921
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 734541780
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1241407703
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 374475854
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1751850812
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2033159604
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 708305446
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 169443773
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1026090270
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1065153162
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 2039710317
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 19448647
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2027493171
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 647803503
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 30231305
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 481734781
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1564780718
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1181122549
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 423686016
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 668927559
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 979564035
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1547919756
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 348314551
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1380495422
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1777961992
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 146566328
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1455231378
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1990923384
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 168103092
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 835014420
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 687158249
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1772262970
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 153965214
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1579259582
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1208861239
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1875480840
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1420321047
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1025427720
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 2022478921
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1396154374
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2038016458
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 296513232
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 573510945
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 600361563
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1110835506
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 602223053
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1348692418
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2106368842
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1076875432
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1512590640
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 764034420
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 328485827
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1822793968
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1893956684
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1592045162
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1753599172
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1393431287
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 550961310
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1944324162
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1889854775
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2024019807
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1893810374
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1629104897
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2032289307
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2058360968
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 722746163
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 956255993
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 106187055
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 986927156
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 831678535
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1736734105
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 64888057
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 772335898
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1729106471
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 659302493
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1391278938
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 965882010
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 300063398
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1938422007
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1056884945
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 305666936
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 219670142
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1588323180
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1702926156
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1728357359
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 235711296
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1462210543
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1430491150
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1682023216
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1011448108
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1387373269
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 166915400
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1880658477
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1700453326
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1013069336
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 17681436
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 776675705
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1327514192
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1923785636
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1002053260
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1694426770
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 255024243
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 150644641
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1562581800
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1671550758
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 313970485
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 998225302
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 430693947
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 274302694
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 956417633
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 555495606
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1935236286
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1728639106
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1167712500
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1497719757
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1594353324
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1468853040
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1385735264
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1229258563
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1761094036
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 50907153
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 824610932
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1247060748
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1120330186
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1783903771
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1242705398
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 483834368
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1758870816
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1512943054
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 909088215
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 662298107
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1594303113
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1214016488
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 478722630
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 662056228
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 525141185
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2007428654
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1477292724
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 2016852113
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2081743456
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1739270145
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1023666825
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1579310750
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2102706926
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 340839280
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1034397395
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 263386484
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 218782011
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1384224890
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 707776012
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1229738292
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 264715855
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1215263011
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1482807496
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 578384662
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1561013185
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1822060736
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 160275630
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1524786516
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 149138274
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 312393055
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 411316591
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 2114415456
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 464078498
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 44759685
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1016780461
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1874145444
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1258689628
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 991996879
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 65874861
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 192786294
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 241952553
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1498867041
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 922160887
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 2028455157
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 466860118
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1729575236
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1089562811
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 132746678
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 391879561
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 691484723
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2123443014
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1178781194
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 639334582
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1953500440
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1968127303
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1265562335
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 38138044
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2012022346
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1773843713
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 982481246
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1647342993
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1567492831
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1045592537
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1726035957
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1933633475
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 17693899
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1312744988
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1596141307
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1836588488
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 934593734
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 954364011
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 869438450
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 218871562
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1546969138
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2013133776
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1077816069
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 966975270
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 509041548
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1489242996
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 886730016
+    },
+    {
+      "family": "API_CONTRACT_EXACTNESS",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 956637835
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1439598667
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1845228574
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 49667605
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1688591071
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2094329650
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 878317922
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1122294452
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 390025800
+    }
+  ],
+  "schema_version": "q2-v3-source-schedule-v1",
+  "seed_namespace": "Q2-V3-SOURCE-SEPARATION-V1",
+  "status": "FROZEN_NOT_RUN"
+}

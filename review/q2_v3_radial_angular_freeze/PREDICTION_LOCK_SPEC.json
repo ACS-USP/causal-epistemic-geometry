@@ -1,0 +1,70 @@
+{
+  "chronology": [
+    "construct and qualify source directions",
+    "calibrate and qualify implemented-amplitude shells",
+    "construct fresh nulls and apply identifiability prerequisites",
+    "capture M1 covariance and M2 label-free finite responses",
+    "compute M0/M1/M2 matrices",
+    "write matrices and metadata atomically",
+    "verify all identifiability gates",
+    "hash and commit prediction lock",
+    "only then authorize semantic panel collection"
+  ],
+  "controller_order": [
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_MEDIUM",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_MEDIUM",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY_STRONG",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY_STRONG",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_API_CONTRACT_EXACTNESS_PROMPT_BOUNDARY_STRONG",
+    "MEAN_API_CONTRACT_EXACTNESS_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY_STRONG",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY_STRONG",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY_STRONG",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY_STRONG",
+    "NULL_Q2_V3_R0_MEDIUM",
+    "NULL_Q2_V3_R1_MEDIUM",
+    "NULL_Q2_V3_R0_STRONG",
+    "NULL_Q2_V3_R1_STRONG"
+  ],
+  "dtype": "float64 matrices",
+  "files": {
+    "arrays": "Q2_V3_PREDICTION_MATRICES.npz",
+    "lock": "Q2_V3_PREDICTION_LOCK.json",
+    "metadata": "Q2_V3_PREDICTION_MATRICES.json"
+  },
+  "hash_or_order_mismatch": "stop before semantic inference",
+  "npz_keys": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "post_outcome_recomputation": "forensic exact reproduction from identical frozen inputs only",
+  "primary_semantic_panel_disjoint_from_geometry_inputs": true,
+  "required_metadata": [
+    "source_commit",
+    "code_commit",
+    "controller_vector_hashes",
+    "implemented_alphas_and_amplitudes",
+    "calibration_manifest_hashes",
+    "M1_fit_hash",
+    "M2_archive_hash",
+    "matrix_hashes",
+    "controller_order_hash"
+  ],
+  "schema_version": "q2-v3-prediction-lock-v1",
+  "shape_each": [
+    24,
+    24
+  ],
+  "status": "PROCEDURE_FROZEN_ARTIFACTS_NOT_YET_COMPUTED"
+}

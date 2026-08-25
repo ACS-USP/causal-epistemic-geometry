@@ -1,0 +1,54 @@
+{
+  "all_criteria_required": true,
+  "criteria": {
+    "angular_q90_minus_q10": {
+      "min": 0.2,
+      "population": "40 cross-family dyads separately for M0 and M1 in each shell"
+    },
+    "cross_family_dyads_each_shell": {
+      "exact": 40
+    },
+    "direction_gram_effective_rank": {
+      "formula": "(sum eigenvalues)^2/sum(eigenvalues^2) for 10x10 Euclidean unit-vector Gram",
+      "min": 5.0
+    },
+    "family_angular_leverage": {
+      "formula": "incident squared centered z-distance divided by total across families; each dyad counted for both incident families",
+      "max": 0.3,
+      "population": "each metric and shell"
+    },
+    "family_median_deviation_each_shell": {
+      "formula": "abs(median(two family radii)-median(ten meaningful radii))/global_median",
+      "max": 0.03
+    },
+    "nonantipodal_absolute_cosine": {
+      "max_strict": 0.95,
+      "population": "all 45 distinct base-direction pairs"
+    },
+    "null_matching": {
+      "pairwise_null_absolute_cosine_max": 1e-06,
+      "span_absolute_cosine_max": 1e-06,
+      "target_relative_error_max": 0.005
+    },
+    "radial_nuisance_r2": {
+      "formula": "OLS R2(metric distance ~ 1 + abs radius difference + mean radius)",
+      "max": 0.1,
+      "population": "40 cross-family dyads, separately by shell and M0/M1/M2"
+    },
+    "radius_cv_each_shell": {
+      "formula": "population_std(r_impl)/mean(r_impl)",
+      "max": 0.03
+    },
+    "standardized_geometry_feature_condition_number": {
+      "formula": "largest/smallest singular value of centered unit-SD columns [M0,M1,M2] over 40 dyads",
+      "max": 30.0,
+      "population": "each shell"
+    }
+  },
+  "failure_action": "do not run semantic panel; do not redraw or alter thresholds",
+  "failure_classification": "Q2_V3_ANGULAR_IDENTIFIABILITY_FAILED",
+  "population": "ten meaningful base directions; shell checks include ten meaningful plus two null directions",
+  "schema_version": "q2-v3-identifiability-gate-v1",
+  "status": "FROZEN_NOT_RUN",
+  "undefined_or_nonfinite": "FAIL"
+}

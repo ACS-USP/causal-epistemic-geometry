@@ -1,0 +1,68 @@
+{
+  "M3": "EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED",
+  "artifact_hashes": {
+    "CLASSIFICATION_TAXONOMY.json": "1003c4d8ee6aad45c37d480224752513049fb8086867bbfc10a56d3835309856",
+    "CONTROLLER_BANK_SPEC.json": "ae04b679be9b895818dd837818f0e4c1f18e3d831186963b2d2efefe7bf09a32",
+    "EVALUATION_SCHEDULE.json": "b88af9e84adc6a793d5ede5504fbd4fc5824b43cbf3236fed3d9700a5465e420",
+    "EXECUTION_CHECKLIST.md": "50dcfa3a12b8d324053071515195817c25629190826b8e3d3846c4289391121b",
+    "EXECUTION_COST_PLAN.json": "d3900a9f679628fd973b92b8a38982fa42ebabe1226c69e472a4b7755896147d",
+    "GEOMETRY_DEFINITIONS.json": "cc758bb35a334d49c4609dd932d65112ccceab7bb27482b84179ed820e64820c",
+    "IDENTIFIABILITY_GATE.json": "ae344f96f0defd9a56acfc9e7e45f033a37bca03d01279faf8c048bdc84f4d9b",
+    "M1_COVARIANCE_MANIFEST.json": "50322939352e2153449c6f65164a4a10b102006f8fcb2f9a20befe427b5b4f25",
+    "M2_PROBE_MANIFEST.json": "97eb8845c092af039014ca2f1d0b3103c4d4294abd1b5fd5580c7fb3c61317fa",
+    "PREDICTION_LOCK_SPEC.json": "4d597a4bd734fbfc23541562fb9a2dead5541c1ac3965034f9691dfc18bdb599",
+    "PRIMARY_PANEL_MANIFEST.json": "a1408dd280d534aca1322cabd74ac9db4d73778bdf893adef8faf124dbdbe756",
+    "PRIMARY_PANEL_PROVENANCE_PROOF.json": "8680616c1afc3639734d311b98dc09c6282a01302800e55bb2942f8e4212ccc0",
+    "PROVENANCE_STATEMENT.md": "2c672620ec742cd82ce326fea81b998bdeb754827ef670b24b8e54ec64ecd49f",
+    "SHELL_CALIBRATION_MANIFEST.json": "9581ae98ba8cb5e4183331b6a943af5feed14d0efb1d86d7b1990a9b7cb7c79c",
+    "SHELL_CALIBRATION_SCHEDULE.json": "59f63eb89bd67a56fd9471e49035cc61982f93650cf638d4045ef116acd9b258",
+    "SHELL_CALIBRATION_SPEC.json": "19f782619b568eea5571e597dac5794cf8d75f1a5aa2110ddaf7a162d87af11f",
+    "SOURCE_CONSTRUCTION_MANIFEST.json": "75c4d5796ee70b1853e6038bcea83f3afac6e8879f49cbc9a24b991a155cc893",
+    "SOURCE_QUALIFICATION_SCHEDULE.json": "54d588755b2537021546c7b3a2b4c9de074524766cfc7af8ffe35872e8082a52",
+    "SOURCE_VALIDATION_MANIFEST.json": "b354e5fb65df1bd045b0f46530f2f6aed00810b38111ed1167a8399642bc8774",
+    "STATISTICAL_ANALYSIS_PLAN.json": "212e175cb6e6eef65576a36abc97e5e9191928ccdbd68c60d18d6b4d1e0a22c0"
+  },
+  "bank": {
+    "base_directions": 10,
+    "families": 5,
+    "meaningful": 20,
+    "nulls": 4,
+    "shells": {
+      "MEDIUM": 0.25,
+      "STRONG": 0.5
+    }
+  },
+  "evidence_class": "HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION",
+  "execution_authorized": false,
+  "experiment_id": "Q2_V3_RADIAL_ANGULAR_OUT_OF_BANK",
+  "experiment_source_commit": "9a748de3706a788f8c6c5a1d12c09489808006e8",
+  "geometries": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "layer": 27,
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "panel": {
+    "class": "C",
+    "n": 200,
+    "ordered_ids_sha256": "969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf"
+  },
+  "q3": "NOT_RUN",
+  "reviewed_base_commit": "9c2ea31c449a6874d4ae47337dd3b913d5bee559",
+  "schema_version": "q2-v3-prospective-lock-v1",
+  "scientific_question": "After matching implemented intervention amplitude, does pre-outcome internal geometry prospectively predict which semantic blind spots differ across genuinely new causal controllers?",
+  "semantic_outcomes_in_this_freeze": 0,
+  "semantic_panel": {
+    "conditions": 25,
+    "executed": false,
+    "items": 200,
+    "rollouts": 2,
+    "rows": 10000
+  },
+  "source_or_shell_outputs_in_this_freeze": 0,
+  "status": "Q2_V3_FROZEN_NOT_RUN"
+}

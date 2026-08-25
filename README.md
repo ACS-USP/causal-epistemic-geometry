@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_FREEZE_READY_M3_EXCLUDED_PROVENANCE_RESOLVED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_FROZEN_NOT_RUN` — **scientific claim:** `NONE_FROZEN`.
 
-M3 real-Qwen engineering qualification closed as M3_DERIVATIVE_IDENTITIES_FAILED. Exact FP32 sequence/JVP/VJP/PSD checks passed, but the frozen polarization and finite-window gates failed and the mandatory BF16 bridge failed independently; M3 is excluded from Q2 V3. The item-level audit classified all 800 CRUXEval items as A=0, B=25, C=655, D=120, unresolved=0. A deterministic 200-item Class-C panel can support historical-item/prospective-controller same-domain validation, not fresh-item confirmation. Q2 V3 is freeze-ready but not frozen or run. Q2 V2 is unchanged; Q3 remains NOT RUN.
+Q2 V3 is prospectively frozen but not run. The exact design uses five new conceptual source families, prompt/execution-boundary L27 paired means, implemented-amplitude shells 0.25/0.50, 20 meaningful controllers, four fresh span-orthogonal nulls, and M0/M1/M2 only. M2 uses a separate label-free Class-B probe set and all prediction matrices must be hashed before the 200-item Class-C semantic panel opens. The primary evidence is historical-item/prospective-controller same-domain validation. M3 remains excluded as NOT_QUALIFIED. Semantic trajectories are zero; Q3 is NOT RUN.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_AND_OPTIONAL_Q2_V3_FREEZE
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_AND_SEPARATE_Q2_V3_EXECUTION_AUTHORIZATION
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

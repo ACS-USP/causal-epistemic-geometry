@@ -1,0 +1,94 @@
+{
+  "experiments/specs/q2_v3_radial_angular_geometry.yaml": {
+    "bytes": 1142,
+    "sha256": "996f54e64bddc565f29dc294ff1f760972e31566326942c6564b94969cdfd6d8"
+  },
+  "review/q2_v3_radial_angular_freeze/CLASSIFICATION_TAXONOMY.json": {
+    "bytes": 1294,
+    "sha256": "1003c4d8ee6aad45c37d480224752513049fb8086867bbfc10a56d3835309856"
+  },
+  "review/q2_v3_radial_angular_freeze/CONTROLLER_BANK_SPEC.json": {
+    "bytes": 7139,
+    "sha256": "ae04b679be9b895818dd837818f0e4c1f18e3d831186963b2d2efefe7bf09a32"
+  },
+  "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json": {
+    "bytes": 2050652,
+    "sha256": "b88af9e84adc6a793d5ede5504fbd4fc5824b43cbf3236fed3d9700a5465e420"
+  },
+  "review/q2_v3_radial_angular_freeze/EXECUTION_CHECKLIST.md": {
+    "bytes": 1407,
+    "sha256": "50dcfa3a12b8d324053071515195817c25629190826b8e3d3846c4289391121b"
+  },
+  "review/q2_v3_radial_angular_freeze/EXECUTION_COST_PLAN.json": {
+    "bytes": 4624,
+    "sha256": "d3900a9f679628fd973b92b8a38982fa42ebabe1226c69e472a4b7755896147d"
+  },
+  "review/q2_v3_radial_angular_freeze/GEOMETRY_DEFINITIONS.json": {
+    "bytes": 5407,
+    "sha256": "cc758bb35a334d49c4609dd932d65112ccceab7bb27482b84179ed820e64820c"
+  },
+  "review/q2_v3_radial_angular_freeze/IDENTIFIABILITY_GATE.json": {
+    "bytes": 2041,
+    "sha256": "ae344f96f0defd9a56acfc9e7e45f033a37bca03d01279faf8c048bdc84f4d9b"
+  },
+  "review/q2_v3_radial_angular_freeze/M1_COVARIANCE_MANIFEST.json": {
+    "bytes": 28479,
+    "sha256": "50322939352e2153449c6f65164a4a10b102006f8fcb2f9a20befe427b5b4f25"
+  },
+  "review/q2_v3_radial_angular_freeze/M2_PROBE_MANIFEST.json": {
+    "bytes": 5990,
+    "sha256": "97eb8845c092af039014ca2f1d0b3103c4d4294abd1b5fd5580c7fb3c61317fa"
+  },
+  "review/q2_v3_radial_angular_freeze/PREDICTION_LOCK_SPEC.json": {
+    "bytes": 2738,
+    "sha256": "4d597a4bd734fbfc23541562fb9a2dead5541c1ac3965034f9691dfc18bdb599"
+  },
+  "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json": {
+    "bytes": 89420,
+    "sha256": "a1408dd280d534aca1322cabd74ac9db4d73778bdf893adef8faf124dbdbe756"
+  },
+  "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_PROVENANCE_PROOF.json": {
+    "bytes": 1578,
+    "sha256": "8680616c1afc3639734d311b98dc09c6282a01302800e55bb2942f8e4212ccc0"
+  },
+  "review/q2_v3_radial_angular_freeze/PROTOCOL_LOCK.json": {
+    "bytes": 3493,
+    "sha256": "759e4dad60bdfc36b2871cd19b5621288616fa3bac00d1bf3a73f2452bbd6056"
+  },
+  "review/q2_v3_radial_angular_freeze/PROTOCOL_LOCK.md": {
+    "bytes": 2659,
+    "sha256": "945a70d3c30d41d26b90386d29727d0d3685941155a5a8d13d4b06c1693e04d1"
+  },
+  "review/q2_v3_radial_angular_freeze/PROVENANCE_STATEMENT.md": {
+    "bytes": 1188,
+    "sha256": "2c672620ec742cd82ce326fea81b998bdeb754827ef670b24b8e54ec64ecd49f"
+  },
+  "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_MANIFEST.json": {
+    "bytes": 5960,
+    "sha256": "9581ae98ba8cb5e4183331b6a943af5feed14d0efb1d86d7b1990a9b7cb7c79c"
+  },
+  "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json": {
+    "bytes": 89813,
+    "sha256": "59f63eb89bd67a56fd9471e49035cc61982f93650cf638d4045ef116acd9b258"
+  },
+  "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SPEC.json": {
+    "bytes": 1938,
+    "sha256": "19f782619b568eea5571e597dac5794cf8d75f1a5aa2110ddaf7a162d87af11f"
+  },
+  "review/q2_v3_radial_angular_freeze/SOURCE_CONSTRUCTION_MANIFEST.json": {
+    "bytes": 11271,
+    "sha256": "75c4d5796ee70b1853e6038bcea83f3afac6e8879f49cbc9a24b991a155cc893"
+  },
+  "review/q2_v3_radial_angular_freeze/SOURCE_QUALIFICATION_SCHEDULE.json": {
+    "bytes": 81480,
+    "sha256": "54d588755b2537021546c7b3a2b4c9de074524766cfc7af8ffe35872e8082a52"
+  },
+  "review/q2_v3_radial_angular_freeze/SOURCE_VALIDATION_MANIFEST.json": {
+    "bytes": 11213,
+    "sha256": "b354e5fb65df1bd045b0f46530f2f6aed00810b38111ed1167a8399642bc8774"
+  },
+  "review/q2_v3_radial_angular_freeze/STATISTICAL_ANALYSIS_PLAN.json": {
+    "bytes": 4538,
+    "sha256": "212e175cb6e6eef65576a36abc97e5e9191928ccdbd68c60d18d6b4d1e0a22c0"
+  }
+}

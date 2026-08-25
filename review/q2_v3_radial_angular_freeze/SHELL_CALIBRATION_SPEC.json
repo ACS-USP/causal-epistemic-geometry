@@ -1,0 +1,42 @@
+{
+  "activation_denominator": "baseline layer-27 block-output current-token residuals on 12 calibration prompts, sequential KV teacher forcing; k is final prompt token plus every token of the frozen teacher continuation; squared norms accumulated float64",
+  "delta_cast_timing": "alpha times float64 unit direction, then cast once to BF16 and back to float32 for measurement and injection",
+  "formula": "r_impl(delta)=sqrt(mean_{x,k}||BF16(delta)||_2^2 / mean_{x,k}||h_L27(x,k)||_2^2)",
+  "label_free_safety": {
+    "all_20_meaningful_controllers_must_pass": true,
+    "correctness_forbidden": true,
+    "evaluability_min": 0.9,
+    "items": 12,
+    "matched_seed_across_conditions": true,
+    "raw_sequence_movement_min": {
+      "MEDIUM": 0.1,
+      "STRONG": 0.15
+    },
+    "relative_evaluability_drop_max": 0.05,
+    "relative_validity_drop_max": 0.05,
+    "rollouts": 2,
+    "truncation_rate_max": 0.05,
+    "validity_min": 0.9
+  },
+  "not_intrinsic_geometry": true,
+  "root_finding": {
+    "failure": "stop before label-free shell-safety generation; no extrapolation or target change",
+    "initial_interval": [
+      0.0,
+      256.0
+    ],
+    "maximum_iterations": 40,
+    "method": "deterministic bisection over alpha with BF16-cast amplitude evaluated at every visited point",
+    "relative_target_error_max": 0.005,
+    "selection": "visited alpha with minimum absolute amplitude error; ties choose lower alpha"
+  },
+  "schema_version": "q2-v3-shell-calibration-spec-v1",
+  "seed_namespace": "Q2-V3-SHELL-SAFETY-V1",
+  "status": "FROZEN_NOT_RUN",
+  "target_justification": "0.25 and 0.50 span a twofold implemented-amplitude contrast inside the historical label-free V2 safe/manipulation displacement range while remaining below the historical high-dose anchor; no V3 outcome informed them",
+  "targets": {
+    "MEDIUM": 0.25,
+    "STRONG": 0.5
+  },
+  "terminology": "coordinate-space implemented intervention amplitude"
+}

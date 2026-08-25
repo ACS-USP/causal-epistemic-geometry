@@ -1,0 +1,35 @@
+{
+  "no_signal_wording_for_subcriterion_failure_forbidden": true,
+  "precedence": [
+    "engine/instrument/provenance",
+    "controller safety/qualification",
+    "identifiability",
+    "prediction lock",
+    "G3",
+    "G2",
+    "G1",
+    "G0"
+  ],
+  "prepanel_terminal_states": [
+    "Q2_V3_PANEL_PROVENANCE_MISMATCH",
+    "Q2_V3_CONTROLLER_QUALIFICATION_FAILED",
+    "Q2_V3_CONTROLLER_BANK_DESTRUCTIVE",
+    "Q2_V3_ANGULAR_IDENTIFIABILITY_FAILED",
+    "Q2_V3_PREDICTION_LOCK_FAILED",
+    "Q2_V3_INSTRUMENT_FAILURE",
+    "Q2_V3_ENGINE_FAILURE",
+    "Q2_V3_WALLET_GATE_FAILED"
+  ],
+  "radial_suffix": {
+    "R+": "radial claim passes",
+    "R-": "radial claim fails"
+  },
+  "schema_version": "q2-v3-classification-taxonomy-v1",
+  "scientific_hierarchy": {
+    "Q2_V3_G0_NO_RELATIONAL_GEOMETRY": "none of M0/M1/M2 passes the relational gate",
+    "Q2_V3_G1_GENERIC_COORDINATE_STATISTICAL_RELATIONAL_GEOMETRY": "M0 or M1 passes and M2-required superiority does not pass, whether or not M2 also passes",
+    "Q2_V3_G2_FINITE_RESPONSE_RELATIONAL_GEOMETRY_SUPPORTED": "M2 passes, neither M0 nor M1 passes, and M2-required superiority does not pass",
+    "Q2_V3_G3_FINITE_RESPONSE_GEOMETRY_REQUIRED": "M2 passes and every M2-required superiority criterion passes"
+  },
+  "status": "FROZEN_NOT_RUN"
+}

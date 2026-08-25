@@ -1537,3 +1537,56 @@ experiments:
     next_action: >-
       Principal researcher review and optional prospective Q2 V3 freeze. Do not
       execute Q2 V3 or Q3 without a new authorization.
+
+  - id: Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE
+    version: V3-FREEZE-V1
+    stage: DEVELOPMENT_PROSPECTIVE_FREEZE
+    question: >-
+      After matching implemented intervention amplitude, does pre-outcome
+      internal geometry prospectively predict which semantic blind spots differ
+      across genuinely new causal controllers?
+    instrument: >-
+      Qwen3-8B L27; five new textual source families; prompt/execution paired
+      means; two implemented-amplitude shells; M0/M1/M2; 200 historical
+      provenance-Class-C CRUXEval items reserved for later semantic execution
+    model_policy: No model loaded and no inference in the freeze sprint
+    status: Q2_V3_FROZEN_NOT_RUN
+    outcome: >-
+      Every controller construction, qualification, shell, null, geometry,
+      prediction-lock, analysis, classification, schedule, seed, cost, wallet,
+      and stopping choice is prospectively frozen. The panel selection was
+      independently reproduced from provenance and SHA-256 ordering without
+      outcome values. Semantic trajectories remain zero.
+    scientific_interpretation: >-
+      This is a protocol state, not a Q2 result. The future evidence class is
+      historical-item/prospective-controller same-domain validation, not
+      fresh-item confirmation. M3 remains excluded because its BF16-stack
+      instrument did not qualify; this is not evidence against Fisher geometry.
+    source_commit: 9a748de3706a788f8c6c5a1d12c09489808006e8
+    artifact: review/q2_v3_radial_angular_freeze/
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    scientific_rows: 0
+    semantic_trajectories: 0
+    inference_performed: false
+    primary_panel:
+      n: 200
+      provenance_class: C
+      ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+      selection_outcome_independent: true
+    controller_bank:
+      families: 5
+      base_directions: 10
+      shells: {MEDIUM: 0.25, STRONG: 0.50}
+      meaningful: 20
+      nulls: 4
+    geometries: [M0, M1, M2]
+    m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED
+    expected_rows_if_separately_authorized: 10000
+    q1: UNCHANGED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    next_action: >-
+      Principal researcher review and separate execution authorization. Do not
+      run source, shell, geometry, semantic-panel, Q3, RunPod, or DGX work from
+      this freeze entry.

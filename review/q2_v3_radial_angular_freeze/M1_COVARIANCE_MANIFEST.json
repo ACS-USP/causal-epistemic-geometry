@@ -1,0 +1,658 @@
+{
+  "allocation": "M1_COVARIANCE",
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "item_count": 64,
+  "item_ids": [
+    "sample_159",
+    "sample_544",
+    "sample_58",
+    "sample_433",
+    "sample_300",
+    "sample_228",
+    "sample_0",
+    "sample_137",
+    "sample_502",
+    "sample_645",
+    "sample_55",
+    "sample_290",
+    "sample_488",
+    "sample_119",
+    "sample_669",
+    "sample_217",
+    "sample_127",
+    "sample_760",
+    "sample_101",
+    "sample_255",
+    "sample_503",
+    "sample_385",
+    "sample_570",
+    "sample_374",
+    "sample_742",
+    "sample_606",
+    "sample_332",
+    "sample_735",
+    "sample_761",
+    "sample_26",
+    "sample_411",
+    "sample_341",
+    "sample_50",
+    "sample_379",
+    "sample_576",
+    "sample_81",
+    "sample_152",
+    "sample_112",
+    "sample_5",
+    "sample_123",
+    "sample_14",
+    "sample_301",
+    "sample_63",
+    "sample_529",
+    "sample_148",
+    "sample_216",
+    "sample_449",
+    "sample_629",
+    "sample_766",
+    "sample_515",
+    "sample_579",
+    "sample_23",
+    "sample_74",
+    "sample_744",
+    "sample_181",
+    "sample_616",
+    "sample_391",
+    "sample_248",
+    "sample_116",
+    "sample_327",
+    "sample_665",
+    "sample_136",
+    "sample_8",
+    "sample_171"
+  ],
+  "items": [
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_159",
+      "official_index": 159,
+      "prompt_sha256": "dc983a6f5e025a453dcb2b696a4afa8b8958abf27a6422156bfa9893c328eff1",
+      "provenance_class": "C",
+      "reference_sha256": "bf7b6b3fb19ea19ebdee50e72dbd8f31b319529c16fa5a4be473ddd3d47e873c",
+      "selection_rank": "00117608375d76ee4418ec4b17a5a6abfbff28dfba251a8a6d74910eb5ee9515"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_544",
+      "official_index": 544,
+      "prompt_sha256": "11511c06b7138fa506ded97f6adb58e54e42fbfa92d00aa3d6eceb1a331bd33d",
+      "provenance_class": "C",
+      "reference_sha256": "2629cbc22de7525a5c1cdbd1cfe33e150bf1a58e1aff3cf1cb2b565ed5c8655c",
+      "selection_rank": "01fd3079772863a6235b2f671ffa9f4b2af72012b7e4528aa7eac8127faa0cce"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_58",
+      "official_index": 58,
+      "prompt_sha256": "b72bd66b50d66fdc64176a199f2e4df8890dc901406653e1b33baafd4a8220f7",
+      "provenance_class": "C",
+      "reference_sha256": "b48ff2bfd0224ccc46bd6c4e44fc2cd9c0775919e56fe8caa0a08235caa791f2",
+      "selection_rank": "02a09f3e14c75c153af5639b0ea94e67c521482a5663943a8834d73b4e190d2a"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_433",
+      "official_index": 433,
+      "prompt_sha256": "d979c960e3d43986416e77e3c6d41ef74ef7a0b0024d06e0c14a16687a0253b6",
+      "provenance_class": "C",
+      "reference_sha256": "0b2e0d8e99e3468849a68d85e404ed6bc2226a0f87e1e4c1319d4c7b91d72626",
+      "selection_rank": "02e75a997d4370792688df73ec5941f019b231355ef9ba036e1727cad1270549"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_300",
+      "official_index": 300,
+      "prompt_sha256": "5ab5edb666183aeb22b925eeb0452dc3aba62c56d34f902a0ffdfe69c4b12e04",
+      "provenance_class": "C",
+      "reference_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3",
+      "selection_rank": "03454e5aa1822ea528ad5bbe49a1a9e9824a3cd5e2f84c64503ecbfff4a3f3f0"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_228",
+      "official_index": 228,
+      "prompt_sha256": "6bec346df0e92692a8cfa47fc628c7c48a731fe96624c43eb33cb9ebe565fc87",
+      "provenance_class": "C",
+      "reference_sha256": "fbbce3d701a87be36ffdc60543729b4d617c23c1703c061299af1a11f048b684",
+      "selection_rank": "0358e121d4b3c07bf2094ad2614dd2bcc594fe10303fbbd572add0143442e812"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_0",
+      "official_index": 0,
+      "prompt_sha256": "ed8cc93c591e863fabcf7c5fab72e62fef5aa6dd99af10076eff60521ddf42f5",
+      "provenance_class": "C",
+      "reference_sha256": "eeb5744ea5fab497a3b48320d8fb9b8daca99ad5964aa05efeb17ff59757db4e",
+      "selection_rank": "057d7ecc4e06b60033489565bfa6cc7e70a65857eb2bd9ca85c143ce76e41e39"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_137",
+      "official_index": 137,
+      "prompt_sha256": "8bf1fea948cc8bc0d9e763c19269ba281536b28b1a6034743ecfb4318ddde495",
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "0615c29d72ce9f1d1b8e102037eb00050d7909905cbbad6f370b3642e6a9f440"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_502",
+      "official_index": 502,
+      "prompt_sha256": "5588fd7962dd48fb9c8d1b5ac679cf5dec30e7246374095154ce47a9dd3a12aa",
+      "provenance_class": "C",
+      "reference_sha256": "bc949cd778d36a83ab782ad883d706e01fb1932087f2f882b3168b48355605a2",
+      "selection_rank": "065140b269c0264a27b2500fc7623f12d0eb6c2f38550d0d021fd9b091f3c7d6"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_645",
+      "official_index": 645,
+      "prompt_sha256": "ce0ad9437d0df129c77fcb6f4addd40c886810a9c25471624cea005ae42ef220",
+      "provenance_class": "C",
+      "reference_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "selection_rank": "066698836729d2eeae3bb200d40c29e526b48be1bc4c103b1252d6a4b1993c20"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_55",
+      "official_index": 55,
+      "prompt_sha256": "ed7d9a5e3e64c10ef81521ca622315abeb63693835f679b2e0af84a089c7d7e3",
+      "provenance_class": "C",
+      "reference_sha256": "7223341d0e27d854a93a81245a2d333e0c2eab13f62b67d6a351f68523167a40",
+      "selection_rank": "06e8dc9d45aa8b6cbdacd2743b56e8cb7835e9f756b951784bd7a207660504f2"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_290",
+      "official_index": 290,
+      "prompt_sha256": "91c1f1b85f62255fa426203d8432761b138c4ec637e112e269b0241a3d6c6472",
+      "provenance_class": "C",
+      "reference_sha256": "501b20e4f07ed0adad70f0dc74f9f3bb3916f193a26bf46e1f67bab8c5349094",
+      "selection_rank": "07076ca44f952193f2afa75045a1d91a2baabf84260b91c9e1360b15e43f9fdf"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_488",
+      "official_index": 488,
+      "prompt_sha256": "7f6ed224ae89835931c06ffe6b2151eb05617fb852bbfcfa91d40a5543b13fec",
+      "provenance_class": "C",
+      "reference_sha256": "ec0478afaed25369361a13d256ed9ba07e6687096d5ec7952ee55463ace33e5f",
+      "selection_rank": "0726ce98ee989392dfd6c9fa19b500650e09eeb96d68ed0b1dc6bdc03edbcbb0"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_119",
+      "official_index": 119,
+      "prompt_sha256": "9c2fb6c646990936df43ba397e2ca73fb259e8a39eb8f2854709b3ffd4908092",
+      "provenance_class": "C",
+      "reference_sha256": "aefbb57293ad11013dfcdfacb0a96d9f19ce40df85955582696a452f706231ac",
+      "selection_rank": "072b0326d03914833e89f9bd08e1ed290fe632d29315ea8b65e5c3d8f9b8bcb3"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_669",
+      "official_index": 669,
+      "prompt_sha256": "60127942f172d7b42f13f225fcd037f206b93096c22c85b291489b903c42f77e",
+      "provenance_class": "C",
+      "reference_sha256": "ea2d4bfbdad2f1b7b3cdba76a272dadf0f28b6e42a60ead41ae083e8f5c5b7c5",
+      "selection_rank": "07e9685b2b3dc201a6e028bbc62a722506d487173e80ff629ce2f4f8a552d2da"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_217",
+      "official_index": 217,
+      "prompt_sha256": "0851add04e88fbc59152c6167d6284ab53be1d35326a83d67373f0c0b37da530",
+      "provenance_class": "C",
+      "reference_sha256": "62a0284ba725361c87783163bb4380e9d8ad74efec790f142cb29eee123b5414",
+      "selection_rank": "07f0387676e42acbfc5f3e453399116213c4d8fa3c69110f1abfe768676ea9f9"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_127",
+      "official_index": 127,
+      "prompt_sha256": "61e56193e06977bd5cd28dda4b50c4894a76215b6c11623ab35b64e47415da70",
+      "provenance_class": "C",
+      "reference_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "selection_rank": "084de16281d0ad2f6faea610a451ae4f8fad4e19688a960809bacc535cf0adab"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_760",
+      "official_index": 760,
+      "prompt_sha256": "ec6d8a35699340269f5aeb9489f0b98e306b73aa9fce94ccbb0c63f310bd6683",
+      "provenance_class": "C",
+      "reference_sha256": "07c3afe9d340b1496722bcc8cf208edd80369584c1160bb7653a3f659ed9b5d0",
+      "selection_rank": "0958a7b8084cff694a6338e2793473b6ebe3f8d75ff6f6e18a74f04cc1c43097"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_101",
+      "official_index": 101,
+      "prompt_sha256": "06083b3ba40c551703951152dc9b0cb3960e69018f96b8341255024eacd8120d",
+      "provenance_class": "C",
+      "reference_sha256": "a205ee214dba2e8216a07ff269d25f0d6138d8e374884a11d621a1c76c6704e0",
+      "selection_rank": "09fc4da15f4c3a98d1af11ee0b1abb7924760c7d0a4d647eb5b721f2534bb7d5"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_255",
+      "official_index": 255,
+      "prompt_sha256": "58ce248ac53c54e445baf17ea3df07d8059da469db5fa18666bbcfdf4476a7bf",
+      "provenance_class": "C",
+      "reference_sha256": "780f9446d41c5571523f6b628f219b47bcc226d25790c734ab0125c14c18c73c",
+      "selection_rank": "0a722fce2f87e9c6250d31b3e898d98455e161aa9dbc1a45cd7705514a2f933f"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_503",
+      "official_index": 503,
+      "prompt_sha256": "60dada81e3642ab4177ddfb7d86f794696b6a237f169f24ac9e4abe68b109535",
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "0a7ea8efceee42897d56aa1be1483e8437fc85649fe57badbfa51803da0f1a78"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_385",
+      "official_index": 385,
+      "prompt_sha256": "c740994e61b41ffd49dd96c7469e616a277bc6273c3165df758d574956ba59c6",
+      "provenance_class": "C",
+      "reference_sha256": "a20d43910814330db029a210095f5df2c3cbb94d95b59f516ed40e70a3edc5de",
+      "selection_rank": "0acd7c303946582ab004a896671b7256bdd4247bbf49dd1aa60c7e8edfed03f4"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_570",
+      "official_index": 570,
+      "prompt_sha256": "794c802262cbbbc36db47c5cf84fe843f34871e1b06731c563a70bce0e503bcd",
+      "provenance_class": "C",
+      "reference_sha256": "01ab8e4b29a808e557d52dcbb01c4e11ca9ff477ff7d3c9b04dcbd41093f6a79",
+      "selection_rank": "0b42b398b6ab868f9a7fc46393a7d1df3177ecd21345003723cfc5a962e86732"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_374",
+      "official_index": 374,
+      "prompt_sha256": "351787245fb54be4582b7f742bdbcb7e88964246d72ff080d384df33c2ffcc49",
+      "provenance_class": "C",
+      "reference_sha256": "65e8c96516460f454ac53a19d3876f52f42f0f19bd8097e0c3951b6fe9fb1d45",
+      "selection_rank": "0ce0f78443e83ea036e325b18fc93019831d24fb03368aeeec86f8acb03b567d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_742",
+      "official_index": 742,
+      "prompt_sha256": "84dd1a614e8b4363aea946bf7a6cc568cfb6717bf53681d3664c9dd1146857f9",
+      "provenance_class": "C",
+      "reference_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe",
+      "selection_rank": "0efedc2b2023b237556bee66b9e255f598399bdccfe4975da06d115d266fbbf1"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_606",
+      "official_index": 606,
+      "prompt_sha256": "252aa27cc657e25e3050489fa02618afd92e234763b61b33da6d1d8539f48ce1",
+      "provenance_class": "C",
+      "reference_sha256": "196777c7b20c0116251526a5c3253ea19971caba54efde96002fe9e527dc7a12",
+      "selection_rank": "12be98fd9e4deabde280316bb9cc7ca2a4caeaaf4fb84db9ca3282019c40f272"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_332",
+      "official_index": 332,
+      "prompt_sha256": "66a13852487c92d88fab85ce3430ba80835047482de7d93ed8946c99a1b08f0a",
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "135ff22d707c3bdde6b9464d7998e7f5935ff13a8ed8dda45a44bc1b2ea2bfd1"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_735",
+      "official_index": 735,
+      "prompt_sha256": "adaeee3972d9e740fa12514cab7fbb01da237ff4564bc64c8bfbe0c2e21b3b4d",
+      "provenance_class": "C",
+      "reference_sha256": "3885eb428f55cdab7201f815a4fc8d6efbcad18f2f4c7dd08bd297d6cca4ea93",
+      "selection_rank": "13b72c481140c8ed7ea8dbcc21361503d9403b894a01c76092c94748188057ab"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_761",
+      "official_index": 761,
+      "prompt_sha256": "f5e3ad611c1c4881b024d834a710798ba9b2bbb07a9df70422bb9b401b63147a",
+      "provenance_class": "C",
+      "reference_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selection_rank": "14899309f32e53d57498f619c4a2acd8e94024807ed0ee333081eb76a3d0daf0"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_26",
+      "official_index": 26,
+      "prompt_sha256": "ce64228ce83fccc9d05cbbfbfcb22396c500d9dd2ea4c6107e8e56c059d7bb1d",
+      "provenance_class": "C",
+      "reference_sha256": "6401a22ddfd527fac40d1a02f113333cdb16644b271a1abaf20b60cd0c901a49",
+      "selection_rank": "148f7034638bd40680dc7acf16d27f118d282fb1dcc65746af1298366a4a8cbb"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_411",
+      "official_index": 411,
+      "prompt_sha256": "d5059c8152a690a8ce784792b6374c5d6796e6b7a34100e790714828555d1fd0",
+      "provenance_class": "C",
+      "reference_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe",
+      "selection_rank": "1525f6d045aa73015e398b73d52b3bba5f65f6b1b95176e4cbf5d23cbf314bc8"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_341",
+      "official_index": 341,
+      "prompt_sha256": "935bd31b489bb425078171af97822fa397b31e76e08009431cd1d0b791c5578b",
+      "provenance_class": "C",
+      "reference_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "selection_rank": "15533b0d3005d887e33de60561edf9067b9952ee4a8776c7e2b59fd7be669013"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_50",
+      "official_index": 50,
+      "prompt_sha256": "0473f5ddcf78dda22088885af6c28d20ae318ef5012cfa9a2cd359c4a3ca06fe",
+      "provenance_class": "C",
+      "reference_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+      "selection_rank": "15b5946532e37022e60f17392c7ecd9c83b51542c6545211ea7c4834ea69e602"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_379",
+      "official_index": 379,
+      "prompt_sha256": "2c141795d9035ace84c0edc04134f6d1e8a369c3c1aad82ef7570902f364d44c",
+      "provenance_class": "C",
+      "reference_sha256": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe",
+      "selection_rank": "1706c1397b3da42c2c8e39c1a130eaabecb0ef2da592ec92a286e58a0c4a6edf"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_576",
+      "official_index": 576,
+      "prompt_sha256": "87e1573cda0d055d5b9bf4215f51d027d283db7d9c5f668936f288b3b5af7fc8",
+      "provenance_class": "C",
+      "reference_sha256": "a05649e228ce06be88e3421e897b07bfc4dccadaddaa3f445ddd90f6cfa768f1",
+      "selection_rank": "174e82d6d4197182ef8c742b633d0f93c57410659f0b12553307a10b91ff304a"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_81",
+      "official_index": 81,
+      "prompt_sha256": "ae3824ec25ba9f15fc1f0f7a82a9c1f4608330cbf187146df084df9ffd5fad44",
+      "provenance_class": "C",
+      "reference_sha256": "e72680edaa138f4d8d9487b37a2e8760899a45e3e891d3482a9a92791076f8bd",
+      "selection_rank": "186915ac2802f345ba5571aaa5fa9160761488175437ba807594c25167d09fb3"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_152",
+      "official_index": 152,
+      "prompt_sha256": "c83abc8b5a21e86363b937bd726a130683b965785aea5abcb148e58399099e4b",
+      "provenance_class": "C",
+      "reference_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+      "selection_rank": "1908f9d49b36e3a0bea12c1f6373e2b402c92107b6ae43c61077bd6303d42bcb"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_112",
+      "official_index": 112,
+      "prompt_sha256": "77cbe148a6543bb3687500e644dbf9e32644f1c5f92900e0a8f9c26ace27dffb",
+      "provenance_class": "C",
+      "reference_sha256": "5cdf14c7465fa670349ceff5d5e4dc4e878fc088812e094cec71d03563f516cc",
+      "selection_rank": "1b023597966a3acf147df1c6a2f93727f208a622bf91e1de1585070b6945b605"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_5",
+      "official_index": 5,
+      "prompt_sha256": "1f88605bbc0a40cb1aa15ebf70ed5a92fd1cbc34e915690ee60026a36792d2e5",
+      "provenance_class": "C",
+      "reference_sha256": "0f1616e8846cd626ca4c2fcc5c805f533ff6dcedb5009ed20cc49dabd892cdf7",
+      "selection_rank": "1b0fb55e6ac8b694f56f572a339dc433c3d7a7430c37b444ef72f5d86433b18d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_123",
+      "official_index": 123,
+      "prompt_sha256": "ea16fa26071d6a1e7ceb7fd725a25e7d571b6b78a164bfac748700783413c8c4",
+      "provenance_class": "C",
+      "reference_sha256": "40898303b39a09baee65a6fab44f333f7eebaa04e257a94d6219756e739a6dd9",
+      "selection_rank": "1b9227b25f52db834446bfebcbae93435a3b73ec1cb0253fb7d3e5c420f5f7ff"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_14",
+      "official_index": 14,
+      "prompt_sha256": "06963480155001637fa7caea67c00151bebef52f61ce2078548bba144d87b79c",
+      "provenance_class": "C",
+      "reference_sha256": "318e1df2765b536e067b33044368e287e4c258d7853277cb5bb90a78b7315e0e",
+      "selection_rank": "1b9e95d356f57a028047219cc7964bef90e846cd2cc41dfa8ae44d249de19643"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_301",
+      "official_index": 301,
+      "prompt_sha256": "49452f5979f4c3f47d42be8fd5c778b66b053fecaa892e5358bc1d08cdbf3107",
+      "provenance_class": "C",
+      "reference_sha256": "c306ed6afdf2d08235196925bfb75df99d75223784d5ec310b3e95861aeab58b",
+      "selection_rank": "1c6713d5e1dc3f794a4ac9c9e061f4a2170f12f7916cf1d484b2fcd283c08e12"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_63",
+      "official_index": 63,
+      "prompt_sha256": "b4544f05d0cb5b8df21c3ad158f9658203e3067ba06a8c7dab86063f26291f34",
+      "provenance_class": "C",
+      "reference_sha256": "4591c036689d388570f130297dfe8826030c1255e3b957610e3e097ad07986c7",
+      "selection_rank": "1cf2dbdc3ecf3bf0e2adc43903f0f15204124abcfe90d1f783c200d5d2e0337b"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_529",
+      "official_index": 529,
+      "prompt_sha256": "cf7d7139d7e1227df3576b62ceebe94de5fc599c651e7ff5c6d7a5f8fe6ed7d1",
+      "provenance_class": "C",
+      "reference_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3",
+      "selection_rank": "1da795225e36df00c96078473ae7479e822db2797c6a0b78f9d45664083c0bce"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_148",
+      "official_index": 148,
+      "prompt_sha256": "ca8c3c8046079fcde89db8f92d0c6ed1ebbea09708ba3c1addf2bef1ccb4082f",
+      "provenance_class": "C",
+      "reference_sha256": "44745a822467d76d6189f40b09c2a983eca726fffa90c72375b19029fa019a86",
+      "selection_rank": "1df636f982a6886e5dbdf353a80d5e6c18004f421f48b8335f0a122d9c429ffd"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_216",
+      "official_index": 216,
+      "prompt_sha256": "cbba8b3756c95aad3dfe3d69bd629b747fd63c37cc0aa6d45bf7e44f84ec3520",
+      "provenance_class": "C",
+      "reference_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "selection_rank": "1f44e1b57332a14d516189adb4520c98243560c6b35c22717daa53a4668d3f3d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_449",
+      "official_index": 449,
+      "prompt_sha256": "94e0186ef4f9e53e0ec634c2a6636ddd2d4ec9b9b3fdce17aaa1ffc389f13112",
+      "provenance_class": "C",
+      "reference_sha256": "3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18",
+      "selection_rank": "1fbbfcdbb9e53f44f14145f3f67fc5e1b7f14da4fa3dc15d9d02ef00a15e5d31"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_629",
+      "official_index": 629,
+      "prompt_sha256": "5fe98f33e4e3dea50a5b867c133379ed449c53147cb3bd3e7ab889a34a52650c",
+      "provenance_class": "C",
+      "reference_sha256": "2eb1de2bf541e971b33622168f40746a6ba1e383340228c59a55b66e9725810f",
+      "selection_rank": "209e336bd2af4c44c1d7e344ef593e8a77e0b8ec8e4e9da39b4a1431f9fa28d3"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_766",
+      "official_index": 766,
+      "prompt_sha256": "18cb74b836d11acf53d7188f0a8e2da7b9e96df30d0ea52b1a563834cca21e36",
+      "provenance_class": "C",
+      "reference_sha256": "ed1f9ed03ca155c131acb9df600d4ffc3678be7be871e0ebc060f486ef8eb133",
+      "selection_rank": "20d32700c70a1c629d61308c1fa4a7beb85178225f4193518733dee1683f7c70"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_515",
+      "official_index": 515,
+      "prompt_sha256": "a39393d325978f1c89465b4346bee0727630cabf236ea74c7d4c3b2da721fe51",
+      "provenance_class": "C",
+      "reference_sha256": "18e6b27be6cc7dfafba6b7cd8956efde9a941e05ddf979cb8b902c051b0bcaaf",
+      "selection_rank": "21a76d9b3004d5f81145c6a1168fc13f88bb7f11a87838381475fe3c47bddd18"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_579",
+      "official_index": 579,
+      "prompt_sha256": "1c3fd74fb8d4901c28ce5543704b279c0bc3f313db301c2ecce28ea7f1534ef1",
+      "provenance_class": "C",
+      "reference_sha256": "6f49cdbd80e1b95d5e6427e1501fc217790daee87055fa5b4e71064288bddede",
+      "selection_rank": "21aa6ecff149df511e94d89a1780531bfff8618765555e1fa819f69943331520"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_23",
+      "official_index": 23,
+      "prompt_sha256": "3d76ce0261508343f322249640a07d3d31c7dbe18cb71430fff0d2d8349b67d2",
+      "provenance_class": "C",
+      "reference_sha256": "8ad5bc5d0f22f750ee821d22e415297941f1390bc4c04f759856671ce1c4ef1e",
+      "selection_rank": "21f23b9d0d443944bcf12b81441955f58032f89f3956f257babef645f75a3d45"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_74",
+      "official_index": 74,
+      "prompt_sha256": "8a1288689d8f71aacfc263b9f2be0e21a9b5c02f66fb9b9814bf16ee41283847",
+      "provenance_class": "C",
+      "reference_sha256": "b76864b239fb98d77e1988e88099a27e327690488298dc3fcf97345769f493bd",
+      "selection_rank": "220ad15934791b6dec8eeaf31e2205ca7e18ebdf22c5529f19a049e55423dc28"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_744",
+      "official_index": 744,
+      "prompt_sha256": "892f5fa885c4eb919f11060afe140c7974d9f8ecbd2429b1b50ee4aea8bda54d",
+      "provenance_class": "C",
+      "reference_sha256": "42f098396cd57b165bcf0e9da60533e958fd0bd8a1f350d68aff374c3150cd69",
+      "selection_rank": "229bf709e1dca8f789386df03380dd2759925cb644c362d439f2b7ef859b8981"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_181",
+      "official_index": 181,
+      "prompt_sha256": "79999831c283be807500fdb4bdc8f086ef14c63f673d24e2b54657c4c048e6a4",
+      "provenance_class": "C",
+      "reference_sha256": "5df9be80d8f96f955535f87b14852cb945b6d91eff5581fe0396b9a2e4a0c123",
+      "selection_rank": "22a9e415bc2da452bc426fdf90cb7d08aba1a61f771eab7e7618eb79511f9a8d"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_616",
+      "official_index": 616,
+      "prompt_sha256": "44c084d1bbb02df682bf3ca8caa9441290e987e3366f4422ea381b371e626133",
+      "provenance_class": "C",
+      "reference_sha256": "f8a7423475c0a0f1a6c902e3fdc61283d0a64bf1f07de45e2ae21595d2877ed4",
+      "selection_rank": "230a064c8a255c01440e08b00f7b07c608b20057e6b38081201c5ac09d22d675"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_391",
+      "official_index": 391,
+      "prompt_sha256": "745e1248e590a160c5d576167bf5da77b248b46222f0a50f7b2e669b59cfcc51",
+      "provenance_class": "C",
+      "reference_sha256": "8e7b89894b5d6fc9e68805d6711d74faf20ea4dd14da98ce50c2b320e2dc5e38",
+      "selection_rank": "2343a8dd49ffdfcce9adbb30be2a58090481ca80c4865959b7fe6ba98b8b31bd"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_248",
+      "official_index": 248,
+      "prompt_sha256": "14e5508fee3eae13a943965832e1d8443140a124238b2ab1bde31458900903e1",
+      "provenance_class": "C",
+      "reference_sha256": "b14e923491a2a7f12f7153733653e0ab121def56fc3b1ef8642ed4692eaf2d64",
+      "selection_rank": "238d5b5521345940480338e2999903f4ee337c4a0f76477021db37873fe9db3c"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_116",
+      "official_index": 116,
+      "prompt_sha256": "2ef1e646e49a3fd3549b86769e84b648cf7b0e5a3227bd59bc1aac5b7efe58ac",
+      "provenance_class": "C",
+      "reference_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "selection_rank": "249bbaf40f5908ab9f0716558f0bf8e5501839f653a16f21feb4f9fa807a96f1"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_327",
+      "official_index": 327,
+      "prompt_sha256": "38a4ed272616e5c4e8d5f7bf5d7c7fe9e260157af74322b206296ac3545db30e",
+      "provenance_class": "C",
+      "reference_sha256": "4cc722a96aa82a28b8f7c545091fa4a254e7ce093ef93d727dbdb5dd4e00f8f6",
+      "selection_rank": "25f49b7d2d1e77555f99b453ae76bc4c6ded27893509a168c3b22b8235593ca5"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_665",
+      "official_index": 665,
+      "prompt_sha256": "74b15fff0acf015e16ebd709be3f5bf3cbb0d47130c7c2e5234e5e0f39e580e7",
+      "provenance_class": "C",
+      "reference_sha256": "ff76761542549533968e913027cefded6cbcb1e5375cf43e5d58f2227ea0667c",
+      "selection_rank": "2628bd93e2856a5f3ffee466303bd725db29432fdcfab97b286e0d3995e10ea2"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_136",
+      "official_index": 136,
+      "prompt_sha256": "793b27e9c1a5ed0010cf2f7f618f1f23a6e57d5c8f154e988b103a9f31c73a43",
+      "provenance_class": "C",
+      "reference_sha256": "f5cf828b5e975f75fa182e0ed1901e10224fd59e88335ed15c619b7cb4e2e789",
+      "selection_rank": "269e1bd0fde05a144440eb4a947bd24aea74a2f1d261aecbed68739f86b48afa"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_8",
+      "official_index": 8,
+      "prompt_sha256": "9b1095255217e224a6a2e576b1416f61a6567e30856b6854d709d0952fc8751d",
+      "provenance_class": "C",
+      "reference_sha256": "8977fe35f5194977c473ab6601baabc99cc3aa4b27729e3eccddb54587cc086c",
+      "selection_rank": "26d44669d6a5c4a2c034ae690fab9a986c567441039af70c133b28c1f6a351ae"
+    },
+    {
+      "allocation": "M1_COVARIANCE",
+      "item_id": "sample_171",
+      "official_index": 171,
+      "prompt_sha256": "7203d217a7d467745e847f2cada6e025576a55cbb2be763f5fe1f0e90ec56868",
+      "provenance_class": "C",
+      "reference_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3",
+      "selection_rank": "2716e878332693c14719a2fe0e5c7beacd1dff88655485813e2a8bfde05fe21b"
+    }
+  ],
+  "ordered_ids_sha256": "db2c9d7255bd6f36dc73de7c0aa284a5aa000d18332d26b897edb9913a9767a5",
+  "outcome_values_read_or_used": false,
+  "provenance_class": "C",
+  "rng": "NONE_SHA256_TOTAL_ORDER",
+  "schema_version": "q2-v3-allocation-v1",
+  "selection_algorithm": "filter exact provenance class and prior exclusions; sort ascending by SHA256(namespace + U+001F + item_id), then item_id; take first N",
+  "selection_namespace": "Q2-V3-M1-COVARIANCE-V1",
+  "status": "FROZEN_NOT_RUN"
+}

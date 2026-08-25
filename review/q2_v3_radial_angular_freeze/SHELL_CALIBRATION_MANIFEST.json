@@ -1,0 +1,138 @@
+{
+  "allocation": "SHELL_CALIBRATION",
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "item_count": 12,
+  "item_ids": [
+    "sample_798",
+    "sample_745",
+    "sample_673",
+    "sample_139",
+    "sample_410",
+    "sample_514",
+    "sample_266",
+    "sample_613",
+    "sample_700",
+    "sample_769",
+    "sample_460",
+    "sample_589"
+  ],
+  "items": [
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_798",
+      "official_index": 798,
+      "prompt_sha256": "bc3590c13c0228ef0d0790be18918174d992720d8550eea77b8d46292d87d7c0",
+      "provenance_class": "C",
+      "reference_sha256": "3c16c401886adb0cea38f537a1070e58b4baa3c89561bc85510b98f849f083b9",
+      "selection_rank": "002dc1df126358f5c1cf5601f374c734f7e4781239d322f91b1c525e7c68895a"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_745",
+      "official_index": 745,
+      "prompt_sha256": "7d22746e39c1364db01d176b6b1b240d7e235f5ea3b2cbb20dccb2586d89ee65",
+      "provenance_class": "C",
+      "reference_sha256": "c039f70067d318f2214b243440052a96c705cdf9ed40155c7598b38a25715b2a",
+      "selection_rank": "0093b8109b4c288d276759d23a497632a2c9457801c33b5c26e4576e8c2b45e2"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_673",
+      "official_index": 673,
+      "prompt_sha256": "6837995e04a1ff545540a56d54922f9ad6b24a2f5fe0d87959b206b6250b00d7",
+      "provenance_class": "C",
+      "reference_sha256": "ee2ffb9ed118d2b92c9d7d17f5f3f48fb31f2c34fc2ce1894772f8aec3a82096",
+      "selection_rank": "02643a57e30b23b57279630bcd62a8417753248afc49dd34465353a9d3fac169"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_139",
+      "official_index": 139,
+      "prompt_sha256": "f6d10a17999b0727e29e672d9d4c42c2f85148776e727bd1db89df035d4f079f",
+      "provenance_class": "C",
+      "reference_sha256": "da4a4a85c0884c8945c7bbe796935c8106bf1712060507bfdfe8c6d54f537fb0",
+      "selection_rank": "033e204a8a51adbd01703fc89dcbff25793dca68f0a1863320872e7ffb1557de"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_410",
+      "official_index": 410,
+      "prompt_sha256": "834696b99bb2d9fdaec89a477f44feef5b90fb01f3113cf672df4dee735f4655",
+      "provenance_class": "C",
+      "reference_sha256": "70e9a0600d699890c7be6342ed74af2be4d417564306d7ec25ccab58e317aa01",
+      "selection_rank": "037a6a14eb396f02094b602dad633e58c3872dafbfbff9d3c025456744076707"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_514",
+      "official_index": 514,
+      "prompt_sha256": "fdae885f69ad73c7ac3b3f5eca891f6e7b4fd46ec3e2a40f47a3c0eb6831970a",
+      "provenance_class": "C",
+      "reference_sha256": "229156c5e58f211df9533ad297517a3f5966e429284c8ee5a2dfe170d5f09394",
+      "selection_rank": "03abf99b3d709ac24ef78a02c64a41ac7cb30772204b3c6c3fc80db206e256f7"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_266",
+      "official_index": 266,
+      "prompt_sha256": "5f8a3d59184844832a8353915436192c6f02a997ceb304dc2fb6e39f2d657d0c",
+      "provenance_class": "C",
+      "reference_sha256": "e5c40e9898f74f38c69a1325169e714a1b79692889562579514cc3a04e176c88",
+      "selection_rank": "04302f18fc0b989a963abcf435ddc6520b5ee8e61ff9653717203b2bd9080db1"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_613",
+      "official_index": 613,
+      "prompt_sha256": "77787d4e572e04d7f0ff3b6e6357871cbaa9c609b197c42576be8cef05aeedcb",
+      "provenance_class": "C",
+      "reference_sha256": "4b49422b87bc11fa603ec32c82a6a73eaf15ebaf1ce6b5329311cbaece9a6d64",
+      "selection_rank": "048a4435bfa75233db2cfcc8c727dcbf20afb628625efde51d4f353786a6cbce"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_700",
+      "official_index": 700,
+      "prompt_sha256": "25be1660917f7f0820d919d9996071e154268952f92855f77a6656579e939684",
+      "provenance_class": "C",
+      "reference_sha256": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "selection_rank": "049652127c523012587322baa8a13d68df0c5f68fbacdf18af90801abb23dcf7"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_769",
+      "official_index": 769,
+      "prompt_sha256": "79938ee7feb8cbe7cd0d346a8ea27c41611238b441ca324c2f39d4229c2d97bc",
+      "provenance_class": "C",
+      "reference_sha256": "9aec674e592542882f7040aa6397fb771f62c5cc13ac679ffdb427131e26b7f8",
+      "selection_rank": "04b90aff2a2bd0117619cad7f00a8857a919dbeb5ee3f6caf5e722b25634fff5"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_460",
+      "official_index": 460,
+      "prompt_sha256": "50e7673ee3ea6fbcb819292a0f9fda8933e0ce13296b4349c8c74c0fc4adb879",
+      "provenance_class": "C",
+      "reference_sha256": "6b6695e3db23f12e105deee13a4fee635bfc9346cc56e2f9bbab510b0f1b8268",
+      "selection_rank": "0552fbc313ebc996d11fcf018565cb367d06bb7bc23343beacfcc296cbc83752"
+    },
+    {
+      "allocation": "SHELL_CALIBRATION",
+      "item_id": "sample_589",
+      "official_index": 589,
+      "prompt_sha256": "09dc042c1bcf4bb247a80bf417b00f0926f75acd50c93f6e8540ce2972c21c94",
+      "provenance_class": "C",
+      "reference_sha256": "09251289e8b0e48f1f6fc30004271110305547aa70bfd0845f7733ab86ffb1f4",
+      "selection_rank": "060a94f5591b696f9885120e901360d80aa90a338773b334d04e4e9e995f1d1a"
+    }
+  ],
+  "ordered_ids_sha256": "d77e155ead66d82f2c4706791c3829199d5f7061a8232d9e05c582c0a77e8439",
+  "outcome_values_read_or_used": false,
+  "provenance_class": "C",
+  "rng": "NONE_SHA256_TOTAL_ORDER",
+  "schema_version": "q2-v3-allocation-v1",
+  "selection_algorithm": "filter exact provenance class and prior exclusions; sort ascending by SHA256(namespace + U+001F + item_id), then item_id; take first N",
+  "selection_namespace": "Q2-V3-SHELL-CALIBRATION-V1",
+  "status": "FROZEN_NOT_RUN"
+}
