@@ -1,0 +1,34 @@
+{
+  "audit_classification": "Q2_V3_FORENSIC_CLEAN",
+  "audited_terminal_state": "Q2_V3_PANEL_PROVENANCE_MISMATCH",
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "independent_recomputation": {
+    "manifest_records_checked": 336,
+    "matching_prompt_hashes": 327,
+    "mismatching_prompt_hashes": 9,
+    "reference_hash_mismatches": 0,
+    "mismatch_ids": [
+      "sample_300",
+      "sample_74",
+      "sample_659",
+      "sample_777",
+      "sample_145",
+      "sample_698",
+      "sample_21",
+      "sample_745",
+      "sample_700"
+    ],
+    "legacy_external_prompt_hash_matches": 9
+  },
+  "primary_audit_count_discrepancy": 0,
+  "frozen_artifacts_rewritten": false,
+  "panel_repaired_or_substituted": false,
+  "model_inference_rows": 0,
+  "semantic_outcomes_opened": false,
+  "prediction_lock_created": false,
+  "scientific_peeking": false,
+  "terminal_rule_applied_mechanically": true,
+  "runpod_active_pods_after_teardown": 0,
+  "runpod_retained_volumes_after_teardown": 0
+}

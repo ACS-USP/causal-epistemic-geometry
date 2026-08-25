@@ -1636,6 +1636,7 @@ experiments:
     semantic_outcomes_opened: false
     prediction_lock_created: false
     geometries_constructed: []
+    forensic_classification: Q2_V3_FORENSIC_CLEAN
     q1: UNCHANGED
     q2_v2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
     m3: EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED

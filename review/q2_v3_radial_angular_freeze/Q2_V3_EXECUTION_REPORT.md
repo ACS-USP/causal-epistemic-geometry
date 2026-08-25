@@ -42,6 +42,12 @@ model was loaded. The historical freeze artifacts were not rewritten.
 This is a pre-panel provenance terminal state, not evidence for or against any
 of M0, M1, or M2.
 
+## Forensic audit
+
+An independent reconstruction reproduced all gate counts exactly and found no
+scientific peeking, item substitution, frozen-artifact rewrite, or model
+inference. Audit classification: `Q2_V3_FORENSIC_CLEAN`.
+
 ## Infrastructure
 
 The A40 environment and frozen package profile passed remote preflight. The Pod
