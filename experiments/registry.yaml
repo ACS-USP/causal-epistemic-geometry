@@ -1377,6 +1377,64 @@ experiments:
       Principal researcher review. Do not execute Q3 or a follow-up geometry
       experiment automatically.
 
+  - id: Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN
+    version: FOUNDATIONS-V1-V3-RADIAL-ANGULAR-DRAFT
+    stage: MATHEMATICAL_FOUNDATIONS_AND_PROSPECTIVE_DESIGN
+    question: >-
+      What geometry is mathematically appropriate for causal Transformer
+      interventions, and how can Q2 V3 identify directional error geometry
+      separately from radial intervention strength?
+    instrument: >-
+      Frozen Q2 V2 code/artifacts, Gate 12/12.1 engineering evidence, local
+      Wurgaft reference, and CPU-only synthetic linear-softmax fixtures
+    model_policy: No model loaded; no scientific inference
+    status: COMPLETE_DESIGN_ONLY_AWAITING_PRINCIPAL_FREEZE
+    outcome: >-
+      M0 and M1 are exactly normalized angular chords and discard deployed
+      dose. M2 is sqrt(mean full-vocabulary JS) over finite teacher-forced
+      intervention responses; it is a response pseudometric, not a local
+      pullback, and its frozen archive lacks a baseline origin for radial/angular
+      decomposition. A multi-checkpoint categorical-Fisher M3 is mathematically
+      defensible on the controller span, but Gate 12.1 prevents treating it as
+      numerically qualified. Q2 V3 was redesigned with ten new oriented
+      directions, two physically matched shells, and a within-shell angular
+      primary claim.
+    scientific_interpretation: >-
+      Q2 V2 primarily identified finite causal intensity. The revised Q2 V3
+      must experimentally match physical radius before outcomes and test
+      whether precomputed orientation predicts semantic error relations. M3 is
+      optional and may enter only after a separate non-scientific qualification.
+    source_commit: 1641c457d0a1d515ed7755011fb8b0683a9d9dcb
+    artifact: review/q2_geometry_foundations/
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    scientific_rows: 0
+    inference_performed: false
+    q2_v2_classification: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    q2_v2_forensic: Q2_V2_FORENSIC_CLEAN
+    cpu_synthetic_validation:
+      fixtures: 24
+      classification: PASS_MATHEMATICAL_IDENTITIES_ONLY
+    m3:
+      candidate: MULTICHECKPOINT_TEACHER_FORCED_CATEGORICAL_FISHER_GRAM
+      status: NOT_QUALIFIED
+      gate12_1_reused_as_qualification: false
+    q2_v3:
+      status: DRAFT_AWAITING_PRINCIPAL_RESEARCHER_FREEZE
+      base_directions: 10
+      shells: 2
+      meaningful_controllers: 20
+      primary_panel_n: 200
+      proposed_panel_rows: 10000
+      same_domain_instrument: UNRESOLVED_BLOCK_BEFORE_FREEZE
+      execution_authorized: false
+    q1: UNCHANGED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    next_action: >-
+      Principal researcher review. Do not qualify M3, freeze/run Q2 V3, use
+      RunPod/DGX, or begin Q3 without a new authorization.
+
   - id: Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DESIGN
     version: REVIEW-V1-V3-DRAFT
     stage: POST_HOC_EXPLORATORY_AND_PROSPECTIVE_DESIGN

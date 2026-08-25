@@ -89,6 +89,15 @@ Compare intervention and error-distance matrices by direction-label
 permutation. Do not run an indiscriminate layer × vector × alpha sweep and do
 not introduce manifold machinery.
 
+The completed Q2 V2 development study and post-hoc review refine this gate.
+M0/M1 were normalized angular metrics, whereas finite M2 largely tracked
+intervention strength. Any Q2 V3 must therefore match a transparent physical
+injection radius prospectively and make within-shell directional prediction the
+primary claim. A local output-Fisher M3 may be included only after a separate
+numerical-engine qualification; it must never be described as the true geometry
+of semantic correctness. The radial/angular Q2 V3 protocol remains a draft and
+is not authorized.
+
 ## Gate 6.3 — single-mean semantic closeout
 
 Gate 6.3 completed the conditional single-L27 semantic evaluation with an

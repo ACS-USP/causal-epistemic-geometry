@@ -1,5 +1,10 @@
 # Q2 V3 — Prospective Out-of-Bank Finite-Secant Geometry
 
+> Superseded as the current design draft by
+> `review/q2_geometry_foundations/Q2_V3_RADIAL_ANGULAR_PROTOCOL_DRAFT.md`.
+> This earlier design is retained as the provenance record of the pre-foundations
+> proposal. Neither draft is frozen or authorized for execution.
+
 Status: `DRAFT / AWAITING PRINCIPAL_RESEARCHER_FREEZE`  
 Execution: `NOT RUN`  
 Inference authorization: `NONE`
@@ -318,4 +323,3 @@ or collective utility remain forbidden.
 - Q3: `NOT RUN`;
 - confirmatory holdout: not reused;
 - RunPod/DGX authorization: none in this draft task.
-

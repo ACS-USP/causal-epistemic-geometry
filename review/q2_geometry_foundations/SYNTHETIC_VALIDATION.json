@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "fisher_psd": true,
+    "hellinger_constant": "8 H^2 / epsilon^2 -> q for H^2=1/2||sqrt(p)-sqrt(q)||^2",
+    "js_constant": "8 JS / epsilon^2 -> q for natural-log equal-weight JS",
+    "kl_constant": "2 KL / epsilon^2 -> q",
+    "logit_shift_invariance": true,
+    "pass": true,
+    "polarization": "<v,w>_G=(q(v+w)-q(v)-q(w))/2"
+  },
+  "epsilon": 0.0003,
+  "fixtures": 24,
+  "maximum_errors": {
+    "distance_identity": 1.3322676295501878e-15,
+    "gram_explicit": 6.661338147750939e-16,
+    "hellinger_relative": 0.0002163375523645157,
+    "js_relative": 0.00021633264486523867,
+    "kl_relative": 0.00014422795675657568,
+    "polarization": 3.3306690738754696e-16
+  },
+  "output_dtype": "float64",
+  "schema_version": "q2-m3-synthetic-validation-v1",
+  "seed": 2026082501
+}

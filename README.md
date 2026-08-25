@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V2_PRINCIPAL_REVIEW_COMPLETE_V3_DRAFT` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_GEOMETRY_FOUNDATIONS_COMPLETE_V3_RADIAL_ANGULAR_DRAFT` — **scientific claim:** `NONE_FROZEN`.
 
-The post-hoc principal review exactly reproduced the frozen Q2 V2 composite null and found that M2's broad family-consistent advantage over M0/M1 is largely confounded by intervention strength. A four-feature dose/delta-norm baseline reached held-out rho 0.443 and RMSE ratio 0.929; adding M2 improved RMSE by only about 0.55%, with residual rho 0.054 and exploratory family-QAP p=0.374. Q2 V2 remains Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL. A stronger magnitude-deconfounded, genuinely out-of-bank Q2 V3 protocol is drafted only and awaits principal freeze. No inference or GPU work occurred; Q1 is unchanged and Q3 remains NOT RUN.
+The geometry-foundations sprint audited the exact Q2 V2 implementations: M0 and M1 are normalized angular chords that discard dose, while M2 is a finite output-response Jensen-Shannon pseudometric, not a local pullback. A categorical-Fisher M3 on the controller span is mathematically coherent in CPU toy models but remains numerically NOT QUALIFIED under the Gate-12.1 evidence boundary. Q2 V3 is redesigned around ten new oriented directions, two physically matched intervention-radius shells, and within-shell angular prediction. It cannot be frozen until M3 qualification is separately reviewed and a genuinely fresh same-domain instrument is established. Q2 V2 remains unchanged; no inference or GPU work occurred; Q3 remains NOT RUN.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_Q2_V3_DRAFT
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_GEOMETRY_FOUNDATIONS_AND_Q2_V3_DRAFT
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

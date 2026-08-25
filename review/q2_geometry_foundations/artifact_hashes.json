@@ -1,0 +1,62 @@
+{
+  "files": {
+    "docs/Q2_GEOMETRY_FOUNDATIONS.md": {
+      "bytes": 11472,
+      "sha256": "f64c5281c52da6b6405bfd85ccfe57ab96cf690f4a369f3fda48cfa977fc8136"
+    },
+    "docs/Q2_M3_FEASIBILITY_AND_QUALIFICATION_PLAN.md": {
+      "bytes": 5552,
+      "sha256": "50e82fd2410f823e88ea4b4f0b9ad442a9680580ceafaf465220f33a3abdddb9"
+    },
+    "experiments/specs/q2_v3_out_of_bank_finite_secant.DRAFT.yaml": {
+      "bytes": 3945,
+      "sha256": "f79886bdaa55675433415ce84eb607279b4129733d03927f7870a41a79653e45"
+    },
+    "review/q2_geometry_foundations/MATHEMATICAL_AUDIT.json": {
+      "bytes": 4026,
+      "sha256": "657434cbd276c6c482a5e7110ab30d5b4e025318fcf8917e7e51a610cb0655f8"
+    },
+    "review/q2_geometry_foundations/Q2_V3_RADIAL_ANGULAR_PROTOCOL_DRAFT.md": {
+      "bytes": 10050,
+      "sha256": "fa0b35431050339cdb2a2317ed6498b718bd5d565e10017c27a7a197dfe21975"
+    },
+    "review/q2_geometry_foundations/Q2_V3_REVISED_POWER_PRECISION_COST_PLAN.md": {
+      "bytes": 3151,
+      "sha256": "e57198349f53e98bd3f032bbbdf1f9184cff8cf7fc64f08d0ff5fd35d717d381"
+    },
+    "review/q2_geometry_foundations/REPORT.md": {
+      "bytes": 2111,
+      "sha256": "c09d5fc12ad058500f66e6b3c07b292d078163c72c31941f082557bd0e6238a3"
+    },
+    "review/q2_geometry_foundations/REVIEW_AUDIT.json": {
+      "bytes": 524,
+      "sha256": "456da664e6039d547ca5081a9aea3b7c7a19239ad76af8065332a30f61eb3b64"
+    },
+    "review/q2_geometry_foundations/SHELL_IDENTIFIABILITY_SIMULATION.json": {
+      "bytes": 2127,
+      "sha256": "d11e7cd3a70708262a9cb1b09e0288deb988287d662b1dc928a343cfe7a27a36"
+    },
+    "review/q2_geometry_foundations/SYNTHETIC_VALIDATION.json": {
+      "bytes": 797,
+      "sha256": "c711a7b6a38f4ec7b8b76aee8cd5889e44a88811df4a96f96aa889033edf3be3"
+    },
+    "scripts/analyze_q2_geometry_foundations.py": {
+      "bytes": 14582,
+      "sha256": "07ca7b5cd19437ecc7c611ce82797978c56af82eb37e49e65d59aa0da3aab522"
+    },
+    "scripts/finalize_q2_geometry_foundations.py": {
+      "bytes": 3344,
+      "sha256": "3cfcec1f26448be30ad7df4163c0b32b8fdf28b1894ab473f1c8822652a08a04"
+    },
+    "src/epistemic_geometry/analysis/control_geometry.py": {
+      "bytes": 6303,
+      "sha256": "b85b12ce48032cc1b1c8f3d57ab8f15a112a719f9e036cac06f1455608013ee4"
+    },
+    "tests/test_control_geometry.py": {
+      "bytes": 2834,
+      "sha256": "07e6379634474c375abcbb58760c73c529efc93df86f392d096714303b318fb5"
+    }
+  },
+  "schema_version": "q2-geometry-foundations-bundle-v1",
+  "status": "DESIGN_ONLY_COMPLETE_Q2_V3_NOT_FROZEN_NOT_RUN"
+}

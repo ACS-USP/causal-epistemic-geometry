@@ -1,5 +1,10 @@
 # Q2 V3 draft power, precision, and cost plan
 
+> Superseded as the current planning draft by
+> `review/q2_geometry_foundations/Q2_V3_REVISED_POWER_PRECISION_COST_PLAN.md`.
+> This file is preserved to show the assumptions used before the radial/angular
+> mathematical reframing.
+
 Status: `DESIGN ONLY — NOT AN EXECUTION AUTHORIZATION`
 
 ## Dependence-aware empirical planning
@@ -79,4 +84,3 @@ value comes from the pre-outcome magnitude-deconfounding gate and genuinely new
 families, not from increasing N until a threshold is crossed.
 
 Source data: `Q2_V3_PRECISION_SIMULATION.json`.
-

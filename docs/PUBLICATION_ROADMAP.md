@@ -181,8 +181,12 @@ described as a finite-displacement association substantially explained by
 intervention strength, not yet as relational control geometry.
 
 Program C's next evidence gate is therefore stricter than an exact replication:
-a fresh, prospectively frozen test across genuinely unseen controller families,
-with a pre-outcome magnitude-deconfounding design gate and M2 required to beat
-the nuisance predictor prospectively. That Q2 V3 protocol is drafted only and
-awaits principal freeze. If its bank cannot separate M2 from magnitude before
-behavioral outcomes, Q2 should stop. Q3 remains not run.
+a fresh, prospectively frozen test across genuinely unseen controller families
+whose physical intervention radii are matched before semantic outcomes. The
+primary question is now angular: within medium and strong shells, does
+precomputed direction in M0/M1/M2 or a separately qualified M3 predict which
+semantic blind spots differ? M3 is a local output-Fisher candidate, not semantic
+correctness geometry, and is currently not qualified. The revised Q2 V3
+protocol is drafted only and awaits principal freeze. It is additionally
+blocked on a genuinely fresh same-domain instrument. If angular identifiability
+cannot be established before outcomes, Q2 should stop. Q3 remains not run.

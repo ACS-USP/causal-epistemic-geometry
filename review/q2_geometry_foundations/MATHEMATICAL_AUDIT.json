@@ -1,0 +1,70 @@
+{
+  "M0": {
+    "complexity": "O(K^2 d)",
+    "construction_data": "paired-mean activation directions and random directions",
+    "coordinate_invariance": "orthogonal and common scalar changes only, not general GL(d)",
+    "fixture_max": 1.730929371806806,
+    "formula": "sqrt(2-2 <v_i/||v_i||_2, v_j/||v_j||_2>)",
+    "inner_product": "Euclidean after normalization",
+    "input": "nonzero frozen controller direction vectors",
+    "intervention_outputs": false,
+    "normalization": "each controller vector is Euclidean-unit-normalized",
+    "object_type": "metric on the unit-sphere images; pseudometric on nonzero raw vectors",
+    "radial_information": "discarded",
+    "semantic_labels": false,
+    "terminology": "normalized coordinate-space angular chord distance"
+  },
+  "M1": {
+    "complexity": "fit O(nd min(n,d)); pair Gram O(K^2 d + K d rank)",
+    "condition_number": 8866.379919444422,
+    "coordinate_invariance": "unregularized covariance form is GL(d)-covariant; the isotropic ridge breaks general GL(d) invariance and preserves orthogonal/common-scale transformations",
+    "covariance_dimension": 4096,
+    "covariance_rows": 64,
+    "effective_rank": 11.656573881089429,
+    "fixture_max": 1.7312694362615766,
+    "formula": "sqrt(2-2 v_i^T Sigma_lambda^-1 v_j / sqrt((v_i^T Sigma_lambda^-1 v_i)(v_j^T Sigma_lambda^-1 v_j)))",
+    "inner_product": "regularized inverse-covariance quadratic form",
+    "input": "controller directions plus label-free prompt-boundary activation covariance",
+    "intervention_outputs": false,
+    "lambda": 0.1,
+    "normalization": "each vector is unit-normalized in the regularized inverse-covariance norm",
+    "not_density_manifold": true,
+    "object_type": "metric on normalized SPD-inner-product sphere; raw-vector pseudometric",
+    "radial_information": "discarded after G-normalization",
+    "semantic_labels": false,
+    "sigma": "(1-lambda) sample_covariance + lambda mean_variance I",
+    "terminology": "regularized covariance-whitened angular chord distance"
+  },
+  "M2": {
+    "checkpoint_count": 4,
+    "complexity": "O(K^2 R V), R=probe-checkpoint rows",
+    "construction_data": "12 label-free probes, fixed teacher continuation, 4 checkpoints",
+    "coordinate_invariance": "invariant to a consistent internal reparameterization that preserves model outputs; not defined from coordinates alone",
+    "formula": "sqrt(mean_{probe,checkpoint} JS(P_i,P_j))",
+    "inner_product": "sqrt(JS) is Hilbert-embeddable, but V2 did not construct an intervention-space quadratic form or explicit Gram matrix",
+    "input": "full-vocabulary logits under finite sustained interventions",
+    "intervention_outputs": true,
+    "local": false,
+    "normalization": "equal-weight mean over probe/checkpoint rows; natural-log JS; square root",
+    "not_pullback_approximation_without_local_limit": true,
+    "object_type": "output-response pseudometric on controllers; sqrt(JS) product distance, with zero possible for distinct controllers with identical captured responses",
+    "probe_count": 12,
+    "radial_information": "finite response magnitude is present, but no baseline response was captured, so the frozen object has no identified origin/radius/angle decomposition",
+    "semantic_labels": false,
+    "terminology": "finite output-response Jensen-Shannon pseudometric"
+  },
+  "frozen_facts": {
+    "changed": false,
+    "q2_v2_classification": "Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL",
+    "q2_v2_forensic": "Q2_V2_FORENSIC_CLEAN"
+  },
+  "schema_version": "q2-geometry-mathematical-audit-v1",
+  "semantic_outcomes_read": false,
+  "source_of_truth": {
+    "implementation": "src/epistemic_geometry/analysis/q2_geometries.py",
+    "implementation_sha256": "e98c08f2891f4481c1ceb1879e9641d39b0143f8d969b362adc03dadec11de3a",
+    "v2_lock_sha256": "c0665efc96c4dbc06f9cc201aaac700f3485ff62dcc82a3002bfddd2a7e7b0f3",
+    "wurgaft_local_copy_verified": true,
+    "wurgaft_reference_sha256": "8dc25353e089b97e8f4a4474df3670f57fde0568a3a2ec08a51c234261051ca8"
+  }
+}

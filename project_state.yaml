@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V2_PRINCIPAL_REVIEW_COMPLETE_V3_DRAFT
+  scientific_stage: Q2_GEOMETRY_FOUNDATIONS_COMPLETE_V3_RADIAL_ANGULAR_DRAFT
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,22 +19,23 @@ project:
     utility?
 
 current:
-  workstream: Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DESIGN
+  workstream: Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN
   lifecycle: CLOSED
-  stage: POST_HOC_REVIEW_AND_DESIGN_COMPLETE
-  source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
+  stage: MATHEMATICAL_FOUNDATIONS_AND_DESIGN_COMPLETE
+  source_commit: 1641c457d0a1d515ed7755011fb8b0683a9d9dcb
   execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
   summary: >-
-    The post-hoc principal review exactly reproduced the frozen Q2 V2 composite
-    null and found that M2's broad family-consistent advantage over M0/M1 is
-    largely confounded by intervention strength. A four-feature dose/delta-norm
-    baseline reached held-out rho 0.443 and RMSE ratio 0.929; adding M2 improved
-    RMSE by only about 0.55%, with residual rho 0.054 and exploratory family-QAP
-    p=0.374. Q2 V2 remains Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL. A stronger
-    magnitude-deconfounded, genuinely out-of-bank Q2 V3 protocol is drafted
-    only and awaits principal freeze. No inference or GPU work occurred; Q1 is
-    unchanged and Q3 remains NOT RUN.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_Q2_V3_DRAFT
+    The geometry-foundations sprint audited the exact Q2 V2 implementations:
+    M0 and M1 are normalized angular chords that discard dose, while M2 is a
+    finite output-response Jensen-Shannon pseudometric, not a local pullback.
+    A categorical-Fisher M3 on the controller span is mathematically coherent
+    in CPU toy models but remains numerically NOT QUALIFIED under the Gate-12.1
+    evidence boundary. Q2 V3 is redesigned around ten new oriented directions,
+    two physically matched intervention-radius shells, and within-shell angular
+    prediction. It cannot be frozen until M3 qualification is separately
+    reviewed and a genuinely fresh same-domain instrument is established. Q2
+    V2 remains unchanged; no inference or GPU work occurred; Q3 remains NOT RUN.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_GEOMETRY_FOUNDATIONS_AND_Q2_V3_DRAFT
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE
@@ -46,7 +47,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V2_PRINCIPAL_REVIEW_COMPLETE_Q2_V3_DRAFT_AWAITING_FREEZE
+  current_task: Q2_GEOMETRY_FOUNDATIONS_COMPLETE_Q2_V3_RADIAL_ANGULAR_DRAFT_AWAITING_FREEZE
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -86,6 +87,29 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN
+    status: COMPLETE_MATHEMATICAL_DESIGN_ONLY
+    conclusion: >-
+      The exact implementations show that M0 is a normalized coordinate-space
+      angular chord, M1 is a regularized covariance-whitened angular chord, and
+      M2 is a finite output-response Jensen-Shannon pseudometric. M0/M1 discard
+      deployed radius; frozen M2 mixes finite response magnitude and direction
+      and lacks a baseline origin, so it is not a pullback approximation or an
+      identified radial/angular geometry. A categorical-Fisher M3 on the bank
+      span is mathematically justified but remains numerically unqualified.
+      The revised Q2 V3 draft matches physical intervention radius by design and
+      makes within-shell angular prediction the primary question.
+    source_commit: 1641c457d0a1d515ed7755011fb8b0683a9d9dcb
+    artifact: review/q2_geometry_foundations/
+    scientific_rows: 0
+    inference_performed: false
+    cpu_synthetic_fixtures: 24
+    q2_v2_classification_changed: false
+    m3_status: NOT_QUALIFIED
+    q2_v3_status: DRAFT_AWAITING_PRINCIPAL_RESEARCHER_FREEZE
+    same_domain_instrument_status: UNRESOLVED_BLOCK_BEFORE_FREEZE
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
   - id: Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DESIGN
     status: COMPLETE_POST_HOC_REVIEW_DESIGN_ONLY
     conclusion: >-

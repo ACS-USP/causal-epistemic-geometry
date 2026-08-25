@@ -1,0 +1,47 @@
+{
+  "design": "5 families x 2 directions, one radius-matched shell, cross-family dyads",
+  "interpretation": "The rules constrain physical-radius leakage by design. They are not power or outcome thresholds and must be applied before semantic collection.",
+  "proposed_preoutcome_rules": {
+    "angular_distance_explained_by_radial_nuisance_r2_max": 0.1,
+    "angular_q90_minus_q10_min": 0.2,
+    "cross_family_angular_dyads_per_shell_min": 40,
+    "direction_gram_effective_rank_min": 5.0,
+    "family_shell_median_relative_deviation_max": 0.03,
+    "max_absolute_nonantipodal_cosine": 0.95,
+    "within_shell_radius_cv_max": 0.03
+  },
+  "repetitions_per_cv": 1000,
+  "results": {
+    "cv_0.00": {
+      "angular_q90_minus_q10_median": 0.3083963648850986,
+      "effective_rank_median": 7.804726652617937,
+      "r2_angular_distance_from_radial_nuisance_median": 0.0,
+      "r2_angular_distance_from_radial_nuisance_p95": 2.220446049250313e-16,
+      "realized_radius_cv_p95": 0.0
+    },
+    "cv_0.02": {
+      "angular_q90_minus_q10_median": 0.30951729627612157,
+      "effective_rank_median": 7.816637592223071,
+      "r2_angular_distance_from_radial_nuisance_median": 0.03821094177902229,
+      "r2_angular_distance_from_radial_nuisance_p95": 0.15726272244929626,
+      "realized_radius_cv_p95": 0.025831095977764538
+    },
+    "cv_0.05": {
+      "angular_q90_minus_q10_median": 0.3045045154414794,
+      "effective_rank_median": 7.853029244495197,
+      "r2_angular_distance_from_radial_nuisance_median": 0.03843429424271516,
+      "r2_angular_distance_from_radial_nuisance_p95": 0.14342677986929778,
+      "realized_radius_cv_p95": 0.06596236301141455
+    },
+    "cv_0.10": {
+      "angular_q90_minus_q10_median": 0.3085998260922532,
+      "effective_rank_median": 7.825953425307188,
+      "r2_angular_distance_from_radial_nuisance_median": 0.03509804396496691,
+      "r2_angular_distance_from_radial_nuisance_p95": 0.1442137746840711,
+      "realized_radius_cv_p95": 0.13054562813435985
+    }
+  },
+  "schema_version": "q2-v3-shell-identifiability-simulation-v1",
+  "seed": 2026082502,
+  "semantic_outcomes_used": false
+}

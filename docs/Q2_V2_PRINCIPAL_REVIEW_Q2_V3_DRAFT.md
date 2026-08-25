@@ -1,5 +1,12 @@
 # Q2 V2 principal review and Q2 V3 draft
 
+> The Q2 V3 design has since been reframed around experimentally matched
+> physical-radius shells and an optional, separately qualified local
+> output-induced M3. See `docs/Q2_GEOMETRY_FOUNDATIONS.md`,
+> `docs/Q2_M3_FEASIBILITY_AND_QUALIFICATION_PLAN.md`, and
+> `review/q2_geometry_foundations/Q2_V3_RADIAL_ANGULAR_PROTOCOL_DRAFT.md`.
+> Q2 V3 remains a non-frozen draft and has not run.
+
 The frozen Q2 V2 classification remains
 `Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL`. A local-only principal-researcher
 review exactly reproduced all primary metrics and then performed explicitly
@@ -22,4 +29,3 @@ proposes a genuinely out-of-bank and magnitude-deconfounded test. It is
 
 No model inference, RunPod, DGX, new scientific trajectory, Q3, or holdout reuse
 occurred in this review.
-
