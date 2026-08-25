@@ -1266,15 +1266,15 @@ experiments:
 
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
     version: Q2-V2
-    stage: DEVELOPMENT_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
+    stage: DEVELOPMENT_FROZEN_COMMON_PANEL_EXECUTION
     question: >-
       Can a calibrated bank of conceptually distinct L27 intervention families
       support a controller-family-held-out test of simple geometry, without
       opening the common panel until the bank is dynamically qualified?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
-    status: ENGINE_QUALIFIED_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
-    outcome: BANK_AND_A40_ENGINE_QUALIFIED_COMMON_PANEL_UNTOUCHED
+    status: FROZEN_COMMON_PANEL_COLLECTION_AUTHORIZED
+    outcome: BANK_AND_A40_ENGINE_QUALIFIED_COLLECTION_PENDING
     scientific_interpretation: >-
       Q2 V2 is a new DEVELOPMENT protocol, not a predictive result. V1's common
       panel was never run. V2 freezes six source-axis candidates, per-direction
@@ -1284,9 +1284,9 @@ experiments:
       nondegenerate four-bin operating-dose distribution. The final 24-direction
       bank and fresh null bank are locked. Under the prospective US$45 amendment,
       the serial A40 reference qualified and projected US$36.1105 cumulatively.
-      RTX 6000 Ada failed exact discrete equivalence. The hard ceiling passes, but
-      the principal-reported US$5.42 wallet cannot fund the US$32.1623 common
-      panel, which therefore remains scientifically untouched.
+      RTX 6000 Ada failed exact discrete equivalence. The hard ceiling passes. A
+      subsequent US$30 principal top-up, before any common-panel row, produced a
+      corrected US$35.23 balance and authorized exact frozen collection.
     source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
     execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
@@ -1323,7 +1323,7 @@ experiments:
       qap_permutations: 10000
       bootstrap_resamples: 10000
     execution:
-      lifecycle: CLOSED_WALLET_BLOCKED
+      lifecycle: PROSPECTIVE_LOCK_COMMON_PANEL_AUTHORIZED
       source_qualification: COMPLETE_576_ROWS_ALL_6_AXES_QUALIFIED
       source_journal_rows: 576
       source_correctness_used: false
@@ -1345,22 +1345,21 @@ experiments:
       selected_engine: SERIAL_REFERENCE
       rtx6000_ada_exact_equivalence: FAIL_116_FIELD_MISMATCHES_21_ROWS
       hard_cost_gate: PASS_UNDER_45_USD_AMENDMENT
-      wallet_gate: FAIL_PRINCIPAL_REPORTED_BALANCE_5_42_USD
+      wallet_gate: PASS_AFTER_PRINCIPAL_30_USD_TOP_UP
       minimum_top_up_usd: 26.742290024590524
       recommended_top_up_with_buffer_usd: 29.958519027049576
-      common_panel: NOT_RUN_INSUFFICIENT_WALLET
+      common_panel: AUTHORIZED_ZERO_ROWS_PRE_COLLECTION
       common_panel_rows: 0
       predictive_geometry_analysis: NOT_RUN
       correctness_used_for_qualification: false
       Q2_V1_common_panel_outcomes_read: false
       Q1: IMMUTABLE
       Q3: NOT_RUN
-      runpod_status: STOPPED
+      runpod_status: A40_PROVISIONING_AUTHORIZED
       active_pods: 0
       retained_stopped_pods: 0
       retained_pod_disk_gb: 0
       network_volumes: 0
     next_action: >-
-      Principal review and wallet top-up; preserve the qualified bank and A40
-      engine lock, and do not start the common panel until wallet sufficiency is
-      re-established prospectively.
+      Execute the exact frozen common panel without scientific peeking, then run
+      the frozen M0/M1/M2 analysis and independent forensic audit.

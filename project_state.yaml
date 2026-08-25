@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_DEVELOPMENT_V2_ENGINE_QUALIFIED_WALLET_BLOCKED
+  scientific_stage: Q2_DEVELOPMENT_V2_COMMON_PANEL_COLLECTION_AUTHORIZED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,9 +19,9 @@ project:
     utility?
 
 current:
-  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
+  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
+  lifecycle: PROSPECTIVE_LOCK
+  stage: DEVELOPMENT_FROZEN_COMMON_PANEL_EXECUTION
   source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
   execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
   summary: >-
@@ -37,26 +37,28 @@ current:
     with a preferred cumulative projection of US$30 and a hard RunPod ceiling
     of US$45. The exact serial A40 reference engine qualified and was selected;
     the faster RTX 6000 Ada failed exact discrete equivalence. The A40 projects
-    US$32.1623 for the complete common panel and US$36.1105 cumulatively, within
-    the hard ceiling but above the available US$5.42 wallet. The common panel
-    remains at zero rows. No correctness or common-panel outcome has been used.
-    Q1 remains immutable and Q3 is not run.
+    US$32.1623 for the complete common panel and US$36.1105 cumulatively. The
+    principal subsequently added US$30; the corrected current wallet is US$35.23,
+    removing the financial block before any common-panel row. Collection
+    of the exact frozen 6,960-row panel is authorized on the A40 serial reference
+    engine. No correctness or common-panel outcome has been used. Q1 remains
+    immutable and Q3 is not run.
   next_authorized_action: >-
-    Principal review and wallet top-up of at least US$26.7423, with a recommended
-    US$3.2162 operational buffer, before any unchanged common-panel collection.
-  runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE_PENDING_WALLET_TOP_UP
+    Execute and operationally monitor the complete frozen 6,960-row common panel
+    without scientific peeking, then run the frozen analysis and forensic audit.
+  runpod: A40_PROVISIONING_AUTHORIZED
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: Q2_V2_FROZEN_COMMON_PANEL_CONTINUATION
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: Q2_V2_ENGINE_QUALIFIED_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
+  geometry_q2: Q2_V2_FROZEN_COMMON_PANEL_COLLECTION_AUTHORIZED
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V2_WALLET_BLOCKED_COMMON_PANEL_UNTOUCHED
-  free_generation: NOT_AUTHORIZED
+  current_task: Q2_V2_FROZEN_COMMON_PANEL_COLLECTION
+  free_generation: NOT_AUTHORIZED; ONLY_FROZEN_6960_ROW_Q2_V2_PANEL
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -96,7 +98,7 @@ confirmatory_program:
 
 instrument_history:
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
-    status: ENGINE_QUALIFIED_COMMON_PANEL_BLOCKED_INSUFFICIENT_WALLET
+    status: FROZEN_COMMON_PANEL_COLLECTION_AUTHORIZED
     conclusion: >-
       Six of six conceptual source axes qualified, and label-free per-direction
       calibration produced a qualified bank of 24 meaningful controllers across
@@ -105,10 +107,12 @@ instrument_history:
       stopped collection. Under the prospective US$45 amendment, an exact A40
       engine benchmark projected US$36.1105 cumulatively, while RTX 6000 Ada
       failed exact discrete equivalence. The hard ceiling passes, but the
-      principal-reported US$5.42 wallet is insufficient for the US$32.1623
-      common-panel projection. The 120-item common panel and predictive M0/M1/M2
-      analyses remain unrun. This is an operational wallet block, not a
-      predictive Q2 null.
+      principal-reported US$5.42 wallet was initially insufficient for the
+      US$32.1623 common-panel projection. A subsequent US$30 principal top-up
+      removed the financial block while the common panel remained at zero rows.
+      The exact frozen 6,960-row panel is now authorized on the A40 serial
+      reference engine; predictive M0/M1/M2 remain unrun until collection is
+      complete.
     source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
     source_qualification_rows: 576

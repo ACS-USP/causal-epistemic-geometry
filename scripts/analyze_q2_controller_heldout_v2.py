@@ -15,6 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / "review/q2_controller_bank_v2"
 sys.path.insert(0, str(ROOT / "src"))
 
+from epistemic_geometry.analysis.q2_geometries import (  # noqa: E402
+    fit_whitening,
+    whitened_geometry,
+)
 from epistemic_geometry.experiments.gate6 import two_rollout_estimands  # noqa: E402
 from epistemic_geometry.experiments.q2_controller_heldout_v2 import (  # noqa: E402
     BASELINE,
@@ -156,24 +160,13 @@ def m1_geometry(lock: dict[str, Any], vectors: dict[str, np.ndarray]) -> np.ndar
     activations = np.load(REVIEW / "V2_COVARIANCE_ACTIVATIONS.npz", allow_pickle=False)[
         "activations"
     ]
-    centered = activations.astype(np.float64) - np.mean(activations, axis=0, keepdims=True)
-    covariance = centered.T @ centered / max(1, len(centered) - 1)
-    eigenvalues, eigenvectors = np.linalg.eigh(covariance)
-    regularization = float(lock["geometry"]["M1"]["lambda"] * np.mean(eigenvalues))
-    inverse = (
-        eigenvectors
-        @ np.diag(1.0 / np.maximum(eigenvalues + regularization, 1e-10))
-        @ eigenvectors.T
+    regularization_fraction = float(lock["geometry"]["M1"]["lambda"])
+    whitening = fit_whitening(
+        activations.astype(np.float64),
+        regularization_fraction=regularization_fraction,
     )
-    matrix = np.zeros((len(names), len(names)), dtype=np.float64)
-    for left, left_name in enumerate(names):
-        for right in range(left + 1, len(names)):
-            right_name = names[right]
-            difference = vectors[left_name] - vectors[right_name]
-            matrix[left, right] = matrix[right, left] = float(
-                np.sqrt(max(0.0, difference @ inverse @ difference))
-            )
-    return matrix
+    ordered = np.stack([vectors[name] for name in names])
+    return whitened_geometry(ordered, whitening)["normalized_euclidean"]
 
 
 def _softmax(values: np.ndarray) -> np.ndarray:
@@ -337,10 +330,8 @@ def main() -> int:
         name
         for name, result in prediction.items()
         if (
-            result["aggregate"][name]["mean_spearman"]
-            >= thresholds["spearman_min"]
-            and result["aggregate"][name]["qap_p_one_sided"]
-            <= thresholds["qap_one_sided_p_max"]
+            result["aggregate"][name]["mean_spearman"] >= thresholds["spearman_min"]
+            and result["aggregate"][name]["qap_p_one_sided"] <= thresholds["qap_one_sided_p_max"]
             and result["aggregate"][name]["rmse_ratio_to_constant"]
             <= thresholds["rmse_ratio_to_constant_max"]
         )

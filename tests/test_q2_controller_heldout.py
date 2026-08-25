@@ -110,8 +110,7 @@ def test_common_panel_schedule_is_complete_independent_and_deterministic() -> No
 
 def test_pairwise_unbiased_d_preserves_negative_estimates() -> None:
     arrays = {
-        name: np.asarray([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=np.int8)
-        for name in CONTROLLER_IDS
+        name: np.asarray([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=np.int8) for name in CONTROLLER_IDS
     }
     arrays[CONTROLLER_IDS[1]] = np.asarray([[1, 0], [1, 0], [0, 1], [0, 1]], dtype=np.int8)
     matrix = pairwise_unbiased_distance_matrix(arrays)
@@ -165,9 +164,7 @@ def test_prediction_calibrates_only_on_train_edges_and_qap_permutes_labels() -> 
     assert score["heldout_edge_count"] == 9
     assert score["test_targets_used_in_fit"] is False
     assert score["heldout_rmse"] < 1e-12
-    qap = qap_permutation(
-        geometry, target, names, train, permutations=200, seed=91
-    )
+    qap = qap_permutation(geometry, target, names, train, permutations=200, seed=91)
     assert qap["permutation_unit"] == "controller label"
     assert qap["observed_rho"] > 0.99
 
@@ -239,3 +236,25 @@ def test_edge_policy_holds_out_every_edge_touching_test_controller() -> None:
     assert len(split["heldout"]) == 75
     assert all(left < 10 and right < 10 for left, right in split["train"])
     assert all(left >= 10 or right >= 10 for left, right in split["heldout"])
+
+
+def test_v2_primary_m1_uses_frozen_shrinkage_and_normalized_geometry(tmp_path, monkeypatch) -> None:
+    import scripts.analyze_q2_controller_heldout_v2 as analysis
+
+    activations = np.asarray(
+        [[1.0, 0.0, 2.0], [0.0, 2.0, 1.0], [2.0, 1.0, 0.0], [1.5, 0.5, 1.0]],
+        dtype=np.float64,
+    )
+    np.savez(tmp_path / "V2_COVARIANCE_ACTIVATIONS.npz", activations=activations)
+    monkeypatch.setattr(analysis, "REVIEW", tmp_path)
+    vectors = {
+        "left": np.asarray([1.0, 0.0, 0.0]),
+        "right": np.asarray([0.0, 1.0, 0.0]),
+    }
+    lock = {
+        "meaningful_controllers": {"left": {}, "right": {}},
+        "geometry": {"M1": {"lambda": 0.1}},
+    }
+    fit = fit_whitening(activations, regularization_fraction=0.1)
+    expected = whitened_geometry(np.stack(list(vectors.values())), fit)["normalized_euclidean"]
+    assert np.allclose(analysis.m1_geometry(lock, vectors), expected)
