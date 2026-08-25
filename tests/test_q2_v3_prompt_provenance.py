@@ -130,7 +130,8 @@ def test_q2_v3_execution_path_uses_only_authoritative_gate7_constructor() -> Non
     runner = (ROOT / "scripts/run_q2_v3.py").read_text(encoding="utf-8")
     assert "canonical_q2_v3_task_prompt" in runner
     assert "legacy_task_prompt" not in runner
-    assert 'REVIEW = ROOT / "review/q2_v3_amendment1_freeze"' in runner
+    assert 'FROZEN_REVIEW = ROOT / "review/q2_v3_amendment1_freeze"' in runner
+    assert 'REVIEW = ROOT / "review/q2_v3_amendment1_execution"' in runner
 
 
 def test_q2_v3_prompt_purpose_coverage_and_primary_identity() -> None:

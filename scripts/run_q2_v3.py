@@ -70,16 +70,20 @@ from epistemic_geometry.reproducibility import require_remote_hf_execution  # no
 from epistemic_geometry.research.reliability import CrashSafeJournal  # noqa: E402
 from epistemic_geometry.steering.gate6 import Gate6HookTrace  # noqa: E402
 
-REVIEW = ROOT / "review/q2_v3_amendment1_freeze"
+FROZEN_REVIEW = ROOT / "review/q2_v3_amendment1_freeze"
 ORIGINAL_REVIEW = ROOT / "review/q2_v3_radial_angular_freeze"
+REVIEW = ROOT / "review/q2_v3_amendment1_execution"
 MAX_NEW_TOKENS = 4096
 MATERIALIZED = "Q2_V3_MATERIALIZED_ITEMS.json"
 
 
 def read_json(path: Path) -> Any:
-    if not path.exists() and path.parent.resolve() == REVIEW.resolve():
+    if not path.exists():
+        frozen = FROZEN_REVIEW / path.name
         inherited = ORIGINAL_REVIEW / path.name
-        if inherited.is_file():
+        if frozen.is_file():
+            path = frozen
+        elif inherited.is_file():
             path = inherited
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -110,7 +114,7 @@ def git_head() -> str:
 
 
 def _assert_frozen(review: Path) -> dict[str, Any]:
-    lock = read_json(review / "PROTOCOL_LOCK.json")
+    lock = read_json(FROZEN_REVIEW / "PROTOCOL_LOCK.json")
     if lock["status"] != "Q2_V3_AMENDMENT1_FROZEN_NOT_RUN":
         raise RuntimeError("Q2_V3_INSTRUMENT_FAILURE: protocol status changed")
     source_commit = str(lock["experiment_source_commit"])
@@ -119,7 +123,7 @@ def _assert_frozen(review: Path) -> dict[str, Any]:
     if lock["M3"] != "EXCLUDED_NOT_QUALIFIED_M3_DERIVATIVE_IDENTITIES_FAILED":
         raise RuntimeError("Q2_V3_INSTRUMENT_FAILURE: M3 exclusion mismatch")
     for name, expected in lock["artifact_hashes"].items():
-        if sha256(review / name) != expected:
+        if sha256(FROZEN_REVIEW / name) != expected:
             raise RuntimeError(f"Q2_V3_INSTRUMENT_FAILURE: frozen hash mismatch: {name}")
     for relative, expected in lock["inherited_artifact_hashes"].items():
         if sha256(ROOT / relative) != expected:
