@@ -8,6 +8,7 @@ import hashlib
 import json
 import subprocess
 import sys
+import time
 from contextlib import nullcontext
 from pathlib import Path
 from typing import Any
@@ -960,13 +961,15 @@ def geometry_phase(backend: Any, review: Path) -> None:
     print(json.dumps({"phase": "geometry", "probes": len(records)}), flush=True)
 
 
-def preflight_phase(backend: Any, review: Path) -> None:
+def preflight_phase(
+    backend: Any, review: Path, *, engine_label: str, model_load_seconds: float
+) -> None:
     lock = final_lock(review)
     vectors, metadata = _load_final_bank(review)
     fixtures = load_external(review / "V2_ENGINEERING_FIXTURES.json")
     durations: list[float] = []
     tokens: list[int] = []
-    import time
+    rows: list[dict[str, Any]] = []
 
     conditions = [BASELINE, *lock["controller_ids"]]
     for item_index, item in enumerate(fixtures):
@@ -981,26 +984,97 @@ def preflight_phase(backend: Any, review: Path) -> None:
                     sampling_seed=91_000_000 + item_index * 1000 + condition_index,
                     max_new_tokens=MAX_NEW_TOKENS,
                 )
-            durations.append(time.monotonic() - started)
-            tokens.append(int(output.metadata.get("generated_token_count", 0)))
+            duration = time.monotonic() - started
+            token_ids = [int(token) for token in output.metadata.get("generated_token_ids", [])]
+            token_count = int(output.metadata.get("generated_token_count", len(token_ids)))
+            commitment = extract_final_commitment(
+                output.raw_output, truncated=token_count >= MAX_NEW_TOKENS
+            )
+            canonical = (
+                canonicalize_semantic_value(commitment.payload)
+                if commitment.valid and commitment.payload is not None
+                else None
+            )
+            durations.append(duration)
+            tokens.append(token_count)
+            rows.append(
+                {
+                    "fixture_id": item.item_id,
+                    "condition": condition,
+                    "seed": 91_000_000 + item_index * 1000 + condition_index,
+                    "elapsed_seconds": duration,
+                    "generated_token_count": token_count,
+                    "generated_token_ids": token_ids,
+                    "generated_token_ids_sha256": hashlib.sha256(
+                        json.dumps(token_ids, separators=(",", ":")).encode("utf-8")
+                    ).hexdigest(),
+                    "raw_output_sha256": hashlib.sha256(
+                        output.raw_output.encode("utf-8")
+                    ).hexdigest(),
+                    "commitment_valid": commitment.valid,
+                    "parser_failure_reason": commitment.failure_reason,
+                    "canonical_value": canonical,
+                }
+            )
     mean_seconds = float(np.mean(durations))
     expected_rows = int(lock["common_panel"]["expected_rows"])
     projected_seconds = mean_seconds * expected_rows * 1.25
+    runtime_quantiles = {
+        name: float(np.quantile(durations, quantile))
+        for name, quantile in (
+            ("p50", 0.50),
+            ("p75", 0.75),
+            ("p90", 0.90),
+            ("p95", 0.95),
+            ("p99", 0.99),
+        )
+    }
+    runtime_quantiles["max"] = float(max(durations))
+    token_quantiles = {
+        name: float(np.quantile(tokens, quantile))
+        for name, quantile in (
+            ("p50", 0.50),
+            ("p75", 0.75),
+            ("p90", 0.90),
+            ("p95", 0.95),
+            ("p99", 0.99),
+        )
+    }
+    token_quantiles["max"] = int(max(tokens))
     result = {
+        "schema_version": "q2-v2-engine-cost-benchmark-v1",
+        "engine_label": engine_label,
+        "model_load_seconds": model_load_seconds,
         "fixture_rows": len(durations),
         "mean_seconds_per_row": mean_seconds,
         "median_seconds_per_row": float(np.median(durations)),
         "mean_tokens": float(np.mean(tokens)),
         "max_tokens": int(max(tokens)),
+        "runtime_quantiles_seconds": runtime_quantiles,
+        "token_quantiles": token_quantiles,
+        "total_generated_tokens": int(sum(tokens)),
+        "steady_state_tokens_per_second": float(sum(tokens) / sum(durations)),
         "expected_common_rows": expected_rows,
         "projected_common_seconds_with_25pct_margin": projected_seconds,
         "projected_common_hours_with_25pct_margin": projected_seconds / 3600.0,
         "cost_projection_requires_current_runpod_hourly_price": True,
         "scientific_items_used": False,
         "correctness_evaluated": False,
+        "rows": rows,
     }
-    write_json(review / "V2_THROUGHPUT_PREFLIGHT.json", result)
-    print(json.dumps(result), flush=True)
+    safe_label = "".join(character if character.isalnum() else "_" for character in engine_label)
+    output_path = review / f"V2_ENGINE_BENCHMARK_{safe_label}.json"
+    write_json(output_path, result)
+    print(
+        json.dumps(
+            {
+                key: value
+                for key, value in result.items()
+                if key not in {"rows"}
+            }
+        ),
+        flush=True,
+    )
 
 
 def common_panel_phase(backend: Any, review: Path, source_commit: str) -> None:
@@ -1112,10 +1186,13 @@ def main() -> int:
     parser.add_argument("--model-path", required=True)
     parser.add_argument("--review-dir", type=Path, default=REVIEW)
     parser.add_argument("--source-commit", required=True)
+    parser.add_argument("--engine-label", default="REFERENCE_A40")
     args = parser.parse_args()
     require_remote_hf_execution(f"Q2 V2 {args.mode}")
     review = args.review_dir.resolve()
+    model_load_started = time.monotonic()
     backend = build_backend(args.model_path)
+    model_load_seconds = time.monotonic() - model_load_started
     if args.mode == "source":
         source_phase(backend, review, args.source_commit)
     elif args.mode == "calibration":
@@ -1125,7 +1202,12 @@ def main() -> int:
     elif args.mode == "geometry":
         geometry_phase(backend, review)
     elif args.mode == "preflight":
-        preflight_phase(backend, review)
+        preflight_phase(
+            backend,
+            review,
+            engine_label=args.engine_label,
+            model_load_seconds=model_load_seconds,
+        )
     else:
         common_panel_phase(backend, review, args.source_commit)
     return 0
