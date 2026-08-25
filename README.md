@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_DEVELOPMENT_V2_COMPLETE` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V2_PRINCIPAL_REVIEW_COMPLETE_V3_DRAFT` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V2 completed its exact frozen 6,960-row common panel on 120 DEVELOPMENT items with 24 meaningful controllers across six held-out source families and four fresh null controls. The forensic audit was clean and reproduced every primary metric to 1.56e-15. M0 flat and M1 whitened showed weak held-out rank association and negligible RMSE improvement. M2 finite secant was stronger and positive in all six family folds (mean rho 0.4279, p_QAP 0.00220), but its RMSE ratio of 0.9067 narrowly missed the frozen maximum of 0.90. The mechanical classification is Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL. This is a DEVELOPMENT composite null with a preserved M2 association sub-result, not a claim that no geometric structure exists. Q1 remains immutable and Q3 was not run.
+The post-hoc principal review exactly reproduced the frozen Q2 V2 composite null and found that M2's broad family-consistent advantage over M0/M1 is largely confounded by intervention strength. A four-feature dose/delta-norm baseline reached held-out rho 0.443 and RMSE ratio 0.929; adding M2 improved RMSE by only about 0.55%, with residual rho 0.054 and exploratory family-QAP p=0.374. Q2 V2 remains Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL. A stronger magnitude-deconfounded, genuinely out-of-bank Q2 V3 protocol is drafted only and awaits principal freeze. No inference or GPU work occurred; Q1 is unchanged and Q3 remains NOT RUN.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_Q2_V3_DRAFT
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

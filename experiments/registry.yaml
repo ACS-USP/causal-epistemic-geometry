@@ -1376,3 +1376,51 @@ experiments:
     next_action: >-
       Principal researcher review. Do not execute Q3 or a follow-up geometry
       experiment automatically.
+
+  - id: Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DESIGN
+    version: REVIEW-V1-V3-DRAFT
+    stage: POST_HOC_EXPLORATORY_AND_PROSPECTIVE_DESIGN
+    question: >-
+      What did Q2 V2 M2 finite-secant geometry capture, and what prospective
+      out-of-bank test could distinguish relational geometry from intervention
+      magnitude?
+    instrument: Immutable Q2 V2 artifacts only; no new model inference
+    model_policy: No model loaded; local deterministic analysis only
+    status: COMPLETE_DESIGN_ONLY_AWAITING_PRINCIPAL_FREEZE
+    outcome: >-
+      Frozen Q2 V2 values reproduced exactly. M2 remained broad across all six
+      families and robust to leave-one-controller deletion, but a four-feature
+      dose/delta-norm nuisance model reached rho 0.443 and RMSE ratio 0.929.
+      Adding M2 produced residual rho 0.054, incremental RMSE ratio 0.9945, and
+      exploratory family-QAP p 0.374. The relational interpretation is therefore
+      unresolved and substantially weakened.
+    scientific_interpretation: >-
+      Q2 V2 remains a composite null with a finite-displacement association.
+      The next informative test would be a magnitude-deconfounded out-of-bank
+      prediction on genuinely new families. The Q2 V3 protocol is a draft, not
+      frozen, preregistered, or authorized for execution.
+    source_commit: 64a551ef95557d303639fb17d240b3f4f7f96a65
+    artifact: review/q2_v2_principal_researcher_review/
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    scientific_rows: 0
+    inference_performed: false
+    q2_v2_classification: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+    q2_v2_forensic: Q2_V2_FORENSIC_CLEAN
+    q2_v3:
+      status: DRAFT_AWAITING_PRINCIPAL_RESEARCHER_FREEZE
+      meaningful_controllers: 20
+      new_families: 5
+      fresh_nulls: 4
+      proposed_fresh_panel_n: 200
+      proposed_panel_rows: 10000
+      primary_reference: FOUR_FEATURE_DOSE_DELTA_NORM_NUISANCE_MODEL
+      execution_authorized: false
+      proposed_hard_cost_ceiling_usd: 12.0
+      proposed_wallet_gate_usd: 15.0
+    q1: UNCHANGED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    next_action: >-
+      Principal researcher review and optional prospective freeze. Do not run Q2
+      V3, Q3, RunPod, DGX, or model inference from this entry.
