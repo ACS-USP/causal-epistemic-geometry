@@ -31,11 +31,11 @@ change.
 
 | Phase | Rows/operations |
 |---|---:|
-| same-domain baseline instrument qualification | 40 items x 2 = 80 |
+| provenance audit and panel construction | complete offline; 0 trajectories |
 | new source qualification | approximately 400–600 trajectories |
 | physical-shell calibration and safety | approximately 600–1,000 trajectories |
-| M3 engineering qualification | no scientific rows |
-| M0/M1/M2/M3 pre-outcome captures | teacher-forced operations, counted separately |
+| M3 engineering qualification | complete; 0 scientific rows; M3 excluded |
+| M0/M1/M2 pre-outcome captures | teacher-forced operations, counted separately |
 | primary panel | 200 x 25 x 2 = 10,000 trajectories |
 | optional transfer panel | draft 120 x 25 x 2 = 6,000 trajectories |
 
@@ -45,15 +45,19 @@ unattended transition.
 
 ## Runtime and cost
 
-### M3 engineering qualification
+### Completed M3 engineering qualification
 
-- expected: 0.5–1.5 A40 GPU-h, US$0.25–0.75;
-- conservative: 4 GPU-h, US$2 planning ceiling;
-- no scientific trajectories.
+- measured runner time: 484.01 seconds = 0.1344 A40 GPU-h;
+- pod rate: US$0.44/h; compute-equivalent runner cost: US$0.059;
+- no scientific trajectories; M3 did not qualify and is excluded from V3.
 
 ### Q2 V3 primary program
 
-Using Q2 V2's observed throughput only as one development anchor:
+Q2 V2's complete 6,960-row common panel used 2.6602 A40 hours and
+US$1.1853. Linear scaling gives 3.822 A40 hours and US$1.682 for the proposed
+10,000 rows before margin, or approximately 4.78 A40 hours and US$2.10 with a
+25% panel margin. Source/shell calibration and M0/M1/M2 captures remain
+separate. For the full program:
 
 - expected generation/capture runtime: 7–12 A40 GPU-h;
 - conservative runtime: 24 GPU-h;
@@ -77,8 +81,9 @@ It does not authorize spending.
 
 Stop before the primary panel if:
 
-- M3 is required by the future design but does not qualify;
-- no fresh same-domain instrument is available;
+- the principal freeze requires M3 despite its non-qualification;
+- the proposed Class-C historical-item/prospective-controller panel is not
+  accepted for the exact stated evidence claim;
 - the radial/angular identifiability gate fails;
 - controller safety/manipulation fails;
 - projected cost exceeds the future authorized ceiling.

@@ -93,10 +93,12 @@ The completed Q2 V2 development study and post-hoc review refine this gate.
 M0/M1 were normalized angular metrics, whereas finite M2 largely tracked
 intervention strength. Any Q2 V3 must therefore match a transparent physical
 injection radius prospectively and make within-shell directional prediction the
-primary claim. A local output-Fisher M3 may be included only after a separate
-numerical-engine qualification; it must never be described as the true geometry
-of semantic correctness. The radial/angular Q2 V3 protocol remains a draft and
-is not authorized.
+primary claim. The separate real-Qwen qualification closed as
+`M3_DERIVATIVE_IDENTITIES_FAILED`, so M3 is excluded; this is an engineering
+non-qualification, not a semantic-geometry null. The item-level audit supports
+a 200-item Class-C historical-item/prospective-controller same-domain panel,
+not fresh-item confirmation. The radial/angular Q2 V3 protocol is freeze-ready
+for principal review and remains unauthorized for execution.
 
 ## Gate 6.3 — single-mean semantic closeout
 

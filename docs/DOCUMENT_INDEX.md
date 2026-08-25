@@ -58,6 +58,8 @@ current instruction source.
 | `docs/Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DRAFT.md` | Post-hoc Q2 V2 diagnosis and navigation to the non-executing Q2 V3 design |
 | `docs/Q2_GEOMETRY_FOUNDATIONS.md` | Exact M0/M1/M2 audit, output-Fisher derivation, Wurgaft comparison, and radial/angular Q2 foundations |
 | `docs/Q2_M3_FEASIBILITY_AND_QUALIFICATION_PLAN.md` | Non-executing numerical qualification plan for the optional local output-induced M3 |
+| `review/q2_m3_qualification_cruxeval_provenance/REPORT.md` | Real-Qwen M3 non-qualification, complete CRUXEval provenance census, and freeze-ready Q2 V3 handoff |
+| `review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl` | Complete machine-readable item-level CRUXEval exposure ledger |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |

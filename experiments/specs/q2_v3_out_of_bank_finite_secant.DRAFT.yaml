@@ -1,5 +1,5 @@
 experiment_id: Q2_RADIAL_ANGULAR_OUT_OF_BANK_GEOMETRY_V3
-status: PROSPECTIVE_DRAFT_AWAITING_PRINCIPAL_RESEARCHER_FREEZE
+status: PROSPECTIVE_FREEZE_READY_AWAITING_PRINCIPAL_RESEARCHER_REVIEW
 execution_authorized: false
 scientific_role: DEVELOPMENT_PROSPECTIVE_MATCHED_RADIUS_OUT_OF_BANK_PREDICTION
 frozen_history:
@@ -50,7 +50,8 @@ geometry:
   M3:
     definition: MULTICHECKPOINT_TEACHER_FORCED_CATEGORICAL_FISHER_GRAM
     status: NOT_QUALIFIED
-    inclusion_rule: ONLY_IF_SEPARATE_ENGINE_QUALIFIES
+    qualification_classification: M3_DERIVATIVE_IDENTITIES_FAILED
+    included_in_v3: false
   semantic_outcomes_used_before_prediction_lock: false
 identifiability:
   within_shell_radius_cv_max: 0.03
@@ -61,11 +62,17 @@ identifiability:
   cross_family_angular_dyads_per_shell_min: 40
   max_absolute_nonantipodal_cosine: 0.95
   standardized_feature_condition_number_max: 30
-fresh_instrument:
-  primary: FRESH_SAME_DISTRIBUTION_PROGRAM_OUTPUT_PREDICTION
-  status: BLOCKED_PENDING_PROVENANCE_AND_AVAILABILITY
-  qualification_items: 40
+primary_instrument:
+  primary: CRUXEVAL_OUTPUT_PREDICTION_CLASS_C
+  status: PROPOSED_FREEZE_READY_NOT_FROZEN
+  provenance_class: C
+  evidence_claim: HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION
+  fresh_item_claim: false
+  selection_namespace: Q2-V3-HISTORICAL-C-PROSPECTIVE-CONTROLLER-V1
+  ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
   evaluation_items: 200
+  excluded_q2_v2_class_d_items: 120
+  unresolved_items: 0
   exact_objective_evaluator_required: true
   optional_transfer: LIVECODEBENCH_TEST_OUTPUT_PREDICTION_SEPARATELY_AUTHORIZED
 common_panel:
@@ -89,7 +96,6 @@ classification_families:
   - Q2_V3_RADIAL_ONLY_CONTROL_GEOMETRY
   - Q2_V3_GENERIC_RELATIONAL_GEOMETRY
   - Q2_V3_FINITE_RESPONSE_GEOMETRY_REQUIRED
-  - Q2_V3_LOCAL_OUTPUT_GEOMETRY_REQUIRED
   - Q2_V3_ANGULAR_ASSOCIATION_PREDICTIVE_ADEQUACY_LIMITED
   - Q2_V3_ANGULAR_IDENTIFIABILITY_FAILED
 classification_status: FROZEN_ONLY_AFTER_PRINCIPAL_REVIEW
@@ -104,6 +110,8 @@ cost:
 firewall:
   inference_in_this_task: false
   m3_qualified: false
+  m3_included: false
   protocol_frozen: false
+  q2_v3_semantic_outcomes_opened: false
   q3: NOT_RUN
   confirmatory_holdout_reuse: false

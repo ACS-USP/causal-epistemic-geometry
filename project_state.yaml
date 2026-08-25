@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_GEOMETRY_FOUNDATIONS_COMPLETE_V3_RADIAL_ANGULAR_DRAFT
+  scientific_stage: Q2_V3_FREEZE_READY_M3_EXCLUDED_PROVENANCE_RESOLVED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,23 +19,22 @@ project:
     utility?
 
 current:
-  workstream: Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN
+  workstream: Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE
   lifecycle: CLOSED
-  stage: MATHEMATICAL_FOUNDATIONS_AND_DESIGN_COMPLETE
-  source_commit: 1641c457d0a1d515ed7755011fb8b0683a9d9dcb
-  execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
+  stage: ENGINEERING_QUALIFICATION_AND_PROVENANCE_AUDIT_COMPLETE
+  source_commit: b3f9a7ffa48d205d1ea242b953afca0910e34283
+  execution_source_commit: 3792a119a8916f450c20022e2937b18e8f5047fc
   summary: >-
-    The geometry-foundations sprint audited the exact Q2 V2 implementations:
-    M0 and M1 are normalized angular chords that discard dose, while M2 is a
-    finite output-response Jensen-Shannon pseudometric, not a local pullback.
-    A categorical-Fisher M3 on the controller span is mathematically coherent
-    in CPU toy models but remains numerically NOT QUALIFIED under the Gate-12.1
-    evidence boundary. Q2 V3 is redesigned around ten new oriented directions,
-    two physically matched intervention-radius shells, and within-shell angular
-    prediction. It cannot be frozen until M3 qualification is separately
-    reviewed and a genuinely fresh same-domain instrument is established. Q2
-    V2 remains unchanged; no inference or GPU work occurred; Q3 remains NOT RUN.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_GEOMETRY_FOUNDATIONS_AND_Q2_V3_DRAFT
+    M3 real-Qwen engineering qualification closed as
+    M3_DERIVATIVE_IDENTITIES_FAILED. Exact FP32 sequence/JVP/VJP/PSD checks
+    passed, but the frozen polarization and finite-window gates failed and the
+    mandatory BF16 bridge failed independently; M3 is excluded from Q2 V3. The
+    item-level audit classified all 800 CRUXEval items as A=0, B=25, C=655,
+    D=120, unresolved=0. A deterministic 200-item Class-C panel can support
+    historical-item/prospective-controller same-domain validation, not
+    fresh-item confirmation. Q2 V3 is freeze-ready but not frozen or run. Q2 V2
+    is unchanged; Q3 remains NOT RUN.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_AND_OPTIONAL_Q2_V3_FREEZE
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE
@@ -47,7 +46,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_GEOMETRY_FOUNDATIONS_COMPLETE_Q2_V3_RADIAL_ANGULAR_DRAFT_AWAITING_FREEZE
+  current_task: Q2_V3_FREEZE_READY_AWAITING_PRINCIPAL_RESEARCHER_REVIEW
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -87,6 +86,36 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE
+    status: COMPLETE_ENGINEERING_NOT_QUALIFIED_PROVENANCE_RESOLVED
+    conclusion: >-
+      The prospectively locked teacher-forced controller-span output-Fisher M3
+      passed exact FP32 sequence, reproducibility, JVP/VJP, and PSD checks, but
+      failed the frozen direct/polarization gate, finite local-window gate, and
+      mandatory BF16 bridge. Offline localization found an unequal
+      fixture/checkpoint aggregation weight in the first two failures; the
+      historical classification remains M3_DERIVATIVE_IDENTITIES_FAILED and M3
+      is excluded. The complete CRUXEval census is A=0, B=25, C=655, D=120,
+      unresolved=0. A deterministic 200-item Class-C panel supports only a
+      historical-item/prospective-controller same-domain claim.
+    source_commit: b3f9a7ffa48d205d1ea242b953afca0910e34283
+    execution_source_commit: 3792a119a8916f450c20022e2937b18e8f5047fc
+    artifact: review/q2_m3_qualification_cruxeval_provenance/
+    scientific_rows: 0
+    q2_v3_behavioral_trajectories: 0
+    semantic_outcomes_read: false
+    free_generation: false
+    m3_classification: M3_DERIVATIVE_IDENTITIES_FAILED
+    m3_forensic: M3_FORENSIC_CLEAN
+    m3_included_in_q2_v3: false
+    cruxeval_class_counts: {A: 0, B: 25, C: 655, D: 120, UNRESOLVED: 0}
+    proposed_primary_panel_n: 200
+    proposed_primary_panel_class: C
+    proposed_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+    evidence_claim: HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION
+    q2_v3_status: FREEZE_READY_AWAITING_PRINCIPAL_RESEARCHER_REVIEW
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
   - id: Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN
     status: COMPLETE_MATHEMATICAL_DESIGN_ONLY
     conclusion: >-

@@ -1,6 +1,6 @@
 # Q2 V3 — Prospective radial/angular out-of-bank geometry
 
-Status: `DRAFT / AWAITING PRINCIPAL_RESEARCHER_FREEZE`
+Status: `FREEZE_READY / AWAITING PRINCIPAL_RESEARCHER_REVIEW`
 
 Execution: `NOT RUN`
 
@@ -85,9 +85,7 @@ Before semantic-panel collection all must hold:
    radius) <=0.10` within each shell for every primary metric;
 9. no family contributes more than 30% of total angular leverage;
 10. standardized prediction-feature condition number `<=30`;
-11. null physical radii satisfy the same shell tolerances;
-12. if M3 is included, its separate engine classification is
-   `M3_DIRECTIONAL_ENGINE_QUALIFIED`.
+11. null physical radii satisfy the same shell tolerances.
 
 These values are design tolerances, not behavioral thresholds. Geometry-only
 simulation shows exact shelling eliminates radial explainability; the 0.10
@@ -103,29 +101,35 @@ Do not redraw after any semantic output.
   prospective baseline capture. Because sqrt(JS) is Hilbert-embeddable, baseline
   distances permit an implicit response angle through the law of cosines. The
   frozen V2 artifact itself had no such angle.
-- **M3:** teacher-forced multi-checkpoint categorical-Fisher Gram and its angle,
-  only if independently qualified.
+- **M3:** excluded from this V3 draft. The real-Qwen qualification closed as
+  `M3_DERIVATIVE_IDENTITIES_FAILED`; exact FP32 identities mostly passed, but
+  the frozen polarization/local-window gates and mandatory BF16 bridge did not.
+  A later M3 requires a separate prospective requalification.
 
 For every metric, freeze pairwise distances, radii where defined, angular
 predictors, code hashes, probes, checkpoints, and arrays before common-panel
 outcomes. No Q2 V3 semantic outcome may fit a primary predictor coefficient.
 
-## Instrument firewall
+## Item provenance and primary evidence claim
 
-The finite official CRUXEval pool is exhausted, including the final Q1
-confirmatory set. The preferred primary panel remains the same scientific task
-distribution, but the draft is blocked from freeze until one of these is
-proven prospectively:
+The item-level audit establishes that the official 800-item CRUXEval
+output-prediction universe is not epistemically homogeneous: Class A=0,
+Class B=25, Class C=655, and Class D=120, with zero unresolved identities.
+The 120 Q2 V2 common-panel items are Class D and excluded because their observed
+error geometry directly motivated the radial/angular redesign.
 
-1. an official CRUXEval generation procedure can create at least 240 genuinely
-   fresh, distribution-faithful items with exact objective references; or
-2. another independently justified same-distribution source is accepted by the
-   principal researcher after provenance and instrument qualification.
+The proposed primary panel contains exactly 200 Class C items selected by the
+outcome-independent namespace
+`Q2-V3-HISTORICAL-C-PROSPECTIVE-CONTROLLER-V1`. Its ordered-ID SHA-256 is
+`969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf`;
+the complete proposed list is in
+`review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json`.
 
-Forty disjoint items qualify baseline opportunity; 200 are then frozen for the
-primary panel. Existing CRUXEval items and holdout data cannot be reused. If no
-same-domain source qualifies, return `Q2_V3_SAME_DOMAIN_INSTRUMENT_UNAVAILABLE`
-rather than silently replacing the primary question.
+This supports **historical-item/prospective-controller same-domain validation**:
+prospective generalization to unseen causal interventions on a fixed historical
+same-domain item distribution. It is not fresh-item confirmation. Controller
+definitions, shell assignments, prediction matrices, schedule, seeds, and
+analysis must all be frozen before any new outcome on these items.
 
 LiveCodeBench test-output prediction is an optional, separately authorized
 secondary transfer panel after the primary result. It does not substitute for
@@ -189,18 +193,15 @@ it is unrelated to Q2 V2's 0.9067 RMSE ratio.
 Use a closed hierarchy after Claim B:
 
 1. test whether either M0 or M1 qualifies;
-2. test M2 only if its max-statistic corrected relational gate qualifies;
-3. test M3 only if qualified before the experiment and its corrected relational
-   gate qualifies.
+2. test M2 only if its max-statistic corrected relational gate qualifies.
 
 “M2 required” additionally requires paired family-balanced rho improvement
 `>=0.10` over both M0 and M1, bootstrap lower bound >0 for each contrast, and
 step-down family-QAP p `<=0.05`.
 
-“M3 required” requires the same `>=0.10` improvement and corrected evidence
-against the best of M0/M1/M2. All metric results are reported regardless of the
-hierarchy. Predictive calibration and RMSE are secondary because no Q2 V3
-semantic outcome may fit the primary mapping.
+M3 is not included in this draft. All M0/M1/M2 results are reported regardless
+of the hierarchy. Predictive calibration and RMSE are secondary because no Q2
+V3 semantic outcome may fit the primary mapping.
 
 ## Classification vocabulary
 
@@ -209,11 +210,11 @@ semantic outcome may fit the primary mapping.
 - `Q2_V3_GENERIC_RELATIONAL_GEOMETRY`: relational gate passes, but M0/M1 suffice
   or no complex metric proves superiority.
 - `Q2_V3_FINITE_RESPONSE_GEOMETRY_REQUIRED`: M2 passes its superiority gate.
-- `Q2_V3_LOCAL_OUTPUT_GEOMETRY_REQUIRED`: qualified M3 passes its superiority gate.
 - `Q2_V3_ANGULAR_ASSOCIATION_PREDICTIVE_ADEQUACY_LIMITED`: rank gate passes but
   prospectively scaled secondary error/calibration criteria fail.
 - `Q2_V3_ANGULAR_IDENTIFIABILITY_FAILED`: pre-outcome bank gate fails.
-- `Q2_V3_SAME_DOMAIN_INSTRUMENT_UNAVAILABLE`: fresh primary source cannot qualify.
+- `Q2_V3_SAME_DOMAIN_INSTRUMENT_UNAVAILABLE`: the accepted primary evidence
+  claim cannot be supported by the provenance-qualified panel.
 - `Q2_V3_CONTROLLER_BANK_DESTRUCTIVE`: safety gate fails.
 - `Q2_V3_INSTRUMENT_FAILURE` / `Q2_V3_ENGINE_FAILURE`.
 
@@ -225,8 +226,12 @@ later, separately authorized stage. Q3 remains not run.
   dyads: radial-only geometry;
 - M0/M1 predict within-shell error relations: generic relational geometry;
 - M2 adds corrected, stable superiority: finite function-aware geometry;
-- qualified M3 uniquely adds corrected superiority: local output-induced
-  geometry;
-- neither radial nor angular relations replicate: no stable candidate geometry;
-- local M3 predicts token movement but not semantic error relation: output
-  sensitivity and epistemic geometry dissociate.
+- neither radial nor angular relations replicate: no stable candidate geometry.
+
+## Prospective chronology
+
+No Q2 V3 semantic outcome has been generated. A future principal-approved
+freeze must first lock the new source families, shell targets, Class-C panel,
+M0/M1/M2 arrays and predictors, nuisance model, all schedules/seeds, and cost
+gate. Only then may the 10,000-row panel open. This document is freeze-ready,
+not frozen, preregistered, or execution-authorized.

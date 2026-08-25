@@ -1,6 +1,11 @@
 # Q2 M3 feasibility and qualification plan
 
-Status: `DESIGN ONLY — M3 NOT QUALIFIED — NO EXECUTION AUTHORIZED`
+Status: `HISTORICAL PLAN — REAL-QWEN QUALIFICATION COMPLETED AND FAILED`
+
+Closeout note: the authorized qualification closed as
+`M3_DERIVATIVE_IDENTITIES_FAILED`. See
+`review/q2_m3_qualification_cruxeval_provenance/REPORT.md`. M3 is excluded from
+the freeze-ready Q2 V3 draft; no semantic outcome was used.
 
 ## Recommendation
 

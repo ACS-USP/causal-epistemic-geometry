@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_GEOMETRY_FOUNDATIONS_COMPLETE_V3_RADIAL_ANGULAR_DRAFT` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_FREEZE_READY_M3_EXCLUDED_PROVENANCE_RESOLVED` — **scientific claim:** `NONE_FROZEN`.
 
-The geometry-foundations sprint audited the exact Q2 V2 implementations: M0 and M1 are normalized angular chords that discard dose, while M2 is a finite output-response Jensen-Shannon pseudometric, not a local pullback. A categorical-Fisher M3 on the controller span is mathematically coherent in CPU toy models but remains numerically NOT QUALIFIED under the Gate-12.1 evidence boundary. Q2 V3 is redesigned around ten new oriented directions, two physically matched intervention-radius shells, and within-shell angular prediction. It cannot be frozen until M3 qualification is separately reviewed and a genuinely fresh same-domain instrument is established. Q2 V2 remains unchanged; no inference or GPU work occurred; Q3 remains NOT RUN.
+M3 real-Qwen engineering qualification closed as M3_DERIVATIVE_IDENTITIES_FAILED. Exact FP32 sequence/JVP/VJP/PSD checks passed, but the frozen polarization and finite-window gates failed and the mandatory BF16 bridge failed independently; M3 is excluded from Q2 V3. The item-level audit classified all 800 CRUXEval items as A=0, B=25, C=655, D=120, unresolved=0. A deterministic 200-item Class-C panel can support historical-item/prospective-controller same-domain validation, not fresh-item confirmation. Q2 V3 is freeze-ready but not frozen or run. Q2 V2 is unchanged; Q3 remains NOT RUN.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_GEOMETRY_FOUNDATIONS_AND_Q2_V3_DRAFT
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_AND_OPTIONAL_Q2_V3_FREEZE
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

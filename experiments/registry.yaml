@@ -1482,3 +1482,58 @@ experiments:
     next_action: >-
       Principal researcher review and optional prospective freeze. Do not run Q2
       V3, Q3, RunPod, DGX, or model inference from this entry.
+  - id: Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE
+    version: M3-REAL-QWEN-V1-CRUX-PROVENANCE-V1
+    stage: ENGINEERING_QUALIFICATION_AND_ITEM_PROVENANCE_AUDIT
+    question: >-
+      Can the proposed local output-Fisher controller-span M3 be measured
+      reliably on the real Qwen stack, and which historical CRUXEval items can
+      support a precisely labeled prospective Q2 V3 test?
+    instrument: >-
+      Six engineering-only directions, 16 synthetic teacher-forced token
+      fixtures, exact BF16-valued Qwen3-8B FP32 lift, and a complete offline
+      ledger over the official 800-item CRUXEval output-prediction universe
+    model_policy: >-
+      Qwen/Qwen3-8B revision b968826d9c46dd6066d109eabc6255188de91218;
+      no free generation, benchmark item, task oracle, or correctness outcome
+      used in M3 qualification
+    status: COMPLETE_ENGINEERING_NOT_QUALIFIED_PROVENANCE_RESOLVED
+    outcome: >-
+      M3 closed as M3_DERIVATIVE_IDENTITIES_FAILED. Exact FP32
+      sequence/JVP/VJP/reproducibility/PSD checks passed, but direct versus
+      polarization, the finite three-scale local window, and the mandatory BF16
+      bridge failed. The CRUXEval audit found A=0, B=25, C=655, D=120 and no
+      unresolved identities. A deterministic 200-item Class-C panel is proposed
+      for historical-item/prospective-controller same-domain validation.
+    scientific_interpretation: >-
+      M3 is not admitted to Q2 V3 and this is not a semantic-geometry null. Q2 V3
+      can be frozen without M3 using M0/M1/M2 and a precisely labeled historical
+      same-domain panel. It is freeze-ready, not frozen or run.
+    source_commit: b3f9a7ffa48d205d1ea242b953afca0910e34283
+    execution_source_commit: 3792a119a8916f450c20022e2937b18e8f5047fc
+    artifact: review/q2_m3_qualification_cruxeval_provenance/
+    cost_usd: 0.13766204213333333
+    cost_semantics: CONSERVATIVE_WHOLE_POD_GPU_UPPER_BOUND_PENDING_ITEMIZED_BILLING
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    gpu_runner_seconds: 484.0082297325134
+    scientific_rows: 0
+    q2_v3_behavioral_trajectories: 0
+    semantic_outcomes_read: false
+    free_generation: false
+    m3_classification: M3_DERIVATIVE_IDENTITIES_FAILED
+    m3_forensic: M3_FORENSIC_CLEAN
+    cruxeval_class_counts: {A: 0, B: 25, C: 655, D: 120, UNRESOLVED: 0}
+    q2_v3:
+      status: FREEZE_READY_AWAITING_PRINCIPAL_RESEARCHER_REVIEW
+      proposed_primary_panel_n: 200
+      proposed_primary_panel_class: C
+      ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+      evidence_claim: HISTORICAL_ITEM_PROSPECTIVE_CONTROLLER_SAME_DOMAIN_VALIDATION
+      m3_included: false
+      execution_authorized: false
+    q1: UNCHANGED
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    next_action: >-
+      Principal researcher review and optional prospective Q2 V3 freeze. Do not
+      execute Q2 V3 or Q3 without a new authorization.
