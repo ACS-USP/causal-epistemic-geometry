@@ -2,22 +2,21 @@
   "verification_source": "dedicated RunPod MCP",
   "pod_id": "2gy9k0axzzzp6u",
   "pod_name": "yeasty_crimson_moose",
-  "pod_status": "EXITED",
-  "available_actions": [
-    "start",
-    "terminate"
-  ],
+  "pod_status": "TERMINATED",
+  "available_actions": [],
   "active_gpu_count": 0,
-  "listed_pods": 1,
+  "listed_pods": 0,
   "active_pods": 0,
   "gpu_type": "NVIDIA A40",
   "gpu_hourly_price_usd": 0.44,
-  "retained_pod_disk_gb": 20,
+  "retained_pod_disk_gb": 0,
   "network_volume_attached": false,
   "billing_window_pod_count": 3,
   "observed_q2_v2_cost_usd": 3.948212791234255,
   "common_panel_started": false,
   "scientific_rows_collected_on_common_panel": 0,
   "temporary_rtx_pod_status": "TERMINATED",
-  "a40_benchmark_artifact_recovered": true
+  "a40_benchmark_artifact_recovered": true,
+  "a40_retained_disk_deleted_after_verified_push": true,
+  "listed_network_volumes": 0
 }

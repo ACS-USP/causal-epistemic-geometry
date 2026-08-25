@@ -61,10 +61,10 @@
   },
   "runpod": {
     "verification_source": "dedicated RunPod MCP",
-    "pod_status": "EXITED",
+    "pod_status": "TERMINATED",
     "active_pods": 0,
     "active_gpus": 0,
-    "retained_pod_disk_gb": 20,
+    "retained_pod_disk_gb": 0,
     "network_volumes": 0
   }
 }

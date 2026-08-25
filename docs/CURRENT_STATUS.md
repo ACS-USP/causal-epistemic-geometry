@@ -11,7 +11,7 @@
 Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel outcomes. Q2 V2 source qualification completed exactly 576 rows: all six frozen conceptual axes qualified, yielding 24 signed/location directions. The 1,164-row matched label-free calibration completed. The final bank qualifies with 24 meaningful directions across six families, 12 causal directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item common panel is locked and remains scientifically untouched. The original US$25 gate correctly stopped collection. A subsequent principal-reviewed material budget amendment authorized execution-engine cost qualification with a preferred cumulative projection of US$30 and a hard RunPod ceiling of US$45. The exact serial A40 reference engine qualified and was selected; the faster RTX 6000 Ada failed exact discrete equivalence. The A40 projects US$32.1623 for the complete common panel and US$36.1105 cumulatively, within the hard ceiling but above the available US$5.42 wallet. The common panel remains at zero rows. No correctness or common-panel outcome has been used. Q1 remains immutable and Q3 is not run.
 
 - Workstream: `Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE`
-- RunPod: `STOPPED_ENGINE_QUALIFIED_PENDING_ARTIFACT_VERIFICATION`
+- RunPod: `TERMINATED_ZERO_ACTIVE_RESOURCES`
 - GPU work authorized: `false`
 - New scientific experiment authorized: `none_pending_wallet_top_up`
 - Next authorized action: Principal review and wallet top-up of at least US$26.7423, with a recommended US$3.2162 operational buffer, before any unchanged common-panel collection.

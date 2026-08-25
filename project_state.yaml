@@ -44,7 +44,7 @@ current:
   next_authorized_action: >-
     Principal review and wallet top-up of at least US$26.7423, with a recommended
     US$3.2162 operational buffer, before any unchanged common-panel collection.
-  runpod: STOPPED_ENGINE_QUALIFIED_PENDING_ARTIFACT_VERIFICATION
+  runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE_PENDING_WALLET_TOP_UP
 
@@ -115,9 +115,9 @@ instrument_history:
     dose_calibration_rows: 1164
     common_panel_rows: 0
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED_NOT_REUSED
-    runpod_status: STOPPED
+    runpod_status: TERMINATED
     active_pods: 0
-    retained_pod_disk_gb: 20
+    retained_pod_disk_gb: 0
     cost_usd: 3.948212791234255
     q3: NOT_RUN
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT

@@ -217,7 +217,7 @@ experiments:
       backup_substrate: QWEN_NONTHINKING/FRESH_PSEUDOWORD_LONG
       generation_time_cost_usd: 0.13116469403083125
       pod_wallclock_cost_estimate_usd: 0.2767111111111111
-      runpod_status: STOPPED
+      runpod_status: TERMINATED
       steering: NOT_RUN
       geometry: NOT_RUN
       q2: NOT_RUN
@@ -1357,8 +1357,8 @@ experiments:
       Q3: NOT_RUN
       runpod_status: STOPPED
       active_pods: 0
-      retained_stopped_pods: 1
-      retained_pod_disk_gb: 20
+      retained_stopped_pods: 0
+      retained_pod_disk_gb: 0
       network_volumes: 0
     next_action: >-
       Principal review and wallet top-up; preserve the qualified bank and A40

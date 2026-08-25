@@ -131,9 +131,9 @@ non-scientific fixture schedule was therefore rerun prospectively to persist the
 cost tail. Neither incident changed scientific semantics.
 
 The temporary RTX Pod was terminated after artifact recovery. The A40 Pod was
-stopped immediately after its benchmark artifact was recovered. Final retained
-disk removal is performed only after local artifact verification and branch
-push, as required by the authorization.
+stopped immediately after its benchmark artifact was recovered, then terminated
+only after local artifact verification and branch push. The dedicated RunPod
+MCP subsequently verified zero Pods, zero active GPUs, and zero network volumes.
 
 ## Next action
 
