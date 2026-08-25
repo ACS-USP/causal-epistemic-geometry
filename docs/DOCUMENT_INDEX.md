@@ -55,6 +55,7 @@ current instruction source.
 | `docs/Q2_AMBITION_LADDER.md` | Evidence ladder from geometry nulls to prospective controller construction |
 | `docs/Q2_CONTROLLER_BANK_QUALIFICATION_CLOSEOUT.md` | First Q2 bank-qualification failure, pre-panel stop, and predictive-claim boundary |
 | `docs/Q2_FIRST_EXPERIMENT_OPTIONS.md` | Compared Q2 entry points and recommended finite-secant prediction study |
+| `docs/Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DRAFT.md` | Post-hoc Q2 V2 diagnosis and navigation to the non-executing Q2 V3 design |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |

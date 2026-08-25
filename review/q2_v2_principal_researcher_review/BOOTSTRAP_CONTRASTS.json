@@ -1,0 +1,120 @@
+{
+  "metrics": {
+    "M0_FLAT": {
+      "rho": {
+        "interval_95": [
+          0.054069545897522074,
+          0.25132965507627103
+        ],
+        "median": 0.15339547739903117
+      },
+      "rmse": {
+        "interval_95": [
+          0.013042848664429644,
+          0.0304133480018744
+        ],
+        "median": 0.020784968090423288
+      },
+      "rmse_ratio": {
+        "interval_95": [
+          0.9709083830487217,
+          1.0047889538671626
+        ],
+        "median": 0.9931166148250108
+      }
+    },
+    "M1_WHITENED": {
+      "rho": {
+        "interval_95": [
+          0.054303637165932485,
+          0.2376162531330206
+        ],
+        "median": 0.14464954862250504
+      },
+      "rmse": {
+        "interval_95": [
+          0.013043465444760345,
+          0.030445009942669316
+        ],
+        "median": 0.020813269021865654
+      },
+      "rmse_ratio": {
+        "interval_95": [
+          0.9742838785776093,
+          1.0044752192917894
+        ],
+        "median": 0.9939335173993165
+      }
+    },
+    "M2_FINITE_SECANT": {
+      "rho": {
+        "interval_95": [
+          0.1205214760297948,
+          0.48263082158215725
+        ],
+        "median": 0.3327478089648065
+      },
+      "rmse": {
+        "interval_95": [
+          0.01243204881562927,
+          0.029115482197662565
+        ],
+        "median": 0.019793603788786553
+      },
+      "rmse_ratio": {
+        "interval_95": [
+          0.8537137267401463,
+          1.0074075658743866
+        ],
+        "median": 0.9494141781781289
+      }
+    }
+  },
+  "paired_contrasts": {
+    "delta_rho_M2_minus_M0": {
+      "confirmatory_p_value": null,
+      "fraction_positive": 0.9567,
+      "interval_95": [
+        -0.023835162612366494,
+        0.34682259352952693
+      ],
+      "mean": 0.17048353390469853,
+      "median": 0.1734260569716063
+    },
+    "delta_rho_M2_minus_M1": {
+      "confirmatory_p_value": null,
+      "fraction_positive": 0.9632,
+      "interval_95": [
+        -0.016099794395960088,
+        0.355709300774764
+      ],
+      "mean": 0.17892646335028026,
+      "median": 0.18215415272801128
+    },
+    "delta_rmse_M0_minus_M2": {
+      "confirmatory_p_value": null,
+      "fraction_positive": 0.8857,
+      "interval_95": [
+        -0.0002988864562451147,
+        0.0031328210956982957
+      ],
+      "mean": 0.0010039691724005764,
+      "median": 0.0008517626254971947
+    },
+    "delta_rmse_M1_minus_M2": {
+      "confirmatory_p_value": null,
+      "fraction_positive": 0.8938,
+      "interval_95": [
+        -0.00026063348044338654,
+        0.0031492584302855236
+      ],
+      "mean": 0.0010255061745617726,
+      "median": 0.0008715168574404408
+    }
+  },
+  "post_hoc_exploratory": true,
+  "resamples": 10000,
+  "schema_version": "q2-v2-posthoc-paired-item-bootstrap-v1",
+  "seed": 2026082401,
+  "unit": "item; all controllers and both rollouts move together"
+}

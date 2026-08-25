@@ -1,0 +1,23 @@
+{
+  "analysis_status": "POST_HOC_EXPLORATORY",
+  "forensic_classification": "Q2_V2_FORENSIC_CLEAN",
+  "frozen_classification": "Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL",
+  "frozen_q2_v2_head": "64a551ef95557d303639fb17d240b3f4f7f96a65",
+  "input_sha256": {
+    "REPORT.md": "bd1c165c63c1d1f002bf4d2d3eea20ed4824220a63a6b27996f399c9ad2d1426",
+    "V2_BOOTSTRAP_INTERVALS.json": "8643852e3613eed9c0081d228747682d1cd07a4197d911425f0fe9849feddf95",
+    "V2_COMMON_PANEL_JOURNAL.jsonl": "9a635787561d5bc6e56cf2c7ffae9e391bebc817488f38369ffc8c0fea14a5b7",
+    "V2_COMMON_PANEL_MANIFEST.json": "365f10c5e88069079f43afb4f7a7845bf702c62dbcb44d19c97241ab7358a91b",
+    "V2_COMMON_PANEL_SCHEDULE.json": "f0a9b69af9befa1ac38737ef9042fe4d9cd315abc4f5e3c190788594c7bc5256",
+    "V2_COVARIANCE_ACTIVATIONS.npz": "d66af6ad59e949fe29b9bc8f1838d30ecb02b99b15f0602ec0520d24345e4597",
+    "V2_DOSE_CALIBRATION.json": "3eb7fc8cb5c4518ccc958d0a03830bf1ee19cff95a69071709465653ce9a38e1",
+    "V2_D_MATRIX.json": "f72424d83a657c82a49b6f4a3169191f837106cb0b4be1ec2a7b8042c2251147",
+    "V2_FINAL_PROTOCOL_LOCK.json": "c0665efc96c4dbc06f9cc201aaac700f3485ff62dcc82a3002bfddd2a7e7b0f3",
+    "V2_FINITE_SECANT_ARCHIVE.json": "b461e4ad6ec48a8044bd70be146c4bdf8b12620729ccff3242790ea13c633824",
+    "V2_GEOMETRY_METRICS.json": "f3c36654589109836d0c2a18d5def5063eb0e4613fbe0ce192c0db4f537f06a8",
+    "V2_PREDICTION_RESULTS.json": "e2dd1d20a70a7f43eb3c36c6d2250c25bd50f40a286994bdfb0754e5e1bc0e45"
+  },
+  "new_inference": false,
+  "schema_version": "q2-v2-principal-review-provenance-v1",
+  "scientific_trajectories_created": 0
+}

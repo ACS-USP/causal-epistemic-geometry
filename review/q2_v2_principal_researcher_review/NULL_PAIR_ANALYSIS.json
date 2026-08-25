@@ -1,0 +1,73 @@
+{
+  "aggregate_primary_depended_on_nulls": false,
+  "frozen_primary_population": "24 meaningful controllers only",
+  "pair_classes": {
+    "MEANINGFUL_MEANINGFUL": {
+      "behavioral_D_mean": 0.014281400966183574,
+      "behavioral_D_median": 0.016666666666666666,
+      "metrics": {
+        "M0_FLAT": {
+          "descriptive_in_sample_rmse": 0.01631099901516304,
+          "pearson": 0.1932119923235783,
+          "spearman": 0.1522054596156674
+        },
+        "M1_WHITENED": {
+          "descriptive_in_sample_rmse": 0.016346531034302437,
+          "pearson": 0.1820223404535438,
+          "spearman": 0.1475875437134782
+        },
+        "M2_FINITE_SECANT": {
+          "descriptive_in_sample_rmse": 0.014708148701582735,
+          "pearson": 0.46608370052366266,
+          "spearman": 0.4326345807903283
+        }
+      },
+      "pairs": 276
+    },
+    "MEANINGFUL_NULL": {
+      "behavioral_D_mean": 0.007899305555555555,
+      "behavioral_D_median": 0.008333333333333333,
+      "metrics": {
+        "M0_FLAT": {
+          "descriptive_in_sample_rmse": 0.015373898619966447,
+          "pearson": -0.03693092988847413,
+          "spearman": -0.05592666957528386
+        },
+        "M1_WHITENED": {
+          "descriptive_in_sample_rmse": 0.015362086567875684,
+          "pearson": -0.03919243375932153,
+          "spearman": -0.0506206948268775
+        },
+        "M2_FINITE_SECANT": {
+          "descriptive_in_sample_rmse": 0.013755026546328524,
+          "pearson": 0.4466676324674362,
+          "spearman": 0.4573626597619919
+        }
+      },
+      "pairs": 96
+    },
+    "NULL_NULL": {
+      "behavioral_D_mean": 0.0,
+      "behavioral_D_median": -0.004166666666666667,
+      "metrics": {
+        "M0_FLAT": {
+          "descriptive_in_sample_rmse": 0.009622504486493762,
+          "pearson": NaN,
+          "spearman": NaN
+        },
+        "M1_WHITENED": {
+          "descriptive_in_sample_rmse": 0.009606970347683007,
+          "pearson": -0.05679880261392696,
+          "spearman": -0.030358837035945815
+        },
+        "M2_FINITE_SECANT": {
+          "descriptive_in_sample_rmse": 0.008006598007329314,
+          "pearson": 0.5546705275832914,
+          "spearman": 0.5161002296110789
+        }
+      },
+      "pairs": 6
+    }
+  },
+  "post_hoc_exploratory": true
+}

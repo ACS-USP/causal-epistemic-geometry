@@ -1,0 +1,182 @@
+{
+  "M0_M1_distance_matrix_pearson": 0.995138242428135,
+  "M0_M1_distance_matrix_spearman": 0.9902908022239179,
+  "M2_Theil_Sen_all_edge_intercept": 0.0028241720354966918,
+  "M2_Theil_Sen_all_edge_mae": 0.011220057843300713,
+  "M2_Theil_Sen_all_edge_slope": 0.15933892448196474,
+  "all_unique_meaningful_edges": {
+    "M0_FLAT": {
+      "pearson": 0.1932119923235783,
+      "spearman": 0.15205403549893837
+    },
+    "M1_WHITENED": {
+      "pearson": 0.1820223404535438,
+      "spearman": 0.1475875437134782
+    },
+    "M2_FINITE_SECANT": {
+      "pearson": 0.46608370052366266,
+      "spearman": 0.4326345807903283
+    }
+  },
+  "leave_one_controller": [
+    {
+      "mean_rmse": 0.01464161107574792,
+      "mean_spearman": 0.44720259751462793,
+      "removed": "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_MINUS",
+      "rmse_ratio": 0.8997123090772261
+    },
+    {
+      "mean_rmse": 0.014898782429265185,
+      "mean_spearman": 0.42129237458209934,
+      "removed": "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9094753754257899
+    },
+    {
+      "mean_rmse": 0.014979564964641793,
+      "mean_spearman": 0.44253646001973274,
+      "removed": "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9021367527773758
+    },
+    {
+      "mean_rmse": 0.01505547698856225,
+      "mean_spearman": 0.4434110474915758,
+      "removed": "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS",
+      "rmse_ratio": 0.913322353898501
+    },
+    {
+      "mean_rmse": 0.015130528170837822,
+      "mean_spearman": 0.45187380824875406,
+      "removed": "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9004990694837816
+    },
+    {
+      "mean_rmse": 0.015121023069609702,
+      "mean_spearman": 0.4239787472140293,
+      "removed": "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9056110628395699
+    },
+    {
+      "mean_rmse": 0.013967539386075513,
+      "mean_spearman": 0.41722555844625187,
+      "removed": "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9072904563123823
+    },
+    {
+      "mean_rmse": 0.014645328540837851,
+      "mean_spearman": 0.40037020141514085,
+      "removed": "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9143963003281155
+    },
+    {
+      "mean_rmse": 0.01509613603524869,
+      "mean_spearman": 0.4375167786275426,
+      "removed": "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9010283028639525
+    },
+    {
+      "mean_rmse": 0.013408059556626493,
+      "mean_spearman": 0.4038430950244986,
+      "removed": "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS",
+      "rmse_ratio": 0.8940638185264929
+    },
+    {
+      "mean_rmse": 0.014792212441849563,
+      "mean_spearman": 0.40784316733313664,
+      "removed": "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9176676873342707
+    },
+    {
+      "mean_rmse": 0.015154745933717106,
+      "mean_spearman": 0.40723684219887607,
+      "removed": "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9260559569940712
+    },
+    {
+      "mean_rmse": 0.014088041330934033,
+      "mean_spearman": 0.5103613126409118,
+      "removed": "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_MINUS",
+      "rmse_ratio": 0.8571715748870035
+    },
+    {
+      "mean_rmse": 0.015229734032012249,
+      "mean_spearman": 0.40782129949078066,
+      "removed": "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9086606264417363
+    },
+    {
+      "mean_rmse": 0.014906568031223708,
+      "mean_spearman": 0.39410823935026307,
+      "removed": "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9330298876898706
+    },
+    {
+      "mean_rmse": 0.014781653266074557,
+      "mean_spearman": 0.4147915147792132,
+      "removed": "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9327042155033833
+    },
+    {
+      "mean_rmse": 0.015003972336311877,
+      "mean_spearman": 0.40693312317811897,
+      "removed": "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9202037123021152
+    },
+    {
+      "mean_rmse": 0.014671962296455477,
+      "mean_spearman": 0.41836351351535733,
+      "removed": "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_PLUS",
+      "rmse_ratio": 0.8894843229087532
+    },
+    {
+      "mean_rmse": 0.015002588750965192,
+      "mean_spearman": 0.4159084164190137,
+      "removed": "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9172095673511509
+    },
+    {
+      "mean_rmse": 0.014802203804269875,
+      "mean_spearman": 0.4432686248266224,
+      "removed": "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9014401998448338
+    },
+    {
+      "mean_rmse": 0.014934878239809879,
+      "mean_spearman": 0.447986744697728,
+      "removed": "MEAN_TYPE_REPRESENTATION_DISCIPLINE_EXECUTION_BOUNDARY_MINUS",
+      "rmse_ratio": 0.8993683150103469
+    },
+    {
+      "mean_rmse": 0.014798003587995693,
+      "mean_spearman": 0.4271324657826312,
+      "removed": "MEAN_TYPE_REPRESENTATION_DISCIPLINE_EXECUTION_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9068562571820523
+    },
+    {
+      "mean_rmse": 0.015190625337908187,
+      "mean_spearman": 0.4135583116635125,
+      "removed": "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS",
+      "rmse_ratio": 0.9196948247012487
+    },
+    {
+      "mean_rmse": 0.014635930941821413,
+      "mean_spearman": 0.4281875136715974,
+      "removed": "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_PLUS",
+      "rmse_ratio": 0.9031102926462392
+    }
+  ],
+  "leave_one_controller_ranges": {
+    "mean_rmse": [
+      0.013408059556626493,
+      0.015229734032012249
+    ],
+    "mean_spearman": [
+      0.39410823935026307,
+      0.5103613126409118
+    ],
+    "rmse_ratio": [
+      0.8571715748870035,
+      0.9330298876898706
+    ]
+  },
+  "post_hoc_exploratory": true
+}

@@ -1,0 +1,53 @@
+{
+  "M0_FLAT": {
+    "calibration_intercept": 0.004954904712281576,
+    "calibration_slope": 0.6449748956909712,
+    "directed_fold_edge_count": 480,
+    "observed_predicted_pearson": 0.12088696801775124,
+    "observed_predicted_spearman": 0.11013332577765358,
+    "pooled_quadratic_rmse_descriptive": 0.016172225974092264,
+    "pooled_recalibrated_rmse_descriptive": 0.01618420764214544,
+    "residual_absolute_predicted_spearman": 0.1382277633296125,
+    "residual_predicted_spearman": -0.08922523063831711,
+    "residual_quantiles": {
+      "median": 0.0009896628944915734,
+      "p05": -0.025772192491510956,
+      "p95": 0.026873742482533262
+    },
+    "uncalibrated_rmse": 0.016220528801884484
+  },
+  "M1_WHITENED": {
+    "calibration_intercept": 0.0054585370139830685,
+    "calibration_slope": 0.6087235358652584,
+    "directed_fold_edge_count": 480,
+    "observed_predicted_pearson": 0.10696630505362785,
+    "observed_predicted_spearman": 0.10269189675117946,
+    "pooled_quadratic_rmse_descriptive": 0.016209941991596262,
+    "pooled_recalibrated_rmse_descriptive": 0.016210234457500135,
+    "residual_absolute_predicted_spearman": 0.1424114065607,
+    "residual_predicted_spearman": -0.08530439433496313,
+    "residual_quantiles": {
+      "median": 0.0009798604249190643,
+      "p05": -0.025696261211919952,
+      "p95": 0.027030907576858866
+    },
+    "uncalibrated_rmse": 0.016248948504919397
+  },
+  "M2_FINITE_SECANT": {
+    "calibration_intercept": 0.002179940136748246,
+    "calibration_slope": 0.8357692546748846,
+    "directed_fold_edge_count": 480,
+    "observed_predicted_pearson": 0.4135619277950423,
+    "observed_predicted_spearman": 0.40533390955618226,
+    "pooled_quadratic_rmse_descriptive": 0.014843854880768337,
+    "pooled_recalibrated_rmse_descriptive": 0.014844195700035158,
+    "residual_absolute_predicted_spearman": 0.1488006675376195,
+    "residual_predicted_spearman": -0.10852868285018598,
+    "residual_quantiles": {
+      "median": -0.00021075826709607282,
+      "p05": -0.02705289300005271,
+      "p95": 0.023929271095304176
+    },
+    "uncalibrated_rmse": 0.01490381557450829
+  }
+}

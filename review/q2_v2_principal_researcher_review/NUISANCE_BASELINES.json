@@ -1,0 +1,120 @@
+{
+  "M2_incremental_over_combined_nuisance": {
+    "aggregate": {
+      "augmented_to_nuisance_rmse_ratio": 0.9944715836129939,
+      "mean_augmented_rmse": 0.015067381986716177,
+      "mean_nuisance_rmse": 0.01515114381848417,
+      "mean_residual_pearson": 0.13648351288026858,
+      "mean_residual_spearman": 0.054370595199842005
+    },
+    "folds": {
+      "COUNTERFACTUAL_CHECKING": {
+        "augmented_rmse": 0.013282202333688195,
+        "augmented_to_nuisance_rmse_ratio": 1.0326112363213855,
+        "nuisance_rmse": 0.012862732717305333,
+        "residual_pearson": -0.08258464955397521,
+        "residual_spearman": -0.15343772713374484,
+        "test_edges": 80
+      },
+      "DECOMPOSE_THEN_SOLVE": {
+        "augmented_rmse": 0.015818804176061387,
+        "augmented_to_nuisance_rmse_ratio": 0.985082426707931,
+        "nuisance_rmse": 0.016058355876803734,
+        "residual_pearson": 0.32814075069607496,
+        "residual_spearman": 0.13420222928991754,
+        "test_edges": 80
+      },
+      "EXPLICIT_STATE_TRACKING": {
+        "augmented_rmse": 0.01900257783107265,
+        "augmented_to_nuisance_rmse_ratio": 0.9986452373055515,
+        "nuisance_rmse": 0.019028356738919196,
+        "residual_pearson": 0.3171349249051285,
+        "residual_spearman": 0.2882610454215788,
+        "test_edges": 80
+      },
+      "INDEPENDENT_VERIFICATION": {
+        "augmented_rmse": 0.015306533609381,
+        "augmented_to_nuisance_rmse_ratio": 0.9663376988332383,
+        "nuisance_rmse": 0.015839735558141006,
+        "residual_pearson": 0.1919603218879955,
+        "residual_spearman": 0.12267047988555295,
+        "test_edges": 80
+      },
+      "INVARIANT_CHECKING": {
+        "augmented_rmse": 0.013363752581568744,
+        "augmented_to_nuisance_rmse_ratio": 0.9907679715172283,
+        "nuisance_rmse": 0.013488276736584398,
+        "residual_pearson": 0.012240957074164999,
+        "residual_spearman": -0.08695754098731294,
+        "test_edges": 80
+      },
+      "TYPE_REPRESENTATION_DISCIPLINE": {
+        "augmented_rmse": 0.01363042138852507,
+        "augmented_to_nuisance_rmse_ratio": 1.000074552436633,
+        "nuisance_rmse": 0.013629405283151352,
+        "residual_pearson": 0.05200877227222285,
+        "residual_spearman": 0.02148508472306049,
+        "test_edges": 80
+      }
+    }
+  },
+  "M2_residual_family_QAP": {
+    "confirmatory": false,
+    "null_mean": 0.01256989317431826,
+    "null_p95": 0.19902616742099358,
+    "observed_mean_residual_spearman": 0.054370595199842005,
+    "p_one_sided": 0.3738626137386261,
+    "permutations": 10000,
+    "seed": 2026082403
+  },
+  "claim_boundary": "Diagnostics condition on simple scalar strength features; they do not create a new Q2 V2 pass/fail rule.",
+  "combined_nuisance_baseline": {
+    "mean_constant_rmse": 0.016305085334629325,
+    "mean_pearson": 0.4440734496006778,
+    "mean_rmse": 0.01515114381848417,
+    "mean_spearman": 0.4433542483627377,
+    "median_spearman": 0.4188434924870683,
+    "rmse_ratio": 0.9292281216281418
+  },
+  "feature_set_frozen_for_this_review": [
+    "DELTA_NORM_DIFFERENCE",
+    "DELTA_NORM_MEAN",
+    "DOSE_FRACTION_DIFFERENCE",
+    "DOSE_FRACTION_MEAN"
+  ],
+  "individual_nuisance_baselines": {
+    "DELTA_NORM_DIFFERENCE": {
+      "mean_constant_rmse": 0.016305085334629325,
+      "mean_pearson": 0.24968353172662291,
+      "mean_rmse": 0.01576215869276151,
+      "mean_spearman": 0.31401939333226314,
+      "median_spearman": 0.3209101820370759,
+      "rmse_ratio": 0.9667020054955047
+    },
+    "DELTA_NORM_MEAN": {
+      "mean_constant_rmse": 0.016305085334629325,
+      "mean_pearson": 0.39918774852594857,
+      "mean_rmse": 0.015078548037194809,
+      "mean_spearman": 0.4029762462036686,
+      "median_spearman": 0.39204286721084824,
+      "rmse_ratio": 0.9247757817722332
+    },
+    "DOSE_FRACTION_DIFFERENCE": {
+      "mean_constant_rmse": 0.016305085334629325,
+      "mean_pearson": 0.1414347256645656,
+      "mean_rmse": 0.01615421945308435,
+      "mean_spearman": 0.16925991721916359,
+      "median_spearman": 0.1674823291291596,
+      "rmse_ratio": 0.9907473111333823
+    },
+    "DOSE_FRACTION_MEAN": {
+      "mean_constant_rmse": 0.016305085334629325,
+      "mean_pearson": 0.27925477228652423,
+      "mean_rmse": 0.0156508875674544,
+      "mean_spearman": 0.2810192542166207,
+      "median_spearman": 0.2993556262681719,
+      "rmse_ratio": 0.9598776851670003
+    }
+  },
+  "post_hoc_exploratory": true
+}

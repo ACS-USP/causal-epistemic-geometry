@@ -1,0 +1,15 @@
+{
+  "classification": "Q2_V2_PRINCIPAL_REVIEW_REPRODUCIBLE",
+  "expected_journal_sha256": "9a635787561d5bc6e56cf2c7ffae9e391bebc817488f38369ffc8c0fea14a5b7",
+  "frozen_journal_rows": 6960,
+  "frozen_journal_sha256": "9a635787561d5bc6e56cf2c7ffae9e391bebc817488f38369ffc8c0fea14a5b7",
+  "frozen_q2_v2_classification_preserved": true,
+  "frozen_q2_v2_forensic_classification": "Q2_V2_FORENSIC_CLEAN",
+  "input_integrity_pass": true,
+  "model_inference": false,
+  "new_scientific_rows": 0,
+  "q2_v3": "DRAFT_NOT_RUN",
+  "q3": "NOT_RUN",
+  "runpod_or_dgx_used": false,
+  "schema_version": "q2-v2-principal-review-audit-v1"
+}

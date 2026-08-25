@@ -1,0 +1,134 @@
+{
+  "files": {
+    "experiments/specs/q2_v3_out_of_bank_finite_secant.DRAFT.yaml": {
+      "bytes": 2617,
+      "sha256": "4bd1014677625986e5dd1fe252816268032f6c1575f61ad25c7354aff740be9f"
+    },
+    "review/q2_v2_principal_researcher_review/ANALYSIS_PROVENANCE.json": {
+      "bytes": 1598,
+      "sha256": "982a13c05ad8e64a6cd2a2dae223a22936cc81fb66b843183e0f3a05abe197c6"
+    },
+    "review/q2_v2_principal_researcher_review/BOOTSTRAP_CONTRASTS.json": {
+      "bytes": 2886,
+      "sha256": "5237bbbc2cc9ce4c8d458eca3ec42b98e3dc6b960b46f891b66834e0a4d7abc2"
+    },
+    "review/q2_v2_principal_researcher_review/BOOTSTRAP_DISTRIBUTIONS.png": {
+      "bytes": 110169,
+      "sha256": "7669e182f80283d083bd900b4b13e3f0bc829d0212096e5c730ea82b26d9fa6d"
+    },
+    "review/q2_v2_principal_researcher_review/CALIBRATION_DIAGNOSTICS.json": {
+      "bytes": 2124,
+      "sha256": "22574546238d1cd12ccf243a382ea9f3afbc125f37eafe19b2efcd3a31c59145"
+    },
+    "review/q2_v2_principal_researcher_review/DOSE_LOCAL_VALIDITY_ANALYSIS.json": {
+      "bytes": 3990,
+      "sha256": "7315bf14b77235905e52e68c6382fa2b456320607e564285d0b86e1095ce7591"
+    },
+    "review/q2_v2_principal_researcher_review/DOSE_MAGNITUDE_DIAGNOSTICS.png": {
+      "bytes": 116699,
+      "sha256": "4369d758fdb6b57929ef216e491d0f2c4fabae0849a86471ed3b8a82c3abc150"
+    },
+    "review/q2_v2_principal_researcher_review/EXPLORATORY_ANALYSIS_ENUMERATION.json": {
+      "bytes": 862,
+      "sha256": "ce15c0c4115c2384b2884a4e3ab780e2e489874ad57838a8531ba3f4fb938998"
+    },
+    "review/q2_v2_principal_researcher_review/FAMILY_DECOMPOSITION.csv": {
+      "bytes": 5716,
+      "sha256": "56ebd58a094acb80b6e6dd28184b988e6bacc90349a804b9e5aec34653c60644"
+    },
+    "review/q2_v2_principal_researcher_review/FAMILY_DECOMPOSITION.png": {
+      "bytes": 104264,
+      "sha256": "51ac753e7b92dd55b2ce6f0a65e132503c653185014e657dd5cb2b855db8471b"
+    },
+    "review/q2_v2_principal_researcher_review/HELDOUT_PREDICTIONS.csv": {
+      "bytes": 350552,
+      "sha256": "d7fbd26c8cf0bd4b5f4158dab53dc1424be18c6c456e52e70df910c726339fa0"
+    },
+    "review/q2_v2_principal_researcher_review/HIGH_LEVERAGE_PAIRS.csv": {
+      "bytes": 5361,
+      "sha256": "72bb79229bac283f3d31535c567b4b4f15ece1697a6c0513c97d859cea984a82"
+    },
+    "review/q2_v2_principal_researcher_review/INFLUENCE_SUMMARY.json": {
+      "bytes": 1138,
+      "sha256": "2363be7db1143b981bbab8a9d159aa9317a164e9bb5df5480fd101864a884383"
+    },
+    "review/q2_v2_principal_researcher_review/ITEM_BOOTSTRAP_SAMPLES.npz": {
+      "bytes": 666839,
+      "sha256": "6339fa03184ce9d94e8a724c63f5947f6df08e06330525cb3fa7ac2cf44e81e3"
+    },
+    "review/q2_v2_principal_researcher_review/MEANINGFUL_PAIR_DIAGNOSTICS.csv": {
+      "bytes": 81711,
+      "sha256": "945282ef85618e905162def6a864dda9c9b45e18711533647858f389e1431076"
+    },
+    "review/q2_v2_principal_researcher_review/NUISANCE_BASELINES.json": {
+      "bytes": 4440,
+      "sha256": "998604f56203bab7dcfd7fc261a5a8495afe2d6dd144f82a95c2371c9cefe95c"
+    },
+    "review/q2_v2_principal_researcher_review/NULL_PAIR_ANALYSIS.json": {
+      "bytes": 2292,
+      "sha256": "a82ec67246bcfdec8e5bf923f8636da8092658f872b896c73809ebb67f046a82"
+    },
+    "review/q2_v2_principal_researcher_review/NULL_PAIR_CLASSES.png": {
+      "bytes": 54068,
+      "sha256": "9b872f45f72a0779a7c6c7353da60e05d63a6285790d5ba9f0f5b2795ba2cadc"
+    },
+    "review/q2_v2_principal_researcher_review/NULL_PAIR_DIAGNOSTICS.csv": {
+      "bytes": 70173,
+      "sha256": "f822baef19a7566d389997ed3a03fe99adbf70ad3d09e37367e3b6e300d56437"
+    },
+    "review/q2_v2_principal_researcher_review/PREDICTION_VS_OBSERVATION.png": {
+      "bytes": 151768,
+      "sha256": "28336363a6f954aa2699376f642a61d9294f345a6d18bcf049e620d4c32b3022"
+    },
+    "review/q2_v2_principal_researcher_review/PRIMARY_REPRODUCTION.json": {
+      "bytes": 2641,
+      "sha256": "48e992631abdca96e9bfcec04dabdc5d67e55438c43997b223de3fe5cb5c79ee"
+    },
+    "review/q2_v2_principal_researcher_review/Q2_V3_POWER_PRECISION_COST_PLAN.md": {
+      "bytes": 3677,
+      "sha256": "192e7931b4fba5d98ac192db445e2fcb7fd5be37b5a4011510de3612b350fb72"
+    },
+    "review/q2_v2_principal_researcher_review/Q2_V3_PRECISION_SIMULATION.json": {
+      "bytes": 4161,
+      "sha256": "fc2d51aea6e97657a4e345f32bd435233a516b6a60dfccd4819d26ec2785de15"
+    },
+    "review/q2_v2_principal_researcher_review/Q2_V3_PROTOCOL_DRAFT.md": {
+      "bytes": 12530,
+      "sha256": "c106b6b0f1beaff9e570bc72105dd911a89f76adc6160b6c9bf0c73d57b2fe52"
+    },
+    "review/q2_v2_principal_researcher_review/REPORT.md": {
+      "bytes": 12168,
+      "sha256": "75472a035cbb020bac2f3081ccd484359cee4b245f7da949b62ea14420ae9cfb"
+    },
+    "review/q2_v2_principal_researcher_review/REVIEW_AUDIT.json": {
+      "bytes": 621,
+      "sha256": "6069434f6fcfe74efee62e9ce266236e732397758a360a98b8934c833eea926a"
+    },
+    "review/q2_v2_principal_researcher_review/ROBUSTNESS_SENSITIVITY.json": {
+      "bytes": 5971,
+      "sha256": "19041933a83a79108a919515839d7e0714f2866d9fe043b85a93bb84e1e6cd7e"
+    },
+    "scripts/analyze_q2_v2_principal_review.py": {
+      "bytes": 38220,
+      "sha256": "042b7d5649476c5d6fe98c296bfdbf9c0c5617f1eec94dcfafedb0dab1de8291"
+    },
+    "scripts/plan_q2_v3_precision.py": {
+      "bytes": 9747,
+      "sha256": "c586dbc704936b9f4d3ffb63cf24a62074ddc36a27521154573677ae714a16dc"
+    },
+    "src/epistemic_geometry/analysis/q2_exploratory.py": {
+      "bytes": 13516,
+      "sha256": "e95f533604f1c1f25d3ecb06cd85ab0c31bd250495881438134461c6b6db582a"
+    },
+    "tests/test_q2_exploratory.py": {
+      "bytes": 2424,
+      "sha256": "3ed86ed2c1274d8f98f218803f8a4e3d411f26cb29216e21b915ae4a7ac14f95"
+    }
+  },
+  "frozen_q2_v2_classification": "Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL",
+  "new_inference": false,
+  "q2_v3": "DRAFT_AWAITING_PRINCIPAL_RESEARCHER_FREEZE",
+  "q3": "NOT_RUN",
+  "schema_version": "q2-v2-principal-review-bundle-v1",
+  "status": "POST_HOC_REVIEW_COMPLETE_Q2_V3_DRAFT_NOT_RUN"
+}

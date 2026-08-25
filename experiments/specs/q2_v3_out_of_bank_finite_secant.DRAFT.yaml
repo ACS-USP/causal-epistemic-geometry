@@ -1,0 +1,83 @@
+experiment_id: Q2_OUT_OF_BANK_FINITE_SECANT_V3
+status: PROSPECTIVE_DRAFT_AWAITING_PRINCIPAL_RESEARCHER_FREEZE
+execution_authorized: false
+scientific_role: DEVELOPMENT_PROSPECTIVE_OUT_OF_BANK_PREDICTION
+frozen_history:
+  q2_v2_classification: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+  q2_v2_forensic: Q2_V2_FORENSIC_CLEAN
+  q1: UNCHANGED
+  q3: NOT_RUN
+question: >-
+  Does the exact Q2 V2 finite-secant construction predict semantic error-profile
+  distance for genuinely new controller families beyond dose and intervention
+  magnitude alone?
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  dtype: BF16
+  quantization: none
+  enable_thinking: false
+  attention: sdpa
+  max_new_tokens: 4096
+controller_design:
+  layer: 27
+  constructor: PAIRED_MEAN_DIFFERENCE
+  source_locations: [PROMPT_BOUNDARY, EXECUTION_BOUNDARY]
+  signs: [PLUS, MINUS]
+  duration: SUSTAINED_CURRENT_TOKEN
+  proposed_new_families:
+    - CONTROL_FLOW_PATH_COVERAGE
+    - MUTATION_ALIAS_CAUSALITY
+    - API_CONTRACT_EXACTNESS
+    - LOOP_BOUNDARY_ACCOUNTING
+    - HYPOTHESIS_BRANCH_ELIMINATION
+  meaningful_controllers: 20
+  fresh_nulls: 4
+dose_calibration:
+  fractions: [0.25, 0.50, 0.75, 1.00]
+  correctness_forbidden: true
+geometry:
+  M0: EXACT_Q2_V2_FLAT
+  M1: EXACT_Q2_V2_WHITENED_LAMBDA_0_1
+  M2: EXACT_Q2_V2_FINITE_SECANT
+  outcomes_used_before_prediction_lock: Q2_V2_DEVELOPMENT_ONLY
+nuisance_features:
+  - ABS_DELTA_NORM_DIFFERENCE
+  - MEAN_DELTA_NORM
+  - ABS_DOSE_FRACTION_DIFFERENCE
+  - MEAN_DOSE_FRACTION
+design_adequacy:
+  m2_explained_by_nuisance_r2_max: 0.75
+  standardized_feature_condition_number_max: 30
+  nuisance_matched_dyads_min: 60
+  cross_family_nuisance_matched_dyads_min: 40
+fresh_instrument:
+  candidate: LIVECODEBENCH_TEST_OUTPUT_PREDICTION
+  exact_revision: TO_BE_FILLED_BEFORE_PRINCIPAL_FREEZE
+  qualification_items: 40
+  evaluation_items: 200
+  exact_objective_evaluator_required: true
+common_panel:
+  conditions: 25
+  rollouts_per_item_condition: 2
+  expected_rows: 10000
+  seed_regime: INDEPENDENT_PRIMARY
+primary:
+  target: D_ij_CANONICAL_UNBIASED_TWO_ROLLOUT
+  population: NEW_MEANINGFUL_CROSS_FAMILY_PAIRS
+  residual_spearman_min: 0.25
+  family_qap_one_sided_p_max: 0.05
+  augmented_to_nuisance_rmse_ratio_max: 0.90
+  positive_rank_families_min: 4_of_5
+  improved_rmse_families_min: 4_of_5
+  item_bootstrap_resamples: 10000
+classification: FROZEN_ONLY_AFTER_PRINCIPAL_REVIEW
+cost:
+  expected_usd: 3_to_5
+  conservative_usd: 9
+  proposed_hard_ceiling_usd: 12
+  proposed_wallet_gate_usd: 15
+firewall:
+  inference_in_this_task: false
+  q3: NOT_RUN
+  confirmatory_holdout_reuse: false

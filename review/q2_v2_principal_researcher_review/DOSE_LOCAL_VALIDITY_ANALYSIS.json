@@ -1,0 +1,135 @@
+{
+  "M2_distance_quartiles": {
+    "Q1": {
+      "M2_pearson": 0.060495482880118495,
+      "M2_spearman": 0.0040383382662689165,
+      "mean_M2_distance": 0.02912896932591377,
+      "mean_behavioral_D": 0.00531400966183575,
+      "pairs": 69
+    },
+    "Q2": {
+      "M2_pearson": 0.07138711870515678,
+      "M2_spearman": -0.0072557483220269505,
+      "mean_M2_distance": 0.05231230683900564,
+      "mean_behavioral_D": 0.010748792270531401,
+      "pairs": 69
+    },
+    "Q3": {
+      "M2_pearson": 0.3069029435557244,
+      "M2_spearman": 0.3014330570265913,
+      "mean_M2_distance": 0.08170889214065534,
+      "mean_behavioral_D": 0.019082125603864734,
+      "pairs": 69
+    },
+    "Q4": {
+      "M2_pearson": 0.46487503571132804,
+      "M2_spearman": 0.34692802728785943,
+      "mean_M2_distance": 0.1290949426837953,
+      "mean_behavioral_D": 0.021980676328502414,
+      "pairs": 69
+    }
+  },
+  "by_dose_mean": {
+    "0.25": {
+      "M2_pearson": -0.19795807121603906,
+      "M2_spearman": -0.16648770448087946,
+      "mean_M2_distance": 0.029017273616909745,
+      "mean_behavioral_D": 0.00404040404040404,
+      "pairs": 66
+    },
+    "0.375": {
+      "M2_pearson": 0.19720630279460855,
+      "M2_spearman": 0.2965773887912259,
+      "mean_M2_distance": 0.06094248857622139,
+      "mean_behavioral_D": 0.013888888888888892,
+      "pairs": 36
+    },
+    "0.5": {
+      "M2_pearson": 0.3590898576142606,
+      "M2_spearman": 0.39831488781541646,
+      "mean_M2_distance": 0.059734413239616854,
+      "mean_behavioral_D": 0.018376068376068384,
+      "pairs": 39
+    },
+    "0.625": {
+      "M2_pearson": 0.3075602008497192,
+      "M2_spearman": 0.3210372748277569,
+      "mean_M2_distance": 0.09489930711126543,
+      "mean_behavioral_D": 0.016152263374485595,
+      "pairs": 81
+    },
+    "0.75": {
+      "M2_pearson": 0.7457905722871612,
+      "M2_spearman": 0.604510082546623,
+      "mean_M2_distance": 0.10448255674672298,
+      "mean_behavioral_D": 0.022222222222222227,
+      "pairs": 21
+    },
+    "0.875": {
+      "M2_pearson": 0.38908241116290965,
+      "M2_spearman": 0.3828251161461669,
+      "mean_M2_distance": 0.10210236780509775,
+      "mean_behavioral_D": 0.019907407407407412,
+      "pairs": 18
+    },
+    "1.0": {
+      "M2_pearson": 0.5766779586340927,
+      "M2_spearman": 0.41671043187519724,
+      "mean_M2_distance": 0.13382538041840122,
+      "mean_behavioral_D": 0.021666666666666667,
+      "pairs": 15
+    }
+  },
+  "by_same_direction_base": {
+    "False": {
+      "M2_pearson": 0.4345175049495926,
+      "M2_spearman": 0.42865405148950086,
+      "mean_M2_distance": 0.07224865991275427,
+      "mean_behavioral_D": 0.014172979797979796,
+      "pairs": 264
+    },
+    "True": {
+      "M2_pearson": 0.7344368276793222,
+      "M2_spearman": 0.5000123987948392,
+      "mean_M2_distance": 0.09093887010828361,
+      "mean_behavioral_D": 0.016666666666666666,
+      "pairs": 12
+    }
+  },
+  "by_same_dose": {
+    "False": {
+      "M2_pearson": 0.3606045046353956,
+      "M2_spearman": 0.28890600226223423,
+      "mean_M2_distance": 0.08344980081502927,
+      "mean_behavioral_D": 0.017151675485008816,
+      "pairs": 189
+    },
+    "True": {
+      "M2_pearson": 0.5350757171323816,
+      "M2_spearman": 0.2945264846196331,
+      "mean_M2_distance": 0.0504931069451264,
+      "mean_behavioral_D": 0.00804597701149425,
+      "pairs": 87
+    }
+  },
+  "by_same_family": {
+    "False": {
+      "M2_pearson": 0.44431513228803154,
+      "M2_spearman": 0.43083074910811825,
+      "mean_M2_distance": 0.07232606819783659,
+      "mean_behavioral_D": 0.013958333333333331,
+      "pairs": 240
+    },
+    "True": {
+      "M2_pearson": 0.5646454498493327,
+      "M2_spearman": 0.43155344676511165,
+      "mean_M2_distance": 0.07796267474404864,
+      "mean_behavioral_D": 0.016435185185185188,
+      "pairs": 36
+    }
+  },
+  "close_dose_M2_spearman": 0.5127601703739105,
+  "close_dose_pairs": 150,
+  "post_hoc_exploratory": true,
+  "same_dose_M2_spearman": 0.2945264846196331
+}

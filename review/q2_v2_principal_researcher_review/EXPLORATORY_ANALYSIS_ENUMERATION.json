@@ -1,0 +1,17 @@
+{
+  "all_post_hoc_exploratory_unless_marked_reproduction": true,
+  "analyses": [
+    "A1 independent primary reconstruction and frozen QAP reproduction",
+    "A2 six-family M0/M1/M2 fold decomposition with frozen item-bootstrap intervals",
+    "A3 paired 10,000-item-bootstrap metric contrasts",
+    "A4 held-out prediction/calibration/residual/nonlinearity diagnostics",
+    "A5 four simple dose/delta-norm nuisance baselines",
+    "A6 same/close-dose and nuisance-residualized M2 diagnostics",
+    "A7 meaningful-meaningful, meaningful-null, and null-null pair classes",
+    "A8 family/direction/dose/local-distance decomposition",
+    "A9 M0/M1 matrix similarity and finite-secant interpretation",
+    "robust Pearson, Theil-Sen, leave-one-controller, and leverage diagnostics"
+  ],
+  "new_pass_fail_rule_for_q2_v2": null,
+  "unreported_metric_searches": 0
+}

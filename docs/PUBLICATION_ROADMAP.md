@@ -171,6 +171,18 @@ For Program C, this is a composite DEVELOPMENT null with a meaningful
 dissociation: static flat/whitened representation geometry did not qualify,
 whereas finite behavioral secants showed reproducible rank structure but fell
 short of the calibrated-prediction requirement. Program C is therefore not a
-paper claim. Its next evidence gate is a fresh, prospectively frozen replication
-of the M2 association and calibration performance across unseen controller
-families or models, without post-outcome metric selection. Q3 remains not run.
+paper claim.
+
+The subsequent post-hoc principal review found an important confound. Four
+simple pre-outcome dose/delta-norm pair features reached held-out rho 0.443 and
+RMSE ratio 0.929; adding M2 improved RMSE by only about 0.55%, with residual rho
+0.054 and exploratory family-QAP p=0.374. Thus the finite-secant result is best
+described as a finite-displacement association substantially explained by
+intervention strength, not yet as relational control geometry.
+
+Program C's next evidence gate is therefore stricter than an exact replication:
+a fresh, prospectively frozen test across genuinely unseen controller families,
+with a pre-outcome magnitude-deconfounding design gate and M2 required to beat
+the nuisance predictor prospectively. That Q2 V3 protocol is drafted only and
+awaits principal freeze. If its bank cannot separate M2 from magnitude before
+behavioral outcomes, Q2 should stop. Q3 remains not run.

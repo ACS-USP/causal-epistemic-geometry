@@ -1,0 +1,137 @@
+{
+  "candidate_sample_sizes": {
+    "120": {
+      "augmented_to_nuisance_rmse_ratio": {
+        "interval_95": [
+          0.9650413980527298,
+          1.0171300178251497
+        ],
+        "interval_width": 0.05208861977241985,
+        "median": 0.9904099161982715
+      },
+      "empirical_V2_prior_pass_proxy_fraction": 0.0,
+      "families_positive": {
+        "fraction_at_least_4_of_5": 0.3305,
+        "median": 3.0
+      },
+      "paired_rmse_improvement": {
+        "interval_95": [
+          -0.0003254843612476156,
+          0.0006684327018120158
+        ],
+        "median": 0.00019630710395983526
+      },
+      "residual_rho": {
+        "interval_95": [
+          -0.13072538432922512,
+          0.24795610459981698
+        ],
+        "interval_width": 0.3786814889290421,
+        "median": 0.07111343165315813
+      }
+    },
+    "160": {
+      "augmented_to_nuisance_rmse_ratio": {
+        "interval_95": [
+          0.962830727738335,
+          1.0153449043123748
+        ],
+        "interval_width": 0.052514176574039784,
+        "median": 0.9886204970053729
+      },
+      "empirical_V2_prior_pass_proxy_fraction": 0.0,
+      "families_positive": {
+        "fraction_at_least_4_of_5": 0.3255,
+        "median": 3.0
+      },
+      "paired_rmse_improvement": {
+        "interval_95": [
+          -0.00028948630649755643,
+          0.0006711071057483558
+        ],
+        "median": 0.00022148098672988663
+      },
+      "residual_rho": {
+        "interval_95": [
+          -0.11550588464935856,
+          0.24285013531845773
+        ],
+        "interval_width": 0.3583560199678163,
+        "median": 0.07200142680819864
+      }
+    },
+    "200": {
+      "augmented_to_nuisance_rmse_ratio": {
+        "interval_95": [
+          0.960658173407841,
+          1.0148150572519903
+        ],
+        "interval_width": 0.054156883844149295,
+        "median": 0.9876785734265934
+      },
+      "empirical_V2_prior_pass_proxy_fraction": 0.0,
+      "families_positive": {
+        "fraction_at_least_4_of_5": 0.323,
+        "median": 3.0
+      },
+      "paired_rmse_improvement": {
+        "interval_95": [
+          -0.00026127824316958195,
+          0.000659588291322388
+        ],
+        "median": 0.0002287484648656104
+      },
+      "residual_rho": {
+        "interval_95": [
+          -0.10499794372798366,
+          0.23750072372430647
+        ],
+        "interval_width": 0.34249866745229013,
+        "median": 0.07463689586961515
+      }
+    },
+    "240": {
+      "augmented_to_nuisance_rmse_ratio": {
+        "interval_95": [
+          0.9631578682980175,
+          1.0136812172003151
+        ],
+        "interval_width": 0.05052334890229759,
+        "median": 0.9864299405849299
+      },
+      "empirical_V2_prior_pass_proxy_fraction": 0.0,
+      "families_positive": {
+        "fraction_at_least_4_of_5": 0.3215,
+        "median": 3.0
+      },
+      "paired_rmse_improvement": {
+        "interval_95": [
+          -0.00023402222993159196,
+          0.0006500635316142708
+        ],
+        "median": 0.00023983219024748328
+      },
+      "residual_rho": {
+        "interval_95": [
+          -0.09500042638266513,
+          0.2330015834701142
+        ],
+        "interval_width": 0.32800200985277933,
+        "median": 0.07621975330796245
+      }
+    }
+  },
+  "dependence_preserved": {
+    "controllers": "all four controllers travel with each sampled family",
+    "dyads": "recomputed from controller error vectors; never treated as independent",
+    "families": "five of six complete V2 families sampled without replacement",
+    "items": "resampled as clusters with both rollouts and all controllers"
+  },
+  "important_limitation": "The fixed mappings and empirical effects come from V2 controllers, so this is optimistic planning input, not evidence about genuinely new V3 families.",
+  "schema_version": "q2-v3-development-planning-simulation-v1",
+  "seed": 2026082501,
+  "selected_draft_n": 200,
+  "selection_rationale": "N=200 materially narrows item noise relative to V2 while family novelty, not item count, remains the dominant uncertainty.",
+  "simulations_per_sample_size": 2000,
+  "status": "DESIGN_ONLY_NOT_A_POWER_GUARANTEE"
+}
