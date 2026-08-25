@@ -7,7 +7,6 @@ import argparse
 import base64
 import hashlib
 import json
-import shutil
 import sys
 from collections import Counter
 from pathlib import Path
@@ -232,13 +231,21 @@ def write_semantic_locks() -> None:
     )
 
 
-def copy_inherited_artifacts(original_lock: dict[str, Any]) -> list[str]:
-    inherited = [name for name in original_lock["artifact_hashes"] if name not in MANIFESTS]
+def validate_inherited_artifacts(original_lock: dict[str, Any]) -> dict[str, str]:
+    inherited = {
+        name: expected
+        for name, expected in original_lock["artifact_hashes"].items()
+        if name not in MANIFESTS
+    }
     for name in inherited:
         source = ORIGINAL / name
-        if file_sha256(source) != original_lock["artifact_hashes"][name]:
+        if file_sha256(source) != inherited[name]:
             raise RuntimeError(f"original frozen artifact changed: {name}")
-        shutil.copy2(source, OUTPUT / name)
+        stale_copy = OUTPUT / name
+        if stale_copy.exists():
+            if file_sha256(stale_copy) != inherited[name]:
+                raise RuntimeError(f"unexpected stale Amendment-1 file: {name}")
+            stale_copy.unlink()
     return inherited
 
 
@@ -409,7 +416,7 @@ def main() -> int:
     args = parser.parse_args()
     OUTPUT.mkdir(parents=True, exist_ok=True)
     original_lock = read_json(ORIGINAL / "PROTOCOL_LOCK.json")
-    inherited = copy_inherited_artifacts(original_lock)
+    inherited = validate_inherited_artifacts(original_lock)
     write_decision_and_specs(args.source_commit)
     write_semantic_locks()
     records, counts = amended_manifests(source_rows())
@@ -418,7 +425,7 @@ def main() -> int:
     write_markdown()
 
     frozen_names = sorted(
-        [*inherited, *MANIFESTS]
+        [*MANIFESTS]
         + [
             "AMENDED_PROMPT_MANIFEST.json",
             "CANONICAL_GATE7_PROMPT_SPEC.json",
@@ -455,6 +462,10 @@ def main() -> int:
             "failed_execution_state": "Q2_V3_PANEL_PROVENANCE_MISMATCH",
             "reconciliation_head": RECONCILIATION_HEAD,
             "reconciliation_state": "Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION",
+        },
+        "inherited_artifact_hashes": {
+            f"review/q2_v3_radial_angular_freeze/{name}": expected
+            for name, expected in sorted(inherited.items())
         },
         "artifact_hashes": artifact_hashes,
     }

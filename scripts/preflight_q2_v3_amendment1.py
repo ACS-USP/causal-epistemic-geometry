@@ -72,6 +72,10 @@ def run_preflight(review: Path, source_path: Path) -> dict[str, Any]:
         path = review / name
         if not path.is_file() or sha256(path) != expected:
             failures.append(f"frozen artifact hash mismatch: {name}")
+    for relative, expected in lock.get("inherited_artifact_hashes", {}).items():
+        path = ROOT / relative
+        if not path.is_file() or sha256(path) != expected:
+            failures.append(f"inherited frozen artifact hash mismatch: {relative}")
 
     source_rows = [
         json.loads(line) for line in source_path.read_text(encoding="utf-8").splitlines() if line

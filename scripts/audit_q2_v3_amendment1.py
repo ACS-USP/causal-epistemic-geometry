@@ -165,11 +165,15 @@ def main() -> int:
         for name in original_lock["artifact_hashes"]
         if name not in MANIFESTS
     ]
-    inherited_mismatches = [
-        name
-        for name in unchanged
-        if file_hash(AMENDMENT / name) != original_lock["artifact_hashes"][name]
-    ]
+    inherited_mismatches = []
+    for name in unchanged:
+        relative = f"review/q2_v3_radial_angular_freeze/{name}"
+        if (
+            file_hash(ORIGINAL / name) != original_lock["artifact_hashes"][name]
+            or lock["inherited_artifact_hashes"].get(relative)
+            != original_lock["artifact_hashes"][name]
+        ):
+            inherited_mismatches.append(name)
     if inherited_mismatches:
         failures.append(f"inherited artifact differences: {inherited_mismatches}")
     diff = read_json(AMENDMENT / "SCIENTIFIC_DIFF_AUDIT.json")

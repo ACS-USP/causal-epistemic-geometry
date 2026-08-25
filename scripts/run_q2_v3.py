@@ -71,11 +71,16 @@ from epistemic_geometry.research.reliability import CrashSafeJournal  # noqa: E4
 from epistemic_geometry.steering.gate6 import Gate6HookTrace  # noqa: E402
 
 REVIEW = ROOT / "review/q2_v3_amendment1_freeze"
+ORIGINAL_REVIEW = ROOT / "review/q2_v3_radial_angular_freeze"
 MAX_NEW_TOKENS = 4096
 MATERIALIZED = "Q2_V3_MATERIALIZED_ITEMS.json"
 
 
 def read_json(path: Path) -> Any:
+    if not path.exists() and path.parent.resolve() == REVIEW.resolve():
+        inherited = ORIGINAL_REVIEW / path.name
+        if inherited.is_file():
+            path = inherited
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -116,6 +121,11 @@ def _assert_frozen(review: Path) -> dict[str, Any]:
     for name, expected in lock["artifact_hashes"].items():
         if sha256(review / name) != expected:
             raise RuntimeError(f"Q2_V3_INSTRUMENT_FAILURE: frozen hash mismatch: {name}")
+    for relative, expected in lock["inherited_artifact_hashes"].items():
+        if sha256(ROOT / relative) != expected:
+            raise RuntimeError(
+                f"Q2_V3_INSTRUMENT_FAILURE: inherited frozen hash mismatch: {relative}"
+            )
     return lock
 
 
