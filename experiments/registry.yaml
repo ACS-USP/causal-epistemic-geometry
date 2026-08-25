@@ -101,7 +101,7 @@ experiments:
     scientific_interpretation: Scientifically untested and operationally blocked.
     source_commit: 690cc75
     artifact: docs/Q1_V4_DENSE_CODE_PILOT.md
-    cost_usd: 0.0
+    cost_usd: 2.579460696550086
     holdout_status: NOT_APPLICABLE
     next_action: Do not prioritize until a credential-free disposable Linux evaluator is audited.
 
@@ -1266,15 +1266,15 @@ experiments:
 
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
     version: Q2-V2
-    stage: DEVELOPMENT_FINAL_BANK_LOCK
+    stage: DEVELOPMENT_COST_GATE_BLOCKED
     question: >-
       Can a calibrated bank of conceptually distinct L27 intervention families
       support a controller-family-held-out test of simple geometry, without
       opening the common panel until the bank is dynamically qualified?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
-    status: FINAL_BANK_QUALIFIED_COMMON_PANEL_LOCKED
-    outcome: BANK_QUALIFIED_COMMON_PANEL_NOT_RUN
+    status: BLOCKED_PROJECTED_COST
+    outcome: BANK_QUALIFIED_COMMON_PANEL_BLOCKED_PROJECTED_COST
     scientific_interpretation: >-
       Q2 V2 is a new DEVELOPMENT protocol, not a predictive result. V1's common
       panel was never run. V2 freezes six source-axis candidates, per-direction
@@ -1282,18 +1282,19 @@ experiments:
       M0/M1/M2 prediction design. Source qualification completed with all six axes
       qualifying. Dose calibration completed with 12 causal directions and a
       nondegenerate four-bin operating-dose distribution. The final 24-direction
-      bank and fresh null bank are locked; the common panel is still unrun.
+      bank and fresh null bank are locked; the synthetic throughput preflight
+      completed, but its projected common-panel cost exceeded the hard ceiling.
     source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
     execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
-    cost_usd: null
+    cost_usd: 0.0
     cost_envelope_usd: 15.0
     hard_cost_ceiling_usd: 25.0
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED
     parent_experiment: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
     lock:
       role: DEVELOPMENT
-      lifecycle: PROSPECTIVE_LOCK
+      lifecycle: CLOSED_COST_BLOCKED
       model: Qwen3-8B
       layer: 27
       source_axes_proposed: 6
@@ -1314,7 +1315,7 @@ experiments:
       qap_permutations: 10000
       bootstrap_resamples: 10000
     execution:
-      lifecycle: PROSPECTIVE_LOCK
+      lifecycle: CLOSED_COST_BLOCKED
       source_qualification: COMPLETE_576_ROWS_ALL_6_AXES_QUALIFIED
       source_journal_rows: 576
       source_correctness_used: false
@@ -1325,15 +1326,26 @@ experiments:
       causal_direction_count: 12
       selected_dose_bins: 4
       final_null_bank: SVD_SPAN_ORTHOGONAL_4_CONTROLLERS
-      common_panel: FROZEN_PRE_COMMON_PANEL_LOCKED
+      engineering_gate: Q2_V2_ENGINEERING_PASS
+      geometry_probes: 12
+      throughput_preflight_rows: 174
+      throughput_mean_seconds_per_row: 32.69949623119506
+      projected_common_hours_with_25pct_margin: 79.0237825587214
+      projected_common_cost_usd_at_0_44_per_hour: 34.770464325837416
+      projected_cumulative_cost_usd: 37.3499250223875
+      cost_gate: BLOCKED_PROJECTED_COST
+      common_panel: NOT_RUN_COST_BLOCKED
       common_panel_rows: 0
       predictive_geometry_analysis: NOT_RUN
       correctness_used_for_qualification: false
       Q2_V1_common_panel_outcomes_read: false
       Q1: IMMUTABLE
       Q3: NOT_RUN
-      runpod_status: ACTIVE_A40
-      active_pods: 1
+      runpod_status: STOPPED
+      active_pods: 0
+      retained_stopped_pods: 1
+      retained_pod_disk_gb: 20
+      network_volumes: 0
     next_action: >-
-      Pass the frozen engineering gate, then collect the complete 6,960-row
-      common panel and stop GPU immediately afterward for local geometry analysis.
+      Principal review of the operational cost block; preserve the qualified
+      bank and do not start the common panel without a new authorized budget.

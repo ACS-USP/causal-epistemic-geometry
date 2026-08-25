@@ -3,7 +3,7 @@ last_verified: "2026-08-24"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_DEVELOPMENT_V2_FINAL_BANK_LOCK
+  scientific_stage: Q2_DEVELOPMENT_V2_COST_BLOCKED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,9 +19,9 @@ project:
     utility?
 
 current:
-  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
-  lifecycle: PROSPECTIVE_LOCK
-  stage: DEVELOPMENT_FINAL_BANK_LOCK
+  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_COST_GATE_BLOCKED
   source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
   execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
   summary: >-
@@ -31,24 +31,26 @@ current:
     The 1,164-row matched label-free calibration completed. The final bank
     qualifies with 24 meaningful directions across six families, 12 causal
     directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item
-    common panel is now locked but remains unrun. No correctness or common-panel
-    outcome has been used. Q1 remains immutable and Q3 is not run.
+    common panel is now locked but remains unrun. The synthetic throughput
+    preflight completed without scientific items; its 79.0238-hour projection
+    with the frozen 25% margin implies a US$37.3499 projected cumulative cost,
+    exceeding the US$25 hard ceiling. No correctness or common-panel outcome
+    was used. Q1 remains immutable and Q3 is not run.
   next_authorized_action: >-
-    Push the final bank lock, pass the engineering gate, and then collect the
-    frozen common panel. No geometry analysis is authorized before all common
-    panel rows are complete.
-  runpod: ACTIVE_A40
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q2_V2_DEVELOPMENT_PROTOCOL_ONLY
+    Principal review of the cost block; do not start the common panel or any
+    predictive geometry analysis under this lock.
+  runpod: STOPPED_ZERO_ACTIVE_GPU_RETAINED_POD_DISK
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: NONE_PENDING_PRINCIPAL_REVIEW
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: Q2_V2_PRE_SOURCE_LOCK_NO_COMMON_OUTCOMES
+  geometry_q2: Q2_V2_BANK_QUALIFIED_COMMON_PANEL_NOT_RUN_COST_BLOCKED
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V2_CALIBRATED_BANK_REBUILD_FINAL_BANK_LOCK
+  current_task: Q2_V2_COST_GATE_BLOCKED_COMMON_PANEL_NOT_RUN
   free_generation: NOT_AUTHORIZED; ONLY_FROZEN_Q2_V2_PHASES
 
 confirmatory_program:
@@ -88,6 +90,27 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
+    status: BLOCKED_PROJECTED_COST
+    conclusion: >-
+      Six of six conceptual source axes qualified, and label-free per-direction
+      calibration produced a qualified bank of 24 meaningful controllers across
+      six families, including 12 causal directions and four dose bins. Four
+      fresh nulls are SVD-span-orthogonal. The synthetic throughput preflight
+      projected a US$37.3499 cumulative cost, above the frozen US$25 ceiling,
+      so the 120-item common panel and predictive M0/M1/M2 analyses were not run.
+      This is an operational cost block, not a predictive Q2 null.
+    source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
+    artifact: review/q2_controller_bank_v2/
+    source_qualification_rows: 576
+    dose_calibration_rows: 1164
+    common_panel_rows: 0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED_NOT_REUSED
+    runpod_status: STOPPED
+    active_pods: 0
+    retained_pod_disk_gb: 20
+    cost_usd: 2.579460696550086
+    q3: NOT_RUN
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
     status: COMPLETE_DEVELOPMENT_BANK_NOT_QUALIFIED
     conclusion: >-

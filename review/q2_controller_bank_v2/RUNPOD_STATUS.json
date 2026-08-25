@@ -1,0 +1,21 @@
+{
+  "verification_source": "dedicated RunPod MCP",
+  "pod_id": "2gy9k0axzzzp6u",
+  "pod_name": "yeasty_crimson_moose",
+  "pod_status": "EXITED",
+  "available_actions": [
+    "start",
+    "terminate"
+  ],
+  "active_gpu_count": 0,
+  "listed_pods": 1,
+  "active_pods": 0,
+  "gpu_type": "NVIDIA A40",
+  "gpu_hourly_price_usd": 0.44,
+  "retained_pod_disk_gb": 20,
+  "network_volume_attached": false,
+  "billing_window_pod_count": 2,
+  "observed_q2_v2_cost_usd": 2.579460696550086,
+  "common_panel_started": false,
+  "scientific_rows_collected_on_common_panel": 0
+}

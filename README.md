@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_DEVELOPMENT_V2_PRE_SOURCE_LOCK` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_DEVELOPMENT_V2_COST_BLOCKED` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel outcomes. Q2 V2 has a pre-source lock with six frozen conceptual axes, fresh disjoint source/dose/geometry qualification pools, corrected SVD null projection, and the unchanged 120-item common panel blocked until a final bank lock. No V2 model output exists yet. Q1 remains immutable and Q3 is not run.
+Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel outcomes. Q2 V2 source qualification completed exactly 576 rows: all six frozen conceptual axes qualified, yielding 24 signed/location directions. The 1,164-row matched label-free calibration completed. The final bank qualifies with 24 meaningful directions across six families, 12 causal directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item common panel is now locked but remains unrun. The synthetic throughput preflight completed without scientific items; its 79.0238-hour projection with the frozen 25% margin implies a US$37.3499 projected cumulative cost, exceeding the US$25 hard ceiling. No correctness or common-panel outcome was used. Q1 remains immutable and Q3 is not run.
 
-**Next authorized action:** Push and principal review of the Q2 V2 pre-source lock, then run source qualification only. No common-panel inference is authorized before the final V2 bank lock.
+**Next authorized action:** Principal review of the cost block; do not start the common panel or any predictive geometry analysis under this lock.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

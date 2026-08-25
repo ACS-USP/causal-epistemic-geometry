@@ -1,0 +1,153 @@
+{
+  "checkpoint_count": 4,
+  "controller_ids": [
+    "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_MINUS",
+    "MEAN_COUNTERFACTUAL_CHECKING_EXECUTION_BOUNDARY_PLUS",
+    "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_MINUS",
+    "MEAN_COUNTERFACTUAL_CHECKING_PROMPT_BOUNDARY_PLUS",
+    "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_MINUS",
+    "MEAN_DECOMPOSE_THEN_SOLVE_EXECUTION_BOUNDARY_PLUS",
+    "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_MINUS",
+    "MEAN_DECOMPOSE_THEN_SOLVE_PROMPT_BOUNDARY_PLUS",
+    "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_MINUS",
+    "MEAN_EXPLICIT_STATE_TRACKING_EXECUTION_BOUNDARY_PLUS",
+    "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_MINUS",
+    "MEAN_EXPLICIT_STATE_TRACKING_PROMPT_BOUNDARY_PLUS",
+    "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_MINUS",
+    "MEAN_INDEPENDENT_VERIFICATION_EXECUTION_BOUNDARY_PLUS",
+    "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_MINUS",
+    "MEAN_INDEPENDENT_VERIFICATION_PROMPT_BOUNDARY_PLUS",
+    "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_MINUS",
+    "MEAN_INVARIANT_CHECKING_EXECUTION_BOUNDARY_PLUS",
+    "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_MINUS",
+    "MEAN_INVARIANT_CHECKING_PROMPT_BOUNDARY_PLUS",
+    "MEAN_TYPE_REPRESENTATION_DISCIPLINE_EXECUTION_BOUNDARY_MINUS",
+    "MEAN_TYPE_REPRESENTATION_DISCIPLINE_EXECUTION_BOUNDARY_PLUS",
+    "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_MINUS",
+    "MEAN_TYPE_REPRESENTATION_DISCIPLINE_PROMPT_BOUNDARY_PLUS",
+    "NULL_V2_R0",
+    "NULL_V2_R1",
+    "NULL_V2_R2",
+    "NULL_V2_R3"
+  ],
+  "correctness_labels_used": false,
+  "records": [
+    {
+      "item_id": "sample_202",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_202.json",
+      "metadata_sha256": "4ef4678345e6ccd167507d3f08055407a002f2ac391277613f6f11d7fc8845c8",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_202.npz",
+      "resumed": false,
+      "sha256": "d79739894fef2ef5e9542dcab89d0985ca488e984103b6f18713b9f4e377b051"
+    },
+    {
+      "item_id": "sample_507",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_507.json",
+      "metadata_sha256": "d6ad305d9a5d0450c60392ebf923895ac6d3e004021051f7da2b9f18466e7979",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_507.npz",
+      "resumed": false,
+      "sha256": "e9d6edffa9ecc5c16dab5d4fa6ccfeafc6f634c062dd508946ed498d38cdcd0c"
+    },
+    {
+      "item_id": "sample_311",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_311.json",
+      "metadata_sha256": "3501c845fd3ff0928c59bd1bc83ca6b0e642ddcaf3ada996f4d0c4029ecaff28",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_311.npz",
+      "resumed": false,
+      "sha256": "49f2b17a803b0da9b433fef864332794e2c86d7c59c18e34dfadbbb374354843"
+    },
+    {
+      "item_id": "sample_681",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_681.json",
+      "metadata_sha256": "02e11aa4f5c13624dcaf8eaea46a1b9b8bf3fba194d4f5bc748cfd91c8222e2f",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_681.npz",
+      "resumed": false,
+      "sha256": "85b1a55e2bfdd5e35032cd9b2af811063b23d8b2e03c00f1432c46db8cdeef9d"
+    },
+    {
+      "item_id": "sample_266",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_266.json",
+      "metadata_sha256": "a398425d00b94be4d85e3051ff5ea817e61f7ef4c976aa296d8b142991853000",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_266.npz",
+      "resumed": false,
+      "sha256": "598110e64434d8727d58b7358118ac8a53d734ee612d6f44f6a37c3d49da21f9"
+    },
+    {
+      "item_id": "sample_463",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_463.json",
+      "metadata_sha256": "dbd6d394794b586454c550e9a4fe6bf7eee2b51296bc9ed2ce238af5406a8dc9",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_463.npz",
+      "resumed": false,
+      "sha256": "9e4ee0c3038d6e363044833f1df3a2a2d0bea86cec47f17047d4cf37acf19ea3"
+    },
+    {
+      "item_id": "sample_348",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_348.json",
+      "metadata_sha256": "23319dc8683e409cb08c662e6199d72900579d82c5de011b78fbeed6f6d22992",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_348.npz",
+      "resumed": false,
+      "sha256": "1e538fa589e36ce31a701c9a67c077497676e9714aeb6accc49cd772f851f41d"
+    },
+    {
+      "item_id": "sample_258",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_258.json",
+      "metadata_sha256": "cf9b1c47f3715f30a2f8463cd185cff829e6455e4d9101b4e9e04821b2ed71cd",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_258.npz",
+      "resumed": false,
+      "sha256": "00d32fa24f3bcdbb4d2ce836d4b3610b09636b149cde7790e74ef2bca194e42b"
+    },
+    {
+      "item_id": "sample_158",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_158.json",
+      "metadata_sha256": "8b7231e33d29716c7fef63a3046ad01f073657d2cbba8962b684797c2387c95f",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_158.npz",
+      "resumed": false,
+      "sha256": "9678e8eaccebae47dc0ff96b02bdcc17791b7b8655fcf687833a22798d2fa56c"
+    },
+    {
+      "item_id": "sample_502",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_502.json",
+      "metadata_sha256": "0d1c30c554c9f474fafd011e8035bd768a9f07017490051dafc9c0239837460c",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_502.npz",
+      "resumed": false,
+      "sha256": "3d2b20f6ac11351a5b84508dbef4266d10dd975bb9e2309eadb87998c031f086"
+    },
+    {
+      "item_id": "sample_729",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_729.json",
+      "metadata_sha256": "b42fb659c6bb8740ccb1675262dbc4b760a00c420ac77fbe061cda9d2af9bef5",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_729.npz",
+      "resumed": false,
+      "sha256": "39239a2a1c27513d0656783081a2c630e37c4932e2cc147865729cc93391eb13"
+    },
+    {
+      "item_id": "sample_441",
+      "metadata_path": "V2_FINITE_SECANT_LOGITS/sample_441.json",
+      "metadata_sha256": "9b60ba94fb10b5d2a9ccf23d8a0508aca13dd313ab6b261342d461d64cb6524d",
+      "path": "V2_FINITE_SECANT_LOGITS/sample_441.npz",
+      "resumed": false,
+      "sha256": "8794f711d14bf664c0d8298e5e22b9a992a1eb267a9d9b6179219f0b97deb588"
+    }
+  ],
+  "representation_dtype": "float16 logits; dequantized to float64 for JS",
+  "teacher_forced_text": "I will now apply the requested reasoning policy to the program before committing to one answer.",
+  "teacher_token_ids": [
+    40,
+    686,
+    1431,
+    3796,
+    279,
+    11223,
+    32711,
+    4842,
+    311,
+    279,
+    2025,
+    1573,
+    39483,
+    311,
+    825,
+    4226,
+    13
+  ]
+}

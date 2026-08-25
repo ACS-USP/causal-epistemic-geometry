@@ -1,0 +1,13 @@
+{
+  "correctness_evaluated": false,
+  "cost_projection_requires_current_runpod_hourly_price": true,
+  "expected_common_rows": 6960,
+  "fixture_rows": 174,
+  "max_tokens": 4096,
+  "mean_seconds_per_row": 32.69949623119506,
+  "mean_tokens": 713.4310344827586,
+  "median_seconds_per_row": 0.6018590814783238,
+  "projected_common_hours_with_25pct_margin": 79.0237825587214,
+  "projected_common_seconds_with_25pct_margin": 284485.61721139704,
+  "scientific_items_used": false
+}

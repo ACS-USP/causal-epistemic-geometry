@@ -1,0 +1,61 @@
+{
+  "classification": "Q2_V2_PROTOCOL_COMPLIANT_COST_BLOCK",
+  "scientific_classification": "DEVELOPMENT",
+  "operational_status": "Q2_V2_BANK_QUALIFIED_COMMON_PANEL_BLOCKED_PROJECTED_COST",
+  "sections": {
+    "1_first_principle": "PASS_V1_NOT_TREATED_AS_PREDICTIVE_NULL",
+    "2_offline_v1_postmortem": "PASS_348_IMMUTABLE_ROWS_LABEL_FREE",
+    "3_null_geometry": "PASS_SVD_ORTHONORMAL_SPAN_PROJECTION",
+    "4_source_axis_expansion": "PASS_6_DISTINCT_AXES_FROZEN_PRE_OUTPUT",
+    "5_source_qualification": "PASS_6_OF_6_AXES",
+    "6_per_direction_dose_calibration": "PASS_24_SIGNED_DIRECTIONS_LABEL_FREE",
+    "7_bank_level_qualification": "PASS_DYNAMIC_RANGE_RULE_FROZEN",
+    "8_primary_bank": "PASS_24_MEANINGFUL_6_FAMILIES_4_NULLS",
+    "9_family_held_out_prediction": "PASS_FROZEN_LEAVE_ONE_FAMILY_OUT_NOT_EXECUTED",
+    "10_geometries": "PASS_M0_M1_M2_ONLY",
+    "11_error_geometry": "PASS_UNBIASED_TWO_ROLLOUT_D_FROZEN",
+    "12_common_panel": "NOT_RUN_ZERO_OUTCOME_JOURNAL",
+    "13_cost": "PASS_PREFLIGHT_BLOCKED_ABOVE_HARD_CEILING",
+    "14_prospective_freeze": "PASS_SOURCE_DOSE_AND_FINAL_LOCKS_PRE_OUTPUT",
+    "15_primary_predictive_analysis": "NOT_RUN_COST_GATE",
+    "16_evidence_interpretation": "PASS_NO_PREDICTIVE_NULL_CLAIM",
+    "17_stop_rule": "PASS_STOPPED_BEFORE_COMMON_PANEL_DUE_HARD_COST_CEILING",
+    "18_final_handoff": "PASS_REPORT_PERSISTED"
+  },
+  "counts": {
+    "v1_qualification_rows": 348,
+    "source_qualification_rows": 576,
+    "dose_calibration_rows": 1164,
+    "synthetic_preflight_rows": 174,
+    "common_panel_rows": 0,
+    "meaningful_controllers": 24,
+    "conceptual_families": 6,
+    "causal_directions": 12,
+    "random_controls": 4
+  },
+  "null_span_max_abs_cosine": 8.413408858487514e-17,
+  "cost": {
+    "observed_pre_common_usd": 2.579460696550086,
+    "projected_common_hours_with_25pct_margin": 79.0237825587214,
+    "runpod_a40_hourly_usd": 0.44,
+    "projected_common_usd": 34.770464325837416,
+    "projected_cumulative_usd": 37.3499250223875,
+    "hard_ceiling_usd": 25.0
+  },
+  "firewall": {
+    "Q1": "UNCHANGED",
+    "Q3": "NOT_RUN",
+    "common_panel_outcomes_read": false,
+    "predictive_geometry_analysis": "NOT_RUN",
+    "JVP_Fisher_pullback": "NOT_RUN",
+    "geometry_guided_controller": "NOT_RUN"
+  },
+  "runpod": {
+    "verification_source": "dedicated RunPod MCP",
+    "pod_status": "EXITED",
+    "active_pods": 0,
+    "active_gpus": 0,
+    "retained_pod_disk_gb": 20,
+    "network_volumes": 0
+  }
+}

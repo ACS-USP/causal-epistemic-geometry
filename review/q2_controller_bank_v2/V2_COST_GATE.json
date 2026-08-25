@@ -1,0 +1,23 @@
+{
+  "classification": "BLOCKED_PROJECTED_COST",
+  "preflight_sha256": "fc7c330e76959f0cee11d33e36b8e2403ecda531c54f7efe9b11743e9662adf9",
+  "fixture_rows": 174,
+  "expected_common_rows": 6960,
+  "mean_seconds_per_row": 32.69949623119506,
+  "projected_common_hours_with_25pct_margin": 79.0237825587214,
+  "runpod_hourly_price_usd": 0.44,
+  "observed_pre_common_cost_usd": 2.579460696550086,
+  "projected_common_cost_usd": 34.770464325837416,
+  "projected_cumulative_cost_usd": 37.3499250223875,
+  "soft_cost_envelope_usd": 15.0,
+  "hard_cost_ceiling_usd": 25.0,
+  "break_even_hourly_price_for_remaining_budget_usd": 0.283718882815936,
+  "scientific_items_used": false,
+  "correctness_evaluated": false,
+  "common_panel_started": false,
+  "common_panel_rows": 0,
+  "runpod_active_gpu_count": 0,
+  "runpod_pod_status": "EXITED",
+  "retained_pod_disk_gb": 20,
+  "decision": "Do not start the common panel; preserve the qualified bank and return for principal review."
+}
