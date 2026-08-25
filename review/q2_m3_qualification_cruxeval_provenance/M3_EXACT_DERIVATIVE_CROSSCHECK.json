@@ -1,0 +1,59 @@
+{
+  "crosschecks": [
+    {
+      "direction_index": 0,
+      "fixture_index": 0,
+      "jvp_cosine": 0.9999999999998958,
+      "jvp_relative_norm": 0.0,
+      "jvp_vjp_relative_error": 7.971129736495539e-07,
+      "raw_path": "review/q2_m3_qualification_cruxeval_provenance/raw_m3_engineering/crosscheck_0_0.npz",
+      "raw_sha256": "b50dffbf2332549503f702b0c74919152db39c635ccaa6477bc31e6eef812a08"
+    },
+    {
+      "direction_index": 1,
+      "fixture_index": 3,
+      "jvp_cosine": 0.9999999999993989,
+      "jvp_relative_norm": 0.0,
+      "jvp_vjp_relative_error": 4.006560483267411e-06,
+      "raw_path": "review/q2_m3_qualification_cruxeval_provenance/raw_m3_engineering/crosscheck_3_1.npz",
+      "raw_sha256": "210307cd23657f09b148d7c8ad8d88ab6351e865ac01b41683a96794afde914c"
+    },
+    {
+      "direction_index": 2,
+      "fixture_index": 7,
+      "jvp_cosine": 0.9999999999995732,
+      "jvp_relative_norm": 0.0,
+      "jvp_vjp_relative_error": 5.783674970546931e-07,
+      "raw_path": "review/q2_m3_qualification_cruxeval_provenance/raw_m3_engineering/crosscheck_7_2.npz",
+      "raw_sha256": "b6de23b1efd84b1ef01d21c31014cfd2931413989711c51e5a67c26f6f8443a3"
+    },
+    {
+      "direction_index": 3,
+      "fixture_index": 11,
+      "jvp_cosine": 0.9999999999996236,
+      "jvp_relative_norm": 1.0837126040996736e-07,
+      "jvp_vjp_relative_error": 1.987083440030814e-06,
+      "raw_path": "review/q2_m3_qualification_cruxeval_provenance/raw_m3_engineering/crosscheck_11_3.npz",
+      "raw_sha256": "30c6a78ab14009010c7c0017dcb101f60d88a08ad25d1d174b8fb7bade0a829b"
+    }
+  ],
+  "direct_polarization_relative_frobenius": 0.25261469913549356,
+  "eigenvalues": [
+    3.880157882067933e-06,
+    4.4083488729045685e-06,
+    4.513595107399556e-06,
+    4.995009998208691e-06,
+    5.912577429977693e-06,
+    6.102128739268596e-06
+  ],
+  "exact_jvp_vjp_pass": true,
+  "pass": false,
+  "polarization_pass": false,
+  "psd_pass": true,
+  "reproducibility": {
+    "chunked_aggregation_relative_frobenius": 1.9638612136569723e-16,
+    "direction_order_relative_frobenius": 7.20652462471877e-16,
+    "repeat_relative_frobenius": 0.0
+  },
+  "reproducibility_pass": true
+}

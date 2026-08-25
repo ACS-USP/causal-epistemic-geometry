@@ -1,0 +1,15 @@
+{
+  "billing_record_status": "POD_NOT_YET_ITEMIZED_AT_CLOSEOUT_QUERY",
+  "gpu": "NVIDIA A40 48GB SECURE",
+  "hard_incremental_ceiling_usd": 2.0,
+  "pod_created_at": "2026-08-25T16:09:02.692Z",
+  "pod_id": "dsw0q6zeq0q44h",
+  "pod_rate_usd_per_hour": 0.44,
+  "resource_zero_verified_at": "2026-08-25T16:27:49Z",
+  "runner_compute_cost_equivalent_usd": 0.05915656141175164,
+  "runner_gpu_hours": 0.13444673048125372,
+  "runner_seconds": 484.0082297325134,
+  "scientific_trajectories": 0,
+  "whole_pod_gpu_cost_upper_bound_usd": 0.13766204213333333,
+  "whole_pod_wall_hours_upper_bound": 0.31286827757555556
+}

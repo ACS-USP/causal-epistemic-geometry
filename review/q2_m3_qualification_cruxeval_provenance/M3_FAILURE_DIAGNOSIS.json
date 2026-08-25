@@ -1,0 +1,29 @@
+{
+  "bf16_bridge": {
+    "baseline_top1_agreement": 0.9736842105263158,
+    "distance_spearman": 0.014285714285714285,
+    "median_curvature_relative_error": 10.108169748504137,
+    "radius_spearman": 0.7142857142857143,
+    "status": "FAILED"
+  },
+  "classification_changed": false,
+  "classification_preserved": "M3_DERIVATIVE_IDENTITIES_FAILED",
+  "finite_window": {
+    "best_jvp_cosine_at_epsilon_0_3": 0.999996909945794,
+    "gram_relative_error_plateau": 0.2525896587831132,
+    "qualified_three_scale_window": null,
+    "status": "FAILED"
+  },
+  "polarization": {
+    "checkpoint_counts": [2, 6, 6, 7],
+    "fixture_weighted_direct_vs_checkpoint_weighted_direct_relative_frobenius": 0.25261471305421074,
+    "polarization_vs_checkpoint_weighted_direct_relative_frobenius": 0.25261469913549356,
+    "polarization_vs_fixture_weighted_direct_relative_frobenius": 1.820317099458097e-07,
+    "status": "FAILED_FROZEN_GATE",
+    "technical_localization": "unequal fixture-versus-checkpoint aggregation weights"
+  },
+  "rerun_performed": false,
+  "scientific_items_processed": 0,
+  "semantic_outcomes_read": false,
+  "status": "POST_QUALIFICATION_OFFLINE_TECHNICAL_DIAGNOSIS_ONLY"
+}

@@ -1,0 +1,25 @@
+{
+  "alpha_zero": {
+    "max_target_logp_abs_difference": 0.0,
+    "max_vocabulary_js": 0.0,
+    "median_logit_cosine": 1.0,
+    "median_target_logp_abs_difference": 0.0,
+    "median_vocabulary_js": 0.0,
+    "p95_vocabulary_js": 0.0,
+    "p99_vocabulary_js": 0.0,
+    "rows": 152,
+    "top1_agreement": 1.0
+  },
+  "fp32_full_vs_sequential": {
+    "max_target_logp_abs_difference": 2.6809591824772383e-05,
+    "max_vocabulary_js": 6.406885400685235e-11,
+    "median_logit_cosine": 0.9999999999994786,
+    "median_target_logp_abs_difference": 2.088223274299139e-06,
+    "median_vocabulary_js": 3.722345904510488e-12,
+    "p95_vocabulary_js": 1.3790553316569054e-11,
+    "p99_vocabulary_js": 4.643782961587463e-11,
+    "rows": 152,
+    "top1_agreement": 1.0
+  },
+  "pass": true
+}
