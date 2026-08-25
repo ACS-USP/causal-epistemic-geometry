@@ -1266,15 +1266,15 @@ experiments:
 
   - id: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
     version: Q2-V2
-    stage: DEVELOPMENT_COST_GATE_BLOCKED
+    stage: DEVELOPMENT_EXECUTION_COST_QUALIFICATION
     question: >-
       Can a calibrated bank of conceptually distinct L27 intervention families
       support a controller-family-held-out test of simple geometry, without
       opening the common panel until the bank is dynamically qualified?
     instrument: CRUXEval semantic output prediction with external-semantic-v3
     model_policy: Qwen3-8B full non-thinking BF16 SDPA, exact frozen revision
-    status: BLOCKED_PROJECTED_COST
-    outcome: BANK_QUALIFIED_COMMON_PANEL_BLOCKED_PROJECTED_COST
+    status: EXECUTION_COST_QUALIFICATION_AUTHORIZED
+    outcome: BANK_QUALIFIED_COMMON_PANEL_UNTOUCHED
     scientific_interpretation: >-
       Q2 V2 is a new DEVELOPMENT protocol, not a predictive result. V1's common
       panel was never run. V2 freezes six source-axis candidates, per-direction
@@ -1288,13 +1288,18 @@ experiments:
     execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
     artifact: review/q2_controller_bank_v2/
     cost_usd: 0.0
-    cost_envelope_usd: 15.0
-    hard_cost_ceiling_usd: 25.0
+    preferred_cumulative_cost_usd: 30.0
+    hard_cost_ceiling_usd: 45.0
+    budget_amendment:
+      type: PRINCIPAL_REVIEWED_MATERIAL_OPERATIONAL_BUDGET_AMENDMENT
+      prospective_before_common_panel_rows: true
+      original_25_usd_gate_preserved_as_correct: true
+      artifact: review/q2_controller_bank_v2/EXECUTION_COST_AMENDMENT.md
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED
     parent_experiment: Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT
     lock:
       role: DEVELOPMENT
-      lifecycle: CLOSED_COST_BLOCKED
+      lifecycle: ENGINEERING_COST_QUALIFICATION
       model: Qwen3-8B
       layer: 27
       source_axes_proposed: 6
@@ -1333,15 +1338,15 @@ experiments:
       projected_common_hours_with_25pct_margin: 79.0237825587214
       projected_common_cost_usd_at_0_44_per_hour: 34.770464325837416
       projected_cumulative_cost_usd: 37.3499250223875
-      cost_gate: BLOCKED_PROJECTED_COST
-      common_panel: NOT_RUN_COST_BLOCKED
+      cost_gate: REOPENED_BY_PROSPECTIVE_45_USD_PRINCIPAL_AMENDMENT
+      common_panel: NOT_RUN_ENGINE_QUALIFICATION_PENDING
       common_panel_rows: 0
       predictive_geometry_analysis: NOT_RUN
       correctness_used_for_qualification: false
       Q2_V1_common_panel_outcomes_read: false
       Q1: IMMUTABLE
       Q3: NOT_RUN
-      runpod_status: STOPPED
+      runpod_status: STOPPED_ENGINE_QUALIFICATION_AUTHORIZED
       active_pods: 0
       retained_stopped_pods: 1
       retained_pod_disk_gb: 20

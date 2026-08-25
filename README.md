@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_DEVELOPMENT_V2_COST_BLOCKED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_DEVELOPMENT_V2_EXECUTION_COST_QUALIFICATION` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel outcomes. Q2 V2 source qualification completed exactly 576 rows: all six frozen conceptual axes qualified, yielding 24 signed/location directions. The 1,164-row matched label-free calibration completed. The final bank qualifies with 24 meaningful directions across six families, 12 causal directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item common panel is now locked but remains unrun. The synthetic throughput preflight completed without scientific items; its 79.0238-hour projection with the frozen 25% margin implies a US$37.3499 projected cumulative cost, exceeding the US$25 hard ceiling. No correctness or common-panel outcome was used. Q1 remains immutable and Q3 is not run.
+Q2 V1 remains closed as Q2_CONTROLLER_BANK_NOT_QUALIFIED with no common-panel outcomes. Q2 V2 source qualification completed exactly 576 rows: all six frozen conceptual axes qualified, yielding 24 signed/location directions. The 1,164-row matched label-free calibration completed. The final bank qualifies with 24 meaningful directions across six families, 12 causal directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item common panel is locked and remains scientifically untouched. The original US$25 gate correctly stopped collection. A subsequent principal-reviewed material budget amendment now authorizes execution-engine cost qualification with a preferred cumulative projection of US$30 and a hard RunPod ceiling of US$45, before any common-panel row. No correctness or common-panel outcome has been used. Q1 remains immutable and Q3 is not run.
 
-**Next authorized action:** Principal review of the cost block; do not start the common panel or any predictive geometry analysis under this lock.
+**Next authorized action:** Qualify execution platforms using non-scientific fixtures, freeze the cheapest exactly equivalent engine, and run the unchanged common panel only if projected cumulative cost is at most US$45 and wallet is sufficient.
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

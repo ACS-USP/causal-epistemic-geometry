@@ -3,7 +3,7 @@ last_verified: "2026-08-24"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_DEVELOPMENT_V2_COST_BLOCKED
+  scientific_stage: Q2_DEVELOPMENT_V2_EXECUTION_COST_QUALIFICATION
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,9 +19,9 @@ project:
     utility?
 
 current:
-  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_COST_GATE_BLOCKED
+  workstream: Q2_CONTROLLER_HELDOUT_GEOMETRY_V2
+  lifecycle: ENGINEERING
+  stage: DEVELOPMENT_EXECUTION_COST_QUALIFICATION
   source_commit: 6d72b1d963aed6c45166ab28b1bc6d8a26ddb9ed
   execution_source_commit: 080dfc83a6c51711f782fa889c6ffff4fcec13e1
   summary: >-
@@ -31,26 +31,28 @@ current:
     The 1,164-row matched label-free calibration completed. The final bank
     qualifies with 24 meaningful directions across six families, 12 causal
     directions, four dose bins, and fresh SVD span-orthogonal nulls. The 120-item
-    common panel is now locked but remains unrun. The synthetic throughput
-    preflight completed without scientific items; its 79.0238-hour projection
-    with the frozen 25% margin implies a US$37.3499 projected cumulative cost,
-    exceeding the US$25 hard ceiling. No correctness or common-panel outcome
-    was used. Q1 remains immutable and Q3 is not run.
+    common panel is locked and remains scientifically untouched. The original
+    US$25 gate correctly stopped collection. A subsequent principal-reviewed
+    material budget amendment now authorizes execution-engine cost qualification
+    with a preferred cumulative projection of US$30 and a hard RunPod ceiling
+    of US$45, before any common-panel row. No correctness or common-panel outcome
+    has been used. Q1 remains immutable and Q3 is not run.
   next_authorized_action: >-
-    Principal review of the cost block; do not start the common panel or any
-    predictive geometry analysis under this lock.
-  runpod: STOPPED_ZERO_ACTIVE_GPU_RETAINED_POD_DISK
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE_PENDING_PRINCIPAL_REVIEW
+    Qualify execution platforms using non-scientific fixtures, freeze the
+    cheapest exactly equivalent engine, and run the unchanged common panel only
+    if projected cumulative cost is at most US$45 and wallet is sufficient.
+  runpod: ENGINE_QUALIFICATION_AUTHORIZED_RETAINED_A40_STOPPED
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: Q2_V2_COMMON_PANEL_AFTER_ENGINE_AND_COST_PASS
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: Q2_V2_BANK_QUALIFIED_COMMON_PANEL_NOT_RUN_COST_BLOCKED
+  geometry_q2: Q2_V2_BANK_QUALIFIED_EXECUTION_COST_QUALIFICATION
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V2_COST_GATE_BLOCKED_COMMON_PANEL_NOT_RUN
+  current_task: Q2_V2_EXECUTION_ENGINE_COST_QUALIFICATION_COMMON_PANEL_UNTOUCHED
   free_generation: NOT_AUTHORIZED; ONLY_FROZEN_Q2_V2_PHASES
 
 confirmatory_program:
