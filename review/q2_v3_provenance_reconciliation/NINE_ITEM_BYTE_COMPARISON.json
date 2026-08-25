@@ -1,0 +1,2723 @@
+{
+  "classification_counts": {
+    "P2": 9
+  },
+  "dataset_repo": "cruxeval-org/cruxeval",
+  "dataset_revision": "b96af0450242eb4da433032b90998f25588a5d0f",
+  "records": [
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(nums):",
+          "     count = 1",
+          "@@ -12,4 +12,6 @@",
+          " ",
+          " Input: [1, 2, 3]",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 17,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 16,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(num",
+          "raw_sha256": "db171bc51c81c40684c466f8003b23ed6bc6ded946c15adc6a0c126dfa3be95f",
+          "suffix_120": "[1, 2, 3]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gMQogICAgZm9yIGkgaW4gcmFuZ2UoY291bnQsIGxlbihudW1zKSAtIDEsIDIpOgogICAgICAgIG51bXNbaV0gPSBtYXgobnVtc1tpXSwgbnVtc1tjb3VudC0xXSkKICAgICAgICBjb3VudCArPSAxCiAgICByZXR1cm4gbnVtcwpgYGAKCklucHV0OiBbMSwgMiwgM10KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 356,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a6465662066286e756d73293a0a20202020636f756e74203d20310a20202020666f72206920696e2072616e676528636f756e742c206c656e286e756d7329202d20312c2032293a0a20202020202020206e756d735b695d203d206d6178286e756d735b695d2c206e756d735b636f756e742d315d290a2020202020202020636f756e74202b3d20310a2020202072657475726e206e756d730a6060600a0a496e7075743a205b312c20322c20335d0a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nums):\n    count = 1\n    for i in range(count, len(nums) - 1, 2):\n        nums[i] = max(nums[i], nums[count-1])\n        count += 1\n    return nums\n```\n\nInput: [1, 2, 3]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "db171bc51c81c40684c466f8003b23ed6bc6ded946c15adc6a0c126dfa3be95f",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 15,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 14,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "e961cd472703e6ff88df6361e8056f08181c3a431bde10edaef067bb5d26ff52",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihudW1zKToKICAgIGNvdW50ID0gMQogICAgZm9yIGkgaW4gcmFuZ2UoY291bnQsIGxlbihudW1zKSAtIDEsIDIpOgogICAgICAgIG51bXNbaV0gPSBtYXgobnVtc1tpXSwgbnVtc1tjb3VudC0xXSkKICAgICAgICBjb3VudCArPSAxCiAgICByZXR1cm4gbnVtcwpgYGAKCklucHV0OiBbMSwgMiwgM10KClJlYXNvbiBjYXJlZnVsbHksIHRoZW4gZW5kIHdpdGggZXhhY3RseSBvbmUgbGluZSBpbiB0aGUgZm9ybSBGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0Pi4gRG8gbm90IGFkZCB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 379,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286e756d73293a0a20202020636f756e74203d20310a20202020666f72206920696e2072616e676528636f756e742c206c656e286e756d7329202d20312c2032293a0a20202020202020206e756d735b695d203d206d6178286e756d735b695d2c206e756d735b636f756e742d315d290a2020202020202020636f756e74202b3d20310a2020202072657475726e206e756d730a6060600a0a496e7075743a205b312c20322c20335d0a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286e756d73293a0a20202020636f756e74203d20310a20202020666f72206920696e2072616e676528636f756e742c206c656e286e756d7329202d20312c2032293a0a20202020202020206e756d735b695d203d206d6178286e756d735b695d2c206e756d735b636f756e742d315d290a2020202020202020636f756e74202b3d20310a2020202072657475726e206e756d730a6060600a0a496e7075743a205b312c20322c20335d0a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "5ab5edb666183aeb22b925eeb0452dc3aba62c56d34f902a0ffdfe69c4b12e04",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(nums):\n    count = 1\n    for i in range(count, len(nums) - 1, 2):\n        nums[i] = max(nums[i], nums[count-1])\n        count += 1\n    return nums\n```\n\nInput: [1, 2, 3]\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_v3_radial_angular_freeze/M1_COVARIANCE_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/M1_COVARIANCE_MANIFEST.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_300",
+      "manifest": "M1_COVARIANCE_MANIFEST.json",
+      "official_index": 300,
+      "official_source_fields": {
+        "code": "def f(nums):\n    count = 1\n    for i in range(count, len(nums) - 1, 2):\n        nums[i] = max(nums[i], nums[count-1])\n        count += 1\n    return nums",
+        "id": "sample_300",
+        "input": "[1, 2, 3]",
+        "output": "[1, 2, 3]"
+      },
+      "purpose": "M1_COVARIANCE",
+      "reference_answer": "[1, 2, 3]",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(lst, i, n):",
+          "     lst.insert(i, n)",
+          "@@ -9,4 +9,6 @@",
+          " ",
+          " Input: [44, 34, 23, 82, 24, 11, 63, 99], 4, 15",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 14,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 13,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(lst",
+          "raw_sha256": "439f8594b417269c79aef2d9e7960e284f4d5677f98ba9dc1bc6ecb2cb5b9241",
+          "suffix_120": "9], 4, 15\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihsc3QsIGksIG4pOgogICAgbHN0Lmluc2VydChpLCBuKQogICAgcmV0dXJuIGxzdApgYGAKCklucHV0OiBbNDQsIDM0LCAyMywgODIsIDI0LCAxMSwgNjMsIDk5XSwgNCwgMTUKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 287,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a6465662066286c73742c20692c206e293a0a202020206c73742e696e7365727428692c206e290a2020202072657475726e206c73740a6060600a0a496e7075743a205b34342c2033342c2032332c2038322c2032342c2031312c2036332c2039395d2c20342c2031350a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(lst, i, n):\n    lst.insert(i, n)\n    return lst\n```\n\nInput: [44, 34, 23, 82, 24, 11, 63, 99], 4, 15\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "439f8594b417269c79aef2d9e7960e284f4d5677f98ba9dc1bc6ecb2cb5b9241",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 12,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 11,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "3d61eec38a89768799e5f942e51837390c0077fe5494bc3d756de34e9ed98fd4",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihsc3QsIGksIG4pOgogICAgbHN0Lmluc2VydChpLCBuKQogICAgcmV0dXJuIGxzdApgYGAKCklucHV0OiBbNDQsIDM0LCAyMywgODIsIDI0LCAxMSwgNjMsIDk5XSwgNCwgMTUKClJlYXNvbiBjYXJlZnVsbHksIHRoZW4gZW5kIHdpdGggZXhhY3RseSBvbmUgbGluZSBpbiB0aGUgZm9ybSBGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0Pi4gRG8gbm90IGFkZCB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 310,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286c73742c20692c206e293a0a202020206c73742e696e7365727428692c206e290a2020202072657475726e206c73740a6060600a0a496e7075743a205b34342c2033342c2032332c2038322c2032342c2031312c2036332c2039395d2c20342c2031350a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286c73742c20692c206e293a0a202020206c73742e696e7365727428692c206e290a2020202072657475726e206c73740a6060600a0a496e7075743a205b34342c2033342c2032332c2038322c2032342c2031312c2036332c2039395d2c20342c2031350a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "8a1288689d8f71aacfc263b9f2be0e21a9b5c02f66fb9b9814bf16ee41283847",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(lst, i, n):\n    lst.insert(i, n)\n    return lst\n```\n\nInput: [44, 34, 23, 82, 24, 11, 63, 99], 4, 15\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate13_cross_model_ministral3/ALLOCATION_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/DEVELOPMENT_REUSE_POOL.json",
+        "review/gate13_cross_model_ministral3/FALLBACK_SCREEN_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_SCHEDULE.json",
+        "review/gate13_cross_model_ministral3/MASTER_PROTOCOL_LOCK.json",
+        "review/gate13_cross_model_ministral3/SOURCE_ACTIVATION_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/SOURCE_CONSTRUCTION_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/journal.jsonl",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate5_source_duration/PROTOCOL_LOCK.json",
+        "review/gate5_source_duration/SUSTAINED_EVALUATION.json",
+        "review/gate6_2_first_stage_repair_mean_bridge/EVALUATION_MANIFEST.json",
+        "review/gate6_3_semantic_validity_audit/LOO_SENSITIVITY.csv",
+        "review/gate6_3_semantic_validity_audit/ROW_REANALYSIS_V3.csv",
+        "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_RESULTS.csv",
+        "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_SCHEDULE.json",
+        "review/gate6_3_single_mean_semantic_evaluation/journal.jsonl",
+        "review/gate6_layer_source_rfm_atlas/ALLOCATION_SUMMARY.json",
+        "review/gate6_layer_source_rfm_atlas/CONTROLLER_EVALUATION.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_MANIFEST.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_RESERVE.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_VALIDATION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/CONSTRUCTION_MANIFEST.json",
+        "review/micro_q1/EVALUATION_MANIFEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_controller_bank_v2/V2_COMMON_PANEL_MANIFEST.json",
+        "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE.json",
+        "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE_TEMPLATE.json",
+        "review/q2_controller_bank_v2/V2_COVARIANCE_CAPTURE_METADATA.json",
+        "review/q2_controller_bank_v2/V2_COVARIANCE_MANIFEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json",
+        "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+        "review/q2_v3_radial_angular_freeze/M1_COVARIANCE_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/M2_PROBE_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+            "review/q2_v3_radial_angular_freeze/M1_COVARIANCE_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/M2_PROBE_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+            "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "2c9c5483f7dcf112ade7a46abfba9cbaead9a548",
+          "date": "2026-08-24",
+          "paths": [
+            "review/q2_controller_bank_v2/V2_COVARIANCE_CAPTURE_METADATA.json"
+          ],
+          "subject": "close Q2 V2 at hard cost gate"
+        },
+        {
+          "commit": "090e26b67f246b651d912dc1f44897454eb96aab",
+          "date": "2026-08-24",
+          "paths": [
+            "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE.json"
+          ],
+          "subject": "lock Q2 V2 qualified controller bank"
+        },
+        {
+          "commit": "3c35cfba572a864d945c1fe6d59ee321e2a3b704",
+          "date": "2026-08-24",
+          "paths": [
+            "review/q2_controller_bank_v2/V2_COMMON_PANEL_MANIFEST.json",
+            "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE_TEMPLATE.json",
+            "review/q2_controller_bank_v2/V2_COVARIANCE_MANIFEST.json"
+          ],
+          "subject": "lock Q2 V2 pre-source protocol"
+        },
+        {
+          "commit": "ac6a79d0bbd7e282f316aceccb8f164d0e90ad24",
+          "date": "2026-08-23",
+          "paths": [
+            "review/gate13_cross_model_ministral3/journal.jsonl"
+          ],
+          "subject": "gate13: close causal layer first-stage null"
+        },
+        {
+          "commit": "4d4c331f0b7d8236e68a93d267063e80aabe10ab",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_SCHEDULE.json",
+            "review/gate13_cross_model_ministral3/SOURCE_ACTIVATION_MANIFEST.json"
+          ],
+          "subject": "gate13: freeze source atlas and layer shortlist"
+        },
+        {
+          "commit": "46056559f9681be38a62e626c7edca8d5c357fca",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate13_cross_model_ministral3/ALLOCATION_MANIFEST.json",
+            "review/gate13_cross_model_ministral3/DEVELOPMENT_REUSE_POOL.json",
+            "review/gate13_cross_model_ministral3/FALLBACK_SCREEN_MANIFEST.json",
+            "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_MANIFEST.json",
+            "review/gate13_cross_model_ministral3/MASTER_PROTOCOL_LOCK.json",
+            "review/gate13_cross_model_ministral3/SOURCE_CONSTRUCTION_MANIFEST.json"
+          ],
+          "subject": "gate13: freeze prospective master protocol"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "ff0385f77622b7b5b296c0d4cb872bc8ec010fc1",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate6_3_semantic_validity_audit/LOO_SENSITIVITY.csv",
+            "review/gate6_3_semantic_validity_audit/ROW_REANALYSIS_V3.csv"
+          ],
+          "subject": "Complete Gate 6.3 semantic validity audit"
+        },
+        {
+          "commit": "32a3cd2f0ec303fcc7951fbaf694db46265cc321",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_RESULTS.csv",
+            "review/gate6_3_single_mean_semantic_evaluation/journal.jsonl"
+          ],
+          "subject": "Close Gate 6.3 single-mean semantic evaluation"
+        },
+        {
+          "commit": "1a343e734fb6cfca995bc6ee99c51f0d6ec8d6fd",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_2_first_stage_repair_mean_bridge/EVALUATION_MANIFEST.json",
+            "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_SCHEDULE.json"
+          ],
+          "subject": "Track compact Gate 6.3 execution lock payload"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json",
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+            "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_RESERVE.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "9fb565fb3a4d65829e7b656d4a1a7d8f9f50ad7a",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_TRAIN_MANIFEST.json"
+          ],
+          "subject": "Refresh Gate 6 pre-outcome protocol lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/ALLOCATION_SUMMARY.json",
+            "review/gate6_layer_source_rfm_atlas/CONTROLLER_EVALUATION.json",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+            "review/gate6_layer_source_rfm_atlas/SOURCE_VALIDATION.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate5_source_duration/PROTOCOL_LOCK.json",
+            "review/gate5_source_duration/SUSTAINED_EVALUATION.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/CONSTRUCTION_MANIFEST.json",
+            "review/micro_q1/EVALUATION_MANIFEST.json",
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_74",
+      "manifest": "M1_COVARIANCE_MANIFEST.json",
+      "official_index": 74,
+      "official_source_fields": {
+        "code": "def f(lst, i, n):\n    lst.insert(i, n)\n    return lst",
+        "id": "sample_74",
+        "input": "[44, 34, 23, 82, 24, 11, 63, 99], 4, 15",
+        "output": "[44, 34, 23, 82, 15, 24, 11, 63, 99]"
+      },
+      "purpose": "M1_COVARIANCE",
+      "reference_answer": "[44, 34, 23, 82, 15, 24, 11, 63, 99]",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "b76864b239fb98d77e1988e88099a27e327690488298dc3fcf97345769f493bd"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(address):",
+          "     suffix_start = address.index('@') + 1",
+          "@@ -11,4 +11,6 @@",
+          " ",
+          " Input: 'minimc@minimc.io'",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 16,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 15,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(add",
+          "raw_sha256": "062157c8f4370b7352df4b949ab3bb365e55893594ba008457b6a66f64936428",
+          "suffix_120": "inimc.io'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhZGRyZXNzKToKICAgIHN1ZmZpeF9zdGFydCA9IGFkZHJlc3MuaW5kZXgoJ0AnKSArIDEKICAgIGlmIGFkZHJlc3Nbc3VmZml4X3N0YXJ0Ol0uY291bnQoJy4nKSA+IDE6CiAgICAgICAgYWRkcmVzcyA9IGFkZHJlc3MucmVtb3Zlc3VmZml4KCcuJy5qb2luKGFkZHJlc3Muc3BsaXQoJ0AnKVsxXS5zcGxpdCgnLicpWzoyXSkpCiAgICByZXR1cm4gYWRkcmVzcwpgYGAKCklucHV0OiAnbWluaW1jQG1pbmltYy5pbycKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 422,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a64656620662861646472657373293a0a202020207375666669785f7374617274203d20616464726573732e696e6465782827402729202b20310a20202020696620616464726573735b7375666669785f73746172743a5d2e636f756e7428272e2729203e20313a0a202020202020202061646472657373203d20616464726573732e72656d6f766573756666697828272e272e6a6f696e28616464726573732e73706c697428274027295b315d2e73706c697428272e27295b3a325d29290a2020202072657475726e20616464726573730a6060600a0a496e7075743a20276d696e696d63406d696e696d632e696f270a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(address):\n    suffix_start = address.index('@') + 1\n    if address[suffix_start:].count('.') > 1:\n        address = address.removesuffix('.'.join(address.split('@')[1].split('.')[:2]))\n    return address\n```\n\nInput: 'minimc@minimc.io'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "062157c8f4370b7352df4b949ab3bb365e55893594ba008457b6a66f64936428",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 14,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 13,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "1da64d6fffd6d600b231983c4ab06b12178e1c71dc6590fb10393f8079299bda",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhZGRyZXNzKToKICAgIHN1ZmZpeF9zdGFydCA9IGFkZHJlc3MuaW5kZXgoJ0AnKSArIDEKICAgIGlmIGFkZHJlc3Nbc3VmZml4X3N0YXJ0Ol0uY291bnQoJy4nKSA+IDE6CiAgICAgICAgYWRkcmVzcyA9IGFkZHJlc3MucmVtb3Zlc3VmZml4KCcuJy5qb2luKGFkZHJlc3Muc3BsaXQoJ0AnKVsxXS5zcGxpdCgnLicpWzoyXSkpCiAgICByZXR1cm4gYWRkcmVzcwpgYGAKCklucHV0OiAnbWluaW1jQG1pbmltYy5pbycKClJlYXNvbiBjYXJlZnVsbHksIHRoZW4gZW5kIHdpdGggZXhhY3RseSBvbmUgbGluZSBpbiB0aGUgZm9ybSBGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0Pi4gRG8gbm90IGFkZCB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 445,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662861646472657373293a0a202020207375666669785f7374617274203d20616464726573732e696e6465782827402729202b20310a20202020696620616464726573735b7375666669785f73746172743a5d2e636f756e7428272e2729203e20313a0a202020202020202061646472657373203d20616464726573732e72656d6f766573756666697828272e272e6a6f696e28616464726573732e73706c697428274027295b315d2e73706c697428272e27295b3a325d29290a2020202072657475726e20616464726573730a6060600a0a496e7075743a20276d696e696d63406d696e696d632e696f270a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662861646472657373293a0a202020207375666669785f7374617274203d20616464726573732e696e6465782827402729202b20310a20202020696620616464726573735b7375666669785f73746172743a5d2e636f756e7428272e2729203e20313a0a202020202020202061646472657373203d20616464726573732e72656d6f766573756666697828272e272e6a6f696e28616464726573732e73706c697428274027295b315d2e73706c697428272e27295b3a325d29290a2020202072657475726e20616464726573730a6060600a0a496e7075743a20276d696e696d63406d696e696d632e696f270a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "7d22746e39c1364db01d176b6b1b240d7e235f5ea3b2cbb20dccb2586d89ee65",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(address):\n    suffix_start = address.index('@') + 1\n    if address[suffix_start:].count('.') > 1:\n        address = address.removesuffix('.'.join(address.split('@')[1].split('.')[:2]))\n    return address\n```\n\nInput: 'minimc@minimc.io'\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_745",
+      "manifest": "SHELL_CALIBRATION_MANIFEST.json",
+      "official_index": 745,
+      "official_source_fields": {
+        "code": "def f(address):\n    suffix_start = address.index('@') + 1\n    if address[suffix_start:].count('.') > 1:\n        address = address.removesuffix('.'.join(address.split('@')[1].split('.')[:2]))\n    return address",
+        "id": "sample_745",
+        "input": "'minimc@minimc.io'",
+        "output": "'minimc@minimc.io'"
+      },
+      "purpose": "SHELL_CALIBRATION",
+      "reference_answer": "'minimc@minimc.io'",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "c039f70067d318f2214b243440052a96c705cdf9ed40155c7598b38a25715b2a"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(text):",
+          "     return len(text) - text.count('bot')",
+          "@@ -8,4 +8,6 @@",
+          " ",
+          " Input: \"Where is the bot in this world?\"",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 13,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 12,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(tex",
+          "raw_sha256": "11a4fab4f658da70df2990282b5752c8b53ae50168356bccb4eb9b03706448f1",
+          "suffix_120": "s world?\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIHJldHVybiBsZW4odGV4dCkgLSB0ZXh0LmNvdW50KCdib3QnKQpgYGAKCklucHV0OiAiV2hlcmUgaXMgdGhlIGJvdCBpbiB0aGlzIHdvcmxkPyIKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 281,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a64656620662874657874293a0a2020202072657475726e206c656e287465787429202d20746578742e636f756e742827626f7427290a6060600a0a496e7075743a202257686572652069732074686520626f7420696e207468697320776f726c643f220a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    return len(text) - text.count('bot')\n```\n\nInput: \"Where is the bot in this world?\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "11a4fab4f658da70df2990282b5752c8b53ae50168356bccb4eb9b03706448f1",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 11,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 10,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "5e548d853f58c6db685e675d793ee3cae059e6df98b115472df65d327ff8f082",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIHJldHVybiBsZW4odGV4dCkgLSB0ZXh0LmNvdW50KCdib3QnKQpgYGAKCklucHV0OiAiV2hlcmUgaXMgdGhlIGJvdCBpbiB0aGlzIHdvcmxkPyIKClJlYXNvbiBjYXJlZnVsbHksIHRoZW4gZW5kIHdpdGggZXhhY3RseSBvbmUgbGluZSBpbiB0aGUgZm9ybSBGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0Pi4gRG8gbm90IGFkZCB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 304,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662874657874293a0a2020202072657475726e206c656e287465787429202d20746578742e636f756e742827626f7427290a6060600a0a496e7075743a202257686572652069732074686520626f7420696e207468697320776f726c643f220a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662874657874293a0a2020202072657475726e206c656e287465787429202d20746578742e636f756e742827626f7427290a6060600a0a496e7075743a202257686572652069732074686520626f7420696e207468697320776f726c643f220a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "25be1660917f7f0820d919d9996071e154268952f92855f77a6656579e939684",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(text):\n    return len(text) - text.count('bot')\n```\n\nInput: \"Where is the bot in this world?\"\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/SHELL_CALIBRATION_SCHEDULE.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_700",
+      "manifest": "SHELL_CALIBRATION_MANIFEST.json",
+      "official_index": 700,
+      "official_source_fields": {
+        "code": "def f(text):\n    return len(text) - text.count('bot')",
+        "id": "sample_700",
+        "input": "\"Where is the bot in this world?\"",
+        "output": "30"
+      },
+      "purpose": "SHELL_CALIBRATION",
+      "reference_answer": "30",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(bots):",
+          "     clean = []",
+          "@@ -12,4 +12,6 @@",
+          " ",
+          " Input: ['yR?TAJhIW?n', 'o11BgEFDfoe', 'KnHdn2vdEd', 'wvwruuqfhXbGis']",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 17,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 16,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(bot",
+          "raw_sha256": "e0706e9152f42160e2442468e4033f483bc6a5864addff5c0197f62a14a86f68",
+          "suffix_120": "fhXbGis']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihib3RzKToKICAgIGNsZWFuID0gW10KICAgIGZvciB1c2VybmFtZSBpbiBib3RzOgogICAgICAgIGlmIG5vdCB1c2VybmFtZS5pc3VwcGVyKCk6CiAgICAgICAgICAgIGNsZWFuLmFwcGVuZCh1c2VybmFtZVs6Ml0gKyB1c2VybmFtZVstMzpdKQogICAgcmV0dXJuIGxlbihjbGVhbikKYGBgCgpJbnB1dDogWyd5Uj9UQUpoSVc/bicsICdvMTFCZ0VGRGZvZScsICdLbkhkbjJ2ZEVkJywgJ3d2d3J1dXFmaFhiR2lzJ10KClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 422,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a646566206628626f7473293a0a20202020636c65616e203d205b5d0a20202020666f7220757365726e616d6520696e20626f74733a0a20202020202020206966206e6f7420757365726e616d652e6973757070657228293a0a202020202020202020202020636c65616e2e617070656e6428757365726e616d655b3a325d202b20757365726e616d655b2d333a5d290a2020202072657475726e206c656e28636c65616e290a6060600a0a496e7075743a205b2779523f54414a6849573f6e272c20276f31314267454644666f65272c20274b6e48646e3276644564272c20277776777275757166685862476973275d0a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(bots):\n    clean = []\n    for username in bots:\n        if not username.isupper():\n            clean.append(username[:2] + username[-3:])\n    return len(clean)\n```\n\nInput: ['yR?TAJhIW?n', 'o11BgEFDfoe', 'KnHdn2vdEd', 'wvwruuqfhXbGis']\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "e0706e9152f42160e2442468e4033f483bc6a5864addff5c0197f62a14a86f68",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 15,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 14,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "c857cad393cfdbb4b0d333d2a694408d1a6868dfdcd6f562fbc9ad19100ab8f9",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihib3RzKToKICAgIGNsZWFuID0gW10KICAgIGZvciB1c2VybmFtZSBpbiBib3RzOgogICAgICAgIGlmIG5vdCB1c2VybmFtZS5pc3VwcGVyKCk6CiAgICAgICAgICAgIGNsZWFuLmFwcGVuZCh1c2VybmFtZVs6Ml0gKyB1c2VybmFtZVstMzpdKQogICAgcmV0dXJuIGxlbihjbGVhbikKYGBgCgpJbnB1dDogWyd5Uj9UQUpoSVc/bicsICdvMTFCZ0VGRGZvZScsICdLbkhkbjJ2ZEVkJywgJ3d2d3J1dXFmaFhiR2lzJ10KClJlYXNvbiBjYXJlZnVsbHksIHRoZW4gZW5kIHdpdGggZXhhY3RseSBvbmUgbGluZSBpbiB0aGUgZm9ybSBGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0Pi4gRG8gbm90IGFkZCB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 445,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a646566206628626f7473293a0a20202020636c65616e203d205b5d0a20202020666f7220757365726e616d6520696e20626f74733a0a20202020202020206966206e6f7420757365726e616d652e6973757070657228293a0a202020202020202020202020636c65616e2e617070656e6428757365726e616d655b3a325d202b20757365726e616d655b2d333a5d290a2020202072657475726e206c656e28636c65616e290a6060600a0a496e7075743a205b2779523f54414a6849573f6e272c20276f31314267454644666f65272c20274b6e48646e3276644564272c20277776777275757166685862476973275d0a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a646566206628626f7473293a0a20202020636c65616e203d205b5d0a20202020666f7220757365726e616d6520696e20626f74733a0a20202020202020206966206e6f7420757365726e616d652e6973757070657228293a0a202020202020202020202020636c65616e2e617070656e6428757365726e616d655b3a325d202b20757365726e616d655b2d333a5d290a2020202072657475726e206c656e28636c65616e290a6060600a0a496e7075743a205b2779523f54414a6849573f6e272c20276f31314267454644666f65272c20274b6e48646e3276644564272c20277776777275757166685862476973275d0a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "761cab1917553066cb0354bd388a0744ee14f699be1dfbabed9f44a541936c98",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(bots):\n    clean = []\n    for username in bots:\n        if not username.isupper():\n            clean.append(username[:2] + username[-3:])\n    return len(clean)\n```\n\nInput: ['yR?TAJhIW?n', 'o11BgEFDfoe', 'KnHdn2vdEd', 'wvwruuqfhXbGis']\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json",
+        "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+        "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+            "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+            "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_659",
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 659,
+      "official_source_fields": {
+        "code": "def f(bots):\n    clean = []\n    for username in bots:\n        if not username.isupper():\n            clean.append(username[:2] + username[-3:])\n    return len(clean)",
+        "id": "sample_659",
+        "input": "['yR?TAJhIW?n', 'o11BgEFDfoe', 'KnHdn2vdEd', 'wvwruuqfhXbGis']",
+        "output": "4"
+      },
+      "purpose": "PRIMARY_SEMANTIC_PANEL",
+      "reference_answer": "4",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(names, excluded):",
+          "     excluded = excluded",
+          "@@ -12,4 +12,6 @@",
+          " ",
+          " Input: [\"avc  a .d e\"], \"\"",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 17,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 16,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(nam",
+          "raw_sha256": "e964f67b629dd0d7ee18a2674cdcc1056f6b1787c064575382f6f94ffad5542e",
+          "suffix_120": "d e\"], \"\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihuYW1lcywgZXhjbHVkZWQpOgogICAgZXhjbHVkZWQgPSBleGNsdWRlZAogICAgZm9yIGkgaW4gcmFuZ2UobGVuKG5hbWVzKSk6CiAgICAgICAgaWYgZXhjbHVkZWQgaW4gbmFtZXNbaV06CiAgICAgICAgICAgIG5hbWVzW2ldID0gbmFtZXNbaV0ucmVwbGFjZShleGNsdWRlZCwgIiIpCiAgICByZXR1cm4gbmFtZXMKYGBgCgpJbnB1dDogWyJhdmMgIGEgLmQgZSJdLCAiIgoKUmV0dXJuIGV4YWN0bHkgb25lIGZpbmFsIGxpbmUgaW4gdGhpcyBmb3JtOgpGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0PgpEbyBub3QgYWRkIGFueSB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 397,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a6465662066286e616d65732c206578636c75646564293a0a202020206578636c75646564203d206578636c756465640a20202020666f72206920696e2072616e6765286c656e286e616d657329293a0a20202020202020206966206578636c7564656420696e206e616d65735b695d3a0a2020202020202020202020206e616d65735b695d203d206e616d65735b695d2e7265706c616365286578636c756465642c202222290a2020202072657475726e206e616d65730a6060600a0a496e7075743a205b22617663202061202e642065225d2c2022220a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(names, excluded):\n    excluded = excluded\n    for i in range(len(names)):\n        if excluded in names[i]:\n            names[i] = names[i].replace(excluded, \"\")\n    return names\n```\n\nInput: [\"avc  a .d e\"], \"\"\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "e964f67b629dd0d7ee18a2674cdcc1056f6b1787c064575382f6f94ffad5542e",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 15,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 14,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "1a035f1d70590a33b1d91766c1a1fa311a7421df087d552709251b9a1bec680b",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihuYW1lcywgZXhjbHVkZWQpOgogICAgZXhjbHVkZWQgPSBleGNsdWRlZAogICAgZm9yIGkgaW4gcmFuZ2UobGVuKG5hbWVzKSk6CiAgICAgICAgaWYgZXhjbHVkZWQgaW4gbmFtZXNbaV06CiAgICAgICAgICAgIG5hbWVzW2ldID0gbmFtZXNbaV0ucmVwbGFjZShleGNsdWRlZCwgIiIpCiAgICByZXR1cm4gbmFtZXMKYGBgCgpJbnB1dDogWyJhdmMgIGEgLmQgZSJdLCAiIgoKUmVhc29uIGNhcmVmdWxseSwgdGhlbiBlbmQgd2l0aCBleGFjdGx5IG9uZSBsaW5lIGluIHRoZSBmb3JtIEZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+LiBEbyBub3QgYWRkIHRleHQgYWZ0ZXIgRklOQUwu",
+          "utf8_byte_count": 420,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286e616d65732c206578636c75646564293a0a202020206578636c75646564203d206578636c756465640a20202020666f72206920696e2072616e6765286c656e286e616d657329293a0a20202020202020206966206578636c7564656420696e206e616d65735b695d3a0a2020202020202020202020206e616d65735b695d203d206e616d65735b695d2e7265706c616365286578636c756465642c202222290a2020202072657475726e206e616d65730a6060600a0a496e7075743a205b22617663202061202e642065225d2c2022220a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286e616d65732c206578636c75646564293a0a202020206578636c75646564203d206578636c756465640a20202020666f72206920696e2072616e6765286c656e286e616d657329293a0a20202020202020206966206578636c7564656420696e206e616d65735b695d3a0a2020202020202020202020206e616d65735b695d203d206e616d65735b695d2e7265706c616365286578636c756465642c202222290a2020202072657475726e206e616d65730a6060600a0a496e7075743a205b22617663202061202e642065225d2c2022220a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "24acf0234c1edcb40a19f80d36cfcce2856b0febaedff85b3580d8e294061c69",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(names, excluded):\n    excluded = excluded\n    for i in range(len(names)):\n        if excluded in names[i]:\n            names[i] = names[i].replace(excluded, \"\")\n    return names\n```\n\nInput: [\"avc  a .d e\"], \"\"\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json",
+        "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+        "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+            "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+            "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_777",
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 777,
+      "official_source_fields": {
+        "code": "def f(names, excluded):\n    excluded = excluded\n    for i in range(len(names)):\n        if excluded in names[i]:\n            names[i] = names[i].replace(excluded, \"\")\n    return names",
+        "id": "sample_777",
+        "input": "[\"avc  a .d e\"], \"\"",
+        "output": "['avc  a .d e']"
+      },
+      "purpose": "PRIMARY_SEMANTIC_PANEL",
+      "reference_answer": "['avc  a .d e']",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "6a99251a49074022e23b44f9f3870aee3eb1bbb0e6550689c056f913f01609f5"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(price, product):",
+          "     inventory = ['olives', 'key', 'orange']",
+          "@@ -14,4 +14,6 @@",
+          " ",
+          " Input: 8.50, 'grapes'",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 19,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 18,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(pri",
+          "raw_sha256": "21e1c5835316699848c6b28a4e288c8265940b6c92eb9fcc6aa9079441bd0276",
+          "suffix_120": " 'grapes'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihwcmljZSwgcHJvZHVjdCk6CiAgICBpbnZlbnRvcnkgPSBbJ29saXZlcycsICdrZXknLCAnb3JhbmdlJ10KICAgIGlmIHByb2R1Y3Qgbm90IGluIGludmVudG9yeToKICAgICAgICByZXR1cm4gcHJpY2UKICAgIGVsc2U6CiAgICAgICAgcHJpY2UgKj0uODUKICAgICAgICBpbnZlbnRvcnkucmVtb3ZlKHByb2R1Y3QpCiAgICByZXR1cm4gcHJpY2UKYGBgCgpJbnB1dDogOC41MCwgJ2dyYXBlcycKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 410,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a64656620662870726963652c2070726f64756374293a0a20202020696e76656e746f7279203d205b276f6c69766573272c20276b6579272c20276f72616e6765275d0a2020202069662070726f64756374206e6f7420696e20696e76656e746f72793a0a202020202020202072657475726e2070726963650a20202020656c73653a0a20202020202020207072696365202a3d2e38350a2020202020202020696e76656e746f72792e72656d6f76652870726f64756374290a2020202072657475726e2070726963650a6060600a0a496e7075743a20382e35302c2027677261706573270a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(price, product):\n    inventory = ['olives', 'key', 'orange']\n    if product not in inventory:\n        return price\n    else:\n        price *=.85\n        inventory.remove(product)\n    return price\n```\n\nInput: 8.50, 'grapes'\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "21e1c5835316699848c6b28a4e288c8265940b6c92eb9fcc6aa9079441bd0276",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 17,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 16,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "49d89460a63c3abb3ffad10f52c18192d1690eee90ce8ea530fb3166615ced8f",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihwcmljZSwgcHJvZHVjdCk6CiAgICBpbnZlbnRvcnkgPSBbJ29saXZlcycsICdrZXknLCAnb3JhbmdlJ10KICAgIGlmIHByb2R1Y3Qgbm90IGluIGludmVudG9yeToKICAgICAgICByZXR1cm4gcHJpY2UKICAgIGVsc2U6CiAgICAgICAgcHJpY2UgKj0uODUKICAgICAgICBpbnZlbnRvcnkucmVtb3ZlKHByb2R1Y3QpCiAgICByZXR1cm4gcHJpY2UKYGBgCgpJbnB1dDogOC41MCwgJ2dyYXBlcycKClJlYXNvbiBjYXJlZnVsbHksIHRoZW4gZW5kIHdpdGggZXhhY3RseSBvbmUgbGluZSBpbiB0aGUgZm9ybSBGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0Pi4gRG8gbm90IGFkZCB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 433,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662870726963652c2070726f64756374293a0a20202020696e76656e746f7279203d205b276f6c69766573272c20276b6579272c20276f72616e6765275d0a2020202069662070726f64756374206e6f7420696e20696e76656e746f72793a0a202020202020202072657475726e2070726963650a20202020656c73653a0a20202020202020207072696365202a3d2e38350a2020202020202020696e76656e746f72792e72656d6f76652870726f64756374290a2020202072657475726e2070726963650a6060600a0a496e7075743a20382e35302c2027677261706573270a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662870726963652c2070726f64756374293a0a20202020696e76656e746f7279203d205b276f6c69766573272c20276b6579272c20276f72616e6765275d0a2020202069662070726f64756374206e6f7420696e20696e76656e746f72793a0a202020202020202072657475726e2070726963650a20202020656c73653a0a20202020202020207072696365202a3d2e38350a2020202020202020696e76656e746f72792e72656d6f76652870726f64756374290a2020202072657475726e2070726963650a6060600a0a496e7075743a20382e35302c2027677261706573270a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "333537b661e4e1e7347260e88b242f08100893aedd8a058b1850eda2561570fd",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(price, product):\n    inventory = ['olives', 'key', 'orange']\n    if product not in inventory:\n        return price\n    else:\n        price *=.85\n        inventory.remove(product)\n    return price\n```\n\nInput: 8.50, 'grapes'\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json",
+        "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+        "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+            "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+            "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_145",
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 145,
+      "official_source_fields": {
+        "code": "def f(price, product):\n    inventory = ['olives', 'key', 'orange']\n    if product not in inventory:\n        return price\n    else:\n        price *=.85\n        inventory.remove(product)\n    return price",
+        "id": "sample_145",
+        "input": "8.50, 'grapes'",
+        "output": "8.5"
+      },
+      "purpose": "PRIMARY_SEMANTIC_PANEL",
+      "reference_answer": "8.5",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "cc6f2aa507f6a1f7de2db7e09ddef04282962c09cb6c6d659f0fa9aa07ac3b6c"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(text):",
+          "     return ''.join(x for x in text if x != ')')",
+          "@@ -8,4 +8,6 @@",
+          " ",
+          " Input: ('(((((((((((d))))))))).))))(((((')",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 13,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 12,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(tex",
+          "raw_sha256": "ea794a79ef0e1562605d10a78a11d00a5b66cd950d9e347061b419d0ea5b861e",
+          "suffix_120": "))(((((')\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIHJldHVybiAnJy5qb2luKHggZm9yIHggaW4gdGV4dCBpZiB4ICE9ICcpJykKYGBgCgpJbnB1dDogKCcoKCgoKCgoKCgoKGQpKSkpKSkpKSkuKSkpKSgoKCgoJykKClJldHVybiBleGFjdGx5IG9uZSBmaW5hbCBsaW5lIGluIHRoaXMgZm9ybToKRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4KRG8gbm90IGFkZCBhbnkgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 290,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a64656620662874657874293a0a2020202072657475726e2027272e6a6f696e287820666f72207820696e2074657874206966207820213d20272927290a6060600a0a496e7075743a2028272828282828282828282828642929292929292929292e29292929282828282827290a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(text):\n    return ''.join(x for x in text if x != ')')\n```\n\nInput: ('(((((((((((d))))))))).))))(((((')\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "ea794a79ef0e1562605d10a78a11d00a5b66cd950d9e347061b419d0ea5b861e",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 11,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 10,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "42cceb6c0f6cb62e3d062e7c9d3b6c2b0ad5f88d2cff5bd5949083f861ee6f49",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZih0ZXh0KToKICAgIHJldHVybiAnJy5qb2luKHggZm9yIHggaW4gdGV4dCBpZiB4ICE9ICcpJykKYGBgCgpJbnB1dDogKCcoKCgoKCgoKCgoKGQpKSkpKSkpKSkuKSkpKSgoKCgoJykKClJlYXNvbiBjYXJlZnVsbHksIHRoZW4gZW5kIHdpdGggZXhhY3RseSBvbmUgbGluZSBpbiB0aGUgZm9ybSBGSU5BTDogPHRoZSBleGFjdCBQeXRob24gb3V0cHV0Pi4gRG8gbm90IGFkZCB0ZXh0IGFmdGVyIEZJTkFMLg==",
+          "utf8_byte_count": 313,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662874657874293a0a2020202072657475726e2027272e6a6f696e287820666f72207820696e2074657874206966207820213d20272927290a6060600a0a496e7075743a2028272828282828282828282828642929292929292929292e29292929282828282827290a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a64656620662874657874293a0a2020202072657475726e2027272e6a6f696e287820666f72207820696e2074657874206966207820213d20272927290a6060600a0a496e7075743a2028272828282828282828282828642929292929292929292e29292929282828282827290a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "eb1d8648f26a9150b00ac0361600179db24c530d151d95eef6b8d9a786a8dab9",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(text):\n    return ''.join(x for x in text if x != ')')\n```\n\nInput: ('(((((((((((d))))))))).))))(((((')\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json",
+        "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+        "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+            "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+            "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_698",
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 698,
+      "official_source_fields": {
+        "code": "def f(text):\n    return ''.join(x for x in text if x != ')')",
+        "id": "sample_698",
+        "input": "('(((((((((((d))))))))).))))(((((')",
+        "output": "'(((((((((((d.((((('"
+      },
+      "purpose": "PRIMARY_SEMANTIC_PANEL",
+      "reference_answer": "'(((((((((((d.((((('",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "b3d2a257d25d6b6c69e1767587fb5d586a14321226cbb5d5fc37f58734405463"
+    },
+    {
+      "classification": "P2",
+      "classification_reason": "Model-visible task wording and answer instructions differ; the change is not limited to a namespace, whitespace, line ending, or inert envelope.",
+      "comparison": {
+        "exact_bytes_equal": false,
+        "reference_answer_present_in_either_prompt": false,
+        "same_code_fence_payload": true,
+        "same_code_field": true,
+        "same_input_field": true,
+        "same_line_ending_kind": true,
+        "same_reference_field": true,
+        "scientifically_plausible_wording_or_instruction_change": true,
+        "system_or_chat_wrapper_in_compared_field": false,
+        "unified_diff": [
+          "--- external-benchmark-cruxeval-prompt-v1",
+          "+++ gate7-cruxeval-semantic-task-prompt-v1",
+          "@@ -1,6 +1,6 @@",
+          "-Solve the following code-output prediction problem.",
+          "+Solve this Python code-output prediction problem.",
+          " ",
+          "-Python function:",
+          "+Function:",
+          " ```python",
+          " def f(array):",
+          "     n = array.pop()",
+          "@@ -10,4 +10,6 @@",
+          " ",
+          " Input: [1, 1, 2, 2]",
+          " ",
+          "-Reason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "+Return exactly one final line in this form:",
+          "+FINAL: <the exact Python output>",
+          "+Do not add any text after FINAL."
+        ]
+      },
+      "current": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 15,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 14,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(arr",
+          "raw_sha256": "7a9db1cda5f551cb017da5e299f180a21014d0d74e287881c279be811f6b8777",
+          "suffix_120": " 1, 2, 2]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhpcyBQeXRob24gY29kZS1vdXRwdXQgcHJlZGljdGlvbiBwcm9ibGVtLgoKRnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSk6CiAgICBuID0gYXJyYXkucG9wKCkKICAgIGFycmF5LmV4dGVuZChbbiwgbl0pCiAgICByZXR1cm4gYXJyYXkKYGBgCgpJbnB1dDogWzEsIDEsIDIsIDJdCgpSZXR1cm4gZXhhY3RseSBvbmUgZmluYWwgbGluZSBpbiB0aGlzIGZvcm06CkZJTkFMOiA8dGhlIGV4YWN0IFB5dGhvbiBvdXRwdXQ+CkRvIG5vdCBhZGQgYW55IHRleHQgYWZ0ZXIgRklOQUwu",
+          "utf8_byte_count": 282,
+          "utf8_hex": "536f6c7665207468697320507974686f6e20636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a46756e6374696f6e3a0a606060707974686f6e0a6465662066286172726179293a0a202020206e203d2061727261792e706f7028290a2020202061727261792e657874656e64285b6e2c206e5d290a2020202072657475726e2061727261790a6060600a0a496e7075743a205b312c20312c20322c20325d0a0a52657475726e2065786163746c79206f6e652066696e616c206c696e6520696e207468697320666f726d3a0a46494e414c3a203c74686520657861637420507974686f6e206f75747075743e0a446f206e6f742061646420616e7920746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "src/epistemic_geometry/experiments/gate7.py::task_prompt",
+          "scripts/run_q2_v3.py::_normalize_public"
+        ],
+        "hash_procedure": "SHA256(exact_prompt_utf8_bytes)",
+        "hash_schema": "sha256-utf8-raw-v1",
+        "raw_prompt_text": "Solve this Python code-output prediction problem.\n\nFunction:\n```python\ndef f(array):\n    n = array.pop()\n    array.extend([n, n])\n    return array\n```\n\nInput: [1, 1, 2, 2]\n\nReturn exactly one final line in this form:\nFINAL: <the exact Python output>\nDo not add any text after FINAL.",
+        "raw_sha256": "7a9db1cda5f551cb017da5e299f180a21014d0d74e287881c279be811f6b8777",
+        "template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "historical": {
+        "bytes": {
+          "contains_code_fence": true,
+          "contains_reference_answer": false,
+          "leading_whitespace_bytes": 0,
+          "line_count": 13,
+          "line_endings": {
+            "CRLF": 0,
+            "LF": 12,
+            "bare_CR": 0
+          },
+          "prefix_80": "Solve the following code-output prediction problem.\n\nPython function:\n```python\n",
+          "raw_sha256": "31a9e3f9f360e83701d570c3f4c731c1396b7a9414fefa0247a618e20b53ff7a",
+          "suffix_120": "son carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+          "trailing_whitespace_bytes": 0,
+          "unicode_normalization": {
+            "NFC": true,
+            "NFD": true,
+            "NFKC": true,
+            "NFKD": true
+          },
+          "utf8_base64": "U29sdmUgdGhlIGZvbGxvd2luZyBjb2RlLW91dHB1dCBwcmVkaWN0aW9uIHByb2JsZW0uCgpQeXRob24gZnVuY3Rpb246CmBgYHB5dGhvbgpkZWYgZihhcnJheSk6CiAgICBuID0gYXJyYXkucG9wKCkKICAgIGFycmF5LmV4dGVuZChbbiwgbl0pCiAgICByZXR1cm4gYXJyYXkKYGBgCgpJbnB1dDogWzEsIDEsIDIsIDJdCgpSZWFzb24gY2FyZWZ1bGx5LCB0aGVuIGVuZCB3aXRoIGV4YWN0bHkgb25lIGxpbmUgaW4gdGhlIGZvcm0gRklOQUw6IDx0aGUgZXhhY3QgUHl0aG9uIG91dHB1dD4uIERvIG5vdCBhZGQgdGV4dCBhZnRlciBGSU5BTC4=",
+          "utf8_byte_count": 305,
+          "utf8_hex": "536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286172726179293a0a202020206e203d2061727261792e706f7028290a2020202061727261792e657874656e64285b6e2c206e5d290a2020202072657475726e2061727261790a6060600a0a496e7075743a205b312c20312c20322c20325d0a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e"
+        },
+        "code_provenance": [
+          "scripts/prepare_external_benchmark.py::_cruxeval_prompt",
+          "src/epistemic_geometry/benchmarks/external/base.py::ExternalItem.prompt_hash",
+          "src/epistemic_geometry/reproducibility.py::stable_digest"
+        ],
+        "hash_payload_utf8_hex": "45585445524e414c2d50524f4d50541f536f6c76652074686520666f6c6c6f77696e6720636f64652d6f75747075742070726564696374696f6e2070726f626c656d2e0a0a507974686f6e2066756e6374696f6e3a0a606060707974686f6e0a6465662066286172726179293a0a202020206e203d2061727261792e706f7028290a2020202061727261792e657874656e64285b6e2c206e5d290a2020202072657475726e2061727261790a6060600a0a496e7075743a205b312c20312c20322c20325d0a0a526561736f6e206361726566756c6c792c207468656e20656e6420776974682065786163746c79206f6e65206c696e6520696e2074686520666f726d2046494e414c3a203c74686520657861637420507974686f6e206f75747075743e2e20446f206e6f742061646420746578742061667465722046494e414c2e",
+        "hash_procedure": "SHA256(UTF8('EXTERNAL-PROMPT') || 0x1f || exact_prompt_utf8_bytes)",
+        "hash_schema": "stable-digest-v1:EXTERNAL-PROMPT",
+        "namespaced_hash": "9ad6244f70f20671a1974aec6c94806d43d04112db26deb10c0350dc36842a09",
+        "raw_prompt_text": "Solve the following code-output prediction problem.\n\nPython function:\n```python\ndef f(array):\n    n = array.pop()\n    array.extend([n, n])\n    return array\n```\n\nInput: [1, 1, 2, 2]\n\nReason carefully, then end with exactly one line in the form FINAL: <the exact Python output>. Do not add text after FINAL.",
+        "template_version": "external-benchmark-cruxeval-prompt-v1"
+      },
+      "historical_artifacts_containing_item_id": [
+        "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+        "review/gate11_1_artifact_complete_replication/CRUX_ITEM_SELECTION.json",
+        "review/gate11_1_artifact_complete_replication/FIXED_SEQUENCE_SCHEDULE.json",
+        "review/gate11_1_artifact_complete_replication/RAW_SHARD_MANIFEST.json",
+        "review/gate11_domain_conditioned_control/CRUX_ITEM_SELECTION.json",
+        "review/gate11_domain_conditioned_control/FIXED_SEQUENCE_PROPAGATION.csv",
+        "review/gate11_domain_conditioned_control/FIXED_SEQUENCE_SCHEDULE.json",
+        "review/gate11_domain_conditioned_control/SOURCE_ACTIVATION_SCHEDULE.json",
+        "review/gate11_domain_conditioned_control/fixed_sequence_journal.jsonl",
+        "review/gate11_domain_conditioned_control/manifest_hashes.json",
+        "review/gate11_domain_conditioned_control/source_activation_journal.jsonl",
+        "review/gate12_utility_aligned_pullback/CONTROL_VALIDATION_ITEMS.json",
+        "review/gate12_utility_aligned_pullback/GEOMETRY_SCHEDULE.json",
+        "review/gate13_1_all_layer_causal_atlas/FINAL_EVALUATION_ITEMS.json",
+        "review/gate13_1_all_layer_causal_atlas/FINAL_EVALUATION_SCHEDULE.json",
+        "review/gate13_1_all_layer_causal_atlas/ITEM_CONTRIBUTIONS.csv",
+        "review/gate13_1_all_layer_causal_atlas/LAYER_DOSE_ITEMS.json",
+        "review/gate13_1_all_layer_causal_atlas/LAYER_DOSE_SCHEDULE.json",
+        "review/gate13_1_all_layer_causal_atlas/LOO_SENSITIVITY.csv",
+        "review/gate13_cross_model_ministral3/ALLOCATION_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/DEVELOPMENT_REUSE_POOL.json",
+        "review/gate13_cross_model_ministral3/DOSE_CALIBRATION_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/FINAL_EVALUATION_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_MANIFEST.json",
+        "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_SCHEDULE.json",
+        "review/gate13_cross_model_ministral3/MASTER_PROTOCOL_LOCK.json",
+        "review/gate13_cross_model_ministral3/journal.jsonl",
+        "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_2_first_stage_repair_mean_bridge/EVALUATION_MANIFEST.json",
+        "review/gate6_3_semantic_validity_audit/LOO_SENSITIVITY.csv",
+        "review/gate6_3_semantic_validity_audit/ROW_REANALYSIS_V3.csv",
+        "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_RESULTS.csv",
+        "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_SCHEDULE.json",
+        "review/gate6_3_single_mean_semantic_evaluation/journal.jsonl",
+        "review/gate6_layer_source_rfm_atlas/ALLOCATION_SUMMARY.json",
+        "review/gate6_layer_source_rfm_atlas/CONTROLLER_EVALUATION.json",
+        "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+        "review/gate6_layer_source_rfm_atlas/SOURCE_VALIDATION_RESERVE.json",
+        "review/gate7_fresh_l27_replication/EVALUATION_MANIFEST.json",
+        "review/gate7_fresh_l27_replication/EVALUATION_SCHEDULE.json",
+        "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate7_fresh_l27_replication/ITEM_CONTRIBUTIONS.csv",
+        "review/gate7_fresh_l27_replication/LOO_SENSITIVITY.csv",
+        "review/gate8_l27_dose_calibration/CALIBRATION_MANIFEST.json",
+        "review/gate8_l27_dose_calibration/CALIBRATION_SCHEDULE.json",
+        "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/EVALUATION_MANIFEST.json",
+        "review/gate9_selected_d75_evaluation/EVALUATION_SCHEDULE.json",
+        "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/gate9_selected_d75_evaluation/ITEM_CONTRIBUTIONS.csv",
+        "review/gate9_selected_d75_evaluation/LOO_SENSITIVITY.csv",
+        "review/gate9_selected_d75_evaluation/REMAINING_FRESH_AVAILABILITY.json",
+        "review/micro_q1/EVALUATION_MANIFEST.json",
+        "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json",
+        "review/q1_confirmatory_fixed_controllers/HOLDOUT_PROVENANCE_AUDIT.json",
+        "review/q1_confirmatory_fixed_controllers/LOO_SENSITIVITY.csv",
+        "review/q1_confirmatory_fixed_controllers/SEED_SCHEDULE_LOCK.json",
+        "review/q2_controller_bank_v2/V2_COMMON_PANEL_MANIFEST.json",
+        "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE.json",
+        "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE_TEMPLATE.json",
+        "review/q2_controller_bank_v2/V2_COVARIANCE_CAPTURE_METADATA.json",
+        "review/q2_controller_bank_v2/V2_COVARIANCE_MANIFEST.json",
+        "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+        "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json",
+        "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+        "review/q2_v3_radial_angular_freeze/M1_COVARIANCE_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/M2_PROBE_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md",
+        "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json",
+        "review/q2_v3_radial_angular_freeze/SOURCE_CONSTRUCTION_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.json",
+        "review/substrate_race/CRUXEVAL_MANIFEST.jsonl",
+        "scripts/prepare_full_nonthinking_smoke.py"
+      ],
+      "historical_git_changes_containing_item_id": [
+        {
+          "commit": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.json",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_FORENSIC_AUDIT.md"
+          ],
+          "subject": "Audit Q2 V3 pre-panel terminal state"
+        },
+        {
+          "commit": "8f7b0eec98cb7f2b21186bf4c9f2b5b60f79963c",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/Q2_V3_EXECUTION_REPORT.md",
+            "review/q2_v3_radial_angular_freeze/Q2_V3_PANEL_PROVENANCE_FAILURE.json"
+          ],
+          "subject": "Close Q2 V3 on frozen provenance mismatch"
+        },
+        {
+          "commit": "b9ea78c87b16278fc385ee5fd8a5218de59fb5c8",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_v3_radial_angular_freeze/EVALUATION_SCHEDULE.json",
+            "review/q2_v3_radial_angular_freeze/M1_COVARIANCE_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/M2_PROBE_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/PRIMARY_PANEL_MANIFEST.json",
+            "review/q2_v3_radial_angular_freeze/SOURCE_CONSTRUCTION_MANIFEST.json"
+          ],
+          "subject": "Freeze Q2 V3 radial angular protocol"
+        },
+        {
+          "commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
+          "date": "2026-08-25",
+          "paths": [
+            "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+            "review/q2_m3_qualification_cruxeval_provenance/Q2_V3_PROPOSED_PRIMARY_PANEL.json"
+          ],
+          "subject": "Prepare M3 qualification and CRUXEval provenance audit"
+        },
+        {
+          "commit": "2c9c5483f7dcf112ade7a46abfba9cbaead9a548",
+          "date": "2026-08-24",
+          "paths": [
+            "review/q2_controller_bank_v2/V2_COVARIANCE_CAPTURE_METADATA.json"
+          ],
+          "subject": "close Q2 V2 at hard cost gate"
+        },
+        {
+          "commit": "090e26b67f246b651d912dc1f44897454eb96aab",
+          "date": "2026-08-24",
+          "paths": [
+            "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE.json"
+          ],
+          "subject": "lock Q2 V2 qualified controller bank"
+        },
+        {
+          "commit": "3c35cfba572a864d945c1fe6d59ee321e2a3b704",
+          "date": "2026-08-24",
+          "paths": [
+            "review/q2_controller_bank_v2/V2_COMMON_PANEL_MANIFEST.json",
+            "review/q2_controller_bank_v2/V2_COMMON_PANEL_SCHEDULE_TEMPLATE.json",
+            "review/q2_controller_bank_v2/V2_COVARIANCE_MANIFEST.json"
+          ],
+          "subject": "lock Q2 V2 pre-source protocol"
+        },
+        {
+          "commit": "0a6127eb6bff68b27f64bbbbdf8d813561e00e76",
+          "date": "2026-08-24",
+          "paths": [
+            "review/q1_confirmatory_fixed_controllers/LOO_SENSITIVITY.csv"
+          ],
+          "subject": "confirmatory: close fixed-controller holdout test"
+        },
+        {
+          "commit": "2fd165e20a1116835097e4867d0d7d652c5227ab",
+          "date": "2026-08-23",
+          "paths": [
+            "review/q1_confirmatory_fixed_controllers/SEED_SCHEDULE_LOCK.json"
+          ],
+          "subject": "confirmatory: lock fixed-controller cross-model test"
+        },
+        {
+          "commit": "2aff0a8f3e9006731066f4d91ebaa638d84fe2e0",
+          "date": "2026-08-23",
+          "paths": [
+            "review/q1_confirmatory_fixed_controllers/HOLDOUT_PROVENANCE_AUDIT.json"
+          ],
+          "subject": "confirmatory: audit sealed CRUXEval holdout identity"
+        },
+        {
+          "commit": "3de38360065a2e41e0e66942e0d153b6213a8336",
+          "date": "2026-08-23",
+          "paths": [
+            "review/gate13_1_all_layer_causal_atlas/FINAL_EVALUATION_SCHEDULE.json",
+            "review/gate13_1_all_layer_causal_atlas/ITEM_CONTRIBUTIONS.csv",
+            "review/gate13_1_all_layer_causal_atlas/LOO_SENSITIVITY.csv"
+          ],
+          "subject": "gate13.1: complete final cross-model evaluation"
+        },
+        {
+          "commit": "164fd26e41a159e7664bb8970a512008c6f3d1ce",
+          "date": "2026-08-23",
+          "paths": [
+            "review/gate13_1_all_layer_causal_atlas/LAYER_DOSE_SCHEDULE.json"
+          ],
+          "subject": "gate13.1: lock Stage B layer-dose candidates"
+        },
+        {
+          "commit": "b050db7a7f9451d9a78360dec3906d02a1980ae9",
+          "date": "2026-08-23",
+          "paths": [
+            "review/gate13_1_all_layer_causal_atlas/FINAL_EVALUATION_ITEMS.json",
+            "review/gate13_1_all_layer_causal_atlas/LAYER_DOSE_ITEMS.json"
+          ],
+          "subject": "gate13.1: freeze prospective all-layer protocol"
+        },
+        {
+          "commit": "ac6a79d0bbd7e282f316aceccb8f164d0e90ad24",
+          "date": "2026-08-23",
+          "paths": [
+            "review/gate13_cross_model_ministral3/journal.jsonl"
+          ],
+          "subject": "gate13: close causal layer first-stage null"
+        },
+        {
+          "commit": "4d4c331f0b7d8236e68a93d267063e80aabe10ab",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_SCHEDULE.json"
+          ],
+          "subject": "gate13: freeze source atlas and layer shortlist"
+        },
+        {
+          "commit": "46056559f9681be38a62e626c7edca8d5c357fca",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate13_cross_model_ministral3/ALLOCATION_MANIFEST.json",
+            "review/gate13_cross_model_ministral3/DEVELOPMENT_REUSE_POOL.json",
+            "review/gate13_cross_model_ministral3/DOSE_CALIBRATION_MANIFEST.json",
+            "review/gate13_cross_model_ministral3/FINAL_EVALUATION_MANIFEST.json",
+            "review/gate13_cross_model_ministral3/LAYER_FIRST_STAGE_MANIFEST.json",
+            "review/gate13_cross_model_ministral3/MASTER_PROTOCOL_LOCK.json"
+          ],
+          "subject": "gate13: freeze prospective master protocol"
+        },
+        {
+          "commit": "91e98830a51a8fc388bd262331729b81998ddf7d",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate12_utility_aligned_pullback/CONTROL_VALIDATION_ITEMS.json",
+            "review/gate12_utility_aligned_pullback/GEOMETRY_SCHEDULE.json"
+          ],
+          "subject": "gate12: freeze utility-aligned pullback protocol"
+        },
+        {
+          "commit": "d4c23abc44c3306ac7fe6055e4ffcefe51d47387",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate11_1_artifact_complete_replication/RAW_SHARD_MANIFEST.json"
+          ],
+          "subject": "gate11.1: close artifact-complete primary replication"
+        },
+        {
+          "commit": "963c15bebf26e5cab1a85da7244242499ebb6de5",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate11_1_artifact_complete_replication/CRUX_ITEM_SELECTION.json",
+            "review/gate11_1_artifact_complete_replication/FIXED_SEQUENCE_SCHEDULE.json"
+          ],
+          "subject": "gate11.1: freeze artifact-complete forensic lock"
+        },
+        {
+          "commit": "55c895b12e1b8e65dac72eb8c27e312e13fd70b3",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate11_domain_conditioned_control/manifest_hashes.json"
+          ],
+          "subject": "gate11: audit persistence and close postmortem"
+        },
+        {
+          "commit": "3e60b214d79c33f32c552df5e7e15839ab2875dd",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate11_domain_conditioned_control/FIXED_SEQUENCE_PROPAGATION.csv",
+            "review/gate11_domain_conditioned_control/fixed_sequence_journal.jsonl",
+            "review/gate11_domain_conditioned_control/source_activation_journal.jsonl"
+          ],
+          "subject": "gate11: preserve diagnostics and primary synthesis"
+        },
+        {
+          "commit": "f51744be0321e40483233eee68fe3514e2d1520d",
+          "date": "2026-08-22",
+          "paths": [
+            "review/gate11_domain_conditioned_control/CRUX_ITEM_SELECTION.json",
+            "review/gate11_domain_conditioned_control/FIXED_SEQUENCE_SCHEDULE.json",
+            "review/gate11_domain_conditioned_control/SOURCE_ACTIVATION_SCHEDULE.json"
+          ],
+          "subject": "gate11: prepare domain-conditioned diagnostics"
+        },
+        {
+          "commit": "0648f57476845e8bc6b5bf1169ed1a13a4a44a01",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/ITEM_CONTRIBUTIONS.csv",
+            "review/gate9_selected_d75_evaluation/LOO_SENSITIVITY.csv"
+          ],
+          "subject": "gate9: close selected D75 evaluation"
+        },
+        {
+          "commit": "0eb5fd466ed78d2dcbc07a3f506e02c098cf2945",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate9_selected_d75_evaluation/EVALUATION_MANIFEST.json",
+            "review/gate9_selected_d75_evaluation/EVALUATION_SCHEDULE.json",
+            "review/gate9_selected_d75_evaluation/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate9_selected_d75_evaluation/REMAINING_FRESH_AVAILABILITY.json"
+          ],
+          "subject": "gate9: lock fresh D75 evaluation"
+        },
+        {
+          "commit": "281ff294f30ec19efa9ac00bbc719bab8bf48be0",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate8_l27_dose_calibration/CALIBRATION_MANIFEST.json",
+            "review/gate8_l27_dose_calibration/CALIBRATION_SCHEDULE.json",
+            "review/gate8_l27_dose_calibration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Add Gate 8 dose-calibration premortem and implementation"
+        },
+        {
+          "commit": "93de60d6ecd0d8f60e4bd22469ca2b83b9e300be",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/ITEM_CONTRIBUTIONS.csv",
+            "review/gate7_fresh_l27_replication/LOO_SENSITIVITY.csv"
+          ],
+          "subject": "Record Gate 7 primary replication result"
+        },
+        {
+          "commit": "647b1d6be2ae5f59a37676fc0abc087a82d928fb",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate7_fresh_l27_replication/EVALUATION_MANIFEST.json",
+            "review/gate7_fresh_l27_replication/EVALUATION_SCHEDULE.json",
+            "review/gate7_fresh_l27_replication/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Lock Gate 7 fresh L27 replication"
+        },
+        {
+          "commit": "ff0385f77622b7b5b296c0d4cb872bc8ec010fc1",
+          "date": "2026-08-21",
+          "paths": [
+            "review/gate6_3_semantic_validity_audit/LOO_SENSITIVITY.csv",
+            "review/gate6_3_semantic_validity_audit/ROW_REANALYSIS_V3.csv"
+          ],
+          "subject": "Complete Gate 6.3 semantic validity audit"
+        },
+        {
+          "commit": "32a3cd2f0ec303fcc7951fbaf694db46265cc321",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_RESULTS.csv",
+            "review/gate6_3_single_mean_semantic_evaluation/journal.jsonl"
+          ],
+          "subject": "Close Gate 6.3 single-mean semantic evaluation"
+        },
+        {
+          "commit": "1a343e734fb6cfca995bc6ee99c51f0d6ec8d6fd",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_2_first_stage_repair_mean_bridge/EVALUATION_MANIFEST.json",
+            "review/gate6_3_single_mean_semantic_evaluation/EVALUATION_SCHEDULE.json"
+          ],
+          "subject": "Track compact Gate 6.3 execution lock payload"
+        },
+        {
+          "commit": "607cbcbbeae051a965c344c6f51f198e81287796",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate6_layer_source_rfm_atlas/SOURCE_CANDIDATE_ORDER.json",
+            "review/gate6_layer_source_rfm_atlas/SOURCE_HISTORICAL_EXCLUSION.json",
+            "review/gate6_layer_source_rfm_atlas/SOURCE_VALIDATION_RESERVE.json"
+          ],
+          "subject": "Freeze Gate 6.1 source attrition repair lock"
+        },
+        {
+          "commit": "062486a752b333ff0f91e423c1ec914f92d61a40",
+          "date": "2026-08-20",
+          "paths": [
+            "experiments/specs/gate6_layer_source_rfm_atlas.yaml",
+            "review/gate6_layer_source_rfm_atlas/ALLOCATION_SUMMARY.json",
+            "review/gate6_layer_source_rfm_atlas/CONTROLLER_EVALUATION.json",
+            "review/gate6_layer_source_rfm_atlas/HISTORICAL_EXCLUSION_DIGEST.json",
+            "review/gate6_layer_source_rfm_atlas/PROTOCOL_LOCK.json"
+          ],
+          "subject": "Freeze Gate 6 source atlas protocol"
+        },
+        {
+          "commit": "3016711ec8570bd2eba34c2ca6c3ff421aa6a647",
+          "date": "2026-08-20",
+          "paths": [
+            "review/gate5_source_duration/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 5 source duration bridge"
+        },
+        {
+          "commit": "58342cd9bd54e808a7c80049da4c80f0f8fd9245",
+          "date": "2026-08-19",
+          "paths": [
+            "review/micro_q1/EVALUATION_MANIFEST.json",
+            "review/micro_q1/HISTORICAL_EXCLUSION_DIGEST.json"
+          ],
+          "subject": "Freeze Gate 4 first micro-Q1 protocol and fresh split"
+        },
+        {
+          "commit": "fa7cb866ca1e4953a49bec18649e4c1f753a0eac",
+          "date": "2026-08-19",
+          "paths": [
+            "review/substrate_race/CRUXEVAL_MANIFEST.json",
+            "review/substrate_race/CRUXEVAL_MANIFEST.jsonl"
+          ],
+          "subject": "Freeze Gate 3 common item manifests"
+        },
+        {
+          "commit": "2d03624ebc594f504a0f19c6104c8c8909fd5de1",
+          "date": "2026-08-19",
+          "paths": [
+            "scripts/prepare_full_nonthinking_smoke.py"
+          ],
+          "subject": "Authorize Gate 1 full non-thinking smoke"
+        }
+      ],
+      "item_id": "sample_21",
+      "manifest": "PRIMARY_PANEL_MANIFEST.json",
+      "official_index": 21,
+      "official_source_fields": {
+        "code": "def f(array):\n    n = array.pop()\n    array.extend([n, n])\n    return array",
+        "id": "sample_21",
+        "input": "[1, 1, 2, 2]",
+        "output": "[1, 1, 2, 2, 2]"
+      },
+      "purpose": "PRIMARY_SEMANTIC_PANEL",
+      "reference_answer": "[1, 1, 2, 2, 2]",
+      "reference_hash_matches_frozen": true,
+      "reference_sha256": "506c55461ac2260acd0f696b51f60a844e4b0c97f4f06b81a5d4fe242121c45c"
+    }
+  ],
+  "schema_version": "q2-v3-nine-item-byte-comparison-v1"
+}

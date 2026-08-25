@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "all_nine_are_p2_wording_changes": true,
+    "all_reference_hashes_match": true,
+    "nine_ids_reproduced": true,
+    "no_amendment_silently_created": true,
+    "original_clean_abort_artifacts_immutable": true,
+    "original_zero_outcome_state_preserved": true,
+    "primary_n_200": true,
+    "primary_ordered_id_hash_preserved": true,
+    "q3_not_run": true,
+    "schema_counts_reproduced": true,
+    "six_purpose_manifests_covered": true,
+    "source_subset_336_unique": true,
+    "terminal_decision_is_principal_review": true
+  },
+  "classification": "Q2_V3_PROVENANCE_RECONCILIATION_AUDIT_PASS",
+  "independent_mismatch_ids": [
+    "sample_21",
+    "sample_74",
+    "sample_145",
+    "sample_300",
+    "sample_659",
+    "sample_698",
+    "sample_700",
+    "sample_745",
+    "sample_777"
+  ],
+  "independent_schema_counts": {
+    "CURRENT_TEMPLATE_RAW_SHA256": 327,
+    "LEGACY_TEMPLATE_EXTERNAL_PROMPT": 9
+  },
+  "model_inference": "NONE",
+  "prediction_matrices": "NONE",
+  "q3": "NOT_RUN",
+  "schema_version": "q2-v3-prompt-reconciliation-independent-audit-v1",
+  "semantic_trajectories": 0
+}

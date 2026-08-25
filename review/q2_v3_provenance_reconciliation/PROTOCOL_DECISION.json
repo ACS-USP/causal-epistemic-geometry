@@ -1,0 +1,28 @@
+{
+  "amendment1_created": false,
+  "classification_counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 9,
+    "P3": 0
+  },
+  "new_inference": false,
+  "original_failed_execution": {
+    "classification": "Q2_V3_PANEL_PROVENANCE_MISMATCH",
+    "forensic_classification": "Q2_V3_FORENSIC_CLEAN",
+    "head": "9b1bc16ea6893ed798575a6850f6db602532ef69",
+    "prediction_lock_created": false,
+    "scientific_trajectories": 0,
+    "semantic_outcomes_opened": false
+  },
+  "original_freeze": {
+    "head": "c9292d2baecb41de786912b77c39734855ed46cb",
+    "source_commit": "9a748de3706a788f8c6c5a1d12c09489808006e8",
+    "status": "Q2_V3_FROZEN_NOT_RUN_PRESERVED"
+  },
+  "q3": "NOT_RUN",
+  "schema_version": "q2-v3-provenance-reconciliation-decision-v1",
+  "scientific_components_changed": [],
+  "terminal_state": "Q2_V3_REFREEZE_REQUIRES_PRINCIPAL_RESEARCHER_DECISION",
+  "why_no_automatic_amendment": "The nine exact user-prompt byte strings differ in behaviorally plausible wording and instructions. The original prospective freeze did not bind a global prompt template version or exact prompt bytes for all 336 records; the executor's global Gate-7 template choice was introduced after the freeze. Selecting either template now is therefore a scientific design choice requiring principal review."
+}
