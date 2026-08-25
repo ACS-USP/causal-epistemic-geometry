@@ -1540,7 +1540,7 @@ experiments:
 
   - id: Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE
     version: V3-FREEZE-V1
-    stage: DEVELOPMENT_PROSPECTIVE_FREEZE
+    stage: DEVELOPMENT_EXECUTION_AUTHORIZED
     question: >-
       After matching implemented intervention amplitude, does pre-outcome
       internal geometry prospectively predict which semantic blind spots differ
@@ -1549,14 +1549,15 @@ experiments:
       Qwen3-8B L27; five new textual source families; prompt/execution paired
       means; two implemented-amplitude shells; M0/M1/M2; 200 historical
       provenance-Class-C CRUXEval items reserved for later semantic execution
-    model_policy: No model loaded and no inference in the freeze sprint
-    status: Q2_V3_FROZEN_NOT_RUN
+    model_policy: Frozen Qwen3-8B BF16/SDPA execution; semantic panel only after every pre-panel gate
+    status: Q2_V3_EXECUTION_AUTHORIZED_NOT_STARTED
     outcome: >-
       Every controller construction, qualification, shell, null, geometry,
       prediction-lock, analysis, classification, schedule, seed, cost, wallet,
       and stopping choice is prospectively frozen. The panel selection was
       independently reproduced from provenance and SHA-256 ordering without
-      outcome values. Semantic trajectories remain zero.
+      outcome values. A separate principal authorization now permits exactly one
+      mechanical execution; semantic trajectories remain zero at authorization.
     scientific_interpretation: >-
       This is a protocol state, not a Q2 result. The future evidence class is
       historical-item/prospective-controller same-domain validation, not
