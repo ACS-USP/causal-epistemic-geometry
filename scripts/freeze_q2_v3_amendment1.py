@@ -317,7 +317,7 @@ def verify_zero_outcome() -> dict[str, Any]:
     result = {
         "schema_version": "q2-v3-amendment1-zero-outcome-verification-v1",
         "failed_execution_classification": failure["classification"],
-        "forensic_classification": forensic["classification"],
+        "forensic_classification": forensic["audit_classification"],
         "scientific_trajectories": 0,
         "semantic_outcomes_opened": False,
         "prediction_matrices": "NONE",
