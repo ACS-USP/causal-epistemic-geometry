@@ -1,0 +1,39 @@
+{
+  "schema_version": "q2-v3-replacement-family-independent-design-audit-v1",
+  "classification": "Q2_V3_REPLACEMENT_FAMILY_DESIGN_AUDIT_CLEAN",
+  "checks": {
+    "official_records_336_unique": true,
+    "primary_panel_200_frozen_not_run": true,
+    "source_construction_24": true,
+    "source_validation_24": true,
+    "allocation_sets_pairwise_disjoint": true,
+    "available_static_records_88": true,
+    "static_projection_digest_reproduced": true,
+    "benchmark_output_excluded_by_allowlist": true,
+    "candidate_model_inference_zero": true,
+    "candidate_behavioral_qualification_zero": true,
+    "candidate_representation_capture_zero": true,
+    "correctness_inspected_for_selection_no": true,
+    "semantic_panel_rows_zero": true,
+    "shell_calibration_rows_zero": true,
+    "geometry_values_zero": true,
+    "q3_not_run": true,
+    "historical_amendment1_result_preserved": true
+  },
+  "independent_set_reproduction": {
+    "official_records": 336,
+    "unique_ids": 336,
+    "primary_panel": 200,
+    "source_construction": 24,
+    "source_validation": 24,
+    "pairwise_overlap_counts": {
+      "primary_construction": 0,
+      "primary_validation": 0,
+      "construction_validation": 0
+    },
+    "available_disjoint_records": 88,
+    "available_static_projection_sha256": "c8cbe0a271091e07d9090bb79d389549ab6bb0af0ccf44cdeb37e8be1ead970d"
+  },
+  "decision": "PATH_B_FOUR_FAMILY",
+  "terminal_state": "Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED"
+}

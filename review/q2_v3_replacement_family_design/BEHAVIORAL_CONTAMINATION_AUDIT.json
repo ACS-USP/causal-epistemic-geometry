@@ -1,0 +1,24 @@
+{
+  "schema_version": "q2-v3-replacement-family-contamination-audit-v1",
+  "classification": "Q2_V3_REPLACEMENT_DESIGN_CONTAMINATION_FIREWALL_PASS",
+  "analysis_mode": "CPU_ONLY_DESIGN_ONLY",
+  "new_model_inference": 0,
+  "runpod_resources_created": 0,
+  "candidate_behavioral_qualification": 0,
+  "candidate_representations_collected": 0,
+  "correctness_inspected_for_selection": false,
+  "historical_controller_outcomes_used_for_ranking": false,
+  "q2_v3_semantic_outcomes": 0,
+  "shell_calibration_rows": 0,
+  "geometry_values_computed": 0,
+  "prediction_locks_created": 0,
+  "q3_executed": false,
+  "prior_behavioral_exposure_used_only_as_contamination_flag": true,
+  "decision": "PATH_B_FOUR_FAMILY",
+  "replacement_family_frozen": false,
+  "notes": [
+    "The existence of prior Q2 V2 source-policy runs was used only to exclude behaviorally exposed neighboring concepts.",
+    "No numerical Q2 V2 qualification margin was used.",
+    "The static loader allowlists task fields and excludes the benchmark output field."
+  ]
+}

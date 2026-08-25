@@ -1,0 +1,25 @@
+{
+  "schema_version": "q2-v3-replacement-family-static-pool-audit-v1",
+  "classification": "STATIC_SOURCE_POOL_AUDIT_PASS",
+  "input_provenance_records": 336,
+  "excluded_unopened_primary_panel": 200,
+  "excluded_prior_source_construction": 24,
+  "excluded_prior_source_validation": 24,
+  "available_disjoint_records": 88,
+  "available_static_projection_sha256": "c8cbe0a271091e07d9090bb79d389549ab6bb0af0ccf44cdeb37e8be1ead970d",
+  "output_field_used": false,
+  "model_behavior_used": false,
+  "correctness_used": false,
+  "candidate_counts": {
+    "INTERMEDIATE_DATAFLOW_COMPOSITION": {"static_positive": 30, "static_negative": 58},
+    "SCOPE_BINDING_SHADOWING": {"static_positive": 6, "static_negative": 82},
+    "SHORT_CIRCUIT_EVALUATION": {"static_positive": 6, "static_negative": 82},
+    "TYPE_COERCION_SEMANTICS": {"static_positive": 14, "static_negative": 74},
+    "EXCEPTION_ERROR_PATH": {"static_positive": 1, "static_negative": 87},
+    "RECURSION_BASE_CASE": {"static_positive": 1, "static_negative": 87},
+    "ORDERING_SIDE_EFFECT_DEPENDENCE": {"static_positive": 10, "static_negative": 78},
+    "DATA_STRUCTURE_INVARIANT": {"static_positive": 22, "static_negative": 66}
+  },
+  "selected_candidate": null,
+  "decision": "Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED"
+}
