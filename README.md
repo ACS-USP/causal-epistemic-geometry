@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_AMENDMENT1_FROZEN_NOT_RUN` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_AMENDMENT1_EXECUTION_AUTHORIZED` — **scientific claim:** `NONE_FROZEN`.
 
-After the clean zero-inference provenance abort and P2 reconciliation, the principal researcher prospectively selected the Gate-7 task prompt globally. Freeze Amendment 1 rebuilds all 336 prompt records with one exact-byte constructor and one typed provenance schema. The independent audit found zero byte, lock, identity, inherited-science, or legacy-execution mismatches; the 200-item panel and ordered-ID hash are unchanged. Execution remains unauthorized, with zero outcomes or prediction matrices. Q3 is NOT RUN.
+The principal researcher authorized exact mechanical execution of Q2 V3 Freeze Amendment 1. Repository, 336/336 prompt provenance, inherited artifacts, and the 200-item Class-C panel passed CPU preflight with zero mismatches before provisioning. The execution branch physically separates frozen inputs from generated outputs. Pre-panel phases and wallet/cost gates remain mandatory; no semantic outcome or prediction matrix exists yet.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_AND_SEPARATE_EXECUTION_AUTHORIZATION
+**Next authorized action:** REMOTE_PREFLIGHT_THEN_FROZEN_PREPANEL_PHASES
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

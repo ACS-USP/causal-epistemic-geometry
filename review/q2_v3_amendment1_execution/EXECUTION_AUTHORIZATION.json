@@ -1,0 +1,15 @@
+{
+  "schema_version": "q2-v3-amendment1-execution-authorization-v1",
+  "authorization": "APPROVED_TO_EXECUTE_Q2_V3_AMENDMENT1",
+  "branch": "experiment/q2-v3-amendment1-execution",
+  "amendment1_frozen_head": "c0a1ed890ccc0a37bba083d0c920a9150ea3ec1e",
+  "amendment1_source_commit": "80d81259ae52c47b0b03330d80e386b092f80359",
+  "execution_source_commit": "ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b",
+  "canonical_prompt_template": "gate7-cruxeval-semantic-task-prompt-v1",
+  "prompt_provenance_schema": "q2-v3-amendment1-prompt-provenance-v1",
+  "scientific_design_changes": [],
+  "execution_only": true,
+  "m3": "EXCLUDED_NOT_QUALIFIED",
+  "q3": "NOT_RUN",
+  "hard_cost_ceiling_usd": 15.0
+}

@@ -80,6 +80,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "Q2_V3_PANEL_PROVENANCE_MISMATCH",
             "Q2_V3_PROMPT_PROVENANCE_RECONCILIATION",
             "Q2_V3_AMENDMENT1_FREEZE",
+            "Q2_V3_AMENDMENT1_EXECUTION",
         }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
@@ -101,6 +102,7 @@ def test_project_state_and_generated_status_are_current() -> None:
                 "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
                 "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
                 "Q2_V3_RADIAL_ANGULAR_EXECUTION",
+                "Q2_V3_AMENDMENT1_EXECUTION",
             }
     )
     if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":

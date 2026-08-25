@@ -3,7 +3,7 @@ last_verified: "2026-08-25"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_AMENDMENT1_FROZEN_NOT_RUN
+  scientific_stage: Q2_V3_AMENDMENT1_EXECUTION_AUTHORIZED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,23 +19,22 @@ project:
     utility?
 
 current:
-  workstream: Q2_V3_AMENDMENT1_FREEZE
-  lifecycle: PROSPECTIVE_LOCK
-  stage: DEVELOPMENT_FREEZE_AMENDMENT
+  workstream: Q2_V3_AMENDMENT1_EXECUTION
+  lifecycle: ENGINEERING
+  stage: DEVELOPMENT_EXECUTION
   source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
-  execution_source_commit: NOT_AUTHORIZED
+  execution_source_commit: ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b
   summary: >-
-    After the clean zero-inference provenance abort and P2 reconciliation, the
-    principal researcher prospectively selected the Gate-7 task prompt globally.
-    Freeze Amendment 1 rebuilds all 336 prompt records with one exact-byte
-    constructor and one typed provenance schema. The independent audit found
-    zero byte, lock, identity, inherited-science, or legacy-execution mismatches;
-    the 200-item panel and ordered-ID hash are unchanged. Execution remains
-    unauthorized, with zero outcomes or prediction matrices. Q3 is NOT RUN.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_AND_SEPARATE_EXECUTION_AUTHORIZATION
+    The principal researcher authorized exact mechanical execution of Q2 V3
+    Freeze Amendment 1. Repository, 336/336 prompt provenance, inherited
+    artifacts, and the 200-item Class-C panel passed CPU preflight with zero
+    mismatches before provisioning. The execution branch physically separates
+    frozen inputs from generated outputs. Pre-panel phases and wallet/cost gates
+    remain mandatory; no semantic outcome or prediction matrix exists yet.
+  next_authorized_action: REMOTE_PREFLIGHT_THEN_FROZEN_PREPANEL_PHASES
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: Q2_V3_AMENDMENT1_ONLY
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -44,7 +43,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_AMENDMENT1_FROZEN_NOT_RUN
+  current_task: Q2_V3_AMENDMENT1_EXECUTION_AUTHORIZED
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -84,6 +83,29 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V3_AMENDMENT1_EXECUTION
+    status: APPROVED_TO_EXECUTE_Q2_V3_AMENDMENT1
+    conclusion: >-
+      Execution authorization is bound to the exact Amendment-1 freeze and an
+      execution branch that writes outside the immutable freeze directory. The
+      CPU preflight reproduced all 336 prompt records, the independent panel
+      check found 200/200 Class-C IDs with zero Class-D or Q2 V2 overlap, and no
+      semantic outcome or prediction matrix existed at authorization.
+    amendment1_frozen_head: c0a1ed890ccc0a37bba083d0c920a9150ea3ec1e
+    source_commit: 80d81259ae52c47b0b03330d80e386b092f80359
+    execution_source_commit: ff97bc22ffd5479e6ea3ae082cc94bad8e632a0b
+    branch: experiment/q2-v3-amendment1-execution
+    artifact: review/q2_v3_amendment1_execution/EXECUTION_AUTHORIZATION.md
+    prompt_preflight: Q2_V3_AMENDMENT1_CPU_PREFLIGHT_PASS
+    prompt_records: 336
+    panel_n: 200
+    panel_ordered_ids_sha256: 969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf
+    scientific_trajectories_at_authorization: 0
+    prediction_matrices_at_authorization: false
+    hard_cost_ceiling_usd: 15.0
+    m3: EXCLUDED_NOT_QUALIFIED
+    q3: NOT_RUN
+
   - id: Q2_V3_AMENDMENT1_FREEZE
     status: Q2_V3_AMENDMENT1_FROZEN_NOT_RUN
     conclusion: >-

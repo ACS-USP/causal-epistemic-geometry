@@ -1,0 +1,32 @@
+{
+  "schema_version": "q2-v3-amendment1-pre-execution-audit-v1",
+  "classification": "Q2_V3_AMENDMENT1_PRE_EXECUTION_PASS",
+  "repository": {
+    "branch": "research/q2-v3-amendment1-freeze",
+    "local_head": "c0a1ed890ccc0a37bba083d0c920a9150ea3ec1e",
+    "remote_head": "c0a1ed890ccc0a37bba083d0c920a9150ea3ec1e",
+    "clean_worktree": true,
+    "source_commit_is_ancestor": true
+  },
+  "prompt_preflight": {
+    "classification": "Q2_V3_AMENDMENT1_CPU_PREFLIGHT_PASS",
+    "records": 336,
+    "mismatches": 0,
+    "legacy_executable_records": 0
+  },
+  "panel": {
+    "n": 200,
+    "unique_ids": 200,
+    "provenance_class_counts": {"C": 200},
+    "class_d_overlap": 0,
+    "q2_v2_common_panel_overlap": 0,
+    "ordered_ids_sha256": "969da4b5bac9c2fddd7e40db1c6a82f019ac84f0fbde4662450354ff528780cf"
+  },
+  "freeze_audit": "Q2_V3_AMENDMENT1_FREEZE_AUDIT_PASS",
+  "inherited_artifact_hash_mismatches": 0,
+  "scientific_trajectories_before_execution": 0,
+  "prediction_matrices_before_execution": "NONE",
+  "wallet_gate": "REQUIRED_AGAIN_BEFORE_SEMANTIC_COLLECTION",
+  "runpod_resources_at_preflight": {"pods": 0, "volumes": 0},
+  "pass": true
+}
