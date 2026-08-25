@@ -1,0 +1,57 @@
+{
+  "artifacts": {
+    "CRUXEVAL_PROVENANCE_AUDIT.json": {
+      "bytes": 31591,
+      "sha256": "a53fe5c7ce44cb54021051a5d2fe41f46f106ffc71db24707b04eaa7c5dd3d25"
+    },
+    "CRUXEVAL_PROVENANCE_LEDGER.jsonl": {
+      "bytes": 5163067,
+      "sha256": "3f8c22baa6fee56fd292cc9dabb9bcd8500c5b09038e2cd7e4715c1668f8a7cc"
+    },
+    "CRUXEVAL_PROVENANCE_REPORT.md": {
+      "bytes": 1295,
+      "sha256": "74c5b9de40c8c86b46a67d876786e2f8c2f55dad748c7111e75f13ba05790b46"
+    },
+    "GATE12_HISTORY_AUDIT.json": {
+      "bytes": 875,
+      "sha256": "fa5fb3abf31049165747a5b336ab84e48bdda31fa0fddeb3a4cc1fa046983e8f"
+    },
+    "GATE12_HISTORY_AUDIT.md": {
+      "bytes": 777,
+      "sha256": "006cbf43f149f42f123f5a12e477f8e59bc8de4fdd7c69e0b00fc6c70617df69"
+    },
+    "M3_ENGINEERING_DIRECTIONS.json": {
+      "bytes": 359,
+      "sha256": "2d39e7866d588e9e5c2e14e36bf68ce074b512f5919bb03075a7e3e4e35e1327"
+    },
+    "M3_ENGINEERING_DIRECTIONS.npz": {
+      "bytes": 188610,
+      "sha256": "da5b0182062b6d11a12b0b6b83924d1cfa57dc1382a6f51723469da6ac7c1774"
+    },
+    "M3_ENGINEERING_FIXTURES.json": {
+      "bytes": 21227,
+      "sha256": "075db638c7bb9698cabb2790650fa4a478582ad7697c33aedb554031538af4d9"
+    },
+    "M3_QUALIFICATION_PROTOCOL.json": {
+      "bytes": 5105,
+      "sha256": "5ebda43850139f1bddfba3782a7706f4467329b6304d104deac400c34ec25365"
+    },
+    "M3_QUALIFICATION_PROTOCOL.md": {
+      "bytes": 944,
+      "sha256": "9dea9759ee3575d7f546616067950dc12d4717821a1cde32dbfbf5cff3477ea9"
+    },
+    "PROTOCOL_LOCK.json": {
+      "bytes": 477,
+      "sha256": "bb2499a7c9515a9e4654cd2bb011c6267f15a9dc8567506542bbd6bae961cfa4"
+    },
+    "PROTOCOL_LOCK.md": {
+      "bytes": 365,
+      "sha256": "31e95da500752418dc5fcf5bc7ab875add569b23741db8cd0e907f75a136d127"
+    },
+    "Q2_V3_PROPOSED_PRIMARY_PANEL.json": {
+      "bytes": 3965,
+      "sha256": "2e495e6543de1f1746add655cfea44eb14629fb876ba366c136f83c25c058f2d"
+    }
+  },
+  "experiment_source_commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283"
+}

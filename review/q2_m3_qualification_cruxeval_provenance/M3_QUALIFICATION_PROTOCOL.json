@@ -12,6 +12,7 @@
     "hard_incremental_ceiling_usd": 2.0,
     "target_usd": 0.75
   },
+  "directions_npz_sha256": "da5b0182062b6d11a12b0b6b83924d1cfa57dc1382a6f51723469da6ac7c1774",
   "engineering_direction_count": 6,
   "epsilons": [
     0.003,
@@ -23,6 +24,7 @@
     3.0,
     10.0
   ],
+  "experiment_source_commit": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
   "firewall": {
     "free_generation": false,
     "q2_v3_behavioral_outcomes": false,
@@ -31,6 +33,7 @@
     "semantic_correctness": false
   },
   "fixture_count": 16,
+  "fixtures_sha256": "075db638c7bb9698cabb2790650fa4a478582ad7697c33aedb554031538af4d9",
   "layer": 27,
   "literal_estimand": "Gamma_ij is the uniform mean over frozen synthetic fixture/checkpoint rows of (J_z v_i)^T (diag(p)-p p^T) (J_z v_j), conditioned on one fixed teacher-forced token sequence per fixture in the FP32 computational lift of BF16-valued parameters.",
   "local_epsilon_max": 1.0,
@@ -38,6 +41,7 @@
   "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
   "object_name": "teacher-forced multi-checkpoint categorical-Fisher controller-span Gram",
   "parameter_realization": "load exact BF16 checkpoint values once and cast those already-rounded values to FP32; do not load a different FP32 checkpoint",
+  "protocol_lock_commit_parent": "b3f9a7ffa48d205d1ea242b953afca0910e34283",
   "qualification_cases": {
     "batch_order_sensitivity": "repeat direction passes, reverse direction order, and compare single-pass versus two-chunk sufficient-statistic aggregation",
     "bf16_geometry_bridge_fixture_indices": [
@@ -131,7 +135,7 @@
     "execution": "FP32 full-sequence use_cache=False",
     "trajectory": "fixed arbitrary synthetic continuation; no generation"
   },
-  "status": "PROSPECTIVE_DRAFT_NOT_YET_COMMITTED",
+  "status": "FROZEN_PRE_REAL_MODEL_QUALIFICATION",
   "threshold_rationale": {
     "bf16_bridge": "retains the prior top-1/JS bridge and adds rank preservation of controller-span radii/distances; failure excludes M3 from Q2 V3",
     "exact_derivatives": "retain Gate-12.1 tolerances that passed independently",
