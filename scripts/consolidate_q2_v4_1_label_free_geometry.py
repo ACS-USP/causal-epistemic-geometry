@@ -66,6 +66,38 @@ def git_head() -> str:
     ).stdout.strip()
 
 
+def tolerance_payload() -> dict[str, Any]:
+    return {
+        "schema_version": "q2-v4.1-local-consolidator-tolerances-v1",
+        "consolidator_script": "scripts/consolidate_q2_v4_1_label_free_geometry.py",
+        "consolidator_commit": git_head(),
+        "a1_recompute_rtol": A1_RECOMPUTE_RTOL,
+        "a1_recompute_atol": A1_RECOMPUTE_ATOL,
+        "a1_matrix_tolerance": A1_MATRIX_TOLERANCE,
+        "a1_range_tolerance": A1_RANGE_TOLERANCE,
+        "a1_condition_maximum": A1_CONDITION_MAXIMUM,
+        "a2_absolute_floor": A2_ABSOLUTE_FLOOR,
+        "a2_cosine_bound_tolerance": A2_COSINE_BOUND_TOLERANCE,
+        "a2_matrix_tolerance": A2_MATRIX_TOLERANCE,
+        "a2_direct_identity_tolerance": A2_DIRECT_IDENTITY_TOLERANCE,
+        "a2_psd_tolerance": A2_PSD_TOLERANCE,
+        "a2_repeat_relative_tolerance": A2_REPEAT_RELATIVE_TOLERANCE,
+        "a2_repeat_rank_threshold": A2_REPEAT_RANK_THRESHOLD,
+        "noise_floor_multiplier": NOISE_FLOOR_MULTIPLIER,
+        "arithmetic": {
+            "log_base": "natural_log",
+            "js": "0.5 KL(p||m) + 0.5 KL(q||m)",
+            "aggregation": "equal_weight_mean_over_48_probe_checkpoint_rows",
+            "input_dtype": "persisted_float32_logits_promoted_to_float64",
+            "output_reduction_dtype": "float64",
+        },
+    }
+
+
+def write_tolerance_artifact() -> None:
+    write_json(REVIEW / "CONSOLIDATOR_TOLERANCES.json", tolerance_payload())
+
+
 def array_hash(value: np.ndarray) -> str:
     array = np.ascontiguousarray(value)
     digest = hashlib.sha256()
@@ -303,34 +335,7 @@ def consolidate(workers: int) -> None:
     lock = read_json(REVIEW / "PROTOCOL_LOCK.json")
     if lock["semantic_execution_authorized"] or lock["semantic_outcomes"] != 0:
         raise RuntimeError("semantic firewall state is invalid")
-    write_json(
-        REVIEW / "CONSOLIDATOR_TOLERANCES.json",
-        {
-            "schema_version": "q2-v4.1-local-consolidator-tolerances-v1",
-            "consolidator_script": "scripts/consolidate_q2_v4_1_label_free_geometry.py",
-            "consolidator_commit": git_head(),
-            "a1_recompute_rtol": A1_RECOMPUTE_RTOL,
-            "a1_recompute_atol": A1_RECOMPUTE_ATOL,
-            "a1_matrix_tolerance": A1_MATRIX_TOLERANCE,
-            "a1_range_tolerance": A1_RANGE_TOLERANCE,
-            "a1_condition_maximum": A1_CONDITION_MAXIMUM,
-            "a2_absolute_floor": A2_ABSOLUTE_FLOOR,
-            "a2_cosine_bound_tolerance": A2_COSINE_BOUND_TOLERANCE,
-            "a2_matrix_tolerance": A2_MATRIX_TOLERANCE,
-            "a2_direct_identity_tolerance": A2_DIRECT_IDENTITY_TOLERANCE,
-            "a2_psd_tolerance": A2_PSD_TOLERANCE,
-            "a2_repeat_relative_tolerance": A2_REPEAT_RELATIVE_TOLERANCE,
-            "a2_repeat_rank_threshold": A2_REPEAT_RANK_THRESHOLD,
-            "noise_floor_multiplier": NOISE_FLOOR_MULTIPLIER,
-            "arithmetic": {
-                "log_base": "natural_log",
-                "js": "0.5 KL(p||m) + 0.5 KL(q||m)",
-                "aggregation": "equal_weight_mean_over_48_probe_checkpoint_rows",
-                "input_dtype": "persisted_float32_logits_promoted_to_float64",
-                "output_reduction_dtype": "float64",
-            },
-        },
-    )
+    write_tolerance_artifact()
     names, coefficients, vectors = load_vectors()
     a0 = 1.0 - coefficients @ coefficients.T
     np.fill_diagonal(a0, 0.0)
@@ -546,9 +551,13 @@ def consolidate(workers: int) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--tolerances-only", action="store_true")
     args = parser.parse_args()
     if args.workers < 1:
         raise SystemExit("--workers must be positive")
+    if args.tolerances_only:
+        write_tolerance_artifact()
+        return
     consolidate(args.workers)
 
 
