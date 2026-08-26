@@ -1,0 +1,39 @@
+{
+  "K_values": [
+    16,
+    20,
+    24,
+    32
+  ],
+  "N_values": [
+    200,
+    300
+  ],
+  "candidate_metrics": [
+    "A0",
+    "A1",
+    "A2"
+  ],
+  "cpu_only": true,
+  "dependence": "controller embeddings, shared item logits, shared items, two Bernoulli rollout blocks, shell-coupled controller permutations",
+  "note": "planning simulation; final V4 QAP uses 50,000 permutations",
+  "qap_permutations_per_replicate": 499,
+  "replicates_per_cell": 120,
+  "rho_values": [
+    0.0,
+    0.1,
+    0.2,
+    0.25,
+    0.3,
+    0.4
+  ],
+  "scenarios": {
+    "correlated_metric_ladder": "A2 combines anisotropic linear and quadratic response features; used for primary K/N power table",
+    "finite_specific_superiority": "A2 uses a synthetic quadratic controller lift with low static-geometry correlation; used only to assess G3 attribution when finite response truly adds structure"
+  },
+  "schema_version": "q2-v4-power-simulation-v1",
+  "semantic_outcomes_read": false,
+  "shape_estimator": "N/(N-1) corrected two-rollout item-population shape estimator",
+  "source_commit": "691ced3779b7b9de0184b73023bf40cba87f5008",
+  "superiority_margin": 0.1
+}

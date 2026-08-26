@@ -1,0 +1,17 @@
+{
+  "classification": "Q2_V4_DESIGN_AUDIT_CLEAN",
+  "source_vector_count": 8,
+  "source_exact_rank": 8,
+  "source_retained_rank": 8,
+  "shape_estimator_finite_panel": "UNBIASED",
+  "shape_estimator_item_population": "REQUIRES_N_OVER_N_MINUS_1_CORRECTION",
+  "m2_angle": "VALID_WITH_MODIFICATIONS",
+  "controller_qap_unit": "CONTROLLER_LABEL",
+  "shell_permutation_coupled": true,
+  "semantic_outcomes_loaded": false,
+  "model_inference": false,
+  "gpu_used": false,
+  "spark_inference": false,
+  "q3": "NOT_RUN",
+  "infra_branch_merged": false
+}

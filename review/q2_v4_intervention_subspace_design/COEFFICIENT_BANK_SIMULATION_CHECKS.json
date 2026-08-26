@@ -1,0 +1,46 @@
+[
+  {
+    "K": 16,
+    "condition_number": 5.05663492401791,
+    "effective_rank": 5.561072508571383,
+    "finite": true,
+    "matrix_rank": 8,
+    "maximum_absolute_pair_cosine": 0.9221676409299863,
+    "maximum_unit_norm_error": 2.220446049250313e-16,
+    "pass": false,
+    "seed": 70314387313527944117618077241624781974
+  },
+  {
+    "K": 20,
+    "condition_number": 3.1320582741502947,
+    "effective_rank": 6.794154330283986,
+    "finite": true,
+    "matrix_rank": 8,
+    "maximum_absolute_pair_cosine": 0.8499901479818703,
+    "maximum_unit_norm_error": 1.1102230246251565e-16,
+    "pass": false,
+    "seed": 63050761357295840281992106827923089099
+  },
+  {
+    "K": 24,
+    "condition_number": 2.650130312379054,
+    "effective_rank": 6.853816278747345,
+    "finite": true,
+    "matrix_rank": 8,
+    "maximum_absolute_pair_cosine": 0.8633615452366887,
+    "maximum_unit_norm_error": 1.1102230246251565e-16,
+    "pass": true,
+    "seed": 51521703581629605552080984308898498936
+  },
+  {
+    "K": 32,
+    "condition_number": 2.4524240629498135,
+    "effective_rank": 7.236845145535995,
+    "finite": true,
+    "matrix_rank": 8,
+    "maximum_absolute_pair_cosine": 0.8639799544855756,
+    "maximum_unit_norm_error": 1.1102230246251565e-16,
+    "pass": true,
+    "seed": 131517969413662918718790292270603986334
+  }
+]
