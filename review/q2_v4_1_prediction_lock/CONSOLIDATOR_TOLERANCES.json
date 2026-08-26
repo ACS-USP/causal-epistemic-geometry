@@ -1,0 +1,25 @@
+{
+  "a1_condition_maximum": 1000000.0,
+  "a1_matrix_tolerance": 1e-10,
+  "a1_range_tolerance": 1e-10,
+  "a1_recompute_atol": 1e-12,
+  "a1_recompute_rtol": 1e-12,
+  "a2_absolute_floor": 1e-12,
+  "a2_cosine_bound_tolerance": 1e-08,
+  "a2_direct_identity_tolerance": 1e-12,
+  "a2_matrix_tolerance": 1e-12,
+  "a2_psd_tolerance": 1e-08,
+  "a2_repeat_rank_threshold": 0.999,
+  "a2_repeat_relative_tolerance": 1e-06,
+  "arithmetic": {
+    "aggregation": "equal_weight_mean_over_48_probe_checkpoint_rows",
+    "input_dtype": "persisted_float32_logits_promoted_to_float64",
+    "js": "0.5 KL(p||m) + 0.5 KL(q||m)",
+    "log_base": "natural_log",
+    "output_reduction_dtype": "float64"
+  },
+  "consolidator_commit": "367190e58ec853a70d23ba0d423d75014044cb61",
+  "consolidator_script": "scripts/consolidate_q2_v4_1_label_free_geometry.py",
+  "noise_floor_multiplier": 100.0,
+  "schema_version": "q2-v4.1-local-consolidator-tolerances-v1"
+}
