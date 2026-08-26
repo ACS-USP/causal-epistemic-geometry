@@ -235,6 +235,8 @@ def _simulate_once(
         "observed_a1": float(observed[a1_index]),
         "observed_a2": float(observed[a2_index]),
         "omnibus_pass": global_p <= 0.05,
+        "a0_attribution_pass": adjusted[a0_index] <= 0.05 and observed[a0_index] > 0.0,
+        "a1_attribution_pass": adjusted[a1_index] <= 0.05 and observed[a1_index] > 0.0,
         "a2_attribution_pass": adjusted[a2_index] <= 0.05 and observed[a2_index] > 0.0,
         "a2_superiority_pass": bool(
             np.all(observed_differences >= 0.10)

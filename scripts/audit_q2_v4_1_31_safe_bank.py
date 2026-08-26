@@ -71,7 +71,15 @@ def binomial_tail(n: int, p: float, minimum: int = 32) -> float:
 
 def read_power() -> list[dict[str, str]]:
     with (REVIEW / "POWER_SIMULATION.csv").open(newline="", encoding="utf-8") as handle:
-        return list(csv.DictReader(handle))
+        rows = list(csv.DictReader(handle))
+    required = {
+        "a0_attribution_rate",
+        "a1_attribution_rate",
+        "a2_attribution_rate",
+    }
+    if not rows or not required.issubset(rows[0]):
+        raise AssertionError("power table must include A0/A1/A2 attribution rates")
+    return rows
 
 
 def row(rows: list[dict[str, str]], k: int, n: int, rho: float) -> dict[str, str]:
@@ -203,6 +211,7 @@ def main() -> None:
         "safe_ids_match_original_order_set": True,
         "coverage_checks_recomputed": checks,
         "power_checks_recomputed": power_checks,
+        "attribution_columns_present": True,
         "max_primary_metric_difference": float(max(
             value["absolute_difference"] for value in crosscheck_rows
         )),

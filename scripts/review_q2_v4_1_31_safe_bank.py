@@ -278,6 +278,8 @@ def _planning_row(
         )
     for label, key in (
         ("omnibus", "omnibus_pass"),
+        ("a0_attribution", "a0_attribution_pass"),
+        ("a1_attribution", "a1_attribution_pass"),
         ("a2_attribution", "a2_attribution_pass"),
         ("a2_superiority", "a2_superiority_pass"),
         ("radial", "radial_pass"),
