@@ -1,0 +1,1212 @@
+{
+  "algorithm": "sha256",
+  "canonical_metadata": {
+    "architecture": "aarch64",
+    "cpu": {
+      "lscpu": [
+        {
+          "data": "aarch64",
+          "field": "Architecture:"
+        },
+        {
+          "data": "64-bit",
+          "field": "CPU op-mode(s):"
+        },
+        {
+          "data": "Little Endian",
+          "field": "Byte Order:"
+        },
+        {
+          "data": "20",
+          "field": "CPU(s):"
+        },
+        {
+          "data": "0-19",
+          "field": "On-line CPU(s) list:"
+        },
+        {
+          "data": "ARM",
+          "field": "Vendor ID:"
+        },
+        {
+          "data": "Cortex-X925",
+          "field": "Model name:"
+        },
+        {
+          "data": "1",
+          "field": "Model:"
+        },
+        {
+          "data": "1",
+          "field": "Thread(s) per core:"
+        },
+        {
+          "data": "10",
+          "field": "Core(s) per socket:"
+        },
+        {
+          "data": "1",
+          "field": "Socket(s):"
+        },
+        {
+          "data": "r0p1",
+          "field": "Stepping:"
+        },
+        {
+          "data": "disabled",
+          "field": "Frequency boost:"
+        },
+        {
+          "data": "100%",
+          "field": "CPU(s) scaling MHz:"
+        },
+        {
+          "data": "3900.0000",
+          "field": "CPU max MHz:"
+        },
+        {
+          "data": "1378.0000",
+          "field": "CPU min MHz:"
+        },
+        {
+          "data": "2000.00",
+          "field": "BogoMIPS:"
+        },
+        {
+          "data": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt",
+          "field": "Flags:"
+        },
+        {
+          "data": "Cortex-A725",
+          "field": "Model name:"
+        },
+        {
+          "data": "1",
+          "field": "Model:"
+        },
+        {
+          "data": "1",
+          "field": "Thread(s) per core:"
+        },
+        {
+          "data": "10",
+          "field": "Core(s) per socket:"
+        },
+        {
+          "data": "1",
+          "field": "Socket(s):"
+        },
+        {
+          "data": "r0p1",
+          "field": "Stepping:"
+        },
+        {
+          "data": "100%",
+          "field": "CPU(s) scaling MHz:"
+        },
+        {
+          "data": "2808.0000",
+          "field": "CPU max MHz:"
+        },
+        {
+          "data": "338.0000",
+          "field": "CPU min MHz:"
+        },
+        {
+          "data": "2000.00",
+          "field": "BogoMIPS:"
+        },
+        {
+          "data": "fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt",
+          "field": "Flags:"
+        },
+        {
+          "data": "1.3 MiB (20 instances)",
+          "field": "L1d cache:"
+        },
+        {
+          "data": "1.3 MiB (20 instances)",
+          "field": "L1i cache:"
+        },
+        {
+          "data": "25 MiB (20 instances)",
+          "field": "L2 cache:"
+        },
+        {
+          "data": "24 MiB (2 instances)",
+          "field": "L3 cache:"
+        },
+        {
+          "data": "1",
+          "field": "NUMA node(s):"
+        },
+        {
+          "data": "0-19",
+          "field": "NUMA node0 CPU(s):"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Gather data sampling:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Ghostwrite:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Indirect target selection:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Itlb multihit:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability L1tf:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Mds:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Meltdown:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Mmio stale data:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Old microcode:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Reg file data sampling:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Retbleed:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Spec rstack overflow:"
+        },
+        {
+          "data": "Mitigation; Speculative Store Bypass disabled via prctl",
+          "field": "Vulnerability Spec store bypass:"
+        },
+        {
+          "data": "Mitigation; __user pointer sanitization",
+          "field": "Vulnerability Spectre v1:"
+        },
+        {
+          "data": "Mitigation; CSV2, BHB",
+          "field": "Vulnerability Spectre v2:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Srbds:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Tsa:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Tsx async abort:"
+        },
+        {
+          "data": "Not affected",
+          "field": "Vulnerability Vmscape:"
+        }
+      ]
+    },
+    "fingerprint_version": "ceg.dgx-spark-fingerprint.v1",
+    "git_head": "2fbcc98fa6026b844074bdaef2ba311b360b7f81",
+    "kernel": {
+      "release": "6.17.0-1026-nvidia",
+      "system": "Linux",
+      "version": "#26-Ubuntu SMP PREEMPT_DYNAMIC Thu Jun 25 00:57:17 UTC 2026"
+    },
+    "memory_total_bytes": 130663170048,
+    "native_nvidia_packages": [
+      {
+        "name": "cuda-cccl-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-command-line-tools-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-compiler-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-compute-repo-lowpri",
+        "version": "25.10-2"
+      },
+      {
+        "name": "cuda-crt-13-0",
+        "version": "13.0.88-1"
+      },
+      {
+        "name": "cuda-cudart-13-0",
+        "version": "13.0.96-1"
+      },
+      {
+        "name": "cuda-cudart-dev-13-0",
+        "version": "13.0.96-1"
+      },
+      {
+        "name": "cuda-culibos-dev-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-cuobjdump-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-cupti-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-cupti-dev-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-cuxxfilt-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-documentation-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-driver-dev-13-0",
+        "version": "13.0.96-1"
+      },
+      {
+        "name": "cuda-gdb-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-libraries-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-libraries-dev-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-nsight-compute-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-nsight-systems-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-nvcc-13-0",
+        "version": "13.0.88-1"
+      },
+      {
+        "name": "cuda-nvdisasm-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-nvml-dev-13-0",
+        "version": "13.0.87-1"
+      },
+      {
+        "name": "cuda-nvprune-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-nvrtc-13-0",
+        "version": "13.0.88-1"
+      },
+      {
+        "name": "cuda-nvrtc-dev-13-0",
+        "version": "13.0.88-1"
+      },
+      {
+        "name": "cuda-nvtx-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-profiler-api-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-sanitizer-13-0",
+        "version": "13.0.85-1"
+      },
+      {
+        "name": "cuda-toolkit-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-toolkit-13-0-config-common",
+        "version": "13.0.96-1"
+      },
+      {
+        "name": "cuda-toolkit-13-config-common",
+        "version": "13.3.29-1"
+      },
+      {
+        "name": "cuda-toolkit-config-common",
+        "version": "13.3.29-1"
+      },
+      {
+        "name": "cuda-tools-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "cuda-visual-tools-13-0",
+        "version": "13.0.3-1"
+      },
+      {
+        "name": "libnvidia-cfg1-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libnvidia-common-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libnvidia-compute-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libnvidia-container-tools",
+        "version": "1.19.1-1"
+      },
+      {
+        "name": "libnvidia-container1",
+        "version": "1.19.1-1"
+      },
+      {
+        "name": "libnvidia-decode-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libnvidia-egl-wayland1",
+        "version": "1:1.1.21-1ubuntu1"
+      },
+      {
+        "name": "libnvidia-encode-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libnvidia-extra-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libnvidia-fbc1-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libnvidia-gl-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "libvncclient1",
+        "version": "0.9.14+dfsg-1ubuntu0.2"
+      },
+      {
+        "name": "linux-headers-6.11.0-1014-nvidia",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-headers-6.17.0-1026-nvidia",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-headers-nvidia-hwe-24.04",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-image-6.11.0-1014-nvidia",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-image-6.17.0-1026-nvidia",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-image-nvidia-hwe-24.04",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-modules-6.11.0-1014-nvidia",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-modules-6.17.0-1026-nvidia",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-modules-extra-6.11.0-1014-nvidia",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-modules-nvidia-580-open-6.11.0-1014-nvidia",
+        "version": "6.11.0-1014.14+2"
+      },
+      {
+        "name": "linux-modules-nvidia-580-open-6.17.0-1026-nvidia",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-modules-nvidia-580-open-nvidia-hwe-24.04",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-modules-nvidia-fs-6.11.0-1014-nvidia",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-modules-nvidia-fs-6.17.0-1026-nvidia",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-modules-nvidia-fs-nvidia-hwe-24.04",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-nvidia-6.11-headers-6.11.0-1014",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-nvidia-6.11-tools-6.11.0-1014",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-nvidia-6.17-headers-6.17.0-1026",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-nvidia-6.17-tools-6.17.0-1026",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-nvidia-hwe-24.04",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-tools-6.11.0-1014-nvidia",
+        "version": "6.11.0-1014.14"
+      },
+      {
+        "name": "linux-tools-6.17.0-1026-nvidia",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "linux-tools-nvidia-hwe-24.04",
+        "version": "6.17.0-1026.26"
+      },
+      {
+        "name": "nvidia-ai-workbench",
+        "version": "0.169.2~17-7778"
+      },
+      {
+        "name": "nvidia-compute-utils-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "nvidia-conf-xconfig",
+        "version": "26.02-1"
+      },
+      {
+        "name": "nvidia-console-settings",
+        "version": "25.07-1"
+      },
+      {
+        "name": "nvidia-container-toolkit",
+        "version": "1.19.1-1"
+      },
+      {
+        "name": "nvidia-container-toolkit-base",
+        "version": "1.19.1-1"
+      },
+      {
+        "name": "nvidia-cppc-cpufreq-options",
+        "version": "25.06-1"
+      },
+      {
+        "name": "nvidia-crashdump",
+        "version": "25.08-1"
+      },
+      {
+        "name": "nvidia-desktop-default-remove-gnome-software-deb",
+        "version": "25.10-1"
+      },
+      {
+        "name": "nvidia-desktop-default-snaps",
+        "version": "25.10-2"
+      },
+      {
+        "name": "nvidia-dgx-telemetry",
+        "version": "5.22"
+      },
+      {
+        "name": "nvidia-disable-aqc-nic",
+        "version": "25.06-1"
+      },
+      {
+        "name": "nvidia-disable-bt-profiles",
+        "version": "25.07-3"
+      },
+      {
+        "name": "nvidia-disable-init-on-alloc",
+        "version": "24.10-1"
+      },
+      {
+        "name": "nvidia-disable-numa-balancing",
+        "version": "24.10-2"
+      },
+      {
+        "name": "nvidia-driver-580-open",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "nvidia-drm-options-modeset0",
+        "version": "25.07-1"
+      },
+      {
+        "name": "nvidia-earlycon",
+        "version": "25.06-1"
+      },
+      {
+        "name": "nvidia-enable-bt-profiles",
+        "version": "26.03-1"
+      },
+      {
+        "name": "nvidia-enable-power-meter-cap",
+        "version": "24.10-3"
+      },
+      {
+        "name": "nvidia-esm-hook-epilogue",
+        "version": "23.03-2"
+      },
+      {
+        "name": "nvidia-firmware-580-580.159.03",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "nvidia-grub-params",
+        "version": "25.10-1"
+      },
+      {
+        "name": "nvidia-kernel-common-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "nvidia-kernel-defaults",
+        "version": "21.05-1"
+      },
+      {
+        "name": "nvidia-kernel-source-580-open",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "nvidia-logrotate",
+        "version": "21.11-1"
+      },
+      {
+        "name": "nvidia-lvfs-config",
+        "version": "25.09-1"
+      },
+      {
+        "name": "nvidia-mlnx-tools",
+        "version": "23.04"
+      },
+      {
+        "name": "nvidia-modprobe",
+        "version": "610.43.02-1ubuntu1"
+      },
+      {
+        "name": "nvidia-motd",
+        "version": "24.01-1"
+      },
+      {
+        "name": "nvidia-mstflint-loader",
+        "version": "23.03-1"
+      },
+      {
+        "name": "nvidia-no-systemd-suspend",
+        "version": "25.06-1"
+      },
+      {
+        "name": "nvidia-nvme-options",
+        "version": "26.02-1"
+      },
+      {
+        "name": "nvidia-oem-config-bmc",
+        "version": "25.04-1"
+      },
+      {
+        "name": "nvidia-oem-config-crypt-passwd",
+        "version": "25.04-1"
+      },
+      {
+        "name": "nvidia-oem-config-eula",
+        "version": "25.04-1"
+      },
+      {
+        "name": "nvidia-oem-config-grub-passwd",
+        "version": "25.04-1"
+      },
+      {
+        "name": "nvidia-oem-config-postact",
+        "version": "25.04-1"
+      },
+      {
+        "name": "nvidia-pci-realloc",
+        "version": "25.02-1"
+      },
+      {
+        "name": "nvidia-plymouth",
+        "version": "20.06-2"
+      },
+      {
+        "name": "nvidia-raid-config",
+        "version": "25.10-1"
+      },
+      {
+        "name": "nvidia-redfish-config",
+        "version": "25.03-1"
+      },
+      {
+        "name": "nvidia-relaxed-ordering-gpu",
+        "version": "25.07-2"
+      },
+      {
+        "name": "nvidia-relaxed-ordering-nvme",
+        "version": "25.07-2"
+      },
+      {
+        "name": "nvidia-repo-keys",
+        "version": "26.02-1"
+      },
+      {
+        "name": "nvidia-sbsa-gwdt-options",
+        "version": "25.06-1"
+      },
+      {
+        "name": "nvidia-settings",
+        "version": "610.43.02-1ubuntu1"
+      },
+      {
+        "name": "nvidia-spark-avahi-conf",
+        "version": "1.0-1"
+      },
+      {
+        "name": "nvidia-spark-baud-rate",
+        "version": "25.09-1"
+      },
+      {
+        "name": "nvidia-spark-default-remove-nvidia-fs-pkg",
+        "version": "25.09-2"
+      },
+      {
+        "name": "nvidia-spark-desktop-edge-ppa",
+        "version": "1.1-1"
+      },
+      {
+        "name": "nvidia-spark-fstab-config",
+        "version": "1.0.0-1"
+      },
+      {
+        "name": "nvidia-spark-grub-pci",
+        "version": "1.0-1"
+      },
+      {
+        "name": "nvidia-spark-initcall-bl",
+        "version": "1.0-1"
+      },
+      {
+        "name": "nvidia-spark-limits",
+        "version": "1.0-1"
+      },
+      {
+        "name": "nvidia-spark-mlnx-firmware-manager",
+        "version": "5.0.8-1"
+      },
+      {
+        "name": "nvidia-spark-ota-check",
+        "version": "1.0.16-1"
+      },
+      {
+        "name": "nvidia-spark-realtek-mod-options",
+        "version": "1.1-1"
+      },
+      {
+        "name": "nvidia-spark-repo",
+        "version": "1.1-1"
+      },
+      {
+        "name": "nvidia-spark-run-apt-upgrade",
+        "version": "25.10-2"
+      },
+      {
+        "name": "nvidia-spark-wifi-fw-ppa",
+        "version": "1.2-1"
+      },
+      {
+        "name": "nvidia-system-core",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-extra",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-station",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-station-apps",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-station-common",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-station-core",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-station-games",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-station-localization",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-station-utils",
+        "version": "2404.26.01-1"
+      },
+      {
+        "name": "nvidia-system-utils",
+        "version": "2404.25.09-2"
+      },
+      {
+        "name": "nvidia-update-manager",
+        "version": "20.06-1"
+      },
+      {
+        "name": "nvidia-utils-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      },
+      {
+        "name": "xserver-xorg-video-nvidia-580",
+        "version": "580.159.03-0ubuntu0.24.04.1"
+      }
+    ],
+    "nvidia": {
+      "gpus": [
+        {
+          "compute_capability": "12.1",
+          "driver_version": "580.159.03",
+          "name": "NVIDIA GB10"
+        }
+      ],
+      "kernel_driver_version_text": "NVRM version: NVIDIA UNIX Open Kernel Module for aarch64  580.159.03  Release Build  (dvs-builder@U22-I3-AK02-23-4)  Fri Apr 24 05:57:43 UTC 2026\nGCC version:  gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1)",
+      "nvcc_available": false,
+      "nvcc_version_text": null,
+      "nvidia_smi_available": true,
+      "nvidia_smi_error": null
+    },
+    "os_release": {
+      "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+      "HOME_URL": "https://www.ubuntu.com/",
+      "ID": "ubuntu",
+      "ID_LIKE": "debian",
+      "LOGO": "ubuntu-logo",
+      "NAME": "Ubuntu",
+      "PRETTY_NAME": "Ubuntu 24.04.4 LTS",
+      "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+      "SUPPORT_URL": "https://help.ubuntu.com/",
+      "UBUNTU_CODENAME": "noble",
+      "VERSION": "24.04.4 LTS (Noble Numbat)",
+      "VERSION_CODENAME": "noble",
+      "VERSION_ID": "24.04"
+    },
+    "python": {
+      "executable": "/home/gabriel.alexandre/projects/ceg-infra-venv/bin/python",
+      "implementation": "CPython",
+      "version": "3.12.3"
+    },
+    "python_packages": [
+      {
+        "name": "accelerate",
+        "version": "1.14.0"
+      },
+      {
+        "name": "aiohappyeyeballs",
+        "version": "2.7.1"
+      },
+      {
+        "name": "aiohttp",
+        "version": "3.14.3"
+      },
+      {
+        "name": "aiosignal",
+        "version": "1.4.0"
+      },
+      {
+        "name": "annotated-doc",
+        "version": "0.0.5"
+      },
+      {
+        "name": "anyio",
+        "version": "4.14.2"
+      },
+      {
+        "name": "attrs",
+        "version": "26.1.0"
+      },
+      {
+        "name": "causal-epistemic-geometry",
+        "version": "0.1.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2026.7.22"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.1"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.3.3"
+      },
+      {
+        "name": "coverage",
+        "version": "7.15.4"
+      },
+      {
+        "name": "cuda-bindings",
+        "version": "13.3.1"
+      },
+      {
+        "name": "cuda-pathfinder",
+        "version": "1.7.0"
+      },
+      {
+        "name": "cuda-toolkit",
+        "version": "13.0.3.0"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "datasets",
+        "version": "5.0.1"
+      },
+      {
+        "name": "dill",
+        "version": "0.4.1"
+      },
+      {
+        "name": "filelock",
+        "version": "3.32.4"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.63.0"
+      },
+      {
+        "name": "frozenlist",
+        "version": "1.8.0"
+      },
+      {
+        "name": "fsspec",
+        "version": "2026.6.0"
+      },
+      {
+        "name": "h11",
+        "version": "0.16.0"
+      },
+      {
+        "name": "hf-xet",
+        "version": "1.6.0"
+      },
+      {
+        "name": "httpcore",
+        "version": "1.0.9"
+      },
+      {
+        "name": "httpx",
+        "version": "0.28.1"
+      },
+      {
+        "name": "huggingface-hub",
+        "version": "0.36.2"
+      },
+      {
+        "name": "idna",
+        "version": "3.19"
+      },
+      {
+        "name": "iniconfig",
+        "version": "2.3.0"
+      },
+      {
+        "name": "jinja2",
+        "version": "3.1.6"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.0"
+      },
+      {
+        "name": "markdown-it-py",
+        "version": "4.2.0"
+      },
+      {
+        "name": "markupsafe",
+        "version": "3.0.3"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.1"
+      },
+      {
+        "name": "mdurl",
+        "version": "0.1.2"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0"
+      },
+      {
+        "name": "multidict",
+        "version": "6.7.1"
+      },
+      {
+        "name": "multiprocess",
+        "version": "0.70.19"
+      },
+      {
+        "name": "networkx",
+        "version": "3.6.1"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.2"
+      },
+      {
+        "name": "nvidia-cublas",
+        "version": "13.1.1.3"
+      },
+      {
+        "name": "nvidia-cuda-cupti",
+        "version": "13.0.85"
+      },
+      {
+        "name": "nvidia-cuda-nvrtc",
+        "version": "13.0.88"
+      },
+      {
+        "name": "nvidia-cuda-runtime",
+        "version": "13.0.96"
+      },
+      {
+        "name": "nvidia-cudnn-cu13",
+        "version": "9.20.0.48"
+      },
+      {
+        "name": "nvidia-cufft",
+        "version": "12.0.0.61"
+      },
+      {
+        "name": "nvidia-cufile",
+        "version": "1.15.1.6"
+      },
+      {
+        "name": "nvidia-curand",
+        "version": "10.4.0.35"
+      },
+      {
+        "name": "nvidia-cusolver",
+        "version": "12.0.4.66"
+      },
+      {
+        "name": "nvidia-cusparse",
+        "version": "12.6.3.3"
+      },
+      {
+        "name": "nvidia-cusparselt-cu13",
+        "version": "0.8.1"
+      },
+      {
+        "name": "nvidia-nccl-cu13",
+        "version": "2.29.7"
+      },
+      {
+        "name": "nvidia-nvjitlink",
+        "version": "13.3.33"
+      },
+      {
+        "name": "nvidia-nvshmem-cu13",
+        "version": "3.4.5"
+      },
+      {
+        "name": "nvidia-nvtx",
+        "version": "13.0.85"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "3.0.5"
+      },
+      {
+        "name": "pillow",
+        "version": "12.3.0"
+      },
+      {
+        "name": "pip",
+        "version": "24.0"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.6.0"
+      },
+      {
+        "name": "propcache",
+        "version": "0.5.2"
+      },
+      {
+        "name": "psutil",
+        "version": "7.2.2"
+      },
+      {
+        "name": "pyarrow",
+        "version": "25.0.1"
+      },
+      {
+        "name": "pygments",
+        "version": "2.21.0"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.2"
+      },
+      {
+        "name": "pytest",
+        "version": "9.1.1"
+      },
+      {
+        "name": "pytest-cov",
+        "version": "7.1.0"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pyyaml",
+        "version": "6.0.3"
+      },
+      {
+        "name": "regex",
+        "version": "2026.7.19"
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2"
+      },
+      {
+        "name": "rich",
+        "version": "15.0.0"
+      },
+      {
+        "name": "ruff",
+        "version": "0.16.4"
+      },
+      {
+        "name": "safetensors",
+        "version": "0.8.0"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "shellingham",
+        "version": "1.5.4"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      },
+      {
+        "name": "tokenizers",
+        "version": "0.22.2"
+      },
+      {
+        "name": "torch",
+        "version": "2.13.0"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.0"
+      },
+      {
+        "name": "transformers",
+        "version": "4.57.6"
+      },
+      {
+        "name": "triton",
+        "version": "3.7.1"
+      },
+      {
+        "name": "typer",
+        "version": "0.27.1"
+      },
+      {
+        "name": "typing-extensions",
+        "version": "4.16.0"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.7.0"
+      },
+      {
+        "name": "xxhash",
+        "version": "4.0.1"
+      },
+      {
+        "name": "yarl",
+        "version": "1.24.5"
+      }
+    ],
+    "torch": {
+      "bf16_supported": true,
+      "compute_capability": "12.1",
+      "cuda_available": true,
+      "cuda_device_count": 1,
+      "cuda_runtime": "13.0",
+      "device_name": "NVIDIA GB10",
+      "installed": true,
+      "reported_total_memory_bytes": 130663170048,
+      "version": "2.13.0+cu130"
+    }
+  },
+  "sha256": "f059ab04bb477c50f69518caae34a9e338571d122be1513c7f794ff071ae05fc"
+}

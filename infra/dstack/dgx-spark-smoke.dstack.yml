@@ -1,0 +1,10 @@
+type: task
+name: ceg-dgx-spark-smoke
+image: nvcr.io/nvidia/vllm:26.05-py3
+resources:
+  cpu: arm:2..
+  gpu: GB10:1
+volumes:
+  - /srv/shared:/shared
+commands:
+  - python infra/dstack/dgx_spark_smoke_job.py

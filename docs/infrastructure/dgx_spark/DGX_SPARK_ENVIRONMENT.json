@@ -1,0 +1,65 @@
+{
+  "collection_status": "COMPLETE",
+  "environment_schema": "ceg.dgx-spark-environment.v1",
+  "fingerprint_schema": "ceg.dgx-spark-fingerprint.v1",
+  "generated_at": "2026-08-25T22:10:00-03:00",
+  "nodes": {
+    "ciaam-spark1": {
+      "address": "200.144.205.82",
+      "architecture": "aarch64",
+      "environment_fingerprint_sha256": "f059ab04bb477c50f69518caae34a9e338571d122be1513c7f794ff071ae05fc",
+      "hostname": "spark1",
+      "key_authentication": true,
+      "port": 1232,
+      "ssh_transport_reachable": true
+    },
+    "ciaam-spark2": {
+      "address": "200.144.205.83",
+      "architecture": "aarch64",
+      "environment_fingerprint_sha256": "309f26be943053f4558b13068707649c2de0aa8cb8a79f0e24ae419d67c76213",
+      "hostname": "spark2",
+      "key_authentication": true,
+      "port": 1232,
+      "ssh_transport_reachable": true
+    }
+  },
+  "password_rotation_confirmed_by_user": true,
+  "remote_measurements": [
+    "spark1-environment.json",
+    "spark1-fingerprint.json",
+    "spark2-environment.json",
+    "spark2-fingerprint.json"
+  ],
+  "repository_base_commit": "2fbcc98fa6026b844074bdaef2ba311b360b7f81",
+  "spark_nodes_classification": "SPARK_NODES_ENVIRONMENT_DIFFER",
+  "symmetry_differences": {
+    "memory_total_bytes": {
+      "spark1": 130663170048,
+      "spark2": 130663165952
+    },
+    "native_packages_only_on_spark1": {
+      "nvidia-spark-avahi-conf": "1.0-1",
+      "nvidia-spark-limits": "1.0-1",
+      "nvidia-spark-ota-check": "1.0.16-1"
+    },
+    "native_package_version_differences": {
+      "nvidia-ai-workbench": {
+        "spark1": "0.169.2~17-7778",
+        "spark2": "0.132.25-5599"
+      },
+      "nvidia-dgx-telemetry": {
+        "spark1": "5.22",
+        "spark2": "4.11"
+      },
+      "nvidia-modprobe": {
+        "spark1": "610.43.02-1ubuntu1",
+        "spark2": "580.82.09-0ubuntu1"
+      },
+      "nvidia-spark-wifi-fw-ppa": {
+        "spark1": "1.2-1",
+        "spark2": "1.1-1"
+      }
+    }
+  },
+  "warning": "Fingerprint differences are descriptive and do not establish numerical equivalence or scientific interchangeability."
+}
