@@ -6,5 +6,7 @@ resources:
   gpu: GB10:1
 volumes:
   - /srv/shared:/shared
+files:
+  - dgx_spark_smoke_job.py:infra/dstack/dgx_spark_smoke_job.py
 commands:
   - python infra/dstack/dgx_spark_smoke_job.py

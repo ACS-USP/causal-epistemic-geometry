@@ -128,14 +128,21 @@ See `DGX_SPARK_ARM64_COMPATIBILITY.md`.
 
 ## G. dstack
 
-`DSTACK_PARTIALLY_READY`.
+`DSTACK_OPERATIONAL`.
 
-The server listens on Spark 1 port 3030 and returns HTTP 200 from the node. The
-public port timed out from the development machine, so an SSH tunnel is needed.
-The local isolated client is dstack 0.21.2. The ARM/GB10/shared-volume smoke YAML
-and script are prepared and structurally tested. Token acquisition/configuration
-remains manual so the token cannot enter logs. No job has yet been submitted and
-no dstack job has yet been submitted.
+The dstack 0.21.2 server listens on Spark 1 port 3030. The public port timed out
+from the development machine, so the local dstack 0.21.2 client uses an SSH
+loopback tunnel. The active identity `gabriel-alexandre` is authorized in project
+`main`. The secret remained only in dstack's private user configuration and was
+not written to this repository or the evidence.
+
+The ARM/GB10/shared-volume task completed with exit status 0 on both nodes. Spark
+1 and Spark 2 each reported `aarch64`, Python 3.12.3, Torch
+`2.12.0a0+5aff3928d8.nv26.05`, CUDA 13.2 available, `NVIDIA GB10`, and all three
+expected `/shared` directories. An initial exit-2 packaging failure established
+that virtual-repository jobs do not automatically contain the local probe; the
+task now declares an explicit `files:` upload. The failed attempt and the two
+successful runs were deleted after log capture.
 
 The cached `nvcr.io/nvidia/vllm:26.05-py3` image was verified on Spark 1 with
 `--pull never`: ARM64 image hash
@@ -261,12 +268,12 @@ A repository secrets scanner is part of the final validation gate.
 | BF16 | PASS |
 | shared storage | PASS |
 | ARM dependency stack | PASS for declared stack; optional extensions untested |
-| dstack | PARTIAL: server/client/config ready; token + smoke pending |
+| dstack | PASS: auth, project access, both-node scheduling, CUDA and shared mount |
 | exact CEG model load | BLOCKED: exact weights absent; not downloaded |
 | CEG intervention engine smoke | NOT TESTED |
 | A40 numerical equivalence | NOT TESTED; prospective qualification required |
 
-Infrastructure terminal state: `DGX_SPARK_TECHNICALLY_OPERATIONAL`, with dstack
-smoke pending the manual secret-safe project configuration and with the exact
-model deliberately absent. Scientific backend state remains
+Infrastructure terminal state: `DGX_SPARK_TECHNICALLY_OPERATIONAL`; the dstack
+smoke now passes on both nodes, while the exact model remains deliberately
+absent. Scientific backend state remains
 `A40_EQUIVALENCE_REQUIRES_PROSPECTIVE_QUALIFICATION`.

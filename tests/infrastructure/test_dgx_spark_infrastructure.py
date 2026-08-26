@@ -115,3 +115,7 @@ def test_dstack_smoke_yaml_has_required_arm_gpu_and_shared_mount() -> None:
     assert config["resources"]["gpu"] == "GB10:1"
     assert "/srv/shared:/shared" in config["volumes"]
     assert config["image"] == "nvcr.io/nvidia/vllm:26.05-py3"
+    assert (
+        "dgx_spark_smoke_job.py:infra/dstack/dgx_spark_smoke_job.py" in config["files"]
+    )
+    assert "python infra/dstack/dgx_spark_smoke_job.py" in config["commands"]

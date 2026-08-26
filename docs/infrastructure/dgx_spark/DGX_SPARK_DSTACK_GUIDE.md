@@ -2,11 +2,14 @@
 
 ## Observed server/client status
 
-- Server: listening on Spark 1 `0.0.0.0:3030`, HTTP 200 from Spark 1.
+- Server: dstack 0.21.2, listening on Spark 1 `0.0.0.0:3030`.
 - Direct development-machine access: timed out after five seconds.
 - Local client: dstack 0.21.2 in
   `/private/tmp/ceg-dstack-client-venv312` (Python 3.12).
 - Required route: SSH local forward to Spark 1.
+- Project: local profile `main` points to `http://127.0.0.1:3030`; the active
+  dstack identity is `gabriel-alexandre`, with project membership verified by
+  successful run submission.
 
 ## Secret-safe local configuration
 
@@ -36,6 +39,7 @@ It pins the administrator-recommended ARM image and declares:
 - `cpu: arm:2..`;
 - `gpu: GB10:1`;
 - `/srv/shared:/shared`;
+- an explicit `files:` mapping that uploads the probe into the container;
 - a tiny script that prints host, architecture, Python, Torch/CUDA/GPU, and
   visible shared-directory names.
 
@@ -52,6 +56,30 @@ the reported architecture is `aarch64`, the GPU contains `GB10`, CUDA is true,
 and `/shared` is visible. Submit a second clean run only if needed to observe
 the other node; scheduler placement on one node does not prove both are usable.
 Stop/delete the task through dstack after its terminal log is retrieved.
+
+## Executed smoke evidence
+
+The checked-in task completed with exit status 0 on Spark 2. A second temporary
+configuration selected fleet instance `sparks-0` and completed with exit status
+0 on Spark 1. Both reported:
+
+| Field | Spark 1 | Spark 2 |
+| --- | --- | --- |
+| architecture | `aarch64` | `aarch64` |
+| Python | `3.12.3` | `3.12.3` |
+| Torch | `2.12.0a0+5aff3928d8.nv26.05` | `2.12.0a0+5aff3928d8.nv26.05` |
+| Torch CUDA | `13.2` | `13.2` |
+| CUDA available | `true` | `true` |
+| GPU | `NVIDIA GB10` | `NVIDIA GB10` |
+| `/shared` | visible | visible |
+| expected directories | all present | all present |
+| probe status | `PASS` | `PASS` |
+
+The first submission exposed a packaging defect: without `files:`, a virtual
+repository run did not contain the local probe script and exited 2. The checked-in
+configuration now uploads that script explicitly. The failed attempt and both
+successful runs were deleted after their terminal logs were collected. No fleet,
+project, membership, or shared-volume configuration was changed by the smoke.
 
 ## vLLM boundary
 
@@ -80,5 +108,7 @@ two-node dstack job would then use `nodes: 2` and
 
 ## Current classification
 
-`DSTACK_PARTIALLY_READY`: server reachability and the client are verified; the
-manual token-backed project configuration and smoke submission remain pending.
+`DSTACK_OPERATIONAL`: server/client compatibility, authentication, project
+authorization, scheduling on both nodes, ARM64/CUDA/GB10 execution, and the
+shared-volume mount all passed. This classification does not qualify model
+serving or scientific equivalence.
