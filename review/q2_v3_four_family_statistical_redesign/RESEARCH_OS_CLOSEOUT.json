@@ -1,0 +1,22 @@
+{
+  "schema_version": "research-os-closeout-v1",
+  "experiment_id": "Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN",
+  "lifecycle": [
+    "PREPARE",
+    "CPU_DESIGN",
+    "SIMULATION",
+    "INDEPENDENT_DESIGN_AUDIT",
+    "CLOSED"
+  ],
+  "final_state": "CLOSED",
+  "classification": "Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED",
+  "incidents": [],
+  "scientific_outcomes_created": 0,
+  "model_inference": false,
+  "runpod_resources_created": 0,
+  "shell_calibration": false,
+  "prediction_matrices_created": [],
+  "amendment2_frozen": false,
+  "amendment2_executed": false,
+  "next_action": "PRINCIPAL_RESEARCHER_REVIEW"
+}

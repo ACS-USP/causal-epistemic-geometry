@@ -1,0 +1,26 @@
+gate,five_family_value,four_family_recommendation,reason
+families,5,4,Four source-qualified families are inherited and fixed
+meaningful_base_directions,10,8,Four families times two source locations
+meaningful_controllers,20,16,Eight directions times two shells
+cross_family_dyads_per_shell,40,24,C(8;2) minus four within-family pairs
+aggregate_rho_min,0.25,0.25,Scientific effect size is not combinatorial
+family_consistency,4/5 strictly positive,3/4 strictly positive,Retains tolerance of one weak family; 4/4 adds a new uniformity claim
+effective_rank_min,5.0,4.0,Preserves 50 percent of maximum rank and rejects simulated common-axis collapse
+max_family_leverage,0.30,0.40,Equal share is 0.25; 0.40 passes 95.9 percent balanced banks and rejects simulated domination
+radial_nuisance_r2_max,0.10,0.10,Predictor nuisance criterion is family-count invariant
+angular_q90_q10_min,0.20,0.20,Substantive dynamic range retained despite coarser 24-dyad quantiles
+geometry_condition_number_max,30.0,30.0,Three-predictor collinearity gate remains stable at 24 versus 40 dyads
+nonantipodal_absolute_cosine_max_strict,0.95,0.95,Direction redundancy boundary is unchanged
+radius_cv_max,0.03,0.03,Implemented-amplitude matching is unchanged
+family_radius_deviation_max,0.03,0.03,Implemented-amplitude family balance is unchanged
+lodo_positive,10/10,8/8,Preserves no-single-direction-sign-determination claim
+positive_shells,2/2,2/2,Shell robustness is unchanged
+m2_superiority_margin,0.10,0.10,Scientific incremental-information margin is unchanged
+qap_universe,3840,384,Block-preserving S_F semidirect product with within-family swaps
+qap_alpha,0.05,0.05,Alpha unchanged; at most 19 of 384 null values may be as extreme
+radial_positive_directions,8/10,7/8,At least 80 percent with integer-compatible stronger fraction
+radial_family_signflip_p,at most 0.05,diagnostic only,Four-family exact minimum 1/16 exceeds 0.05
+radial_inferential_gate,family sign-flip plus bootstrap,item bootstrap plus 4/4 family and 7/8 direction consistency,Avoids changing alpha or using an impossible exact criterion
+primary_N,200,300,Item-precision elbow; controller geometry remains limiting
+semantic_trajectories,10000,12600,21 conditions times 300 items times two rollouts
+

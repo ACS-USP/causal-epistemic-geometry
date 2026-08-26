@@ -1,0 +1,93 @@
+{
+  "schema_version": "q2-v3-four-family-statistical-recommendation-v1",
+  "status": "PRINCIPAL_REVIEW_READY_NOT_FROZEN_NOT_EXECUTED",
+  "classification": "Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED",
+  "families": [
+    "CONTROL_FLOW_PATH_COVERAGE",
+    "MUTATION_ALIAS_CAUSALITY",
+    "LOOP_BOUNDARY_ACCOUNTING",
+    "HYPOTHESIS_BRANCH_ELIMINATION"
+  ],
+  "controller_structure": {
+    "families": 4,
+    "source_locations_per_family": 2,
+    "shells": 2,
+    "meaningful_controllers": 16,
+    "null_controllers": 4,
+    "baseline_conditions": 1,
+    "total_conditions": 21,
+    "cross_family_dyads_per_shell": 24,
+    "shell_stratified_primary_dyads": 48,
+    "radial_same_direction_pairs": 8
+  },
+  "primary_n": 300,
+  "semantic_trajectory_derivation": "21 conditions x 300 items x 2 independent rollouts",
+  "semantic_trajectories": 12600,
+  "qap": {
+    "group": "S_4 semidirect (Z_2)^4",
+    "universe_size": 384,
+    "same_mapping_both_shells": true,
+    "identity_included": true,
+    "p_value": "count(null >= observed) / 384",
+    "alpha": 0.05,
+    "maximum_rejection_count": 19,
+    "multiplicity": "omnibus maxT across M0/M1/M2 then single-step maxT metric attribution"
+  },
+  "relational_gate": {
+    "aggregate_family_balanced_rho_min": 0.25,
+    "maxT_qap_p_max": 0.05,
+    "item_bootstrap_lower_strictly_positive": true,
+    "positive_family_summaries_min": 3,
+    "positive_shells_required": 2,
+    "lodo_positive_required": 8
+  },
+  "identifiability": {
+    "effective_rank_formula": "(sum eigenvalues)^2 / sum(eigenvalues^2)",
+    "effective_rank_min": 4.0,
+    "family_leverage_formula": "incident centered-z squared energy / (2 total squared energy)",
+    "max_family_leverage": 0.4,
+    "radial_nuisance_r2_max": 0.1,
+    "angular_q90_minus_q10_min": 0.2,
+    "standardized_geometry_condition_number_max": 30.0,
+    "nonantipodal_absolute_cosine_max_strict": 0.95,
+    "radius_cv_max": 0.03,
+    "family_radius_deviation_max": 0.03
+  },
+  "m2_superiority": {
+    "delta_rho_over_M0_min": 0.1,
+    "delta_rho_over_M1_min": 0.1,
+    "paired_item_bootstrap_lower_each_strictly_positive": true,
+    "two_contrast_stepdown_maxT_qap_p_each_max": 0.05
+  },
+  "radial_gate": {
+    "median_strong_minus_medium_strictly_positive": true,
+    "positive_directions_min": 7,
+    "positive_family_medians_required": 4,
+    "item_cluster_bootstrap_resamples": 10000,
+    "item_bootstrap_lower_strictly_positive": true,
+    "family_signflip_16_point_p": "diagnostic only; minimum 0.0625 cannot meet alpha 0.05"
+  },
+  "null_controllers": {
+    "count": 4,
+    "base_directions": 2,
+    "shells_each": 2,
+    "construction": "fresh Gaussian bases SVD-projected against eight-direction meaningful span, mutually orthogonal, shell-amplitude matched",
+    "role": "controls/diagnostics; excluded from primary meaningful relational population"
+  },
+  "prediction_lock": {
+    "metrics": ["M0", "M1", "M2"],
+    "M3": "EXCLUDED_NOT_QUALIFIED",
+    "must_precede_semantic_outcomes": true
+  },
+  "classification_taxonomy": {
+    "G0": "no candidate relational geometry passes",
+    "G1": "M0 and/or M1 passes the full relational gate",
+    "G2": "M2 passes the full relational gate while M0/M1 do not",
+    "G3": "M2 passes and both superiority contrasts pass effect, bootstrap, and corrected QAP gates",
+    "radial": "R+ iff redesigned radial gate passes; otherwise R-; reported independently"
+  },
+  "decision_reason": "At rho 0.40 and N=300, synthetic dependent M2 maxT/full-gate power averaged only about 0.30 across regimes; N=400 improved it only to about 0.31. Controller/family diversity, not item count, is the binding limit.",
+  "amendment2": "NOT_DRAFTED_UNDERPOWERED",
+  "execution_authorized": false
+}
+

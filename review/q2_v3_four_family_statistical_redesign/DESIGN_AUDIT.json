@@ -1,0 +1,54 @@
+{
+  "behavioral_data_audit": {
+    "M0_M1_M2": "NOT_RUN",
+    "Q3": "NOT_RUN",
+    "correctness_inspected": false,
+    "new_model_inference": "NONE",
+    "runpod": 0,
+    "semantic_v3_outcomes": 0,
+    "shell_calibration": "NOT_RUN"
+  },
+  "checks": {
+    "api_family_excluded": true,
+    "cross_family_dyads_expected_24": true,
+    "cross_family_dyads_per_shell": 24,
+    "four_family_qap_expected_384": true,
+    "four_family_qap_unique_maps": 384,
+    "geometry_regimes": 3,
+    "geometry_regimes_expected_3": true,
+    "historical_qap_implementation_reconstructed": true,
+    "historical_qap_universe": 3840,
+    "identity_included": true,
+    "inherited_200_preserved_as_prefix": true,
+    "panel_correctness_values_read": false,
+    "panel_disjoint_from_other_allocations": true,
+    "panel_order_hash_reproduced": true,
+    "panel_selected_n": 300,
+    "panel_selected_unique": true,
+    "power_cells": 54,
+    "power_cells_expected_54": true,
+    "qap_19_over_384": 0.049479166666666664,
+    "qap_20_over_384": 0.052083333333333336,
+    "qap_rejection_count_at_alpha_0_05": 19,
+    "radial_family_signflip_min_p": 0.0625,
+    "radial_p_0_05_attainable": false,
+    "radial_pairs": 8,
+    "shell_stratified_dyads": 48,
+    "source_qualified_exact_four_expected": true,
+    "source_qualified_families": [
+      "CONTROL_FLOW_PATH_COVERAGE",
+      "HYPOTHESIS_BRANCH_ELIMINATION",
+      "LOOP_BOUNDARY_ACCOUNTING",
+      "MUTATION_ALIAS_CAUSALITY"
+    ]
+  },
+  "classification": "Q2_V3_FOUR_FAMILY_DESIGN_AUDIT_CLEAN",
+  "input_boundary": [
+    "historical protocol/statistical source code",
+    "source-qualification pass flags and vector metadata",
+    "Class-C provenance IDs/classes/content hashes only",
+    "synthetic simulation artifacts"
+  ],
+  "outcome_journals_loaded": [],
+  "schema_version": "q2-v3-four-family-independent-design-audit-v1"
+}

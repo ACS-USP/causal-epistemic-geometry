@@ -1,0 +1,35 @@
+{
+  "schema_version": "q2-v3-four-family-cost-plan-v1",
+  "status": "DESIGN_ONLY_NO_PROVISIONING",
+  "selected_n": 300,
+  "conditions": 21,
+  "rollouts": 2,
+  "semantic_trajectories": 12600,
+  "inherited_source_qualification_rerun": false,
+  "shell_calibration_trajectories": 408,
+  "m1_baseline_captures": 64,
+  "m2_teacher_forced_captures": 252,
+  "reference": {
+    "experiment": "Q2 V2 common panel",
+    "rows": 6960,
+    "billed_a40_hours": 2.6601873877569523,
+    "pod_cost_usd": 1.1852973215281963,
+    "a40_rate_usd_per_hour": 0.44
+  },
+  "linear_semantic_panel": {
+    "hours": 4.815856477835862,
+    "cost_usd": 2.1457968751803556
+  },
+  "expected_complete_program": {
+    "gpu_hours": 5.75,
+    "cost_usd": 2.53
+  },
+  "conservative_50pct_tail_plus_startup": {
+    "gpu_hours": 8.5,
+    "cost_usd": 3.74
+  },
+  "prospective_hard_ceiling_if_redesigned_and_authorized": 6.0,
+  "runpod_started": false,
+  "note": "Cost does not cure the controller/family-level power deficit; no execution is recommended."
+}
+
