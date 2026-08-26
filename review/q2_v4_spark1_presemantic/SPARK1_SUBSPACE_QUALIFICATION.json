@@ -1,0 +1,54 @@
+{
+  "Q_sha256": "5f083960b898641a763a0d85f9432c6dc077b01767e3cb8e56e417a0c4527c44",
+  "ambient_dimension": 4096,
+  "checks": {
+    "condition_number_at_most_10": true,
+    "each_concept_leverage_at_least_0_01": true,
+    "orthonormality_max_error_at_most_1e_10": true,
+    "retained_rank_at_least_6": true
+  },
+  "classification": "Q2_V4_SUBSPACE_QUALIFIED",
+  "concept_leverage": [
+    0.25000000000000006,
+    0.24999999999999997,
+    0.2500000000000001,
+    0.2500000000000001
+  ],
+  "condition_number": 2.735663592406562,
+  "direction_order": [
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY",
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY",
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY",
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY",
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY"
+  ],
+  "entropy_effective_rank": 6.587926028066003,
+  "pass": true,
+  "relative_singular_values": [
+    1.0,
+    0.7233888814570022,
+    0.665804202029729,
+    0.6470965589919389,
+    0.5193082264408142,
+    0.4435112986057144,
+    0.4305621054220688,
+    0.3655420216051859
+  ],
+  "retained_rank": 8,
+  "singular_values": [
+    1.5884254015838248,
+    1.1490492745296126,
+    1.0575803069852703,
+    1.0278646115802816,
+    0.8248823781300341,
+    0.7044846125947456,
+    0.6839157852118267,
+    0.5806362324639806
+  ],
+  "source_count": 8,
+  "source_matrix_sha256": "927191174ce7a4cf796b7a983320ff4d9784739621e1ea233574872227130886",
+  "stable_rank": 3.1707086681399868
+}

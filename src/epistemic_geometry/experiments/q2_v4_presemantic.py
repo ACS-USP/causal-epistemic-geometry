@@ -245,7 +245,10 @@ def baseline_centered_angle(
 
 
 def unique_controller_permutations(prelock_commit: str) -> tuple[np.ndarray, int]:
-    seed = deterministic_seed("Q2-V4-QAP-V1", prelock_commit)
+    seed = int.from_bytes(
+        hashlib.sha256(f"Q2-V4-QAP-V1|{prelock_commit}".encode()).digest()[:16],
+        "big",
+    )
     rng = np.random.Generator(np.random.PCG64DXSM(seed))
     identity = tuple(range(SELECTED_COUNT))
     seen = {identity}
@@ -258,18 +261,48 @@ def unique_controller_permutations(prelock_commit: str) -> tuple[np.ndarray, int
     return np.asarray(rows, dtype=np.uint8), seed
 
 
-def semantic_schedule(item_ids: Sequence[str], prelock_commit: str) -> list[dict[str, Any]]:
+def unique_shell_swaps(prelock_commit: str) -> tuple[np.ndarray, int]:
+    """Return identity plus 49,999 unique paired medium/strong swap maps."""
+
+    seed = int.from_bytes(
+        hashlib.sha256(f"Q2-V4-RADIAL-SWAPS-V1|{prelock_commit}".encode()).digest()[:16],
+        "big",
+    )
+    rng = np.random.Generator(np.random.PCG64DXSM(seed))
+    seen = {bytes(SELECTED_COUNT)}
+    rows = [np.zeros(SELECTED_COUNT, dtype=np.uint8)]
+    while len(rows) < QAP_MAPS:
+        row = rng.integers(0, 2, size=SELECTED_COUNT, dtype=np.uint8)
+        key = row.tobytes()
+        if key not in seen:
+            seen.add(key)
+            rows.append(row)
+    return np.stack(rows), seed
+
+
+def _wide_seed(namespace: str, *parts: str | int) -> int:
+    payload = "\x1f".join((namespace, *(str(part) for part in parts))).encode()
+    return int.from_bytes(hashlib.sha256(payload).digest()[:8], "big") & ((1 << 63) - 1)
+
+
+def semantic_schedule(
+    item_ids: Sequence[str], selected_ids: Sequence[str], prelock_commit: str
+) -> list[dict[str, Any]]:
+    selected = list(selected_ids)
+    if len(selected) != SELECTED_COUNT or len(set(selected)) != SELECTED_COUNT:
+        raise ValueError("future semantic schedule requires 32 unique selected directions")
+    allowed = {f"V4_DIRECTION_{index:02d}" for index in range(CANDIDATE_COUNT)}
+    if not set(selected).issubset(allowed):
+        raise ValueError("future semantic schedule contains an unknown direction")
     conditions = ["BASELINE"] + [
-        f"{direction}_{shell}"
-        for direction in (f"V4_DIRECTION_{i:02d}" for i in range(SELECTED_COUNT))
-        for shell in SHELLS
+        f"{direction}_{shell}" for direction in selected for shell in SHELLS
     ]
     rows: list[dict[str, Any]] = []
     for item_id in item_ids:
         for rollout in (0, 1):
             order_rng = np.random.Generator(
                 np.random.PCG64DXSM(
-                    deterministic_seed("Q2-V4-CONDITION-ORDER", prelock_commit, item_id, rollout)
+                    _wide_seed("Q2-V4-CONDITION-ORDER", prelock_commit, item_id, rollout)
                 )
             )
             for order, condition in enumerate(order_rng.permutation(conditions).tolist()):
@@ -279,11 +312,14 @@ def semantic_schedule(item_ids: Sequence[str], prelock_commit: str) -> list[dict
                         "condition": str(condition),
                         "rollout_index": rollout,
                         "condition_order": order,
-                        "seed": deterministic_seed(
+                        "seed": _wide_seed(
                             "Q2-V4-INDEPENDENT-PRIMARY", prelock_commit, item_id, condition, rollout
                         ),
                     }
                 )
+    seeds = [int(row["seed"]) for row in rows]
+    if len(seeds) != len(set(seeds)):
+        raise RuntimeError("future semantic schedule contains a seed collision")
     return rows
 
 
@@ -316,4 +352,5 @@ __all__ = [
     "sha256_bytes",
     "source_direction_id",
     "unique_controller_permutations",
+    "unique_shell_swaps",
 ]

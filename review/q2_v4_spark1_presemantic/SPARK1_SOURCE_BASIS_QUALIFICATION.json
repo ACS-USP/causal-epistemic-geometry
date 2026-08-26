@@ -1,0 +1,217 @@
+{
+  "all_four_families_pass": true,
+  "classification": "Q2_V4_SPARK1_SOURCE_BASIS_QUALIFIED",
+  "correctness_used": false,
+  "directions": {
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY": {
+      "canonical_vector_hash": "7b597d4e9a114311852daa04d03b3bc49899dd766942769f7844226166a596f3",
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "file_sha256": "364b949df1bcbf9531189cbdfd1f33f41bf3bd32953888a4894a4ace6525bbcc",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 79.01096057702183,
+      "standardized_gap": 19.226969639802622
+    },
+    "MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY": {
+      "canonical_vector_hash": "31e2b9059e04cd5830d5dd65bedb768c5b3f89bbd7383da885e6d32f92a3713a",
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "file_sha256": "a3d4234af122ecdda055888440540b303044e505a88d6fab13653b26c36aa5b5",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 70.25544031102474,
+      "standardized_gap": 9.298116746104107
+    },
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY": {
+      "canonical_vector_hash": "77453f9c55c0181e1cd2e974b6f44c0577ef0198b5117bf10b6a3e28a7cb60d3",
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "file_sha256": "88b5db99cdedf82f92e31f56f5031044045d0daf1e7513973080a6098e2d810a",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 88.00885233022078,
+      "standardized_gap": 25.715176308975227
+    },
+    "MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY": {
+      "canonical_vector_hash": "d5c151aae0254168b47756bd3ecf2062fe0fcb43e371d29410e5f0e41f14f4a6",
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "file_sha256": "c39ff806cdba9286b91fe4f009afb6727f754cae94a5d3e18bf810052e415358",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 67.06844005919353,
+      "standardized_gap": 18.09332510431024
+    },
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY": {
+      "canonical_vector_hash": "71042253d016c384c0b9c56c7b65221fea715bcfb9f7c73afb93f12fffa52240",
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "file_sha256": "9a689c403cfc20695665c484684af8c21852467c6551497db2aa8c5dd2281be2",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 83.17245238304834,
+      "standardized_gap": 17.53286846561664
+    },
+    "MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY": {
+      "canonical_vector_hash": "d9c7b4bb9d7355efa65ed78a1b7a896d48e1938095de665a3b611c100f6f6dca",
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "file_sha256": "b69ccf40559a990666a6b7cfc3efc60ec5cba56ad34a315f26eb7f95c7421b8f",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 68.16886510970049,
+      "standardized_gap": 7.017720371088762
+    },
+    "MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY": {
+      "canonical_vector_hash": "1d36109a485fbc3cb36e1988a4e86d34265391c24ce60859d09a0f9d5aa45dd4",
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "file_sha256": "26b9fb266ab5e1b1e11d020a37da37cefc6715d8d5ec95c8bbbb7b51093d098a",
+      "location": "EXECUTION_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 78.12285337286588,
+      "standardized_gap": 17.542821927211502
+    },
+    "MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY": {
+      "canonical_vector_hash": "04cc54738ebe9ffe9e8fecea28aef30535ede0e37cac91ae4e6e0d28b77c278e",
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "file_sha256": "8e173ca35b04017607ec16f1bb4271eed7c4aeaad7e64ef230a70d72ed12e14f",
+      "location": "PROMPT_BOUNDARY",
+      "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY.npy",
+      "positive_projection_fraction": 1.0,
+      "raw_norm": 82.46842715448098,
+      "standardized_gap": 10.877877394163256
+    }
+  },
+  "families": {
+    "CONTROL_FLOW_PATH_COVERAGE": {
+      "cross_disagreement": 0.40625,
+      "excess_disagreement": 0.15625,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "canonical_vector_hash": "7b597d4e9a114311852daa04d03b3bc49899dd766942769f7844226166a596f3",
+          "family": "CONTROL_FLOW_PATH_COVERAGE",
+          "file_sha256": "364b949df1bcbf9531189cbdfd1f33f41bf3bd32953888a4894a4ace6525bbcc",
+          "location": "EXECUTION_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_CONTROL_FLOW_PATH_COVERAGE_EXECUTION_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 79.01096057702183,
+          "standardized_gap": 19.226969639802622
+        },
+        "PROMPT_BOUNDARY": {
+          "canonical_vector_hash": "31e2b9059e04cd5830d5dd65bedb768c5b3f89bbd7383da885e6d32f92a3713a",
+          "family": "CONTROL_FLOW_PATH_COVERAGE",
+          "file_sha256": "a3d4234af122ecdda055888440540b303044e505a88d6fab13653b26c36aa5b5",
+          "location": "PROMPT_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_CONTROL_FLOW_PATH_COVERAGE_PROMPT_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 70.25544031102474,
+          "standardized_gap": 9.298116746104107
+        }
+      },
+      "negative_evaluability": 1.0,
+      "negative_validity": 1.0,
+      "pass": true,
+      "positive_evaluability": 0.9791666666666666,
+      "positive_validity": 0.9791666666666666,
+      "within_disagreement": 0.25
+    },
+    "HYPOTHESIS_BRANCH_ELIMINATION": {
+      "cross_disagreement": 0.3020833333333333,
+      "excess_disagreement": 0.09374999999999997,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "canonical_vector_hash": "77453f9c55c0181e1cd2e974b6f44c0577ef0198b5117bf10b6a3e28a7cb60d3",
+          "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+          "file_sha256": "88b5db99cdedf82f92e31f56f5031044045d0daf1e7513973080a6098e2d810a",
+          "location": "EXECUTION_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_EXECUTION_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 88.00885233022078,
+          "standardized_gap": 25.715176308975227
+        },
+        "PROMPT_BOUNDARY": {
+          "canonical_vector_hash": "d5c151aae0254168b47756bd3ecf2062fe0fcb43e371d29410e5f0e41f14f4a6",
+          "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+          "file_sha256": "c39ff806cdba9286b91fe4f009afb6727f754cae94a5d3e18bf810052e415358",
+          "location": "PROMPT_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_HYPOTHESIS_BRANCH_ELIMINATION_PROMPT_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 67.06844005919353,
+          "standardized_gap": 18.09332510431024
+        }
+      },
+      "negative_evaluability": 0.9791666666666666,
+      "negative_validity": 0.9791666666666666,
+      "pass": true,
+      "positive_evaluability": 0.9583333333333334,
+      "positive_validity": 0.9583333333333334,
+      "within_disagreement": 0.20833333333333334
+    },
+    "LOOP_BOUNDARY_ACCOUNTING": {
+      "cross_disagreement": 0.3541666666666667,
+      "excess_disagreement": 0.041666666666666685,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "canonical_vector_hash": "71042253d016c384c0b9c56c7b65221fea715bcfb9f7c73afb93f12fffa52240",
+          "family": "LOOP_BOUNDARY_ACCOUNTING",
+          "file_sha256": "9a689c403cfc20695665c484684af8c21852467c6551497db2aa8c5dd2281be2",
+          "location": "EXECUTION_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_LOOP_BOUNDARY_ACCOUNTING_EXECUTION_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 83.17245238304834,
+          "standardized_gap": 17.53286846561664
+        },
+        "PROMPT_BOUNDARY": {
+          "canonical_vector_hash": "d9c7b4bb9d7355efa65ed78a1b7a896d48e1938095de665a3b611c100f6f6dca",
+          "family": "LOOP_BOUNDARY_ACCOUNTING",
+          "file_sha256": "b69ccf40559a990666a6b7cfc3efc60ec5cba56ad34a315f26eb7f95c7421b8f",
+          "location": "PROMPT_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_LOOP_BOUNDARY_ACCOUNTING_PROMPT_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 68.16886510970049,
+          "standardized_gap": 7.017720371088762
+        }
+      },
+      "negative_evaluability": 1.0,
+      "negative_validity": 1.0,
+      "pass": true,
+      "positive_evaluability": 1.0,
+      "positive_validity": 1.0,
+      "within_disagreement": 0.3125
+    },
+    "MUTATION_ALIAS_CAUSALITY": {
+      "cross_disagreement": 0.3854166666666667,
+      "excess_disagreement": 0.11458333333333337,
+      "locations": {
+        "EXECUTION_BOUNDARY": {
+          "canonical_vector_hash": "1d36109a485fbc3cb36e1988a4e86d34265391c24ce60859d09a0f9d5aa45dd4",
+          "family": "MUTATION_ALIAS_CAUSALITY",
+          "file_sha256": "26b9fb266ab5e1b1e11d020a37da37cefc6715d8d5ec95c8bbbb7b51093d098a",
+          "location": "EXECUTION_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_MUTATION_ALIAS_CAUSALITY_EXECUTION_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 78.12285337286588,
+          "standardized_gap": 17.542821927211502
+        },
+        "PROMPT_BOUNDARY": {
+          "canonical_vector_hash": "04cc54738ebe9ffe9e8fecea28aef30535ede0e37cac91ae4e6e0d28b77c278e",
+          "family": "MUTATION_ALIAS_CAUSALITY",
+          "file_sha256": "8e173ca35b04017607ec16f1bb4271eed7c4aeaad7e64ef230a70d72ed12e14f",
+          "location": "PROMPT_BOUNDARY",
+          "path": "review/q2_v4_spark1_presemantic/SOURCE_DIRECTIONS/MEAN_MUTATION_ALIAS_CAUSALITY_PROMPT_BOUNDARY.npy",
+          "positive_projection_fraction": 1.0,
+          "raw_norm": 82.46842715448098,
+          "standardized_gap": 10.877877394163256
+        }
+      },
+      "negative_evaluability": 0.9375,
+      "negative_validity": 0.9375,
+      "pass": true,
+      "positive_evaluability": 0.9791666666666666,
+      "positive_validity": 0.9791666666666666,
+      "within_disagreement": 0.2708333333333333
+    }
+  }
+}

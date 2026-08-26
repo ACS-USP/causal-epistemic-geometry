@@ -1002,7 +1002,12 @@ def _capture_covariance(backend: Any) -> np.ndarray:
 
 
 def _checkpoint_indices(length: int) -> tuple[int, int, int]:
-    return (length // 3, (2 * length) // 3, length - 1)
+    if length < 3:
+        raise RuntimeError("Q2_V4_A2_INSTRUMENT_NOT_QUALIFIED: continuation too short")
+    indices = (length // 3, (2 * length) // 3, length - 1)
+    if len(set(indices)) != 3:
+        raise RuntimeError("Q2_V4_A2_INSTRUMENT_NOT_QUALIFIED: duplicate checkpoints")
+    return indices
 
 
 def _fingerprint(
@@ -1085,6 +1090,40 @@ def geometry_phase(backend: Any, prelock_commit: str) -> None:
     a0 = 1.0 - coefficients @ coefficients.T
     direction_rows = np.stack([vectors[name] for name in names])
     a1 = np.asarray(whitened_geometry(direction_rows, fit)["cosine_distance"], dtype=np.float64)
+    repeated_fit = fit_whitening(covariance.astype(np.float64), regularization_fraction=0.10)
+    a1_checks = {
+        "activation_shape_64_by_4096": covariance.shape == (64, 4096),
+        "activations_finite": bool(np.isfinite(covariance).all()),
+        "regularization_value_positive": fit.regularization_value > 0.0,
+        "condition_number_finite_at_most_1e6": bool(
+            np.isfinite(fit.condition_number) and fit.condition_number <= 1e6
+        ),
+        "effective_rank_at_least_2": fit.effective_rank >= 2.0,
+        "deterministic_fit_hash": fit.fit_hash == repeated_fit.fit_hash,
+        "matrix_finite": bool(np.isfinite(a1).all()),
+        "matrix_symmetry_error_at_most_1e10": float(np.max(np.abs(a1 - a1.T))) <= 1e-10,
+        "matrix_diagonal_error_at_most_1e10": float(np.max(np.abs(np.diag(a1)))) <= 1e-10,
+        "cosine_distance_range": float(np.min(a1)) >= -1e-10 and float(np.max(a1)) <= 2.0 + 1e-10,
+    }
+    a1_pass = all(a1_checks.values())
+    write_json(
+        REVIEW / "A1_INSTRUMENT_QUALIFICATION.json",
+        {
+            "activation_archive_sha256": sha256(REVIEW / "A1_COVARIANCE_ACTIVATIONS.npz"),
+            "fit_sha256": sha256(REVIEW / "A1_COVARIANCE_FIT.npz"),
+            "fit_hash": fit.fit_hash,
+            "lambda": 0.10,
+            "regularization_value": fit.regularization_value,
+            "effective_rank": fit.effective_rank,
+            "condition_number": fit.condition_number,
+            "checks": a1_checks,
+            "classification": "Q2_V4_A1_INSTRUMENT_QUALIFIED"
+            if a1_pass
+            else "Q2_V4_A1_INSTRUMENT_NOT_QUALIFIED",
+        },
+    )
+    if not a1_pass:
+        raise RuntimeError("Q2_V4_A1_INSTRUMENT_NOT_QUALIFIED")
     continuation = [
         int(v) for v in backend.tokenizer.encode(EXECUTION_TEACHER_TEXT, add_special_tokens=False)
     ]
@@ -1211,15 +1250,6 @@ def geometry_phase(backend: Any, prelock_commit: str) -> None:
         }
     np.savez_compressed(REVIEW / "PREDICTION_MATRICES.npz", **matrices)
     instrument_pass = all(row["pass"] for row in a2_reports.values())
-    write_json(
-        REVIEW / "A1_INSTRUMENT_QUALIFICATION.json",
-        {
-            "activation_archive_sha256": sha256(REVIEW / "A1_COVARIANCE_ACTIVATIONS.npz"),
-            "fit_sha256": sha256(REVIEW / "A1_COVARIANCE_FIT.npz"),
-            "lambda": 0.10,
-            "classification": "Q2_V4_A1_INSTRUMENT_QUALIFIED",
-        },
-    )
     write_json(
         REVIEW / "A2_INSTRUMENT_QUALIFICATION.json",
         {

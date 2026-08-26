@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "alpha_zero_identity": true,
+    "architecture_aarch64": true,
+    "batch_order_independence": true,
+    "bf16_supported": true,
+    "deterministic_seed_repeatability": true,
+    "gpu_gb10": true,
+    "hook_cleanup": true,
+    "hook_scope_shift_forward": true,
+    "hostname_spark1": true,
+    "kv_cache_current_token_semantics": true,
+    "one_cuda_device": true,
+    "resume_identity_and_no_duplicate": true,
+    "technical_logit_repeatability": true,
+    "tokenization_repeatability": true
+  },
+  "classification": "Q2_V4_SPARK1_ENGINE_QUALIFIED",
+  "elapsed_seconds": 44.53532206700038,
+  "throughput_fixtures": [
+    {
+      "fixture_id": "TECH_00",
+      "generated_tokens": 5,
+      "seconds": 1.5766637030028505
+    },
+    {
+      "fixture_id": "TECH_01",
+      "generated_tokens": 5,
+      "seconds": 0.415105329000653
+    },
+    {
+      "fixture_id": "TECH_02",
+      "generated_tokens": 18,
+      "seconds": 1.5073562039979151
+    },
+    {
+      "fixture_id": "TECH_03",
+      "generated_tokens": 32,
+      "seconds": 2.7500740210016374
+    },
+    {
+      "fixture_id": "TECH_04",
+      "generated_tokens": 32,
+      "seconds": 2.688168968001264
+    }
+  ]
+}

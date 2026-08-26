@@ -1,0 +1,82 @@
+{
+  "G3": {
+    "A2_full_gate_required": true,
+    "paired_bootstrap_lower_bounds_positive": true,
+    "rho_A2_minus_A0_min": 0.1,
+    "rho_A2_minus_A1_min": 0.1,
+    "two_contrast_single_step_maxT_p_max": 0.05
+  },
+  "Q3": "NOT_RUN",
+  "QAP": {
+    "identity_first": true,
+    "maps_total": 50000,
+    "multiplicity": "single-step maxT across A0/A1/A2",
+    "p_value": "count(T_perm>=T_observed)/50000",
+    "rng": "NumPy PCG64DXSM",
+    "same_permutation_both_shells_all_metrics": true,
+    "seed": "first128bits SHA256('Q2-V4-QAP-V1|' + PRELOCK_COMMIT), big-endian",
+    "unique_sampled_maps": 49999
+  },
+  "angular_metrics": [
+    "A0",
+    "A1",
+    "A2"
+  ],
+  "bootstrap": {
+    "item_cluster_resamples": 10000,
+    "unit": "item; move all 65 conditions and both rollouts together"
+  },
+  "classification": {
+    "V4-G0": "no primary angular metric qualifies",
+    "V4-G1": "A0 and/or A1 qualifies without separate A2 support",
+    "V4-G2": "A2 qualifies",
+    "V4-G3": "A2 qualifies and passes frozen superiority requirements"
+  },
+  "endpoint": {
+    "D_shape_panel": "D_total-mean_shift_product",
+    "D_shape_superpopulation": "N/(N-1)*D_shape_panel",
+    "D_total": "mean_t[(e_i,t,0-e_j,t,0)*(e_i,t,1-e_j,t,1)]",
+    "mean_shift_product": "mean_t(d_t,0)*mean_t(d_t,1)",
+    "negative_estimates": "RETAIN"
+  },
+  "metric_gate": {
+    "both_shell_rhos_strictly_positive": true,
+    "delete_one_controller_sign_stable": true,
+    "item_bootstrap_lower_bound_strictly_positive": true,
+    "maxT_adjusted_p_max": 0.05,
+    "shell_mean_rho_min": 0.2
+  },
+  "panel": {
+    "N": 300,
+    "conditions": 65,
+    "expected_rows": 39000,
+    "rollouts": 2,
+    "seed_regime": "INDEPENDENT_PRIMARY"
+  },
+  "primary_statistic": "equal-weight mean of shell-specific upper-triangle Spearman correlations",
+  "radial": {
+    "R_shape": "D_shape(BASELINE,strong)-D_shape(BASELINE,medium)",
+    "R_total": "D_total(BASELINE,strong)-D_total(BASELINE,medium)",
+    "independent_of_G_classification": true,
+    "maps_total": 50000,
+    "paired_shell_swaps": true,
+    "positive_gate": {
+      "item_bootstrap_lower_bound_strictly_positive": true,
+      "median_strictly_positive": true,
+      "permutation_p_max": 0.05,
+      "positive_directions_min": 22
+    },
+    "rng": "NumPy PCG64DXSM",
+    "seed": "first128bits SHA256('Q2-V4-RADIAL-SWAPS-V1|' + PRELOCK_COMMIT), big-endian",
+    "statuses": [
+      "RT+",
+      "RT-",
+      "RS+",
+      "RS-"
+    ]
+  },
+  "schema_version": "q2-v4-statistical-analysis-plan-v1",
+  "secondary_metric": "D2",
+  "semantic_execution_authorized": false,
+  "status": "FROZEN_PRE_OUTCOME"
+}
