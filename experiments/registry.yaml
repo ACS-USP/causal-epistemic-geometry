@@ -1863,3 +1863,57 @@ experiments:
     active_pods: 0
     retained_volumes: 0
     next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN
+    version: V3-FOUR-FAMILY-CPU-DESIGN
+    stage: DEVELOPMENT_DESIGN_ONLY
+    question: >-
+      Can exactly four inherited source-qualified controller families support
+      an identifiable and sufficiently powered radial/angular Q2 V3 test, and
+      what Class-C panel N is justified before any new freeze?
+    instrument: >-
+      CPU-only exact QAP reconstruction, dependent synthetic two-rollout
+      simulations, geometry-only identifiability simulations, deterministic
+      Class-C panel expansion, and independent outcome-free design audit.
+    model_policy: NO_MODEL_CPU_ONLY_DESIGN
+    status: Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED
+    outcome: STOP_NO_AMENDMENT2_DRAFT
+    scientific_interpretation: >-
+      The exact four-family design is algebraically coherent but not adequately
+      informative for the intended G2/G3 distinction. The block-preserving QAP
+      has 384 maps; N=300 is the item-precision elbow; however maxT/full-gate
+      power remained low even at nominal rho 0.40 and N=400. More items do not
+      create controller or family units. This is a design-power conclusion, not
+      a Q2 predictive-geometry outcome.
+    source_branch: research/q2-v3-four-family-statistical-redesign
+    source_commit: 2fbcc98fa6026b844074bdaef2ba311b360b7f81
+    artifact: review/q2_v3_four_family_statistical_redesign/REPORT.md
+    inherited_source_families: 4
+    meaningful_controllers: 16
+    null_controllers: 4
+    conditions: 21
+    selected_planning_n: 300
+    selected_panel_ordered_ids_sha256: d1853656e8320757aa149b8dfe71a661a875fa2127c85b933d367e544bd17392
+    cross_family_dyads_per_shell: 24
+    primary_shell_stratified_dyads: 48
+    radial_pairs: 8
+    projected_semantic_rows: 12600
+    qap_group: S4_SEMIDIRECT_Z2_POWER4
+    qap_universe: 384
+    effective_rank_min: 4.0
+    max_family_leverage: 0.40
+    family_consistency: THREE_OF_FOUR_STRICTLY_POSITIVE
+    lodo: EIGHT_OF_EIGHT_STRICTLY_POSITIVE
+    amendment2_drafted: false
+    model_inference: false
+    runpod: 0
+    correctness_inspected: false
+    shell_calibration: NOT_RUN
+    geometry_metrics_run: []
+    semantic_v3_outcomes: 0
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    q1: UNCHANGED
+    q3: NOT_RUN
+    design_audit: Q2_V3_FOUR_FAMILY_DESIGN_AUDIT_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW

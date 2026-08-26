@@ -83,6 +83,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "Q2_V3_AMENDMENT1_EXECUTION",
             "Q2_V3_AMENDMENT1_EXECUTION_COMPLETE",
             "Q2_V3_REPLACEMENT_FAMILY_DESIGN_COMPLETE",
+            "Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN_COMPLETE",
         }
     assert state["current"]["gpu_work_authorized"] is (
         workstream

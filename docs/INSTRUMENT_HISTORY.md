@@ -133,10 +133,17 @@ sets. No concept uniquely combined adequate source coverage, mechanistic
 distinctness, and freedom from relevant prior behavioral exposure.
 
 **Decision:** `Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED`. No fifth family was
-frozen. The non-executing redesign memo projects 16 meaningful controllers, 48
-primary cross-family shell-stratified dyads, and 8,400 semantic trajectories,
-with new family-level precision and QAP rules required before any freeze. See
-the [design closeout](../review/q2_v3_replacement_family_design/REPORT.md).
+frozen. See the
+[replacement design closeout](../review/q2_v3_replacement_family_design/REPORT.md).
+
+The subsequent CPU-only four-family statistical sprint reconstructed the old
+QAP as \(S_5\ltimes(\mathbb Z_2)^5\) and its exact 384-map four-family
+analogue. Dependence-preserving simulations selected N=300 as the item-level
+precision elbow (12,600 possible rows), but N=400 still had inadequate power
+for meaningful G2/G3 discrimination. The closed design classification is
+`Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED`. Amendment 2 was not drafted or run;
+no shell calibration, M0/M1/M2, semantic outcome, or model inference occurred.
+See the [statistical redesign](../review/q2_v3_four_family_statistical_redesign/REPORT.md).
 
 ## Cross-series conclusion
 

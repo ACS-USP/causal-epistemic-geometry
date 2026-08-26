@@ -5,9 +5,9 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_FOUR_FAMILY_REDESIGN_REQUIRED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED` — **scientific claim:** `NONE_FROZEN`.
 
-The CPU-only prospective replacement-family audit found no unique fifth family with adequate static source support, mechanistic distinctness, and freedom from relevant prior behavioral exposure. No replacement was frozen. A four-family redesign is required for principal review; it would contain 16 meaningful controllers, 48 primary shell-stratified cross-family dyads, and 8,400 semantic trajectories. No model inference, geometry, or semantic panel was run, so the Q2 V3 relational hypothesis remains untested.
+The CPU-only four-family redesign reconstructed the historical 3,840-map QAP and derived its exact 384-map block-preserving analogue. Synthetic dependence-preserving simulations selected N=300 as the item-precision elbow, but showed low maxT/full-gate power even for rho=0.40 and little benefit from N=400. The controller/family units, not item count, are the binding limit. Amendment 2 was not drafted or run. No model inference, shell calibration, M0/M1/M2, or semantic outcome occurred.
 
 **Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
 <!-- PROJECT_STATUS:END -->
