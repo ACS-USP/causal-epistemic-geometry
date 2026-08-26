@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ruff: noqa: E501
 """CPU-only Q2 V4.1 frozen-31-bank adequacy review.
 
 This script reads only the historical V4 coefficient bank and label-free
@@ -23,6 +24,10 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from epistemic_geometry.experiments.q2_v4 import (  # noqa: E402
+    controller_permutations,
+    protocol_seed,
+)
 from epistemic_geometry.experiments.q2_v4_1 import (  # noqa: E402
     EXPECTED_SAFE_IDS,
     V4_CANDIDATE_COMMIT,
@@ -38,14 +43,11 @@ from epistemic_geometry.experiments.q2_v4_1 import (  # noqa: E402
     synthetic_adequacy_criteria,
 )
 from scripts.design_q2_v4_intervention_subspace import (  # noqa: E402
+    _angular,
     _candidate_embeddings,
     _finite_specific_embeddings,
     _qap_cache,
     _simulate_once,
-)
-from epistemic_geometry.experiments.q2_v4 import (  # noqa: E402
-    controller_permutations,
-    protocol_seed,
 )
 
 REVIEW = ROOT / "review" / "q2_v4_1_31_safe_bank_review"
@@ -82,20 +84,22 @@ def sha256_json(value: Any) -> str:
 def write_design_precheck() -> None:
     REVIEW.mkdir(parents=True, exist_ok=True)
     criteria = synthetic_adequacy_criteria()
-    criteria.update({
-        "source_commit": SOURCE_COMMIT,
-        "historical_v4_classification": V4_CLASSIFICATION,
-        "historical_v4_prelock": V4_PRELOCK,
-        "semantic_outcomes_read": False,
-        "model_inference": False,
-        "gpu_used": False,
-        "application_order": [
-            "freeze criteria",
-            "reconstruct 40 and 31-safe geometry",
-            "run synthetic K=31/K=32 planning simulation",
-            "apply criteria mechanically",
-        ],
-    })
+    criteria.update(
+        {
+            "source_commit": SOURCE_COMMIT,
+            "historical_v4_classification": V4_CLASSIFICATION,
+            "historical_v4_prelock": V4_PRELOCK,
+            "semantic_outcomes_read": False,
+            "model_inference": False,
+            "gpu_used": False,
+            "application_order": [
+                "freeze criteria",
+                "reconstruct 40 and 31-safe geometry",
+                "run synthetic K=31/K=32 planning simulation",
+                "apply criteria mechanically",
+            ],
+        }
+    )
     write_json(REVIEW / "DESIGN_PRECHECK.json", criteria)
     (REVIEW / "DESIGN_PRECHECK.md").write_text(
         "# Q2 V4.1 coverage and power adequacy design precheck\n\n"
@@ -115,17 +119,19 @@ def write_design_precheck() -> None:
 
 
 def _amplitudes(rows: list[dict[str, Any]]) -> np.ndarray:
-    return np.asarray([
-        [row["medium"]["implemented_amplitude"], row["strong"]["implemented_amplitude"]]
-        for row in rows
-    ], dtype=np.float64)
+    return np.asarray(
+        [
+            [row["medium"]["implemented_amplitude"], row["strong"]["implemented_amplitude"]]
+            for row in rows
+        ],
+        dtype=np.float64,
+    )
 
 
 def reconstruct_bank() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
     candidates, safe = load_frozen_candidates(CANDIDATE_MANIFEST, SAFETY_REPORT)
     all_coefficients = np.asarray([row["coefficients"] for row in candidates], dtype=np.float64)
     safe_coefficients = np.asarray([row["coefficients"] for row in safe], dtype=np.float64)
-    all_amplitudes = _amplitudes(candidates)
     safe_amplitudes = _amplitudes(safe)
     structure = selected_bank_coverage_checks(safe_coefficients, safe_amplitudes)
     reconstructed = {
@@ -140,9 +146,8 @@ def reconstruct_bank() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict
         "candidate_count": len(candidates),
         "safe_count": len(safe),
         "unsafe_count": len(candidates) - len(safe),
-        "candidate_order_preserved": [
-            row["candidate_id"] for row in candidates
-        ] == [f"V4_DIRECTION_{i:02d}" for i in range(40)],
+        "candidate_order_preserved": [row["candidate_id"] for row in candidates]
+        == [f"V4_DIRECTION_{i:02d}" for i in range(40)],
         "safe_order_preserved": [row["candidate_id"] for row in safe] == list(EXPECTED_SAFE_IDS),
         "correctness_used": False,
         "semantic_outcomes": 0,
@@ -154,12 +159,15 @@ def reconstruct_bank() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict
         "safe_candidates": safe,
     }
     write_json(REVIEW / "CANDIDATE_RECONSTRUCTION.json", reconstructed)
-    write_json(REVIEW / "SAFETY_ATTRITION_GEOMETRY.json", {
-        "all_40": reconstructed["all_geometry"],
-        "safe_31": reconstructed["safe_geometry"],
-        "coverage_checks": structure,
-        "unsafe_ids": reconstructed["unsafe_ids"],
-    })
+    write_json(
+        REVIEW / "SAFETY_ATTRITION_GEOMETRY.json",
+        {
+            "all_40": reconstructed["all_geometry"],
+            "safe_31": reconstructed["safe_geometry"],
+            "coverage_checks": structure,
+            "unsafe_ids": reconstructed["unsafe_ids"],
+        },
+    )
     return candidates, safe, reconstructed
 
 
@@ -231,10 +239,7 @@ def _simulate_cells(
         seed=protocol_seed(f"Q2-V4-POWER-QAP-K{k}-V1", SOURCE_COMMIT),
     )
     metric_names, cache = _qap_cache(
-        {
-            name: value / np.linalg.norm(value, axis=1, keepdims=True)
-            for name, value in embeddings.items()
-        },
+        {name: _angular(value) for name, value in embeddings.items()},
         permutations,
     )
     rows = []
@@ -247,22 +252,26 @@ def _simulate_cells(
                 n_items=n_items,
                 target_rho=rho,
                 seed=protocol_seed(
-                    f"Q2-V4-{('SUPERIORITY' if superiority else 'SIM')}-K{k}-N{n_items}-R{rho}-I{replicate}",
+                    (
+                        f"Q2-V4-{('SUPERIORITY' if superiority else 'SIM')}-K{k}-"
+                        f"N{n_items}-R{rho}-I{replicate}"
+                    ),
                     SOURCE_COMMIT,
                 ),
             )
             for replicate in range(replicates)
         ]
-        rows.append(_planning_row(
-            results,
-            k=k,
-            n_items=n_items,
-            rho=rho,
-            scenario=(
-                "finite_specific_superiority" if superiority
-                else "correlated_metric_ladder"
-            ),
-        ))
+        rows.append(
+            _planning_row(
+                results,
+                k=k,
+                n_items=n_items,
+                rho=rho,
+                scenario=(
+                    "finite_specific_superiority" if superiority else "correlated_metric_ladder"
+                ),
+            )
+        )
     return rows
 
 
@@ -274,43 +283,60 @@ def run_power(
     rows.extend(_simulate_cells(k=31, n_items=300, rho_values=RHO_VALUES, replicates=replicates))
     rows.extend(_simulate_cells(k=32, n_items=300, rho_values=RHO_VALUES, replicates=replicates))
     if include_n400:
-        rows.extend(_simulate_cells(k=31, n_items=400, rho_values=RHO_VALUES, replicates=replicates))
+        rows.extend(
+            _simulate_cells(k=31, n_items=400, rho_values=RHO_VALUES, replicates=replicates)
+        )
     superiority_rows: list[dict[str, Any]] = []
     superiority_rhos = (0.25, 0.30, 0.40, 0.50, 0.60)
-    superiority_rows.extend(_simulate_cells(
-        k=31, n_items=300, rho_values=superiority_rhos,
-        replicates=replicates, superiority=True,
-    ))
-    superiority_rows.extend(_simulate_cells(
-        k=32, n_items=300, rho_values=superiority_rhos,
-        replicates=replicates, superiority=True,
-    ))
+    superiority_rows.extend(
+        _simulate_cells(
+            k=31,
+            n_items=300,
+            rho_values=superiority_rhos,
+            replicates=replicates,
+            superiority=True,
+        )
+    )
+    superiority_rows.extend(
+        _simulate_cells(
+            k=32,
+            n_items=300,
+            rho_values=superiority_rhos,
+            replicates=replicates,
+            superiority=True,
+        )
+    )
     write_csv(REVIEW / "POWER_SIMULATION.csv", rows)
     write_csv(REVIEW / "SUPERIORITY_POWER_SIMULATION.csv", superiority_rows)
-    write_json(REVIEW / "POWER_SIMULATION_METADATA.json", {
-        "schema_version": "q2-v4.1-power-simulation-v1",
-        "cpu_only": True,
-        "semantic_outcomes_read": False,
-        "model_inference": False,
-        "source_commit": SOURCE_COMMIT,
-        "K_values": [31, 32],
-        "N_values": [300] + ([400] if include_n400 else []),
-        "rho_values": list(RHO_VALUES),
-        "replicates_per_cell": replicates,
-        "planning_qap_maps_per_replicate": PLANNING_QAP_MAPS,
-        "final_v4_qap_maps_preserved": FINAL_QAP_MAPS,
-        "qap_structure": "same controller-label permutation, shell-coupled maxT machinery as V4",
-        "endpoint": "N/(N-1)-corrected two-rollout item-population D_shape",
-        "multiplicity": "single-step maxT across A0/A1/A2",
-        "K31_primary": True,
-        "K32_reference": True,
-        "N400_secondary": include_n400,
-        "seed_source_commit": SOURCE_COMMIT,
-        "note": (
-            "Planning uses the V4 established 499-map Monte Carlo acceleration "
-            "for repeated power cells; the 50,000-map final protocol is unchanged."
-        ),
-    })
+    write_json(
+        REVIEW / "POWER_SIMULATION_METADATA.json",
+        {
+            "schema_version": "q2-v4.1-power-simulation-v1",
+            "cpu_only": True,
+            "semantic_outcomes_read": False,
+            "model_inference": False,
+            "source_commit": SOURCE_COMMIT,
+            "K_values": [31, 32],
+            "N_values": [300] + ([400] if include_n400 else []),
+            "rho_values": list(RHO_VALUES),
+            "replicates_per_cell": replicates,
+            "planning_qap_maps_per_replicate": PLANNING_QAP_MAPS,
+            "final_v4_qap_maps_preserved": FINAL_QAP_MAPS,
+            "qap_structure": (
+                "same controller-label permutation, shell-coupled maxT machinery as V4"
+            ),
+            "endpoint": "N/(N-1)-corrected two-rollout item-population D_shape",
+            "multiplicity": "single-step maxT across A0/A1/A2",
+            "K31_primary": True,
+            "K32_reference": True,
+            "N400_secondary": include_n400,
+            "seed_source_commit": SOURCE_COMMIT,
+            "note": (
+                "Planning uses the V4 established 499-map Monte Carlo acceleration "
+                "for repeated power cells; the 50,000-map final protocol is unchanged."
+            ),
+        },
+    )
     return rows, superiority_rows
 
 
@@ -332,9 +358,9 @@ def apply_decision(
     power_checks = {
         "coverage_all_pass": bool(reconstructed["safe_coverage_checks"]["pass"]),
         "k31_omnibus_power_at_least_0_80": k31["omnibus_rate"] >= 0.80,
-        "k31_fpr_in_prespecified_range": 0.025 <= _find(
-            rows, k=31, n=300, rho=0.0
-        )["omnibus_rate"] <= 0.075,
+        "k31_fpr_in_prespecified_range": 0.025
+        <= _find(rows, k=31, n=300, rho=0.0)["omnibus_rate"]
+        <= 0.075,
         "absolute_omnibus_power_loss_vs_k32_at_most_0_10": (
             k32["omnibus_rate"] - k31["omnibus_rate"] <= 0.10
         ),
@@ -351,8 +377,7 @@ def apply_decision(
         "k32_reference_cell": k32,
         "n400_simulated": include_n400,
         "decision": (
-            "Q2_V4_1_31_SAFE_BANK_ADEQUATE"
-            if adequate else "Q2_V4_1_31_SAFE_BANK_INADEQUATE"
+            "Q2_V4_1_31_SAFE_BANK_ADEQUATE" if adequate else "Q2_V4_1_31_SAFE_BANK_INADEQUATE"
         ),
         "semantic_outcomes": 0,
         "a1_a2_new_computation": False,
@@ -365,7 +390,9 @@ def apply_decision(
         manifest = {
             "schema_version": "q2-v4.1-safe-bank-manifest-v1",
             "classification": decision["decision"],
-            "population": "original isotropic V4 candidates conditioned on frozen safety eligibility",
+            "population": (
+                "original isotropic V4 candidates conditioned on frozen safety eligibility"
+            ),
             "candidate_count_historical": 40,
             "safe_count": 31,
             "candidate_order": list(EXPECTED_SAFE_IDS),
@@ -392,11 +419,17 @@ def apply_decision(
             encoding="utf-8",
         )
     else:
-        write_json(REVIEW / "FUTURE_RESERVE_RECOMMENDATION.json", {
-            "decision": decision["decision"],
-            "recommendation": "Use a larger prospectively frozen reserve in a future design; do not generate candidates in V4.1.",
-            "candidate_counts_for_95pct": reserve_fragility()["rows"],
-        })
+        write_json(
+            REVIEW / "FUTURE_RESERVE_RECOMMENDATION.json",
+            {
+                "decision": decision["decision"],
+                "recommendation": (
+                    "Use a larger prospectively frozen reserve in a future design; "
+                    "do not generate candidates in V4.1."
+                ),
+                "candidate_counts_for_95pct": reserve_fragility()["rows"],
+            },
+        )
     return decision
 
 
@@ -412,19 +445,22 @@ def write_reports(
 ) -> None:
     write_json(REVIEW / "RESERVE_FRAGILITY.json", reserve)
     write_json(REVIEW / "SAFETY_STRUCTURE.json", structure)
-    write_json(REVIEW / "ZERO_INFERENCE_AUDIT.json", {
-        "new_gpu_inference": False,
-        "new_model_inference": False,
-        "correctness_inspected": False,
-        "a1_a2_new_computation": False,
-        "semantic_outcomes": 0,
-        "q3": "NOT_RUN",
-        "spark1_used": False,
-        "spark2_used": False,
-        "runpod_used": False,
-        "historical_v4_result_unchanged": True,
-        "historical_v4_classification": V4_CLASSIFICATION,
-    })
+    write_json(
+        REVIEW / "ZERO_INFERENCE_AUDIT.json",
+        {
+            "new_gpu_inference": False,
+            "new_model_inference": False,
+            "correctness_inspected": False,
+            "a1_a2_new_computation": False,
+            "semantic_outcomes": 0,
+            "q3": "NOT_RUN",
+            "spark1_used": False,
+            "spark2_used": False,
+            "runpod_used": False,
+            "historical_v4_result_unchanged": True,
+            "historical_v4_classification": V4_CLASSIFICATION,
+        },
+    )
     all_geometry = reconstructed["all_geometry"]
     safe_geometry = reconstructed["safe_geometry"]
     p25 = _find(rows, k=31, n=300, rho=0.25)
@@ -501,22 +537,25 @@ def write_reports(
         "Q3: NOT RUN. The original V4 classification is immutable.\n",
         encoding="utf-8",
     )
-    write_json(REVIEW / "FORENSIC_AUDIT.json", {
-        "classification": "Q2_V4_1_FORENSIC_CLEAN",
-        "recomputed_from": [
-            "CANDIDATE_BANK_MANIFEST.json",
-            "CANDIDATE_SAFETY_REPORT.json",
-        ],
-        "candidate_count": len(candidates),
-        "safe_count": len(safe),
-        "decision": decision["decision"],
-        "semantic_outcomes": 0,
-        "gpu_used": False,
-        "model_inference": False,
-        "correctness_inspected": False,
-        "historical_classification_unchanged": V4_CLASSIFICATION,
-        "independent_recomputation": "direct geometry, binomial, and planning-statistic recomputation",
-    })
+    write_json(
+        REVIEW / "FORENSIC_AUDIT.json",
+        {
+            "classification": "Q2_V4_1_FORENSIC_CLEAN",
+            "recomputed_from": [
+                "CANDIDATE_BANK_MANIFEST.json",
+                "CANDIDATE_SAFETY_REPORT.json",
+            ],
+            "candidate_count": len(candidates),
+            "safe_count": len(safe),
+            "decision": decision["decision"],
+            "semantic_outcomes": 0,
+            "gpu_used": False,
+            "model_inference": False,
+            "correctness_inspected": False,
+            "historical_classification_unchanged": V4_CLASSIFICATION,
+            "independent_recomputation": "direct geometry, binomial, and planning-statistic recomputation",
+        },
+    )
     (REVIEW / "FORENSIC_AUDIT.md").write_text(
         "# Q2 V4.1 forensic audit\n\n"
         "Q2_V4_1_FORENSIC_CLEAN.\n\n"
@@ -532,16 +571,21 @@ def write_reports(
     file_hashes = {
         name: sha256_file(REVIEW / name)
         for name in sorted(
-            path.name for path in REVIEW.iterdir()
-            if path.is_file() and path.name not in {"artifact_hashes.json", "MANIFEST_AND_HASHES.json"}
+            path.name
+            for path in REVIEW.iterdir()
+            if path.is_file()
+            and path.name not in {"artifact_hashes.json", "MANIFEST_AND_HASHES.json"}
         )
     }
     write_json(REVIEW / "artifact_hashes.json", file_hashes)
-    write_json(REVIEW / "MANIFEST_AND_HASHES.json", {
-        "review_artifact_hash": sha256_json(file_hashes),
-        "historical_candidate_manifest_sha256": sha256_file(CANDIDATE_MANIFEST),
-        "historical_safety_report_sha256": sha256_file(SAFETY_REPORT),
-    })
+    write_json(
+        REVIEW / "MANIFEST_AND_HASHES.json",
+        {
+            "review_artifact_hash": sha256_json(file_hashes),
+            "historical_candidate_manifest_sha256": sha256_file(CANDIDATE_MANIFEST),
+            "historical_safety_report_sha256": sha256_file(SAFETY_REPORT),
+        },
+    )
 
 
 def main() -> None:
@@ -577,13 +621,18 @@ def main() -> None:
         decision,
         args.replicates,
     )
-    print(json.dumps({
-        "classification": decision["decision"],
-        "safe_count": len(safe),
-        "replicates": args.replicates,
-        "power_rows": len(rows),
-        "review": str(REVIEW),
-    }, indent=2))
+    print(
+        json.dumps(
+            {
+                "classification": decision["decision"],
+                "safe_count": len(safe),
+                "replicates": args.replicates,
+                "power_rows": len(rows),
+                "review": str(REVIEW),
+            },
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

@@ -122,9 +122,7 @@ def bank_geometry(coefficients: np.ndarray) -> dict[str, Any]:
     a0_distance = 1.0 - gram
     a0_upper = _upper(a0_distance)
     angular = np.arccos(np.clip(gram, -1.0, 1.0))
-    nearest = np.asarray(
-        [np.min(np.delete(angular[index], index)) for index in range(len(unit))]
-    )
+    nearest = np.asarray([np.min(np.delete(angular[index], index)) for index in range(len(unit))])
     # H is the row-space leverage for the coefficient observations.
     leverage = np.diag(unit @ np.linalg.pinv(unit.T @ unit, hermitian=True) @ unit.T)
     coordinate_signs = {
@@ -255,7 +253,8 @@ def load_frozen_candidates(
                 shell: {
                     key: value
                     for key, value in shell_data.items()
-                    if key in {
+                    if key
+                    in {
                         "pass",
                         "validity",
                         "evaluability",
@@ -269,9 +268,9 @@ def load_frozen_candidates(
         rows.append(row)
         if row["joint_safe"]:
             safe_rows.append(row)
-    if len(safe_rows) != 31 or [
-        row["candidate_id"] for row in safe_rows
-    ] != list(EXPECTED_SAFE_IDS):
+    if len(safe_rows) != 31 or [row["candidate_id"] for row in safe_rows] != list(
+        EXPECTED_SAFE_IDS
+    ):
         raise ValueError("safe subset reconstruction failed")
     if set(by_id) != {row["candidate_id"] for row in rows}:
         raise ValueError("candidate IDs do not reconcile")
@@ -394,7 +393,10 @@ def synthetic_adequacy_criteria() -> dict[str, Any]:
     return {
         "status": "FROZEN_BEFORE_OBSERVED_BANK_APPLICATION",
         "coverage": {
-            "lineage": "V4 selected_bank_checks with only selected cardinality generalized 32 -> 31",
+            "lineage": (
+                "V4 selected_bank_checks with only selected cardinality "
+                "generalized 32 -> 31"
+            ),
             "rank": "full retained coefficient-space rank",
             "effective_rank_fraction_min": 0.75,
             "condition_number_max": 3.0,
@@ -418,7 +420,10 @@ def synthetic_adequacy_criteria() -> dict[str, Any]:
             "omnibus_fpr_range": [0.025, 0.075],
             "relative_omnibus_power_loss_max": 0.10,
             "ci_width_ratio_max": 1.10,
-            "a2_attribution": "reported and compared to K=32; no separate binary gate because V4 explicitly documented marginal superiority limitations",
+            "a2_attribution": (
+                "reported and compared to K=32; no separate binary gate because "
+                "V4 explicitly documented marginal superiority limitations"
+            ),
             "g3_superiority": "reported honestly, not used as a K=31 adequacy gate",
         },
         "decision": {
@@ -428,7 +433,8 @@ def synthetic_adequacy_criteria() -> dict[str, Any]:
                 "K31/N300 omnibus FPR lies in [0.025, 0.075]",
                 "K31/N300 power loss versus K32/N300 <= 0.10 absolute",
                 "K31/N300 planning CI width ratio versus K32/N300 <= 1.10",
-                "no gross safety-conditioned collapse is present; diagnostics are interpreted jointly, not by aesthetic spherical uniformity",
+                "no gross safety-conditioned collapse is present; diagnostics are "
+                "interpreted jointly, not by aesthetic spherical uniformity",
             ],
             "inadequate_if": "any primary adequacy requirement fails",
             "no_semantic_outcomes": True,
