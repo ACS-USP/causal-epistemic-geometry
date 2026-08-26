@@ -85,8 +85,9 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q2_V3_REPLACEMENT_FAMILY_DESIGN_COMPLETE",
         "Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN_COMPLETE",
         "Q2_V4_INTERVENTION_SUBSPACE_DESIGN_COMPLETE",
-        "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
-    }
+            "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
+            "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE",
+        }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
         in {

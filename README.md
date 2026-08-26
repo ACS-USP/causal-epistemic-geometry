@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_LOCKED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V4_PRESEMANTIC_SAFE_BANK_INSUFFICIENT` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V4's Spark-1-only presemantic qualification protocol is prospectively locked. It may qualify the native engine, reconstruct the four surviving source concepts at prompt and execution boundaries, derive one PRELOCK-seeded 40-direction bank, select the first 32 directions passing the label-free two-shell safety gate, and seal A0/A1/A2 predictors. The 300-item semantic panel is content-frozen but inference remains forbidden; semantic outcomes are zero and Q3 remains not run.
+Q2 V4 qualified the Spark-1 engine, all eight native source directions, the rank-8 source subspace, and the single PRELOCK-seeded 40-direction candidate stream. The complete 1,944-row label-free two-shell safety gate produced only 31 safe directions versus the frozen requirement of 32, so the instrument closed as Q2_V4_SAFE_BANK_INSUFFICIENT. A1/A2, prediction matrices, QAP, and the 300-item semantic panel were not run; semantic outcomes remain zero.
 
-**Next authorized action:** EXECUTE_SPARK1_PRESEMANTIC_QUALIFICATION_ONLY
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

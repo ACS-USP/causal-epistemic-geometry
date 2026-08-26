@@ -3,7 +3,7 @@ last_verified: "2026-08-26"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_LOCKED
+  scientific_stage: Q2_V4_PRESEMANTIC_SAFE_BANK_INSUFFICIENT
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,23 +19,22 @@ project:
     utility?
 
 current:
-  workstream: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
-  lifecycle: PROSPECTIVE_QUALIFICATION_LOCK
-  stage: DEVELOPMENT_PRESEMANTIC_QUALIFICATION
-  source_commit: c53322a7db2cd6d06da719ae71c16fcc653b4024
-  execution_source_commit: null
+  workstream: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_INSTRUMENT_NOT_QUALIFIED
+  source_commit: 99782d6f4f3ce1ca52d2cf6caeacafd4d0de9081
+  execution_source_commit: 6b773e3709ad303640544a03d373fe64a0474687
   summary: >-
-    Q2 V4's Spark-1-only presemantic qualification protocol is prospectively
-    locked. It may qualify the native engine, reconstruct the four surviving
-    source concepts at prompt and execution boundaries, derive one PRELOCK-seeded
-    40-direction bank, select the first 32 directions passing the label-free
-    two-shell safety gate, and seal A0/A1/A2 predictors. The 300-item semantic
-    panel is content-frozen but inference remains forbidden; semantic outcomes
-    are zero and Q3 remains not run.
-  next_authorized_action: EXECUTE_SPARK1_PRESEMANTIC_QUALIFICATION_ONLY
+    Q2 V4 qualified the Spark-1 engine, all eight native source directions, the
+    rank-8 source subspace, and the single PRELOCK-seeded 40-direction candidate
+    stream. The complete 1,944-row label-free two-shell safety gate produced only
+    31 safe directions versus the frozen requirement of 32, so the instrument
+    closed as Q2_V4_SAFE_BANK_INSUFFICIENT. A1/A2, prediction matrices, QAP, and
+    the 300-item semantic panel were not run; semantic outcomes remain zero.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q2_V4_PRESEMANTIC_LABEL_FREE_ONLY
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: NONE
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -44,8 +43,8 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
-  free_generation: SOURCE_AND_LABEL_FREE_QUALIFICATION_ONLY_PRIMARY_PANEL_FORBIDDEN
+  current_task: Q2_V4_PRESEMANTIC_CLOSED_SAFE_BANK_INSUFFICIENT
+  free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -84,6 +83,38 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
+    status: Q2_V4_SAFE_BANK_INSUFFICIENT
+    conclusion: >-
+      The Spark-1 engine, all eight native source directions, and the rank-8
+      intervention subspace qualified. One PRELOCK-derived PCG64DXSM stream
+      generated exactly 40 candidates and passed its algebraic gate. The complete
+      1,944-row label-free shell/safety phase found 31 candidates safe at both
+      implemented radii, one below the frozen 32-direction requirement. The
+      sprint stopped without redraw or threshold change. A1, A2, prediction
+      matrices, QAP, future semantic schedule, and all 300-item panel outcomes
+      remain nonexistent; this is instrument non-qualification, not Q2 evidence.
+    branch: experiment/q2-v4-spark1-presemantic-qualification
+    design_parent_commit: c53322a7db2cd6d06da719ae71c16fcc653b4024
+    prelock_commit: 99782d6f4f3ce1ca52d2cf6caeacafd4d0de9081
+    candidate_bank_commit: c82c1cb79392f9a5d9bd9e8d258a1d1b54e8fd41
+    artifact: review/q2_v4_spark1_presemantic/REPORT.md
+    spark1_engine: Q2_V4_SPARK1_ENGINE_QUALIFIED
+    source_directions_qualified: 8
+    source_subspace_rank: 8
+    candidate_count: 40
+    safe_count: 31
+    selected_count_required: 32
+    label_free_rows: 2328
+    semantic_rows: 0
+    prediction_lock: NOT_CREATED_BY_FROZEN_STOP_RULE
+    forensic_classification: Q2_V4_PRESEMANTIC_FORENSIC_CLEAN
+    spark1_gpu_hours_approx: 4.2
+    spark2_used: false
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY
     conclusion: >-

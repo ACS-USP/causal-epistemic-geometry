@@ -1,0 +1,38 @@
+{
+  "approximate_total_spark1_gpu_hours_including_load_and_setup": 4.2,
+  "future_execution_ready": false,
+  "future_projection_basis": "candidate_safety label-free generation rate",
+  "future_semantic_rows": 39000,
+  "measured_phase_gpu_hours_excluding_model_load": 4.050175809660279,
+  "phases": [
+    {
+      "phase": "technical_fixtures",
+      "rows": 5,
+      "seconds": 8.93736822500432,
+      "tokens": 92,
+      "tokens_per_second": 10.293858066920537,
+      "trajectories_per_hour": 2014.0157087453224
+    },
+    {
+      "phase": "source_qualification",
+      "rows": 384,
+      "seconds": 5411.077657588001,
+      "tokens": 62435,
+      "tokens_per_second": 11.53836702240761,
+      "trajectories_per_hour": 255.47591209700133
+    },
+    {
+      "phase": "candidate_safety",
+      "rows": 1944,
+      "seconds": 9160.617888964,
+      "tokens": 103755,
+      "tokens_per_second": 11.326201055170738,
+      "trajectories_per_hour": 763.9659338297614
+    }
+  ],
+  "projected_future_wall_hours": 51.04939667203875,
+  "projected_future_wall_hours_with_50pct_tail": 76.57409500805812,
+  "reason": "Q2_V4_SAFE_BANK_INSUFFICIENT",
+  "schema_version": "q2-v4-presemantic-throughput-v1",
+  "spark2_used": false
+}

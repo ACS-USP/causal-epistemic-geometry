@@ -1,0 +1,988 @@
+{
+  "Q3": "NOT_RUN",
+  "baseline_evaluability": 1.0,
+  "baseline_validity": 1.0,
+  "candidate_recomputation": {
+    "V4_DIRECTION_00": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999999422634767,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 2.309460933602736e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999998845269533,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 2.309460933602736e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_01": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999999058750455,
+          "pass": true,
+          "raw_sequence_movement": 0.125,
+          "relative_target_error": 3.7649981798892895e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999999811750091,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 3.7649981798892895e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_02": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499999375416188,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 2.498335247569372e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999998750832376,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 2.498335247569372e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_03": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499998322469598,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 6.710121608355379e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999996644939196,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 6.710121608355379e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_04": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499999464454113,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 2.14218354832596e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999998928908226,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 2.14218354832596e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_05": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999956807680634,
+          "pass": true,
+          "raw_sequence_movement": 0.125,
+          "relative_target_error": 1.7276927746223691e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9166666666666666,
+          "implemented_amplitude": 0.4999991361536127,
+          "pass": false,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 1.7276927746223691e-06,
+          "truncation": 0.08333333333333333,
+          "validity": 0.9166666666666666
+        }
+      }
+    },
+    "V4_DIRECTION_06": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999998928335376,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 4.286658494834228e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9583333333333334,
+          "implemented_amplitude": 0.4999999785667075,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 4.286658494834228e-08,
+          "truncation": 0.041666666666666664,
+          "validity": 0.9583333333333334
+        }
+      }
+    },
+    "V4_DIRECTION_07": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500000705868254,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 2.823473015389766e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000001411736508,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 2.823473015389766e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_08": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500004004637207,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 1.6018548827378964e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000008009274414,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 1.6018548827378964e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_09": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500000328170071,
+          "pass": true,
+          "raw_sequence_movement": 0.125,
+          "relative_target_error": 1.3126802844709573e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000000656340142,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 1.3126802844709573e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_10": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999989342336706,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 4.2630653174224875e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999978684673413,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 4.2630653174224875e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_11": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999972073027535,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 1.1170788986047953e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999994414605507,
+          "pass": true,
+          "raw_sequence_movement": 0.5416666666666666,
+          "relative_target_error": 1.1170788986047953e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_12": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999997468660118,
+          "pass": false,
+          "raw_sequence_movement": 0.041666666666666664,
+          "relative_target_error": 1.0125359528601052e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999994937320236,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 1.0125359528601052e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_13": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999985472161146,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 5.811135541655688e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9583333333333334,
+          "implemented_amplitude": 0.4999997094432229,
+          "pass": true,
+          "raw_sequence_movement": 0.75,
+          "relative_target_error": 5.811135541655688e-07,
+          "truncation": 0.0,
+          "validity": 0.9583333333333334
+        }
+      }
+    },
+    "V4_DIRECTION_14": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500007104228799,
+          "pass": false,
+          "raw_sequence_movement": 0.041666666666666664,
+          "relative_target_error": 2.8416915196505244e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000014208457598,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 2.8416915196505244e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_15": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500002663235249,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 1.0652940996003224e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000005326470498,
+          "pass": true,
+          "raw_sequence_movement": 0.625,
+          "relative_target_error": 1.0652940996003224e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_16": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500000134595326,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 5.383813039827601e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.8333333333333334,
+          "implemented_amplitude": 0.5000000269190652,
+          "pass": false,
+          "raw_sequence_movement": 0.7083333333333334,
+          "relative_target_error": 5.383813039827601e-08,
+          "truncation": 0.16666666666666666,
+          "validity": 0.8333333333333334
+        }
+      }
+    },
+    "V4_DIRECTION_17": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999958965020472,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 1.641399181129266e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999917930040944,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 1.641399181129266e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_18": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500003591136355,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 1.436454541980936e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9583333333333334,
+          "implemented_amplitude": 0.500000718227271,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 1.436454541980936e-06,
+          "truncation": 0.041666666666666664,
+          "validity": 0.9583333333333334
+        }
+      }
+    },
+    "V4_DIRECTION_19": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999974375994782,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 1.0249602087064602e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999948751989565,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 1.0249602087064602e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_20": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500004532084153,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 1.8128336611855644e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000009064168306,
+          "pass": true,
+          "raw_sequence_movement": 0.625,
+          "relative_target_error": 1.8128336611855644e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_21": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000024699358186,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 9.879743274598951e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.625,
+          "implemented_amplitude": 0.5000004939871637,
+          "pass": false,
+          "raw_sequence_movement": 1.0,
+          "relative_target_error": 9.879743274598951e-07,
+          "truncation": 0.041666666666666664,
+          "validity": 0.625
+        }
+      }
+    },
+    "V4_DIRECTION_22": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999997757532613,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 8.969869547126308e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999995515065226,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 8.969869547126308e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_23": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500002752171067,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 1.1008684268620783e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000005504342134,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 1.1008684268620783e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_24": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000001398005844,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 5.592023377687383e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000000279601169,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 5.592023377687383e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_25": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499996100910247,
+          "pass": false,
+          "raw_sequence_movement": 0.08333333333333333,
+          "relative_target_error": 1.5596359012048921e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999992201820494,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 1.5596359012048921e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_26": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500000027224237,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 1.0889694701532449e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000000054448474,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 1.0889694701532449e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_27": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499997700324884,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 9.19870046356408e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9166666666666666,
+          "implemented_amplitude": 0.4999995400649768,
+          "pass": false,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 9.19870046356408e-07,
+          "truncation": 0.08333333333333333,
+          "validity": 0.9166666666666666
+        }
+      }
+    },
+    "V4_DIRECTION_28": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999998990953645,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 4.0361854192205726e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999999798190729,
+          "pass": true,
+          "raw_sequence_movement": 0.5416666666666666,
+          "relative_target_error": 4.0361854192205726e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_29": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499999580875136,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 1.6764994559270718e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999999161750272,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 1.6764994559270718e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_30": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.250001199066533,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 4.796266132034432e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.500002398133066,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 4.796266132034432e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_31": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499999908154733,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 3.673810677895517e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999999816309466,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 3.673810677895517e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_32": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500001781638563,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 7.126554251168926e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000003563277126,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 7.126554251168926e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_33": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000010185406424,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 4.074162569533968e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000002037081285,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 4.074162569533968e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_34": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500000271202401,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 1.0848096043680755e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000000542404802,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 1.0848096043680755e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_35": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000023841801183,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 9.536720473324323e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000004768360237,
+          "pass": true,
+          "raw_sequence_movement": 0.7083333333333334,
+          "relative_target_error": 9.536720473324323e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "V4_DIRECTION_36": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999973979520532,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 1.040819178732555e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9166666666666666,
+          "implemented_amplitude": 0.49999947959041063,
+          "pass": false,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 1.040819178732555e-06,
+          "truncation": 0.08333333333333333,
+          "validity": 0.9166666666666666
+        }
+      }
+    },
+    "V4_DIRECTION_37": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500000101382204,
+          "pass": true,
+          "raw_sequence_movement": 0.125,
+          "relative_target_error": 4.055288149729108e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9583333333333334,
+          "implemented_amplitude": 0.5000000202764407,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 4.055288149729108e-08,
+          "truncation": 0.041666666666666664,
+          "validity": 0.9583333333333334
+        }
+      }
+    },
+    "V4_DIRECTION_38": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999996021150797,
+          "pass": false,
+          "raw_sequence_movement": 0.08333333333333333,
+          "relative_target_error": 1.5915396811561067e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 0.9166666666666666,
+          "implemented_amplitude": 0.49999992042301594,
+          "pass": false,
+          "raw_sequence_movement": 0.6666666666666666,
+          "relative_target_error": 1.5915396811561067e-07,
+          "truncation": 0.0,
+          "validity": 0.9166666666666666
+        }
+      }
+    },
+    "V4_DIRECTION_39": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499999438736052,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 2.2450557923825443e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999998877472104,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 2.2450557923825443e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    }
+  },
+  "checks": {
+    "a1_not_run": true,
+    "a2_not_run": true,
+    "all_matched_seeds_match_schedule": true,
+    "baseline_rows_exactly_24": true,
+    "candidate_bank_not_redrawn": true,
+    "classification_agrees": true,
+    "correctness_never_evaluated": true,
+    "each_nonbaseline_condition_rows_exactly_24": true,
+    "journal_matches_frozen_schedule": true,
+    "journal_rows_exactly_1944": true,
+    "journal_unique_keys_exactly_1944": true,
+    "no_future_semantic_journal": true,
+    "prediction_lock_not_created": true,
+    "prediction_matrices_not_created": true,
+    "primary_audit_max_metric_difference_zero": true,
+    "primary_panel_n_300": true,
+    "primary_panel_semantic_outcomes_zero": true,
+    "safe_count_agrees": true,
+    "safe_order_agrees": true,
+    "schedule_rows_exactly_1944": true
+  },
+  "classification": "Q2_V4_PRESEMANTIC_FORENSIC_CLEAN",
+  "primary_audit_max_metric_difference": 0.0,
+  "primary_classification": "Q2_V4_SAFE_BANK_INSUFFICIENT",
+  "safe_count": 31,
+  "safe_ids_in_candidate_order": [
+    "V4_DIRECTION_00",
+    "V4_DIRECTION_01",
+    "V4_DIRECTION_02",
+    "V4_DIRECTION_03",
+    "V4_DIRECTION_04",
+    "V4_DIRECTION_06",
+    "V4_DIRECTION_07",
+    "V4_DIRECTION_08",
+    "V4_DIRECTION_09",
+    "V4_DIRECTION_10",
+    "V4_DIRECTION_11",
+    "V4_DIRECTION_13",
+    "V4_DIRECTION_15",
+    "V4_DIRECTION_17",
+    "V4_DIRECTION_18",
+    "V4_DIRECTION_19",
+    "V4_DIRECTION_20",
+    "V4_DIRECTION_22",
+    "V4_DIRECTION_23",
+    "V4_DIRECTION_24",
+    "V4_DIRECTION_26",
+    "V4_DIRECTION_28",
+    "V4_DIRECTION_29",
+    "V4_DIRECTION_30",
+    "V4_DIRECTION_31",
+    "V4_DIRECTION_32",
+    "V4_DIRECTION_33",
+    "V4_DIRECTION_34",
+    "V4_DIRECTION_35",
+    "V4_DIRECTION_37",
+    "V4_DIRECTION_39"
+  ],
+  "schema_version": "q2-v4-presemantic-safety-forensic-v1",
+  "semantic_outcomes": 0
+}
