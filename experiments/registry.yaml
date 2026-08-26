@@ -142,6 +142,7 @@ experiments:
     spark1_only: true
     spark2_used: false
     local_dstack: TERMINATED_NOT_PART_OF_PROTOCOL
+    cost_usd: 0.0
     runpod: 0
     q2: UNTESTED
     q3: NOT_RUN
