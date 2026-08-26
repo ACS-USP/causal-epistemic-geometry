@@ -1,0 +1,58 @@
+{
+  "application_order": [
+    "freeze criteria",
+    "reconstruct 40 and 31-safe geometry",
+    "run synthetic K=31/K=32 planning simulation",
+    "apply criteria mechanically"
+  ],
+  "coverage": {
+    "a0_q90_minus_q10_min": 0.2,
+    "cardinality": 31,
+    "condition_number_max": 3.0,
+    "descriptive_only": [
+      "axis loading/sign balance",
+      "mean-direction anisotropy",
+      "leverage",
+      "nearest-neighbor angular coverage",
+      "safety-label coefficient-space structure"
+    ],
+    "effective_rank_fraction_min": 0.75,
+    "lineage": "V4 selected_bank_checks with only selected cardinality generalized 32 -> 31",
+    "max_absolute_pair_cosine_max_exclusive": 0.98,
+    "rank": "full retained coefficient-space rank",
+    "shell_amplitude_cv_max": 0.03
+  },
+  "decision": {
+    "adequate_if": [
+      "all coverage checks pass",
+      "K31/N300 omnibus power >= 0.80 at rho=0.25",
+      "K31/N300 omnibus FPR lies in [0.025, 0.075]",
+      "K31/N300 power loss versus K32/N300 <= 0.10 absolute",
+      "K31/N300 planning CI width ratio versus K32/N300 <= 1.10",
+      "no gross safety-conditioned collapse is present; diagnostics are interpreted jointly, not by aesthetic spherical uniformity"
+    ],
+    "inadequate_if": "any primary adequacy requirement fails",
+    "no_semantic_outcomes": true
+  },
+  "gpu_used": false,
+  "historical_v4_classification": "Q2_V4_SAFE_BANK_INSUFFICIENT",
+  "historical_v4_prelock": "99782d6f4f3ce1ca52d2cf6caeacafd4d0de9081",
+  "model_inference": false,
+  "power": {
+    "a2_attribution": "reported and compared to K=32; no separate binary gate because V4 explicitly documented marginal superiority limitations",
+    "ci_width_ratio_max": 1.1,
+    "g3_superiority": "reported honestly, not used as a K=31 adequacy gate",
+    "omnibus_fpr_range": [
+      0.025,
+      0.075
+    ],
+    "omnibus_power_min": 0.8,
+    "primary_regime": "K=31, N=300",
+    "reference_regime": "K=32, N=300",
+    "relative_omnibus_power_loss_max": 0.1,
+    "scientifically_meaningful_rho": 0.25
+  },
+  "semantic_outcomes_read": false,
+  "source_commit": "186a6b6d5b81ba26aea9fe607dabe8eaae6ff0e1",
+  "status": "FROZEN_BEFORE_OBSERVED_BANK_APPLICATION"
+}
