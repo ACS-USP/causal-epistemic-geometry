@@ -246,7 +246,12 @@ def main() -> None:
         path.name: sha256(path)
         for path in sorted(REVIEW.iterdir(), key=lambda item: item.name)
         if path.is_file()
-        and path.name not in {"artifact_hashes.json", "MANIFEST_AND_HASHES.json"}
+        and path.name not in {
+            "artifact_hashes.json",
+            "MANIFEST_AND_HASHES.json",
+            "Q2_V4_1_REVIEW_BUNDLE.tar.gz",
+            "BUNDLE_SHA256.txt",
+        }
     }
     (REVIEW / "artifact_hashes.json").write_text(
         json.dumps(artifact_hashes, indent=2, sort_keys=True) + "\n",

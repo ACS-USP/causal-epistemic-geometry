@@ -655,7 +655,12 @@ def write_reports(
             path.name
             for path in REVIEW.iterdir()
             if path.is_file()
-            and path.name not in {"artifact_hashes.json", "MANIFEST_AND_HASHES.json"}
+            and path.name not in {
+                "artifact_hashes.json",
+                "MANIFEST_AND_HASHES.json",
+                "Q2_V4_1_REVIEW_BUNDLE.tar.gz",
+                "BUNDLE_SHA256.txt",
+            }
         )
     }
     write_json(REVIEW / "artifact_hashes.json", file_hashes)
