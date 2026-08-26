@@ -261,9 +261,9 @@ def main() -> None:
         and firewall_pass
     )
     audit_classification = (
-        "GATE12_1_FORENSIC_CLEAN"
+        "Q2_V4_1_LABEL_FREE_FORENSIC_CLEAN"
         if pass_audit
-        else "GATE12_1_FORENSIC_SCIENTIFIC_INTEGRITY_CONCERN"
+        else "Q2_V4_1_LABEL_FREE_FORENSIC_INTEGRITY_CONCERN"
     )
     with (REVIEW / "METRIC_CROSSCHECK.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=["artifact", "primary", "max_abs_difference"])

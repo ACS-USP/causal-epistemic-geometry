@@ -1,0 +1,47 @@
+{
+  "audit_commit": "78a2206c7590ee3c30e2c806b11eb037d94a8b80",
+  "classification": "Q2_V4_1_LABEL_FREE_FORENSIC_CLEAN",
+  "correctness_inspected": false,
+  "environment_pass": true,
+  "firewall_pass": true,
+  "independent_js": {
+    "aggregation": "equal_weight_mean_over_48_probe_checkpoint_rows",
+    "implementation": "explicit max-shift normalization, independent from primary consolidator",
+    "log_base": "natural_log",
+    "weighting": "0.5 KL(p||m) + 0.5 KL(q||m)"
+  },
+  "matrix_max_abs_difference": 6.024625243128412e-12,
+  "matrix_tolerance": 1e-08,
+  "no_gpu_used_for_consolidation": true,
+  "no_model_execution": true,
+  "no_semantic_parser_execution": true,
+  "raw_archive_hashes_verified": true,
+  "raw_file_count": 24,
+  "raw_repeat_byte_identity_verified": true,
+  "schema_version": "q2-v4.1-label-free-forensic-audit-v1",
+  "scientific_items_processed": 0,
+  "semantic_outcomes": 0,
+  "shells": {
+    "MEDIUM": {
+      "matrix_max_abs_difference": 3.6080027854268337e-12,
+      "recomputed_cosine_range": [
+        -0.6990414721637156,
+        1.0
+      ],
+      "recomputed_gram_min_eigenvalue": 0.00023122892144116763,
+      "rows": 48,
+      "vocabulary": 151936
+    },
+    "STRONG": {
+      "matrix_max_abs_difference": 6.024625243128412e-12,
+      "recomputed_cosine_range": [
+        -0.4238244556894169,
+        1.0
+      ],
+      "recomputed_gram_min_eigenvalue": 0.002494707992420187,
+      "rows": 48,
+      "vocabulary": 151936
+    }
+  },
+  "tolerance_note": "Audit tolerance was frozen in the source before this recomputation."
+}

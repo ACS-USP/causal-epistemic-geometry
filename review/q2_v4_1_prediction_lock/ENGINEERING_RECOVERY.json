@@ -1,0 +1,23 @@
+{
+  "schema_version": "q2-v4.1-engineering-recovery-v1",
+  "incidents": [
+    {
+      "id": "Q2V41-ENG-004",
+      "class": "A",
+      "phase": "ENGINEERING",
+      "symptom": "After the successful Spark-1 A1/A2 capture, the remote CPU consolidator remained active during the high-dimensional pairwise JS reduction without producing the final summary within the operational window.",
+      "diagnosis": "The raw label-free archives had completed and were independently verified; the remaining operation was offline A2 consolidation, not model inference.",
+      "repair": "Stop the post-capture remote consolidator, preserve all 24 raw A2 files unchanged, transfer them with hashes, and rerun only the frozen consolidator locally on CPU.",
+      "model_loaded": true,
+      "a1_a2_capture_started": true,
+      "raw_a1_a2_archives_preserved": true,
+      "scientific_outputs": false,
+      "semantic_outcomes": 0,
+      "correctness_inspected": false,
+      "model_rerun": false,
+      "status": "REPAIRED_OFFLINE_CONSOLIDATION"
+    }
+  ],
+  "scientific_integrity": "UNAFFECTED",
+  "note": "No A2 radii, Gram eigenvalues, cosines, or qualification status were accepted before the consolidator and independent reference check were frozen and committed."
+}

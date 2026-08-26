@@ -3,7 +3,7 @@ last_verified: "2026-08-26"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V4_1_31_SAFE_BANK_ADEQUATE
+  scientific_stage: Q2_V4_1_READY_FOR_PRINCIPAL_SEMANTIC_EXECUTION_REVIEW
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,11 +19,11 @@ project:
     utility?
 
 current:
-  workstream: Q2_V4_1_31_SAFE_BANK_REVIEW_COMPLETE
+  workstream: Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK_COMPLETE
   lifecycle: CLOSED
-  stage: DEVELOPMENT_DESIGN_REVIEW
-  source_commit: 0c11b05b5f94d795e45f4031dda4fa1bf17eac56
-  execution_source_commit: 186a6b6d5b81ba26aea9fe607dabe8eaae6ff0e1
+  stage: DEVELOPMENT_PRESEMANTIC_GEOMETRY_LOCKED
+  source_commit: 78a2206c7590ee3c30e2c806b11eb037d94a8b80
+  execution_source_commit: 4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc
   summary: >-
     Q2 V4.1 performed a CPU-only, outcome-free adequacy review of the complete
     historical 40-candidate bank and all 31 directions that passed both frozen
@@ -31,11 +31,13 @@ current:
     condition number 2.021583, and all inherited coverage checks. Synthetic
     K=31/N=300 planning retained 97.17% omnibus power at rho=0.25, with 1.33
     percentage points loss versus K=32 and A2 width ratio 1.022. The bank is
-    adequate for a future V4.1 design, but no semantic experiment was run.
+    adequate for a future V4.1 design. Label-free A1/A2 were then materialized
+    from Spark-1 raw arrays, independently audited, and pinned to the lock;
+    no semantic experiment was run.
   next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
-  runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
+  runpod: NOT_USED
   gpu_work_authorized: false
-  new_scientific_experiment_authorized: V4_1_SEMANTIC_PANEL_REQUIRES_NEW_FREEZE
+  new_scientific_experiment_authorized: PRINCIPAL_SEMANTIC_EXECUTION_REVIEW_REQUIRED
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -44,7 +46,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V4_1_CLOSED_SAFE_BANK_ADEQUATE_NO_SEMANTIC_OUTCOMES
+  current_task: Q2_V4_1_PRESEMANTIC_A1_A2_QUALIFIED_NO_SEMANTIC_OUTCOMES
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -159,6 +161,45 @@ instrument_history:
     v4_1_semantic_status: DRAFT_NOT_RUN
     forensic_classification: Q2_V4_1_FORENSIC_CLEAN
     next_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_NEW_PROSPECTIVE_FREEZE
+
+  - id: Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK
+    status: Q2_V4_1_READY_FOR_PRINCIPAL_SEMANTIC_EXECUTION_REVIEW
+    conclusion: >-
+      The exact 31-direction V4.1-safe bank was materialized only from
+      label-free Spark-1 raw arrays. A1 and A2 were consolidated locally with
+      frozen tolerances, natural-log equal-weight JS, and the exact persisted
+      controller ordering. An independent CPU audit reproduced the matrices
+      within 6.03e-12, verified all 24 raw files and their repeat identity, and
+      confirmed the qualified Spark-1 fingerprint. No semantic correctness or
+      outcome was inspected; the Q2 relational hypothesis remains untested.
+    branch: experiment/q2-v4-1-prediction-lock
+    source_commit: 78a2206c7590ee3c30e2c806b11eb037d94a8b80
+    execution_source_commit: 4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc
+    consolidator_commit: 367190e58ec853a70d23ba0d423d75014044cb61
+    artifact: review/q2_v4_1_prediction_lock/Q2_V4_1_PRESEMANTIC_CLOSEOUT.md
+    controller_count: 31
+    future_conditions: 63
+    future_panel_n: 300
+    projected_semantic_trajectories: 37800
+    a1: Q2_V4_1_A1_INSTRUMENT_QUALIFIED
+    a2: Q2_V4_1_A2_INSTRUMENT_QUALIFIED
+    raw_a2_file_count: 24
+    raw_a2_aggregate_sha256: ee1e215f19d22914d5a7c36e68c7754c0064425f934056541f02cf2b11072bbf
+    environment_fingerprint: 8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386
+    label_free_forensic_classification: Q2_V4_1_LABEL_FREE_FORENSIC_CLEAN
+    semantic_outcomes: 0
+    correctness_inspected: false
+    model_inference: true
+    semantic_inference: false
+    gpu_used_for_label_free_capture: true
+    gpu_used_for_consolidation: false
+    spark1_only: true
+    spark2_used: false
+    local_dstack: TERMINATED_NOT_PART_OF_PROTOCOL
+    runpod_status: NOT_USED
+    q2: UNTESTED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
 
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY

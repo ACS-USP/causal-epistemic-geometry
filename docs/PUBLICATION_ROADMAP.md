@@ -206,3 +206,16 @@ with only a 1.33 percentage-point omnibus-power reduction versus K=32. The
 result is `Q2_V4_1_31_SAFE_BANK_ADEQUATE`: design adequacy only. The bank is
 frozen for a possible future V4.1 semantic experiment, which requires a new
 prospective lock; the Q2 relational hypothesis remains untested.
+
+The subsequent V4.1 presemantic lock materialized only the label-free A1/A2
+instrument artifacts from the persisted Spark-1 raw arrays. The consolidator
+and all numeric tolerances were frozen before inspecting the resulting radii,
+Gram spectra, or cosines; the A2 implementation uses natural-log JS with
+equal weighting and the pinned 24-file raw archive. A separate reference check
+and independent CPU audit reproduced the matrices within `6.03e-12` and
+verified the qualified Spark-1 environment fingerprint. This is not Q2
+evidence: no semantic outcome or correctness label was inspected, and the
+future 37,800-row panel remains a draft requiring a separate principal
+semantic-execution review. A temporary local dstack server used during
+troubleshooting was terminated and is not part of the scientific protocol;
+Spark 1 was accessed directly over SSH and Spark 2 was not used.

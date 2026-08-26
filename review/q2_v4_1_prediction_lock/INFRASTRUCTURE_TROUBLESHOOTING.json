@@ -1,0 +1,21 @@
+{
+  "schema_version": "q2-v4.1-infrastructure-troubleshooting-v1",
+  "events": [
+    {
+      "id": "Q2V41-OPS-LOCAL-DSTACK-001",
+      "description": "A local dstack server was started temporarily while diagnosing access, was not used for scientific capture or inference, and was terminated before the Spark-1 direct-SSH run.",
+      "scientific_effect": "NONE",
+      "canonical_scientific_access": "direct_ssh_spark1",
+      "credential_changes": false,
+      "status": "TERMINATED_NOT_PART_OF_PROTOCOL"
+    },
+    {
+      "id": "Q2V41-OPS-SPARK1-SSH-001",
+      "description": "The label-free capture used the documented direct SSH path to Spark 1 because the local dstack path was not used as a scientific substitute.",
+      "scientific_effect": "NONE",
+      "canonical_scientific_access": "direct_ssh_spark1",
+      "spark2_used": false,
+      "status": "DOCUMENTED"
+    }
+  ]
+}

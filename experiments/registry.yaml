@@ -102,6 +102,52 @@ experiments:
     forensic_classification: Q2_V4_1_FORENSIC_CLEAN
     next_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_NEW_PROSPECTIVE_FREEZE
 
+  - id: Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK
+    version: V4.1-FINAL-PRESEMANTIC
+    stage: DEVELOPMENT_PRESEMANTIC_LOCKED
+    question: >-
+      Can the exact V4.1-safe bank and label-free A1/A2 geometry be sealed for
+      a future semantic panel without inspecting semantic outcomes?
+    instrument: >-
+      Spark-1 direct-SSH label-free A1 covariance geometry and A2
+      baseline-centered natural-log JS response geometry, consolidated locally
+      from persisted raw arrays and independently audited.
+    model_policy: Qwen3-8B full non-thinking BF16 SDPA on qualified Spark-1
+    status: CLOSED_PRESEMANTIC_AWAITING_PRINCIPAL_SEMANTIC_REVIEW
+    outcome: Q2_V4_1_READY_FOR_PRINCIPAL_SEMANTIC_EXECUTION_REVIEW
+    scientific_interpretation: >-
+      A1 and A2 are qualified instrument artifacts only. The exact 31 safe
+      directions are pinned in original order; 24 raw A2 files are hash-pinned
+      and the independent audit agrees within 6.03e-12. No semantic item,
+      correctness label, or Q2 outcome was inspected.
+    source_branch: experiment/q2-v4-1-prediction-lock
+    source_commit: 78a2206c7590ee3c30e2c806b11eb037d94a8b80
+    execution_source_commit: 4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc
+    consolidator_commit: 367190e58ec853a70d23ba0d423d75014044cb61
+    artifact: review/q2_v4_1_prediction_lock/Q2_V4_1_PRESEMANTIC_CLOSEOUT.md
+    controller_count: 31
+    future_conditions: 63
+    future_panel_n: 300
+    projected_semantic_trajectories: 37800
+    raw_a2_file_count: 24
+    raw_a2_aggregate_sha256: ee1e215f19d22914d5a7c36e68c7754c0064425f934056541f02cf2b11072bbf
+    environment_fingerprint: 8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386
+    label_free_forensic_classification: Q2_V4_1_LABEL_FREE_FORENSIC_CLEAN
+    semantic_outcomes: 0
+    correctness_inspected: false
+    model_inference: true
+    semantic_inference: false
+    gpu_used_for_label_free_capture: true
+    gpu_used_for_consolidation: false
+    spark1_only: true
+    spark2_used: false
+    local_dstack: TERMINATED_NOT_PART_OF_PROTOCOL
+    runpod: 0
+    q2: UNTESTED
+    q3: NOT_RUN
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY

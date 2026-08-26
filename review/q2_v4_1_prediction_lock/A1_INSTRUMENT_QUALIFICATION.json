@@ -1,0 +1,24 @@
+{
+  "activation_archive_sha256": "b596169d4a18afda00d0d770e839052097d43c4a8b1dc5a437dfbeae25edb1fd",
+  "checks": {
+    "activation_shape_64_by_4096": true,
+    "activations_finite": true,
+    "cosine_distance_range": true,
+    "effective_rank_at_least_2": true,
+    "fit_condition_finite": true,
+    "matrix_diagonal": true,
+    "matrix_finite": true,
+    "matrix_symmetry": true,
+    "regularization_positive": true
+  },
+  "classification": "Q2_V4_1_A1_INSTRUMENT_QUALIFIED",
+  "condition_number": 11718.972854437636,
+  "effective_rank": 7.603726089151967,
+  "fit_hash": "1c67c482096db4ad6ad7671eae80300c5ca1d8833da070af13dd9ac0cfeca2a1",
+  "fit_sha256": "193a6869ce3105064a2dc8fd38f6b69f67b7ee9f2d650947290e0c8bc4102102",
+  "lambda": 0.1,
+  "local_recompute_eigenvalues_max_abs_difference": 1.9895196601282805e-13,
+  "local_recompute_is_numerically_equivalent": true,
+  "local_recompute_right_basis_max_abs_difference": 0.4511043404939157,
+  "regularization_value": 0.025723347947164917
+}
