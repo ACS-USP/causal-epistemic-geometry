@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import platform
 import subprocess
 import sys
@@ -221,6 +222,10 @@ def model_manifest(model_path: Path) -> dict[str, Any]:
 
 def environment_manifest(backend: Any, model_path: Path) -> dict[str, Any]:
     torch = backend.torch
+    python_include = Path(os.environ.get("CEG_SPARK_PYTHON_INCLUDE", "/usr/include/python3.12"))
+    python_header = python_include / "Python.h"
+    if not python_header.is_file():
+        raise RuntimeError("Q2_V4_SPARK1_ENGINE_NOT_QUALIFIED: Python.h missing")
     packages = subprocess.run(
         [sys.executable, "-m", "pip", "freeze", "--all"],
         check=True,
@@ -250,6 +255,8 @@ def environment_manifest(backend: Any, model_path: Path) -> dict[str, Any]:
         "compute_capability": list(torch.cuda.get_device_capability(0)),
         "nvidia_smi": smi,
         "packages": packages,
+        "python_build_include": str(python_include),
+        "python_header_sha256": sha256(python_header),
         "dtype": "bfloat16",
         "attention": "sdpa",
         "model_path": str(model_path),
