@@ -1,9 +1,9 @@
 schema_version: 1
-last_verified: "2026-08-25"
+last_verified: "2026-08-26"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED
+  scientific_stage: Q2_V4_DESIGN_FREEZE_READY
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,20 +19,22 @@ project:
     utility?
 
 current:
-  workstream: Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN_COMPLETE
+  workstream: Q2_V4_INTERVENTION_SUBSPACE_DESIGN_COMPLETE
   lifecycle: CLOSED
   stage: DEVELOPMENT_DESIGN_ONLY
-  source_commit: 2fbcc98fa6026b844074bdaef2ba311b360b7f81
+  source_commit: 691ced3779b7b9de0184b73023bf40cba87f5008
   execution_source_commit: null
   summary: >-
-    The CPU-only four-family redesign reconstructed the historical 3,840-map
-    QAP and derived its exact 384-map block-preserving analogue. Synthetic
-    dependence-preserving simulations selected N=300 as the item-precision
-    elbow, but showed low maxT/full-gate power even for rho=0.40 and little
-    benefit from N=400. The controller/family units, not item count, are the
-    binding limit. Amendment 2 was not drafted or run. No model inference,
-    shell calibration, M0/M1/M2, or semantic outcome occurred.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
+    Q2 V4 is a new CPU-only design that replaces sparse family vertices with
+    32 prospectively sampled intervention directions inside the exact
+    eight-dimensional span of the four surviving source concepts. The design
+    selects N=300, corrects the blind-spot-shape estimator for finite N,
+    qualifies baseline-centered M2 angular geometry mathematically, and
+    recommends native Spark 1 with a separate pre-semantic qualification chain.
+    V4 is freeze-ready as a design but is not frozen or run. No model inference,
+    Spark inference, shell calibration, geometry matrix, semantic outcome, or
+    Q3 operation occurred.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_PROSPECTIVE_SPARK1_QUALIFICATION_AND_FREEZE
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE
@@ -44,7 +46,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED
+  current_task: Q2_V4_DESIGN_FREEZE_READY
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -84,6 +86,43 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
+    status: Q2_V4_DESIGN_FREEZE_READY
+    conclusion: >-
+      The CPU-only V4 design audited the eight surviving V3 unit directions as
+      exact rank 8 with condition number 2.733, derived an outcome-free
+      isotropic subspace-sampling rule, corrected the two-rollout blind-spot
+      shape estimator by N/(N-1), and proved that baseline-centered equal-weight
+      mean-JS admits a finite-response Hilbert angle. Dependence-aware
+      simulations select K=32 and N=300, implying 65 conditions and 39,000
+      potential semantic trajectories. Native Spark 1 is recommended, but its
+      model/engine/source/subspace/shell/M1/M2 qualification requires a separate
+      authorization and prospective lock. V4 remains not frozen and not run.
+    branch: research/q2-v4-intervention-subspace-design
+    source_commit: 691ced3779b7b9de0184b73023bf40cba87f5008
+    artifact: review/q2_v4_intervention_subspace_design/REPORT.md
+    inherited_source_concepts: 4
+    inherited_source_directions: 8
+    historical_a40_exact_rank: 8
+    historical_a40_condition_number: 2.7329425085703103
+    recommended_k: 32
+    recommended_n: 300
+    conditions: 65
+    projected_semantic_trajectories: 39000
+    shape_endpoint: N_OVER_N_MINUS_1_CORRECTED_ITEM_POPULATION_VARIANCE
+    primary_geometries: [A0_COORDINATE_ANGLE, A1_WHITENED_ANGLE, A2_FINITE_RESPONSE_ANGLE]
+    backend_decision: V4_NATIVE_SPARK1
+    spark1_only: true
+    spark2_used: false
+    model_inference: false
+    spark_scientific_inference: false
+    geometries_constructed: []
+    semantic_outcomes: 0
+    q3: NOT_RUN
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    design_audit: Q2_V4_DESIGN_AUDIT_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_PROSPECTIVE_SPARK1_QUALIFICATION_AND_FREEZE
+
   - id: Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN
     status: Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED
     conclusion: >-

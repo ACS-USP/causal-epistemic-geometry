@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V4_DESIGN_FREEZE_READY` — **scientific claim:** `NONE_FROZEN`.
 
-The CPU-only four-family redesign reconstructed the historical 3,840-map QAP and derived its exact 384-map block-preserving analogue. Synthetic dependence-preserving simulations selected N=300 as the item-precision elbow, but showed low maxT/full-gate power even for rho=0.40 and little benefit from N=400. The controller/family units, not item count, are the binding limit. Amendment 2 was not drafted or run. No model inference, shell calibration, M0/M1/M2, or semantic outcome occurred.
+Q2 V4 is a new CPU-only design that replaces sparse family vertices with 32 prospectively sampled intervention directions inside the exact eight-dimensional span of the four surviving source concepts. The design selects N=300, corrects the blind-spot-shape estimator for finite N, qualifies baseline-centered M2 angular geometry mathematically, and recommends native Spark 1 with a separate pre-semantic qualification chain. V4 is freeze-ready as a design but is not frozen or run. No model inference, Spark inference, shell calibration, geometry matrix, semantic outcome, or Q3 operation occurred.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_FOR_PROSPECTIVE_SPARK1_QUALIFICATION_AND_FREEZE
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

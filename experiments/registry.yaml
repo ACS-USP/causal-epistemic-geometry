@@ -1,5 +1,52 @@
 schema_version: 1
 experiments:
+  - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
+    version: V4-DESIGN
+    stage: DEVELOPMENT_DESIGN_ONLY
+    question: >-
+      Within a prospectively fixed causal intervention subspace, does
+      pre-outcome angular geometry predict semantic blind-spot shape across
+      unseen intervention directions after matching implemented amplitude?
+    instrument: >-
+      CPU-only audit of eight historical source-qualified L27 directions,
+      corrected two-rollout shape-estimator derivation, baseline-centered
+      finite-response-angle derivation, controller-label QAP design, and
+      dependence-aware K/N simulation.
+    model_policy: NO_MODEL_CPU_ONLY_DESIGN
+    status: Q2_V4_DESIGN_FREEZE_READY
+    outcome: DESIGN_READY_NOT_FROZEN_NOT_RUN
+    scientific_interpretation: >-
+      Q2 V3 remains untested and instrument-limited. V4 replaces four family
+      units with 32 prospectively sampled vertices inside an eight-dimensional
+      source-supported intervention subspace. K=32/N=300 is adequately powered
+      for moderate omnibus/A2 association, while marginal A2 superiority
+      remains difficult. A native Spark-1 qualification chain is drafted but
+      requires separate principal authorization before any model inference.
+    source_branch: research/q2-v4-intervention-subspace-design
+    source_commit: 691ced3779b7b9de0184b73023bf40cba87f5008
+    artifact: review/q2_v4_intervention_subspace_design/REPORT.md
+    source_directions: 8
+    exact_rank: 8
+    effective_rank_entropy: 6.5935732420733535
+    condition_number: 2.7329425085703103
+    recommended_k: 32
+    recommended_n: 300
+    conditions: 65
+    projected_semantic_rows: 39000
+    backend: V4_NATIVE_SPARK1
+    spark1_only: true
+    spark2_used: false
+    model_inference: false
+    semantic_rows: 0
+    prediction_matrices: []
+    cost_usd: 0.0
+    q1: UNCHANGED
+    q2_v3: Q2_V3_FOUR_FAMILY_DESIGN_UNDERPOWERED
+    q3: NOT_RUN
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    design_audit: Q2_V4_DESIGN_AUDIT_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_PROSPECTIVE_SPARK1_QUALIFICATION_AND_FREEZE
+
   - id: Q1_V1_MMLU_PRO
     version: V1-V1.2
     stage: DEVELOPMENT

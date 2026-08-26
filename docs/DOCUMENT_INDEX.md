@@ -66,6 +66,7 @@ current instruction source.
 | `review/q2_v3_amendment1_execution/REPORT.md` | Amendment-1 pre-panel closeout: 4/5 source families passed; frozen source gate failed; no shell, geometry, prediction lock, or semantic panel |
 | `review/q2_v3_replacement_family_design/REPORT.md` | CPU-only outcome-free replacement-family audit: no unique fifth family; four-family redesign required; no inference or semantic outcomes |
 | `review/q2_v3_four_family_statistical_redesign/REPORT.md` | Exact four-family QAP/gate reconstruction and dependent CPU power study: N=300 precision elbow, controller-level design underpowered, no Amendment 2 or inference |
+| `review/q2_v4_intervention_subspace_design/REPORT.md` | New CPU-only intervention-subspace design: exact rank-8 source span, corrected blind-spot-shape endpoint, baseline-centered M2 angle, K=32/N=300 decision, and native-Spark-1 qualification draft; V4 not frozen or run |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
