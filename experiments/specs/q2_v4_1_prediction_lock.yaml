@@ -2,7 +2,7 @@ schema_version: 1
 experiment_id: Q2_V4_1_PREDICTION_LOCK
 status: PROSPECTIVE_PRESEMANTIC_LOCK
 stage: DEVELOPMENT_PRESEMANTIC_GEOMETRY_FREEZE
-source_commit: 55b5146611fd43403b226e63260b39b16b546ee9
+source_commit: e71f35b19da826fc45b472aa7d2c2947109a73e2
 backend: V4_NATIVE_SPARK1
 spark1_only: true
 spark2_forbidden: true
