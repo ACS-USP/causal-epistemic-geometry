@@ -14,6 +14,20 @@
       "semantic_outcomes": 0,
       "retries_of_logical_rows": 0,
       "status": "REPAIRED_PENDING_PROSPECTIVE_RERUN"
+    },
+    {
+      "id": "Q2V41-ENG-002",
+      "class": "A",
+      "phase": "ENGINEERING",
+      "symptom": "The second label-free runner invocation stopped at the repository's remote-only HuggingFace guard because the Spark-1 execution profile variables were not exported.",
+      "diagnosis": "The canonical Spark-1 venv and model were present, but CEG_EXECUTION_PROFILE and HF_HOME were unset in the non-interactive SSH environment.",
+      "repair": "Use the documented Spark-1 profile with CEG_EXECUTION_PROFILE=SPARK1 and HF_HOME=/srv/shared/hf-cache for the rerun; no dependency, model, or code change is required.",
+      "model_loaded": false,
+      "a1_a2_capture_started": false,
+      "scientific_outputs": false,
+      "semantic_outcomes": 0,
+      "retries_of_logical_rows": 0,
+      "status": "REPAIRED_PENDING_PROSPECTIVE_RERUN"
     }
   ],
   "scientific_integrity": "UNAFFECTED"
