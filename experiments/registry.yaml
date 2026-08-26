@@ -48,6 +48,60 @@ experiments:
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_V4_1_31_SAFE_BANK_REVIEW
+    version: V4.1-FROZEN-31-BANK-ADEQUACY
+    stage: DEVELOPMENT_DESIGN_REVIEW
+    question: >-
+      Does the complete realized set of 31 V4 directions that passed both
+      frozen safety shells retain sufficient coverage and power for the
+      unchanged relational-geometry experiment?
+    instrument: >-
+      CPU-only reconstruction of the immutable 40-candidate coefficient bank,
+      safety-attrition geometry audit, frozen K=31 versus K=32 synthetic power
+      review, and reserve-fragility calculation.
+    model_policy: NO_MODEL_CPU_ONLY_DESIGN
+    status: CLOSED
+    outcome: Q2_V4_1_31_SAFE_BANK_ADEQUATE
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    scientific_interpretation: >-
+      All 31 and only the 31 directions that independently passed both original
+      label-free safety shells were retained in original candidate order. The
+      bank retained full rank and all inherited coverage checks. K=31/N=300
+      planning retained 0.9717 omnibus power at rho=0.25 versus 0.9850 for
+      K=32, with A2 width ratio 1.022. This is design adequacy only; no
+      semantic outcome or Q2 geometry result exists.
+    source_branch: research/q2-v4-31-safe-bank-review
+    source_commit: 0c11b05b5f94d795e45f4031dda4fa1bf17eac56
+    historical_v4_final_commit: 186a6b6d5b81ba26aea9fe607dabe8eaae6ff0e1
+    artifact: review/q2_v4_1_31_safe_bank_review/Q2_V4_1_31_SAFE_BANK_REVIEW.md
+    candidate_count_historical: 40
+    safe_count: 31
+    unsafe_count: 9
+    safe_bank_manifest: review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json
+    safe_bank_manifest_sha256: a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447
+    coverage_gate: PASS
+    primary_k: 31
+    primary_n: 300
+    reference_k: 32
+    power_simulation: CPU_ONLY_SYNTHETIC
+    power_replicates_per_cell: 600
+    rho_025_omnibus_power_k31: 0.9716666666666667
+    rho_025_omnibus_power_k32: 0.985
+    rho_025_a2_attribution_k31: 0.965
+    rho_025_a2_attribution_k32: 0.9766666666666667
+    rho_025_a2_width_ratio_k31_to_k32: 1.021973
+    semantic_outcomes: 0
+    correctness_inspected: false
+    model_inference: false
+    gpu_used: false
+    spark_used: false
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    q3: NOT_RUN
+    v4_1_semantic_status: DRAFT_NOT_RUN
+    forensic_classification: Q2_V4_1_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_NEW_PROSPECTIVE_FREEZE
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY

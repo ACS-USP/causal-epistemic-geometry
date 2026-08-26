@@ -5,9 +5,9 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V4_PRESEMANTIC_SAFE_BANK_INSUFFICIENT` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V4_1_31_SAFE_BANK_ADEQUATE` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V4 qualified the Spark-1 engine, all eight native source directions, the rank-8 source subspace, and the single PRELOCK-seeded 40-direction candidate stream. The complete 1,944-row label-free two-shell safety gate produced only 31 safe directions versus the frozen requirement of 32, so the instrument closed as Q2_V4_SAFE_BANK_INSUFFICIENT. A1/A2, prediction matrices, QAP, and the 300-item semantic panel were not run; semantic outcomes remain zero.
+Q2 V4.1 performed a CPU-only, outcome-free adequacy review of the complete historical 40-candidate bank and all 31 directions that passed both frozen safety shells. The 31-safe bank retained full rank, effective rank 7.225679, condition number 2.021583, and all inherited coverage checks. Synthetic K=31/N=300 planning retained 97.17% omnibus power at rho=0.25, with 1.33 percentage points loss versus K=32 and A2 width ratio 1.022. The bank is adequate for a future V4.1 design, but no semantic experiment was run.
 
 **Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW
 <!-- PROJECT_STATUS:END -->

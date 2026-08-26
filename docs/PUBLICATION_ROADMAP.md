@@ -197,3 +197,12 @@ scientific choices. Execution still requires a separate principal
 authorization. If controller qualification, angular identifiability,
 prediction locking, or the wallet gate fails, the semantic panel must remain
 closed. This freeze creates no Program C evidence; Q3 remains not run.
+
+The subsequent Q2 V4.1 review assessed the realized 31-direction safe bank
+without generating candidates or running model inference. All 31 frozen safe
+directions retained full rank and passed the inherited coverage checks; CPU-only
+synthetic planning at K=31/N=300 retained the original rho=0.25 power rationale
+with only a 1.33 percentage-point omnibus-power reduction versus K=32. The
+result is `Q2_V4_1_31_SAFE_BANK_ADEQUATE`: design adequacy only. The bank is
+frozen for a possible future V4.1 semantic experiment, which requires a new
+prospective lock; the Q2 relational hypothesis remains untested.

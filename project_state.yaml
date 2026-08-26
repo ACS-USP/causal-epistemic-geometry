@@ -3,7 +3,7 @@ last_verified: "2026-08-26"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V4_PRESEMANTIC_SAFE_BANK_INSUFFICIENT
+  scientific_stage: Q2_V4_1_31_SAFE_BANK_ADEQUATE
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,22 +19,23 @@ project:
     utility?
 
 current:
-  workstream: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE
+  workstream: Q2_V4_1_31_SAFE_BANK_REVIEW_COMPLETE
   lifecycle: CLOSED
-  stage: DEVELOPMENT_INSTRUMENT_NOT_QUALIFIED
-  source_commit: 99782d6f4f3ce1ca52d2cf6caeacafd4d0de9081
-  execution_source_commit: 6b773e3709ad303640544a03d373fe64a0474687
+  stage: DEVELOPMENT_DESIGN_REVIEW
+  source_commit: 0c11b05b5f94d795e45f4031dda4fa1bf17eac56
+  execution_source_commit: 186a6b6d5b81ba26aea9fe607dabe8eaae6ff0e1
   summary: >-
-    Q2 V4 qualified the Spark-1 engine, all eight native source directions, the
-    rank-8 source subspace, and the single PRELOCK-seeded 40-direction candidate
-    stream. The complete 1,944-row label-free two-shell safety gate produced only
-    31 safe directions versus the frozen requirement of 32, so the instrument
-    closed as Q2_V4_SAFE_BANK_INSUFFICIENT. A1/A2, prediction matrices, QAP, and
-    the 300-item semantic panel were not run; semantic outcomes remain zero.
+    Q2 V4.1 performed a CPU-only, outcome-free adequacy review of the complete
+    historical 40-candidate bank and all 31 directions that passed both frozen
+    safety shells. The 31-safe bank retained full rank, effective rank 7.225679,
+    condition number 2.021583, and all inherited coverage checks. Synthetic
+    K=31/N=300 planning retained 97.17% omnibus power at rho=0.25, with 1.33
+    percentage points loss versus K=32 and A2 width ratio 1.022. The bank is
+    adequate for a future V4.1 design, but no semantic experiment was run.
   next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
   gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE
+  new_scientific_experiment_authorized: V4_1_SEMANTIC_PANEL_REQUIRES_NEW_FREEZE
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -43,7 +44,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V4_PRESEMANTIC_CLOSED_SAFE_BANK_INSUFFICIENT
+  current_task: Q2_V4_1_CLOSED_SAFE_BANK_ADEQUATE_NO_SEMANTIC_OUTCOMES
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
@@ -114,6 +115,50 @@ instrument_history:
     runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_V4_1_31_SAFE_BANK_REVIEW
+    status: Q2_V4_1_31_SAFE_BANK_ADEQUATE
+    conclusion: >-
+      CPU-only outcome-free review reconstructed the immutable 40-candidate V4
+      stream and retained all 31 candidates that passed both original safety
+      shells, in original generation order. The safe bank retains rank 8,
+      effective rank 7.225679, stable rank 4.735927, condition number 2.021583,
+      broad angular spread, and all inherited selected-bank coverage checks.
+      Synthetic dependence-aware planning at K=31/N=300 retains 0.9717 omnibus
+      power at rho=0.25 versus 0.9850 at K=32, with A2 width ratio 1.022.
+      This establishes design adequacy only; the Q2 relational hypothesis
+      remains untested and no semantic trajectories were run.
+    branch: research/q2-v4-31-safe-bank-review
+    source_commit: 0c11b05b5f94d795e45f4031dda4fa1bf17eac56
+    artifact: review/q2_v4_1_31_safe_bank_review/Q2_V4_1_31_SAFE_BANK_REVIEW.md
+    historical_v4_final_commit: 186a6b6d5b81ba26aea9fe607dabe8eaae6ff0e1
+    historical_v4_classification: Q2_V4_SAFE_BANK_INSUFFICIENT
+    historical_candidate_count: 40
+    safe_count: 31
+    unsafe_count: 9
+    safe_bank_manifest: review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json
+    safe_bank_manifest_sha256: a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447
+    coverage_gate: PASS
+    power_simulation: CPU_ONLY_SYNTHETIC
+    primary_k: 31
+    primary_n: 300
+    reference_k: 32
+    rho_025_omnibus_power_k31: 0.9716666666666667
+    rho_025_omnibus_power_k32: 0.985
+    rho_025_a2_attribution_k31: 0.965
+    rho_025_a2_attribution_k32: 0.9766666666666667
+    rho_025_a2_width_ratio_k31_to_k32: 1.021973
+    power_replicates_per_cell: 600
+    semantic_outcomes: 0
+    correctness_inspected: false
+    model_inference: false
+    gpu_used: false
+    spark_used: false
+    runpod_status: TERMINATED_ZERO_ACTIVE_RESOURCES
+    q3: NOT_RUN
+    v4_1_semantic_status: DRAFT_NOT_RUN
+    forensic_classification: Q2_V4_1_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_NEW_PROSPECTIVE_FREEZE
 
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY

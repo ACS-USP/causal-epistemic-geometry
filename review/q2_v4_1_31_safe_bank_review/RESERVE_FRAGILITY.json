@@ -1,0 +1,43 @@
+{
+  "historical_candidate_count": 40,
+  "interpretation": "planning only; no candidates generated",
+  "minimum_safe": 32,
+  "rows": [
+    {
+      "candidate_count": 40,
+      "minimum_candidates_for_95pct": 53,
+      "p_safe": 0.7,
+      "probability_at_least_minimum": 0.1110091752497975
+    },
+    {
+      "candidate_count": 40,
+      "minimum_candidates_for_95pct": 49,
+      "p_safe": 0.75,
+      "probability_at_least_minimum": 0.2998322997148652
+    },
+    {
+      "candidate_count": 40,
+      "minimum_candidates_for_95pct": 47,
+      "p_safe": 0.775,
+      "probability_at_least_minimum": 0.43854868086795745
+    },
+    {
+      "candidate_count": 40,
+      "minimum_candidates_for_95pct": 46,
+      "p_safe": 0.8,
+      "probability_at_least_minimum": 0.5931271301483905
+    },
+    {
+      "candidate_count": 40,
+      "minimum_candidates_for_95pct": 42,
+      "p_safe": 0.85,
+      "probability_at_least_minimum": 0.8645979648707637
+    },
+    {
+      "candidate_count": 40,
+      "minimum_candidates_for_95pct": 39,
+      "p_safe": 0.9,
+      "probability_at_least_minimum": 0.9845046945855556
+    }
+  ]
+}

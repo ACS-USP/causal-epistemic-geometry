@@ -339,7 +339,10 @@ def safety_structure(
             "null_q95": float(np.quantile(permutation_values, 0.95)),
         },
         "coordinate_associations": coordinate_associations,
-        "model": "descriptive linear logistic separation only; no prediction or selection",
+        "model": (
+            "coordinate-level point-biserial associations and centroid separation "
+            "only; no predictive model fitted or used for selection"
+        ),
         "seed": seed,
     }
 

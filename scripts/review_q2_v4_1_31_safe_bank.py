@@ -168,6 +168,87 @@ def reconstruct_bank() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict
             "unsafe_ids": reconstructed["unsafe_ids"],
         },
     )
+    write_csv(
+        REVIEW / "SAFETY_ATTRITION.csv",
+        [
+            {
+                "candidate_id": row["candidate_id"],
+                "generation_index": row["generation_index"],
+                "joint_safe": row["joint_safe"],
+                "medium_pass": row["medium"]["pass"],
+                "strong_pass": row["strong"]["pass"],
+                "medium_validity": row["medium"]["validity"],
+                "strong_validity": row["strong"]["validity"],
+                "medium_evaluability": row["medium"]["evaluability"],
+                "strong_evaluability": row["strong"]["evaluability"],
+                "medium_truncation": row["medium"]["truncation"],
+                "strong_truncation": row["strong"]["truncation"],
+                "medium_movement": row["medium"]["raw_sequence_movement"],
+                "strong_movement": row["strong"]["raw_sequence_movement"],
+                "failure_reason": (
+                    "SAFE"
+                    if row["joint_safe"]
+                    else ";".join(
+                        shell
+                        for shell in ("medium", "strong")
+                        if not row[shell]["pass"]
+                    )
+                ),
+            }
+            for row in candidates
+        ],
+    )
+    write_csv(
+        REVIEW / "SPECTRUM_COMPARISON.csv",
+        [
+            {
+                "singular_index": index,
+                "all_40": reconstructed["all_geometry"]["singular_values"][index],
+                "safe_31": reconstructed["safe_geometry"]["singular_values"][index],
+                "safe_over_all": (
+                    reconstructed["safe_geometry"]["singular_values"][index]
+                    / reconstructed["all_geometry"]["singular_values"][index]
+                ),
+            }
+            for index in range(8)
+        ],
+    )
+    write_csv(
+        REVIEW / "AXIS_COVERAGE.csv",
+        [
+            {
+                "bank": bank,
+                "axis": axis,
+                **geometry["axis"][str(axis)],
+            }
+            for bank, geometry in (
+                ("all_40", reconstructed["all_geometry"]),
+                ("safe_31", reconstructed["safe_geometry"]),
+            )
+            for axis in range(8)
+        ],
+    )
+    write_csv(
+        REVIEW / "UNSAFE_FAILURES.csv",
+        [
+            {
+                "candidate_id": row["candidate_id"],
+                "generation_index": row["generation_index"],
+                "medium_pass": row["medium"]["pass"],
+                "strong_pass": row["strong"]["pass"],
+                "medium_validity": row["medium"]["validity"],
+                "strong_validity": row["strong"]["validity"],
+                "medium_evaluability": row["medium"]["evaluability"],
+                "strong_evaluability": row["strong"]["evaluability"],
+                "medium_truncation": row["medium"]["truncation"],
+                "strong_truncation": row["strong"]["truncation"],
+                "medium_movement": row["medium"]["raw_sequence_movement"],
+                "strong_movement": row["strong"]["raw_sequence_movement"],
+            }
+            for row in candidates
+            if not row["joint_safe"]
+        ],
+    )
     return candidates, safe, reconstructed
 
 
