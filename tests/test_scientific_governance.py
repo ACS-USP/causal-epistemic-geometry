@@ -70,22 +70,23 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q1_CONFIRMATORY_FIXED_CONTROLLERS",
         "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
         "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT_COMPLETE",
-            "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
-            "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE",
-            "Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DESIGN",
-            "Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN",
-            "Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE",
-            "Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE",
-            "Q2_V3_RADIAL_ANGULAR_EXECUTION",
-            "Q2_V3_PANEL_PROVENANCE_MISMATCH",
-            "Q2_V3_PROMPT_PROVENANCE_RECONCILIATION",
-            "Q2_V3_AMENDMENT1_FREEZE",
-            "Q2_V3_AMENDMENT1_EXECUTION",
-            "Q2_V3_AMENDMENT1_EXECUTION_COMPLETE",
-            "Q2_V3_REPLACEMENT_FAMILY_DESIGN_COMPLETE",
-            "Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN_COMPLETE",
-            "Q2_V4_INTERVENTION_SUBSPACE_DESIGN_COMPLETE",
-        }
+        "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
+        "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2_COMPLETE",
+        "Q2_V2_PRINCIPAL_REVIEW_Q2_V3_DESIGN",
+        "Q2_GEOMETRY_FOUNDATIONS_Q2_V3_RADIAL_ANGULAR_DESIGN",
+        "Q2_M3_QUALIFICATION_CRUXEVAL_PROVENANCE",
+        "Q2_V3_RADIAL_ANGULAR_PROSPECTIVE_FREEZE",
+        "Q2_V3_RADIAL_ANGULAR_EXECUTION",
+        "Q2_V3_PANEL_PROVENANCE_MISMATCH",
+        "Q2_V3_PROMPT_PROVENANCE_RECONCILIATION",
+        "Q2_V3_AMENDMENT1_FREEZE",
+        "Q2_V3_AMENDMENT1_EXECUTION",
+        "Q2_V3_AMENDMENT1_EXECUTION_COMPLETE",
+        "Q2_V3_REPLACEMENT_FAMILY_DESIGN_COMPLETE",
+        "Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN_COMPLETE",
+        "Q2_V4_INTERVENTION_SUBSPACE_DESIGN_COMPLETE",
+        "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
+    }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
         in {
@@ -103,21 +104,20 @@ def test_project_state_and_generated_status_are_current() -> None:
             "GATE11_DOMAIN_CONDITIONED_CONTROL_POSTMORTEM",
             "GATE12_1_CONTINUOUS_GEOMETRY_ENGINE",
             "GATE13_1_ALL_LAYER_CAUSAL_ATLAS",
-                "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
-                "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
-                "Q2_V3_RADIAL_ANGULAR_EXECUTION",
+            "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
+            "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
+            "Q2_V3_RADIAL_ANGULAR_EXECUTION",
                 "Q2_V3_AMENDMENT1_EXECUTION",
+                "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
             }
     )
     if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":
         assert state["current"]["lifecycle"] == "CLOSED"
         assert (
-            state["scientific_firewall"]["confirmatory_holdout"]
-            == "CONSUMED_CONFIRMATORY_CLOSED"
+            state["scientific_firewall"]["confirmatory_holdout"] == "CONSUMED_CONFIRMATORY_CLOSED"
         )
         assert (
-            state["scientific_firewall"]["steering"]
-            == "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL"
+            state["scientific_firewall"]["steering"] == "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL"
         )
     assert state["scientific_firewall"]["steering"] in {
         "ORIGINAL_Q1_NOT_RUN",

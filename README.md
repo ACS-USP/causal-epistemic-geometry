@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V4_DESIGN_FREEZE_READY` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_LOCKED` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V4 is a new CPU-only design that replaces sparse family vertices with 32 prospectively sampled intervention directions inside the exact eight-dimensional span of the four surviving source concepts. The design selects N=300, corrects the blind-spot-shape estimator for finite N, qualifies baseline-centered M2 angular geometry mathematically, and recommends native Spark 1 with a separate pre-semantic qualification chain. V4 is freeze-ready as a design but is not frozen or run. No model inference, Spark inference, shell calibration, geometry matrix, semantic outcome, or Q3 operation occurred.
+Q2 V4's Spark-1-only presemantic qualification protocol is prospectively locked. It may qualify the native engine, reconstruct the four surviving source concepts at prompt and execution boundaries, derive one PRELOCK-seeded 40-direction bank, select the first 32 directions passing the label-free two-shell safety gate, and seal A0/A1/A2 predictors. The 300-item semantic panel is content-frozen but inference remains forbidden; semantic outcomes are zero and Q3 remains not run.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_FOR_PROSPECTIVE_SPARK1_QUALIFICATION_AND_FREEZE
+**Next authorized action:** EXECUTE_SPARK1_PRESEMANTIC_QUALIFICATION_ONLY
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

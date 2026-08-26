@@ -1,5 +1,44 @@
 schema_version: 1
 experiments:
+  - id: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
+    version: V4-PRESEMANTIC
+    stage: DEVELOPMENT_PRESEMANTIC_QUALIFICATION
+    question: >-
+      Can the entire V4 intervention-subspace predictor be reconstructed,
+      qualified, and sealed natively on Spark 1 before any semantic-panel
+      outcome exists?
+    instrument: >-
+      Spark-1-only engine/source/subspace qualification, one PRELOCK-derived
+      40-direction PCG64DXSM bank, label-free two-shell safety conditioning,
+      and pre-outcome A0/A1/A2 geometry construction.
+    model_policy: Qwen3-8B full non-thinking BF16 SDPA on one Spark-1 GB10
+    status: Q2_V4_SPARK1_QUALIFICATION_PROTOCOL_FROZEN
+    outcome: PENDING_PRESEMANTIC_QUALIFICATION
+    scientific_interpretation: >-
+      This stage can qualify and seal predictor-side instruments only. It is
+      neither a semantic geometry result nor evidence for or against Q2.
+    source_branch: experiment/q2-v4-spark1-presemantic-qualification
+    design_parent_commit: c53322a7db2cd6d06da719ae71c16fcc653b4024
+    source_commit: c53322a7db2cd6d06da719ae71c16fcc653b4024
+    artifact: review/q2_v4_spark1_presemantic/QUALIFICATION_PROTOCOL_LOCK.md
+    source_families: 4
+    source_directions: 8
+    candidate_count: 40
+    selected_count_target: 32
+    shell_targets: [0.25, 0.50]
+    primary_panel_n: 300
+    projected_semantic_rows: 39000
+    semantic_inference_authorized: false
+    semantic_rows: 0
+    spark1_only: true
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    q1: UNCHANGED
+    q3: NOT_RUN
+    next_action: EXECUTE_SPARK1_PRESEMANTIC_QUALIFICATION_ONLY
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY

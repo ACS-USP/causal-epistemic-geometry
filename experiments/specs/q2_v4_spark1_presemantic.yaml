@@ -1,0 +1,16 @@
+schema_version: 1
+experiment_id: Q2_V4_SPARK1_PRESEMANTIC
+status: PROSPECTIVE_PRESEMANTIC_QUALIFICATION
+stage: DEVELOPMENT_PRESEMANTIC_QUALIFICATION
+backend: V4_NATIVE_SPARK1
+spark1_only: true
+spark2_used: false
+model: Qwen/Qwen3-8B
+model_revision: b968826d9c46dd6066d109eabc6255188de91218
+layer: 27
+candidate_count: 40
+selected_count: 32
+shell_targets: [0.25, 0.50]
+primary_panel_n: 300
+semantic_inference: forbidden
+q3: not_run

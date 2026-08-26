@@ -1,0 +1,67 @@
+{
+  "correctness_oracle": null,
+  "fixtures": [
+    {
+      "fixture_id": "TECH_00",
+      "prompt": "Return exactly FINAL: ok.",
+      "prompt_sha256": "1e79311e3d3b64a7781e7cb85abc21297a2901c0593c6c22aefee5bb478a9c70"
+    },
+    {
+      "fixture_id": "TECH_01",
+      "prompt": "Repeat the token alpha twice and finish with FINAL: alpha alpha.",
+      "prompt_sha256": "a21b753b2dcaf213bbae58c00b1ffa36ecb2d2046a1375d8e1f0a2575f536f03"
+    },
+    {
+      "fixture_id": "TECH_02",
+      "prompt": "Punctuation fixture: []{}()!?; finish with FINAL: punctuation.",
+      "prompt_sha256": "dce25769ede14597d6002503caaa10ec0fa06215300e51dd745ce9d42608a76b"
+    },
+    {
+      "fixture_id": "TECH_03",
+      "prompt": "Numeric fixture 000123456789; finish with FINAL: 123456789.",
+      "prompt_sha256": "9aaef7f2573ef04a06f69337a63892d4c81d4d01bff0faa3dcfebb8041142c81"
+    },
+    {
+      "fixture_id": "TECH_04",
+      "prompt": "Code-like fixture: for i in range(3): pass; finish with FINAL: done.",
+      "prompt_sha256": "69a9a4c9de79fe9e795a9c86a563c99a115779701a5bcfdb54feaab51ed03ff5"
+    },
+    {
+      "fixture_id": "TECH_05",
+      "prompt": "Unicode-neutral fixture cafe naive resume; finish with FINAL: done.",
+      "prompt_sha256": "530e2076b3c2174b8e7e886dc6c9f204306797afe60447ac84fd01c3bc606857"
+    },
+    {
+      "fixture_id": "TECH_06",
+      "prompt": "Short prompt. Finish with FINAL: short.",
+      "prompt_sha256": "7de858d64990f686011f7bfffd7c91c2019e1c23c1bef3b3823b2681cff14c59"
+    },
+    {
+      "fixture_id": "TECH_07",
+      "prompt": "A longer deterministic engineering prompt containing repeated words repeated words and no benchmark question. Finish with FINAL: long.",
+      "prompt_sha256": "518f7bed1bfa345da5aa56f46a44054d57cb1cd7e303074031fd434487f658ce"
+    },
+    {
+      "fixture_id": "TECH_08",
+      "prompt": "List A B C D E and finish with FINAL: E.",
+      "prompt_sha256": "310b9fd92cdc0539e28a3e3828fac0f01f180b6166e9d4360ace24acce75f40d"
+    },
+    {
+      "fixture_id": "TECH_09",
+      "prompt": "Whitespace fixture with one sentence. Finish with FINAL: whitespace.",
+      "prompt_sha256": "880b336f82fd58c71c6aedc6ea438f6c6f97e3eff3dd64ae92aa469cedaf0a8f"
+    },
+    {
+      "fixture_id": "TECH_10",
+      "prompt": "Cache-position fixture. Produce a brief preface then FINAL: cache.",
+      "prompt_sha256": "ddc751123b610e46c7ec8005baff45de4953f3e80536636007f0ae999cab764b"
+    },
+    {
+      "fixture_id": "TECH_11",
+      "prompt": "Intervention-scope fixture. Produce two brief clauses then FINAL: scope.",
+      "prompt_sha256": "77b944c49c7f70a2888bac81c18fe37c292799fd1a9306fae6a1ac140cecff65"
+    }
+  ],
+  "schema_version": "q2-v4-technical-fixtures-v1",
+  "scientific_items": false
+}

@@ -3,7 +3,7 @@ last_verified: "2026-08-26"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V4_DESIGN_FREEZE_READY
+  scientific_stage: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_LOCKED
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,25 +19,23 @@ project:
     utility?
 
 current:
-  workstream: Q2_V4_INTERVENTION_SUBSPACE_DESIGN_COMPLETE
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_DESIGN_ONLY
-  source_commit: 691ced3779b7b9de0184b73023bf40cba87f5008
+  workstream: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
+  lifecycle: PROSPECTIVE_QUALIFICATION_LOCK
+  stage: DEVELOPMENT_PRESEMANTIC_QUALIFICATION
+  source_commit: c53322a7db2cd6d06da719ae71c16fcc653b4024
   execution_source_commit: null
   summary: >-
-    Q2 V4 is a new CPU-only design that replaces sparse family vertices with
-    32 prospectively sampled intervention directions inside the exact
-    eight-dimensional span of the four surviving source concepts. The design
-    selects N=300, corrects the blind-spot-shape estimator for finite N,
-    qualifies baseline-centered M2 angular geometry mathematically, and
-    recommends native Spark 1 with a separate pre-semantic qualification chain.
-    V4 is freeze-ready as a design but is not frozen or run. No model inference,
-    Spark inference, shell calibration, geometry matrix, semantic outcome, or
-    Q3 operation occurred.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_FOR_PROSPECTIVE_SPARK1_QUALIFICATION_AND_FREEZE
+    Q2 V4's Spark-1-only presemantic qualification protocol is prospectively
+    locked. It may qualify the native engine, reconstruct the four surviving
+    source concepts at prompt and execution boundaries, derive one PRELOCK-seeded
+    40-direction bank, select the first 32 directions passing the label-free
+    two-shell safety gate, and seal A0/A1/A2 predictors. The 300-item semantic
+    panel is content-frozen but inference remains forbidden; semantic outcomes
+    are zero and Q3 remains not run.
+  next_authorized_action: EXECUTE_SPARK1_PRESEMANTIC_QUALIFICATION_ONLY
   runpod: TERMINATED_ZERO_ACTIVE_RESOURCES
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: Q2_V4_PRESEMANTIC_LABEL_FREE_ONLY
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -46,8 +44,8 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V4_DESIGN_FREEZE_READY
-  free_generation: NOT_AUTHORIZED
+  current_task: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
+  free_generation: SOURCE_AND_LABEL_FREE_QUALIFICATION_ONLY_PRIMARY_PANEL_FORBIDDEN
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT

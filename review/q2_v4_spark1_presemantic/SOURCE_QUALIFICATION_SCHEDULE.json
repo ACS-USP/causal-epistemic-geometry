@@ -1,0 +1,2693 @@
+{
+  "rows": [
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 399635221
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1815477754
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 211186216
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 518541906
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 169240227
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 54219967
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 859512732
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 84574741
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 320475694
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 692349366
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 445653024
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 805104462
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1699393784
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1562635972
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1084089788
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_285",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1159518116
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2115242035
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1971905090
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 210122894
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2019184294
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2045679130
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1253074668
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1502568468
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 32276831
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2133879082
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 866751606
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 417725068
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 777672606
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 44934080
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2120123312
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1514033974
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_88",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1938794198
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1467455140
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1076336719
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1310168604
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 49417369
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1586907198
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 942901183
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1790670560
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1724760009
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2023359170
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 505989575
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1726250766
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1639131252
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 472259501
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 505607003
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1002252592
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_666",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 56056835
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1873070617
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 777498343
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1692500990
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 196195520
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1880390931
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 175299540
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1943527179
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1504716376
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 524430503
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 599948700
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 718090444
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1884135914
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 844455683
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1051750344
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 281143995
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_475",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 752816295
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1690033726
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 850729044
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 330032049
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1471819399
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1231272462
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1033386931
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 196724852
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1175523387
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1143682033
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 335626147
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1233176192
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 656570290
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 434105324
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1205769676
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1777545854
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_548",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1449209096
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 808971114
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 439118180
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 823424531
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1325460320
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 148175499
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1157266922
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1043354852
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1561755083
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 955221925
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1235926081
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1435672177
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 682793942
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 806243886
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2033998075
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1156869969
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_699",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 79081896
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 402576790
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1277906399
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 745260056
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1600414866
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 769076058
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1195147555
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1586153282
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 709016222
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1432603861
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1313212769
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1722445640
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1488684742
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1465783831
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 625910873
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 392119778
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_180",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1266241616
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1274659607
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1985719416
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1750433355
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1790444405
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 50513897
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 578010308
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 112171224
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1048761937
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1997722270
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1935396546
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1491286394
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1237520012
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1633157786
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 811050915
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 731898664
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_9",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1816702619
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1373011685
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 370349681
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1569864192
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1521471308
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1394733185
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1853794626
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 757045033
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 168364958
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 665681552
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 26293073
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1719249082
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 568488851
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1813055185
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 553056566
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 361414515
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_253",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1443986913
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 749109252
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 550403313
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1423179216
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1515404649
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 513759320
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1373491455
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1163241167
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 16441059
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1075106812
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1728555409
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 505328020
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 242821486
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 299300948
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1913688182
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1728141984
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_771",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1286491636
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 558627676
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 953943029
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1241175344
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 533885809
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1053896313
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 153737959
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 467806343
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1391787150
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1427541923
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1688798600
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1636800051
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1786571852
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 101611249
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1871476278
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1991610639
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_277",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 112916185
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2026972268
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1333471640
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 541777182
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 334417953
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1248676975
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 759086660
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 243258315
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1136944793
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 396459532
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1565173487
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 961406733
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1943514015
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2130328996
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 560832287
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 150082757
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_623",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 63420986
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1522203316
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 269522146
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 630532660
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 442600478
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 240828422
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1929095153
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1077521959
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 211698921
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1032548267
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1858386233
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 131910725
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1225514640
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 9461511
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 660771072
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 137020091
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_70",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1565942043
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 246744030
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1454566725
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1216038071
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 42730706
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1317325502
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1501319696
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1991544877
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 838838144
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1555314885
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 280221472
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1203326074
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1865732124
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1669527866
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1587093151
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 119500929
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_707",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 146718021
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1893677119
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 199861110
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 474880205
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 467171474
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1370794221
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2136240388
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1188568685
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 485665180
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2051281552
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1821966548
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1303667679
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 458913698
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1727019928
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 261952442
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 628084122
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_64",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1186954951
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1767188602
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 220260305
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1922133244
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1705470718
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 368717202
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1917667464
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 488552716
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1894668413
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 395778628
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1939925059
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1026912675
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1011171271
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1606507071
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 727399381
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1444820377
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_454",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 866701573
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1367833930
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 885991112
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 2070925280
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 289268931
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1250360173
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 691913575
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 71255047
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1125429255
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2133030937
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1340047534
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 370336505
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1854270913
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 852345883
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 855439846
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 642208620
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_781",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1193005758
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 303469724
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1751773824
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 901920421
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 120192285
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2014618945
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 219475910
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1863811020
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2017976448
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1751149073
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 329609736
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 802021193
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 84379268
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1141615701
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 401955794
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 483992103
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_524",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1532891575
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1189755889
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1846523619
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1222754930
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 760471024
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1742588593
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 197589430
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1755324426
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 683629730
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 709535913
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1993442245
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1255049600
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1744302948
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1470287668
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 888733554
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 326860501
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_276",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 720918521
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 2112762659
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1912133223
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1321799011
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1583099338
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 880367914
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 92019936
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 580862908
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 651824085
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 164309830
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1210973118
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 553447148
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 41848342
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 423194144
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 279332808
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1514198843
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_662",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 2092817465
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1567557260
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1660675302
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 638259377
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1600975426
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 215951405
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 904142541
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 166883768
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1347921367
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 370929025
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1610532697
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1260382991
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 590290228
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1171891244
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1022899480
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 137187979
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_658",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1592527421
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1652183183
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1951994015
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 899262669
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 942757534
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1078250966
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 584100468
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1589663925
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1080078280
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1361915006
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 120752209
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 37242062
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 14494120
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1898942407
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 620996586
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1958446952
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_338",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 25710774
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 371354058
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1840641992
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 155593412
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 952170914
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1381810006
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1495226693
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1839025130
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 278429875
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 707551650
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1843751533
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1416538606
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 647361159
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 359910760
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 2023873829
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1300096378
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_244",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 208003395
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1796428200
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 485166824
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 1234603765
+    },
+    {
+      "family": "CONTROL_FLOW_PATH_COVERAGE",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1067109947
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1010026964
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 890976756
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 183196029
+    },
+    {
+      "family": "MUTATION_ALIAS_CAUSALITY",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 1229140398
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1239025204
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1520272048
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 222790302
+    },
+    {
+      "family": "LOOP_BOUNDARY_ACCOUNTING",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 548410780
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 0,
+      "seed": 1382627366
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "POSITIVE",
+      "rollout_index": 1,
+      "seed": 1060293240
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 0,
+      "seed": 530807501
+    },
+    {
+      "family": "HYPOTHESIS_BRANCH_ELIMINATION",
+      "item_id": "sample_591",
+      "polarity": "NEGATIVE",
+      "rollout_index": 1,
+      "seed": 625898318
+    }
+  ],
+  "schema_version": "q2-v4-source-schedule-v1"
+}
