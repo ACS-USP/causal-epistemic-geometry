@@ -4,6 +4,7 @@ import json
 
 import pytest
 
+import epistemic_geometry.reproducibility as reproducibility
 from epistemic_geometry.benchmarks.mmlu_pro import MMLUProBenchmark, row_to_item
 from epistemic_geometry.benchmarks.splits import create_mmlu_pro_split_manifest
 from epistemic_geometry.config import (
@@ -83,5 +84,21 @@ def test_development_config_cannot_access_confirmatory_holdout() -> None:
 
 def test_real_hf_operations_are_refused_outside_runpod(monkeypatch) -> None:
     monkeypatch.delenv("HF_HOME", raising=False)
+    monkeypatch.delenv("CEG_EXECUTION_PROFILE", raising=False)
     with pytest.raises(RuntimeError, match="remote-only"):
         require_remote_hf_execution("test operation")
+
+
+def test_real_hf_operations_allow_explicit_spark1_profile(monkeypatch) -> None:
+    monkeypatch.setenv("CEG_EXECUTION_PROFILE", "SPARK1")
+    monkeypatch.setenv("HF_HOME", "/srv/shared/hf-cache")
+    monkeypatch.setattr(
+        reproducibility,
+        "remote_execution_context",
+        lambda: {
+            "hostname": "spark1",
+            "pwd": "/home/gabriel.alexandre/projects/ceg-q2-v4-presemantic",
+            "HF_HOME": "/srv/shared/hf-cache",
+        },
+    )
+    require_remote_hf_execution("test operation")

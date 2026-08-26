@@ -149,7 +149,7 @@ def remote_execution_context() -> dict[str, str]:
 
 
 def require_remote_hf_execution(operation: str) -> None:
-    """Refuse real model/data loading unless the RunPod cache invariant holds.
+    """Refuse real model/data loading unless an explicit remote profile holds.
 
     Local configuration and preflight remain usable without this invariant. The
     guard is only called immediately before a real Transformers or datasets
@@ -163,9 +163,20 @@ def require_remote_hf_execution(operation: str) -> None:
     print(f"HF_HOME: {context['HF_HOME']}")
     root = Path(context["pwd"]).resolve()
     expected_root = Path("/workspace/causal-epistemic-geometry").resolve()
-    if context["HF_HOME"] != "/workspace/hf-cache" or expected_root not in (root, *root.parents):
+    runpod = context["HF_HOME"] == "/workspace/hf-cache" and expected_root in (
+        root,
+        *root.parents,
+    )
+    spark_root = Path("/home/gabriel.alexandre/projects").resolve()
+    spark1 = (
+        os.environ.get("CEG_EXECUTION_PROFILE") == "SPARK1"
+        and context["hostname"].split(".", maxsplit=1)[0] == "spark1"
+        and context["HF_HOME"] == "/srv/shared/hf-cache"
+        and spark_root in (root, *root.parents)
+    )
+    if not (runpod or spark1):
         raise RuntimeError(
             f"Refusing {operation}: real HuggingFace operations are remote-only. "
-            "Required pwd under /workspace/causal-epistemic-geometry and "
-            "HF_HOME=/workspace/hf-cache. No download was attempted."
+            "Required either the RunPod /workspace profile or the explicit "
+            "Spark-1 shared-cache profile. No download was attempted."
         )
