@@ -1,0 +1,27 @@
+{
+  "schema_version": "q2-v4.1-prediction-lock-premortem-v1",
+  "classification": "PREMORTEM_PASS",
+  "historical_v4_classification": "Q2_V4_SAFE_BANK_INSUFFICIENT",
+  "historical_v4_forensic": "Q2_V4_PRESEMANTIC_FORENSIC_CLEAN",
+  "v4_1_adequacy": "Q2_V4_1_31_SAFE_BANK_ADEQUATE",
+  "safe_bank_count": 31,
+  "candidate_count": 40,
+  "d38_authority": "immutable V4 safety JSON and journal",
+  "d38_normalized_failures": {
+    "MEDIUM": ["raw_sequence_movement_below_0.10"],
+    "STRONG": ["validity_below_0.95_relative_guard", "evaluability_below_0.95_relative_guard"]
+  },
+  "leverage_ruling": "LEVERAGE_DESCRIPTIVE_ONLY",
+  "g3_delta_grid": [0.0, 0.05, 0.1, 0.15, 0.2],
+  "g3_margin": 0.1,
+  "backend": "V4_NATIVE_SPARK1",
+  "max_gb10": 1,
+  "spark2_forbidden": true,
+  "runpod_forbidden": true,
+  "semantic_outcomes": 0,
+  "correctness_inspected": false,
+  "model_inference_before_lock": false,
+  "a1_a2_before_lock": false,
+  "semantic_execution_authorized": false,
+  "q3": "NOT_RUN"
+}
