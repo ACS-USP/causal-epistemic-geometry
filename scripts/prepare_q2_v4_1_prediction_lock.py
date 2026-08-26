@@ -754,6 +754,7 @@ def write_protocol_lock(
                 "A0_STRONG.npy",
                 "A0_METADATA.json",
                 "PREPARATION_AUDIT.json",
+                "ENGINEERING_INCIDENTS.json",
             )
         },
         "safe_bank_manifest": {

@@ -1,0 +1,20 @@
+{
+  "schema_version": "q2-v4.1-engineering-incidents-v1",
+  "incidents": [
+    {
+      "id": "Q2V41-ENG-001",
+      "class": "A",
+      "phase": "ENGINEERING",
+      "symptom": "The first label-free runner invocation stopped before backend construction because the immutable safe-bank manifest has no path field.",
+      "diagnosis": "The manifest intentionally preserves candidate_id and file_sha256; the runner incorrectly assumed a path field.",
+      "repair": "Reconstruct the historical candidate path only as CANDIDATE_DIRECTIONS/<candidate_id>.npy and continue to verify the persisted file SHA-256.",
+      "model_loaded": false,
+      "a1_a2_capture_started": false,
+      "scientific_outputs": false,
+      "semantic_outcomes": 0,
+      "retries_of_logical_rows": 0,
+      "status": "REPAIRED_PENDING_PROSPECTIVE_RERUN"
+    }
+  ],
+  "scientific_integrity": "UNAFFECTED"
+}

@@ -42,6 +42,7 @@ from epistemic_geometry.types import BenchmarkItem  # noqa: E402
 
 REVIEW = ROOT / "review/q2_v4_1_prediction_lock"
 OLD_REVIEW = ROOT / "review/q2_v4_1_31_safe_bank_review"
+VECTOR_DIR = ROOT / "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS"
 LAYER = 27
 MODEL = "Qwen/Qwen3-8B"
 MODEL_REVISION = "b968826d9c46dd6066d109eabc6255188de91218"
@@ -164,7 +165,10 @@ def load_vectors() -> tuple[dict[str, np.ndarray], dict[str, Any]]:
         raise RuntimeError("immutable safe-bank hash mismatch")
     vectors = {}
     for row in manifest["directions"]:
-        path = ROOT / row["path"]
+        # The immutable V4.1 safe-bank manifest intentionally records the
+        # vector hash but not a path. Reconstruct only the historical,
+        # deterministic candidate path from the immutable candidate_id.
+        path = VECTOR_DIR / f"{row['candidate_id']}.npy"
         if sha256_file(path) != row["file_sha256"]:
             raise RuntimeError(f"controller file hash mismatch: {row['candidate_id']}")
         vectors[row["candidate_id"]] = np.load(path, allow_pickle=False).astype(np.float64)
