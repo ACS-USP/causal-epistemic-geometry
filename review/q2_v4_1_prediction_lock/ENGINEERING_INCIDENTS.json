@@ -28,6 +28,20 @@
       "semantic_outcomes": 0,
       "retries_of_logical_rows": 0,
       "status": "REPAIRED_PENDING_PROSPECTIVE_RERUN"
+    },
+    {
+      "id": "Q2V41-ENG-003",
+      "class": "A",
+      "phase": "ENGINEERING",
+      "symptom": "The third label-free runner invocation loaded the frozen model and then stopped because the inherited M1/M2 manifests store prompts in prompt_provenance rather than a top-level prompt field.",
+      "diagnosis": "The runner used an invalid manifest schema assumption. No layer capture or A1/A2 array was written.",
+      "repair": "Reconstruct the prompt with canonical_q2_v3_task_prompt(code, input) and verify the frozen raw prompt-bytes SHA-256 before creating an ExternalItem.",
+      "model_loaded": true,
+      "a1_a2_capture_started": false,
+      "scientific_outputs": false,
+      "semantic_outcomes": 0,
+      "retries_of_logical_rows": 0,
+      "status": "REPAIRED_PENDING_PROSPECTIVE_RERUN"
     }
   ],
   "scientific_integrity": "UNAFFECTED"

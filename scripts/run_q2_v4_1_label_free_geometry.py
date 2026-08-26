@@ -33,6 +33,9 @@ from epistemic_geometry.analysis.q2_geometries import fit_whitening, whitened_ge
 from epistemic_geometry.backends.huggingface import HuggingFaceBackend  # noqa: E402
 from epistemic_geometry.benchmarks.external.base import ExternalItem  # noqa: E402
 from epistemic_geometry.config import BackendConfig  # noqa: E402
+from epistemic_geometry.experiments.q2_v3_prompt_provenance import (  # noqa: E402
+    canonical_q2_v3_task_prompt,
+)
 from epistemic_geometry.experiments.q2_v4_1 import (  # noqa: E402
     EXPECTED_SAFE_IDS,
     sha256_file,
@@ -121,9 +124,12 @@ def manifest_items(name: str) -> list[Any]:
     values = []
     for frozen in manifest["items"]:
         row = source[str(frozen["item_id"])]
-        prompt = str(frozen["prompt"])
-        reference = str(frozen.get("reference_answer", row["output"]))
-        if hashlib.sha256(prompt.encode()).hexdigest() != frozen["prompt_sha256"]:
+        prompt = canonical_q2_v3_task_prompt(str(row["code"]), str(row["input"]))
+        reference = str(row["output"])
+        expected_prompt_hash = frozen["prompt_provenance"]["model_visible_prompt"][
+            "prompt_bytes_sha256"
+        ]
+        if hashlib.sha256(prompt.encode()).hexdigest() != expected_prompt_hash:
             raise RuntimeError("label-free manifest prompt hash mismatch")
         values.append(
             ExternalItem(
