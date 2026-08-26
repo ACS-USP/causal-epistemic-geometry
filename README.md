@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V4_1_READY_FOR_SEMANTIC_EXECUTION_AUTHORIZATION` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V4_1_SEMANTIC_EXECUTION_OPEN` — **scientific claim:** `NONE_FROZEN`.
 
-Q2 V4.1 performed a CPU-only, outcome-free adequacy review of the complete historical 40-candidate bank and all 31 directions that passed both frozen safety shells. The 31-safe bank retained full rank, effective rank 7.225679, condition number 2.021583, and all inherited coverage checks. Synthetic K=31/N=300 planning retained 97.17% omnibus power at rho=0.25, with 1.33 percentage points loss versus K=32 and A2 width ratio 1.022. The bank is adequate for a future V4.1 design. Label-free A1/A2 were then materialized from Spark-1 raw arrays, independently audited, and pinned to the lock; the normative execution and analysis addendum makes the already-frozen generation, retry/resume, estimand, and G0-G3 rules explicit without changing any hash-pinned scientific object; no semantic experiment was run.
+Q2 V4.1 performed a CPU-only, outcome-free adequacy review of the complete historical 40-candidate bank and all 31 directions that passed both frozen safety shells. The 31-safe bank retained full rank, effective rank 7.225679, condition number 2.021583, and all inherited coverage checks. Synthetic K=31/N=300 planning retained 97.17% omnibus power at rho=0.25, with 1.33 percentage points loss versus K=32 and A2 width ratio 1.022. The bank is adequate for a future V4.1 design. Label-free A1/A2 were then materialized from Spark-1 raw arrays, independently audited, and pinned to the lock; the normative execution and analysis addendum makes the already-frozen generation, retry/resume, estimand, and G0-G3 rules explicit without changing any hash-pinned scientific object. Principal authorization has opened the frozen semantic campaign; outcomes remain uninspected until all 37,800 logical rows are complete.
 
-**Next authorized action:** PRINCIPAL_SEMANTIC_EXECUTION_AUTHORIZATION
+**Next authorized action:** COMPLETE_37800_ROW_CAMPAIGN_AND_SEAL
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is

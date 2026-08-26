@@ -87,6 +87,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q2_V4_INTERVENTION_SUBSPACE_DESIGN_COMPLETE",
             "Q2_V4_1_31_SAFE_BANK_REVIEW_COMPLETE",
             "Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK_COMPLETE",
+            "Q2_V4_1_SEMANTIC_EXECUTION",
                 "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
             "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE",
         }
@@ -111,7 +112,8 @@ def test_project_state_and_generated_status_are_current() -> None:
             "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
             "Q2_V3_RADIAL_ANGULAR_EXECUTION",
                 "Q2_V3_AMENDMENT1_EXECUTION",
-                "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
+            "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
+            "Q2_V4_1_SEMANTIC_EXECUTION",
             }
     )
     if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":
@@ -148,6 +150,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q1_CONFIRMATORY_HOLDOUT_ASSIGNED_POWER_PENDING",
         "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL",
         "Q2_V2_PRE_SOURCE_LOCK_NO_COMMON_OUTCOMES",
+        "Q2_V4_1_SEMANTIC_EXECUTION_OPEN_NO_OUTCOME_INSPECTION",
     }
     assert state["scientific_firewall"]["published_positive_control"] == "PASS"
 

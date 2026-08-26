@@ -158,6 +158,48 @@ experiments:
     normative_lock_parent: 1a88b869540c58823f31e903ff37fea7c8de0d6c
     next_action: PRINCIPAL_SEMANTIC_EXECUTION_AUTHORIZATION
 
+  - id: Q2_V4_1_SEMANTIC_EXECUTION
+    version: V4.1-FROZEN-SEMANTIC
+    stage: DEVELOPMENT_SEMANTIC_EXECUTION
+    question: >-
+      Does the frozen 31-controller V4.1 bank exhibit the prospectively frozen
+      relational geometry of semantic blind spots on the untouched 300-item
+      panel?
+    instrument: >-
+      Exactly 63 frozen conditions, two independent primary rollouts, a
+      hash-pinned 37,800-row schedule, frozen D_shape endpoint, controller-label
+      QAP and mechanical G0-G3 classification.
+    model_policy: Qwen3-8B full non-thinking BF16 SDPA on one Spark-1 GB10
+    status: OPEN_COLLECTION
+    outcome: UNTESTED_DURING_COLLECTION
+    scientific_interpretation: >-
+      The principal researcher authorized the already frozen semantic campaign.
+      Collection is open on Spark 1 only; scientific outcomes remain uninspected
+      until all 37,800 logical trajectories are complete.
+    source_branch: experiment/q2-v4-1-prediction-lock
+    source_commit: 02bee4b6ede3969ef3c730d9ca5ea3a01e1c5454
+    execution_source_commit: 4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc
+    prediction_lock_commit: 8f0a6db7ca0f9fbac3b4530f200a8ed01e2b5156
+    normative_lock_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
+    semantic_schedule: review/q2_v4_1_prediction_lock/FUTURE_SEMANTIC_SCHEDULE.json
+    semantic_schedule_sha256: fd5be00b208083b40b2d6a61e97ceecee1d74fa9e658f9a017137d7596ef8dc7
+    controller_count: 31
+    conditions: 63
+    panel_n: 300
+    rollouts: 2
+    projected_rows: 37800
+    semantic_outcomes: 0
+    correctness_inspected: false
+    q2: UNTESTED
+    q3: NOT_RUN
+    spark1_only: true
+    spark2_used: false
+    runpod: 0
+    artifact: review/q2_v4_1_semantic_execution/PRE_EXECUTION_MANIFEST.json
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    next_action: COMPLETE_CAMPAIGN_BEFORE_ANALYSIS
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY
