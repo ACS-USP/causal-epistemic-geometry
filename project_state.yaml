@@ -3,7 +3,7 @@ last_verified: "2026-08-26"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V4_1_READY_FOR_PRINCIPAL_SEMANTIC_EXECUTION_REVIEW
+  scientific_stage: Q2_V4_1_READY_FOR_SEMANTIC_EXECUTION_AUTHORIZATION
   claim_status: NONE_FROZEN
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -21,7 +21,7 @@ project:
 current:
   workstream: Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK_COMPLETE
   lifecycle: CLOSED
-  stage: DEVELOPMENT_PRESEMANTIC_GEOMETRY_LOCKED
+  stage: DEVELOPMENT_PRESEMANTIC_NORMATIVE_LOCKED
   source_commit: 78a2206c7590ee3c30e2c806b11eb037d94a8b80
   execution_source_commit: 4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc
   summary: >-
@@ -33,11 +33,21 @@ current:
     percentage points loss versus K=32 and A2 width ratio 1.022. The bank is
     adequate for a future V4.1 design. Label-free A1/A2 were then materialized
     from Spark-1 raw arrays, independently audited, and pinned to the lock;
-    no semantic experiment was run.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW
+    the normative execution and analysis addendum makes the already-frozen
+    generation, retry/resume, estimand, and G0-G3 rules explicit without
+    changing any hash-pinned scientific object; no semantic experiment was run.
+  next_authorized_action: PRINCIPAL_SEMANTIC_EXECUTION_AUTHORIZATION
   runpod: NOT_USED
   gpu_work_authorized: false
-  new_scientific_experiment_authorized: PRINCIPAL_SEMANTIC_EXECUTION_REVIEW_REQUIRED
+  new_scientific_experiment_authorized: PRINCIPAL_SEMANTIC_EXECUTION_AUTHORIZATION_REQUIRED
+  normative_addendum:
+    machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
+    machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
+    human_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.md
+    human_readable_sha256: 25a146cbe134528e868b368295ad249c5bc50815fbde358e7009679322095cac
+    hash_manifest: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_LOCK_HASHES.json
+    hash_manifest_sha256: 5e2f08b4a5ab60d2a3e993fa9b23d87712fa23483b40780d76b38403ea0dd826
+    parent_prediction_lock: 1a88b869540c58823f31e903ff37fea7c8de0d6c
 
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
@@ -46,7 +56,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V4_1_PRESEMANTIC_A1_A2_QUALIFIED_NO_SEMANTIC_OUTCOMES
+  current_task: Q2_V4_1_NORMATIVE_LOCK_COMPLETE_NO_SEMANTIC_OUTCOMES
   free_generation: NOT_AUTHORIZED
 
 confirmatory_program:

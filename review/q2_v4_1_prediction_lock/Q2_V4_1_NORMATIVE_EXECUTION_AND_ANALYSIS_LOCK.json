@@ -1,0 +1,647 @@
+{
+  "schema_version": "q2-v4.1-normative-execution-analysis-lock-v1",
+  "lock_kind": "PRESEMANTIC_NORMATIVE_ADDENDUM",
+  "status": "Q2_V4_1_NORMATIVE_LOCK_COMPLETE",
+  "created_from_commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+  "parent_prediction_lock": {
+    "path": "review/q2_v4_1_prediction_lock/PROTOCOL_LOCK.json",
+    "sha256": "0adc2d04e314bca4bf488595cdbd171da1a47f439b90170cb8125c9def35d278",
+    "declared_source_commit": "4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc",
+    "controller_count": 31,
+    "semantic_execution_authorized": false
+  },
+  "authority_and_scope": {
+    "authority_order": [
+      "frozen executable code and immutable schedules/manifests",
+      "existing protocol locks and presemantic artifacts",
+      "frozen design/protocol documents",
+      "historical reports",
+      "drafts"
+    ],
+    "purpose": "Make existing V4.1 semantic execution and analysis intent explicit without changing any scientific object or rule.",
+    "scientific_design_change": false,
+    "semantic_outcomes": 0,
+    "correctness_inspected": false,
+    "semantic_execution_authorized": false,
+    "q2": "UNTESTED",
+    "q3": "NOT_RUN",
+    "no_model_or_gpu_inference_in_this_addendum": true
+  },
+  "hash_pinned_objects": {
+    "safe_31_manifest": {
+      "path": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+      "sha256": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447"
+    },
+    "semantic_panel_manifest": {
+      "path": "review/q2_v4_1_prediction_lock/SEMANTIC_PANEL_MANIFEST.json",
+      "sha256": "c127cf3594e8ea849dbd038492606b3afaaac406feb4146188769c04d6691187",
+      "N": 300,
+      "status": "FROZEN_CONTENT_NOT_AUTHORIZED_FOR_INFERENCE"
+    },
+    "semantic_schedule": {
+      "path": "review/q2_v4_1_prediction_lock/FUTURE_SEMANTIC_SCHEDULE.json",
+      "sha256": "fd5be00b208083b40b2d6a61e97ceecee1d74fa9e658f9a017137d7596ef8dc7",
+      "rows": 37800,
+      "conditions": 63,
+      "rollouts": 2,
+      "logical_keys": 37800,
+      "unique_seeds": 37800,
+      "status": "FROZEN_NOT_AUTHORIZED_NOT_RUN"
+    },
+    "qap_manifest": {
+      "path": "review/q2_v4_1_prediction_lock/QAP_SCHEDULE.json",
+      "sha256": "6228f39d45e0d7b5615dd885dd30de108a040bbe692e227cc5395486352d8eaa",
+      "permutation_array_path": "review/q2_v4_1_prediction_lock/QAP_CONTROLLER_PERMUTATIONS.npy",
+      "permutation_array_sha256": "cb00acd62008d2dd36e588cb2df38b6ecf5fa4f15e59f79e925d625639a9d210",
+      "maps": 50000,
+      "controller_count": 31,
+      "identity_count": 1,
+      "unique_maps": 50000
+    },
+    "matrix_archive": {
+      "path": "review/q2_v4_1_prediction_lock/PREDICTION_MATRICES.npz",
+      "sha256": "723348bddd1de0b482bc859f888f982c8a3dd99e406331cb9a4642ea2c7dcae8",
+      "metadata_path": "review/q2_v4_1_prediction_lock/PREDICTION_MATRIX_METADATA.json",
+      "metadata_sha256": "98876a77f7c001265dad7b86db77854b16d498e242d870323ed60e3992ff9b1f",
+      "matrix_hashes": {
+        "A0_MEDIUM": "a89a2c54c38e44bfbfd8452ed193605fa830c7259233366e21474b9d41d95328",
+        "A0_STRONG": "a89a2c54c38e44bfbfd8452ed193605fa830c7259233366e21474b9d41d95328",
+        "A1_MEDIUM": "3711858ff405d47d47c12d3cd0e8ebc695df745ff55c283a1929fc660a2914f1",
+        "A1_STRONG": "3711858ff405d47d47c12d3cd0e8ebc695df745ff55c283a1929fc660a2914f1",
+        "A2_MEDIUM": "35ad08bfbeb38fb80ef2cc2f806691261b9d00a6fdebed31505df2ee1e088875",
+        "A2_STRONG": "a7dc7343c36480d1c6a437e6c273c6210a2ce1ebed23e315c90f2b349f1025af",
+        "D2_MEDIUM": "20df24254c3c1ea4aca1eba063e8cbb57e0a233ad26ae3787febcd1d7ef8ee6b",
+        "D2_STRONG": "6b7ebc1b700213c85f77a2b5505ba8b165f621cccd1e668e45f741e4a92293a6"
+      }
+    },
+    "a2_raw_archive": {
+      "manifest_path": "review/q2_v4_1_prediction_lock/A2_RAW_ARCHIVE_HASHES.json",
+      "manifest_sha256": "09372bbcc14fd76f8aa71c8041a9b167fc74222d5a4292edfb08fdaddc46b923",
+      "file_count": 24,
+      "aggregate_sha256": "ee1e215f19d22914d5a7c36e68c7754c0064425f934056541f02cf2b11072bbf"
+    },
+    "environment": {
+      "path": "review/q2_v4_1_prediction_lock/ENVIRONMENT_PROVENANCE.json",
+      "qualified_fingerprint": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386",
+      "backend": "V4_NATIVE_SPARK1",
+      "spark2": "NOT_USED",
+      "runpod": "NOT_USED"
+    },
+    "final_presemantic_bundle": {
+      "path": "review/q2_v4_1_prediction_lock/ARTIFACT_HASHES_FINAL.json",
+      "sha256": "e0cf82b8e668410569b5d4a4e669c05e57bb2a1413dd7ce88079eed842277638"
+    }
+  },
+  "controller_identity": {
+    "population": "original isotropic V4 candidates conditioned on frozen two-shell safety eligibility",
+    "count": 31,
+    "order_source": "SAFE_31_IMMUTABLE_MANIFEST.json and PROTOCOL_LOCK.json; original candidate order",
+    "ids": [
+      "V4_DIRECTION_00",
+      "V4_DIRECTION_01",
+      "V4_DIRECTION_02",
+      "V4_DIRECTION_03",
+      "V4_DIRECTION_04",
+      "V4_DIRECTION_06",
+      "V4_DIRECTION_07",
+      "V4_DIRECTION_08",
+      "V4_DIRECTION_09",
+      "V4_DIRECTION_10",
+      "V4_DIRECTION_11",
+      "V4_DIRECTION_13",
+      "V4_DIRECTION_15",
+      "V4_DIRECTION_17",
+      "V4_DIRECTION_18",
+      "V4_DIRECTION_19",
+      "V4_DIRECTION_20",
+      "V4_DIRECTION_22",
+      "V4_DIRECTION_23",
+      "V4_DIRECTION_24",
+      "V4_DIRECTION_26",
+      "V4_DIRECTION_28",
+      "V4_DIRECTION_29",
+      "V4_DIRECTION_30",
+      "V4_DIRECTION_31",
+      "V4_DIRECTION_32",
+      "V4_DIRECTION_33",
+      "V4_DIRECTION_34",
+      "V4_DIRECTION_35",
+      "V4_DIRECTION_37",
+      "V4_DIRECTION_39"
+    ],
+    "shells": {
+      "MEDIUM": 0.25,
+      "STRONG": 0.5
+    },
+    "conditions": {
+      "baseline": "BASELINE",
+      "controller_shell_template": "{controller_id}_{shell}",
+      "shell_order": ["MEDIUM", "STRONG"],
+      "count": 63,
+      "future_trajectories": 37800
+    },
+    "layer": 27,
+    "controller_vector_identity": "schedule controller_vector_hash and immutable bank artifact; no reconstruction, reorientation, or renormalization",
+    "source_artifacts": [
+      {
+        "path": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+        "sha256": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c"
+      },
+      {
+        "path": "review/q2_v4_1_prediction_lock/FUTURE_SEMANTIC_SCHEDULE.json",
+        "sha256": "fd5be00b208083b40b2d6a61e97ceecee1d74fa9e658f9a017137d7596ef8dc7",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c"
+      }
+    ]
+  },
+  "generation_specification": {
+    "source_of_truth_note": "The frozen row schedule and panel are authoritative for item, condition, prompt hash, reference type, rollout and seed. The backend and prompt functions below define execution semantics.",
+    "model": {
+      "id": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "tokenizer_id": "the same resolved model source",
+      "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "dtype": "BF16",
+      "quantization": "none",
+      "model_loader": "AutoModelForCausalLM",
+      "trust_remote_code": false,
+      "environment_profile": "CORE_QWEN",
+      "environment_fingerprint": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386"
+    },
+    "prompt": {
+      "mode": "chat",
+      "messages": "one user message containing the exact frozen panel prompt; no system message unless present in the frozen item metadata (the V4.1 panel has none)",
+      "user_prompt_template_version": "gate7-cruxeval-semantic-task-prompt-v1",
+      "template": "Solve this Python code-output prediction problem.\\n\\nFunction:\\n```python\\n{code}\\n```\\n\\nInput: {value}\\n\\nReturn exactly one final line in this form:\\nFINAL: <the exact Python output>\\nDo not add any text after FINAL.",
+      "source_prompt_function": "canonical_q2_v3_task_prompt -> current_task_prompt",
+      "encoding": "UTF-8",
+      "unicode_normalization": "NONE",
+      "chat_template_call": {
+        "tokenizer_method": "apply_chat_template",
+        "tokenize": false,
+        "add_generation_prompt": true,
+        "enable_thinking": false
+      },
+      "tokenization_call": {
+        "return_tensors": "pt",
+        "padding": "not used for serial batch size one"
+      }
+    },
+    "generation": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "max_new_tokens": 4096,
+      "repetition_penalty": "not supplied by project; frozen model GenerationConfig default",
+      "frequency_penalty": "not supplied by project; not a Transformers generate argument in this path",
+      "presence_penalty": "not supplied by project; not a Transformers generate argument in this path",
+      "sampling_seed": "the exact integer seed in the frozen schedule row",
+      "rng_scope": "torch.random.fork_rng; torch.manual_seed(seed); CUDA manual seed when applicable",
+      "raw_decode": "tokenizer.decode(new_tokens, skip_special_tokens=true), without pre-parser rewriting"
+    },
+    "stopping_and_cache": {
+      "stop_strings": "none supplied",
+      "eos_token_id": "not supplied by project; model.generate uses the frozen model GenerationConfig/model default at the exact revision",
+      "pad_token_id": "tokenizer.pad_token_id supplied explicitly; backend resolves a missing pad token to tokenizer EOS, otherwise 0",
+      "max_length_policy": "max_new_tokens=4096; no separate project max_length override",
+      "use_cache": "not overridden in generate_reasoning; frozen model.generate default applies",
+      "attention_implementation": "SDPA",
+      "execution_mode": "serial_reference",
+      "batch_size": 1,
+      "item_batch_size": 1,
+      "condition_chunk_size": 1,
+      "cross_condition_batching": false
+    },
+    "intervention": {
+      "meaningful_and_all_controller_layers": "model.model.layers[27]",
+      "source_location": "PROMPT_BOUNDARY",
+      "duration": "sustained_current_token",
+      "delta_source": "the frozen schedule row alpha multiplied by the immutable controller vector identified by controller_vector_hash",
+      "prefill": "add delta only to the final non-padding prompt token",
+      "decode": "add delta only to the one current token once on each decode forward",
+      "historical_states": "past KV states and historical token positions are never modified",
+      "hook_lifecycle": "one registered hook per trajectory; removed in finally; no condition leakage",
+      "baseline": "no intervention context; baseline is the zero-dose condition",
+      "randoms": "none in V4.1; all 31 scheduled non-baseline controllers are the frozen meaningful bank"
+    },
+    "schedule_and_seed": {
+      "seed_regime": "INDEPENDENT_PRIMARY",
+      "logical_key": ["item_id", "condition", "rollout_index"],
+      "seed_source": "FUTURE_SEMANTIC_SCHEDULE.json row seed",
+      "schedule_seed_namespace": "Q2-V4.1-INDEPENDENT-PRIMARY",
+      "condition_order_seed_namespace": "Q2-V4.1-CONDITION-ORDER",
+      "prelock_source": "99782d6f4f3ce1ca52d2cf6caeacafd4d0de9081",
+      "order_rng": "NumPy PCG64DXSM, one frozen permutation per item and rollout block",
+      "condition_order": "interleaved frozen schedule order; no outcome-dependent reorder",
+      "seed_uniqueness": 37800
+    },
+    "source_references": [
+      {
+        "path": "scripts/run_q2_v4_presemantic.py",
+        "function_or_lines": "build_v4_backend, lines 71-104; items, lines 155-175",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "abc8a9b5a37a235d710ee8f3c59e29fae5b335ccc0f6f36f6cd609e78d62bec8"
+      },
+      {
+        "path": "src/epistemic_geometry/benchmarks/prompts.py",
+        "function_or_lines": "render_prompt, lines 19-58",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "47fc45098556174574df1f28accd8ec4eae31c42f6dd8c1557cf06f9eebdaedd"
+      },
+      {
+        "path": "src/epistemic_geometry/experiments/q2_v3_prompt_provenance.py",
+        "function_or_lines": "current_task_prompt/canonical_q2_v3_task_prompt, lines 39-56",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "f0cb127a9a180b08698fe0b05e55bc2bf61ed4a8712712c9f5befecf1383d2e3"
+      },
+      {
+        "path": "src/epistemic_geometry/backends/huggingface.py",
+        "function_or_lines": "_encode_item, generate_reasoning, lines 230-380",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "f9aeb27d55d61b8f9df162feb8387887757ab0f9beb2cf6c88f90def7092ae46"
+      },
+      {
+        "path": "src/epistemic_geometry/backends/huggingface.py",
+        "function_or_lines": "steer_sustained_current_token, lines 1755-1851",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "f9aeb27d55d61b8f9df162feb8387887757ab0f9beb2cf6c88f90def7092ae46"
+      },
+      {
+        "path": "scripts/prepare_q2_v4_1_prediction_lock.py",
+        "function_or_lines": "make_schedule, lines 540-598",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "2ee4d2ea0288eb885f35367ffdfdd2b431580deb26e133ed85e789d3eaa0beeb"
+      }
+    ],
+    "legacy_helper_boundary": {
+      "path": "src/epistemic_geometry/experiments/q2_v4_presemantic.py",
+      "function": "semantic_schedule",
+      "fact": "This historical presemantic helper retains SELECTED_COUNT=32 and is not the source of the frozen V4.1 31-controller schedule.",
+      "sha256": "b41f9c88155dbbc87788edfb110a4f7ca735cd9796e7c122b1bd4da8575d9cf7",
+      "normative_instruction": "A future V4.1 semantic executor must consume the hash-pinned FUTURE_SEMANTIC_SCHEDULE.json and must not call or regenerate from this legacy 32-controller helper.",
+      "conflict_status": "NOT_APPLICABLE_LEGACY_PRESEMANTIC_HELPER"
+    }
+  },
+  "retry_resume_specification": {
+    "logical_identity": ["item_id", "condition", "rollout_index"],
+    "scientific_inputs_in_identity": [
+      "frozen panel item and prompt hash",
+      "frozen condition/controller/vector hash/alpha/layer/duration",
+      "frozen rollout index and schedule seed",
+      "frozen model/tokenizer/environment/parser provenance"
+    ],
+    "complete_logical_key": "A single journal row with the exact logical key, raw generated output or recorded runtime outcome, parser/scoring fields, generated token metadata, seed, and matching frozen provenance, persisted with append+flush+fsync.",
+    "operational_retryable_failures": [
+      "transport or network failure before a scientific row is persisted",
+      "process crash or scheduler interruption before a scientific row is persisted",
+      "incomplete artifact write or recoverable truncated journal tail",
+      "model load failure before a trajectory exists",
+      "timeout before a valid scientific row exists"
+    ],
+    "non_retryable_scientific_outcomes": [
+      "valid wrong answer",
+      "invalid or unevaluable commitment",
+      "truncated generation when truncation is recorded as an outcome",
+      "no final commitment",
+      "model runtime error recorded as a scientific row",
+      "any undesirable, surprising, or low-utility result"
+    ],
+    "retry_attempt_contract": {
+      "same_logical_key": true,
+      "same_seed": true,
+      "same_scientific_inputs": true,
+      "retry_provenance_appended": true,
+      "maximum_infrastructure_attempts": 3,
+      "terminal_after_attempt_limit": "ENGINE_FAILURE; no replacement trajectory"
+    },
+    "duplicate_prevention": {
+      "journal": "CrashSafeJournal",
+      "format": "append-only JSONL wrapper with identity hash and key fields",
+      "identical_duplicate": "ignored",
+      "conflicting_duplicate": "raises and blocks; never adjudicated by choosing one",
+      "resume": "load and validate the journal, skip only completed keys with matching identity/provenance, and process only pending schedule keys",
+      "tail_recovery": "only a malformed final tail may be quarantined and atomically removed; a malformed non-final row blocks",
+      "third_scientific_draw": false
+    },
+    "replacement_boundary": "No item, condition, rollout, seed, controller, prompt, or threshold may be substituted for a failed or undesirable logical key.",
+    "source_references": [
+      {
+        "path": "src/epistemic_geometry/research/reliability.py",
+        "function_or_lines": "CrashSafeJournal, lines 113 onward",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "5c29533c7489077a30f0c7d8e67f10df3c3379403b59d0560226ed5d24f307c4"
+      },
+      {
+        "path": "docs/ENGINEERING_POLICY.md",
+        "function_or_lines": "Reproducibility, lines 17-20",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "042102b65ffcc09706f41d3b0395dce4ad836a778c80689fcc0d1f5badc98f2f"
+      },
+      {
+        "path": "docs/RESEARCH_AUTONOMY_POLICY.md",
+        "function_or_lines": "Class A and Class B, lines 11-44",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "69becd2359d70f5bd8ce8486005dc24b5eebf5c80b8cbe46516c8bb504ef06e8"
+      },
+      {
+        "path": "scripts/freeze_q2_v3.py",
+        "function_or_lines": "frozen execution retry/journal policy, lines 783-788",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "4e39a64aa98caf0c92b8fc5016bbf5b981e4729ee42efb951dd8a6d7de5040d7"
+      }
+    ]
+  },
+  "semantic_estimands": {
+    "panel": {
+      "N": 300,
+      "items": "SEMANTIC_PANEL_MANIFEST.json in frozen order",
+      "rollouts": 2,
+      "rollout_regime": "INDEPENDENT_PRIMARY",
+      "conditions": 63,
+      "shells": ["MEDIUM", "STRONG"],
+      "item_weight": "uniform 1/N",
+      "pair_weight": "uniform over the upper triangle for geometry association"
+    },
+    "error_indicator": {
+      "notation": "e_{i,t,r}",
+      "definition": "e_{i,t,r}=0 iff external-semantic-v3 returns correct=true for condition i, item t, rollout r; e_{i,t,r}=1 for valid wrong, invalid/unevaluable, no or ambiguous commitment, truncation, or a recorded model-runtime outcome",
+      "missingness": "a missing logical row is not silently converted to e=1; incomplete schedules block completion and analysis",
+      "complete_case_filtering": false,
+      "source": "frozen Q2 V4 statistical plan error rule and canonical metrics policy"
+    },
+    "pairwise_rollout_difference": {
+      "notation": "d_{ij,t,r}",
+      "formula": "d_{ij,t,r}=e_{i,t,r}-e_{j,t,r}",
+      "item_pairing": "same item t; independent rollout r is paired by rollout index, not by generated token identity"
+    },
+    "total_distance": {
+      "notation": "Dtotal_ij",
+      "formula": "Dtotal_ij = (1/N) * sum_t[d_{ij,t,0} * d_{ij,t,1}]",
+      "implementation": "blind_spot_shape_matrices(errors), total matrix",
+      "negative_estimates": "RETAIN"
+    },
+    "rollout_means": {
+      "formula": "mhat_r = (1/N) * sum_t d_{ij,t,r}",
+      "mean_shift_product": "mhat_0 * mhat_1"
+    },
+    "shape_distance": {
+      "panel_formula": "Dshape_panel_ij = Dtotal_ij - mhat_0*mhat_1",
+      "superpopulation_formula": "Dshape_superpopulation_ij = [N/(N-1)] * Dshape_panel_ij",
+      "primary_name": "D_shape_superpopulation",
+      "fixed_panel_name": "D_shape_panel",
+      "N": 300,
+      "negative_estimates": "RETAIN; no clipping",
+      "baseline_handling": "BASELINE is condition 0 and is paired with every controller in each shell",
+      "shell_handling": "compute separate baseline-plus-31-controller matrices for MEDIUM and STRONG; do not pool shells before shell-specific quantities",
+      "invalid_outcomes": "retained as e=1 when a scientific row exists",
+      "missing_rows": "schedule/journal completeness failure, not complete-case deletion"
+    },
+    "geometry_matrices": {
+      "A0": {
+        "definition": "coordinate-space angular dissimilarity 1-cosine",
+        "shells": "same A0 matrix in MEDIUM and STRONG",
+        "hashes": {
+          "MEDIUM": "a89a2c54c38e44bfbfd8452ed193605fa830c7259233366e21474b9d41d95328",
+          "STRONG": "a89a2c54c38e44bfbfd8452ed193605fa830c7259233366e21474b9d95328"
+        }
+      },
+      "A1": {
+        "definition": "regularized covariance-whitened angular dissimilarity",
+        "regularization_lambda": 0.1,
+        "shells": "same A1 matrix in MEDIUM and STRONG",
+        "hashes": {
+          "MEDIUM": "3711858ff405d47d47c12d3cd0e8ebc695df745ff55c283a1929fc660a2914f1",
+          "STRONG": "3711858ff405d47d47c12d3cd0e8ebc695df745ff55c283a1929fc660a2914f1"
+        }
+      },
+      "A2": {
+        "definition": "baseline-centered natural-log full-vocabulary JS response angle",
+        "hashes": {
+          "MEDIUM": "35ad08bfbeb38fb80ef2cc2f806691261b9d00a6fdebed31505df2ee1e088875",
+          "STRONG": "a7dc7343c36480d1c6a437e6c273c6210a2ce1ebed23e315c90f2b349f1025af"
+        },
+        "raw_aggregation": "natural-log JS; equal 0.5/0.5 mixture; equal-weight mean over 48 probe/checkpoint rows; persisted raw artifacts and consolidator are hash-pinned"
+      },
+      "D2": {
+        "definition": "finite response total distance",
+        "hashes": {
+          "MEDIUM": "20df24254c3c1ea4aca1eba063e8cbb57e0a233ad26ae3787febcd1d7ef8ee6b",
+          "STRONG": "6b7ebc1b700213c85f77a2b5505ba8b165f621cccd1e668e45f741e4a92293a6"
+        }
+      }
+    },
+    "radial_secondary": {
+      "R_shape": "Dshape(BASELINE,STRONG)-Dshape(BASELINE,MEDIUM)",
+      "R_total": "Dtotal(BASELINE,STRONG)-Dtotal(BASELINE,MEDIUM)",
+      "status": "reported independently of G0/G1/G2/G3",
+      "shell_swaps": "paired direction shell swaps under the frozen V4 radial procedure",
+      "positive_gate": {
+        "positive_directions_min": 22,
+        "item_bootstrap_lower_bound_strictly_positive": true,
+        "median_strictly_positive": true,
+        "permutation_p_max": 0.05
+      },
+      "no_second_radial_test": true
+    },
+    "bootstrap": {
+      "resamples": 10000,
+      "seed": 1885846737463784981,
+      "unit": "item_id",
+      "cluster_movement": "move all 63 conditions and both rollouts for each sampled item together",
+      "interval": "percentile [2.5%,97.5%]"
+    },
+    "source_references": [
+      {
+        "path": "src/epistemic_geometry/experiments/q2_v4.py",
+        "function_or_lines": "blind_spot_shape_matrices, lines 125-163; baseline_centered_js_angle, lines 166-201",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "45215a2b48c0824a9e5248866160185421bcb3e487e989bfa3908e6e3d8637db"
+      },
+      {
+        "path": "review/q2_v4_spark1_presemantic/V4_STATISTICAL_ANALYSIS_PLAN.json",
+        "function_or_lines": "endpoint, radial and bootstrap objects",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "7300c6cc2dc4b51bff39976349ae128d1c4007e9ca5b539c3532fe16602ac81b"
+      },
+      {
+        "path": "docs/METRICS_AND_STATISTICS.md",
+        "function_or_lines": "canonical two-rollout error and missingness conventions",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "f9ddf0f984f28ef7f0c3c398d5d2d726cf9b1a3038a972328ce1f33dd806096c"
+      }
+    ]
+  },
+  "classification_rules": {
+    "association_object": "For each metric M in A0,A1,A2 and each shell s, Spearman correlation between the upper-triangle entries of M_s and Dshape_superpopulation_s; aggregate is the equal-weight arithmetic mean of the two shell-specific correlations.",
+    "spearman": {
+      "rank_ties": "average ranks",
+      "correlation": "Pearson correlation of average ranks",
+      "undefined": "metric fails the relational gate"
+    },
+    "primary_metric_qualifies": {
+      "both_shell_rhos_strictly_positive": true,
+      "shell_mean_rho_min": 0.2,
+      "delete_one_controller_sign_stable": true,
+      "item_bootstrap_lower_bound_strictly_positive": true,
+      "qap_maxT_adjusted_p_max": 0.05,
+      "logic": "AND across every listed criterion"
+    },
+    "qap": {
+      "permutation_unit": "controller labels",
+      "mapping": "E -> P_pi E P_pi^T",
+      "schedule_path": "review/q2_v4_1_prediction_lock/QAP_SCHEDULE.json",
+      "schedule_sha256": "6228f39d45e0d7b5615dd885dd30de108a040bbe692e227cc5395486352d8eaa",
+      "maps": 50000,
+      "identity_included": true,
+      "identity_first": true,
+      "same_permutation_across_shells_and_metrics": true,
+      "multiplicity": "single-step maxT across A0/A1/A2",
+      "p_value": "count(T_perm >= T_observed) / 50000",
+      "alternative": "one-sided positive association",
+      "seed": "211623173112176675888800389284962313332",
+      "rng": "NumPy PCG64DXSM"
+    },
+    "g3_superiority": {
+      "a2_full_gate_required": true,
+      "contrast_a2_minus_a0": ">= 0.10",
+      "contrast_a2_minus_a1": ">= 0.10",
+      "paired_bootstrap_lower_bounds_positive": true,
+      "two_contrast_single_step_maxT_p_max": 0.05,
+      "classification_note": "G3 requires A2 qualification plus both incremental superiority contrasts; it is not a replacement for the A2 gate",
+      "power_note": "G3_POWER_CHARACTERIZATION_IS_PLANNING_ONLY",
+      "power_artifact": {
+        "path": "review/q2_v4_1_prediction_lock/G3_POWER_CHARACTERIZATION.json",
+        "sha256": "dad13f9648aba5221361f98afa55a53dde61356631af09bcbf5d12ed1bd27d06",
+        "delta_grid": [0.0, 0.05, 0.1, 0.15, 0.2],
+        "semantic_outcomes": 0
+      }
+    },
+    "mechanical_decision_table": [
+      {
+        "state": "V4-G3",
+        "criterion": "A2 qualifies AND every G3 superiority criterion passes",
+        "precedence": 1,
+        "meaning": "finite-response A2 support with frozen incremental superiority beyond both A0 and A1"
+      },
+      {
+        "state": "V4-G2",
+        "criterion": "G3 does not pass AND A2 qualifies",
+        "precedence": 2,
+        "meaning": "finite-response relational geometry supported without the frozen G3 superiority claim"
+      },
+      {
+        "state": "V4-G1",
+        "criterion": "G3 and G2 do not pass AND A0 or A1 qualifies",
+        "precedence": 3,
+        "meaning": "static coordinate or covariance geometry qualifies without separate A2 support"
+      },
+      {
+        "state": "V4-G0",
+        "criterion": "none of A0, A1, A2 qualifies",
+        "precedence": 4,
+        "meaning": "no primary angular metric qualifies"
+      }
+    ],
+    "radial_suffixes": ["RT+", "RT-", "RS+", "RS-"],
+    "source_references": [
+      {
+        "path": "review/q2_v4_spark1_presemantic/V4_STATISTICAL_ANALYSIS_PLAN.json",
+        "function_or_lines": "metric_gate, G3, classification and radial objects",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "7300c6cc2dc4b51bff39976349ae128d1c4007e9ca5b539c3532fe16602ac81b"
+      },
+      {
+        "path": "review/q2_v4_1_prediction_lock/QAP_SCHEDULE.json",
+        "function_or_lines": "QAP metadata and p-value convention",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "6228f39d45e0d7b5615dd885dd30de108a040bbe692e227cc5395486352d8eaa"
+      },
+      {
+        "path": "src/epistemic_geometry/experiments/q2_v4.py",
+        "function_or_lines": "spearman, lines 239-249; shell_coupled_qap_statistics, lines 252-289",
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "sha256": "45215a2b48c0824a9e5248866160185421bcb3e487e989bfa3908e6e3d8637db"
+      }
+    ]
+  },
+  "consistency_audit": {
+    "status": "PASS",
+    "compared_artifacts_and_code": [
+      {
+        "path": "review/q2_v4_1_prediction_lock/PROTOCOL_LOCK.json",
+        "sha256": "0adc2d04e314bca4bf488595cdbd171da1a47f439b90170cb8125c9def35d278",
+        "checks": ["31 controllers", "MEDIUM/STRONG shells", "Q2 UNTESTED", "Q3 NOT_RUN", "semantic execution unauthorized"]
+      },
+      {
+        "path": "review/q2_v4_1_prediction_lock/FUTURE_SEMANTIC_SCHEDULE.json",
+        "sha256": "fd5be00b208083b40b2d6a61e97ceecee1d74fa9e658f9a017137d7596ef8dc7",
+        "checks": ["63 conditions", "N=300", "2 rollouts", "37800 rows", "37800 unique keys", "37800 unique seeds"]
+      },
+      {
+        "path": "review/q2_v4_1_prediction_lock/QAP_SCHEDULE.json",
+        "sha256": "6228f39d45e0d7b5615dd885dd30de108a040bbe692e227cc5395486352d8eaa",
+        "checks": ["K=31", "50000 unique maps", "identity included", "single-step maxT"]
+      },
+      {
+        "path": "review/q2_v4_1_prediction_lock/PREDICTION_MATRIX_METADATA.json",
+        "sha256": "98876a77f7c001265dad7b86db77854b16d498e242d870323ed60e3992ff9b1f",
+        "checks": ["A0/A1/A2/D2 hashes", "semantic_outcomes=0", "correctness_inspected=false"]
+      },
+      {
+        "path": "review/q2_v4_1_prediction_lock/SEMANTIC_PANEL_MANIFEST.json",
+        "sha256": "c127cf3594e8ea849dbd038492606b3afaaac406feb4146188769c04d6691187",
+        "checks": ["N=300", "frozen content", "not authorized for inference"]
+      },
+      {
+        "path": "review/q2_v4_spark1_presemantic/V4_STATISTICAL_ANALYSIS_PLAN.json",
+        "sha256": "7300c6cc2dc4b51bff39976349ae128d1c4007e9ca5b539c3532fe16602ac81b",
+        "checks": ["Dshape formula", "negative estimates retained", "metric gate", "G3 margin", "radial procedure", "bootstrap"]
+      },
+      {
+        "path": "src/epistemic_geometry/experiments/q2_v4.py",
+        "sha256": "45215a2b48c0824a9e5248866160185421bcb3e487e989bfa3908e6e3d8637db",
+        "checks": ["two-rollout Dshape implementation", "A2 angle conversion", "Spearman", "shell-coupled QAP"]
+      },
+      {
+        "path": "src/epistemic_geometry/benchmarks/external/semantic_v3.py",
+        "sha256": "51ac492a6cea1284c36df6ef659520adf4a04e0595cf0e66bfd15ba172b960c3",
+        "checks": ["external-semantic-v3 identity", "separate commitment/evaluability/correctness"]
+      },
+      {
+        "path": "scripts/prepare_q2_v4_1_prediction_lock.py",
+        "sha256": "2ee4d2ea0288eb885f35367ffdfdd2b431580deb26e133ed85e789d3eaa0beeb",
+        "checks": ["V4.1 31-controller schedule source", "63 conditions", "frozen row seeds"]
+      }
+    ],
+    "legacy_32_helper": "documented and excluded from V4.1 source of truth; no applicable semantic runner conflict",
+    "hash_pinned_scientific_objects_changed": false,
+    "scientific_choice_added": false
+  },
+  "semantic_firewall": {
+    "v4_v4_1_semantic_trajectories": 0,
+    "correctness_inspected": false,
+    "d_shape_exists": false,
+    "empirical_g0_g1_g2_g3_exists": false,
+    "radial_semantic_statistic_exists": false,
+    "primary_panel_executed": false,
+    "model_inference_in_this_task": false,
+    "gpu_inference_in_this_task": false,
+    "spark1_used_in_this_task": false,
+    "spark2_used": false,
+    "runpod_used": false,
+    "q3": "NOT_RUN",
+    "status": "SEMANTIC_FIREWALL_CLEAN"
+  },
+  "required_future_executor_assertions": [
+    "Verify this addendum SHA and every referenced hash before loading the model.",
+    "Reject any schedule row whose generation, controller, parser, environment, or seed provenance differs from this addendum.",
+    "Consume the frozen 37800-row schedule; do not regenerate it.",
+    "Preserve scientific invalid/truncated/runtime outcomes; retry only pre-row infrastructure failures under the same key and seed.",
+    "Do not inspect scientific outcomes before the complete schedule is collected.",
+    "Do not run Q3 or any new experiment from this lock."
+  ],
+  "final_state_before_separate_principal_execution_authorization": "Q2_V4_1_READY_FOR_SEMANTIC_EXECUTION_AUTHORIZATION"
+}

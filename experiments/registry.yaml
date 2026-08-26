@@ -113,13 +113,15 @@ experiments:
       baseline-centered natural-log JS response geometry, consolidated locally
       from persisted raw arrays and independently audited.
     model_policy: Qwen3-8B full non-thinking BF16 SDPA on qualified Spark-1
-    status: CLOSED_PRESEMANTIC_AWAITING_PRINCIPAL_SEMANTIC_REVIEW
-    outcome: Q2_V4_1_READY_FOR_PRINCIPAL_SEMANTIC_EXECUTION_REVIEW
+    status: CLOSED_PRESEMANTIC_NORMATIVE_LOCK_COMPLETE
+    outcome: Q2_V4_1_READY_FOR_SEMANTIC_EXECUTION_AUTHORIZATION
     scientific_interpretation: >-
       A1 and A2 are qualified instrument artifacts only. The exact 31 safe
       directions are pinned in original order; 24 raw A2 files are hash-pinned
       and the independent audit agrees within 6.03e-12. No semantic item,
-      correctness label, or Q2 outcome was inspected.
+      correctness label, or Q2 outcome was inspected. The normative execution
+      and analysis addendum makes the already-frozen generation, retry/resume,
+      estimand, and G0-G3 semantics explicit; it changes no scientific object.
     source_branch: experiment/q2-v4-1-prediction-lock
     source_commit: 78a2206c7590ee3c30e2c806b11eb037d94a8b80
     execution_source_commit: 4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc
@@ -147,7 +149,14 @@ experiments:
     q2: UNTESTED
     q3: NOT_RUN
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED
-    next_action: PRINCIPAL_RESEARCHER_REVIEW
+    normative_addendum: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
+    normative_addendum_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
+    normative_companion: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.md
+    normative_companion_sha256: 25a146cbe134528e868b368295ad249c5bc50815fbde358e7009679322095cac
+    normative_hash_manifest: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_LOCK_HASHES.json
+    normative_hash_manifest_sha256: 5e2f08b4a5ab60d2a3e993fa9b23d87712fa23483b40780d76b38403ea0dd826
+    normative_lock_parent: 1a88b869540c58823f31e903ff37fea7c8de0d6c
+    next_action: PRINCIPAL_SEMANTIC_EXECUTION_AUTHORIZATION
 
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
