@@ -1,0 +1,20 @@
+schema_version: 1
+experiment_id: Q2_V4_1_PREDICTION_LOCK
+status: PROSPECTIVE_PRESEMANTIC_LOCK
+stage: DEVELOPMENT_PRESEMANTIC_GEOMETRY_FREEZE
+source_commit: b757f22d0ff37d6c3fdf200fa01940a9d0dd3bb8
+backend: V4_NATIVE_SPARK1
+spark1_only: true
+spark2_forbidden: true
+runpod_forbidden: true
+model: Qwen/Qwen3-8B
+model_revision: b968826d9c46dd6066d109eabc6255188de91218
+layer: 27
+controllers: 31
+shells: [MEDIUM, STRONG]
+primary_n: 300
+conditions: 63
+future_semantic_trajectories: 37800
+qap_maps: 50000
+semantic_execution: forbidden
+q3: not_run

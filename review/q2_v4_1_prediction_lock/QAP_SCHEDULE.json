@@ -1,0 +1,14 @@
+{
+  "array_sha256": "cb00acd62008d2dd36e588cb2df38b6ecf5fa4f15e59f79e925d625639a9d210",
+  "controller_count": 31,
+  "identity_first": true,
+  "maps": 50000,
+  "multiplicity": "single-step maxT across A0/A1/A2",
+  "p_value": "count(T_perm>=T_observed)/50000",
+  "rng": "NumPy PCG64DXSM",
+  "same_permutation_across_shells_and_A0_A1_A2": true,
+  "schema_version": "q2-v4.1-qap-v1",
+  "seed": "211623173112176675888800389284962313332",
+  "seed_source": "Q2-V4-QAP-V1-K31|V4_PRELOCK",
+  "unique_maps": 50000
+}

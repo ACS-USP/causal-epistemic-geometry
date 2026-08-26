@@ -1,0 +1,26 @@
+{
+  "authority": {
+    "candidate_safety_sha256": "62328ee097d4172bf3fbc4038dd49bb34ffff4405edd0d08c09b149c96773c08",
+    "raw_artifacts_modified": false,
+    "safe_manifest_sha256": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447",
+    "v4_forensic_audit_sha256": "b27cbe92d7427c3f0892c300015526404db0095710e9f015b64dd598cf12a8fb"
+  },
+  "candidate_id": "V4_DIRECTION_38",
+  "classification": "DOCUMENTATION_TYPO_CONFIRMED",
+  "raw_truth": {
+    "both_shells_pass": false,
+    "medium_pass": false,
+    "medium_reason_labels": [
+      "raw_sequence_movement_below_0.10"
+    ],
+    "strong_pass": false,
+    "strong_reason_labels": [
+      "validity_below_relative_0.05_guard",
+      "evaluability_below_relative_0.05_guard"
+    ],
+    "truncation_at_both_shells": false
+  },
+  "reason_code_note": "The immutable V4 JSON has no normalized reason-code field; labels above are this erratum's deterministic normalization.",
+  "schema_version": "q2-v4.1-safety-history-erratum-v1",
+  "v4_1_manifest_unaffected": true
+}
