@@ -1,0 +1,709 @@
+{
+  "algebraic_gate": {
+    "checks": {
+      "coefficient_norm_error_at_most_1e_12": true,
+      "condition_number_at_most_3": true,
+      "entropy_effective_rank_at_least_0_75r": true,
+      "finite": true,
+      "full_subspace_rank": true,
+      "max_absolute_pair_cosine_below_0_98": true,
+      "vector_norm_error_at_most_1e_10": true
+    },
+    "condition_number": 1.9069763635483228,
+    "entropy_effective_rank": 7.2917806715362605,
+    "max_absolute_pair_cosine": 0.8448703713036927,
+    "pass": true,
+    "rank": 8
+  },
+  "byte_order": "big",
+  "candidate_count": 40,
+  "candidates": [
+    {
+      "candidate_id": "V4_DIRECTION_00",
+      "canonical_vector_hash": "985fd1814c28740ae4c9a48568435ed64c7083145fa6be256e0c63479731500d",
+      "coefficients": [
+        0.650494816198578,
+        0.06251643136607397,
+        -0.011913617435518194,
+        -0.09720884204127442,
+        0.649696368859519,
+        0.2626485559171254,
+        -0.19423418947849183,
+        0.18584977982139664
+      ],
+      "file_sha256": "f44572ba59ceab4df37cd0a210d5093792ebf9d3542d316260de355b73ef9094",
+      "generation_index": 0,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_00.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_01",
+      "canonical_vector_hash": "24fe249263a4bd45cc1e4668c110522ba458dd4a9f5b3cd200f9e95d4de8b824",
+      "coefficients": [
+        -0.31025926990082714,
+        0.0410253232839071,
+        0.28633494981712715,
+        0.39903330047201063,
+        -0.11064307145669504,
+        -0.2887032277454688,
+        0.26282695542195605,
+        0.704394334481259
+      ],
+      "file_sha256": "2abbe08480805357f8efba95d6d7563721d6a153ea440690523e3b3da6a25e7d",
+      "generation_index": 1,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_01.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_02",
+      "canonical_vector_hash": "37e530b2d9d909c578bcec616ffe1defa00e3f8e6d33e4eb5ce3c6344152786f",
+      "coefficients": [
+        -0.304130017103061,
+        -0.30905616015540466,
+        -0.12423528818181337,
+        0.7091512664299223,
+        0.24746517017782396,
+        0.1682704534701638,
+        -0.21339018858069886,
+        0.39820844857110654
+      ],
+      "file_sha256": "28cfa15767fcd48719125f58856c7e2708facd6029cebde049aba196cec6996f",
+      "generation_index": 2,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_02.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_03",
+      "canonical_vector_hash": "a14198c43bff278b5b7e1cdf58e8d7d7052744dbdb5785221d090a3ff4719da3",
+      "coefficients": [
+        -0.5665781217625957,
+        0.20512589128327652,
+        -0.30960833472714144,
+        -0.2279063658818437,
+        -0.4326382059536331,
+        0.30703108582324246,
+        0.3932574202078265,
+        -0.2302578221518997
+      ],
+      "file_sha256": "484acefedb1b6d37c444232a8ab647270b3a2df15c306fe0397ae2579b0e8675",
+      "generation_index": 3,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_03.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_04",
+      "canonical_vector_hash": "2511a7d1477181030873422134a9ca7a1e00a6e850adf182e39561165572c049",
+      "coefficients": [
+        -0.22845398217805554,
+        -0.30372092696655945,
+        -0.14308867641190412,
+        -0.09103635835032768,
+        -0.33377529083012863,
+        0.5330390396668188,
+        0.26215794031228234,
+        0.602110488568438
+      ],
+      "file_sha256": "becfcca96c07ae06b33ba44b3bd178157438b809239d049b1590358c959cfe11",
+      "generation_index": 4,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_04.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_05",
+      "canonical_vector_hash": "5e27f9a0d195674967ac5125ab22944f99dc3a52fa13009ade5ce08b29a2feb5",
+      "coefficients": [
+        -0.2007257580933985,
+        0.29565011356525406,
+        -0.1776645460970659,
+        0.7197307563447873,
+        -0.38523848991649473,
+        -0.00014822619211525301,
+        -0.01885779459666386,
+        0.41708367903452154
+      ],
+      "file_sha256": "2e37bb28c8b13ee8c7dbd5b9501ab233b248e9b80f78fe9a23378ca42cf1f786",
+      "generation_index": 5,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_05.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_06",
+      "canonical_vector_hash": "4ef1afc6c3fd12aededa6fcfecb8a433d2ca87debc2aa3a496fa4dd06b879989",
+      "coefficients": [
+        -0.1840400904729605,
+        0.4580819659938867,
+        0.31800106258978317,
+        0.3945564269303884,
+        -0.6657267999723883,
+        0.12274299894523663,
+        0.1704731753564934,
+        0.11032492094672816
+      ],
+      "file_sha256": "56c23124aae1546ebab0d0eb5debd2ee5acd574cf4721b0678f706431b737d73",
+      "generation_index": 6,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_06.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_07",
+      "canonical_vector_hash": "94237eff5a392d22460e471ba2a1479f14fae90f781ab550be1cd268a384be40",
+      "coefficients": [
+        -0.21952467328642683,
+        -0.21553309219521422,
+        0.08163577168560793,
+        0.3823560935735048,
+        -0.24559012765141996,
+        0.17971680717711042,
+        -0.8122403769376064,
+        -0.012114081320548812
+      ],
+      "file_sha256": "a55116cbcfde8b965ed465ef2057d814058b7a33848c1868f485996d3a978a29",
+      "generation_index": 7,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_07.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_08",
+      "canonical_vector_hash": "5897681879844aa1a6f4af5d51ea5bf06940841ed2c5e25d1b28b26f2cfdbdfb",
+      "coefficients": [
+        -0.04730544759454829,
+        -0.6258807539491589,
+        0.05695080078409223,
+        0.020130627647283225,
+        0.31443070517357485,
+        -0.26192157515891673,
+        0.3092403497532122,
+        -0.5824840485192022
+      ],
+      "file_sha256": "181a8f70f404fec8e8b429234bd8c7fa7d19a1415c4d687a09e1b9eb842a663a",
+      "generation_index": 8,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_08.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_09",
+      "canonical_vector_hash": "231b66d906fd8883c2329f140cfb79c8c705d25554371fcf98bd334ca980fec0",
+      "coefficients": [
+        0.13201163823296153,
+        0.6338969969722131,
+        0.13613172017386926,
+        -0.15385112989282204,
+        -0.34713806219020643,
+        -0.5658651319712537,
+        -0.22823433883258099,
+        0.21388411341075286
+      ],
+      "file_sha256": "1e6eeca5245f479fda1fe97f7ad9967871f6d7c5cb4c6462ae38350df0528cef",
+      "generation_index": 9,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_09.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_10",
+      "canonical_vector_hash": "edd580f19b8b3cdd1c742c0baf992fd4bec066bb37a78e06fd2dba32a117855a",
+      "coefficients": [
+        -0.4134633220050488,
+        -0.29704780080269316,
+        -0.14957479938502172,
+        -0.7340191939871022,
+        0.0537506956512849,
+        0.23157717653097634,
+        -0.05091477804728497,
+        -0.34719511379860674
+      ],
+      "file_sha256": "c3386eade16254026c09eb388f69756dcc567e499f3193963038885930d3908b",
+      "generation_index": 10,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_10.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_11",
+      "canonical_vector_hash": "755be3cbfaf47b42d657e3c37007163d5142186c1edc4ac0f8653e1a1051128c",
+      "coefficients": [
+        0.21317231813598958,
+        0.21006148832858534,
+        0.1587929243035157,
+        -0.42193075699851795,
+        0.06327296410583594,
+        -0.5371070217610681,
+        0.01547637277529347,
+        -0.6437888151136526
+      ],
+      "file_sha256": "63eb7a426551d90e64905397d9ba41f1620ae9453a8e9f3eb18f032cb644f967",
+      "generation_index": 11,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_11.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_12",
+      "canonical_vector_hash": "96d29b9373181911eb7598a0d97a399b492704374bf0ecbcd3a87f901124ac01",
+      "coefficients": [
+        0.25623882322253266,
+        -0.17987367985727382,
+        -0.048101110793815495,
+        0.25332590551727896,
+        -0.9060528646571051,
+        0.04645956506315032,
+        0.08396837181992516,
+        -0.07320123835765129
+      ],
+      "file_sha256": "3ada9f7ea4393e4cb8b17e30050501a8ec7f66e4db46b1d541825df0667a2efe",
+      "generation_index": 12,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_12.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_13",
+      "canonical_vector_hash": "f4cbae5950a1492d62eaf4fdb8016147f2fa5eba930e86250f8498390e569dc2",
+      "coefficients": [
+        -0.19453495948376956,
+        -0.45188568298330334,
+        -0.0019028170067260338,
+        -0.03619532817093503,
+        -0.2721384415669844,
+        0.09287085422040407,
+        0.7149082056452359,
+        0.40356373365104703
+      ],
+      "file_sha256": "0c9353058285385208ca57d3c77a1900dedaaf45afe7aad9d2720ccba6a113d4",
+      "generation_index": 13,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_13.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_14",
+      "canonical_vector_hash": "693b2fca0df517eb8886532d0524d25436c9e72963bb9b1faf91c8a2634db451",
+      "coefficients": [
+        0.33285050090954527,
+        0.37028244579442543,
+        -0.5891757897807587,
+        -0.13907590963451072,
+        -0.3691593382152968,
+        -0.10229282377694174,
+        0.3653901512687167,
+        0.32462106069126806
+      ],
+      "file_sha256": "658a4423c3fe5f1b1288c75a0810e84d602bb22f6a5e8d25054228862fc56047",
+      "generation_index": 14,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_14.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_15",
+      "canonical_vector_hash": "5ad181e3126541322ce342c8de4d12e8575bdfd96b5a9d88a8220c887725ff92",
+      "coefficients": [
+        0.2959307299726991,
+        0.45825696718696074,
+        -0.16973956601757043,
+        0.20828083822686388,
+        0.6669036112189849,
+        0.004087745215606078,
+        -0.4270994632960268,
+        0.05515468586159489
+      ],
+      "file_sha256": "67016c272046783bb33d1831ed79e6cc523117f1881858cf2da7ebd5482dfd25",
+      "generation_index": 15,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_15.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_16",
+      "canonical_vector_hash": "464e8ac397de505e4ed51e78f857decf5b90aea41474ec3986d3e9bdc60885ef",
+      "coefficients": [
+        0.007112173169429796,
+        0.5067054204264454,
+        -0.4081375834071515,
+        -0.13092224436696062,
+        -0.20799448466803308,
+        -0.05463129269431797,
+        0.319545175886584,
+        -0.6411916325230662
+      ],
+      "file_sha256": "d1dd8c5f53e2e0c1139d6ddc7ac6e75e71a509bb059c40433e59ee1ad2b6de63",
+      "generation_index": 16,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_16.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_17",
+      "canonical_vector_hash": "e4dfee84b5f49c3d0132fbabd1f1c0914cc9da1fe82f6b1ca26e2fbb0bf47ba6",
+      "coefficients": [
+        -0.2468408525610653,
+        0.1401889961061092,
+        0.060432542708536666,
+        0.3805567861974926,
+        0.24111648168123037,
+        -0.6218667705587231,
+        0.05032096526002243,
+        0.5688175819455068
+      ],
+      "file_sha256": "bad142b5ce6413e6d35ffd5bd1e39d9079e83e3ae24cc8d72cc6b649c10cb913",
+      "generation_index": 17,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_17.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_18",
+      "canonical_vector_hash": "3de650d62f5d4c4cab7336ed9b93eb7465f33e72eaf2c668fe365207b082574f",
+      "coefficients": [
+        -0.4481232072040425,
+        0.35649518665363683,
+        -0.11204666223898072,
+        -0.05446604369726245,
+        -0.021339381822274517,
+        0.7430423917613377,
+        0.06895521569614782,
+        0.3150453644800296
+      ],
+      "file_sha256": "9c26caf2649ecc9b5e63a546b8c332d1baf23cdf05245f49e93fe00ff18e99c0",
+      "generation_index": 18,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_18.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_19",
+      "canonical_vector_hash": "8baa1867a7be252705f3751df19c9996f9104bd3607fe815e86c392141631e2d",
+      "coefficients": [
+        0.4607232259990903,
+        -0.5161127246450022,
+        0.17918610434484042,
+        0.47658893020039084,
+        0.14828623429305296,
+        0.324724960449802,
+        -0.3345282741760712,
+        -0.1509066687111935
+      ],
+      "file_sha256": "9960d4cfc46b621b9c05f1399163b0cbb4bb885fe875bb28bf6ad17381a46c4d",
+      "generation_index": 19,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_19.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_20",
+      "canonical_vector_hash": "0648b0f96be4a73a8203f8f78878d8fc806aaf03dcac03ffe9672879f7579c88",
+      "coefficients": [
+        -0.05804671916318103,
+        -0.2926538510146425,
+        0.13943806687730304,
+        -0.3077762835786607,
+        -0.3788584882239993,
+        -0.4311973405002263,
+        -0.3435111573869286,
+        0.5910586018742722
+      ],
+      "file_sha256": "3f243b6f7540a83249baf10324520b7d5bdf94df03311da1ccfbad3a4c44e68a",
+      "generation_index": 20,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_20.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_21",
+      "canonical_vector_hash": "4e56e9a2a334807cdc77bf6a79134cabd90cf6ba76f57016479d235a2bf9891a",
+      "coefficients": [
+        0.3158751344753784,
+        -0.108066723242189,
+        0.5167937799691362,
+        -0.42651536505178694,
+        -0.11739276953880999,
+        -0.6158068002778007,
+        -0.1366426799751564,
+        -0.16698208139989848
+      ],
+      "file_sha256": "b07470b58de46b6d41cf666087e325acd7e8cbf85815d627d959f6dc0690d932",
+      "generation_index": 21,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_21.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_22",
+      "canonical_vector_hash": "8f6366a12f4448201e10b8703892a51e159c58ae1151fa027af91b1051a0f216",
+      "coefficients": [
+        0.05006161496005473,
+        0.6361358980120728,
+        -0.10745115025551889,
+        0.32526154943603103,
+        -0.1859390227880188,
+        0.39773667257041867,
+        0.08671601729802446,
+        0.5245919177574317
+      ],
+      "file_sha256": "8d3f50566363e81240152aa3cc5ab7b44194269a235099c31f0ce5a2e5f647e3",
+      "generation_index": 22,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_22.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_23",
+      "canonical_vector_hash": "987f0fc0aaf3e178c7ce75e98e8975249ac96b455d1b264d66ca8ed4beaab1cd",
+      "coefficients": [
+        0.008720671356227514,
+        0.12060654222210845,
+        -0.4349516689002309,
+        0.34010052723022627,
+        0.30449307224315586,
+        0.5403185955433805,
+        -0.5157906789710522,
+        0.17270335467350864
+      ],
+      "file_sha256": "4a71daa4573a1db89f0d28ddc9576b5e82d9b05bddd752ae1da22bac92d6e6c5",
+      "generation_index": 23,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_23.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_24",
+      "canonical_vector_hash": "24c0bd9b997f1ad2949c2c62029fe91caac173c0f31179d8dd19b4ab59e355a5",
+      "coefficients": [
+        -0.14685123663144461,
+        -0.39514697913174773,
+        -0.278879035376259,
+        0.17450472429131886,
+        -0.6389827398261577,
+        -0.2568432477061824,
+        0.3409080224059471,
+        -0.35154301099830076
+      ],
+      "file_sha256": "12c2ea421fdae84297754a0f2e099169fc242cc3dfd63c799f1df6cabad57e21",
+      "generation_index": 24,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_24.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_25",
+      "canonical_vector_hash": "52572d28f12e6ddf35cd3a74590a3ee8de46aafd5dc927a87df27db2442018de",
+      "coefficients": [
+        0.36570214675984153,
+        -0.3644807572319518,
+        -0.3559106382871704,
+        0.20665977625907794,
+        -0.3175297045442913,
+        0.3810864495269665,
+        0.08398344983538994,
+        -0.5576108470664156
+      ],
+      "file_sha256": "e106b318653c4e4f4ff8eb59f226b1da1d362a3a788706c6306879315b23fdd1",
+      "generation_index": 25,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_25.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_26",
+      "canonical_vector_hash": "fc605758ad5dc2044f69dabddc29400a0b377905666d4bd55ed3cac8e7a0cd8a",
+      "coefficients": [
+        0.23092325374519596,
+        -0.4654068809985994,
+        -0.04249070894487845,
+        0.42831380583866396,
+        -0.0460818681738733,
+        -0.5725248827937103,
+        -0.4524616563327689,
+        0.10091025189003136
+      ],
+      "file_sha256": "ee3f1d4728c71d82feb983664f0eca21b7f3e9266042650079c82c0f9cb934e7",
+      "generation_index": 26,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_26.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_27",
+      "canonical_vector_hash": "a93f742aee4b99bc5ef6e7391a34c83cd2f5edd6603c659e4368a61a7caedfc3",
+      "coefficients": [
+        0.028846903454679638,
+        0.389872221739101,
+        -0.1866052697732155,
+        0.5601585291891558,
+        -0.29506527725577364,
+        0.46924757750151996,
+        -0.13260636018082209,
+        -0.4168058885780328
+      ],
+      "file_sha256": "f3cae4576233be206802d6d430710065e0fd0a8f9a356ee1b7ecb6eab6787ef2",
+      "generation_index": 27,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_27.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_28",
+      "canonical_vector_hash": "0c7a6a6c35cc7b785fe588fceb0575969b2b9067bd9d96b3137d30f2806637ba",
+      "coefficients": [
+        0.721506078789183,
+        -0.06062826789794089,
+        -0.3737113796576214,
+        0.39928565136866856,
+        0.22777462085035688,
+        0.13433091847773043,
+        -0.15121193274766864,
+        -0.2896080844167991
+      ],
+      "file_sha256": "0dfd4fc7546f99b430f99414cfb7addd4a3c11525a7ca45c2b535bd44d72811c",
+      "generation_index": 28,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_28.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_29",
+      "canonical_vector_hash": "32a6dbef73f51cdd4a901f5d4ef32288553ed60edb4f6b4cab72c728840016f8",
+      "coefficients": [
+        0.4426933122792225,
+        0.7335272919711437,
+        -0.1327297407527301,
+        -0.024787247757935307,
+        0.024019825908885222,
+        -0.045511528413711914,
+        -0.07342937444538572,
+        0.4895800518590858
+      ],
+      "file_sha256": "14f891b0e980bee10f20c33fab6b0d2a90f79b42492aa177abae89f77440f0da",
+      "generation_index": 29,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_29.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_30",
+      "canonical_vector_hash": "646f651e040ba135fb135be1b8e1a0254c17d5d107012d2b3728687e4fc931aa",
+      "coefficients": [
+        -0.5593783467159432,
+        0.26373115573724165,
+        -0.34833779363848305,
+        0.4634403689672134,
+        -0.40105947006913406,
+        0.007466442655880108,
+        -0.041379562342260166,
+        -0.3446865738257562
+      ],
+      "file_sha256": "119b35b1bb2dc735e8a83854d091cbffed61b69e80bcfe4eac9e9a3d0f00ddb3",
+      "generation_index": 30,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_30.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_31",
+      "canonical_vector_hash": "19ca2a98ff342a4565f6ea84b9c1b48fd44d1b8459001228df333403cfe5ca48",
+      "coefficients": [
+        0.3245772386175644,
+        0.2836360081210506,
+        -0.03172794839302279,
+        0.27558981534916926,
+        0.03320690941386619,
+        -0.2724236615561821,
+        -0.3515287136735474,
+        0.7337261309846171
+      ],
+      "file_sha256": "96c5e19e9aecba9357d596fbb6ea241f489f6047400c57af0796bf30599f4bd7",
+      "generation_index": 31,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_31.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_32",
+      "canonical_vector_hash": "ae04e9c3d46915436de7ebc8298f4a8635e4ea78111d6e308ebef324d8bfea38",
+      "coefficients": [
+        -0.08866759270748116,
+        0.4534313302682387,
+        0.4102463951161781,
+        0.3075383842373457,
+        0.2128356524036212,
+        -0.44469117009411757,
+        -0.06002850917002723,
+        -0.5263111728270384
+      ],
+      "file_sha256": "81b0130215ade4c9814afadcea51120639c015881399b7a18fda5ec008d88c69",
+      "generation_index": 32,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_32.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_33",
+      "canonical_vector_hash": "2bd69a5c0dddc17b8523a3995a41e602534253e6a7dfb3f61c5f2c6fbc259736",
+      "coefficients": [
+        -0.15535594558959234,
+        0.0298115289796122,
+        -0.8638039749782926,
+        -0.36488660581841187,
+        -0.23525007264980846,
+        0.14966288576454267,
+        0.0026378205599281957,
+        0.13389446015972584
+      ],
+      "file_sha256": "e62c7ec70c5e96bb1745dcf10d16c8b3a1c57b51a106a58ebc907f290c652ba9",
+      "generation_index": 33,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_33.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_34",
+      "canonical_vector_hash": "437e865e09e12e4acfd093816369cbd96907795236c3ca457fc7e41455794f77",
+      "coefficients": [
+        0.513047128198961,
+        -0.02998864482228097,
+        -0.00032013109948987785,
+        0.13827827534344672,
+        -0.524729790689638,
+        0.6636153476321877,
+        -0.019728730940412425,
+        -0.025425102515885683
+      ],
+      "file_sha256": "a2d0bf87a3d3daf5b8ad64c96c3f25fdde2f622669bb0ab7cadbcfd34b6117ad",
+      "generation_index": 34,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_34.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_35",
+      "canonical_vector_hash": "e4909caac7fc944c94e0e77cdd0670f649188e55467a38a74a9632d0c1675934",
+      "coefficients": [
+        -0.3281035857610945,
+        -0.32719747802817284,
+        0.2656727611164917,
+        -0.37911011548253243,
+        -0.2136484881052946,
+        -0.023345050283083778,
+        0.0005502260706646535,
+        0.7244255525111943
+      ],
+      "file_sha256": "fd2f6807981996c370aa82e18495f9d23dc42451b9846ab2b8fd54917c0a6d50",
+      "generation_index": 35,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_35.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_36",
+      "canonical_vector_hash": "d8ea75f386662836cede6ae6d14f2718a986ddbca93b5f83d6fc0bdfa4c0bfc6",
+      "coefficients": [
+        -0.24024000288615424,
+        0.8243888197865676,
+        -0.26059259231098647,
+        0.18620697985595655,
+        -0.04822713609149831,
+        0.38992538673854865,
+        -0.01619576460346457,
+        -0.07386683721297743
+      ],
+      "file_sha256": "23c313eefcefd390675a2b8768e30f24e4b301a1d856b919a15749384d0671ad",
+      "generation_index": 36,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_36.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_37",
+      "canonical_vector_hash": "ca497ab0649a075844c04a378bf5ee73ec72c01297c7691be5de0b6a09e5d1b8",
+      "coefficients": [
+        -0.013391787426609585,
+        0.43120873567395945,
+        -0.16329400184470008,
+        -0.3238184887104004,
+        -0.316830223540291,
+        -0.38195938283597125,
+        -0.43408398227772793,
+        -0.49764754323087307
+      ],
+      "file_sha256": "63b17dc06027c594e6c84521a12499dca64ddb2bbb5cad464a2fdb6592ca5a20",
+      "generation_index": 37,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_37.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_38",
+      "canonical_vector_hash": "c517b29a82718f16b51e45e4d23ade4ef104bad7e95b18395428e2755dc0c081",
+      "coefficients": [
+        -0.3888471613124206,
+        -0.13724607386205326,
+        -0.005653634586357745,
+        -0.28045181136568514,
+        -0.8184783690144204,
+        -0.21200490716214218,
+        0.010222563357833066,
+        0.19057490983719505
+      ],
+      "file_sha256": "0b40c806f01264dd7f7ba6e7165ceac571d0b8d600ca49ddc8fa01ca9d185fcf",
+      "generation_index": 38,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_38.npy"
+    },
+    {
+      "candidate_id": "V4_DIRECTION_39",
+      "canonical_vector_hash": "902b6c20dae77f624b16e0f7cadcce9502009a3b453c342234d2b8c5271a24de",
+      "coefficients": [
+        -0.0677821091640586,
+        0.6755088643732574,
+        0.314594628292693,
+        0.1934649846744542,
+        0.41977809172582503,
+        0.3346685791740358,
+        -0.2723318027645014,
+        -0.20078238072204632
+      ],
+      "file_sha256": "2e1666915e29957d43b8eeba54035faf5c69456b02170ebaea93f37531a7a68d",
+      "generation_index": 39,
+      "path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_39.npy"
+    }
+  ],
+  "classification": "Q2_V4_CANDIDATE_BANK_ALGEBRAIC_PASS",
+  "prelock_commit": "99782d6f4f3ce1ca52d2cf6caeacafd4d0de9081",
+  "redraw_permitted": false,
+  "rng": "NumPy PCG64DXSM",
+  "schema_version": "q2-v4-candidate-bank-v1",
+  "seed": "164758257368056574741665736289526988272",
+  "seed_hex_128": "7bf34940ccce6c38442f1cdc728bbdf0"
+}
