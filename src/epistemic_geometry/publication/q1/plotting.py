@@ -5,7 +5,6 @@ from __future__ import annotations
 import warnings
 from datetime import UTC, datetime
 from pathlib import Path
-from textwrap import fill
 from typing import Any
 
 import matplotlib
@@ -105,60 +104,103 @@ def save_figure(fig: plt.Figure, root: Path, stem: str) -> dict[str, Path]:
             bbox_inches="tight",
             metadata=metadata[suffix],
         )
+        if suffix == "svg" and stem.startswith("figure"):
+            # Matplotlib emits path lines with trailing spaces. Normalize only
+            # serialization whitespace in polished main figures so changed
+            # vectors pass diff hygiene without rewriting unchanged supplements.
+            path.write_text(
+                "\n".join(line.rstrip() for line in path.read_text().splitlines()) + "\n"
+            )
         paths[suffix] = path
     plt.close(fig)
     return paths
 
 
 def figure1(root: Path) -> dict[str, Path]:
-    fig = plt.figure(figsize=(11.5, 5.2))
-    grid = fig.add_gridspec(2, 1, height_ratios=[1.05, 1], hspace=0.35)
+    fig = plt.figure(figsize=(11.5, 6.2))
+    grid = fig.add_gridspec(2, 1, height_ratios=[1.45, 1], hspace=0.30)
     ax = fig.add_subplot(grid[0])
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis("off")
-    labels = [
-        ("Same frozen\nmodel", "same weights"),
-        ("Repeated\nbaseline", "independent rollouts"),
-        ("Meaningful\ncontroller", "fixed layer + dose"),
-        ("Matched\nrandoms", "prospective null bank"),
-        ("Same item\npanel", "itemwise errors"),
-        ("Blind-spot\ncomplementarity", "beyond mean competence"),
+    conditions = [
+        (0.23, "Repeated baseline", "independent rollouts"),
+        (0.50, "Meaningful controller", "fixed layer + dose"),
+        (0.77, "Matched random controls", "prospective null bank"),
     ]
-    xs = np.linspace(0.075, 0.925, len(labels))
-    for index, ((title, subtitle), x) in enumerate(zip(labels, xs, strict=True)):
-        face = "#EDF3F7" if index < 4 else "#E9F3EE"
+
+    def add_box(
+        x: float,
+        y: float,
+        width: float,
+        height: float,
+        title: str,
+        subtitle: str,
+        face: str,
+    ) -> None:
         box = FancyBboxPatch(
-            (x - 0.067, 0.34),
-            0.134,
-            0.36,
+            (x - width / 2, y - height / 2),
+            width,
+            height,
             boxstyle="round,pad=0.012,rounding_size=0.014",
             linewidth=1.0,
             edgecolor="#536675",
             facecolor=face,
         )
         ax.add_patch(box)
-        ax.text(x, 0.57, title, ha="center", va="center", weight="bold", fontsize=8.4)
-        ax.text(x, 0.43, subtitle, ha="center", va="center", fontsize=7.8)
-        if index < len(labels) - 1:
-            ax.add_patch(
-                FancyArrowPatch(
-                    (x + 0.069, 0.52),
-                    (xs[index + 1] - 0.069, 0.52),
-                    arrowstyle="-|>",
-                    mutation_scale=11,
-                    linewidth=1,
-                    color="#5D6F7D",
-                )
+        ax.text(x, y + 0.035, title, ha="center", va="center", weight="bold", fontsize=8.7)
+        ax.text(x, y - 0.055, subtitle, ha="center", va="center", fontsize=7.7)
+
+    add_box(0.50, 0.88, 0.24, 0.16, "Same frozen model", "same weights", "#EDF3F7")
+    for x, title, subtitle in conditions:
+        add_box(x, 0.57, 0.22, 0.16, title, subtitle, "#EDF3F7")
+        ax.add_patch(
+            FancyArrowPatch(
+                (0.50, 0.79),
+                (x, 0.66),
+                arrowstyle="-|>",
+                mutation_scale=11,
+                linewidth=1,
+                color="#5D6F7D",
             )
+        )
+        ax.add_patch(
+            FancyArrowPatch(
+                (x, 0.48),
+                (0.50, 0.34),
+                arrowstyle="-|>",
+                mutation_scale=11,
+                linewidth=1,
+                color="#5D6F7D",
+            )
+        )
+    add_box(
+        0.50,
+        0.25,
+        0.27,
+        0.15,
+        "Same frozen item panel",
+        "condition-specific itemwise errors",
+        "#E9F3EE",
+    )
+    ax.add_patch(
+        FancyArrowPatch(
+            (0.50, 0.17),
+            (0.50, 0.075),
+            arrowstyle="-|>",
+            mutation_scale=11,
+            linewidth=1,
+            color="#5D6F7D",
+        )
+    )
     ax.text(
         0.5,
-        0.12,
-        "Causal comparison: meaningful movement versus repeated sampling "
-        "and matched random directions",
+        0.025,
+        "Compare aggregate competence and blind-spot complementarity C across parallel conditions",
         ha="center",
         color=COLORS["muted"],
         style="italic",
+        fontsize=8.5,
     )
 
     toy = fig.add_subplot(grid[1])
@@ -172,8 +214,8 @@ def figure1(root: Path) -> dict[str, Path]:
     toy.set_yticks([0, 1], ["Policy A", "Policy B"])
     toy.set_xticks(range(8), [f"item {index}" for index in range(1, 9)])
     toy.tick_params(axis="x", rotation=35)
-    toy.set_title("Illustrative only: equal accuracy, different error identities")
-    toy.set_xlabel("Green = correct; red = error — schematic values, not empirical Q1 items")
+    toy.set_title("SCHEMATIC / ILLUSTRATIVE: equal accuracy, different error identities")
+    toy.set_xlabel("Green = correct; red = error — NOT EMPIRICAL DATA")
     for spine in toy.spines.values():
         spine.set_visible(True)
         spine.set_color(COLORS["grid"])
@@ -182,7 +224,7 @@ def figure1(root: Path) -> dict[str, Path]:
 
 
 def figure2(root: Path, genealogy: pd.DataFrame) -> dict[str, Path]:
-    fig, ax = plt.subplots(figsize=(12, 7.2))
+    fig, ax = plt.subplots(figsize=(12.4, 6.1))
     x = np.arange(len(genealogy))
     colors = [
         COLORS["fail"]
@@ -194,46 +236,80 @@ def figure2(root: Path, genealogy: pd.DataFrame) -> dict[str, Path]:
         else COLORS["development"]
         for category in genealogy["category"]
     ]
-    ax.axhline(0.5, color=COLORS["grid"], linewidth=1)
+    compact = {
+        "Gate 4": (
+            "One-shot L17\nplus / minus / random",
+            "No detectable\nsemantic movement",
+        ),
+        "Gate 5": (
+            "Duration isolation\none-shot vs sustained",
+            "Duration contrast;\nmovement below threshold",
+        ),
+        "Gates 6–6.3": (
+            "Source/readout separation\npaired-mean L27",
+            "Strong DEVELOPMENT signal;\nhistorical safety issue",
+        ),
+        "Gate 7": (
+            "Fresh full-dose\nreplication",
+            "Movement replicated;\nvalidity cost",
+        ),
+        "Gate 8": (
+            "Label-free dose\ncalibration",
+            "D75 selected; no\naccuracy/G/C/D selection",
+        ),
+        "Gate 9": (
+            "Fresh selected-dose\nDEVELOPMENT test",
+            "Strong safe DEVELOPMENT\nreplication",
+        ),
+    }
+    ax.axhline(0.50, color=COLORS["grid"], linewidth=1)
     ax.scatter(x, np.full(len(x), 0.5), s=180, color=colors, zorder=3)
     for index, row in genealogy.reset_index(drop=True).iterrows():
-        upper = index % 2 == 0
-        y_method = 0.88 if upper else 0.72
-        y_result = 0.34 if upper else 0.18
-        ax.plot([index, index], [0.53, y_method - 0.04], color=COLORS["grid"], linewidth=1)
-        ax.plot([index, index], [y_result + 0.05, 0.47], color=COLORS["grid"], linewidth=1)
+        method, result = compact[str(row["stage"])]
+        ax.plot([index, index], [0.53, 0.69], color=COLORS["grid"], linewidth=1)
+        ax.plot([index, index], [0.31, 0.47], color=COLORS["grid"], linewidth=1)
         ax.text(
             index,
-            y_method,
-            fill(str(row["methodological_decision"]), width=27),
+            0.73,
+            method,
             ha="center",
             va="bottom",
-            fontsize=7.1,
-            linespacing=1.22,
+            fontsize=8.2,
+            weight="bold",
+            linespacing=1.18,
         )
         ax.text(
             index,
-            y_result,
-            f"{fill(str(row['observed_result']), width=28)}\n"
-            f"{_wrap_identifier(str(row['classification']))}\n"
-            f"N={int(row['n_items'])}",
+            0.27,
+            result,
             ha="center",
             va="top",
-            fontsize=6.8,
+            fontsize=8.0,
             color=colors[index],
-            linespacing=1.20,
+            weight="bold",
+            linespacing=1.16,
         )
-    ax.text(-0.55, 0.95, "METHOD DECISION", weight="bold", color=COLORS["muted"])
-    ax.text(-0.55, 0.09, "OBSERVED RESULT", weight="bold", color=COLORS["muted"])
+        ax.text(
+            index,
+            0.13,
+            f"{_wrap_identifier(str(row['classification']), width=22)}\nN={int(row['n_items'])}",
+            ha="center",
+            va="top",
+            fontsize=6.7,
+            color=colors[index],
+            linespacing=1.12,
+        )
+    ax.text(-0.58, 0.92, "METHOD CHANGE", weight="bold", color=COLORS["muted"])
+    ax.text(-0.58, 0.36, "FROZEN RESULT", weight="bold", color=COLORS["muted"])
     ax.set_xlim(-0.65, len(x) - 0.35)
-    ax.set_ylim(-0.04, 1.05)
+    ax.set_ylim(-0.03, 1.02)
     ax.set_xticks(x, genealogy["stage"])
     ax.set_yticks([])
     ax.spines.left.set_visible(False)
     ax.spines.bottom.set_visible(False)
     ax.set_title(
         "The qualified instrument emerged through falsifiable gates\n"
-        "Failures, calibration, and replication are distinct—not an inevitable path",
+        "Failure / insufficient evidence, calibration, and replication remain distinct",
         pad=14,
     )
     return save_figure(fig, root, "figure2_falsifiable_instrument_genealogy")
@@ -342,7 +418,7 @@ def figure3(
         color=COLORS["meaningful"],
         capsize=4,
         markersize=7,
-        label="Meaningful + frozen 95% CI",
+        label="Meaningful C (95% CI for C)",
     )
     null.scatter(
         x_random,
@@ -360,16 +436,22 @@ def figure3(
     null.set_xticks(range(5), ["Meaningful", "R0", "R1", "R2", "R3"])
     null.set_ylabel("Competence-adjusted complementarity C")
     null.set_title("Meaningful controller versus frozen null bank")
-    interval = confirmatory["models"]["Qwen"]["intervals"]["delta_C_nullmean"]
+    intervals = confirmatory["models"]["Qwen"]["intervals"]
+    c_interval = intervals["C_meaningful"]
+    contrast_interval = intervals["delta_C_nullmean"]
     null.text(
         0.02,
         0.98,
-        f"C − random mean 95% interval\n[{interval['q025']:.3f}, {interval['q975']:.3f}]",
+        f"Meaningful C = {c_interval['estimate']:.3f}\n"
+        f"95% CI for C: [{c_interval['q025']:.3f}, {c_interval['q975']:.3f}]\n\n"
+        f"Contrast vs random mean: ΔC = {contrast_interval['estimate']:.3f}\n"
+        f"95% CI for ΔC: [{contrast_interval['q025']:.3f}, "
+        f"{contrast_interval['q975']:.3f}]",
         transform=null.transAxes,
         va="top",
-        fontsize=8,
+        fontsize=7.5,
     )
-    null.legend(frameon=False, fontsize=7.5, loc="lower right")
+    null.legend(frameon=False, fontsize=7.2, loc="lower right")
     fig.suptitle(
         "Qwen confirmatory itemwise blind-spot reorganization",
         fontsize=14,
@@ -440,7 +522,8 @@ def figure4(
             width,
             color=COLORS["baseline"],
             alpha=0.65 if metric_index else 1,
-            label=f"Baseline {metric.replace('_', ' ')}",
+            hatch="//" if metric_index else None,
+            label="Baseline" if metric_index == 0 else None,
         )
         axes[2].bar(
             base_positions + width / 2,
@@ -448,7 +531,8 @@ def figure4(
             width,
             color=COLORS["meaningful"],
             alpha=0.65 if metric_index else 1,
-            label=f"Meaningful {metric.replace('_', ' ')}",
+            hatch="//" if metric_index else None,
+            label="Meaningful" if metric_index == 0 else None,
         )
         axes[2].scatter(
             base_positions,
@@ -459,11 +543,28 @@ def figure4(
             color=COLORS["fail"],
             label="Frozen relative floor" if metric_index == 0 else None,
         )
+        for center in base_positions:
+            axes[2].text(
+                center,
+                1.005,
+                "Commit." if metric_index == 0 else "Evaluab.",
+                ha="center",
+                va="bottom",
+                fontsize=6.6,
+                color=COLORS["muted"],
+                clip_on=False,
+            )
     axes[2].set_ylim(0, 1.02)
     axes[2].set_xticks(positions, ["Qwen\nMODEL PASS", "Ministral\nMODEL FAIL"])
     axes[2].set_ylabel("Fraction")
     axes[2].set_title("Safe realization is conjunctive")
-    axes[2].legend(frameon=False, fontsize=6.8, loc="lower left")
+    axes[2].legend(
+        frameon=False,
+        fontsize=7.0,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.17),
+        ncol=3,
+    )
     fig.suptitle(
         "Complementarity replicates more robustly than safe realization\n"
         "Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL",
@@ -507,7 +608,7 @@ def figure5(root: Path, cross_domain: pd.DataFrame) -> dict[str, Path]:
         ax.axhline(0, color=COLORS["muted"], linewidth=0.8)
         ax.set_xticks([0, 1], ["CRUXEval\nN=100", "Long character count\nN=200"])
         ax.set_title(title)
-    axes[0].set_ylabel("Absolute effect")
+    axes[0].set_ylabel("Effect")
     axes[-1].legend(frameon=False, fontsize=7.5)
     fig.suptitle(
         "Fixed Qwen L27-D75 controller: positive same-domain evidence, negative transfer boundary\n"

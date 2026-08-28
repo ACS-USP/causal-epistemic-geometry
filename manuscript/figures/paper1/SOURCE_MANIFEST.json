@@ -1,12 +1,18 @@
 {
+  "communication_polish_lineage": {
+    "kind": "COMMUNICATION_LAYOUT_POLISH_ONLY",
+    "parent_implementation_commit": "52f668c0e90ee02691e9ed2a575746913a64c8cb",
+    "parent_source_manifest_sha256": "aab5c76a36819ec7ab1d39ab7716188d76c5c502a600167bd4972518cb96a12f",
+    "scientific_derived_tables_required_byte_identical": true
+  },
   "contains_raw_outputs": false,
   "figure_data_manifest": {
     "path": "manuscript/data/paper1/FIGURE_DATA_MANIFEST.json",
-    "sha256": "dedb5a2aa3bc3babb5f742e919d20cb27ec070c5e199373b6143ff3274982825"
+    "sha256": "e93501d5933a7ec83f391850ba0cc725f1d54706919be8d41c9dd266cd92bb4a"
   },
   "figure_spec": {
     "path": "manuscript/figures/paper1/FIGURE_SPEC.json",
-    "sha256": "6e11b148da1de52c273708864d393b20f9c706fb85774f1974a89bd22e7b05f7"
+    "sha256": "9db7a2f947ac8849f8ec962d1ac1cef16dfd2c78246d8356d9f73d28ec481260"
   },
   "historical_package": {
     "contains_raw_outputs": false,
@@ -36,20 +42,20 @@
     "figure1": {
       "derived_tables": {},
       "inclusion_policy": "SCHEMATIC_ONLY_NO_EMPIRICAL_ITEMS",
-      "item_ordering_rule": "CAUSAL_FLOW_LEFT_TO_RIGHT",
+      "item_ordering_rule": "PARALLEL_CONDITIONS_FROM_SAME_FROZEN_MODEL_TO_SAME_ITEM_PANEL",
       "notes": "AS_FROZEN_IN_FIGURE_SPEC",
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure1_causal_control_where_model_fails.pdf",
-          "sha256": "11a3dba6d9debeceefc0add156248ce76d35a729ef7386ffd8d33c80b9db13cb"
+          "sha256": "1b3e05c453d08db8bd2af532b8bdc84644aa82d4496b135f06ec2edde623af4f"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure1_causal_control_where_model_fails.png",
-          "sha256": "de153239b4ed22381f1a8f0bd627da6ed7d3aa74884fbb73b270edc721b5a320"
+          "sha256": "f5835e403efa8ceebe22e17aac1c5953bd9581503cb7c9bed4dda7f44ef6f852"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure1_causal_control_where_model_fails.svg",
-          "sha256": "67791c1edebe13109938ebcabd0b5dae52a1fd9b96fcdad2ebf9d6965d56303f"
+          "sha256": "1e7495deb6bc8f13629e268c7f5a053f49f66596f7187249f078299e3e3c0517"
         }
       },
       "scientific_status": "CONCEPTUAL",
@@ -74,15 +80,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.pdf",
-          "sha256": "4c00eed96685a49f4d46bc92345a737e8a15256affdbc6ccd99b6fb7bc593225"
+          "sha256": "fcd11cf37d67490befe138bef574be15daff9e8092375d3731cb1d7419d99029"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.png",
-          "sha256": "b61ce82be570f05a359734fc180618301c163619de205b74631ef655bc445938"
+          "sha256": "0ddc8cb01be1641de00eee98950cc72da8479b1529e68d9cb57cbf7964857f47"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.svg",
-          "sha256": "b8cc2fb591df51a49017f0bc4f9c9c757074d0f9139fc8cb1d036c963e02c508"
+          "sha256": "85e14e260343a21e49a91937707ba8f9aed7552e1b6491da886980f410ed4561"
         }
       },
       "scientific_status": "DEVELOPMENT_CALIBRATION_GENEALOGY",
@@ -92,7 +98,7 @@
         "docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md": "f38991d976a5b59174ee0ac5f2aca6e9729d4313fa23cb5c9e41125b00d71895",
         "docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md": "0e954518266dcf2c1577ca7924a4ab668a176b245c11ff3d62f9d8978bc5fdff",
         "docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md": "b6680a2635a238cd6dfcb6b4169d142dc00870c9d0824c540b1cef44f42588a7",
-        "manuscript/figures/paper1/FIGURE_SPEC.json": "6e11b148da1de52c273708864d393b20f9c706fb85774f1974a89bd22e7b05f7",
+        "manuscript/figures/paper1/FIGURE_SPEC.json": "9db7a2f947ac8849f8ec962d1ac1cef16dfd2c78246d8356d9f73d28ec481260",
         "review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md": "2bb0e0048d3772c744f6b856a659c00e7726a8ac027e147282fedf2d09aed996",
         "review/gate8_l27_dose_calibration/REPORT.md": "8bc801dcde82b045ea1389cfbe60031b39563cd4b5654d4fdf4669b196ab6662",
         "review/gate9_selected_d75_evaluation/REPORT.md": "635d5bbd35d14ffeb46fc8dd97d9de385ddc65d25d1296d5baa9e3b8e0a587f4"
@@ -120,15 +126,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.pdf",
-          "sha256": "b19a44f22ac5b706ee8db22f7cc2c5a11a79ce4d821051a6493c9531fca04ef5"
+          "sha256": "e356b3f9fd09d16c19372e76bd46149b7ad8d46e2575f15495199b4f4c9945b7"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.png",
-          "sha256": "e5bea6aacf2b00ea3daf8db8e5d42b9338e4ba7efae7be4894b29f0a089777a4"
+          "sha256": "63197a00c49f0ec502c9f3ab1582c1709c9facbf5b7525d8e6938f7b3801390d"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.svg",
-          "sha256": "13a658c758dec6adc162a31ca71d8f7e1c4829081ff113e2df0d4cc839dca8cd"
+          "sha256": "de1154a595d18f5fb44fb32944f3dc14ebfa0b8682f43c82c7605481a40f8ec7"
         }
       },
       "scientific_status": "CONFIRMATORY",
@@ -159,15 +165,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure4_cross_model_complementarity_safety.pdf",
-          "sha256": "0488d317e71e1e99bf3cbaa974d31a3edb6ff23c11d6087647995717e76bda36"
+          "sha256": "d51962fa6a0998b41635583b3420660f3fd4a5e4855b88eb7769cfcfc82243eb"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure4_cross_model_complementarity_safety.png",
-          "sha256": "167af32dca32168e691b128d5f614e648327be263a1910b3d875d703a9001dce"
+          "sha256": "22a49924297787bcc50533fe311da80c9970116827ff4c86194e56b4d8bb4618"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure4_cross_model_complementarity_safety.svg",
-          "sha256": "e7d411fcb698f52f2d4a53bbc2aa2e6861955b145ed703cc053d3459de64dced"
+          "sha256": "50cf3a41407a1a1cfce66d8cb6c216fb55c3f53aae86dc9c48f5e47cdd5dc98c"
         }
       },
       "scientific_status": "CONFIRMATORY",
@@ -194,15 +200,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.pdf",
-          "sha256": "8c540dc35f111b2ca77bddf1736de20468673a9dcbc452f6a2641d30f1a507c5"
+          "sha256": "cffc98abccae1f2aeed07cedeefd1c14eb01e3991593074becf4e2cd07b6c1fe"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.png",
-          "sha256": "77ae6b14570c2fa0a20343d4ee21f4d7abf326a6cd4c5884d5121420c9b917f9"
+          "sha256": "fe4eb76de266f39c62dc8a677e8651b4912ba1fe1434e322d08a0534aadcbf86"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.svg",
-          "sha256": "f47d46945d499c2b132e59bba4e10fedc5ccf79f16b7e5d8d0616478780d3f60"
+          "sha256": "7cf97019be78e43af033e6c2e686e731319d162f8fab14af03c02982d3008db8"
         }
       },
       "scientific_status": "DEVELOPMENT_POSITIVE_NEGATIVE_BOUNDARY",
@@ -434,14 +440,14 @@
     "s6": "heterogeneous stages; no comparable frozen regression target",
     "s9": "cross-controller/layer sign comparison risk"
   },
-  "plotting_code_commit": "dd5acd083b5fc8d425c5e192175f0a6481db6268",
+  "plotting_code_commit": "52f668c0e90ee02691e9ed2a575746913a64c8cb",
   "plotting_code_hashes": {
     "scripts/generate_q1_paper_figures.py": "dae6d720fcdbcb32c0fd0c8ff51855660ff9463f5ddab467635938cabfb13b41",
     "src/epistemic_geometry/publication/q1/figure_tables.py": "017f54e731ebf5e89bd9938490d2beb6b8188e92672de828dda9b581eda9afb9",
     "src/epistemic_geometry/publication/q1/loaders.py": "66c3de218935459333632cc77dfeb9fc6374620b03fdc690553686a8e31189ae",
     "src/epistemic_geometry/publication/q1/pipeline.py": "d5c386b5456b649ce72d134cdf83fe6342751f88f4be48086ae07c36fc1319b9",
-    "src/epistemic_geometry/publication/q1/plotting.py": "36c8e0247a66192c275d41fdcdddd1f7f01a3c39403488086f83aab6f11b3c5d",
-    "src/epistemic_geometry/publication/q1/provenance.py": "c1ac3f038e937ec49a76211c4c78f42dffe9ac0f56cafe291c47d1a04ffbe24a"
+    "src/epistemic_geometry/publication/q1/plotting.py": "91b24f6a060f6e261a99c742b1770675dcb1ff70aa466138db3a1980d9de03b8",
+    "src/epistemic_geometry/publication/q1/provenance.py": "365e4f298b6034a15d78aacbc12fdf49cac6b7b52e971d04feeefa8f3145fdba"
   },
   "plotting_code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
   "q2_semantic_sources": 0,

@@ -1,12 +1,12 @@
 {
-  "code_commit": "dd5acd083b5fc8d425c5e192175f0a6481db6268",
+  "code_commit": "52f668c0e90ee02691e9ed2a575746913a64c8cb",
   "code_hashes": {
     "scripts/generate_q1_paper_figures.py": "dae6d720fcdbcb32c0fd0c8ff51855660ff9463f5ddab467635938cabfb13b41",
     "src/epistemic_geometry/publication/q1/figure_tables.py": "017f54e731ebf5e89bd9938490d2beb6b8188e92672de828dda9b581eda9afb9",
     "src/epistemic_geometry/publication/q1/loaders.py": "66c3de218935459333632cc77dfeb9fc6374620b03fdc690553686a8e31189ae",
     "src/epistemic_geometry/publication/q1/pipeline.py": "d5c386b5456b649ce72d134cdf83fe6342751f88f4be48086ae07c36fc1319b9",
-    "src/epistemic_geometry/publication/q1/plotting.py": "36c8e0247a66192c275d41fdcdddd1f7f01a3c39403488086f83aab6f11b3c5d",
-    "src/epistemic_geometry/publication/q1/provenance.py": "c1ac3f038e937ec49a76211c4c78f42dffe9ac0f56cafe291c47d1a04ffbe24a"
+    "src/epistemic_geometry/publication/q1/plotting.py": "91b24f6a060f6e261a99c742b1770675dcb1ff70aa466138db3a1980d9de03b8",
+    "src/epistemic_geometry/publication/q1/provenance.py": "365e4f298b6034a15d78aacbc12fdf49cac6b7b52e971d04feeefa8f3145fdba"
   },
   "code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
   "q2_semantic_sources": 0,
@@ -77,7 +77,7 @@
       "path": "manuscript/data/paper1/derived_figure_tables/figure2_genealogy.csv",
       "sha256": "7d8371ff87f70b5a7469ddab62774069f73cc929209532947e86c9a5495fd147",
       "sources": {
-        "manuscript/figures/paper1/FIGURE_SPEC.json": "6e11b148da1de52c273708864d393b20f9c706fb85774f1974a89bd22e7b05f7"
+        "manuscript/figures/paper1/FIGURE_SPEC.json": "9db7a2f947ac8849f8ec962d1ac1cef16dfd2c78246d8356d9f73d28ec481260"
       }
     },
     "s1_duration_history": {

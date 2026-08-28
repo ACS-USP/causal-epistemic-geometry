@@ -76,9 +76,9 @@
         "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json",
         "docs/METRICS_AND_STATISTICS.md"
       ],
-      "panels": ["causal design", "illustrative equal-accuracy error profiles"],
+      "panels": ["parallel baseline/meaningful/matched-random causal design", "illustrative equal-accuracy error profiles"],
       "inclusion": "SCHEMATIC_ONLY_NO_EMPIRICAL_ITEMS",
-      "ordering": "CAUSAL_FLOW_LEFT_TO_RIGHT",
+      "ordering": "PARALLEL_CONDITIONS_FROM_SAME_FROZEN_MODEL_TO_SAME_ITEM_PANEL",
       "invalid_handling": "NOT_APPLICABLE",
       "statistics": ["conceptual C definition"],
       "supports": "aggregate competence and error identity are distinct causal objects",
@@ -122,7 +122,7 @@
       "ordering": "HOLDOUT_MANIFEST_ORDER",
       "invalid_handling": "RETAIN_AS_ERROR_AND_OVERLAY_INVALID_COUNT",
       "controller_order": ["BASELINE", "MEANINGFUL_FIXED", "RANDOM_R0", "RANDOM_R1", "RANDOM_R2", "RANDOM_R3"],
-      "statistics": ["q_hat", "rescue", "damage", "shared correct", "shared error", "C", "95% item bootstrap CI", "delta C versus null mean"],
+      "statistics": ["q_hat", "rescue", "damage", "shared correct", "shared error", "C", "95% item bootstrap CI for C", "separately labeled 95% item bootstrap CI for delta C versus null mean", "no fitted random-population interval"],
       "supports": "safe prospective-null-specific Qwen complementarity",
       "does_not_support": ["precise latent propensities", "domain generality", "geometry prediction", "deployable oracle"]
     },
@@ -138,7 +138,7 @@
         "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_MINISTRAL.json",
         "review/q1_confirmatory_fixed_controllers/FORENSIC_AUDIT.json"
       ],
-      "panels": ["C and null bank", "accuracy change", "commitment/evaluability safety"],
+      "panels": ["C and null bank", "accuracy change", "commitment/evaluability safety with metric texture and compact condition legend"],
       "inclusion": "CONFIRMATORY_ONLY",
       "ordering": "QWEN_THEN_MINISTRAL",
       "invalid_handling": "FROZEN_PRIMARY_ERROR_NO_POSTHOC_RECOVERY",
@@ -155,7 +155,7 @@
         "review/gate10_cross_domain_charcount/ESTIMANDS.json",
         "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json"
       ],
-      "panels": ["accuracy change", "C", "D", "fixed-controller identity"],
+      "panels": ["zero-referenced accuracy change", "zero-referenced C", "zero-referenced D", "fixed-controller identity"],
       "inclusion": "ALL_MEANINGFUL_AND_FOUR_RANDOM_CONTROLS_PER_DOMAIN",
       "ordering": "CRUXEVAL_THEN_CHARACTER_COUNT",
       "invalid_handling": "AS_FROZEN_IN_SOURCE_ESTIMANDS",

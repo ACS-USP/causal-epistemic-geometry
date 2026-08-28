@@ -9,6 +9,11 @@ from typing import Any
 
 from epistemic_geometry.publication.q1.loaders import sha256
 
+POLISH_PARENT_IMPLEMENTATION_COMMIT = "52f668c0e90ee02691e9ed2a575746913a64c8cb"
+POLISH_PARENT_SOURCE_MANIFEST_SHA256 = (
+    "aab5c76a36819ec7ab1d39ab7716188d76c5c502a600167bd4972518cb96a12f"
+)
+
 TABLE_SOURCES = {
     "figure2_genealogy": ["manuscript/figures/paper1/FIGURE_SPEC.json"],
     "confirmatory_item_profiles": [
@@ -259,6 +264,12 @@ def write_source_manifest(
         "plotting_code_commit": _git_head(root),
         "plotting_code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
         "plotting_code_hashes": code_hashes(root),
+        "communication_polish_lineage": {
+            "kind": "COMMUNICATION_LAYOUT_POLISH_ONLY",
+            "parent_implementation_commit": POLISH_PARENT_IMPLEMENTATION_COMMIT,
+            "parent_source_manifest_sha256": POLISH_PARENT_SOURCE_MANIFEST_SHA256,
+            "scientific_derived_tables_required_byte_identical": True,
+        },
         "validated_frozen_source_artifacts": source_hashes,
         "implemented_figures": implemented,
         "omitted_supplements": {

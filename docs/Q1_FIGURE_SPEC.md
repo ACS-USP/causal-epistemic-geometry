@@ -37,8 +37,9 @@ The machine-readable companion is
 - **Status:** `CONCEPTUAL`.
 - **Sources:** Q1 analysis lock, controller identity lock, Qwen null-bank lock,
   and `docs/METRICS_AND_STATISTICS.md`.
-- **Panels:** causal design schematic; illustrative equal-accuracy/different-
-  error-profile toy grid; compact estimand legend.
+- **Panels:** parallel baseline, meaningful-controller, and matched-random
+  conditions applied to the same frozen model and item panel; illustrative
+  equal-accuracy/different-error-profile toy grid; compact estimand legend.
 - **Inclusion:** schematic values only, unmistakably labeled illustrative.
 - **Supports:** the distinction between aggregate competence and error identity.
 - **Does not support:** geometry prediction, routing utility, deterministic item
@@ -67,8 +68,10 @@ The machine-readable companion is
   overlay without changing `q_hat`.
 - **Panel B:** four-way cross-rollout mass: shared correct, rescue, damage, and
   shared error. Values are means of all four rollout cross-products per item.
-- **Panel C:** meaningful C with frozen 95% interval, all four random C values,
-  random mean, and frozen meaningful-minus-random-mean interval annotation.
+- **Panel C:** meaningful C with its frozen 95% interval, all four random C
+  values, random mean, and a separately labeled frozen 95% interval for the
+  meaningful-minus-random-mean contrast. The random bank has no fitted
+  population interval.
 - **Supports:** safe, prospective-null-specific Qwen complementarity.
 - **Does not support:** precise latent propensities, domain generality,
   geometric predictability, or deployable oracle selection.
@@ -79,7 +82,9 @@ The machine-readable companion is
 - **Sources:** shared confirmatory result, analysis lock, both controller locks,
   both null-bank locks, and forensic audit.
 - **Panels:** aligned Qwen/Ministral C-plus-null facets; accuracy change; baseline
-  and meaningful commitment/evaluability against frozen floors.
+  and meaningful commitment/evaluability against frozen floors, with bar
+  texture distinguishing the two safety metrics and a compact three-entry
+  legend for condition/floor identity.
 - **Ordering:** Qwen then Ministral; meaningful then random R0--R3.
 - **Supports:** Qwen complete pass and Ministral positive/null-specific
   complementarity with an immutable safety fail.
@@ -90,8 +95,8 @@ The machine-readable companion is
 
 - **Status:** `DEVELOPMENT_POSITIVE / NEGATIVE_BOUNDARY`.
 - **Sources:** Gate 9 and Gate 10 estimands plus controller identity lock.
-- **Panels:** zero-referenced delta accuracy, C, and D; meaningful and all four
-  corresponding random controls; fixed-controller identity strip.
+- **Panels:** zero-referenced accuracy change, C, and D effects; meaningful and
+  all four corresponding random controls; fixed-controller identity strip.
 - **Ordering:** CRUXEval then long character count; meaningful then R0--R3.
 - **Supports:** a task-conditioned boundary for the exact Qwen L27-D75 controller.
 - **Does not support:** equal task difficulty or impossibility of any transferable
