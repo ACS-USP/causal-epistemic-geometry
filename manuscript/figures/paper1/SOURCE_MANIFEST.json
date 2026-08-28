@@ -8,11 +8,18 @@
   "contains_raw_outputs": false,
   "figure_data_manifest": {
     "path": "manuscript/data/paper1/FIGURE_DATA_MANIFEST.json",
-    "sha256": "e93501d5933a7ec83f391850ba0cc725f1d54706919be8d41c9dd266cd92bb4a"
+    "sha256": "128531390d48eb4e1ef3c583157e032c41041c1894577c44810dd58bbb062252"
   },
   "figure_spec": {
     "path": "manuscript/figures/paper1/FIGURE_SPEC.json",
-    "sha256": "9db7a2f947ac8849f8ec962d1ac1cef16dfd2c78246d8356d9f73d28ec481260"
+    "sha256": "caab13879cb7a75f104a0b5d571386c03919f7ee4ddddfd376cd8ef7e3571964"
+  },
+  "final_communication_fix_lineage": {
+    "kind": "FINAL_PREMERGE_COMMUNICATION_FIX_ONLY",
+    "original_implementation_commit": "52f668c0e90ee02691e9ed2a575746913a64c8cb",
+    "parent_polish_commit": "8629947568654a3b64aa9ab254ea5fc3ee0f239a",
+    "parent_polish_source_manifest_sha256": "ecfc351fb91f92eb7f8b3eb1bb293c54c628f72a31dc687824ef420e2843f1b6",
+    "scientific_derived_tables_required_byte_identical": true
   },
   "historical_package": {
     "contains_raw_outputs": false,
@@ -80,15 +87,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.pdf",
-          "sha256": "fcd11cf37d67490befe138bef574be15daff9e8092375d3731cb1d7419d99029"
+          "sha256": "017f39054029d99b5fbba76707a3a685b1de5decf5f275197c6b369af7770223"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.png",
-          "sha256": "0ddc8cb01be1641de00eee98950cc72da8479b1529e68d9cb57cbf7964857f47"
+          "sha256": "fc5e3a26e8f1de16d4e0be9a71c820d427b9ed1a0a714b192453b1c43ee5f949"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.svg",
-          "sha256": "85e14e260343a21e49a91937707ba8f9aed7552e1b6491da886980f410ed4561"
+          "sha256": "df638d3d4966edfdb1e996a8102c33e8d1ae03c6f6c4d790599c20dcf7927d15"
         }
       },
       "scientific_status": "DEVELOPMENT_CALIBRATION_GENEALOGY",
@@ -98,7 +105,7 @@
         "docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md": "f38991d976a5b59174ee0ac5f2aca6e9729d4313fa23cb5c9e41125b00d71895",
         "docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md": "0e954518266dcf2c1577ca7924a4ab668a176b245c11ff3d62f9d8978bc5fdff",
         "docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md": "b6680a2635a238cd6dfcb6b4169d142dc00870c9d0824c540b1cef44f42588a7",
-        "manuscript/figures/paper1/FIGURE_SPEC.json": "9db7a2f947ac8849f8ec962d1ac1cef16dfd2c78246d8356d9f73d28ec481260",
+        "manuscript/figures/paper1/FIGURE_SPEC.json": "caab13879cb7a75f104a0b5d571386c03919f7ee4ddddfd376cd8ef7e3571964",
         "review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md": "2bb0e0048d3772c744f6b856a659c00e7726a8ac027e147282fedf2d09aed996",
         "review/gate8_l27_dose_calibration/REPORT.md": "8bc801dcde82b045ea1389cfbe60031b39563cd4b5654d4fdf4669b196ab6662",
         "review/gate9_selected_d75_evaluation/REPORT.md": "635d5bbd35d14ffeb46fc8dd97d9de385ddc65d25d1296d5baa9e3b8e0a587f4"
@@ -126,15 +133,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.pdf",
-          "sha256": "e356b3f9fd09d16c19372e76bd46149b7ad8d46e2575f15495199b4f4c9945b7"
+          "sha256": "64867ad1120c5d4cbb582415a9ba888fdd038b590064adc2f302d85e78d4570a"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.png",
-          "sha256": "63197a00c49f0ec502c9f3ab1582c1709c9facbf5b7525d8e6938f7b3801390d"
+          "sha256": "152fa556ca4506eb7521c73c35a645a080bc06d4048d0add8e548665dca9b490"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.svg",
-          "sha256": "de1154a595d18f5fb44fb32944f3dc14ebfa0b8682f43c82c7605481a40f8ec7"
+          "sha256": "04b31134e7473542ec0284c569647c39613530d477a709f4a530818b9f5dd2ec"
         }
       },
       "scientific_status": "CONFIRMATORY",
@@ -200,15 +207,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.pdf",
-          "sha256": "cffc98abccae1f2aeed07cedeefd1c14eb01e3991593074becf4e2cd07b6c1fe"
+          "sha256": "5d6dffc0332b2dedfebfac19eced31c7fc86174b74dfc759f0f6f0c33bf73e32"
         },
         "png": {
           "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.png",
-          "sha256": "fe4eb76de266f39c62dc8a677e8651b4912ba1fe1434e322d08a0534aadcbf86"
+          "sha256": "953dd8ced6c111253274819cea390597d67945d6f5c33988b8dbfdc4dce88794"
         },
         "svg": {
           "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.svg",
-          "sha256": "7cf97019be78e43af033e6c2e686e731319d162f8fab14af03c02982d3008db8"
+          "sha256": "98d793fd652ecab73cac11a98c4b04044b6cc234f813599cc425ed0fb85855e9"
         }
       },
       "scientific_status": "DEVELOPMENT_POSITIVE_NEGATIVE_BOUNDARY",
@@ -440,14 +447,14 @@
     "s6": "heterogeneous stages; no comparable frozen regression target",
     "s9": "cross-controller/layer sign comparison risk"
   },
-  "plotting_code_commit": "52f668c0e90ee02691e9ed2a575746913a64c8cb",
+  "plotting_code_commit": "8629947568654a3b64aa9ab254ea5fc3ee0f239a",
   "plotting_code_hashes": {
     "scripts/generate_q1_paper_figures.py": "dae6d720fcdbcb32c0fd0c8ff51855660ff9463f5ddab467635938cabfb13b41",
     "src/epistemic_geometry/publication/q1/figure_tables.py": "017f54e731ebf5e89bd9938490d2beb6b8188e92672de828dda9b581eda9afb9",
     "src/epistemic_geometry/publication/q1/loaders.py": "66c3de218935459333632cc77dfeb9fc6374620b03fdc690553686a8e31189ae",
     "src/epistemic_geometry/publication/q1/pipeline.py": "d5c386b5456b649ce72d134cdf83fe6342751f88f4be48086ae07c36fc1319b9",
-    "src/epistemic_geometry/publication/q1/plotting.py": "91b24f6a060f6e261a99c742b1770675dcb1ff70aa466138db3a1980d9de03b8",
-    "src/epistemic_geometry/publication/q1/provenance.py": "365e4f298b6034a15d78aacbc12fdf49cac6b7b52e971d04feeefa8f3145fdba"
+    "src/epistemic_geometry/publication/q1/plotting.py": "1137c3faf9dbd95980fd37cff25de9b44d6f93cfeabc828af7da6deb42a9107a",
+    "src/epistemic_geometry/publication/q1/provenance.py": "a529f4ed9b0aa8be340ad3a2bce9b9299f0d7959ee0786be9e739f12a3c4f6d8"
   },
   "plotting_code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
   "q2_semantic_sources": 0,

@@ -41,6 +41,23 @@ def test_manifest_preserves_historical_figure_package() -> None:
     assert historical["contains_raw_outputs"] is False
 
 
+def test_manifest_preserves_both_q1_visual_implementation_lineages() -> None:
+    payload = json.loads((ROOT / "manuscript/figures/paper1/SOURCE_MANIFEST.json").read_text())
+    polish = payload["communication_polish_lineage"]
+    final_fix = payload["final_communication_fix_lineage"]
+    assert polish["parent_implementation_commit"] == (
+        "52f668c0e90ee02691e9ed2a575746913a64c8cb"
+    )
+    assert final_fix["parent_polish_commit"] == (
+        "8629947568654a3b64aa9ab254ea5fc3ee0f239a"
+    )
+    assert final_fix["original_implementation_commit"] == (
+        "52f668c0e90ee02691e9ed2a575746913a64c8cb"
+    )
+    assert polish["scientific_derived_tables_required_byte_identical"] is True
+    assert final_fix["scientific_derived_tables_required_byte_identical"] is True
+
+
 def test_no_q2_semantic_path_in_figure_manifests() -> None:
     paths = [
         ROOT / "manuscript/figures/paper1/FIGURE_SPEC.json",

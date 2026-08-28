@@ -99,6 +99,18 @@
         "review/gate9_selected_d75_evaluation/REPORT.md"
       ],
       "panels": ["methodological decision lane", "observed result lane"],
+      "display": {
+        "final_size_inches": [7.2, 5.7],
+        "minimum_scientifically_relevant_font_points": 7.2,
+        "terminal_classifications_in_caption": [
+          "MICRO_Q1_NO_DETECTABLE_SIGNAL",
+          "GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD",
+          "GATE6_3_SINGLE_MEAN_DESTRUCTIVE",
+          "GATE7_DESTRUCTIVE",
+          "GATE8_SAFE_LOWER_DOSE_SELECTED",
+          "GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION"
+        ]
+      },
       "inclusion": "DIRECT_ANCESTRAL_QWEN_INSTRUMENT_STAGES",
       "ordering": "GATE_CHRONOLOGY",
       "invalid_handling": "USE_FROZEN_STAGE_CLASSIFICATION",
@@ -123,6 +135,11 @@
       "invalid_handling": "RETAIN_AS_ERROR_AND_OVERLAY_INVALID_COUNT",
       "controller_order": ["BASELINE", "MEANINGFUL_FIXED", "RANDOM_R0", "RANDOM_R1", "RANDOM_R2", "RANDOM_R3"],
       "statistics": ["q_hat", "rescue", "damage", "shared correct", "shared error", "C", "95% item bootstrap CI for C", "separately labeled 95% item bootstrap CI for delta C versus null mean", "no fitted random-population interval"],
+      "display": {
+        "point_estimates": "OBSERVED_FROZEN_ESTIMANDS",
+        "intervals": "FROZEN_ITEM_BOOTSTRAP_95_PERCENT",
+        "bootstrap_medians_are_point_labels": false
+      },
       "supports": "safe prospective-null-specific Qwen complementarity",
       "does_not_support": ["precise latent propensities", "domain generality", "geometry prediction", "deployable oracle"]
     },
@@ -155,7 +172,11 @@
         "review/gate10_cross_domain_charcount/ESTIMANDS.json",
         "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json"
       ],
-      "panels": ["zero-referenced accuracy change", "zero-referenced C", "zero-referenced D", "fixed-controller identity"],
+      "panels": ["zero-referenced accuracy change", "zero-referenced C", "zero-referenced estimated D-hat", "fixed-controller identity"],
+      "display": {
+        "profile_distance_label": "Estimated profile distance D-hat",
+        "finite_sample_note": "The frozen unbiased finite-sample estimator may be negative although its population target is non-negative."
+      },
       "inclusion": "ALL_MEANINGFUL_AND_FOUR_RANDOM_CONTROLS_PER_DOMAIN",
       "ordering": "CRUXEVAL_THEN_CHARACTER_COUNT",
       "invalid_handling": "AS_FROZEN_IN_SOURCE_ESTIMANDS",

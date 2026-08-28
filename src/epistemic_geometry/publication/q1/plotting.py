@@ -35,22 +35,15 @@ COLORS = {
     "development": "#6C67A3",
 }
 FIXED_DATE = datetime(2026, 8, 27, tzinfo=UTC)
-
-
-def _wrap_identifier(value: str, width: int = 20) -> str:
-    """Wrap frozen classification identifiers only at semantic underscores."""
-    lines: list[str] = []
-    current = ""
-    for token in value.split("_"):
-        candidate = token if not current else f"{current}_{token}"
-        if current and len(candidate) > width:
-            lines.append(current)
-            current = token
-        else:
-            current = candidate
-    if current:
-        lines.append(current)
-    return "\n".join(lines)
+FIGURE2_FINAL_SIZE = (7.2, 5.7)
+FIGURE2_FONT_SIZES = {
+    "title": 10.5,
+    "header": 7.2,
+    "gate": 8.5,
+    "method": 7.6,
+    "result": 7.6,
+    "status": 7.2,
+}
 
 
 def publication_style() -> None:
@@ -224,8 +217,7 @@ def figure1(root: Path) -> dict[str, Path]:
 
 
 def figure2(root: Path, genealogy: pd.DataFrame) -> dict[str, Path]:
-    fig, ax = plt.subplots(figsize=(12.4, 6.1))
-    x = np.arange(len(genealogy))
+    fig, ax = plt.subplots(figsize=FIGURE2_FINAL_SIZE)
     colors = [
         COLORS["fail"]
         if category == "FAILURE"
@@ -238,15 +230,15 @@ def figure2(root: Path, genealogy: pd.DataFrame) -> dict[str, Path]:
     ]
     compact = {
         "Gate 4": (
-            "One-shot L17\nplus / minus / random",
+            "One-shot L17\n± sign + random",
             "No detectable\nsemantic movement",
         ),
         "Gate 5": (
-            "Duration isolation\none-shot vs sustained",
-            "Duration contrast;\nmovement below threshold",
+            "Isolate duration:\none-shot vs sustained",
+            "Duration contrast; primary\nmovement below threshold",
         ),
         "Gates 6–6.3": (
-            "Source/readout separation\npaired-mean L27",
+            "Source/readout split;\npaired-mean L27",
             "Strong DEVELOPMENT signal;\nhistorical safety issue",
         ),
         "Gate 7": (
@@ -254,65 +246,144 @@ def figure2(root: Path, genealogy: pd.DataFrame) -> dict[str, Path]:
             "Movement replicated;\nvalidity cost",
         ),
         "Gate 8": (
-            "Label-free dose\ncalibration",
-            "D75 selected; no\naccuracy/G/C/D selection",
+            "Prospective label-free\ncalibration",
+            "D75 selected; not by\naccuracy, G, C, or D",
         ),
         "Gate 9": (
             "Fresh selected-dose\nDEVELOPMENT test",
             "Strong safe DEVELOPMENT\nreplication",
         ),
     }
-    ax.axhline(0.50, color=COLORS["grid"], linewidth=1)
-    ax.scatter(x, np.full(len(x), 0.5), s=180, color=colors, zorder=3)
+    n_rows = len(genealogy)
+    y_positions = np.arange(n_rows - 1, -1, -1, dtype=float)
+    ax.plot(
+        [0.055, 0.055],
+        [y_positions[-1], y_positions[0]],
+        color=COLORS["grid"],
+        linewidth=1.2,
+        zorder=1,
+    )
+    ax.scatter(
+        np.full(n_rows, 0.055),
+        y_positions,
+        s=50,
+        color=colors,
+        zorder=3,
+    )
     for index, row in genealogy.reset_index(drop=True).iterrows():
+        y = y_positions[index]
         method, result = compact[str(row["stage"])]
-        ax.plot([index, index], [0.53, 0.69], color=COLORS["grid"], linewidth=1)
-        ax.plot([index, index], [0.31, 0.47], color=COLORS["grid"], linewidth=1)
+        if index < n_rows - 1:
+            ax.axhline(y - 0.5, color=COLORS["grid"], linewidth=0.65, alpha=0.75)
         ax.text(
-            index,
-            0.73,
-            method,
-            ha="center",
-            va="bottom",
-            fontsize=8.2,
+            0.09,
+            y,
+            f"{row['stage']}\nN={int(row['n_items'])}",
+            ha="left",
+            va="center",
+            fontsize=FIGURE2_FONT_SIZES["gate"],
             weight="bold",
             linespacing=1.18,
         )
         ax.text(
-            index,
             0.27,
+            y,
+            method,
+            ha="left",
+            va="center",
+            fontsize=FIGURE2_FONT_SIZES["method"],
+            linespacing=1.18,
+        )
+        ax.text(
+            0.58,
+            y,
             result,
-            ha="center",
-            va="top",
-            fontsize=8.0,
+            ha="left",
+            va="center",
+            fontsize=FIGURE2_FONT_SIZES["result"],
             color=colors[index],
             weight="bold",
             linespacing=1.16,
         )
         ax.text(
-            index,
-            0.13,
-            f"{_wrap_identifier(str(row['classification']), width=22)}\nN={int(row['n_items'])}",
-            ha="center",
-            va="top",
-            fontsize=6.7,
+            0.985,
+            y,
+            str(row["category"]).title(),
+            ha="right",
+            va="center",
+            fontsize=FIGURE2_FONT_SIZES["status"],
             color=colors[index],
-            linespacing=1.12,
+            weight="bold",
         )
-    ax.text(-0.58, 0.92, "METHOD CHANGE", weight="bold", color=COLORS["muted"])
-    ax.text(-0.58, 0.36, "FROZEN RESULT", weight="bold", color=COLORS["muted"])
-    ax.set_xlim(-0.65, len(x) - 0.35)
-    ax.set_ylim(-0.03, 1.02)
-    ax.set_xticks(x, genealogy["stage"])
-    ax.set_yticks([])
-    ax.spines.left.set_visible(False)
-    ax.spines.bottom.set_visible(False)
+    header_y = y_positions[0] + 0.56
+    for x, label in ((0.09, "GATE"), (0.27, "METHOD CHANGE"), (0.58, "FROZEN RESULT")):
+        ax.text(
+            x,
+            header_y,
+            label,
+            ha="left",
+            va="bottom",
+            fontsize=FIGURE2_FONT_SIZES["header"],
+            weight="bold",
+            color=COLORS["muted"],
+        )
+    ax.text(
+        0.985,
+        header_y,
+        "STATUS",
+        ha="right",
+        va="bottom",
+        fontsize=FIGURE2_FONT_SIZES["header"],
+        weight="bold",
+        color=COLORS["muted"],
+    )
+    ax.set_xlim(0, 1)
+    ax.set_ylim(y_positions[-1] - 0.5, header_y + 0.25)
+    ax.axis("off")
     ax.set_title(
         "The qualified instrument emerged through falsifiable gates\n"
         "Failure / insufficient evidence, calibration, and replication remain distinct",
-        pad=14,
+        pad=9,
+        fontsize=FIGURE2_FONT_SIZES["title"],
     )
     return save_figure(fig, root, "figure2_falsifiable_instrument_genealogy")
+
+
+def figure3_annotation_data(
+    effects: pd.DataFrame,
+    confirmatory: dict[str, Any],
+) -> dict[str, float]:
+    """Return observed Qwen estimands and their frozen bootstrap intervals."""
+    qwen = effects[effects["model_role"] == "Qwen"]
+    meaningful = qwen[qwen["condition"] == "MEANINGFUL_FIXED"].iloc[0]
+    random_mean = qwen[qwen["condition"] == "RANDOM_MEAN"].iloc[0]
+    intervals = confirmatory["models"]["Qwen"]["intervals"]
+    c_interval = intervals["C_meaningful"]
+    contrast_interval = intervals["delta_C_nullmean"]
+    observed_c = float(meaningful["C"])
+    observed_random_mean = float(random_mean["C"])
+    return {
+        "observed_c": observed_c,
+        "observed_random_mean_c": observed_random_mean,
+        "observed_delta_c": observed_c - observed_random_mean,
+        "c_ci_lower": float(c_interval["q025"]),
+        "c_ci_upper": float(c_interval["q975"]),
+        "delta_c_ci_lower": float(contrast_interval["q025"]),
+        "delta_c_ci_upper": float(contrast_interval["q975"]),
+        "c_bootstrap_median": float(c_interval["estimate"]),
+        "delta_c_bootstrap_median": float(contrast_interval["estimate"]),
+    }
+
+
+def format_figure3_annotation(values: dict[str, float]) -> str:
+    """Format observed Figure 3 point estimates with frozen bootstrap intervals."""
+    return (
+        f"Meaningful C = {values['observed_c']:.3f}\n"
+        f"95% bootstrap CI: [{values['c_ci_lower']:.3f}, {values['c_ci_upper']:.3f}]\n\n"
+        f"Contrast vs random mean: ΔC = {values['observed_delta_c']:.3f}\n"
+        "95% bootstrap CI: "
+        f"[{values['delta_c_ci_lower']:.3f}, {values['delta_c_ci_upper']:.3f}]"
+    )
 
 
 def _item_matrix(profiles: pd.DataFrame, model: str) -> tuple[np.ndarray, np.ndarray]:
@@ -428,7 +499,8 @@ def figure3(
         s=55,
         label="Prospective random controls",
     )
-    random_mean = float(randoms["C"].mean())
+    annotation_values = figure3_annotation_data(effects, confirmatory)
+    random_mean = annotation_values["observed_random_mean_c"]
     null.axhline(
         random_mean, color=COLORS["random_edge"], linestyle="--", linewidth=1, label="Random mean"
     )
@@ -436,17 +508,10 @@ def figure3(
     null.set_xticks(range(5), ["Meaningful", "R0", "R1", "R2", "R3"])
     null.set_ylabel("Competence-adjusted complementarity C")
     null.set_title("Meaningful controller versus frozen null bank")
-    intervals = confirmatory["models"]["Qwen"]["intervals"]
-    c_interval = intervals["C_meaningful"]
-    contrast_interval = intervals["delta_C_nullmean"]
     null.text(
         0.02,
         0.98,
-        f"Meaningful C = {c_interval['estimate']:.3f}\n"
-        f"95% CI for C: [{c_interval['q025']:.3f}, {c_interval['q975']:.3f}]\n\n"
-        f"Contrast vs random mean: ΔC = {contrast_interval['estimate']:.3f}\n"
-        f"95% CI for ΔC: [{contrast_interval['q025']:.3f}, "
-        f"{contrast_interval['q975']:.3f}]",
+        format_figure3_annotation(annotation_values),
         transform=null.transAxes,
         va="top",
         fontsize=7.5,
@@ -580,7 +645,7 @@ def figure5(root: Path, cross_domain: pd.DataFrame) -> dict[str, Path]:
     for ax, metric, title in zip(
         axes,
         ("accuracy_change", "C", "D"),
-        ("Accuracy change", "Complementarity C", "Profile distance D"),
+        ("Accuracy change", "Complementarity C", r"Estimated profile distance $\widehat{D}$"),
         strict=True,
     ):
         for domain_index, domain in enumerate(domains):
@@ -863,4 +928,13 @@ def generate_all_figures(
     }
 
 
-__all__ = ["OUTPUT_DIR", "generate_all_figures", "publication_style", "save_figure"]
+__all__ = [
+    "FIGURE2_FINAL_SIZE",
+    "FIGURE2_FONT_SIZES",
+    "OUTPUT_DIR",
+    "figure3_annotation_data",
+    "format_figure3_annotation",
+    "generate_all_figures",
+    "publication_style",
+    "save_figure",
+]

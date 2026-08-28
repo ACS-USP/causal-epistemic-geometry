@@ -51,8 +51,14 @@ The machine-readable companion is
 - **Sources:** frozen Gate 4, Gate 5, Gate 6.2, Gate 6.3/V3, Gate 7, Gate 8, and
   Gate 9 reports.
 - **Ordering:** immutable chronological gate order.
-- **Panels:** one timeline with separate methodological-decision and observed-
-  result lanes.
+- **Layout:** final paper size is 7.2 × 5.7 inches. A vertical chronology keeps
+  gate, method change, frozen result, and status text at 7.2 pt or larger.
+- **Caption classification key:** Gate 4
+  `MICRO_Q1_NO_DETECTABLE_SIGNAL`; Gate 5
+  `GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD`; Gates 6–6.3
+  `GATE6_3_SINGLE_MEAN_DESTRUCTIVE`; Gate 7 `GATE7_DESTRUCTIVE`; Gate 8
+  `GATE8_SAFE_LOWER_DOSE_SELECTED`; Gate 9
+  `GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION`.
 - **Supports:** the final instrument followed explicit failures, duration
   isolation, full-dose overshoot, prospective calibration, and fresh evaluation.
 - **Does not support:** inevitability, Gate-5 success, or accuracy/G/C/D-based
@@ -68,10 +74,11 @@ The machine-readable companion is
   overlay without changing `q_hat`.
 - **Panel B:** four-way cross-rollout mass: shared correct, rescue, damage, and
   shared error. Values are means of all four rollout cross-products per item.
-- **Panel C:** meaningful C with its frozen 95% interval, all four random C
-  values, random mean, and a separately labeled frozen 95% interval for the
-  meaningful-minus-random-mean contrast. The random bank has no fitted
-  population interval.
+- **Panel C:** observed meaningful C with its frozen bootstrap 95% interval,
+  all four random C values, observed random mean, and the observed
+  meaningful-minus-random-mean contrast with its separately labeled frozen
+  bootstrap 95% interval. Bootstrap medians are not displayed as point
+  estimands. The random bank has no fitted population interval.
 - **Supports:** safe, prospective-null-specific Qwen complementarity.
 - **Does not support:** precise latent propensities, domain generality,
   geometric predictability, or deployable oracle selection.
@@ -95,8 +102,11 @@ The machine-readable companion is
 
 - **Status:** `DEVELOPMENT_POSITIVE / NEGATIVE_BOUNDARY`.
 - **Sources:** Gate 9 and Gate 10 estimands plus controller identity lock.
-- **Panels:** zero-referenced accuracy change, C, and D effects; meaningful and
-  all four corresponding random controls; fixed-controller identity strip.
+- **Panels:** zero-referenced accuracy change, C, and estimated profile distance
+  D-hat effects; meaningful and all four corresponding random controls;
+  fixed-controller identity strip. The frozen unbiased finite-sample profile-
+  distance estimator may be negative although its population target is
+  non-negative.
 - **Ordering:** CRUXEval then long character count; meaningful then R0--R3.
 - **Supports:** a task-conditioned boundary for the exact Qwen L27-D75 controller.
 - **Does not support:** equal task difficulty or impossibility of any transferable

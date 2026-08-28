@@ -13,6 +13,10 @@ POLISH_PARENT_IMPLEMENTATION_COMMIT = "52f668c0e90ee02691e9ed2a575746913a64c8cb"
 POLISH_PARENT_SOURCE_MANIFEST_SHA256 = (
     "aab5c76a36819ec7ab1d39ab7716188d76c5c502a600167bd4972518cb96a12f"
 )
+FINAL_FIX_PARENT_POLISH_COMMIT = "8629947568654a3b64aa9ab254ea5fc3ee0f239a"
+FINAL_FIX_PARENT_SOURCE_MANIFEST_SHA256 = (
+    "ecfc351fb91f92eb7f8b3eb1bb293c54c628f72a31dc687824ef420e2843f1b6"
+)
 
 TABLE_SOURCES = {
     "figure2_genealogy": ["manuscript/figures/paper1/FIGURE_SPEC.json"],
@@ -268,6 +272,15 @@ def write_source_manifest(
             "kind": "COMMUNICATION_LAYOUT_POLISH_ONLY",
             "parent_implementation_commit": POLISH_PARENT_IMPLEMENTATION_COMMIT,
             "parent_source_manifest_sha256": POLISH_PARENT_SOURCE_MANIFEST_SHA256,
+            "scientific_derived_tables_required_byte_identical": True,
+        },
+        "final_communication_fix_lineage": {
+            "kind": "FINAL_PREMERGE_COMMUNICATION_FIX_ONLY",
+            "parent_polish_commit": FINAL_FIX_PARENT_POLISH_COMMIT,
+            "parent_polish_source_manifest_sha256": (
+                FINAL_FIX_PARENT_SOURCE_MANIFEST_SHA256
+            ),
+            "original_implementation_commit": POLISH_PARENT_IMPLEMENTATION_COMMIT,
             "scientific_derived_tables_required_byte_identical": True,
         },
         "validated_frozen_source_artifacts": source_hashes,
