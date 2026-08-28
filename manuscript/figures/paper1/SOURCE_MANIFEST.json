@@ -1,24 +1,471 @@
 {
   "contains_raw_outputs": false,
-  "generator": "scripts/generate_paper1_figures.py",
-  "generator_sha256": "12ceb0381d6d19cd8e030ec1ab778e6733484bc0418e5f8d329bb3f66ad796a2",
-  "output_artifacts": {
-    "manuscript/figures/paper1/figure1_conceptual_framework.png": "c49f716cc1bfe01e748d2fd319be3476ac0a1ed5629767c7f4e7133baa15a361",
-    "manuscript/figures/paper1/figure1_conceptual_framework.svg": "948b979fc805bd43ba58938f881fa11971029b1024f3d159f32c848b559a2f43",
-    "manuscript/figures/paper1/figure2_qwen_development_confirmation.png": "09cad5e635d13ed009c162889044d8f2085cd3de08cc98cad74b9f9d4e71e03e",
-    "manuscript/figures/paper1/figure2_qwen_development_confirmation.svg": "7a6529d97a6f0af03c52bbd2420ab24ad11f3612aa1bfbfc4fef6abed24c7bc7",
-    "manuscript/figures/paper1/figure3_ministral_development_confirmation.png": "70cd9721776ff2990f0827f330c45664f142202419b6774b728b4ad841bb0000",
-    "manuscript/figures/paper1/figure3_ministral_development_confirmation.svg": "26ec7ca66f232765ab52134f8baf50da7a92fb6e166a39a54287f8f58b206ae0",
-    "manuscript/figures/paper1/figure4_complementarity_safety_dissociation.png": "e68d7b68d1b6397129d6609915e2295146f46ba9cd609329d09e749c07e50705",
-    "manuscript/figures/paper1/figure4_complementarity_safety_dissociation.svg": "8676d8012bd3556e2f82fce62f2e7615074d1ac97366fae3e2f9223628f09d2c",
-    "manuscript/figures/paper1/figure5_cross_domain_boundary.png": "ac138807f95f1d7c87a16fc0e9cbf76f3172eeb5918f2dbf858746ce94163604",
-    "manuscript/figures/paper1/figure5_cross_domain_boundary.svg": "caae3f270125ba42dab27e93a7b715f3bdcba30ae52573893d1bb19b39f23e79"
+  "figure_data_manifest": {
+    "path": "manuscript/data/paper1/FIGURE_DATA_MANIFEST.json",
+    "sha256": "dedb5a2aa3bc3babb5f742e919d20cb27ec070c5e199373b6143ff3274982825"
   },
-  "source_artifacts": {
+  "figure_spec": {
+    "path": "manuscript/figures/paper1/FIGURE_SPEC.json",
+    "sha256": "6e11b148da1de52c273708864d393b20f9c706fb85774f1974a89bd22e7b05f7"
+  },
+  "historical_package": {
+    "contains_raw_outputs": false,
+    "generator": "scripts/generate_paper1_figures.py",
+    "generator_sha256": "12ceb0381d6d19cd8e030ec1ab778e6733484bc0418e5f8d329bb3f66ad796a2",
+    "output_artifacts": {
+      "manuscript/figures/paper1/figure1_conceptual_framework.png": "c49f716cc1bfe01e748d2fd319be3476ac0a1ed5629767c7f4e7133baa15a361",
+      "manuscript/figures/paper1/figure1_conceptual_framework.svg": "948b979fc805bd43ba58938f881fa11971029b1024f3d159f32c848b559a2f43",
+      "manuscript/figures/paper1/figure2_qwen_development_confirmation.png": "09cad5e635d13ed009c162889044d8f2085cd3de08cc98cad74b9f9d4e71e03e",
+      "manuscript/figures/paper1/figure2_qwen_development_confirmation.svg": "7a6529d97a6f0af03c52bbd2420ab24ad11f3612aa1bfbfc4fef6abed24c7bc7",
+      "manuscript/figures/paper1/figure3_ministral_development_confirmation.png": "70cd9721776ff2990f0827f330c45664f142202419b6774b728b4ad841bb0000",
+      "manuscript/figures/paper1/figure3_ministral_development_confirmation.svg": "26ec7ca66f232765ab52134f8baf50da7a92fb6e166a39a54287f8f58b206ae0",
+      "manuscript/figures/paper1/figure4_complementarity_safety_dissociation.png": "e68d7b68d1b6397129d6609915e2295146f46ba9cd609329d09e749c07e50705",
+      "manuscript/figures/paper1/figure4_complementarity_safety_dissociation.svg": "8676d8012bd3556e2f82fce62f2e7615074d1ac97366fae3e2f9223628f09d2c",
+      "manuscript/figures/paper1/figure5_cross_domain_boundary.png": "ac138807f95f1d7c87a16fc0e9cbf76f3172eeb5918f2dbf858746ce94163604",
+      "manuscript/figures/paper1/figure5_cross_domain_boundary.svg": "caae3f270125ba42dab27e93a7b715f3bdcba30ae52573893d1bb19b39f23e79"
+    },
+    "source_artifacts": {
+      "review/gate10_cross_domain_charcount/ESTIMANDS.json": "d40dd7973750f8787d0815acfea44f72b43241d3846259cb32a84f7b0e86bc74",
+      "review/gate13_1_all_layer_causal_atlas/ESTIMANDS.json": "fb19cff627edc5d026b6cc2ea1b4bfc9074a147f46bc2c4657ed68d733a53fd5",
+      "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258",
+      "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
+      "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+    }
+  },
+  "implemented_figures": {
+    "figure1": {
+      "derived_tables": {},
+      "inclusion_policy": "SCHEMATIC_ONLY_NO_EMPIRICAL_ITEMS",
+      "item_ordering_rule": "CAUSAL_FLOW_LEFT_TO_RIGHT",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/figure1_causal_control_where_model_fails.pdf",
+          "sha256": "11a3dba6d9debeceefc0add156248ce76d35a729ef7386ffd8d33c80b9db13cb"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/figure1_causal_control_where_model_fails.png",
+          "sha256": "de153239b4ed22381f1a8f0bd627da6ed7d3aa74884fbb73b270edc721b5a320"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/figure1_causal_control_where_model_fails.svg",
+          "sha256": "67791c1edebe13109938ebcabd0b5dae52a1fd9b96fcdad2ebf9d6965d56303f"
+        }
+      },
+      "scientific_status": "CONCEPTUAL",
+      "source_artifacts": {
+        "docs/METRICS_AND_STATISTICS.md": "f9ddf0f984f28ef7f0c3c398d5d2d726cf9b1a3038a972328ce1f33dd806096c",
+        "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
+        "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json": "42a2b57dc1df786eaa3452036007541d256c0882125add8721c12de7534059db",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json": "6ec601441e9e291a40ee8c63cdda461f7cb172a1de9ed4ced6e52a71861ea0e4"
+      },
+      "title": "Causal control of where a model fails"
+    },
+    "figure2": {
+      "derived_tables": {
+        "figure2_genealogy": {
+          "path": "manuscript/data/paper1/derived_figure_tables/figure2_genealogy.csv",
+          "sha256": "7d8371ff87f70b5a7469ddab62774069f73cc929209532947e86c9a5495fd147"
+        }
+      },
+      "inclusion_policy": "DIRECT_ANCESTRAL_QWEN_INSTRUMENT_STAGES",
+      "item_ordering_rule": "GATE_CHRONOLOGY",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.pdf",
+          "sha256": "4c00eed96685a49f4d46bc92345a737e8a15256affdbc6ccd99b6fb7bc593225"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.png",
+          "sha256": "b61ce82be570f05a359734fc180618301c163619de205b74631ef655bc445938"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/figure2_falsifiable_instrument_genealogy.svg",
+          "sha256": "b8cc2fb591df51a49017f0bc4f9c9c757074d0f9139fc8cb1d036c963e02c508"
+        }
+      },
+      "scientific_status": "DEVELOPMENT_CALIBRATION_GENEALOGY",
+      "source_artifacts": {
+        "docs/GATE4_MICRO_Q1_CLOSEOUT.md": "ba7f7baf0268c88f4b1ef22c976850c9e22136ce5a62c3c97f9653052f075108",
+        "docs/GATE5_SOURCE_DURATION_CLOSEOUT.md": "da1a78f19de241f8f51d2a27879d02f79aec08bf1e787376e70f033d448b1668",
+        "docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md": "f38991d976a5b59174ee0ac5f2aca6e9729d4313fa23cb5c9e41125b00d71895",
+        "docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md": "0e954518266dcf2c1577ca7924a4ab668a176b245c11ff3d62f9d8978bc5fdff",
+        "docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md": "b6680a2635a238cd6dfcb6b4169d142dc00870c9d0824c540b1cef44f42588a7",
+        "manuscript/figures/paper1/FIGURE_SPEC.json": "6e11b148da1de52c273708864d393b20f9c706fb85774f1974a89bd22e7b05f7",
+        "review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md": "2bb0e0048d3772c744f6b856a659c00e7726a8ac027e147282fedf2d09aed996",
+        "review/gate8_l27_dose_calibration/REPORT.md": "8bc801dcde82b045ea1389cfbe60031b39563cd4b5654d4fdf4669b196ab6662",
+        "review/gate9_selected_d75_evaluation/REPORT.md": "635d5bbd35d14ffeb46fc8dd97d9de385ddc65d25d1296d5baa9e3b8e0a587f4"
+      },
+      "title": "The qualified instrument emerged through falsifiable gates"
+    },
+    "figure3": {
+      "derived_tables": {
+        "confirmatory_effects": {
+          "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_effects.csv",
+          "sha256": "3369bb577fcf37a7d7bcd5c50164e369b0f85aeb796b5e259f1d1156bc417171"
+        },
+        "confirmatory_item_profiles": {
+          "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_item_profiles.csv",
+          "sha256": "2d5b72fc0d0e558aa00799e597d55d1ed26d246f9ec6053b59e01897b99f7889"
+        },
+        "confirmatory_transition_decomposition": {
+          "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_transition_decomposition.csv",
+          "sha256": "3cdab0bed4215a6a87fe8e53426ec8b883226e08d0e7f7da3ab52e24e714d008"
+        }
+      },
+      "inclusion_policy": "ALL_57_ITEMS_ALL_TERMINAL_ROWS",
+      "item_ordering_rule": "HOLDOUT_MANIFEST_ORDER",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.pdf",
+          "sha256": "b19a44f22ac5b706ee8db22f7cc2c5a11a79ce4d821051a6493c9531fca04ef5"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.png",
+          "sha256": "e5bea6aacf2b00ea3daf8db8e5d42b9338e4ba7efae7be4894b29f0a089777a4"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/figure3_qwen_confirmatory_itemwise_blindspots.svg",
+          "sha256": "13a658c758dec6adc162a31ca71d8f7e1c4829081ff113e2df0d4cc839dca8cd"
+        }
+      },
+      "scientific_status": "CONFIRMATORY",
+      "source_artifacts": {
+        "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298",
+        "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json": "6ec601441e9e291a40ee8c63cdda461f7cb172a1de9ed4ced6e52a71861ea0e4",
+        "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+        "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2"
+      },
+      "title": "Qwen confirmatory itemwise blind-spot reorganization"
+    },
+    "figure4": {
+      "derived_tables": {
+        "confirmatory_effects": {
+          "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_effects.csv",
+          "sha256": "3369bb577fcf37a7d7bcd5c50164e369b0f85aeb796b5e259f1d1156bc417171"
+        },
+        "confirmatory_safety": {
+          "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_safety.csv",
+          "sha256": "47bcc6739aea4ce4a7e587f265906958684aa1585d8e6d44688353334cc4fce8"
+        }
+      },
+      "inclusion_policy": "CONFIRMATORY_ONLY",
+      "item_ordering_rule": "QWEN_THEN_MINISTRAL",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/figure4_cross_model_complementarity_safety.pdf",
+          "sha256": "0488d317e71e1e99bf3cbaa974d31a3edb6ff23c11d6087647995717e76bda36"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/figure4_cross_model_complementarity_safety.png",
+          "sha256": "167af32dca32168e691b128d5f614e648327be263a1910b3d875d703a9001dce"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/figure4_cross_model_complementarity_safety.svg",
+          "sha256": "e7d411fcb698f52f2d4a53bbc2aa2e6861955b145ed703cc053d3459de64dced"
+        }
+      },
+      "scientific_status": "CONFIRMATORY",
+      "source_artifacts": {
+        "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298",
+        "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json": "42a2b57dc1df786eaa3452036007541d256c0882125add8721c12de7534059db",
+        "review/q1_confirmatory_fixed_controllers/FORENSIC_AUDIT.json": "470219775b71770e3b62fe2271f2a7c9fed0154d00bf1811cf2f1e79c0c9dcb7",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_MINISTRAL.json": "7b5725f3118dc46d7a019d40a8f0c96071b28dd09b2e11aa8b79332734d1ad9d",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json": "6ec601441e9e291a40ee8c63cdda461f7cb172a1de9ed4ced6e52a71861ea0e4"
+      },
+      "title": "Complementarity replicates more robustly than safe realization"
+    },
+    "figure5": {
+      "derived_tables": {
+        "cross_domain_effects": {
+          "path": "manuscript/data/paper1/derived_figure_tables/cross_domain_effects.csv",
+          "sha256": "16edfb1fe5a4415eaf3ff4236a958a465181f31edac84fe1a63bd12af29c5b3d"
+        }
+      },
+      "inclusion_policy": "ALL_MEANINGFUL_AND_FOUR_RANDOM_CONTROLS_PER_DOMAIN",
+      "item_ordering_rule": "CRUXEVAL_THEN_CHARACTER_COUNT",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.pdf",
+          "sha256": "8c540dc35f111b2ca77bddf1736de20468673a9dcbc452f6a2641d30f1a507c5"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.png",
+          "sha256": "77ae6b14570c2fa0a20343d4ee21f4d7abf326a6cd4c5884d5121420c9b917f9"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/figure5_fixed_qwen_cross_domain_boundary.svg",
+          "sha256": "f47d46945d499c2b132e59bba4e10fedc5ccf79f16b7e5d8d0616478780d3f60"
+        }
+      },
+      "scientific_status": "DEVELOPMENT_POSITIVE_NEGATIVE_BOUNDARY",
+      "source_artifacts": {
+        "review/gate10_cross_domain_charcount/ESTIMANDS.json": "d40dd7973750f8787d0815acfea44f72b43241d3846259cb32a84f7b0e86bc74",
+        "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258",
+        "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json": "42a2b57dc1df786eaa3452036007541d256c0882125add8721c12de7534059db"
+      },
+      "title": "Fixed Qwen controller does not transfer to long character counting"
+    },
+    "s1": {
+      "derived_tables": {
+        "s1_duration_history": {
+          "path": "manuscript/data/paper1/derived_figure_tables/s1_duration_history.csv",
+          "sha256": "f59432f255f8b6d60ebf5fffd7fc679f7d70f9bcca5b6a2965df4028e4e7372f"
+        }
+      },
+      "inclusion_policy": "ALL_FROZEN_GATE4_AND_GATE5_CONDITIONS",
+      "item_ordering_rule": "GATE_THEN_FROZEN_CONDITION_ORDER",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/supplement_s1_duration_history.pdf",
+          "sha256": "23f5a8826f010b1148666514766470c44f1c34cf7012282b848afff57209a5e3"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/supplement_s1_duration_history.png",
+          "sha256": "e29ac7c5519c2e23eabb2f2b6d0e2171eee192bbae912b5b3f2dd1daa8cbdee4"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/supplement_s1_duration_history.svg",
+          "sha256": "7a82a091f399c4f8b7d31a9c3c0a75217b7a14e9acfeb707d090e3381af20e21"
+        }
+      },
+      "scientific_status": "DEVELOPMENT",
+      "source_artifacts": {
+        "review/gate5_source_duration/ESTIMANDS.json": "8bb9af1e132404c54a818fef004d5dd5f8a2f73e050044e7856dcef55110f2fe",
+        "review/micro_q1/ESTIMANDS.json": "46997b4b051c98e76ac659b9542e9f35f00adce9bc7127dd6f3ce50ac1ec479a"
+      },
+      "title": "One-shot versus sustained duration history"
+    },
+    "s2": {
+      "derived_tables": {
+        "s2_dose_calibration": {
+          "path": "manuscript/data/paper1/derived_figure_tables/s2_dose_calibration.csv",
+          "sha256": "f9cfa7d2e107e86f70d7b7a185c13263a8a7281bfd8b4fdb01a9151ddd09ab14"
+        }
+      },
+      "inclusion_policy": "ALL_FOUR_GATE8_DOSES_PLUS_GATE7_FULL_DOSE_VALIDITY",
+      "item_ordering_rule": "D25_D50_D75_D100",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/supplement_s2_dose_calibration.pdf",
+          "sha256": "b91263ef2bce8b661268216336e0477e1cf3b4000485d890a8f35b4717c9b1e1"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/supplement_s2_dose_calibration.png",
+          "sha256": "c1b96f2085e6391ac3c84563073369052f7937fc1383b6f59f275b0e96827bbc"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/supplement_s2_dose_calibration.svg",
+          "sha256": "d88cb0ba5cfccee1ba5117b363974dd7f79264ee019569c2cbf427483f40ddb6"
+        }
+      },
+      "scientific_status": "DEVELOPMENT_CALIBRATION",
+      "source_artifacts": {
+        "review/gate7_fresh_l27_replication/ESTIMANDS.json": "97cdaab1853e55664d953e08bf8aabd834d487ec260e0a96896fcae636945322",
+        "review/gate8_l27_dose_calibration/DOSE_SUMMARY.csv": "408879428ebf2051d2988291f4a9067e0d3495ecd8ee6f8d98d48cc6202ff546"
+      },
+      "title": "Full-dose overshoot and prospective D75 calibration"
+    },
+    "s3": {
+      "derived_tables": {
+        "s3_development_confirmation_controls": {
+          "path": "manuscript/data/paper1/derived_figure_tables/s3_development_confirmation_controls.csv",
+          "sha256": "26a828c6fbfa8b1fc5cf8263eb08fd59d67ea2c8c44947957c50c09bc9af5e4b"
+        }
+      },
+      "inclusion_policy": "MEANINGFUL_AND_ALL_FOUR_RANDOMS_AT_EACH_STAGE",
+      "item_ordering_rule": "MODEL_THEN_STAGE_THEN_MEANINGFUL_R0_R3",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/supplement_s3_development_confirmation_controls.pdf",
+          "sha256": "ae96bc73387a6493201c144da19a7ccfef47bb0a79d48ea6acba5e3c6e9b0cb5"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/supplement_s3_development_confirmation_controls.png",
+          "sha256": "2b055dffef283e90eadb4942089a281c2feebe347032e255e3a1edd65eee9a4a"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/supplement_s3_development_confirmation_controls.svg",
+          "sha256": "89e787be55b7295c64db6cd8951cf47ac5d2cd986430dc0872523d0f793d5f23"
+        }
+      },
+      "scientific_status": "DEVELOPMENT_CONFIRMATORY",
+      "source_artifacts": {
+        "review/gate13_1_all_layer_causal_atlas/ESTIMANDS.json": "fb19cff627edc5d026b6cc2ea1b4bfc9074a147f46bc2c4657ed68d733a53fd5",
+        "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258",
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+      },
+      "title": "Development-to-confirmation control banks"
+    },
+    "s4": {
+      "derived_tables": {
+        "confirmatory_item_profiles": {
+          "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_item_profiles.csv",
+          "sha256": "2d5b72fc0d0e558aa00799e597d55d1ed26d246f9ec6053b59e01897b99f7889"
+        }
+      },
+      "inclusion_policy": "ALL_57_ITEMS_BASELINE_AND_MEANINGFUL",
+      "item_ordering_rule": "HOLDOUT_MANIFEST_ORDER",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/supplement_s4_dual_model_item_profiles.pdf",
+          "sha256": "2f02ecaf0f6305fe01a3b0c3f9fecb3a9d94d9b9e1680ec425a5203c0d3b8add"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/supplement_s4_dual_model_item_profiles.png",
+          "sha256": "4145cb725e3d3afea5ce03951bc6f5edf1258a50c871bc5ec5a41c0f488e64d3"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/supplement_s4_dual_model_item_profiles.svg",
+          "sha256": "8fb2b1172cf5afddb187c8b5bd118e8ee5db9ece97b2fa37973890466d7b4b24"
+        }
+      },
+      "scientific_status": "CONFIRMATORY",
+      "source_artifacts": {
+        "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283",
+        "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+        "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2"
+      },
+      "title": "Shared-holdout dual-model itemwise profiles"
+    },
+    "s5": {
+      "derived_tables": {
+        "s5_ministral_invalidity": {
+          "path": "manuscript/data/paper1/derived_figure_tables/s5_ministral_invalidity.csv",
+          "sha256": "dd927712ed068243fafbe2b19423f1e3ceedde1c171575873f2eefee3802866a"
+        }
+      },
+      "inclusion_policy": "ALL_13_FROZEN_INVALID_MEANINGFUL_ROWS",
+      "item_ordering_rule": "COUNT_THEN_CATEGORY_FOR_DISPLAY_ONLY",
+      "notes": "POST_HOC_DESCRIPTIVE_ONLY; recovered answers never enter frozen outcomes",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/supplement_s5_ministral_invalidity_posthoc.pdf",
+          "sha256": "f27814648008c07132786a515fe82eb488adccf01234d9b8021994ae63d8d57a"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/supplement_s5_ministral_invalidity_posthoc.png",
+          "sha256": "bb643c9287b566e10326670db16b1335f07c2e488bf8689263ea4b8726748009"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/supplement_s5_ministral_invalidity_posthoc.svg",
+          "sha256": "439723821166557d80ab5760e6e406d388abdbed32ed800835c2f84138e4f35e"
+        }
+      },
+      "scientific_status": "POST_HOC_DESCRIPTIVE_ONLY",
+      "source_artifacts": {
+        "manuscript/data/posthoc_ministral_invalidity_aggregate.json": "4b77b0512ed543a474326693acf02dcd47ec8a4c3f4dc8304c080ee41f18f99f"
+      },
+      "title": "Ministral invalidity taxonomy"
+    },
+    "s7": {
+      "derived_tables": {
+        "s7_loo_sensitivity": {
+          "path": "manuscript/data/paper1/derived_figure_tables/s7_loo_sensitivity.csv",
+          "sha256": "229c5657dbe48bce252792fb3c6e7c63c096c8549d71080718ba401644d87532"
+        }
+      },
+      "inclusion_policy": "ALL_57_LOO_ROWS_PER_MODEL",
+      "item_ordering_rule": "HOLDOUT_MANIFEST_ORDER",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/supplement_s7_loo_robustness.pdf",
+          "sha256": "c2419e86208420e5cb3eb67c8bc7a35559981d6bbf3101463c006f25f992fe89"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/supplement_s7_loo_robustness.png",
+          "sha256": "1affa34b65a00e9b663688bf84532edbe4931b7eee1be8f035b7ad2aae892af1"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/supplement_s7_loo_robustness.svg",
+          "sha256": "555906dca768b769f63582339a829dba03aedbd60bd7e1855d72ddb02ca2410c"
+        }
+      },
+      "scientific_status": "CONFIRMATORY_SENSITIVITY",
+      "source_artifacts": {
+        "review/q1_confirmatory_fixed_controllers/LOO_SENSITIVITY.csv": "6f9e49d47d719abb80455a4b3e1c62119e89e257d493e8559a856728ba71cd5f"
+      },
+      "title": "Leave-one-item-out robustness"
+    },
+    "s8": {
+      "derived_tables": {
+        "s8_token_regimes": {
+          "path": "manuscript/data/paper1/derived_figure_tables/s8_token_regimes.csv",
+          "sha256": "6727239e3b354eb202eb09dd71e6ce6c9b5c67f2ac49413c56aa14080ce3afed"
+        }
+      },
+      "inclusion_policy": "ALL_SEVEN_CONFIRMATORY_CONDITIONS_BOTH_MODELS",
+      "item_ordering_rule": "MODEL_THEN_FROZEN_CONDITION_ORDER",
+      "notes": "AS_FROZEN_IN_FIGURE_SPEC",
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1/supplement_s8_token_regimes.pdf",
+          "sha256": "1f5035bba10132ac41cac910fda3443a53ee2adbb724843d1e34c61d8448f5d8"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1/supplement_s8_token_regimes.png",
+          "sha256": "7b53c2530f9b1b6c1fb76e75a5bb2ddf3c20554df6264cff60bc43a234c46f47"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1/supplement_s8_token_regimes.svg",
+          "sha256": "a7ecec47ec659c35569db99d0ec82e7a397a846e6bbaa72110388f3a71b31bb1"
+        }
+      },
+      "scientific_status": "CONFIRMATORY_DESCRIPTIVE",
+      "source_artifacts": {
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+      },
+      "title": "Token-regime summaries"
+    }
+  },
+  "omitted_supplements": {
+    "s6": "heterogeneous stages; no comparable frozen regression target",
+    "s9": "cross-controller/layer sign comparison risk"
+  },
+  "plotting_code_commit": "dd5acd083b5fc8d425c5e192175f0a6481db6268",
+  "plotting_code_hashes": {
+    "scripts/generate_q1_paper_figures.py": "dae6d720fcdbcb32c0fd0c8ff51855660ff9463f5ddab467635938cabfb13b41",
+    "src/epistemic_geometry/publication/q1/figure_tables.py": "017f54e731ebf5e89bd9938490d2beb6b8188e92672de828dda9b581eda9afb9",
+    "src/epistemic_geometry/publication/q1/loaders.py": "66c3de218935459333632cc77dfeb9fc6374620b03fdc690553686a8e31189ae",
+    "src/epistemic_geometry/publication/q1/pipeline.py": "d5c386b5456b649ce72d134cdf83fe6342751f88f4be48086ae07c36fc1319b9",
+    "src/epistemic_geometry/publication/q1/plotting.py": "36c8e0247a66192c275d41fdcdddd1f7f01a3c39403488086f83aab6f11b3c5d",
+    "src/epistemic_geometry/publication/q1/provenance.py": "c1ac3f038e937ec49a76211c4c78f42dffe9ac0f56cafe291c47d1a04ffbe24a"
+  },
+  "plotting_code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
+  "q2_semantic_sources": 0,
+  "schema_version": "2.0",
+  "scientific_scope": "Q1_ONLY",
+  "validated_frozen_source_artifacts": {
+    "manuscript/data/posthoc_ministral_invalidity_aggregate.json": "4b77b0512ed543a474326693acf02dcd47ec8a4c3f4dc8304c080ee41f18f99f",
     "review/gate10_cross_domain_charcount/ESTIMANDS.json": "d40dd7973750f8787d0815acfea44f72b43241d3846259cb32a84f7b0e86bc74",
     "review/gate13_1_all_layer_causal_atlas/ESTIMANDS.json": "fb19cff627edc5d026b6cc2ea1b4bfc9074a147f46bc2c4657ed68d733a53fd5",
+    "review/gate5_source_duration/ESTIMANDS.json": "8bb9af1e132404c54a818fef004d5dd5f8a2f73e050044e7856dcef55110f2fe",
+    "review/gate7_fresh_l27_replication/ESTIMANDS.json": "97cdaab1853e55664d953e08bf8aabd834d487ec260e0a96896fcae636945322",
+    "review/gate8_l27_dose_calibration/DOSE_SUMMARY.csv": "408879428ebf2051d2988291f4a9067e0d3495ecd8ee6f8d98d48cc6202ff546",
     "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258",
+    "review/micro_q1/ESTIMANDS.json": "46997b4b051c98e76ac659b9542e9f35f00adce9bc7127dd6f3ce50ac1ec479a",
     "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
-    "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+    "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298",
+    "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json": "42a2b57dc1df786eaa3452036007541d256c0882125add8721c12de7534059db",
+    "review/q1_confirmatory_fixed_controllers/FORENSIC_AUDIT.json": "470219775b71770e3b62fe2271f2a7c9fed0154d00bf1811cf2f1e79c0c9dcb7",
+    "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283",
+    "review/q1_confirmatory_fixed_controllers/LOO_SENSITIVITY.csv": "6f9e49d47d719abb80455a4b3e1c62119e89e257d493e8559a856728ba71cd5f",
+    "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_MINISTRAL.json": "7b5725f3118dc46d7a019d40a8f0c96071b28dd09b2e11aa8b79332734d1ad9d",
+    "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json": "6ec601441e9e291a40ee8c63cdda461f7cb172a1de9ed4ced6e52a71861ea0e4",
+    "review/q1_confirmatory_fixed_controllers/PROTOCOL_LOCK.json": "971ee8d29f54106dee74c0fe3f099a8c892ddf9e260e616e67beb481ef6bb96c",
+    "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+    "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2"
   }
 }

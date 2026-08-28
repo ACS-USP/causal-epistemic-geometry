@@ -1,5 +1,11 @@
 # Paper 1 figure plan
 
+> Implementation note (2026-08-27): the canonical Q1 figure contract is now
+> [`Q1_FIGURE_SPEC.md`](Q1_FIGURE_SPEC.md), and the implemented visual package
+> is indexed in [`Q1_VISUAL_EVIDENCE.md`](Q1_VISUAL_EVIDENCE.md). The material
+> below is preserved as the earlier planning document; it is not the current
+> output manifest.
+
 The main-text package should use five figures. Six figures would over-weight
 the developmental atlas relative to the confirmatory result; layer/readout
 material belongs in the appendix unless the manuscript's venue strongly favors

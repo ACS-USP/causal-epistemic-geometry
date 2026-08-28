@@ -1,0 +1,148 @@
+{
+  "code_commit": "dd5acd083b5fc8d425c5e192175f0a6481db6268",
+  "code_hashes": {
+    "scripts/generate_q1_paper_figures.py": "dae6d720fcdbcb32c0fd0c8ff51855660ff9463f5ddab467635938cabfb13b41",
+    "src/epistemic_geometry/publication/q1/figure_tables.py": "017f54e731ebf5e89bd9938490d2beb6b8188e92672de828dda9b581eda9afb9",
+    "src/epistemic_geometry/publication/q1/loaders.py": "66c3de218935459333632cc77dfeb9fc6374620b03fdc690553686a8e31189ae",
+    "src/epistemic_geometry/publication/q1/pipeline.py": "d5c386b5456b649ce72d134cdf83fe6342751f88f4be48086ae07c36fc1319b9",
+    "src/epistemic_geometry/publication/q1/plotting.py": "36c8e0247a66192c275d41fdcdddd1f7f01a3c39403488086f83aab6f11b3c5d",
+    "src/epistemic_geometry/publication/q1/provenance.py": "c1ac3f038e937ec49a76211c4c78f42dffe9ac0f56cafe291c47d1a04ffbe24a"
+  },
+  "code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
+  "q2_semantic_sources": 0,
+  "schema_version": "1.0",
+  "scientific_scope": "Q1_ONLY",
+  "tables": {
+    "confirmatory_effects": {
+      "derivation_function": "confirmatory_effects",
+      "inclusion_rule": "all prospective confirmatory controls",
+      "ordering_rule": "Qwen then Ministral; meaningful then R0-R3",
+      "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_effects.csv",
+      "sha256": "3369bb577fcf37a7d7bcd5c50164e369b0f85aeb796b5e259f1d1156bc417171",
+      "sources": {
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+      }
+    },
+    "confirmatory_item_profiles": {
+      "derivation_function": "confirmatory_item_profiles",
+      "inclusion_rule": "all 57 items; invalid retained as e=1",
+      "ordering_rule": "holdout manifest order",
+      "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_item_profiles.csv",
+      "sha256": "2d5b72fc0d0e558aa00799e597d55d1ed26d246f9ec6053b59e01897b99f7889",
+      "sources": {
+        "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283",
+        "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+        "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2"
+      }
+    },
+    "confirmatory_safety": {
+      "derivation_function": "confirmatory_safety",
+      "inclusion_rule": "baseline and meaningful; no complete-case filtering",
+      "ordering_rule": "Qwen then Ministral",
+      "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_safety.csv",
+      "sha256": "47bcc6739aea4ce4a7e587f265906958684aa1585d8e6d44688353334cc4fce8",
+      "sources": {
+        "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+      }
+    },
+    "confirmatory_transition_decomposition": {
+      "derivation_function": "transition_decomposition",
+      "inclusion_rule": "all four rollout cross-products",
+      "ordering_rule": "component order fixed in spec",
+      "path": "manuscript/data/paper1/derived_figure_tables/confirmatory_transition_decomposition.csv",
+      "sha256": "3cdab0bed4215a6a87fe8e53426ec8b883226e08d0e7f7da3ab52e24e714d008",
+      "sources": {
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298",
+        "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283",
+        "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+        "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2"
+      }
+    },
+    "cross_domain_effects": {
+      "derivation_function": "cross_domain_effects",
+      "inclusion_rule": "meaningful and all four domain-specific random controls",
+      "ordering_rule": "CRUXEval then long character count",
+      "path": "manuscript/data/paper1/derived_figure_tables/cross_domain_effects.csv",
+      "sha256": "16edfb1fe5a4415eaf3ff4236a958a465181f31edac84fe1a63bd12af29c5b3d",
+      "sources": {
+        "review/gate10_cross_domain_charcount/ESTIMANDS.json": "d40dd7973750f8787d0815acfea44f72b43241d3846259cb32a84f7b0e86bc74",
+        "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258"
+      }
+    },
+    "figure2_genealogy": {
+      "derivation_function": "genealogy",
+      "inclusion_rule": "direct ancestral Qwen stages",
+      "ordering_rule": "frozen chronological gate order",
+      "path": "manuscript/data/paper1/derived_figure_tables/figure2_genealogy.csv",
+      "sha256": "7d8371ff87f70b5a7469ddab62774069f73cc929209532947e86c9a5495fd147",
+      "sources": {
+        "manuscript/figures/paper1/FIGURE_SPEC.json": "6e11b148da1de52c273708864d393b20f9c706fb85774f1974a89bd22e7b05f7"
+      }
+    },
+    "s1_duration_history": {
+      "derivation_function": "duration_history",
+      "inclusion_rule": "all frozen one-shot/sustained conditions represented",
+      "ordering_rule": "Gate 4 then Gate 5 frozen condition order",
+      "path": "manuscript/data/paper1/derived_figure_tables/s1_duration_history.csv",
+      "sha256": "f59432f255f8b6d60ebf5fffd7fc679f7d70f9bcca5b6a2965df4028e4e7372f",
+      "sources": {
+        "review/gate5_source_duration/ESTIMANDS.json": "8bb9af1e132404c54a818fef004d5dd5f8a2f73e050044e7856dcef55110f2fe",
+        "review/micro_q1/ESTIMANDS.json": "46997b4b051c98e76ac659b9542e9f35f00adce9bc7127dd6f3ce50ac1ec479a"
+      }
+    },
+    "s2_dose_calibration": {
+      "derivation_function": "dose_calibration",
+      "inclusion_rule": "all Gate 8 doses plus Gate 7 full-dose validity",
+      "ordering_rule": "D25,D50,D75,D100",
+      "path": "manuscript/data/paper1/derived_figure_tables/s2_dose_calibration.csv",
+      "sha256": "f9cfa7d2e107e86f70d7b7a185c13263a8a7281bfd8b4fdb01a9151ddd09ab14",
+      "sources": {
+        "review/gate7_fresh_l27_replication/ESTIMANDS.json": "97cdaab1853e55664d953e08bf8aabd834d487ec260e0a96896fcae636945322",
+        "review/gate8_l27_dose_calibration/DOSE_SUMMARY.csv": "408879428ebf2051d2988291f4a9067e0d3495ecd8ee6f8d98d48cc6202ff546"
+      }
+    },
+    "s3_development_confirmation_controls": {
+      "derivation_function": "development_confirmation_controls",
+      "inclusion_rule": "all four controls at each stage",
+      "ordering_rule": "model then stage then meaningful/R0-R3",
+      "path": "manuscript/data/paper1/derived_figure_tables/s3_development_confirmation_controls.csv",
+      "sha256": "26a828c6fbfa8b1fc5cf8263eb08fd59d67ea2c8c44947957c50c09bc9af5e4b",
+      "sources": {
+        "review/gate13_1_all_layer_causal_atlas/ESTIMANDS.json": "fb19cff627edc5d026b6cc2ea1b4bfc9074a147f46bc2c4657ed68d733a53fd5",
+        "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258",
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+      }
+    },
+    "s5_ministral_invalidity": {
+      "derivation_function": "invalidity_taxonomy",
+      "inclusion_rule": "13 invalid meaningful rows; post-hoc only",
+      "ordering_rule": "frozen taxonomy artifact order",
+      "path": "manuscript/data/paper1/derived_figure_tables/s5_ministral_invalidity.csv",
+      "sha256": "dd927712ed068243fafbe2b19423f1e3ceedde1c171575873f2eefee3802866a",
+      "sources": {
+        "manuscript/data/posthoc_ministral_invalidity_aggregate.json": "4b77b0512ed543a474326693acf02dcd47ec8a4c3f4dc8304c080ee41f18f99f"
+      }
+    },
+    "s7_loo_sensitivity": {
+      "derivation_function": "loo_sensitivity",
+      "inclusion_rule": "all 57 leave-one-item-out rows per model",
+      "ordering_rule": "model then holdout manifest order",
+      "path": "manuscript/data/paper1/derived_figure_tables/s7_loo_sensitivity.csv",
+      "sha256": "229c5657dbe48bce252792fb3c6e7c63c096c8549d71080718ba401644d87532",
+      "sources": {
+        "review/q1_confirmatory_fixed_controllers/LOO_SENSITIVITY.csv": "6f9e49d47d719abb80455a4b3e1c62119e89e257d493e8559a856728ba71cd5f"
+      }
+    },
+    "s8_token_regimes": {
+      "derivation_function": "token_regimes",
+      "inclusion_rule": "all confirmatory conditions; descriptive only",
+      "ordering_rule": "model then frozen condition order",
+      "path": "manuscript/data/paper1/derived_figure_tables/s8_token_regimes.csv",
+      "sha256": "6727239e3b354eb202eb09dd71e6ce6c9b5c67f2ac49413c56aa14080ce3afed",
+      "sources": {
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298"
+      }
+    }
+  }
+}

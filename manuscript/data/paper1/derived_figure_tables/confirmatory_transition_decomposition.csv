@@ -1,0 +1,9 @@
+model_role,component,fraction,rollout_convention
+Qwen,shared_correct,0.394736842105,all_four_cross_products
+Qwen,rescue,0.105263157895,all_four_cross_products
+Qwen,damage,0.0438596491228,all_four_cross_products
+Qwen,shared_error,0.456140350877,all_four_cross_products
+Ministral,shared_correct,0.5,all_four_cross_products
+Ministral,rescue,0.149122807018,all_four_cross_products
+Ministral,damage,0.0701754385965,all_four_cross_products
+Ministral,shared_error,0.280701754386,all_four_cross_products

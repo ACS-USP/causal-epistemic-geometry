@@ -1,0 +1,6 @@
+stage,dose,eta,Q,random_Q_mean,commitment_validity,semantic_evaluability,eligible
+Gate 8 calibration,D25,3.21247598428,0.05,0.045,1,1,False
+Gate 8 calibration,D50,6.42495196857,0.23,0.115,1,1,False
+Gate 8 calibration,D75,9.63742795285,0.43,0.2025,1,1,True
+Gate 8 calibration,D100,12.8499039371,0.58,0.28,0.97,0.97,True
+Gate 7 fresh full dose,D100,,,,0.9,0.9,False

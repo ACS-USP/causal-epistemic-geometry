@@ -1,0 +1,11 @@
+domain,condition,controller_kind,accuracy_change,C,D
+CRUXEval,MEANINGFUL,meaningful,0.13,0.0643434343434,0.12
+CRUXEval,RANDOM_R0,random,0.005,0.005,0.01
+CRUXEval,RANDOM_R1,random,-0.01,-0.00464646464646,-0.01
+CRUXEval,RANDOM_R2,random,0.03,-0.000808080808081,0.02
+CRUXEval,RANDOM_R3,random,0.015,0.00974747474747,0.02
+Long character count,MEANINGFUL,meaningful,-0.0275,-0.0122989949749,-0.025
+Long character count,RANDOM_R0,random,-0.03,-0.00441582914573,0
+Long character count,RANDOM_R1,random,-0.045,0.00016959798995,0.03
+Long character count,RANDOM_R2,random,-0.015,-0.00648869346734,-0.005
+Long character count,RANDOM_R3,random,-0.055,-0.0122675879397,-0.03

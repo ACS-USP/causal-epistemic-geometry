@@ -1,0 +1,7 @@
+stage,methodological_decision,observed_result,classification,category,n_items
+Gate 4,"One-shot L17 careful-minus-direct controller; plus, minus, orthogonal random",No detectable semantic movement,MICRO_Q1_NO_DETECTABLE_SIGNAL,FAILURE,50
+Gate 5,Hold controller fixed; isolate one-shot versus sustained duration,Duration contrast observed; primary movement threshold not reached,GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD,FAILURE,60
+Gates 6–6.3,Separate source/readout from causal control; advance paired-mean prompt-boundary L27,Large specific signal; historical safety classification remains destructive,GATE6_3_SINGLE_MEAN_DESTRUCTIVE,DEVELOPMENT,60
+Gate 7,Replicate exact L27 controller at full dose on fresh items,Movement replicated; relative validity/evaluability guards failed,GATE7_DESTRUCTIVE,FAILURE,120
+Gate 8,Prospective safety/behavioral dose calibration; no accuracy or G/C/D selection,Frozen lowest-eligible-lower-dose rule selected D75,GATE8_SAFE_LOWER_DOSE_SELECTED,CALIBRATION,50
+Gate 9,Fresh independent evaluation of the fixed selected D75 controller,Strong safe selected-dose development replication,GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION,REPLICATION,100

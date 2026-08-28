@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_Q1_FIGURE_IMPLEMENTATION",
+  "scientific_firewall": {
+    "allowed_program": "Q1_ONLY",
+    "q2_semantic_sources_allowed": false,
+    "new_inferential_tests": false
+  },
+  "global_rules": {
+    "confirmatory_item_order": "HOLDOUT_CONTENT_MANIFEST.items order",
+    "confirmatory_item_count": 57,
+    "invalid_or_unevaluable_error": 1,
+    "complete_case_filtering": false,
+    "null_controller_order": ["RANDOM_R0", "RANDOM_R1", "RANDOM_R2", "RANDOM_R3"],
+    "two_rollout_profile_values": [0.0, 0.5, 1.0],
+    "transition_convention": "ALL_FOUR_BASELINE_CONDITION_ROLLOUT_CROSS_PRODUCTS"
+  },
+  "genealogy_rows": [
+    {
+      "stage": "Gate 4",
+      "methodological_decision": "One-shot L17 careful-minus-direct controller; plus, minus, orthogonal random",
+      "observed_result": "No detectable semantic movement",
+      "classification": "MICRO_Q1_NO_DETECTABLE_SIGNAL",
+      "category": "FAILURE",
+      "n_items": 50
+    },
+    {
+      "stage": "Gate 5",
+      "methodological_decision": "Hold controller fixed; isolate one-shot versus sustained duration",
+      "observed_result": "Duration contrast observed; primary movement threshold not reached",
+      "classification": "GATE5_DURATION_EFFECT_BELOW_MOVEMENT_THRESHOLD",
+      "category": "FAILURE",
+      "n_items": 60
+    },
+    {
+      "stage": "Gates 6–6.3",
+      "methodological_decision": "Separate source/readout from causal control; advance paired-mean prompt-boundary L27",
+      "observed_result": "Large specific signal; historical safety classification remains destructive",
+      "classification": "GATE6_3_SINGLE_MEAN_DESTRUCTIVE",
+      "category": "DEVELOPMENT",
+      "n_items": 60
+    },
+    {
+      "stage": "Gate 7",
+      "methodological_decision": "Replicate exact L27 controller at full dose on fresh items",
+      "observed_result": "Movement replicated; relative validity/evaluability guards failed",
+      "classification": "GATE7_DESTRUCTIVE",
+      "category": "FAILURE",
+      "n_items": 120
+    },
+    {
+      "stage": "Gate 8",
+      "methodological_decision": "Prospective safety/behavioral dose calibration; no accuracy or G/C/D selection",
+      "observed_result": "Frozen lowest-eligible-lower-dose rule selected D75",
+      "classification": "GATE8_SAFE_LOWER_DOSE_SELECTED",
+      "category": "CALIBRATION",
+      "n_items": 50
+    },
+    {
+      "stage": "Gate 9",
+      "methodological_decision": "Fresh independent evaluation of the fixed selected D75 controller",
+      "observed_result": "Strong safe selected-dose development replication",
+      "classification": "GATE9_STRONG_SAFE_SELECTED_DOSE_REPLICATION",
+      "category": "REPLICATION",
+      "n_items": 100
+    }
+  ],
+  "figures": [
+    {
+      "id": "figure1",
+      "title": "Causal control of where a model fails",
+      "scientific_status": "CONCEPTUAL",
+      "sources": [
+        "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json",
+        "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json",
+        "docs/METRICS_AND_STATISTICS.md"
+      ],
+      "panels": ["causal design", "illustrative equal-accuracy error profiles"],
+      "inclusion": "SCHEMATIC_ONLY_NO_EMPIRICAL_ITEMS",
+      "ordering": "CAUSAL_FLOW_LEFT_TO_RIGHT",
+      "invalid_handling": "NOT_APPLICABLE",
+      "statistics": ["conceptual C definition"],
+      "supports": "aggregate competence and error identity are distinct causal objects",
+      "does_not_support": ["geometry prediction", "routing utility", "domain generality"]
+    },
+    {
+      "id": "figure2",
+      "title": "The qualified instrument emerged through falsifiable gates",
+      "scientific_status": "DEVELOPMENT_CALIBRATION_GENEALOGY",
+      "sources": [
+        "docs/GATE4_MICRO_Q1_CLOSEOUT.md",
+        "docs/GATE5_SOURCE_DURATION_CLOSEOUT.md",
+        "docs/GATE6_2_FIRST_STAGE_REPAIR_CLOSEOUT.md",
+        "docs/GATE6_3_SINGLE_MEAN_CLOSEOUT.md",
+        "review/gate6_3_semantic_validity_audit/AUDIT_REPORT.md",
+        "docs/GATE7_FRESH_L27_REPLICATION_CLOSEOUT.md",
+        "review/gate8_l27_dose_calibration/REPORT.md",
+        "review/gate9_selected_d75_evaluation/REPORT.md"
+      ],
+      "panels": ["methodological decision lane", "observed result lane"],
+      "inclusion": "DIRECT_ANCESTRAL_QWEN_INSTRUMENT_STAGES",
+      "ordering": "GATE_CHRONOLOGY",
+      "invalid_handling": "USE_FROZEN_STAGE_CLASSIFICATION",
+      "statistics": ["sample size", "terminal classification"],
+      "supports": "prospective instrument qualification through explicit failures",
+      "does_not_support": ["inevitable trajectory", "Gate 5 primary pass", "outcome-selected D75"]
+    },
+    {
+      "id": "figure3",
+      "title": "Qwen confirmatory itemwise blind-spot reorganization",
+      "scientific_status": "CONFIRMATORY",
+      "sources": [
+        "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json",
+        "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl",
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json",
+        "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json"
+      ],
+      "panels": ["two-rollout item profile", "cross-rollout decomposition", "C versus null bank"],
+      "inclusion": "ALL_57_ITEMS_ALL_TERMINAL_ROWS",
+      "ordering": "HOLDOUT_MANIFEST_ORDER",
+      "invalid_handling": "RETAIN_AS_ERROR_AND_OVERLAY_INVALID_COUNT",
+      "controller_order": ["BASELINE", "MEANINGFUL_FIXED", "RANDOM_R0", "RANDOM_R1", "RANDOM_R2", "RANDOM_R3"],
+      "statistics": ["q_hat", "rescue", "damage", "shared correct", "shared error", "C", "95% item bootstrap CI", "delta C versus null mean"],
+      "supports": "safe prospective-null-specific Qwen complementarity",
+      "does_not_support": ["precise latent propensities", "domain generality", "geometry prediction", "deployable oracle"]
+    },
+    {
+      "id": "figure4",
+      "title": "Complementarity replicates more robustly than safe realization",
+      "scientific_status": "CONFIRMATORY",
+      "sources": [
+        "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json",
+        "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json",
+        "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json",
+        "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_MINISTRAL.json",
+        "review/q1_confirmatory_fixed_controllers/FORENSIC_AUDIT.json"
+      ],
+      "panels": ["C and null bank", "accuracy change", "commitment/evaluability safety"],
+      "inclusion": "CONFIRMATORY_ONLY",
+      "ordering": "QWEN_THEN_MINISTRAL",
+      "invalid_handling": "FROZEN_PRIMARY_ERROR_NO_POSTHOC_RECOVERY",
+      "statistics": ["C", "C 95% CI", "delta C versus null mean", "accuracy change", "commitment validity", "semantic evaluability", "safety floors"],
+      "supports": "Qwen complete pass and Ministral complementarity with safety fail",
+      "does_not_support": ["Ministral partial pass", "cross-model safe confirmation"]
+    },
+    {
+      "id": "figure5",
+      "title": "Fixed Qwen controller does not transfer to long character counting",
+      "scientific_status": "DEVELOPMENT_POSITIVE_NEGATIVE_BOUNDARY",
+      "sources": [
+        "review/gate9_selected_d75_evaluation/ESTIMANDS.json",
+        "review/gate10_cross_domain_charcount/ESTIMANDS.json",
+        "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json"
+      ],
+      "panels": ["accuracy change", "C", "D", "fixed-controller identity"],
+      "inclusion": "ALL_MEANINGFUL_AND_FOUR_RANDOM_CONTROLS_PER_DOMAIN",
+      "ordering": "CRUXEVAL_THEN_CHARACTER_COUNT",
+      "invalid_handling": "AS_FROZEN_IN_SOURCE_ESTIMANDS",
+      "statistics": ["accuracy change", "C", "D"],
+      "supports": "task-conditioned boundary for Qwen L27-D75",
+      "does_not_support": ["equal task difficulty", "impossibility of any transferable controller"]
+    },
+    {
+      "id": "s1",
+      "title": "One-shot versus sustained duration history",
+      "scientific_status": "DEVELOPMENT",
+      "implementation": "YES",
+      "sources": ["review/micro_q1/ESTIMANDS.json", "review/gate5_source_duration/ESTIMANDS.json"],
+      "variables": ["D", "validity", "duration", "condition"],
+      "inclusion": "ALL_FROZEN_GATE4_AND_GATE5_CONDITIONS",
+      "invalid_handling": "AS_FROZEN_IN_SOURCE_ESTIMANDS",
+      "ordering": "GATE_THEN_FROZEN_CONDITION_ORDER",
+      "statistics": ["D", "frozen movement threshold"],
+      "supports": "duration-isolation history",
+      "does_not_support": ["Gate 5 primary movement pass", "cross-controller effect ranking"]
+    },
+    {
+      "id": "s2",
+      "title": "Full-dose overshoot and prospective D75 calibration",
+      "scientific_status": "DEVELOPMENT_CALIBRATION",
+      "implementation": "YES",
+      "sources": ["review/gate7_fresh_l27_replication/ESTIMANDS.json", "review/gate8_l27_dose_calibration/DOSE_SUMMARY.csv"],
+      "variables": ["dose", "eta", "Q", "random_Q_mean", "commitment_validity", "semantic_evaluability", "eligible"],
+      "inclusion": "ALL_FOUR_GATE8_DOSES_PLUS_GATE7_FULL_DOSE_VALIDITY",
+      "invalid_handling": "AS_FROZEN_IN_SOURCE_SUMMARIES",
+      "ordering": "D25_D50_D75_D100",
+      "statistics": ["Q", "random mean Q", "commitment validity"],
+      "supports": "label-free lower-dose selection after full-dose overshoot",
+      "does_not_support": ["accuracy-based dose selection", "full-dose universal destructiveness"]
+    },
+    {
+      "id": "s3",
+      "title": "Development-to-confirmation control banks",
+      "scientific_status": "DEVELOPMENT_CONFIRMATORY",
+      "implementation": "YES",
+      "sources": ["review/gate9_selected_d75_evaluation/ESTIMANDS.json", "review/gate13_1_all_layer_causal_atlas/ESTIMANDS.json", "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json"],
+      "variables": ["model_role", "stage", "controller_kind", "C"],
+      "inclusion": "MEANINGFUL_AND_ALL_FOUR_RANDOMS_AT_EACH_STAGE",
+      "invalid_handling": "AS_FROZEN_IN_SOURCE_ESTIMANDS",
+      "ordering": "MODEL_THEN_STAGE_THEN_MEANINGFUL_R0_R3",
+      "statistics": ["C"],
+      "supports": "separate development and confirmatory null-specific effects",
+      "does_not_support": ["pooled-stage inference", "shared random distribution"]
+    },
+    {
+      "id": "s4",
+      "title": "Shared-holdout dual-model itemwise profiles",
+      "scientific_status": "CONFIRMATORY",
+      "implementation": "YES",
+      "sources": ["review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json", "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl", "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl"],
+      "variables": ["q_hat_error", "invalid_rollouts", "valid_error_rollouts"],
+      "inclusion": "ALL_57_ITEMS_BASELINE_AND_MEANINGFUL",
+      "invalid_handling": "RETAIN_AS_ERROR_AND_HATCH",
+      "ordering": "HOLDOUT_MANIFEST_ORDER",
+      "statistics": ["two-rollout empirical error proportion"],
+      "supports": "descriptive shared-panel model comparison",
+      "does_not_support": ["item selection", "precise latent error propensity"]
+    },
+    {
+      "id": "s5",
+      "title": "Ministral invalidity taxonomy",
+      "scientific_status": "POST_HOC_DESCRIPTIVE_ONLY",
+      "implementation": "YES",
+      "sources": ["manuscript/data/posthoc_ministral_invalidity_aggregate.json"],
+      "variables": ["taxonomy category", "count"],
+      "inclusion": "ALL_13_FROZEN_INVALID_MEANINGFUL_ROWS",
+      "invalid_handling": "NO_RECLASSIFICATION_OR_RECOVERED_OUTCOME_USE",
+      "ordering": "COUNT_THEN_CATEGORY_FOR_DISPLAY_ONLY",
+      "statistics": ["exact descriptive count"],
+      "supports": "descriptive anatomy of the frozen safety failure",
+      "does_not_support": ["parser repair", "confirmatory reclassification"]
+    },
+    {
+      "id": "s6",
+      "title": "Readout versus causal qualification",
+      "scientific_status": "DEVELOPMENT",
+      "implementation": "OMITTED_HETEROGENEOUS_STAGES",
+      "sources": [],
+      "variables": [],
+      "inclusion": "OMITTED",
+      "invalid_handling": "NOT_APPLICABLE",
+      "ordering": "NOT_APPLICABLE",
+      "statistics": [],
+      "supports": "nothing; not implemented",
+      "does_not_support": ["cross-stage regression"]
+    },
+    {
+      "id": "s7",
+      "title": "Leave-one-item-out robustness",
+      "scientific_status": "CONFIRMATORY_SENSITIVITY",
+      "implementation": "YES",
+      "sources": ["review/q1_confirmatory_fixed_controllers/LOO_SENSITIVITY.csv"],
+      "variables": ["left_out_item_id", "C", "delta_C_nullmean"],
+      "inclusion": "ALL_57_LOO_ROWS_PER_MODEL",
+      "invalid_handling": "AS_FROZEN_IN_PRIMARY_ERROR_CONVENTION",
+      "ordering": "HOLDOUT_MANIFEST_ORDER",
+      "statistics": ["LOO C", "LOO C minus null mean"],
+      "supports": "sensitivity without item selection",
+      "does_not_support": ["item deletion", "item relabeling"]
+    },
+    {
+      "id": "s8",
+      "title": "Token-regime summaries",
+      "scientific_status": "CONFIRMATORY_DESCRIPTIVE",
+      "implementation": "YES",
+      "sources": ["review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json"],
+      "variables": ["mean_tokens", "median_tokens", "condition", "model_role"],
+      "inclusion": "ALL_SEVEN_CONFIRMATORY_CONDITIONS_BOTH_MODELS",
+      "invalid_handling": "TERMINAL_ROWS_RETAINED_IN_FROZEN_SUMMARIES",
+      "ordering": "MODEL_THEN_FROZEN_CONDITION_ORDER",
+      "statistics": ["mean generated tokens", "median generated tokens"],
+      "supports": "token regime as correlate or possible mediator",
+      "does_not_support": ["established causal mediation"]
+    },
+    {
+      "id": "s9",
+      "title": "Historical plus/minus sign results",
+      "scientific_status": "DEVELOPMENT",
+      "implementation": "OMITTED_CROSS_CONTROLLER_COMPARABILITY_RISK",
+      "sources": [],
+      "variables": [],
+      "inclusion": "OMITTED",
+      "invalid_handling": "NOT_APPLICABLE",
+      "ordering": "NOT_APPLICABLE",
+      "statistics": [],
+      "supports": "nothing; not implemented",
+      "does_not_support": ["cross-layer or cross-controller sign comparison"]
+    }
+  ],
+  "expected_source_sha256": {
+    "review/q1_confirmatory_fixed_controllers/PROTOCOL_LOCK.json": "971ee8d29f54106dee74c0fe3f099a8c892ddf9e260e616e67beb481ef6bb96c",
+    "review/q1_confirmatory_fixed_controllers/ANALYSIS_LOCK.json": "20deab742b525536d5af2ed5a3916d1f771ccc84943f65ee091145d3d54f5145",
+    "review/q1_confirmatory_fixed_controllers/CONTROLLER_IDENTITY_LOCK.json": "42a2b57dc1df786eaa3452036007541d256c0882125add8721c12de7534059db",
+    "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_QWEN.json": "6ec601441e9e291a40ee8c63cdda461f7cb172a1de9ed4ced6e52a71861ea0e4",
+    "review/q1_confirmatory_fixed_controllers/NULL_BANK_LOCK_MINISTRAL.json": "7b5725f3118dc46d7a019d40a8f0c96071b28dd09b2e11aa8b79332734d1ad9d",
+    "review/q1_confirmatory_fixed_controllers/HOLDOUT_CONTENT_MANIFEST.json": "903a2543500d66637413c33e691e14f57c77e2291576621340733210eba55283",
+    "review/q1_confirmatory_fixed_controllers/journal_qwen.jsonl": "b116624404667b6f5f17c3cc463a21f128fabc97cd3e6154d27b4cbbde11a7b2",
+    "review/q1_confirmatory_fixed_controllers/journal_ministral.jsonl": "c571078c48a06759478968e9b92509c09ac53dd4ea83de03f20694ff7867415d",
+    "review/q1_confirmatory_fixed_controllers/CONFIRMATORY_RESULTS.json": "8a1188f146386c14d4ffb93a489c738608cbb5fede862a630b675caabcbfd298",
+    "review/q1_confirmatory_fixed_controllers/FORENSIC_AUDIT.json": "470219775b71770e3b62fe2271f2a7c9fed0154d00bf1811cf2f1e79c0c9dcb7",
+    "review/gate9_selected_d75_evaluation/ESTIMANDS.json": "d62054361b296ae019de895ae1dd2faaf84a79d25ebf52a330377722b46e6258",
+    "review/gate10_cross_domain_charcount/ESTIMANDS.json": "d40dd7973750f8787d0815acfea44f72b43241d3846259cb32a84f7b0e86bc74",
+    "review/gate13_1_all_layer_causal_atlas/ESTIMANDS.json": "fb19cff627edc5d026b6cc2ea1b4bfc9074a147f46bc2c4657ed68d733a53fd5",
+    "review/micro_q1/ESTIMANDS.json": "46997b4b051c98e76ac659b9542e9f35f00adce9bc7127dd6f3ce50ac1ec479a",
+    "review/gate5_source_duration/ESTIMANDS.json": "8bb9af1e132404c54a818fef004d5dd5f8a2f73e050044e7856dcef55110f2fe",
+    "review/gate7_fresh_l27_replication/ESTIMANDS.json": "97cdaab1853e55664d953e08bf8aabd834d487ec260e0a96896fcae636945322",
+    "review/gate8_l27_dose_calibration/DOSE_SUMMARY.csv": "408879428ebf2051d2988291f4a9067e0d3495ecd8ee6f8d98d48cc6202ff546",
+    "review/q1_confirmatory_fixed_controllers/LOO_SENSITIVITY.csv": "6f9e49d47d719abb80455a4b3e1c62119e89e257d493e8559a856728ba71cd5f",
+    "manuscript/data/posthoc_ministral_invalidity_aggregate.json": "4b77b0512ed543a474326693acf02dcd47ec8a4c3f4dc8304c080ee41f18f99f"
+  }
+}

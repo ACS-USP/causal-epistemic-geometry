@@ -1,0 +1,5 @@
+model_role,metric,baseline,meaningful,relative_floor,model_pass
+Qwen,commitment_validity,0.982456140351,0.973684210526,0.932456140351,True
+Qwen,semantic_evaluability,0.982456140351,0.973684210526,0.932456140351,True
+Ministral,commitment_validity,0.964912280702,0.885964912281,0.914912280702,False
+Ministral,semantic_evaluability,0.964912280702,0.885964912281,0.914912280702,False
