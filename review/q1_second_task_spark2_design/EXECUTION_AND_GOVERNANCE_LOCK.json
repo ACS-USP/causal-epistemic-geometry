@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "authorization_state": "DESIGN_ONLY_STAGE_A_AND_STAGE_B_NOT_AUTHORIZED",
+  "backend": {
+    "claim": "SPARK2_NATIVE_CROSS_BACKEND_REPLICATION",
+    "gpu_count_max": 1,
+    "runpod": "FORBIDDEN",
+    "spark1": "FORBIDDEN_OWNED_BY_OPEN_Q2",
+    "spark2": "REQUIRED",
+    "spark2_environment_fingerprint": "306d65af9643cc1144d344ae57141ac96ffbbcf70520f67e9276a907d29660bc"
+  },
+  "generation": {
+    "attention": "SDPA",
+    "do_sample": true,
+    "dtype": "BF16",
+    "enable_thinking": false,
+    "max_new_tokens": 4096,
+    "min_p": 0.0,
+    "model": "Qwen/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "temperature": 0.6,
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "top_k": 20,
+    "top_p": 0.95,
+    "torch_disable_native_jit": "1"
+  },
+  "intervention": {
+    "dose": "D75",
+    "effective_delta_norm": 97.85168930581241,
+    "eta": 9.637427952852196,
+    "layer": 27,
+    "prefill": "shift final non-padding prompt token exactly once",
+    "decode": "shift current token exactly once per model forward",
+    "duration": "SUSTAINED_CURRENT_TOKEN",
+    "meaningful_vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838"
+  },
+  "logical_identity": [
+    "stage",
+    "item_id",
+    "condition",
+    "rollout_index"
+  ],
+  "journal": {
+    "append_only": true,
+    "duplicate_valid_completions_allowed": false,
+    "flush_each_row": true,
+    "fsync_each_row": true,
+    "required_fields": [
+      "stage",
+      "item_id",
+      "item_sha256",
+      "condition",
+      "rollout_index",
+      "seed",
+      "raw_output",
+      "generated_token_ids",
+      "generated_token_count",
+      "output_sha256",
+      "prompt_sha256",
+      "model_revision",
+      "tokenizer_revision",
+      "vector_hash",
+      "eta",
+      "layer",
+      "parser_version",
+      "retry_provenance",
+      "environment_fingerprint"
+    ]
+  },
+  "retry_resume": {
+    "completed_key": "one atomically persisted terminal scientific row whose hashes and locked metadata validate",
+    "operational_retryable": [
+      "transport_or_network_interruption_before_durable_completion",
+      "scheduler_or_process_interruption_before_durable_completion",
+      "model_load_failure_before_generation",
+      "incomplete_or_corrupt_artifact_write_without_a_valid_completion",
+      "hardware_runtime_failure_before_a_terminal_model_result_exists"
+    ],
+    "scientific_nonretryable": [
+      "incorrect_answer",
+      "invalid_or_malformed_final_commitment",
+      "semantically_unevaluable_terminal_output",
+      "terminal_token_cap_truncation",
+      "repetitive_but_terminal_output",
+      "no_commitment_terminal_output"
+    ],
+    "retry_invariants": [
+      "same_logical_key",
+      "same_seed",
+      "same_item",
+      "same_condition_and_vector",
+      "same_generation_parameters",
+      "same_model_and_environment"
+    ],
+    "resume": "validate all durable journal rows against the frozen schedule and regenerate only absent logical keys",
+    "replacement": "FORBIDDEN",
+    "third_scientific_draw": "FORBIDDEN"
+  },
+  "scoring": {
+    "evaluator": "livecodebench-exact-literal-v1",
+    "generated_code_execution": false,
+    "invalid_terminal_outcome_error": 1,
+    "llm_judge": false,
+    "parser": "external-semantic-v3 final commitment plus exact typed literal",
+    "primary_error": "0 only for exact typed correctness; 1 otherwise"
+  },
+  "stages": {
+    "A": {
+      "conditions": ["BASELINE", "TEXTUAL_CAREFUL"],
+      "items": 50,
+      "logical_rows": 200,
+      "rollouts": 2,
+      "schedule": "STAGE_A_SCHEDULE.json"
+    },
+    "B": {
+      "conditions": 11,
+      "items": 150,
+      "logical_rows": 6600,
+      "rollouts": 4,
+      "schedule": "STAGE_B_SCHEDULE.json",
+      "transition": "only after the frozen Stage-A gate passes and a new principal authorization"
+    }
+  },
+  "collection_firewalls": {
+    "no_midrun_scientific_peeking": true,
+    "q2_output_paths": "FORBIDDEN",
+    "q2_process": "DO_NOT_MODIFY",
+    "scientific_metrics_before_stage_completion": "FORBIDDEN"
+  },
+  "sealing": {
+    "before_analysis": [
+      "journal_sha256",
+      "raw_output_bundle_sha256",
+      "parsed_records_sha256",
+      "campaign_manifest_sha256",
+      "environment_provenance"
+    ],
+    "independent_forensic_recomputation_required": true
+  }
+}

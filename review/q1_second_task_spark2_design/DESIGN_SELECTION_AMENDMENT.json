@@ -1,0 +1,17 @@
+{
+  "amendment_class": "PROSPECTIVE_CLASS_B_DESIGN_SELECTION",
+  "benchmark_outcomes_exist": false,
+  "correctness_inspected": false,
+  "engine_qualification_source_commit": "8300ce388cf2777790da683f52fa307b4c860f5f",
+  "final_stage_b_n": 150,
+  "initial_pre_engine_candidate_n": 200,
+  "model_free_inputs": [
+    "POWER_PRECISION_GRID.csv",
+    "SPARK2_ENGINE_QUALIFICATION.json"
+  ],
+  "reason": "N=150/R=4 meets the predeclared approximately-80-percent planning target at the full historical Qwen effect while materially improving weekend feasibility; N=200 improves lower-transfer sensitivity but extends the observed-throughput projection beyond a conventional weekend.",
+  "rollouts": 4,
+  "scientific_semantics_changed_after_outcomes": false,
+  "stage_b_conditions": 11,
+  "stage_b_logical_rows": 6600
+}

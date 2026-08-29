@@ -52,7 +52,7 @@ def test_question_group_split_and_schedules_are_deterministic() -> None:
         items.append(item)
         source_index += 1
     stage_a, stage_b, reserve = q1s.split_items(items)
-    assert (len(stage_a), len(stage_b), len(reserve)) == (50, 200, 50)
+    assert (len(stage_a), len(stage_b), len(reserve)) == (50, 150, 100)
     assert not ({item.question_id for item in stage_a} & {item.question_id for item in stage_b})
     schedule_a = q1s.build_schedule(
         stage_a,
@@ -67,8 +67,8 @@ def test_question_group_split_and_schedules_are_deterministic() -> None:
         rollouts=q1s.STAGE_B_ROLLOUTS,
     )
     assert len(schedule_a) == 200
-    assert len(schedule_b) == 8800
-    assert len({row["seed"] for row in schedule_a + schedule_b}) == 9000
+    assert len(schedule_b) == 6600
+    assert len({row["seed"] for row in schedule_a + schedule_b}) == 6800
     assert q1s.split_items(items) == (stage_a, stage_b, reserve)
 
 

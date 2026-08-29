@@ -1,0 +1,110 @@
+{
+  "checks": {
+    "alpha_zero_token_identity": true,
+    "cached_decode_observed": true,
+    "current_token_noncurrent_change_le_0.125": true,
+    "environment_exact": true,
+    "hook_cleanup": true,
+    "journal_resume_synthetic": true,
+    "model_and_tokenizer_identity": true,
+    "one_application_per_forward": true,
+    "parser_roundtrip": true,
+    "per_forward_exact_shift_bf16_eps_le_2": true,
+    "random_delta_norm_range_le_1e-9": true,
+    "seed_repeatability": true,
+    "vector_identity": true
+  },
+  "classification": "SPARK2_NATIVE_ENGINE_QUALIFIED",
+  "correctness_inspected": false,
+  "environment": {
+    "architecture": "aarch64",
+    "attention": "SDPA",
+    "cuda": "13.0",
+    "dtype": "BF16",
+    "gpu": "NVIDIA GB10",
+    "gpu_count": 1,
+    "hostname": "spark2",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "python": "3.12.3",
+    "torch": "2.13.0+cu130",
+    "torch_disable_native_jit": "1",
+    "transformers": "4.57.6"
+  },
+  "exercised_conditions": [
+    "MEANINGFUL_FIXED_QWEN_L27_D75",
+    "RANDOM_R0",
+    "RANDOM_R1",
+    "RANDOM_R2",
+    "RANDOM_R3",
+    "RANDOM_R4",
+    "RANDOM_R5",
+    "RANDOM_R6",
+    "RANDOM_R7"
+  ],
+  "fixtures": 8,
+  "max_noncurrent_change": 0.0,
+  "max_relative_shift_error_bf16_eps": 0.5,
+  "pass": true,
+  "process_id": 730652,
+  "raw_generated_text_persisted": false,
+  "scientific_benchmark_items": 0,
+  "scientific_benchmark_outcomes": 0,
+  "scientific_environment_fingerprint": "306d65af9643cc1144d344ae57141ac96ffbbcf70520f67e9276a907d29660bc",
+  "source_commit": "8300ce388cf2777790da683f52fa307b4c860f5f",
+  "synthetic_generated_tokens": 177,
+  "synthetic_generation_fixtures": 3,
+  "synthetic_generation_seconds": 15.353955784987193,
+  "synthetic_tokens_per_second": 11.527973798978062,
+  "tokenization": [
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_00",
+      "prompt_tokens": 23,
+      "rendered_prompt_hash": "1723108898abfc0a0d01713326d0dc5c47114cfd8ff7f1a16705cfd3b8e40888",
+      "rendered_prompt_sha256": "dc660e946628b6d77f9c7b521a751df24e16cbbba6a19fb01aa697768c98177d"
+    },
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_01",
+      "prompt_tokens": 22,
+      "rendered_prompt_hash": "d3688cf8fc453e04298f72c4aee03048d73e6d536167b06be1bd58b9e2e8d1c2",
+      "rendered_prompt_sha256": "c05e83adc90e1edd8653ba2219eecfff5c9c74d867e6ba2b15df03fad7b15f36"
+    },
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_02",
+      "prompt_tokens": 34,
+      "rendered_prompt_hash": "25f5b2538ef111f885d9c921c0c5bec095a16597fb6e009af872a5dfe21411eb",
+      "rendered_prompt_sha256": "581f79a091631505c4bef2e6fd38cd00b6ffee14199d52448a9d6e17784d8852"
+    },
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_03",
+      "prompt_tokens": 25,
+      "rendered_prompt_hash": "aeca52daa8217d1dd8412410f80d99a91610674307656d6ed00467d02232da81",
+      "rendered_prompt_sha256": "6667e5372cbe143c01b962f332ffa27a735b84c0f2b092f294e696e63dda863f"
+    },
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_04",
+      "prompt_tokens": 27,
+      "rendered_prompt_hash": "a2912b1027214b3d8488bad9609e00ec56ba45bfb0d75fd5bc77b5bedcef204f",
+      "rendered_prompt_sha256": "13bc5c817dc96bef03ab0ad5617c4ddfebcbcb2b6418b4f0aee531eba3f63b17"
+    },
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_05",
+      "prompt_tokens": 31,
+      "rendered_prompt_hash": "66a35ad1c863f6e04c878997cb9190b7a828adc811abc35d6617c641830cce03",
+      "rendered_prompt_sha256": "7a634f5566f74d82830b5c3ca1036956f0dfc8d0b01ea5344ec8371ffffec7ff"
+    },
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_06",
+      "prompt_tokens": 29,
+      "rendered_prompt_hash": "336304a2663bd5b2d3dfa16b12e1505ace09dda11ec3520aebe1797dd9c0f39b",
+      "rendered_prompt_sha256": "f4dc62c6f3c77e37719561d4dd4911973c2548d12629738bff85c14a4a406f5e"
+    },
+    {
+      "fixture_id": "SYNTHETIC_ENGINE_07",
+      "prompt_tokens": 25,
+      "rendered_prompt_hash": "27da9c8270d840e3e1c74e17d20b59f636b778bdfe90f4899ced2ade08a0e5fa",
+      "rendered_prompt_sha256": "13ae81d87e28214fac1d7762f6e9dcbbcc4674728514940088019c881cb94969"
+    }
+  ],
+  "trace_application_count": 73,
+  "trace_forward_count": 73
+}
