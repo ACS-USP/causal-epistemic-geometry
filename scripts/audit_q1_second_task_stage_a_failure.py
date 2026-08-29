@@ -236,7 +236,12 @@ def condition_summary(rows: list[dict[str, Any]], condition: str) -> dict[str, A
             row["candidate_parser_a2_eligible"] for row in invalid
         ),
         "semantically_ambiguous_invalid": sum(
-            row["failure_category"] in {"AMBIGUOUS_OUTPUT", "REFERENCE_OR_PROMPT_AMBIGUITY"}
+            row["failure_category"]
+            in {
+                "AMBIGUOUS_OUTPUT",
+                "MULTIPLE_CONTRADICTORY_COMMITMENTS",
+                "REFERENCE_OR_PROMPT_AMBIGUITY",
+            }
             for row in invalid
         ),
         "unrecoverable_invalid": sum(

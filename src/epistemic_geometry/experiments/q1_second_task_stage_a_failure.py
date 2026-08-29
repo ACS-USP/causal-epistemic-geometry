@@ -11,10 +11,14 @@ import json
 import re
 from collections.abc import Sequence
 from dataclasses import dataclass
+from typing import Any
 
 from epistemic_geometry.benchmarks.external.base import _visible_text
 from epistemic_geometry.benchmarks.external.semantic_v3 import _marker
-from epistemic_geometry.experiments.q1_second_task import parse_safe_literal
+from epistemic_geometry.experiments.q1_second_task import (
+    evaluate_livecodebench_output,
+    parse_safe_literal,
+)
 
 TAXONOMY = (
     "VALID_AS_FROZEN",
@@ -363,12 +367,67 @@ def terminal_contract_repair_candidate(
     return None
 
 
+def evaluate_livecodebench_output_stage_a2(
+    raw_output: str,
+    reference_json: str,
+    token_ids: Sequence[int],
+    *,
+    truncated: bool = False,
+    runtime_error: bool = False,
+) -> dict[str, Any]:
+    """Prospective Stage-A2 evaluator with the locked parser-only extension."""
+
+    frozen = evaluate_livecodebench_output(
+        raw_output,
+        reference_json,
+        truncated=truncated,
+        runtime_error=runtime_error,
+    )
+    base = {
+        **frozen,
+        "parser_repair_applied": False,
+        "parser_repair": None,
+        "frozen_status_before_repair": frozen["status"],
+    }
+    if runtime_error or frozen["semantic_evaluable"]:
+        return base
+    expected = parse_safe_literal(reference_json)
+    expected_type = str(expected[0])
+    classification = classify_output(
+        raw_output,
+        token_ids,
+        truncated=truncated,
+        frozen_commitment_valid=bool(frozen["commitment_valid"]),
+        frozen_evaluable=bool(frozen["semantic_evaluable"]),
+        frozen_value_type=None,
+        expected_type=expected_type,
+    )
+    candidate = terminal_contract_repair_candidate(classification)
+    if candidate is None:
+        return base
+    correct = candidate.canonical_json == json.dumps(
+        expected, ensure_ascii=False, separators=(",", ":")
+    )
+    return {
+        "status": "VALID_CORRECT" if correct else "VALID_WRONG",
+        "commitment_valid": True,
+        "semantic_evaluable": True,
+        "correct": correct,
+        "canonical_value": candidate.canonical_json,
+        "failure_reason": None,
+        "parser_repair_applied": True,
+        "parser_repair": "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1",
+        "frozen_status_before_repair": frozen["status"],
+    }
+
+
 __all__ = [
     "AuditClassification",
     "LiteralCandidate",
     "TAXONOMY",
     "classify_output",
     "conservative_repair_candidate",
+    "evaluate_livecodebench_output_stage_a2",
     "mechanical_repetition",
     "terminal_contract_repair_candidate",
     "unfinished_reasoning",

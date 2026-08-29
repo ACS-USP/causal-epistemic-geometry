@@ -1,0 +1,131 @@
+{
+  "conditions": {
+    "BASELINE": {
+      "candidate_parser_a": {
+        "accuracy": 0.609375,
+        "commitment_valid": 53,
+        "commitment_validity": 0.828125,
+        "correct": 39,
+        "crosses_commitment_threshold_0_95": false,
+        "crosses_evaluability_threshold_0_95": false,
+        "semantic_evaluability": 0.8125,
+        "semantic_evaluable": 52
+      },
+      "candidate_parser_a2": {
+        "accuracy": 0.71875,
+        "commitment_valid": 63,
+        "commitment_validity": 0.984375,
+        "correct": 46,
+        "crosses_commitment_threshold_0_95": true,
+        "crosses_evaluability_threshold_0_95": true,
+        "semantic_evaluability": 0.984375,
+        "semantic_evaluable": 63
+      },
+      "candidate_parser_a2_eligible_invalid": 11,
+      "candidate_parser_a_eligible_invalid": 0,
+      "correct_as_frozen": 39,
+      "evaluable_as_frozen": 52,
+      "failure_categories": {
+        "AMBIGUOUS_OUTPUT": 0,
+        "FINAL_MARKER_CASE_OR_WHITESPACE_VARIANT": 0,
+        "MALFORMED_PYTHON_OR_JSON_LITERAL": 0,
+        "MECHANICAL_REPETITION": 0,
+        "MISSING_FINAL_MARKER_UNIQUE_LITERAL_PRESENT": 0,
+        "MULTIPLE_CONTRADICTORY_COMMITMENTS": 1,
+        "MULTIPLE_IDENTICAL_COMMITMENTS": 0,
+        "NO_RECOVERABLE_LITERAL": 0,
+        "OTHER": 11,
+        "REFERENCE_OR_PROMPT_AMBIGUITY": 0,
+        "TRUNCATED_GENERATION": 0,
+        "TYPE_MISMATCH": 0,
+        "UNFINISHED_REASONING": 0,
+        "UNIQUE_LITERAL_IN_CODE_BLOCK": 0,
+        "UNIQUE_LITERAL_WITH_TRAILING_PROSE": 0,
+        "VALID_AS_FROZEN": 52
+      },
+      "historical": {
+        "accuracy": 0.609375,
+        "commitment_valid": 53,
+        "commitment_validity": 0.828125,
+        "correct": 39,
+        "semantic_evaluability": 0.8125,
+        "semantic_evaluable": 52
+      },
+      "invalid_or_nonevaluable": 12,
+      "mechanical_repetition": 0,
+      "rows": 64,
+      "semantically_ambiguous_invalid": 1,
+      "token_cap": 0,
+      "unique_mechanically_recoverable_invalid": 11,
+      "unrecoverable_invalid": 1,
+      "valid_as_frozen": 53
+    },
+    "TEXTUAL_CAREFUL": {
+      "candidate_parser_a": {
+        "accuracy": 0.78125,
+        "commitment_valid": 62,
+        "commitment_validity": 0.96875,
+        "correct": 50,
+        "crosses_commitment_threshold_0_95": true,
+        "crosses_evaluability_threshold_0_95": true,
+        "semantic_evaluability": 0.953125,
+        "semantic_evaluable": 61
+      },
+      "candidate_parser_a2": {
+        "accuracy": 0.828125,
+        "commitment_valid": 64,
+        "commitment_validity": 1.0,
+        "correct": 53,
+        "crosses_commitment_threshold_0_95": true,
+        "crosses_evaluability_threshold_0_95": true,
+        "semantic_evaluability": 1.0,
+        "semantic_evaluable": 64
+      },
+      "candidate_parser_a2_eligible_invalid": 3,
+      "candidate_parser_a_eligible_invalid": 0,
+      "correct_as_frozen": 50,
+      "evaluable_as_frozen": 61,
+      "failure_categories": {
+        "AMBIGUOUS_OUTPUT": 0,
+        "FINAL_MARKER_CASE_OR_WHITESPACE_VARIANT": 0,
+        "MALFORMED_PYTHON_OR_JSON_LITERAL": 0,
+        "MECHANICAL_REPETITION": 0,
+        "MISSING_FINAL_MARKER_UNIQUE_LITERAL_PRESENT": 0,
+        "MULTIPLE_CONTRADICTORY_COMMITMENTS": 0,
+        "MULTIPLE_IDENTICAL_COMMITMENTS": 0,
+        "NO_RECOVERABLE_LITERAL": 0,
+        "OTHER": 3,
+        "REFERENCE_OR_PROMPT_AMBIGUITY": 0,
+        "TRUNCATED_GENERATION": 0,
+        "TYPE_MISMATCH": 0,
+        "UNFINISHED_REASONING": 0,
+        "UNIQUE_LITERAL_IN_CODE_BLOCK": 0,
+        "UNIQUE_LITERAL_WITH_TRAILING_PROSE": 0,
+        "VALID_AS_FROZEN": 61
+      },
+      "historical": {
+        "accuracy": 0.78125,
+        "commitment_valid": 62,
+        "commitment_validity": 0.96875,
+        "correct": 50,
+        "semantic_evaluability": 0.953125,
+        "semantic_evaluable": 61
+      },
+      "invalid_or_nonevaluable": 3,
+      "mechanical_repetition": 0,
+      "rows": 64,
+      "semantically_ambiguous_invalid": 0,
+      "token_cap": 0,
+      "unique_mechanically_recoverable_invalid": 3,
+      "unrecoverable_invalid": 0,
+      "valid_as_frozen": 62
+    }
+  },
+  "historical_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "historical_classification_modified": false,
+  "journal_sha256": "5b0fec6960ac414f56995d91a43c3b41c49a06b5fb868156a8e24d037b9281b1",
+  "private_row_audit_sha256": "c4f28b6f42f7621b536eb55fd92857d06f2364f8722988ae6359d3f3a8893458",
+  "raw_outputs_committed": false,
+  "schema_version": 1,
+  "status": "POST_HOC_DIAGNOSTIC_NOT_STAGE_A1_RECLASSIFICATION"
+}

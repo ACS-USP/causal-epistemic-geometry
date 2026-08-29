@@ -1,0 +1,40 @@
+{
+  "classification": "Q1_SECOND_TASK_STAGE_A_FAILURE_AUDIT_FORENSIC_CLEAN",
+  "conditions": {
+    "BASELINE": {
+      "frozen": {
+        "commitment_valid": 53,
+        "correct": 39,
+        "semantic_evaluable": 52
+      },
+      "repair_eligible_invalid": 11,
+      "repaired": {
+        "commitment_valid": 63,
+        "correct": 46,
+        "semantic_evaluable": 63
+      },
+      "rows": 64
+    },
+    "TEXTUAL_CAREFUL": {
+      "frozen": {
+        "commitment_valid": 62,
+        "correct": 50,
+        "semantic_evaluable": 61
+      },
+      "repair_eligible_invalid": 3,
+      "repaired": {
+        "commitment_valid": 64,
+        "correct": 53,
+        "semantic_evaluable": 64
+      },
+      "rows": 64
+    }
+  },
+  "historical_stage_a1_classification_modified": false,
+  "journal_sha256": "5b0fec6960ac414f56995d91a43c3b41c49a06b5fb868156a8e24d037b9281b1",
+  "new_model_inference": 0,
+  "primary_row_field_discrepancies": 0,
+  "q2_outputs_inspected": false,
+  "raw_output_reproduced_in_artifact": false,
+  "rows": 128
+}

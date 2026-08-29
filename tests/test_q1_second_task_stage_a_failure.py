@@ -5,6 +5,7 @@ import pytest
 from epistemic_geometry.experiments.q1_second_task_stage_a_failure import (
     classify_output,
     conservative_repair_candidate,
+    evaluate_livecodebench_output_stage_a2,
     mechanical_repetition,
     terminal_contract_repair_candidate,
 )
@@ -116,6 +117,26 @@ def test_terminal_contract_repair_fails_closed_on_competing_or_nonterminal_value
 ) -> None:
     result = classify(raw)
     assert terminal_contract_repair_candidate(result) is None
+
+
+def test_stage_a2_evaluator_recovers_terminal_literal_without_changing_exact_scoring() -> None:
+    raw = "## Final Answer:\n```python\nprint('solution')\n```\nFINAL: 7"
+    correct = evaluate_livecodebench_output_stage_a2(raw, "7", list(range(50)))
+    wrong = evaluate_livecodebench_output_stage_a2(raw, "8", list(range(50)))
+    assert correct["semantic_evaluable"] and correct["correct"]
+    assert correct["parser_repair_applied"]
+    assert wrong["semantic_evaluable"] and not wrong["correct"]
+
+
+def test_stage_a2_evaluator_preserves_ambiguity_and_existing_valid_rows() -> None:
+    ambiguous = evaluate_livecodebench_output_stage_a2(
+        "## Final Answer:\n8\nFINAL: 7", "7", list(range(50))
+    )
+    existing = evaluate_livecodebench_output_stage_a2("FINAL: 7", "7", list(range(50)))
+    assert not ambiguous["semantic_evaluable"]
+    assert not ambiguous["parser_repair_applied"]
+    assert existing["semantic_evaluable"] and existing["correct"]
+    assert not existing["parser_repair_applied"]
 
 
 @pytest.mark.parametrize(

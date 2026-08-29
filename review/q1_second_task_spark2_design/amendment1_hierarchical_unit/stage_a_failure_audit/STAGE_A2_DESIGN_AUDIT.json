@@ -1,0 +1,17 @@
+{
+  "activation_conditions_present": false,
+  "all_twenty_reserve_families_used": true,
+  "classification": "Q1_SECOND_TASK_STAGE_A2_DESIGN_INTEGRITY_PASS",
+  "logical_keys_unique": true,
+  "manifest_rows": 20,
+  "new_model_inference": 0,
+  "q2_outputs_inspected": false,
+  "schedule_rows": 80,
+  "seeds_disjoint_from_stage_a1_and_stage_b": true,
+  "seeds_unique": true,
+  "stage_a1_family_overlap": 0,
+  "stage_a2_outcomes": 0,
+  "stage_b_family_overlap": 0,
+  "stage_b_manifest_unchanged_sha256": "56ed32a378bd0a1ee4cfb81c6e3bb4755098014fef6bba5bfbc9730080900605",
+  "stage_b_schedule_unchanged_sha256": "6c1b6437d4df8116ebfbd26ee7fcaefd7abc3066d57bec2b6a4755ffa407fd03"
+}

@@ -1,0 +1,52 @@
+{
+  "condition_symmetric": true,
+  "conditions": {
+    "BASELINE": {
+      "candidate_parser_a2": {
+        "accuracy": 0.71875,
+        "commitment_valid": 63,
+        "commitment_validity": 0.984375,
+        "correct": 46,
+        "crosses_commitment_threshold_0_95": true,
+        "crosses_evaluability_threshold_0_95": true,
+        "semantic_evaluability": 0.984375,
+        "semantic_evaluable": 63
+      },
+      "historical": {
+        "accuracy": 0.609375,
+        "commitment_valid": 53,
+        "commitment_validity": 0.828125,
+        "correct": 39,
+        "semantic_evaluability": 0.8125,
+        "semantic_evaluable": 52
+      }
+    },
+    "TEXTUAL_CAREFUL": {
+      "candidate_parser_a2": {
+        "accuracy": 0.828125,
+        "commitment_valid": 64,
+        "commitment_validity": 1.0,
+        "correct": 53,
+        "crosses_commitment_threshold_0_95": true,
+        "crosses_evaluability_threshold_0_95": true,
+        "semantic_evaluability": 1.0,
+        "semantic_evaluable": 64
+      },
+      "historical": {
+        "accuracy": 0.78125,
+        "commitment_valid": 62,
+        "commitment_validity": 0.96875,
+        "correct": 50,
+        "semantic_evaluability": 0.953125,
+        "semantic_evaluable": 61
+      }
+    }
+  },
+  "distinct_competing_typed_literals_fail_closed": true,
+  "fuzzy_or_semantic_matching": false,
+  "historical_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "historical_classification_modified": false,
+  "repair": "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1",
+  "selection_used_correctness": false,
+  "status": "POST_HOC_DIAGNOSTIC_NOT_STAGE_A1_RECLASSIFICATION"
+}
