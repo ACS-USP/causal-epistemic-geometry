@@ -175,7 +175,12 @@ def reconstruct_items(
     for family in manifest["ordered_families"]:
         expected = family["selected_item"]
         item = all_items[expected["item_id"]]
-        if item.public_manifest_record() != expected or item.question_id != family["family_id"]:
+        actual = item.public_manifest_record()
+        if (
+            actual["item_id"] != expected["item_id"]
+            or actual["item_sha256"] != expected["item_sha256"]
+            or item.question_id != family["family_id"]
+        ):
             raise RuntimeError("selected benchmark row differs from frozen Stage-A2 manifest")
         selected[item.item_id] = item
     if len(selected) != 20:
