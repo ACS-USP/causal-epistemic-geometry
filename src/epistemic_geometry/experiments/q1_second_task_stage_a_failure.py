@@ -13,6 +13,7 @@ from collections.abc import Sequence
 from dataclasses import dataclass
 
 from epistemic_geometry.benchmarks.external.base import _visible_text
+from epistemic_geometry.benchmarks.external.semantic_v3 import _marker
 from epistemic_geometry.experiments.q1_second_task import parse_safe_literal
 
 TAXONOMY = (
@@ -188,6 +189,51 @@ def _typed_category(
     return otherwise if candidate.value_type == expected_type else "TYPE_MISMATCH"
 
 
+def _terminal_after_nonliteral_headings(
+    visible: str, expected_type: str
+) -> LiteralCandidate | None:
+    """Recover one terminal typed FINAL after only empty final-style headings.
+
+    This is the post-diagnosis candidate repair.  It fails closed if another
+    distinct standalone/fenced typed literal or another inline commitment is
+    visible anywhere in the response.
+    """
+
+    lines = visible.splitlines()
+    markers = [
+        (index, marker)
+        for index, line in enumerate(lines)
+        if (marker := _marker(line)) is not None
+    ]
+    if len(markers) < 2:
+        return None
+    nonempty_indices = [index for index, line in enumerate(lines) if line.strip()]
+    if not nonempty_indices:
+        return None
+    terminal_index, terminal_marker = markers[-1]
+    terminal_kind, terminal_payload, terminal_closer = terminal_marker
+    if (
+        terminal_index != nonempty_indices[-1]
+        or terminal_kind != "FINAL"
+        or terminal_closer is not None
+        or not terminal_payload.strip()
+    ):
+        return None
+    terminal = _candidate(
+        terminal_payload, "TERMINAL_FINAL_AFTER_NONLITERAL_FINAL_HEADINGS"
+    )
+    if terminal is None or terminal.value_type != expected_type:
+        return None
+    for _index, marker in markers[:-1]:
+        kind, payload, _closer = marker
+        if kind not in {"FINAL_ANSWER", "FINAL_SECTION"} or payload.strip():
+            return None
+    outside = [*_fenced_candidates(visible), *_standalone_candidates(visible)]
+    if any(value.canonical_json != terminal.canonical_json for value in outside):
+        return None
+    return terminal
+
+
 def classify_output(
     raw: str,
     token_ids: Sequence[int],
@@ -212,6 +258,9 @@ def classify_output(
         return AuditClassification("UNFINISHED_REASONING", False, None, False, repeated, True)
     final_values, marker_count, malformed, has_trailing_lines = _final_candidates(visible)
     if marker_count > 1:
+        terminal = _terminal_after_nonliteral_headings(visible, expected_type)
+        if terminal is not None:
+            return AuditClassification("OTHER", True, terminal, False, repeated, unfinished)
         unique = _unique(final_values)
         if not malformed and unique is not None:
             return AuditClassification(
@@ -223,7 +272,7 @@ def classify_output(
                 unfinished,
             )
         return AuditClassification(
-            "MULTIPLE_CONTRADICTORY_COMMITMENTS", False, None, False, repeated, unfinished
+            "MULTIPLE_CONTRADICTORY_COMMITMENTS", False, None, True, repeated, unfinished
         )
     if marker_count == 1:
         unique = _unique(final_values)
@@ -278,7 +327,7 @@ def classify_output(
             unfinished,
         )
     if len({value.canonical_json for value in all_values}) > 1:
-        return AuditClassification("AMBIGUOUS_OUTPUT", False, None, False, repeated, unfinished)
+        return AuditClassification("AMBIGUOUS_OUTPUT", False, None, True, repeated, unfinished)
     if unfinished:
         return AuditClassification("UNFINISHED_REASONING", False, None, False, repeated, True)
     return AuditClassification("NO_RECOVERABLE_LITERAL", False, None, False, repeated, unfinished)
@@ -296,6 +345,24 @@ def conservative_repair_candidate(classification: AuditClassification) -> Litera
     return classification.candidate if classification.category in allowed else None
 
 
+def terminal_contract_repair_candidate(
+    classification: AuditClassification,
+) -> LiteralCandidate | None:
+    """Post-diagnosis Repair A2, additive to the original conservative repair."""
+
+    original = conservative_repair_candidate(classification)
+    if original is not None:
+        return original
+    candidate = classification.candidate
+    if (
+        classification.category == "OTHER"
+        and candidate is not None
+        and candidate.source == "TERMINAL_FINAL_AFTER_NONLITERAL_FINAL_HEADINGS"
+    ):
+        return candidate
+    return None
+
+
 __all__ = [
     "AuditClassification",
     "LiteralCandidate",
@@ -303,5 +370,6 @@ __all__ = [
     "classify_output",
     "conservative_repair_candidate",
     "mechanical_repetition",
+    "terminal_contract_repair_candidate",
     "unfinished_reasoning",
 ]

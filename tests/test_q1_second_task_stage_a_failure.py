@@ -6,6 +6,7 @@ from epistemic_geometry.experiments.q1_second_task_stage_a_failure import (
     classify_output,
     conservative_repair_candidate,
     mechanical_repetition,
+    terminal_contract_repair_candidate,
 )
 
 
@@ -82,6 +83,39 @@ def test_identical_multiple_finals_are_recoverable() -> None:
     result = classify("FINAL: 7\nFINAL: 7")
     assert result.category == "MULTIPLE_IDENTICAL_COMMITMENTS"
     assert result.recoverable
+
+
+def test_terminal_contract_repair_accepts_unique_typed_terminal_after_empty_heading() -> None:
+    raw = "## Final Answer:\n```python\nprint('solution')\n```\nFINAL: 7"
+    result = classify(raw)
+    assert result.category == "OTHER"
+    assert result.candidate is not None
+    assert result.candidate.source == "TERMINAL_FINAL_AFTER_NONLITERAL_FINAL_HEADINGS"
+    assert conservative_repair_candidate(result) is None
+    assert terminal_contract_repair_candidate(result) is not None
+
+
+def test_terminal_contract_repair_accepts_multiple_empty_headings_only() -> None:
+    raw = "## Final Answer:\nprose\n## Final:\nmore prose\nFINAL: 7"
+    result = classify(raw)
+    assert terminal_contract_repair_candidate(result) is not None
+
+
+@pytest.mark.parametrize(
+    "raw",
+    [
+        "## Final Answer: 8\nFINAL: 7",
+        "## Final Answer:\n8\nFINAL: 7",
+        "## Final Answer:\nFINAL: 7\nmore prose",
+        "## Final Answer:\nFINAL: not_a_literal",
+        "FINAL: 8\nFINAL: 7",
+    ],
+)
+def test_terminal_contract_repair_fails_closed_on_competing_or_nonterminal_values(
+    raw: str,
+) -> None:
+    result = classify(raw)
+    assert terminal_contract_repair_candidate(result) is None
 
 
 @pytest.mark.parametrize(

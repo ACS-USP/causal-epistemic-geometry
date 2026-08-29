@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_AFTER_STRUCTURAL_DIAGNOSIS_BEFORE_DIAGNOSTIC_RESCORE",
+  "historical_stage_a_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "historical_stage_a_classification_mutable": false,
+  "selected_candidate_repair_class": "REPAIR_A_CONDITION_SYMMETRIC_PARSER_EXTENSION",
+  "selected_candidate_repair": "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1",
+  "mechanical_rule": {
+    "visible_text_policy": "canonical closed-thinking-block removal",
+    "terminal_requirement": "last nonempty visible line is exactly one inline FINAL marker carrying one supported typed Python/JSON literal",
+    "earlier_marker_requirement": "all earlier final-style markers are empty FINAL_ANSWER or heading-derived FINAL_SECTION markers",
+    "competing_literal_rule": "reject if any distinct supported standalone or fenced typed literal is visible",
+    "competing_inline_commitment_rule": "reject",
+    "expected_type_rule": "terminal candidate type must equal the benchmark reference type",
+    "correctness_used_to_extract_or_select": false,
+    "condition_identity_used": false,
+    "item_specific_exceptions": false,
+    "llm_judge": false,
+    "fuzzy_matching": false,
+    "typed_exact_comparison_preserved": true
+  },
+  "selection_basis": {
+    "structural_failure_pattern": "an earlier empty nonliteral final-style heading followed by one terminal exact typed FINAL commitment",
+    "candidate_correctness_used": false,
+    "selection_priority": [
+      "mechanical_validity",
+      "condition_symmetry",
+      "absence_of_semantic_judgment",
+      "minimal_scope",
+      "adversarial_robustness",
+      "fresh_data_testability"
+    ]
+  },
+  "prompt_repair_b_selected": false,
+  "combined_repair_c_selected": false,
+  "implementation": {
+    "path": "src/epistemic_geometry/experiments/q1_second_task_stage_a_failure.py",
+    "sha256": "995acce160ca214ce3f73b8c9acc6e6d1aa796d45dc75d2d2b562f325d06d28d",
+    "test_path": "tests/test_q1_second_task_stage_a_failure.py",
+    "test_sha256": "50a6c13ac13d0ac3f800b9304183c92bed35f798f7568cd6e44d5e46a0fc9148",
+    "adversarial_tests_passed": 35,
+    "audit_script_path": "scripts/audit_q1_second_task_stage_a_failure.py",
+    "audit_script_sha256": "95bd443def36cd1b0e96297111b48d2a68589942accd017aaaef74caa71a25e1"
+  },
+  "posthoc_rescore_label": "POST_HOC_DIAGNOSTIC_NOT_STAGE_A1_RECLASSIFICATION",
+  "new_model_inference": 0,
+  "fresh_family_correctness_inspected": false,
+  "stage_b_status": "NOT_AUTHORIZED_NOT_OPENED",
+  "q2_outputs_inspected": false
+}

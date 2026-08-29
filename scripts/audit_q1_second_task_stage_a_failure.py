@@ -25,6 +25,7 @@ from epistemic_geometry.experiments.q1_second_task_stage_a_failure import (  # n
     TAXONOMY,
     classify_output,
     conservative_repair_candidate,
+    terminal_contract_repair_candidate,
 )
 
 EXPECTED_JOURNAL_SHA256 = "5b0fec6960ac414f56995d91a43c3b41c49a06b5fb868156a8e24d037b9281b1"
@@ -113,6 +114,7 @@ def score_and_classify(row: dict[str, Any]) -> tuple[dict[str, Any], dict[str, A
         candidate is not None and candidate.canonical_json == canonical_json(expected)
     )
     repair = conservative_repair_candidate(classification)
+    repair_a2 = terminal_contract_repair_candidate(classification)
     if scored["semantic_evaluable"]:
         repaired_commitment = bool(scored["commitment_valid"])
         repaired_evaluable = True
@@ -125,6 +127,18 @@ def score_and_classify(row: dict[str, Any]) -> tuple[dict[str, Any], dict[str, A
         repaired_commitment = bool(scored["commitment_valid"])
         repaired_evaluable = False
         repaired_correct = False
+    if scored["semantic_evaluable"]:
+        repaired_a2_commitment = bool(scored["commitment_valid"])
+        repaired_a2_evaluable = True
+        repaired_a2_correct = bool(scored["correct"])
+    elif repair_a2 is not None:
+        repaired_a2_commitment = True
+        repaired_a2_evaluable = True
+        repaired_a2_correct = repair_a2.canonical_json == canonical_json(expected)
+    else:
+        repaired_a2_commitment = bool(scored["commitment_valid"])
+        repaired_a2_evaluable = False
+        repaired_a2_correct = False
     public_row = {
         "condition": row["condition"],
         "family_id": row["family_id"],
@@ -147,12 +161,19 @@ def score_and_classify(row: dict[str, Any]) -> tuple[dict[str, Any], dict[str, A
         "candidate_matches_reference": candidate_matches_reference,
         "recovery_requires_semantic_judgment": classification.requires_semantic_judgment,
         "failure_category": classification.category,
+        "failure_detail": (
+            classification.candidate.source if classification.category == "OTHER" else None
+        ),
         "mechanically_repetitive": classification.mechanically_repetitive,
         "unfinished_reasoning": classification.unfinished,
         "candidate_parser_a_eligible": repair is not None,
         "candidate_parser_a_commitment_valid": repaired_commitment,
         "candidate_parser_a_semantic_evaluable": repaired_evaluable,
         "candidate_parser_a_correct": repaired_correct,
+        "candidate_parser_a2_eligible": repair_a2 is not None,
+        "candidate_parser_a2_commitment_valid": repaired_a2_commitment,
+        "candidate_parser_a2_semantic_evaluable": repaired_a2_evaluable,
+        "candidate_parser_a2_correct": repaired_a2_correct,
         "raw_output_persisted_only_in_sealed_journal": True,
     }
     private_row = {
@@ -183,6 +204,15 @@ def condition_summary(rows: list[dict[str, Any]], condition: str) -> dict[str, A
         ),
         "correct": sum(row["candidate_parser_a_correct"] for row in selected),
     }
+    repaired_a2 = {
+        "commitment_valid": sum(
+            row["candidate_parser_a2_commitment_valid"] for row in selected
+        ),
+        "semantic_evaluable": sum(
+            row["candidate_parser_a2_semantic_evaluable"] for row in selected
+        ),
+        "correct": sum(row["candidate_parser_a2_correct"] for row in selected),
+    }
     expected = EXPECTED_HISTORICAL[condition]
     if old != expected:
         raise RuntimeError(f"historical metric mismatch for {condition}: {old} != {expected}")
@@ -201,6 +231,9 @@ def condition_summary(rows: list[dict[str, Any]], condition: str) -> dict[str, A
         ),
         "candidate_parser_a_eligible_invalid": sum(
             row["candidate_parser_a_eligible"] for row in invalid
+        ),
+        "candidate_parser_a2_eligible_invalid": sum(
+            row["candidate_parser_a2_eligible"] for row in invalid
         ),
         "semantically_ambiguous_invalid": sum(
             row["failure_category"] in {"AMBIGUOUS_OUTPUT", "REFERENCE_OR_PROMPT_AMBIGUITY"}
@@ -222,6 +255,16 @@ def condition_summary(rows: list[dict[str, Any]], condition: str) -> dict[str, A
             "accuracy": repaired["correct"] / n,
             "crosses_commitment_threshold_0_95": repaired["commitment_valid"] / n >= 0.95,
             "crosses_evaluability_threshold_0_95": repaired["semantic_evaluable"] / n
+            >= 0.95,
+        },
+        "candidate_parser_a2": {
+            **repaired_a2,
+            "commitment_validity": repaired_a2["commitment_valid"] / n,
+            "semantic_evaluability": repaired_a2["semantic_evaluable"] / n,
+            "accuracy": repaired_a2["correct"] / n,
+            "crosses_commitment_threshold_0_95": repaired_a2["commitment_valid"] / n
+            >= 0.95,
+            "crosses_evaluability_threshold_0_95": repaired_a2["semantic_evaluable"] / n
             >= 0.95,
         },
     }
@@ -311,6 +354,26 @@ def main() -> int:
             "private_row_audit_sha256": sha256(
                 args.private_output_dir / "ROW_FAILURE_AUDIT_WITH_RAW.jsonl"
             ),
+        },
+    )
+    write_json(
+        args.public_output_dir / "POSTHOC_PARSER_A2_RESCORE.json",
+        {
+            "status": POSTHOC_LABEL,
+            "repair": "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1",
+            "historical_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+            "historical_classification_modified": False,
+            "conditions": {
+                condition: {
+                    "historical": summary["historical"],
+                    "candidate_parser_a2": summary["candidate_parser_a2"],
+                }
+                for condition, summary in summaries.items()
+            },
+            "selection_used_correctness": False,
+            "condition_symmetric": True,
+            "fuzzy_or_semantic_matching": False,
+            "distinct_competing_typed_literals_fail_closed": True,
         },
     )
     write_json(
