@@ -4,8 +4,12 @@
   "first_attempt_model_loaded": false,
   "first_attempt_scientific_items": 0,
   "first_attempt_synthetic_outputs": 0,
+  "second_attempt_model_loaded": true,
+  "second_attempt_scientific_items": 0,
+  "second_attempt_synthetic_outputs": 0,
   "incident": "The existing HuggingFace execution guard recognized only RunPod and Spark 1 and refused Spark 2 before model loading.",
   "repair": "Add a hostname-, cache-, and experiment-scoped Spark 2 execution profile.",
+  "second_repair": "Use the frozen non-oracle marker SYNTHETIC_NO_ORACLE to satisfy the internal BenchmarkItem nonempty-target invariant.",
   "scientific_semantics_changed": false,
   "scientific_outcomes_exist": false
 }

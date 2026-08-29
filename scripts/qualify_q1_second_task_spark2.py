@@ -125,7 +125,7 @@ def main() -> int:
             benchmark="SYNTHETIC_ENGINEERING",
             subtask="NO_SCIENTIFIC_TASK",
             prompt=fixture["prompt"],
-            reference_answer="",
+            reference_answer="SYNTHETIC_NO_ORACLE",
             evaluator="none",
             source_revision="synthetic-v1",
         )
@@ -154,7 +154,7 @@ def main() -> int:
             benchmark="SYNTHETIC_ENGINEERING",
             subtask="NO_SCIENTIFIC_TASK",
             prompt=fixture["prompt"],
-            reference_answer="",
+            reference_answer="SYNTHETIC_NO_ORACLE",
             evaluator="none",
             source_revision="synthetic-v1",
         )
