@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_PROSPECTIVE_PRE_OUTCOME",
+  "authorization_timestamp_utc": "2026-08-29T18:49:22Z",
+  "authorized": "STAGE_B_ONLY",
+  "stage_b": "AUTHORIZED_NOT_YET_OPENED",
+  "stage_b_scientific_outcomes_before_authorization": 0,
+  "stage_b_correctness_inspected": false,
+  "families": 130,
+  "conditions": 11,
+  "rollouts": 4,
+  "logical_trajectories": 5720,
+  "scientific_unit": "QUESTION_FAMILY",
+  "implementation_commit": "64285e4d6015985936bbb6ba8acb4a5137576579",
+  "implementation_hashes": {
+    "runner": "7c77a0918a7b936b3200578e3431c178ed9208e21f3513610537dbbfaaec1665",
+    "primary_analysis": "0c7ba341a1189d653b1963285dbd45de07270353fceaf7d891c63dbb6833b0e0",
+    "independent_audit": "00fe61f7666bce05a95dfe0693bcce309758c2c24e4392ee20ef4070fc876ca4",
+    "stage_b_contract": "745d074c24bf8577b074e93e12f0734ebdcb11eedbec1eee282e08ec4b7ad4bc",
+    "stage_b_tests": "a00820c699ba5966869cb9324b9b7572ba5398bc5fc5e26a78ed37bd0ab3ec01"
+  },
+  "frozen_hashes": {
+    "stage_b_manifest": "56ed32a378bd0a1ee4cfb81c6e3bb4755098014fef6bba5bfbc9730080900605",
+    "stage_b_schedule": "6c1b6437d4df8116ebfbd26ee7fcaefd7abc3066d57bec2b6a4755ffa407fd03",
+    "controller_lock": "bef49d3e6a7b377b920097c4233aed52ce55d4f2f9b00953c697a94900c6dd93",
+    "null_bank_lock": "e0e923f2f87fa365f535b0038b11b74cf03665a794b821390563de28811b68dd",
+    "parser_addendum": "1caf5c0f5864cf7d0f82a9c4952f3bf47728ce49a57fc9c72fd62db88220ca11",
+    "stage_a2_closeout": "2776d195d117f9bb8d539aa340cd0c69da719e0390b8bdd5ddff6ed24f84089a"
+  },
+  "external_resource_preemption_policy": {
+    "path": "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_preopen/EXTERNAL_RESOURCE_PREEMPTION_POLICY.json",
+    "sha256": "2b6834d90f9c7aec020cb02d634cb969a98d3de9a98b6e8c40778ad9f744e021"
+  },
+  "meaningful_controller": {
+    "model": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "layer": 27,
+    "dose": "D75",
+    "eta": 9.637427952852196,
+    "effective_delta_norm": 97.85168930581241,
+    "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "timing": "SUSTAINED_CURRENT_TOKEN"
+  },
+  "activation_nulls": {
+    "RANDOM_R0": "14068796823e3fe7bff714e4574efb0134a74e0ea5607191f5838fb98e74395b",
+    "RANDOM_R1": "bd035b5be25ec2a56d3d2602b5d7964006896d5f9223fea9734afe5259d49c31",
+    "RANDOM_R2": "783039b801dab9fb595129529e99dd6e35ac12b5dc7cff70f0683f8230a1d4e1",
+    "RANDOM_R3": "52fbae1bc7e0104d9a21b48710ce97b703633837e61235508deb3c10ed0ae5dc",
+    "RANDOM_R4": "fe1d650172ca3a07dcc4e18ef4af6785139bcef9a30a077471bffbbacb4aa5b8",
+    "RANDOM_R5": "85c296a9df4d118151acd1745bb4b7ba5e1a3810d07ced34f5ddcc21cebf60e9",
+    "RANDOM_R6": "49f548d6bcfcc11774df11da5ee7509c3ce12935a384ccb80a48c82b180557fe",
+    "RANDOM_R7": "a2f4c937110e4d925ed588969d01bfa7f0806aa4285c3001e9e9a752ee3686e9"
+  },
+  "parser": "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1",
+  "spark2_environment_fingerprint": "306d65af9643cc1144d344ae57141ac96ffbbcf70520f67e9276a907d29660bc",
+  "stage_a1": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED_PRESERVED",
+  "stage_a2": "Q1_SECOND_TASK_STAGE_A2_QUALIFIED",
+  "stage_a2_forensic": "Q1_SECOND_TASK_STAGE_A2_FORENSIC_CLEAN",
+  "q2_firewall": "ACTIVE",
+  "spark1": "FORBIDDEN",
+  "runpod": "FORBIDDEN",
+  "multi_node": "FORBIDDEN",
+  "merge_to_main": "NOT_AUTHORIZED"
+}
