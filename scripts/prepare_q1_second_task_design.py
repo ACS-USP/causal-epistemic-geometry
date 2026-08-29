@@ -472,6 +472,7 @@ def main() -> int:
             "transformers": "4.57.6",
             "dtype": "BF16",
             "attention": "SDPA",
+            "torch_disable_native_jit": "1",
             "model_revision": q1s.MODEL_REVISION,
         },
         "required_checks": [

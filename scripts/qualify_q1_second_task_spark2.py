@@ -90,6 +90,7 @@ def main() -> int:
         "transformers": transformers.__version__,
         "dtype": "BF16",
         "attention": "SDPA",
+        "torch_disable_native_jit": os.environ.get("TORCH_DISABLE_NATIVE_JIT", "(unset)"),
         "model_revision": q1s.MODEL_REVISION,
     }
     environment_exact = all(environment.get(key) == value for key, value in expected.items())

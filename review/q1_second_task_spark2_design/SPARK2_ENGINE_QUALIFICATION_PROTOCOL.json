@@ -13,6 +13,7 @@
     "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
     "python": "3.12.3",
     "torch": "2.13.0+cu130",
+    "torch_disable_native_jit": "1",
     "transformers": "4.57.6"
   },
   "required_checks": [
