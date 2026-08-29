@@ -2164,3 +2164,64 @@ experiments:
     q3: NOT_RUN
     design_audit: Q2_V3_FOUR_FAMILY_DESIGN_AUDIT_CLEAN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_HIERARCHICAL_AMENDMENT1
+    version: AMENDMENT-1-PREOUTCOME
+    stage: DEVELOPMENT_DESIGN_ONLY
+    question: >-
+      What is the correct independent sampling unit for LiveCodeBench
+      test-output prediction, and can the second-task design be prospectively
+      repaired before any benchmark outcome is opened?
+    instrument: >-
+      CPU-only structural reconstruction of 442 official test-output rows in
+      182 question families, dependence-aware power planning, deterministic
+      one-row-per-family selection, frozen family-disjoint manifests and
+      schedules, and independent outcome-free audit.
+    model_policy: NO_MODEL_CPU_ONLY_HIERARCHICAL_DESIGN_REPAIR
+    status: Q1_SECOND_TASK_HIERARCHICAL_DESIGN_READY_FOR_PRINCIPAL_REVIEW
+    outcome: DESIGN_C_ONE_ROW_PER_FAMILY_SELECTED
+    scientific_interpretation: >-
+      Rows in a question family share the same source program and problem
+      statement and differ only by exact test input/reference. The old Stage-B
+      row bootstrap treated 150 rows from 62 families as independent and is
+      not defensible under positive within-family dependence. Amendment 1
+      freezes one deterministic row for each of 32 Stage-A and 130 Stage-B
+      families, retains 20 reserve families, gives families equal weight, and
+      uses family bootstrap. This is a pre-outcome design repair, not a Q1
+      scientific result.
+    source_branch: research/q1-second-task-spark2-design
+    source_commit: d13e85d70231482c6f2a36613de68be3523eceec
+    parent_design_commit: 03098d80f73b1ee1a4cfb5fb56504c409aad6286
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/Q1_SECOND_TASK_HIERARCHICAL_UNIT_REVIEW.md
+    benchmark_rows: 442
+    question_families: 182
+    old_stage_a_rows: 50
+    old_stage_a_families: 21
+    old_stage_b_rows: 150
+    old_stage_b_families: 62
+    stage_a_families: 32
+    stage_b_families: 130
+    reserve_families: 20
+    stage_a_trajectories: 128
+    stage_b_trajectories: 5720
+    bootstrap_unit: QUESTION_FAMILY
+    estimand_weighting: EQUAL_FAMILY
+    full_transfer_joint_power: 0.81514
+    transfer_75pct_joint_power: 0.55722
+    null_false_positive: 0.00219
+    old_schedules: SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    model_inference: false
+    correctness_inspected: false
+    livecodebench_scientific_outcomes: 0
+    stage_a_authorized: false
+    stage_b_authorized: false
+    spark1_used: false
+    spark2_scientific_inference: false
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    historical_q1: UNCHANGED
+    q3: NOT_RUN
+    design_audit: Q1_SECOND_TASK_HIERARCHICAL_DESIGN_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW

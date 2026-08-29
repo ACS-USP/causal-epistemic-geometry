@@ -1,5 +1,5 @@
 schema_version: 1
-last_verified: "2026-08-26"
+last_verified: "2026-08-29"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
@@ -98,6 +98,45 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_HIERARCHICAL_AMENDMENT1
+    status: Q1_SECOND_TASK_HIERARCHICAL_DESIGN_READY_FOR_PRINCIPAL_REVIEW
+    conclusion: >-
+      A model-free audit found that 442 LiveCodeBench test-output rows are
+      nested in 182 question families sharing the same program and problem
+      statement. The old 150-row Stage-B design contained only 62 families,
+      so its row bootstrap could understate uncertainty. Before any benchmark
+      outcome, Amendment 1 selected one deterministic row per family and froze
+      32 Stage-A, 130 Stage-B, and 20 reserve families. The amended design has
+      5,720 Stage-B trajectories, equal-family weighting, family bootstrap,
+      81.5% planned joint power under full historical-effect transfer, and a
+      clean independent audit. Neither Stage A nor Stage B is authorized.
+    branch: research/q1-second-task-spark2-design
+    source_commit: d13e85d70231482c6f2a36613de68be3523eceec
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/Q1_SECOND_TASK_HIERARCHICAL_UNIT_REVIEW.md
+    parent_design_commit: 03098d80f73b1ee1a4cfb5fb56504c409aad6286
+    benchmark_rows: 442
+    question_families: 182
+    stage_a_families: 32
+    stage_b_families: 130
+    reserve_families: 20
+    stage_a_trajectories: 128
+    stage_b_trajectories: 5720
+    scientific_unit: QUESTION_FAMILY
+    bootstrap_unit: QUESTION_FAMILY
+    model_inference: false
+    correctness_inspected: false
+    livecodebench_scientific_outcomes: 0
+    stage_a_authorized: false
+    stage_b_authorized: false
+    spark1_used: false
+    spark2_scientific_inference: false
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    historical_q1: UNCHANGED
+    q3: NOT_RUN
+    forensic_classification: Q1_SECOND_TASK_HIERARCHICAL_DESIGN_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
     status: Q2_V4_SAFE_BANK_INSUFFICIENT
     conclusion: >-
