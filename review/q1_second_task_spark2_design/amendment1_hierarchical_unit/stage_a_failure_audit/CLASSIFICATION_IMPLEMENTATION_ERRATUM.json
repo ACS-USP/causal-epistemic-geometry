@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "classification": "POSTHOC_AUDIT_IMPLEMENTATION_ERRATUM_NONSIGNIFICANT_TO_HISTORICAL_STAGE_A",
+  "detected_after_first_aggregate_diagnostic": true,
+  "historical_stage_a_result_affected": false,
+  "historical_stage_a_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "historical_stage_a_classification_modified": false,
+  "frozen_taxonomy_changed": false,
+  "candidate_repair_eligibility_changed": false,
+  "defect": "The new audit classifier scanned raw hidden-thinking text, while the frozen external-semantic-v3 parser first removes closed <think> blocks.",
+  "repair": "Apply the canonical _visible_text transformation before classifying commitment presentation forms; classify unclosed thinking as UNFINISHED_REASONING.",
+  "canonical_source": "src/epistemic_geometry/benchmarks/external/base.py::_visible_text",
+  "canonical_consumer": "src/epistemic_geometry/benchmarks/external/semantic_v3.py::extract_final_commitment",
+  "corrected_implementation": {
+    "path": "src/epistemic_geometry/experiments/q1_second_task_stage_a_failure.py",
+    "sha256": "fd180097f3b2f2d84baf5ec9011eb8b324f75af7be54f0cacde3482bcaf53afa",
+    "test_path": "tests/test_q1_second_task_stage_a_failure.py",
+    "test_sha256": "cfeac3eec4b7d7741c21e4a0d4393ef8f68026cb92884b537619a757510e8e6d",
+    "tests_passed": 28,
+    "audit_script_path": "scripts/audit_q1_second_task_stage_a_failure.py",
+    "audit_script_sha256": "d8d0d8f9794db2c410889879f9ecad417b3b5d8c98e71a57ed896c06eb438c0c"
+  },
+  "preliminary_aggregate_status": "DISCARDED_NONCANONICAL_NOT_USED_TO_SELECT_RULES",
+  "preliminary_aggregate_hashes": {
+    "FAILURE_TAXONOMY_SUMMARY.json": "66418a3b7e68cb61ae661b5e750657e27086bcec6549cf49a3d1f964a46e43e8",
+    "POSTHOC_PARSER_A_RESCORE.json": "293bf6523b52791e5d5ce9c79363cd03c66dba7d6db85085aecb2d3875ff906a",
+    "SEMANTIC_ANSWER_CHANNEL_DECOMPOSITION.json": "d48dfb678634be031f0eb73bf9d4c6189091410efcf7565fd135e741a423f31b"
+  },
+  "new_model_inference": 0,
+  "q2_outputs_inspected": false
+}

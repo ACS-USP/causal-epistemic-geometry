@@ -12,6 +12,7 @@ import re
 from collections.abc import Sequence
 from dataclasses import dataclass
 
+from epistemic_geometry.benchmarks.external.base import _visible_text
 from epistemic_geometry.experiments.q1_second_task import parse_safe_literal
 
 TAXONOMY = (
@@ -206,7 +207,10 @@ def classify_output(
     if frozen_evaluable:
         category = "VALID_AS_FROZEN" if frozen_value_type == expected_type else "TYPE_MISMATCH"
         return AuditClassification(category, True, None, False, repeated, unfinished)
-    final_values, marker_count, malformed, has_trailing_lines = _final_candidates(raw)
+    visible, unclosed_thinking = _visible_text(raw)
+    if unclosed_thinking:
+        return AuditClassification("UNFINISHED_REASONING", False, None, False, repeated, True)
+    final_values, marker_count, malformed, has_trailing_lines = _final_candidates(visible)
     if marker_count > 1:
         unique = _unique(final_values)
         if not malformed and unique is not None:
@@ -241,7 +245,7 @@ def classify_output(
                 repeated,
                 unfinished,
             )
-        trailing = _trailing_prose_candidate(raw)
+        trailing = _trailing_prose_candidate(visible)
         if trailing is not None:
             return AuditClassification(
                 _typed_category(trailing, expected_type, "UNIQUE_LITERAL_WITH_TRAILING_PROSE"),
@@ -255,8 +259,8 @@ def classify_output(
             return AuditClassification(
                 "MALFORMED_PYTHON_OR_JSON_LITERAL", False, None, False, repeated, unfinished
             )
-    fenced = _fenced_candidates(raw)
-    standalone = _standalone_candidates(raw)
+    fenced = _fenced_candidates(visible)
+    standalone = _standalone_candidates(visible)
     all_values = [*fenced, *standalone]
     unique_all = _unique(all_values)
     if unique_all is not None:

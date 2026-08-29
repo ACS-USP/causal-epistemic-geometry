@@ -52,6 +52,19 @@ def test_case_and_whitespace_final_variant_is_recoverable() -> None:
     assert result.recoverable
 
 
+def test_hidden_thinking_markers_are_not_counted_as_visible_commitments() -> None:
+    result = classify("<think>\nFINAL: 7\n</think>\nfinal: 8")
+    assert result.category == "FINAL_MARKER_CASE_OR_WHITESPACE_VARIANT"
+    assert result.candidate is not None
+    assert result.candidate.canonical_json == '[\"int\",8]'
+
+
+def test_unclosed_thinking_is_unfinished_not_recoverable() -> None:
+    result = classify("<think>\nFINAL: 7")
+    assert result.category == "UNFINISHED_REASONING"
+    assert conservative_repair_candidate(result) is None
+
+
 def test_unique_code_block_literal_is_recoverable() -> None:
     result = classify("The answer is below.\n```python\n[1, 2]\n```", expected="list")
     assert result.category == "UNIQUE_LITERAL_IN_CODE_BLOCK"
