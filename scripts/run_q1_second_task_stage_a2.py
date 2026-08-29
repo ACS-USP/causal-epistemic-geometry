@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import inspect
 import json
 import os
 import platform
@@ -24,6 +25,9 @@ from run_gate6_2_first_stage_repair import build_backend, model_item  # noqa: E4
 from epistemic_geometry.benchmarks.external.base import ExternalItem  # noqa: E402
 from epistemic_geometry.experiments import q1_second_task as q1s  # noqa: E402
 from epistemic_geometry.experiments import q1_second_task_stage_a2 as stage_a2  # noqa: E402
+from epistemic_geometry.experiments.q1_second_task_stage_a_failure import (  # noqa: E402
+    evaluate_livecodebench_output_stage_a2,
+)
 
 REVIEW = ROOT / "review/q1_second_task_spark2_design/amendment1_hierarchical_unit"
 AUDIT = REVIEW / "stage_a_failure_audit"
@@ -32,7 +36,6 @@ AMENDMENT = AUDIT / "AMENDMENT2_LOCK_DRAFT.json"
 MANIFEST = AUDIT / "STAGE_A2_FAMILY_MANIFEST.json"
 SCHEDULE = AUDIT / "STAGE_A2_SCHEDULE.json"
 PARSER_SOURCE = ROOT / "src/epistemic_geometry/experiments/q1_second_task_stage_a_failure.py"
-EVALUATOR_SOURCE = ROOT / "src/epistemic_geometry/experiments/q1_second_task.py"
 TEST_SOURCE = ROOT / "tests/test_q1_second_task_stage_a_failure.py"
 PARSER_VERSION = "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1"
 
@@ -47,6 +50,10 @@ def sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def source_sha256(value: Any) -> str:
+    return hashlib.sha256(inspect.getsource(value).encode()).hexdigest()
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -111,8 +118,8 @@ def validate_locks() -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, An
     source_hashes = authorization["implementation_hashes"]
     actual_source_hashes = {
         "parser_source": sha256(PARSER_SOURCE),
-        "evaluator_source": sha256(EVALUATOR_SOURCE),
-        "prompt_source": sha256(EVALUATOR_SOURCE),
+        "evaluator_function": source_sha256(evaluate_livecodebench_output_stage_a2),
+        "prompt_builder_function": source_sha256(q1s.build_livecodebench_prompt),
         "adversarial_tests": sha256(TEST_SOURCE),
     }
     if actual_source_hashes != source_hashes:
