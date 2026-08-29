@@ -1,0 +1,48 @@
+{
+  "amendment_hashes_verified": 15,
+  "classification": "Q1_SECOND_TASK_HIERARCHICAL_DESIGN_FORENSIC_CLEAN",
+  "correctness_inspected": false,
+  "cross_stage_unique_seeds": 5848,
+  "family_structure": {
+    "families": 182,
+    "rows": 442,
+    "size_counts": {
+      "2": 105,
+      "3": 76,
+      "4": 1
+    }
+  },
+  "inherited_lock_hashes_verified": 5,
+  "old_artifacts_immutable_and_superseded": true,
+  "partition": {
+    "excluded_sibling_rows": 232,
+    "raw_rows_accounted": 442,
+    "reserve_families": 20,
+    "reserve_raw_rows": 48,
+    "selected_rows": 162,
+    "stage_a_families": 32,
+    "stage_b_families": 130
+  },
+  "power_determinism_crosscheck": true,
+  "q2_outputs_inspected": false,
+  "representative_rule_recomputed_independently": true,
+  "scientific_inference": 0,
+  "spark1_used": false,
+  "spark2_scientific_inference": false,
+  "stage_a_schedule": {
+    "conditions": 2,
+    "duplicate_logical_keys": 0,
+    "duplicate_seeds": 0,
+    "families": 32,
+    "rollouts": 2,
+    "rows": 128
+  },
+  "stage_b_schedule": {
+    "conditions": 11,
+    "duplicate_logical_keys": 0,
+    "duplicate_seeds": 0,
+    "families": 130,
+    "rollouts": 4,
+    "rows": 5720
+  }
+}

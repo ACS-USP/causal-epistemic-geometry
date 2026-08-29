@@ -1,0 +1,33 @@
+{
+  "classification": "QUESTION_FAMILY_IS_PRIMARY_STRUCTURAL_UNIT",
+  "correctness_inspected": false,
+  "families": 182,
+  "family_size_counts": {
+    "2": 105,
+    "3": 76,
+    "4": 1
+  },
+  "family_size_summary": {
+    "max": 4,
+    "mean": 2.4285714285714284,
+    "median": 2.0,
+    "min": 2,
+    "p90": 3.0
+  },
+  "fraction_rows_from_three_or_more_row_families": 0.5248868778280543,
+  "model_inference": false,
+  "rows": 442,
+  "rows_from_three_or_more_row_families": 232,
+  "scientific_interpretation": "Rows within a family share the complete program, statement, function, and latent reasoning structure; they differ by test input and exact output. Positive dependence is structurally plausible, so row-level independence is not justified.",
+  "shared_fields_identical_within_every_family": {
+    "contest_date": true,
+    "contest_id": true,
+    "difficulty": true,
+    "function_name": true,
+    "question_content": true,
+    "question_title": true,
+    "starter_code": true
+  },
+  "test_id_unique_within_every_family": true,
+  "test_input_and_reference_differ_within_every_family": true
+}

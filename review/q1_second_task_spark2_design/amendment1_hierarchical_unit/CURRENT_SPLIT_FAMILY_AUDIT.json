@@ -1,0 +1,148 @@
+{
+  "classification": "CURRENT_ROW_BOOTSTRAP_STRUCTURALLY_ANTI_CONSERVATIVE_IF_RHO_POSITIVE",
+  "ruling": "Family sizes are bounded, so unequal weighting is modest; nevertheless row bootstrap treats shared-program tests as independent and can materially understate uncertainty.",
+  "splits": [
+    {
+      "equal_family_weight": 0.047619047619047616,
+      "families": 21,
+      "family_size_counts": {
+        "2": 13,
+        "3": 8
+      },
+      "family_size_summary": {
+        "max": 3,
+        "mean": 2.380952380952381,
+        "median": 2.0,
+        "min": 2,
+        "p90": 3.0
+      },
+      "maximum_row_level_family_weight": 0.06,
+      "maximum_to_minimum_family_weight_ratio": 1.5,
+      "minimum_row_level_family_weight": 0.04,
+      "row_bootstrap_sensitivity": [
+        {
+          "design_effect": 1.0,
+          "effective_independent_units": 50.0,
+          "rho": 0.0
+        },
+        {
+          "design_effect": 1.37,
+          "effective_independent_units": 36.4963503649635,
+          "rho": 0.25
+        },
+        {
+          "design_effect": 1.74,
+          "effective_independent_units": 28.735632183908045,
+          "rho": 0.5
+        },
+        {
+          "design_effect": 2.11,
+          "effective_independent_units": 23.696682464454977,
+          "rho": 0.75
+        },
+        {
+          "design_effect": 2.48,
+          "effective_independent_units": 20.161290322580644,
+          "rho": 1.0
+        }
+      ],
+      "rows": 50,
+      "split": "STAGE_A"
+    },
+    {
+      "equal_family_weight": 0.016129032258064516,
+      "families": 62,
+      "family_size_counts": {
+        "2": 37,
+        "3": 24,
+        "4": 1
+      },
+      "family_size_summary": {
+        "max": 4,
+        "mean": 2.4193548387096775,
+        "median": 2.0,
+        "min": 2,
+        "p90": 3.0
+      },
+      "maximum_row_level_family_weight": 0.02666666666666667,
+      "maximum_to_minimum_family_weight_ratio": 2.0,
+      "minimum_row_level_family_weight": 0.013333333333333334,
+      "row_bootstrap_sensitivity": [
+        {
+          "design_effect": 1.0,
+          "effective_independent_units": 150.0,
+          "rho": 0.0
+        },
+        {
+          "design_effect": 1.3833333333333333,
+          "effective_independent_units": 108.43373493975903,
+          "rho": 0.25
+        },
+        {
+          "design_effect": 1.7666666666666666,
+          "effective_independent_units": 84.90566037735849,
+          "rho": 0.5
+        },
+        {
+          "design_effect": 2.15,
+          "effective_independent_units": 69.76744186046511,
+          "rho": 0.75
+        },
+        {
+          "design_effect": 2.533333333333333,
+          "effective_independent_units": 59.21052631578948,
+          "rho": 1.0
+        }
+      ],
+      "rows": 150,
+      "split": "STAGE_B"
+    },
+    {
+      "equal_family_weight": 0.010101010101010102,
+      "families": 99,
+      "family_size_counts": {
+        "2": 55,
+        "3": 44
+      },
+      "family_size_summary": {
+        "max": 3,
+        "mean": 2.4444444444444446,
+        "median": 2.0,
+        "min": 2,
+        "p90": 3.0
+      },
+      "maximum_row_level_family_weight": 0.012396694214876033,
+      "maximum_to_minimum_family_weight_ratio": 1.5,
+      "minimum_row_level_family_weight": 0.008264462809917356,
+      "row_bootstrap_sensitivity": [
+        {
+          "design_effect": 1.0,
+          "effective_independent_units": 242.0,
+          "rho": 0.0
+        },
+        {
+          "design_effect": 1.3863636363636365,
+          "effective_independent_units": 174.5573770491803,
+          "rho": 0.25
+        },
+        {
+          "design_effect": 1.772727272727273,
+          "effective_independent_units": 136.5128205128205,
+          "rho": 0.5
+        },
+        {
+          "design_effect": 2.159090909090909,
+          "effective_independent_units": 112.08421052631579,
+          "rho": 0.75
+        },
+        {
+          "design_effect": 2.545454545454546,
+          "effective_independent_units": 95.07142857142856,
+          "rho": 1.0
+        }
+      ],
+      "rows": 242,
+      "split": "RESERVE"
+    }
+  ]
+}

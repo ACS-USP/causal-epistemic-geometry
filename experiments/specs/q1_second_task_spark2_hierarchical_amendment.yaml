@@ -1,0 +1,33 @@
+id: Q1_SECOND_TASK_LIVECODEBENCH_SPARK2_AMENDMENT1
+status: PROSPECTIVE_LOCK_AWAITING_PRINCIPAL_REVIEW
+parent_design: Q1_SECOND_TASK_LIVECODEBENCH_SPARK2
+parent_design_commit: 03098d80f73b1ee1a4cfb5fb56504c409aad6286
+reason: hierarchical dependence discovered during principal design review
+scientific_outcomes_before_amendment: 0
+correctness_inspected: false
+scientific_unit: QUESTION_FAMILY
+weighting: EQUAL_FAMILY
+representative_row_rule: MINIMUM_STABLE_DIGEST_WITHIN_FAMILY
+stage_a:
+  families: 32
+  rows: 32
+  conditions: 2
+  rollouts: 2
+  trajectories: 128
+stage_b:
+  families: 130
+  rows: 130
+  conditions: 11
+  rollouts: 4
+  trajectories: 5720
+reserve:
+  families: 20
+bootstrap:
+  unit: QUESTION_FAMILY
+  resamples: 50000
+controller_and_null_bank: INHERITED_UNCHANGED_FROM_PARENT_LOCKS
+stage_a_authorized: false
+stage_b_authorized: false
+q2_outputs_inspected: false
+spark1_used: false
+spark2_scientific_inference: false

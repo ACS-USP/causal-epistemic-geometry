@@ -1,0 +1,3359 @@
+{
+  "n_families": 130,
+  "n_selected_rows": 130,
+  "ordered_families": [
+    {
+      "all_item_ids": [
+        "3243:0",
+        "3243:1",
+        "3243:2"
+      ],
+      "all_item_sha256": [
+        "02e89911b309d80ba44755da1bf8a2b19aef95111763c286117131423d1fd75d",
+        "3dccc242c7549cc57d830fde9ea6c2f79b1a638cddee8bb063b5666a6d025ca0",
+        "54c067dd4a206de5663b76631adf3a459f75783c40e81ade0a93a2df59ae243e"
+      ],
+      "family_id": "3243",
+      "family_program_sha256": "1d9840c474d0ba0ed238bfbe3bee3b3e276d0d58c899ab32652c4339b98aad2f",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "88b93d3101bedac2469a832b5efb88b13c8103c97de3da8abb53513e8f4b85c4",
+        "difficulty": "hard",
+        "item_id": "3243:1",
+        "item_sha256": "3dccc242c7549cc57d830fde9ea6c2f79b1a638cddee8bb063b5666a6d025ca0",
+        "prompt_sha256": "2f49d0d81590908a2d7c8b1df530c3e8919e1ff7ccfa480c162a7fb3a6370a10",
+        "question_id": "3243",
+        "reference_type": "int",
+        "source_index": 370,
+        "test_id": 1
+      },
+      "selection_digest": "51d3295919e23340cc264eb4f9e413113354d626cb9d895a7300f75d483fc578"
+    },
+    {
+      "all_item_ids": [
+        "3261:0",
+        "3261:1",
+        "3261:2"
+      ],
+      "all_item_sha256": [
+        "5aef1dbb5824fa27547508f4e1e4e85962e472d045eeb42ee1662a7e2bc9152b",
+        "75e19f68e83564cbd1bb4cdb27aae75e04e791dc55d057a02c90206b0b8ff1c2",
+        "4b6443aad282547cd4a74fbf0f5e2f4ac82915dad4c456d3567fac9dd1d8c115"
+      ],
+      "family_id": "3261",
+      "family_program_sha256": "7acceb5ee0f951c16b84f096e80c1d0ea32b3f32b66caa58d0509dfa38451961",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "0a34f602c34f4cfce7c9a430ff9adf486da6fa9c3613a0f6b227f6669c13cc85",
+        "difficulty": "hard",
+        "item_id": "3261:1",
+        "item_sha256": "75e19f68e83564cbd1bb4cdb27aae75e04e791dc55d057a02c90206b0b8ff1c2",
+        "prompt_sha256": "79d27aeaa8b5b1dbfa1305dd0ec5d2022760ff3f66fc1e61954e1722dec9c48b",
+        "question_id": "3261",
+        "reference_type": "int",
+        "source_index": 388,
+        "test_id": 1
+      },
+      "selection_digest": "1a2f01f705e98ae82a24c80e4ff1640a861cdc89c7f8605249913625704030cd"
+    },
+    {
+      "all_item_ids": [
+        "3207:0",
+        "3207:1"
+      ],
+      "all_item_sha256": [
+        "2845960341878e2fce0695661fb5e3c99329c91eedd9162d127aeeb76ed0d066",
+        "9dcc79b6998a0cf307ecee1b2cc4e3109a7c2b89a4ddf333fe96972fa34e68dc"
+      ],
+      "family_id": "3207",
+      "family_program_sha256": "f7f5aea94c2af62089f0cb15718d76d6e443f651617cebed522743bf9dade6f1",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "4b91a32180e65212a33780dc08d6cb4fcf2affa11d3d2552a544e9d9ade1d473",
+        "difficulty": "easy",
+        "item_id": "3207:1",
+        "item_sha256": "9dcc79b6998a0cf307ecee1b2cc4e3109a7c2b89a4ddf333fe96972fa34e68dc",
+        "prompt_sha256": "199b4cdf9cb0f9ec573f2db070828d02f1e2b4d9819bbafbf49caba99731cac7",
+        "question_id": "3207",
+        "reference_type": "int",
+        "source_index": 308,
+        "test_id": 1
+      },
+      "selection_digest": "71e30c3928a9369d30a21dfa54a5438ecd61a3a1623cdbe9f81428b85d94cf8e"
+    },
+    {
+      "all_item_ids": [
+        "3263:0",
+        "3263:1",
+        "3263:2"
+      ],
+      "all_item_sha256": [
+        "2a1f5a15534aba817405cb7cc23483b3740cfcbf4144b18357d5be215bdf30d8",
+        "4d27e1e1c33c6bdce30893ccc88404bc499c87e5ed9c006486da160e615a4cb0",
+        "3ff6c044e2fad777bc2d855d2af627ac6ed1437f7560b98d3a437544f5ceab6a"
+      ],
+      "family_id": "3263",
+      "family_program_sha256": "c070db0c6b6ddb5de40a4abc208071395029667b27a1520dfc9086174e97c264",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "08a98885263963e2a2ecbe3a84c5a88f96f552893dacd7c880163ac401322449",
+        "difficulty": "easy",
+        "item_id": "3263:2",
+        "item_sha256": "3ff6c044e2fad777bc2d855d2af627ac6ed1437f7560b98d3a437544f5ceab6a",
+        "prompt_sha256": "10b68568685527943d64d0dffb803a43dbb14c41befee24d8b127de2bf241a68",
+        "question_id": "3263",
+        "reference_type": "int",
+        "source_index": 395,
+        "test_id": 2
+      },
+      "selection_digest": "8005956807250b084716317aac9d5ce6f627f9167e6027beab6e83e2ded3a654"
+    },
+    {
+      "all_item_ids": [
+        "2755:0",
+        "2755:1"
+      ],
+      "all_item_sha256": [
+        "497368366dc1bfff018e6a54330bc0ecb97efedec26a75d4bfc0ba1964d1d833",
+        "c52dcb49e819d80824e915ef06f56601d3c8b65b1ef73a7d42a090e3bb721658"
+      ],
+      "family_id": "2755",
+      "family_program_sha256": "d10ae931b1d259da3fcd476002fca9941e87d68d59269c2e17ad95fd5a9a1159",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "5c0b93cb5fe77ed79d4d8c721b1ae447f5454bb1a959bd2e567d10fe385a26b6",
+        "difficulty": "medium",
+        "item_id": "2755:0",
+        "item_sha256": "497368366dc1bfff018e6a54330bc0ecb97efedec26a75d4bfc0ba1964d1d833",
+        "prompt_sha256": "f639f2b20386bc8fd1ccbffe8d8f9d694ab252a64675c84b35af4fe553727af4",
+        "question_id": "2755",
+        "reference_type": "int",
+        "source_index": 8,
+        "test_id": 0
+      },
+      "selection_digest": "93c5dbcab8dc8d14f0e5f08f1047c5e3401ed82e2527081a066c379d6b017609"
+    },
+    {
+      "all_item_ids": [
+        "2785:0",
+        "2785:1",
+        "2785:2"
+      ],
+      "all_item_sha256": [
+        "2304b94a77a0fe4dae8392a058163ea5981b6356912d0a6a4069eec09618c137",
+        "7bbf8f26a7c7e1913ebb5ad0bbe29745972034c985e643fcd9c27107b135d176",
+        "a4e5f14acf8721fcaee903d441e824f10c29761f2b28df8925365159f97482b0"
+      ],
+      "family_id": "2785",
+      "family_program_sha256": "540ad301a901cd060df2300f0cdff03df3e021ae292912cb3a99b85fae09bf16",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "4297d6de280213d46fd0364ec93736d8c561984be36e246b5cef9c2e68ea1b20",
+        "difficulty": "easy",
+        "item_id": "2785:0",
+        "item_sha256": "2304b94a77a0fe4dae8392a058163ea5981b6356912d0a6a4069eec09618c137",
+        "prompt_sha256": "c7887bc2dad20db64b596bf1b020f359f3d4df8046bef0ae830a94eddc09da68",
+        "question_id": "2785",
+        "reference_type": "int",
+        "source_index": 20,
+        "test_id": 0
+      },
+      "selection_digest": "7a20f22b4832c673986c93a07105ad6ac0a051353af26677850e07b1533a759e"
+    },
+    {
+      "all_item_ids": [
+        "3240:0",
+        "3240:1"
+      ],
+      "all_item_sha256": [
+        "0fa14791f1c5e708d5b1e92efbdf9f92e8eb98ef7fe64bbcb064041ae9c1c27b",
+        "77a4bd6a8cf2ebff6a9079d1ed2ee0a354ec76fa309c1eb1f84398ea6d19affb"
+      ],
+      "family_id": "3240",
+      "family_program_sha256": "3e18a1767742d3ddf59e46b7f15d3be8d7849c6917f787807e4a82baa0b36f0d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "dbca8ca155c105425a943f67fe47cb16cf792d9a967b287f747f9c699d06e1fb",
+        "difficulty": "medium",
+        "item_id": "3240:1",
+        "item_sha256": "77a4bd6a8cf2ebff6a9079d1ed2ee0a354ec76fa309c1eb1f84398ea6d19affb",
+        "prompt_sha256": "0a18218fd66309fdb884cd8fd61accf0e7fdc6d0f2acf86d997e987c8c580e8a",
+        "question_id": "3240",
+        "reference_type": "int",
+        "source_index": 366,
+        "test_id": 1
+      },
+      "selection_digest": "098b7b26878c3b927b1f9c67d6154e533fea4d4c9d0686c043f3d9dd087f7331"
+    },
+    {
+      "all_item_ids": [
+        "2919:0",
+        "2919:1",
+        "2919:2"
+      ],
+      "all_item_sha256": [
+        "58204c4d3846f2b2f3e50012d53fcf4717db1ba8c4b582586eee4fd94ce512fe",
+        "46b4d2ee59b918fd4deccad813e27d632c8b9145a0715f4e62ab32b427c3f89d",
+        "8e3530bf17ad405a69a1437d38505d6cb36b6125d27e38ffff3196ce75794997"
+      ],
+      "family_id": "2919",
+      "family_program_sha256": "d294b83a757fc7634a0cbf448bd512beae612f5fbbf06a56e04d1f1bbff2cad5",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "55d323cd4e2b079358f4ee121e3c4ca379e63e36a49ded29b7198a284ef307f8",
+        "difficulty": "hard",
+        "item_id": "2919:0",
+        "item_sha256": "58204c4d3846f2b2f3e50012d53fcf4717db1ba8c4b582586eee4fd94ce512fe",
+        "prompt_sha256": "97d4d4b58c58e1221c533ff7b18c9525db2f10b874c8281b26df38d7689da0eb",
+        "question_id": "2919",
+        "reference_type": "int",
+        "source_index": 156,
+        "test_id": 0
+      },
+      "selection_digest": "43c31eba85a8b4f2c2d11754a55cf092165ca6eac859a7d4ed37ccc6a00e79dd"
+    },
+    {
+      "all_item_ids": [
+        "3192:0",
+        "3192:1",
+        "3192:2"
+      ],
+      "all_item_sha256": [
+        "04cd9f5222d6def74c542d3f5e086c5b6cb33c9b23edd6a5f1388a04daa982b5",
+        "249fafcd2339405b9e9fc25a3891772cddbf341497401cb6c6b542e71d817f61",
+        "7e63dd2ca027c979376faa6dbac7f5534289297d64a4971fbe5473d65ef33251"
+      ],
+      "family_id": "3192",
+      "family_program_sha256": "6a7cf00341cbc2c935486be375fb84e1172bd208f2eb99fcfd54603f0a047cdb",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "7364b48ba35f7efe7223c2430307afa7ed2deba090d0f81c9200e2ed42774add",
+        "difficulty": "medium",
+        "item_id": "3192:2",
+        "item_sha256": "7e63dd2ca027c979376faa6dbac7f5534289297d64a4971fbe5473d65ef33251",
+        "prompt_sha256": "684d24b14d61e1e062eb7586317fad4be65064ed5908e8c5b41d104f0f368dd3",
+        "question_id": "3192",
+        "reference_type": "int",
+        "source_index": 286,
+        "test_id": 2
+      },
+      "selection_digest": "841dc01aafcfe05e613e5de2eacb17c64482823269760f8546c061524be48785"
+    },
+    {
+      "all_item_ids": [
+        "2854:0",
+        "2854:1",
+        "2854:2"
+      ],
+      "all_item_sha256": [
+        "41e51de27311fe017b5688167dfb4e23816a97df4f2f258574c74adefe454f47",
+        "1c8e8145916a5e85fd35afdf559b01b8ea662b2170c1f5c675493e0d9de544cf",
+        "d2def928981be5c2f19403d6cc326dad724b5e784c61e16ed1c73ce17ecb40a1"
+      ],
+      "family_id": "2854",
+      "family_program_sha256": "296c3957f845b2661295b1ff9ad0e45e691bf9da682ae7a01ade3955405e7d72",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "f7ff3469d900b2f4e3e1dccbd743b07101924e28dce0a8f60bea698111e69c3f",
+        "difficulty": "medium",
+        "item_id": "2854:0",
+        "item_sha256": "41e51de27311fe017b5688167dfb4e23816a97df4f2f258574c74adefe454f47",
+        "prompt_sha256": "a1d2b305668d1eee4febb7744b0181ee8daef2aa53343d7756f9053204832a62",
+        "question_id": "2854",
+        "reference_type": "int",
+        "source_index": 87,
+        "test_id": 0
+      },
+      "selection_digest": "41e4158cc22d321bcc7ab249ebfad7c32f8e1e444056c5518dd5786e763a2d5b"
+    },
+    {
+      "all_item_ids": [
+        "2866:0",
+        "2866:1",
+        "2866:2"
+      ],
+      "all_item_sha256": [
+        "9507c9e84aacbcc6012f20f3c0caf513c2fce46364f259fd2c4c32577658d603",
+        "3df00fed59f06c16505f3ae09409f9093887775d65fe2f9912130dd91a72b774",
+        "cb63e14b8a29a3b77ca3dc3f546ad2f31dbf8bb191668b01716f98124dbfd7c1"
+      ],
+      "family_id": "2866",
+      "family_program_sha256": "6614956309ddd601e5b0c88696fe63ae67fa812eaa1a942e7dd9a3a5beb6ebcf",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "539f9b4458c25e8599b9fee46222f9a895912c63fa7b10a2dd22403300b5e47c",
+        "difficulty": "easy",
+        "item_id": "2866:0",
+        "item_sha256": "9507c9e84aacbcc6012f20f3c0caf513c2fce46364f259fd2c4c32577658d603",
+        "prompt_sha256": "68dd7c3ea67d025171c025598c290d61edb470f4df60c0e3cbd9d6eba777615b",
+        "question_id": "2866",
+        "reference_type": "int",
+        "source_index": 97,
+        "test_id": 0
+      },
+      "selection_digest": "6e8992bddf4f60885cfbf0c566d8b1957c971135ec98bc9a7c0d2432afa6555c"
+    },
+    {
+      "all_item_ids": [
+        "3196:0",
+        "3196:1"
+      ],
+      "all_item_sha256": [
+        "3b3641a4a77ebfa7ed448ab82fa99aad123e4b3232feb91cfc3f6a4c70202ad7",
+        "d0b9924c89b848e866012eb94965444ea92833396517f7e9a2a00b1bdc473360"
+      ],
+      "family_id": "3196",
+      "family_program_sha256": "4492791dc2120b76cfed3c9f7e816b2b863dc34598e6f3d0b524361731106790",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "45c4414a76e38b9d33933e4d66eebb4ab3c5fd1b1f25080b6b9a6e084d4f857c",
+        "difficulty": "hard",
+        "item_id": "3196:0",
+        "item_sha256": "3b3641a4a77ebfa7ed448ab82fa99aad123e4b3232feb91cfc3f6a4c70202ad7",
+        "prompt_sha256": "aead948dc15a00f73947ff412173c3cf96eb2e7e3393f0454c7dbeaba5eeb597",
+        "question_id": "3196",
+        "reference_type": "int",
+        "source_index": 296,
+        "test_id": 0
+      },
+      "selection_digest": "1a6805820f1cf6fe355c250f99a3ec926107369e35e7ecae6672bb33f73a85a2"
+    },
+    {
+      "all_item_ids": [
+        "2825:0",
+        "2825:1",
+        "2825:2"
+      ],
+      "all_item_sha256": [
+        "7e4fc4589539c80dfc9f211b0e0ca3bb07fa051f091f41774e043065e4a60ede",
+        "dde004ea6e7c4c9422c0a765fced0212e7ce124992d916769e9e50d50a743ba7",
+        "48308ad940aaf45b1924acd0253a29315f4afdeda26a732e4c143bde1c866537"
+      ],
+      "family_id": "2825",
+      "family_program_sha256": "8caf9423c4635de26b68a7011283a8a72ae1adeb3b86829be0eb473674da8d89",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "8c33e606e7e63f6a99843ab916e9863cc049171db558f8bad7fd9a19b4a21393",
+        "difficulty": "easy",
+        "item_id": "2825:0",
+        "item_sha256": "7e4fc4589539c80dfc9f211b0e0ca3bb07fa051f091f41774e043065e4a60ede",
+        "prompt_sha256": "2c654567bb58b2ca70c0dea447c00c4505db84f9af7b52ffe9d6aebd2f4ab50d",
+        "question_id": "2825",
+        "reference_type": "int",
+        "source_index": 52,
+        "test_id": 0
+      },
+      "selection_digest": "880c3ccc6ae16f10bc48a6ba383bf20d9effaef1332e0739fc7f5505e55071fa"
+    },
+    {
+      "all_item_ids": [
+        "3267:0",
+        "3267:1",
+        "3267:2"
+      ],
+      "all_item_sha256": [
+        "52af37007b1e05fe9916d8e1905fef57a2634fa9e53244830aa46ca41e42de6e",
+        "9b6d7a515c27df008261d3255919002804054be724e3c00733b1f66f368b0033",
+        "d46227bc46c6ff77d69a73de6efad6d668206e3faed3cbe12419f63389d5c9d5"
+      ],
+      "family_id": "3267",
+      "family_program_sha256": "0fd077c82e8a5a898ab67704fa117225ae6f627c6c29d9181b41058425257c92",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "1d1ef815995cee74de7a83a3cc89a8f8b28a5d4e86aa7e9fe4f67aad9e1841ac",
+        "difficulty": "medium",
+        "item_id": "3267:0",
+        "item_sha256": "52af37007b1e05fe9916d8e1905fef57a2634fa9e53244830aa46ca41e42de6e",
+        "prompt_sha256": "482f8db00ed5e891471c1481f62c66aa3d4ab115be8dffba63bdfdd2745e995d",
+        "question_id": "3267",
+        "reference_type": "int",
+        "source_index": 399,
+        "test_id": 0
+      },
+      "selection_digest": "1208675be7e1fd7d466b29160a01eaa5436c010bed8de74c55a883a93bb24d2f"
+    },
+    {
+      "all_item_ids": [
+        "3210:0",
+        "3210:1",
+        "3210:2"
+      ],
+      "all_item_sha256": [
+        "8240b38618ed38e49f3dd79eb90539a5ca3e23dd46078e5278b4cde26f12cbb5",
+        "396df9664b5bcd1cc24eec74926c4076e6ec541046f4ad96db4d8ef5368c08e6",
+        "6f3a403cf605e900940995d13daa39ad1b1410102f8a1f6327411ef33aa83409"
+      ],
+      "family_id": "3210",
+      "family_program_sha256": "2b55e5ab3c3a7e8a2dbc7e78897abf1730b6697584c7960bef6d48aa5d337990",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "225f65553655300195929c2cc45121f6ce1fe790e0aaa988a1530ab44b9b77ae",
+        "difficulty": "medium",
+        "item_id": "3210:1",
+        "item_sha256": "396df9664b5bcd1cc24eec74926c4076e6ec541046f4ad96db4d8ef5368c08e6",
+        "prompt_sha256": "c899be548b52fbe08ced83f8c999f6055f0a340ec9052813d0630e2d3615e495",
+        "question_id": "3210",
+        "reference_type": "int",
+        "source_index": 312,
+        "test_id": 1
+      },
+      "selection_digest": "8e76eb957ea05ed67220a0c15a0e6d8b7908340acb5bea280b1bfd6610df3cf5"
+    },
+    {
+      "all_item_ids": [
+        "3231:0",
+        "3231:1",
+        "3231:2"
+      ],
+      "all_item_sha256": [
+        "91ac6147416ca767ed4eb8136f82e343392a9ed221e2d8686c3ca4ab6603c02f",
+        "3430873b807876599859e353988187db4f8d407041aeb5515ce3b4b6799bf63e",
+        "1f249aa962c775a0c8d953aa4f5804848e7bef4a6c92ae511b2759ea259b053c"
+      ],
+      "family_id": "3231",
+      "family_program_sha256": "01106530048b66c8783fda9236c5d85377b10e9c30d31469b2597b7e03de9cda",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "ae1facf400ca89ddc3601b4203cd9cf5461f8a3bd8ff2a995c343ffb9670e88b",
+        "difficulty": "medium",
+        "item_id": "3231:0",
+        "item_sha256": "91ac6147416ca767ed4eb8136f82e343392a9ed221e2d8686c3ca4ab6603c02f",
+        "prompt_sha256": "7a1ad81b48a5683b2967b42300a9813be6e048dac62002ab438c749bc07c969d",
+        "question_id": "3231",
+        "reference_type": "int",
+        "source_index": 349,
+        "test_id": 0
+      },
+      "selection_digest": "4c8c1de3942a0a5ba04bdff729b882a273cf5b7f62376ab48042513f8f41942a"
+    },
+    {
+      "all_item_ids": [
+        "3024:0",
+        "3024:1"
+      ],
+      "all_item_sha256": [
+        "1dd9666aabb3fa57f6535769aa05cedff7db3865a35d20b18d626ceabf31bdb1",
+        "d8ee4e73ef6309955a69dd22940282f06457c2b94bc79961d9fc07b0282873b8"
+      ],
+      "family_id": "3024",
+      "family_program_sha256": "b7c7b0715f86bc5e8fa6ec030a36957b37c1e0010168431a550eee36c9d46c0d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "e5b617be94cc4a5ee2f6654261751b0cea921ea5314ee027731c60a0cc9245b4",
+        "difficulty": "hard",
+        "item_id": "3024:1",
+        "item_sha256": "d8ee4e73ef6309955a69dd22940282f06457c2b94bc79961d9fc07b0282873b8",
+        "prompt_sha256": "f2f7ecec154c88bda454bd938832d1218703e3dbef1b3b198f4565f182a141db",
+        "question_id": "3024",
+        "reference_type": "int",
+        "source_index": 195,
+        "test_id": 1
+      },
+      "selection_digest": "2511c39f5544abba52314a8a6bf425c90cf727a3c81d379cc9213d1e779e18c1"
+    },
+    {
+      "all_item_ids": [
+        "3203:0",
+        "3203:1",
+        "3203:2"
+      ],
+      "all_item_sha256": [
+        "1dabcb235810da6c8c698137f16d71a6eb6ad9c2ed355496f331ec70a7c1df08",
+        "83d14766a77637e3d1b6846036449a0cc33ada6fc401dc1da8804fa9e81d1a83",
+        "57638b6e64a8f1b6c55ed9559d6a3aa5be2da4b490fc3f7a807645c371308903"
+      ],
+      "family_id": "3203",
+      "family_program_sha256": "ecabd19599d9df802a71fabaca59112680f1190ff30a052338abe80d69a13dfe",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "a094a0b4d4160a8384a624c37fd03389429a175d19de8a6c3f49ace595c49b4d",
+        "difficulty": "hard",
+        "item_id": "3203:1",
+        "item_sha256": "83d14766a77637e3d1b6846036449a0cc33ada6fc401dc1da8804fa9e81d1a83",
+        "prompt_sha256": "46e4128229c7bc134708d7dfb2fc89d9ca41173593aa65506a73e2754f1b18df",
+        "question_id": "3203",
+        "reference_type": "list",
+        "source_index": 303,
+        "test_id": 1
+      },
+      "selection_digest": "3d39c08ed0c3f23949bd6a352cae2aba086c98e8bb8f23e21f489f1381eff74f"
+    },
+    {
+      "all_item_ids": [
+        "3094:0",
+        "3094:1"
+      ],
+      "all_item_sha256": [
+        "5232b51ac8524c8d75d507bd1a0d2895661332115b43cfec73ccca2ae03e6944",
+        "12a1efa2a2caeadd8558b9bfad39492e9ce2006dfc467ad6af7785c599702ce7"
+      ],
+      "family_id": "3094",
+      "family_program_sha256": "3033a942445786b36c7a5ce89c564e32d6d6824a279a60e7f74145cabd500e30",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "3481c7602aefb5cd866a24cf9287e45392ac76566381e75c92bfb1ee0e37ffe6",
+        "difficulty": "medium",
+        "item_id": "3094:0",
+        "item_sha256": "5232b51ac8524c8d75d507bd1a0d2895661332115b43cfec73ccca2ae03e6944",
+        "prompt_sha256": "d8271ff55d6ae38e92caa9065c58bde112cf013f2fc8632a2908a333cd4889ef",
+        "question_id": "3094",
+        "reference_type": "int",
+        "source_index": 233,
+        "test_id": 0
+      },
+      "selection_digest": "6cc48bd17a5fc738e2b1ed8c4cb825a683905b2a48ed51c8fa9d6ffe3ebc210d"
+    },
+    {
+      "all_item_ids": [
+        "2832:0",
+        "2832:1"
+      ],
+      "all_item_sha256": [
+        "8d3c3d7e46e31d9e3969f7b288a6f221ae29ee4460531e9b61c5c42a3144c254",
+        "2ac39c5249f0fe034bb3b9e76ca9764a8c3c78a5254e495199bf0ff83b3f0f8c"
+      ],
+      "family_id": "2832",
+      "family_program_sha256": "fe59cc1c5032845f7c53c7d7dc3221d1b41b8022c0f16f7273f0b6bdb5921cb6",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "a559420cd1962b89baf6ef39427006a94411efdfae65e307d4bd7436ce2fde3b",
+        "difficulty": "medium",
+        "item_id": "2832:1",
+        "item_sha256": "2ac39c5249f0fe034bb3b9e76ca9764a8c3c78a5254e495199bf0ff83b3f0f8c",
+        "prompt_sha256": "c0dc3f5703022dcc19110c04a7ac13f8397fcdad482e3ab5be5d486762b68fee",
+        "question_id": "2832",
+        "reference_type": "int",
+        "source_index": 64,
+        "test_id": 1
+      },
+      "selection_digest": "aee1b6e2a159b801e7bd6c83932f374cc02e041d74af2c8a07709af4ce19b4e5"
+    },
+    {
+      "all_item_ids": [
+        "3141:0",
+        "3141:1",
+        "3141:2"
+      ],
+      "all_item_sha256": [
+        "783e8775ee8e56dd40186297a0adb6a28d52082fc0f5947150d02ba7c67a4eb5",
+        "4c406bef3e15f483db360a5c63ab5a814994d817ab90170658386409b99420ad",
+        "ff1971d1fe8fa7effc90fa9cb90b8f0dab3158dbbb2f4a6a112d23bb267797a0"
+      ],
+      "family_id": "3141",
+      "family_program_sha256": "b38ddc600c520157c90025dd75d45ece69bcdf8bc8525eb5341df12e1441576d",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "b2c8abc068466014e97f1606128bd66ac4ab9338013f3109f62efb7e85ddddeb",
+        "difficulty": "medium",
+        "item_id": "3141:1",
+        "item_sha256": "4c406bef3e15f483db360a5c63ab5a814994d817ab90170658386409b99420ad",
+        "prompt_sha256": "854206b928133e8ec13d36845e21d5909a45f7f9cacfc9aaf07bdb9352210b5e",
+        "question_id": "3141",
+        "reference_type": "int",
+        "source_index": 244,
+        "test_id": 1
+      },
+      "selection_digest": "1a4c82e01171989d17e14b367286367154256e5a2cf4135b6cb72ac1f229ec9a"
+    },
+    {
+      "all_item_ids": [
+        "3190:0",
+        "3190:1",
+        "3190:2"
+      ],
+      "all_item_sha256": [
+        "615a4aaa822825c787e0321bee1f870745771630b9c5d4d74c5779e13e95a27b",
+        "86e6c85de13725a2a83f527b71850170d946f63645a5a2ad62a26982981428ed",
+        "bbb8ef272670939adea6a897bf6e3fa70e1d2046aa3e55360932e66af886222e"
+      ],
+      "family_id": "3190",
+      "family_program_sha256": "bb8e789f57f31ffcc246c050305b155bed09e6eadbe1d3f6d56d494aaab577ab",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "50acb5240f7eb22ed1108833b7701e28b77c2ef83a55f1331097acacf9e7494a",
+        "difficulty": "medium",
+        "item_id": "3190:1",
+        "item_sha256": "86e6c85de13725a2a83f527b71850170d946f63645a5a2ad62a26982981428ed",
+        "prompt_sha256": "d453ff2101e5db2de180a5acd020a98199ee34bded08b305b7a3ed66e913c95f",
+        "question_id": "3190",
+        "reference_type": "int",
+        "source_index": 282,
+        "test_id": 1
+      },
+      "selection_digest": "4c6be990bd7fe3804c2ec301bcc7d072cb35cc89057e9b60ded1501a4d8845ed"
+    },
+    {
+      "all_item_ids": [
+        "2850:0",
+        "2850:1"
+      ],
+      "all_item_sha256": [
+        "e1394d107aa7d761ce946e58ae9fbc3b6c5b91f5dfab39046cadb3b76cd9bb01",
+        "cc4b08c8bbedb8bd546bdb2e26a2aa967cc3f965007fdcccb724b7c791d2f301"
+      ],
+      "family_id": "2850",
+      "family_program_sha256": "8a236be56e6fb87ed1dfb75221ec17c7a6fb552e63ab73bd750a96c3c0c03a4d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "a157cf2287cfd04a2dcd798e4226656b758344eb6c2e40d6c60efe3ddba51bee",
+        "difficulty": "medium",
+        "item_id": "2850:0",
+        "item_sha256": "e1394d107aa7d761ce946e58ae9fbc3b6c5b91f5dfab39046cadb3b76cd9bb01",
+        "prompt_sha256": "b7be14aca55271f88e8f83e90e7fe8f7d16202e4590f8f84088f9ec30a39aa67",
+        "question_id": "2850",
+        "reference_type": "int",
+        "source_index": 85,
+        "test_id": 0
+      },
+      "selection_digest": "28f4b64824ca03eb2bea485fbef3a4f2015a32636c4be923f6227b68701d9564"
+    },
+    {
+      "all_item_ids": [
+        "2952:0",
+        "2952:1"
+      ],
+      "all_item_sha256": [
+        "9f311ffb11e5553236f7281ca270f8c85b6d7fdcadf8e9d6677acc8916017715",
+        "971144aada0d973f5b6254fd9250d645d69e48974720c787c7ef82f81d892187"
+      ],
+      "family_id": "2952",
+      "family_program_sha256": "c0c7b1b6502d1abdf140d2b5814bf7e5e34b030fbfdcb482aff651303b2663bd",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "e9105e82421187330361509d17a5f1b9f6b22d59c2ec337d8e2f49f8d2e2e8db",
+        "difficulty": "hard",
+        "item_id": "2952:0",
+        "item_sha256": "9f311ffb11e5553236f7281ca270f8c85b6d7fdcadf8e9d6677acc8916017715",
+        "prompt_sha256": "a7523be72f44ff2af0a99a72ab59a51444d8b106323d467bb2045e98c776d9d9",
+        "question_id": "2952",
+        "reference_type": "int",
+        "source_index": 164,
+        "test_id": 0
+      },
+      "selection_digest": "5b2e683b15e08b53e13074f428f3e9178d3eb803a5e606e73d6287f0383fb8a1"
+    },
+    {
+      "all_item_ids": [
+        "3031:0",
+        "3031:1"
+      ],
+      "all_item_sha256": [
+        "1ca5eeafa83ab2265655a475447d778cc6967b2910f2c03af1e43fd0545e3eb2",
+        "500ca0a54b11c2052b3d7bfd0a3399acdeac6a740d9009aaaa599a4027926363"
+      ],
+      "family_id": "3031",
+      "family_program_sha256": "8bd06df36e5b98039fb542dae5d5534cf2e580f3d50bae8d40097926a8b10bc5",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "efa574eff2cbdbc74ff768c7fbeafb2d5e57aace03e711f2451a69cbbf37e9b1",
+        "difficulty": "medium",
+        "item_id": "3031:0",
+        "item_sha256": "1ca5eeafa83ab2265655a475447d778cc6967b2910f2c03af1e43fd0545e3eb2",
+        "prompt_sha256": "841cfe07ffb0b18b8142d1adf74969d8f59e3ebb1b5c741f4e973d7aa3f05955",
+        "question_id": "3031",
+        "reference_type": "list",
+        "source_index": 202,
+        "test_id": 0
+      },
+      "selection_digest": "c1a86601cbb18c549335e209568654b077b5a1001b12698d377e510df591615a"
+    },
+    {
+      "all_item_ids": [
+        "3193:0",
+        "3193:1",
+        "3193:2"
+      ],
+      "all_item_sha256": [
+        "1b35ced54d4b8811bcca11ac5e3c2a09d877bf62da6a3c3eba56af62dd5452bd",
+        "cb9a6e22ee907aefed4f9aa2c1e329bce4c6a846475e1db65548b94fc357c01e",
+        "8cfd25b6a93676c9606b0ce3cd0ff3444aee6c1f4f52e30fde8735b067665a3d"
+      ],
+      "family_id": "3193",
+      "family_program_sha256": "828b81deb98e621ae603cf716e8afd4d5a97cd2f0655f5badc3825e8991933c4",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "23f4d5dbf234b7671874a98914a3753851ac8ed577bf458efac448aa09fbf74c",
+        "difficulty": "easy",
+        "item_id": "3193:0",
+        "item_sha256": "1b35ced54d4b8811bcca11ac5e3c2a09d877bf62da6a3c3eba56af62dd5452bd",
+        "prompt_sha256": "cccf2f213ce9619d70aef930555cbc740978cb4df46d1bd12a0914827f4929d8",
+        "question_id": "3193",
+        "reference_type": "int",
+        "source_index": 287,
+        "test_id": 0
+      },
+      "selection_digest": "ce34cda3c60710b1dbe826e456da8865ac843eb447584db4a3ea7db16cb33d09"
+    },
+    {
+      "all_item_ids": [
+        "3298:0",
+        "3298:1"
+      ],
+      "all_item_sha256": [
+        "711118bbb09e6f5c364a1cd2258d1be86dbdfdcac0e4e3b3660ba0ed96bd3442",
+        "7f034c9ee74411b38454c44addf7b98a7f4fade2989824a3b10b5b670a8c6541"
+      ],
+      "family_id": "3298",
+      "family_program_sha256": "d20102b022eaafc11eec79bb73a39aaa07c43fb4a070a2aea45b33b59e49d7fd",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "f7559430b72bd295d78405aa977b7164f24c3d6dd4155550ff005c211cd0af01",
+        "difficulty": "hard",
+        "item_id": "3298:1",
+        "item_sha256": "7f034c9ee74411b38454c44addf7b98a7f4fade2989824a3b10b5b670a8c6541",
+        "prompt_sha256": "5a6d7396de412e1202ed28a02d552da999763adcec650ad0f701a7499376d2e3",
+        "question_id": "3298",
+        "reference_type": "int",
+        "source_index": 416,
+        "test_id": 1
+      },
+      "selection_digest": "000a2d0a7c999c0018913db5d1a09856164616e3e8b3481907db7897ec08f515"
+    },
+    {
+      "all_item_ids": [
+        "3234:0",
+        "3234:1"
+      ],
+      "all_item_sha256": [
+        "0b5c07f43a8dd751c533018078588b369bbf77dad981ccb63eeb3394394ce5f5",
+        "ccc6a0f716af4d470826d45b5ce2fde08246e330e0c60c3a93ac97538b74f5fc"
+      ],
+      "family_id": "3234",
+      "family_program_sha256": "f340f6eb95c9927ad4657b99c9d73f437d5e78a1e4626ec1494de9f60dc2ad72",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "2481111a4c65dd9b4fcf27cff70535d16fbdd49e3661588b23364c69999d2e5a",
+        "difficulty": "medium",
+        "item_id": "3234:0",
+        "item_sha256": "0b5c07f43a8dd751c533018078588b369bbf77dad981ccb63eeb3394394ce5f5",
+        "prompt_sha256": "57dd5558665aff27b12c9a92a127ad345fbc2c707007e5fc8d3d428c30c819be",
+        "question_id": "3234",
+        "reference_type": "list",
+        "source_index": 355,
+        "test_id": 0
+      },
+      "selection_digest": "7ebad49eb312228010401a26ea342a546013198704ddb22480cf8559e4419eda"
+    },
+    {
+      "all_item_ids": [
+        "3164:0",
+        "3164:1"
+      ],
+      "all_item_sha256": [
+        "06353f7f2ae6915bf5951c3a51e253ca39c7c3b3117e7d231783bc61b42c3195",
+        "dad59e68b063d8fc7a549ddd3262e6945b4482e22dae0d2ef7b12fe252bd965d"
+      ],
+      "family_id": "3164",
+      "family_program_sha256": "f0971d895eb74a5ae9807d62b4013d33c64049b06b51dab3b22e157026783a20",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "805b6832ad29950f3dd70cdd1d0d0e88d4bb6f12f3cd135517db832885bf9759",
+        "difficulty": "easy",
+        "item_id": "3164:1",
+        "item_sha256": "dad59e68b063d8fc7a549ddd3262e6945b4482e22dae0d2ef7b12fe252bd965d",
+        "prompt_sha256": "83d21a8469cbdc08986af969205914bdb4d66707fb4438a9ccb05059b4fca71f",
+        "question_id": "3164",
+        "reference_type": "list",
+        "source_index": 259,
+        "test_id": 1
+      },
+      "selection_digest": "28f6323b5fff4ff78672816dc9cb577cad918b580992091e7c30de79aeafe880"
+    },
+    {
+      "all_item_ids": [
+        "2819:0",
+        "2819:1"
+      ],
+      "all_item_sha256": [
+        "70c4320a2745c25b071afd08a43a74362a817b6c902975ea36aa0f0a2bf22083",
+        "7f90f7a4c3d6ad455b1365d82a8c3a8a8ba8232b0fb692e2c718b263c983201c"
+      ],
+      "family_id": "2819",
+      "family_program_sha256": "2ef0634608f4559606dd37fc27111b6694a2902553506f8527cdfaa8ca02fc27",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "4487010d937354b9afe75e794cfbce3eaa4aa18c8b0da8dc412a55d3ed5cfa7f",
+        "difficulty": "easy",
+        "item_id": "2819:1",
+        "item_sha256": "7f90f7a4c3d6ad455b1365d82a8c3a8a8ba8232b0fb692e2c718b263c983201c",
+        "prompt_sha256": "a25ca62d3dcf9dac6e99b8170d2323e46d0c7bb0a09c48bc9d13a74a9a0bb876",
+        "question_id": "2819",
+        "reference_type": "str",
+        "source_index": 49,
+        "test_id": 1
+      },
+      "selection_digest": "da09134bc767dae914429d148ef10f6a2654909f35308ba83a6d64e94178b3cc"
+    },
+    {
+      "all_item_ids": [
+        "3026:0",
+        "3026:1",
+        "3026:2"
+      ],
+      "all_item_sha256": [
+        "d7322daf2a1ea23396213a33f27510eda303ba28949e50bffe8106e0092105c4",
+        "d0d36d92359e9034924f98900c122772583aa57f24bbd61e45d2b285bb5e5266",
+        "89961d9765a5a6610cc9a8fccdc3d74567240f64bcc5263ea9ecfb8303515b6c"
+      ],
+      "family_id": "3026",
+      "family_program_sha256": "842a922f8bbb5bf553e8c2411146a4887b12c88118d65207dc9d82282f7cc658",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "8ab0c523310145e16aa9e34f0dbac9b54be489216cc8494c3efa05b83896cdb0",
+        "difficulty": "medium",
+        "item_id": "3026:1",
+        "item_sha256": "d0d36d92359e9034924f98900c122772583aa57f24bbd61e45d2b285bb5e5266",
+        "prompt_sha256": "f4afbb00d070081afa9e80d011a680cfdabfd03cf68384790b8df628ef26f6e7",
+        "question_id": "3026",
+        "reference_type": "int",
+        "source_index": 200,
+        "test_id": 1
+      },
+      "selection_digest": "7040ff82f9a134ae4f2364ebc0f79d095db7bc3fc27f3433ca67d57fd264a6bd"
+    },
+    {
+      "all_item_ids": [
+        "3033:0",
+        "3033:1"
+      ],
+      "all_item_sha256": [
+        "17861001c4bdecb16aafd29d2bec805e22769d7a16177ec44aafcc24800f8518",
+        "ce55027eaf9eed3a8fb43e2e338118b1ed7e0c2209ba3dcd838fdb5514f753fe"
+      ],
+      "family_id": "3033",
+      "family_program_sha256": "fa7a882c75e1607fc98613f683dd568d684a04eb96bde0f7178e01e25fcf191d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "fba0fbc4ff8e885db90a33040a57ba437841ac9cc4d67f3e8a90680f57608f0b",
+        "difficulty": "medium",
+        "item_id": "3033:1",
+        "item_sha256": "ce55027eaf9eed3a8fb43e2e338118b1ed7e0c2209ba3dcd838fdb5514f753fe",
+        "prompt_sha256": "a0aa904192506208659c679cb345efc174f7434939858c1ad97984f23e89d384",
+        "question_id": "3033",
+        "reference_type": "int",
+        "source_index": 207,
+        "test_id": 1
+      },
+      "selection_digest": "90a1ad51964502970b278cc88abc13340ffb97c6d1e89f5418af49c89db34fe9"
+    },
+    {
+      "all_item_ids": [
+        "2857:0",
+        "2857:1"
+      ],
+      "all_item_sha256": [
+        "fe1fbf82182a15aa415cf70f439cee3c2af1ef71083ce1965e9cf3e6a1177f5e",
+        "0cbea5ee1ffc6ce64a698b87339cb696d88e945bf177a2fd9a16037023099a26"
+      ],
+      "family_id": "2857",
+      "family_program_sha256": "4261890538d6c96a15963ccabfa393f339fe677098cc6a8918f8dd537c951c0b",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "986bcf493f5125b706074eefdb47ceb8f276e9d3beb332a24c8bad92d2f2889c",
+        "difficulty": "easy",
+        "item_id": "2857:0",
+        "item_sha256": "fe1fbf82182a15aa415cf70f439cee3c2af1ef71083ce1965e9cf3e6a1177f5e",
+        "prompt_sha256": "2f83e601d971dfb66861323fa8af36ff4bc3081944a4e46e85e73b99b590d94f",
+        "question_id": "2857",
+        "reference_type": "int",
+        "source_index": 95,
+        "test_id": 0
+      },
+      "selection_digest": "3bed6fa7f7b176156d856b7fb0d52bfdd594025ae16d94346322cb86f7057ab1"
+    },
+    {
+      "all_item_ids": [
+        "3184:0",
+        "3184:1",
+        "3184:2"
+      ],
+      "all_item_sha256": [
+        "30e1aa0895d0530ddb837e8442be6963bd57ac03cd73cace9672e353898a07e5",
+        "59671857ebfb740f4743c134f62c41a65a06e1a0c50939362a69f488b229d75a",
+        "a87097bad14836e26f4cc3af40b9697ea70408cc67c1c6e4253ec3ae257c32b3"
+      ],
+      "family_id": "3184",
+      "family_program_sha256": "19c5e27d4a343b438d502792e298f8e0242bbf23e856386383603795aee4a974",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "b2939429cd2928612b515473d64c98b2bf6ecb63a01905653048d4441cbe9c5b",
+        "difficulty": "hard",
+        "item_id": "3184:0",
+        "item_sha256": "30e1aa0895d0530ddb837e8442be6963bd57ac03cd73cace9672e353898a07e5",
+        "prompt_sha256": "aa8f6e52c506d85a29865e571d3f7c7aecd8bd2bffb7716743d8a238bff18cf7",
+        "question_id": "3184",
+        "reference_type": "int",
+        "source_index": 276,
+        "test_id": 0
+      },
+      "selection_digest": "4b961398bcf3c438858c2545ff18cf226008ee50634cd2b6e30e59b5002cc7d3"
+    },
+    {
+      "all_item_ids": [
+        "3044:0",
+        "3044:1",
+        "3044:2"
+      ],
+      "all_item_sha256": [
+        "7f4f93a1942b123d131fe27ddb70bc8efe64f7b39808b297b849255fe3fb9510",
+        "5d46f41a4f0d5b9f9c3efc5c975c4dfc08f6c8005b247875dfee06607736fef5",
+        "900902f97cd47ff484c73815ff59cbaed7f49fd870b85337550c7cb54aee2d0e"
+      ],
+      "family_id": "3044",
+      "family_program_sha256": "d8dc70a6635d17e6892794a3ab02595320f97845fc271b30ab5aa77c259cae5d",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "74bd6594b5b73024c8ac7aab46539812ee04a11f54db2829b6608f2b55bd5a4e",
+        "difficulty": "easy",
+        "item_id": "3044:0",
+        "item_sha256": "7f4f93a1942b123d131fe27ddb70bc8efe64f7b39808b297b849255fe3fb9510",
+        "prompt_sha256": "c9ac20a5d8bcab33486f51622cd052d49394d53001b02bb3c98149fd4ce35324",
+        "question_id": "3044",
+        "reference_type": "int",
+        "source_index": 210,
+        "test_id": 0
+      },
+      "selection_digest": "7b817218d9f6aef3b845ba5b7f921f16ac15f3a2950672c45cbd99edad09f735"
+    },
+    {
+      "all_item_ids": [
+        "2915:0",
+        "2915:1"
+      ],
+      "all_item_sha256": [
+        "ef315dbb72df5a445de4005eabcbf9d29159325ad10edd10664dd4553c9701d4",
+        "0a9e9df353f77ba7421b027bf24fedd34162155acacafa5aac7e46321c7f73b8"
+      ],
+      "family_id": "2915",
+      "family_program_sha256": "e7807d7af51d12893566243986f0b52564f636775752f94124163aa254449f46",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "5860252984b3b9d68c162f67cf1b4720a879a8e758fcd947d6e87952280e2051",
+        "difficulty": "medium",
+        "item_id": "2915:1",
+        "item_sha256": "0a9e9df353f77ba7421b027bf24fedd34162155acacafa5aac7e46321c7f73b8",
+        "prompt_sha256": "0f1bf7907d7fc45b707eeabd0e3e3eacdb1f1a810c1e36e4999333269bc612dd",
+        "question_id": "2915",
+        "reference_type": "int",
+        "source_index": 150,
+        "test_id": 1
+      },
+      "selection_digest": "9758abec35ac1bc6d74ec5905dd1772f507a00f5186dbb069a027976a071b61b"
+    },
+    {
+      "all_item_ids": [
+        "3195:0",
+        "3195:1",
+        "3195:2"
+      ],
+      "all_item_sha256": [
+        "db648e8ae68588dac7f5e735c00728b4630eb166d84ca223f850990baae23e33",
+        "ccc4078eb17ca4a9ce2d6ba11cccf717f49ac10641e420819bd50903fbb28d6b",
+        "187374c3dadb7461c4107c028654f9be83ecde0f6aed06254965c4612f42b354"
+      ],
+      "family_id": "3195",
+      "family_program_sha256": "8c3ab9ac872eb167be55f6d6aa647eeef0ef901ecc2944eed7252fe8906db2b5",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "b1ac205e262c2d0aca1562b41cad007e2cc8caea59cd7be844ba110888f981c1",
+        "difficulty": "medium",
+        "item_id": "3195:0",
+        "item_sha256": "db648e8ae68588dac7f5e735c00728b4630eb166d84ca223f850990baae23e33",
+        "prompt_sha256": "7b48290474e9b03393315ec5a20df8ab113235c5c3abd3f7cc749ae647593c4b",
+        "question_id": "3195",
+        "reference_type": "int",
+        "source_index": 293,
+        "test_id": 0
+      },
+      "selection_digest": "7b90a5b72ac06f1b2d5e7b4a71ec966878c6ead3f1222678472c64ae9abe4d31"
+    },
+    {
+      "all_item_ids": [
+        "3034:0",
+        "3034:1"
+      ],
+      "all_item_sha256": [
+        "2a7b4413b3be829720e9990b20379486d7a3508d0c9010d0bc9f71b70a56f9c1",
+        "616642824f070b7a665147ee2103bc82cf2dc60991375ed09c849712878b8447"
+      ],
+      "family_id": "3034",
+      "family_program_sha256": "b134d04ba618763f6762750293f8961cc3fc510eb433275e9a89a28b6dd13ef7",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "708430c2402addd9b9f32df4934218faeda858cc4eb12d7695704a1eb53d1d0b",
+        "difficulty": "easy",
+        "item_id": "3034:0",
+        "item_sha256": "2a7b4413b3be829720e9990b20379486d7a3508d0c9010d0bc9f71b70a56f9c1",
+        "prompt_sha256": "86ea41c9863ae211bb0cb455160f00e26b61ffcb976d6b0a803b3a827e39c51b",
+        "question_id": "3034",
+        "reference_type": "int",
+        "source_index": 208,
+        "test_id": 0
+      },
+      "selection_digest": "9c50a117c3339510b54df44be133ae8ad0a50e4affb43fee24fa9a71cabb7007"
+    },
+    {
+      "all_item_ids": [
+        "2779:0",
+        "2779:1"
+      ],
+      "all_item_sha256": [
+        "1c7b1de7cb4317b03694544f7bf96e2436dcec7b122c36ae079b022e783f0e8c",
+        "0be1886f94ba12d887c9007adce7c13aafe63f04c75a62447cc02dd91b4f9991"
+      ],
+      "family_id": "2779",
+      "family_program_sha256": "9cde8d68b0f4d1924533da86988a7b63962efbfcce0b93ffc8ce6f803ad8d315",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "a875eca9fff1df6ab01000d367a1b4f8c0413e2c8c0b6306342eb8cfc481bdda",
+        "difficulty": "medium",
+        "item_id": "2779:1",
+        "item_sha256": "0be1886f94ba12d887c9007adce7c13aafe63f04c75a62447cc02dd91b4f9991",
+        "prompt_sha256": "fd493ecf57d402dea51736caab61bfd115d68852d259d57992ae4a9e8b609890",
+        "question_id": "2779",
+        "reference_type": "list",
+        "source_index": 17,
+        "test_id": 1
+      },
+      "selection_digest": "383866b63db05b3b8f26d135d3a0d3e3c6383996c8c0448c1ca1ca7054df6d30"
+    },
+    {
+      "all_item_ids": [
+        "2834:0",
+        "2834:1"
+      ],
+      "all_item_sha256": [
+        "860e8d4ed8710656e24f99055dd68f959c97d4629c91f63f200e0ab0814778eb",
+        "8abf05c8e11472569c716789cfbe04fe70a65b8ca58bd0e968b73ca2cfc416e6"
+      ],
+      "family_id": "2834",
+      "family_program_sha256": "92b7b41bf82ed9f8c7ebba666c0785c8dcfd0aa5ec373d61ed0a769331cbc77e",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "bd9ba88242258b13f018d391e34b33a70d7ea13e6c317ddf3f1beda164130b46",
+        "difficulty": "medium",
+        "item_id": "2834:0",
+        "item_sha256": "860e8d4ed8710656e24f99055dd68f959c97d4629c91f63f200e0ab0814778eb",
+        "prompt_sha256": "fe0fe78b4bb353bbbef239755ff33983339942540c880c9ebc2dcba6f55022e6",
+        "question_id": "2834",
+        "reference_type": "list",
+        "source_index": 67,
+        "test_id": 0
+      },
+      "selection_digest": "1f68d5784078956ead6820c43faa70db670d381203c9c7752422f060088aaa06"
+    },
+    {
+      "all_item_ids": [
+        "3329:0",
+        "3329:1"
+      ],
+      "all_item_sha256": [
+        "e490ff1990e76e1ea50b5aa552a1f483d3170ee937e85aa89c934e900cfb36d5",
+        "26c2ebd66725568a473ed04bc909d6dec4cfe7db640fc6c386c21d4bec930b5c"
+      ],
+      "family_id": "3329",
+      "family_program_sha256": "e19355a985fcb89d8059c9222dc90cfbcaa3b69fbde3dd666dc2ce913c300154",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "29a63dbfed55456a213446007870bdeec4588bbb768b6b984279387e765d6345",
+        "difficulty": "medium",
+        "item_id": "3329:0",
+        "item_sha256": "e490ff1990e76e1ea50b5aa552a1f483d3170ee937e85aa89c934e900cfb36d5",
+        "prompt_sha256": "e2384b8eded19502dec81f7d9a6f81acc5d63242cf37d83e9952ed9ad40ce44e",
+        "question_id": "3329",
+        "reference_type": "int",
+        "source_index": 435,
+        "test_id": 0
+      },
+      "selection_digest": "1924c2464d9688c38880ca6aed779c2e68908c9a8923b735093c42739c4319ac"
+    },
+    {
+      "all_item_ids": [
+        "2921:0",
+        "2921:1"
+      ],
+      "all_item_sha256": [
+        "86738c51870e10de94b51e7f812a433040f6f6984c6988324d1d02b0067d8a7b",
+        "c327de4173b36285e9205ccd7ad35bac9b453b41b03a7b4981d2ff9e3037b451"
+      ],
+      "family_id": "2921",
+      "family_program_sha256": "381100cc4d1acaea3fcb48b2777a89d03c8ccdcfc302436441cf30689754a57a",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "04224c073d59ed90b2e906fbb1fc926dad89e8cf224e2f0461ccd4f67a5e7915",
+        "difficulty": "hard",
+        "item_id": "2921:1",
+        "item_sha256": "c327de4173b36285e9205ccd7ad35bac9b453b41b03a7b4981d2ff9e3037b451",
+        "prompt_sha256": "4ba29eb586b94841677b6c6fe27d594357a3232c19144dfa0286ce2d4c67fc5c",
+        "question_id": "2921",
+        "reference_type": "int",
+        "source_index": 163,
+        "test_id": 1
+      },
+      "selection_digest": "b70dcb6f07b2efb96eebdf64d0b7f4c1f60b4dd59d3bfbebf5d9b213aa06918a"
+    },
+    {
+      "all_item_ids": [
+        "3163:0",
+        "3163:1"
+      ],
+      "all_item_sha256": [
+        "531a170043ae33c868d148080acaedc4cd2a693f456d14829da8a5706671719f",
+        "de58a44c9a5f8b196d43dc87a84fffea3cc7183366e21de6096f00d4de1f77d7"
+      ],
+      "family_id": "3163",
+      "family_program_sha256": "8a0f97001d6129863eb8cd9f1cd05859ae04496080ed9482f85b3b07fb526a08",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "309e14765ff642c837c88dc19023238aefcda2ed3e0f78bf412af0c13d6de7f6",
+        "difficulty": "easy",
+        "item_id": "3163:0",
+        "item_sha256": "531a170043ae33c868d148080acaedc4cd2a693f456d14829da8a5706671719f",
+        "prompt_sha256": "ff2a71a1fc9d8eef4c66c351b16db6a62a11cc649fe7d8a4591341db112f5cea",
+        "question_id": "3163",
+        "reference_type": "int",
+        "source_index": 256,
+        "test_id": 0
+      },
+      "selection_digest": "1a4a1f902b70b9d17528676ef9d3db82a4e6006f5d5f02759d56d2f93ef8f0e3"
+    },
+    {
+      "all_item_ids": [
+        "3047:0",
+        "3047:1"
+      ],
+      "all_item_sha256": [
+        "41ea269a3b7e268236312894783a30884e26cb95c09e8ab292897af540e74061",
+        "1e21832e1e61bdbb5293a7c6cb5e7290b95bbab8c498197d786970151a1d0d4d"
+      ],
+      "family_id": "3047",
+      "family_program_sha256": "18293bad84a510fc9bc8722c4b3183a6013ec006fd216359a2ff2c12dc8bbdda",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "2f2a60b3df7de7478addbf38ccabd6460151904c75e50d9b27f81ad80bef2db0",
+        "difficulty": "hard",
+        "item_id": "3047:0",
+        "item_sha256": "41ea269a3b7e268236312894783a30884e26cb95c09e8ab292897af540e74061",
+        "prompt_sha256": "055aa056c18af870c2fad89b1a9e15542002e92c2188170025b37045c24abe22",
+        "question_id": "3047",
+        "reference_type": "int",
+        "source_index": 219,
+        "test_id": 0
+      },
+      "selection_digest": "3601495ca66865e694b33519775149b179ec16a430e9b669cd86c43e19e5fc74"
+    },
+    {
+      "all_item_ids": [
+        "2756:0",
+        "2756:1"
+      ],
+      "all_item_sha256": [
+        "fb704225685f9ba076af9e436a3f98ab13f7ff1994fcbbe84dc02f48577a99ae",
+        "0dbd6e15fa74e1a9d3f2a0aa587837f5df1b434eb26b4b589000b24b89b946c8"
+      ],
+      "family_id": "2756",
+      "family_program_sha256": "7637dc3ddeff2658a0b39e5afe18341293e4073a5e9540aff5ef2f60cc823eb7",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "89d8ccdedb522bb30c1891f064a11d5e2f330514d1b1c4f53bab6c9d8d5321db",
+        "difficulty": "easy",
+        "item_id": "2756:0",
+        "item_sha256": "fb704225685f9ba076af9e436a3f98ab13f7ff1994fcbbe84dc02f48577a99ae",
+        "prompt_sha256": "9e52999f39344664a755eb5451050047c50ab5e283727b8103b08259366800a4",
+        "question_id": "2756",
+        "reference_type": "int",
+        "source_index": 10,
+        "test_id": 0
+      },
+      "selection_digest": "4aab50c8fdca6b1a74d889b12de34d2e0235af647deb21d3b5bf17653ca885f6"
+    },
+    {
+      "all_item_ids": [
+        "2977:0",
+        "2977:1",
+        "2977:2"
+      ],
+      "all_item_sha256": [
+        "3ed0bc04ba0c8e47cd02ee65ce83414ad742e7496261a93f8e29d38822888065",
+        "7def403c6e2d52c2ba27601e7ddd36d8ca0e6e09b62e7423d70cde54c4e8d5f1",
+        "6f927e45434c1edff197e980c5db3bbfed47ab259e66cbcbdc2454052d93cc80"
+      ],
+      "family_id": "2977",
+      "family_program_sha256": "f15a983a8f786acf865dc2cf11890449a08b02601c79961017ff612554fe30e0",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "2fa344a95daea9506bb09bf0d16d6fe0f4ec450bde021ec860c9e726c59f3542",
+        "difficulty": "easy",
+        "item_id": "2977:2",
+        "item_sha256": "6f927e45434c1edff197e980c5db3bbfed47ab259e66cbcbdc2454052d93cc80",
+        "prompt_sha256": "3b312a76916182edb3c1faf3840aa058cbf473898e62b2dbc6ab2f9a4fb2fe45",
+        "question_id": "2977",
+        "reference_type": "bool",
+        "source_index": 175,
+        "test_id": 2
+      },
+      "selection_digest": "2ce6906eda20d251bcfb82ab96c5b0a61008022d8035f4607bcee2f3380e2488"
+    },
+    {
+      "all_item_ids": [
+        "3106:0",
+        "3106:1",
+        "3106:2"
+      ],
+      "all_item_sha256": [
+        "56e83912e09a2fa1ed02e13c5217125ec24fe31b07800b06fc5c91a5b357e72f",
+        "db023af5eb938eeef6d6d9c79f408d54b54a47c5af1dda5da71271589617b53e",
+        "08ee0c6952dbe4309ca5d139badf5896ede3ecb6b03cf6341eb8ebcb6c3df5c0"
+      ],
+      "family_id": "3106",
+      "family_program_sha256": "9f0ebdf8b5af7847b51399ed6c92aaa2d72f6b991b5a00bfd4829b187fd10adc",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "fe56169bcb01047755bd65d07f3021ccc99058f786fdab249f90809d974d088b",
+        "difficulty": "medium",
+        "item_id": "3106:1",
+        "item_sha256": "db023af5eb938eeef6d6d9c79f408d54b54a47c5af1dda5da71271589617b53e",
+        "prompt_sha256": "9950a2e51eb795c9d87184cdb6e543d38a841a0f2dcfdca47c770ed0fe4ef35b",
+        "question_id": "3106",
+        "reference_type": "int",
+        "source_index": 238,
+        "test_id": 1
+      },
+      "selection_digest": "1722166339bf7ed9c74971c09651b95182a3f204a3501b38172a812cb2932a8c"
+    },
+    {
+      "all_item_ids": [
+        "2887:0",
+        "2887:1"
+      ],
+      "all_item_sha256": [
+        "8594a029ec3af37ed4a0e76277c7101d31104f7e754a113391f88b0111c9e008",
+        "5fbec4aac6e21d5fedb35fc86418c9d7b6ffc4fd5e16d37b17d43310668759df"
+      ],
+      "family_id": "2887",
+      "family_program_sha256": "73820987e3930e5622d5c70bc30712835691a946b6718ffa047313c4f3a691fb",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "6b414d7613884c33f0a9fa636775e801dc87d6c25cdd4cdb13b7e502e6a7278b",
+        "difficulty": "medium",
+        "item_id": "2887:1",
+        "item_sha256": "5fbec4aac6e21d5fedb35fc86418c9d7b6ffc4fd5e16d37b17d43310668759df",
+        "prompt_sha256": "73d3909270519344de4236213d3e405e499241974309d4befc7591dcaa7c382d",
+        "question_id": "2887",
+        "reference_type": "str",
+        "source_index": 135,
+        "test_id": 1
+      },
+      "selection_digest": "4b1bfe1f03d2bae2398c0583e9cffde44b6fb5ab3cd41e0d00e466b5cab67b0a"
+    },
+    {
+      "all_item_ids": [
+        "2777:0",
+        "2777:1"
+      ],
+      "all_item_sha256": [
+        "1d2722bd54051374371a48da056225c9d36c93417d6f7ae3a62d441e044e3b22",
+        "cc5c9619df05d963fd4a0cf6c0d3cded77e7887fc8ed177c18ed27c4e17b5dbf"
+      ],
+      "family_id": "2777",
+      "family_program_sha256": "40a3548033c613e99f40a28662558edee5044b4408fc7e9db74b70e24bb62d9b",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "b82c4aa11e96f81a064ad633be7a43bfdae038a5834d22fbb64928cf9c40b7c5",
+        "difficulty": "easy",
+        "item_id": "2777:1",
+        "item_sha256": "cc5c9619df05d963fd4a0cf6c0d3cded77e7887fc8ed177c18ed27c4e17b5dbf",
+        "prompt_sha256": "d2a5c1ff4cd03a1976b019502312b98af80d71c7d148894dfc7306e7ab39b539",
+        "question_id": "2777",
+        "reference_type": "list",
+        "source_index": 15,
+        "test_id": 1
+      },
+      "selection_digest": "38a64b7e4a1fc4837297cf93b72b5dd36ce84353be19f1aca1ccb0a7d01168d5"
+    },
+    {
+      "all_item_ids": [
+        "2920:0",
+        "2920:1",
+        "2920:2"
+      ],
+      "all_item_sha256": [
+        "e77ea531f57d1352d990d2913ca46d6dfff153848d332c88d362c8194ba4bc19",
+        "62da618c17de8b8f0e52b52cb2544529ca7980bc8495669c01d97ffa5eb8682e",
+        "c5a2e821270ccdc0e25cae1924592f3893957f1739ee395e304e25730531f5a9"
+      ],
+      "family_id": "2920",
+      "family_program_sha256": "0e1442362fa29b92f366b6c9857c43d34a214528e2077d01c4ee66d34d4b872b",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "dfa93e39119337f0baf64f5dfd71ea158ff0de41af03baca5eec66303e28880f",
+        "difficulty": "medium",
+        "item_id": "2920:2",
+        "item_sha256": "c5a2e821270ccdc0e25cae1924592f3893957f1739ee395e304e25730531f5a9",
+        "prompt_sha256": "c2a93b1275013fb0574fae821f40c07125260cd3f8f251f0f44488a641ff867a",
+        "question_id": "2920",
+        "reference_type": "int",
+        "source_index": 161,
+        "test_id": 2
+      },
+      "selection_digest": "0cd577b63a6093f9090477a2f6aef309878426add8e803e17eeec8148d67c266"
+    },
+    {
+      "all_item_ids": [
+        "2955:0",
+        "2955:1"
+      ],
+      "all_item_sha256": [
+        "e746d125d5f65ee747650dfe38a558a5936dd7143a7d4eac8b6840accd2ab8da",
+        "b4737fad26a769b18473d5c44acc74d775fd72c7521bd69ea2dbc2e3c20e4050"
+      ],
+      "family_id": "2955",
+      "family_program_sha256": "aa8995bba5edc906af3dfcd7d4a178d9b4f878a3494d39148506e56b15a56c3b",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "38e0c9a65050a1ce9482b965ffc6705ff249603e7a2a0e59148f96bdb03df87d",
+        "difficulty": "easy",
+        "item_id": "2955:0",
+        "item_sha256": "e746d125d5f65ee747650dfe38a558a5936dd7143a7d4eac8b6840accd2ab8da",
+        "prompt_sha256": "23175841a244415d284310ec84cf6c02d4ab5fd26c1f91fb51d546058c7b4f13",
+        "question_id": "2955",
+        "reference_type": "int",
+        "source_index": 171,
+        "test_id": 0
+      },
+      "selection_digest": "8ef7d9655336e9eedacd83dc110b43101b8dfaa0d8c08dce8ac4e2d8f223f1c5"
+    },
+    {
+      "all_item_ids": [
+        "3308:0",
+        "3308:1"
+      ],
+      "all_item_sha256": [
+        "3a3663e072f2101ca698fd1b0ba8ae96ca4b77aaedf97f4a195907b87cf85d4f",
+        "31615c23c04a88a71109aa74dda4b120fc1b4e2f8be59ab9384b2eff34fb6bab"
+      ],
+      "family_id": "3308",
+      "family_program_sha256": "15c75ba6c9ac867e778c1b5ae9305cd30c20355347a721b1040233e971cc4f0d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "f5315218aa91323c20e862ceb1cf80644b8acc8efa45102f96db8f99d54c52d7",
+        "difficulty": "medium",
+        "item_id": "3308:1",
+        "item_sha256": "31615c23c04a88a71109aa74dda4b120fc1b4e2f8be59ab9384b2eff34fb6bab",
+        "prompt_sha256": "69850f741488eadfa4ae2b077028d2ae1f3756dcb0d5691c41534edc179cf8fb",
+        "question_id": "3308",
+        "reference_type": "str",
+        "source_index": 420,
+        "test_id": 1
+      },
+      "selection_digest": "a7a77105cda923d0bba12a8ed916251bcbce1e7f65f6d282220d8ffa84206765"
+    },
+    {
+      "all_item_ids": [
+        "2891:0",
+        "2891:1"
+      ],
+      "all_item_sha256": [
+        "9fa2d845efa1d13a96b092385f6ccc44f6edf69c4a75b937aa369f445af89be7",
+        "60d49728752582f657acdc62eb452f2e9cf6f090dd422177f6805dfb1b39eca5"
+      ],
+      "family_id": "2891",
+      "family_program_sha256": "ac747011c91fce6ca195f2252d559f518c87c3245d84e671021e82e5a5c7a43f",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "3eaa1d8324124e984babc10b525aa472bf914ab8df7c52f1bda34336d2e99684",
+        "difficulty": "medium",
+        "item_id": "2891:1",
+        "item_sha256": "60d49728752582f657acdc62eb452f2e9cf6f090dd422177f6805dfb1b39eca5",
+        "prompt_sha256": "0e62061a8658e81e1ad6776b5bbf35fd729aa503d214f95cfedd3012423c3e7a",
+        "question_id": "2891",
+        "reference_type": "int",
+        "source_index": 140,
+        "test_id": 1
+      },
+      "selection_digest": "52884ed80cfe46b959c7bfd1504b33550f1edcb81627a01a349a23df1ff8e7c3"
+    },
+    {
+      "all_item_ids": [
+        "2873:0",
+        "2873:1"
+      ],
+      "all_item_sha256": [
+        "87b6382ea001ec77b0f7e9cae19a462347a31b23af5c1e99a3d3629ff1f6d90c",
+        "488def83cb8b3f53868f9ae39b5b72a6619b0cfe01880dc8abcac3e837d13eff"
+      ],
+      "family_id": "2873",
+      "family_program_sha256": "b1f45c23b60b628a8c61f1449800e9aea3c448047e085f20bb03bf7379125688",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "08874b7c3e77587f15a70d409552b62869a0f2cd4cfa04a492c355def771ebee",
+        "difficulty": "medium",
+        "item_id": "2873:1",
+        "item_sha256": "488def83cb8b3f53868f9ae39b5b72a6619b0cfe01880dc8abcac3e837d13eff",
+        "prompt_sha256": "f883a3ec44a7ed7165bdf5ae109800fc62ea2a81675be57510154cdd32d15273",
+        "question_id": "2873",
+        "reference_type": "list",
+        "source_index": 112,
+        "test_id": 1
+      },
+      "selection_digest": "3226f9ee313727fec3385125260859275bff0876465ea4831492da801205969b"
+    },
+    {
+      "all_item_ids": [
+        "3311:0",
+        "3311:1"
+      ],
+      "all_item_sha256": [
+        "c7f0b47e2966b947ed94e6a52362717627a1bacf7968c56b89acb76f098884da",
+        "e774e08f3b371270555d7e895f16d9bdbb62467aa35b7371aa289be4105121e5"
+      ],
+      "family_id": "3311",
+      "family_program_sha256": "a2bdeba9628d12d737645159b370bc7131c04aa8f9c796c58f62db9f4a29b7d4",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "a1542ddd803854f0aa545abc15c04434c32b933fe8e3ab12c5580f9e2ad1d3dc",
+        "difficulty": "easy",
+        "item_id": "3311:1",
+        "item_sha256": "e774e08f3b371270555d7e895f16d9bdbb62467aa35b7371aa289be4105121e5",
+        "prompt_sha256": "1fead46759853d30e74534e333d1039d3d5270eec043519fa878d529b4d24238",
+        "question_id": "3311",
+        "reference_type": "int",
+        "source_index": 425,
+        "test_id": 1
+      },
+      "selection_digest": "1237804a1ee9cdbaeea2133a49003e269c87175cfa79c106971bc0944fa8609a"
+    },
+    {
+      "all_item_ids": [
+        "3221:0",
+        "3221:1"
+      ],
+      "all_item_sha256": [
+        "f55ff2f04603907ff205a2d2964dfbe61971b16dd253afef59192ca9e0b1840e",
+        "75c6f8e4903409ee03b6978cdd1f70fefd0cf9ad49623ead11be457f78081603"
+      ],
+      "family_id": "3221",
+      "family_program_sha256": "3e5f2fe53b7984ba611c8300590d9bb7eddc136e998819c919e14bc31a95aaf4",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "a2a76271cdf78a102921ee61e8c0cc6d5decb8a0bf2b76c5eebe2086bc263d82",
+        "difficulty": "easy",
+        "item_id": "3221:0",
+        "item_sha256": "f55ff2f04603907ff205a2d2964dfbe61971b16dd253afef59192ca9e0b1840e",
+        "prompt_sha256": "416588ef91bc27a7b7cc151816b91122a8bc40d5dd039f4fc3c54d89f74d2319",
+        "question_id": "3221",
+        "reference_type": "list",
+        "source_index": 327,
+        "test_id": 0
+      },
+      "selection_digest": "526185b80e5a723e8199e35bbd30cdcaad8718c46f863d9c684df0cb7697aa4b"
+    },
+    {
+      "all_item_ids": [
+        "2730:0",
+        "2730:1"
+      ],
+      "all_item_sha256": [
+        "f1501461c764cb82fe00ce47c7169dbbfc49d1f0ada2ce717bd598047eb9c5b2",
+        "9a0b38426f931280a548a47d6ec6a3a58f655ffcf6ede753c3ad6f61c7a8069e"
+      ],
+      "family_id": "2730",
+      "family_program_sha256": "8329bd514845c848ebe1ecfd5ed5e6efe5b611079a338364e1f89a5e6f1df50a",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "795b702ecec2b424b01d49ea20194b6fdcf25c33ed8c02489329bbb27cba30c3",
+        "difficulty": "medium",
+        "item_id": "2730:0",
+        "item_sha256": "f1501461c764cb82fe00ce47c7169dbbfc49d1f0ada2ce717bd598047eb9c5b2",
+        "prompt_sha256": "85f0e9584831da267e51b6ce8ab5a0522c23e0d18aec9bc8bae1ceea45aeb01a",
+        "question_id": "2730",
+        "reference_type": "int",
+        "source_index": 4,
+        "test_id": 0
+      },
+      "selection_digest": "4b258cf2316052e02d9d9ddcedee1ed782d09f63edff05dcda338ad7b2614ee1"
+    },
+    {
+      "all_item_ids": [
+        "3228:0",
+        "3228:1",
+        "3228:2"
+      ],
+      "all_item_sha256": [
+        "27545dc368ee62c0a1e6ae9fe0fe1c4e27c6335bad35d7d9ccea4a3fdaac5978",
+        "f490a4e6606752f1787fe866fbff32cd744c772b423397fd5ff45c26abe3dfcf",
+        "740ca5f8f58c1005c95d67d0924887a77d728692bd0959cff04efbfa5d14c599"
+      ],
+      "family_id": "3228",
+      "family_program_sha256": "b4a0cd3f4bea37e2bf5a463d836a9c6bea302b457b238c9ce4f0fe15b606d28b",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "32f24cc4e5cdd070d801f2c8fa5a0b0fbf07e7af229ae6be4a72766f0c1232e1",
+        "difficulty": "medium",
+        "item_id": "3228:0",
+        "item_sha256": "27545dc368ee62c0a1e6ae9fe0fe1c4e27c6335bad35d7d9ccea4a3fdaac5978",
+        "prompt_sha256": "9f7e6d6386eea3fe7e946565244c8e73b4ec42ce8f5115799a34bcdc60b05d34",
+        "question_id": "3228",
+        "reference_type": "int",
+        "source_index": 340,
+        "test_id": 0
+      },
+      "selection_digest": "2218ffba058b9d956d3ab5f5a21d89205a6039a5ca92042b99085fc85d019494"
+    },
+    {
+      "all_item_ids": [
+        "3239:0",
+        "3239:1",
+        "3239:2"
+      ],
+      "all_item_sha256": [
+        "388f6b7b6fdb9ad89bd50e603ae61425023ecd7471273c2af091c3978d0a4e22",
+        "4897026d4c0717361095c7945e6eef379e28ec83a444761167ac77d4bbd139dd",
+        "d207de74fec4f8f7e81bc68ca62dc68de4490a218a81d623d9a3d2442c5c6e35"
+      ],
+      "family_id": "3239",
+      "family_program_sha256": "5cf62d3cce0e786572861831a5ae6c4724822f1018d628f62be4abd719be20b6",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "47e7cded2646ed4aae22e35b957627f7b45c2709daa8aac142e21891c7c0fd8f",
+        "difficulty": "medium",
+        "item_id": "3239:1",
+        "item_sha256": "4897026d4c0717361095c7945e6eef379e28ec83a444761167ac77d4bbd139dd",
+        "prompt_sha256": "aadff3887b3dc06a09360a425f40a614ce2361d8abd86e1b7f643c39e13b6c94",
+        "question_id": "3239",
+        "reference_type": "int",
+        "source_index": 363,
+        "test_id": 1
+      },
+      "selection_digest": "417516ab847782e9884811a084634971bfa13d880ed4d6a2426a3eae22242e20"
+    },
+    {
+      "all_item_ids": [
+        "2856:0",
+        "2856:1"
+      ],
+      "all_item_sha256": [
+        "998476cbc45a6090923c86766f85e8b018ac2d0fc8268aa42ae329400bfbc179",
+        "9c9528d2ec1af10be743dc11e1d2600d61a00a15df6df4185d385b4a39471fea"
+      ],
+      "family_id": "2856",
+      "family_program_sha256": "9e68ca1d2e0bf6d5a0470cacf4f0bf094909b78eeff09eef074b8c4587df1931",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "0f147fc90a92830202d50611aa9cbb5c21841e38cb6d0a79a4f441f7d988e6f2",
+        "difficulty": "medium",
+        "item_id": "2856:1",
+        "item_sha256": "9c9528d2ec1af10be743dc11e1d2600d61a00a15df6df4185d385b4a39471fea",
+        "prompt_sha256": "e1b0e9ef4a8c12ab5e45241a51bf627f740078b866396771a616c3ae9d36b034",
+        "question_id": "2856",
+        "reference_type": "int",
+        "source_index": 94,
+        "test_id": 1
+      },
+      "selection_digest": "9e54e2bfdc5a83880efc157019dbdf8bdf4aae4ff9daaa75f192535049afe537"
+    },
+    {
+      "all_item_ids": [
+        "3262:0",
+        "3262:1",
+        "3262:2"
+      ],
+      "all_item_sha256": [
+        "f88b513f3fc6e37b961fb106bbf20ba33400e8dbc78155d725d3dedac686216a",
+        "68261cc13e359abcbcb6768ad01e197d09530da8c8dbd29ccf549df62d84de35",
+        "18d75c2bb30ed30caebe1a3d06859079aa567e8e5a54228fa1f8a87571f7ff34"
+      ],
+      "family_id": "3262",
+      "family_program_sha256": "dad9d6f6f3d4517037623b9bff7a3b13f11d861bda5edfb8319e4001a6b29326",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "e8c86f45a3c4024671876297820745d1817c892d73e582d0440fcfa70f442616",
+        "difficulty": "medium",
+        "item_id": "3262:2",
+        "item_sha256": "18d75c2bb30ed30caebe1a3d06859079aa567e8e5a54228fa1f8a87571f7ff34",
+        "prompt_sha256": "bc1fc9f2ff46d5c4f9502c76b86959dc197e0bd9570dac296c96cf1ad8a9813e",
+        "question_id": "3262",
+        "reference_type": "int",
+        "source_index": 392,
+        "test_id": 2
+      },
+      "selection_digest": "60c550a0a6577595c3bf36edab235b146b39a3731bf80a8035ea5d2ed33b0ec5"
+    },
+    {
+      "all_item_ids": [
+        "3183:0",
+        "3183:1",
+        "3183:2"
+      ],
+      "all_item_sha256": [
+        "e336a5c672d26ebe1b1a95ee045fc969433cd2269133336713fbf0418323b2fa",
+        "101a67a14a44ecd57ad306a087e87fc85e391f5a93335c44c73a32f7c4809c8d",
+        "2a658275e1f29b665471d86efcf77e8f39eec6ca0bf66a8564a7753c1725279d"
+      ],
+      "family_id": "3183",
+      "family_program_sha256": "64e46007525b5db4d9bb8447df8e8f4b3159b631901e7a7b0cc2c5742397b922",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "97679c0cbb2e977095e0efa3974e4c35a6aa1be2cf0cc0a311355097ad19402a",
+        "difficulty": "easy",
+        "item_id": "3183:0",
+        "item_sha256": "e336a5c672d26ebe1b1a95ee045fc969433cd2269133336713fbf0418323b2fa",
+        "prompt_sha256": "a1438386d3381e251e58006b61c85fa8b792661209065a3306632ab18a1a2ef8",
+        "question_id": "3183",
+        "reference_type": "int",
+        "source_index": 273,
+        "test_id": 0
+      },
+      "selection_digest": "0c670824a71eb2cdf65e3fb45d5ac29ca819f25af51e9674794e143d681f5822"
+    },
+    {
+      "all_item_ids": [
+        "2979:0",
+        "2979:1"
+      ],
+      "all_item_sha256": [
+        "f92b9750de259b538e28a0522823346e166e144f849ccc2533b7916e8c2a0c1e",
+        "f2e8825500de4ec035fee684f59a6e49582db41660a4d88cd3426bb9cc39f8f5"
+      ],
+      "family_id": "2979",
+      "family_program_sha256": "6b5dcb8f5fa30a545c6c82bc9822e3f1a6b566b4f8b316565628af1d3df4ba8e",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "3a599d56ed1127a2762f79e25e1f60605796eea6de95e63ba52f9815f1a6ed6b",
+        "difficulty": "medium",
+        "item_id": "2979:0",
+        "item_sha256": "f92b9750de259b538e28a0522823346e166e144f849ccc2533b7916e8c2a0c1e",
+        "prompt_sha256": "ab0277ed08cd6dbc3d3e39799991e4d74cadded66e145d8d7ca8c779525465b8",
+        "question_id": "2979",
+        "reference_type": "int",
+        "source_index": 176,
+        "test_id": 0
+      },
+      "selection_digest": "5ce6af73205caa5e3977ebc7c2ccf36a77e3d938cb1524a7c107e8b0661d87e9"
+    },
+    {
+      "all_item_ids": [
+        "3172:0",
+        "3172:1",
+        "3172:2"
+      ],
+      "all_item_sha256": [
+        "de3283881b4d4e47b09f40067c8a170d7662bde8a625cb7b33764f745337de18",
+        "33c08e03bfd7b6567e326809517fca772ed0a789601d67e09adc96af22d45354",
+        "f77da770a88c3d6ceac8615e1190e1a95655fb1e83fd9db555928aac5643a629"
+      ],
+      "family_id": "3172",
+      "family_program_sha256": "6de547a2b816b53e1806f2874dccc5327d7d16e2ab842cff284894e462bf5dd4",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "a92a935c7547da0b1b4494f3541f560271f47da50cad6026f3e3f2d9ca7d2a70",
+        "difficulty": "easy",
+        "item_id": "3172:0",
+        "item_sha256": "de3283881b4d4e47b09f40067c8a170d7662bde8a625cb7b33764f745337de18",
+        "prompt_sha256": "c2d69a5b0ff4857690e770dd068f5fd04ed374b0b48aae4cd69ccdc7a0c36242",
+        "question_id": "3172",
+        "reference_type": "int",
+        "source_index": 264,
+        "test_id": 0
+      },
+      "selection_digest": "4dc3070cd9f3ee538a9b22d13ace638febedb8334687cfe68bf6c267bf1715d2"
+    },
+    {
+      "all_item_ids": [
+        "2828:0",
+        "2828:1",
+        "2828:2"
+      ],
+      "all_item_sha256": [
+        "408010363a32b3446a4f2576d440fc47deaacd906df59556a7b9d7e689190e8c",
+        "bb0d01fdb751a2895da91e0aa2a5fd6fed2b9a504d44ea9d604bdd15b3a2928a",
+        "0663ec365d303e59b3cbf2b369319339fd7b1184e7467802bc7e65fc8265727a"
+      ],
+      "family_id": "2828",
+      "family_program_sha256": "532cfa48c0486f4cc51b9fbcfe3a5a581cff376fe5e1c43327f9f7c1c102684b",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "498f3352df6c00db4491ccf67c2cdc9bebc9ffaf0d8e7feb4e6a402feedbac44",
+        "difficulty": "medium",
+        "item_id": "2828:2",
+        "item_sha256": "0663ec365d303e59b3cbf2b369319339fd7b1184e7467802bc7e65fc8265727a",
+        "prompt_sha256": "1fba7ff605aa8d24b90caa78c6e54bc5e9e1760eec0d048f880bc0646ed24d0c",
+        "question_id": "2828",
+        "reference_type": "str",
+        "source_index": 60,
+        "test_id": 2
+      },
+      "selection_digest": "3641ad6fb5362fa95fc52c153eb2b81ad31876c2984f1b18c6fec862a338a533"
+    },
+    {
+      "all_item_ids": [
+        "3235:0",
+        "3235:1",
+        "3235:2"
+      ],
+      "all_item_sha256": [
+        "3bdbf58d2275a56cbe6693570b19406e900c2ef97ea14061602d8803b50a2493",
+        "2c8c9ed3a3e6b85fcdcbeda39ff63ad3a691483e82d7956f631fea2aa1dc1574",
+        "dda415d23ecbcc3db481de6acc9e0e6450eb5b608834c3e1abe60d2f007e2ad5"
+      ],
+      "family_id": "3235",
+      "family_program_sha256": "1cb224ad66292bf5d0da83452b01a659bd8be5720eb7acfabbff02d72c4b8d0d",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "61ca8c5cdb83057ce118f44827375a026427fee027d7e3835982c077a0ee889b",
+        "difficulty": "medium",
+        "item_id": "3235:2",
+        "item_sha256": "dda415d23ecbcc3db481de6acc9e0e6450eb5b608834c3e1abe60d2f007e2ad5",
+        "prompt_sha256": "e0727cb9ab3987dbe8a20f32b9006ac8e04dcd366b12f6d12ca1e7d54151768d",
+        "question_id": "3235",
+        "reference_type": "int",
+        "source_index": 359,
+        "test_id": 2
+      },
+      "selection_digest": "39238d2feb3fcea4d8ee29793b8633b26eb91bbedceb5dcb068957cc21b04493"
+    },
+    {
+      "all_item_ids": [
+        "3251:0",
+        "3251:1"
+      ],
+      "all_item_sha256": [
+        "4c75c57b6219264cf2e9ac197689b633e98b637ea548a5e0f987f0b71a9e2de5",
+        "79c749d0fb861397e5670ae85e9e5881ba564ec70893cb057205f02539e6dfb8"
+      ],
+      "family_id": "3251",
+      "family_program_sha256": "642f46a71ef4f8b53832a89aafc7f5073b00e351e97ddda2992123e10a306575",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "5989e5f3e4949a201b740a743eabeb24a0867675c99cbfbbc2c8b01746992741",
+        "difficulty": "easy",
+        "item_id": "3251:1",
+        "item_sha256": "79c749d0fb861397e5670ae85e9e5881ba564ec70893cb057205f02539e6dfb8",
+        "prompt_sha256": "c014e033e042912bde3245a7cd3c65a0915c57cd62966a00323f061fe23a7a47",
+        "question_id": "3251",
+        "reference_type": "int",
+        "source_index": 383,
+        "test_id": 1
+      },
+      "selection_digest": "2529e1f19291f9c30b02b7c2153980deaaaee8917ea9b9fc15eb2d6c0d180d7f"
+    },
+    {
+      "all_item_ids": [
+        "2881:0",
+        "2881:1",
+        "2881:2"
+      ],
+      "all_item_sha256": [
+        "353ae569f7a1f632ae50f3757d3509c9f235139750ae80a172ef9626288c960d",
+        "974d07193e5de04bed605850e88a7fe92e141aa1aff7d977bcd0ca8b43b14f52",
+        "549765a1d4c7b98479d56271fc7f58c813d57f753b68567c07b6ffb9e947cab3"
+      ],
+      "family_id": "2881",
+      "family_program_sha256": "2ec4475b482a49bc24207209385d80183cd2b12cc8f0c98601f8b0a7c0b4acdb",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "43dd1321d53fd158662a61d8c723fccedfe16534b8ad313fb94f656dfddf697f",
+        "difficulty": "easy",
+        "item_id": "2881:1",
+        "item_sha256": "974d07193e5de04bed605850e88a7fe92e141aa1aff7d977bcd0ca8b43b14f52",
+        "prompt_sha256": "f42ce10e837e6420cf455a529809158c74b920348e462e632f53d382b8e036f9",
+        "question_id": "2881",
+        "reference_type": "list",
+        "source_index": 123,
+        "test_id": 1
+      },
+      "selection_digest": "192082c0d83d42b43e2b9934797a106b57149091ca138e1b07e41086be85a276"
+    },
+    {
+      "all_item_ids": [
+        "3230:0",
+        "3230:1",
+        "3230:2"
+      ],
+      "all_item_sha256": [
+        "7518a3f12ee84b96b1cfa52a07dbdfcd853e6c52c82f1c2024e2a5f04c900c77",
+        "8963de0f6792fce47d42b1ee2ac1135844b70c376690f24bfd85f2435db050ca",
+        "a69d80a873f918aeecdb5135002be6c7a92864e6561180ebed370c42afa51944"
+      ],
+      "family_id": "3230",
+      "family_program_sha256": "d6490b143b63c3196752e111da91a3abcba667c41f20dcb92c772a6340d4d416",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "f6ea548048e537bf80fd8411fdcdde6dfaee766daad5212c53115624699a17c9",
+        "difficulty": "medium",
+        "item_id": "3230:0",
+        "item_sha256": "7518a3f12ee84b96b1cfa52a07dbdfcd853e6c52c82f1c2024e2a5f04c900c77",
+        "prompt_sha256": "b0a7a224e181a8a4024c2cd52a8056fe53312660707fd0a785e965e195a839ad",
+        "question_id": "3230",
+        "reference_type": "int",
+        "source_index": 346,
+        "test_id": 0
+      },
+      "selection_digest": "207fde5d96931346df691405bcdbd35043f3e9cf72dd3ec4ab54da0c5c58d9a8"
+    },
+    {
+      "all_item_ids": [
+        "2792:0",
+        "2792:1",
+        "2792:2"
+      ],
+      "all_item_sha256": [
+        "7e8e4d3bc96c20772c72249bfcef656ae89376f4528c060cf0e391299a501ecd",
+        "fe2d1dc703fb09f9093c167837347fd1d8ea2ee71c98bc1ba860e40a8c8b8337",
+        "e1395dc40757a74308a62ba35a18e263a8161425dcc8a6137b4f2fa7a621213e"
+      ],
+      "family_id": "2792",
+      "family_program_sha256": "4216e0489824c234628b2089556e6fb2c02b9513878538fe63e13d12ef4ae43c",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "0d6a747c0d99fa0700ec0f1ba518204f22cca4977c751f13bff41713484387b6",
+        "difficulty": "medium",
+        "item_id": "2792:1",
+        "item_sha256": "fe2d1dc703fb09f9093c167837347fd1d8ea2ee71c98bc1ba860e40a8c8b8337",
+        "prompt_sha256": "44e2ef1fb45fa1ca8176b4ffb5aa400fa788249b5203b4519d34788be40a9778",
+        "question_id": "2792",
+        "reference_type": "bool",
+        "source_index": 29,
+        "test_id": 1
+      },
+      "selection_digest": "d06cea479840fec8a309bed834c5849cc538167422b94830a8f2842772a2e2ce"
+    },
+    {
+      "all_item_ids": [
+        "2872:0",
+        "2872:1"
+      ],
+      "all_item_sha256": [
+        "700d4da4dcf127cbee39fabdb7c1f346230ef1a68d2003a901d06e718bcefdd3",
+        "46b370194f5f971b2ef7f1e62b9c8ea2d57f15794d80868b98ddc06ff3001949"
+      ],
+      "family_id": "2872",
+      "family_program_sha256": "dc8ad80e482dd275cdc72abda021bbf6796c930da25b2125f5546ea67d2774d6",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "67fe2d000e7098991cf3337e570ca61c8e8b584e1b876405790807f006d9b0d6",
+        "difficulty": "medium",
+        "item_id": "2872:0",
+        "item_sha256": "700d4da4dcf127cbee39fabdb7c1f346230ef1a68d2003a901d06e718bcefdd3",
+        "prompt_sha256": "6361606b8b9af77bcc742f657eee87148874ced094eca60f61bf5111edfafb94",
+        "question_id": "2872",
+        "reference_type": "int",
+        "source_index": 109,
+        "test_id": 0
+      },
+      "selection_digest": "3c0e6a6daf792af421c69561f4c90c8923d8c3be4fd924e8d0e073490803148e"
+    },
+    {
+      "all_item_ids": [
+        "2810:0",
+        "2810:1"
+      ],
+      "all_item_sha256": [
+        "c3f1167cdd95640714a920c8364f013f1430af6ef8ccd62acaf47e1a437012bd",
+        "2479c7696f37cc5b57ed6466c2a9a2a66665621c76e514923f44e1996f02e48d"
+      ],
+      "family_id": "2810",
+      "family_program_sha256": "6c8f03b5f01aa543ab11898aae65b92f146cde92377e882242a105b98364303f",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "93cc14b837aa6db9efccc33dfb2b661c633ea3611bc955e7c28f67902b2d0f53",
+        "difficulty": "medium",
+        "item_id": "2810:1",
+        "item_sha256": "2479c7696f37cc5b57ed6466c2a9a2a66665621c76e514923f44e1996f02e48d",
+        "prompt_sha256": "2f0c0127699159e4c16b7097fd7ceb6fa2d32f42d8d3a29eaae1f24e36257a88",
+        "question_id": "2810",
+        "reference_type": "int",
+        "source_index": 38,
+        "test_id": 1
+      },
+      "selection_digest": "5bc9f7355f7a73b196891a509228ca06a9a1baf19898f6f3badb7c545a01404c"
+    },
+    {
+      "all_item_ids": [
+        "2882:0",
+        "2882:1"
+      ],
+      "all_item_sha256": [
+        "feac02493e5575e8ac6cc9aa6c0668fae37579b44dcf080ab2f87baadbdcc739",
+        "54e34effa996166451b5979494012e4fb24d2ba4a444fe15a3212e1d517fdbed"
+      ],
+      "family_id": "2882",
+      "family_program_sha256": "23b36e408ae6173edffe47389ce9e3f13e087632f02800b73d3828c3fe322bd8",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "18f34334b752186f07c19fa911f61b12025d59f22ffc103c01f933769862071d",
+        "difficulty": "medium",
+        "item_id": "2882:1",
+        "item_sha256": "54e34effa996166451b5979494012e4fb24d2ba4a444fe15a3212e1d517fdbed",
+        "prompt_sha256": "6a8ba59b871a8a8baefdd890ee64282165b1180e01b06dc56cee3c8db087cb44",
+        "question_id": "2882",
+        "reference_type": "int",
+        "source_index": 126,
+        "test_id": 1
+      },
+      "selection_digest": "8de503020410ed5025cb6ee8bf8b934bea92eb8ee1734e046a5a4857b9475be5"
+    },
+    {
+      "all_item_ids": [
+        "2902:0",
+        "2902:1"
+      ],
+      "all_item_sha256": [
+        "9fbcc7f8a7315991a0defd8b10e77324ecebc72391269610258440cc0b26020f",
+        "b7aeb55a33e5f89ba3e4207c22c3a6923d0826a2fe14b1856a9f506a2037b44c"
+      ],
+      "family_id": "2902",
+      "family_program_sha256": "3ac6a473a743a2b256f23daa7bc31d8ac66f858e8ccca810d94f1e53022c1bd9",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "69d34fcc6f85f0b678fe84230195b8315d95a348cc92e9069ac00187f44d9f54",
+        "difficulty": "easy",
+        "item_id": "2902:0",
+        "item_sha256": "9fbcc7f8a7315991a0defd8b10e77324ecebc72391269610258440cc0b26020f",
+        "prompt_sha256": "cf94d706068c5391a1dd45498a0d41695bec01477293f76111010268c329c8f0",
+        "question_id": "2902",
+        "reference_type": "int",
+        "source_index": 147,
+        "test_id": 0
+      },
+      "selection_digest": "af971e629de3900c60eefaa58417cb98698337fb1c540cba36d32154ada798c3"
+    },
+    {
+      "all_item_ids": [
+        "3220:0",
+        "3220:1"
+      ],
+      "all_item_sha256": [
+        "8bdd79a4fef5d6cbc9cff89610073eeefeef19526715863f32b001a2b35a4151",
+        "5a194a8ecb24dda366466ea6125387144187c6c04d47a989248db8cb36360826"
+      ],
+      "family_id": "3220",
+      "family_program_sha256": "0d829af72c173febdd1a16430499735d6371dacdc93c66337cab991d3842320e",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "25bf9dcc9f8cc2f8bca9028f86183f617bb8bcb6357657eb4704df6db1211e34",
+        "difficulty": "easy",
+        "item_id": "3220:0",
+        "item_sha256": "8bdd79a4fef5d6cbc9cff89610073eeefeef19526715863f32b001a2b35a4151",
+        "prompt_sha256": "82f0fd52d225afb26d77dc2c6291a9f67416c923bc67c5f39d8039e88ac47066",
+        "question_id": "3220",
+        "reference_type": "int",
+        "source_index": 325,
+        "test_id": 0
+      },
+      "selection_digest": "0f5f262db563171b918ceb4225deefe7bcf4ce41dbd9f242428f6ba97c6a23dc"
+    },
+    {
+      "all_item_ids": [
+        "2888:0",
+        "2888:1",
+        "2888:2"
+      ],
+      "all_item_sha256": [
+        "4be38e24fc86464f2deab0c5b39368fc5855b0f0abe92cc137d9231555015f88",
+        "259212e2bb7e98cd5ae8518d0a3998c140016036f8625f3858b3bd36451c275d",
+        "aa1e84f4d4a22dc6b18d9a88191ed5f8503b8f8dfd76825e3ff58fb35abcbada"
+      ],
+      "family_id": "2888",
+      "family_program_sha256": "4cc8e8899862bba590b3f607939595c4de0389cf48f46bd262fe02de71164a25",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "1d4b5bab74eaca7e1a6b92336ceb34f1de62cd7be5404c35ed3b413498bb4315",
+        "difficulty": "medium",
+        "item_id": "2888:2",
+        "item_sha256": "aa1e84f4d4a22dc6b18d9a88191ed5f8503b8f8dfd76825e3ff58fb35abcbada",
+        "prompt_sha256": "69b243eb04306da6c011176dc6769744061dfb46c2344591ee68f3a0b61415af",
+        "question_id": "2888",
+        "reference_type": "int",
+        "source_index": 138,
+        "test_id": 2
+      },
+      "selection_digest": "5b1226bca2bc6bfdaa157783dbe72bb92ad88ff7dc7af47e33553e163eff7dce"
+    },
+    {
+      "all_item_ids": [
+        "2868:0",
+        "2868:1"
+      ],
+      "all_item_sha256": [
+        "07fe3a65987115ad83d3faa7c74c6e784e85cddc7973046892665bdf56b8ecb2",
+        "b79e138079a691de8b2aed49f5e9222d8bf3ebc93e103b4dae545cc44f1393a8"
+      ],
+      "family_id": "2868",
+      "family_program_sha256": "71e16bed95282b12b96778f930bca8d55dcf90a152de51994dd75c1ea8a0b883",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "bb0c655cb0160a0eb0e9b1ad6d94b7e5bad58ca6175bfbece735cb41373fb0dd",
+        "difficulty": "medium",
+        "item_id": "2868:0",
+        "item_sha256": "07fe3a65987115ad83d3faa7c74c6e784e85cddc7973046892665bdf56b8ecb2",
+        "prompt_sha256": "2168d60960668d369caa8c3318affb769e412eedcd16cf2bc9f0f1f058cc7cc1",
+        "question_id": "2868",
+        "reference_type": "int",
+        "source_index": 102,
+        "test_id": 0
+      },
+      "selection_digest": "508f9e5ca2deda757bee2fa984acc434d317b306df8bdf87ab6e540b86a3c563"
+    },
+    {
+      "all_item_ids": [
+        "3292:0",
+        "3292:1",
+        "3292:2"
+      ],
+      "all_item_sha256": [
+        "1082bab84cf20db0d9df0568f63e45d9a2df212f1ee3ff8ded25b746ec14c2c3",
+        "00ff76aef2d854ef0185be26626dcdb414f206e192551b2b9dd933fdac67fda3",
+        "d109385d6c1a5fc8cb8b67b294c09736cdea42b33099d889cfd50a650211194a"
+      ],
+      "family_id": "3292",
+      "family_program_sha256": "c0a521401a293387dece9fbe904e423561a77a87350f9d5737c5ba1e12ad0684",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "8c033b9ea2c5de0a03eb5dce5385bd468e1b648bd3824733336100168a87f033",
+        "difficulty": "medium",
+        "item_id": "3292:0",
+        "item_sha256": "1082bab84cf20db0d9df0568f63e45d9a2df212f1ee3ff8ded25b746ec14c2c3",
+        "prompt_sha256": "e7b8822bd6061631e31de3ef02691efc54c1990465543c94fb34e6fab96dd148",
+        "question_id": "3292",
+        "reference_type": "int",
+        "source_index": 409,
+        "test_id": 0
+      },
+      "selection_digest": "1b18ad2945b1b5c2fa6b124680b0ab37d00762c69424d78ed733276b6cead268"
+    },
+    {
+      "all_item_ids": [
+        "3297:0",
+        "3297:1",
+        "3297:2"
+      ],
+      "all_item_sha256": [
+        "e6b29bce063f197627d8c81d497f1563f3c034e54781655208fb1f6e010e69f9",
+        "be9929936e63bd61f1e4b18d7e451c33bf155ec24dbbdd0b21ef903fff984670",
+        "c0cf4ce884ddabc1fa2d1fcdc090220c3fe79caa99a902bb2c27ca7dc8f341d2"
+      ],
+      "family_id": "3297",
+      "family_program_sha256": "13969c0898a6a8e90b05806a9af8f85f89409fbc24d7dcadf27a4bce51c411d5",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "0a4c26102b246fb80c9b69db1da76bfd1116533a48d6d2e7fd51c8dfa86ebacd",
+        "difficulty": "medium",
+        "item_id": "3297:2",
+        "item_sha256": "c0cf4ce884ddabc1fa2d1fcdc090220c3fe79caa99a902bb2c27ca7dc8f341d2",
+        "prompt_sha256": "5eaf416531121090fb59e2d319924c46b1c2242549eaef88084c411059dc71f9",
+        "question_id": "3297",
+        "reference_type": "int",
+        "source_index": 414,
+        "test_id": 2
+      },
+      "selection_digest": "3c1e2544f3becb87141b8e1bc41b9403d59df3f3f4d6464c8e953a9e38ca3edc"
+    },
+    {
+      "all_item_ids": [
+        "3317:0",
+        "3317:1",
+        "3317:2"
+      ],
+      "all_item_sha256": [
+        "a772ad1ce41e6d23d532521f77171144e7aaf1331b9943b864b4281965c3e11a",
+        "f6dd15264332d3e56b7d088476e511463acea9c464110cf1d51f2f44905ca2ec",
+        "2def337d16b727f7f3410e3111a0ec4ed6296ec7d5fb9cf616b478fc665f26a0"
+      ],
+      "family_id": "3317",
+      "family_program_sha256": "0b0e0150031f85b76277ea70ff29f5c586dc4552da9bb1acdf1499318059bec2",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "89fd9639f6db4f820a16c8834f837ee0be43f11903e10c20051fd4cdecb1ccb7",
+        "difficulty": "medium",
+        "item_id": "3317:1",
+        "item_sha256": "f6dd15264332d3e56b7d088476e511463acea9c464110cf1d51f2f44905ca2ec",
+        "prompt_sha256": "6c5bd405d66c2c274671fe1481d04f61ee5295151e5f0fea834e8b0ac2d9347a",
+        "question_id": "3317",
+        "reference_type": "int",
+        "source_index": 429,
+        "test_id": 1
+      },
+      "selection_digest": "56f84b1dfad1498212c8b8212059d1e62e052ebad8aca0141a89b395871a9620"
+    },
+    {
+      "all_item_ids": [
+        "3194:0",
+        "3194:1",
+        "3194:2"
+      ],
+      "all_item_sha256": [
+        "2a7c981fb23824623cc9d430f1e3cea3f0854735b2f8c0979997af5fddb85d94",
+        "ce78132fdfc22f0cb2f19876bba3024523bae22f18b1e5df4260ccdc0859773f",
+        "40ef961d747803e53d4950cad105a9983f0ba01fe616aae648def24a32737143"
+      ],
+      "family_id": "3194",
+      "family_program_sha256": "db8ed9908b8e2473977a4e913eeeae7d2f336dfd30634b9fe1692bf88acb7bb3",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "18fc1e3bf29ef55b17226ae89203c375f92479ec49fb4012d6821086386afe27",
+        "difficulty": "easy",
+        "item_id": "3194:1",
+        "item_sha256": "ce78132fdfc22f0cb2f19876bba3024523bae22f18b1e5df4260ccdc0859773f",
+        "prompt_sha256": "60f16894551c37fd56818536b528bf91c7fe4839d7e88042cc89f56380cefdb4",
+        "question_id": "3194",
+        "reference_type": "list",
+        "source_index": 291,
+        "test_id": 1
+      },
+      "selection_digest": "36858abcae104f0c7298f0f977b20caebfba973670d1142824fd598c8857c15f"
+    },
+    {
+      "all_item_ids": [
+        "2849:0",
+        "2849:1"
+      ],
+      "all_item_sha256": [
+        "4620f25b1eee3e8374f9984bb6242e08971e298a828ccbf186bf6a94bc88a73b",
+        "f8aa3fae73157380f6d4fc255135f34601cbc48f67ef4933dbd1159ceea74c63"
+      ],
+      "family_id": "2849",
+      "family_program_sha256": "5435666590fe01b71b9642279fe74a613cc46ae1e571ec9663c567ce0d2ed335",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "c9c22f2fe077869ae35f343938a580e9e44419cc753aae24313ef3aa009ee81f",
+        "difficulty": "hard",
+        "item_id": "2849:1",
+        "item_sha256": "f8aa3fae73157380f6d4fc255135f34601cbc48f67ef4933dbd1159ceea74c63",
+        "prompt_sha256": "b476f3f7126491df68b8965edbd7e41103b173888039e11463436ce069aa2cfb",
+        "question_id": "2849",
+        "reference_type": "int",
+        "source_index": 84,
+        "test_id": 1
+      },
+      "selection_digest": "1baaad54e1cb3be10c4e8403d60c9dad1495db609694e859617cb842e6b02050"
+    },
+    {
+      "all_item_ids": [
+        "3104:0",
+        "3104:1"
+      ],
+      "all_item_sha256": [
+        "ffd5910223493810177788bc4e817e590e1a791b16d5e974b4435d59d2c96798",
+        "a6e8521f26e819e654e58ecd1976575e31c0faf9cc7e1b8593344a64052b0ad7"
+      ],
+      "family_id": "3104",
+      "family_program_sha256": "caae9e3af5ad4a7b8cb6ad0930dd232ba6d5c046b5a930684f3660fc8b62b4b9",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "678e785c4836e5cc659ae85547db9e3309582ad581324d51c60e02967d7f98a9",
+        "difficulty": "medium",
+        "item_id": "3104:1",
+        "item_sha256": "a6e8521f26e819e654e58ecd1976575e31c0faf9cc7e1b8593344a64052b0ad7",
+        "prompt_sha256": "92c05c1634b5fc87f16d33d3169cb1eaba2947c9dd14ffb2b77cd8864b34725f",
+        "question_id": "3104",
+        "reference_type": "int",
+        "source_index": 236,
+        "test_id": 1
+      },
+      "selection_digest": "2de2de1d1ee19e26d5b7580e3897036e3d484794c5ae276285c14aa6a907d2e2"
+    },
+    {
+      "all_item_ids": [
+        "3055:0",
+        "3055:1"
+      ],
+      "all_item_sha256": [
+        "84b554aaa87cd45a88d10bf9f4d7038e504047d218a3616fd172493bfee8dca8",
+        "a4b579adcbc4f0b56366fe094fb8c9f25c19a2c9e90a0aeb207513fdd88aeba5"
+      ],
+      "family_id": "3055",
+      "family_program_sha256": "d48316a74457ff944feb4ef59d0a426fec03c2cb6cc9e2324d609c1acfd4f29b",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "f530dc522a66c0628ce6c47b76e6cf8e030878818881f6c5b36d652ed0b183a5",
+        "difficulty": "easy",
+        "item_id": "3055:1",
+        "item_sha256": "a4b579adcbc4f0b56366fe094fb8c9f25c19a2c9e90a0aeb207513fdd88aeba5",
+        "prompt_sha256": "d6972de561de9b50bc65cbb050f1b65b1d478ce1a5c10185555d4142de6706ad",
+        "question_id": "3055",
+        "reference_type": "str",
+        "source_index": 222,
+        "test_id": 1
+      },
+      "selection_digest": "1a844b03816fc4133b6519d81251f39e267385e9564922613029e826143181fa"
+    },
+    {
+      "all_item_ids": [
+        "3236:0",
+        "3236:1"
+      ],
+      "all_item_sha256": [
+        "619fb0b315b249a6406f3ccb970341666f847af92d09e31db7b13d63336a243f",
+        "deee76a234d74bfbc191ed1928c9a7c5341c941be08ad23d2f8062a3139a3920"
+      ],
+      "family_id": "3236",
+      "family_program_sha256": "37e051a70bad63cfdbdda089409b5a2e3fa046379cea777f5b89601407fb26b1",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "b16c2827ead26b4b63885c553449e8380e5885e514acb83db1a11c1943f3d19b",
+        "difficulty": "easy",
+        "item_id": "3236:0",
+        "item_sha256": "619fb0b315b249a6406f3ccb970341666f847af92d09e31db7b13d63336a243f",
+        "prompt_sha256": "04630c2eaf5877283b368bef84d70ddd922ca78188757d1f6d61756a3bc4b234",
+        "question_id": "3236",
+        "reference_type": "int",
+        "source_index": 360,
+        "test_id": 0
+      },
+      "selection_digest": "72b67816e0332c278488095b2622b4b944690c7edb31a8f2fafbc5eb666119cc"
+    },
+    {
+      "all_item_ids": [
+        "3171:0",
+        "3171:1"
+      ],
+      "all_item_sha256": [
+        "9743517210e5cca50aaf73eb60b6835e52019dc8355619acb7deccdcbd5883a4",
+        "09017b5222c2cf03168d01305741c20b79c7925401757700bbab022450a1e4f5"
+      ],
+      "family_id": "3171",
+      "family_program_sha256": "b710a57d13598a71ecdc4f808a993c73c6189cf0d4a0cc0eb7553303acdc047c",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "f888f60b013d29807bb8df6e96b4fa40812c265bedd142523f7c138a3c3abf61",
+        "difficulty": "medium",
+        "item_id": "3171:1",
+        "item_sha256": "09017b5222c2cf03168d01305741c20b79c7925401757700bbab022450a1e4f5",
+        "prompt_sha256": "b60dcff88edd1dc10ad6dd3d73c59c2a052cd595284da3313ada2c6714592bf0",
+        "question_id": "3171",
+        "reference_type": "int",
+        "source_index": 263,
+        "test_id": 1
+      },
+      "selection_digest": "db185624c4e92cdad7defddbd6792ec29336791875a8220cfa9a6de220d3eddc"
+    },
+    {
+      "all_item_ids": [
+        "2824:0",
+        "2824:1"
+      ],
+      "all_item_sha256": [
+        "56ffb778b5d8ad7efddacc7a65ddbb71cb6ce03a743259a1928ca8def1fd30d5",
+        "aa3d8125e8e0e82724250b967c15ccd0cb1e7f7e409b01c252745b833f47526f"
+      ],
+      "family_id": "2824",
+      "family_program_sha256": "1089e36f73aaa8d3c386baabf64eb9fa6aeb24ac8137cb679efe1a5451fcdc45",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "105b0aff272d68eb69089fe6e5260871943f0a874f4222661d16189b9cadf373",
+        "difficulty": "easy",
+        "item_id": "2824:0",
+        "item_sha256": "56ffb778b5d8ad7efddacc7a65ddbb71cb6ce03a743259a1928ca8def1fd30d5",
+        "prompt_sha256": "5ace8ed577141add85fb3c4b33fe798f8a7a304e0e3b123891eeab29eccaa157",
+        "question_id": "2824",
+        "reference_type": "bool",
+        "source_index": 50,
+        "test_id": 0
+      },
+      "selection_digest": "31f83449d8e52c481966046b09f8e4b57a495ae5bcfdd6dcc0e6e9b788a50a5d"
+    },
+    {
+      "all_item_ids": [
+        "3224:0",
+        "3224:1"
+      ],
+      "all_item_sha256": [
+        "b2d017525097acae991901e5d20679bff85c1c39d6eec0c69b53b07dd240dd96",
+        "0ae5b64764402dc5c663660c5bb1784402e33c8eb1fead6264875e9a6d505af2"
+      ],
+      "family_id": "3224",
+      "family_program_sha256": "23d108016519e8169155371e5d68d08a2e1389b48fabe8b7e35a59e330a6a462",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "4355e22a1db29635b29babf80279d286f98e88d808f1f1c0c9af83e52534b020",
+        "difficulty": "hard",
+        "item_id": "3224:0",
+        "item_sha256": "b2d017525097acae991901e5d20679bff85c1c39d6eec0c69b53b07dd240dd96",
+        "prompt_sha256": "cbe804e4cc81add6dbb227e21d9a66612ebf4f3d3c1c8c0cfff2b5d197245bc5",
+        "question_id": "3224",
+        "reference_type": "int",
+        "source_index": 331,
+        "test_id": 0
+      },
+      "selection_digest": "1ff2445d3317766f5d04e2997995e764015b01c43f8773dafb2aa116ecdf890e"
+    },
+    {
+      "all_item_ids": [
+        "3320:0",
+        "3320:1"
+      ],
+      "all_item_sha256": [
+        "49f25277b2f64826f25c1de374a65ecfb4db941c1fdc3c012d32c6a4c3daf1eb",
+        "86fe28d85e54146a5f3c53f5f359165b177e4580033e1159069ddef35a0d4eb3"
+      ],
+      "family_id": "3320",
+      "family_program_sha256": "1b02576fe8eccc0bdf79b7e02a60ada9bbb47a2754ba3af57ac13f8ba7807765",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "4b117504172d93f45a1ef90a5be4e37e0e9d69a24b7a7582c1d0fa2293007b92",
+        "difficulty": "easy",
+        "item_id": "3320:0",
+        "item_sha256": "49f25277b2f64826f25c1de374a65ecfb4db941c1fdc3c012d32c6a4c3daf1eb",
+        "prompt_sha256": "236c0df360e25f745a16718a98e140370877a85582e8b137f3cee7eccc7d340b",
+        "question_id": "3320",
+        "reference_type": "int",
+        "source_index": 431,
+        "test_id": 0
+      },
+      "selection_digest": "1a9a3cf7cf7791877a3049612ee772d0b62d3e89c3cd988c5ac08a3fb6880887"
+    },
+    {
+      "all_item_ids": [
+        "3331:0",
+        "3331:1",
+        "3331:2"
+      ],
+      "all_item_sha256": [
+        "a4bfb030f494b0f1fbd582ee755fb23b44ad7be1b3b417dc86f3c4623defda58",
+        "96ae2f90266cc4e1aeed56af98e10d643227f6ffd92d4c307f31cb85fc697e09",
+        "64f8566a6e3dde5d2166918daab3acf345e1f9af6d834ad0359d5880f3b09979"
+      ],
+      "family_id": "3331",
+      "family_program_sha256": "012b5f6fb09e321d6c0c0d2cc80baf3b8edfeb3a1bb67ebfb8f530e4270510d3",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "5f2cadbf7637ca1f8d33276c9fc14be6b3f90fcfb02d8ca7941e86f7132f254a",
+        "difficulty": "easy",
+        "item_id": "3331:1",
+        "item_sha256": "96ae2f90266cc4e1aeed56af98e10d643227f6ffd92d4c307f31cb85fc697e09",
+        "prompt_sha256": "94f21f80b7fe6e7451d5f89c63d50fb53630801188d54613b7bcdd3563b90579",
+        "question_id": "3331",
+        "reference_type": "int",
+        "source_index": 438,
+        "test_id": 1
+      },
+      "selection_digest": "5c22776bbb89a9cb0047ae2bc3a89c0744952ad5d40025a0ecf89072b3d75326"
+    },
+    {
+      "all_item_ids": [
+        "2837:0",
+        "2837:1"
+      ],
+      "all_item_sha256": [
+        "606592a110bd9de870ac21f8a20a54c68064ea8f13b94eda2e9c9bcc8eae452c",
+        "94bb21e9fe678d10c1a57e4c873df9c6211c01cb21475c0600fe95c8dd7baca1"
+      ],
+      "family_id": "2837",
+      "family_program_sha256": "7afd8753b7b10725a52f94d0eefa0952fdc83798e559f40c472d37700afb170a",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "542ccda684d1dc314cefce82bc1ed65a87c283a05bc11a5949e5fe6cff92fc15",
+        "difficulty": "medium",
+        "item_id": "2837:0",
+        "item_sha256": "606592a110bd9de870ac21f8a20a54c68064ea8f13b94eda2e9c9bcc8eae452c",
+        "prompt_sha256": "05748685e291d59d0717c78cd33310e2159884adf783fc054f48f188e862bf93",
+        "question_id": "2837",
+        "reference_type": "int",
+        "source_index": 69,
+        "test_id": 0
+      },
+      "selection_digest": "5004c5e56c155f195469b209d19efb528f1ec6da793c8a5c2a4a612483089d58"
+    },
+    {
+      "all_item_ids": [
+        "3226:0",
+        "3226:1"
+      ],
+      "all_item_sha256": [
+        "5899290ec75dc4a0734c883016467dc863e370552f341fef9257afd3c582a1e7",
+        "a6be55dd2e613acd797f066d8548dca7737cd8f16845ae58040f683626eb934f"
+      ],
+      "family_id": "3226",
+      "family_program_sha256": "f6da4c3c47f9b2af9ddde5e700ff113b877a1672da2475286828f89d6122af01",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "49bbad19075d67556eaf30dee06802d030b0de59b88bb2e6720c72daaf3f411f",
+        "difficulty": "easy",
+        "item_id": "3226:1",
+        "item_sha256": "a6be55dd2e613acd797f066d8548dca7737cd8f16845ae58040f683626eb934f",
+        "prompt_sha256": "e9c43a12ddaee3fec5835235d8b3d6e4c8aac591cf5e084c19c8c97741c3e996",
+        "question_id": "3226",
+        "reference_type": "list",
+        "source_index": 337,
+        "test_id": 1
+      },
+      "selection_digest": "2c714d8dd9ea6c77c9bc35c5076a974cf20b4105befd30a1cc7a4bd06a9cc921"
+    },
+    {
+      "all_item_ids": [
+        "3212:0",
+        "3212:1",
+        "3212:2"
+      ],
+      "all_item_sha256": [
+        "8a58740af640accd157cf87652bb094225d2fef2895c8ca56795ca012ebe112a",
+        "1920457db16e7335db4529b23901fa111431829b97c8a9263a662a02de9a9ccf",
+        "17c952c7c9ff35039af3983d72e5c07602ba39d3ebf0954b9649f53518c10cc0"
+      ],
+      "family_id": "3212",
+      "family_program_sha256": "f41d19c73494644203b44f518b068477daa61aff19b641a8020019b9ee5ce133",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "e4c08a7028256f26b304fc719ffa0b1f14b36471b0160dc1aaf85afcf5ec2092",
+        "difficulty": "hard",
+        "item_id": "3212:2",
+        "item_sha256": "17c952c7c9ff35039af3983d72e5c07602ba39d3ebf0954b9649f53518c10cc0",
+        "prompt_sha256": "48cf4132805c74eda0995e438b038c7849b0d83781697acfb40a45ff9548769b",
+        "question_id": "3212",
+        "reference_type": "int",
+        "source_index": 319,
+        "test_id": 2
+      },
+      "selection_digest": "5bb03988377be804fafd6bc0e3381a7dfa64844b49bb8016a479f99abeb7b6c9"
+    },
+    {
+      "all_item_ids": [
+        "2808:0",
+        "2808:1"
+      ],
+      "all_item_sha256": [
+        "f6f403c0790a8fecbfeda7bbbee98a9540dd7833a2b15da728e574ee62c5fb05",
+        "608511fa53b6fce28f214b49854bdf9523d2a58e6318793f888a9b67f0568ca9"
+      ],
+      "family_id": "2808",
+      "family_program_sha256": "a4de50f6210475188cda19ab68984a3d3895a75f73b89996b877fc55924f14af",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "f631b598ce88356c81ea414f6d492241b0b66bfc88c38fb1c582979d1f4d55e0",
+        "difficulty": "hard",
+        "item_id": "2808:0",
+        "item_sha256": "f6f403c0790a8fecbfeda7bbbee98a9540dd7833a2b15da728e574ee62c5fb05",
+        "prompt_sha256": "728ee716ef414adfc5a1fbdbb17e882ac0a5fbd37d47a764b56a42e6038ef96f",
+        "question_id": "2808",
+        "reference_type": "int",
+        "source_index": 35,
+        "test_id": 0
+      },
+      "selection_digest": "a210c0293c05c2c41954869ca1a30f198cbe6142ba39d4f07d1e82223f607032"
+    },
+    {
+      "all_item_ids": [
+        "2791:0",
+        "2791:1"
+      ],
+      "all_item_sha256": [
+        "7ca24ebbad1dca3e4debaf330c4b450cf649325d340d684069617da6260d79df",
+        "ba7a27e76df2f7985d184249cd5b18576158817c45a7a3ff984f54aafbf0cb8c"
+      ],
+      "family_id": "2791",
+      "family_program_sha256": "5e7e417ea304259955cebcf67a675942e59809abb943295580f3ceba01da2421",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "d0f6e5b67fc9cf8d4d1189e556bf0a863f33e0ac9ec2300a20307a817b8c51f6",
+        "difficulty": "easy",
+        "item_id": "2791:1",
+        "item_sha256": "ba7a27e76df2f7985d184249cd5b18576158817c45a7a3ff984f54aafbf0cb8c",
+        "prompt_sha256": "20c39cec13fb001ba9a623743fee204b3f0f110bd98d60d7e289cd53f8826d34",
+        "question_id": "2791",
+        "reference_type": "list",
+        "source_index": 27,
+        "test_id": 1
+      },
+      "selection_digest": "4995f1ade0bda4af6eb4576b00dee2b3facc165f2cef7bf7553e8ecb479cdf3f"
+    },
+    {
+      "all_item_ids": [
+        "3176:0",
+        "3176:1",
+        "3176:2"
+      ],
+      "all_item_sha256": [
+        "a4d7f4ab07c32a3fae854d72124dd8f33d30bab6c414944f9dbaa9c4505a58eb",
+        "60e1af29bdd13f14d1a3492de468ca9f0c4bf279c1b9aa132a08222fcb9626ec",
+        "27b98da40f2409ed373cc241ea04b9917cdce36cb089c09a6770625cf7d9854c"
+      ],
+      "family_id": "3176",
+      "family_program_sha256": "956d514fd7dfb4675abe038520752e2da7f79c77100aaa05926b96688e6f5f0f",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "9dc3437d4b332216c1a6652d89c1af79eac2864ae4ad0ae3ad5e6280590c9c21",
+        "difficulty": "easy",
+        "item_id": "3176:0",
+        "item_sha256": "a4d7f4ab07c32a3fae854d72124dd8f33d30bab6c414944f9dbaa9c4505a58eb",
+        "prompt_sha256": "a592ec3585ddff0c2e7bce60ae0b3ceff85b35cca47b24659ea1ada425434a20",
+        "question_id": "3176",
+        "reference_type": "int",
+        "source_index": 270,
+        "test_id": 0
+      },
+      "selection_digest": "017833eac031e8b233b32c07041492cbccd9891884faeaea2cbb3bde71466e57"
+    },
+    {
+      "all_item_ids": [
+        "3213:0",
+        "3213:1"
+      ],
+      "all_item_sha256": [
+        "613f08b6bd9cacfb3ae7cfd8b4bbe3b1b4fb44b718e15df359e2c80a949c9f76",
+        "31604e12281494c13f3c4d0170b0ccf14ade906157df14e34ba9c08887352e80"
+      ],
+      "family_id": "3213",
+      "family_program_sha256": "d6f596473a959a94cb7f79c38667b9068b27ab8fc648f5a5cecbece287f5a09e",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "8e3ea99e9fead8567c0326d7606a7900606727b88c21b111ff4ec6b91ca17984",
+        "difficulty": "medium",
+        "item_id": "3213:0",
+        "item_sha256": "613f08b6bd9cacfb3ae7cfd8b4bbe3b1b4fb44b718e15df359e2c80a949c9f76",
+        "prompt_sha256": "a3774f7e28a8655be4b0a2709d3fcaf5a8e2c2ef8203faa9d060e101f2b96d87",
+        "question_id": "3213",
+        "reference_type": "int",
+        "source_index": 320,
+        "test_id": 0
+      },
+      "selection_digest": "5bfba1b70179446585201e9babbdc4a167ee3af1235b0e82587eb098d3f5da03"
+    },
+    {
+      "all_item_ids": [
+        "3081:0",
+        "3081:1",
+        "3081:2"
+      ],
+      "all_item_sha256": [
+        "d14bbe5ee12a217456f83699c290a32bcaef220052e4150a1f215aa2e003983f",
+        "f1d83c7c94177a6811d241f67ee19236aa373d662c8c28db8518a9d90bacfce7",
+        "c3045b9900bfb8a4bc1cfecb846768b52d9ac1e14e844764cc0b2eeca2317e5a"
+      ],
+      "family_id": "3081",
+      "family_program_sha256": "8f573210d6aadb79931a20e83fc68bb4f6974bdf260d34db82ac4467605fe3a8",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "07a621e3221f40343151fe6d1388baec57a5796ac3bf994b5497cc68d0e28724",
+        "difficulty": "medium",
+        "item_id": "3081:1",
+        "item_sha256": "f1d83c7c94177a6811d241f67ee19236aa373d662c8c28db8518a9d90bacfce7",
+        "prompt_sha256": "6b7a30ea07c8238454546aa0eed1765efd8aca0a20c060247941797a4f24c712",
+        "question_id": "3081",
+        "reference_type": "int",
+        "source_index": 226,
+        "test_id": 1
+      },
+      "selection_digest": "819588b37b92a86479b2da78bbff6bd3d15bf1a9a105652c2b02d725aaac2f17"
+    },
+    {
+      "all_item_ids": [
+        "3347:0",
+        "3347:1"
+      ],
+      "all_item_sha256": [
+        "da9b961b6599780ed90ece9c0f14d249f159edcf0b85260bb720ae2bc2bfda5c",
+        "36f0c4e5c0ec0156ceb5070d4fec7ac1b58fedd4be970da1449b103ff46fa31f"
+      ],
+      "family_id": "3347",
+      "family_program_sha256": "736f702261d2c8c9bdec96580a47f3d95ca306271e95bd0ab6db8ada45b5afb0",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "677a5801f267d2c1b38aa3fc20cc432c4aff6ef374b8d66661f5191c4f2574e6",
+        "difficulty": "easy",
+        "item_id": "3347:0",
+        "item_sha256": "da9b961b6599780ed90ece9c0f14d249f159edcf0b85260bb720ae2bc2bfda5c",
+        "prompt_sha256": "dd3267834ca6c6b4d074c09ee145e1b2f68a355e4602b78e556deb1ab1db2780",
+        "question_id": "3347",
+        "reference_type": "list",
+        "source_index": 440,
+        "test_id": 0
+      },
+      "selection_digest": "42d6b58cdfe55dc6172b4be356a4b26598d26824a84384bfbee3c2a8274c870e"
+    },
+    {
+      "all_item_ids": [
+        "2811:0",
+        "2811:1"
+      ],
+      "all_item_sha256": [
+        "059d27ffce715a76ab57842e6350e5f11a3dd64ce76a0f4c77f93c6f3f5b9335",
+        "0889f78055042b5875d51f135a82e4453755d81bbf5d118397aa6fe4aacd5aaf"
+      ],
+      "family_id": "2811",
+      "family_program_sha256": "91ec6b88004dbf240322631c8e1dd890dcf7daba52d3c43954441dc821b1ddc1",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "ae3cbdc07a2250e8fdcd7be7ae9a0d1a5cc8cd8f5afc1b6261dc2481a8dfa00b",
+        "difficulty": "medium",
+        "item_id": "2811:1",
+        "item_sha256": "0889f78055042b5875d51f135a82e4453755d81bbf5d118397aa6fe4aacd5aaf",
+        "prompt_sha256": "ff4895a7a00894313be95afa6042f6bfaeb59e623991429ed75e0fec913de1c6",
+        "question_id": "2811",
+        "reference_type": "int",
+        "source_index": 40,
+        "test_id": 1
+      },
+      "selection_digest": "2181b48f29508ee332655a5fd3f22c67684c8fce60c652fc013f45062f765dc9"
+    },
+    {
+      "all_item_ids": [
+        "3211:0",
+        "3211:1",
+        "3211:2"
+      ],
+      "all_item_sha256": [
+        "a884460edbfb1128405c374f176d6a60069838c769db6dd72ecae483edc21831",
+        "46929354713b86b2c6011ffec4aec8c98d5089066647cde6638fc468fbbd78eb",
+        "f7679b6c83b949ec3f42436b1e8399fefc8707f31172b4263c8a1ff13897722f"
+      ],
+      "family_id": "3211",
+      "family_program_sha256": "30cec03adee7208d0c85ae32627cd6ac3facc5f54588a217fc7dadbd488433b5",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "4380fdace5797d2ff6bc4ee8c7a54ba59c9edc14aae4b16fd119ab1524eea2f7",
+        "difficulty": "hard",
+        "item_id": "3211:1",
+        "item_sha256": "46929354713b86b2c6011ffec4aec8c98d5089066647cde6638fc468fbbd78eb",
+        "prompt_sha256": "9e3dead50444a2544a9d0cd86ef8135ea7f9c182aa70b42cfd952d9687290b5c",
+        "question_id": "3211",
+        "reference_type": "int",
+        "source_index": 315,
+        "test_id": 1
+      },
+      "selection_digest": "49542c70f6860d00252bbb28273308f2f23f86dc6ec64e7edc45e3110dff8af9"
+    },
+    {
+      "all_item_ids": [
+        "2817:0",
+        "2817:1"
+      ],
+      "all_item_sha256": [
+        "e04d09236c35bf6a5b5935b17d7790a3415681ace8f591b59d93d15ebf6e29b3",
+        "4a7c0883a3d75b5b91c8d9b8bad8443e6b99be1c9858e10e0ac7d19f032086a9"
+      ],
+      "family_id": "2817",
+      "family_program_sha256": "9f679af33df81bc34aabb704933d5d54997c6049acb1b539826735e45cd31ab8",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "f59adfb9797471a22ac239bb27bb00ed532444f8875cb4678ff5fcc5382bc8e1",
+        "difficulty": "medium",
+        "item_id": "2817:0",
+        "item_sha256": "e04d09236c35bf6a5b5935b17d7790a3415681ace8f591b59d93d15ebf6e29b3",
+        "prompt_sha256": "cbbb76b2a6a55256b55820b03bc9358b7cd16d845ef651e1af4a9d2644e87c54",
+        "question_id": "2817",
+        "reference_type": "int",
+        "source_index": 46,
+        "test_id": 0
+      },
+      "selection_digest": "224df98b2772cc9a2f7e2b221c19d2191490ad1cba2c5f16ad140bb49cd8753e"
+    },
+    {
+      "all_item_ids": [
+        "2877:0",
+        "2877:1"
+      ],
+      "all_item_sha256": [
+        "4d37f1f7e6cd32946d047b4acb08360d1ae7b45da9767e1d3a33c1e4e165ee46",
+        "5cec89875112bcbacaa7286dc0024252987c374453bbced2bb9f571ba67a1e03"
+      ],
+      "family_id": "2877",
+      "family_program_sha256": "4c92b1d2371e747ff1db6a1f6084666819ec5ca3b91794aad14e48ecb70e387e",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "e8e1f17b4c0b2e5282c48d9bcf48b75643a8479d94e21fc5ab47480445f749ac",
+        "difficulty": "medium",
+        "item_id": "2877:0",
+        "item_sha256": "4d37f1f7e6cd32946d047b4acb08360d1ae7b45da9767e1d3a33c1e4e165ee46",
+        "prompt_sha256": "934757e6ce3a4a4ed314d0427222d88332360b0770c32401315912c6f6a7a2b6",
+        "question_id": "2877",
+        "reference_type": "str",
+        "source_index": 115,
+        "test_id": 0
+      },
+      "selection_digest": "15a3e4b4b720601d9d5301b1687140727773fed434243c31be77337cce19f363"
+    },
+    {
+      "all_item_ids": [
+        "2867:0",
+        "2867:1"
+      ],
+      "all_item_sha256": [
+        "e1a2ee7df5a74976469c34d670d07265c0c7af76b1eb7e8fa1303a86d596c745",
+        "fe25831ee8c7046b8116305bef273c2dfc480bc37aa565defeb78b599bb20eb9"
+      ],
+      "family_id": "2867",
+      "family_program_sha256": "96abed23a931d95e8d72ab0ef2cac883a1a83923561dcdcb8362e036468933db",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "6196a8c6028071a634babd0620f0c15ec67ea301f6c2c7933832034d22de110d",
+        "difficulty": "medium",
+        "item_id": "2867:1",
+        "item_sha256": "fe25831ee8c7046b8116305bef273c2dfc480bc37aa565defeb78b599bb20eb9",
+        "prompt_sha256": "c99a0a3ddaa09f683de902697d6a2264e3beae06f5e4fba7e5f8be8e9265de59",
+        "question_id": "2867",
+        "reference_type": "int",
+        "source_index": 101,
+        "test_id": 1
+      },
+      "selection_digest": "123d122e71df07b5485b53ea9ce76a6931ed9d8f7c223b9d62fd3eed5a6332a6"
+    },
+    {
+      "all_item_ids": [
+        "2999:0",
+        "2999:1"
+      ],
+      "all_item_sha256": [
+        "3c07ba7e2c5eb878782d0c47d1a446e039d12d94c8c52ebdbdaeb5a2f408b383",
+        "e1f52eb593ee14cb1be491f31c7f654d7cc976325f777703871babebb45cbeff"
+      ],
+      "family_id": "2999",
+      "family_program_sha256": "846768948620d7a476c0a684189d7b12e0b580f610029d9737344dfa14778e74",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "dca0875c3bf3c2ef9c6e02fc427d5d91d57323f872dd3d4d2c95488efe17a084",
+        "difficulty": "easy",
+        "item_id": "2999:1",
+        "item_sha256": "e1f52eb593ee14cb1be491f31c7f654d7cc976325f777703871babebb45cbeff",
+        "prompt_sha256": "f1b67ad528d967711fdf3b39f76832f21e55c7bf3129a672adaa0ba46df4ff2c",
+        "question_id": "2999",
+        "reference_type": "bool",
+        "source_index": 181,
+        "test_id": 1
+      },
+      "selection_digest": "d8f840741b70b38fa54ca98479a3a29dd8096a8f2e190f3afeeebb0f6ec91e44"
+    },
+    {
+      "all_item_ids": [
+        "2878:0",
+        "2878:1"
+      ],
+      "all_item_sha256": [
+        "8056e8eacf9a882e0b4b86cb729df212c46d65db8afcd56f78364ac0dd9c52f8",
+        "915039e102aacc81b99adb2cacff90223ce92f654305367e9830e7712046b8ee"
+      ],
+      "family_id": "2878",
+      "family_program_sha256": "53683282c10d39a2089734d9bbc44bd79680c731d53de93722ce7454cea2854c",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "e07af0c1caac9543574e807482a3b7bad2da7564a503a332fa4da6005401e5e4",
+        "difficulty": "medium",
+        "item_id": "2878:0",
+        "item_sha256": "8056e8eacf9a882e0b4b86cb729df212c46d65db8afcd56f78364ac0dd9c52f8",
+        "prompt_sha256": "924bab006c0dcf73764573aeed12d366d456a95acbe42255ba06359b38a7c768",
+        "question_id": "2878",
+        "reference_type": "bool",
+        "source_index": 117,
+        "test_id": 0
+      },
+      "selection_digest": "a33553b03ca50179796ee697c9410fb299525fa3fff899a35106d2925b0fc848"
+    },
+    {
+      "all_item_ids": [
+        "3225:0",
+        "3225:1",
+        "3225:2"
+      ],
+      "all_item_sha256": [
+        "04785d243960261d09f951496953a774298e2beb9d6d0516a35f0c085c512ca4",
+        "6a71bfed90263b83e4a01328c3c8d6f77126911bfc54d57369e123c866634cab",
+        "135d61aef7aa8cb50218b1fa08c7eee182a4e66ac9bfb4ca19b084a255b6d6ae"
+      ],
+      "family_id": "3225",
+      "family_program_sha256": "76e3aca3c8607459a77dcfffee7284f1e1ed2bdc7006f9d3580f19555d7ca9a9",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "f17f3f9549518aabbe1a7ab7210b637f03bd5307cfea62ab5e9ab65e4629d799",
+        "difficulty": "medium",
+        "item_id": "3225:2",
+        "item_sha256": "135d61aef7aa8cb50218b1fa08c7eee182a4e66ac9bfb4ca19b084a255b6d6ae",
+        "prompt_sha256": "5085a00061e0fc06131fc118cc3f5e371d43fbc06ef4377f16981c5924019a37",
+        "question_id": "3225",
+        "reference_type": "int",
+        "source_index": 335,
+        "test_id": 2
+      },
+      "selection_digest": "04f6e53a29329f3076c28998232d71d1da2fe869581509bef54240ab69d450db"
+    },
+    {
+      "all_item_ids": [
+        "2800:0",
+        "2800:1"
+      ],
+      "all_item_sha256": [
+        "609ef03bd5486e8a51d31740453170bc60cbddfd6c0856cd0c1eb7d85442fba1",
+        "cb396193ed16f023f6406661f95a5eb12b017dd488c90f2b417ca667a19f2cf3"
+      ],
+      "family_id": "2800",
+      "family_program_sha256": "97e4da7f4d186077e86486209e0625fea401be6acb3afa5e8825d29693d46d77",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "feac5eff2598a91eb80acb3f89137cd7e84bb3170b2527d4c72615ecc6438dc0",
+        "difficulty": "easy",
+        "item_id": "2800:0",
+        "item_sha256": "609ef03bd5486e8a51d31740453170bc60cbddfd6c0856cd0c1eb7d85442fba1",
+        "prompt_sha256": "01de9960c0796d871896f4d059795130104f58a0a35beecf05551f39a247774a",
+        "question_id": "2800",
+        "reference_type": "int",
+        "source_index": 31,
+        "test_id": 0
+      },
+      "selection_digest": "9059a3633f772f54c90f9e6dbbf9a4423e26ca1ea347d6142e124a610dabe23b"
+    },
+    {
+      "all_item_ids": [
+        "2831:0",
+        "2831:1"
+      ],
+      "all_item_sha256": [
+        "cc5e9a932d15a755d9b70ca7db79003729e4f3444cd66a456659f6dc385c36b4",
+        "51c272c20048b1f0cf666add590bb978451f58a916fff47dd2e158d703704f3c"
+      ],
+      "family_id": "2831",
+      "family_program_sha256": "fe7d6b4ea34eac4bb6c8e75cac3390a5153625db3689471839dd597055eddb4d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "68ad84f3bcec313564319b4a4595c6bdf781714aa0f84668f917a50fd7ad7819",
+        "difficulty": "easy",
+        "item_id": "2831:0",
+        "item_sha256": "cc5e9a932d15a755d9b70ca7db79003729e4f3444cd66a456659f6dc385c36b4",
+        "prompt_sha256": "e16224f5176b85ab827c2624b8e8efc8ca00d7b6c910a648b5fb59f95bdc2cdc",
+        "question_id": "2831",
+        "reference_type": "int",
+        "source_index": 61,
+        "test_id": 0
+      },
+      "selection_digest": "239079520cc172ec046c94ebe911d6082224fd8862ce207de82e82c59cf90f8c"
+    },
+    {
+      "all_item_ids": [
+        "3093:0",
+        "3093:1"
+      ],
+      "all_item_sha256": [
+        "e351923f487126b78bc9764f5589e587e253d64a1a284b5c5d519757001b3be6",
+        "71b062ed26587be8db787aa405bfbc5f694679945399f6d5acbb5f883545c47c"
+      ],
+      "family_id": "3093",
+      "family_program_sha256": "d5350fa6922e97cd9e1619411616d32e667d27335250a78ffb9a7c553c235f7a",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "576ce426bc60308697f7a8ef89c636b39345ee623aeef3cb0250e24832ef3b63",
+        "difficulty": "easy",
+        "item_id": "3093:0",
+        "item_sha256": "e351923f487126b78bc9764f5589e587e253d64a1a284b5c5d519757001b3be6",
+        "prompt_sha256": "227d30c479ee7ee268ee92f4f36cea630f50dd05855e6283ce9eb7c3576b4e11",
+        "question_id": "3093",
+        "reference_type": "int",
+        "source_index": 231,
+        "test_id": 0
+      },
+      "selection_digest": "23a4e119b69a5721403b356cff52812b0aabef0d363dab6bf41abf94c8f52498"
+    },
+    {
+      "all_item_ids": [
+        "3223:0",
+        "3223:1"
+      ],
+      "all_item_sha256": [
+        "4d8c2f43943fdd46484ddc66f7466c553c1c2646c27060f6ceef3e6875e0d9be",
+        "15b9bcab652ff60c6d0b746b10f6072841817019cec5a8873e9fdc7d7d11f8b9"
+      ],
+      "family_id": "3223",
+      "family_program_sha256": "ebca2cc7a8832a1f19d695b3824a8bc8bcb86a2baf407f3880e095fe5f141461",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "4c2c768f2b473671715af3a0655b57e3a9947e6c5992735ab45792f9f9877fcc",
+        "difficulty": "hard",
+        "item_id": "3223:1",
+        "item_sha256": "15b9bcab652ff60c6d0b746b10f6072841817019cec5a8873e9fdc7d7d11f8b9",
+        "prompt_sha256": "6a605ba8c1c112d951683f65985b534a4816376473b197bda3ebcdc333b4eed5",
+        "question_id": "3223",
+        "reference_type": "int",
+        "source_index": 330,
+        "test_id": 1
+      },
+      "selection_digest": "15b722008f95c7044ef6f15f7e847dc2c2f1fbf3bf0d2b06b5889c922338ba8a"
+    },
+    {
+      "all_item_ids": [
+        "3269:0",
+        "3269:1"
+      ],
+      "all_item_sha256": [
+        "fee28c0d0a7c87eb4f8271acca01200568d63b2d5341bf1195196870fdff3d17",
+        "cb0d226ecbe524b2b0896a25d48b3a0afd4bd4070f6353f6e330844405bafc02"
+      ],
+      "family_id": "3269",
+      "family_program_sha256": "97e86da0d68894b10bee6414919508f112403fb74d0e2f1f2555a9c3ae4c314b",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "a3bae635a3fec2a093d44fe26c2d5c61bc87617963b54ccd3c6c191144152c92",
+        "difficulty": "medium",
+        "item_id": "3269:0",
+        "item_sha256": "fee28c0d0a7c87eb4f8271acca01200568d63b2d5341bf1195196870fdff3d17",
+        "prompt_sha256": "41a7d397a023578792ecdbd589c2f09b5db4a953cfa0b694b52b433325535a78",
+        "question_id": "3269",
+        "reference_type": "int",
+        "source_index": 402,
+        "test_id": 0
+      },
+      "selection_digest": "898a0fb73dbd1bb6e642e93453fc7d91bcea94219a0ed949e89f64644840035e"
+    },
+    {
+      "all_item_ids": [
+        "2848:0",
+        "2848:1"
+      ],
+      "all_item_sha256": [
+        "8d180f23eb34c31401a77b41e43f5b9fe494d05be46d9492f9ef739c5aab8ef1",
+        "126d831f69a4153377350e25a052ca6dcd87f0fd7a2fa2fd03ca407c710fddc1"
+      ],
+      "family_id": "2848",
+      "family_program_sha256": "2eda4bd2490ed4ed0e3262c9a9b6b834b4f9dae91e3fe2777ae1db9a833ba7d8",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "214b395adb7571b44de6325b5a22cc8fa33f68d8595a4cc404c136e2cc94ae66",
+        "difficulty": "medium",
+        "item_id": "2848:1",
+        "item_sha256": "126d831f69a4153377350e25a052ca6dcd87f0fd7a2fa2fd03ca407c710fddc1",
+        "prompt_sha256": "b5b1d2311f3a3d0ce7282c542dc3b51d85d50deb3c46cad0bf437d6afbe74417",
+        "question_id": "2848",
+        "reference_type": "int",
+        "source_index": 82,
+        "test_id": 1
+      },
+      "selection_digest": "80f4fbcd0fda99b0b2e05ff44e4ed66d10420cca6f853100f7038b6f03f3de50"
+    },
+    {
+      "all_item_ids": [
+        "2784:0",
+        "2784:1"
+      ],
+      "all_item_sha256": [
+        "da972d1f49eb8b756b960bc379050b4c67bf2e8132cce4b428cfadeb9a2e225d",
+        "f6e0e56b05cb13fab50da2d699fbbeb37169d074e628cf8adf994fd7efa86f7a"
+      ],
+      "family_id": "2784",
+      "family_program_sha256": "ed24199b6cfd2db4f5890ff94b82b2d883cb3897898f80d1052ac98eb74cdc1c",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "1f1b7287dbca47166b3ad462d1e9806220f6241d20b31f626e7c997797331612",
+        "difficulty": "hard",
+        "item_id": "2784:0",
+        "item_sha256": "da972d1f49eb8b756b960bc379050b4c67bf2e8132cce4b428cfadeb9a2e225d",
+        "prompt_sha256": "ef2b9a97dcb89cc142639e0ee16467a525e6b5540db3b624ee8831c28f578e51",
+        "question_id": "2784",
+        "reference_type": "int",
+        "source_index": 18,
+        "test_id": 0
+      },
+      "selection_digest": "02bb6f4c861faf1c6cc21964a03f71630b370291a8d1e0e681bdc2c66d5d78f6"
+    },
+    {
+      "all_item_ids": [
+        "3046:0",
+        "3046:1",
+        "3046:2"
+      ],
+      "all_item_sha256": [
+        "d6f05a89899b58870e90d71c33018c3425b7a0efabfff2315a8374560b9f2038",
+        "fdc145bd1e2282c509be078477aba1d129654200dfc6d04042361ad49ec9640c",
+        "4c3632ff3c2ef6897e4f1702a1fc4ed88dc9013d56b3cdfd44adb0edd7bf9c04"
+      ],
+      "family_id": "3046",
+      "family_program_sha256": "6774a1c16f42eeedad47319a41fcb665fb9a74e12af972655420b1f31fa8f94a",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "ccb7dcf0c6fc2ba671c7e6afdb39e69c99a530184fd7af57cdabfa9e09c48dd8",
+        "difficulty": "medium",
+        "item_id": "3046:2",
+        "item_sha256": "4c3632ff3c2ef6897e4f1702a1fc4ed88dc9013d56b3cdfd44adb0edd7bf9c04",
+        "prompt_sha256": "f674251ca762505ae03fe57e7f01ecef44aa02919b370e5e1285924f84168ed4",
+        "question_id": "3046",
+        "reference_type": "int",
+        "source_index": 218,
+        "test_id": 2
+      },
+      "selection_digest": "10e72bd29100e2c428b47505cfff30aae16c5e756a4cb026824d96344c504166"
+    },
+    {
+      "all_item_ids": [
+        "2883:0",
+        "2883:1",
+        "2883:2"
+      ],
+      "all_item_sha256": [
+        "03a37d9d04231ccfbb76c6d9c317bb6b3c8a57c9b233c3147eca31d09d55be46",
+        "4a025e65a676bc39781822dedbba4e18f3c52ec6fcb75e58ee7ea6a70b5c9a86",
+        "c5c6adb7a177b28f4cf90b9e94e56f76309d2599a3d8966870dd54aab7445cc7"
+      ],
+      "family_id": "2883",
+      "family_program_sha256": "dfd33403f300baa6f06f6c0ca3b1cef15e0548ef5a580ac2443f65a09975906b",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "3ee10e0286b475f66961cabb8d3c14141d5d829361a94cb8902a325a13177410",
+        "difficulty": "medium",
+        "item_id": "2883:0",
+        "item_sha256": "03a37d9d04231ccfbb76c6d9c317bb6b3c8a57c9b233c3147eca31d09d55be46",
+        "prompt_sha256": "7d4b206821dad677605f0a27bb94a0baadc4ff3d5c6de88134b3e86fdcedbae9",
+        "question_id": "2883",
+        "reference_type": "int",
+        "source_index": 127,
+        "test_id": 0
+      },
+      "selection_digest": "2b2ab4a1ecf786c0ac22f7991daad6d21df8b4f5e5730e2ed830bde8a454e434"
+    },
+    {
+      "all_item_ids": [
+        "3227:0",
+        "3227:1"
+      ],
+      "all_item_sha256": [
+        "401054331c8290c5526dc3ccab432535e022660e51e91f31567fa550d684e279",
+        "646d549e4ae7d28d33635686ab5336cac4fb39ba517d200bb141c7aaa79a5a3c"
+      ],
+      "family_id": "3227",
+      "family_program_sha256": "0e5a50363c033745b1afe461a86955149df5a06e7690cc326879f133f99da857",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "59d0594fff14cea28c2219f98afb6d915c5e0f5529c1877a91130814efea0e9a",
+        "difficulty": "easy",
+        "item_id": "3227:1",
+        "item_sha256": "646d549e4ae7d28d33635686ab5336cac4fb39ba517d200bb141c7aaa79a5a3c",
+        "prompt_sha256": "e3e73cf3be32cedc26aefdad463f92a40f24cfa737ed055807fd8fbaa448ba1b",
+        "question_id": "3227",
+        "reference_type": "list",
+        "source_index": 339,
+        "test_id": 1
+      },
+      "selection_digest": "15401890977d4685ed79fe09e9b9c9f41ac4b9d392f10ee46c222f6f7247b2b3"
+    },
+    {
+      "all_item_ids": [
+        "2802:0",
+        "2802:1"
+      ],
+      "all_item_sha256": [
+        "cbda7888809b8b1a59dbfd4e0dfe622a1633f9b0275f55913755b74828962c8a",
+        "733686e10ef20ea5eece7dfd3e9e8ab5c6a512a90d08ede5f1ae015cada1997d"
+      ],
+      "family_id": "2802",
+      "family_program_sha256": "5c5f34ff1d0b18f8bcadf9e2bec8b32ba7161b29f952c553f10cdad9285bf8fc",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "0ff9b254ba3216cdd35a77d10864cee0e51251bab2e05abf81f91a43316b3f4c",
+        "difficulty": "medium",
+        "item_id": "2802:1",
+        "item_sha256": "733686e10ef20ea5eece7dfd3e9e8ab5c6a512a90d08ede5f1ae015cada1997d",
+        "prompt_sha256": "599fe530d09fd2803809e85ee208bdf1551d69a51a16f250f28671e51263e68f",
+        "question_id": "2802",
+        "reference_type": "int",
+        "source_index": 34,
+        "test_id": 1
+      },
+      "selection_digest": "619324a877cb1dbaed46aa88527c4859a308440ef6acdd133e52ffe8264f9e30"
+    },
+    {
+      "all_item_ids": [
+        "2886:0",
+        "2886:1"
+      ],
+      "all_item_sha256": [
+        "233cf15bd3a9023aff46d5a171b60431fd729bb1847caaed499d0fd316b79f04",
+        "e1617dd536379981969afb903f18bdc0ed529031e0e9c0566e1607e07950195e"
+      ],
+      "family_id": "2886",
+      "family_program_sha256": "b4a9175495aaf5cef0e7b6350ebda25b464f02d315679f2c61764ba071f57f88",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "51477e8fc5432fc3bae03205f1ec192bed1cf3219d6571ec1d3490991f6af147",
+        "difficulty": "easy",
+        "item_id": "2886:1",
+        "item_sha256": "e1617dd536379981969afb903f18bdc0ed529031e0e9c0566e1607e07950195e",
+        "prompt_sha256": "faf534ba2acc38fec89b96c0ad19a8ec09871a11004282a796aaca4f4f2e863c",
+        "question_id": "2886",
+        "reference_type": "str",
+        "source_index": 133,
+        "test_id": 1
+      },
+      "selection_digest": "cd9e730a5a5d6d8b7adaaa0767c34173cf82d76aafb00d037b22db38b96ba574"
+    },
+    {
+      "all_item_ids": [
+        "2816:0",
+        "2816:1",
+        "2816:2"
+      ],
+      "all_item_sha256": [
+        "15be892326d97ad0f152b00c98b93fd84a9ba7d351659cbfd29fd9857b83aaa2",
+        "6e429993ee3b268bbd988c4415d55ef1273730b0cef783c295a2b1e1eca3552a",
+        "b1103e1f539635966db159df8b577816dcde2825d6dbc7c3d01bd8741b33e936"
+      ],
+      "family_id": "2816",
+      "family_program_sha256": "4b5bbb96feddd79131e9bbf60f54dcb6a62f9d30ba4a99936ee963c3dbda5639",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "827bd28cd0baff1824a19ca00b2b6f891f333566aed4e39af302294ab3683e29",
+        "difficulty": "easy",
+        "item_id": "2816:2",
+        "item_sha256": "b1103e1f539635966db159df8b577816dcde2825d6dbc7c3d01bd8741b33e936",
+        "prompt_sha256": "8143a65923cc7ce04d3303f2d99091bcaf8d3baff39f72dbeb1de61c848e7f7c",
+        "question_id": "2816",
+        "reference_type": "str",
+        "source_index": 45,
+        "test_id": 2
+      },
+      "selection_digest": "1dddd51bce1b4eb47354d880e7d9b4176639230ca2a7deecbf1979e34fb612f4"
+    },
+    {
+      "all_item_ids": [
+        "2953:0",
+        "2953:1"
+      ],
+      "all_item_sha256": [
+        "fe004570da2fec321a355c0237639c9a3ee8fc6d7ac44eef8d82c62723fa5bca",
+        "dda435feb972181ffc8c341fdb631344f0050b9fe9a781a4d1f5d4f58093f6b6"
+      ],
+      "family_id": "2953",
+      "family_program_sha256": "96db1c63b4a3161f32ad260ea121e01dc880d09f33305f888843931ab8bbc5c5",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "b1542f246f1ad484b679278814ce6cbf7e7d1825ba7d25979a35e1733f7e9192",
+        "difficulty": "medium",
+        "item_id": "2953:1",
+        "item_sha256": "dda435feb972181ffc8c341fdb631344f0050b9fe9a781a4d1f5d4f58093f6b6",
+        "prompt_sha256": "00b0ed9103460a56653e9746742dc6cd6c4df5283c72493d712c7450272a3184",
+        "question_id": "2953",
+        "reference_type": "int",
+        "source_index": 167,
+        "test_id": 1
+      },
+      "selection_digest": "38c69a44ecd76909d049084e3d75ea597eddf86b2bc3cad04034a97d149f87d2"
+    },
+    {
+      "all_item_ids": [
+        "3299:0",
+        "3299:1"
+      ],
+      "all_item_sha256": [
+        "56946cfb63a00a6ab1eac16a9a12dc7409da04d5bd09187f8545461c3563c78a",
+        "83d91948373017d80b4a9af250245cadf7e913dcb8c9a58c39837b6cf9206855"
+      ],
+      "family_id": "3299",
+      "family_program_sha256": "e3dbe526e1c5d2f00e0a01294021b7c556b859b340649e064d86770688168bf8",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "e421d43a809779c721f7b6c4350a0459b9c40ab0c39fee93604ee3db9c4f2649",
+        "difficulty": "medium",
+        "item_id": "3299:0",
+        "item_sha256": "56946cfb63a00a6ab1eac16a9a12dc7409da04d5bd09187f8545461c3563c78a",
+        "prompt_sha256": "aefc7a23fe2c0dfe3d9461d5aacafdd46a8966e1bcdb687a7019347bd723b36a",
+        "question_id": "3299",
+        "reference_type": "int",
+        "source_index": 417,
+        "test_id": 0
+      },
+      "selection_digest": "323075b8dea99597afc19f1f0ef4724a41820c60f1dac29d0b1861c0b920d056"
+    },
+    {
+      "all_item_ids": [
+        "3000:0",
+        "3000:1",
+        "3000:2"
+      ],
+      "all_item_sha256": [
+        "5ae0b7dd1972a966500b45ce0dd6763ce898705d78fbb0450677e69d84c286b7",
+        "24f5419d515827ee1a7b68effc06792d69793cbae452a8d994a8aa65a367ee3e",
+        "9f4514bc732b1ed020985893df64a2f9dec2f9cea3a86293283079fd9d05d2c3"
+      ],
+      "family_id": "3000",
+      "family_program_sha256": "38f637d2163fa5f8300cfda35e59200e153b1618cf5dd1cfa9ba437722724ff5",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "88ad9f3530c7a3302306761e5c8f875dee135957983bb9bdf61ac2b7d980d092",
+        "difficulty": "medium",
+        "item_id": "3000:2",
+        "item_sha256": "9f4514bc732b1ed020985893df64a2f9dec2f9cea3a86293283079fd9d05d2c3",
+        "prompt_sha256": "55b2ced2c0dfd06864b6fbbff7fbe9c4f8c76b8e2ed466b8dd81618767bce5d0",
+        "question_id": "3000",
+        "reference_type": "int",
+        "source_index": 184,
+        "test_id": 2
+      },
+      "selection_digest": "6eefbcf2c079da7cfaf0c795e174740f88455bfc0e27add28638b51e8ee28471"
+    },
+    {
+      "all_item_ids": [
+        "3245:0",
+        "3245:1"
+      ],
+      "all_item_sha256": [
+        "cb91b6d263dc91adfa8cf905c167c53512b5879f28489fd06c7d9f2b2090d716",
+        "506b9dd89d9e50c4d5b8f3b837194bd375d47c010351c447510f799a6209b220"
+      ],
+      "family_id": "3245",
+      "family_program_sha256": "baecb4aa0f156d0e976cf405dc304f3357a12e9f122e0b926dfcf2c46e13793d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "593de23278fd774679756c101a284eaf54981a58b4281fddfb8b6b678d039303",
+        "difficulty": "medium",
+        "item_id": "3245:0",
+        "item_sha256": "cb91b6d263dc91adfa8cf905c167c53512b5879f28489fd06c7d9f2b2090d716",
+        "prompt_sha256": "05207d18bc5295d501cfd2133feedb7c806f31d5f2eaa583a3a74b21a54e7a8d",
+        "question_id": "3245",
+        "reference_type": "list",
+        "source_index": 375,
+        "test_id": 0
+      },
+      "selection_digest": "3b10d7234ad2d0c8bca71b8183ba44e1229098fa05f28c64179c13bc25edebf9"
+    },
+    {
+      "all_item_ids": [
+        "2833:0",
+        "2833:1"
+      ],
+      "all_item_sha256": [
+        "56ae8fe22f1b8c1de06d295ed092d7871bd0b68a20ee976be9941fd43af2133e",
+        "372b9b90a77e66b25d3052c3762e74e5636b37d2ce4c260d07aa64727cdd574f"
+      ],
+      "family_id": "2833",
+      "family_program_sha256": "a0562980446959d519a1c16fced6fc0ce1a4139dbe13c2087e39f691c58e129d",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "cbc31e32db85b11ef4351dac0ae25a6df3bda2a94d0db85f7c7e4d815a64aeed",
+        "difficulty": "medium",
+        "item_id": "2833:1",
+        "item_sha256": "372b9b90a77e66b25d3052c3762e74e5636b37d2ce4c260d07aa64727cdd574f",
+        "prompt_sha256": "8f916cf3331354b0c26c84fcb5e15ee95a2d2a96621264aa541cb3403044449a",
+        "question_id": "2833",
+        "reference_type": "list",
+        "source_index": 66,
+        "test_id": 1
+      },
+      "selection_digest": "34a3c907289ee7ed9cc941abd6dddb14b8dd707e1d1b517d3b37922c97521568"
+    },
+    {
+      "all_item_ids": [
+        "3229:0",
+        "3229:1",
+        "3229:2"
+      ],
+      "all_item_sha256": [
+        "4c40327c28b4830139c8b1043525296731196956af3f6633e5a0cf8f6c7a4276",
+        "cb6d89abbcad2c796697bf7b8cc6ae4544bba2bf0358072e09c6812dbb592dc5",
+        "2b13c80e2930d35cfb1505a81afb6ddd491b2fbdb72ee97af7a21f4d0a4faf97"
+      ],
+      "family_id": "3229",
+      "family_program_sha256": "ca8b28510b6f54f5e92fa20332496cf579df196584bbcb853cc3d5d1e8210b50",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "3a4588068a89d3be3d9b71b7c44e524b0e9acd3b5dfde2bc007c06fd3ac78f8d",
+        "difficulty": "medium",
+        "item_id": "3229:0",
+        "item_sha256": "4c40327c28b4830139c8b1043525296731196956af3f6633e5a0cf8f6c7a4276",
+        "prompt_sha256": "42b1497d7be2001c7848b5c98a762304b356e6e6e7c0b39a9b906577332f1e84",
+        "question_id": "3229",
+        "reference_type": "int",
+        "source_index": 343,
+        "test_id": 0
+      },
+      "selection_digest": "38347777be82e0a7b0b4e4809a8c0ba395b32853d95443ddb8184b15c0300804"
+    },
+    {
+      "all_item_ids": [
+        "3291:0",
+        "3291:1",
+        "3291:2"
+      ],
+      "all_item_sha256": [
+        "c1dc64be89efb9bc65ad72f84b687926729d3a53743567aed26d80d1d59c2270",
+        "9e307f170b83570844fe21e574b3422f7b0a0de58fdb63ca110127500d4cee88",
+        "ae31a0e89eedfa95cb7724c9dca304cc94fac8d2a809154e08a1ddb575c1dc67"
+      ],
+      "family_id": "3291",
+      "family_program_sha256": "46b48bd7b3ffce9b0f36f72824b3b992c98ed7dc85464992fab7bd2bcce0e59e",
+      "family_size": 3,
+      "selected_item": {
+        "content_sha256": "e9c4448fa7e0b9f60bf2b74fce1f174f04471888c04713f59737ee73007ce369",
+        "difficulty": "medium",
+        "item_id": "3291:0",
+        "item_sha256": "c1dc64be89efb9bc65ad72f84b687926729d3a53743567aed26d80d1d59c2270",
+        "prompt_sha256": "2ca054fd45f8fd99fe728875168e02b6101cf8d6037b0e37b73c5ae6a144589f",
+        "question_id": "3291",
+        "reference_type": "bool",
+        "source_index": 406,
+        "test_id": 0
+      },
+      "selection_digest": "b6f55982afe77dbe3bc34e6e651572ee1e57a5080d278441f617494bab0a98c9"
+    },
+    {
+      "all_item_ids": [
+        "2884:0",
+        "2884:1"
+      ],
+      "all_item_sha256": [
+        "08f91568a9efea65e61092ecad791b62047ff9eb8e10ec267df76675e4a3375b",
+        "bac5cc1f2c62da29a9a4d701d740b1bb157427e672b67cf3c4ec887f3981b125"
+      ],
+      "family_id": "2884",
+      "family_program_sha256": "ef943016665889989cc08c6c1edd9e188af1718a51e80beecfc429adca97a35e",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "366c3d173b47aacd698d9396c183aad82cc37811f5caf6facba74bc9b92e505f",
+        "difficulty": "hard",
+        "item_id": "2884:0",
+        "item_sha256": "08f91568a9efea65e61092ecad791b62047ff9eb8e10ec267df76675e4a3375b",
+        "prompt_sha256": "078c23274a29918fd5a70f87c2f1a484e9cd3fe1e780799cf7f4010a01e36c48",
+        "question_id": "2884",
+        "reference_type": "int",
+        "source_index": 130,
+        "test_id": 0
+      },
+      "selection_digest": "97c494e81b07a4e2e042a33a0d7993171f5ba90984ea5958c0336b155e9d8b0d"
+    },
+    {
+      "all_item_ids": [
+        "2844:0",
+        "2844:1"
+      ],
+      "all_item_sha256": [
+        "b255db682316b33d64ff9d6c642a6641c279aab8b1cd817b4f14f4f5e6f6e6b9",
+        "8abcf07819a0b36033c903e3b018a6b43b1224983fc71a24b2f6455652068022"
+      ],
+      "family_id": "2844",
+      "family_program_sha256": "04d87d2c02c7da61ffb1b51cdf8c754fb25f88bfb6a464f44df89224ee394020",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "16a071dacdd34bb764c1575d0a5c616803fc140864dbe130a5bcd6da5e6c0fb6",
+        "difficulty": "easy",
+        "item_id": "2844:1",
+        "item_sha256": "8abcf07819a0b36033c903e3b018a6b43b1224983fc71a24b2f6455652068022",
+        "prompt_sha256": "fff7b6d99cea9b5f7398af4c8e9aaad59344d4e7cd006d75a4a35baa0619223f",
+        "question_id": "2844",
+        "reference_type": "int",
+        "source_index": 75,
+        "test_id": 1
+      },
+      "selection_digest": "483e58e4df76aca54e6579798c82a52790f7a0d51748f2169b7c700e68c4316c"
+    },
+    {
+      "all_item_ids": [
+        "3324:0",
+        "3324:1"
+      ],
+      "all_item_sha256": [
+        "e04f9659fc6f2bb16a8c64bf0431dcb1860ad1259d207c7ad620561f0e6ef89c",
+        "20d00967ce97f24e41ae42b8698c32e58ffb7ab6f46cc9328ecb4ee6e57567a6"
+      ],
+      "family_id": "3324",
+      "family_program_sha256": "0f32067d762279978133012f7ea1c45fce58cfbc46efc47788c6659ef5743694",
+      "family_size": 2,
+      "selected_item": {
+        "content_sha256": "39968cdcfcef973eee603a45f0e6c6b20f6823cd1acc4b6f49459ffb015e7c96",
+        "difficulty": "easy",
+        "item_id": "3324:0",
+        "item_sha256": "e04f9659fc6f2bb16a8c64bf0431dcb1860ad1259d207c7ad620561f0e6ef89c",
+        "prompt_sha256": "9076c06f82990da0db554d48c8d1110d265a06c7425ff2cdec5efa1462c2b15f",
+        "question_id": "3324",
+        "reference_type": "bool",
+        "source_index": 433,
+        "test_id": 0
+      },
+      "selection_digest": "b9ce0bde1694e82fb979f20b893178d63ad13c6953a831e7dae74e632e7caebc"
+    }
+  ],
+  "representative_rule": "minimum frozen stable digest within family",
+  "role": "STAGE_B",
+  "scientific_unit": "QUESTION_FAMILY"
+}

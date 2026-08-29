@@ -1,0 +1,28 @@
+{
+  "historical_outcomes_used_only_as_planning_inputs": true,
+  "livecodebench_outcomes_used": false,
+  "random_controls": 8,
+  "replicates_per_cell": 100000,
+  "rho_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "rollouts": 4,
+  "seed": 2026083001,
+  "transfer_grid": [
+    0.0,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "unit_grid": [
+    80,
+    100,
+    120,
+    130,
+    140
+  ]
+}
