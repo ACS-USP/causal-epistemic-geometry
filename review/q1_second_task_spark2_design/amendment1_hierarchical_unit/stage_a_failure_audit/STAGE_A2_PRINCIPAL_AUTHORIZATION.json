@@ -1,0 +1,81 @@
+{
+  "activation_nulls_on_livecodebench": "SEALED_NOT_OPENED",
+  "authorization_timestamp_utc": "2026-08-29T16:58:40Z",
+  "authorized": "STAGE_A2_ONLY",
+  "fresh_stage_a2_correctness_inspected": false,
+  "fresh_stage_a2_outcomes_before_authorization": 0,
+  "generation_configuration": {
+    "attention": "SDPA",
+    "conditions": [
+      "BASELINE",
+      "TEXTUAL_CAREFUL"
+    ],
+    "do_sample": true,
+    "dtype": "BF16",
+    "enable_thinking": false,
+    "max_new_tokens": 4096,
+    "min_p": 0.0,
+    "rollouts_per_condition": 2,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "implementation_commit": "31f7f31c90ddbfc0fdead7fb6eb5ace9750f5638",
+  "implementation_hashes": {
+    "adversarial_tests": "06e0c05d0cd1abf62b65f1f2942dd56a0d3ab19392ef6f32ff048422f35f4571",
+    "evaluator_function": "9c1e1d1572e9ee51033af3810d7c75d526441cda068183e8ef4c4a59fdc42169",
+    "parser_source": "0557447697a1f75caab0f9680863982fe2636393335e3fffd94223e6d92e50d9",
+    "prompt_builder_function": "1ce7e7d4a53844de47f51d2d2477263515bd5d19f6a516e604f9468fe934da2c"
+  },
+  "meaningful_activation_controller_on_livecodebench": "SEALED_NOT_OPENED",
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "normative_thresholds": {
+    "baseline_B00_min": 0.05,
+    "baseline_accuracy_range": [
+      0.25,
+      0.9
+    ],
+    "baseline_commitment_validity_min": 0.95,
+    "baseline_correct_at_least_once_min": 4,
+    "baseline_semantic_evaluability_min": 0.95,
+    "baseline_wrong_both_min": 2,
+    "textual_accuracy_gain_min": 0.03,
+    "textual_commitment_validity_min": 0.95,
+    "textual_mean_token_ratio_min": 1.5,
+    "textual_median_token_gain_min": 10,
+    "textual_nonharm_margin": 0.03,
+    "textual_semantic_evaluability_min": 0.95,
+    "validity_evaluability_required_count_of_40": 38
+  },
+  "parser_identity": {
+    "adversarial_test_path": "tests/test_q1_second_task_stage_a_failure.py",
+    "evaluator_function": "evaluate_livecodebench_output_stage_a2",
+    "evaluator_source_path": "src/epistemic_geometry/experiments/q1_second_task_stage_a_failure.py",
+    "parser_source_path": "src/epistemic_geometry/experiments/q1_second_task_stage_a_failure.py",
+    "prompt_builder": "build_livecodebench_prompt",
+    "prompt_source_path": "src/epistemic_geometry/experiments/q1_second_task.py",
+    "reference_type_used_during_candidate_selection": false,
+    "reference_value_used_during_candidate_selection": false,
+    "version": "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1"
+  },
+  "principal_authorization": "STAGE_A2_ONLY",
+  "q2_firewall": {
+    "q2_outputs_inspected": false,
+    "q2_paths_imported": false,
+    "spark1_authorized": false
+  },
+  "reviewed_design_commit": "e4fc36e8e77d3ce5402c258a8e310c4290b25536",
+  "reviewed_hashes": {
+    "amendment2_draft": "c8b006e039d2f826f45ad58f9356d00056f73c83d92686557e6b55d6e64f9d34",
+    "stage_a2_manifest": "5dc6acea72968c3d8bce8b0ab7f567fd2692801602011b8f9d9a72437443d306",
+    "stage_a2_schedule": "f5cb5e300f922872959bc5d2c36e4314b4494a5d8ccd91e4323eabebed21ed9e"
+  },
+  "schema_version": 1,
+  "spark2_environment_fingerprint": "306d65af9643cc1144d344ae57141ac96ffbbcf70520f67e9276a907d29660bc",
+  "stage_a1": "EXECUTED_AND_FAILED_AS_FROZEN",
+  "stage_a1_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "stage_a2": "AUTHORIZED_NOT_YET_OPENED",
+  "stage_b": "CLOSED_NOT_AUTHORIZED",
+  "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+}

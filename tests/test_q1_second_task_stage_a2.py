@@ -1,6 +1,17 @@
 from __future__ import annotations
 
+import hashlib
+import json
+from pathlib import Path
+
 from epistemic_geometry.experiments import q1_second_task_stage_a2 as a2
+
+ROOT = Path(__file__).resolve().parents[1]
+AUDIT = (
+    ROOT
+    / "review/q1_second_task_spark2_design/amendment1_hierarchical_unit"
+    / "stage_a_failure_audit"
+)
 
 
 def reserve_fixture() -> dict:
@@ -52,3 +63,27 @@ def test_stage_a2_gate_uses_twenty_equal_families_and_frozen_count_thresholds() 
     assert result["baseline"]["families_wrong_both_rollouts"] == 2
     assert result["baseline"]["families_correct_at_least_once"] == 18
     assert result["baseline"]["B00"] == 0.1
+
+
+def test_stage_a2_principal_authorization_pins_reviewed_artifacts() -> None:
+    authorization = json.loads(
+        (AUDIT / "STAGE_A2_PRINCIPAL_AUTHORIZATION.json").read_text(encoding="utf-8")
+    )
+    names = {
+        "amendment2_draft": "AMENDMENT2_LOCK_DRAFT.json",
+        "stage_a2_manifest": "STAGE_A2_FAMILY_MANIFEST.json",
+        "stage_a2_schedule": "STAGE_A2_SCHEDULE.json",
+    }
+    for key, name in names.items():
+        assert hashlib.sha256((AUDIT / name).read_bytes()).hexdigest() == authorization[
+            "reviewed_hashes"
+        ][key]
+    assert authorization["authorized"] == "STAGE_A2_ONLY"
+    assert authorization["stage_a1"] == "EXECUTED_AND_FAILED_AS_FROZEN"
+    assert authorization["stage_b"] == "CLOSED_NOT_AUTHORIZED"
+    assert authorization["meaningful_activation_controller_on_livecodebench"] == (
+        "SEALED_NOT_OPENED"
+    )
+    assert authorization["activation_nulls_on_livecodebench"] == "SEALED_NOT_OPENED"
+    assert authorization["fresh_stage_a2_outcomes_before_authorization"] == 0
+    assert authorization["fresh_stage_a2_correctness_inspected"] is False
