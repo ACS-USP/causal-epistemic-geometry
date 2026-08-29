@@ -1,0 +1,71 @@
+{
+  "bootstrap": {
+    "method": "TWO_SIDED_95_PERCENT_PERCENTILE",
+    "move_all_conditions_and_four_rollouts_together": true,
+    "negative_D_retained": true,
+    "resamples": 50000,
+    "seed": 2026082902,
+    "unit": "ITEM"
+  },
+  "primary_endpoint": "C_MEANINGFUL",
+  "primary_estimator": "POOLED_R4_UNBIASED_U_STATISTIC",
+  "r2_reduction": "EXACT_CANONICAL_Q1_ESTIMATOR",
+  "secondary_endpoints": [
+    "G",
+    "D",
+    "rescue",
+    "damage",
+    "accuracy"
+  ],
+  "split_halves": {
+    "A": [
+      0,
+      1
+    ],
+    "B": [
+      2,
+      3
+    ]
+  },
+  "stage_a_gate": {
+    "all_non_usefulness_conditions": "OR_WITHIN_USEFUL_ANY; AND_FOR_OTHER_GATES",
+    "baseline_B00_min": 0.05,
+    "baseline_commitment_validity_min": 0.95,
+    "baseline_pooled_accuracy_range_inclusive": [
+      0.25,
+      0.9
+    ],
+    "baseline_semantic_evaluability_min": 0.95,
+    "items_correct_at_least_once_min": 10,
+    "items_wrong_both_rollouts_min": 5,
+    "textual_accuracy_relative_margin": -0.03,
+    "textual_commitment_validity_min": 0.95,
+    "textual_semantic_evaluability_min": 0.95,
+    "textual_useful_any": [
+      "accuracy_gain_ge_0.03",
+      "mean_tokens_ge_1.5x_baseline",
+      "median_tokens_ge_baseline_plus_10"
+    ]
+  },
+  "stage_b_scientific": {
+    "P1": "LOWER_95_CI_C_MEANINGFUL_GT_ZERO",
+    "P2": [
+      "LOWER_95_CI_C_MEANINGFUL_MINUS_MEAN_8_NULLS_GT_ZERO",
+      "POINT_C_MEANINGFUL_GT_MAX_8_NULLS"
+    ],
+    "multiplicity": "single conjunctive primary hypothesis; eight-null mean interval plus point max; no extra post-hoc multiplicity family",
+    "safety": {
+      "accuracy_relative_margin": -0.1,
+      "commitment_relative_margin": -0.05,
+      "evaluability_relative_margin": -0.05
+    },
+    "split_half_consistency": "both predesignated R2 halves have C>0, delta_C_nullmean>0, and C_meaningful>mean_C_nulls"
+  },
+  "terminal_states": {
+    "Q1_SECOND_TASK_COMPLEMENTARITY_WITH_SAFETY_FAIL": "scientific P1/P2/split-half checks pass but any safety guard fails",
+    "Q1_SECOND_TASK_EXECUTION_INCOMPLETE": "Stage B cannot complete frozen logical keys",
+    "Q1_SECOND_TASK_FIXED_CONTROLLER_PASS": "Stage A and engine pass; P1, both P2 checks, split-half consistency, and all safety guards pass",
+    "Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED": "model-free, Spark-2 engine, or Stage-A opportunity/textual gate fails",
+    "Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY": "instrument and execution qualify but the scientific conjunction does not pass"
+  }
+}

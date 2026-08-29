@@ -1,0 +1,41 @@
+{
+  "assumptions": {
+    "item_scaling": "sqrt(57/N)",
+    "normal_calibration": "SE inferred from frozen percentile interval width",
+    "null_controls": "empirical Qwen null C values sampled with replacement",
+    "rollout_scaling": "ICC variance decomposition; no claim of exact LiveCodeBench power",
+    "test_correlation": 0.65,
+    "transfer_fractions": [
+      0.0,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "classification": "CPU_ONLY_PROSPECTIVE_PLANNING",
+  "historical_inputs": {
+    "C_interval": [
+      0.014411027568922305,
+      0.09680451127819548
+    ],
+    "delta_C_interval": [
+      0.00601112155388471,
+      0.07456140350877193
+    ],
+    "delta_C_nullmean": 0.03871005639097745,
+    "meaningful_C": 0.05435463659147877,
+    "n": 57,
+    "null_C_values": [
+      0.024122807017543935,
+      0.014097744360902331,
+      0.016369047619047616,
+      0.007988721804511378
+    ],
+    "planning_icc": 0.876655701754386,
+    "rollouts": 2,
+    "source": "frozen Qwen Q1 confirmatory artifacts"
+  },
+  "replicates_per_cell": 100000,
+  "rows_file": "POWER_PRECISION_GRID.csv",
+  "seed": 2026082901
+}
