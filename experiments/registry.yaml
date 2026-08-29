@@ -2166,8 +2166,8 @@ experiments:
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
   - id: Q1_SECOND_TASK_LIVECODEBENCH_HIERARCHICAL_AMENDMENT1
-    version: AMENDMENT-1-PREOUTCOME
-    stage: DEVELOPMENT_DESIGN_ONLY
+    version: AMENDMENT-1-STAGE-A-CLOSEOUT
+    stage: DEVELOPMENT_STAGE_A_CLOSED
     question: >-
       What is the correct independent sampling unit for LiveCodeBench
       test-output prediction, and can the second-task design be prospectively
@@ -2178,8 +2178,8 @@ experiments:
       one-row-per-family selection, frozen family-disjoint manifests and
       schedules, and independent outcome-free audit.
     model_policy: NO_MODEL_CPU_ONLY_HIERARCHICAL_DESIGN_REPAIR
-    status: Q1_SECOND_TASK_HIERARCHICAL_DESIGN_READY_FOR_PRINCIPAL_REVIEW
-    outcome: DESIGN_C_ONE_ROW_PER_FAMILY_SELECTED
+    status: Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED
+    outcome: STAGE_A_BASELINE_VALIDITY_EVALUABILITY_GUARDS_FAILED
     scientific_interpretation: >-
       Rows in a question family share the same source program and problem
       statement and differ only by exact test input/reference. The old Stage-B
@@ -2188,11 +2188,15 @@ experiments:
       freezes one deterministic row for each of 32 Stage-A and 130 Stage-B
       families, retains 20 reserve families, gives families equal weight, and
       uses family bootstrap. This is a pre-outcome design repair, not a Q1
-      scientific result.
+      scientific result. The subsequently authorized 128-row Stage A completed
+      on Spark 2. Baseline accuracy/error opportunity passed, but commitment
+      validity and semantic evaluability failed their frozen 0.95 guards.
+      TEXTUAL_CAREFUL showed a positive accuracy manifestation. Stage B and all
+      activation-controller/null conditions remained unopened.
     source_branch: research/q1-second-task-spark2-design
-    source_commit: d13e85d70231482c6f2a36613de68be3523eceec
+    source_commit: d0f3d1da0988fcf905d974377eb6b5180876dd17
     parent_design_commit: 03098d80f73b1ee1a4cfb5fb56504c409aad6286
-    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/Q1_SECOND_TASK_HIERARCHICAL_UNIT_REVIEW.md
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_a_closeout/REPORT.md
     benchmark_rows: 442
     question_families: 182
     old_stage_a_rows: 50
@@ -2210,18 +2214,30 @@ experiments:
     transfer_75pct_joint_power: 0.55722
     null_false_positive: 0.00219
     old_schedules: SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED
+    stage_a_runtime_seconds: 4593.385388884984
+    stage_a_journal_sha256: 5b0fec6960ac414f56995d91a43c3b41c49a06b5fb868156a8e24d037b9281b1
+    baseline_commitment_validity: 0.828125
+    baseline_semantic_evaluability: 0.8125
+    baseline_accuracy: 0.609375
+    baseline_B00: 0.25
+    textual_commitment_validity: 0.96875
+    textual_semantic_evaluability: 0.953125
+    textual_accuracy: 0.78125
+    textual_accuracy_delta: 0.171875
+    textual_manifestation: TEXTUAL_CAREFUL_ACCURACY_BENEFIT_PRESENT
     cost_usd: 0.0
     holdout_status: CONSUMED_CONFIRMATORY_CLOSED
-    model_inference: false
-    correctness_inspected: false
-    livecodebench_scientific_outcomes: 0
-    stage_a_authorized: false
+    model_inference: true
+    correctness_inspected: true
+    livecodebench_scientific_outcomes: 128
+    stage_a_authorized: true
+    stage_a_completed: true
     stage_b_authorized: false
     spark1_used: false
-    spark2_scientific_inference: false
+    spark2_scientific_inference: true
     q2_outputs_inspected: false
     q2_process_modified: false
     historical_q1: UNCHANGED
     q3: NOT_RUN
-    design_audit: Q1_SECOND_TASK_HIERARCHICAL_DESIGN_FORENSIC_CLEAN
-    next_action: PRINCIPAL_RESEARCHER_REVIEW
+    design_audit: Q1_SECOND_TASK_STAGE_A_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_A_NOT_QUALIFIED

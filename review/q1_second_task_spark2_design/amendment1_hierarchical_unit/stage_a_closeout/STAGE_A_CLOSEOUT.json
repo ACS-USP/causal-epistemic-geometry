@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "classification": "Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED",
+  "public_terminal_state": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "source_branch": "research/q1-second-task-spark2-design",
+  "approved_design_commit": "e20c68f1cbf9276425da63d8b2128418ae9e755b",
+  "execution_commit": "d0f3d1da0988fcf905d974377eb6b5180876dd17",
+  "authorization_sha256": "d89dd95dfa433d67ddac31fb855447e54a969583524f93cc7d291b7648c80213",
+  "amendment_sha256": "5cf14cb5c41f6a6547c1c5d2385511faee26a7549576caa75c9c84b9bee02594",
+  "stage_a_manifest_sha256": "78e6cf9b76c8c3d3b78847af2ce39449be0fe472567c7fe047a47938ed500036",
+  "stage_a_schedule_sha256": "fd1267c506827672cfe6c7e5374003821c78f512a3ed13fc745f655b5b13880a",
+  "environment_fingerprint": "306d65af9643cc1144d344ae57141ac96ffbbcf70520f67e9276a907d29660bc",
+  "execution": {
+    "scheduled_trajectories": 128,
+    "completed_trajectories": 128,
+    "duplicates": 0,
+    "missing": 0,
+    "unexpected": 0,
+    "retries": 0,
+    "runtime_errors": 0,
+    "runtime_seconds": 4593.385388884984,
+    "journal_bytes": 619809,
+    "journal_sha256": "5b0fec6960ac414f56995d91a43c3b41c49a06b5fb868156a8e24d037b9281b1",
+    "raw_data_seal_sha256": "7eddb11816a4eccfde4f7ff7c24e06a0a69f6280464f61bf096e5c31d126a2cd",
+    "parsed_records_sha256": "38caf90a9aef49a96b1497708b7919034f8ee9cbde397d57c0b9ad0e57c2d526"
+  },
+  "baseline": {
+    "commitment_validity": 0.828125,
+    "semantic_evaluability": 0.8125,
+    "accuracy": 0.609375,
+    "B00": 0.25,
+    "families_wrong_both_rollouts": 8,
+    "families_correct_at_least_once": 24,
+    "mean_generated_tokens": 368.484375,
+    "median_generated_tokens": 302.5,
+    "minimum_generated_tokens": 59,
+    "maximum_generated_tokens": 1813,
+    "gate_passes": {
+      "commitment_validity": false,
+      "semantic_evaluability": false,
+      "accuracy_opportunity": true,
+      "B00_opportunity": true,
+      "wrong_both_count": true,
+      "correct_at_least_once_count": true
+    }
+  },
+  "textual_careful": {
+    "commitment_validity": 0.96875,
+    "semantic_evaluability": 0.953125,
+    "accuracy": 0.78125,
+    "accuracy_delta": 0.171875,
+    "mean_generated_tokens": 460.359375,
+    "median_generated_tokens": 408.5,
+    "minimum_generated_tokens": 136,
+    "maximum_generated_tokens": 2652,
+    "mean_token_ratio": 1.2493321460373998,
+    "median_token_delta": 106.0,
+    "manifestations": {
+      "TEXTUAL_ACCURACY_GAIN_GE_0_03": true,
+      "TEXTUAL_MEAN_TOKEN_RATIO_GE_1_5": false,
+      "TEXTUAL_MEDIAN_TOKEN_GAIN_GE_10": true
+    },
+    "descriptive_classification": "TEXTUAL_CAREFUL_ACCURACY_BENEFIT_PRESENT",
+    "all_textual_gates_pass": true
+  },
+  "forensic": {
+    "classification": "Q1_SECOND_TASK_STAGE_A_FORENSIC_CLEAN",
+    "maximum_metric_difference": 0.0,
+    "schedule_coverage": 128,
+    "seeds_exact": true,
+    "selected_rows_exact": true
+  },
+  "stage_b_status": "NOT_AUTHORIZED_NOT_OPENED",
+  "meaningful_controller_livecodebench_trajectories": 0,
+  "activation_null_livecodebench_trajectories": 0,
+  "spark1_used": false,
+  "q2_outputs_inspected": false,
+  "q2_process_modified_or_interrupted": false,
+  "historical_q1_modified": false,
+  "scientific_boundary": "Development instrument qualification only; no activation-controller transfer claim was tested."
+}
