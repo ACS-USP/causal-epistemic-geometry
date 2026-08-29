@@ -236,6 +236,7 @@ def main() -> int:
         "parser_roundtrip": parser_roundtrip,
         "journal_resume_synthetic": journal_resume,
     }
+    checks = {name: bool(value) for name, value in checks.items()}
     passed = all(checks.values()) and exercised == set(vectors)
     result = {
         "classification": (
