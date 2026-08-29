@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_BEFORE_RAW_OUTPUT_INSPECTION",
+  "parent_manifest": "POST_CLOSEOUT_AUDIT_MANIFEST.json",
+  "historical_result": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "historical_result_mutable": false,
+  "purpose": "POST_HOC_INSTRUMENT_DEVELOPMENT_ONLY",
+  "taxonomy": [
+    "VALID_AS_FROZEN",
+    "MISSING_FINAL_MARKER_UNIQUE_LITERAL_PRESENT",
+    "FINAL_MARKER_CASE_OR_WHITESPACE_VARIANT",
+    "UNIQUE_LITERAL_IN_CODE_BLOCK",
+    "UNIQUE_LITERAL_WITH_TRAILING_PROSE",
+    "MULTIPLE_IDENTICAL_COMMITMENTS",
+    "MULTIPLE_CONTRADICTORY_COMMITMENTS",
+    "MALFORMED_PYTHON_OR_JSON_LITERAL",
+    "TYPE_MISMATCH",
+    "NO_RECOVERABLE_LITERAL",
+    "TRUNCATED_GENERATION",
+    "MECHANICAL_REPETITION",
+    "UNFINISHED_REASONING",
+    "AMBIGUOUS_OUTPUT",
+    "REFERENCE_OR_PROMPT_AMBIGUITY",
+    "OTHER"
+  ],
+  "mechanical_repetition": {
+    "minimum_tokens": 128,
+    "tail_window": 128,
+    "tail_unique_ratio_max": 0.20,
+    "or_consecutive_repetitions": 8,
+    "ngram_widths": [1, 2, 4, 8]
+  },
+  "candidate_parser_repair_a": {
+    "name": "CONSERVATIVE_CONDITION_SYMMETRIC_LITERAL_RECOVERY_V1",
+    "eligible_categories": [
+      "FINAL_MARKER_CASE_OR_WHITESPACE_VARIANT",
+      "UNIQUE_LITERAL_IN_CODE_BLOCK",
+      "MISSING_FINAL_MARKER_UNIQUE_LITERAL_PRESENT",
+      "MULTIPLE_IDENTICAL_COMMITMENTS"
+    ],
+    "excluded_categories": [
+      "UNIQUE_LITERAL_WITH_TRAILING_PROSE",
+      "MULTIPLE_CONTRADICTORY_COMMITMENTS",
+      "MALFORMED_PYTHON_OR_JSON_LITERAL",
+      "TYPE_MISMATCH",
+      "NO_RECOVERABLE_LITERAL",
+      "TRUNCATED_GENERATION",
+      "MECHANICAL_REPETITION",
+      "UNFINISHED_REASONING",
+      "AMBIGUOUS_OUTPUT"
+    ],
+    "condition_identity_used": false,
+    "reference_or_correctness_used_to_select_candidate": false,
+    "llm_judge": false,
+    "fuzzy_matching": false,
+    "typed_exact_comparison_preserved": true,
+    "trailing_prose_recovery": "DIAGNOSTIC_ONLY_NOT_ELIGIBLE",
+    "subsequent_nonempty_lines_after_final": "TRAILING_PROSE",
+    "candidate_type_must_equal_reference_type": true
+  },
+  "candidate_prompt_repair_b": {
+    "name": "SHARED_NEUTRAL_OUTPUT_CONTRACT_V1",
+    "shared_text": "Follow the output contract exactly: provide exactly one final commitment line in the form FINAL: <the exact Python or JSON literal output>, with no text after it.",
+    "applies_to_every_future_condition": true,
+    "adds_careful_reasoning_semantics": false,
+    "careful_only_policy_remains_separate": true
+  },
+  "selection_priorities": [
+    "mechanical_validity",
+    "condition_symmetry",
+    "absence_of_semantic_judgment",
+    "minimal_scope",
+    "adversarial_robustness",
+    "fresh_data_testability",
+    "descriptive_stage_a1_recovery_last"
+  ],
+  "posthoc_rescoring_label": "POST_HOC_DIAGNOSTIC_NOT_STAGE_A1_RECLASSIFICATION",
+  "implementation": {
+    "path": "src/epistemic_geometry/experiments/q1_second_task_stage_a_failure.py",
+    "sha256": "20d57d6af9ced18cd2e2b642ce5d3c2cbe5872e262c1d64e542d72d527ff49b6",
+    "test_path": "tests/test_q1_second_task_stage_a_failure.py",
+    "test_sha256": "46768f0b5cc622409ca986bddaab55b49cc6f9f3f67a0ff948f5279007137dca",
+    "tests_passed": 26
+  },
+  "new_model_inference": 0,
+  "q2_outputs_inspected": false,
+  "stage_b_status": "NOT_AUTHORIZED_NOT_OPENED"
+}
