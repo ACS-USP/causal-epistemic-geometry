@@ -199,7 +199,7 @@ def preflight(args: argparse.Namespace) -> dict[str, Any]:
     reserve = read_json(REVIEW / "RESERVE_FAMILY_MANIFEST.json")
     stage_a_families = {row["family_id"] for row in schedule}
     stage_b_families = {row["family_id"] for row in stage_b["ordered_families"]}
-    reserve_families = {row["family_id"] for row in reserve["ordered_families"]}
+    reserve_families = {row["family_id"] for row in reserve["families"]}
     if stage_a_families & stage_b_families or stage_a_families & reserve_families:
         raise RuntimeError("family split collision")
     output_dir = args.output_dir
