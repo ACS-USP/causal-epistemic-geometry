@@ -7,6 +7,7 @@ from epistemic_geometry.experiments.q1_second_task_stage_a_failure import (
     conservative_repair_candidate,
     evaluate_livecodebench_output_stage_a2,
     mechanical_repetition,
+    terminal_candidate_after_empty_final_headings,
     terminal_contract_repair_candidate,
 )
 
@@ -126,6 +127,19 @@ def test_stage_a2_evaluator_recovers_terminal_literal_without_changing_exact_sco
     assert correct["semantic_evaluable"] and correct["correct"]
     assert correct["parser_repair_applied"]
     assert wrong["semantic_evaluable"] and not wrong["correct"]
+
+
+def test_stage_a2_candidate_selection_is_reference_type_invariant() -> None:
+    raw = "## Final Answer:\n```python\nprint('solution')\n```\nFINAL: 7"
+    candidate = terminal_candidate_after_empty_final_headings(raw)
+    assert candidate is not None
+    assert candidate.canonical_json == '["int",7]'
+
+    correct_type = evaluate_livecodebench_output_stage_a2(raw, "7", list(range(50)))
+    different_type = evaluate_livecodebench_output_stage_a2(raw, '"7"', list(range(50)))
+    assert correct_type["parser_repair_applied"]
+    assert not different_type["parser_repair_applied"]
+    assert not different_type["semantic_evaluable"]
 
 
 def test_stage_a2_evaluator_preserves_ambiguity_and_existing_valid_rows() -> None:

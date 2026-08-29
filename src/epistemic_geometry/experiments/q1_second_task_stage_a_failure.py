@@ -193,16 +193,20 @@ def _typed_category(
     return otherwise if candidate.value_type == expected_type else "TYPE_MISMATCH"
 
 
-def _terminal_after_nonliteral_headings(
-    visible: str, expected_type: str
+def terminal_candidate_after_empty_final_headings(
+    raw_output: str,
 ) -> LiteralCandidate | None:
-    """Recover one terminal typed FINAL after only empty final-style headings.
+    """Select one terminal literal without consulting reference type or value.
 
     This is the post-diagnosis candidate repair.  It fails closed if another
     distinct standalone/fenced typed literal or another inline commitment is
-    visible anywhere in the response.
+    visible anywhere in the response. Reference typing and exact comparison
+    happen only after this purely mechanical selection step.
     """
 
+    visible, unclosed_thinking = _visible_text(raw_output)
+    if unclosed_thinking:
+        return None
     lines = visible.splitlines()
     markers = [
         (index, marker)
@@ -226,7 +230,7 @@ def _terminal_after_nonliteral_headings(
     terminal = _candidate(
         terminal_payload, "TERMINAL_FINAL_AFTER_NONLITERAL_FINAL_HEADINGS"
     )
-    if terminal is None or terminal.value_type != expected_type:
+    if terminal is None:
         return None
     for _index, marker in markers[:-1]:
         kind, payload, _closer = marker
@@ -262,7 +266,7 @@ def classify_output(
         return AuditClassification("UNFINISHED_REASONING", False, None, False, repeated, True)
     final_values, marker_count, malformed, has_trailing_lines = _final_candidates(visible)
     if marker_count > 1:
-        terminal = _terminal_after_nonliteral_headings(visible, expected_type)
+        terminal = terminal_candidate_after_empty_final_headings(raw)
         if terminal is not None:
             return AuditClassification("OTHER", True, terminal, False, repeated, unfinished)
         unique = _unique(final_values)
@@ -354,9 +358,6 @@ def terminal_contract_repair_candidate(
 ) -> LiteralCandidate | None:
     """Post-diagnosis Repair A2, additive to the original conservative repair."""
 
-    original = conservative_repair_candidate(classification)
-    if original is not None:
-        return original
     candidate = classification.candidate
     if (
         classification.category == "OTHER"
@@ -405,6 +406,8 @@ def evaluate_livecodebench_output_stage_a2(
     candidate = terminal_contract_repair_candidate(classification)
     if candidate is None:
         return base
+    if candidate.value_type != expected_type:
+        return base
     correct = candidate.canonical_json == json.dumps(
         expected, ensure_ascii=False, separators=(",", ":")
     )
@@ -429,6 +432,7 @@ __all__ = [
     "conservative_repair_candidate",
     "evaluate_livecodebench_output_stage_a2",
     "mechanical_repetition",
+    "terminal_candidate_after_empty_final_headings",
     "terminal_contract_repair_candidate",
     "unfinished_reasoning",
 ]
