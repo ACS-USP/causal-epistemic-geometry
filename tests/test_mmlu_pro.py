@@ -102,3 +102,36 @@ def test_real_hf_operations_allow_explicit_spark1_profile(monkeypatch) -> None:
         },
     )
     require_remote_hf_execution("test operation")
+
+
+def test_real_hf_operations_allow_scoped_spark2_profile(monkeypatch) -> None:
+    monkeypatch.setenv("CEG_EXECUTION_PROFILE", "SPARK2")
+    monkeypatch.setenv("CEG_SPARK2_PROJECT", "Q1_SECOND_TASK_LIVECODEBENCH_SPARK2")
+    monkeypatch.setenv("HF_HOME", "/srv/shared/hf-cache")
+    monkeypatch.setattr(
+        reproducibility,
+        "remote_execution_context",
+        lambda: {
+            "hostname": "spark2",
+            "pwd": "/tmp/q1-second-task-design",
+            "HF_HOME": "/srv/shared/hf-cache",
+        },
+    )
+    require_remote_hf_execution("test operation")
+
+
+def test_real_hf_operations_reject_unscoped_spark2_profile(monkeypatch) -> None:
+    monkeypatch.setenv("CEG_EXECUTION_PROFILE", "SPARK2")
+    monkeypatch.delenv("CEG_SPARK2_PROJECT", raising=False)
+    monkeypatch.setenv("HF_HOME", "/srv/shared/hf-cache")
+    monkeypatch.setattr(
+        reproducibility,
+        "remote_execution_context",
+        lambda: {
+            "hostname": "spark2",
+            "pwd": "/tmp/q1-second-task-design",
+            "HF_HOME": "/srv/shared/hf-cache",
+        },
+    )
+    with pytest.raises(RuntimeError, match="Refusing test operation"):
+        require_remote_hf_execution("test operation")

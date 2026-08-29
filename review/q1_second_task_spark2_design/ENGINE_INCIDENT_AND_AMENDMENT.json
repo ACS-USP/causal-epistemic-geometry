@@ -1,0 +1,11 @@
+{
+  "amendment_class": "PROSPECTIVE_CLASS_A_ENGINEERING_REPAIR",
+  "classification": "SPARK2_EXECUTION_GUARD_REPAIR_PRE_INFERENCE",
+  "first_attempt_model_loaded": false,
+  "first_attempt_scientific_items": 0,
+  "first_attempt_synthetic_outputs": 0,
+  "incident": "The existing HuggingFace execution guard recognized only RunPod and Spark 1 and refused Spark 2 before model loading.",
+  "repair": "Add a hostname-, cache-, and experiment-scoped Spark 2 execution profile.",
+  "scientific_semantics_changed": false,
+  "scientific_outcomes_exist": false
+}
