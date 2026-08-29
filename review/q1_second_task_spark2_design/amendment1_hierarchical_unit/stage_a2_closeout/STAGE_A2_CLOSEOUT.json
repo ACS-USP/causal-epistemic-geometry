@@ -1,0 +1,62 @@
+{
+  "activation_null_livecodebench_trajectories": 0,
+  "authorization_sha256": "d9d39f90ddf5cb8d9805fe47989433d133a1a083dafb51d36eb2ee9a0997d9ec",
+  "baseline": {
+    "B00": 0.25,
+    "accuracy": 0.65,
+    "commitment_validity": 0.95,
+    "families_correct_at_least_once": 15,
+    "families_wrong_both_rollouts": 5,
+    "mean_generated_tokens": 448.975,
+    "median_generated_tokens": 355.5,
+    "semantic_evaluability": 0.95
+  },
+  "classification": "Q1_SECOND_TASK_STAGE_A2_QUALIFIED",
+  "completed_trajectories": 80,
+  "duplicates": 0,
+  "environment_fingerprint": "306d65af9643cc1144d344ae57141ac96ffbbcf70520f67e9276a907d29660bc",
+  "execution_commit": "c882219e31db45998c19270de3d0f168a88ec011",
+  "forensic_classification": "Q1_SECOND_TASK_STAGE_A2_FORENSIC_CLEAN",
+  "forensic_maximum_metric_difference": 0.0,
+  "historical_stage_a1_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "historical_stage_a1_modified": false,
+  "journal_bytes": 469050,
+  "journal_sha256": "be7b711bbca2b205eca2d2cee9985ff892f734d9a22943bc38e5904e49f156ba",
+  "meaningful_controller_livecodebench_trajectories": 0,
+  "missing": 0,
+  "q2_outputs_inspected": false,
+  "q2_process_modified_or_interrupted": false,
+  "raw_data_seal_sha256": "0e574cfe1b94f6903045c54537a96198ab72736d8090598d56ff2993c7b976a1",
+  "retries": 0,
+  "scheduled_trajectories": 80,
+  "schema_version": 1,
+  "spark1_used": false,
+  "stage_b_status": "NOT_AUTHORIZED_NOT_OPENED",
+  "textual_careful": {
+    "accuracy": 0.675,
+    "commitment_validity": 0.975,
+    "descriptive_label": "TEXTUAL_CAREFUL_NONHARMFUL_COMPUTE_MANIFESTATION",
+    "manifestations": {
+      "TEXTUAL_ACCURACY_GAIN_GE_0_03": false,
+      "TEXTUAL_MEAN_TOKEN_RATIO_GE_1_5": false,
+      "TEXTUAL_MEDIAN_TOKEN_GAIN_GE_10": true
+    },
+    "mean_generated_tokens": 630.275,
+    "median_generated_tokens": 511.0,
+    "semantic_evaluability": 0.975,
+    "textual_accuracy_delta": 0.025000000000000022,
+    "textual_mean_token_ratio": 1.4038086753159975,
+    "textual_median_token_delta": 155.5
+  },
+  "token_statistics_all_conditions": {
+    "at_frozen_cap": 2,
+    "max": 4096,
+    "mean": 539.625,
+    "median": 429.0,
+    "p90": 837,
+    "p95": 961,
+    "total_generated_tokens": 43170
+  },
+  "unexpected": 0,
+  "wall_seconds_collection_excluding_model_load": 3775.199117086013
+}

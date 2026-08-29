@@ -147,6 +147,50 @@ instrument_history:
     forensic_classification: Q1_SECOND_TASK_STAGE_A_FORENSIC_CLEAN
     next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_A_NOT_QUALIFIED
 
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_A2
+    status: Q1_SECOND_TASK_STAGE_A2_QUALIFIED
+    conclusion: >-
+      A prospectively authorized parser-only repair was tested on 20 untouched
+      reserve question families with BASELINE and TEXTUAL_CAREFUL only. The
+      complete 80-trajectory Spark-2-native Stage A2 passed every frozen
+      opportunity, validity, evaluability, competence, and textual-manifestation
+      gate. Baseline validity/evaluability were both 0.95 and accuracy was 0.65.
+      TEXTUAL_CAREFUL accuracy was 0.675; its +0.025 accuracy delta and 1.404x
+      mean-token ratio did not cross their manifestation thresholds, while its
+      +155.5 median-token delta did. The proper label is non-harmful compute
+      manifestation, not accuracy benefit. The independent audit reproduced
+      every metric exactly. Stage A1 remains failed and unmodified; Stage B was
+      not opened and all activation-controller/null trajectories remain zero.
+    branch: research/q1-second-task-spark2-design
+    execution_source_commit: c882219e31db45998c19270de3d0f168a88ec011
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_a2_closeout/REPORT.md
+    parent_stage_a1_closeout_commit: 00ab87c386c72a7c88fac438e94240619555d629
+    stage_a1_classification: Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED
+    stage_a1_modified: false
+    scientific_unit: QUESTION_FAMILY
+    stage_a2_families: 20
+    stage_a2_trajectories: 80
+    stage_a2_classification: Q1_SECOND_TASK_STAGE_A2_QUALIFIED
+    baseline_commitment_validity: 0.95
+    baseline_semantic_evaluability: 0.95
+    baseline_accuracy: 0.65
+    baseline_B00: 0.25
+    textual_commitment_validity: 0.975
+    textual_semantic_evaluability: 0.975
+    textual_accuracy: 0.675
+    textual_accuracy_delta: 0.025000000000000022
+    textual_manifestation: TEXTUAL_CAREFUL_NONHARMFUL_COMPUTE_MANIFESTATION
+    stage_b_families_untouched: 130
+    stage_b_authorized: false
+    meaningful_controller_livecodebench_trajectories: 0
+    activation_null_livecodebench_trajectories: 0
+    spark1_used: false
+    spark2_scientific_inference: true
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    forensic_classification: Q1_SECOND_TASK_STAGE_A2_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_A2_QUALIFIED
+
   - id: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
     status: Q2_V4_SAFE_BANK_INSUFFICIENT
     conclusion: >-
