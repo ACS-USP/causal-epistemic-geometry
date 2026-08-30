@@ -53,6 +53,7 @@ def main() -> int:
             "NOT_APPLICABLE",
             "SEALED_ASSIGNED_UNACCESSED",
             "CONSUMED_CONFIRMATORY_CLOSED",
+            "CONSUMED_DEVELOPMENT_CLOSED",
         }:
             errors.append(f"{identifier}: unexpected holdout status")
     required_ids = {

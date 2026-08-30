@@ -1,0 +1,33 @@
+{
+  "agreement": true,
+  "audit": "Q2_V4_1_G2",
+  "metric_audit": {
+    "A0": {
+      "qualifies": true,
+      "shell_rho": {
+        "MEDIUM": 0.5548224632268762,
+        "STRONG": 0.5728142335797248
+      }
+    },
+    "A1": {
+      "qualifies": true,
+      "shell_rho": {
+        "MEDIUM": 0.5546810909321492,
+        "STRONG": 0.5579408630791556
+      }
+    },
+    "A2": {
+      "qualifies": true,
+      "shell_rho": {
+        "MEDIUM": 0.44256928065741025,
+        "STRONG": 0.4396876674553257
+      }
+    }
+  },
+  "primary": "Q2_V4_1_G2",
+  "qap_observed": {
+    "A0": 0.5638183484033006,
+    "A1": 0.5563109770056525,
+    "A2": 0.441128474056368
+  }
+}

@@ -22,7 +22,7 @@ def test_project_state_and_generated_status_are_current() -> None:
     result = _run("render_project_state.py", "--check")
     assert result.returncode == 0, result.stderr
     state = yaml.safe_load((ROOT / "project_state.yaml").read_text(encoding="utf-8"))
-    assert state["project"]["claim_status"] == "NONE_FROZEN"
+    assert state["project"]["claim_status"] == "Q2_V4_1_G2"
     assert state["scientific_firewall"]["confirmatory_holdout"] in {
         "UNTOUCHED",
         "SEALED_ASSIGNED_UNACCESSED",
@@ -85,12 +85,13 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q2_V3_REPLACEMENT_FAMILY_DESIGN_COMPLETE",
         "Q2_V3_FOUR_FAMILY_STATISTICAL_REDESIGN_COMPLETE",
         "Q2_V4_INTERVENTION_SUBSPACE_DESIGN_COMPLETE",
-            "Q2_V4_1_31_SAFE_BANK_REVIEW_COMPLETE",
-            "Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK_COMPLETE",
-            "Q2_V4_1_SEMANTIC_EXECUTION",
-                "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
-            "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE",
-        }
+        "Q2_V4_1_31_SAFE_BANK_REVIEW_COMPLETE",
+        "Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK_COMPLETE",
+        "Q2_V4_1_SEMANTIC_EXECUTION",
+        "Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE",
+        "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
+        "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE",
+    }
     assert state["current"]["gpu_work_authorized"] is (
         workstream
         in {
@@ -111,10 +112,10 @@ def test_project_state_and_generated_status_are_current() -> None:
             "Q2_CONTROLLER_HELDOUT_GEOMETRY_PILOT",
             "Q2_CONTROLLER_HELDOUT_GEOMETRY_V2",
             "Q2_V3_RADIAL_ANGULAR_EXECUTION",
-                "Q2_V3_AMENDMENT1_EXECUTION",
+            "Q2_V3_AMENDMENT1_EXECUTION",
             "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
             "Q2_V4_1_SEMANTIC_EXECUTION",
-            }
+        }
     )
     if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":
         assert state["current"]["lifecycle"] == "CLOSED"
