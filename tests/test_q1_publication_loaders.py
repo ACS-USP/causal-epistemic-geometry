@@ -3,10 +3,25 @@ from __future__ import annotations
 import ast
 from pathlib import Path
 
+import pytest
+
 from epistemic_geometry.publication.q1 import loaders
 
 
+def _require_private_q1_sources() -> None:
+    missing = [
+        path
+        for path in loaders.expected_source_hashes()
+        if not (loaders.ROOT / path).is_file()
+    ]
+    if missing:
+        pytest.skip(
+            "private/hash-pinned Q1 publication sources are not present in this clone"
+        )
+
+
 def test_frozen_q1_source_hashes_and_controller_identities_validate() -> None:
+    _require_private_q1_sources()
     observed = loaders.validate_frozen_sources()
     assert observed == loaders.expected_source_hashes()
     assert loaders.validate_controller_identities() == {
@@ -16,6 +31,7 @@ def test_frozen_q1_source_hashes_and_controller_identities_validate() -> None:
 
 
 def test_holdout_membership_order_and_confirmatory_journals() -> None:
+    _require_private_q1_sources()
     item_ids = loaders.holdout_item_ids()
     assert len(item_ids) == 57
     assert len(set(item_ids)) == 57

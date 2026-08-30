@@ -207,7 +207,7 @@ result is `Q2_V4_1_31_SAFE_BANK_ADEQUATE`: design adequacy only. The bank is
 frozen for a possible future V4.1 semantic experiment, which requires a new
 prospective lock; the Q2 relational hypothesis remains untested.
 
-The subsequent V4.1 presemantic lock materialized only the label-free A1/A2
+At that historical presemantic stage, the subsequent V4.1 lock materialized only the label-free A1/A2
 instrument artifacts from the persisted Spark-1 raw arrays. The consolidator
 and all numeric tolerances were frozen before inspecting the resulting radii,
 Gram spectra, or cosines; the A2 implementation uses natural-log JS with
@@ -219,3 +219,20 @@ future 37,800-row panel remains a draft requiring a separate principal
 semantic-execution review. A temporary local dstack server used during
 troubleshooting was terminated and is not part of the scientific protocol;
 Spark 1 was accessed directly over SSH and Spark 2 was not used.
+
+## Q2 V4.1 closed DEVELOPMENT result
+
+V4.1 subsequently completed all 37,800 frozen semantic trajectories and sealed
+the raw data before scoring. A0, A1, and A2 all passed the frozen relational
+gate, with aggregate Spearman associations 0.563818, 0.556311, and 0.441128.
+A2 did not outperform either static geometry: A2-A0 was -0.122690 and A2-A1
+was -0.115183. The mechanical result is `Q2_V4_1_G2`, not G3. Independent
+radial results are `RS+` and `RT+`; all 31 directions showed greater shape and
+total displacement at STRONG than MEDIUM amplitude. The independent audit is
+`Q2_V4_1_SEMANTIC_FORENSIC_CLEAN` with maximum discrepancy 0.0.
+
+Program C therefore now has DEVELOPMENT evidence that intervention geometry
+predicts semantic blind-spot geometry inside the prospectively fixed Qwen
+subspace. It does not establish A2 superiority, global smoothness, manifold
+structure, model/task generality, or Q3 utility. The canonical result is the
+[Q2 V4.1 semantic closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md).

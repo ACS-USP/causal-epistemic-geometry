@@ -21,8 +21,8 @@ Status vocabulary:
 | Cross-domain transfer to long character counting | `NEGATIVE_RESULT` | Gate 10 opportunity and safety pass, transfer classification `GATE10_NO_CROSS_DOMAIN_TRANSFER` | Character counting may reward a different policy; no task adaptation was allowed |
 | Strong readout implies strong causal controllability | `NEGATIVE_RESULT` as a ranking heuristic | Gate 6 source/RFM atlas and Gate 13 shortlist: widespread readout eligibility did not identify the final causal layer reliably | Does not show readout is useless; it shows readout alone does not rank control handles |
 | Finite-displacement output or hidden movement is exact pullback/Fisher geometry | `NOT_ESTABLISHED` | Gate 11/11.1 preserved KL/JS and hidden displacement; Gate 12/12.1 stopped at engineering qualification | These are finite-shift control diagnostics, not a measured exact local metric |
-| Internal geometry predicts error-profile geometry | `NOT_ESTABLISHED` | No scientific Q2 outcome exists | Gate 12 collected zero scientific geometry shards; Q2 is not run |
-| Euclidean geometry is inferior to pullback geometry | `NOT_ESTABLISHED` | No prospectively held-out metric comparison | Neither positive nor negative Q2 evidence exists |
+| Internal geometry predicts error-profile geometry | `DEVELOPMENT` | Q2 V4.1: A0/A1/A2 aggregate rho=0.56382/0.55631/0.44113, all maxT p=0.00002; terminal class `Q2_V4_1_G2` | Within the fixed 31-direction Qwen subspace and frozen CRUXEval panel; not a universal geometry claim |
+| Finite-response A2 is superior to static A0/A1 geometry | `NEGATIVE_RESULT` | Q2 V4.1: A2-A0=-0.12269 and A2-A1=-0.11518, corrected permutation p=1.0 | A2 contains relational signal, but G3 superiority was not observed; do not attribute the negative contrasts only to planning power |
 | The controllers implement a transferable careful-computation policy | `NEGATIVE_RESULT` in its broad form | CRUXEval benefits versus character-count null/harm; Gate 11 policy-utility mismatch | A domain-conditioned program-tracing policy remains plausible in development |
 | Complementarity can be converted into implementable collective utility | `NOT_ESTABLISHED` | Pair-oracle headroom and rescue/damage are measured | No deployable selector/router/committee has been tested; Q3 is not run |
 | The project has a universal controller | `NOT_ESTABLISHED` | Architecture-specific Qwen and Ministral vectors/layers/doses were selected separately | Similar source concept is not vector identity or cross-architecture transport |
@@ -37,5 +37,6 @@ not “cross-model replication failed.” It is:
 > Ministral while safe commitment realization does not. Cross-domain evidence
 > bounds the current controllers as task-conditioned.
 
-No sentence in the manuscript should imply that Q2 geometry prediction or Q3
-deployable utility has been established.
+Q2 geometry prediction is now supported at DEVELOPMENT level by V4.1 G2, with
+the fixed-subspace and task boundaries above. No sentence in the manuscript
+should imply A2 superiority, universal geometry, or Q3 deployable utility.

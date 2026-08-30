@@ -4,11 +4,29 @@ This index classifies every tracked Markdown document. “Archival” means
 preserved evidence, not deletion or irrelevance; it means the file is not the
 current instruction source.
 
+## If you are new, read in this order
+
+1. [`README.md`](../README.md)
+2. [`docs/START_HERE.md`](START_HERE.md)
+3. [`docs/SCIENTIFIC_RESULTS.md`](SCIENTIFIC_RESULTS.md)
+4. [`docs/CURRENT_STATUS.md`](CURRENT_STATUS.md)
+5. [`docs/Q1_VISUAL_EVIDENCE.md`](Q1_VISUAL_EVIDENCE.md)
+6. [`docs/Q1_CONFIRMATORY_FIXED_CONTROLLERS_CLOSEOUT.md`](Q1_CONFIRMATORY_FIXED_CONTROLLERS_CLOSEOUT.md)
+7. [`review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md`](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md)
+8. [`docs/EXPERIMENT_INDEX.md`](EXPERIMENT_INDEX.md)
+9. [`docs/CLAIM_EVIDENCE_MATRIX.md`](CLAIM_EVIDENCE_MATRIX.md)
+10. [`docs/REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
+
 ## Canonical and normative
 
 | Document | Role |
 |---|---|
+| `docs/START_HERE.md` | External five-minute scientific onboarding |
 | `docs/CURRENT_STATUS.md` | Generated live status; edit `project_state.yaml` |
+| `docs/SCIENTIFIC_RESULTS.md` | Canonical external results summary with exact numbers and evidence links |
+| `docs/EXPERIMENT_INDEX.md` | Evidence-level and methodological genealogy of major experiments |
+| `docs/CLAIM_EVIDENCE_MATRIX.md` | Headline claims, allowed wording, and forbidden overclaims |
+| `docs/REPRODUCIBILITY.md` | Analysis reproduction, raw-data availability, and inference boundaries |
 | `docs/PUBLICATION_ROADMAP.md` | Non-overlapping evidence gates for Programs A, B, and C |
 | `docs/SCIENTIFIC_CONSTITUTION.md` | Claim hierarchy and non-negotiable evidence rules |
 | `docs/METRICS_AND_STATISTICS.md` | Current estimands, seed semantics, and uncertainty |
@@ -26,6 +44,9 @@ current instruction source.
 | `docs/RESEARCH_OS_V1_REPORT.md` | Research OS v1 implementation and validation report |
 | `docs/RESEARCH_OS_INTEGRATION_REPORT.md` | Gate 6.3 integration amendments, fixture isolation, and environment profiles |
 | `docs/POST_Q1_RESEARCH_ROADMAP.md` | Focused Paper 1, Q2, DGX, and later-Q3 horizons after Q1 closeout |
+| `docs/Q1_VISUAL_EVIDENCE.md` | Reproducible Q1 publication figure and notebook entry point |
+| `docs/Q1_FIGURE_SPEC.md` | Frozen source, encoding, and interpretation contract for the Q1 visual package |
+| `docs/Q2_VISUAL_EVIDENCE_ROADMAP.md` | Explicit roadmap for a not-yet-implemented Q2 visual package |
 
 ## Current supporting references
 

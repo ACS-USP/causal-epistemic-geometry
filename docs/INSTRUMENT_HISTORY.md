@@ -145,6 +145,23 @@ for meaningful G2/G3 discrimination. The closed design classification is
 no shell calibration, M0/M1/M2, semantic outcome, or model inference occurred.
 See the [statistical redesign](../review/q2_v3_four_family_statistical_redesign/REPORT.md).
 
+## Q2 V4/V4.1 — safe-bank stop, prospective reuse, and semantic result
+
+Q2 V4 generated exactly 40 directions from its frozen seed and found 31 that
+passed both safety shells, one below its required 32. It closed as
+`Q2_V4_SAFE_BANK_INSUFFICIENT` without opening semantic outcomes. V4.1 was a
+distinct prospective design that retained all 31 safe directions, passed an
+outcome-free coverage/power gate, locked A0/A1/A2 and the semantic schedule,
+and then completed all 37,800 trajectories.
+
+A0, A1, and A2 all qualified as predictors of pairwise blind-spot-shape
+distance. A2 did not outperform A0 or A1, so the mechanical result is
+`Q2_V4_1_G2`; independent radial results are `RS+` and `RT+`. The forensic
+audit reproduced the classification with maximum discrepancy 0.0. This is
+DEVELOPMENT evidence within the fixed Qwen intervention subspace, not a
+universal geometry or manifold claim. See the
+[semantic closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md).
+
 ## Cross-series conclusion
 
 The repository has learned a great deal about measurement failure and execution

@@ -9,7 +9,7 @@ from epistemic_geometry.publication.q1.figure_tables import (
     confirmatory_item_profiles,
     write_tables,
 )
-from epistemic_geometry.publication.q1.loaders import load_sources
+from epistemic_geometry.publication.q1.loaders import ROOT, expected_source_hashes, load_sources
 from epistemic_geometry.publication.q1.plotting import (
     FIGURE2_FINAL_SIZE,
     FIGURE2_FONT_SIZES,
@@ -20,6 +20,11 @@ from epistemic_geometry.publication.q1.plotting import (
 
 @pytest.fixture(scope="module")
 def q1_data() -> dict:
+    missing = [path for path in expected_source_hashes() if not (ROOT / path).is_file()]
+    if missing:
+        pytest.skip(
+            "private/hash-pinned Q1 publication sources are not present in this clone"
+        )
     return load_sources()
 
 

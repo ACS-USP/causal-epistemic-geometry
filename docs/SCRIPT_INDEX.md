@@ -7,6 +7,8 @@ current action. No historical reproduction script is deleted by this reset.
 
 - `scripts/render_project_state.py` — generated status source.
 - `scripts/check_docs.py` — offline document/state audit.
+- `scripts/check_external_readiness.py` — public-claim and tracked Q2 hash audit;
+  never reads private or open-experiment outcomes.
 - `scripts/check_experiment_registry.py` — experiment-registry audit.
 - `scripts/validate_scientific_metrics.py` — synthetic estimand validation.
 - `scripts/validate_research_os.py` — policy, lifecycle, contract, and named-environment audit.

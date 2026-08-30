@@ -1,124 +1,91 @@
-# Causal Geometry of Epistemic Complementarity
+# Causal Epistemic Geometry
 
-This repository is DEVELOPMENT infrastructure for a staged research program on
-whether internal interventions can create useful, competence-preserving changes
-in a frozen model's semantic error profile.
+We study whether semantic failure patterns in frozen language models can be
+causally controlled through activation interventions, and whether the changes
+are organized by the geometry of the intervention space. The central object is
+not accuracy alone: it is the itemwise pattern of failures—the model's semantic
+blind spots.
+
+## Current headline results
+
+- **Q1 — controllability.** A fixed Qwen3-8B activation controller safely
+  reorganized which CRUXEval items the model tended to fail, beyond average
+  competence change and matched random-direction controls. The confirmatory
+  classification is `Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL`.
+- **Q2 — geometry.** In a prospectively fixed bank of 31 intervention
+  directions, pairwise intervention geometry predicted pairwise semantic
+  blind-spot geometry. Q2 V4.1 closed as `Q2_V4_1_G2`; its independent radial
+  results are `RS+` and `RT+`.
+- **Q3 — utility.** Not run. No deployable selector, router, or committee has
+  yet converted the measured complementarity into realized utility.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE` — **scientific claim:** `Q2_V4_1_G2`.
+**Current stage:** `Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B_OPEN` — **scientific claim:** `Q2_V4_1_G2`.
 
-Q2 V4.1 completed all 37,800 frozen semantic trajectories with zero duplicate, missing, replacement, or retried logical rows. Raw data were sealed before scoring. A0, A1, and A2 all passed the frozen relational gate; A2 did not pass incremental superiority beyond A0/A1, yielding the mechanical classification Q2_V4_1_G2. Independent radial results are RS+ and RT+. The independent semantic forensic audit reproduced the result with maximum discrepancy 0.0. Original V4 remains Q2_V4_SAFE_BANK_INSUFFICIENT; V4.1 is a distinct prospectively locked experiment.
+Q2 V4.1 is closed and forensic-clean as Q2_V4_1_G2 with independent RS+ and RT+ radial results. A separate Q1 DEVELOPMENT transfer experiment is currently collecting a frozen 5,720-trajectory LiveCodeBench Stage B on Spark 2. Its fixed controller, eight nulls, 130 question families, parser, schedule, endpoints, and decision rules were locked before opening. No partial Stage-B scientific outcome is part of the repository state or may be inspected during collection.
 
-**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_OF_Q2_V4_1_RESULT
+**Next authorized action:** COMPLETE_FROZEN_5720_ROW_STAGE_B_AND_SEAL_BEFORE_ANALYSIS
 <!-- PROJECT_STATUS:END -->
 
-The machine-readable source for this block and the live status page is
-[`project_state.yaml`](project_state.yaml). Run `make state-check` to detect
-stale generated status.
+This block is generated from [`project_state.yaml`](project_state.yaml). See the
+short [current-status page](docs/CURRENT_STATUS.md) for the active scientific
+state.
 
-## The research program
+## Scientific story
 
 ```text
-representation / intervention geometry
-                  |
-                  v
-       controlled causal intervention
-                  |
-                  v
- semantic error profile and covariance
-                  |
-                  v
-   realizable committee utility (later)
+Q1: controllability  →  Q2: geometry  →  Q3: utility
+    Can blind spots      Is their          Can the structure
+    be moved causally?   movement ordered? yield useful systems?
 ```
 
-The minimal Q1 is deliberately narrower:
+Q1 establishes a narrow causal result on Qwen3-8B and CRUXEval. Q2 establishes
+a relational result inside a fixed Qwen intervention subspace on a frozen
+CRUXEval panel. Neither result establishes universal steering, model- or
+task-generality, global smoothness, a Riemannian manifold, or collective
+utility.
 
-> Can one controlled activation intervention change where a frozen model fails
-> beyond ordinary stochastic resampling without merely making it worse?
+## Results at a glance
 
-Q2 asks whether geometry between interventions predicts geometry between error
-profiles. Q3 would ask whether a realizable committee can exploit that
-complementarity. Behavioral difference, semantic error difference, useful
-complementarity, and implementable ensemble gain are four different claims.
+| Question | Canonical result | Evidence boundary |
+|---|---|---|
+| Q1, Qwen | Confirmatory pass | Safe, null-specific competence-adjusted complementarity on Qwen3-8B + CRUXEval |
+| Q1, Ministral | Confirmatory model-level fail | Complementarity components were positive, but frozen validity/evaluability guards failed |
+| Q1, character count | Negative boundary | The fixed Qwen controller did not transfer to long character counting |
+| Q1, LiveCodeBench | Open DEVELOPMENT experiment | Frozen Stage B is collecting; no partial scientific result is available |
+| Q2 V4.1 | `G2`, `RS+`, `RT+` | Relational and radial evidence within the fixed 31-direction Qwen subspace |
+| Q3 | Not run | Utility remains an open question |
 
-The fixed-controller Q1 confirmatory result and the scoped Q2 V4.1 relational
-result are now established under their frozen designs. Realizable committee
-utility remains untested.
+Exact numbers, classifications, and links to the evidence are in
+[Scientific Results](docs/SCIENTIFIC_RESULTS.md).
 
 ## Start here
 
-For a first visit, read:
+1. [Start Here](docs/START_HERE.md) — a five-minute scientific orientation.
+2. [Scientific Results](docs/SCIENTIFIC_RESULTS.md) — exact current findings.
+3. [Current Status](docs/CURRENT_STATUS.md) — what is closed, open, and next.
+4. [Q1 Visual Evidence](docs/Q1_VISUAL_EVIDENCE.md) — reproducible figures and notebook.
+5. [Experiment Index](docs/EXPERIMENT_INDEX.md) — methodological genealogy.
+6. [Claim–Evidence Matrix](docs/CLAIM_EVIDENCE_MATRIX.md) — allowed wording and limits.
+7. [Reproducibility](docs/REPRODUCIBILITY.md) — tracked versus private artifacts.
+8. [Document Index](docs/DOCUMENT_INDEX.md) — complete navigation.
 
-1. [Current status](docs/CURRENT_STATUS.md) — generated live state.
-2. [Scientific constitution](docs/SCIENTIFIC_CONSTITUTION.md) — questions,
-   claim boundaries, and stop rules.
-3. [Instrument history](docs/INSTRUMENT_HISTORY.md) — what V1–V4 actually
-   established and why each instrument closed or paused.
-4. [Metrics and statistics](docs/METRICS_AND_STATISTICS.md) — hard errors,
-   stochastic estimands, uncertainty, and seed semantics.
-5. [Experiment ladder](docs/EXPERIMENT_LADDER.md) — the prospective sequence
-   from cheap smoke to micro-Q1 and future Q2.
-6. [Document index](docs/DOCUMENT_INDEX.md) — canonical versus archival files.
+## Repository map
 
-The complete machine-readable experiment history is
-[`experiments/registry.yaml`](experiments/registry.yaml). Historical protocol
-and review files remain preserved for audit; they are not silently rewritten
-as current plans.
+```text
+docs/          scientific narrative, policies, closeouts, and navigation
+review/        frozen protocols, audits, aggregate results, and hash ledgers
+experiments/   machine-readable registry, decisions, and prospective specs
+src/           reusable experiment and analysis code
+scripts/       execution, analysis, audit, and publication entry points
+tests/         deterministic scientific and software invariants
+notebooks/     narrative notebooks backed by tested loaders
+manuscript/    publication figures and figure-data provenance
+```
 
-## Current evidence boundary
+## Quick start
 
-- V1–V1.2/MMLU-Pro: closed DEVELOPMENT instrument; aggregation-sensitive.
-- V2/E3-10: closed non-qualified direct-readout ablation.
-- V3 reasoning agent: baseline Stage A complete; frozen screen failed; no
-  steering.
-- External benchmark search: development diagnostics only; no qualifier.
-- V4 character count: closed after semantic saturation and parser artifacts.
-- V4 geometry: tiny descriptive activation diagnostic only; no causal or
-  behavioral result.
-- V4 dense code: objective nested outcomes look promising, but secure execution
-  is not production-ready and no model pilot ran.
-- Published weekday positive control: PASS under its frozen metric and endpoint
-  criteria; this validates one known intervention stack, not original Q1 or Q2.
-- Gate 3 substrate race: baseline-only exploration complete; Qwen full
-  non-thinking × CRUXEval semantic is the provisional primary development
-  substrate, with fresh long character count as backup. No steering was run.
-- Gate 4 first original micro-Q1: audited bounded null; the one-shot
-  careful-minus-direct direction did not exceed baseline resampling and the
-  norm-matched random control.
-- Gate 5 source/duration bridge: textual careful/direct source separation and
-  sustained manipulation passed their frozen gates, but the 60-item primary
-  evaluation was below the frozen movement threshold.
-- Gate 6.3 single-mean semantic evaluation: matched architecture-specific
-  random gate passed, but the frozen L27 meaningful controller failed the
-  primary validity guard (0.9083 versus 0.9250) and is classified
-  `GATE6_3_SINGLE_MEAN_DESTRUCTIVE`. A later condition-blind, model-free V3
-  audit preserved that historical classification but found 0.9750 commitment
-  validity/evaluability and a strong controller-specific G/C/D diagnostic.
-  Gate 7 then tested the exact controller on 120 fresh items with semantic V3
-  frozen before collection. Accuracy and G/C/D improved beyond four new random
-  controls, but commitment/evaluability fell to 0.9000 and violated the frozen
-  relative guard; classification: `GATE7_DESTRUCTIVE`.
-- Gate 8 prospectively calibrated the same controller and selected D75 as the
-  lowest safe dose with a specific behavioral first stage. Gate 9 then tested
-  D75 on 100 fresh CRUXEval items and obtained a strong safe DEVELOPMENT
-  replication beyond four new random controls.
-- Gate 10 transported the fixed L27-D75 controller without adaptation to 200
-  fresh long character-count items. Baseline opportunity and safety passed,
-  but G/C/D were negative and below the random null; classification:
-  `GATE10_NO_CROSS_DOMAIN_TRANSFER`. This bounds domain generality without
-  overturning the fresh CRUXEval replication.
-- Q1 confirmatory holdout: consumed and closed with
-  `Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL`.
-- Q2 V4.1: the complete 37,800-row frozen semantic experiment classified
-  `Q2_V4_1_G2`; A0/A1/A2 qualified, A2 did not satisfy G3 superiority, radial
-  results were `RS+` and `RT+`, and the independent forensic audit was clean.
-
-These are instrument outcomes, not a positive or negative result for the full
-causal-geometry theory.
-
-## Lightweight local workflow
-
-Python 3.11 or newer is recommended.
+Python 3.11 or newer is supported for local analysis and validation.
 
 ```bash
 python3 -m venv .venv
@@ -131,62 +98,36 @@ python -m compileall -q src scripts
 make scientific-audit
 ```
 
-Mock mode requires no GPU, model, network, or benchmark download:
+Regenerate the publication-oriented Q1 figures when the hash-pinned private Q1
+source bundle is available locally:
 
 ```bash
-ceg doctor
-ceg run configs/mock_smoke.yaml
-ceg preflight configs/mock_smoke.yaml
+python scripts/generate_q1_paper_figures.py
 ```
 
-The mock linear fixture and the network-free tiny random transformer validate
-software mechanics only. Their outputs are not scientific evidence.
+No GPU or model download is required for the mock smoke, documentation checks,
+or tracked aggregate analyses. Q1 figure regeneration is offline but requires
+the private/hash-pinned row-level Q1 source bundle; generated figures and
+derived tables are already tracked.
 
-## Execution policy
+## Reproducibility and data availability
 
-The local Mac is canonical for code, configuration, tests, documentation, and
-Git history. Real model inference belongs on an explicitly authorized remote
-GPU host. Local Hugging Face model downloads are fail-closed. RunPod, Docker,
-and generated-code execution are not part of the current offline
-rearchitecture.
+Git contains protocol locks, schedules, aggregate scientific results, audits,
+tests, figure data, and SHA-256 identity ledgers. Some raw benchmark-derived
+prompts, reference answers, generated text, and row-level scores are not
+redistributed because of benchmark licensing, size, and research-data policy.
+Their exact identities are recorded by hash. See
+[Reproducibility](docs/REPRODUCIBILITY.md) for the three distinct levels:
+tracked-artifact reproduction, full raw-data audit, and new model inference.
 
-The repository distinguishes three regimes:
+## Publication status
 
-- `EXPLORATION`: cheap 5–20 item screens designed to fail quickly.
-- `DEVELOPMENT_LOCK`: freeze code, estimands, seeds, schemas, cost, and review
-  after a real signal appears.
-- `CONFIRMATORY`: sealed estimands, source commit, validator, and holdout with
-  no adaptive tuning.
-
-See [engineering policy](docs/ENGINEERING_POLICY.md) for reproducibility,
-engine-equivalence, security, and artifact rules.
-
-## Package shape
-
-```text
-src/epistemic_geometry/
-    backends/       mock, Hugging Face, and tiny-transformer mechanics
-    benchmarks/     exact task adapters and historical instruments
-    experiments/    paired and reasoning runners
-    inference/      reference and optimized execution utilities
-    metrics/        paired, stochastic, and uncertainty estimands
-    steering/       vector artifacts and temporary interventions
-
-experiments/
-    registry.yaml   canonical history and status
-    decision_log.yaml
-    specs/           prospective, not-yet-executed protocols
-```
-
-## What not to conclude
-
-This repository does not currently show that activation steering creates useful
-diversity, that a privileged geometric direction exists, that intervention
-geometry predicts error covariance, or that an oracle pair gain is realizable
-by an ensemble. Negative instrument screens are useful engineering evidence,
-but they do not settle the underlying theory.
+This is an active research repository, not a final archival data release. Q1
+has a publication-oriented visual evidence package; the equivalent Q2 visual
+package is a documented [externalization TODO](docs/Q2_VISUAL_EVIDENCE_ROADMAP.md).
+Use the [claim matrix](docs/CLAIM_EVIDENCE_MATRIX.md) when citing results.
 
 ## License
 
-The package metadata currently declares MIT licensing. Model and benchmark
-assets retain their own licenses and are not stored in this repository.
+Package metadata declares MIT licensing. Model, benchmark, and private
+scientific-data artifacts retain their own licenses and release constraints.

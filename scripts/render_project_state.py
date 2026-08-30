@@ -21,11 +21,11 @@ def _render_state(state: dict[str, object]) -> str:
     project = state["project"]
     current = state["current"]
     firewall = state["scientific_firewall"]
-    instruments = state["instrument_history"]
     assert isinstance(project, dict)
     assert isinstance(current, dict)
     assert isinstance(firewall, dict)
-    assert isinstance(instruments, list)
+    active = current.get("active_experiment", {})
+    assert isinstance(active, dict)
     lines = [
         "# Current Repository Status",
         "",
@@ -35,53 +35,51 @@ def _render_state(state: dict[str, object]) -> str:
         f"**Scientific stage:** `{project['scientific_stage']}`",
         f"**Claim status:** `{project['claim_status']}`",
         "",
-        "## Current work",
+        "## Closed headline results",
+        "",
+        "- **Q1:** `Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL`. The fixed Qwen",
+        "  controller passed; the fixed Ministral controller failed mandatory",
+        "  validity/evaluability guards.",
+        "- **Q2:** `Q2_V4_1_G2`, with independent radial results `RS+` and",
+        "  `RT+`. The semantic forensic audit is clean.",
+        "- **Q3:** `NOT_RUN`.",
+        "",
+        "Exact results and scope: [Scientific Results](SCIENTIFIC_RESULTS.md).",
+        "",
+        "## Active experiment",
         "",
         str(current["summary"]),
         "",
         f"- Workstream: `{current['workstream']}`",
-        f"- RunPod: `{current['runpod']}`",
-        f"- GPU work authorized: `{str(current['gpu_work_authorized']).lower()}`",
-        f"- New scientific experiment authorized: "
-        f"`{str(current['new_scientific_experiment_authorized']).lower()}`",
+        f"- Evidence level: `{active.get('evidence_level', 'N/A')}`",
+        f"- Lifecycle: `{current['lifecycle']}`",
+        f"- Branch: `{active.get('branch', 'N/A')}`",
+        f"- Authorization commit: `{active.get('authorization_commit', 'N/A')}`",
+        f"- Frozen scale: {active.get('families', 'N/A')} question families, "
+        f"{active.get('conditions', 'N/A')} conditions, "
+        f"{active.get('rollouts', 'N/A')} rollouts, "
+        f"{active.get('scheduled_trajectories', 'N/A')} logical trajectories",
+        "- Partial scientific outcomes in repository status: `NO`",
         f"- Next authorized action: {current['next_authorized_action']}",
-        "",
-        "## Scientific program",
-        "",
-        f"- Long-term: {project['long_term_question']}",
-        f"- Minimal Q1: {project['minimal_q1']}",
-        f"- Q2: {project['q2']}",
-        f"- Q3: {project['q3']}",
-        "",
-        "## Instrument history at a glance",
-        "",
-        "| Instrument | Status | Evidence boundary |",
-        "|---|---|---|",
-    ]
-    for item in instruments:
-        assert isinstance(item, dict)
-        lines.append(f"| `{item['id']}` | `{item['status']}` | {item['conclusion']} |")
-    lines += [
         "",
         "## Scientific firewall",
         "",
-    ]
-    for key, value in firewall.items():
-        lines.append(f"- `{key}`: `{value}`")
-    lines += [
+        "The open LiveCodeBench campaign remains blind during collection. Its",
+        "generated text, correctness, condition-level validity/evaluability,",
+        "C/G/D, and controller/null comparisons are not part of this status.",
         "",
-        "Historical failures above are failures or non-qualification of measurement",
-        "instruments. They are not positive or negative tests of the full causal-geometry",
-        "theory. The current confirmatory-holdout status is",
-        f"`{firewall['confirmatory_holdout']}`.",
+        f"- Q1 canonical state: `{firewall['steering']}`",
+        f"- Q2 canonical state: `{firewall['geometry_q2']}`",
+        f"- Q3 canonical state: `{firewall['committee_q3']}`",
+        f"- Free generation: `{firewall['free_generation']}`",
+        f"- RunPod: `{current['runpod']}`",
         "",
         "## Canonical navigation",
         "",
-        "Start with [the scientific constitution](SCIENTIFIC_CONSTITUTION.md), then",
-        "[metrics and statistics](METRICS_AND_STATISTICS.md), the",
-        "[experiment ladder](EXPERIMENT_LADDER.md), and the",
-        "[document index](DOCUMENT_INDEX.md). Machine-readable history is in",
-        "[`experiments/registry.yaml`](../experiments/registry.yaml).",
+        "Read [Start Here](START_HERE.md), [Scientific Results](SCIENTIFIC_RESULTS.md),",
+        "the [Experiment Index](EXPERIMENT_INDEX.md), and the",
+        "[Claim–Evidence Matrix](CLAIM_EVIDENCE_MATRIX.md). Machine-readable history",
+        "is in [`experiments/registry.yaml`](../experiments/registry.yaml).",
         "",
     ]
     return "\n".join(lines)

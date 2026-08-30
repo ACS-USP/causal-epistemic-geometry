@@ -3,7 +3,7 @@ last_verified: "2026-08-30"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE
+  scientific_stage: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B_OPEN
   claim_status: Q2_V4_1_G2
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,24 +19,36 @@ project:
     utility?
 
 current:
-  workstream: Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE
-  lifecycle: CLOSED
-  stage: DEVELOPMENT_SEMANTIC_RESULT
-  source_commit: 02bee4b6ede3969ef3c730d9ca5ea3a01e1c5454
-  execution_source_commit: dd5acd083b5fc8d425c5e192175f0a6481db6268
+  workstream: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
+  lifecycle: COLLECTION
+  stage: DEVELOPMENT_FIXED_CONTROLLER_TRANSFER_EXECUTION
+  source_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
+  execution_source_commit: 64285e4d6015985936bbb6ba8acb4a5137576579
   summary: >-
-    Q2 V4.1 completed all 37,800 frozen semantic trajectories with zero
-    duplicate, missing, replacement, or retried logical rows. Raw data were
-    sealed before scoring. A0, A1, and A2 all passed the frozen relational gate;
-    A2 did not pass incremental superiority beyond A0/A1, yielding the
-    mechanical classification Q2_V4_1_G2. Independent radial results are RS+
-    and RT+. The independent semantic forensic audit reproduced the result with
-    maximum discrepancy 0.0. Original V4 remains Q2_V4_SAFE_BANK_INSUFFICIENT;
-    V4.1 is a distinct prospectively locked experiment.
-  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_OF_Q2_V4_1_RESULT
+    Q2 V4.1 is closed and forensic-clean as Q2_V4_1_G2 with independent RS+
+    and RT+ radial results. A separate Q1 DEVELOPMENT transfer experiment is
+    currently collecting a frozen 5,720-trajectory LiveCodeBench Stage B on
+    Spark 2. Its fixed controller, eight nulls, 130 question families, parser,
+    schedule, endpoints, and decision rules were locked before opening. No
+    partial Stage-B scientific outcome is part of the repository state or may
+    be inspected during collection.
+  next_authorized_action: COMPLETE_FROZEN_5720_ROW_STAGE_B_AND_SEAL_BEFORE_ANALYSIS
   runpod: NOT_USED
-  gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE
+  gpu_work_authorized: true
+  new_scientific_experiment_authorized: Q1_SECOND_TASK_STAGE_B_ONLY
+  active_experiment:
+    name: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
+    evidence_level: DEVELOPMENT
+    status: OPEN_RUNNING_BLIND_COLLECTION
+    branch: research/q1-second-task-spark2-design
+    authorization_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
+    scientific_unit: QUESTION_FAMILY
+    families: 130
+    conditions: 11
+    rollouts: 4
+    scheduled_trajectories: 5720
+    partial_scientific_outcomes_available_to_docs: false
+    merge_to_main: NOT_AUTHORIZED_WHILE_OPEN
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
     machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
@@ -53,8 +65,8 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE_AWAITING_PRINCIPAL_REVIEW
-  free_generation: NOT_AUTHORIZED
+  current_task: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B_OPEN_BLIND_COLLECTION
+  free_generation: FROZEN_STAGE_B_SCHEDULE_ONLY
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -983,8 +995,13 @@ workflow_regimes:
       - no outcome-dependent tuning
 
 canonical_documents:
+  start_here: docs/START_HERE.md
   constitution: docs/SCIENTIFIC_CONSTITUTION.md
   status: docs/CURRENT_STATUS.md
+  scientific_results: docs/SCIENTIFIC_RESULTS.md
+  experiment_index: docs/EXPERIMENT_INDEX.md
+  claim_evidence_matrix: docs/CLAIM_EVIDENCE_MATRIX.md
+  reproducibility: docs/REPRODUCIBILITY.md
   metrics: docs/METRICS_AND_STATISTICS.md
   ladder: docs/EXPERIMENT_LADDER.md
   engineering: docs/ENGINEERING_POLICY.md

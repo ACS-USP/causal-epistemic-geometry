@@ -167,10 +167,11 @@ and output changes likewise did not establish an exact local pullback/Fisher
 geometry or predict utility. Readout, control gain, policy realization, and task
 utility should therefore be measured as distinct objects.
 
-The natural next question is geometric but remains untested: can a metric on a
-diverse intervention bank predict held-out distances between error-propensity
-profiles? The present paper supplies controlled interventions and audited error
-profiles; it does not claim a geometry-prediction result.
+At the freeze of this Q1-only revision memo, the natural next question was
+geometric and remained untested. Q2 V4.1 has since closed at DEVELOPMENT level
+as `Q2_V4_1_G2`; see the canonical Q2 closeout rather than treating this memo
+as current Q2 status. The present Paper-1 argument remains Q1-only and does not
+absorb the later geometry result without a separate manuscript revision.
 
 ## Limitations replacement
 
@@ -191,8 +192,9 @@ profiles; it does not claim a geometry-prediction result.
 - Longer generations co-occur with meaningful steering. Token length is a
   mechanistic correlate and possible mediator/confound, not evidence that
   verbosity itself causes complementarity.
-- Readout-controllability and geometry-utility relationships remain
-  unestablished. Q2 and Q3 have not been run.
+- Readout-controllability mechanisms and geometry-to-utility relationships
+  remain unestablished. Q2 V4.1 now supplies fixed-subspace DEVELOPMENT
+  geometry evidence; Q3 has not been run.
 
 ## Confirmatory-status language
 

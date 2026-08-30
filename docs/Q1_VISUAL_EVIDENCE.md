@@ -15,6 +15,12 @@ does not alter any frozen scientific classification.
 
 ## Regeneration
 
+The rendered figures, derived tables, and provenance manifests are tracked in
+Git. Exact end-to-end regeneration additionally requires the private,
+hash-pinned Q1 holdout manifest and row-level confirmatory journals identified
+by `FIGURE_SPEC.json`; a public clone without those bytes can inspect the
+tracked package but cannot reconstruct item-level tables from scratch.
+
 ```bash
 python scripts/generate_q1_paper_figures.py
 ```

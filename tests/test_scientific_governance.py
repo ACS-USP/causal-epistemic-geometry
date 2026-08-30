@@ -89,6 +89,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q2_V4_1_PRESEMANTIC_PREDICTION_LOCK_COMPLETE",
         "Q2_V4_1_SEMANTIC_EXECUTION",
         "Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE",
+        "Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B",
         "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
         "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE",
     }
@@ -115,6 +116,7 @@ def test_project_state_and_generated_status_are_current() -> None:
             "Q2_V3_AMENDMENT1_EXECUTION",
             "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
             "Q2_V4_1_SEMANTIC_EXECUTION",
+            "Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B",
         }
     )
     if workstream == "Q1_CONFIRMATORY_FIXED_CONTROLLERS":
@@ -159,8 +161,10 @@ def test_project_state_and_generated_status_are_current() -> None:
 def test_registry_and_document_audits_pass() -> None:
     registry = _run("check_experiment_registry.py")
     documents = _run("check_docs.py")
+    external = _run("check_external_readiness.py")
     assert registry.returncode == 0, registry.stderr
     assert documents.returncode == 0, documents.stderr
+    assert external.returncode == 0, external.stderr
 
 
 def test_prospective_specs_are_explicitly_unexecuted() -> None:
