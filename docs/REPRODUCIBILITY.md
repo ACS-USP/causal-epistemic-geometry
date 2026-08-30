@@ -66,6 +66,25 @@ to the private artifact store and any benchmark materials that can legally be
 shared. Hashes establish identity and detect mutation; they do not themselves
 make absent bytes reproducible.
 
+### Historical tracked-data exceptions
+
+The repository is not yet a clean minimal-data release. A repository-wide
+schema-only audit found historical tracked files that contain raw model output
+and reference-answer fields, notably:
+
+- `review/gate13_cross_model_ministral3/journal.jsonl` (21,064,875 bytes);
+- `review/gate6_3_single_mean_semantic_evaluation/journal.jsonl` (13,998,979
+  bytes);
+- `review/gate6_3_single_mean_semantic_evaluation/EVALUATION_RESULTS.csv`
+  (13,389,369 bytes).
+
+They are preserved because they are scientific provenance and deleting them
+from the current tree would not remove them from Git history. Before a formal
+public data release, benchmark licenses and redistribution rights must be
+reviewed and an archival/redaction plan approved. Do not casually delete,
+rewrite, or history-filter these artifacts: that is a separate provenance and
+release-governance decision.
+
 ## 3. New model inference
 
 Re-running generation is a new experiment, not a documentation check. It
@@ -99,6 +118,9 @@ artifact is unavailable, the index and results page must say so explicitly.
 
 ## Publication blockers
 
+- Historical tracked journals containing raw outputs/reference fields require
+  a benchmark-license and redistribution audit; current-tree deletion alone
+  would not remediate Git history.
 - A release mechanism and license review are needed for raw CRUXEval and
   LiveCodeBench-derived content.
 - Q2 raw journals, row-level scores, and several large label-free arrays are
