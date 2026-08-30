@@ -1,0 +1,64 @@
+{
+  "schema_version": "q2-v4.1-semantic-closeout-artifacts-v1",
+  "classification": "Q2_V4_1_G2",
+  "radial_classifications": {
+    "shape": "RS+",
+    "total": "RT+"
+  },
+  "execution_commit": "dd5acd083b5fc8d425c5e192175f0a6481db6268",
+  "private_remote_artifacts": {
+    "review/q2_v4_1_semantic_execution/journal.jsonl": {
+      "rows": 37800,
+      "sha256": "d726b473feca8c6922b545bdf8a217e8171c8267697ff2b9714b14e1a0363a99",
+      "tracked": false
+    },
+    "review/q2_v4_1_semantic_execution/SEMANTIC_SCORES.jsonl": {
+      "rows": 37800,
+      "sha256": "a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f",
+      "tracked": false
+    },
+    "review/q2_v4_1_semantic_execution/ITEM_CONTRIBUTIONS.csv": {
+      "sha256": "76d85ed0ad298ba6d1fbbc1e6587670391f686f7d0e948e3846d38c86587522e",
+      "tracked": false
+    },
+    "review/q2_v4_1_semantic_execution/LOO_SENSITIVITY.csv": {
+      "sha256": "76d85ed0ad298ba6d1fbbc1e6587670391f686f7d0e948e3846d38c86587522e",
+      "tracked": false
+    },
+    "review/q2_v4_1_semantic_execution/CONDITION_SUMMARY.csv": {
+      "sha256": "c1a30054b7a60ecdf029baa46be5a8303cf6b76fdf1d5dcb6da0081016b07d90",
+      "tracked": false
+    },
+    "review/q2_v4_1_semantic_execution/METRIC_CROSSCHECK.csv": {
+      "sha256": "a046408ed247d757bd7f87a40fe76b72dccbd7c95fdbec483227d4f4db4da147",
+      "tracked": false
+    }
+  },
+  "tracked_aggregate_artifacts": {
+    "PRE_EXECUTION_MANIFEST.json": "8242004c5c7f0f62bc9b23a565344851633b4910d096735f53506cfa32eb1fa1",
+    "CAMPAIGN_COMPLETENESS.json": "ddc4991d7a6c14b427f8567936eb0031ecee8e6bc952bbf697a0cc709c95b721",
+    "RAW_DATA_SEAL.json": "ce08ae11606b69a027393777e78f0cb40028f5bd2dcb5126eec6bfd1bfa309fc",
+    "ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6",
+    "BOOTSTRAP_INTERVALS.json": "19575a009851f1fcfb56fa768b24390fdbd6d97b2d38d239f17ed40491806b77",
+    "RADIAL_RESULTS.json": "6bfb75ea95e87461a57693de4adf3b0318e1cd3add66a9bcf787fd2731e43fdc",
+    "CLASSIFICATION_CROSSCHECK.json": "2ff7073fbdb5a5766273a0a518192c0d71570355d9b6f365c4c9b8d2b196809e",
+    "FORENSIC_AUDIT.json": "c8f9eb597aeb01a150c21c28b0b00b712e2468bad55752b924917e12daa182d8",
+    "COST.json": "ef4ea8821abc5c8468c9e56ac610b48edecf16007232a4ff5cc5423b7cd1b0c0",
+    "REPORT.md": "cb9f5c4f8dd3c4b36544506ffdd5cbdbed3c5b32fce9ab16c80d03a9252ae487",
+    "FORENSIC_AUDIT.md": "1be1441adfeec6808c22cc8261eddd48be681cef04a8d43e5a43f0022b075ae0",
+    "RETRY_LEDGER.json": "8770b6f971edc06d855c4e70b013548dcf151726284666754bd23d0bfe7febea",
+    "manifest_hashes.json": "2fb983a45e724b80d9a8918f75f243e56c99c8a5da9b4e92abdcdf071bd5cdf1",
+    "POST_HOC_GENERATION_DIAGNOSTIC.json": "8016b966450f947467d41ea2c277a2ec6ddff41744b77aabb4bf25899858c4d6",
+    "POST_HOC_GENERATION_DIAGNOSTIC.md": "f787fa55930142d52d9a1477f5fb31253c6eee22d101aa32342635099d8ab2c4"
+  },
+  "closeout_artifacts": {
+    "Q2_V4_1_SEMANTIC_CLOSEOUT.json": "137de8ff7735ca7a3188e7d1bc3afb254b0fb46ef7ad5037705aca98cb5de616",
+    "Q2_V4_1_SEMANTIC_CLOSEOUT.md": "7d3de4ef3b382a12011faf9d8cfb9b98921d8402c16ecdd33dc55845ed43db26"
+  },
+  "posthoc_diagnostic_implementation": {
+    "scripts/posthoc_diagnose_q2_v4_1_generation.py": "e340f9d622c4f874a868c0d9a4e203005b8bcfe778ab688f2202f35a39bda24e",
+    "tests/test_q2_v4_1_posthoc_generation.py": "0ff0541a1d32cc3dd0ff042ae36249c329b93a96a0059f7f193fc6668ab04a5a"
+  },
+  "raw_artifact_policy": "Raw benchmark-derived outputs and item-level scores remain in the private Spark-1 artifact store and are referenced only by hash.",
+  "q3": "NOT_RUN"
+}

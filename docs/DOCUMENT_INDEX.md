@@ -68,6 +68,8 @@ current instruction source.
 | `review/q2_v3_four_family_statistical_redesign/REPORT.md` | Exact four-family QAP/gate reconstruction and dependent CPU power study: N=300 precision elbow, controller-level design underpowered, no Amendment 2 or inference |
 | `review/q2_v4_intervention_subspace_design/REPORT.md` | New CPU-only intervention-subspace design: exact rank-8 source span, corrected blind-spot-shape endpoint, baseline-centered M2 angle, K=32/N=300 decision, and native-Spark-1 qualification draft; V4 not frozen or run |
 | `review/q2_v4_1_31_safe_bank_review/Q2_V4_1_31_SAFE_BANK_REVIEW.md` | CPU-only, outcome-free adequacy review of the immutable 40-candidate V4 stream and all 31 directions passing both frozen safety shells; no semantic panel run |
+| `review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md` | Complete 37,800-row Q2 V4.1 semantic closeout: frozen G2 relational classification, RS+/RT+ radial results, hashes, and clean independent forensic audit |
+| `docs/Q2_V4_1_SEMANTIC_EXECUTION_CLOSEOUT.md` | Short canonical pointer to the Q2 V4.1 semantic closeout bundle |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |

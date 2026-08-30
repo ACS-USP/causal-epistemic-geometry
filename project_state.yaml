@@ -1,10 +1,10 @@
 schema_version: 1
-last_verified: "2026-08-26"
+last_verified: "2026-08-30"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_V4_1_SEMANTIC_EXECUTION_OPEN
-  claim_status: NONE_FROZEN
+  scientific_stage: Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE
+  claim_status: Q2_V4_1_G2
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
     control which blind spots competence-preserving model variants exhibit?
@@ -19,29 +19,24 @@ project:
     utility?
 
 current:
-  workstream: Q2_V4_1_SEMANTIC_EXECUTION
-  lifecycle: COLLECTION
-  stage: DEVELOPMENT_SEMANTIC_EXECUTION
+  workstream: Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE
+  lifecycle: CLOSED
+  stage: DEVELOPMENT_SEMANTIC_RESULT
   source_commit: 02bee4b6ede3969ef3c730d9ca5ea3a01e1c5454
-  execution_source_commit: 4b6423dd909d3f7f10ffd27acd64c06c9f97c3dc
+  execution_source_commit: dd5acd083b5fc8d425c5e192175f0a6481db6268
   summary: >-
-    Q2 V4.1 performed a CPU-only, outcome-free adequacy review of the complete
-    historical 40-candidate bank and all 31 directions that passed both frozen
-    safety shells. The 31-safe bank retained full rank, effective rank 7.225679,
-    condition number 2.021583, and all inherited coverage checks. Synthetic
-    K=31/N=300 planning retained 97.17% omnibus power at rho=0.25, with 1.33
-    percentage points loss versus K=32 and A2 width ratio 1.022. The bank is
-    adequate for a future V4.1 design. Label-free A1/A2 were then materialized
-    from Spark-1 raw arrays, independently audited, and pinned to the lock;
-    the normative execution and analysis addendum makes the already-frozen
-    generation, retry/resume, estimand, and G0-G3 rules explicit without
-    changing any hash-pinned scientific object. Principal authorization has
-    opened the frozen semantic campaign; outcomes remain uninspected until all
-    37,800 logical rows are complete.
-  next_authorized_action: COMPLETE_37800_ROW_CAMPAIGN_AND_SEAL
+    Q2 V4.1 completed all 37,800 frozen semantic trajectories with zero
+    duplicate, missing, replacement, or retried logical rows. Raw data were
+    sealed before scoring. A0, A1, and A2 all passed the frozen relational gate;
+    A2 did not pass incremental superiority beyond A0/A1, yielding the
+    mechanical classification Q2_V4_1_G2. Independent radial results are RS+
+    and RT+. The independent semantic forensic audit reproduced the result with
+    maximum discrepancy 0.0. Original V4 remains Q2_V4_SAFE_BANK_INSUFFICIENT;
+    V4.1 is a distinct prospectively locked experiment.
+  next_authorized_action: PRINCIPAL_RESEARCHER_REVIEW_OF_Q2_V4_1_RESULT
   runpod: NOT_USED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q2_V4_1_SEMANTIC_EXECUTION_AUTHORIZED
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: NONE
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
     machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
@@ -54,12 +49,12 @@ current:
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: Q2_V2_NO_FAMILY_HELDOUT_GEOMETRY_SIGNAL
+  geometry_q2: Q2_V4_1_G2
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q2_V4_1_SEMANTIC_EXECUTION_OPEN_NO_OUTCOME_INSPECTION
-  free_generation: FROZEN_SEMANTIC_SCHEDULE_ONLY
+  current_task: Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE_AWAITING_PRINCIPAL_REVIEW
+  free_generation: NOT_AUTHORIZED
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -210,6 +205,44 @@ instrument_history:
     local_dstack: TERMINATED_NOT_PART_OF_PROTOCOL
     runpod_status: NOT_USED
     q2: UNTESTED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_V4_1_SEMANTIC_EXECUTION
+    status: Q2_V4_1_G2
+    conclusion: >-
+      The complete prospectively frozen 37,800-row campaign was collected on
+      one Spark-1 GB10 with zero missing, duplicate, replacement, or retried
+      logical rows. Raw data were sealed before scoring. A0, A1, and A2 all
+      passed the frozen relational qualification gate; A2 did not pass either
+      frozen G3 superiority contrast, so the mechanical precedence table yields
+      Q2_V4_1_G2. Radial blind-spot shape and total movement both classified
+      positive (RS+ and RT+). The independent audit reproduced the primary
+      classification with maximum difference 0.0.
+    branch: experiment/q2-v4-1-prediction-lock
+    execution_commit: dd5acd083b5fc8d425c5e192175f0a6481db6268
+    artifact: review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md
+    scientific_rows: 37800
+    panel_n: 300
+    controller_count: 31
+    conditions: 63
+    rollouts: 2
+    a0_aggregate_rho: 0.5638183484033006
+    a1_aggregate_rho: 0.5563109770056525
+    a2_aggregate_rho: 0.441128474056368
+    qap_maxT_p: 0.00002
+    a2_minus_a0: -0.12268987434693257
+    a2_minus_a1: -0.11518250294928445
+    radial_shape: RS+
+    radial_total: RT+
+    journal_sha256: d726b473feca8c6922b545bdf8a217e8171c8267697ff2b9714b14e1a0363a99
+    scores_sha256: a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f
+    forensic_classification: Q2_V4_1_SEMANTIC_FORENSIC_CLEAN
+    forensic_maximum_difference: 0.0
+    historical_v4_classification: Q2_V4_SAFE_BANK_INSUFFICIENT
+    spark1_only: true
+    spark2_used: false
+    runpod_status: NOT_USED
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 

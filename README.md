@@ -5,11 +5,11 @@ whether internal interventions can create useful, competence-preserving changes
 in a frozen model's semantic error profile.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_V4_1_SEMANTIC_EXECUTION_OPEN` — **scientific claim:** `NONE_FROZEN`.
+**Current stage:** `Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE` — **scientific claim:** `Q2_V4_1_G2`.
 
-Q2 V4.1 performed a CPU-only, outcome-free adequacy review of the complete historical 40-candidate bank and all 31 directions that passed both frozen safety shells. The 31-safe bank retained full rank, effective rank 7.225679, condition number 2.021583, and all inherited coverage checks. Synthetic K=31/N=300 planning retained 97.17% omnibus power at rho=0.25, with 1.33 percentage points loss versus K=32 and A2 width ratio 1.022. The bank is adequate for a future V4.1 design. Label-free A1/A2 were then materialized from Spark-1 raw arrays, independently audited, and pinned to the lock; the normative execution and analysis addendum makes the already-frozen generation, retry/resume, estimand, and G0-G3 rules explicit without changing any hash-pinned scientific object. Principal authorization has opened the frozen semantic campaign; outcomes remain uninspected until all 37,800 logical rows are complete.
+Q2 V4.1 completed all 37,800 frozen semantic trajectories with zero duplicate, missing, replacement, or retried logical rows. Raw data were sealed before scoring. A0, A1, and A2 all passed the frozen relational gate; A2 did not pass incremental superiority beyond A0/A1, yielding the mechanical classification Q2_V4_1_G2. Independent radial results are RS+ and RT+. The independent semantic forensic audit reproduced the result with maximum discrepancy 0.0. Original V4 remains Q2_V4_SAFE_BANK_INSUFFICIENT; V4.1 is a distinct prospectively locked experiment.
 
-**Next authorized action:** COMPLETE_37800_ROW_CAMPAIGN_AND_SEAL
+**Next authorized action:** PRINCIPAL_RESEARCHER_REVIEW_OF_Q2_V4_1_RESULT
 <!-- PROJECT_STATUS:END -->
 
 The machine-readable source for this block and the live status page is
@@ -41,7 +41,9 @@ profiles. Q3 would ask whether a realizable committee can exploit that
 complementarity. Behavioral difference, semantic error difference, useful
 complementarity, and implementable ensemble gain are four different claims.
 
-No one of them is currently established.
+The fixed-controller Q1 confirmatory result and the scoped Q2 V4.1 relational
+result are now established under their frozen designs. Realizable committee
+utility remains untested.
 
 ## Start here
 
@@ -105,7 +107,11 @@ as current plans.
   but G/C/D were negative and below the random null; classification:
   `GATE10_NO_CROSS_DOMAIN_TRANSFER`. This bounds domain generality without
   overturning the fresh CRUXEval replication.
-- Confirmatory holdout: untouched.
+- Q1 confirmatory holdout: consumed and closed with
+  `Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL`.
+- Q2 V4.1: the complete 37,800-row frozen semantic experiment classified
+  `Q2_V4_1_G2`; A0/A1/A2 qualified, A2 did not satisfy G3 superiority, radial
+  results were `RS+` and `RT+`, and the independent forensic audit was clean.
 
 These are instrument outcomes, not a positive or negative result for the full
 causal-geometry theory.
