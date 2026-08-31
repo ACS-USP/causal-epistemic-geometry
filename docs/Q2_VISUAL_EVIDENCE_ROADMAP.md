@@ -9,7 +9,9 @@ frozen tracked aggregates and pre-outcome matrices. The implemented package is
 Implemented:
 
 1. Explanatory Q1-to-Q2 intervention-laboratory overview.
-2. A0/A1/A2 rank-relational panels for MEDIUM and STRONG.
+2. A0/A1/A2 fixed-decile relational panels for MEDIUM and STRONG, calibrated
+   to show moderate association together with broad conditional dispersion;
+   raw-scatter and shared-scale hexbin alternatives remain available.
 3. Full-sample association, separately displayed bootstrap summaries, and G3
    contrasts explaining `G2` rather than `G3`.
 4. Per-direction STRONG−MEDIUM radial shape and total displacement for all 31

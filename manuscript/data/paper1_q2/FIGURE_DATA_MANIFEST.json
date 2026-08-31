@@ -1,13 +1,13 @@
 {
   "classification": "Q2_V4_1_G2",
-  "code_commit": "93066e0b90d0652e77ec4ff37a0d82c25afa4704",
+  "code_commit": "dc54a37b70bd4260200a20285613fb8f30ec36e8",
   "code_hashes": {
     "scripts/generate_q2_paper_figures.py": "2e29370dedae2a09daca1a8967dae87c81a4c583e45febf583a2f237988c6311",
     "src/epistemic_geometry/publication/q2/figure_tables.py": "1e0a7e6abfe9f78961d9e61d5e0f7311e43970e872d06e1fb5d99fe0fedf90bd",
     "src/epistemic_geometry/publication/q2/loaders.py": "fe475697849a89edbb9caf763aa3baf4ac22a28637e59e618489172497f7ddda",
     "src/epistemic_geometry/publication/q2/pipeline.py": "6945e6e45abd07acf0eacff8722555e1a69401d155a8b59aff28055c02db8df6",
-    "src/epistemic_geometry/publication/q2/plotting.py": "5b9657a2d1283eea46a205e8d45ac5e3496b90a008204b577fe9b904a550ff0d",
-    "src/epistemic_geometry/publication/q2/provenance.py": "f062794479542cb2426a9e3ca4a6925b6890e90cfa6890b5b0231e3ee651a4a0"
+    "src/epistemic_geometry/publication/q2/plotting.py": "da3a9501d44e0f182c45dcf7a879dd0259e27f6227149e0a0e6a5305f7c1007d",
+    "src/epistemic_geometry/publication/q2/provenance.py": "c5b1984d58e5c564aa8cb895903e3ad615a0004d5d92977481fdf7c805e9aace"
   },
   "code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
   "contains_raw_outputs": false,

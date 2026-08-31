@@ -19,7 +19,9 @@ from epistemic_geometry.publication.q2.loaders import (
 from epistemic_geometry.publication.q2.pipeline import generate_visual_evidence
 from epistemic_geometry.publication.q2.plotting import (
     FIGURE_SIZES,
+    _apply_shared_count_normalization,
     _coefficient_projection,
+    _decile_summary,
     qap_null_values,
 )
 
@@ -162,10 +164,41 @@ def test_tables_are_byte_deterministic(tmp_path: Path, q2_tables: dict) -> None:
         assert first[name].read_bytes() == second[name].read_bytes()
 
 
+def test_figure2_deciles_are_fixed_and_complete(q2_tables: dict) -> None:
+    pairwise = q2_tables["pairwise_geometry"]
+    expected_counts = [47, 46, 47, 46, 46, 47, 46, 47, 46, 47]
+    for metric in ("A0", "A1", "A2"):
+        for shell in ("MEDIUM", "STRONG"):
+            subset = pairwise[(pairwise["metric"] == metric) & (pairwise["shell"] == shell)]
+            summary = _decile_summary(subset)
+            assert summary["decile"].tolist() == list(range(1, 11))
+            assert summary["count"].tolist() == expected_counts
+            assert int(summary["count"].sum()) == 465
+
+
+def test_hexbin_collections_share_one_count_normalization() -> None:
+    class Collection:
+        def __init__(self, values: list[int]) -> None:
+            self.values = np.asarray(values)
+            self.norm = None
+
+        def get_array(self) -> np.ndarray:
+            return self.values
+
+        def set_norm(self, norm: object) -> None:
+            self.norm = norm
+
+    collections = [Collection([1, 4, 8]), Collection([2, 7, 15]), Collection([1, 3])]
+    norm = _apply_shared_count_normalization(collections)
+    assert norm.vmin == 1
+    assert norm.vmax == 15
+    assert all(collection.norm is norm for collection in collections)
+
+
 def test_notebook_persists_executed_figure_outputs() -> None:
     notebook = json.loads((ROOT / "notebooks/q2_visual_story.ipynb").read_text())
     code_cells = [cell for cell in notebook["cells"] if cell["cell_type"] == "code"]
-    assert [cell["execution_count"] for cell in code_cells] == list(range(1, 8))
+    assert [cell["execution_count"] for cell in code_cells] == list(range(1, 9))
     assert not any(
         output["output_type"] == "error"
         for cell in code_cells
@@ -177,7 +210,7 @@ def test_notebook_persists_executed_figure_outputs() -> None:
         for output in cell["outputs"]
         if "image/png" in output.get("data", {})
     ]
-    assert len(image_outputs) == 6
+    assert len(image_outputs) == 7
 
 
 def test_figure_package_is_byte_deterministic() -> None:
@@ -192,5 +225,7 @@ def test_figure_package_is_byte_deterministic() -> None:
         for suffix, path in outputs.items():
             assert path.read_bytes() == first_bytes[(figure_id, suffix)]
     assert FIGURE_SIZES["figure2"] == (7.2, 5.4)
+    assert FIGURE_SIZES["figure2_raw"] == (7.2, 5.4)
+    assert FIGURE_SIZES["figure2_hexbin"] == (7.2, 5.4)
     assert FIGURE_SIZES["figure3"] == (7.2, 4.5)
     assert FIGURE_SIZES["figure4"] == (7.2, 4.4)

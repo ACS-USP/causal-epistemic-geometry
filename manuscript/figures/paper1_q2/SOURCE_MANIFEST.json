@@ -1,23 +1,23 @@
 {
   "classification": "Q2_V4_1_G2",
-  "code_commit": "93066e0b90d0652e77ec4ff37a0d82c25afa4704",
+  "code_commit": "dc54a37b70bd4260200a20285613fb8f30ec36e8",
   "code_hashes": {
     "scripts/generate_q2_paper_figures.py": "2e29370dedae2a09daca1a8967dae87c81a4c583e45febf583a2f237988c6311",
     "src/epistemic_geometry/publication/q2/figure_tables.py": "1e0a7e6abfe9f78961d9e61d5e0f7311e43970e872d06e1fb5d99fe0fedf90bd",
     "src/epistemic_geometry/publication/q2/loaders.py": "fe475697849a89edbb9caf763aa3baf4ac22a28637e59e618489172497f7ddda",
     "src/epistemic_geometry/publication/q2/pipeline.py": "6945e6e45abd07acf0eacff8722555e1a69401d155a8b59aff28055c02db8df6",
-    "src/epistemic_geometry/publication/q2/plotting.py": "5b9657a2d1283eea46a205e8d45ac5e3496b90a008204b577fe9b904a550ff0d",
-    "src/epistemic_geometry/publication/q2/provenance.py": "f062794479542cb2426a9e3ca4a6925b6890e90cfa6890b5b0231e3ee651a4a0"
+    "src/epistemic_geometry/publication/q2/plotting.py": "da3a9501d44e0f182c45dcf7a879dd0259e27f6227149e0a0e6a5305f7c1007d",
+    "src/epistemic_geometry/publication/q2/provenance.py": "c5b1984d58e5c564aa8cb895903e3ad615a0004d5d92977481fdf7c805e9aace"
   },
   "code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
   "contains_raw_outputs": false,
   "figure_data_manifest": {
     "path": "manuscript/data/paper1_q2/FIGURE_DATA_MANIFEST.json",
-    "sha256": "58e870fb81c24c7f187a90044d4a702ab86ff7133716423334a8182e6e6f24a4"
+    "sha256": "b24bcfaa7f07092269396034f04e50006dec32f7191390ebca0296191ee8b7e7"
   },
   "figure_spec": {
     "path": "manuscript/figures/paper1_q2/FIGURE_SPEC.json",
-    "sha256": "4b911acedbac89591b86849dd861af801b58ded2dcb3ff3fe033eff147ab4df4"
+    "sha256": "e59c81ba4b07d75a07426596e2f773f352b389a6f0b011e636f66f5f2e86a938"
   },
   "figures": {
     "figure1": {
@@ -35,15 +35,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1_q2/figure1_q2_from_controllability_to_geometry.pdf",
-          "sha256": "f2523c289ced7893a3d40697c1ee8535cdbd0ef83e370ea6046a27ef7f6669f9"
+          "sha256": "14926886523faa0fc649d8baeb09f2b432a292d4d4a872bac9ed0c2da83de600"
         },
         "png": {
           "path": "manuscript/figures/paper1_q2/figure1_q2_from_controllability_to_geometry.png",
-          "sha256": "60f44e9e91f4164f256e277fbd90d33a41878c0992b094eea587cda194b0a41f"
+          "sha256": "8fbe371ea958b349761c0cd78d753542515d35cbbe3093a01d716683a0cf333a"
         },
         "svg": {
           "path": "manuscript/figures/paper1_q2/figure1_q2_from_controllability_to_geometry.svg",
-          "sha256": "29d4f1d66d75786c15775cc8c3538e72de0ff630c0ae76e47149a542f411d470"
+          "sha256": "44ebc3776435dc799bac09e27ec74db2a099242a83714865c2158e1cb7d8ee74"
         }
       },
       "source_artifacts": {
@@ -72,21 +72,23 @@
       ],
       "does_not_support": [
         "465 independent samples",
+        "precise pairwise prediction",
+        "held-out controller-bank generalization",
         "linear law",
         "A2 superiority"
       ],
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1_q2/figure2_q2_primary_relational_geometry.pdf",
-          "sha256": "0e85916753e0df030b88d158fb62fea4304d096b6cd5f1dc24c5727546ca5332"
+          "sha256": "d70d162bd8fe0506d16bdae460e02a9b97ce79db75dc9bf75b13484dd02593e4"
         },
         "png": {
           "path": "manuscript/figures/paper1_q2/figure2_q2_primary_relational_geometry.png",
-          "sha256": "c89e82c7bc590a88e31d7df57fd15f61b818ca6fdcb5430ad64d1c46cd4d0fd1"
+          "sha256": "5908708d7e7cdd7f91737ddb1473cac611b89b1d9e257e71496104b5dc3439f3"
         },
         "svg": {
           "path": "manuscript/figures/paper1_q2/figure2_q2_primary_relational_geometry.svg",
-          "sha256": "8c0d0e07badc8f7ab49e65cc3c099f9c206e5d1d186100d97225c29609a75068"
+          "sha256": "afde008076df4d2144a7b3a737d03b84c040544bd657fecc5a9aa80da9934070"
         }
       },
       "source_artifacts": {
@@ -95,8 +97,96 @@
         "review/q2_v4_1_semantic_execution/BOOTSTRAP_INTERVALS.json": "19575a009851f1fcfb56fa768b24390fdbd6d97b2d38d239f17ed40491806b77",
         "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
       },
-      "supports": "positive shell-specific A0/A1/A2 rank association",
-      "title": "Intervention geometry predicts blind-spot geometry"
+      "supports": "moderate positive shell-specific A0/A1/A2 rank association with broad conditional dispersion",
+      "title": "Pre-outcome geometry is moderately associated with blind-spot rank structure"
+    },
+    "figure2_hexbin": {
+      "classification": "CALIBRATION_ALTERNATE",
+      "derived_tables": {
+        "association_summary": {
+          "path": "manuscript/data/paper1_q2/derived_figure_tables/association_summary.csv",
+          "sha256": "c5685aacd1d13cb2c91de0bea8648c0091bce86123105960fa9d3e2c08b9078f"
+        },
+        "pairwise_geometry": {
+          "path": "manuscript/data/paper1_q2/derived_figure_tables/pairwise_geometry.csv",
+          "sha256": "85e14a1c3ad90f56aeb2394433e933cfde42b55e773b6e106dac7e6ca1a12e13"
+        }
+      },
+      "dimensions_inches": [
+        7.2,
+        5.4
+      ],
+      "does_not_support": [
+        "fitted density model",
+        "precise pairwise prediction",
+        "independent dyads"
+      ],
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1_q2/alternate_q2_hexbin_pairwise_density.pdf",
+          "sha256": "d4dcbde45f308fe8cc3f818513c89b276d98b816ecd90ae962006d3be2491258"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1_q2/alternate_q2_hexbin_pairwise_density.png",
+          "sha256": "8ffb7e2a044f2914a4b4459d39f5ecfad3eb1bb6b37817cbb6c5990daf22d176"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1_q2/alternate_q2_hexbin_pairwise_density.svg",
+          "sha256": "be2b4acacd25bff7ef468a8676ce76a85819fb543fbf3872978d9e3c893d3b17"
+        }
+      },
+      "source_artifacts": {
+        "review/q2_v4_1_prediction_lock/PREDICTION_MATRICES.npz": "723348bddd1de0b482bc859f888f982c8a3dd99e406331cb9a4642ea2c7dcae8",
+        "review/q2_v4_1_prediction_lock/PREDICTION_MATRIX_METADATA.json": "98876a77f7c001265dad7b86db77854b16d498e242d870323ed60e3992ff9b1f",
+        "review/q2_v4_1_semantic_execution/BOOTSTRAP_INTERVALS.json": "19575a009851f1fcfb56fa768b24390fdbd6d97b2d38d239f17ed40491806b77",
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
+      },
+      "supports": "density-aware view of the same 465 dependent dyads per panel under a shared count scale",
+      "title": "Moderate rank association coexists with broad pairwise dispersion"
+    },
+    "figure2_raw": {
+      "classification": "SUPPLEMENT_CANDIDATE",
+      "derived_tables": {
+        "association_summary": {
+          "path": "manuscript/data/paper1_q2/derived_figure_tables/association_summary.csv",
+          "sha256": "c5685aacd1d13cb2c91de0bea8648c0091bce86123105960fa9d3e2c08b9078f"
+        },
+        "pairwise_geometry": {
+          "path": "manuscript/data/paper1_q2/derived_figure_tables/pairwise_geometry.csv",
+          "sha256": "85e14a1c3ad90f56aeb2394433e933cfde42b55e773b6e106dac7e6ca1a12e13"
+        }
+      },
+      "dimensions_inches": [
+        7.2,
+        5.4
+      ],
+      "does_not_support": [
+        "IID dyads",
+        "precise pairwise prediction",
+        "fitted regression"
+      ],
+      "outputs": {
+        "pdf": {
+          "path": "manuscript/figures/paper1_q2/supplement_q2_raw_pairwise_scatter.pdf",
+          "sha256": "cc616515c4d6057083466af5736b0b353bb0f7f186b8f283f788427e1ace8b5d"
+        },
+        "png": {
+          "path": "manuscript/figures/paper1_q2/supplement_q2_raw_pairwise_scatter.png",
+          "sha256": "7c908577e3e600183baffbaebd51072012af096593f05ec5ac387708980f69e7"
+        },
+        "svg": {
+          "path": "manuscript/figures/paper1_q2/supplement_q2_raw_pairwise_scatter.svg",
+          "sha256": "b8610f51dfece1146c10a4ada1ff19810da840b43044b94419dca97208d04b6a"
+        }
+      },
+      "source_artifacts": {
+        "review/q2_v4_1_prediction_lock/PREDICTION_MATRICES.npz": "723348bddd1de0b482bc859f888f982c8a3dd99e406331cb9a4642ea2c7dcae8",
+        "review/q2_v4_1_prediction_lock/PREDICTION_MATRIX_METADATA.json": "98876a77f7c001265dad7b86db77854b16d498e242d870323ed60e3992ff9b1f",
+        "review/q2_v4_1_semantic_execution/BOOTSTRAP_INTERVALS.json": "19575a009851f1fcfb56fa768b24390fdbd6d97b2d38d239f17ed40491806b77",
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
+      },
+      "supports": "complete transparent raw-data reference for all dependent dyads",
+      "title": "Raw pairwise ranks show a moderate tendency with broad scatter"
     },
     "figure3": {
       "classification": "MAIN_PAPER_CANDIDATE",
@@ -121,15 +211,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1_q2/figure3_q2_g2_not_g3.pdf",
-          "sha256": "f20d0f0f26777e333060fe7fd442ff0086f0c462219bfd8dd93d53d9987e4b25"
+          "sha256": "d7349435acccbd14c85799b73a78584f0e58cb9869d35f8f29c715c1b14ade0d"
         },
         "png": {
           "path": "manuscript/figures/paper1_q2/figure3_q2_g2_not_g3.png",
-          "sha256": "f4a67016a89c9dedf975214376c22eeaf2e22f7263a2a2624181c789c63be75c"
+          "sha256": "84ffc2732bfe9e4db73e59dc161dc6683b0c1dab7a006b8e806a338af6e8d377"
         },
         "svg": {
           "path": "manuscript/figures/paper1_q2/figure3_q2_g2_not_g3.svg",
-          "sha256": "08b50c9ff63e73c220ae0816ddacb165dcbc9786a64461f21ffcd9e097e73949"
+          "sha256": "01a0f3151bc5eca626434dc0040b6a6f41b1bab3dce80b4f6c6eabfd81dc19d0"
         }
       },
       "source_artifacts": {
@@ -163,15 +253,15 @@
       "outputs": {
         "pdf": {
           "path": "manuscript/figures/paper1_q2/figure4_q2_radial_31_of_31.pdf",
-          "sha256": "4c7cb8aff8ed2d8ed17738ba86509704ae8de898cac5f76a1bea0c034a474210"
+          "sha256": "83954d632ad176fbc4f2f91b863084fc7850eb84f6e7152bbd743441541f62a6"
         },
         "png": {
           "path": "manuscript/figures/paper1_q2/figure4_q2_radial_31_of_31.png",
-          "sha256": "4d5e47602e6e8764b4c76a46adacb7fa4caa5d5efdeabb96da91d51c45a47f24"
+          "sha256": "58c36d199154c9934f74bdaba3cfdce27e2686dd66e7e0a47c16713dc4fdb315"
         },
         "svg": {
           "path": "manuscript/figures/paper1_q2/figure4_q2_radial_31_of_31.svg",
-          "sha256": "b437ef4e693e55cc28b3af7945bd4696e1341c56a5ffc74ef90ec3c47e7cf76a"
+          "sha256": "f1be76d351919e9fcb8019c2908ab839643127c3e43d21fb51c0159708435d6d"
         }
       },
       "source_artifacts": {

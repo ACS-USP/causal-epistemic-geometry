@@ -13,6 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
+from matplotlib.colors import Normalize  # noqa: E402
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch  # noqa: E402
 
 OUTPUT_DIR = Path("manuscript/figures/paper1_q2")
@@ -20,6 +21,9 @@ FIXED_DATE = datetime(2026, 8, 30, tzinfo=timezone.utc)  # noqa: UP017 -- Python
 FIGURE_SIZES = {
     "figure1": (7.2, 4.8),
     "figure2": (7.2, 5.4),
+    "figure2_raw": (7.2, 5.4),
+    "figure2_hexbin": (7.2, 5.4),
+    "figure2_decile": (7.2, 5.4),
     "figure3": (7.2, 4.5),
     "figure4": (7.2, 4.4),
     "s1": (7.2, 3.4),
@@ -174,7 +178,7 @@ def figure1(root: Path, data: dict[str, Any]) -> dict[str, Path]:
     flow.text(
         0.5,
         0.08,
-        "Predictors fixed before semantic correctness  |  Q3 utility remains untested",
+        "Candidate geometries fixed before semantic correctness  |  Q3 utility remains untested",
         ha="center",
         fontsize=7.2,
         color=COLORS["muted"],
@@ -298,12 +302,84 @@ def _binned_rank_trend(frame: pd.DataFrame, bins: int = 12) -> tuple[np.ndarray,
     return np.asarray(x_values), np.asarray(y_values)
 
 
-def figure2(
+def _decile_summary(frame: pd.DataFrame) -> pd.DataFrame:
+    """Fixed equal-width rank deciles; the rule never depends on outcomes."""
+    edges = np.linspace(0.0, 1.0, 11)
+    groups = np.clip(
+        np.digitize(frame["intervention_rank_fraction"], edges, right=False) - 1,
+        0,
+        9,
+    )
+    records: list[dict[str, float | int]] = []
+    for index in range(10):
+        values = frame.loc[groups == index, "blind_spot_rank_fraction"].to_numpy(dtype=float)
+        records.append(
+            {
+                "decile": index + 1,
+                "x": (edges[index] + edges[index + 1]) / 2,
+                "count": len(values),
+                "q10": float(np.quantile(values, 0.10)),
+                "q25": float(np.quantile(values, 0.25)),
+                "median": float(np.quantile(values, 0.50)),
+                "q75": float(np.quantile(values, 0.75)),
+                "q90": float(np.quantile(values, 0.90)),
+            }
+        )
+    return pd.DataFrame.from_records(records)
+
+
+def _apply_shared_count_normalization(collections: list[Any]) -> Normalize:
+    """Apply one count scale to every hexbin collection."""
+    shared_max = max(float(collection.get_array().max()) for collection in collections)
+    shared_norm = Normalize(vmin=1, vmax=shared_max)
+    for collection in collections:
+        collection.set_norm(shared_norm)
+    return shared_norm
+
+
+def _format_relational_panel(
+    ax: plt.Axes,
+    *,
+    row: int,
+    column: int,
+    metric: str,
+    shell: str,
+    rho: float,
+    detailed_title: bool = True,
+) -> None:
+    ax.plot([0, 1], [0, 1], color=COLORS["grid"], linewidth=0.8, linestyle="--")
+    ax.text(
+        0.05,
+        0.92,
+        f"ρ = {rho:.3f}\nmaxT p = 0.00002",
+        transform=ax.transAxes,
+        ha="left",
+        va="top",
+        fontsize=7.1,
+        weight="bold",
+    )
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.grid(color=COLORS["grid"], linewidth=0.45, alpha=0.55)
+    if row == 0:
+        title = {
+            "A0": "A0  coordinate",
+            "A1": "A1  whitened",
+            "A2": "A2  finite response",
+        }[metric]
+        ax.set_title(title if detailed_title else metric)
+    if column == 0:
+        ax.set_ylabel(f"{shell}\nBlind-spot Dshape rank")
+    if row == 1:
+        ax.set_xlabel("Intervention-distance rank")
+
+
+def figure2_raw_scatter(
     root: Path,
     pairwise: pd.DataFrame,
     associations: pd.DataFrame,
 ) -> dict[str, Path]:
-    fig, axes = plt.subplots(2, 3, figsize=FIGURE_SIZES["figure2"], sharex=True, sharey=True)
+    fig, axes = plt.subplots(2, 3, figsize=FIGURE_SIZES["figure2_raw"], sharex=True, sharey=True)
     colors = {"MEDIUM": COLORS["medium"], "STRONG": COLORS["strong"]}
     lookup = associations.set_index("metric")
     for row, shell in enumerate(("MEDIUM", "STRONG")):
@@ -323,35 +399,20 @@ def figure2(
             ax.plot(
                 trend_x, trend_y, color=COLORS["ink"], linewidth=1.3, marker="o", markersize=2.5
             )
-            ax.plot([0, 1], [0, 1], color=COLORS["grid"], linewidth=0.8, linestyle="--")
             field = "medium_rho" if shell == "MEDIUM" else "strong_rho"
             rho = float(lookup.loc[metric, field])
-            ax.text(
-                0.05,
-                0.92,
-                f"ρ = {rho:.3f}\nmaxT p = 0.00002",
-                transform=ax.transAxes,
-                ha="left",
-                va="top",
-                fontsize=7.1,
-                weight="bold",
+            _format_relational_panel(
+                ax,
+                row=row,
+                column=column,
+                metric=metric,
+                shell=shell,
+                rho=rho,
+                detailed_title=False,
             )
-            ax.set_xlim(-0.03, 1.03)
-            ax.set_ylim(-0.03, 1.03)
-            ax.grid(color=COLORS["grid"], linewidth=0.45, alpha=0.55)
-            if row == 0:
-                ax.set_title(
-                    {"A0": "A0  coordinate", "A1": "A1  whitened", "A2": "A2  finite response"}[
-                        metric
-                    ]
-                )
-            if column == 0:
-                ax.set_ylabel(f"{shell}\nBlind-spot Dshape rank")
-            if row == 1:
-                ax.set_xlabel("Intervention-distance rank")
     fig.suptitle(
-        "Intervention geometry predicts blind-spot geometry in both shells",
-        fontsize=11.5,
+        "Raw pairwise ranks show a moderate tendency with broad scatter",
+        fontsize=11.2,
         weight="bold",
     )
     fig.text(
@@ -366,7 +427,185 @@ def figure2(
         color=COLORS["muted"],
     )
     fig.subplots_adjust(bottom=0.12, top=0.88, wspace=0.18, hspace=0.16)
-    return save_figure(fig, root, "figure2_q2_primary_relational_geometry")
+    return save_figure(fig, root, "supplement_q2_raw_pairwise_scatter")
+
+
+def figure2_hexbin(
+    root: Path,
+    pairwise: pd.DataFrame,
+    associations: pd.DataFrame,
+) -> dict[str, Path]:
+    fig = plt.figure(figsize=FIGURE_SIZES["figure2_hexbin"])
+    grid = fig.add_gridspec(2, 4, width_ratios=(1, 1, 1, 0.06))
+    axes = np.empty((2, 3), dtype=object)
+    for row in range(2):
+        for column in range(3):
+            reference = axes[0, 0] if (row, column) != (0, 0) else None
+            axes[row, column] = fig.add_subplot(
+                grid[row, column],
+                sharex=reference,
+                sharey=reference,
+            )
+    colorbar_axis = fig.add_subplot(grid[:, 3])
+    lookup = associations.set_index("metric")
+    collections = []
+    for row, shell in enumerate(("MEDIUM", "STRONG")):
+        for column, metric in enumerate(("A0", "A1", "A2")):
+            ax = axes[row, column]
+            subset = pairwise[(pairwise["metric"] == metric) & (pairwise["shell"] == shell)]
+            collection = ax.hexbin(
+                subset["intervention_rank_fraction"],
+                subset["blind_spot_rank_fraction"],
+                gridsize=12,
+                extent=(0, 1, 0, 1),
+                mincnt=1,
+                cmap="Blues",
+                linewidths=0.25,
+                edgecolors="white",
+            )
+            collections.append(collection)
+            summary = _decile_summary(subset)
+            ax.vlines(
+                summary["x"],
+                summary["q25"],
+                summary["q75"],
+                color=COLORS["ink"],
+                linewidth=1.0,
+                alpha=0.8,
+                zorder=4,
+            )
+            ax.plot(
+                summary["x"],
+                summary["median"],
+                color=COLORS["ink"],
+                linewidth=1.1,
+                marker="o",
+                markerfacecolor="white",
+                markeredgewidth=0.7,
+                markersize=2.8,
+                zorder=5,
+            )
+            field = "medium_rho" if shell == "MEDIUM" else "strong_rho"
+            _format_relational_panel(
+                ax,
+                row=row,
+                column=column,
+                metric=metric,
+                shell=shell,
+                rho=float(lookup.loc[metric, field]),
+            )
+    _apply_shared_count_normalization(collections)
+    colorbar = fig.colorbar(collections[0], cax=colorbar_axis)
+    colorbar.set_label("Dyads / hex (shared scale)", fontsize=7.0)
+    colorbar.ax.tick_params(labelsize=6.5)
+    fig.suptitle(
+        "Moderate rank association coexists with broad pairwise dispersion",
+        fontsize=11.2,
+        weight="bold",
+    )
+    fig.text(
+        0.48,
+        0.012,
+        (
+            "Shared 12-bin hex grid; black markers show fixed-decile "
+            "medians and IQR, not a fitted model."
+        ),
+        ha="center",
+        fontsize=6.7,
+        color=COLORS["muted"],
+    )
+    fig.subplots_adjust(bottom=0.12, top=0.88, wspace=0.18, hspace=0.16)
+    return save_figure(fig, root, "alternate_q2_hexbin_pairwise_density")
+
+
+def figure2_decile_distribution(
+    root: Path,
+    pairwise: pd.DataFrame,
+    associations: pd.DataFrame,
+    *,
+    filename: str = "alternate_q2_decile_distributions",
+) -> dict[str, Path]:
+    fig, axes = plt.subplots(
+        2,
+        3,
+        figsize=FIGURE_SIZES["figure2_decile"],
+        sharex=True,
+        sharey=True,
+    )
+    lookup = associations.set_index("metric")
+    colors = {"MEDIUM": COLORS["medium"], "STRONG": COLORS["strong"]}
+    for row, shell in enumerate(("MEDIUM", "STRONG")):
+        for column, metric in enumerate(("A0", "A1", "A2")):
+            ax = axes[row, column]
+            subset = pairwise[(pairwise["metric"] == metric) & (pairwise["shell"] == shell)]
+            summary = _decile_summary(subset)
+            ax.vlines(
+                summary["x"],
+                summary["q10"],
+                summary["q90"],
+                color=colors[shell],
+                linewidth=0.8,
+                alpha=0.55,
+                zorder=2,
+            )
+            ax.vlines(
+                summary["x"],
+                summary["q25"],
+                summary["q75"],
+                color=colors[shell],
+                linewidth=3.2,
+                alpha=0.9,
+                zorder=3,
+            )
+            ax.plot(
+                summary["x"],
+                summary["median"],
+                color=COLORS["ink"],
+                linewidth=1.0,
+                marker="o",
+                markersize=3.0,
+                markerfacecolor="white",
+                markeredgewidth=0.8,
+                zorder=4,
+            )
+            field = "medium_rho" if shell == "MEDIUM" else "strong_rho"
+            _format_relational_panel(
+                ax,
+                row=row,
+                column=column,
+                metric=metric,
+                shell=shell,
+                rho=float(lookup.loc[metric, field]),
+            )
+    fig.suptitle(
+        "Pre-outcome geometry is moderately associated with blind-spot rank structure",
+        fontsize=11.0,
+        weight="bold",
+    )
+    fig.text(
+        0.5,
+        0.012,
+        "Fixed equal-width rank deciles: line = 10–90%, thick bar = IQR, dot = median.",
+        ha="center",
+        fontsize=6.8,
+        color=COLORS["muted"],
+    )
+    fig.subplots_adjust(bottom=0.12, top=0.88, wspace=0.18, hspace=0.16)
+    return save_figure(fig, root, filename)
+
+
+def figure2(
+    root: Path,
+    pairwise: pd.DataFrame,
+    associations: pd.DataFrame,
+) -> dict[str, Path]:
+    """Selected main view: fixed deciles expose tendency and conditional spread."""
+    return figure2_decile_distribution(
+        root,
+        pairwise,
+        associations,
+        filename="figure2_q2_primary_relational_geometry",
+    )
 
 
 def figure3(
@@ -434,7 +673,7 @@ def figure3(
     ax.axhline(0, color=COLORS["muted"], linewidth=0.7)
     ax.set_xticks(x, ["A0", "A1", "A2"])
     ax.set_ylim(0.27, 0.57)
-    ax.set_ylabel("Bootstrap statistic")
+    ax.set_ylabel("Bootstrap-resample aggregate ρ")
     ax.set_title("B  Frozen item bootstrap")
     ax.text(
         0.5,
@@ -518,6 +757,15 @@ def figure4(
             color=COLORS["fail"],
             linestyle="--",
             linewidth=1,
+        )
+        ax.text(
+            31.5,
+            record["observed_median_strong_minus_medium"],
+            "median Δ ",
+            ha="right",
+            va="bottom",
+            fontsize=6.4,
+            color=COLORS["fail"],
         )
         ax.text(
             0.03,
@@ -754,6 +1002,12 @@ def generate_all_figures(
     return {
         "figure1": figure1(root, data),
         "figure2": figure2(root, tables["pairwise_geometry"], tables["association_summary"]),
+        "figure2_raw": figure2_raw_scatter(
+            root, tables["pairwise_geometry"], tables["association_summary"]
+        ),
+        "figure2_hexbin": figure2_hexbin(
+            root, tables["pairwise_geometry"], tables["association_summary"]
+        ),
         "figure3": figure3(root, tables["association_summary"], tables["g3_contrasts"]),
         "figure4": figure4(root, tables["radial_by_direction"], tables["radial_summary"]),
         "s1": supplement_s1(root, tables["behavioral_context"]),

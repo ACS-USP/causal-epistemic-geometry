@@ -73,6 +73,8 @@ TABLE_RULES = {
 FIGURE_TABLES = {
     "figure1": [],
     "figure2": ["pairwise_geometry", "association_summary"],
+    "figure2_raw": ["pairwise_geometry", "association_summary"],
+    "figure2_hexbin": ["pairwise_geometry", "association_summary"],
     "figure3": ["association_summary", "g3_contrasts"],
     "figure4": ["radial_by_direction", "radial_summary"],
     "s1": ["behavioral_context"],
@@ -86,6 +88,8 @@ FIGURE_DIRECT_SOURCES = {
         "review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json",
     ],
     "figure2": [],
+    "figure2_raw": [],
+    "figure2_hexbin": [],
     "figure3": [],
     "figure4": [],
     "s1": [],

@@ -23,16 +23,37 @@ empirical association or a Q3 utility result.
 
 Classification: `MAIN_PAPER_CANDIDATE`.
 
-Intervention geometry predicts blind-spot geometry in both matched shells.
-Each panel shows all 465 controller pairs as rank-transformed intervention
-dissimilarity versus rank-transformed blind-spot-shape distance, matching the
-frozen Spearman estimand; the black trace is a binned rank median, not a linear
-fit. A0 (coordinate), A1 (covariance-whitened), and A2 (finite response) are
-shown separately for MEDIUM and STRONG. Shell-specific Spearman correlations
-are respectively 0.555/0.573, 0.555/0.558, and 0.443/0.440; all maxT-adjusted
-QAP p-values are 0.00002. The 465 dyads share 31 controllers and are not
-independent observations; inference permutes whole controller identities with
-the same map in both shells.
+Pre-outcome intervention geometry is moderately associated with blind-spot
+rank structure in both matched shells. The selected main-paper view divides
+intervention-distance rank into ten fixed equal-width bins on `[0,1]`; the
+rule is outcome-independent and shared across all geometries and shells. Each
+bin shows the blind-spot-rank median, IQR, and 10–90% interval. The central
+tendency rises while the wide intervals preserve substantial pair-specific
+variation. A0 (coordinate), A1 (covariance-whitened), and A2 (finite response)
+are shown separately for MEDIUM and STRONG. Shell-specific Spearman
+correlations are respectively 0.555/0.573, 0.555/0.558, and 0.443/0.440; all
+maxT-adjusted QAP p-values are 0.00002. The 465 dyads share 31 controllers and
+are not independent observations; inference permutes whole controller
+identities with the same map in both shells. QAP establishes evidence against
+random controller-label correspondence; rho describes the moderate effect
+size. This is not an out-of-sample test on a fresh controller bank.
+
+### Figure 2 raw-data reference
+
+Classification: `SUPPLEMENT_CANDIDATE`.
+
+The original transparent scatter remains as a complete raw-data reference,
+including all 465 dependent dyads and the binned median. It makes broad scatter
+maximally visible but is visually dense at final paper size.
+
+### Figure 2 hexbin calibration alternate
+
+Classification: `CALIBRATION_ALTERNATE`.
+
+The density alternative uses a deterministic 12-bin hex grid over `[0,1]²`
+with one count normalization shared by all six panels. Fixed-decile medians
+and IQRs are overlaid. It clarifies density but hides individual dyads, so it
+is retained for review rather than selected as the main representation.
 
 ## Figure 3 — Why the result is G2, not G3
 
@@ -43,7 +64,8 @@ Panel A shows shell-specific and shell-aggregated full-sample Spearman
 statistics. Panel B separately shows the medians and percentile intervals of
 the frozen 10,000-resample item-cluster bootstrap; these are not presented as
 conventional intervals centered on Panel A because the frozen bootstrap
-distribution is shifted relative to the full-sample statistic. Panel C shows
+distribution is shifted relative to the full-sample statistic. Its axis is
+explicitly labeled `Bootstrap-resample aggregate rho`. Panel C shows
 the two registered superiority contrasts: A2−A0 = −0.123 and A2−A1 = −0.115,
 with bootstrap intervals entirely below zero and superiority maxT p=1.0 for
 both. A2 therefore carries relational signal (`G2`) without the stronger G3
@@ -56,11 +78,15 @@ Classification: `MAIN_PAPER_CANDIDATE`.
 Each lollipop is the frozen paired STRONG-minus-MEDIUM difference in
 baseline-to-controller displacement for one direction, retained in frozen
 manifest order. Blind-spot-shape displacement and total profile displacement
-are positive in 31/31 directions. The observed medians are 0.0441 (`RS+`) and
+are positive in 31/31 directions. The dashed lines are directly labeled as
+the observed median deltas: 0.0441 (`RS+`) and
 0.0433 (`RT+`), with paired-swap p=0.00002 and p=0.00014 and frozen bootstrap
 intervals [0.0300, 0.0511] and [0.0300, 0.0533]. This supports amplitude
 ordering across the two tested shells, not global monotonicity, smoothness,
-linearity, or a continuous dose-response law.
+linearity, or a continuous dose-response law. Invalid or unevaluable terminal
+outputs remain errors under the frozen endpoint, and STRONG produced more
+answer-channel stress; the paired displacement is not evidence of pure
+semantic mediation.
 
 ## Supplement S1 — Movement is not just accuracy
 
@@ -74,6 +100,11 @@ STRONG. Stronger steering therefore produces much more movement and
 complementarity without uniform accuracy improvement. These are secondary
 behavioral summaries, not the primary relational endpoint and not evidence of
 deployable collective utility.
+
+Controller-level overlays were considered and rejected in this pass: the
+existing table is intentionally a shell-mean descriptive summary, and adding
+points would either require a new display derivation or create clutter without
+an authorized inferential role.
 
 ## Supplement S2 — Dependence-aware robustness
 

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "status": "FROZEN_BEFORE_Q2_FIGURE_IMPLEMENTATION",
+  "status": "Q2_VISUAL_CALIBRATION_PASS",
   "scientific_scope": "Q2_V4_1_ONLY",
   "scientific_firewall": {
     "q1_livecodebench_sources_allowed": false,
@@ -37,7 +37,9 @@
     "pair_order": "upper triangle in frozen controller order",
     "radial_order": "frozen controller order; never outcome-sorted",
     "primary_relational_statistic": "Spearman rho",
-    "inference_unit": "controller identity under shell-coupled QAP"
+    "inference_unit": "controller identity under shell-coupled QAP",
+    "figure2_main_binning": "10 fixed equal-width intervals on [0,1] intervention-rank fraction; np.digitize with right=false, clipped to bins 1-10; display median, IQR, and 10-90% interval",
+    "figure2_hexbin_grid": "matplotlib hexbin gridsize=12, extent=[0,1,0,1], mincnt=1; count normalization shared across all six panels"
   },
   "figures": [
     {
@@ -52,11 +54,29 @@
     {
       "id": "figure2",
       "filename": "figure2_q2_primary_relational_geometry",
-      "title": "Intervention geometry predicts blind-spot geometry",
+      "title": "Pre-outcome geometry is moderately associated with blind-spot rank structure",
       "classification": "MAIN_PAPER_CANDIDATE",
       "final_size_inches": [7.2, 5.4],
-      "supports": "positive shell-specific A0/A1/A2 rank association",
-      "does_not_support": ["465 independent samples", "linear law", "A2 superiority"]
+      "supports": "moderate positive shell-specific A0/A1/A2 rank association with broad conditional dispersion",
+      "does_not_support": ["465 independent samples", "precise pairwise prediction", "held-out controller-bank generalization", "linear law", "A2 superiority"]
+    },
+    {
+      "id": "figure2_raw",
+      "filename": "supplement_q2_raw_pairwise_scatter",
+      "title": "Raw pairwise ranks show a moderate tendency with broad scatter",
+      "classification": "SUPPLEMENT_CANDIDATE",
+      "final_size_inches": [7.2, 5.4],
+      "supports": "complete transparent raw-data reference for all dependent dyads",
+      "does_not_support": ["IID dyads", "precise pairwise prediction", "fitted regression"]
+    },
+    {
+      "id": "figure2_hexbin",
+      "filename": "alternate_q2_hexbin_pairwise_density",
+      "title": "Moderate rank association coexists with broad pairwise dispersion",
+      "classification": "CALIBRATION_ALTERNATE",
+      "final_size_inches": [7.2, 5.4],
+      "supports": "density-aware view of the same 465 dependent dyads per panel under a shared count scale",
+      "does_not_support": ["fitted density model", "precise pairwise prediction", "independent dyads"]
     },
     {
       "id": "figure3",

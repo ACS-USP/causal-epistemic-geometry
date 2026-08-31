@@ -27,8 +27,11 @@ The notebook must teach only four prerequisites before showing a result:
 
 1. **From controllability to relational geometry** — explanatory overview
    combining the intervention laboratory and the pre-outcome/outcome firewall.
-2. **Primary relational geometry** — six rank-rank panels (A0/A1/A2 by shell),
-   showing all 465 dyads per shell and the frozen Spearman associations.
+2. **Primary relational geometry** — six fixed-decile distribution panels
+   (A0/A1/A2 by shell), showing median, IQR, and 10–90% blind-spot-rank
+   intervals with the frozen Spearman associations. The full 465-dyad scatter
+   remains a supplement and a shared-scale hexbin remains a calibration
+   alternate, exposing both moderate tendency and broad conditional spread.
 3. **Why the result is G2, not G3** — full-sample associations, separately
    displayed frozen bootstrap summaries, and the two superiority contrasts.
 4. **Radial displacement in all 31 directions** — the frozen paired
