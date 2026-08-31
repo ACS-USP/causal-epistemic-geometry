@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_Q2_FIGURE_IMPLEMENTATION",
+  "scientific_scope": "Q2_V4_1_ONLY",
+  "scientific_firewall": {
+    "q1_livecodebench_sources_allowed": false,
+    "q3_results_allowed": false,
+    "private_raw_semantic_outputs_allowed": false,
+    "new_inferential_tests": false
+  },
+  "expected_source_sha256": {
+    "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447",
+    "review/q2_v4_1_prediction_lock/PREDICTION_MATRICES.npz": "723348bddd1de0b482bc859f888f982c8a3dd99e406331cb9a4642ea2c7dcae8",
+    "review/q2_v4_1_prediction_lock/PREDICTION_MATRIX_METADATA.json": "98876a77f7c001265dad7b86db77854b16d498e242d870323ed60e3992ff9b1f",
+    "review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json": "ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a",
+    "review/q2_v4_1_prediction_lock/QAP_CONTROLLER_PERMUTATIONS.npy": "cb00acd62008d2dd36e588cb2df38b6ecf5fa4f15e59f79e925d625639a9d210",
+    "review/q2_v4_1_prediction_lock/QAP_SCHEDULE.json": "6228f39d45e0d7b5615dd885dd30de108a040bbe692e227cc5395486352d8eaa",
+    "review/q2_v4_1_semantic_execution/ARTIFACT_HASHES.json": "a8bbde75b9776b1da13371e0770948a76d41454a5d9397261d53b16ce7a78877",
+    "review/q2_v4_1_semantic_execution/BOOTSTRAP_INTERVALS.json": "19575a009851f1fcfb56fa768b24390fdbd6d97b2d38d239f17ed40491806b77",
+    "review/q2_v4_1_semantic_execution/CAMPAIGN_COMPLETENESS.json": "ddc4991d7a6c14b427f8567936eb0031ecee8e6bc952bbf697a0cc709c95b721",
+    "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6",
+    "review/q2_v4_1_semantic_execution/FORENSIC_AUDIT.json": "c8f9eb597aeb01a150c21c28b0b00b712e2468bad55752b924917e12daa182d8",
+    "review/q2_v4_1_semantic_execution/POST_HOC_GENERATION_DIAGNOSTIC.json": "8016b966450f947467d41ea2c277a2ec6ddff41744b77aabb4bf25899858c4d6",
+    "review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.json": "137de8ff7735ca7a3188e7d1bc3afb254b0fb46ef7ad5037705aca98cb5de616",
+    "review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json": "6bfb75ea95e87461a57693de4adf3b0318e1cd3add66a9bcf787fd2731e43fdc",
+    "review/q2_v4_spark1_presemantic/CANDIDATE_BANK_MANIFEST.json": "ac1d05f7202cc1afd5acf71d81952b5d247eeda62fb231ea7a8c4cd1f98ba5ac",
+    "review/q2_v4_spark1_presemantic/SPARK1_SUBSPACE_QUALIFICATION.json": "2f872bddf11ceb512e195e5388ef648d2055b0b8f97dc92aea576e09691d3efd"
+  },
+  "global_rules": {
+    "controller_count": 31,
+    "shells": ["MEDIUM", "STRONG"],
+    "pair_count_per_shell": 465,
+    "semantic_item_count": 300,
+    "rollouts": 2,
+    "qap_maps": 50000,
+    "controller_order": "SAFE_31_IMMUTABLE_MANIFEST.candidate_order",
+    "pair_order": "upper triangle in frozen controller order",
+    "radial_order": "frozen controller order; never outcome-sorted",
+    "primary_relational_statistic": "Spearman rho",
+    "inference_unit": "controller identity under shell-coupled QAP"
+  },
+  "figures": [
+    {
+      "id": "figure1",
+      "filename": "figure1_q2_from_controllability_to_geometry",
+      "title": "From controllability to relational geometry",
+      "classification": "EXPLANATORY_ONLY",
+      "final_size_inches": [7.2, 4.8],
+      "supports": "the Q2 intervention laboratory, firewall, and relational question",
+      "does_not_support": ["empirical association", "global manifold", "Q3 utility"]
+    },
+    {
+      "id": "figure2",
+      "filename": "figure2_q2_primary_relational_geometry",
+      "title": "Intervention geometry predicts blind-spot geometry",
+      "classification": "MAIN_PAPER_CANDIDATE",
+      "final_size_inches": [7.2, 5.4],
+      "supports": "positive shell-specific A0/A1/A2 rank association",
+      "does_not_support": ["465 independent samples", "linear law", "A2 superiority"]
+    },
+    {
+      "id": "figure3",
+      "filename": "figure3_q2_g2_not_g3",
+      "title": "All three geometries qualify; A2 does not outperform A0/A1",
+      "classification": "MAIN_PAPER_CANDIDATE",
+      "final_size_inches": [7.2, 4.5],
+      "supports": "Q2_V4_1_G2 and the explicit G3 boundary",
+      "does_not_support": ["bootstrap intervals centered on full-sample rho", "A0 universal superiority"]
+    },
+    {
+      "id": "figure4",
+      "filename": "figure4_q2_radial_31_of_31",
+      "title": "The stronger shell moves farther in all 31 directions",
+      "classification": "MAIN_PAPER_CANDIDATE",
+      "final_size_inches": [7.2, 4.4],
+      "supports": "positive paired STRONG-minus-MEDIUM displacement in every direction, RS+ and RT+",
+      "does_not_support": ["global monotonicity", "linearity", "continuous dose response"]
+    },
+    {
+      "id": "s1",
+      "filename": "supplement_q2_movement_not_accuracy",
+      "title": "Movement is not uniform accuracy improvement",
+      "classification": "SUPPLEMENT_CANDIDATE",
+      "final_size_inches": [7.2, 3.4],
+      "supports": "secondary behavioral context for accuracy, C, and D",
+      "does_not_support": ["causal mediation", "deployable utility"]
+    },
+    {
+      "id": "s2",
+      "filename": "supplement_q2_qap_and_loo_robustness",
+      "title": "Dependence-aware inference and controller stability",
+      "classification": "SUPPLEMENT_CANDIDATE",
+      "final_size_inches": [7.2, 4.0],
+      "supports": "frozen controller-label QAP and delete-one-controller sign stability",
+      "does_not_support": ["IID dyads", "alternative post-hoc inference"]
+    }
+  ]
+}
