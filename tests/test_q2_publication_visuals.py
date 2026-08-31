@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import ast
 import copy
+import json
 from pathlib import Path
 
 import numpy as np
@@ -159,6 +160,24 @@ def test_tables_are_byte_deterministic(tmp_path: Path, q2_tables: dict) -> None:
     assert first.keys() == second.keys()
     for name in first:
         assert first[name].read_bytes() == second[name].read_bytes()
+
+
+def test_notebook_persists_executed_figure_outputs() -> None:
+    notebook = json.loads((ROOT / "notebooks/q2_visual_story.ipynb").read_text())
+    code_cells = [cell for cell in notebook["cells"] if cell["cell_type"] == "code"]
+    assert [cell["execution_count"] for cell in code_cells] == list(range(1, 8))
+    assert not any(
+        output["output_type"] == "error"
+        for cell in code_cells
+        for output in cell["outputs"]
+    )
+    image_outputs = [
+        output
+        for cell in code_cells
+        for output in cell["outputs"]
+        if "image/png" in output.get("data", {})
+    ]
+    assert len(image_outputs) == 6
 
 
 def test_figure_package_is_byte_deterministic() -> None:
