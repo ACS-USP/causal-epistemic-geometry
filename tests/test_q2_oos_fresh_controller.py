@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import hashlib
+import json
+from pathlib import Path
+
 import numpy as np
 
 from epistemic_geometry.experiments.q2_oos_fresh_controller import (
@@ -8,10 +12,13 @@ from epistemic_geometry.experiments.q2_oos_fresh_controller import (
     fresh_candidate_bank,
     fresh_row_permutations,
     leave_one_fresh_out,
+    protocol_seed,
     row_permutation_test,
     semantic_schedule,
     shell_mean_spearman,
 )
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_candidate_stream_is_deterministic_and_in_subspace() -> None:
@@ -79,3 +86,30 @@ def test_future_schedule_contains_only_fresh_conditions() -> None:
         "Q2_OOS_DIRECTION_01_STRONG",
     }
     assert all(row["condition"] != "BASELINE" for row in rows)
+
+
+def test_frozen_candidate_stream_reproduces_and_has_no_historical_overlap() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design"
+    manifest = json.loads((review / "CANDIDATE_BANK_MANIFEST.json").read_text())
+    prelock_commit = "c774ef57b0247024d866c6efd8b0ab2aaa5c67d0"
+    expected_seed = protocol_seed("Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V1", prelock_commit)
+    basis = np.load(
+        ROOT / "review/q2_v4_spark1_presemantic/SPARK1_SUBSPACE_Q.npy",
+        allow_pickle=False,
+    )
+    coefficients, vectors = fresh_candidate_bank(basis, count=19, seed=expected_seed)
+    assert manifest["seed"] == expected_seed
+    assert np.array_equal(
+        coefficients,
+        np.asarray([row["coefficients"] for row in manifest["candidates"]]),
+    )
+    for row, vector in zip(manifest["candidates"], vectors, strict=True):
+        assert (
+            row["vector_array_sha256"]
+            == hashlib.sha256(np.asarray(vector, dtype=np.float64).tobytes()).hexdigest()
+        )
+    assert manifest["historical_overlap_audit"]["pass"] is True
+    assert manifest["algebraic_checks"]["pass"] is False
+    assert manifest["classification"] == ("Q2_OOS_FRESH_CONTROLLER_CANDIDATE_STREAM_ALGEBRAIC_FAIL")
+    assert manifest["semantic_outcomes"] == 0
+    assert manifest["correctness_inspected"] is False

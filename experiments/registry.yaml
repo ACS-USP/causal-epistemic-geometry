@@ -214,6 +214,48 @@ experiments:
     holdout_status: CONSUMED_DEVELOPMENT_CLOSED
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_OOS_FRESH_CONTROLLER_DESIGN
+    version: OOS-FRESH-CONTROLLER-V1
+    stage: DEVELOPMENT_DESIGN_PRESEMANTIC_STOP
+    question: >-
+      Does the Q2 V4.1 A0 relational association generalize to entirely fresh
+      controller identities sampled from the same frozen rank-8 subspace?
+    instrument: >-
+      CPU-only cross-block power design followed by one prospectively frozen
+      19-candidate PCG64DXSM coefficient stream; Spark-1 safety and label-free
+      qualification were authorized only after the algebraic stream gate.
+    model_policy: NO_MODEL_INFERENCE_REACHED
+    status: CLOSED_PRESEMANTIC
+    outcome: Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED
+    scientific_interpretation: >-
+      K=10 was the smallest power-qualified design, but the single frozen
+      candidate stream failed its prospectively fixed effective-rank and
+      condition-number gates before safety qualification. This is an
+      instrument-design stop, not a fresh-controller semantic null and not a
+      modification of Q2 V4.1.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: d57b8b410a6e12d1253eb189935ae8a878f17f53
+    prelock_commit: c774ef57b0247024d866c6efd8b0ab2aaa5c67d0
+    artifact: review/q2_oos_fresh_controller_design/REPORT.md
+    candidate_manifest: review/q2_oos_fresh_controller_design/CANDIDATE_BANK_MANIFEST.json
+    candidate_manifest_sha256: 61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b
+    target_k: 10
+    candidate_count: 19
+    candidate_rank: 8
+    candidate_effective_rank: 5.915762425524043
+    candidate_condition_number: 3.591939479153766
+    safety_qualification: NOT_RUN_PREEMPTED_BY_FROZEN_CANDIDATE_STREAM_GATE
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY

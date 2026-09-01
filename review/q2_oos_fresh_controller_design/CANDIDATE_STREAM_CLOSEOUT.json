@@ -1,0 +1,28 @@
+{
+  "candidate_count": 19,
+  "candidate_manifest_sha256": "61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b",
+  "candidate_stream": {
+    "condition_number": 3.591939479153766,
+    "effective_rank": 5.915762425524043,
+    "maximum_absolute_pair_cosine": 0.8843979744859711,
+    "rank": 8
+  },
+  "classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+  "correctness_inspected": false,
+  "failed_frozen_gates": {
+    "condition_number_at_most_3": false,
+    "effective_rank_at_least_6": false
+  },
+  "historical_overlap_audit_sha256": "4225ad8b2270379fc39e19a71356f518cd34da98c97bf6b43036430366c8f007",
+  "historical_overlap_pass": true,
+  "K_target": 10,
+  "prelock_commit": "c774ef57b0247024d866c6efd8b0ab2aaa5c67d0",
+  "prelock_sha256": "4c705fc1c6498d0d227aabfdc1092909d437c79e402311af25b1fd45ef22ce7c",
+  "protocol_lock_sha256": "63e74bfc1411f4d6bfe75161ffb4439241f7904da09c95978aaf34f34d580f80",
+  "reason": "The single frozen candidate stream failed two prospectively frozen algebraic gates before Spark-1 safety qualification. No redraw or threshold change is permitted.",
+  "safe_bank_qualification": "NOT_RUN_PREEMPTED_BY_FROZEN_CANDIDATE_STREAM_GATE",
+  "seed": 184636762849226582434755075854859606661,
+  "semantic_outcomes": 0,
+  "spark1_presemantic_used": false,
+  "spark2_used": false
+}

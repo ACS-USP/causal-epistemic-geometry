@@ -258,6 +258,38 @@ instrument_history:
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_OOS_FRESH_CONTROLLER_DESIGN
+    status: Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED
+    conclusion: >-
+      A CPU-only cross-block power review prospectively selected K=10 and a
+      19-candidate reserve for fresh-controller identity generalization within
+      the frozen V4.1 rank-8 subspace. The PRELOCK was committed and pushed
+      before one deterministic PCG64DXSM stream was materialized. That stream
+      retained rank 8 and no historical overlap, but failed the frozen
+      effective-rank (5.915762 < 6.0) and condition-number (3.591939 > 3.0)
+      gates. No redraw, threshold change, Spark inference, safety outcome,
+      correctness, or semantic outcome occurred.
+    branch: research/q2-fresh-controller-oos-design
+    source_commit: d57b8b410a6e12d1253eb189935ae8a878f17f53
+    prelock_commit: c774ef57b0247024d866c6efd8b0ab2aaa5c67d0
+    artifact: review/q2_oos_fresh_controller_design/REPORT.md
+    candidate_manifest: review/q2_oos_fresh_controller_design/CANDIDATE_BANK_MANIFEST.json
+    candidate_manifest_sha256: 61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b
+    target_k: 10
+    candidate_count: 19
+    candidate_rank: 8
+    candidate_effective_rank: 5.915762425524043
+    candidate_condition_number: 3.591939479153766
+    historical_overlap: false
+    safety_qualification: NOT_RUN_PREEMPTED_BY_FROZEN_CANDIDATE_STREAM_GATE
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    q3: NOT_RUN
+    historical_q2: Q2_V4_1_G2_UNCHANGED
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY
     conclusion: >-

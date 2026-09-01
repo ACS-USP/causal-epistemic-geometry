@@ -1,0 +1,20 @@
+{
+  "candidate_count": 19,
+  "candidate_manifest_sha256": "61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b",
+  "classification": "Q2_OOS_FRESH_CONTROLLER_PRESEMANTIC_FORENSIC_CLEAN",
+  "correctness_inspected": false,
+  "exact_coefficient_reproduction": true,
+  "exact_seed_reproduction": true,
+  "failed_gate_reproduction": {
+    "condition_number_at_most_3": false,
+    "effective_rank_at_least_6": false
+  },
+  "historical_overlap_recomputed": false,
+  "historical_overlap_reported": false,
+  "historical_overlap_check_pass": true,
+  "maximum_numeric_difference": 0.0,
+  "q_basis_hash_verified": true,
+  "semantic_outcomes": 0,
+  "stream_classification_reproduced": "Q2_OOS_FRESH_CONTROLLER_CANDIDATE_STREAM_ALGEBRAIC_FAIL",
+  "test": "tests/test_q2_oos_fresh_controller.py::test_frozen_candidate_stream_reproduces_and_has_no_historical_overlap"
+}

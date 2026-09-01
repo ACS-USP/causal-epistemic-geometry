@@ -1,0 +1,404 @@
+{
+  "Q_basis_sha256": "5f083960b898641a763a0d85f9432c6dc077b01767e3cb8e56e417a0c4527c44",
+  "algebraic_checks": {
+    "checks": {
+      "coefficient_unit_norm_error_at_most_1e_12": true,
+      "condition_number_at_most_3": false,
+      "effective_rank_at_least_6": false,
+      "finite": true,
+      "maximum_absolute_pair_cosine_below_0_98": true,
+      "rank_8": true,
+      "vector_unit_norm_error_at_most_1e_10": true
+    },
+    "condition_number": 3.591939479153766,
+    "effective_rank": 5.915762425524043,
+    "maximum_absolute_pair_cosine": 0.8843979744859711,
+    "pass": false,
+    "rank": 8
+  },
+  "candidate_count": 19,
+  "candidates": [
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_00",
+      "candidate_index": 0,
+      "coefficient_array_sha256": "5cdf48422f88f8dd03b9cd132ce17dcd19ad7512702e2750057771d03b3f1df5",
+      "coefficients": [
+        0.3507340644001954,
+        0.38286211409863863,
+        0.18007016134562032,
+        -0.15341525258830857,
+        -0.24375319165436468,
+        -0.6334693911453493,
+        -0.2840597488352588,
+        0.36476250637280283
+      ],
+      "file_sha256": "2354581636249ca2dc8d8cffe938dd5fe61e661c3d71395e1d45912f4c3d9250",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_00.npy",
+      "vector_array_sha256": "fe5398956dc40ada555d9de616b88077fe54654825b75732deeac41df2f70199",
+      "vector_norm": 0.9999999999999999
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_01",
+      "candidate_index": 1,
+      "coefficient_array_sha256": "e50ec443c0ff2cc80af98824fd95572131642227759bd1368f69c7d99843f575",
+      "coefficients": [
+        0.2590754212330916,
+        -0.2542759100014952,
+        -0.2615940857014345,
+        0.5007938069441599,
+        0.04741951551529999,
+        -0.07615400061335412,
+        0.6513017163740967,
+        0.3416955032558153
+      ],
+      "file_sha256": "cad56c0c9368331daaa9b088d80f5fa995b1055c0baf84daf22dbc367398cbb3",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_01.npy",
+      "vector_array_sha256": "fe30eb976f88e2e719a11f0a1ddccc04b9de66adac14f6834f5aba3e65eebded",
+      "vector_norm": 1.0000000000000002
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_02",
+      "candidate_index": 2,
+      "coefficient_array_sha256": "f6d2b36d75178ea897efcc901ce929ab0f5055d376561bec077adfc7a8b0b6aa",
+      "coefficients": [
+        -0.054725627566779914,
+        -0.6097430801383671,
+        -0.44943532788047835,
+        0.003150023741096253,
+        0.24991260639507915,
+        0.5537895619276311,
+        0.07763504376525031,
+        0.2192032288963479
+      ],
+      "file_sha256": "caace7ff9aef5b4d4d838ea1abd15c609f911b0b89f3e3de322ea83f010a64f5",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_02.npy",
+      "vector_array_sha256": "f5a931022a2581a365c2043e2032405ebeafa6865ae63f9f899e491a8ca41640",
+      "vector_norm": 1.0000000000000007
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_03",
+      "candidate_index": 3,
+      "coefficient_array_sha256": "b8bbb8f8d48a942192a50a8b15963b4dfcc2b76928d77edc437d4c3e393fa4fa",
+      "coefficients": [
+        0.16114439016429205,
+        0.1117540749452054,
+        -0.1365341036790407,
+        -0.20506888466128048,
+        -0.10429669338234626,
+        0.5620760459461045,
+        0.6712741515943595,
+        0.35132952488003827
+      ],
+      "file_sha256": "d38ec55964338535b2b3e285026643dde064dee2de759129ff226ba3c7080aaa",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_03.npy",
+      "vector_array_sha256": "729a2594a393739ea09e00c486705aecb0795b09e7b1d09cccc3433923f67e92",
+      "vector_norm": 1.0000000000000004
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_04",
+      "candidate_index": 4,
+      "coefficient_array_sha256": "93d4a87bfae1de713ef1c16481b75cf40eb9f7e46ffce5e234a0f96f244ea54b",
+      "coefficients": [
+        -0.04455709787257653,
+        0.6044094479403314,
+        0.4208127079078392,
+        -0.07110621476470319,
+        0.08748679012751778,
+        -0.5480146305687574,
+        -0.3677667874695483,
+        -0.08566254505234668
+      ],
+      "file_sha256": "f9f6fa2e166d76af2315dc05f83d4e40057d80c3bf6adcb86e65ea8d5accf151",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_04.npy",
+      "vector_array_sha256": "d97ec74da82c8c2776d0fb675ebae1f32491a57a57ad24eb5725f8b4d5bad55b",
+      "vector_norm": 1.0000000000000004
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_05",
+      "candidate_index": 5,
+      "coefficient_array_sha256": "9a5ce5a4fc1a072be13452c68b7fc8e989574d8adb86ef5f8298ee3d372f0ad5",
+      "coefficients": [
+        0.14332291486632173,
+        0.6340756876518903,
+        -0.3103785126324252,
+        -0.02413583589811386,
+        -0.391706028015923,
+        0.2101691339540097,
+        -0.03802782094798616,
+        -0.5305076929767794
+      ],
+      "file_sha256": "80d3c125c959e68bbaa7fbb9ef19b3d1f2cbc0c715e3ae4393125afcf46f5055",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_05.npy",
+      "vector_array_sha256": "81ef368660677fe7fdb60c9661df702a82a6b99a6db2f4b29e8473437d794cb3",
+      "vector_norm": 0.9999999999999998
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_06",
+      "candidate_index": 6,
+      "coefficient_array_sha256": "85c59909518dd462d7268124f0a8851d695ac6d98ad26f873218300e21f21bed",
+      "coefficients": [
+        -0.37719927387220015,
+        0.3073657940219262,
+        0.024365461190657,
+        -0.28866739655207335,
+        0.46714737454703303,
+        0.042053267927549404,
+        0.47089416926593075,
+        -0.4874299635703033
+      ],
+      "file_sha256": "84aba15327aeda81a31506acb8d7b03ae60287b4b73489ee7c29985d592ae908",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_06.npy",
+      "vector_array_sha256": "39eccec74d14daaf8dbace81eba7988eb734222d58ef94112443ef4f42466d51",
+      "vector_norm": 0.9999999999999998
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_07",
+      "candidate_index": 7,
+      "coefficient_array_sha256": "340a66c4531ca5f89206aeedac56fa6105a96882f03e5732c5a01ab049082ea3",
+      "coefficients": [
+        -0.4187438230881327,
+        -0.04356887348791331,
+        0.2594354966710179,
+        0.1546573157882091,
+        -0.022485167462632637,
+        -0.7029226808601305,
+        0.4834118665070564,
+        0.056892802053737486
+      ],
+      "file_sha256": "68ed8076ba62e976c4e4adf827dcfd8e76efe99f8e04bb46154986203dd29fc7",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_07.npy",
+      "vector_array_sha256": "291608f0ea8e2c5d95a9dab9926b9046003bc1ec0cb7807fafdc6c666eddf0f0",
+      "vector_norm": 1.0
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_08",
+      "candidate_index": 8,
+      "coefficient_array_sha256": "f36ed2ece5ce4fdb0463d327dfdf60c4f2eb86fe5e95bec8be8165d0abbbdcf4",
+      "coefficients": [
+        0.17566088638114974,
+        -0.42089368495518265,
+        -0.6945580820546525,
+        0.313884824384374,
+        0.3786306962361601,
+        0.03857619038749009,
+        -0.07146973073512504,
+        -0.247183934805535
+      ],
+      "file_sha256": "6d54edc8530f8faf5ff1dae7e3e108d957b2a293393ce656902381b8a2ee1feb",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_08.npy",
+      "vector_array_sha256": "5e5e29f3ac03e44fb521d14715bc35e339f81b7f329cde383762dcef3ff7733a",
+      "vector_norm": 1.0000000000000009
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_09",
+      "candidate_index": 9,
+      "coefficient_array_sha256": "ad28dfb42763b1c2c0026a27bb5bfdc798e02fedb10a634d41a6c074523d31d6",
+      "coefficients": [
+        -0.30079928559605923,
+        0.6864251568781294,
+        0.15200162948207127,
+        -0.04415518566743563,
+        0.21029717663862948,
+        -0.22346610496044209,
+        -0.42174722485422794,
+        -0.3758369244267946
+      ],
+      "file_sha256": "b87fbbbe691550f8272006d82c99b4bdcfb6405229bba605f4a0dddee864bc9b",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_09.npy",
+      "vector_array_sha256": "fe276ef2aedc9871c8412bfb2af6f0e05bd1fb278f3a32f21218c5588d6f4487",
+      "vector_norm": 0.9999999999999999
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_10",
+      "candidate_index": 10,
+      "coefficient_array_sha256": "d7ea853dccb81ce394c3cf08afabacc6bb368f6ca6df624143e9effcbb1d8186",
+      "coefficients": [
+        0.5185046405097478,
+        -0.2758431070945326,
+        -0.30201759549311646,
+        0.21781035933935275,
+        0.32486262208591143,
+        0.3119901384225816,
+        0.2004745890570039,
+        0.5228230167621349
+      ],
+      "file_sha256": "69c17edceb162c3236529e94032887279a8360a653bd484a41877448ac380965",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_10.npy",
+      "vector_array_sha256": "d2f05a9b2c6df8d4e9a7893ca7947a70e148236ae37607e89ea700e7b807bb48",
+      "vector_norm": 0.9999999999999998
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_11",
+      "candidate_index": 11,
+      "coefficient_array_sha256": "eaa891f8b38a30fc39c44c51c19631f96d51c3a438a64315e4b8054eddb11da9",
+      "coefficients": [
+        -0.43026342114814825,
+        -0.46373900137672464,
+        -0.34139315931200637,
+        -0.2605160198772325,
+        -0.05378039041190974,
+        0.3114024333404239,
+        -0.029438988398668157,
+        0.5609555965182719
+      ],
+      "file_sha256": "7adca1ab731fc6b79e71e8d76cea0b23bd28fba3c764968fad52f68e6a96d739",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_11.npy",
+      "vector_array_sha256": "bb641493c709884fd6eda1df0b3ba7a7e81551ff7ebb723161a7573f96a24555",
+      "vector_norm": 1.0000000000000002
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_12",
+      "candidate_index": 12,
+      "coefficient_array_sha256": "80026bd3e2ec6d603b229a44a55184174b9127315a86a783f73a644697b1512f",
+      "coefficients": [
+        0.30648170052502655,
+        -0.062280880258847954,
+        0.3490427543197487,
+        0.17216568105573568,
+        -0.09299305023704416,
+        -0.7983229091705396,
+        0.3196578830781527,
+        0.05069374920106294
+      ],
+      "file_sha256": "7b383585fcc8ca47e3984799aa76b62f5087921478f3d682dd5b80acbac7343a",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_12.npy",
+      "vector_array_sha256": "29c59a9f7194e8864ce4b820f5042267478fe96ddc9df8702da1b6d679ae9617",
+      "vector_norm": 1.0000000000000004
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_13",
+      "candidate_index": 13,
+      "coefficient_array_sha256": "e19bef245f3cd6f8604d40755f05db3068d2413096a1a1b1f9d98384d2788020",
+      "coefficients": [
+        -0.3320480387824741,
+        0.0184898200230813,
+        0.7357545093509783,
+        -0.2234627016654691,
+        0.06002555907986454,
+        0.39092952830029726,
+        0.32120079691768877,
+        -0.19629832818899834
+      ],
+      "file_sha256": "3879441e1c1e77efaa9b60dc8db92c1df4cabd6976f558c5ebc4b9a916f9a823",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_13.npy",
+      "vector_array_sha256": "b285c66fa1d5dd0fbf223adeb911fc5d75140f84897fec8f4f872c51d457a2f7",
+      "vector_norm": 1.0
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_14",
+      "candidate_index": 14,
+      "coefficient_array_sha256": "d7fc86ae557201b5d8e8e2a1d3434dc72a6c191d962f4400ed4f2aefc9c7520a",
+      "coefficients": [
+        0.16195446455222534,
+        -0.004530437579554885,
+        -0.048056435132160354,
+        0.1315989849340251,
+        0.46674784028116123,
+        0.21092575888356263,
+        0.28827329777490784,
+        0.7801780542772955
+      ],
+      "file_sha256": "2cdb10588429268002057ff91bf69e05a6197ebf06c5c8f3a66c55f0d49eb325",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_14.npy",
+      "vector_array_sha256": "c50e8c9e676135e351c092a0bc8a072dc81290fa362198a44e373662150028ad",
+      "vector_norm": 0.9999999999999998
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_15",
+      "candidate_index": 15,
+      "coefficient_array_sha256": "3981a946d74186845ec962caa60e2564ba2cdc2824cc6162413762fa2a273fa4",
+      "coefficients": [
+        0.24663055575912662,
+        -0.12263619180108382,
+        -0.3307744184894552,
+        0.12016743595716317,
+        0.3404717989106238,
+        -0.2053492477539328,
+        0.35647695276163643,
+        0.7177162584044976
+      ],
+      "file_sha256": "9227ce75bce313fd1b6b04aa0c0e97562da44e6a222642da3540908cd46cc9ac",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_15.npy",
+      "vector_array_sha256": "d4a65bc2f5fc7421e9ea27d492ed8300f5b05be73568cffe485eddc30430eb1c",
+      "vector_norm": 0.9999999999999996
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_16",
+      "candidate_index": 16,
+      "coefficient_array_sha256": "b99ae18732aff40036603c2855888b1b50e18a07d8ead6a5ce4cb00c9149f6f0",
+      "coefficients": [
+        -0.018503291117805295,
+        0.20831685572922773,
+        -0.017385711488500037,
+        0.10517704979798834,
+        0.13806541670394107,
+        0.4157333606208277,
+        0.06464465780804944,
+        0.8653450311077588
+      ],
+      "file_sha256": "9c9628744689a0d2138f1c5264544b8c1c79f3bba125ea84a0c394294e181db7",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_16.npy",
+      "vector_array_sha256": "fac35da0eb1b61b7840b3c18f540d2cbc7d4c00679344ecf1787506e2b40e262",
+      "vector_norm": 1.0
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_17",
+      "candidate_index": 17,
+      "coefficient_array_sha256": "b6999074be2e21503a0e65cfa3aba7fccc90f15342628edeaa9d4e9555501ee3",
+      "coefficients": [
+        0.557493612023949,
+        -0.6061457115477102,
+        0.0612215631020858,
+        -0.005179126080711409,
+        -0.01348854684979151,
+        0.2384514404829336,
+        -0.10161597910564395,
+        0.500646090781786
+      ],
+      "file_sha256": "614b41c22a2b074d4cd6eddca822a9db57fcff3308cdd8842b228838360fc8c2",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_17.npy",
+      "vector_array_sha256": "94d8e73cecb12e57e12bf4b70f509601bba6699fe79b16d3c6437de34a70bb97",
+      "vector_norm": 0.9999999999999994
+    },
+    {
+      "candidate_id": "Q2_OOS_DIRECTION_18",
+      "candidate_index": 18,
+      "coefficient_array_sha256": "bcb24635972017a313f88db16595a48e7205da84289c4f1141f3a2fdf931f362",
+      "coefficients": [
+        0.154234376126076,
+        0.13822866915348292,
+        0.2536854909762261,
+        0.5930999488980118,
+        -0.379336594719022,
+        -0.44457282924774194,
+        -0.247300402578287,
+        0.3718628414034349
+      ],
+      "file_sha256": "1f4c58794c44578b994d74284fa43a49407bb9d187fed2534bab868a22409265",
+      "path": "review/q2_oos_fresh_controller_design/CANDIDATE_DIRECTIONS/Q2_OOS_DIRECTION_18.npy",
+      "vector_array_sha256": "90d4db6e4a36af125910e823ddd129921c29c3cbbc888880595f9038fb36ad6b",
+      "vector_norm": 1.0000000000000002
+    }
+  ],
+  "classification": "Q2_OOS_FRESH_CONTROLLER_CANDIDATE_STREAM_ALGEBRAIC_FAIL",
+  "correctness_inspected": false,
+  "deterministic_materialization_note": "The first invocation derived this same seed/stream and stopped before persistence when the frozen algebraic gate failed. This artifact is an exact deterministic rematerialization of that one stream, not a redraw.",
+  "draw": "normalized Gaussian in R8; v=Qc",
+  "generated_once": true,
+  "historical_overlap_audit": {
+    "candidate_id_overlap": false,
+    "exact_coefficient_overlap": false,
+    "fresh_candidate_count": 19,
+    "historical_candidate_count": 40,
+    "maximum_absolute_cross_stream_cosine": 0.9230358390457863,
+    "pass": true,
+    "vector_array_hash_overlap": false
+  },
+  "namespace": "Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V1",
+  "prelock_commit": "c774ef57b0247024d866c6efd8b0ab2aaa5c67d0",
+  "redraw": "FORBIDDEN",
+  "rng": "NumPy PCG64DXSM",
+  "schema_version": "q2-oos-fresh-controller-candidate-stream-v1",
+  "seed": 184636762849226582434755075854859606661,
+  "semantic_outcomes": 0
+}
