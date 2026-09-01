@@ -191,6 +191,57 @@ instrument_history:
     forensic_classification: Q1_SECOND_TASK_STAGE_A2_FORENSIC_CLEAN
     next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_A2_QUALIFIED
 
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
+    status: Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY
+    conclusion: >-
+      The complete prospectively frozen Stage B executed 5,720 trajectories
+      over 130 independent question families, 11 conditions, and four
+      rollouts. The meaningful controller C point estimate was 0.00688 and
+      exceeded every individual null point estimate, but its frozen 95%
+      family-bootstrap interval included zero, the meaningful-minus-null-mean
+      interval included zero, and split-half A failed. The meaningful
+      condition also failed the frozen commitment-validity and semantic-
+      evaluability guards. The primary terminal state is therefore no
+      null-specific complementarity. The independent audit returned the same
+      terminal class but disagreed with the primary parser on 30 rows and on
+      the P2a constituent gate, so the forensic state is disagreement pending
+      principal review; no post-opening repair or reclassification occurred.
+    branch: research/q1-second-task-spark2-design
+    analysis_source_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md
+    stage_a1_classification: Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED
+    stage_a2_classification: Q1_SECOND_TASK_STAGE_A2_QUALIFIED
+    scientific_unit: QUESTION_FAMILY
+    families: 130
+    conditions: 11
+    rollouts: 4
+    scheduled_trajectories: 5720
+    completed_trajectories: 5720
+    missing: 0
+    unexpected: 0
+    duplicates: 0
+    journal_sha256: 14ee3691de42c609dd4be1749ab4ea7d8b1c25b3cfbd47483423a83741fdb364
+    meaningful_C: 0.006879844961240278
+    meaningful_C_interval_95: [-0.010640373434704862, 0.0244633273703041]
+    meaningful_minus_nullmean_C: 0.011801207513416796
+    meaningful_minus_nullmean_C_interval_95: [-0.0005907824612403139, 0.02443910256410256]
+    meaningful_gt_every_null: true
+    split_half_A_pass: false
+    split_half_B_pass: true
+    safety_commitment_validity_pass: false
+    safety_semantic_evaluability_pass: false
+    safety_accuracy_pass: true
+    forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT
+    forensic_parser_disagreement_rows: 30
+    forensic_classification_agreement: true
+    historical_q1_confirmatory_result: UNCHANGED
+    spark1_used: false
+    spark2_scientific_inference: true
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_DISAGREEMENT
+
   - id: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
     status: Q2_V4_SAFE_BANK_INSUFFICIENT
     conclusion: >-

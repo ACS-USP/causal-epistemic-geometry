@@ -1,0 +1,47 @@
+{
+  "audit_classification": "Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY",
+  "audit_forensic_classification": "Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT",
+  "audit_scientific_checks": {
+    "P1_C_lower_gt_zero": false,
+    "P2a_delta_C_nullmean_lower_gt_zero": true,
+    "P2b_C_meaningful_gt_every_null": true,
+    "split_half_A": false,
+    "split_half_B": true
+  },
+  "audit_safety_checks": {
+    "accuracy": true,
+    "commitment_validity": false,
+    "semantic_evaluability": false
+  },
+  "classification_agreement": true,
+  "disagreement_rows": 30,
+  "field_disagreements": {
+    "commitment_valid": 3,
+    "correct": 17,
+    "semantic_evaluable": 30
+  },
+  "maximum_primary_audit_metric_difference": 0.019230769230769273,
+  "primary_classification": "Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY",
+  "primary_scientific_checks": {
+    "P1_C_lower_gt_zero": false,
+    "P2a_delta_C_nullmean_lower_gt_zero": false,
+    "P2b_C_meaningful_gt_every_null": true,
+    "split_half_A": false,
+    "split_half_B": true
+  },
+  "primary_safety_checks": {
+    "accuracy": true,
+    "commitment_validity": false,
+    "semantic_evaluability": false
+  },
+  "protocol_action": "SURFACE_DISAGREEMENT_WITHOUT_REPAIR_OR_RECLASSIFICATION",
+  "schema_version": 1,
+  "transition_counts": {
+    "commitment_valid_false_to_true": 1,
+    "commitment_valid_true_to_false": 2,
+    "correct_false_to_true": 1,
+    "correct_true_to_false": 16,
+    "semantic_evaluable_false_to_true": 1,
+    "semantic_evaluable_true_to_false": 29
+  }
+}
