@@ -10,15 +10,18 @@ from epistemic_geometry.experiments.q2_oos_fresh_controller import (
     angular_cross_block,
     candidate_stream_gate,
     coefficient_bank_diagnostics,
+    controller_conjugation_test,
     cross_block_shape,
     fresh_candidate_bank,
     fresh_row_permutations,
     leave_one_fresh_out,
+    leave_one_fresh_out_symmetric,
     protocol_seed,
     row_permutation_test,
     selected_bank_gate,
     semantic_schedule,
     shell_mean_spearman,
+    symmetric_upper_spearman,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,6 +65,26 @@ def test_shell_mean_is_equal_weighted() -> None:
     )
     assert shell == {"MEDIUM": 1.0, "STRONG": -1.0}
     assert aggregate == 0.0
+
+
+def test_fresh_fresh_qap_conjugates_complete_controller_labels() -> None:
+    rng = np.random.default_rng(31)
+    coefficients = rng.standard_normal((6, 4))
+    geometry = angular_cross_block(coefficients, coefficients)
+    geometries = {"MEDIUM": geometry.copy(), "STRONG": geometry.copy()}
+    outcomes = {"MEDIUM": geometry.copy(), "STRONG": geometry.copy()}
+    permutations = fresh_row_permutations(6, 720, seed=22)
+    result = controller_conjugation_test(geometries, outcomes, permutations)
+    assert symmetric_upper_spearman(geometry, geometry) > 0.999999
+    assert result["observed_aggregate_rho"] > 0.999999
+    assert result["p_value"] == 1 / 720
+    assert np.all(leave_one_fresh_out_symmetric(geometries, outcomes) > 0.999999)
+
+
+def test_fresh_fresh_qap_rejects_non_square_endpoints() -> None:
+    rectangular = np.ones((4, 3))
+    with np.testing.assert_raises(ValueError):
+        symmetric_upper_spearman(rectangular, rectangular)
 
 
 def test_cross_block_shape_matches_scalar_reference() -> None:

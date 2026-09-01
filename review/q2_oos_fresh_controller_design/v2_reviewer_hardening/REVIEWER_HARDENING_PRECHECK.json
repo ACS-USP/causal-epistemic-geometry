@@ -1,0 +1,130 @@
+{
+  "schema_version": "q2-oos-v2-reviewer-hardening-precheck-v1",
+  "status": "FROZEN_BEFORE_FINAL_REVIEWER_HARDENING_SIMULATION",
+  "source_commit": "ff7ede3785e3e4a203cf64f4260e7cc6b819918b",
+  "historical_v1": {
+    "commit": "249543e044f3d07713ac90dc6b68988e237f5119",
+    "classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+    "mutable": false
+  },
+  "accepted_v2_gate_audit": {
+    "commit": "ff7ede3785e3e4a203cf64f4260e7cc6b819918b",
+    "classification": "Q2_OOS_V2_INFERENCE_ALIGNED_DESIGN_READY_FOR_PRINCIPAL_REVIEW",
+    "route": "ROUTE_C_INFERENCE_ALIGNED_GATES",
+    "mutable": false
+  },
+  "firewall": {
+    "cpu_only": true,
+    "new_v2_stream_authorized": false,
+    "actual_v2_seed_derivation_authorized": false,
+    "model_inference": 0,
+    "semantic_trajectories": 0,
+    "correctness_inspected": false,
+    "spark1_used": false,
+    "spark2_used": false
+  },
+  "comparison": {
+    "K_values": [10, 12, 16],
+    "candidate_count_search": {
+      "K10": [23, 24, 25, 26, 27, 28],
+      "K12": [27, 28, 29, 30, 31, 32],
+      "K16": [34, 35, 36, 37, 38, 39]
+    },
+    "minimum_safety_rate": 0.6,
+    "reserve_probability_min": 0.95,
+    "unconditional_inference_aligned_qualification_min": 0.95,
+    "qualification_scenarios": [
+      "INDEPENDENT",
+      "MODERATE_HISTORICAL_AXIS4"
+    ],
+    "qualification_replicates_per_cell": 40000,
+    "selected_bank_gates": {
+      "count": "K",
+      "rank": 8,
+      "entropy_effective_rank_min": 4.8,
+      "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+      "fresh_by_reference_A0_q90_minus_q10_min": 0.2,
+      "shell_amplitude_cv_max": 0.03,
+      "condition_number": "MANDATORY_DESCRIPTIVE_ONLY"
+    },
+    "candidate_stream_integrity": {
+      "finite": true,
+      "unit_norm_error_max": 1e-12,
+      "rank": 8,
+      "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+      "historical_overlap": "FORBIDDEN"
+    }
+  },
+  "power": {
+    "N": 300,
+    "rollouts": 2,
+    "shells": ["MEDIUM", "STRONG"],
+    "reference_controllers": 31,
+    "planning_banks_per_K": 8,
+    "replicates_per_K_effect": 600,
+    "planning_row_permutations": 999,
+    "final_row_permutations": 50000,
+    "effect_grid": {
+      "NULL": 0.0,
+      "QUARTER_PRIOR_A0": 0.14095458710082515,
+      "RHO_0_15": 0.15,
+      "HALF_PRIOR_A0": 0.2819091742016503
+    },
+    "planning_effect_source": "fractions of closed Q2 V4.1 aggregate A0 rho 0.5638183484033006; synthetic planning inputs only",
+    "dependence_model": "shared 300-item binary panels, two rollout banks, 31 fixed reference columns, equal-weight shells, complete fresh-row permutations shared across shells",
+    "precision": "empirical 2.5%-97.5% width over independent synthetic N=300 panels; final inference retains the separately frozen item-cluster bootstrap",
+    "reported_stability": "probability all leave-one-fresh-controller aggregate correlations are strictly positive"
+  },
+  "decision_rule": {
+    "feasibility_requirements": {
+      "reserve_probability_min": 0.95,
+      "independent_unconditional_qualification_min": 0.95,
+      "moderate_axis_unconditional_qualification_min": 0.95,
+      "null_false_positive_rate_max": 0.075,
+      "projected_safety_plus_semantic_gpu_hours_max": 50.0,
+      "projected_semantic_trajectories_max": 20000
+    },
+    "inferential_requirements": {
+      "half_prior_permutation_power_min": 0.8,
+      "rho_0_15_permutation_power_min": 0.6,
+      "half_prior_all_lofo_positive_rate_min": 0.8,
+      "half_prior_sampling_95_width_max": 0.4
+    },
+    "selection": "Among K values satisfying all feasibility and inferential requirements, choose the largest K because fresh-controller identity is the external-validity sampling unit. Prefer the next smaller K only if the adjacent increase costs more than 50% additional projected safety-plus-semantic GPU-hours or violates a requirement.",
+    "purpose": "balance independent fresh identities, incremental compute, qualification probability, and smaller-effect power without selecting only on p-value power"
+  },
+  "predicted_power_gate_review": {
+    "terminal_gate_protection_standard": "retain as terminal only if eligible banks that pass rank/effective-rank/near-duplication/A0-spread gates still show a material failure mode at half-prior planning effect: more than 5% fail either power>=0.8 or all-LOFO-positive>=0.8, and the proposed gate discriminates those failures rather than merely restating K or A0 spread",
+    "diagnostic_only_standard": "use when the calculation is reproducible but ceiling-saturated, redundant, or materially dependent on the arbitrary synthetic response model",
+    "remove_standard": "use only if the calculation is invalid, irreproducible, or has no interpretable planning value",
+    "allowed_rulings": [
+      "RETAIN_AS_TERMINAL_GATE",
+      "RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY",
+      "REMOVE_FROM_V2"
+    ]
+  },
+  "fresh_fresh_secondary": {
+    "geometry": "A0",
+    "semantic_endpoint": "Dshape",
+    "statistic": "equal-weight mean over shells of upper-triangle Spearman correlations",
+    "exchangeability_unit": "fresh controller identity",
+    "permutation_action": "P_pi A0 P_pi^T against fixed Dshape, using the same controller permutation across shells",
+    "final_maps": "identity plus 49,999 unique sampled non-identity maps",
+    "bootstrap": "same frozen item-cluster bootstrap principles; all controller conditions and rollout banks for a sampled item move together",
+    "stability": "all leave-one-fresh-controller aggregate correlations strictly positive",
+    "labels": {
+      "FRESH_FRESH_ASSOCIATION_POSITIVE": "aggregate rho > 0 AND one-sided controller-QAP p <= 0.05 AND item-bootstrap lower 95% bound > 0 AND every LOFO rho > 0",
+      "FRESH_FRESH_ASSOCIATION_INCOMPLETE": "aggregate rho > 0 but at least one QAP/bootstrap/LOFO support requirement fails",
+      "FRESH_FRESH_NO_ASSOCIATION": "aggregate rho <= 0 OR controller-QAP p > 0.05"
+    },
+    "role": "SECONDARY_ONLY_CANNOT_RESCUE_OR_CHANGE_PRIMARY_CLASSIFICATION"
+  },
+  "seeds": {
+    "QUALIFICATION": 72510327282649748523781322367043960501,
+    "POWER_BANKS": 234424800651076123130361345689454857309,
+    "POWER_PANELS": 84843704597127131365120612094585190788,
+    "POWER_QAP": 103874347161770770672718647261873525191
+  },
+  "seed_rule": "first 128 big-endian bits of SHA256('Q2-OOS-V2-REVIEWER-HARDENING-' + purpose + '|' + source_commit)",
+  "frozen_before_final_simulation": true
+}

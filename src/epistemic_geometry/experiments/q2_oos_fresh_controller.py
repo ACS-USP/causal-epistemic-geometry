@@ -309,6 +309,79 @@ def leave_one_reference_out(
     return np.asarray(values, dtype=np.float64)
 
 
+def symmetric_upper_spearman(left: np.ndarray, right: np.ndarray) -> float:
+    """Spearman correlation over corresponding strict upper triangles."""
+
+    first = np.asarray(left, dtype=np.float64)
+    second = np.asarray(right, dtype=np.float64)
+    if first.ndim != 2 or first.shape != second.shape or first.shape[0] != first.shape[1]:
+        raise ValueError("fresh-by-fresh matrices must be equal square arrays")
+    upper = np.triu_indices(first.shape[0], 1)
+    return spearman_flat(first[upper], second[upper])
+
+
+def controller_conjugation_test(
+    geometry_by_shell: dict[str, np.ndarray],
+    outcome_by_shell: dict[str, np.ndarray],
+    permutations: np.ndarray,
+) -> dict[str, object]:
+    """Fresh-controller QAP for a symmetric fresh-by-fresh endpoint.
+
+    Each map conjugates the geometry by one complete controller-label
+    permutation while holding the semantic matrices fixed. The same map is
+    used for both shells, preserving shell dependence.
+    """
+
+    if set(geometry_by_shell) != set(SHELLS) or set(outcome_by_shell) != set(SHELLS):
+        raise ValueError("both frozen shells are required")
+    size = next(iter(geometry_by_shell.values())).shape[0]
+    for shell in SHELLS:
+        if geometry_by_shell[shell].shape != (size, size):
+            raise ValueError("geometry matrices must be square and equally sized")
+        if outcome_by_shell[shell].shape != (size, size):
+            raise ValueError("outcome matrices must match geometry matrices")
+    observed_shell = {
+        shell: symmetric_upper_spearman(geometry_by_shell[shell], outcome_by_shell[shell])
+        for shell in SHELLS
+    }
+    observed = float(np.mean([observed_shell[shell] for shell in SHELLS]))
+    null = np.empty(len(permutations), dtype=np.float64)
+    for index, permutation in enumerate(np.asarray(permutations, dtype=np.int64)):
+        shell_values = []
+        for shell in SHELLS:
+            permuted = geometry_by_shell[shell][np.ix_(permutation, permutation)]
+            shell_values.append(symmetric_upper_spearman(permuted, outcome_by_shell[shell]))
+        null[index] = float(np.mean(shell_values))
+    return {
+        "observed_shell_rho": observed_shell,
+        "observed_aggregate_rho": observed,
+        "permutation_statistics": null,
+        "p_value": float(np.sum(null >= observed) / len(null)),
+        "maps": int(len(null)),
+    }
+
+
+def leave_one_fresh_out_symmetric(
+    geometry_by_shell: dict[str, np.ndarray],
+    outcome_by_shell: dict[str, np.ndarray],
+) -> np.ndarray:
+    """Return fresh-by-fresh aggregate rho after deleting each vertex."""
+
+    size = next(iter(geometry_by_shell.values())).shape[0]
+    values = []
+    for omitted in range(size):
+        keep = np.arange(size) != omitted
+        shell_values = [
+            symmetric_upper_spearman(
+                geometry_by_shell[shell][np.ix_(keep, keep)],
+                outcome_by_shell[shell][np.ix_(keep, keep)],
+            )
+            for shell in SHELLS
+        ]
+        values.append(float(np.mean(shell_values)))
+    return np.asarray(values, dtype=np.float64)
+
+
 def cross_block_shape(
     fresh_errors: np.ndarray,
     reference_errors: np.ndarray,
@@ -380,9 +453,11 @@ __all__ = [
     "coefficient_bank_diagnostics",
     "cross_block_diagnostics",
     "cross_block_shape",
+    "controller_conjugation_test",
     "fresh_candidate_bank",
     "fresh_row_permutations",
     "leave_one_fresh_out",
+    "leave_one_fresh_out_symmetric",
     "leave_one_reference_out",
     "protocol_seed",
     "row_permutation_test",
@@ -390,5 +465,6 @@ __all__ = [
     "semantic_schedule",
     "shell_mean_spearman",
     "spearman_flat",
+    "symmetric_upper_spearman",
     "unit_rows",
 ]
