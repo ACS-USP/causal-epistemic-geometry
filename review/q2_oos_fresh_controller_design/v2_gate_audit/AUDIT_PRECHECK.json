@@ -1,0 +1,39 @@
+{
+  "schema_version": "q2-oos-v2-candidate-gate-audit-precheck-v1",
+  "historical_v1_commit": "249543e044f3d07713ac90dc6b68988e237f5119",
+  "historical_v1_classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+  "cpu_only": true,
+  "model_inference": 0,
+  "semantic_outcomes": 0,
+  "correctness_inspected": false,
+  "new_controller_stream_authorized": false,
+  "candidate_counts": [12, 16, 19, 22, 24, 28, 32, 36, 40, 48, 56, 64],
+  "target_K": 10,
+  "safety_probability_grid": [0.6, 0.65, 0.7, 0.75, 0.775, 0.8, 0.85, 0.9],
+  "algebraic_replicates_per_candidate_count": 100000,
+  "selected_bank_replicates_per_candidate_count": 20000,
+  "power_replicates": 1200,
+  "power_planning_permutations": 999,
+  "power_effect_rho": 0.2819091742016503,
+  "power_effect_source": "50% of the closed aggregate Q2 V4.1 A0 rho; planning input only",
+  "safety_scenarios": {
+    "INDEPENDENT": "Bernoulli safety independent of coefficients",
+    "WEAK_AXIS4": "logit slope 0.5 times the historical univariate axis-4 estimate",
+    "MODERATE_AXIS4": "logit slope equal to the historical univariate axis-4 estimate",
+    "ADVERSARIAL_AXIS4_TOP10": "descriptive worst-reasonable localization: ten largest axis-4 loadings are safe"
+  },
+  "amplitude_simulation": "conditional on exact normalized-vector target amplitude; future observed shell-amplitude CV remains mandatory",
+  "seeds": {
+    "ALGEBRAIC": 217849343832152266089957481535304268372,
+    "SELECTED_BANK": 36983733259251569987201176381592192134,
+    "SAFETY_BOOTSTRAP": 12948719876448489938579533130205626846,
+    "POWER": 86081479373643367755062886622141161215
+  },
+  "seed_rule": "first 128 big-endian bits of SHA256(namespace + '|' + historical_v1_commit)",
+  "simulation_precision": {
+    "algebraic_joint_probability_target_mc_se_max": 0.0016,
+    "selected_bank_probability_target_mc_se_max": 0.0036,
+    "power_probability_target_mc_se_max": 0.0145
+  },
+  "frozen_before_final_simulation": true
+}

@@ -8,12 +8,15 @@ import numpy as np
 
 from epistemic_geometry.experiments.q2_oos_fresh_controller import (
     angular_cross_block,
+    candidate_stream_gate,
+    coefficient_bank_diagnostics,
     cross_block_shape,
     fresh_candidate_bank,
     fresh_row_permutations,
     leave_one_fresh_out,
     protocol_seed,
     row_permutation_test,
+    selected_bank_gate,
     semantic_schedule,
     shell_mean_spearman,
 )
@@ -113,3 +116,45 @@ def test_frozen_candidate_stream_reproduces_and_has_no_historical_overlap() -> N
     assert manifest["classification"] == ("Q2_OOS_FRESH_CONTROLLER_CANDIDATE_STREAM_ALGEBRAIC_FAIL")
     assert manifest["semantic_outcomes"] == 0
     assert manifest["correctness_inspected"] is False
+
+
+def test_v1_gate_metrics_match_closeout_and_projected_space() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design"
+    manifest = json.loads((review / "CANDIDATE_BANK_MANIFEST.json").read_text())
+    closeout = json.loads((review / "CANDIDATE_STREAM_CLOSEOUT.json").read_text())
+    coefficients = np.asarray([row["coefficients"] for row in manifest["candidates"]])
+    basis = np.load(
+        ROOT / "review/q2_v4_spark1_presemantic/SPARK1_SUBSPACE_Q.npy",
+        allow_pickle=False,
+    )
+    vectors = coefficients @ basis.T
+    coefficient_metrics = coefficient_bank_diagnostics(coefficients)
+    coefficient_singular = np.linalg.svd(coefficients, compute_uv=False)
+    projected_singular = np.linalg.svd(vectors, compute_uv=False)[:8]
+    frozen = closeout["candidate_stream"]
+    assert coefficient_metrics["count"] == 19
+    assert coefficient_metrics["dimension"] == 8
+    for name in (
+        "rank",
+        "effective_rank",
+        "condition_number",
+        "maximum_absolute_pair_cosine",
+    ):
+        assert coefficient_metrics[name] == frozen[name]
+    assert np.max(np.abs(coefficient_singular - projected_singular)) < 1e-12
+    assert candidate_stream_gate(coefficients)["pass"] is False
+
+
+def test_selected_bank_gate_uses_fresh_by_reference_cross_block() -> None:
+    safe = json.loads(
+        (
+            ROOT
+            / "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json"
+        ).read_text()
+    )
+    reference = np.asarray([row["coefficients"] for row in safe["directions"]])
+    fresh = reference[:10].copy()
+    result = selected_bank_gate(fresh, reference)
+    assert result["metrics"]["count"] == 10
+    assert result["metrics"]["a0_q90_minus_q10"] > 0.20
+    assert result["checks"]["shell_amplitude_cv_at_most_0_03"] is True

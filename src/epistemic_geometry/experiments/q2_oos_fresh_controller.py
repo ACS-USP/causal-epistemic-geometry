@@ -11,6 +11,7 @@ from __future__ import annotations
 import hashlib
 import math
 from collections.abc import Sequence
+from typing import Any
 
 import numpy as np
 
@@ -29,6 +30,131 @@ QAP_MAPS = 50_000
 BOOTSTRAP_RESAMPLES = 10_000
 K_CANDIDATES = (6, 8, 10, 12, 16)
 SEED_PREFIX = "Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V1|"
+
+
+def unit_rows(values: np.ndarray) -> np.ndarray:
+    """Return finite row-normalized vectors."""
+
+    array = np.asarray(values, dtype=np.float64)
+    if array.ndim != 2 or array.shape[0] < 2 or array.shape[1] < 2:
+        raise ValueError("values must be a nontrivial two-dimensional matrix")
+    norms = np.linalg.norm(array, axis=1)
+    if np.any(~np.isfinite(array)) or np.any(norms <= 0.0):
+        raise ValueError("rows must be finite and nonzero")
+    return array / norms[:, None]
+
+
+def coefficient_bank_diagnostics(
+    coefficients: np.ndarray,
+    *,
+    rank_tolerance: float = 1e-10,
+) -> dict[str, float | int]:
+    """Reproduce the frozen coefficient-bank diagnostics on rows × dimensions.
+
+    Entropy effective rank and stable rank use squared singular values as the
+    energy distribution. The condition number is ``s_max / s_min`` over all
+    eight retained coefficient dimensions.
+    """
+
+    values = np.asarray(coefficients, dtype=np.float64)
+    if values.ndim != 2 or values.shape[0] < 2 or values.shape[1] < 2:
+        raise ValueError("coefficients must be a nontrivial two-dimensional matrix")
+    if np.any(~np.isfinite(values)) or np.any(np.linalg.norm(values, axis=1) <= 0.0):
+        raise ValueError("coefficient rows must be finite and nonzero")
+    singular = np.linalg.svd(values, compute_uv=False)
+    energy = np.square(singular)
+    probabilities = energy / np.sum(energy)
+    gram = values @ values.T
+    upper = gram[np.triu_indices(len(values), 1)]
+    return {
+        "count": int(len(values)),
+        "dimension": int(values.shape[1]),
+        "rank": int(np.linalg.matrix_rank(values, tol=rank_tolerance)),
+        "effective_rank": float(np.exp(-np.sum(probabilities * np.log(probabilities)))),
+        "stable_rank": float(np.sum(energy) / energy[0]),
+        "condition_number": float(singular[0] / singular[-1]),
+        "maximum_absolute_pair_cosine": float(np.max(np.abs(upper))),
+        "maximum_unit_norm_error": float(
+            np.max(np.abs(np.linalg.norm(values, axis=1) - 1.0))
+        ),
+    }
+
+
+def candidate_stream_gate(coefficients: np.ndarray) -> dict[str, Any]:
+    """Apply the immutable V1 full-candidate-stream algebraic gate."""
+
+    metrics = coefficient_bank_diagnostics(coefficients)
+    checks = {
+        "rank_8": metrics["rank"] == 8,
+        "effective_rank_at_least_6": metrics["effective_rank"] >= 6.0,
+        "condition_number_at_most_3": metrics["condition_number"] <= 3.0,
+        "maximum_absolute_pair_cosine_below_0_98": (
+            metrics["maximum_absolute_pair_cosine"] < 0.98
+        ),
+        "unit_norm_error_at_most_1e_12": metrics["maximum_unit_norm_error"] <= 1e-12,
+    }
+    return {"metrics": metrics, "checks": checks, "pass": bool(all(checks.values()))}
+
+
+def cross_block_diagnostics(
+    fresh_coefficients: np.ndarray,
+    reference_coefficients: np.ndarray,
+) -> dict[str, float]:
+    """Return inference-facing diagnostics for one fresh × reference A0 block."""
+
+    fresh = unit_rows(fresh_coefficients)
+    reference = unit_rows(reference_coefficients)
+    a0 = angular_cross_block(fresh, reference)
+    flat = a0.reshape(-1)
+    centered_rows = a0 - np.mean(a0, axis=1, keepdims=True)
+    row_distances = np.linalg.norm(
+        centered_rows[:, None, :] - centered_rows[None, :, :], axis=2
+    )
+    row_upper = row_distances[np.triu_indices(len(fresh), 1)]
+    leverage = np.diag(
+        fresh @ np.linalg.pinv(fresh.T @ fresh, hermitian=True) @ fresh.T
+    )
+    return {
+        "a0_q90_minus_q10": float(np.quantile(flat, 0.90) - np.quantile(flat, 0.10)),
+        "row_diversity_mean": float(np.mean(row_upper)),
+        "row_diversity_min": float(np.min(row_upper)),
+        "maximum_leverage": float(np.max(leverage)),
+    }
+
+
+def selected_bank_gate(
+    coefficients: np.ndarray,
+    reference_coefficients: np.ndarray,
+    *,
+    shell_amplitude_cv: float = 0.0,
+) -> dict[str, Any]:
+    """Apply the frozen V1 selected-K identifiability gate.
+
+    ``shell_amplitude_cv`` is a future implementation measurement. Passing
+    zero is appropriate only for model-free simulations conditional on exact
+    target amplitude; future qualification must supply the observed value.
+    """
+
+    metrics = coefficient_bank_diagnostics(coefficients)
+    cross = cross_block_diagnostics(coefficients, reference_coefficients)
+    checks = {
+        "count_10": metrics["count"] == 10,
+        "rank_8": metrics["rank"] == 8,
+        "effective_rank_at_least_4_8": metrics["effective_rank"] >= 4.8,
+        "condition_number_at_most_10": metrics["condition_number"] <= 10.0,
+        "maximum_absolute_pair_cosine_below_0_98": (
+            metrics["maximum_absolute_pair_cosine"] < 0.98
+        ),
+        "cross_block_A0_q90_minus_q10_at_least_0_20": (
+            cross["a0_q90_minus_q10"] >= 0.20
+        ),
+        "shell_amplitude_cv_at_most_0_03": shell_amplitude_cv <= 0.03,
+    }
+    return {
+        "metrics": {**metrics, **cross, "shell_amplitude_cv": float(shell_amplitude_cv)},
+        "checks": checks,
+        "pass": bool(all(checks.values())),
+    }
 
 
 def protocol_seed(namespace: str, source_commit: str) -> int:
@@ -250,6 +376,9 @@ __all__ = [
     "SHELLS",
     "SHELL_TARGETS",
     "angular_cross_block",
+    "candidate_stream_gate",
+    "coefficient_bank_diagnostics",
+    "cross_block_diagnostics",
     "cross_block_shape",
     "fresh_candidate_bank",
     "fresh_row_permutations",
@@ -257,7 +386,9 @@ __all__ = [
     "leave_one_reference_out",
     "protocol_seed",
     "row_permutation_test",
+    "selected_bank_gate",
     "semantic_schedule",
     "shell_mean_spearman",
     "spearman_flat",
+    "unit_rows",
 ]
