@@ -1,0 +1,16 @@
+{
+  "bootstrap_slope_q025": 0.4401735006736926,
+  "bootstrap_slope_q975": 2.445950393872691,
+  "bootstrap_valid_replicates": 9997,
+  "centroid_permutation_p": 0.17848215178482152,
+  "coordinate_mean": -0.1307119393926163,
+  "coordinate_standard_deviation": 0.35554808270852256,
+  "historical_n": 40,
+  "interpretation": "small presemantic sample; weak/moderate sensitivity scenarios only; not a controller-selection model",
+  "logistic_intercept": 1.551151026053978,
+  "logistic_slope": 1.1622402176332354,
+  "safe_count": 31,
+  "safe_rate": 0.775,
+  "selected_coordinate_zero_based": 4,
+  "selection_reason": "largest absolute historical coordinate point-biserial association"
+}

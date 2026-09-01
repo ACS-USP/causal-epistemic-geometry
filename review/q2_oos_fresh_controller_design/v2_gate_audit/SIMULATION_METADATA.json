@@ -1,0 +1,43 @@
+{
+  "algebraic_replicates_per_count": 100000,
+  "candidate_counts": [
+    12,
+    16,
+    19,
+    22,
+    24,
+    28,
+    32,
+    36,
+    40,
+    48,
+    56,
+    64
+  ],
+  "correctness_inspected": false,
+  "historical_v1_commit": "249543e044f3d07713ac90dc6b68988e237f5119",
+  "model_inference": 0,
+  "new_controller_stream_generated": false,
+  "planning_permutations": 999,
+  "power_replicates": 1200,
+  "precheck_sha256": "e43852f02affba2c67e0f70707df4632ee548b2d80f2e1e80e8b4ad48fc54b16",
+  "safety_probability_grid": [
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.775,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "schema_version": "q2-oos-v2-candidate-gate-audit-results-v1",
+  "selected_replicates_per_cell": 20000,
+  "semantic_outcomes": 0,
+  "source_files": {
+    "historical_safety_report": "62328ee097d4172bf3fbc4038dd49bb34ffff4405edd0d08c09b149c96773c08",
+    "reference_safe_bank": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447",
+    "v1_closeout": "72c02333e53ce23b6de5c79cfdfda759e457c4f89c581134e37722b640ebddac",
+    "v1_manifest": "61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b"
+  }
+}

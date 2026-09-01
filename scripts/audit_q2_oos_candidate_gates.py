@@ -200,8 +200,7 @@ def algebraic_calibration(
                 ),
                 "probability_any_candidate_gate_failure": float(np.mean(~passed)),
                 "interpretation": (
-                    "model-free position of the immutable V1 stream; "
-                    "not a semantic outcome"
+                    "model-free position of the immutable V1 stream; not a semantic outcome"
                 ),
             }
     return rows, v1_percentiles
@@ -361,6 +360,12 @@ def selected_bank_calibration(
                 if reserve_successes:
                     metrics = selected_metrics(selected, reference)
                     bank_pass = selected_pass(metrics)
+                    inference_aligned_pass = (
+                        (metrics["rank"] == 8)
+                        & (metrics["effective_rank"] >= 4.8)
+                        & (metrics["maximum_absolute_pair_cosine"] < 0.98)
+                        & (metrics["a0_q90_minus_q10"] >= 0.20)
+                    )
                     full_for_eligible = full_pass[eligible]
                 else:
                     metrics = {
@@ -374,9 +379,11 @@ def selected_bank_calibration(
                         )
                     }
                     bank_pass = np.asarray([], dtype=bool)
+                    inference_aligned_pass = np.asarray([], dtype=bool)
                     full_for_eligible = np.asarray([], dtype=bool)
                 joint_pass = int(np.sum(bank_pass & full_for_eligible))
                 bank_successes = int(np.sum(bank_pass))
+                inference_successes = int(np.sum(inference_aligned_pass))
                 reserve_low, reserve_high = wilson(reserve_successes, replicates)
                 unconditional_low, unconditional_high = wilson(bank_successes, replicates)
                 rows.append(
@@ -398,6 +405,20 @@ def selected_bank_calibration(
                         "unconditional_selected_ci95_low": unconditional_low,
                         "unconditional_selected_ci95_high": unconditional_high,
                         "candidate_and_selected_joint_probability": joint_pass / replicates,
+                        "candidate_gate_and_reserve_probability": float(
+                            np.sum(full_for_eligible) / replicates
+                        ),
+                        "inference_aligned_selected_probability_given_reserve": (
+                            inference_successes / reserve_successes
+                            if reserve_successes
+                            else float("nan")
+                        ),
+                        "unconditional_inference_aligned_qualification_probability": (
+                            inference_successes / replicates
+                        ),
+                        "candidate_and_inference_aligned_joint_probability": float(
+                            np.sum(inference_aligned_pass & full_for_eligible) / replicates
+                        ),
                         "selected_pass_given_full_candidate_failure": float(
                             np.mean(bank_pass[~full_for_eligible])
                         )
@@ -437,6 +458,12 @@ def selected_bank_calibration(
         adversarial = values[np.arange(replicates)[:, None], adversarial_indices]
         adversarial_metrics = selected_metrics(adversarial, reference)
         adversarial_pass = selected_pass(adversarial_metrics)
+        adversarial_inference_pass = (
+            (adversarial_metrics["rank"] == 8)
+            & (adversarial_metrics["effective_rank"] >= 4.8)
+            & (adversarial_metrics["maximum_absolute_pair_cosine"] < 0.98)
+            & (adversarial_metrics["a0_q90_minus_q10"] >= 0.20)
+        )
         rows.append(
             {
                 "candidate_count": n,
@@ -458,6 +485,16 @@ def selected_bank_calibration(
                 )[1],
                 "candidate_and_selected_joint_probability": float(
                     np.mean(adversarial_pass & full_pass)
+                ),
+                "candidate_gate_and_reserve_probability": float(np.mean(full_pass)),
+                "inference_aligned_selected_probability_given_reserve": float(
+                    np.mean(adversarial_inference_pass)
+                ),
+                "unconditional_inference_aligned_qualification_probability": float(
+                    np.mean(adversarial_inference_pass)
+                ),
+                "candidate_and_inference_aligned_joint_probability": float(
+                    np.mean(adversarial_inference_pass & full_pass)
                 ),
                 "selected_pass_given_full_candidate_failure": float(
                     np.mean(adversarial_pass[~full_pass])
@@ -627,6 +664,20 @@ def power_calibration(
             "selected-bank condition/effective rank add power information after cross-block spread"
         ),
     }
+    observed_rho = np.asarray([row["observed_aggregate_rho"] for row in rows])
+    standardized_rho = (observed_rho - np.mean(observed_rho)) / np.std(observed_rho)
+    linear_beta = np.linalg.lstsq(design, standardized_rho, rcond=None)[0]
+    summary["observed_rho_quantiles"] = {
+        name: float(value)
+        for name, value in zip(
+            ("q025", "q25", "q50", "q75", "q975"),
+            np.quantile(observed_rho, (0.025, 0.25, 0.50, 0.75, 0.975)),
+            strict=True,
+        )
+    }
+    summary["standardized_linear_coefficients_for_observed_rho"] = {
+        name: float(value) for name, value in zip(predictor_names, linear_beta[1:], strict=True)
+    }
     return rows, summary
 
 
@@ -670,6 +721,29 @@ def main() -> None:
         }
         for n in COUNTS
     ]
+    algebraic_by_n = {row["candidate_count"]: row for row in algebraic_rows}
+    joint_rows = []
+    for n in COUNTS:
+        algebraic_probability = algebraic_by_n[n]["joint_candidate_gate_probability"]
+        for p_safe in P_SAFE:
+            reserve_probability = binomial_tail(n, p_safe)
+            joint_rows.append(
+                {
+                    "candidate_count": n,
+                    "p_safe": p_safe,
+                    "candidate_algebraic_probability": algebraic_probability,
+                    "reserve_probability": reserve_probability,
+                    "independence_product_estimate": (algebraic_probability * reserve_probability),
+                    "frechet_lower_bound": max(
+                        0.0, algebraic_probability + reserve_probability - 1.0
+                    ),
+                    "frechet_upper_bound": min(algebraic_probability, reserve_probability),
+                    "assumption": (
+                        "product assumes independence; Frechet bounds require no "
+                        "algebraic-safety dependence assumption"
+                    ),
+                }
+            )
     selected_rows = selected_bank_calibration(
         selected_replicates,
         precheck["seeds"]["SELECTED_BANK"],
@@ -687,6 +761,7 @@ def main() -> None:
     write_json(OUT / "V1_REALIZED_PERCENTILES.json", v1_percentiles)
     write_json(OUT / "HISTORICAL_SAFETY_GEOMETRY.json", safety_model)
     write_csv(OUT / "SAFETY_RESERVE.csv", reserve_rows)
+    write_csv(OUT / "JOINT_ALGEBRAIC_SAFETY_FEASIBILITY.csv", joint_rows)
     write_csv(OUT / "SELECTED_BANK_CALIBRATION.csv", selected_rows)
     write_csv(OUT / "CROSS_BLOCK_POWER.csv", power_rows)
     write_json(OUT / "CROSS_BLOCK_POWER_SUMMARY.json", power_summary)

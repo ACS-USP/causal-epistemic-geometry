@@ -158,3 +158,16 @@ def test_selected_bank_gate_uses_fresh_by_reference_cross_block() -> None:
     assert result["metrics"]["count"] == 10
     assert result["metrics"]["a0_q90_minus_q10"] > 0.20
     assert result["checks"]["shell_amplitude_cv_at_most_0_03"] is True
+
+
+def test_v2_gate_audit_does_not_materialize_a_controller_stream() -> None:
+    audit = ROOT / "review/q2_oos_fresh_controller_design/v2_gate_audit"
+    draft = json.loads((audit / "V2_PROTOCOL_DRAFT.json").read_text())
+    zero = json.loads((audit / "ZERO_INFERENCE_AUDIT.json").read_text())
+    assert draft["candidate_count"] == 24
+    assert draft["target_K"] == 10
+    assert draft["generation"]["actual_seed"] == "NOT_DERIVED_IN_THIS_AUDIT"
+    assert draft["future_semantic"]["authorized_by_this_draft"] is False
+    assert zero["new_controller_stream_generated"] is False
+    assert zero["model_inference"] == 0
+    assert not list(audit.rglob("*.npy"))

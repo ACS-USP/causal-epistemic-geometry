@@ -290,6 +290,37 @@ instrument_history:
     historical_q2: Q2_V4_1_G2_UNCHANGED
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_OOS_V2_CANDIDATE_GATE_ADEQUACY_AUDIT
+    status: Q2_OOS_V2_INFERENCE_ALIGNED_DESIGN_READY_FOR_PRINCIPAL_REVIEW
+    conclusion: >-
+      A committed CPU-only audit found that V1 n=19 had 0.47182 probability
+      of passing its full-stream algebraic gate. Larger streams improve that
+      probability, but the selected-K condition-number gate independently
+      caps qualification near 0.73 and showed no material relationship with
+      synthetic K-by-31 power after cross-block diagnostics. The prospective
+      recommendation is a wholly new, exactly-once n=24 stream with K=10 and
+      inference-aligned selected-bank gates. No V2 stream was generated.
+    branch: research/q2-fresh-controller-oos-design
+    historical_v1_commit: 249543e044f3d07713ac90dc6b68988e237f5119
+    audit_precheck_commit: c871486
+    artifact: review/q2_oos_fresh_controller_design/v2_gate_audit/Q2_OOS_CANDIDATE_GATE_ADEQUACY_REVIEW.md
+    protocol_draft: review/q2_oos_fresh_controller_design/v2_gate_audit/V2_PROTOCOL_DRAFT.json
+    target_k: 10
+    recommended_candidate_count: 24
+    recommended_route: ROUTE_C_INFERENCE_ALIGNED_GATES
+    new_controller_stream_generated: false
+    v1_vectors_altered: false
+    model_inference: 0
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    runpod_used: false
+    livecodebench_raw_outputs_inspected: false
+    q3: NOT_RUN
+    historical_q2: Q2_V4_1_G2_UNCHANGED
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY
     conclusion: >-

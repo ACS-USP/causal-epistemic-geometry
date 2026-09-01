@@ -1,0 +1,27 @@
+{
+  "schema_version": "q2-oos-v2-gate-audit-zero-inference-v1",
+  "classification": "Q2_OOS_V2_INFERENCE_ALIGNED_DESIGN_READY_FOR_PRINCIPAL_REVIEW",
+  "historical_v1_classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+  "historical_v1_commit": "249543e044f3d07713ac90dc6b68988e237f5119",
+  "historical_v1_vectors_altered": false,
+  "new_controller_stream_generated": false,
+  "new_controller_vectors": 0,
+  "model_inference": 0,
+  "safety_shell_trajectories": 0,
+  "A2_probe_captures": 0,
+  "semantic_trajectories": 0,
+  "correctness_inspected": false,
+  "Q2_V4_1_item_level_semantic_outcomes_accessed": false,
+  "LiveCodeBench_raw_outputs_inspected": false,
+  "Spark1_used": false,
+  "Spark2_used": false,
+  "RunPod_used": false,
+  "Q3": "NOT_RUN",
+  "audit_inputs": [
+    "public V1 coefficient manifest and closeout",
+    "public frozen 31-reference coefficient manifest",
+    "historical presemantic V4 safety labels and implemented amplitudes",
+    "closed aggregate Q2 V4.1 A0 rho as declared planning input"
+  ],
+  "forbidden_inputs_accessed": []
+}

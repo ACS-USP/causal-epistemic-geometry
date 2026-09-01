@@ -1,0 +1,142 @@
+{
+  "schema_version": "q2-oos-fresh-controller-v2-inference-aligned-draft-v1",
+  "status": "DRAFT_AWAITING_PRINCIPAL_RESEARCHER_REVIEW",
+  "route": "ROUTE_C_INFERENCE_ALIGNED_GATES",
+  "historical_v1": {
+    "commit": "249543e044f3d07713ac90dc6b68988e237f5119",
+    "classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+    "candidate_manifest_sha256": "61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b",
+    "candidate_ids": [
+      "Q2_OOS_DIRECTION_00",
+      "Q2_OOS_DIRECTION_01",
+      "Q2_OOS_DIRECTION_02",
+      "Q2_OOS_DIRECTION_03",
+      "Q2_OOS_DIRECTION_04",
+      "Q2_OOS_DIRECTION_05",
+      "Q2_OOS_DIRECTION_06",
+      "Q2_OOS_DIRECTION_07",
+      "Q2_OOS_DIRECTION_08",
+      "Q2_OOS_DIRECTION_09",
+      "Q2_OOS_DIRECTION_10",
+      "Q2_OOS_DIRECTION_11",
+      "Q2_OOS_DIRECTION_12",
+      "Q2_OOS_DIRECTION_13",
+      "Q2_OOS_DIRECTION_14",
+      "Q2_OOS_DIRECTION_15",
+      "Q2_OOS_DIRECTION_16",
+      "Q2_OOS_DIRECTION_17",
+      "Q2_OOS_DIRECTION_18"
+    ],
+    "status_of_every_candidate": [
+      "HISTORICAL_FAILED_STREAM",
+      "EXCLUDED_FROM_V2",
+      "NEVER_SEMANTICALLY_EXECUTED"
+    ],
+    "mutable": false
+  },
+  "scientific_question": "Does the closed Q2 V4.1 A0 cross-block association replicate for ten entirely fresh safety-qualified controller identities from one new random stream in the same frozen rank-8 subspace?",
+  "target_K": 10,
+  "candidate_count": 24,
+  "candidate_count_rationale": {
+    "minimum_planning_safety_rate": 0.6,
+    "probability_at_least_10_safe": 0.978341948670397,
+    "independent_unconditional_inference_aligned_qualification": 0.9523,
+    "moderate_axis_association_unconditional_inference_aligned_qualification": 0.95485,
+    "selection_rule": "smallest audited n with at least 0.95 unconditional inference-aligned qualification under p_safe=0.60 in both independent and moderate historical-axis sensitivity scenarios"
+  },
+  "generation": {
+    "namespace": "Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V2",
+    "rng": "NumPy PCG64DXSM",
+    "draw": "g~N(0,I_8); c=g/||g||; v=Qc",
+    "basis": "exact frozen Q2 V4.1 rank-8 SPARK1_SUBSPACE_Q.npy",
+    "seed_rule": "big-endian first 128 bits SHA256('Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V2|' + FUTURE_PRELOCK_COMMIT)",
+    "actual_seed": "NOT_DERIVED_IN_THIS_AUDIT",
+    "generate_once": true,
+    "redraw": "FORBIDDEN",
+    "exclude_v1_exact_coefficients_ids_and_vector_hashes": true,
+    "public_commit_before_model_use": true
+  },
+  "candidate_stream_gate": {
+    "finite": true,
+    "unit_norm_error_max": 1e-12,
+    "rank": 8,
+    "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+    "historical_exact_overlap": "FORBIDDEN",
+    "entropy_effective_rank": "DESCRIPTIVE_ONLY",
+    "condition_number": "DESCRIPTIVE_ONLY",
+    "reason": "unused reserve geometry is not the inferential object; only gross corruption, rank loss, near-duplication, or historical overlap stops the stream"
+  },
+  "safety": {
+    "backend": "Spark 1 only after separate principal authorization",
+    "all_24_candidates_tested": true,
+    "selection": "first 10 passing both frozen MEDIUM and STRONG safety shells in immutable generation order",
+    "minimum_safe": 10,
+    "additional_candidates": "FORBIDDEN",
+    "redraw": "FORBIDDEN",
+    "inherits_v1_safety_gate_without_change": true,
+    "planned_candidate_shell_item_rollout_trajectories": 1152
+  },
+  "selected_bank_gate": {
+    "count": 10,
+    "rank": 8,
+    "entropy_effective_rank_min": 4.8,
+    "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+    "cross_block_A0_q90_minus_q10_min": 0.2,
+    "shell_amplitude_cv_max": 0.03,
+    "condition_number": "DESCRIPTIVE_ONLY_NOT_A_GATE",
+    "cross_block_row_diversity": "DESCRIPTIVE_REQUIRED_REPORT",
+    "leave_one_fresh_controller_geometry": "DESCRIPTIVE_REQUIRED_REPORT",
+    "predicted_power_gate": {
+      "effect": "50% of closed Q2 V4.1 A0 aggregate rho",
+      "synthetic_panels": 2000,
+      "planning_permutations": 999,
+      "permutation_power_min": 0.8,
+      "all_LOFO_positive_rate_min": 0.8,
+      "seed_rule": "first128bits SHA256('Q2-OOS-V2-SELECTED-POWER|' + FUTURE_PRELOCK_COMMIT)"
+    }
+  },
+  "presemantic_label_free": {
+    "A0": "primary and fully precomputed from selected coefficients against the frozen 31-reference bank",
+    "A1": "secondary using the frozen V4.1 whitening fit",
+    "A2": "secondary fresh label-free capture; pre-semantic-outcome but not pre-intervention",
+    "A1_A2_qualification": "inherit V1 lock; failure stops before semantic execution"
+  },
+  "future_semantic": {
+    "authorized_by_this_draft": false,
+    "fresh_controllers": 10,
+    "reference_controllers_rerun": 0,
+    "baseline_rerun": false,
+    "shells": 2,
+    "items": 300,
+    "rollouts": 2,
+    "logical_trajectories": 12000,
+    "primary_metric": "A0",
+    "statistic": "equal-weight mean of MEDIUM and STRONG fresh-by-reference Spearman correlations",
+    "permutation": "50,000 complete fresh-row maps with frozen reference columns",
+    "bootstrap": "10,000 item-cluster resamples",
+    "stability": "all leave-one-fresh-controller aggregate A0 rho values strictly positive"
+  },
+  "planning_runtime": {
+    "safety_gpu_hours_linear_from_v4_40_candidate_run": 1.5267696481606668,
+    "semantic_gpu_hours_linear_from_q2_v4_1": 27.4018783902909,
+    "A2_capture": "requires a future outcome-free throughput preflight; not estimated from an absent canonical elapsed-time artifact"
+  },
+  "terminal_states": {
+    "Q2_OOS_V2_CANDIDATE_STREAM_CORRUPT_OR_OVERLAPPING": "basic stream integrity gate fails",
+    "Q2_OOS_V2_SAFE_BANK_INSUFFICIENT": "fewer than 10 of 24 pass both safety shells",
+    "Q2_OOS_V2_SELECTED_BANK_NOT_QUALIFIED": "selected bank inference-aligned geometry or predicted-power gate fails",
+    "Q2_OOS_V2_LABEL_FREE_INSTRUMENT_NOT_QUALIFIED": "A1 or A2 qualification fails",
+    "Q2_OOS_V2_READY_FOR_PREDICTION_LOCK": "all presemantic gates pass; semantic execution still requires separate authorization",
+    "Q2_OOS_V2_EXECUTION_INCOMPLETE": "future authorized execution cannot complete its frozen schedule"
+  },
+  "firewall": {
+    "new_controller_stream_generated": false,
+    "model_inference": 0,
+    "semantic_trajectories": 0,
+    "correctness_inspected": false,
+    "Spark1_used": false,
+    "Spark2_used": false,
+    "RunPod_used": false,
+    "Q3": "NOT_RUN"
+  }
+}
