@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "high_level_resolution": "AUDIT_IMPLEMENTATION_NON_EQUIVALENT",
+  "primary_source_hash_matches_lock": true,
+  "condition_identity_used_by_primary": false,
+  "condition_identity_used_by_historical_audit": false,
+  "differences": [
+    {
+      "stage": "REPAIRED_TERMINAL_COMMITMENT_EXTRACTION",
+      "historical_audit_deviation": "REPAIR_SKIPPED_WHEN_DIRECT_PAYLOAD_EXISTED_BUT_WAS_NOT_LITERAL_EVALUABLE",
+      "realized_rows": 27,
+      "ruling": "PRIMARY_MATCHES_LOCK_AUDIT_DEVIATES"
+    },
+    {
+      "stage": "COMPETING_CANDIDATE_DETECTION",
+      "historical_audit_deviation": "UNSUPPORTED_TUPLE_ENTERED_REPAIR_COMPETITION",
+      "realized_rows": 1,
+      "ruling": "PRIMARY_MATCHES_LOCK_AUDIT_DEVIATES"
+    },
+    {
+      "stage": "SEMANTIC_EVALUABLE_DECISION",
+      "historical_audit_deviation": "FROZEN_MECHANICAL_REPETITION_PRECEDENCE_OMITTED",
+      "realized_rows": 1,
+      "ruling": "PRIMARY_MATCHES_LOCK_AUDIT_DEVIATES"
+    },
+    {
+      "stage": "EXPECTED_REFERENCE_TYPE_USAGE",
+      "historical_audit_deviation": "DIRECT_TYPE_MISMATCH_INVALIDATED_INSTEAD_OF_EVALUABLE_WRONG",
+      "realized_rows": 1,
+      "ruling": "PRIMARY_MATCHES_LOCK_AUDIT_DEVIATES"
+    }
+  ],
+  "correctness_used_for_adjudication": false,
+  "primary_results_modified": false
+}

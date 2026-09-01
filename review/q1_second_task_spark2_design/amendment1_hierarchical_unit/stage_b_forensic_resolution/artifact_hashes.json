@@ -1,0 +1,20 @@
+{
+  "artifacts": {
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/INDEPENDENT_STAGE_B_FORENSIC_AUDIT.json": "cace16bc125e8c97e7915b1261b5dc559d5077ff06e8e4fd2ca4365445b3b6b2",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/PRIMARY_STAGE_B_RESULTS.json": "63902efc6e7fd53e19baec1f12325943a99495adcb9589057f7716ff1eb586d1",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/DISAGREEMENT_CASES_SAFE.jsonl": "486c46ee66db5470eccfae93b9d53b8824079c88eb5f288e5dd7f004cfb036f3",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/FORENSIC_PARSER_RESOLUTION.json": "f2076b7910d3f4dbc69b0c4483f0974bcac5443c88a027198127b87017b5ccae",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/FORENSIC_PARSER_RESOLUTION_PROTOCOL.json": "4a1acf9ffadf0f41cba29a604a1ef090d8d272abca337fb38e0ad3ed54d326f7",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/INDEPENDENT_STAGE_B_FORENSIC_AUDIT_RESOLVED.json": "d88d7d00883b455d60e749a1f1f77406186803bc2ea84be09fce8a2a46fcd866",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/P2A_SENSITIVITY_DECOMPOSITION.json": "b631a4b3d6595d7b825f475f5e816e040fea368bfa0194f640dc0c9fd9a0cf34",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md": "64f82d871a4dedddbda1074c96b1e85907abba3e6172f7eb1c0651d63b09f57c",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/STATIC_SEMANTIC_DIFFERENCE_TABLE.json": "d815dd81db2a16dc06f8ed9a3e9eab7d71a1f76b564900a0606095076645ceb0",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/STATIC_SEMANTIC_DIFFERENCE_TABLE.md": "fb52d984cd7afdf937953efa745aed47df95d4cdfda2bf920effac5464ae9aa0",
+    "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/SYNTHETIC_FIXTURE_RESULTS.json": "5aafd01e0c82b320cc7ee090614ecf42b696447e303cb0aa1b7477a6b45cd6a8",
+    "scripts/audit_q1_second_task_stage_b_resolved.py": "950fa6beeeec9773fcde370579c76830dccd8900cf6232a4fbc124031e00e350",
+    "src/epistemic_geometry/experiments/q1_second_task_stage_b_forensic.py": "2824378f804bfd8073969c290af13304168efec0bf91559e113455fe17b1a964",
+    "tests/test_q1_second_task_stage_b_forensic.py": "e4b1c68c87c8ffd1975b4ea3723b22fc1099e04876df36c56791423f9648cdf4"
+  },
+  "classification": "Q1_SECOND_TASK_STAGE_B_FORENSIC_RESOLVED_PRIMARY_CONFIRMED",
+  "schema_version": 1
+}

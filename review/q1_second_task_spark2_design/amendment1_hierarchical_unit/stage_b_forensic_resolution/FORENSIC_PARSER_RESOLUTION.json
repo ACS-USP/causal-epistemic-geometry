@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "experiment": "Q1_SECOND_TASK_STAGE_B",
+  "historical_primary_classification": "Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY",
+  "historical_forensic_status_preserved": "Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT",
+  "resolution": "AUDIT_IMPLEMENTATION_NON_EQUIVALENT",
+  "resolved_forensic_status": "Q1_SECOND_TASK_STAGE_B_FORENSIC_RESOLVED_PRIMARY_CONFIRMED",
+  "raw_journal_sha256": "14ee3691de42c609dd4be1749ab4ea7d8b1c25b3cfbd47483423a83741fdb364",
+  "rows": 5720,
+  "historical_disagreement_rows": 30,
+  "root_causes": {
+    "AUDIT_SKIPPED_REPAIR_AFTER_DIRECT_PAYLOAD_FAILED_LITERAL_PARSE": 27,
+    "AUDIT_TREATED_UNSUPPORTED_TUPLE_AS_COMPETING_REPAIR_LITERAL": 1,
+    "AUDIT_OMITTED_FROZEN_MECHANICAL_REPETITION_PRECEDENCE": 1,
+    "AUDIT_USED_REFERENCE_TYPE_TO_INVALIDATE_DIRECT_EVALUABLE_WRONG_COMMITMENT": 1
+  },
+  "condition_counts": {
+    "BASELINE": 3,
+    "TEXTUAL_CAREFUL": 5,
+    "MEANINGFUL_FIXED_QWEN_L27_D75": 2,
+    "RANDOM_R0": 0,
+    "RANDOM_R1": 1,
+    "RANDOM_R2": 1,
+    "RANDOM_R3": 3,
+    "RANDOM_R4": 0,
+    "RANDOM_R5": 1,
+    "RANDOM_R6": 10,
+    "RANDOM_R7": 4
+  },
+  "condition_identity_used_by_either_parser": false,
+  "correctness_used_for_adjudication": false,
+  "primary_source_hash_matches_prospective_lock": true,
+  "primary_result": {
+    "C_meaningful": 0.006879844961240278,
+    "C_meaningful_ci": [-0.010640373434704862, 0.0244633273703041],
+    "delta_C_nullmean": 0.011801207513416796,
+    "delta_C_nullmean_ci": [-0.0005907824612403139, 0.02443910256410256]
+  },
+  "historical_audit_sensitivity": {
+    "delta_C_nullmean_ci_lower": 0.0016537622987477594,
+    "maximum_primary_audit_metric_difference": 0.019230769230769273,
+    "maximum_difference_field": "summaries.RANDOM_R6.semantic_evaluability",
+    "label": "POST_HOC_FORENSIC_SENSITIVITY_ONLY"
+  },
+  "corrected_independent_audit": {
+    "rows_recomputed": 5720,
+    "parser_disagreements": 0,
+    "maximum_primary_audit_metric_difference": 0.0,
+    "classification_agreement": true,
+    "artifact_sha256": "d88d7d00883b455d60e749a1f1f77406186803bc2ea84be09fce8a2a46fcd866"
+  },
+  "terminal_invariants_across_historical_implementations": {
+    "P1_fails": true,
+    "P2b_passes": true,
+    "split_half_A_fails": true,
+    "split_half_B_passes": true,
+    "commitment_safety_fails": true,
+    "semantic_evaluability_safety_fails": true,
+    "accuracy_safety_passes": true,
+    "terminal_class_negative": true,
+    "P2a_parser_sensitive": true
+  },
+  "primary_parser_modified": false,
+  "primary_parsed_records_modified": false,
+  "primary_results_modified": false,
+  "stage_b_rows_modified": 0,
+  "new_model_inference": 0,
+  "q2_inspected": false,
+  "q3_run": false
+}

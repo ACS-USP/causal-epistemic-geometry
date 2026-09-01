@@ -2244,7 +2244,7 @@ experiments:
 
   - id: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
     version: STAGE-B-CLOSEOUT-PRIMARY-CLASSIFICATION
-    stage: DEVELOPMENT_STAGE_B_CLOSED_FORENSIC_DISAGREEMENT
+    stage: DEVELOPMENT_STAGE_B_CLOSED_FORENSIC_RESOLVED
     question: >-
       Does the exact frozen Qwen L27-D75 activation controller produce safe,
       competence-adjusted, null-specific semantic error-profile
@@ -2261,9 +2261,11 @@ experiments:
       percentile intervals crossing zero; split-half A failed. The meaningful
       point estimate exceeded every null point estimate, but the full frozen
       scientific conjunction did not pass. Commitment-validity and semantic-
-      evaluability safety guards also failed. The independent audit agreed on
-      the terminal class but disagreed on 30 parser decisions and the P2a
-      constituent gate, requiring principal review without post-opening repair.
+      evaluability safety guards also failed. A frozen parser-equivalence
+      resolution traced all 30 historical disagreements to the independent
+      audit implementation. The corrected independent path matched all 5,720
+      parser decisions and every primary metric exactly; the historical first
+      audit and the primary result remain immutable.
     scientific_interpretation: >-
       The fixed controller did not satisfy the prospectively frozen
       LiveCodeBench transfer criterion at N=130/R=4. This bounds task transfer
@@ -2294,9 +2296,15 @@ experiments:
     split_half_A_pass: false
     split_half_B_pass: true
     safety_conjunction_pass: false
-    forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT
+    forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_RESOLVED_PRIMARY_CONFIRMED
+    historical_forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT
     forensic_classification_agreement: true
     forensic_parser_disagreement_rows: 30
+    corrected_forensic_parser_disagreement_rows: 0
+    corrected_forensic_maximum_metric_difference: 0.0
+    forensic_resolution: AUDIT_IMPLEMENTATION_NON_EQUIVALENT
+    forensic_resolution_artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md
+    forensic_resolution_protocol_commit: 38c35758db66d40e37bfd699d7910ccbe5d289cb
     raw_artifacts: PRIVATE_HASH_PINNED
     spark1_used: false
     spark2_used: true
@@ -2304,4 +2312,4 @@ experiments:
     q2_outputs_inspected: false
     q2_process_modified: false
     q3: NOT_RUN
-    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_DISAGREEMENT
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_RESOLUTION

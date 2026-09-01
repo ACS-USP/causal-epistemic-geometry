@@ -202,10 +202,11 @@ instrument_history:
       interval included zero, and split-half A failed. The meaningful
       condition also failed the frozen commitment-validity and semantic-
       evaluability guards. The primary terminal state is therefore no
-      null-specific complementarity. The independent audit returned the same
-      terminal class but disagreed with the primary parser on 30 rows and on
-      the P2a constituent gate, so the forensic state is disagreement pending
-      principal review; no post-opening repair or reclassification occurred.
+      null-specific complementarity. A frozen post-closeout parser-equivalence
+      audit traced all 30 historical disagreements to a non-equivalent
+      independent-audit implementation. The corrected independent path matched
+      all 5,720 parser decisions and every metric exactly; no primary result or
+      historical first-audit artifact was modified.
     branch: research/q1-second-task-spark2-design
     analysis_source_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
     artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md
@@ -231,8 +232,14 @@ instrument_history:
     safety_commitment_validity_pass: false
     safety_semantic_evaluability_pass: false
     safety_accuracy_pass: true
-    forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT
+    forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_RESOLVED_PRIMARY_CONFIRMED
+    historical_forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT
     forensic_parser_disagreement_rows: 30
+    corrected_forensic_parser_disagreement_rows: 0
+    corrected_forensic_maximum_metric_difference: 0.0
+    forensic_resolution: AUDIT_IMPLEMENTATION_NON_EQUIVALENT
+    forensic_resolution_artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md
+    forensic_resolution_protocol_commit: 38c35758db66d40e37bfd699d7910ccbe5d289cb
     forensic_classification_agreement: true
     historical_q1_confirmatory_result: UNCHANGED
     spark1_used: false
@@ -240,7 +247,7 @@ instrument_history:
     q2_outputs_inspected: false
     q2_process_modified: false
     q3: NOT_RUN
-    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_DISAGREEMENT
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_RESOLUTION
 
   - id: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
     status: Q2_V4_SAFE_BANK_INSUFFICIENT
