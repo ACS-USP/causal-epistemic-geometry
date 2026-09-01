@@ -321,6 +321,41 @@ instrument_history:
     historical_q2: Q2_V4_1_G2_UNCHANGED
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_OOS_V2_FINAL_REVIEWER_HARDENING
+    status: Q2_OOS_V2_FINAL_PROTOCOL_READY_FOR_PRELOCK
+    conclusion: >-
+      A prospectively frozen CPU-only comparison treated fresh-controller
+      identity, rather than dyads, as the external-validity unit. K=10, 12,
+      and 16 all met the frozen qualification, FPR, power, precision, and
+      projected-compute requirements. The rule selected K=16 with one future
+      n=34 stream: exact P(at least 16 safe | p=.60)=0.95556 and simulated
+      unconditional inference-aligned qualification 0.95278 under independent
+      safety and 0.95438 under moderate historical-axis sensitivity. The
+      per-bank synthetic-power check is mandatory diagnostic only, and a
+      fresh-by-fresh A0/Dshape secondary is fully predeclared. No V2 stream or
+      V2 seed was generated.
+    branch: research/q2-fresh-controller-oos-design
+    source_commit: ff7ede3785e3e4a203cf64f4260e7cc6b819918b
+    precheck_commit: 6e7a4356409a193212ed70ecc65ff0dd1144841d
+    artifact: review/q2_oos_fresh_controller_design/v2_reviewer_hardening/Q2_OOS_V2_FINAL_REVIEWER_HARDENING_REVIEW.md
+    protocol_draft: review/q2_oos_fresh_controller_design/v2_reviewer_hardening/FINAL_V2_PROTOCOL_DRAFT.json
+    target_k: 16
+    recommended_candidate_count: 34
+    predicted_power_gate: RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY
+    fresh_fresh_secondary: PREDECLARED_SECONDARY_CANNOT_RESCUE_PRIMARY
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    model_inference: 0
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    runpod_used: false
+    v1_changed: false
+    q3: NOT_RUN
+    historical_q2: Q2_V4_1_G2_UNCHANGED
+    next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY
     conclusion: >-

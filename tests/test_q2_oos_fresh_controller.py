@@ -194,3 +194,31 @@ def test_v2_gate_audit_does_not_materialize_a_controller_stream() -> None:
     assert zero["new_controller_stream_generated"] is False
     assert zero["model_inference"] == 0
     assert not list(audit.rglob("*.npy"))
+
+
+def test_v2_reviewer_hardening_selects_k16_without_materializing_stream() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design/v2_reviewer_hardening"
+    precheck = json.loads((review / "REVIEWER_HARDENING_PRECHECK.json").read_text())
+    summary = json.loads((review / "SIMULATION_SUMMARY.json").read_text())
+    protocol = json.loads((review / "FINAL_V2_PROTOCOL_DRAFT.json").read_text())
+    zero = json.loads((review / "ZERO_INFERENCE_AUDIT.json").read_text())
+    assert precheck["frozen_before_final_simulation"] is True
+    assert summary["recommended_K"] == 16
+    assert summary["recommended_candidate_count"] == 34
+    assert summary["predicted_power_gate_ruling"] == (
+        "RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY"
+    )
+    assert protocol["design"]["K"] == 16
+    assert protocol["design"]["candidate_count"] == 34
+    assert protocol["generation"]["actual_seed"] == "NOT_DERIVED_IN_THIS_REVIEW"
+    assert protocol["future_semantic"]["authorized_by_this_draft"] is False
+    assert zero["new_v2_stream_generated"] is False
+    assert zero["model_inference"] == 0
+    assert not list(review.rglob("*.npy"))
+
+
+def test_v2_reviewer_hardening_hash_manifest_matches() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design/v2_reviewer_hardening"
+    manifest = json.loads((review / "ARTIFACT_HASHES.json").read_text())
+    for name, expected in manifest["artifacts"].items():
+        assert hashlib.sha256((review / name).read_bytes()).hexdigest() == expected

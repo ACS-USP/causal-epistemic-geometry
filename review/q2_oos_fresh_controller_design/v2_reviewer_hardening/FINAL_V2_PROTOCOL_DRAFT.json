@@ -1,0 +1,237 @@
+{
+  "schema_version": "q2-oos-fresh-controller-v2-final-reviewer-hardened-draft-v1",
+  "status": "Q2_OOS_V2_FINAL_PROTOCOL_READY_FOR_PRELOCK",
+  "authorization": "DRAFT_ONLY_NO_CONTROLLER_GENERATION_OR_INFERENCE",
+  "route": "ROUTE_C_INFERENCE_ALIGNED_GATES",
+  "lineage": {
+    "historical_v1_commit": "249543e044f3d07713ac90dc6b68988e237f5119",
+    "historical_v1_classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+    "accepted_gate_audit_commit": "ff7ede3785e3e4a203cf64f4260e7cc6b819918b",
+    "accepted_gate_audit_classification": "Q2_OOS_V2_INFERENCE_ALIGNED_DESIGN_READY_FOR_PRINCIPAL_REVIEW",
+    "reviewer_hardening_precheck_commit": "6e7a4356409a193212ed70ecc65ff0dd1144841d",
+    "prior_K10_n24_draft": "SUPERSEDED_PROSPECTIVELY_BEFORE_ANY_V2_STREAM_OR_OUTCOME",
+    "history_mutable": false
+  },
+  "scientific_question": "Within the same frozen Qwen3-8B, CRUXEval, and rank-8 intervention laboratory, does the closed Q2 V4.1 A0 relational association generalize to prospectively sampled, safety-conditioned fresh controller identities?",
+  "design": {
+    "K": 16,
+    "candidate_count": 34,
+    "selection": "first 16 candidates passing both frozen safety shells in immutable generation order",
+    "fresh_controller_identity_is_external_validity_unit": true,
+    "reference_controllers": 31,
+    "fresh_by_reference_dyads_per_shell": 496,
+    "fresh_by_fresh_dyads_per_shell": 120
+  },
+  "generation": {
+    "namespace": "Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V2",
+    "rng": "NumPy PCG64DXSM",
+    "draw": "g~N(0,I_8); c=g/||g||; v=Qc",
+    "basis": "exact frozen Q2 V4.1 rank-8 SPARK1_SUBSPACE_Q.npy",
+    "seed_rule": "big-endian first 128 bits SHA256('Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V2|' + FUTURE_PRELOCK_COMMIT)",
+    "actual_seed": "NOT_DERIVED_IN_THIS_REVIEW",
+    "stream_materialized": false,
+    "generate_once": true,
+    "redraw": "FORBIDDEN",
+    "exclude_all_v1_candidate_ids_coefficients_and_vector_hashes": true,
+    "public_commit_before_model_use": true
+  },
+  "candidate_stream_integrity": {
+    "finite": true,
+    "unit_norm_error_max": 1e-12,
+    "rank": 8,
+    "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+    "historical_exact_overlap": "FORBIDDEN",
+    "entropy_effective_rank": "MANDATORY_DESCRIPTIVE_ONLY",
+    "condition_number": "MANDATORY_DESCRIPTIVE_ONLY",
+    "reason": "unused reserve geometry is not the inferential object; only corruption, rank loss, near-duplication, or historical overlap stops the stream"
+  },
+  "safety": {
+    "backend": "Spark 1 only after separate principal authorization",
+    "all_34_candidates_tested": true,
+    "shells": {
+      "MEDIUM": 0.25,
+      "STRONG": 0.5
+    },
+    "items": 12,
+    "rollouts": 2,
+    "selection": "first 16 passing both shells in generation order",
+    "minimum_safe": 16,
+    "candidate_requires_both_shells": true,
+    "inherits_exact_v1_v4_1_safety_gate": true,
+    "additional_candidates": "FORBIDDEN",
+    "redraw": "FORBIDDEN",
+    "planned_trajectories": 1632
+  },
+  "selected_bank_gate": {
+    "count": 16,
+    "rank": 8,
+    "entropy_effective_rank_min": 4.8,
+    "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+    "fresh_by_reference_A0_q90_minus_q10_min": 0.2,
+    "shell_amplitude_cv_max": 0.03,
+    "condition_number": "MANDATORY_DESCRIPTIVE_ONLY_NOT_A_GATE",
+    "cross_block_row_diversity": "MANDATORY_DESCRIPTIVE_ONLY",
+    "fresh_by_reference_geometry_LOFO": "MANDATORY_DESCRIPTIVE_ONLY",
+    "predicted_power": {
+      "status": "RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY",
+      "effect": "50% of closed Q2 V4.1 A0 aggregate rho",
+      "synthetic_panels": 2000,
+      "planning_permutations": 999,
+      "report": [
+        "permutation power",
+        "all-LOFO-positive rate"
+      ],
+      "terminal_threshold": "NONE",
+      "reason": "eligible banks were ceiling-saturated at the half-prior effect and the calculation depends on a synthetic response model; it did not protect a failure mode beyond the inference-aligned geometry gates"
+    }
+  },
+  "presemantic_label_free": {
+    "A0": "primary and fully precomputed from selected coefficients against the frozen 31-reference bank",
+    "A1": "secondary using the frozen V4.1 whitening fit",
+    "A2": "secondary fresh label-free capture; pre-semantic-outcome but not pre-intervention",
+    "A1_A2_qualification": "inherit V1 lock; failure stops before semantic execution",
+    "D2": "secondary according to the inherited frozen definitions"
+  },
+  "future_semantic": {
+    "authorized_by_this_draft": false,
+    "fresh_controllers": 16,
+    "reference_controllers_rerun": 0,
+    "baseline_rerun": false,
+    "shells": 2,
+    "items": 300,
+    "rollouts": 2,
+    "logical_trajectories": 19200
+  },
+  "fresh_old_primary": {
+    "geometry": "A0",
+    "semantic_endpoint": "Dshape",
+    "matrix_shape_per_shell": [
+      16,
+      31
+    ],
+    "statistic": "equal-weight mean of MEDIUM and STRONG complete fresh-by-reference Spearman correlations",
+    "permutation": {
+      "exchangeability_unit": "fresh controller identity",
+      "action": "P_pi A0 against fixed Dshape; all 31 reference columns remain fixed",
+      "same_fresh_row_map_across_shells": true,
+      "maps": 50000,
+      "identity_included": true,
+      "nonidentity_unique": 49999,
+      "p_value": "count(T_perm >= T_observed) / 50000",
+      "null": "conditional on the frozen reference bank, fresh-controller geometry-row labels are unrelated to the corresponding fresh-controller semantic rows, while preserving complete within-row, shared-reference, shared-item, and cross-shell dependence"
+    },
+    "bootstrap": {
+      "unit": "item",
+      "resamples": 10000,
+      "interval": "percentile [0.025,0.975]",
+      "cluster": "all fresh and reference controllers, both shells, and both rollout banks for each sampled item move together",
+      "negative_Dshape": "retained"
+    },
+    "stability": {
+      "leave_one_fresh_controller_out": "every aggregate A0 rho strictly positive",
+      "leave_one_reference_controller_out": "complete descriptive report, not a terminal requirement"
+    },
+    "pass_conjunction": {
+      "P1": "aggregate A0 rho > 0",
+      "P2": "one-sided fresh-row permutation p <= 0.05",
+      "P3": "item-bootstrap lower 95% bound > 0",
+      "P4": "every leave-one-fresh-controller aggregate A0 rho > 0"
+    },
+    "secondary_metrics": {
+      "metrics": [
+        "A1",
+        "A2"
+      ],
+      "multiplicity": "Holm correction across A1 and A2",
+      "A2_superiority_test": false
+    }
+  },
+  "fresh_fresh_secondary": {
+    "role": "SECONDARY_ONLY_CANNOT_RESCUE_OR_CHANGE_FRESH_OLD_PRIMARY_CLASSIFICATION",
+    "geometry": "A0",
+    "semantic_endpoint": "Dshape",
+    "dyads_per_shell": 120,
+    "statistic": "equal-weight mean across shells of strict-upper-triangle Spearman correlations",
+    "permutation": {
+      "exchangeability_unit": "fresh controller identity",
+      "action": "P_pi A0 P_pi^T against fixed Dshape",
+      "same_controller_map_across_shells": true,
+      "maps": 50000,
+      "identity_included": true,
+      "nonidentity_unique": 49999,
+      "p_value": "count(T_perm >= T_observed) / 50000"
+    },
+    "bootstrap": "same 10000 item-cluster resamples as the primary; all conditions and rollout banks for a sampled item move together",
+    "stability": "every leave-one-fresh-controller upper-triangle aggregate rho strictly positive",
+    "classification_precedence": [
+      "FRESH_FRESH_NO_ASSOCIATION if aggregate rho <= 0 OR controller-QAP p > 0.05",
+      "FRESH_FRESH_ASSOCIATION_POSITIVE if rho > 0, QAP p <= 0.05, item-bootstrap lower bound > 0, and every LOFO rho > 0",
+      "FRESH_FRESH_ASSOCIATION_INCOMPLETE otherwise when rho > 0 and QAP p <= 0.05 but bootstrap or LOFO support fails"
+    ],
+    "precheck_clarification": "The precedence above resolves an outcome-free logical overlap in the precheck wording; it does not use or alter any semantic result."
+  },
+  "radial_secondary": {
+    "baseline": "reuse sealed V4.1 baseline",
+    "statistic": "median over fresh controllers of Dshape(BASELINE,STRONG)-Dshape(BASELINE,MEDIUM)",
+    "positive_rule": "median > 0 AND exact one-sided sign p <= 0.05 (for K=16, at least 12 positives if there are no ties) AND item-bootstrap lower bound > 0",
+    "continuous_dose_response_claim": false
+  },
+  "terminal_states": {
+    "Q2_OOS_V2_CANDIDATE_STREAM_CORRUPT_OR_OVERLAPPING": "basic stream integrity fails",
+    "Q2_OOS_V2_SAFE_BANK_INSUFFICIENT": "fewer than 16 of 34 candidates pass both safety shells",
+    "Q2_OOS_V2_SELECTED_BANK_NOT_QUALIFIED": "selected-bank inference-aligned geometry or observed amplitude gate fails",
+    "Q2_OOS_V2_LABEL_FREE_INSTRUMENT_NOT_QUALIFIED": "A1 or A2 qualification fails",
+    "Q2_OOS_V2_READY_FOR_PREDICTION_LOCK": "all presemantic gates pass; semantic execution still requires separate authorization",
+    "Q2_OOS_V2_EXECUTION_INCOMPLETE": "future authorized semantic schedule cannot be completed",
+    "Q2_OOS_V2_A0_PASS": "fresh-old P1 AND P2 AND P3 AND P4",
+    "Q2_OOS_V2_ASSOCIATION_INCOMPLETE": "fresh-old aggregate A0 rho > 0 and at least one permutation/bootstrap/LOFO support requirement fails",
+    "Q2_OOS_V2_NO_REPLICATION": "fresh-old aggregate A0 rho <= 0 OR row-permutation p > 0.05"
+  },
+  "claim_boundary": {
+    "allowed_positive": "Within the same frozen Qwen3-8B, CRUXEval, and rank-8 intervention laboratory, the previously discovered A0 relational geometry generalizes to prospectively sampled, safety-conditioned fresh controller identities.",
+    "fresh_fresh_addition": "A positive secondary strengthens only the within-laboratory fresh-controller identity claim by placing both dyad endpoints in the new bank.",
+    "forbidden": [
+      "geometry generalizes across tasks",
+      "geometry generalizes across models",
+      "universal epistemic metric",
+      "precise pairwise prediction",
+      "global smoothness",
+      "Riemannian or manifold structure"
+    ]
+  },
+  "planning": {
+    "reserve_probability_at_p_safe_0_60": 0.9555588265670434,
+    "independent_unconditional_qualification": 0.952775,
+    "moderate_axis_unconditional_qualification": 0.954375,
+    "half_prior_power": 1.0,
+    "quarter_prior_power": 0.805,
+    "rho_0_15_power": 0.87,
+    "null_fpr": 0.07333333333333333,
+    "null_fpr_mc_se": 0.010642333355954383,
+    "half_prior_all_LOFO_positive_rate": 1.0,
+    "rho_0_15_all_LOFO_positive_rate": 0.9883333333333333,
+    "half_prior_sampling_95_width": 0.11823177393439177,
+    "rho_0_15_sampling_95_width": 0.11347682064250308,
+    "interpretation": "synthetic planning evidence only; null FPR uncertainty is reported and does not use semantic outcomes"
+  },
+  "projected_compute": {
+    "safety_trajectories": 1632,
+    "semantic_trajectories": 19200,
+    "safety_gpu_hours_linear_from_v4": 2.162923668227611,
+    "semantic_gpu_hours_linear_from_q2_v4_1": 43.84300542446544,
+    "safety_plus_semantic_gpu_hours": 46.00592909269305,
+    "A2_capture": "requires future outcome-free throughput preflight; no canonical elapsed-time estimate exists"
+  },
+  "firewall": {
+    "new_v2_stream_generated": false,
+    "actual_v2_seed_derived": false,
+    "model_inference": 0,
+    "semantic_trajectories": 0,
+    "correctness_inspected": false,
+    "Spark1_used": false,
+    "Spark2_used": false,
+    "RunPod_used": false,
+    "V1_changed": false,
+    "Q3": "NOT_RUN"
+  }
+}

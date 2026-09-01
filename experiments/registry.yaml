@@ -298,6 +298,52 @@ experiments:
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_OOS_V2_FINAL_REVIEWER_HARDENING
+    version: V2-FINAL-DESIGN-REVIEW-V1
+    stage: DEVELOPMENT_DESIGN_CPU_ONLY
+    question: >-
+      What fresh-controller identity count, reserve size, secondary new-new
+      validation, and power-gate policy make Route C maximally defensible
+      before one future V2 stream is committed?
+    instrument: >-
+      Forty thousand normalized-Gaussian streams per qualification cell,
+      independent and moderate historical-axis safety selection, and 600
+      dependence-aware synthetic N=300 panels per K/effect cell for K=10, 12,
+      and 16; no V2 controller stream or model output was generated.
+    model_policy: NO_MODEL_INFERENCE
+    status: DRAFT_READY_FOR_PRINCIPAL_PRELOCK_REVIEW
+    outcome: Q2_OOS_V2_FINAL_PROTOCOL_READY_FOR_PRELOCK
+    scientific_interpretation: >-
+      The prospectively frozen rule selected K=16 and n=34. This provides 16
+      independent fresh identities, 496 fresh-old and 120 fresh-fresh dyads
+      per shell, retains at least 0.95 qualification in both audited safety
+      scenarios, and improves small-effect planning power within a projected
+      46.01 Spark-1 safety-plus-semantic GPU-hour envelope. Synthetic per-bank
+      power is diagnostic rather than terminal; fresh-fresh A0 versus Dshape
+      is secondary and cannot rescue the primary.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: ff7ede3785e3e4a203cf64f4260e7cc6b819918b
+    precheck_commit: 6e7a4356409a193212ed70ecc65ff0dd1144841d
+    artifact: review/q2_oos_fresh_controller_design/v2_reviewer_hardening/Q2_OOS_V2_FINAL_REVIEWER_HARDENING_REVIEW.md
+    protocol_draft: review/q2_oos_fresh_controller_design/v2_reviewer_hardening/FINAL_V2_PROTOCOL_DRAFT.json
+    target_k: 16
+    candidate_count: 34
+    fresh_old_dyads_per_shell: 496
+    fresh_fresh_dyads_per_shell: 120
+    predicted_power_gate: RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY
