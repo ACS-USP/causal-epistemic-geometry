@@ -63,6 +63,7 @@ SELECTED = REVIEW / "V2_SELECTED_CONTROLLER_BANK.json"
 CANDIDATE_MANIFEST = V2_STREAM / "V2_CANDIDATE_BANK_MANIFEST.json"
 V2_FINAL_PROTOCOL = V2_STREAM / "V2_FINAL_PROTOCOL_LOCK.json"
 AMENDED_EXECUTION_LOCK = V2_STREAM / "Q2_OOS_V2_AMENDED_SEMANTIC_EXECUTION_LOCK.json"
+MODEL_MANIFEST = ROOT / "review/q2_v4_spark1_presemantic/EXACT_MODEL_MANIFEST.json"
 
 MODEL = "Qwen/Qwen3-8B"
 MODEL_REVISION = "b968826d9c46dd6066d109eabc6255188de91218"
@@ -90,6 +91,7 @@ EXPECTED_PREDICTION_MATRIX_SHA256 = (
     "b4ec00985e750c5bb8fd7fd49228267ec576bf6c2ad2ac3984f6f2390d927703"
 )
 EXPECTED_A2_RAW_MANIFEST_SHA256 = "54f4d2b8e3699d4d9bcce3b102a6ca23b6e01112a5b037cf00db6df8beb987d6"
+EXPECTED_MODEL_MANIFEST_SHA256 = "cedc88ba2f732baea6bb71f5e6d7f6bc3aad00d302c3456d208a21687c9e069c"
 PARSER_VERSION = "external-semantic-v3"
 KEY_FIELDS = ("item_id", "condition", "rollout_index")
 ROLL_OUTS = (0, 1)
@@ -125,6 +127,54 @@ def sha256_file(path: Path) -> str:
 
 def sha256_bytes(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
+
+
+def verify_qualified_model_bytes(model_path: str) -> dict[str, Any]:
+    """Verify every qualified model/tokenizer file before model construction."""
+
+    model_root = Path(model_path)
+    if sha256_file(MODEL_MANIFEST) != EXPECTED_MODEL_MANIFEST_SHA256:
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+    try:
+        manifest = read_json(MODEL_MANIFEST)
+        expected_rows = list(manifest["files"])
+        expected_paths = {str(row["path"]) for row in expected_rows}
+        expected_count = int(manifest["file_count"])
+        expected_total_bytes = int(manifest["total_bytes"])
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError) as exc:
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT") from exc
+    if manifest.get("model") != MODEL or manifest.get("revision") != MODEL_REVISION:
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+    if len(expected_paths) != len(expected_rows) or expected_count != len(expected_rows):
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+    observed_paths = {
+        str(path.relative_to(model_root))
+        for path in model_root.rglob("*")
+        if path.is_file() and ".cache" not in path.parts
+    }
+    if observed_paths != expected_paths:
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+    observed_total_bytes = 0
+    try:
+        for row in expected_rows:
+            path = model_root / str(row["path"])
+            observed_total_bytes += path.stat().st_size
+            if path.stat().st_size != int(row["bytes"]):
+                raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+            if sha256_file(path) != str(row["sha256"]):
+                raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+    except (KeyError, TypeError, ValueError, OSError) as exc:
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT") from exc
+    if observed_total_bytes != expected_total_bytes:
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+    return {
+        "manifest_sha256": EXPECTED_MODEL_MANIFEST_SHA256,
+        "manifest_inner_sha256": str(manifest["manifest_sha256"]),
+        "file_count": len(expected_rows),
+        "total_bytes": int(manifest["total_bytes"]),
+        "model": MODEL,
+        "revision": MODEL_REVISION,
+    }
 
 
 def git_head() -> str:
@@ -255,6 +305,7 @@ def frozen_file_hashes() -> dict[str, str]:
             "Q2_OOS_V2_AMENDED_SEMANTIC_EXECUTION_LOCK.json": (
                 EXPECTED_AMENDED_EXECUTION_LOCK_SHA256
             ),
+            str(MODEL_MANIFEST.relative_to(ROOT)): EXPECTED_MODEL_MANIFEST_SHA256,
         }
     )
     paths: dict[str, Path] = {
@@ -267,6 +318,7 @@ def frozen_file_hashes() -> dict[str, str]:
             "V2_CANDIDATE_BANK_MANIFEST.json": CANDIDATE_MANIFEST,
             "V2_FINAL_PROTOCOL_LOCK.json": V2_FINAL_PROTOCOL,
             "Q2_OOS_V2_AMENDED_SEMANTIC_EXECUTION_LOCK.json": AMENDED_EXECUTION_LOCK,
+            str(MODEL_MANIFEST.relative_to(ROOT)): MODEL_MANIFEST,
         }
     )
     observed: dict[str, str] = {}
@@ -402,6 +454,7 @@ def verify_spark1_environment(model_path: str) -> dict[str, Any]:
         raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
     if not Path(model_path).is_dir():
         raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
+    model_bytes = verify_qualified_model_bytes(model_path)
     if os.environ.get("CEG_EXECUTION_PROFILE") != "SPARK1":
         raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
     try:
@@ -433,6 +486,7 @@ def verify_spark1_environment(model_path: str) -> dict[str, Any]:
         "model_revision": MODEL_REVISION,
         "tokenizer_revision": MODEL_REVISION,
         "qualified_environment_fingerprint": EXPECTED_ENVIRONMENT,
+        "model_bytes": model_bytes,
     }
 
 
@@ -667,8 +721,10 @@ def complete_collection_seal(
     return seal
 
 
-def record_preflight(execution_dir: Path, model_path: str) -> dict[str, Any]:
+def record_preflight(execution_dir: Path, model_path: str, code_commit: str) -> dict[str, Any]:
     execution_dir.mkdir(parents=True, exist_ok=True)
+    if git_head() != code_commit:
+        raise RuntimeError("Q2_OOS_V2_INSTRUMENT_FAILURE: code commit mismatch")
     journal_path = execution_dir / "journal.jsonl"
     if journal_path.exists() and journal_path.stat().st_size:
         raise RuntimeError("Q2_OOS_V2_INSTRUMENT_FAILURE: pre-existing semantic completions")
@@ -680,6 +736,7 @@ def record_preflight(execution_dir: Path, model_path: str) -> dict[str, Any]:
         "schema_version": "q2-oos-v2-semantic-preopen-seal-v1",
         "status": "AUTHORIZED_PREOPEN_NO_SEMANTIC_OUTPUTS",
         "authorization": "PRINCIPAL_AUTHORIZATION_Q2_OOS_V2_SEMANTIC_EXECUTION",
+        "code_commit": code_commit,
         "frozen": frozen,
         "environment": environment,
         "model_load_performed": False,
@@ -689,6 +746,8 @@ def record_preflight(execution_dir: Path, model_path: str) -> dict[str, Any]:
         else None,
         "semantic_outcomes_before_execution": 0,
         "correctness_inspected_before_execution": False,
+        "pre_existing_semantic_rows": 0,
+        "status_contract": "AUTHORIZED_PREOPEN_NO_SEMANTIC_OUTPUTS",
         "created_at_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
     write_json(execution_dir / "PREOPEN_SEAL.json", payload)
@@ -707,11 +766,65 @@ def record_preflight(execution_dir: Path, model_path: str) -> dict[str, Any]:
     return payload
 
 
+def validate_preopen_seal(
+    execution_dir: Path, code_commit: str
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Require a current, exact persisted pre-open seal before any model load."""
+
+    seal_path = execution_dir / "PREOPEN_SEAL.json"
+    if not seal_path.is_file():
+        raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_REQUIRED")
+    try:
+        seal = read_json(seal_path)
+        frozen = validate_frozen_objects()
+        current_head = git_head()
+    except (OSError, json.JSONDecodeError, KeyError, TypeError, ValueError) as exc:
+        raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID") from exc
+    if (
+        not isinstance(seal, dict)
+        or seal.get("status") != "AUTHORIZED_PREOPEN_NO_SEMANTIC_OUTPUTS"
+        or seal.get("status_contract") != "AUTHORIZED_PREOPEN_NO_SEMANTIC_OUTPUTS"
+        or seal.get("authorization")
+        != "PRINCIPAL_AUTHORIZATION_Q2_OOS_V2_SEMANTIC_EXECUTION"
+        or seal.get("code_commit") != code_commit
+        or current_head != code_commit
+        or frozen.get("head") != code_commit
+        or seal.get("frozen") != frozen
+        or seal.get("semantic_outcomes_before_execution") != 0
+        or seal.get("pre_existing_semantic_rows") != 0
+        or seal.get("correctness_inspected_before_execution") is not False
+        or seal.get("model_load_performed") is not False
+        or seal.get("journal_path_is_empty") is not True
+    ):
+        raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID")
+    required_hashes = {
+        "schedule_sha256": (SCHEDULE, EXPECTED_SCHEDULE_SHA256),
+        "selected_controller_bank_sha256": (SELECTED, EXPECTED_SELECTED_BANK_SHA256),
+        "panel_sha256": (PANEL, EXPECTED_PANEL_SHA256),
+    }
+    frozen_hashes = seal.get("frozen", {}).get("hashes")
+    if not isinstance(frozen_hashes, dict):
+        raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID")
+    for path, expected in required_hashes.values():
+        if frozen_hashes.get(str(path.relative_to(ROOT))) != expected:
+            raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID")
+    environment = seal.get("environment")
+    model_bytes = environment.get("model_bytes") if isinstance(environment, dict) else None
+    if (
+        not isinstance(environment, dict)
+        or environment.get("model_revision") != MODEL_REVISION
+        or environment.get("tokenizer_revision") != MODEL_REVISION
+        or environment.get("qualified_environment_fingerprint") != EXPECTED_ENVIRONMENT
+        or not isinstance(model_bytes, dict)
+        or model_bytes.get("manifest_sha256") != EXPECTED_MODEL_MANIFEST_SHA256
+    ):
+        raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID")
+    return seal, frozen
+
+
 def collect(execution_dir: Path, model_path: str, code_commit: str) -> dict[str, Any]:
-    preflight = validate_frozen_objects()
-    if preflight["head"] != code_commit:
-        raise RuntimeError("Q2_OOS_V2_INSTRUMENT_FAILURE: code commit mismatch")
     execution_dir.mkdir(parents=True, exist_ok=True)
+    preopen, preflight = validate_preopen_seal(execution_dir, code_commit)
     seal_path = execution_dir / "COLLECTION_COMPLETE_SEAL.json"
     if seal_path.exists():
         raise RuntimeError("Q2_OOS_V2_POST_OPENING_PROTOCOL_DEFECT: collection already sealed")
@@ -719,6 +832,8 @@ def collect(execution_dir: Path, model_path: str, code_commit: str) -> dict[str,
     schedule = load_schedule()
     vectors, _selected = load_selected_vectors()
     environment = verify_spark1_environment(model_path)
+    if environment != preopen["environment"]:
+        raise RuntimeError("Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_DRIFT")
     identity = build_identity(code_commit, environment)
     journal = CrashSafeJournal(
         execution_dir / "journal.jsonl", identity=identity, key_fields=KEY_FIELDS
@@ -835,7 +950,7 @@ def main() -> int:
     parser.add_argument("--code-commit", default=git_head())
     args = parser.parse_args()
     if args.mode == "preflight":
-        record_preflight(args.execution_dir, args.model_path)
+        record_preflight(args.execution_dir, args.model_path, args.code_commit)
     else:
         collect(args.execution_dir, args.model_path, args.code_commit)
     return 0
