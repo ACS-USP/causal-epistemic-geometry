@@ -1,0 +1,21 @@
+{
+  "artifact_scope": "AGGREGATE_HISTORICAL_REPLAY_AND_PROSPECTIVE_SEMANTIC_TERMINATION_LOCK",
+  "files_authorized_for_public_git": [
+    "HISTORICAL_HARD_CAP_REPLAY.json",
+    "HISTORICAL_REPETITION_REPLAY.json",
+    "Q2_OOS_V2_SEMANTIC_EFFICIENCY_AMENDMENT.json",
+    "Q2_OOS_V2_AMENDED_SEMANTIC_EXECUTION_LOCK.json"
+  ],
+  "historical_closed_Q2_aggregate_results_only": true,
+  "private_infrastructure_identifiers": false,
+  "qwen_model_inference_for_replay": 0,
+  "raw_benchmark_content": false,
+  "raw_generated_text": false,
+  "raw_model_outputs": false,
+  "raw_reference_answers": false,
+  "raw_token_ids": false,
+  "schema_version": "q2-oos-v2-semantic-efficiency-release-safety-v1",
+  "semantic_V2_outcomes": 0,
+  "status": "PUBLIC_RELEASE_SAFE",
+  "v2_candidate_or_safety_outcomes": false
+}

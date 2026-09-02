@@ -1,0 +1,66 @@
+{
+  "development": {
+    "1024": {
+      "exact_endpoint_equivalence": false,
+      "row_level_differences": {
+        "binary_error_e": 0,
+        "commitment_valid": 9,
+        "correct": 0,
+        "semantic_evaluable": 9
+      },
+      "valid_output_2x_margin": false
+    },
+    "2048": {
+      "exact_endpoint_equivalence": false,
+      "row_level_differences": {
+        "binary_error_e": 0,
+        "commitment_valid": 1,
+        "correct": 0,
+        "semantic_evaluable": 1
+      },
+      "valid_output_2x_margin": false
+    },
+    "256": {
+      "exact_endpoint_equivalence": false,
+      "row_level_differences": {
+        "binary_error_e": 64,
+        "commitment_valid": 137,
+        "correct": 64,
+        "semantic_evaluable": 137
+      },
+      "valid_output_2x_margin": false
+    },
+    "4096": {
+      "exact_endpoint_equivalence": true,
+      "row_level_differences": {
+        "binary_error_e": 0,
+        "commitment_valid": 0,
+        "correct": 0,
+        "semantic_evaluable": 0
+      },
+      "valid_output_2x_margin": false
+    },
+    "512": {
+      "exact_endpoint_equivalence": false,
+      "row_level_differences": {
+        "binary_error_e": 17,
+        "commitment_valid": 51,
+        "correct": 17,
+        "semantic_evaluable": 51
+      },
+      "valid_output_2x_margin": false
+    }
+  },
+  "development_valid_lengths": {
+    "maximum": 2920,
+    "p99": 116.94000000000233,
+    "p99_9": 766.4699999999939,
+    "required_cap_at_2x_max": 5840,
+    "rows": 18754
+  },
+  "model_inference": 0,
+  "raw_text_persisted_or_printed": false,
+  "schema_version": "q2-oos-v2-semantic-efficiency-replay-v1",
+  "status": "Q2_OOS_V2_NO_ENDPOINT_EQUIVALENT_STOP_POLICY",
+  "validation_opened": false
+}

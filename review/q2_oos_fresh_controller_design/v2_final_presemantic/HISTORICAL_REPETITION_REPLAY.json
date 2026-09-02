@@ -1,0 +1,192 @@
+{
+  "V2_safety_results_used": false,
+  "V2_semantic_outcomes_observed": 0,
+  "criterion": {
+    "dominant_token_share_threshold": 0.5,
+    "maximum_period_tokens": 64,
+    "minimum_generated_tokens": 256,
+    "name": "EXTREME_MECHANICAL_REPETITION_V1",
+    "periodic_match_threshold": 0.9,
+    "source_sha256": "e340f9d622c4f874a868c0d9a4e203005b8bcfe778ab688f2202f35a39bda24e",
+    "tail_window_tokens": 1024
+  },
+  "development": {
+    "early_stops": 359,
+    "row_level_differences": {
+      "binary_error_e": 0,
+      "commitment_valid": 0,
+      "correct": 0,
+      "semantic_evaluable": 0
+    },
+    "rows": 19200,
+    "valid_evaluable_early_stops": 0
+  },
+  "full_historical_certification": {
+    "early_stops": 709,
+    "row_level_differences": {
+      "binary_error_e": 0,
+      "commitment_valid": 0,
+      "correct": 0,
+      "semantic_evaluable": 0
+    },
+    "rows": 37800,
+    "scientific": {
+      "Dshape_maximum_absolute_difference": 0.0,
+      "Dtotal_maximum_absolute_difference": 0.0,
+      "QAP_observed_maximum_absolute_difference": 0.0,
+      "bootstrap_maximum_absolute_difference": 0.0,
+      "classification": "Q2_V4_1_G2",
+      "classification_matches": true,
+      "controller_item_error_arrays_maximum_absolute_difference": 0.0,
+      "exact_scientific_equivalence": true,
+      "heterogeneity_robust": {
+        "classification": "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT",
+        "matches": true,
+        "maximum_absolute_difference": 0.0
+      },
+      "radial": {
+        "R_shape": "RS+",
+        "R_total": "RT+",
+        "matches": true,
+        "maximum_absolute_difference": 0.0
+      },
+      "relational": {
+        "A0": {
+          "aggregate_absolute_difference": 0.0,
+          "aggregate_rho": 0.5638183484033006,
+          "maximum_absolute_difference": 0.0,
+          "shell_rho": {
+            "MEDIUM": 0.5548224632268762,
+            "STRONG": 0.5728142335797248
+          }
+        },
+        "A1": {
+          "aggregate_absolute_difference": 0.0,
+          "aggregate_rho": 0.5563109770056525,
+          "maximum_absolute_difference": 0.0,
+          "shell_rho": {
+            "MEDIUM": 0.5546810909321492,
+            "STRONG": 0.5579408630791556
+          }
+        },
+        "A2": {
+          "aggregate_absolute_difference": 0.0,
+          "aggregate_rho": 0.441128474056368,
+          "maximum_absolute_difference": 0.0,
+          "shell_rho": {
+            "MEDIUM": 0.44256928065741025,
+            "STRONG": 0.4396876674553257
+          }
+        }
+      }
+    },
+    "valid_evaluable_early_stops": 0
+  },
+  "held_out_validation": {
+    "early_stops": 344,
+    "opened_once": true,
+    "row_level_differences": {
+      "binary_error_e": 0,
+      "commitment_valid": 0,
+      "correct": 0,
+      "semantic_evaluable": 0
+    },
+    "rows": 18000,
+    "valid_evaluable_early_stops": 0
+  },
+  "model_inference": 0,
+  "raw_text_decoded_printed_or_persisted": false,
+  "runtime": {
+    "OLS": {
+      "fit_population": "naturally terminating DEVELOPMENT-controller rows",
+      "intercept_seconds": 0.0026314195231813987,
+      "per_generated_token_seconds": 0.08664760109758401,
+      "validation": {
+        "MAE_seconds": 0.008627645612945219,
+        "MAPE": 0.009397756014134478,
+        "R2": 0.9999521333778516,
+        "median_absolute_error_seconds": 0.00578724638649919,
+        "rows": 17652
+      }
+    },
+    "hard_cap_counterfactuals": {
+      "1024": {
+        "counterfactual_hours": 31.097935769011052,
+        "counterfactual_tail_hours": 18.041720905168006,
+        "hours_saved": 55.2179811604033,
+        "percent_saved": 63.97195688201785,
+        "rows_hard_stopped": 732
+      },
+      "2048": {
+        "counterfactual_hours": 48.943045694221105,
+        "counterfactual_tail_hours": 35.58997087040137,
+        "hours_saved": 37.372871235193244,
+        "percent_saved": 43.297774691723724,
+        "rows_hard_stopped": 722
+      },
+      "256": {
+        "counterfactual_hours": 16.376880326831664,
+        "counterfactual_tail_hours": 6.174662815307137,
+        "hours_saved": 69.93903660258269,
+        "percent_saved": 81.02681300341858,
+        "rows_hard_stopped": 1002
+      },
+      "4096": {
+        "counterfactual_hours": 86.31591692941434,
+        "counterfactual_tail_hours": 0.0,
+        "hours_saved": 0.0,
+        "percent_saved": 0.0,
+        "rows_hard_stopped": 0
+      },
+      "512": {
+        "counterfactual_hours": 21.814829531072675,
+        "counterfactual_tail_hours": 9.87148020788068,
+        "hours_saved": 64.50108739834167,
+        "percent_saved": 74.72675920373764,
+        "rows_hard_stopped": 801
+      }
+    },
+    "interpretation": "MODEL_ESTIMATED_COUNTERFACTUAL_RUNTIME_NOT_OBSERVED_EXECUTION",
+    "observed_historical_hours": 86.31591692941434,
+    "runtime_used_for_policy_selection": false,
+    "selected_repetition_policy": {
+      "future_19200_seconds": {
+        "P50": 35132.46204105737,
+        "P80": 39796.55800353792,
+        "P90": 42500.13913650848,
+        "P95": 44824.04460688052,
+        "P99": 49501.39110239959,
+        "mean": 35645.07977504355
+      },
+      "historical_counterfactual_hours": 19.36509452555147,
+      "hours_saved": 66.95082240386287,
+      "percent_saved": 77.5648626412815,
+      "stopped_rows": 709,
+      "stress_future_19200_seconds": {
+        "1.5": {
+          "P50": 39273.89405177049,
+          "P80": 44006.1372719648,
+          "P90": 46716.76226094671,
+          "P95": 49059.18103480348,
+          "P99": 53797.91174687252,
+          "mean": 39769.76818600666
+        },
+        "2.0": {
+          "P50": 43437.245315979046,
+          "P80": 48286.43350808214,
+          "P90": 51017.24446704375,
+          "P95": 53438.343783131444,
+          "P99": 58190.963907758036,
+          "mean": 43894.45659696976
+        }
+      }
+    }
+  },
+  "schema_version": "q2-oos-v2-repetition-efficiency-replay-v1",
+  "selected_policy": {
+    "repetition_stop": "EXTREME_MECHANICAL_REPETITION_V1",
+    "safety_max_new_tokens": 4096,
+    "semantic_max_new_tokens": 4096
+  },
+  "status": "Q2_OOS_V2_ENDPOINT_EQUIVALENT_REPETITION_STOP_QUALIFIED"
+}

@@ -1,0 +1,106 @@
+{
+  "amendment_identity": {
+    "amendment_path": "review/q2_oos_fresh_controller_design/v2_final_presemantic/Q2_OOS_V2_SEMANTIC_EFFICIENCY_AMENDMENT.json",
+    "amendment_scope": "FUTURE_SEMANTIC_TERMINATION_POLICY_ONLY",
+    "amendment_sha256": "3450b073a909be98ef2723c7283ea522c95819789a6a5216ffb53453ed16c358",
+    "parent_prelock_sha256": "44d0ae8a09c29db8e244ba16e1bccf14af2b2d90dd0ac53b66f150b4460e315e",
+    "precheck_sha256": "e1bea44915335fc033e3df0e5f360bc2e14f5e1d46a2fc961d2e0eeb8eb20e21"
+  },
+  "collector": {
+    "backend_path": "src/epistemic_geometry/backends/huggingface.py",
+    "backend_sha256": "ef69a1279ee23d46349a50a5a68ffabdcc24e817159a859c9dab41ed68b33ae4",
+    "future_runner_path": "scripts/run_q2_oos_v2_semantic.py",
+    "future_runner_sha256": "941b838afeb27ea4021205d3d837435349d03cc71e2b782adde6eb715ce64d31",
+    "serial_reference_engine": true,
+    "source_commit": "e1b459b60df383c9bbde370b18871700360f741b",
+    "synthetic_engine_tests": {
+      "model_inference": 0,
+      "nonsemantic_fixture_only": true,
+      "passed": 17,
+      "test_paths": [
+        "tests/test_q2_oos_v2_semantic_engine.py",
+        "tests/test_q2_oos_v2_semantic_collector.py",
+        "tests/test_research_fault_injection.py"
+      ]
+    }
+  },
+  "controller_stream": {
+    "candidate_bank_manifest_sha256": "3d19c8d71fe86329026d113312f5088468f45d956dd860f97d340da60a093479",
+    "candidate_count": 34,
+    "changed": false,
+    "new_stream": 0,
+    "redraws": 0,
+    "replacements": 0
+  },
+  "future_semantic_execution": {
+    "authorization": "NOT_AUTHORIZED",
+    "conditions": "TO_BE_FROZEN_ONLY_AFTER_SELECTED_BANK_AND_LABEL_FREE_QUALIFICATION",
+    "item_count": 300,
+    "planned_logical_rows": 19200,
+    "rollouts": 2,
+    "schedule": "NOT_YET_FROZEN",
+    "selected_controller_count": 16,
+    "shells": ["MEDIUM", "STRONG"],
+    "trajectories_executed": 0
+  },
+  "generation_semantics": {
+    "all_other_generation_parameters": "UNCHANGED_FROM_V2_FINAL_PROTOCOL_LOCK_AND_QUALIFIED_SPARK1_REFERENCE_ENGINE",
+    "hard_max_new_tokens": 4096,
+    "repetition_policy": {
+      "dominant_token_share_threshold": 0.5,
+      "historical_definition_source_sha256": "e340f9d622c4f874a868c0d9a4e203005b8bcfe778ab688f2202f35a39bda24e",
+      "maximum_period_tokens": 64,
+      "minimum_generated_tokens": 256,
+      "name": "EXTREME_MECHANICAL_REPETITION_V1",
+      "periodic_match_threshold": 0.9,
+      "policy_source_sha256": "164758696de1eb0918b94a44bd997054d0c5c9402e817791ce436aec02ec8ada",
+      "tail_window_tokens": 1024
+    },
+    "stop_is_condition_symmetric": true,
+    "stop_uses_benchmark_content": false,
+    "stop_uses_condition_identity": false,
+    "stop_uses_correctness": false,
+    "stop_uses_reference_answer": false,
+    "stop_uses_token_ids_only": true
+  },
+  "historical_equivalence_certificate": {
+    "hard_cap_replay_sha256": "f236453390089d4c733aace4028f5de18fb2ad53f94d8a863a61b09fb9df20ea",
+    "repetition_replay_sha256": "c939e9d8a35f581c7a9e738f03becf1bd5c534cb9035629c10d9a05a0074524e",
+    "row_level_exact": true,
+    "rows": 37800,
+    "scientific_endpoint_exact": true,
+    "validation_opened_once": true
+  },
+  "immutability": {
+    "existing_prelock_changed": false,
+    "existing_stream_changed": false,
+    "historical_Q2_classifications_changed": false,
+    "safety_protocol_changed": false
+  },
+  "retry_resume_and_terminality": {
+    "hard_cap_or_repetition_stop_is_terminal": true,
+    "operational_pre_persistence_failure_may_retry_same_key_seed_only": true,
+    "persisted_terminal_row_retryable": false,
+    "resume_missing_keys_only": true,
+    "terminal_row_deleted": false,
+    "terminal_row_imputed": false,
+    "terminal_row_replaced": false,
+    "terminal_scoring": {
+      "binary_error_e": 1,
+      "commitment_valid": false,
+      "semantic_evaluable": false
+    }
+  },
+  "safety_execution": {
+    "completed_rows_preserved": 91,
+    "hard_max_new_tokens": 4096,
+    "repetition_stop_applied": false,
+    "schedule_sha256": "56676788813f6b39e4fe837f00d8245fc88a7278fd0642f3253fd63f42209702",
+    "safety_lock_sha256": "3a9e674ac63a2fc749e0a016b730c1dbdc1406e76207f77810c73599f61d2ba7",
+    "same_campaign_must_resume": true
+  },
+  "schema_version": "q2-oos-v2-amended-semantic-execution-lock-v1",
+  "semantic_correctness_observed_before_lock": 0,
+  "semantic_outcomes_observed_before_lock": 0,
+  "status": "FROZEN_PRESEMANTIC_NOT_AUTHORIZED_NOT_RUN"
+}

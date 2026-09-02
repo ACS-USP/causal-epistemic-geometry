@@ -1,0 +1,135 @@
+{
+  "amendment_scope": "FUTURE_SEMANTIC_TERMINATION_POLICY_ONLY",
+  "controller_stream": {
+    "candidate_count": 34,
+    "changed": false,
+    "manifest_sha256": "3d19c8d71fe86329026d113312f5088468f45d956dd860f97d340da60a093479",
+    "new_streams": 0,
+    "redraws": 0,
+    "replacements": 0,
+    "status": "EXISTING_ONE_SHOT_PUBLIC_STREAM_PRESERVED_IMMUTABLE"
+  },
+  "endpoint_equivalence": {
+    "A0_maximum_absolute_difference": 0.0,
+    "A1_maximum_absolute_difference": 0.0,
+    "A2_maximum_absolute_difference": 0.0,
+    "Dshape_maximum_absolute_difference": 0.0,
+    "Dtotal_maximum_absolute_difference": 0.0,
+    "Q2_classification": "Q2_V4_1_G2",
+    "Q2_classification_match": true,
+    "binary_error_row_differences": 0,
+    "bootstrap_maximum_absolute_difference": 0.0,
+    "commitment_validity_row_differences": 0,
+    "controller_item_error_array_maximum_absolute_difference": 0.0,
+    "correctness_row_differences": 0,
+    "full_historical_rows": 37800,
+    "heterogeneity_robust_classification": "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT",
+    "heterogeneity_robust_maximum_absolute_difference": 0.0,
+    "qap_observed_maximum_absolute_difference": 0.0,
+    "radial_shape": "RS+",
+    "radial_total": "RT+",
+    "radial_maximum_absolute_difference": 0.0,
+    "semantic_evaluability_row_differences": 0
+  },
+  "hard_cap_development": {
+    "candidate_caps": [4096, 2048, 1024, 512, 256],
+    "lower_cap_selected": false,
+    "maximum_naturally_terminated_valid_evaluable_tokens": 2920,
+    "minimum_cap_required_by_2x_margin": 5840,
+    "p99_naturally_terminated_valid_evaluable_tokens": 116.94000000000233,
+    "p99_9_naturally_terminated_valid_evaluable_tokens": 766.4699999999939,
+    "result_sha256": "f236453390089d4c733aace4028f5de18fb2ad53f94d8a863a61b09fb9df20ea",
+    "status": "NO_LOWER_HARD_CAP_QUALIFIED",
+    "validation_opened": false
+  },
+  "historical_inputs": {
+    "journal_rows": 37800,
+    "journal_sha256": "d726b473feca8c6922b545bdf8a217e8171c8267697ff2b9714b14e1a0363a99",
+    "semantic_scores_sha256": "a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f"
+  },
+  "historical_states_modified": false,
+  "implementation": {
+    "backend_sha256": "ef69a1279ee23d46349a50a5a68ffabdcc24e817159a859c9dab41ed68b33ae4",
+    "hard_cap_replay_sha256": "5b54968e570b2bb0f49ce98398f2995cc45a54c5d65b935be07465c2163b9eb2",
+    "repetition_policy_sha256": "164758696de1eb0918b94a44bd997054d0c5c9402e817791ce436aec02ec8ada",
+    "repetition_replay_sha256": "82ee8d5039e7d626e9918b0b2cc43cc161d46f3354508bb76ec7134718c0fead",
+    "semantic_collector_sha256": "941b838afeb27ea4021205d3d837435349d03cc71e2b782adde6eb715ce64d31",
+    "source_commit": "e1b459b60df383c9bbde370b18871700360f741b",
+    "synthetic_collector_test_sha256": "f0b17e62e3c8155edb27f97cc736a5b154ee498c5f75db249c9ce4d77c3fdd7d",
+    "synthetic_engine_test_sha256": "bb52fe37f9ad80100890075c58cfb2d690d46607e1cc4a3fd97c473fc93d8866"
+  },
+  "precheck_sha256": "e1bea44915335fc033e3df0e5f360bc2e14f5e1d46a2fc961d2e0eeb8eb20e21",
+  "repetition_policy_validation": {
+    "criterion": "EXTREME_MECHANICAL_REPETITION_V1",
+    "criterion_historical_source_sha256": "e340f9d622c4f874a868c0d9a4e203005b8bcfe778ab688f2202f35a39bda24e",
+    "development_early_stops": 359,
+    "development_rows": 19200,
+    "development_row_level_differences": 0,
+    "development_valid_evaluable_early_stops": 0,
+    "full_early_stops": 709,
+    "full_row_level_differences": 0,
+    "full_valid_evaluable_early_stops": 0,
+    "result_sha256": "c939e9d8a35f581c7a9e738f03becf1bd5c534cb9035629c10d9a05a0074524e",
+    "validation_early_stops": 344,
+    "validation_opened_once": true,
+    "validation_rows": 18000,
+    "validation_row_level_differences": 0,
+    "validation_valid_evaluable_early_stops": 0
+  },
+  "runtime_counterfactual": {
+    "historical_counterfactual_hours": 19.36509452555147,
+    "historical_hours_saved": 66.95082240386287,
+    "historical_observed_hours": 86.31591692941434,
+    "historical_percent_saved": 77.5648626412815,
+    "interpretation": "MODEL_ESTIMATED_COUNTERFACTUAL_RUNTIME_NOT_OBSERVED_EXECUTION",
+    "ols_validation_R2": 0.9999521333778516,
+    "selected_future_19200_seconds": {
+      "P50": 35132.46204105737,
+      "P80": 39796.55800353792,
+      "P90": 42500.13913650848,
+      "P95": 44824.04460688052,
+      "P99": 49501.39110239959,
+      "mean": 35645.07977504355
+    },
+    "stress_1_5x_future_19200_seconds": {
+      "P50": 39273.89405177049,
+      "P80": 44006.1372719648,
+      "P90": 46716.76226094671,
+      "P95": 49059.18103480348,
+      "P99": 53797.91174687252,
+      "mean": 39769.76818600666
+    },
+    "stress_2x_future_19200_seconds": {
+      "P50": 43437.245315979046,
+      "P80": 48286.43350808214,
+      "P90": 51017.24446704375,
+      "P95": 53438.343783131444,
+      "P99": 58190.963907758036,
+      "mean": 43894.45659696976
+    },
+    "used_for_policy_selection": false
+  },
+  "safety_campaign": {
+    "completed_rows_preserved": 91,
+    "max_new_tokens": 4096,
+    "protocol_changed": false,
+    "status": "PAUSED_PENDING_PUSH_OF_THIS_AMENDMENT"
+  },
+  "schema_version": "q2-oos-v2-semantic-efficiency-amendment-v1",
+  "selected_semantic_termination_policy": {
+    "hard_cap_only": false,
+    "max_new_tokens": 4096,
+    "repetition_stop": "EXTREME_MECHANICAL_REPETITION_V1",
+    "terminal_interpretation": {
+      "binary_error_e": 1,
+      "commitment_valid": false,
+      "delete_retry_or_impute": false,
+      "row_retained": true,
+      "semantic_evaluable": false
+    }
+  },
+  "semantic_N300_trajectories_before_amendment": 0,
+  "semantic_correctness_observed_before_amendment": 0,
+  "semantic_outcomes_observed_before_amendment": 0,
+  "status": "Q2_OOS_V2_SEMANTIC_EFFICIENCY_AMENDMENT_FROZEN"
+}
