@@ -1,0 +1,196 @@
+{
+  "Q3": "NOT_RUN",
+  "RunPod": "FORBIDDEN",
+  "Spark2": "FORBIDDEN",
+  "candidate_generation": {
+    "additional_candidates": "FORBIDDEN",
+    "basis": "exact frozen rank-8 SPARK1_SUBSPACE_Q.npy",
+    "draw": "g~N(0,I_8); c=g/||g||; v=Qc",
+    "exclude_all_V1_controllers": true,
+    "generate_once": true,
+    "namespace": "Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V2",
+    "publish_before_model_use": true,
+    "redraws": 0,
+    "replacement": "FORBIDDEN",
+    "rng": "NumPy PCG64DXSM",
+    "seed_rule": "big-endian first 128 bits SHA256('Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V2|' + PRELOCK_COMMIT)"
+  },
+  "candidate_stream_gate": {
+    "V1_exact_or_hash_overlap": "FORBIDDEN",
+    "coefficient_unit_norm_error_max": 1e-12,
+    "condition_number": "DESCRIPTIVE_ONLY",
+    "effective_rank": "DESCRIPTIVE_ONLY",
+    "finite": true,
+    "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+    "rank": 8,
+    "vector_unit_norm_error_max": 1e-10
+  },
+  "correctness_inspected": false,
+  "design": {
+    "K": 16,
+    "candidate_count": 34,
+    "future_semantic_trajectories": 19200,
+    "future_streams": 1,
+    "items": 300,
+    "reference_controllers": 31,
+    "rollouts": 2,
+    "shells": [
+      "MEDIUM",
+      "STRONG"
+    ]
+  },
+  "fresh_fresh_secondary": {
+    "method": "NODE_JACKKNIFE_PSEUDOVALUE_T",
+    "role": "SECONDARY_ONLY_CANNOT_RESCUE_PRIMARY"
+  },
+  "fresh_old_primary": {
+    "alpha": 0.05,
+    "alternative": "P(r_i>0)>0.5",
+    "bernoulli": "X_i=1 iff finite r_i>0; X_i=0 iff finite r_i<=0",
+    "denominator": 16,
+    "descriptive": [
+      "complete r_i distribution",
+      "median r_i",
+      "mean r_i",
+      "positive zero negative counts",
+      "global cross-block rho",
+      "shell-specific global rho"
+    ],
+    "mandatory": [
+      "all 16 r_i finite",
+      "positive_count>=12",
+      "exact_p<=0.05"
+    ],
+    "nonfinite": "Q2_OOS_V2_INFERENCE_DEGENERATE",
+    "null": "P(r_i>0)<=0.5",
+    "positive_count_min": 12,
+    "reference_order": "exact frozen 31-controller V4.1 order",
+    "rescue_by_sensitivity": "FORBIDDEN",
+    "row_statistic": "r_i = 0.5*(Spearman_j(A0_MEDIUM(i,j),Dshape_MEDIUM(i,j)) + Spearman_j(A0_STRONG(i,j),Dshape_STRONG(i,j)))",
+    "sensitivities": [
+      "original row-QAP diagnostic only",
+      "studentized mean controller-level sensitivity",
+      "controller-cluster bootstrap",
+      "item bootstrap",
+      "LOFO"
+    ],
+    "test": "exact one-sided Binomial upper-tail"
+  },
+  "future_schedule": {
+    "balance": "deterministically interleave controller shell rollout and item region",
+    "generation": "exact inherited V4.1 normative generation contract",
+    "retry_resume": "exact inherited V4.1 operational-only retry and missing-key resume",
+    "rows": 19200,
+    "runtime_or_semantic_adaptation": "FORBIDDEN"
+  },
+  "historical_states_immutable": [
+    "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+    "Q2_OOS_V2_NULL_CALIBRATION_BLOCKED",
+    "Q2_V4_1_G2",
+    "RS+",
+    "RT+",
+    "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT"
+  ],
+  "label_free_geometry": {
+    "A0": "primary coordinate angular dissimilarity",
+    "A1": "secondary using exact frozen V4.1 whitening fit",
+    "A1_A2_qualification": "inherit V4.1 algebraic and forensic gates",
+    "A2": "secondary fresh label-free finite-response capture",
+    "D2": "inherited secondary",
+    "correctness": "FORBIDDEN",
+    "semantic_panel": "FORBIDDEN"
+  },
+  "model": {
+    "attention": "sdpa",
+    "backend": "Spark 1 only",
+    "dtype": "bfloat16",
+    "id": "Qwen/Qwen3-8B",
+    "layer": 27,
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "timing": "sustained-current-token"
+  },
+  "prelock_commit": "THE_COMMIT_CONTAINING_THIS_ARTIFACT",
+  "runtime_reference_hours": {
+    "cannot_affect_selection": true,
+    "cap_stress_1_5x": {
+      "p50": 62.25,
+      "p95": 76.78
+    },
+    "cap_stress_2x": {
+      "p50": 80.66,
+      "p95": 100.17
+    },
+    "normal_superpopulation": {
+      "mean": 44.15,
+      "p50": 43.84,
+      "p80": 48.52,
+      "p90": 51.17,
+      "p95": 53.42,
+      "p99": 57.86
+    }
+  },
+  "safety": {
+    "candidate_requires_both_shells": true,
+    "candidates": 34,
+    "correctness": "FORBIDDEN",
+    "inherits_exact_V4_1_gate": true,
+    "items": 12,
+    "minimum_safe": 16,
+    "planned_trajectories": 1632,
+    "replacement": "FORBIDDEN",
+    "rollouts": 2,
+    "runtime_based_selection": "FORBIDDEN",
+    "selection": "first 16 candidates passing both shells in immutable order",
+    "shells": {
+      "MEDIUM": 0.25,
+      "STRONG": 0.5
+    }
+  },
+  "schema_version": "q2-oos-v2-final-presemantic-protocol-lock-v1",
+  "selected_bank_gate": {
+    "condition_number": "DESCRIPTIVE_ONLY",
+    "count": 16,
+    "cross_block_row_diversity": "DESCRIPTIVE_REQUIRED",
+    "effective_rank_min": 4.8,
+    "fresh_by_reference_A0_q90_minus_q10_min": 0.2,
+    "fresh_by_reference_geometry_LOFO": "DESCRIPTIVE_REQUIRED",
+    "maximum_absolute_pair_cosine_max_exclusive": 0.98,
+    "predicted_power": "MANDATORY_DIAGNOSTIC_ONLY_NO_TERMINAL_THRESHOLD",
+    "rank": 8,
+    "shell_amplitude_cv_max": 0.03
+  },
+  "semantic_N300_trajectories": 0,
+  "semantic_execution_authorized": false,
+  "source_commit_before_prelock": "c531068f5433ef27d3f4c7397ef8ae9cef01795a",
+  "source_hashes": {
+    "A1_covariance_manifest": "29159587e31a5f2c2faa2df877d9fcf5a39f96cb75cb2f398b7ee30f250956ff",
+    "A1_frozen_fit": "193a6869ce3105064a2dc8fd38f6b69f67b7ee9f2d650947290e0c8bc4102102",
+    "A2_probe_manifest": "5195ab06a01685fbc31c89ef2538a7b49c03e96466742611ac7a80c6acc4721b",
+    "A2_raw_archive_hashes": "09372bbcc14fd76f8aa71c8041a9b167fc74222d5a4292edfb08fdaddc46b923",
+    "V1_candidate_manifest": "61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b",
+    "V4_candidate_manifest": "ac1d05f7202cc1afd5acf71d81952b5d247eeda62fb231ea7a8c4cd1f98ba5ac",
+    "accepted_revised_design": "3f82f977f61eb1f051cedf28894de46af206596ea0de81c8790e2fc1fb08dcf2",
+    "environment_profile": "516c631ba5b03785f01c2c493abd7c7e300bb3f61cd67e269f3e7d8ebb4718a1",
+    "historical_safe31_manifest": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447",
+    "prelock_preparer": "99e904ff47b0c9ac1cf7c66c1b877b768e83027e1741125b2da9e94dc8e50ad5",
+    "rank8_Q_basis": "5f083960b898641a763a0d85f9432c6dc077b01767e3cb8e56e417a0c4527c44",
+    "rank8_Q_qualification": "2f872bddf11ceb512e195e5388ef648d2055b0b8f97dc92aea576e09691d3efd",
+    "runtime_autopsy": "1a2e62825ef856a468230f97d912ab6a5d2e1ce61664ead793aa684fd86230ca",
+    "safety_items": "95dbde8bd3204b877bee1c093eb9dbfbfa0d7aba3b836b7b241872a412a15f5b",
+    "safety_protocol": "b2deee14dbc4f1b666a7bc99cddfaf951465de6212050c595a301fd45e675c8a",
+    "semantic_panel_manifest": "c127cf3594e8ea849dbd038492606b3afaaac406feb4146188769c04d6691187",
+    "sign_test_code": "e18f21cc9d76f6ad79b41b9e877e29b4ba197002d4d040a4cbfcb1a8f8938817",
+    "sign_test_tests": "1f93aaca0572676ded71a2bccb440ed77707b5a46f97eea74b99381fa61fe0c1",
+    "stream_materializer": "941bf0788fa43ad9cdcdbe9c1022df3bca0eb877cd3f55aecb5a9a813bc1a010",
+    "zero_erratum_precheck": "990725399099b89a1f09ae592d238fbe517d4b54526a2ecc18a4d9d8475b6147",
+    "zero_recalibration": "3f6ef29caa0ae3107abbe37fcaa30a39e0a4b422e599f905e4dea70dffc82cb9"
+  },
+  "status": "Q2_OOS_V2_FINAL_PROTOCOL_FROZEN",
+  "terminal_states": [
+    "Q2_OOS_V2_STREAM_INTEGRITY_BLOCKED",
+    "Q2_OOS_V2_SAFE_BANK_INSUFFICIENT",
+    "Q2_OOS_V2_SELECTED_BANK_NOT_QUALIFIED",
+    "Q2_OOS_V2_LABEL_FREE_INSTRUMENT_NOT_QUALIFIED",
+    "Q2_OOS_V2_READY_FOR_PREDICTION_LOCK"
+  ]
+}
