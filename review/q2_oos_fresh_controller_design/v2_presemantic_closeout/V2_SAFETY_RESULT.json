@@ -1,0 +1,1494 @@
+{
+  "baseline_evaluability": 1.0,
+  "baseline_journal_sha256": "6dbaa8977c28c00508849953008972c098c3cbb0f0f8fda973c5718845cd2fb5",
+  "baseline_source": "IMMUTABLE_V4_PRESEMANTIC_BASELINE",
+  "baseline_validity": 1.0,
+  "candidates": {
+    "Q2_OOS_V2_DIRECTION_00": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500004475870385,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 1.7903481539516264e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": false,
+            "evaluability_within_baseline_margin": false,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": false,
+            "validity_at_least_0_90": false,
+            "validity_within_baseline_margin": false
+          },
+          "evaluability": 0.7083333333333334,
+          "implemented_amplitude": 0.500000895174077,
+          "pass": false,
+          "raw_sequence_movement": 1.0,
+          "relative_target_error": 1.7903481539516264e-06,
+          "truncation": 0.08333333333333333,
+          "validity": 0.7083333333333334
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_01": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499998628139495,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 5.487442019669331e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.499999725627899,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 5.487442019669331e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_02": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500001011441684,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 4.0457667349613757e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000002022883367,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 4.0457667349613757e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_03": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499995167381927,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 1.9330472291745338e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999990334763854,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 1.9330472291745338e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_04": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999979375175785,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 8.249929686066082e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999995875035157,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 8.249929686066082e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_05": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999968418762655,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 1.2632494937880878e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999993683752531,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 1.2632494937880878e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_06": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500001062381965,
+          "pass": true,
+          "raw_sequence_movement": 0.125,
+          "relative_target_error": 4.2495278607113107e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.500000212476393,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 4.2495278607113107e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_07": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999957667127554,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 1.6933148978548473e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999991533425511,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 1.6933148978548473e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_08": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500000819173923,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 3.27669569255562e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000001638347846,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 3.27669569255562e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_09": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000004991589536,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 1.9966358144607455e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000000998317907,
+          "pass": true,
+          "raw_sequence_movement": 0.5416666666666666,
+          "relative_target_error": 1.9966358144607455e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_10": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500001850222048,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 7.400888191178012e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": false,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": false
+          },
+          "evaluability": 0.9166666666666666,
+          "implemented_amplitude": 0.5000003700444096,
+          "pass": false,
+          "raw_sequence_movement": 0.7916666666666666,
+          "relative_target_error": 7.400888191178012e-07,
+          "truncation": 0.0,
+          "validity": 0.9166666666666666
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_11": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499996049066684,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 1.5803733264263542e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999992098133368,
+          "pass": true,
+          "raw_sequence_movement": 0.5416666666666666,
+          "relative_target_error": 1.5803733264263542e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_12": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500005479539661,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 2.191815864360791e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": false,
+            "evaluability_within_baseline_margin": false,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": false,
+            "validity_within_baseline_margin": false
+          },
+          "evaluability": 0.875,
+          "implemented_amplitude": 0.5000010959079322,
+          "pass": false,
+          "raw_sequence_movement": 0.875,
+          "relative_target_error": 2.191815864360791e-06,
+          "truncation": 0.0,
+          "validity": 0.875
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_13": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500001813414029,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 7.253656115757678e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000003626828058,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 7.253656115757678e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_14": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500002750043456,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 1.1000173822939274e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000005500086911,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 1.1000173822939274e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_15": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999977888944266,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 8.844422293430299e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999955777888533,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 8.844422293430299e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_16": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500001359754677,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 5.439018708752741e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000002719509354,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 5.439018708752741e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_17": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499995859755057,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 1.6560979771984563e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 0.9583333333333334,
+          "implemented_amplitude": 0.4999991719510114,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 1.6560979771984563e-06,
+          "truncation": 0.041666666666666664,
+          "validity": 0.9583333333333334
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_18": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000015866183806,
+          "pass": true,
+          "raw_sequence_movement": 0.20833333333333334,
+          "relative_target_error": 6.34647352226736e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000003173236761,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 6.34647352226736e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_19": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499999915463502,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 3.3814599231796194e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999999830927004,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 3.3814599231796194e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_20": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2500021857077244,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 8.742830897690013e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000043714154488,
+          "pass": true,
+          "raw_sequence_movement": 0.5416666666666666,
+          "relative_target_error": 8.742830897690013e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_21": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499996750390768,
+          "pass": true,
+          "raw_sequence_movement": 0.125,
+          "relative_target_error": 1.2998436927924573e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": false,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": false
+          },
+          "evaluability": 0.9166666666666666,
+          "implemented_amplitude": 0.4999993500781536,
+          "pass": false,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 1.2998436927924573e-06,
+          "truncation": 0.041666666666666664,
+          "validity": 0.9166666666666666
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_22": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999998757236447,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 4.9710542127101576e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999997514472894,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 4.9710542127101576e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_23": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499995655716556,
+          "pass": true,
+          "raw_sequence_movement": 0.25,
+          "relative_target_error": 1.7377133776363962e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999991311433112,
+          "pass": true,
+          "raw_sequence_movement": 0.5833333333333334,
+          "relative_target_error": 1.7377133776363962e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_24": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499996022655352,
+          "pass": true,
+          "raw_sequence_movement": 0.16666666666666666,
+          "relative_target_error": 1.590937859230479e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999992045310704,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 1.590937859230479e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_25": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.250000087925895,
+          "pass": true,
+          "raw_sequence_movement": 0.4166666666666667,
+          "relative_target_error": 3.5170358003711044e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 0.9583333333333334,
+          "implemented_amplitude": 0.50000017585179,
+          "pass": true,
+          "raw_sequence_movement": 0.625,
+          "relative_target_error": 3.5170358003711044e-07,
+          "truncation": 0.0,
+          "validity": 0.9583333333333334
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_26": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499998820805874,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 4.716776503821407e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.4999997641611748,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 4.716776503821407e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_27": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000012549035017,
+          "pass": true,
+          "raw_sequence_movement": 0.2916666666666667,
+          "relative_target_error": 5.019614006673834e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000002509807003,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 5.019614006673834e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_28": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000015015402494,
+          "pass": true,
+          "raw_sequence_movement": 0.125,
+          "relative_target_error": 6.006160997440446e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000003003080499,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 6.006160997440446e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_29": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999998362591966,
+          "pass": true,
+          "raw_sequence_movement": 0.3333333333333333,
+          "relative_target_error": 6.549632136643169e-08,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": false,
+            "evaluability_within_baseline_margin": false,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": false,
+            "validity_within_baseline_margin": false
+          },
+          "evaluability": 0.75,
+          "implemented_amplitude": 0.4999999672518393,
+          "pass": false,
+          "raw_sequence_movement": 0.75,
+          "relative_target_error": 6.549632136643169e-08,
+          "truncation": 0.0,
+          "validity": 0.75
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_30": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.2499999634767491,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 1.4609300358348065e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": false,
+            "evaluability_within_baseline_margin": false,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": false,
+            "validity_at_least_0_90": false,
+            "validity_within_baseline_margin": false
+          },
+          "evaluability": 0.8333333333333334,
+          "implemented_amplitude": 0.4999999269534982,
+          "pass": false,
+          "raw_sequence_movement": 0.7916666666666666,
+          "relative_target_error": 1.4609300358348065e-07,
+          "truncation": 0.08333333333333333,
+          "validity": 0.8333333333333334
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_31": {
+      "both_shells_pass": true,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.25000015028275363,
+          "pass": true,
+          "raw_sequence_movement": 0.375,
+          "relative_target_error": 6.011310145215276e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.5000003005655073,
+          "pass": true,
+          "raw_sequence_movement": 0.5,
+          "relative_target_error": 6.011310145215276e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_32": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": false,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.250000033611732,
+          "pass": false,
+          "raw_sequence_movement": 0.041666666666666664,
+          "relative_target_error": 1.344469280351035e-07,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": false,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": false
+          },
+          "evaluability": 0.9166666666666666,
+          "implemented_amplitude": 0.500000067223464,
+          "pass": false,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 1.344469280351035e-07,
+          "truncation": 0.0,
+          "validity": 0.9166666666666666
+        }
+      }
+    },
+    "Q2_OOS_V2_DIRECTION_33": {
+      "both_shells_pass": false,
+      "shells": {
+        "MEDIUM": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": false,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.24999951720165453,
+          "pass": false,
+          "raw_sequence_movement": 0.08333333333333333,
+          "relative_target_error": 1.931193381876639e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        },
+        "STRONG": {
+          "checks": {
+            "evaluability_at_least_0_90": true,
+            "evaluability_within_baseline_margin": true,
+            "movement": true,
+            "relative_amplitude_error_at_most_0_005": true,
+            "truncation_at_most_0_05": true,
+            "validity_at_least_0_90": true,
+            "validity_within_baseline_margin": true
+          },
+          "evaluability": 1.0,
+          "implemented_amplitude": 0.49999903440330906,
+          "pass": true,
+          "raw_sequence_movement": 0.4583333333333333,
+          "relative_target_error": 1.931193381876639e-06,
+          "truncation": 0.0,
+          "validity": 1.0
+        }
+      }
+    }
+  },
+  "classification": "Q2_OOS_V2_SELECTED_BANK_GATE_PASS",
+  "completed_rows": 1632,
+  "correctness_used": false,
+  "elapsed_seconds_this_invocation": 6322.05590625701,
+  "expected_rows": 1632,
+  "journal_sha256": "92b8197bfbf767ff01636eafe4e6307f2141d7254318cb5efc1391828593341d",
+  "new_generated_tokens_this_invocation": 71912,
+  "safe_count": 26,
+  "safe_ids_in_stream_order": [
+    "Q2_OOS_V2_DIRECTION_01",
+    "Q2_OOS_V2_DIRECTION_02",
+    "Q2_OOS_V2_DIRECTION_03",
+    "Q2_OOS_V2_DIRECTION_04",
+    "Q2_OOS_V2_DIRECTION_05",
+    "Q2_OOS_V2_DIRECTION_06",
+    "Q2_OOS_V2_DIRECTION_07",
+    "Q2_OOS_V2_DIRECTION_08",
+    "Q2_OOS_V2_DIRECTION_09",
+    "Q2_OOS_V2_DIRECTION_11",
+    "Q2_OOS_V2_DIRECTION_13",
+    "Q2_OOS_V2_DIRECTION_14",
+    "Q2_OOS_V2_DIRECTION_15",
+    "Q2_OOS_V2_DIRECTION_16",
+    "Q2_OOS_V2_DIRECTION_17",
+    "Q2_OOS_V2_DIRECTION_18",
+    "Q2_OOS_V2_DIRECTION_19",
+    "Q2_OOS_V2_DIRECTION_20",
+    "Q2_OOS_V2_DIRECTION_22",
+    "Q2_OOS_V2_DIRECTION_23",
+    "Q2_OOS_V2_DIRECTION_24",
+    "Q2_OOS_V2_DIRECTION_25",
+    "Q2_OOS_V2_DIRECTION_26",
+    "Q2_OOS_V2_DIRECTION_27",
+    "Q2_OOS_V2_DIRECTION_28",
+    "Q2_OOS_V2_DIRECTION_31"
+  ],
+  "schedule_sha256": "56676788813f6b39e4fe837f00d8245fc88a7278fd0642f3253fd63f42209702",
+  "schema_version": "q2-oos-v2-safety-result-v1",
+  "selected_bank_gate": {
+    "checks": {
+      "count_16": true,
+      "cross_block_A0_q90_minus_q10_at_least_0_20": true,
+      "effective_rank_at_least_4_8": true,
+      "maximum_absolute_pair_cosine_below_0_98": true,
+      "rank_8": true,
+      "shell_amplitude_cv_at_most_0_03": true
+    },
+    "metrics": {
+      "a0_q90_minus_q10": 0.959090505084742,
+      "condition_number": 2.6680977236031636,
+      "condition_number_status": "DESCRIPTIVE_ONLY",
+      "count": 16,
+      "dimension": 8,
+      "effective_rank": 6.842021185570888,
+      "lofo_a0_q90_minus_q10_max": 0.9717594433180543,
+      "lofo_a0_q90_minus_q10_min": 0.9364398520665996,
+      "lofo_status": "DESCRIPTIVE_REQUIRED",
+      "maximum_absolute_pair_cosine": 0.8148387642876267,
+      "maximum_leverage": 0.7712194550872248,
+      "maximum_unit_norm_error": 2.220446049250313e-16,
+      "rank": 8,
+      "row_diversity_mean": 2.7323979114150196,
+      "row_diversity_min": 1.2371355109366085,
+      "shell_amplitude_cv": 9.956993521872947e-07,
+      "shell_amplitude_cv_by_shell": {
+        "MEDIUM": 9.956993521872947e-07,
+        "STRONG": 9.956993521872947e-07
+      },
+      "stable_rank": 3.596249002477428
+    },
+    "pass": true
+  },
+  "selected_first_16_safe": [
+    "Q2_OOS_V2_DIRECTION_01",
+    "Q2_OOS_V2_DIRECTION_02",
+    "Q2_OOS_V2_DIRECTION_03",
+    "Q2_OOS_V2_DIRECTION_04",
+    "Q2_OOS_V2_DIRECTION_05",
+    "Q2_OOS_V2_DIRECTION_06",
+    "Q2_OOS_V2_DIRECTION_07",
+    "Q2_OOS_V2_DIRECTION_08",
+    "Q2_OOS_V2_DIRECTION_09",
+    "Q2_OOS_V2_DIRECTION_11",
+    "Q2_OOS_V2_DIRECTION_13",
+    "Q2_OOS_V2_DIRECTION_14",
+    "Q2_OOS_V2_DIRECTION_15",
+    "Q2_OOS_V2_DIRECTION_16",
+    "Q2_OOS_V2_DIRECTION_17",
+    "Q2_OOS_V2_DIRECTION_18"
+  ],
+  "semantic_outcomes": 0,
+  "source_commit": "0c6b71aa1547429e0a87b74d681dbd1c33538962"
+}
