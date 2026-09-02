@@ -32,3 +32,9 @@ def test_independent_a1_is_symmetric_and_zero_diagonal() -> None:
     matrix = MODULE.independent_a1(vectors, MODULE.load_fit())
     np.testing.assert_allclose(matrix, matrix.T, rtol=0.0, atol=1e-12)
     np.testing.assert_allclose(np.diag(matrix), 0.0, rtol=0.0, atol=0.0)
+
+
+def test_numpy_boolean_checks_are_normalized_for_json() -> None:
+    checks = {"comparison": np.float64(0.0) <= 1e-12}
+    normalized = {name: bool(value) for name, value in checks.items()}
+    assert type(normalized["comparison"]) is bool

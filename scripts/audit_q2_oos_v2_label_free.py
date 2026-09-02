@@ -276,6 +276,10 @@ def audit(historical_dir: Path, fresh_dir: Path, output_dir: Path) -> None:
         "semantic_outcomes_zero": qualification["semantic_outcomes"] == 0,
         "correctness_not_inspected": qualification["correctness_inspected"] is False,
     }
+    # Comparisons involving NumPy scalars can yield ``np.bool_``.  Normalize only
+    # the report boundary so the frozen audit mathematics remains unchanged and
+    # the result is portable through the standard-library JSON encoder.
+    checks = {name: bool(value) for name, value in checks.items()}
     classification = (
         "Q2_OOS_V2_LABEL_FREE_FORENSIC_CLEAN"
         if all(checks.values())
