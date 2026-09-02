@@ -1,0 +1,114 @@
+{
+  "schema_version": "q2-oos-v2-primary-row-qap-null-calibration-precheck-v1",
+  "status": "FROZEN_BEFORE_NULL_SIMULATION_AND_BEFORE_V2_STREAM",
+  "source_commit": "74ba16ad03d63dd680bb85e8a4486e29eaa12c9c",
+  "fixed_design": {
+    "route": "ROUTE_C_INFERENCE_ALIGNED_GATES",
+    "K": 16,
+    "candidate_count": 34,
+    "primary_geometry": "A0",
+    "primary_semantic_endpoint": "Dshape",
+    "statistic": "equal-weight mean of MEDIUM and STRONG complete fresh-by-reference Spearman correlations",
+    "exchangeability_unit": "fresh controller identity",
+    "permutation_action": "complete fresh geometry rows only; 31 reference columns fixed",
+    "same_map_across_shells": true,
+    "nominal_alpha": 0.05,
+    "right_tail": true,
+    "p_value": "count(T_perm >= T_observed) / total_maps",
+    "K_selection_reopened": false
+  },
+  "strict_exchangeable_null": {
+    "panels": 10000,
+    "maps_total": 1000,
+    "maps": "identity plus 999 unique sampled nonidentity fresh-row permutations",
+    "geometry": "one representative synthetic normalized-Gaussian K=16 coefficient bank against the exact frozen 31-reference coefficient bank; not the future V2 stream",
+    "semantic_generation": "N=300 shared-item binary panels with two independent rollout banks and both shells; fresh semantic latent rows are IID exchangeable and redrawn per panel independently of geometry; reference semantic profiles and item factors are shared within panel; no fixed controller-label nuisance",
+    "shells": [
+      "MEDIUM",
+      "STRONG"
+    ],
+    "reported": [
+      "rejection_rate_at_0.05",
+      "monte_carlo_se",
+      "Wilson_95_interval",
+      "p_value_decile_histogram",
+      "p_value_quantiles",
+      "fraction_p_le_0.01",
+      "fraction_p_le_0.05",
+      "fraction_p_le_0.10"
+    ]
+  },
+  "future_50000_map_path": {
+    "strict_null_panels": 500,
+    "maps_total": 50000,
+    "maps": "identity plus 49,999 unique sampled nonidentity fresh-row permutations",
+    "same_panels_compared_with_1000_map_path": true,
+    "implementation_consistency": {
+      "absolute_rejection_rate_difference_max": 0.03,
+      "p95_absolute_p_value_difference_max": 0.035
+    }
+  },
+  "stress_null": {
+    "panels": 10000,
+    "maps_total": 1000,
+    "exact_source": "the K=16 NULL regime frozen in scripts/review_q2_oos_v2_k.py at reviewer-hardening precheck commit 6e7a4356409a193212ed70ecc65ff0dd1144841d",
+    "planning_banks": 8,
+    "panels_per_bank": 1250,
+    "target_rho": 0.0,
+    "latent_weight_grid": "101 equally spaced values from 0 to 1, selecting the value whose pre-outcome latent geometry is closest to target rho=0, without post-result modification",
+    "purpose": "distinguish Monte Carlo noise from nonexchangeable stress-model residual structure; not the strict randomization null"
+  },
+  "small_K_exact_audit": {
+    "K": 6,
+    "strict_null_panels": 2000,
+    "exact_maps": 720,
+    "sampled_maps_total": 500,
+    "p95_absolute_p_value_difference_max": 0.05,
+    "absolute_rejection_rate_difference_max": 0.02
+  },
+  "implementation_audit": {
+    "identity_count": 1,
+    "nonidentity_unique": true,
+    "uniform_nonidentity_sampling": "PCG64DXSM rejection sampling without replacement from controller-label permutations",
+    "reference_columns_fixed": true,
+    "dyad_level_permutation_forbidden": true,
+    "same_map_both_shells": true,
+    "deterministic_seeds": true,
+    "tied_rank_fixture": "required",
+    "degenerate_Spearman_fixture": "required and must fail closed without sign inversion",
+    "right_tail_fixture": "required",
+    "no_sign_inversion": true
+  },
+  "ruling": {
+    "material_strict_anti_conservatism": "strict rejection rate > 0.065 AND Wilson lower bound > 0.055, OR fraction p<=0.01 > 0.020 with Wilson lower > 0.0125, OR fraction p<=0.10 > 0.125 with Wilson lower > 0.110",
+    "material_stress_anti_conservatism": "stress rejection rate > 0.065 AND Wilson lower bound > 0.055",
+    "PRIMARY_ROW_QAP_IMPLEMENTATION_NOT_CALIBRATED": "any implementation audit, exact-small-K comparison, 50,000-map path consistency, determinism, ties, degeneracy, tail, identity, uniqueness, or fixed-column check fails; or strict null is materially anti-conservative",
+    "STRESS_NULL_EXCHANGEABILITY_WARNING": "strict null and implementation pass but stress null is materially anti-conservative",
+    "PRIMARY_ROW_QAP_CALIBRATED": "implementation and strict null pass and stress null is not materially anti-conservative"
+  },
+  "seeds": {
+    "STRICT_GEOMETRY": 100983842583019999352810342397805226156,
+    "STRICT_PANELS": 91252092344204400285996883919554255737,
+    "STRICT_QAP_1K": 200351260501786779816525734443944068138,
+    "STRICT_QAP_50K": 285335920472963638142500601143621626652,
+    "SMALL_K_EXACT": 327702994964852283190985605892537525635,
+    "STRESS": "reuse and extend the exact deterministic K=16 NULL bank/latent/panel seed namespaces frozen at 6e7a4356409a193212ed70ecc65ff0dd1144841d"
+  },
+  "compute_location": {
+    "benchmark_before_full_run": true,
+    "local_if_projected_minutes_max": 30,
+    "Spark1_CPU_only_if_longer_or_memory_pressure": true,
+    "Spark1_model_loading_forbidden": true,
+    "Spark1_GPU_scientific_use_forbidden": true,
+    "Spark2_forbidden": true
+  },
+  "firewall": {
+    "V2_stream_exists": false,
+    "V2_seed_derived": false,
+    "model_inference": 0,
+    "semantic_outcomes": 0,
+    "correctness_inspected": false,
+    "historical_runtime_metadata_inspected_before_precheck": false,
+    "historical_raw_text_inspected": false
+  }
+}
