@@ -1,0 +1,12 @@
+{
+  "schema_version": "q2-v4-1-runtime-autopsy-authorization-v1",
+  "source_commit": "8d153a06a4ffdbaa65302f5e5babd0db9e4f1fc5",
+  "protocol": "review/q2_oos_fresh_controller_design/v2_presemantic_qualification/RUNTIME_FORECAST_PROTOCOL.json",
+  "required_journal_sha256": "d726b473feca8c6922b545bdf8a217e8171c8267697ff2b9714b14e1a0363a99",
+  "allowed_fields": ["anonymized_controller_identity", "shell", "rollout", "generated_token_count", "elapsed_seconds", "capped_or_truncated", "retry_count", "runtime_error", "schedule_index"],
+  "forbidden": ["raw_text", "correctness", "semantic_score", "C", "D", "Dshape", "benchmark_content"],
+  "pseudo_campaigns": 100000,
+  "future_campaign": {"fresh_controllers": 16, "rows": 19200, "paired_shell_profiles": true},
+  "seed": 181879861245714525386395017528639201702,
+  "scientific_use": "runtime only; cannot affect controller selection or inference-method selection"
+}
