@@ -1,0 +1,59 @@
+{
+  "a1_frozen_fit_sha256": "193a6869ce3105064a2dc8fd38f6b69f67b7ee9f2d650947290e0c8bc4102102",
+  "a2_historical_raw_archive_manifest_sha256": "09372bbcc14fd76f8aa71c8041a9b167fc74222d5a4292edfb08fdaddc46b923",
+  "a2_probe_manifest_sha256": "5195ab06a01685fbc31c89ef2538a7b49c03e96466742611ac7a80c6acc4721b",
+  "capture": {
+    "baseline_repeated_per_probe": true,
+    "checkpoints_per_probe": 4,
+    "conditions": 32,
+    "free_generation": false,
+    "historical_reference_raw_reused": true,
+    "probes": 12,
+    "repeat_capture": true,
+    "teacher_forced_continuation": "EXACT_INHERITED_V4_1_EXECUTION_TEACHER_TEXT"
+  },
+  "capture_runner_path": "scripts/run_q2_oos_v2_label_free.py",
+  "capture_runner_sha256": "05e0f08417ceea82f7efbfd8ae051a09a8cc66244274b0c4f1dbb563f1779bf6",
+  "consolidator": {
+    "A1_matrix_tolerance": 1e-10,
+    "A2_absolute_floor": 1e-12,
+    "A2_cosine_bound_tolerance": 1e-08,
+    "A2_matrix_tolerance": 1e-12,
+    "A2_psd_tolerance": 1e-08,
+    "A2_repeat_rank_threshold": 0.999,
+    "A2_repeat_relative_tolerance": 1e-06,
+    "aggregation": "uniform_mean_over_48_probe_checkpoint_rows",
+    "baseline_recapture_tolerance": 1e-06,
+    "controller_order": "fresh_16_then_reference_31",
+    "historical_matrix_reproduction_tolerance": 1e-10,
+    "js_log_base": "natural_log",
+    "js_mixture_weights": [
+      0.5,
+      0.5
+    ],
+    "noise_floor_multiplier": 100.0,
+    "path": "scripts/consolidate_q2_oos_v2_label_free.py",
+    "sha256": "d60c2d5f31cab5200836a7adcddea7c581cca518723360aa420d51d2008ddefd"
+  },
+  "correctness": "FORBIDDEN",
+  "correctness_inspected": false,
+  "environment_profile": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386",
+  "execution_commit": "THE_COMMIT_CONTAINING_THIS_LOCK",
+  "generation": {
+    "attention": "sdpa",
+    "dtype": "bfloat16",
+    "layer": 27,
+    "model": "Qwen/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "timing": "sustained-current-token"
+  },
+  "implementation_commit": "63a5f0b1c56a28b10bafcb5dc0c3738715d376f2",
+  "new_A1_model_inference": 0,
+  "raw_artifact_policy": "PRIVATE_HASH_PINNED_NOT_GIT",
+  "schema_version": "q2-oos-v2-label-free-capture-lock-v1",
+  "selected_bank_sha256": "9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd",
+  "semantic_N300_trajectories": 0,
+  "semantic_outcomes": 0,
+  "status": "FROZEN_LABEL_FREE_CAPTURE_NOT_RUN",
+  "stream_manifest_sha256": "3d19c8d71fe86329026d113312f5088468f45d956dd860f97d340da60a093479"
+}

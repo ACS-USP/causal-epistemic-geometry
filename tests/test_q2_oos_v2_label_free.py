@@ -37,3 +37,13 @@ def test_capture_source_has_no_semantic_panel_or_correctness_path() -> None:
     assert "reference_answer" not in source
     assert "generate_reasoning" not in source
     assert '"correctness": "FORBIDDEN"' in source
+
+
+def test_capture_lock_pins_runner_and_forbids_semantic_outcomes() -> None:
+    lock = MODULE.read_json(MODULE.CAPTURE_LOCK)
+    assert MODULE.sha256_file(ROOT / lock["capture_runner_path"]) == lock[
+        "capture_runner_sha256"
+    ]
+    assert lock["correctness"] == "FORBIDDEN"
+    assert lock["semantic_outcomes"] == 0
+    assert lock["semantic_N300_trajectories"] == 0
