@@ -1,0 +1,130 @@
+{
+  "amendment_scope": "FUTURE_SEMANTIC_TERMINATION_POLICY_ONLY",
+  "candidate_hard_caps": [
+    4096,
+    2048,
+    1024,
+    512,
+    256
+  ],
+  "controller_partition": {
+    "baseline_rows": "WITHHELD_FROM_POLICY_SELECTION_AND_INCLUDED_ONLY_IN_FULL_CERTIFICATION",
+    "development_count": 16,
+    "hash_namespace": "Q2-OOS-V2-EFFICIENCY-PARTITION-V1",
+    "rule": "sha256(namespace + '|' + immutable historical controller_id); sort ascending by digest; first 16 DEVELOPMENT, remaining 15 VALIDATION",
+    "unit": "historical controller; all items, shells, and rollouts move together",
+    "validation_count": 15,
+    "validation_opening": "ONCE_AFTER_ONE_PROVISIONAL_POLICY_IS_SELECTED_FROM_DEVELOPMENT"
+  },
+  "endpoint_equivalence": {
+    "full_historical_rows": 37800,
+    "held_out_validation_row_level_exact": [
+      "commitment_valid",
+      "semantic_evaluable",
+      "correct",
+      "binary_error_e"
+    ],
+    "required_full_scientific_reproduction": [
+      "controller_item_error_arrays",
+      "Dtotal",
+      "Dshape",
+      "A0_relational_results",
+      "A1_relational_results",
+      "A2_relational_results",
+      "Q2_V4_1_G2",
+      "RS+",
+      "RT+",
+      "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT"
+    ],
+    "row_level_difference_tolerance": 0,
+    "scientific_float_tolerance": "exact machine reproduction under the frozen implementation; maximum absolute difference must be reported"
+  },
+  "existing_34_controller_stream": "PRESERVED_IMMUTABLE",
+  "existing_prelock": "PRESERVED_IMMUTABLE",
+  "historical_inputs": {
+    "journal_sha256": "d726b473feca8c6922b545bdf8a217e8171c8267697ff2b9714b14e1a0363a99",
+    "rows": 37800,
+    "semantic_scores_sha256": "a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f"
+  },
+  "implementation_identity": {
+    "analysis_sha256": "0f8e195a2abbee2bd738a82f0e828c4fd4350a46d51a39d7e7a0e3f77475cf4c",
+    "audit_sha256": "8ae48a684774f48f2a1fe0898b1165401301322ea97d77dcb99ba16d024164a6",
+    "backend_decode_sha256": "f9aeb27d55d61b8f9df162feb8387887757ab0f9beb2cf6c88f90def7092ae46",
+    "evaluator": "exact typed comparison in external-semantic-v3",
+    "parser": "external-semantic-v3",
+    "parser_sha256": "51ac492a6cea1284c36df6ef659520adf4a04e0595cf0e66bfd15ba172b960c3",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "new_stream": "FORBIDDEN",
+  "policy_selection": {
+    "development_rule": "among hard caps with exact DEVELOPMENT row-level equivalence and cap >= 2 * DEVELOPMENT maximum valid/evaluable natural-output length, choose the smallest cap",
+    "full_rule": "the selected policy must then pass one held-out VALIDATION opening, exact complete 37,800-row equivalence, and the complete valid-output margin",
+    "no_fallback_after_validation_failure": true,
+    "precedence": [
+      "exact held-out endpoint equivalence",
+      "exact full-historical endpoint equivalence",
+      "valid-answer length margin",
+      "hard-cap-only preferred",
+      "smallest qualifying hard cap"
+    ],
+    "runtime_for_selection": false,
+    "v2_safety_results_for_selection": false
+  },
+  "repetition_policy": {
+    "allowed_only_if_no_hard_cap_at_most_1024_qualifies_on_development": true,
+    "candidate": "EXTREME_MECHANICAL_REPETITION_V1_UNCHANGED",
+    "hard_cap_only_preferred": true,
+    "threshold_tuning": "FORBIDDEN"
+  },
+  "replay": {
+    "decode": "exact frozen tokenizer.decode(prefix_token_ids, skip_special_tokens=true)",
+    "manual_text_inspection": false,
+    "model_inference": 0,
+    "prefix": "exact stored autoregressive generated-token prefix through candidate cap C",
+    "raw_text_or_token_ids_in_git": false
+  },
+  "runtime_model": {
+    "counterfactual_row_rule": "retain observed elapsed_seconds for natural rows at or below cap; for rows exceeding cap use max(0, OLS intercept + OLS per_token_cost * cap)",
+    "fit": "ordinary least squares elapsed_seconds = intercept + per_generated_token_cost * generated_token_count",
+    "fit_population": "naturally terminating DEVELOPMENT-controller rows only",
+    "policy_selection_use": false,
+    "validation": "report R2, MAE, median absolute error and MAPE on naturally terminating VALIDATION-controller rows before full reporting",
+    "future_campaign_draws": 100000,
+    "future_controller_draw": "sample 16 complete paired MEDIUM/STRONG controller runtime profiles with replacement from the historical 31-controller superpopulation",
+    "future_quantiles": [
+      0.5,
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "seed": "181879861245714525386395017528639201702",
+    "stress_long_tail_propensity_multipliers": [
+      1.5,
+      2.0
+    ]
+  },
+  "safety_protocol": {
+    "completed_rows_preserved": 91,
+    "max_new_tokens": 4096,
+    "status": "PAUSED_UNCHANGED",
+    "v2_safety_results_used": false
+  },
+  "schema_version": "q2-oos-v2-semantic-efficiency-precheck-v1",
+  "semantic_N300_campaign": "NOT_EXECUTED",
+  "semantic_outcomes_observed": 0,
+  "source_commit": "0c6b71aa1547429e0a87b74d681dbd1c33538962",
+  "status": "Q2_OOS_V2_SEMANTIC_EFFICIENCY_AMENDMENT_PRECHECK_FROZEN",
+  "valid_output_margin": {
+    "exception": "NONE",
+    "natural_termination_only": true,
+    "required_cap_multiplier_over_complete_historical_maximum": 2.0,
+    "summary_quantiles": [
+      0.99,
+      0.999,
+      1.0
+    ],
+    "subset": "commitment_valid AND semantic_evaluable"
+  },
+  "v2_semantic_trajectories_before_amendment": 0
+}

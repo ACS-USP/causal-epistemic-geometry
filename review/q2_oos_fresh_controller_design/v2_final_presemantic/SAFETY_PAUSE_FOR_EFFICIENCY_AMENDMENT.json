@@ -1,0 +1,22 @@
+{
+  "completed_journal_rows": 91,
+  "correctness_inspected": false,
+  "created_utc": "2026-09-02T12:33:23Z",
+  "gpu_utilization_after_stop_percent": 0,
+  "historical_or_candidate_safety_outcomes_inspected": false,
+  "incomplete_in_flight_row_existed": true,
+  "journal_bytes": 85075,
+  "journal_sha256": "507fbb7f7eae7c81f57a0ce8daa5d849e55f89cde528809809cb93d52dfdeb20",
+  "last_appended_schedule_index_zero_based": 90,
+  "maximum_completed_schedule_index_zero_based": 90,
+  "process_stopped": true,
+  "purpose": "PROSPECTIVE_SEMANTIC_EFFICIENCY_AMENDMENT",
+  "runtime_log_bytes": 6693,
+  "runtime_log_sha256": "164867dc61f2031d3991702366769230aec3f1bd02025feb04886b6901eac713",
+  "safety_campaign_interpretation": "SAME_FROZEN_CAMPAIGN_PAUSED_NOT_FAILED",
+  "safety_max_new_tokens": 4096,
+  "schema_version": "q2-oos-v2-safety-pause-v1",
+  "source_commit": "0c6b71aa1547429e0a87b74d681dbd1c33538962",
+  "status": "PAUSED_PROSPECTIVELY_FOR_SEMANTIC_EFFICIENCY_AMENDMENT",
+  "unique_logical_keys": 91
+}
