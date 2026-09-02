@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import numpy as np
+from scripts.audit_q2_oos_v2_repetition_efficiency import earliest_repetition_stop
 from scripts.audit_q2_oos_v2_semantic_efficiency import (
     controller_partition,
     exact,
     length_summary,
     replay_endpoint,
 )
+from scripts.posthoc_diagnose_q2_v4_1_generation import is_extreme_mechanical_repetition
 
 
 def test_controller_partition_is_deterministic_and_disjoint() -> None:
@@ -62,3 +64,20 @@ def test_valid_length_margin_is_twice_observed_maximum() -> None:
     summary = length_summary(np.asarray([1, 2, 3, 4], dtype=np.int64))
     assert summary["maximum"] == 4
     assert summary["required_cap_at_2x_max"] == 8
+
+
+def test_online_repetition_stop_uses_unchanged_historical_criterion() -> None:
+    cases = [
+        [1, 2, 3] * 80,
+        [1, 2, 3, 4] * 100,
+        ([1] * 200) + list(range(100)),
+        list(range(512)),
+    ]
+    for tokens in cases:
+        stop = earliest_repetition_stop(tokens)
+        if stop is None:
+            assert not is_extreme_mechanical_repetition(tokens)
+        else:
+            assert stop >= 256
+            assert is_extreme_mechanical_repetition(tokens[:stop])
+            assert not is_extreme_mechanical_repetition(tokens[: stop - 1])
