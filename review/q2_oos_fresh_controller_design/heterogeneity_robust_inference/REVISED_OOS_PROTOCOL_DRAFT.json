@@ -1,0 +1,109 @@
+{
+  "schema_version": "q2-oos-v2-heterogeneity-robust-revised-protocol-draft-v1",
+  "status": "DRAFT_AWAITING_PRINCIPAL_PRELOCK_REVIEW",
+  "authorization": "DESIGN_ONLY_NO_STREAM_NO_MODEL_OR_SEMANTIC_INFERENCE",
+  "lineage": {
+    "historical_v1_classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+    "historical_v2_classification": "Q2_OOS_V2_NULL_CALIBRATION_BLOCKED",
+    "historical_v2_closeout_commit": "8d153a06a4ffdbaa65302f5e5babd0db9e4f1fc5",
+    "precheck_commit": "d1166eaa202fddc68af8da5a98c8f18f747939e6",
+    "method_selection_sha256": "f215e4f617f20634ceb36abd18246bac2fa924933df08c217e274782f6386f70",
+    "history_mutable": false
+  },
+  "scientific_question": "For one prospectively sampled, safety-conditioned fresh controller, do the fixed historical controllers that are geometrically closer also tend to be semantically closer in blind-spot shape, and is that alignment positive across the fresh-controller population?",
+  "design_unchanged": {
+    "K_fresh": 16,
+    "candidate_count": 34,
+    "reference_atlas": 31,
+    "items": 300,
+    "shells": ["MEDIUM", "STRONG"],
+    "rollouts": 2,
+    "future_semantic_trajectories": 19200,
+    "one_future_stream": true
+  },
+  "fresh_old_primary": {
+    "geometry": "A0",
+    "semantic_endpoint": "Dshape",
+    "independent_unit": "fresh controller",
+    "row_estimand": "r_i = equal-shell mean of Spearman over the 31 fixed historical references between A0_s(i,j) and Dshape_s(i,j)",
+    "population_estimand": "median of the safety-conditioned fresh-controller r_i distribution",
+    "null": "P(r_i > 0) <= 0.5",
+    "alternative": "P(r_i > 0) > 0.5",
+    "test": "exact one-sided Binomial sign test",
+    "alpha": 0.05,
+    "zero_handling": "discard exact zero r_i values from the binomial denominator and report their count; if no nonzero rows p=1",
+    "degeneracy": "any nonfinite r_i fails the inferential computation closed",
+    "point_requirement": "median(r_i) > 0",
+    "p_value_requirement": "one-sided exact sign p <= 0.05",
+    "K16_no_tie_implication": "at least 12 of 16 r_i values must be positive",
+    "global_cross_block_rho": "DESCRIPTIVE_EFFECT_SIZE_ONLY",
+    "original_row_QAP": "SECONDARY_DIAGNOSTIC_ONLY_CANNOT_CHANGE_PRIMARY_CLASSIFICATION",
+    "studentized_mean_row_association": "PREDECLARED_ROBUST_SENSITIVITY_ONLY_CANNOT_CHANGE_PRIMARY_CLASSIFICATION",
+    "cluster_bootstrap_global_rho": "PREDECLARED_ROBUST_SENSITIVITY_ONLY_CANNOT_CHANGE_PRIMARY_CLASSIFICATION",
+    "item_bootstrap": "report finite-panel uncertainty descriptively; it is not the population-generalization sampling unit and cannot replace controller-level inference",
+    "LOFO": "report leave-one-fresh-controller-out median and sign decisions as sensitivity; no post-outcome controller deletion is allowed"
+  },
+  "fresh_fresh_secondary": {
+    "role": "SECONDARY_ONLY_CANNOT_RESCUE_FRESH_OLD_PRIMARY",
+    "geometry": "A0",
+    "semantic_endpoint": "Dshape",
+    "independent_unit": "fresh controller node",
+    "point_estimate": "equal-shell mean strict-upper-triangle Spearman",
+    "formal_method": "NODE_JACKKNIFE_PSEUDOVALUE_T",
+    "test": "one-sided t test of node-jackknife pseudovalue mean with df=K-1",
+    "alpha": 0.05,
+    "historical_conjugation_QAP": "SECONDARY_DIAGNOSTIC_ONLY",
+    "node_bootstrap": "NOT_RETAINED_DUPLICATED_NODE_RESAMPLES_CREATE_STRUCTURAL_ZERO_DYADS"
+  },
+  "secondary_geometries": {
+    "A1_A2": "report controller-level row estimates and Holm-adjusted exact sign p-values as secondary; they cannot rescue A0",
+    "A2_superiority": false
+  },
+  "future_terminal_states": {
+    "Q2_OOS_V2_A0_PASS": "all 16 row associations finite, median(r_i)>0, and exact one-sided sign p<=0.05",
+    "Q2_OOS_V2_ASSOCIATION_INCOMPLETE": "median(r_i)>0 but the exact controller-level sign test does not pass, or a predeclared robustness diagnostic is incomplete",
+    "Q2_OOS_V2_NO_REPLICATION": "median(r_i)<=0 or the controller-level sign evidence does not support a positive population tendency",
+    "Q2_OOS_V2_INFERENCE_DEGENERATE": "one or more required row associations are nonfinite",
+    "Q2_OOS_V2_EXECUTION_INCOMPLETE": "future authorized semantic schedule cannot be completed"
+  },
+  "claim_boundary": {
+    "allowed_positive": "Within the same frozen Qwen3-8B, CRUXEval, and rank-8 intervention laboratory, positive A0 relational alignment generalizes across prospectively sampled, safety-conditioned fresh controller identities.",
+    "forbidden": [
+      "geometry generalizes across tasks",
+      "geometry generalizes across models",
+      "universal epistemic metric",
+      "precise pairwise prediction",
+      "global smoothness",
+      "Riemannian or manifold structure"
+    ]
+  },
+  "runtime_planning": {
+    "historical_journal_sha256": "d726b473feca8c6922b545bdf8a217e8171c8267697ff2b9714b14e1a0363a99",
+    "future_19200_rows_finite_bank_hours": {
+      "mean": 44.17972132836366,
+      "p50": 44.20182304707781,
+      "p80": 47.47758907283009,
+      "p90": 49.10387361192861,
+      "p95": 50.345590478123995,
+      "p99": 52.461980684558884
+    },
+    "runtime_cannot_affect_controller_or_method_selection": true
+  },
+  "future_prelock_procedure": [
+    "principal accepts this revised draft",
+    "commit a new prospective PRELOCK before deriving any V2 seed",
+    "derive exactly one candidate-stream seed from the committed PRELOCK",
+    "publish the finite 34-candidate stream before model use",
+    "run the unchanged safety and label-free qualification sequence only after separate authorization",
+    "freeze the exact sign-test schedule/code and semantic prediction lock before any V2 semantic outcome",
+    "never use real V2 outcomes to select or alter the inference method"
+  ],
+  "firewall": {
+    "new_v2_stream_generated": false,
+    "actual_v2_seed_derived": false,
+    "Qwen_inference": 0,
+    "new_semantic_trajectories": 0,
+    "correctness_used_for_method_selection": false,
+    "Q3": "NOT_RUN"
+  }
+}

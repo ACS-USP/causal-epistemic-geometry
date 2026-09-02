@@ -1,0 +1,70 @@
+{
+  "global_cross_block_rho_role": "DESCRIPTIVE_EFFECT_SIZE",
+  "method_decisions": [
+    {
+      "calibrated_all_nulls": false,
+      "method": "A_ORIGINAL_ROW_QAP",
+      "power": {
+        "POSITIVE_25_PERCENT_CLOSED_A0": 0.948,
+        "POSITIVE_50_PERCENT_CLOSED_A0": 1.0,
+        "POSITIVE_RHO_LIKE_0_15": 0.964
+      },
+      "preferred_power_adequate": true
+    },
+    {
+      "calibrated_all_nulls": true,
+      "method": "B_ROW_SPEARMAN_SIGN",
+      "power": {
+        "POSITIVE_25_PERCENT_CLOSED_A0": 0.72,
+        "POSITIVE_50_PERCENT_CLOSED_A0": 0.9973333333333333,
+        "POSITIVE_RHO_LIKE_0_15": 0.7596666666666667
+      },
+      "preferred_power_adequate": true
+    },
+    {
+      "calibrated_all_nulls": true,
+      "method": "C_STUDENTIZED_MEAN_ROW_ASSOCIATION",
+      "power": {
+        "POSITIVE_25_PERCENT_CLOSED_A0": 0.8846666666666667,
+        "POSITIVE_50_PERCENT_CLOSED_A0": 1.0,
+        "POSITIVE_RHO_LIKE_0_15": 0.9243333333333333
+      },
+      "preferred_power_adequate": true
+    },
+    {
+      "calibrated_all_nulls": true,
+      "method": "D_CLUSTER_BOOTSTRAP_BASIC",
+      "power": {
+        "POSITIVE_25_PERCENT_CLOSED_A0": 0.85,
+        "POSITIVE_50_PERCENT_CLOSED_A0": 1.0,
+        "POSITIVE_RHO_LIKE_0_15": 0.89
+      },
+      "preferred_power_adequate": true
+    },
+    {
+      "calibrated_all_nulls": true,
+      "method": "D_CLUSTER_BOOTSTRAP_PERCENTILE",
+      "power": {
+        "POSITIVE_25_PERCENT_CLOSED_A0": 0.8513333333333334,
+        "POSITIVE_50_PERCENT_CLOSED_A0": 1.0,
+        "POSITIVE_RHO_LIKE_0_15": 0.8953333333333333
+      },
+      "preferred_power_adequate": true
+    },
+    {
+      "calibrated_all_nulls": false,
+      "method": "E_RANK_REGRESSION_CLUSTER",
+      "power": {
+        "POSITIVE_25_PERCENT_CLOSED_A0": 0.918,
+        "POSITIVE_50_PERCENT_CLOSED_A0": 1.0,
+        "POSITIVE_RHO_LIKE_0_15": 0.9436666666666667
+      },
+      "preferred_power_adequate": true
+    }
+  ],
+  "original_row_qap_role": "SECONDARY_DIAGNOSTIC_ONLY",
+  "precheck_commit": "d1166eaa202fddc68af8da5a98c8f18f747939e6",
+  "schema_version": "q2-oos-heterogeneity-robust-method-selection-v1",
+  "selected_primary": "B_ROW_SPEARMAN_SIGN",
+  "terminal_recommendation": "Q2_OOS_HETEROGENEITY_ROBUST_INFERENCE_READY"
+}

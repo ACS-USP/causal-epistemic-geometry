@@ -1,0 +1,17 @@
+{
+  "schema_version": "q2-oos-heterogeneity-robust-zero-inference-audit-v1",
+  "historical_v1_classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+  "historical_v2_classification": "Q2_OOS_V2_NULL_CALIBRATION_BLOCKED",
+  "historical_classifications_altered": false,
+  "new_controller_streams": 0,
+  "actual_v2_seed_derived": false,
+  "Qwen_inference": 0,
+  "new_semantic_trajectories": 0,
+  "historical_Q2_sensitivity_label": "POST_HOC_HETEROGENEITY_ROBUST_Q2_SENSITIVITY",
+  "raw_text_inspected": false,
+  "correctness_used_for_method_selection": false,
+  "Spark1_CPU_only_used": true,
+  "Spark1_CUDA_disabled_for_simulations": true,
+  "Spark2_used": false,
+  "Q3": "NOT_RUN"
+}

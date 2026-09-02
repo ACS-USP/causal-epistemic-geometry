@@ -1,0 +1,63 @@
+{
+  "classification": "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT",
+  "correctness_read": false,
+  "estimands_sha256": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6",
+  "estimator_lock_sha256": "76381274ae271c63b10aa0bd2b783f008ae274e7b13ed73a86c3aa3f89720a90",
+  "historical_classification": "Q2_V4_1_G2",
+  "historical_classification_modified": false,
+  "label": "POST_HOC_HETEROGENEITY_ROBUST_Q2_SENSITIVITY",
+  "model_inference": 0,
+  "q3": "NOT_RUN",
+  "raw_journal_read": false,
+  "results": {
+    "A0": {
+      "CI95": [
+        0.45120564598222834,
+        0.6587801942643722
+      ],
+      "Holm_p": 8.485118555225934e-12,
+      "historical_full_association": 0.5638183484033006,
+      "jackknife_pseudovalue_mean": 0.5549929201233003,
+      "jackknife_standard_error": 0.05081950443788971,
+      "leave_one_node_all_positive": true,
+      "leave_one_node_max": 0.584706244263577,
+      "leave_one_node_min": 0.5462910427507881,
+      "one_sided_p": 2.828372851741978e-12,
+      "robust_support": true,
+      "t": 10.920864464579703
+    },
+    "A1": {
+      "CI95": [
+        0.4448099234033581,
+        0.6505027512951506
+      ],
+      "Holm_p": 8.485118555225934e-12,
+      "historical_full_association": 0.5563109770056525,
+      "jackknife_pseudovalue_mean": 0.5476563373492543,
+      "jackknife_standard_error": 0.05035881164814388,
+      "leave_one_node_all_positive": true,
+      "leave_one_node_max": 0.5746396560595918,
+      "leave_one_node_min": 0.5382478274295903,
+      "one_sided_p": 3.1301910973244567e-12,
+      "robust_support": true,
+      "t": 10.87508460635885
+    },
+    "A2": {
+      "CI95": [
+        0.30728245279641925,
+        0.5615862804520013
+      ],
+      "Holm_p": 4.7105735334678914e-08,
+      "historical_full_association": 0.441128474056368,
+      "jackknife_pseudovalue_mean": 0.43443436662421026,
+      "jackknife_standard_error": 0.062260015040711596,
+      "leave_one_node_all_positive": true,
+      "leave_one_node_max": 0.4647689146444863,
+      "leave_one_node_min": 0.42329885113870225,
+      "one_sided_p": 4.7105735334678914e-08,
+      "robust_support": true,
+      "t": 6.977742718824196
+    }
+  },
+  "schema_version": "q2-v4-1-posthoc-heterogeneity-robust-sensitivity-v1"
+}
