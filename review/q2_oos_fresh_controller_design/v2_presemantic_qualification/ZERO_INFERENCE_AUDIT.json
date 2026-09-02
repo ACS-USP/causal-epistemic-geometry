@@ -1,0 +1,20 @@
+{
+  "schema_version": "q2-oos-v2-null-calibration-zero-inference-audit-v1",
+  "classification": "Q2_OOS_V2_NULL_CALIBRATION_BLOCKED",
+  "actual_v2_seed_derived": false,
+  "correctness_inspected": false,
+  "historical_q2_runtime_metadata_inspected": false,
+  "historical_raw_text_inspected": false,
+  "model_loaded": false,
+  "new_semantic_trajectories": 0,
+  "new_v2_streams_generated": 0,
+  "prelock_created": false,
+  "q3_run": false,
+  "runpod_used": false,
+  "spark1_a2_used": false,
+  "spark1_cpu_only_model_free_used": true,
+  "spark1_model_inference": 0,
+  "spark1_safety_trajectories": 0,
+  "spark2_used": false,
+  "v1_modified": false
+}

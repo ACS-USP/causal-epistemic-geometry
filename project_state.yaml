@@ -356,6 +356,43 @@ instrument_history:
     historical_q2: Q2_V4_1_G2_UNCHANGED
     next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
 
+  - id: Q2_OOS_V2_NULL_CALIBRATION
+    status: Q2_OOS_V2_NULL_CALIBRATION_BLOCKED
+    conclusion: >-
+      The prospectively frozen K=16 fresh-row QAP passed its strict
+      exchangeable-null calibration (0.0512 rejection at alpha=.05), exact
+      small-K comparison, and 50,000-map path check. The unchanged
+      reviewer-hardening stress null remained materially anti-conservative
+      (0.0758; Wilson 95% interval 0.07077--0.08115), requiring a principal
+      stop. A fail-closed audit aggregator also recorded the desired absence
+      of dyad-level permutation as a false Boolean and therefore emitted
+      PRIMARY_ROW_QAP_IMPLEMENTATION_NOT_CALIBRATED; it was not patched or
+      rerun after results were visible. No PRELOCK, seed, stream, runtime
+      autopsy, model inference, safety outcome, or semantic outcome occurred.
+    branch: research/q2-fresh-controller-oos-design
+    precheck_commit: 630b0854b191d1da87800396987e1e6d85c2bdc6
+    precheck_erratum_commit: fe255060f4ec9ee2143a62b810a9d91aecd9167b
+    calibration_code_commit: 48cba4e740fc65940d11b980d58780e381a6be7e
+    artifact: review/q2_oos_fresh_controller_design/v2_presemantic_qualification/Q2_OOS_V2_NULL_CALIBRATION_CLOSEOUT.md
+    result: review/q2_oos_fresh_controller_design/v2_presemantic_qualification/NULL_CALIBRATION_RESULT.json
+    strict_null_rejection_rate: 0.0512
+    stress_null_rejection_rate: 0.0758
+    stress_null_wilson_95: [0.07077374054640673, 0.08115204367127532]
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    model_inference: 0
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_cpu_only_model_free_used: true
+    spark1_safety_trajectories: 0
+    spark1_a2_used: false
+    spark2_used: false
+    runpod_used: false
+    v1_changed: false
+    q3: NOT_RUN
+    historical_q2: Q2_V4_1_G2_UNCHANGED
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY
     conclusion: >-
