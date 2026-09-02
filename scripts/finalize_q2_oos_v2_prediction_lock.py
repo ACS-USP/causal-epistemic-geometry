@@ -9,6 +9,7 @@ semantic execution unauthorized.
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -126,7 +127,11 @@ def build_schedule() -> dict[str, Any]:
         for row in rows
     }
     seeds = {row["seed"] for row in rows}
-    if len(rows) != EXPECTED_ROWS or len(keys) != EXPECTED_ROWS or len(seeds) != EXPECTED_ROWS:
+    if (
+        len(rows) != EXPECTED_ROWS
+        or len(keys) != EXPECTED_ROWS
+        or len(seeds) != EXPECTED_ROWS
+    ):
         raise RuntimeError("Q2_OOS_V2_SEMANTIC_SCHEDULE_INTEGRITY_FAILURE")
     return {
         "schema_version": "q2-oos-v2-future-semantic-schedule-v1",
@@ -144,6 +149,151 @@ def build_schedule() -> dict[str, Any]:
         "semantic_outcomes": 0,
         "rows": rows,
     }
+
+
+def oos_generation_specification(
+    inherited: dict[str, Any], schedule: dict[str, Any], prelock_commit: str
+) -> dict[str, Any]:
+    """Bind the inherited execution engine to the frozen OOS schedule.
+
+    V4.1 is the authoritative source for model, prompt, and sampling semantics,
+    but its controller count and schedule namespaces are not OOS objects.
+    """
+    specification = copy.deepcopy(inherited)
+    specification["source_of_truth_note"] = (
+        "Model, prompt, sampling, and hook semantics are inherited exactly from the "
+        "qualified V4.1 reference engine. The OOS schedule is authoritative for the "
+        "16 fresh controllers, two shells, 300 items, two rollouts, and row seeds."
+    )
+    specification["prompt"]["messages"] = (
+        "one user message containing the exact frozen panel prompt; no system message "
+        "is present in the frozen panel metadata"
+    )
+    specification["intervention"].pop("baseline", None)
+    specification["intervention"].pop("randoms", None)
+    specification["intervention"]["conditions"] = (
+        "exactly 16 selected fresh controllers at MEDIUM and STRONG; no baseline or "
+        "reference-atlas recapture in the future OOS schedule"
+    )
+    specification["schedule_and_seed"] = {
+        "condition_order": (
+            "within each item-rollout block, one deterministic NumPy PCG64DXSM "
+            "permutation of the 32 frozen fresh-controller shell conditions"
+        ),
+        "condition_order_seed_namespace": f'{schedule["namespace"]}|CONDITION_ORDER',
+        "logical_key": ["item_id", "condition", "rollout_index"],
+        "order_rng": "NumPy PCG64DXSM",
+        "prelock_source": prelock_commit,
+        "schedule_seed_namespace": f'{schedule["namespace"]}|GENERATION_SEED',
+        "seed_regime": "INDEPENDENT_PRIMARY",
+        "seed_source": "FUTURE_SEMANTIC_SCHEDULE.json row seed",
+        "seed_uniqueness": schedule["unique_seeds"],
+    }
+    specification.pop("legacy_helper_boundary", None)
+    return specification
+
+
+def oos_retry_resume_specification(
+    inherited: dict[str, Any], efficiency: dict[str, Any]
+) -> dict[str, Any]:
+    specification = copy.deepcopy(inherited)
+    specification["terminal_generation_policy"] = {
+        "hard_max_new_tokens": efficiency["generation_semantics"][
+            "hard_max_new_tokens"
+        ],
+        "extreme_mechanical_repetition": efficiency["generation_semantics"][
+            "repetition_policy"
+        ],
+        "hard_cap_or_repetition_stop_is_terminal": True,
+        "persisted_terminal_row_retryable": False,
+        "terminal_scoring": efficiency["retry_resume_and_terminality"][
+            "terminal_scoring"
+        ],
+    }
+    return specification
+
+
+def oos_semantic_estimands(
+    inherited: dict[str, Any],
+    matrix_metadata: dict[str, Any],
+    inference: dict[str, Any],
+) -> dict[str, Any]:
+    """Preserve the V4.1 estimators while binding them to OOS blocks/inference."""
+    estimands = copy.deepcopy(inherited)
+    estimands["panel"] = {
+        "N": 300,
+        "future_conditions": 32,
+        "fresh_controllers": 16,
+        "historical_reference_controllers": 31,
+        "items": "the exact frozen V4.1 semantic panel in frozen order",
+        "item_weight": "uniform 1/N",
+        "rollouts": 2,
+        "rollout_regime": "INDEPENDENT_PRIMARY",
+        "shells": list(SHELLS),
+        "reference_profile_policy": (
+            "reuse the sealed historical V4.1 reference-controller itemwise error "
+            "profiles; do not recapture or regenerate them"
+        ),
+    }
+    definitions = {
+        "A0": "coordinate-space angular dissimilarity 1-cosine",
+        "A1": "regularized covariance-whitened angular dissimilarity",
+        "A2": "baseline-centered natural-log full-vocabulary JS response angle",
+        "D2": "finite response total distance",
+    }
+    estimands["geometry_matrices"] = {
+        metric: {
+            "definition": definition,
+            "blocks": {
+                shell: {
+                    "FRESH_FRESH": matrix_metadata["matrix_hashes"][
+                        f"{metric}_{shell}_FRESH_FRESH"
+                    ],
+                    "FRESH_REFERENCE": matrix_metadata["matrix_hashes"][
+                        f"{metric}_{shell}_FRESH_REFERENCE"
+                    ],
+                }
+                for shell in SHELLS
+            },
+            "role": (
+                "PRIMARY_GEOMETRY" if metric == "A0" else "SECONDARY_OR_SENSITIVITY"
+            ),
+        }
+        for metric, definition in definitions.items()
+    }
+    estimands["geometry_matrices"]["A1"]["regularization_lambda"] = 0.1
+    estimands["geometry_matrices"]["A2"]["raw_aggregation"] = (
+        "natural-log JS; equal 0.5/0.5 mixture; uniform mean over 48 "
+        "probe/checkpoint rows"
+    )
+    estimands["shape_distance"]["baseline_handling"] = (
+        "no baseline condition is generated in OOS V2; fresh-controller profiles "
+        "are paired with sealed historical reference-controller profiles by the same "
+        "item and rollout index"
+    )
+    estimands["shape_distance"]["shell_handling"] = (
+        "compute fresh-by-reference 16x31 and fresh-by-fresh 16x16 matrices "
+        "separately for MEDIUM and STRONG"
+    )
+    estimands["shape_distance"]["reference_profiles"] = (
+        "fixed sealed Q2 V4.1 itemwise error profiles in the exact 31-controller order"
+    )
+    estimands.pop("radial_secondary", None)
+    estimands["bootstrap"] = {
+        "unit": "semantic panel item",
+        "resamples": inference["item_bootstrap"]["resamples"],
+        "seed": inference["item_bootstrap"]["seed"],
+        "cluster_movement": (
+            "move all 32 fresh-controller conditions, both rollouts, and the paired "
+            "fixed historical reference profiles for each sampled item together"
+        ),
+        "role": inference["item_bootstrap"]["role"],
+    }
+    estimands["fresh_old_primary"] = inference["fresh_old_primary"]
+    estimands["fresh_fresh_secondary"] = inference["fresh_fresh_secondary"]
+    estimands["global_cross_block_rho"] = "DESCRIPTIVE_EFFECT_SIZE_ONLY"
+    estimands["historical_row_qap"] = "DIAGNOSTIC_ONLY"
+    return estimands
 
 
 def freeze(output_dir: Path) -> None:
@@ -230,6 +380,16 @@ def freeze(output_dir: Path) -> None:
     atomic_json(runtime_path, runtime)
     matrix_metadata = read_json(MATRIX_METADATA)
     normative = read_json(V41_NORMATIVE)
+    prelock_commit = read_json(STREAM_MANIFEST)["prelock_commit"]
+    generation = oos_generation_specification(
+        normative["generation_specification"], schedule, prelock_commit
+    )
+    retry_resume = oos_retry_resume_specification(
+        normative["retry_resume_specification"], efficiency
+    )
+    semantic_estimands = oos_semantic_estimands(
+        normative["semantic_estimands"], matrix_metadata, inference
+    )
     prediction = {
         "schema_version": "q2-oos-v2-prediction-lock-v1",
         "status": "Q2_OOS_V2_READY_FOR_PREDICTION_LOCK",
@@ -241,6 +401,15 @@ def freeze(output_dir: Path) -> None:
         "prediction_matrices_sha256": sha256_file(MATRICES),
         "prediction_matrix_hashes": matrix_metadata["matrix_hashes"],
         "label_free_qualification_sha256": sha256_file(LABEL_FREE),
+        "label_free_forensic_audit_sha256": sha256_file(
+            REVIEW / "LABEL_FREE_FORENSIC_AUDIT.json"
+        ),
+        "fresh_A2_raw_hash_manifest_sha256": sha256_file(
+            REVIEW / "A2_FRESH_RAW_ARCHIVE_HASHES.json"
+        ),
+        "post_maintenance_environment_qualification_sha256": sha256_file(
+            REVIEW / "POST_MAINTENANCE_ENVIRONMENT_QUALIFICATION.json"
+        ),
         "semantic_schedule_sha256": sha256_file(schedule_path),
         "inference_lock_sha256": sha256_file(inference_path),
         "runtime_monitor_lock_sha256": sha256_file(runtime_path),
@@ -248,10 +417,10 @@ def freeze(output_dir: Path) -> None:
         "semantic_generation": {
             "max_new_tokens": 4096,
             "repetition_stop": "EXTREME_MECHANICAL_REPETITION_V1",
-            "all_other_parameters": normative["generation_specification"],
+            "generation_specification": generation,
         },
-        "retry_resume": normative["retry_resume_specification"],
-        "semantic_estimands": normative["semantic_estimands"],
+        "retry_resume": retry_resume,
+        "semantic_estimands": semantic_estimands,
         "fresh_old_primary": inference["fresh_old_primary"],
         "fresh_fresh_secondary": inference["fresh_fresh_secondary"],
         "historical_safety_policy": "UNCHANGED_MAX_NEW_TOKENS_4096_NO_REPETITION_STOP",
@@ -270,6 +439,9 @@ def freeze(output_dir: Path) -> None:
         MATRICES,
         MATRIX_METADATA,
         LABEL_FREE,
+        REVIEW / "LABEL_FREE_FORENSIC_AUDIT.json",
+        REVIEW / "A2_FRESH_RAW_ARCHIVE_HASHES.json",
+        REVIEW / "POST_MAINTENANCE_ENVIRONMENT_QUALIFICATION.json",
         schedule_path,
         inference_path,
         runtime_path,
