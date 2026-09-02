@@ -1,0 +1,23 @@
+{
+  "schema_version": "q2-oos-v2-presemantic-phase0-precheck-erratum-v1",
+  "status": "FROZEN_BEFORE_ANY_NULL_SIMULATION_OR_RUNTIME_METADATA_ACCESS",
+  "parent_precheck_commit": "630b0854b191d1da87800396987e1e6d85c2bdc6",
+  "affected_artifact": "NULL_CALIBRATION_PRECHECK.json",
+  "affected_field": "stress_null.maps_total",
+  "original_value": 1000,
+  "corrected_value": 999,
+  "corrected_map_composition": "identity plus 998 unique sampled nonidentity maps",
+  "reason": "The accepted reviewer-hardening K=16 NULL regime in scripts/review_q2_oos_v2_k.py used the precheck planning_row_permutations value 999 as the total map count. Literal reproduction therefore requires 999 total maps. The strict exchangeable-null calibration remains identity plus 999 nonidentity maps, 1000 total.",
+  "scientific_effect": "none; correction restores exact historical stress-model reproduction before results",
+  "strict_null_changed": false,
+  "ruling_thresholds_changed": false,
+  "seeds_changed": false,
+  "runtime_protocol_changed": false,
+  "null_panels_generated_before_erratum": 0,
+  "historical_runtime_metadata_inspected_before_erratum": false,
+  "v2_stream_exists": false,
+  "actual_v2_seed_derived": false,
+  "model_inference": 0,
+  "semantic_trajectories": 0,
+  "correctness_inspected": false
+}
