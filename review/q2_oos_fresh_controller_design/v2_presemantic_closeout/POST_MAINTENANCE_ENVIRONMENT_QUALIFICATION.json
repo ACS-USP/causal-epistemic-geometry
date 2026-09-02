@@ -1,0 +1,88 @@
+{
+  "artifact_hashes": {
+    "A1_covariance_manifest": "29159587e31a5f2c2faa2df877d9fcf5a39f96cb75cb2f398b7ee30f250956ff",
+    "A1_frozen_fit": "193a6869ce3105064a2dc8fd38f6b69f67b7ee9f2d650947290e0c8bc4102102",
+    "A2_historical_raw_manifest": "09372bbcc14fd76f8aa71c8041a9b167fc74222d5a4292edfb08fdaddc46b923",
+    "A2_probe_manifest": "5195ab06a01685fbc31c89ef2538a7b49c03e96466742611ac7a80c6acc4721b",
+    "candidate_stream_manifest": "3d19c8d71fe86329026d113312f5088468f45d956dd860f97d340da60a093479",
+    "consolidator": "d60c2d5f31cab5200836a7adcddea7c581cca518723360aa420d51d2008ddefd",
+    "exact_model_manifest": "cedc88ba2f732baea6bb71f5e6d7f6bc3aad00d302c3456d208a21687c9e069c",
+    "label_free_capture_lock": "057af9de861666053d227861210a3b7363e9542443ddbe9c3e092c1092d689ac",
+    "runner": "05e0f08417ceea82f7efbfd8ae051a09a8cc66244274b0c4f1dbb563f1779bf6",
+    "selected_controller_bank": "9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd",
+    "spark1_environment_lock": "9af8be9bf711d6e528325c015e06216a946e274a3550a8060a7afa8acdc5ec28"
+  },
+  "checks": {
+    "architecture_aarch64": true,
+    "bf16_supported": true,
+    "candidate_and_selected_bank_hashes_exact": true,
+    "cuda_13": true,
+    "cuda_available": true,
+    "disk_adequate": true,
+    "gpu_GB10": true,
+    "gpu_idle": true,
+    "hostname_spark1": true,
+    "label_free_lock_and_code_hashes_exact": true,
+    "model_and_tokenizer_15_of_15_files_exact": true,
+    "model_revision_exact": true,
+    "one_gpu": true,
+    "python_3_12_3": true,
+    "remote_git_head_exact": true,
+    "remote_worktree_clean": true,
+    "sdpa_available": true,
+    "stale_A2_capture_process_absent": true,
+    "stale_user_gpu_process_absent": true,
+    "tokenizer_revision_exact": true,
+    "torch_2_13_0_cu130": true,
+    "transformers_4_57_6": true
+  },
+  "created_utc": "2026-09-02T18:44:17Z",
+  "environment": {
+    "architecture": "aarch64",
+    "bf16_supported": true,
+    "compute_capability": [
+      12,
+      1
+    ],
+    "cuda_available": true,
+    "disk_available": "3.2T",
+    "disk_use_percent": 10,
+    "driver": "580.173.02",
+    "gpu": "NVIDIA GB10",
+    "gpu_temperature_c": 33,
+    "gpu_utilization_percent": 0,
+    "hostname": "spark1",
+    "kernel": "Linux 6.17.0-1032-nvidia",
+    "model_file_count": 15,
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "python": "3.12.3",
+    "qualified_environment_profile": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386",
+    "sdpa_available": true,
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "torch": "2.13.0+cu130",
+    "torch_cuda": "13.0",
+    "transformers": "4.57.6"
+  },
+  "expected_remote_head": "f2ec44c2da9f00688a918f55b0f5d70b198f4744",
+  "operational_differences": {
+    "driver": {
+      "after_maintenance": "580.173.02",
+      "frozen_observation": "580.159.03",
+      "qualification_rule": "NOT_A_FROZEN_STATIC_GATE"
+    },
+    "kernel": {
+      "after_maintenance": "Linux 6.17.0-1032-nvidia",
+      "frozen_observation": "Linux 6.17.0-1026-nvidia",
+      "qualification_rule": "NOT_A_FROZEN_STATIC_GATE"
+    }
+  },
+  "remote_git": {
+    "branch": "DETACHED_FROZEN_WORKTREE",
+    "head": "f2ec44c2da9f00688a918f55b0f5d70b198f4744",
+    "worktree_clean": true
+  },
+  "schema_version": "q2-oos-v2-post-maintenance-environment-qualification-v1",
+  "scientifically_relevant_drift": false,
+  "semantic_N300_trajectories": 0,
+  "status": "Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_QUALIFIED"
+}
