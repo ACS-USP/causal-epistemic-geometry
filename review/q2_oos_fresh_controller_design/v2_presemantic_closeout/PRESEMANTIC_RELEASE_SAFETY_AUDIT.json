@@ -1,0 +1,36 @@
+{
+  "schema_version": "q2-oos-v2-presemantic-release-safety-audit-v1",
+  "classification": "Q2_OOS_V2_PRESEMANTIC_RELEASE_SAFE",
+  "public_package_contains": [
+    "environment qualification without private route or cache path",
+    "safety aggregates and private-journal hashes",
+    "selected-controller identities, vectors, and hashes already prospectively public",
+    "A1/A2 qualification aggregates",
+    "aggregate A0/A1/A2/D2 prediction matrices",
+    "raw-capture file hashes and aggregate hash",
+    "independent forensic result",
+    "future semantic schedule containing stable item IDs, prompt hashes, controller hashes, and seeds",
+    "inference, runtime, and prediction locks",
+    "presemantic closeout"
+  ],
+  "excluded_from_git": [
+    "24 raw A2 activation/probability capture archives",
+    "raw safety journal and runtime log",
+    "model cache and weights",
+    "raw benchmark content and reference answers",
+    "raw model generations",
+    "credentials, endpoints, usernames, ports, identity paths, and tokens"
+  ],
+  "checks": {
+    "credentials_absent": true,
+    "private_infrastructure_details_absent": true,
+    "raw_benchmark_content_absent": true,
+    "raw_model_outputs_absent": true,
+    "raw_activation_probe_archives_absent": true,
+    "new_semantic_outcomes_absent": true,
+    "correctness_absent": true,
+    "private_artifacts_hash_pinned": true
+  },
+  "semantic_trajectories": 0,
+  "correctness_inspected": false
+}

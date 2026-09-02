@@ -1,0 +1,456 @@
+{
+  "Q3": "NOT_RUN",
+  "RunPod": "FORBIDDEN",
+  "Spark1": "FUTURE_SEMANTIC_BACKEND_ONLY_NOT_EXECUTED",
+  "Spark2": "FORBIDDEN",
+  "correctness_inspected": false,
+  "efficient_termination_lock_sha256": "4e5a6bfbd6af174d4095b68cee4d0e20759ee312320d3d9afaa5eaa6b6eeaa4d",
+  "fresh_A2_raw_hash_manifest_sha256": "54f4d2b8e3699d4d9bcce3b102a6ca23b6e01112a5b037cf00db6df8beb987d6",
+  "fresh_fresh_secondary": {
+    "method": "NODE_JACKKNIFE_PSEUDOVALUE_T",
+    "role": "SECONDARY_ONLY_CANNOT_RESCUE_PRIMARY"
+  },
+  "fresh_old_primary": {
+    "all_16_finite_required": true,
+    "alpha": 0.05,
+    "bernoulli": "X_i=1 iff finite r_i>0; X_i=0 iff finite r_i<=0",
+    "global_fresh_old_rho": "DESCRIPTIVE_ONLY",
+    "null": "P(r_i>0)<=0.5",
+    "original_row_QAP": "DIAGNOSTIC_ONLY",
+    "positive_count_required": 12,
+    "row_statistic": "r_i=0.5*(Spearman_j(A0_MEDIUM(i,j),Dshape_MEDIUM(i,j))+Spearman_j(A0_STRONG(i,j),Dshape_STRONG(i,j)))",
+    "studentized_controller_mean": "SENSITIVITY_ONLY",
+    "test": "exact one-sided Binomial upper-tail"
+  },
+  "historical_safety_policy": "UNCHANGED_MAX_NEW_TOKENS_4096_NO_REPETITION_STOP",
+  "inference_lock_sha256": "a8d9ead49d9265211906a0f367ac3062d03b32c924e8606a2f8c12caaf3fbea1",
+  "label_free_forensic_audit_sha256": "1ce1a3025878506be33fe7f9d91055a625b5d7f038e8bd88aa46af0c12865ab0",
+  "label_free_qualification_sha256": "5e9632f93fcdd8d387f3bf0f1d03c008e32a84924e5c0bb8e520f65e3b9f612b",
+  "new_controller_streams": 0,
+  "post_maintenance_environment_qualification_sha256": "f392aa16c2718d3c943fb626abdb629f199f3a13bf46a49bdf51bf85a6519a08",
+  "prediction_matrices_sha256": "b4ec00985e750c5bb8fd7fd49228267ec576bf6c2ad2ac3984f6f2390d927703",
+  "prediction_matrix_hashes": {
+    "A0_MEDIUM_FRESH_FRESH": "e84e59e9b7f0b63bedb26852fe211f39944c9af35577f1a9ed5649abccb9f091",
+    "A0_MEDIUM_FRESH_REFERENCE": "11c9ba2ef5b614dbfd725ccaa1e716c7f01b89c3791aa6e3c9dbc34f24a44acc",
+    "A0_STRONG_FRESH_FRESH": "e84e59e9b7f0b63bedb26852fe211f39944c9af35577f1a9ed5649abccb9f091",
+    "A0_STRONG_FRESH_REFERENCE": "11c9ba2ef5b614dbfd725ccaa1e716c7f01b89c3791aa6e3c9dbc34f24a44acc",
+    "A1_MEDIUM_FRESH_FRESH": "02cbb09f8e9afe2017a9072217d108baa7b11bdfe8f13993da2ef9ce4b78e95e",
+    "A1_MEDIUM_FRESH_REFERENCE": "6aa64a331e6180996e78e38b670d75397d95ce8281333cf2c17209ff73c0cb82",
+    "A1_STRONG_FRESH_FRESH": "02cbb09f8e9afe2017a9072217d108baa7b11bdfe8f13993da2ef9ce4b78e95e",
+    "A1_STRONG_FRESH_REFERENCE": "6aa64a331e6180996e78e38b670d75397d95ce8281333cf2c17209ff73c0cb82",
+    "A2_MEDIUM_FRESH_FRESH": "dac2ed4c5d483a6dc25e1f5ae254e8c5df7c89cb9c2e7604ea6fdc420023fc12",
+    "A2_MEDIUM_FRESH_REFERENCE": "75a4bd5f22468218cccfa8fbddebd004d8a51bd8810bfb74c1bd04ffced80aed",
+    "A2_STRONG_FRESH_FRESH": "b7d02bcbaf61acc018de896221021c7b7c968069911afea3f3e02f385a300021",
+    "A2_STRONG_FRESH_REFERENCE": "de4a9b63f3d14143122dfd12b0acf682fde6075360db5cc472502f9842c09309",
+    "D2_MEDIUM_FRESH_FRESH": "b5c7a4e855e83b21f44a8aff82e246bd77f85a941143f40123dd7166bf46ca22",
+    "D2_MEDIUM_FRESH_REFERENCE": "d3a41387558831b4a29d4d7b09811a53cc525929b64f2a80a57f21fc4f0ec909",
+    "D2_STRONG_FRESH_FRESH": "0bc38a7700f63301ac94889fdb8c0f886b56b059fddbea0832963c7b4fe21b4e",
+    "D2_STRONG_FRESH_REFERENCE": "21ab9b0ecfc99e17e495ca3cfff91c24488f29a93d9334a0e6dac426cb0c9755"
+  },
+  "redraws": 0,
+  "replacements": 0,
+  "retry_resume": {
+    "complete_logical_key": "A single journal row with the exact logical key, raw generated output or recorded runtime outcome, parser/scoring fields, generated token metadata, seed, and matching frozen provenance, persisted with append+flush+fsync.",
+    "duplicate_prevention": {
+      "conflicting_duplicate": "raises and blocks; never adjudicated by choosing one",
+      "format": "append-only JSONL wrapper with identity hash and key fields",
+      "identical_duplicate": "ignored",
+      "journal": "CrashSafeJournal",
+      "resume": "load and validate the journal, skip only completed keys with matching identity/provenance, and process only pending schedule keys",
+      "tail_recovery": "only a malformed final tail may be quarantined and atomically removed; a malformed non-final row blocks",
+      "third_scientific_draw": false
+    },
+    "logical_identity": [
+      "item_id",
+      "condition",
+      "rollout_index"
+    ],
+    "non_retryable_scientific_outcomes": [
+      "valid wrong answer",
+      "invalid or unevaluable commitment",
+      "truncated generation when truncation is recorded as an outcome",
+      "no final commitment",
+      "model runtime error recorded as a scientific row",
+      "any undesirable, surprising, or low-utility result"
+    ],
+    "operational_retryable_failures": [
+      "transport or network failure before a scientific row is persisted",
+      "process crash or scheduler interruption before a scientific row is persisted",
+      "incomplete artifact write or recoverable truncated journal tail",
+      "model load failure before a trajectory exists",
+      "timeout before a valid scientific row exists"
+    ],
+    "replacement_boundary": "No item, condition, rollout, seed, controller, prompt, or threshold may be substituted for a failed or undesirable logical key.",
+    "retry_attempt_contract": {
+      "maximum_infrastructure_attempts": 3,
+      "retry_provenance_appended": true,
+      "same_logical_key": true,
+      "same_scientific_inputs": true,
+      "same_seed": true,
+      "terminal_after_attempt_limit": "ENGINE_FAILURE; no replacement trajectory"
+    },
+    "scientific_inputs_in_identity": [
+      "frozen panel item and prompt hash",
+      "frozen condition/controller/vector hash/alpha/layer/duration",
+      "frozen rollout index and schedule seed",
+      "frozen model/tokenizer/environment/parser provenance"
+    ],
+    "source_references": [
+      {
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "function_or_lines": "CrashSafeJournal, lines 113 onward",
+        "path": "src/epistemic_geometry/research/reliability.py",
+        "sha256": "5c29533c7489077a30f0c7d8e67f10df3c3379403b59d0560226ed5d24f307c4"
+      },
+      {
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "function_or_lines": "Reproducibility, lines 17-20",
+        "path": "docs/ENGINEERING_POLICY.md",
+        "sha256": "042102b65ffcc09706f41d3b0395dce4ad836a778c80689fcc0d1f5badc98f2f"
+      },
+      {
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "function_or_lines": "Class A and Class B, lines 11-44",
+        "path": "docs/RESEARCH_AUTONOMY_POLICY.md",
+        "sha256": "69becd2359d70f5bd8ce8486005dc24b5eebf5c80b8cbe46516c8bb504ef06e8"
+      },
+      {
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "function_or_lines": "frozen execution retry/journal policy, lines 783-788",
+        "path": "scripts/freeze_q2_v3.py",
+        "sha256": "4e39a64aa98caf0c92b8fc5016bbf5b981e4729ee42efb951dd8a6d7de5040d7"
+      }
+    ],
+    "terminal_generation_policy": {
+      "extreme_mechanical_repetition": {
+        "dominant_token_share_threshold": 0.5,
+        "historical_definition_source_sha256": "e340f9d622c4f874a868c0d9a4e203005b8bcfe778ab688f2202f35a39bda24e",
+        "maximum_period_tokens": 64,
+        "minimum_generated_tokens": 256,
+        "name": "EXTREME_MECHANICAL_REPETITION_V1",
+        "periodic_match_threshold": 0.9,
+        "policy_source_sha256": "164758696de1eb0918b94a44bd997054d0c5c9402e817791ce436aec02ec8ada",
+        "tail_window_tokens": 1024
+      },
+      "hard_cap_or_repetition_stop_is_terminal": true,
+      "hard_max_new_tokens": 4096,
+      "persisted_terminal_row_retryable": false,
+      "terminal_scoring": {
+        "binary_error_e": 1,
+        "commitment_valid": false,
+        "semantic_evaluable": false
+      }
+    }
+  },
+  "runtime_monitor_lock_sha256": "fadafb50b9c26c42bfb2abd4dcdeb7a93870ac46c3a1e0925b4ba8fc3707ea8d",
+  "schema_version": "q2-oos-v2-prediction-lock-v1",
+  "selected_controller_bank_sha256": "9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd",
+  "selected_controller_order": [
+    "Q2_OOS_V2_DIRECTION_01",
+    "Q2_OOS_V2_DIRECTION_02",
+    "Q2_OOS_V2_DIRECTION_03",
+    "Q2_OOS_V2_DIRECTION_04",
+    "Q2_OOS_V2_DIRECTION_05",
+    "Q2_OOS_V2_DIRECTION_06",
+    "Q2_OOS_V2_DIRECTION_07",
+    "Q2_OOS_V2_DIRECTION_08",
+    "Q2_OOS_V2_DIRECTION_09",
+    "Q2_OOS_V2_DIRECTION_11",
+    "Q2_OOS_V2_DIRECTION_13",
+    "Q2_OOS_V2_DIRECTION_14",
+    "Q2_OOS_V2_DIRECTION_15",
+    "Q2_OOS_V2_DIRECTION_16",
+    "Q2_OOS_V2_DIRECTION_17",
+    "Q2_OOS_V2_DIRECTION_18"
+  ],
+  "semantic_estimands": {
+    "bootstrap": {
+      "cluster_movement": "move all 32 fresh-controller conditions, both rollouts, and the paired fixed historical reference profiles for each sampled item together",
+      "resamples": 50000,
+      "role": "UNCERTAINTY_AND_SENSITIVITY_NOT_PRIMARY_SIGN_TEST_REPLACEMENT",
+      "seed": 8570345065466006396,
+      "unit": "semantic panel item"
+    },
+    "error_indicator": {
+      "complete_case_filtering": false,
+      "definition": "e_{i,t,r}=0 iff external-semantic-v3 returns correct=true for condition i, item t, rollout r; e_{i,t,r}=1 for valid wrong, invalid/unevaluable, no or ambiguous commitment, truncation, or a recorded model-runtime outcome",
+      "missingness": "a missing logical row is not silently converted to e=1; incomplete schedules block completion and analysis",
+      "notation": "e_{i,t,r}",
+      "source": "frozen Q2 V4 statistical plan error rule and canonical metrics policy"
+    },
+    "fresh_fresh_secondary": {
+      "method": "NODE_JACKKNIFE_PSEUDOVALUE_T",
+      "role": "SECONDARY_ONLY_CANNOT_RESCUE_PRIMARY"
+    },
+    "fresh_old_primary": {
+      "all_16_finite_required": true,
+      "alpha": 0.05,
+      "bernoulli": "X_i=1 iff finite r_i>0; X_i=0 iff finite r_i<=0",
+      "global_fresh_old_rho": "DESCRIPTIVE_ONLY",
+      "null": "P(r_i>0)<=0.5",
+      "original_row_QAP": "DIAGNOSTIC_ONLY",
+      "positive_count_required": 12,
+      "row_statistic": "r_i=0.5*(Spearman_j(A0_MEDIUM(i,j),Dshape_MEDIUM(i,j))+Spearman_j(A0_STRONG(i,j),Dshape_STRONG(i,j)))",
+      "studentized_controller_mean": "SENSITIVITY_ONLY",
+      "test": "exact one-sided Binomial upper-tail"
+    },
+    "geometry_matrices": {
+      "A0": {
+        "blocks": {
+          "MEDIUM": {
+            "FRESH_FRESH": "e84e59e9b7f0b63bedb26852fe211f39944c9af35577f1a9ed5649abccb9f091",
+            "FRESH_REFERENCE": "11c9ba2ef5b614dbfd725ccaa1e716c7f01b89c3791aa6e3c9dbc34f24a44acc"
+          },
+          "STRONG": {
+            "FRESH_FRESH": "e84e59e9b7f0b63bedb26852fe211f39944c9af35577f1a9ed5649abccb9f091",
+            "FRESH_REFERENCE": "11c9ba2ef5b614dbfd725ccaa1e716c7f01b89c3791aa6e3c9dbc34f24a44acc"
+          }
+        },
+        "definition": "coordinate-space angular dissimilarity 1-cosine",
+        "role": "PRIMARY_GEOMETRY"
+      },
+      "A1": {
+        "blocks": {
+          "MEDIUM": {
+            "FRESH_FRESH": "02cbb09f8e9afe2017a9072217d108baa7b11bdfe8f13993da2ef9ce4b78e95e",
+            "FRESH_REFERENCE": "6aa64a331e6180996e78e38b670d75397d95ce8281333cf2c17209ff73c0cb82"
+          },
+          "STRONG": {
+            "FRESH_FRESH": "02cbb09f8e9afe2017a9072217d108baa7b11bdfe8f13993da2ef9ce4b78e95e",
+            "FRESH_REFERENCE": "6aa64a331e6180996e78e38b670d75397d95ce8281333cf2c17209ff73c0cb82"
+          }
+        },
+        "definition": "regularized covariance-whitened angular dissimilarity",
+        "regularization_lambda": 0.1,
+        "role": "SECONDARY_OR_SENSITIVITY"
+      },
+      "A2": {
+        "blocks": {
+          "MEDIUM": {
+            "FRESH_FRESH": "dac2ed4c5d483a6dc25e1f5ae254e8c5df7c89cb9c2e7604ea6fdc420023fc12",
+            "FRESH_REFERENCE": "75a4bd5f22468218cccfa8fbddebd004d8a51bd8810bfb74c1bd04ffced80aed"
+          },
+          "STRONG": {
+            "FRESH_FRESH": "b7d02bcbaf61acc018de896221021c7b7c968069911afea3f3e02f385a300021",
+            "FRESH_REFERENCE": "de4a9b63f3d14143122dfd12b0acf682fde6075360db5cc472502f9842c09309"
+          }
+        },
+        "definition": "baseline-centered natural-log full-vocabulary JS response angle",
+        "raw_aggregation": "natural-log JS; equal 0.5/0.5 mixture; uniform mean over 48 probe/checkpoint rows",
+        "role": "SECONDARY_OR_SENSITIVITY"
+      },
+      "D2": {
+        "blocks": {
+          "MEDIUM": {
+            "FRESH_FRESH": "b5c7a4e855e83b21f44a8aff82e246bd77f85a941143f40123dd7166bf46ca22",
+            "FRESH_REFERENCE": "d3a41387558831b4a29d4d7b09811a53cc525929b64f2a80a57f21fc4f0ec909"
+          },
+          "STRONG": {
+            "FRESH_FRESH": "0bc38a7700f63301ac94889fdb8c0f886b56b059fddbea0832963c7b4fe21b4e",
+            "FRESH_REFERENCE": "21ab9b0ecfc99e17e495ca3cfff91c24488f29a93d9334a0e6dac426cb0c9755"
+          }
+        },
+        "definition": "finite response total distance",
+        "role": "SECONDARY_OR_SENSITIVITY"
+      }
+    },
+    "global_cross_block_rho": "DESCRIPTIVE_EFFECT_SIZE_ONLY",
+    "historical_row_qap": "DIAGNOSTIC_ONLY",
+    "pairwise_rollout_difference": {
+      "formula": "d_{ij,t,r}=e_{i,t,r}-e_{j,t,r}",
+      "item_pairing": "same item t; independent rollout r is paired by rollout index, not by generated token identity",
+      "notation": "d_{ij,t,r}"
+    },
+    "panel": {
+      "N": 300,
+      "fresh_controllers": 16,
+      "future_conditions": 32,
+      "historical_reference_controllers": 31,
+      "item_weight": "uniform 1/N",
+      "items": "the exact frozen V4.1 semantic panel in frozen order",
+      "reference_profile_policy": "reuse the sealed historical V4.1 reference-controller itemwise error profiles; do not recapture or regenerate them",
+      "rollout_regime": "INDEPENDENT_PRIMARY",
+      "rollouts": 2,
+      "shells": [
+        "MEDIUM",
+        "STRONG"
+      ]
+    },
+    "rollout_means": {
+      "formula": "mhat_r = (1/N) * sum_t d_{ij,t,r}",
+      "mean_shift_product": "mhat_0 * mhat_1"
+    },
+    "shape_distance": {
+      "N": 300,
+      "baseline_handling": "no baseline condition is generated in OOS V2; fresh-controller profiles are paired with sealed historical reference-controller profiles by the same item and rollout index",
+      "fixed_panel_name": "D_shape_panel",
+      "invalid_outcomes": "retained as e=1 when a scientific row exists",
+      "missing_rows": "schedule/journal completeness failure, not complete-case deletion",
+      "negative_estimates": "RETAIN; no clipping",
+      "panel_formula": "Dshape_panel_ij = Dtotal_ij - mhat_0*mhat_1",
+      "primary_name": "D_shape_superpopulation",
+      "reference_profiles": "fixed sealed Q2 V4.1 itemwise error profiles in the exact 31-controller order",
+      "shell_handling": "compute fresh-by-reference 16x31 and fresh-by-fresh 16x16 matrices separately for MEDIUM and STRONG",
+      "superpopulation_formula": "Dshape_superpopulation_ij = [N/(N-1)] * Dshape_panel_ij"
+    },
+    "source_references": [
+      {
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "function_or_lines": "blind_spot_shape_matrices, lines 125-163; baseline_centered_js_angle, lines 166-201",
+        "path": "src/epistemic_geometry/experiments/q2_v4.py",
+        "sha256": "45215a2b48c0824a9e5248866160185421bcb3e487e989bfa3908e6e3d8637db"
+      },
+      {
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "function_or_lines": "endpoint, radial and bootstrap objects",
+        "path": "review/q2_v4_spark1_presemantic/V4_STATISTICAL_ANALYSIS_PLAN.json",
+        "sha256": "7300c6cc2dc4b51bff39976349ae128d1c4007e9ca5b539c3532fe16602ac81b"
+      },
+      {
+        "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+        "function_or_lines": "canonical two-rollout error and missingness conventions",
+        "path": "docs/METRICS_AND_STATISTICS.md",
+        "sha256": "f9ddf0f984f28ef7f0c3c398d5d2d726cf9b1a3038a972328ce1f33dd806096c"
+      }
+    ],
+    "total_distance": {
+      "formula": "Dtotal_ij = (1/N) * sum_t[d_{ij,t,0} * d_{ij,t,1}]",
+      "implementation": "blind_spot_shape_matrices(errors), total matrix",
+      "negative_estimates": "RETAIN",
+      "notation": "Dtotal_ij"
+    }
+  },
+  "semantic_execution_authorized": false,
+  "semantic_generation": {
+    "generation_specification": {
+      "generation": {
+        "do_sample": true,
+        "frequency_penalty": "not supplied by project; not a Transformers generate argument in this path",
+        "max_new_tokens": 4096,
+        "min_p": 0.0,
+        "presence_penalty": "not supplied by project; not a Transformers generate argument in this path",
+        "raw_decode": "tokenizer.decode(new_tokens, skip_special_tokens=true), without pre-parser rewriting",
+        "repetition_penalty": "not supplied by project; frozen model GenerationConfig default",
+        "rng_scope": "torch.random.fork_rng; torch.manual_seed(seed); CUDA manual seed when applicable",
+        "sampling_seed": "the exact integer seed in the frozen schedule row",
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "intervention": {
+        "conditions": "exactly 16 selected fresh controllers at MEDIUM and STRONG; no baseline or reference-atlas recapture in the future OOS schedule",
+        "decode": "add delta only to the one current token once on each decode forward",
+        "delta_source": "the frozen schedule row alpha multiplied by the immutable controller vector identified by controller_vector_hash",
+        "duration": "sustained_current_token",
+        "historical_states": "past KV states and historical token positions are never modified",
+        "hook_lifecycle": "one registered hook per trajectory; removed in finally; no condition leakage",
+        "meaningful_and_all_controller_layers": "model.model.layers[27]",
+        "prefill": "add delta only to the final non-padding prompt token",
+        "source_location": "PROMPT_BOUNDARY"
+      },
+      "model": {
+        "dtype": "BF16",
+        "environment_fingerprint": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386",
+        "environment_profile": "CORE_QWEN",
+        "id": "Qwen/Qwen3-8B",
+        "model_loader": "AutoModelForCausalLM",
+        "quantization": "none",
+        "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "tokenizer_id": "the same resolved model source",
+        "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "trust_remote_code": false
+      },
+      "prompt": {
+        "chat_template_call": {
+          "add_generation_prompt": true,
+          "enable_thinking": false,
+          "tokenize": false,
+          "tokenizer_method": "apply_chat_template"
+        },
+        "encoding": "UTF-8",
+        "messages": "one user message containing the exact frozen panel prompt; no system message is present in the frozen panel metadata",
+        "mode": "chat",
+        "source_prompt_function": "canonical_q2_v3_task_prompt -> current_task_prompt",
+        "template": "Solve this Python code-output prediction problem.\\n\\nFunction:\\n```python\\n{code}\\n```\\n\\nInput: {value}\\n\\nReturn exactly one final line in this form:\\nFINAL: <the exact Python output>\\nDo not add any text after FINAL.",
+        "tokenization_call": {
+          "padding": "not used for serial batch size one",
+          "return_tensors": "pt"
+        },
+        "unicode_normalization": "NONE",
+        "user_prompt_template_version": "gate7-cruxeval-semantic-task-prompt-v1"
+      },
+      "schedule_and_seed": {
+        "condition_order": "within each item-rollout block, one deterministic NumPy PCG64DXSM permutation of the 32 frozen fresh-controller shell conditions",
+        "condition_order_seed_namespace": "Q2-OOS-V2-FRESH-CONTROLLER-SEMANTIC-V1|CONDITION_ORDER",
+        "logical_key": [
+          "item_id",
+          "condition",
+          "rollout_index"
+        ],
+        "order_rng": "NumPy PCG64DXSM",
+        "prelock_source": "3babbb868933aee480b3ed8d47ec0b817c927469",
+        "schedule_seed_namespace": "Q2-OOS-V2-FRESH-CONTROLLER-SEMANTIC-V1|GENERATION_SEED",
+        "seed_regime": "INDEPENDENT_PRIMARY",
+        "seed_source": "FUTURE_SEMANTIC_SCHEDULE.json row seed",
+        "seed_uniqueness": 19200
+      },
+      "source_of_truth_note": "Model, prompt, sampling, and hook semantics are inherited exactly from the qualified V4.1 reference engine. The OOS schedule is authoritative for the 16 fresh controllers, two shells, 300 items, two rollouts, and row seeds.",
+      "source_references": [
+        {
+          "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+          "function_or_lines": "build_v4_backend, lines 71-104; items, lines 155-175",
+          "path": "scripts/run_q2_v4_presemantic.py",
+          "sha256": "abc8a9b5a37a235d710ee8f3c59e29fae5b335ccc0f6f36f6cd609e78d62bec8"
+        },
+        {
+          "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+          "function_or_lines": "render_prompt, lines 19-58",
+          "path": "src/epistemic_geometry/benchmarks/prompts.py",
+          "sha256": "47fc45098556174574df1f28accd8ec4eae31c42f6dd8c1557cf06f9eebdaedd"
+        },
+        {
+          "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+          "function_or_lines": "current_task_prompt/canonical_q2_v3_task_prompt, lines 39-56",
+          "path": "src/epistemic_geometry/experiments/q2_v3_prompt_provenance.py",
+          "sha256": "f0cb127a9a180b08698fe0b05e55bc2bf61ed4a8712712c9f5befecf1383d2e3"
+        },
+        {
+          "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+          "function_or_lines": "_encode_item, generate_reasoning, lines 230-380",
+          "path": "src/epistemic_geometry/backends/huggingface.py",
+          "sha256": "f9aeb27d55d61b8f9df162feb8387887757ab0f9beb2cf6c88f90def7092ae46"
+        },
+        {
+          "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+          "function_or_lines": "steer_sustained_current_token, lines 1755-1851",
+          "path": "src/epistemic_geometry/backends/huggingface.py",
+          "sha256": "f9aeb27d55d61b8f9df162feb8387887757ab0f9beb2cf6c88f90def7092ae46"
+        },
+        {
+          "commit": "1a88b869540c58823f31e903ff37fea7c8de0d6c",
+          "function_or_lines": "make_schedule, lines 540-598",
+          "path": "scripts/prepare_q2_v4_1_prediction_lock.py",
+          "sha256": "2ee4d2ea0288eb885f35367ffdfdd2b431580deb26e133ed85e789d3eaa0beeb"
+        }
+      ],
+      "stopping_and_cache": {
+        "attention_implementation": "SDPA",
+        "batch_size": 1,
+        "condition_chunk_size": 1,
+        "cross_condition_batching": false,
+        "eos_token_id": "not supplied by project; model.generate uses the frozen model GenerationConfig/model default at the exact revision",
+        "execution_mode": "serial_reference",
+        "item_batch_size": 1,
+        "max_length_policy": "max_new_tokens=4096; no separate project max_length override",
+        "pad_token_id": "tokenizer.pad_token_id supplied explicitly; backend resolves a missing pad token to tokenizer EOS, otherwise 0",
+        "stop_strings": "none supplied",
+        "use_cache": "not overridden in generate_reasoning; frozen model.generate default applies"
+      }
+    },
+    "max_new_tokens": 4096,
+    "repetition_stop": "EXTREME_MECHANICAL_REPETITION_V1"
+  },
+  "semantic_schedule_sha256": "dac5c284b90c726016968f31d25200a362c42d96f63b63d730665f3f47e85ec5",
+  "semantic_trajectories": 0,
+  "status": "Q2_OOS_V2_READY_FOR_PREDICTION_LOCK"
+}

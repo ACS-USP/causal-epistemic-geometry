@@ -1,0 +1,41 @@
+{
+  "LOFO": {
+    "all_16_omissions": true,
+    "role": "SENSITIVITY_ONLY",
+    "unit": "fresh controller"
+  },
+  "fresh_fresh_secondary": {
+    "method": "NODE_JACKKNIFE_PSEUDOVALUE_T",
+    "role": "SECONDARY_ONLY_CANNOT_RESCUE_PRIMARY"
+  },
+  "fresh_old_primary": {
+    "all_16_finite_required": true,
+    "alpha": 0.05,
+    "bernoulli": "X_i=1 iff finite r_i>0; X_i=0 iff finite r_i<=0",
+    "global_fresh_old_rho": "DESCRIPTIVE_ONLY",
+    "null": "P(r_i>0)<=0.5",
+    "original_row_QAP": "DIAGNOSTIC_ONLY",
+    "positive_count_required": 12,
+    "row_statistic": "r_i=0.5*(Spearman_j(A0_MEDIUM(i,j),Dshape_MEDIUM(i,j))+Spearman_j(A0_STRONG(i,j),Dshape_STRONG(i,j)))",
+    "studentized_controller_mean": "SENSITIVITY_ONLY",
+    "test": "exact one-sided Binomial upper-tail"
+  },
+  "item_bootstrap": {
+    "conditions_and_rollouts_coupled_within_item": true,
+    "resamples": 50000,
+    "role": "UNCERTAINTY_AND_SENSITIVITY_NOT_PRIMARY_SIGN_TEST_REPLACEMENT",
+    "seed": 8570345065466006396,
+    "unit": "semantic panel item"
+  },
+  "reference_atlas": "fixed historical 31-controller V4.1 bank in frozen order",
+  "schema_version": "q2-oos-v2-inference-lock-v1",
+  "scientific_unit": "one prospectively sampled safety-conditioned fresh controller",
+  "semantic_outcomes": 0,
+  "status": "FROZEN_NOT_RUN",
+  "terminal_precedence": [
+    "EXECUTION_INCOMPLETE",
+    "INFERENCE_DEGENERATE",
+    "PRIMARY_FRESH_OLD_SIGN_TEST",
+    "SECONDARY_FRESH_FRESH_DESCRIPTIVE_OR_SUPPORT"
+  ]
+}

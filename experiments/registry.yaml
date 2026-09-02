@@ -444,6 +444,60 @@ experiments:
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
 
+  - id: Q2_OOS_V2_POST_MAINTENANCE_PRESEMANTIC_CLOSEOUT
+    version: V2-PRESEMANTIC-PREDICTION-LOCK-V1
+    stage: DEVELOPMENT_PRESEMANTIC_PREDICTION_LOCK
+    question: >-
+      Can one prospectively frozen stream provide 16 safe fresh controllers with
+      qualified A0/A1/A2/D2 geometry and a complete controller-level inference
+      lock before any fresh-controller semantic outcome exists?
+    instrument: >-
+      Exact 34-candidate PCG64DXSM stream, frozen two-shell safety gate, first-16
+      safe selection, 12-probe primary/repeat label-free A2 capture, frozen
+      consolidation, independent scalar-JS forensic audit, and a balanced
+      19,200-row future semantic schedule.
+    model_policy: >-
+      Spark-1 Qwen3-8B label-free teacher-forced capture only; future N=300 free
+      generation remains unauthorized and unrun.
+    status: CLOSED_PRESEMANTIC_AWAITING_PRINCIPAL_REVIEW
+    outcome: Q2_OOS_V2_READY_FOR_PREDICTION_LOCK
+    scientific_interpretation: >-
+      The fresh bank and its label-free geometry are prospectively qualified.
+      This is an instrument and prediction-lock result, not evidence that the
+      closed Q2 relational association generalizes to fresh controller
+      identities. The latter remains untested until separately authorized
+      semantic execution.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: 26b698639cb378112ce1f2ca37f2d00d90227279
+    capture_source_commit: f2ec44c2da9f00688a918f55b0f5d70b198f4744
+    prediction_lock_code_commit: 26b698639cb378112ce1f2ca37f2d00d90227279
+    artifact: review/q2_oos_fresh_controller_design/v2_presemantic_closeout/Q2_OOS_V2_POST_MAINTENANCE_PRESEMANTIC_CLOSEOUT.md
+    safety_rows: 1632
+    safe_candidates: 26
+    fresh_controllers: 16
+    reference_controllers: 31
+    raw_A2_archives: 24
+    raw_A2_aggregate_sha256: a479f6c35fb6e9da106eef989ae980b230ecc4d88abce29a295f20e085e2dd66
+    label_free_qualification: Q2_OOS_V2_LABEL_FREE_INSTRUMENT_QUALIFIED
+    forensic_classification: Q2_OOS_V2_LABEL_FREE_FORENSIC_CLEAN
+    maximum_primary_audit_difference: 1.2329692822277138e-11
+    selected_bank_sha256: 9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd
+    prediction_lock_sha256: 825d6e3536b51a31956cbd5c9e75bedfed38f9e3df5da05a4452a5681f65f9bb
+    schedule_sha256: dac5c284b90c726016968f31d25200a362c42d96f63b63d730665f3f47e85ec5
+    future_semantic_rows: 19200
+    semantic_execution_authorized: false
+    new_semantic_trajectories: 0
+    correctness_inspected: false
+    spark1_label_free_used: true
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: CONSUMED_DEVELOPMENT_CLOSED
+    q2: UNTESTED_FOR_FRESH_CONTROLLER_IDENTITIES
+    historical_q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY

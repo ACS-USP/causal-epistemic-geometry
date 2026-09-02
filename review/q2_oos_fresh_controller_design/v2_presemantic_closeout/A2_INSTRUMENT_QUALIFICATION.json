@@ -1,0 +1,68 @@
+{
+  "arithmetic": {
+    "aggregation": "uniform_mean_over_48_probe_checkpoint_rows",
+    "controller_order": "fresh_16_then_reference_31",
+    "log_base": "natural_log",
+    "mixture_weights": [
+      0.5,
+      0.5
+    ]
+  },
+  "classification": "Q2_OOS_V2_A2_INSTRUMENT_QUALIFIED",
+  "shells": {
+    "MEDIUM": {
+      "checks": {
+        "cosine_bounds": true,
+        "diagonal": true,
+        "gram_psd": true,
+        "historical_A2_reproduction": true,
+        "historical_D2_reproduction": true,
+        "radius_floor": true,
+        "repeat_angular_rank": true,
+        "repeat_distance": true,
+        "repeat_radius": true,
+        "symmetry": true
+      },
+      "cosine_range": [
+        -0.6990414721639372,
+        1.0000000000000002
+      ],
+      "fresh_historical_baseline_max_abs_difference": 0.0,
+      "gram_min_eigenvalue": 0.0001307007732005834,
+      "historical_A2_reproduction_max_abs_difference": 1.1102230246251565e-15,
+      "historical_D2_reproduction_max_abs_difference": 5.551115123125783e-17,
+      "noise_floor_squared": 1e-12,
+      "pass": true,
+      "repeat_angular_rank_correlation": 1.0,
+      "repeat_distance_relative_error_max": 0.0,
+      "repeat_radius_relative_error_max": 0.0
+    },
+    "STRONG": {
+      "checks": {
+        "cosine_bounds": true,
+        "diagonal": true,
+        "gram_psd": true,
+        "historical_A2_reproduction": true,
+        "historical_D2_reproduction": true,
+        "radius_floor": true,
+        "repeat_angular_rank": true,
+        "repeat_distance": true,
+        "repeat_radius": true,
+        "symmetry": true
+      },
+      "cosine_range": [
+        -0.4280431702464801,
+        1.0000000000000002
+      ],
+      "fresh_historical_baseline_max_abs_difference": 0.0,
+      "gram_min_eigenvalue": 0.0011039789382645564,
+      "historical_A2_reproduction_max_abs_difference": 5.551115123125783e-16,
+      "historical_D2_reproduction_max_abs_difference": 1.1102230246251565e-16,
+      "noise_floor_squared": 1e-12,
+      "pass": true,
+      "repeat_angular_rank_correlation": 1.0,
+      "repeat_distance_relative_error_max": 0.0,
+      "repeat_radius_relative_error_max": 0.0
+    }
+  }
+}

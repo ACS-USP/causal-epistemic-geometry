@@ -428,6 +428,48 @@ instrument_history:
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
 
+  - id: Q2_OOS_V2_POST_MAINTENANCE_PRESEMANTIC_CLOSEOUT
+    status: Q2_OOS_V2_READY_FOR_PREDICTION_LOCK
+    conclusion: >-
+      Spark 1 requalified after maintenance with no scientifically relevant
+      drift. The immutable 34-candidate safety campaign completed 1,632/1,632
+      rows, yielded 26 safe candidates, and selected the first 16 safe in frozen
+      stream order. Twelve primary plus twelve repeat label-free A2 archives
+      qualified with zero repeat discrepancy, exact baseline recapture, and an
+      independent maximum primary/audit difference of 1.233e-11. A0/A1/A2/D2,
+      the controller-level sign-test inference, and a balanced 19,200-row future
+      semantic schedule are hash-locked but semantic execution remains
+      unauthorized and unrun.
+    branch: research/q2-fresh-controller-oos-design
+    capture_source_commit: f2ec44c2da9f00688a918f55b0f5d70b198f4744
+    prediction_lock_code_commit: 26b698639cb378112ce1f2ca37f2d00d90227279
+    artifact: review/q2_oos_fresh_controller_design/v2_presemantic_closeout/Q2_OOS_V2_POST_MAINTENANCE_PRESEMANTIC_CLOSEOUT.md
+    environment_qualification: Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_QUALIFIED
+    environment_profile: 8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386
+    safety_rows: 1632
+    safe_candidates: 26
+    selected_controllers: 16
+    selected_bank_sha256: 9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd
+    label_free_raw_archives: 24
+    label_free_raw_aggregate_sha256: a479f6c35fb6e9da106eef989ae980b230ecc4d88abce29a295f20e085e2dd66
+    label_free_qualification: Q2_OOS_V2_LABEL_FREE_INSTRUMENT_QUALIFIED
+    label_free_forensic: Q2_OOS_V2_LABEL_FREE_FORENSIC_CLEAN
+    maximum_primary_audit_difference: 1.2329692822277138e-11
+    prediction_matrices_sha256: b4ec00985e750c5bb8fd7fd49228267ec576bf6c2ad2ac3984f6f2390d927703
+    prediction_lock_sha256: 825d6e3536b51a31956cbd5c9e75bedfed38f9e3df5da05a4452a5681f65f9bb
+    future_semantic_schedule_sha256: dac5c284b90c726016968f31d25200a362c42d96f63b63d730665f3f47e85ec5
+    future_semantic_rows: 19200
+    semantic_execution_authorized: false
+    semantic_outcomes: 0
+    correctness_inspected: false
+    selected_16_changed: false
+    new_controller_stream_generated: false
+    spark1_label_free_used: true
+    spark2_used: false
+    q3: NOT_RUN
+    historical_q2: Q2_V4_1_G2_RS_PLUS_RT_PLUS_UNCHANGED
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY
     conclusion: >-
