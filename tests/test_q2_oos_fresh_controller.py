@@ -52,7 +52,23 @@ def test_cross_block_statistic_and_row_permutation_preserve_rows() -> None:
     result = row_permutation_test(geometries, outcomes, permutations)
     assert result["observed_aggregate_rho"] > 0.999999
     assert result["p_value"] == 1 / 720
+    assert result["degenerate_fail_closed"] is False
     assert np.all(leave_one_fresh_out(geometries, outcomes) > 0.999999)
+
+
+def test_row_permutation_degenerate_spearman_fails_closed() -> None:
+    rng = np.random.default_rng(9)
+    geometry = rng.standard_normal((6, 5))
+    constant = np.ones((6, 5))
+    permutations = fresh_row_permutations(6, 50, seed=73)
+    result = row_permutation_test(
+        {"MEDIUM": geometry, "STRONG": geometry},
+        {"MEDIUM": constant, "STRONG": constant},
+        permutations,
+    )
+    assert np.isnan(result["observed_aggregate_rho"])
+    assert result["p_value"] == 1.0
+    assert result["degenerate_fail_closed"] is True
 
 
 def test_shell_mean_is_equal_weighted() -> None:

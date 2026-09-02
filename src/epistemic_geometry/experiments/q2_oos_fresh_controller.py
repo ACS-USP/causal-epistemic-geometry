@@ -264,11 +264,14 @@ def row_permutation_test(
             for shell in SHELLS
         ]
         null[index] = float(np.mean(shell_values))
+    degenerate = not np.isfinite(observed) or np.any(~np.isfinite(null))
+    p_value = 1.0 if degenerate else float(np.sum(null >= observed) / len(null))
     return {
         "observed_shell_rho": observed_shell,
         "observed_aggregate_rho": observed,
         "permutation_statistics": null,
-        "p_value": float(np.sum(null >= observed) / len(null)),
+        "p_value": p_value,
+        "degenerate_fail_closed": bool(degenerate),
         "maps": int(len(null)),
     }
 
@@ -352,11 +355,14 @@ def controller_conjugation_test(
             permuted = geometry_by_shell[shell][np.ix_(permutation, permutation)]
             shell_values.append(symmetric_upper_spearman(permuted, outcome_by_shell[shell]))
         null[index] = float(np.mean(shell_values))
+    degenerate = not np.isfinite(observed) or np.any(~np.isfinite(null))
+    p_value = 1.0 if degenerate else float(np.sum(null >= observed) / len(null))
     return {
         "observed_shell_rho": observed_shell,
         "observed_aggregate_rho": observed,
         "permutation_statistics": null,
-        "p_value": float(np.sum(null >= observed) / len(null)),
+        "p_value": p_value,
+        "degenerate_fail_closed": bool(degenerate),
         "maps": int(len(null)),
     }
 
