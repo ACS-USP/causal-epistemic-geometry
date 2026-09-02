@@ -392,6 +392,58 @@ experiments:
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_OOS_HETEROGENEITY_ROBUST_INFERENCE_REVIEW
+    version: V2-PRESEMANTIC-HETEROGENEITY-ROBUST-REDESIGN-V1
+    stage: DEVELOPMENT_PRESEMANTIC_INFERENCE_DESIGN
+    question: >-
+      Which fresh-controller-level inference procedure remains calibrated when
+      aggregate-zero relational association does not imply exchangeable fresh
+      rows, and does closed Q2 V4.1 remain supported under node-level robust
+      sensitivity inference?
+    instrument: >-
+      CPU-only synthetic nonexchangeability ablation and method tournament at
+      K=16 against the fixed 31-reference atlas, a separately frozen model-free
+      K=31 calibration audit, one exactly-once post-hoc node-jackknife sensitivity
+      of sealed Q2 V4.1 matrices, and an allowlisted historical runtime autopsy.
+    model_policy: NO_MODEL_INFERENCE_CPU_ONLY
+    status: CLOSED_DESIGN_REVIEW
+    outcome: Q2_OOS_HETEROGENEITY_ROBUST_INFERENCE_READY
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    scientific_interpretation: >-
+      The exact one-sided sign test over one row-Spearman per fresh controller
+      is the selected future primary. It calibrated under strict, frozen-stress,
+      row-heterogeneity, safety-conditioned, and heavy-heterogeneity nulls while
+      exceeding the frozen power floor. Global cross-block rho and historical
+      row-QAP are descriptive/diagnostic only. The fresh-by-fresh formal
+      secondary uses node-jackknife inference and cannot rescue the primary.
+      Closed Q2 V4.1 retained robust positive A0/A1/A2 support under the
+      precommitted post-hoc node-level sensitivity; its historical G2/RS+/RT+
+      classifications remain unchanged.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: a63b5b87167c0f7ed27d4800115f9c3b8af13aea
+    precheck_commit: d1166eaa202fddc68af8da5a98c8f18f747939e6
+    artifact: review/q2_oos_fresh_controller_design/heterogeneity_robust_inference/Q2_HETEROGENEITY_ROBUST_INFERENCE_REVIEW.md
+    protocol_draft: review/q2_oos_fresh_controller_design/heterogeneity_robust_inference/REVISED_OOS_PROTOCOL_DRAFT.json
+    selected_primary: B_ROW_SPEARMAN_SIGN
+    selected_secondary: NODE_JACKKNIFE_PSEUDOVALUE_T
+    fresh_controllers: 16
+    reference_controllers: 31
+    candidate_count: 34
+    future_semantic_trajectories: 19200
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    model_inference: 0
+    semantic_outcomes: 0
+    raw_text_inspected: false
+    correctness_used_for_method_selection: false
+    spark1_cpu_only_model_free_used: true
+    spark2_used: false
+    runpod: 0
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY

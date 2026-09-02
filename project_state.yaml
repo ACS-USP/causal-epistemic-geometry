@@ -1,5 +1,5 @@
 schema_version: 1
-last_verified: "2026-08-30"
+last_verified: "2026-09-02"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
@@ -392,6 +392,41 @@ instrument_history:
     q3: NOT_RUN
     historical_q2: Q2_V4_1_G2_UNCHANGED
     next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_OOS_HETEROGENEITY_ROBUST_INFERENCE_REVIEW
+    status: Q2_OOS_HETEROGENEITY_ROBUST_INFERENCE_READY
+    conclusion: >-
+      A prospectively frozen CPU-only tournament identified the fresh controller,
+      rather than the 31 fresh-by-reference dyads, as the external-validity unit.
+      The original row-QAP remained anti-conservative under the frozen
+      nonexchangeable stress null (0.0746). An exact controller-level sign test
+      was calibrated under all five plausible nulls and retained useful power
+      (0.7200 at 25% of historical A0, 0.9973 at 50%, and 0.7597 at a rho-like
+      0.15 signal), so it is selected as the prospective primary. The global
+      cross-block rho remains a descriptive effect size. A node-jackknife test
+      qualified for the fresh-by-fresh secondary. Exactly one explicitly
+      post-hoc node-level sensitivity preserved positive A0/A1/A2 support in
+      closed Q2 V4.1 without changing Q2_V4_1_G2, RS+, or RT+.
+    branch: research/q2-fresh-controller-oos-design
+    source_commit: a63b5b87167c0f7ed27d4800115f9c3b8af13aea
+    precheck_commit: d1166eaa202fddc68af8da5a98c8f18f747939e6
+    artifact: review/q2_oos_fresh_controller_design/heterogeneity_robust_inference/Q2_HETEROGENEITY_ROBUST_INFERENCE_REVIEW.md
+    revised_protocol_draft: review/q2_oos_fresh_controller_design/heterogeneity_robust_inference/REVISED_OOS_PROTOCOL_DRAFT.json
+    selected_primary: B_ROW_SPEARMAN_SIGN
+    fresh_controller_k: 16
+    candidate_count: 34
+    fresh_fresh_secondary: NODE_JACKKNIFE_PSEUDOVALUE_T
+    historical_q2_sensitivity: Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT
+    historical_q2_classification_changed: false
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    model_inference: 0
+    semantic_outcomes: 0
+    correctness_used_for_method_selection: false
+    spark1_cpu_only_model_free_used: true
+    spark2_used: false
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
 
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     status: Q2_V4_DESIGN_FREEZE_READY
