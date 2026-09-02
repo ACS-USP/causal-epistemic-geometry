@@ -72,6 +72,41 @@ def exact_sign_test(values: Sequence[float]) -> dict[str, float | int | bool]:
     }
 
 
+def exact_positive_sign_test(values: Sequence[float]) -> dict[str, float | int | bool]:
+    """Exact positive-sign test with zeros retained as non-successes.
+
+    This is the prospective Q2 OOS V2 erratum rule.  Every finite controller
+    contributes to the Binomial denominator: positive values are successes;
+    zero and negative values are non-successes.  Any nonfinite row fails closed.
+    """
+
+    array = np.asarray(values, dtype=np.float64)
+    finite = np.isfinite(array)
+    if not np.all(finite):
+        return {
+            "count": int(len(array)),
+            "finite": int(np.sum(finite)),
+            "positives": int(np.sum(array[finite] > 0.0)),
+            "zeros": int(np.sum(array[finite] == 0.0)),
+            "negatives": int(np.sum(array[finite] < 0.0)),
+            "p_value": 1.0,
+            "reject_0_05": False,
+            "degenerate": True,
+        }
+    positives = int(np.sum(array > 0.0))
+    p_value = binomial_upper_tail(positives, len(array))
+    return {
+        "count": int(len(array)),
+        "finite": int(len(array)),
+        "positives": positives,
+        "zeros": int(np.sum(array == 0.0)),
+        "negatives": int(np.sum(array < 0.0)),
+        "p_value": p_value,
+        "reject_0_05": bool(p_value <= 0.05),
+        "degenerate": False,
+    }
+
+
 def _continued_beta(a: float, b: float, x: float) -> float:
     maximum_iterations = 300
     epsilon = 3e-14

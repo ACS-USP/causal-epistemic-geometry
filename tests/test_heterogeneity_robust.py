@@ -1,6 +1,7 @@
 import numpy as np
 
 from epistemic_geometry.experiments.heterogeneity_robust import (
+    exact_positive_sign_test,
     exact_sign_test,
     node_jackknife_test,
     rank_cluster_regression,
@@ -17,6 +18,24 @@ def test_exact_sign_and_zero_handling() -> None:
     assert result["positives"] == 12
     assert np.isclose(result["p_value"], 0.0384063720703125)
     assert result["reject_0_05"]
+
+
+def test_exact_positive_sign_keeps_zeros_as_failures() -> None:
+    qualified = exact_positive_sign_test([1.0] * 12 + [-1.0] * 3 + [0.0])
+    assert qualified["count"] == 16
+    assert qualified["positives"] == 12
+    assert qualified["zeros"] == 1
+    assert np.isclose(qualified["p_value"], 0.0384063720703125)
+    assert qualified["reject_0_05"]
+
+    not_qualified = exact_positive_sign_test([1.0] * 11 + [0.0] * 5)
+    assert not_qualified["positives"] == 11
+    assert not_qualified["zeros"] == 5
+    assert not not_qualified["reject_0_05"]
+
+    degenerate = exact_positive_sign_test([1.0] * 15 + [float("nan")])
+    assert degenerate["degenerate"]
+    assert not degenerate["reject_0_05"]
 
 
 def test_student_t_known_values() -> None:
