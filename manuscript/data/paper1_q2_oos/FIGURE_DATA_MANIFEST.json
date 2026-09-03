@@ -1,0 +1,58 @@
+{
+  "classification": "Q2_OOS_V2_A0_PASS",
+  "code_commit": "e3c15887a5995fc6108f68ce0ddbdf3083ad6cd5",
+  "code_hashes": {
+    "scripts/derive_q2_oos_figure_tables.py": "010e3fa884d59e1ae3ae9cff4594e2def5660289f6fe2392aaf53b2248a89ffc",
+    "scripts/generate_q2_oos_paper_figures.py": "1393563b70667fa9038c63ebcb7d452fdecc333ed1f45ebf0e9eaf62992024d6",
+    "src/epistemic_geometry/publication/q2_oos/loaders.py": "079b10cd966c54b95f40d00ac16d8db55ee5ba89787deaa70c4bcbbe03c3ed42",
+    "src/epistemic_geometry/publication/q2_oos/pipeline.py": "df55d662a64f10d34e6365e61830e1b03191e7c425ffa786bd5e16979df95691",
+    "src/epistemic_geometry/publication/q2_oos/plotting.py": "605eba3d7daa1ceecf226c8175d81211193a5f72a820b68c59fd596b46710c7f",
+    "src/epistemic_geometry/publication/q2_oos/provenance.py": "a45459b82e5c7c8cc644e6e8f9ee9086a68e773ead882b60f4dc6af164288fdb"
+  },
+  "code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
+  "contains_benchmark_text": false,
+  "contains_raw_outputs": false,
+  "forensic_status": "Q2_OOS_V2_FORENSIC_CLEAN",
+  "item_bootstrap_ruling": "Q2_OOS_V2_ITEM_BOOTSTRAP_METHOD_NOT_CALIBRATED",
+  "private_Dshape_source_sha256": "a6a6b4889e2c86df04ce42c4415281dde82af0d2deb1347b8083015e95089ea5",
+  "private_inputs_required_to_regenerate_tables": [
+    "sealed D_SHAPE.npz"
+  ],
+  "schema_version": "q2-oos-v2-figure-data-manifest-v1",
+  "scientific_scope": "Q2_OOS_V2_CLOSED_RESULT",
+  "source_hashes": {
+    "review/q2_oos_fresh_controller_design/v2_presemantic_closeout/PREDICTION_MATRICES.npz": "b4ec00985e750c5bb8fd7fd49228267ec576bf6c2ad2ac3984f6f2390d927703",
+    "review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_ANALYSIS.json": "97913256d32dcbdfd30fb247bdf925ed0ad0d6a8d39da29a0195bfd7845987c5",
+    "review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_RESULT.json": "7465e81d568854b92a0a7e6f0e46ec4a800577459df663b044c1975ef5be1573"
+  },
+  "tables": {
+    "bootstrap_diagnostic": {
+      "path": "manuscript/data/paper1_q2_oos/derived_figure_tables/bootstrap_diagnostic.csv",
+      "sha256": "542bc8d357500fa9cf2e363a46c1b697c74a62cec2f6911948bdfe24c370d543"
+    },
+    "controller_associations": {
+      "path": "manuscript/data/paper1_q2_oos/derived_figure_tables/controller_associations.csv",
+      "sha256": "cb3403abb1bbfe811f13e24e3e1697ee8ec92c901e3d4f79a4d6ba85f32e02a9"
+    },
+    "fresh_fresh_pairs": {
+      "path": "manuscript/data/paper1_q2_oos/derived_figure_tables/fresh_fresh_pairs.csv",
+      "sha256": "86a196e2e0c11e3a6311a74e396ceb7ae84a6c45111d0257484e41bad45e8cac"
+    },
+    "fresh_fresh_summary": {
+      "path": "manuscript/data/paper1_q2_oos/derived_figure_tables/fresh_fresh_summary.csv",
+      "sha256": "867754709d258a6bff71e88764e31a470fa1d73f16081726494c9ad9de7dc42e"
+    },
+    "global_associations": {
+      "path": "manuscript/data/paper1_q2_oos/derived_figure_tables/global_associations.csv",
+      "sha256": "58e5ce431b6e7b9da44cd76234ede9be27f53294cf6b6937f92d940d88940b46"
+    },
+    "lofo": {
+      "path": "manuscript/data/paper1_q2_oos/derived_figure_tables/lofo.csv",
+      "sha256": "fe3339eea3a256b38f4afc57c990e7534dae6aeec90392f9c8cb63690ff6525d"
+    },
+    "runtime_summary": {
+      "path": "manuscript/data/paper1_q2_oos/derived_figure_tables/runtime_summary.csv",
+      "sha256": "1de321df81c70e7f7ae71a40b5323a16ec69bb2532b85f6ca9c682594e5869da"
+    }
+  }
+}

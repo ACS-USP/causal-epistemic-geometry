@@ -1,5 +1,10 @@
 # Q2 visual evidence package — implementation status
 
+> The closed fresh-controller OOS validation now has a separate
+> [Q2 OOS visual evidence package](Q2_OOS_VISUAL_EVIDENCE.md). The V4.1 figures
+> below remain the historical fixed-bank package; the two evidence levels are
+> intentionally not pooled.
+
 Q2 V4.1 now has a publication-oriented visual package generated entirely from
 frozen tracked aggregates and pre-outcome matrices. The implemented package is
 `notebooks/q2_visual_story.ipynb`, with figures under

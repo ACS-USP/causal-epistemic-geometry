@@ -1,0 +1,49 @@
+{
+  "schema_version": "q2-oos-v2-figure-spec-v1",
+  "scientific_scope": "Q2_OOS_V2_CLOSED_RESULT",
+  "classification": "Q2_OOS_V2_A0_PASS",
+  "forensic_status": "Q2_OOS_V2_FORENSIC_CLEAN",
+  "ordering_rule": "all fresh-controller displays use the prospectively frozen controller order",
+  "inference_unit": "one prospectively sampled safety-conditioned fresh controller",
+  "figures": [
+    {
+      "id": "main",
+      "filename": "figure_q2_oos_fresh_controller_generalization",
+      "title": "Q2 OOS V2: controller-identity generalization",
+      "panels": [
+        "prospective experimental question",
+        "all 16 MEDIUM, STRONG, and equal-shell controller-level associations",
+        "global A0/A1/A2/D2 descriptive associations",
+        "fresh-by-fresh node-jackknife secondary"
+      ],
+      "supports": "positive A0 relational alignment across 16 prospectively sampled fresh controller identities within the fixed Qwen/CRUXEval/rank-8 laboratory",
+      "does_not_support": "cross-task, cross-model, random-subspace specificity, universal geometry, or Q3 utility"
+    },
+    {
+      "id": "s1",
+      "filename": "supplement_q2_oos_medium_vs_strong",
+      "title": "MEDIUM versus STRONG controller-level associations"
+    },
+    {
+      "id": "s2",
+      "filename": "supplement_q2_oos_distribution_and_lofo",
+      "title": "Controller-level distribution and LOFO sensitivity"
+    },
+    {
+      "id": "s3",
+      "filename": "supplement_q2_oos_fresh_fresh_pairs",
+      "title": "Fresh-by-fresh relational structure"
+    },
+    {
+      "id": "s4",
+      "filename": "supplement_q2_oos_runtime",
+      "title": "Efficient-termination runtime audit"
+    },
+    {
+      "id": "s5",
+      "filename": "supplement_q2_oos_item_bootstrap_diagnostic",
+      "title": "Post-hoc item-bootstrap diagnostic",
+      "terminology": "panel-perturbation sensitivity distribution; not a conventional confidence interval"
+    }
+  ]
+}
