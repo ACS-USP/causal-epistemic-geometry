@@ -1,0 +1,99 @@
+{
+  "classification": "Q2_V4_1_G2",
+  "code_commit": "dc54a37b70bd4260200a20285613fb8f30ec36e8",
+  "code_hashes": {
+    "scripts/generate_q2_paper_figures.py": "2e29370dedae2a09daca1a8967dae87c81a4c583e45febf583a2f237988c6311",
+    "src/epistemic_geometry/publication/q2/figure_tables.py": "1e0a7e6abfe9f78961d9e61d5e0f7311e43970e872d06e1fb5d99fe0fedf90bd",
+    "src/epistemic_geometry/publication/q2/loaders.py": "fe475697849a89edbb9caf763aa3baf4ac22a28637e59e618489172497f7ddda",
+    "src/epistemic_geometry/publication/q2/pipeline.py": "6945e6e45abd07acf0eacff8722555e1a69401d155a8b59aff28055c02db8df6",
+    "src/epistemic_geometry/publication/q2/plotting.py": "da3a9501d44e0f182c45dcf7a879dd0259e27f6227149e0a0e6a5305f7c1007d",
+    "src/epistemic_geometry/publication/q2/provenance.py": "c5b1984d58e5c564aa8cb895903e3ad615a0004d5d92977481fdf7c805e9aace"
+  },
+  "code_state": "WORKTREE_PINNED_BY_CODE_HASHES",
+  "contains_raw_outputs": false,
+  "q1_livecodebench_sources": 0,
+  "q3_results": 0,
+  "radial_classifications": [
+    "RS+",
+    "RT+"
+  ],
+  "schema_version": "1.0",
+  "scientific_scope": "Q2_V4_1_ONLY",
+  "tables": {
+    "association_summary": {
+      "derivation_function": "association_summary",
+      "inclusion_rule": "all frozen primary geometries",
+      "ordering_rule": "A0, A1, A2",
+      "path": "manuscript/data/paper1_q2/derived_figure_tables/association_summary.csv",
+      "sha256": "c5685aacd1d13cb2c91de0bea8648c0091bce86123105960fa9d3e2c08b9078f",
+      "sources": {
+        "review/q2_v4_1_semantic_execution/BOOTSTRAP_INTERVALS.json": "19575a009851f1fcfb56fa768b24390fdbd6d97b2d38d239f17ed40491806b77",
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
+      }
+    },
+    "behavioral_context": {
+      "derivation_function": "behavioral_context",
+      "inclusion_rule": "baseline reference and means across all 31 controllers per shell",
+      "ordering_rule": "baseline, MEDIUM, STRONG",
+      "path": "manuscript/data/paper1_q2/derived_figure_tables/behavioral_context.csv",
+      "sha256": "f11522f7e91b57a516a7520cdf39a755ce9285495fc2fe313d77b5f4dd333974",
+      "sources": {
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
+      }
+    },
+    "g3_contrasts": {
+      "derivation_function": "g3_contrasts",
+      "inclusion_rule": "both frozen superiority contrasts",
+      "ordering_rule": "A2-A0, A2-A1",
+      "path": "manuscript/data/paper1_q2/derived_figure_tables/g3_contrasts.csv",
+      "sha256": "6f391561c86c40a4369b48fabf359ef7af24211c087e466e395419875fd38ee0",
+      "sources": {
+        "review/q2_v4_1_semantic_execution/BOOTSTRAP_INTERVALS.json": "19575a009851f1fcfb56fa768b24390fdbd6d97b2d38d239f17ed40491806b77",
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
+      }
+    },
+    "loo_robustness": {
+      "derivation_function": "loo_robustness",
+      "inclusion_rule": "all 31 delete-one-controller results per geometry",
+      "ordering_rule": "A0/A1/A2 then frozen dropped-controller order",
+      "path": "manuscript/data/paper1_q2/derived_figure_tables/loo_robustness.csv",
+      "sha256": "5cb21cd0b47ddd5e969a61a701b31aa9124a3ae788dde83977aeb303d9f9c301",
+      "sources": {
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
+      }
+    },
+    "pairwise_geometry": {
+      "derivation_function": "relational_geometry",
+      "inclusion_rule": "all 465 controller pairs in both shells for A0/A1/A2",
+      "ordering_rule": "metric, shell, frozen upper-triangle controller order",
+      "path": "manuscript/data/paper1_q2/derived_figure_tables/pairwise_geometry.csv",
+      "sha256": "85e14a1c3ad90f56aeb2394433e933cfde42b55e773b6e106dac7e6ca1a12e13",
+      "sources": {
+        "review/q2_v4_1_prediction_lock/PREDICTION_MATRICES.npz": "723348bddd1de0b482bc859f888f982c8a3dd99e406331cb9a4642ea2c7dcae8",
+        "review/q2_v4_1_prediction_lock/PREDICTION_MATRIX_METADATA.json": "98876a77f7c001265dad7b86db77854b16d498e242d870323ed60e3992ff9b1f",
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6"
+      }
+    },
+    "radial_by_direction": {
+      "derivation_function": "radial_by_direction",
+      "inclusion_rule": "all 31 directions; no outcome sorting",
+      "ordering_rule": "frozen controller order",
+      "path": "manuscript/data/paper1_q2/derived_figure_tables/radial_by_direction.csv",
+      "sha256": "1831acd192aeb8b2570d95e4752f104576737ac28f9b64706640339eee225488",
+      "sources": {
+        "review/q2_v4_1_semantic_execution/ESTIMANDS.json": "17ae335447c441801ba9d5ab838a721ee21d1d4906700a2030d332d5054bd1f6",
+        "review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json": "6bfb75ea95e87461a57693de4adf3b0318e1cd3add66a9bcf787fd2731e43fdc"
+      }
+    },
+    "radial_summary": {
+      "derivation_function": "radial_summary",
+      "inclusion_rule": "both independent frozen radial endpoints",
+      "ordering_rule": "shape, total",
+      "path": "manuscript/data/paper1_q2/derived_figure_tables/radial_summary.csv",
+      "sha256": "d70a7abbadaed86f1e2b690787ff8b3e19b38392f119bdc737cbf07b2e06a00f",
+      "sources": {
+        "review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json": "6bfb75ea95e87461a57693de4adf3b0318e1cd3add66a9bcf787fd2731e43fdc"
+      }
+    }
+  }
+}

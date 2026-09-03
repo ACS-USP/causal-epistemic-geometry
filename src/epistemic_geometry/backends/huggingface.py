@@ -5,7 +5,7 @@ from __future__ import annotations
 import copy
 import inspect
 import time
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from contextlib import contextmanager
 from typing import Any
 
@@ -290,6 +290,8 @@ class HuggingFaceBackend(ModelBackend):
         sampling_seed: int,
         max_new_tokens: int | None = None,
         intervention_metadata: dict[str, Any] | None = None,
+        token_stop_predicate: Callable[[list[int]], bool] | None = None,
+        token_stop_name: str | None = None,
     ) -> BackendOutput:
         """Generate one seeded full autoregressive trajectory without intervention.
 
@@ -311,6 +313,48 @@ class HuggingFaceBackend(ModelBackend):
             "min_p": self.config.min_p,
             "pad_token_id": self.tokenizer.pad_token_id,
         }
+        token_stopping_criteria: Any | None = None
+        if token_stop_predicate is not None:
+            if not token_stop_name:
+                raise ValueError("token_stop_name is required with token_stop_predicate")
+            try:
+                from transformers import StoppingCriteria, StoppingCriteriaList
+            except ImportError as exc:  # pragma: no cover - guarded by backend construction
+                raise OptionalDependencyError(
+                    "Token terminal policies require transformers"
+                ) from exc
+
+            eos = getattr(self.tokenizer, "eos_token_id", None)
+            eos_ids = {int(eos)} if isinstance(eos, int) else set(eos or ())
+            torch_module = self.torch
+
+            class TokenPredicateStoppingCriteria(StoppingCriteria):
+                def __init__(self) -> None:
+                    self.triggered = False
+                    self.trigger_token_count: int | None = None
+
+                def __call__(self, input_ids: Any, scores: Any, **kwargs: Any) -> Any:
+                    del scores, kwargs
+                    if input_ids.shape[0] != 1:
+                        raise RuntimeError("token terminal policy requires serial batch size 1")
+                    generated_ids = [
+                        int(value) for value in input_ids[0, input_length:].detach().cpu().tolist()
+                    ]
+                    if generated_ids and generated_ids[-1] in eos_ids:
+                        return torch_module.zeros(
+                            1, dtype=torch_module.bool, device=input_ids.device
+                        )
+                    self.triggered = bool(token_stop_predicate(generated_ids))
+                    if self.triggered:
+                        self.trigger_token_count = len(generated_ids)
+                    return torch_module.full(
+                        (1,), self.triggered, dtype=torch_module.bool, device=input_ids.device
+                    )
+
+            token_stopping_criteria = TokenPredicateStoppingCriteria()
+            generation_kwargs["stopping_criteria"] = StoppingCriteriaList(
+                [token_stopping_criteria]
+            )
         if self.device.type == "cuda":
             self.torch.cuda.reset_peak_memory_stats(self.device)
             self.torch.cuda.synchronize(self.device)
@@ -371,6 +415,17 @@ class HuggingFaceBackend(ModelBackend):
                 "top_k": self.config.top_k,
                 "min_p": self.config.min_p,
                 "max_new_tokens": int(max_new_tokens or self.config.max_new_tokens),
+            },
+            "terminal_policy": {
+                "name": token_stop_name,
+                "triggered": bool(
+                    token_stopping_criteria is not None and token_stopping_criteria.triggered
+                ),
+                "trigger_token_count": (
+                    token_stopping_criteria.trigger_token_count
+                    if token_stopping_criteria is not None
+                    else None
+                ),
             },
             "intervention": "none",
         }

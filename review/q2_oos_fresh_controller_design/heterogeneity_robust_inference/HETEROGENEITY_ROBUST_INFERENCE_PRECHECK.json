@@ -1,0 +1,51 @@
+{
+  "schema_version": "q2-oos-heterogeneity-robust-inference-precheck-v1",
+  "source_commit": "8d153a06a4ffdbaa65302f5e5babd0db9e4f1fc5",
+  "frozen_before_simulation": true,
+  "prohibitions": ["real V2 outcomes", "V2 controller stream generation", "K reselection", "method selection using historical semantic outcomes", "dyad-level resampling"],
+  "scientific_unit": "one prospectively sampled safety-conditioned fresh controller",
+  "fixed_design": {"K_fresh": 16, "reference_atlas": 31, "items": 300, "shells": 2, "rollouts": 2, "closed_Q2_A0_rho_planning_input": 0.5638183484033006},
+  "row_estimand": "r_i = equal-shell mean of Spearman_j(A0_s(i,j), Dshape_s(i,j)) over the 31 fixed historical references",
+  "population_question": "whether relational alignment is positive across the population of safety-conditioned fresh controllers",
+  "global_effect_summary": "equal-shell mean global Spearman over all Kx31 dyads; descriptive/effect-size unless its cluster inference calibrates",
+  "methods": [
+    {"id": "A_ORIGINAL_ROW_QAP", "test": "fresh-row label QAP with fixed reference columns", "role": "historical comparator"},
+    {"id": "B_ROW_SPEARMAN_SIGN", "estimate": "median(r_i)", "test": "exact one-sided Binomial test of P(r_i>0)<=0.5", "zero_handling": "discard exact zeros; p=1 if no nonzero rows", "primary_candidate": true},
+    {"id": "C_STUDENTIZED_MEAN_ROW_ASSOCIATION", "estimate": "mean(r_i)", "test": "one-sample studentized t statistic with df=K-1", "ci": "two-sided t interval", "primary_candidate": true},
+    {"id": "D_CLUSTER_BOOTSTRAP_GLOBAL_RHO", "estimate": "global cross-block rho", "bootstrap_unit": "complete fresh-controller row coupled across shells", "variants": ["percentile", "basic", "bootstrap_t"], "resamples_calibration": 499, "resamples_future": 10000},
+    {"id": "E_RANK_REGRESSION_CLUSTER", "estimate": "within-row/reference-adjusted rank slope", "test": "fresh-controller CR1 cluster t with df=K-1", "retain_only_if": "calibrated and power exceeds the selected simpler controller-level method by at least 0.05 at rho-like 0.15"}
+  ],
+  "scenarios": [
+    {"id": "STRICT_EXCHANGEABLE_NULL", "kind": "null", "replicates_A_B_C_E": 5000, "replicates_D": 2000},
+    {"id": "FROZEN_NONEXCHANGEABLE_STRESS_NULL", "kind": "null", "replicates_A_B_C_E": 5000, "replicates_D": 2000},
+    {"id": "ROW_HETEROGENEITY_NULL", "kind": "null", "description": "balanced positive/negative row associations with population mean and sign probability null", "replicates_A_B_C_E": 5000, "replicates_D": 2000},
+    {"id": "SAFETY_CONDITIONED_NULL", "kind": "null", "description": "safety-conditioned fresh geometry with outcome profiles independent of geometry", "replicates_A_B_C_E": 5000, "replicates_D": 2000},
+    {"id": "HEAVY_HETEROGENEITY_NULL", "kind": "null", "description": "balanced heavy-tailed row effects, heteroskedastic rows, and shared item nuisance", "replicates_A_B_C_E": 5000, "replicates_D": 2000},
+    {"id": "POSITIVE_25_PERCENT_CLOSED_A0", "kind": "alternative", "target": 0.14095458710082515, "replicates_A_B_C_E": 3000, "replicates_D": 1500},
+    {"id": "POSITIVE_50_PERCENT_CLOSED_A0", "kind": "alternative", "target": 0.2819091742016503, "replicates_A_B_C_E": 3000, "replicates_D": 1500},
+    {"id": "POSITIVE_RHO_LIKE_0_15", "kind": "alternative", "target": 0.15, "replicates_A_B_C_E": 3000, "replicates_D": 1500}
+  ],
+  "seeds": {
+    "base": 127312203758005809165674771733196123382,
+    "strict": 325821868001418570336217898637735310305,
+    "stress": 67862453737857082377413731476530831374,
+    "row_heterogeneity": 73312736066229487233568863316391236642,
+    "safety": 219163880128250439384842051443681301908,
+    "heavy": 179356739871098701461851414503798108436,
+    "alternative_25": 297385110334741930819907396538638829594,
+    "alternative_50": 142743271692323084787232471489610419723,
+    "alternative_015": 75049684888057212797957913563726553194,
+    "bootstrap": 118613282769869400430583486296130981279
+  },
+  "calibration": {
+    "nominal_alpha": 0.05,
+    "null_pass": "empirical rejection <=0.065 and Wilson lower bound <=0.055 for every applicable plausible null",
+    "coverage_pass": "two-sided 95% CI coverage >=0.925 where a CI is defined",
+    "bias_report": "report signed and absolute bias; no post-hoc bias threshold selects a method",
+    "ties_and_degeneracy": "must fail closed; exact-zero rule as method-specific above",
+    "LOFO": "report leave-one-fresh-controller-out point-estimate range and decision stability"
+  },
+  "power_adequacy": {"preferred": "at least 0.60 at both 50%-closed-A0 and rho-like 0.15", "25_percent_effect": "reported without mandatory threshold"},
+  "selection_precedence": ["calibrated under strict null", "calibrated under every applicable plausible heterogeneity null", "direct match to fresh-controller population estimand", "simple and auditable", "adequate power", "continuity with global-rho reporting"],
+  "selection_rule": "Select the first scientifically direct method satisfying all calibration requirements and preferred power; never select a more powerful anti-conservative method. Retain global Kx31 rho descriptively."
+}

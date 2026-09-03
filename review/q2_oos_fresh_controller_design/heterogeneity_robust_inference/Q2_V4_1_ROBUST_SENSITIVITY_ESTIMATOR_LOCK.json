@@ -1,0 +1,42 @@
+{
+  "schema_version": "q2-v4-1-robust-sensitivity-estimator-lock-v1",
+  "status": "FROZEN_AFTER_MODEL_FREE_CALIBRATION_BEFORE_HISTORICAL_DSHAPE_ACCESS",
+  "parent_protocol_commit": "d1166eaa202fddc68af8da5a98c8f18f747939e6",
+  "calibration_code_commit": "3d6af1803cf6d47d411bfc9a87765d5dd5b4b6bb",
+  "calibration_csv_sha256": "25c0c26d2a3e3d221fb103ac16047b47a6f67442a247e396dcdafff741f24331",
+  "calibration_json_sha256": "217997fd7e7de196ff20b0b11859531727a5ee5f9f5e9f7820ef5914ce16f55e",
+  "calibration_ruling": {
+    "historical_controller_label_QAP": "NOT_UNIFORMLY_HETEROGENEITY_ROBUST; A2 node-heterogeneity FPR=0.0698 with Wilson lower=0.06306",
+    "selected_estimator": "NODE_JACKKNIFE_PSEUDOVALUE_T",
+    "selected_estimator_calibrated": true,
+    "selected_estimator_behavior": "conservative in all frozen null scenarios; FPR range 0.0000--0.0104 and coverage range 0.9896--1.0000"
+  },
+  "historical_semantic_matrix_accessed_before_lock": false,
+  "analysis": {
+    "label": "POST_HOC_HETEROGENEITY_ROBUST_Q2_SENSITIVITY",
+    "metrics": ["A0", "A1", "A2"],
+    "shell_statistic": "Spearman over strict upper-triangle metric and D_shape entries",
+    "aggregate": "equal arithmetic mean of MEDIUM and STRONG shell statistics",
+    "node_count": 31,
+    "delete_one_unit": "controller node removed from both rows and columns in both shells",
+    "full_statistic": "theta_full",
+    "delete_one_statistics": "theta_minus_i for i=1..31",
+    "pseudovalue_formula": "pv_i = 31*theta_full - 30*theta_minus_i",
+    "test_statistic": "mean(pv)/(sd(pv,ddof=1)/sqrt(31))",
+    "reference_distribution": "Student t with 30 degrees of freedom",
+    "alternative": "positive association",
+    "confidence_interval": "mean(pv) +/- t_0.975,30 * sd(pv,ddof=1)/sqrt(31), with t critical 2.042272456",
+    "multiplicity": "Holm step-down adjustment across the three one-sided p-values",
+    "negative_values": "retained",
+    "execution_count": "exactly one"
+  },
+  "mechanical_classification": {
+    "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT": "all A0/A1/A2 have Holm-adjusted p<=0.05 and unadjusted robust 95% lower confidence bound >0",
+    "Q2_V4_1_HETEROGENEITY_SENSITIVITY_MIXED": "at least one but not all A0/A1/A2 satisfy both conditions",
+    "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT_NOT_ESTABLISHED": "none satisfies both conditions"
+  },
+  "historical_classification_immutable": "Q2_V4_1_G2",
+  "raw_journal_not_required": true,
+  "correctness_not_required": true,
+  "model_inference": 0
+}

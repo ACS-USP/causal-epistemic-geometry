@@ -1,0 +1,46 @@
+{
+  "classification": "Q2_OOS_V2_SELECTED_BANK_GATE_PASS",
+  "completed_rows": 1632,
+  "correctness_inspected": false,
+  "expected_rows": 1632,
+  "historical_pause": {
+    "incomplete_in_flight_row_existed": true,
+    "journal_sha256_at_pause": "507fbb7f7eae7c81f57a0ce8daa5d849e55f89cde528809809cb93d52dfdeb20",
+    "rows_preserved": 91,
+    "status": "PAUSED_PROSPECTIVELY_FOR_SEMANTIC_EFFICIENCY_AMENDMENT"
+  },
+  "immutable_stream": {
+    "candidate_count": 34,
+    "changed": false,
+    "new_streams": 0,
+    "redraws": 0,
+    "replacements": 0
+  },
+  "private_artifacts": {
+    "journal_bytes": 1928377,
+    "journal_sha256": "92b8197bfbf767ff01636eafe4e6307f2141d7254318cb5efc1391828593341d",
+    "runtime_log_sha256": "dd38c11529dc181d6619c167adea425b3e1ad24c3d6e6790b7df8b197cc6329d"
+  },
+  "public_artifacts": {
+    "preopen_seal_sha256": "709f58ba640a6f42be0fab8806ef1c0cb144e85e1de76eb1ffc7777b21de010b",
+    "safety_result_sha256": "a3ae6864273f6d780450e1eb45d5eabce883c82efd69ff80398d972ef23b7216",
+    "selected_bank_sha256": "9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd"
+  },
+  "safe_candidate_count": 26,
+  "safety_max_new_tokens": 4096,
+  "schema_version": "q2-oos-v2-safety-closeout-v1",
+  "selected_bank": {
+    "count": 16,
+    "effective_rank": 6.842021185570888,
+    "first_16_safe_in_stream_order": true,
+    "fresh_by_reference_A0_q90_minus_q10": 0.959090505084742,
+    "gate_pass": true,
+    "maximum_absolute_pair_cosine": 0.8148387642876267,
+    "rank": 8,
+    "shell_amplitude_cv": 9.956993521872947e-07
+  },
+  "semantic_N300_trajectories": 0,
+  "semantic_outcomes": 0,
+  "source_execution_commit": "0c6b71aa1547429e0a87b74d681dbd1c33538962",
+  "status": "SAFETY_COMPLETE_SELECTED_BANK_QUALIFIED"
+}

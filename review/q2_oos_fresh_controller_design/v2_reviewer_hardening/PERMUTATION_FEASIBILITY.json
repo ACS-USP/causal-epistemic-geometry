@@ -1,0 +1,20 @@
+{
+  "10": {
+    "exact_enumeration_feasible": true,
+    "final_convention": "identity plus 49,999 unique sampled non-identity maps",
+    "fresh_controller_permutation_group_size": 3628800,
+    "fresh_fresh_action": "P_pi A0 P_pi^T; Dshape fixed; same pi across shells"
+  },
+  "12": {
+    "exact_enumeration_feasible": false,
+    "final_convention": "identity plus 49,999 unique sampled non-identity maps",
+    "fresh_controller_permutation_group_size": 479001600,
+    "fresh_fresh_action": "P_pi A0 P_pi^T; Dshape fixed; same pi across shells"
+  },
+  "16": {
+    "exact_enumeration_feasible": false,
+    "final_convention": "identity plus 49,999 unique sampled non-identity maps",
+    "fresh_controller_permutation_group_size": 20922789888000,
+    "fresh_fresh_action": "P_pi A0 P_pi^T; Dshape fixed; same pi across shells"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "accepted_route": "ROUTE_C_INFERENCE_ALIGNED_GATES",
+  "actual_v2_seed_derived": false,
+  "artifact_hashes": {
+    "K_COMPARISON.csv": "9e6c99a23b41d1a2d7ed44d67eeeead3dd7128f289ef76b64247358b67ef865f",
+    "PERMUTATION_FEASIBILITY.json": "5b5b024beaf50b44912fddeba0acfcd5fdd60eccbf9c8e6e114f47aa8e064f26",
+    "POWER_BY_PLANNING_BANK.csv": "842c01a73c8d526f51db50056ec4b96e7d4c0619c3b9d6a78fae96eb0f0b243c",
+    "POWER_COMPARISON.csv": "3b5bec139828e31396ccfd2f88332c0a1570ab5862de59cda41544e84535498e",
+    "QUALIFICATION_SEARCH.csv": "6a3512378912d2dcceb6c8a05a45cb4bf0359e5b7f374e0fb16e15dd790dff93",
+    "REVIEWER_HARDENING_PRECHECK.json": "4b1872e748d19e918547f0ab6425bb170c6f346b78f8fd87163e9cf5c1be3e3a"
+  },
+  "correctness_inspected": false,
+  "decisions": [
+    {
+      "K": 10,
+      "checks": {
+        "gpu_hours": true,
+        "half_prior_lofo": true,
+        "half_prior_power": true,
+        "half_prior_width": true,
+        "independent_qualification": true,
+        "moderate_axis_qualification": true,
+        "null_fpr": true,
+        "reserve_probability": true,
+        "rho_0_15_power": true,
+        "semantic_trajectories": true
+      },
+      "pass": true
+    },
+    {
+      "K": 12,
+      "checks": {
+        "gpu_hours": true,
+        "half_prior_lofo": true,
+        "half_prior_power": true,
+        "half_prior_width": true,
+        "independent_qualification": true,
+        "moderate_axis_qualification": true,
+        "null_fpr": true,
+        "reserve_probability": true,
+        "rho_0_15_power": true,
+        "semantic_trajectories": true
+      },
+      "pass": true
+    },
+    {
+      "K": 16,
+      "checks": {
+        "gpu_hours": true,
+        "half_prior_lofo": true,
+        "half_prior_power": true,
+        "half_prior_width": true,
+        "independent_qualification": true,
+        "moderate_axis_qualification": true,
+        "null_fpr": true,
+        "reserve_probability": true,
+        "rho_0_15_power": true,
+        "semantic_trajectories": true
+      },
+      "pass": true
+    }
+  ],
+  "fresh_fresh_secondary": {
+    "bootstrap": "same frozen item-cluster bootstrap principles; all controller conditions and rollout banks for a sampled item move together",
+    "exchangeability_unit": "fresh controller identity",
+    "final_maps": "identity plus 49,999 unique sampled non-identity maps",
+    "geometry": "A0",
+    "labels": {
+      "FRESH_FRESH_ASSOCIATION_INCOMPLETE": "aggregate rho > 0 but at least one QAP/bootstrap/LOFO support requirement fails",
+      "FRESH_FRESH_ASSOCIATION_POSITIVE": "aggregate rho > 0 AND one-sided controller-QAP p <= 0.05 AND item-bootstrap lower 95% bound > 0 AND every LOFO rho > 0",
+      "FRESH_FRESH_NO_ASSOCIATION": "aggregate rho <= 0 OR controller-QAP p > 0.05"
+    },
+    "permutation_action": "P_pi A0 P_pi^T against fixed Dshape, using the same controller permutation across shells",
+    "role": "SECONDARY_ONLY_CANNOT_RESCUE_OR_CHANGE_PRIMARY_CLASSIFICATION",
+    "semantic_endpoint": "Dshape",
+    "stability": "all leave-one-fresh-controller aggregate correlations strictly positive",
+    "statistic": "equal-weight mean over shells of upper-triangle Spearman correlations"
+  },
+  "half_prior_planning_bank_gate_failure_fraction": 0.0,
+  "historical_v1_classification": "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+  "model_inference": 0,
+  "new_v2_stream_generated": false,
+  "predicted_power_gate_ruling": "RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY",
+  "recommended_K": 16,
+  "recommended_candidate_count": 34,
+  "schema_version": "q2-oos-v2-reviewer-hardening-summary-v1",
+  "semantic_trajectories": 0,
+  "source_commit": "ff7ede3785e3e4a203cf64f4260e7cc6b819918b",
+  "spark1_used": false,
+  "spark2_used": false
+}

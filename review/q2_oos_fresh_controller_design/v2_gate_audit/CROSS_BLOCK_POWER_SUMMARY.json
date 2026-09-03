@@ -1,0 +1,85 @@
+{
+  "effect_rho_input": 0.2819091742016503,
+  "interpretation": "synthetic relational planning model only; coefficients diagnose whether selected-bank condition/effective rank add power information after cross-block spread",
+  "observed_rho_quantiles": {
+    "q025": 0.26522159104069093,
+    "q25": 0.27576017876725917,
+    "q50": 0.2816352692737228,
+    "q75": 0.28776841019795113,
+    "q975": 0.3026628638007377
+  },
+  "overall_all_lofo_positive": 1.0,
+  "overall_permutation_power": 1.0,
+  "planning_permutations": 999,
+  "quartile_power": [
+    {
+      "metric": "cross_block_A0_q90_minus_q10",
+      "power_by_quartile": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "quartile_edges": [
+        0.9092688370272594,
+        0.9352597882777995,
+        0.9618696562381781
+      ]
+    },
+    {
+      "metric": "cross_block_row_diversity",
+      "power_by_quartile": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "quartile_edges": [
+        2.599794328111251,
+        2.6776714728460576,
+        2.748916527631735
+      ]
+    },
+    {
+      "metric": "selected_effective_rank",
+      "power_by_quartile": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "quartile_edges": [
+        5.302503705600486,
+        5.5834350664857055,
+        5.838307693172856
+      ]
+    },
+    {
+      "metric": "log_selected_condition_number",
+      "power_by_quartile": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "quartile_edges": [
+        1.7151677541550598,
+        2.009636087405621,
+        2.3491114875357217
+      ]
+    }
+  ],
+  "replicates": 1200,
+  "standardized_linear_coefficients_for_observed_rho": {
+    "cross_block_A0_q90_minus_q10": 0.029298616539597543,
+    "cross_block_row_diversity": 0.003468041248179492,
+    "log_selected_condition_number": 0.019234788267625993,
+    "selected_effective_rank": 0.006325593156056547
+  },
+  "standardized_logistic_coefficients_conditioning_on_all_metrics": {
+    "cross_block_A0_q90_minus_q10": -1.1571190742304352e-13,
+    "cross_block_row_diversity": -1.536680559693488e-14,
+    "log_selected_condition_number": 1.5748726819689048e-14,
+    "selected_effective_rank": 3.772374390121727e-14
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "correctness_inspected_only_after_raw_seal": true,
+  "dshape_artifact_sha256": "a6a6b4889e2c86df04ce42c4415281dde82af0d2deb1347b8083015e95089ea5",
+  "dtotal_artifact_sha256": "354db2363a845c654eafa00a3865b28ee04158978dc035a8128d95cf58a05ed9",
+  "error_arrays_sha256": "6c0e555f7cccba0c41415c7605d161e84f99ba705b6430eaac53d2527b05086c",
+  "exact_binomial": {
+    "count": 16,
+    "degenerate": false,
+    "finite": 16,
+    "negatives": 0,
+    "p_value": 1.52587890625e-05,
+    "positives": 16,
+    "reject_0_05": true,
+    "zeros": 0
+  },
+  "negative_count": 0,
+  "positive_count": 16,
+  "primary_classification": "Q2_OOS_V2_A0_PASS",
+  "primary_r_i": [
+    0.7647559159570819,
+    0.513508064516129,
+    0.47192257523831216,
+    0.8344758064516129,
+    0.6147524197208121,
+    0.763850314539403,
+    0.740862927008436,
+    0.72114124774186,
+    0.6441532258064516,
+    0.7350151974479999,
+    0.7034274193548387,
+    0.8185483870967742,
+    0.45927419354838706,
+    0.8221179680932903,
+    0.7292065769490946,
+    0.7211077082660151
+  ],
+  "raw_journal_sha256": "24fdd1c818c6e507f2e1999ce6e5da380405bc533af60723da01c1ec2bd66a40",
+  "saved_before_secondary_analyses": true,
+  "schema_version": "q2-oos-v2-primary-result-seal-v1",
+  "scored_dataset_sha256": "9f03d96d40839e228d6cfb55408ea056e262fbf7e9aef2e863080e035e4b721b",
+  "status": "PRIMARY_RESULT_SEALED_BEFORE_SECONDARIES",
+  "zero_count": 0
+}

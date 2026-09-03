@@ -1,0 +1,75 @@
+{
+  "schema_version": "q2-oos-v2-zero-handling-sign-test-erratum-precheck-v1",
+  "source_commit": "536984480b6e4b14ff4d28647309b6d707d21637",
+  "status": "FROZEN_BEFORE_RECALIBRATION",
+  "scope": "NARROW_ZERO_HANDLING_RECALIBRATION_ONLY",
+  "method_reselection": "FORBIDDEN",
+  "design_changes": {
+    "K": "UNCHANGED_16",
+    "candidate_count": "UNCHANGED_34",
+    "reference_atlas": "UNCHANGED_31",
+    "method": "UNCHANGED_B_ROW_SPEARMAN_SIGN"
+  },
+  "row_statistic": "r_i = equal-shell mean of Spearman_j(A0_s(i,j), Dshape_s(i,j)) over the exact 31 fixed historical references",
+  "bernoulli_variable": "X_i = 1 if finite r_i > 0; X_i = 0 if finite r_i <= 0",
+  "zero_rule": "exact zero is a non-success and remains in the K=16 Binomial denominator",
+  "negative_rule": "negative is a non-success",
+  "nonfinite_rule": "Q2_OOS_V2_INFERENCE_DEGENERATE",
+  "null": "P(r_i > 0) <= 0.5",
+  "alternative": "P(r_i > 0) > 0.5",
+  "test": "exact one-sided Binomial upper-tail with n=16 whenever all rows are finite",
+  "alpha": 0.05,
+  "K16_mechanical_requirement": "positive_count >= 12 and exact p <= 0.05",
+  "effect_size_summaries": [
+    "complete r_i distribution",
+    "median r_i descriptive only",
+    "mean r_i descriptive only",
+    "positive zero and negative counts"
+  ],
+  "scenarios": [
+    {"id": "STRICT_EXCHANGEABLE_NULL", "kind": "null", "replicates": 5000, "seed_key": "strict"},
+    {"id": "FROZEN_NONEXCHANGEABLE_STRESS_NULL", "kind": "null", "replicates": 5000, "seed_key": "stress"},
+    {"id": "ROW_HETEROGENEITY_NULL", "kind": "null", "replicates": 5000, "seed_key": "row_heterogeneity"},
+    {"id": "SAFETY_CONDITIONED_NULL", "kind": "null", "replicates": 5000, "seed_key": "safety"},
+    {"id": "HEAVY_HETEROGENEITY_NULL", "kind": "null", "replicates": 5000, "seed_key": "heavy"},
+    {"id": "POSITIVE_25_PERCENT_CLOSED_A0", "kind": "alternative", "replicates": 3000, "seed_key": "alternative_25", "target": 0.14095458710082515},
+    {"id": "POSITIVE_50_PERCENT_CLOSED_A0", "kind": "alternative", "replicates": 3000, "seed_key": "alternative_50", "target": 0.2819091742016503},
+    {"id": "POSITIVE_RHO_LIKE_0_15", "kind": "alternative", "replicates": 3000, "seed_key": "alternative_015", "target": 0.15}
+  ],
+  "seeds": {
+    "strict": 325821868001418570336217898637735310305,
+    "stress": 67862453737857082377413731476530831374,
+    "row_heterogeneity": 73312736066229487233568863316391236642,
+    "safety": 219163880128250439384842051443681301908,
+    "heavy": 179356739871098701461851414503798108436,
+    "alternative_25": 297385110334741930819907396538638829594,
+    "alternative_50": 142743271692323084787232471489610419723,
+    "alternative_015": 75049684888057212797957913563726553194
+  },
+  "calibration_gate": "for every null empirical FPR <= 0.065 and Wilson 95% lower bound <= 0.055",
+  "power_gate": "power >= 0.60 at both POSITIVE_50_PERCENT_CLOSED_A0 and POSITIVE_RHO_LIKE_0_15; 25-percent power reported without mandatory threshold",
+  "required_outputs": [
+    "FPR or power",
+    "Wilson 95% interval",
+    "exact-zero row frequency",
+    "panel-level distribution of nonpositive counts",
+    "positive-count distribution",
+    "exact p-value distribution"
+  ],
+  "prohibitions": [
+    "rerun any competing method for selection",
+    "change K or candidate_count",
+    "access real V2 outcomes",
+    "access historical Q2 semantic outcomes",
+    "generate a controller stream before qualification",
+    "derive a V2 seed before final PRELOCK"
+  ],
+  "historical_states_immutable": [
+    "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+    "Q2_OOS_V2_NULL_CALIBRATION_BLOCKED",
+    "Q2_V4_1_G2",
+    "RS+",
+    "RT+",
+    "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "benchmark_content_absent": true,
+    "correctness_absent": true,
+    "credentials_absent": true,
+    "generated_token_ids_absent": true,
+    "infrastructure_identifiers_absent": true,
+    "private_paths_absent": true,
+    "raw_model_outputs_absent": true,
+    "semantic_outcomes_absent": true
+  },
+  "files_reviewed": [
+    "V2_SAFETY_PREOPEN_SEAL.json",
+    "V2_SAFETY_RESULT.json",
+    "V2_SELECTED_CONTROLLER_BANK.json"
+  ],
+  "private_artifacts_represented_by_hash_only": [
+    "V2_SAFETY_JOURNAL.jsonl",
+    "run.log"
+  ],
+  "release_safe": true,
+  "schema_version": "q2-oos-v2-safety-release-audit-v1"
+}

@@ -1,0 +1,126 @@
+{
+  "actual_v2_seed_derived": false,
+  "correctness_inspected": false,
+  "elapsed_seconds": 60.13343221892137,
+  "future_50000_map_path": {
+    "absolute_rejection_rate_difference": 0.0,
+    "maps_1k": 1000,
+    "maps_50k": 50000,
+    "p95_absolute_p_value_difference": 0.024455,
+    "panels": 500,
+    "pass": true,
+    "rejection_rate_1k": 0.034,
+    "rejection_rate_50k": 0.034
+  },
+  "implementation_audit": {
+    "checks": {
+      "degenerate_detected": true,
+      "deterministic_panel": true,
+      "dyad_level_permutation": false,
+      "identity_count_1k": true,
+      "identity_count_50k": true,
+      "identity_first_1k": true,
+      "identity_first_50k": true,
+      "permutations_cover_complete_rows": true,
+      "reference_columns_fixed": true,
+      "right_tail_and_no_sign_inversion": true,
+      "same_map_both_shells": true,
+      "tied_average_ranks_finite": true,
+      "unique_1k": true,
+      "unique_50k": true
+    },
+    "pass": false
+  },
+  "model_inference": 0,
+  "new_v2_stream_generated": false,
+  "precheck_commit": "630b0854b191d1da87800396987e1e6d85c2bdc6",
+  "precheck_erratum_commit": "fe255060f4ec9ee2143a62b810a9d91aecd9167b",
+  "ruling": "PRIMARY_ROW_QAP_IMPLEMENTATION_NOT_CALIBRATED",
+  "schema_version": "q2-oos-v2-row-qap-null-calibration-result-v1",
+  "semantic_trajectories": 0,
+  "small_K_exact_audit": {
+    "K": 6,
+    "absolute_rejection_rate_difference": 0.0,
+    "exact_maps": 720,
+    "exact_rejection_rate": 0.0565,
+    "p95_absolute_p_value_difference": 0.01833611111111114,
+    "panels": 2000,
+    "pass": true,
+    "sampled_maps": 500,
+    "sampled_rejection_rate": 0.0565
+  },
+  "stress_materially_anti_conservative": true,
+  "stress_null": {
+    "Wilson_95_interval": [
+      0.07077374054640673,
+      0.08115204367127532
+    ],
+    "fraction_p_le_0_01": 0.0054,
+    "fraction_p_le_0_05": 0.0758,
+    "fraction_p_le_0_10": 0.1552,
+    "monte_carlo_se": 0.0026467784191352324,
+    "p_value_decile_histogram": [
+      1552,
+      1353,
+      1363,
+      1281,
+      1217,
+      1111,
+      881,
+      710,
+      413,
+      119
+    ],
+    "p_value_quantiles": {
+      "0.01": 0.012012012012012012,
+      "0.05": 0.035035035035035036,
+      "0.1": 0.06406406406406406,
+      "0.25": 0.16716716716716717,
+      "0.5": 0.35935935935935936,
+      "0.75": 0.5645645645645646,
+      "0.9": 0.7327327327327328,
+      "0.95": 0.8058058058058059,
+      "0.99": 0.9059159159159161
+    },
+    "panels": 10000,
+    "rejection_rate_at_0_05": 0.0758,
+    "rejections_at_0_05": 758
+  },
+  "strict_exchangeable_null": {
+    "Wilson_95_interval": [
+      0.04704986366401762,
+      0.05569481327350168
+    ],
+    "fraction_p_le_0_01": 0.0111,
+    "fraction_p_le_0_05": 0.0512,
+    "fraction_p_le_0_10": 0.0983,
+    "monte_carlo_se": 0.002204054445788488,
+    "p_value_decile_histogram": [
+      973,
+      993,
+      1074,
+      937,
+      934,
+      1034,
+      998,
+      1026,
+      994,
+      1037
+    ],
+    "p_value_quantiles": {
+      "0.01": 0.00999000000000001,
+      "0.05": 0.049,
+      "0.1": 0.102,
+      "0.25": 0.25,
+      "0.5": 0.508,
+      "0.75": 0.753,
+      "0.9": 0.903,
+      "0.95": 0.952,
+      "0.99": 0.992
+    },
+    "panels": 10000,
+    "rejection_rate_at_0_05": 0.0512,
+    "rejections_at_0_05": 512
+  },
+  "strict_materially_anti_conservative": false
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "q2-oos-v2-item-bootstrap-diagnostic-result-v1",
+  "status": "CLOSED",
+  "label": "POST_HOC_DIAGNOSTIC_ONLY",
+  "ruling": "Q2_OOS_V2_ITEM_BOOTSTRAP_METHOD_NOT_CALIBRATED",
+  "primary_oos_classification": "Q2_OOS_V2_A0_PASS",
+  "primary_oos_classification_changed": false,
+  "primary_integrity": {
+    "pass": true,
+    "error_array_max_abs_difference": 0.0,
+    "Dshape_max_abs_difference": 0.0,
+    "Dtotal_max_abs_difference": 0.0,
+    "primary_r_i_max_abs_difference": 0.0,
+    "fresh_historical_item_order_exact": true
+  },
+  "historical_bootstrap_implementation": {
+    "implementation_exact": true,
+    "maximum_archived_quantile_difference": 0.0,
+    "resamples": 50000,
+    "items_drawn_with_replacement": 300,
+    "frozen_seed": "8570345065466006396",
+    "expected_unique_items": 189.82036326757122,
+    "observed_mean_unique_items": 189.8224,
+    "observed_mean_multiplicity_effective_support": 150.49042684699745,
+    "rank_degeneracy_fraction": 0.0,
+    "global_q50_minus_full": -0.10299908611797137,
+    "median_row_q50_minus_full": -0.11556112061806179
+  },
+  "interpretation": {
+    "historical_percentiles_are_conventional_95_percent_confidence_interval": false,
+    "authorized_term": "ordinary item-resampling panel-perturbation sensitivity distribution",
+    "reason": "The exact implementation is centered on statistics recomputed from a duplicate-weighted empirical panel with substantially reduced unique and effective item support. The compound R=2 Dshape-to-rank-correlation estimator is nonlinear and attenuates under this perturbation. Frozen simulations did not establish conventional percentile-interval calibration.",
+    "primary_sign_test_affected": false,
+    "controller_cluster_interval_role": "separate fresh-controller-population uncertainty conditional on the observed item panel",
+    "replacement_item_level_confidence_interval_selected": false
+  },
+  "synthetic_calibration": {
+    "scenarios": 8,
+    "outer_panels_per_scenario": 96,
+    "resamples_per_method_per_panel": 127,
+    "ordinary_item_bootstrap_failed_scenarios": [
+      "NULL",
+      "WEAK_POSITIVE",
+      "MODERATE_POSITIVE",
+      "OBSERVED_LIKE",
+      "HETEROGENEOUS_CONTROLLER_EFFECTS",
+      "HETEROGENEOUS_ITEM_DIFFICULTY",
+      "SPARSE_BLIND_SPOT_DIFFERENCES",
+      "HEAVY_TIES_NEAR_DEGENERATE"
+    ],
+    "ordinary_item_bootstrap_failed_screens": 16,
+    "fully_screened_item_level_alternatives": [],
+    "method_screen_pass_counts_out_of_16": {
+      "A_ordinary_item_bootstrap": 0,
+      "B_bayesian_multiplier": 0,
+      "C_subsampling_0.500": 0,
+      "C_subsampling_0.632": 0,
+      "C_subsampling_0.750": 0,
+      "C_subsampling_0.900": 0,
+      "D_delete_d_0.10": 1,
+      "D_delete_d_0.25": 0
+    }
+  },
+  "publication_consequence": {
+    "preserve_historical_artifact": true,
+    "omit_conventional_item_bootstrap_CI_language_from_main_text": true,
+    "report_anomaly_transparently_in_supplement": true,
+    "main_inference_remains_exact_controller_level_sign_test": true,
+    "controller_cluster_bootstrap_may_be_shown_with_explicit_population_label": true
+  },
+  "firewall": {
+    "new_semantic_trajectories": 0,
+    "Qwen_loaded": false,
+    "raw_text_manually_inspected": false,
+    "correctness_used_for_method_selection": false,
+    "Spark1_GPU_used": false,
+    "Spark2_used": false,
+    "RunPod_used": false,
+    "Q3_run": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "q2-oos-fresh-fresh-secondary-inference-precheck-v1",
+  "source_commit": "8d153a06a4ffdbaa65302f5e5babd0db9e4f1fc5",
+  "frozen_before_simulation": true,
+  "role": "SECONDARY_ONLY_CANNOT_RESCUE_FRESH_OLD_PRIMARY",
+  "design": {"K": 16, "symmetric_dyads": 120, "shells": 2, "null_replicates": 5000, "alternative_replicates": 3000, "seed": 205141614227786064888570140463277081771},
+  "methods": [
+    {"id": "HISTORICAL_CONJUGATION_QAP", "role": "comparator"},
+    {"id": "NODE_JACKKNIFE_PSEUDOVALUE_T", "unit": "controller node", "test": "one-sided t on leave-one-node-out jackknife pseudovalues"},
+    {"id": "NODE_BOOTSTRAP", "unit": "controller node", "test": "node-resampled percentile interval", "resamples": 999}
+  ],
+  "nulls": ["STRICT_EXCHANGEABLE_NODE_NULL", "NODE_HETEROGENEITY_NULL", "HEAVY_NODE_HETEROGENEITY_NULL"],
+  "calibration_rule": "formal method requires empirical FPR <=0.065 and Wilson lower bound <=0.055 for every null",
+  "fallback": "if no formal method qualifies, retain fresh-fresh as descriptive secondary with node-jackknife uncertainty and no formal p-value"
+}

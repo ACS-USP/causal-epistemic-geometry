@@ -1,0 +1,44 @@
+{
+  "schema_version": "q2-oos-v2-release-safety-audit-v1",
+  "release_safe": true,
+  "scope": "Q2_OOS_V2 post-collection derived scientific closeout",
+  "scientific_outcomes_included": true,
+  "raw_model_outputs_included": false,
+  "raw_benchmark_content_included": false,
+  "private_infrastructure_identifiers_included": false,
+  "credentials_included": false,
+  "historical_results_modified": false,
+  "follow_up_experiment_started": false,
+  "raw_artifacts": {
+    "journal": "private_hash_pinned",
+    "scored_dataset": "private_hash_pinned",
+    "error_arrays": "private_hash_pinned",
+    "dshape": "private_hash_pinned",
+    "dtotal": "private_hash_pinned"
+  },
+  "published_files": [
+    "Q2_OOS_V2_SEMANTIC_ANALYSIS.json",
+    "Q2_OOS_V2_PRIMARY_RESULT_SEAL.json",
+    "Q2_OOS_V2_FORENSIC_AUDIT.json",
+    "Q2_OOS_V2_SEMANTIC_CLOSEOUT.md"
+  ],
+  "content_scan": {
+    "raw_model_text": false,
+    "token_id_arrays": false,
+    "reference_literals": false,
+    "answer_parse_fields": false,
+    "private_paths": false,
+    "ssh_or_credential_material": false
+  },
+  "primary_classification": "Q2_OOS_V2_A0_PASS",
+  "forensic_status": "Q2_OOS_V2_FORENSIC_CLEAN",
+  "raw_journal_sha256": "24fdd1c818c6e507f2e1999ce6e5da380405bc533af60723da01c1ec2bd66a40",
+  "raw_journal_rows": 19200,
+  "raw_journal_bytes": 127968010,
+  "private_derived_hashes": {
+    "scored_dataset": "9f03d96d40839e228d6cfb55408ea056e262fbf7e9aef2e863080e035e4b721b",
+    "error_arrays": "6c0e555f7cccba0c41415c7605d161e84f99ba705b6430eaac53d2527b05086c",
+    "dshape": "a6a6b4889e2c86df04ce42c4415281dde82af0d2deb1347b8083015e95089ea5",
+    "dtotal": "354db2363a845c654eafa00a3865b28ee04158978dc035a8128d95cf58a05ed9"
+  }
+}

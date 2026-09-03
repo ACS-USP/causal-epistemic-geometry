@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "diagonal": true,
+    "finite": true,
+    "fit_hash_matches": true,
+    "range": true,
+    "symmetry": true
+  },
+  "classification": "Q2_OOS_V2_A1_INSTRUMENT_QUALIFIED",
+  "frozen_fit_hash": "1c67c482096db4ad6ad7671eae80300c5ca1d8833da070af13dd9ac0cfeca2a1",
+  "frozen_fit_sha256": "193a6869ce3105064a2dc8fd38f6b69f67b7ee9f2d650947290e0c8bc4102102"
+}

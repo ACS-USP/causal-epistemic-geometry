@@ -1,0 +1,33 @@
+{
+  "schema_version": "q2-v4-1-heterogeneity-robust-sensitivity-protocol-v1",
+  "source_commit": "8d153a06a4ffdbaa65302f5e5babd0db9e4f1fc5",
+  "frozen_before_historical_semantic_matrix_access": true,
+  "historical_state_immutable": ["Q2_V4_1_G2", "RS+", "RT+", "Q2_V4_1_SEMANTIC_FORENSIC_CLEAN"],
+  "label": "POST_HOC_HETEROGENEITY_ROBUST_Q2_SENSITIVITY",
+  "preoutcome_inputs_allowed_now": ["K=31 safe-bank structure", "A0_MEDIUM", "A0_STRONG", "A1 matrices", "A2 matrices", "frozen controller-label QAP schedule"],
+  "semantic_inputs_forbidden_until_method_lock": ["D_shape matrices", "semantic estimands", "correctness", "raw journal"],
+  "calibration": {
+    "K": 31,
+    "shells": 2,
+    "synthetic_null_replicates": 5000,
+    "synthetic_alternative_replicates": 3000,
+    "qap_maps_for_calibration": 1000,
+    "seed": 85520001188651234598636425997315295011,
+    "nulls": ["STRICT_EXCHANGEABLE_SYMMETRIC_NULL", "NODE_HETEROGENEITY_NULL", "HEAVY_NODE_HETEROGENEITY_NULL", "SAFETY_AXIS_HETEROGENEITY_NULL"],
+    "historical_comparator": "frozen controller-label conjugation QAP",
+    "candidate_robust_method": "node-jackknife pseudovalue t over equal-shell mean Spearman",
+    "pass": "FPR <=0.065 and Wilson lower bound <=0.055 for every null; 95% CI coverage >=0.925"
+  },
+  "method_lock_rule": "Only after model-free calibration, commit the exact selected robust estimator and thresholds before opening D_shape.",
+  "single_posthoc_analysis": {
+    "metrics": ["A0", "A1", "A2"],
+    "association": "equal-weight mean of MEDIUM and STRONG upper-triangle Spearman",
+    "multiplicity": "Holm correction across A0/A1/A2 one-sided robust p-values",
+    "outcomes": {
+      "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT": "all three positive with Holm p<=0.05 and unadjusted 95% lower CI >0",
+      "Q2_V4_1_HETEROGENEITY_SENSITIVITY_MIXED": "at least one but not all three satisfies robust support",
+      "Q2_V4_1_HETEROGENEITY_ROBUST_SUPPORT_NOT_ESTABLISHED": "none satisfies robust support"
+    }
+  },
+  "cannot_change": "historical Q2_V4_1_G2 mechanical classification"
+}

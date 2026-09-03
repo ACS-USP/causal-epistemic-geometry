@@ -1,0 +1,107 @@
+{
+  "K_values": [
+    6,
+    8,
+    10,
+    12,
+    16
+  ],
+  "N": 300,
+  "controller_dependence_sensitivity_sha256": "427b2270b665f20692956225c60f70a7ac07d8c91fcbae719c9dab3a627eaf4d",
+  "cpu_only": true,
+  "decisions": [
+    {
+      "K": 6,
+      "checks": {
+        "full_prior_lofo_sign_stability": true,
+        "full_prior_permutation_power": true,
+        "full_prior_precision": true,
+        "minimum_fresh_controller_vertices": false,
+        "null_false_positive_rate": true,
+        "safe_bank_feasibility": true,
+        "three_quarter_prior_permutation_power": true
+      },
+      "pass": false
+    },
+    {
+      "K": 8,
+      "checks": {
+        "full_prior_lofo_sign_stability": true,
+        "full_prior_permutation_power": true,
+        "full_prior_precision": true,
+        "minimum_fresh_controller_vertices": false,
+        "null_false_positive_rate": true,
+        "safe_bank_feasibility": true,
+        "three_quarter_prior_permutation_power": true
+      },
+      "pass": false
+    },
+    {
+      "K": 10,
+      "checks": {
+        "full_prior_lofo_sign_stability": true,
+        "full_prior_permutation_power": true,
+        "full_prior_precision": true,
+        "minimum_fresh_controller_vertices": true,
+        "null_false_positive_rate": true,
+        "safe_bank_feasibility": true,
+        "three_quarter_prior_permutation_power": true
+      },
+      "pass": true
+    },
+    {
+      "K": 12,
+      "checks": {
+        "full_prior_lofo_sign_stability": true,
+        "full_prior_permutation_power": true,
+        "full_prior_precision": true,
+        "minimum_fresh_controller_vertices": true,
+        "null_false_positive_rate": true,
+        "safe_bank_feasibility": true,
+        "three_quarter_prior_permutation_power": true
+      },
+      "pass": true
+    },
+    {
+      "K": 16,
+      "checks": {
+        "full_prior_lofo_sign_stability": true,
+        "full_prior_permutation_power": true,
+        "full_prior_precision": true,
+        "minimum_fresh_controller_vertices": true,
+        "null_false_positive_rate": true,
+        "safe_bank_feasibility": true,
+        "three_quarter_prior_permutation_power": true
+      },
+      "pass": true
+    }
+  ],
+  "dependence": "shared 300 items, two rollout blocks, 31 fixed reference columns, complete fresh-row permutation, both shells coupled",
+  "effect_scenarios": {
+    "FULL_PRIOR": 0.5638183484033006,
+    "HALF_PRIOR": 0.2819091742016503,
+    "NULL": 0.0,
+    "THREE_QUARTER_PRIOR": 0.42286376130247544
+  },
+  "planning_criteria_frozen_in_code": {
+    "full_prior_all_lofo_positive_rate_min": 0.8,
+    "full_prior_permutation_power_min": 0.8,
+    "full_prior_sampling_95_width_max": 0.4,
+    "minimum_fresh_controller_vertices": 10,
+    "null_false_positive_rate_max": 0.075,
+    "safe_bank_probability_min_at_p_0_70": 0.95,
+    "selection_rule": "smallest K satisfying every criterion; ties favor lower future trajectories",
+    "three_quarter_prior_permutation_power_min": 0.6
+  },
+  "planning_input": {
+    "A0_aggregate_rho": 0.5638183484033006,
+    "source": "Q2 V4.1 final closeout"
+  },
+  "power_csv_sha256": "746dd9cd4e29f5a76cae8b292f4a9f09ea9294a2064a8a7cf7935165bc1ba81c",
+  "precision_definition": "empirical 95% width across independent synthetic N=300 panels; final inference uses the separately frozen item bootstrap",
+  "prior_item_level_outcomes_accessed": false,
+  "recommended_K": 10,
+  "recommended_candidate_count": 19,
+  "reference_manifest_sha256": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447",
+  "schema_version": "q2-oos-fresh-controller-power-v1"
+}

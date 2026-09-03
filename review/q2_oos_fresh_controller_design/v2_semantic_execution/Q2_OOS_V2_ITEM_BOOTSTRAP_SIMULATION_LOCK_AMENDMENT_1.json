@@ -1,0 +1,37 @@
+{
+  "schema_version": "q2-oos-v2-item-bootstrap-simulation-lock-amendment-v1",
+  "status": "FROZEN_BEFORE_FINAL_SYNTHETIC_CALIBRATION",
+  "label": "POST_HOC_DIAGNOSTIC_ONLY",
+  "amends_lock_sha256": "80029dfd81110bd5d07c1d78268686a1d38714e7513a541073452bca794407ee",
+  "reason": "The compact weight implementation initially applied an effective-support covariance correction to every method. The historical ordinary bootstrap instead treats the 300 sampled occurrences as the sample and applies the exact fixed N/(N-1) correction even when item indices repeat.",
+  "final_calibration_results_generated_before_amendment": 0,
+  "partial_interrupted_runs_used_for_method_selection": false,
+  "scenario_parameters_changed": false,
+  "seeds_changed": false,
+  "replicate_counts_changed": false,
+  "methods_changed": false,
+  "evaluation_criteria_changed": false,
+  "implementation_commit": "0d71db64cb524373c31b4d7f5e3e52b950fedc05",
+  "implementation_path": "scripts/calibrate_q2_oos_v2_item_bootstrap.py",
+  "implementation_sha256": "4a9b3dacf5fb3294642f4260618d6101b208f2f7b32340c791fd3c9deba3f027",
+  "correction_policy": {
+    "A_ordinary_item_bootstrap": "fixed occurrence count N=300; correction N/(N-1), exactly matching the historical implementation",
+    "B_bayesian_multiplier": "continuous-weight correction 1/(1-sum(normalized_weight_squared))",
+    "C_subsampling": "equal-weight selected support; correction m/(m-1)",
+    "D_delete_d": "equal-weight retained support; correction (N-d)/(N-d-1)",
+    "E_controller_cluster": "no item re-estimation; observed Dshape remains fixed"
+  },
+  "regression_test": {
+    "path": "tests/test_q2_oos_v2_item_bootstrap_diagnostic.py",
+    "sha256": "f83b33181a58bab2ccbd502224d0b684423589da74b9f70935bb573dd52d5d5d",
+    "invariant": "count-weighted compact computation equals explicit repeated-index cross_block_shape within 1e-15"
+  },
+  "governance": {
+    "frozen_primary": "Q2_OOS_V2_A0_PASS",
+    "primary_changed": false,
+    "new_semantic_trajectories": 0,
+    "Qwen_loaded": false,
+    "raw_text_inspected": false,
+    "GPU": false
+  }
+}

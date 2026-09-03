@@ -1,0 +1,16 @@
+{
+  "schema_version": "q2-oos-v2-presemantic-phase0-precheck-manifest-v1",
+  "source_commit": "74ba16ad03d63dd680bb85e8a4486e29eaa12c9c",
+  "status": "READY_FOR_PRE_SIMULATION_COMMIT",
+  "artifacts": {
+    "NULL_CALIBRATION_PRECHECK.json": "a2cd99c9c98d66895b2af6851801c3d1d28c0c85892047c8b42f9ba893dd53c4",
+    "RUNTIME_FORECAST_PROTOCOL.json": "c5226e2fdfd80ab77a81940b99f8a90bb007b7e7f3de689ae3a57a074c2a2638"
+  },
+  "hash_algorithm": "SHA-256",
+  "v2_stream_exists": false,
+  "actual_v2_seed_derived": false,
+  "historical_runtime_metadata_inspected": false,
+  "model_inference": 0,
+  "semantic_trajectories": 0,
+  "correctness_inspected": false
+}

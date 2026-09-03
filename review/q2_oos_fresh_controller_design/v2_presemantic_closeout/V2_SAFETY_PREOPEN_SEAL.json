@@ -1,0 +1,34 @@
+{
+  "correctness_inspected": false,
+  "environment": {
+    "attention": "sdpa",
+    "checks": {
+      "architecture_aarch64": true,
+      "bf16_supported": true,
+      "cuda_available": true,
+      "gpu_gb10": true,
+      "hostname_spark1": true,
+      "model_path_exists": true,
+      "one_gpu": true,
+      "python_3_12_3": true,
+      "torch_exact": true,
+      "transformers_exact": true
+    },
+    "dtype": "bfloat16",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "qualified_environment_profile": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386"
+  },
+  "journal_preexisting_for_resume": true,
+  "semantic_outcomes": 0,
+  "source_commit": "0c6b71aa1547429e0a87b74d681dbd1c33538962",
+  "static_checks": {
+    "candidate_count_34": true,
+    "candidate_manifest_sha256": true,
+    "historical_baseline_sha256": true,
+    "prelock_sha256": true,
+    "protocol_lock_sha256": true,
+    "runner_sha256": true,
+    "safety_schedule_sha256": true,
+    "schedule_rows_1632": true
+  }
+}

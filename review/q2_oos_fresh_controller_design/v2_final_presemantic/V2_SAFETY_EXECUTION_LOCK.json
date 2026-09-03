@@ -1,0 +1,19 @@
+{
+  "RunPod": "FORBIDDEN",
+  "Spark1": "ONLY",
+  "Spark2": "FORBIDDEN",
+  "candidate_manifest_sha256": "3d19c8d71fe86329026d113312f5088468f45d956dd860f97d340da60a093479",
+  "correctness": "FORBIDDEN",
+  "historical_baseline_sha256": "6dbaa8977c28c00508849953008972c098c3cbb0f0f8fda973c5718845cd2fb5",
+  "new_baseline_trajectories": 0,
+  "planned_new_model_trajectories": 1632,
+  "prelock_sha256": "44d0ae8a09c29db8e244ba16e1bccf14af2b2d90dd0ac53b66f150b4460e315e",
+  "protocol_lock_sha256": "dd6b327243d29690a451ecf3ea93395406a2d17f6582d9cae0b68e312e51ddd4",
+  "qualified_environment_profile": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386",
+  "runner_path": "scripts/run_q2_oos_v2_presemantic.py",
+  "runner_sha256": "af3365cf0231e1625f8550e251a877ef6cab8e032c72b7f1b77fc0a79f90a22d",
+  "safety_schedule_sha256": "56676788813f6b39e4fe837f00d8245fc88a7278fd0642f3253fd63f42209702",
+  "schema_version": "q2-oos-v2-safety-execution-lock-v1",
+  "semantic_panel": "FORBIDDEN",
+  "status": "Q2_OOS_V2_SAFETY_EXECUTION_FROZEN_NOT_RUN"
+}

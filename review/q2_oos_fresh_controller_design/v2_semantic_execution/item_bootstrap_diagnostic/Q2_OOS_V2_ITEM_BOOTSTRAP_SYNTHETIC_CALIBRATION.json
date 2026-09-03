@@ -1,0 +1,2511 @@
+{
+  "Qwen_loaded": false,
+  "controller_cluster_role": "SEPARATE_CONTROLLER_POPULATION_UNCERTAINTY_NOT_ITEM_UNCERTAINTY_REPLACEMENT",
+  "development_mode": false,
+  "diagnostic_ruling_from_frozen_rule": "Q2_OOS_V2_ITEM_BOOTSTRAP_METHOD_NOT_CALIBRATED",
+  "dimensions": {
+    "fresh_controllers": 16,
+    "fresh_reference_dyads_per_shell": 496,
+    "items": 300,
+    "reference_controllers": 31,
+    "rollouts": 2,
+    "shells": 2
+  },
+  "frozen_primary_classification": "Q2_OOS_V2_A0_PASS",
+  "fully_screened_alternatives": [],
+  "label": "POST_HOC_DIAGNOSTIC_ONLY",
+  "method_screen_pass_counts": {
+    "A_ordinary_item_bootstrap": 0,
+    "B_bayesian_multiplier": 0,
+    "C_subsampling_0.500": 0,
+    "C_subsampling_0.632": 0,
+    "C_subsampling_0.750": 0,
+    "C_subsampling_0.900": 0,
+    "D_delete_d_0.10": 1,
+    "D_delete_d_0.25": 0
+  },
+  "method_screen_total": 16,
+  "new_semantic_trajectories": 0,
+  "observed_coefficient_A0_max_abs_difference": 4.440892098500626e-16,
+  "ordinary_item_bootstrap_failed_scenarios": [
+    "NULL",
+    "WEAK_POSITIVE",
+    "MODERATE_POSITIVE",
+    "OBSERVED_LIKE",
+    "HETEROGENEOUS_CONTROLLER_EFFECTS",
+    "HETEROGENEOUS_ITEM_DIFFICULTY",
+    "SPARSE_BLIND_SPOT_DIFFERENCES",
+    "HEAVY_TIES_NEAR_DEGENERATE"
+  ],
+  "ordinary_item_bootstrap_failed_screens": 16,
+  "scenarios": {
+    "HEAVY_TIES_NEAR_DEGENERATE": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.0031243644140456915,
+        "median_row_association": 0.005484994016125496
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": -0.38722381479644047,
+        "median_row_association": -0.41713030336290674
+      },
+      "mean_full_Dshape_tie_fraction": 0.021442372311827967,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07716990529812869,
+            "mean_resampling_median_minus_full": -0.0010412439181342282,
+            "mean_resampling_median_minus_truth": -0.3882650587145748,
+            "median_resampling_median_minus_full": -0.0018485205988702188,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11662128861363352,
+            "mean_resampling_median_minus_full": -0.00358280558629437,
+            "mean_resampling_median_minus_truth": -0.42071310894920116,
+            "median_resampling_median_minus_full": -0.0018145161290322592,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07706400415772575,
+            "mean_resampling_median_minus_full": -0.0011034253428311772,
+            "mean_resampling_median_minus_truth": -0.3883272401392717,
+            "median_resampling_median_minus_full": -0.001204084814152088,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11466550109206987,
+            "mean_resampling_median_minus_full": -0.0032294496612867867,
+            "mean_resampling_median_minus_truth": -0.4203597530241936,
+            "median_resampling_median_minus_full": -0.002116935483870967,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.054870438767044144,
+            "mean_resampling_median_minus_full": -0.0011578427169458858,
+            "mean_resampling_median_minus_truth": -0.38838165751338644,
+            "median_resampling_median_minus_full": -0.001305966803906376,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08195564709125457,
+            "mean_resampling_median_minus_full": -0.003695547703031116,
+            "mean_resampling_median_minus_truth": -0.42082585106593795,
+            "median_resampling_median_minus_full": -0.0010293049136654263,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.054000930006780246,
+            "mean_resampling_median_minus_full": -0.0008826139278342769,
+            "mean_resampling_median_minus_truth": -0.38810642872427475,
+            "median_resampling_median_minus_full": -0.0006670746224783,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08601946789715154,
+            "mean_resampling_median_minus_full": -0.003973044801981895,
+            "mean_resampling_median_minus_truth": -0.42110334816488865,
+            "median_resampling_median_minus_full": -0.00317406672851142,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.04818064586395728,
+            "mean_resampling_median_minus_full": -0.0005241696999781256,
+            "mean_resampling_median_minus_truth": -0.3877479844964187,
+            "median_resampling_median_minus_full": -0.0008629384964192527,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0831844010426634,
+            "mean_resampling_median_minus_full": -0.002746347164113773,
+            "mean_resampling_median_minus_truth": -0.41987665052702045,
+            "median_resampling_median_minus_full": -0.001663306451612904,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.034167441529762366,
+            "mean_resampling_median_minus_full": -0.0003109717389957053,
+            "mean_resampling_median_minus_truth": -0.3875347865354362,
+            "median_resampling_median_minus_full": -0.00022307649745572766,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07123472888568277,
+            "mean_resampling_median_minus_full": -0.0023057911071691513,
+            "mean_resampling_median_minus_truth": -0.4194360944700759,
+            "median_resampling_median_minus_full": -0.0022462238107595,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10997925161541779,
+            "mean_resampling_median_minus_full": -0.00020804875717651697,
+            "mean_resampling_median_minus_truth": -0.3874318635536171,
+            "median_resampling_median_minus_full": -1.5421211129208138e-05,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.2295847034353898,
+            "mean_resampling_median_minus_full": -0.0025151790829814036,
+            "mean_resampling_median_minus_truth": -0.4196454824458882,
+            "median_resampling_median_minus_full": -0.00252400562569784,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10092611033094957,
+            "mean_resampling_median_minus_full": -0.00035704681639316636,
+            "mean_resampling_median_minus_truth": -0.3875808616128336,
+            "median_resampling_median_minus_full": -0.00048318972445615324,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.17069464869344939,
+            "mean_resampling_median_minus_full": -0.003330097268862886,
+            "mean_resampling_median_minus_truth": -0.42046040063176965,
+            "median_resampling_median_minus_full": -0.003603830645161293,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10872016675511352,
+            "mean_resampling_median_minus_full": 6.995820127724695e-05,
+            "mean_resampling_median_minus_truth": -0.38715385659516327,
+            "median_resampling_median_minus_full": 0.00021148766070191137,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.15363509433290823,
+            "mean_resampling_median_minus_full": -7.11873255602957e-05,
+            "mean_resampling_median_minus_truth": -0.41720149068846707,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.0,
+        "difficulty_sd": 0.35,
+        "nuisance": 0.15,
+        "signal": 0.15,
+        "sparse_probability": 0.35
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": 0.3903481792104862,
+        "median_row_association": 0.4226152973790322
+      }
+    },
+    "HETEROGENEOUS_CONTROLLER_EFFECTS": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.47498270259398767,
+        "median_row_association": 0.5657804747119477
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": -0.09071261074089292,
+        "median_row_association": -0.12814593657837484
+      },
+      "mean_full_Dshape_tie_fraction": 0.028278309811827957,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0724888267539497,
+            "mean_resampling_median_minus_full": -0.051375521610338405,
+            "mean_resampling_median_minus_truth": -0.14208813235123133,
+            "median_resampling_median_minus_full": -0.05101718711484446,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11531761907176648,
+            "mean_resampling_median_minus_full": -0.0651024060559346,
+            "mean_resampling_median_minus_truth": -0.19324834263430943,
+            "median_resampling_median_minus_full": -0.06680869703004999,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0730039292040939,
+            "mean_resampling_median_minus_full": -0.051185220528246866,
+            "mean_resampling_median_minus_truth": -0.1418978312691398,
+            "median_resampling_median_minus_full": -0.050630505103527346,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11501218077956987,
+            "mean_resampling_median_minus_full": -0.06430933055872194,
+            "mean_resampling_median_minus_truth": -0.1924552671370968,
+            "median_resampling_median_minus_full": -0.06612903225806449,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.19791666666666666,
+            "coverage_wilson_95": [
+              0.13052733153747123,
+              0.28855166945987454
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05130594848056983,
+            "mean_resampling_median_minus_full": -0.0524546155227645,
+            "mean_resampling_median_minus_truth": -0.1431672262636574,
+            "median_resampling_median_minus_full": -0.0518926585476224,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.20833333333333334,
+            "coverage_wilson_95": [
+              0.13910828905878492,
+              0.3000024705248593
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08232078063617158,
+            "mean_resampling_median_minus_full": -0.06609842122941585,
+            "mean_resampling_median_minus_truth": -0.19424435780779067,
+            "median_resampling_median_minus_full": -0.06909819420335334,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.10416666666666667,
+            "coverage_wilson_95": [
+              0.057571532417443415,
+              0.18122164130321652
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.046705368306249335,
+            "mean_resampling_median_minus_full": -0.032838872787462677,
+            "mean_resampling_median_minus_truth": -0.12355148352835561,
+            "median_resampling_median_minus_full": -0.032558596507626325,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.13541666666666666,
+            "coverage_wilson_95": [
+              0.0808770644581112,
+              0.21801138502144396
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07953743323575983,
+            "mean_resampling_median_minus_full": -0.04137664876172919,
+            "mean_resampling_median_minus_truth": -0.16952258534010403,
+            "median_resampling_median_minus_full": -0.04142112170849399,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.03125,
+            "coverage_wilson_95": [
+              0.010684070371201164,
+              0.0878867932453698
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.041224350375984625,
+            "mean_resampling_median_minus_full": -0.019802109872623805,
+            "mean_resampling_median_minus_truth": -0.11051472061351675,
+            "median_resampling_median_minus_full": -0.020094227668273068,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0625,
+            "coverage_wilson_95": [
+              0.028956674311051346,
+              0.12970946506441489
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07263038593167027,
+            "mean_resampling_median_minus_full": -0.024153902727722165,
+            "mean_resampling_median_minus_truth": -0.152299839306097,
+            "median_resampling_median_minus_full": -0.024302378904218602,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.010416666666666666,
+            "coverage_wilson_95": [
+              0.0018411702168162486,
+              0.056666176227157854
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.02708920976576426,
+            "mean_resampling_median_minus_full": -0.006936011404073076,
+            "mean_resampling_median_minus_truth": -0.097648622144966,
+            "median_resampling_median_minus_full": -0.006936808703781883,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.020833333333333332,
+            "coverage_wilson_95": [
+              0.005731969852430421,
+              0.07280713517784211
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05476635906395052,
+            "mean_resampling_median_minus_full": -0.008393030926980212,
+            "mean_resampling_median_minus_truth": -0.13653896750535507,
+            "median_resampling_median_minus_full": -0.008512733109506287,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.07291666666666667,
+            "coverage_wilson_95": [
+              0.03576758131036273,
+              0.14293031665140193
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08805286792213973,
+            "mean_resampling_median_minus_full": -0.006942180713166969,
+            "mean_resampling_median_minus_truth": -0.0976547914540599,
+            "median_resampling_median_minus_full": -0.007045191002106155,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.15625,
+            "coverage_wilson_95": [
+              0.09703709990686579,
+              0.24191486674528626
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.17523122326403606,
+            "mean_resampling_median_minus_full": -0.008306774880755716,
+            "mean_resampling_median_minus_truth": -0.13645271145913054,
+            "median_resampling_median_minus_full": -0.008107581959312271,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.07291666666666667,
+            "coverage_wilson_95": [
+              0.03576758131036273,
+              0.14293031665140193
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0834239218426011,
+            "mean_resampling_median_minus_full": -0.019682837029832433,
+            "mean_resampling_median_minus_truth": -0.11039544777072537,
+            "median_resampling_median_minus_full": -0.020820407629857013,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.10416666666666667,
+            "coverage_wilson_95": [
+              0.057571532417443415,
+              0.18122164130321652
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1493379414850861,
+            "mean_resampling_median_minus_full": -0.0234049127134094,
+            "mean_resampling_median_minus_truth": -0.15155084929178422,
+            "median_resampling_median_minus_full": -0.02428058396190752,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.4375,
+            "coverage_wilson_95": [
+              0.3425682747577502,
+              0.5372411737244593
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.15934547940132504,
+            "mean_resampling_median_minus_full": 0.004266838622855603,
+            "mean_resampling_median_minus_truth": -0.08644577211803732,
+            "median_resampling_median_minus_full": 0.003655480458063576,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.17708333333333334,
+            "coverage_wilson_95": [
+              0.11360507865666794,
+              0.265410405168081
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.18938768158178457,
+            "mean_resampling_median_minus_full": 0.00010653084504458402,
+            "mean_resampling_median_minus_truth": -0.12803940573333025,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.45,
+        "difficulty_sd": 1.0,
+        "nuisance": 0.4,
+        "signal": 3.0,
+        "sparse_probability": 1.0
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": 0.5656953133348807,
+        "median_row_association": 0.6939264112903226
+      }
+    },
+    "HETEROGENEOUS_ITEM_DIFFICULTY": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.6132649903178308,
+        "median_row_association": 0.6554743507895061
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": -0.3540935546879485,
+        "median_row_association": -0.30988078193898855
+      },
+      "mean_full_Dshape_tie_fraction": 0.055002520161290314,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.09403105251098698,
+            "mean_resampling_median_minus_full": -0.12208274379717055,
+            "mean_resampling_median_minus_truth": -0.47617629848511916,
+            "median_resampling_median_minus_full": -0.12224455795988692,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11610580871787653,
+            "mean_resampling_median_minus_full": -0.12201884091679942,
+            "mean_resampling_median_minus_truth": -0.4318996228557879,
+            "median_resampling_median_minus_full": -0.12096774193548387,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.09527348513429057,
+            "mean_resampling_median_minus_full": -0.12011695714076247,
+            "mean_resampling_median_minus_truth": -0.474210511828711,
+            "median_resampling_median_minus_full": -0.12041065928250996,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11680123277889783,
+            "mean_resampling_median_minus_full": -0.12051761355832329,
+            "mean_resampling_median_minus_truth": -0.43039839549731185,
+            "median_resampling_median_minus_full": -0.11995967741935482,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.06536134986617452,
+            "mean_resampling_median_minus_full": -0.12403638337954881,
+            "mean_resampling_median_minus_truth": -0.4781299380674973,
+            "median_resampling_median_minus_full": -0.12428251950223512,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08034968182041019,
+            "mean_resampling_median_minus_full": -0.12342715883609708,
+            "mean_resampling_median_minus_truth": -0.43330794077508555,
+            "median_resampling_median_minus_full": -0.12317428371873101,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.06090848069783491,
+            "mean_resampling_median_minus_full": -0.08203295194969927,
+            "mean_resampling_median_minus_truth": -0.43612650663764785,
+            "median_resampling_median_minus_full": -0.08248417718638973,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07784422617927587,
+            "mean_resampling_median_minus_full": -0.08155555127873,
+            "mean_resampling_median_minus_truth": -0.3914363332177185,
+            "median_resampling_median_minus_full": -0.08093476449999754,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.053029739746292,
+            "mean_resampling_median_minus_full": -0.05168785558444402,
+            "mean_resampling_median_minus_truth": -0.4057814102723926,
+            "median_resampling_median_minus_full": -0.05242243262494306,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07159945837113384,
+            "mean_resampling_median_minus_full": -0.05127839442818725,
+            "mean_resampling_median_minus_truth": -0.36115917636717576,
+            "median_resampling_median_minus_full": -0.05106850417599518,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.03598069163407666,
+            "mean_resampling_median_minus_full": -0.01864872995177658,
+            "mean_resampling_median_minus_truth": -0.3727422846397251,
+            "median_resampling_median_minus_full": -0.018559924173754794,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05417933371197133,
+            "mean_resampling_median_minus_full": -0.01897542004872805,
+            "mean_resampling_median_minus_truth": -0.3288562019877166,
+            "median_resampling_median_minus_full": -0.018478257831583134,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1183921749005395,
+            "mean_resampling_median_minus_full": -0.01856538050776599,
+            "mean_resampling_median_minus_truth": -0.3726589351957146,
+            "median_resampling_median_minus_full": -0.01868842603716192,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.17576712543049836,
+            "mean_resampling_median_minus_full": -0.01927447532546146,
+            "mean_resampling_median_minus_truth": -0.32915525726445,
+            "median_resampling_median_minus_full": -0.018832368633005026,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10483845234790305,
+            "mean_resampling_median_minus_full": -0.05191597526559059,
+            "mean_resampling_median_minus_truth": -0.40600952995353917,
+            "median_resampling_median_minus_full": -0.051658460877770984,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1437657406371706,
+            "mean_resampling_median_minus_full": -0.05255493636029392,
+            "mean_resampling_median_minus_truth": -0.3624357182992825,
+            "median_resampling_median_minus_full": -0.05235089111333463,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.09931844625489533,
+            "mean_resampling_median_minus_full": 0.002078020462688243,
+            "mean_resampling_median_minus_truth": -0.3520155342252604,
+            "median_resampling_median_minus_full": 0.002027295691727382,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11169569946313836,
+            "mean_resampling_median_minus_full": -0.0006154274117130797,
+            "mean_resampling_median_minus_truth": -0.3104962093507016,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.0,
+        "difficulty_sd": 2.0,
+        "nuisance": 0.4,
+        "signal": 3.0,
+        "sparse_probability": 1.0
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": 0.9673585450057794,
+        "median_row_association": 0.9653551327284946
+      }
+    },
+    "MODERATE_POSITIVE": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.3782777511961822,
+        "median_row_association": 0.4117553858701255
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": -0.48150265861688335,
+        "median_row_association": -0.463054551965896
+      },
+      "mean_full_Dshape_tie_fraction": 0.03794942876344085,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08799119888285616,
+            "mean_resampling_median_minus_full": -0.09233439651743687,
+            "mean_resampling_median_minus_truth": -0.5738370551343203,
+            "median_resampling_median_minus_full": -0.09195546449028497,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.12253456355397237,
+            "mean_resampling_median_minus_full": -0.09640303486424591,
+            "mean_resampling_median_minus_truth": -0.5594575868301419,
+            "median_resampling_median_minus_full": -0.09660314603333031,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0900062026761006,
+            "mean_resampling_median_minus_full": -0.09190169508761814,
+            "mean_resampling_median_minus_truth": -0.5734043537045015,
+            "median_resampling_median_minus_full": -0.09213772077799073,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.12168210265456987,
+            "mean_resampling_median_minus_full": -0.09452693324915777,
+            "mean_resampling_median_minus_truth": -0.5575814852150537,
+            "median_resampling_median_minus_full": -0.09647686609579029,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.06261270572840083,
+            "mean_resampling_median_minus_full": -0.09403749800127587,
+            "mean_resampling_median_minus_truth": -0.5755401566181592,
+            "median_resampling_median_minus_full": -0.09281497958966584,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08549235638717517,
+            "mean_resampling_median_minus_full": -0.09767727775727124,
+            "mean_resampling_median_minus_truth": -0.5607318297231673,
+            "median_resampling_median_minus_full": -0.09977969658958386,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05932814161342583,
+            "mean_resampling_median_minus_full": -0.06282191748382816,
+            "mean_resampling_median_minus_truth": -0.5443245761007115,
+            "median_resampling_median_minus_full": -0.06280444652437164,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08457622032386101,
+            "mean_resampling_median_minus_full": -0.0643056724352777,
+            "mean_resampling_median_minus_truth": -0.5273602244011737,
+            "median_resampling_median_minus_full": -0.06531042004429813,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05375483910140444,
+            "mean_resampling_median_minus_full": -0.04047771020730015,
+            "mean_resampling_median_minus_truth": -0.5219803688241834,
+            "median_resampling_median_minus_full": -0.040445019553203815,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0829758647664983,
+            "mean_resampling_median_minus_full": -0.04092626537834468,
+            "mean_resampling_median_minus_truth": -0.5039808173442407,
+            "median_resampling_median_minus_full": -0.04232102509302532,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.037597650837967976,
+            "mean_resampling_median_minus_full": -0.015154100869237687,
+            "mean_resampling_median_minus_truth": -0.49665675948612104,
+            "median_resampling_median_minus_full": -0.015333106823266468,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.06680352633723041,
+            "mean_resampling_median_minus_full": -0.014699380789397906,
+            "mean_resampling_median_minus_truth": -0.47775393275529393,
+            "median_resampling_median_minus_full": -0.015787933248748803,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11998405861853322,
+            "mean_resampling_median_minus_full": -0.015038964200811746,
+            "mean_resampling_median_minus_truth": -0.49654162281769504,
+            "median_resampling_median_minus_full": -0.015429462232270041,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.21450933946278483,
+            "mean_resampling_median_minus_full": -0.014259295949912855,
+            "mean_resampling_median_minus_truth": -0.47731384791580883,
+            "median_resampling_median_minus_full": -0.014508458782842598,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11039236428727528,
+            "mean_resampling_median_minus_full": -0.04040004643124017,
+            "mean_resampling_median_minus_truth": -0.5219027050481235,
+            "median_resampling_median_minus_full": -0.04101823115446318,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.16857697083005463,
+            "mean_resampling_median_minus_full": -0.040578516237190644,
+            "mean_resampling_median_minus_truth": -0.5036330682030866,
+            "median_resampling_median_minus_full": -0.041990061745169116,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11316937327307679,
+            "mean_resampling_median_minus_full": 0.002577957847507527,
+            "mean_resampling_median_minus_truth": -0.4789247007693758,
+            "median_resampling_median_minus_full": 0.0026028974288270224,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.14307432233780615,
+            "mean_resampling_median_minus_full": -0.0008206679085365482,
+            "mean_resampling_median_minus_truth": -0.46387521987443253,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.0,
+        "difficulty_sd": 1.0,
+        "nuisance": 0.55,
+        "signal": 1.8,
+        "sparse_probability": 1.0
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": 0.8597804098130656,
+        "median_row_association": 0.8748099378360216
+      }
+    },
+    "NULL": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.0015431719846004093,
+        "median_row_association": 0.008560975763521874
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": 0.005678530629627956,
+        "median_row_association": 0.011273299352231552
+      },
+      "mean_full_Dshape_tie_fraction": 0.028708837365591402,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.625,
+            "coverage_wilson_95": [
+              0.5251071844189874,
+              0.7152739186165937
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07742051898671393,
+            "mean_resampling_median_minus_full": -0.0011728803312956125,
+            "mean_resampling_median_minus_truth": 0.004505650298332344,
+            "median_resampling_median_minus_full": -0.0014498681199524616,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.7291666666666666,
+            "coverage_wilson_95": [
+              0.6327365269279848,
+              0.8079621619705808
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11420661666190307,
+            "mean_resampling_median_minus_full": -0.007109796965362768,
+            "mean_resampling_median_minus_truth": 0.004163502386868782,
+            "median_resampling_median_minus_full": -0.008291013036488517,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.59375,
+            "coverage_wilson_95": [
+              0.49373884894170256,
+              0.6865469783349833
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07711562917747607,
+            "mean_resampling_median_minus_full": -0.0006795074911227629,
+            "mean_resampling_median_minus_truth": 0.004999023138505192,
+            "median_resampling_median_minus_full": -0.00037561045405292044,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.7291666666666666,
+            "coverage_wilson_95": [
+              0.6327365269279848,
+              0.8079621619705808
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11529916414650536,
+            "mean_resampling_median_minus_full": -0.0068073635323390785,
+            "mean_resampling_median_minus_truth": 0.0044659358198924715,
+            "median_resampling_median_minus_full": -0.008518145161290323,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.3645833333333333,
+            "coverage_wilson_95": [
+              0.27523940085174403,
+              0.4643477375263765
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05425709680576232,
+            "mean_resampling_median_minus_full": -0.0006841119804797015,
+            "mean_resampling_median_minus_truth": 0.004994418649148253,
+            "median_resampling_median_minus_full": -0.0009640036938961156,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.4479166666666667,
+            "coverage_wilson_95": [
+              0.3523575930459819,
+              0.5474836140225261
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08123402470436074,
+            "mean_resampling_median_minus_full": -0.006825166390808736,
+            "mean_resampling_median_minus_truth": 0.004448132961422816,
+            "median_resampling_median_minus_full": -0.00899981395755152,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.34375,
+            "coverage_wilson_95": [
+              0.2564039323896144,
+              0.4431196888159093
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05228414107497436,
+            "mean_resampling_median_minus_full": -0.0004276319901405596,
+            "mean_resampling_median_minus_truth": 0.005250898639487395,
+            "median_resampling_median_minus_full": -0.00025670800083453515,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.4479166666666667,
+            "coverage_wilson_95": [
+              0.3523575930459819,
+              0.5474836140225261
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08382234345087163,
+            "mean_resampling_median_minus_full": -0.005641594634765483,
+            "mean_resampling_median_minus_truth": 0.0056317047174660705,
+            "median_resampling_median_minus_full": -0.00637711334269738,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.3645833333333333,
+            "coverage_wilson_95": [
+              0.27523940085174403,
+              0.4643477375263765
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.04756877121965975,
+            "mean_resampling_median_minus_full": -0.0007924077815768789,
+            "mean_resampling_median_minus_truth": 0.004886122848051076,
+            "median_resampling_median_minus_full": -0.0007768593843340641,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.4895833333333333,
+            "coverage_wilson_95": [
+              0.3919286123125563,
+              0.5880396291011453
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08315703953206809,
+            "mean_resampling_median_minus_full": -0.005013401072644746,
+            "mean_resampling_median_minus_truth": 0.006259898279586805,
+            "median_resampling_median_minus_full": -0.004889112903225806,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.23958333333333334,
+            "coverage_wilson_95": [
+              0.1652822121585541,
+              0.33392382318398534
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.03326341307227584,
+            "mean_resampling_median_minus_full": -0.0003391763940793131,
+            "mean_resampling_median_minus_truth": 0.005339354235548643,
+            "median_resampling_median_minus_full": -0.00038955695702711304,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.4166666666666667,
+            "coverage_wilson_95": [
+              0.32311561071330697,
+              0.5166303205963058
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07095587384648434,
+            "mean_resampling_median_minus_full": -0.0025728171995701705,
+            "mean_resampling_median_minus_truth": 0.00870048215266138,
+            "median_resampling_median_minus_full": -0.0008557976771613948,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.7291666666666666,
+            "coverage_wilson_95": [
+              0.6327365269279848,
+              0.8079621619705808
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10639091445947685,
+            "mean_resampling_median_minus_full": -0.00037116886900546227,
+            "mean_resampling_median_minus_truth": 0.005307361760622495,
+            "median_resampling_median_minus_full": -0.00044858393502665225,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": true,
+            "coverage": 0.9270833333333334,
+            "coverage_wilson_95": [
+              0.8570696833485983,
+              0.9642324186896375
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.21933442464182282,
+            "mean_resampling_median_minus_full": -0.002775098149630322,
+            "mean_resampling_median_minus_truth": 0.00849820120260123,
+            "median_resampling_median_minus_full": -0.0017754572497679201,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.7083333333333334,
+            "coverage_wilson_95": [
+              0.6108010969781356,
+              0.7898340747478333
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.09766432675010824,
+            "mean_resampling_median_minus_full": 0.00012082912922290715,
+            "mean_resampling_median_minus_truth": 0.005799359758850862,
+            "median_resampling_median_minus_full": -9.752266262153452e-05,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.8333333333333334,
+            "coverage_wilson_95": [
+              0.7462900984810511,
+              0.8947261762804989
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.16825514757091398,
+            "mean_resampling_median_minus_full": -0.004928391636298995,
+            "mean_resampling_median_minus_truth": 0.0063449077159325575,
+            "median_resampling_median_minus_full": -0.003473640818699931,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.7083333333333334,
+            "coverage_wilson_95": [
+              0.6108010969781356,
+              0.7898340747478333
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10689267436674921,
+            "mean_resampling_median_minus_full": -2.2078328772064035e-05,
+            "mean_resampling_median_minus_truth": 0.0056564523008558925,
+            "median_resampling_median_minus_full": 6.748320993516573e-05,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.7083333333333334,
+            "coverage_wilson_95": [
+              0.6108010969781356,
+              0.7898340747478333
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.14602126395391346,
+            "mean_resampling_median_minus_full": -0.00010499522123619797,
+            "mean_resampling_median_minus_truth": 0.011168304130995352,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.0,
+        "difficulty_sd": 1.0,
+        "nuisance": 0.65,
+        "signal": 0.0,
+        "sparse_probability": 1.0
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": -0.004135358645027545,
+        "median_row_association": -0.002712323588709678
+      }
+    },
+    "OBSERVED_LIKE": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.6400539581452064,
+        "median_row_association": 0.6818901938833344
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": -0.33325920457582525,
+        "median_row_association": -0.28861131821343977
+      },
+      "mean_full_Dshape_tie_fraction": 0.037371891801075266,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0897701577079036,
+            "mean_resampling_median_minus_full": -0.12135208799847184,
+            "mean_resampling_median_minus_truth": -0.4546112925742971,
+            "median_resampling_median_minus_full": -0.12185846803615591,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10962615165399354,
+            "mean_resampling_median_minus_full": -0.11941446013869096,
+            "mean_resampling_median_minus_truth": -0.4080257783521308,
+            "median_resampling_median_minus_full": -0.11958291095615065,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.09139002965331906,
+            "mean_resampling_median_minus_full": -0.12056008979499411,
+            "mean_resampling_median_minus_truth": -0.4538192943708193,
+            "median_resampling_median_minus_full": -0.1219125217888154,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11052083333333333,
+            "mean_resampling_median_minus_full": -0.11873600201505481,
+            "mean_resampling_median_minus_truth": -0.4073473202284947,
+            "median_resampling_median_minus_full": -0.11931849369946013,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.060163593224984914,
+            "mean_resampling_median_minus_full": -0.12285526615155008,
+            "mean_resampling_median_minus_truth": -0.45611447072737527,
+            "median_resampling_median_minus_full": -0.12288805624304455,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.07459276055713898,
+            "mean_resampling_median_minus_full": -0.120736086190687,
+            "mean_resampling_median_minus_truth": -0.4093474044041268,
+            "median_resampling_median_minus_full": -0.12192701286649604,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.056125927284885725,
+            "mean_resampling_median_minus_full": -0.08042420123588855,
+            "mean_resampling_median_minus_truth": -0.41368340581171376,
+            "median_resampling_median_minus_full": -0.08023346706855455,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.070727878231147,
+            "mean_resampling_median_minus_full": -0.07847949659485584,
+            "mean_resampling_median_minus_truth": -0.36709081480829564,
+            "median_resampling_median_minus_full": -0.07921783300020158,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.05010970472965565,
+            "mean_resampling_median_minus_full": -0.050650939951245026,
+            "mean_resampling_median_minus_truth": -0.38391014452707023,
+            "median_resampling_median_minus_full": -0.05115749745272957,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.06544854515300787,
+            "mean_resampling_median_minus_full": -0.048382629280875965,
+            "mean_resampling_median_minus_truth": -0.33699394749431577,
+            "median_resampling_median_minus_full": -0.0476564037225336,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.03352496187787147,
+            "mean_resampling_median_minus_full": -0.018239912725665625,
+            "mean_resampling_median_minus_truth": -0.3514991173014909,
+            "median_resampling_median_minus_full": -0.01839051666506586,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.050780488073151296,
+            "mean_resampling_median_minus_full": -0.017109924432265933,
+            "mean_resampling_median_minus_truth": -0.3057212426457057,
+            "median_resampling_median_minus_full": -0.01673387096774187,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10843251034868644,
+            "mean_resampling_median_minus_full": -0.018132717548764245,
+            "mean_resampling_median_minus_truth": -0.3513919221245894,
+            "median_resampling_median_minus_full": -0.01798183755385019,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1608867120954188,
+            "mean_resampling_median_minus_full": -0.016780563385937804,
+            "mean_resampling_median_minus_truth": -0.30539188159937763,
+            "median_resampling_median_minus_full": -0.015919702734524976,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10121371111410782,
+            "mean_resampling_median_minus_full": -0.05095861180746178,
+            "mean_resampling_median_minus_truth": -0.38421781638328706,
+            "median_resampling_median_minus_full": -0.05089115360883473,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.13388326132998676,
+            "mean_resampling_median_minus_full": -0.04782834888757461,
+            "mean_resampling_median_minus_truth": -0.33643966710101436,
+            "median_resampling_median_minus_full": -0.04730058926825492,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08872765819483434,
+            "mean_resampling_median_minus_full": 0.0022558223823701735,
+            "mean_resampling_median_minus_truth": -0.33100338219345504,
+            "median_resampling_median_minus_full": 0.0019522939422759178,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.09936541263284364,
+            "mean_resampling_median_minus_full": 4.111722166107631e-05,
+            "mean_resampling_median_minus_truth": -0.2885702009917787,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.0,
+        "difficulty_sd": 1.0,
+        "nuisance": 0.35,
+        "signal": 2.8,
+        "sparse_probability": 1.0
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": 0.9733131627210314,
+        "median_row_association": 0.970501512096774
+      }
+    },
+    "SPARSE_BLIND_SPOT_DIFFERENCES": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.4360668043414959,
+        "median_row_association": 0.4759057395791489
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": -0.5548277601577514,
+        "median_row_association": -0.510589346106335
+      },
+      "mean_full_Dshape_tie_fraction": 0.04077410954301074,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1762536808518462,
+            "mean_resampling_median_minus_full": -0.11047335559272191,
+            "mean_resampling_median_minus_truth": -0.6653011157504732,
+            "median_resampling_median_minus_full": -0.11020592053183004,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.2013480848839928,
+            "mean_resampling_median_minus_full": -0.11853125579146286,
+            "mean_resampling_median_minus_truth": -0.6291206018977978,
+            "median_resampling_median_minus_full": -0.11878168845243595,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.17452792043991708,
+            "mean_resampling_median_minus_full": -0.10809096932979641,
+            "mean_resampling_median_minus_truth": -0.6629187294875477,
+            "median_resampling_median_minus_full": -0.10888382999221191,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.19987698462701609,
+            "mean_resampling_median_minus_full": -0.11569698621893387,
+            "mean_resampling_median_minus_truth": -0.6262863323252689,
+            "median_resampling_median_minus_full": -0.11784274193548389,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.12294802911833347,
+            "mean_resampling_median_minus_full": -0.11109125688940726,
+            "mean_resampling_median_minus_truth": -0.6659190170471586,
+            "median_resampling_median_minus_full": -0.11112330295358944,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.14289788467741615,
+            "mean_resampling_median_minus_full": -0.11868881289720301,
+            "mean_resampling_median_minus_truth": -0.6292781590035379,
+            "median_resampling_median_minus_full": -0.12091815869753786,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11657878144406474,
+            "mean_resampling_median_minus_full": -0.07472123880049326,
+            "mean_resampling_median_minus_truth": -0.6295489989582447,
+            "median_resampling_median_minus_full": -0.07418957448826488,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.13767451991613314,
+            "mean_resampling_median_minus_full": -0.07971120318509838,
+            "mean_resampling_median_minus_truth": -0.5903005492914333,
+            "median_resampling_median_minus_full": -0.08086745559982064,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10200752500128796,
+            "mean_resampling_median_minus_full": -0.047793033758668245,
+            "mean_resampling_median_minus_truth": -0.6026207939164195,
+            "median_resampling_median_minus_full": -0.04895265382951797,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1214022121150225,
+            "mean_resampling_median_minus_full": -0.05178644643203833,
+            "mean_resampling_median_minus_truth": -0.5623757925383732,
+            "median_resampling_median_minus_full": -0.053586983410786715,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.06815765469104829,
+            "mean_resampling_median_minus_full": -0.017559317447106686,
+            "mean_resampling_median_minus_truth": -0.5723870776048581,
+            "median_resampling_median_minus_full": -0.017861053163628238,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08775853684280077,
+            "mean_resampling_median_minus_full": -0.01892243695051477,
+            "mean_resampling_median_minus_truth": -0.5295117830568496,
+            "median_resampling_median_minus_full": -0.019657258064516153,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.22049978004345708,
+            "mean_resampling_median_minus_full": -0.017144917067349278,
+            "mean_resampling_median_minus_truth": -0.5719726772251006,
+            "median_resampling_median_minus_full": -0.016785220625501723,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.2908380992046118,
+            "mean_resampling_median_minus_full": -0.019406058573532222,
+            "mean_resampling_median_minus_truth": -0.529995404679867,
+            "median_resampling_median_minus_full": -0.019934969487090365,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.20619130113448103,
+            "mean_resampling_median_minus_full": -0.04786872450955709,
+            "mean_resampling_median_minus_truth": -0.6026964846673084,
+            "median_resampling_median_minus_full": -0.049391629801797676,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.24821886354610675,
+            "mean_resampling_median_minus_full": -0.05224771549340004,
+            "mean_resampling_median_minus_truth": -0.562837061599735,
+            "median_resampling_median_minus_full": -0.05309115028083794,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.10553348929594175,
+            "mean_resampling_median_minus_full": 0.0026963121902223216,
+            "mean_resampling_median_minus_truth": -0.552131447967529,
+            "median_resampling_median_minus_full": 0.0026761476443881715,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1304456053218673,
+            "mean_resampling_median_minus_full": 0.0006813559482419223,
+            "mean_resampling_median_minus_truth": -0.509907990158093,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.0,
+        "difficulty_sd": 1.0,
+        "nuisance": 0.35,
+        "signal": 10.0,
+        "sparse_probability": 0.15
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": 0.9908945644992472,
+        "median_row_association": 0.9864950856854838
+      }
+    },
+    "WEAK_POSITIVE": {
+      "full_estimate_mean": {
+        "global_equal_shell_mean": 0.13722355731126087,
+        "median_row_association": 0.15261433497052987
+      },
+      "full_estimator_bias": {
+        "global_equal_shell_mean": -0.39490173558328473,
+        "median_row_association": -0.4138643696665669
+      },
+      "mean_full_Dshape_tie_fraction": 0.033423639112903226,
+      "methods": {
+        "A_ordinary_item_bootstrap": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08008978908697316,
+            "mean_resampling_median_minus_full": -0.03703193855461934,
+            "mean_resampling_median_minus_truth": -0.43193367413790407,
+            "median_resampling_median_minus_full": -0.0373857808819838,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11852471241138289,
+            "mean_resampling_median_minus_full": -0.04073540189529994,
+            "mean_resampling_median_minus_truth": -0.4545997715618668,
+            "median_resampling_median_minus_full": -0.038737783245961915,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty for the compound R=2 Dshape-to-Spearman estimator; historical percentile implementation"
+        },
+        "B_bayesian_multiplier": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08028004688586882,
+            "mean_resampling_median_minus_full": -0.037033855541666404,
+            "mean_resampling_median_minus_truth": -0.4319355911249511,
+            "median_resampling_median_minus_full": -0.03703492611847273,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11995883736559139,
+            "mean_resampling_median_minus_full": -0.04071077314257285,
+            "mean_resampling_median_minus_truth": -0.4545751428091398,
+            "median_resampling_median_minus_full": -0.038558467741935484,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty under continuous exchangeable item weights with full support"
+        },
+        "C_subsampling_0.500": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.056616324240257664,
+            "mean_resampling_median_minus_full": -0.03792234927107658,
+            "mean_resampling_median_minus_truth": -0.43282408485436136,
+            "median_resampling_median_minus_full": -0.037925115239083464,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08383179759080268,
+            "mean_resampling_median_minus_full": -0.04122343855084565,
+            "mean_resampling_median_minus_truth": -0.45508780821741257,
+            "median_resampling_median_minus_full": -0.038908256524538304,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.632": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.054681643302723425,
+            "mean_resampling_median_minus_full": -0.026105503146986415,
+            "mean_resampling_median_minus_truth": -0.4210072387302712,
+            "median_resampling_median_minus_full": -0.025793879764504216,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08791510260462011,
+            "mean_resampling_median_minus_full": -0.028325740708887565,
+            "mean_resampling_median_minus_truth": -0.4421901103754546,
+            "median_resampling_median_minus_full": -0.027867546410489857,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.750": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.04944462775960722,
+            "mean_resampling_median_minus_full": -0.01679351434100253,
+            "mean_resampling_median_minus_truth": -0.41169524992428724,
+            "median_resampling_median_minus_full": -0.01710518288865588,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.08562344470244194,
+            "mean_resampling_median_minus_full": -0.018148381230046157,
+            "mean_resampling_median_minus_truth": -0.4320127508966131,
+            "median_resampling_median_minus_full": -0.018845927982399098,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "C_subsampling_0.900": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.034779804414300834,
+            "mean_resampling_median_minus_full": -0.006399295765157721,
+            "mean_resampling_median_minus_truth": -0.40130103134844247,
+            "median_resampling_median_minus_full": -0.0063955635299606794,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0716806923052097,
+            "mean_resampling_median_minus_full": -0.006980617491102649,
+            "mean_resampling_median_minus_truth": -0.4208449871576696,
+            "median_resampling_median_minus_full": -0.007510080645161288,
+            "panels": 96
+          },
+          "uncertainty_population": "item-population uncertainty estimated from without-replacement subsets and root-m calibration"
+        },
+        "D_delete_d_0.10": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1130368977132466,
+            "mean_resampling_median_minus_full": -0.006371706622799564,
+            "mean_resampling_median_minus_truth": -0.40127344220608424,
+            "median_resampling_median_minus_full": -0.006316187710352854,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.2324777942566235,
+            "mean_resampling_median_minus_full": -0.007174888956552559,
+            "mean_resampling_median_minus_truth": -0.42103925862311953,
+            "median_resampling_median_minus_full": -0.007762096774193553,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "D_delete_d_0.25": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.0998072904715341,
+            "mean_resampling_median_minus_full": -0.01728359139295102,
+            "mean_resampling_median_minus_truth": -0.41218532697623583,
+            "median_resampling_median_minus_full": -0.017853801806569106,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.1719504901972135,
+            "mean_resampling_median_minus_full": -0.019005692636231374,
+            "mean_resampling_median_minus_truth": -0.4328700623027983,
+            "median_resampling_median_minus_full": -0.018724798387096772,
+            "panels": 96
+          },
+          "uncertainty_population": "local item-deletion sensitivity and approximate item-population standard error"
+        },
+        "E_controller_cluster": {
+          "global_equal_shell_mean": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.11867227929628144,
+            "mean_resampling_median_minus_full": 0.0008777572263629689,
+            "mean_resampling_median_minus_truth": -0.39402397835692177,
+            "median_resampling_median_minus_full": 0.0009781674014680275,
+            "panels": 96
+          },
+          "median_row_association": {
+            "calibration_screen_pass": false,
+            "coverage": 0.0,
+            "coverage_wilson_95": [
+              3.469446951953614e-18,
+              0.038475587857675686
+            ],
+            "degeneracy_fraction": 0.0,
+            "mean_interval_width": 0.15060520243755812,
+            "mean_resampling_median_minus_full": -0.0007533866677133454,
+            "mean_resampling_median_minus_truth": -0.41461775633428033,
+            "median_resampling_median_minus_full": 0.0,
+            "panels": 96
+          },
+          "uncertainty_population": "fresh-controller-population uncertainty conditional on the observed item panel; not item uncertainty"
+        }
+      },
+      "parameters": {
+        "controller_scale_sd": 0.0,
+        "difficulty_sd": 1.0,
+        "nuisance": 0.75,
+        "signal": 1.0,
+        "sparse_probability": 1.0
+      },
+      "truth_mean": {
+        "global_equal_shell_mean": 0.5321252928945456,
+        "median_row_association": 0.5664787046370968
+      }
+    }
+  },
+  "schema_version": "q2-oos-v2-item-bootstrap-synthetic-calibration-v1",
+  "simulation_protocol": {
+    "delete_d_groups_per_fraction": 32,
+    "gpu": false,
+    "model_inference": false,
+    "outer_panels_per_scenario": 96,
+    "parallelism": "deterministic panel-level CPU parallelism permitted; result order restored before aggregation",
+    "real_data_exact_reproduction_resamples": 50000,
+    "real_data_structural_index_resamples": 50000,
+    "resamples_per_method_per_panel": 127,
+    "rng": "numpy Generator PCG64DXSM",
+    "seeds": {
+      "method_tie_and_degeneracy_audit": 881920234,
+      "real_data_structural_indices": 881920231,
+      "synthetic_panel_generation": 881920232,
+      "synthetic_resampling": 881920233
+    }
+  },
+  "source_hashes": {
+    "analysis_source": "3a0c861aaec49dfa615db0b87f04f22c8a97f82a4182f85d7cf27a366174ddba",
+    "fresh_coefficient_manifest": "3d19c8d71fe86329026d113312f5088468f45d956dd860f97d340da60a093479",
+    "precheck": "6148797e8d9a9279591f71a5f7e514a97e03b81a9ba76180f727e9d8a4c30f2f",
+    "reference_coefficient_manifest": "ac1d05f7202cc1afd5acf71d81952b5d247eeda62fb231ea7a8c4cd1f98ba5ac"
+  },
+  "status": "SYNTHETIC_CALIBRATION_COMPLETE",
+  "synthetic_parameterization": {
+    "development_full_sample_global_means": {
+      "MODERATE_POSITIVE": 0.364,
+      "OBSERVED_LIKE": 0.628,
+      "WEAK_POSITIVE": 0.134
+    },
+    "development_panels": 8,
+    "development_resamples_per_method": 1,
+    "method_outputs_used_for_parameterization": false,
+    "real_result_role": "the sealed A0 global rho 0.6430547122 is used only as the explicit planning target for OBSERVED_LIKE",
+    "selection_basis": "synthetic development panels only; target named weak, moderate, and observed-like full-sample signal regimes before method coverage was run",
+    "status": "FROZEN_BEFORE_FINAL_CALIBRATION"
+  },
+  "tie_and_degeneracy_audit": {
+    "frozen_seed": 881920234,
+    "method": "deterministic exact tie counts over every simulated panel; no jitter or stochastic tie breaking",
+    "reason_seed_not_consumed": "the frozen audit is exhaustive and deterministic, so random subsampling is unnecessary",
+    "seed_consumed": false
+  }
+}

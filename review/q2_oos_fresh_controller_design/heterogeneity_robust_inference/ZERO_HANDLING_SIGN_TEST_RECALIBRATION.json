@@ -1,0 +1,292 @@
+{
+  "Qwen_inference": 0,
+  "calibrated_all_nulls": true,
+  "classification": "Q2_OOS_V2_SIGN_TEST_CALIBRATED",
+  "elapsed_seconds": 70.80421159905382,
+  "historical_outcomes_accessed": false,
+  "method": "B_ROW_SPEARMAN_SIGN_ZERO_INCLUSIVE",
+  "methods_rerun": [
+    "B_ROW_SPEARMAN_SIGN_ZERO_INCLUSIVE"
+  ],
+  "new_controller_streams": 0,
+  "precheck_commit": "9e3151820e25d7ff871952fb79c709d24f8f6561",
+  "precheck_sha256": "990725399099b89a1f09ae592d238fbe517d4b54526a2ecc18a4d9d8475b6147",
+  "preferred_power_adequate": true,
+  "schema_version": "q2-oos-v2-zero-inclusive-sign-recalibration-v1",
+  "semantic_trajectories": 0,
+  "summaries": [
+    {
+      "Wilson_95_high": 0.03703445463015224,
+      "Wilson_95_low": 0.027284421471199274,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 0.0020904541015625,
+        "q05": 0.1050567626953125,
+        "q100": 0.9999847412109375,
+        "q50": 0.5981903076171875,
+        "q95": 0.9615936279296875
+      },
+      "exact_zero_row_fraction": 0.000325,
+      "exact_zero_rows": 26,
+      "kind": "null",
+      "nonpositive_count_distribution": {
+        "q00": 2.0,
+        "q100": 15.0,
+        "q25": 7.0,
+        "q50": 8.0,
+        "q75": 9.0
+      },
+      "panels_with_exact_zero": 26,
+      "positive_count_distribution": {
+        "q00": 1.0,
+        "q100": 14.0,
+        "q25": 7.0,
+        "q50": 8.0,
+        "q75": 9.0
+      },
+      "rate": 0.0318,
+      "rejections": 159,
+      "replicates": 5000,
+      "scenario": "STRICT_EXCHANGEABLE_NULL"
+    },
+    {
+      "Wilson_95_high": 0.049194708643338324,
+      "Wilson_95_low": 0.037906663853665874,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 0.0020904541015625,
+        "q05": 0.1050567626953125,
+        "q100": 0.9979095458984375,
+        "q50": 0.5981903076171875,
+        "q95": 0.8949432373046875
+      },
+      "exact_zero_row_fraction": 0.0004375,
+      "exact_zero_rows": 35,
+      "kind": "null",
+      "nonpositive_count_distribution": {
+        "q00": 2.0,
+        "q100": 13.0,
+        "q25": 6.0,
+        "q50": 8.0,
+        "q75": 9.0
+      },
+      "panels_with_exact_zero": 35,
+      "positive_count_distribution": {
+        "q00": 3.0,
+        "q100": 14.0,
+        "q25": 7.0,
+        "q50": 8.0,
+        "q75": 10.0
+      },
+      "rate": 0.0432,
+      "rejections": 216,
+      "replicates": 5000,
+      "scenario": "FROZEN_NONEXCHANGEABLE_STRESS_NULL"
+    },
+    {
+      "Wilson_95_high": 0.0007677019450571244,
+      "Wilson_95_low": 0.0,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 0.5981903076171875,
+        "q05": 0.5981903076171875,
+        "q100": 0.5981903076171875,
+        "q50": 0.5981903076171875,
+        "q95": 0.5981903076171875
+      },
+      "exact_zero_row_fraction": 0.0,
+      "exact_zero_rows": 0,
+      "kind": "null",
+      "nonpositive_count_distribution": {
+        "q00": 8.0,
+        "q100": 8.0,
+        "q25": 8.0,
+        "q50": 8.0,
+        "q75": 8.0
+      },
+      "panels_with_exact_zero": 0,
+      "positive_count_distribution": {
+        "q00": 8.0,
+        "q100": 8.0,
+        "q25": 8.0,
+        "q50": 8.0,
+        "q75": 8.0
+      },
+      "rate": 0.0,
+      "rejections": 0,
+      "replicates": 5000,
+      "scenario": "ROW_HETEROGENEITY_NULL"
+    },
+    {
+      "Wilson_95_high": 0.04195723779310631,
+      "Wilson_95_low": 0.03155457545035066,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 0.0002593994140625,
+        "q05": 0.1050567626953125,
+        "q100": 0.9997406005859375,
+        "q50": 0.5981903076171875,
+        "q95": 0.9615936279296875
+      },
+      "exact_zero_row_fraction": 0.000675,
+      "exact_zero_rows": 54,
+      "kind": "null",
+      "nonpositive_count_distribution": {
+        "q00": 1.0,
+        "q100": 14.0,
+        "q25": 7.0,
+        "q50": 8.0,
+        "q75": 9.0
+      },
+      "panels_with_exact_zero": 54,
+      "positive_count_distribution": {
+        "q00": 2.0,
+        "q100": 15.0,
+        "q25": 7.0,
+        "q50": 8.0,
+        "q75": 9.0
+      },
+      "rate": 0.0364,
+      "rejections": 182,
+      "replicates": 5000,
+      "scenario": "SAFETY_CONDITIONED_NULL"
+    },
+    {
+      "Wilson_95_high": 0.0007677019450571244,
+      "Wilson_95_low": 0.0,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 0.2272491455078125,
+        "q05": 0.4018096923828125,
+        "q100": 0.8949432373046875,
+        "q50": 0.5981903076171875,
+        "q95": 0.7727508544921875
+      },
+      "exact_zero_row_fraction": 3.75e-05,
+      "exact_zero_rows": 3,
+      "kind": "null",
+      "nonpositive_count_distribution": {
+        "q00": 6.0,
+        "q100": 10.0,
+        "q25": 8.0,
+        "q50": 8.0,
+        "q75": 8.0
+      },
+      "panels_with_exact_zero": 3,
+      "positive_count_distribution": {
+        "q00": 6.0,
+        "q100": 10.0,
+        "q25": 8.0,
+        "q50": 8.0,
+        "q75": 8.0
+      },
+      "rate": 0.0,
+      "rejections": 0,
+      "replicates": 5000,
+      "scenario": "HEAVY_HETEROGENEITY_NULL"
+    },
+    {
+      "Wilson_95_high": 0.7357777646818205,
+      "Wilson_95_low": 0.703659541879036,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 1.52587890625e-05,
+        "q05": 0.0002593994140625,
+        "q100": 0.8949432373046875,
+        "q50": 0.0384063720703125,
+        "q95": 0.4018096923828125
+      },
+      "exact_zero_row_fraction": 0.0004583333333333333,
+      "exact_zero_rows": 22,
+      "kind": "alternative",
+      "nonpositive_count_distribution": {
+        "q00": 0.0,
+        "q100": 10.0,
+        "q25": 2.0,
+        "q50": 4.0,
+        "q75": 5.0
+      },
+      "panels_with_exact_zero": 22,
+      "positive_count_distribution": {
+        "q00": 6.0,
+        "q100": 16.0,
+        "q25": 11.0,
+        "q50": 12.0,
+        "q75": 14.0
+      },
+      "rate": 0.72,
+      "rejections": 2160,
+      "replicates": 3000,
+      "scenario": "POSITIVE_25_PERCENT_CLOSED_A0"
+    },
+    {
+      "Wilson_95_high": 0.9986481352598064,
+      "Wilson_95_low": 0.9947465032080693,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 1.52587890625e-05,
+        "q05": 1.52587890625e-05,
+        "q100": 0.4018096923828125,
+        "q50": 0.0002593994140625,
+        "q95": 0.0106353759765625
+      },
+      "exact_zero_row_fraction": 0.00025,
+      "exact_zero_rows": 12,
+      "kind": "alternative",
+      "nonpositive_count_distribution": {
+        "q00": 0.0,
+        "q100": 7.0,
+        "q25": 0.0,
+        "q50": 1.0,
+        "q75": 2.0
+      },
+      "panels_with_exact_zero": 12,
+      "positive_count_distribution": {
+        "q00": 9.0,
+        "q100": 16.0,
+        "q25": 14.0,
+        "q50": 15.0,
+        "q75": 16.0
+      },
+      "rate": 0.9973333333333333,
+      "rejections": 2992,
+      "replicates": 3000,
+      "scenario": "POSITIVE_50_PERCENT_CLOSED_A0"
+    },
+    {
+      "Wilson_95_high": 0.77461836818602,
+      "Wilson_95_low": 0.7440508163759608,
+      "degenerate_panels": 0,
+      "exact_p_value_distribution": {
+        "q00": 1.52587890625e-05,
+        "q05": 0.0002593994140625,
+        "q100": 0.7727508544921875,
+        "q50": 0.0106353759765625,
+        "q95": 0.2272491455078125
+      },
+      "exact_zero_row_fraction": 0.0002708333333333333,
+      "exact_zero_rows": 13,
+      "kind": "alternative",
+      "nonpositive_count_distribution": {
+        "q00": 0.0,
+        "q100": 9.0,
+        "q25": 2.0,
+        "q50": 3.0,
+        "q75": 4.0
+      },
+      "panels_with_exact_zero": 13,
+      "positive_count_distribution": {
+        "q00": 7.0,
+        "q100": 16.0,
+        "q25": 12.0,
+        "q50": 13.0,
+        "q75": 14.0
+      },
+      "rate": 0.7596666666666667,
+      "rejections": 2279,
+      "replicates": 3000,
+      "scenario": "POSITIVE_RHO_LIKE_0_15"
+    }
+  ],
+  "zero_rule": "finite r_i == 0 is a non-success in the K=16 denominator"
+}

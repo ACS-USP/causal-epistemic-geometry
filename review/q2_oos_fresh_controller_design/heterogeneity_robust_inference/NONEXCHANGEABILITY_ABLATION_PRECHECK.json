@@ -1,0 +1,33 @@
+{
+  "schema_version": "q2-oos-nonexchangeability-ablation-precheck-v1",
+  "source_commit": "8d153a06a4ffdbaa65302f5e5babd0db9e4f1fc5",
+  "frozen_before_simulation": true,
+  "purpose": "Model-free root-cause diagnosis of the frozen stress-null anti-conservatism; not method selection and not a search for a passing stress model.",
+  "design": {
+    "K_fresh": 16,
+    "reference_controllers": 31,
+    "items": 300,
+    "rollouts": 2,
+    "shell_amplitudes": [0.75, 1.15],
+    "panels_per_scenario": 5000,
+    "row_qap_total_maps": 1000,
+    "nominal_alpha": 0.05,
+    "base_seed": 111266550853054276849575755160007252173
+  },
+  "scenarios": [
+    {"id": "STRICT_EXCHANGEABLE_NULL", "fresh_safety_conditioning": false, "fresh_latent_heterogeneity": true, "reference_latent_heterogeneity": true, "fixed_historical_reference_geometry": true, "controller_intercepts": true, "geometry_related_latent_nuisance": false, "shared_item_factors": true, "two_shell_coupling": true},
+    {"id": "NO_FRESH_LATENT_HETEROGENEITY", "parent": "STRICT_EXCHANGEABLE_NULL", "fresh_latent_heterogeneity": false},
+    {"id": "NO_REFERENCE_LATENT_HETEROGENEITY", "parent": "STRICT_EXCHANGEABLE_NULL", "reference_latent_heterogeneity": false},
+    {"id": "NO_CONTROLLER_INTERCEPTS", "parent": "STRICT_EXCHANGEABLE_NULL", "controller_intercepts": false},
+    {"id": "NO_SHARED_ITEM_FACTORS", "parent": "STRICT_EXCHANGEABLE_NULL", "shared_item_factors": false},
+    {"id": "INDEPENDENT_SHELLS", "parent": "STRICT_EXCHANGEABLE_NULL", "two_shell_coupling": false},
+    {"id": "SAFETY_CONDITIONING_ONLY", "parent": "STRICT_EXCHANGEABLE_NULL", "fresh_safety_conditioning": true},
+    {"id": "GEOMETRY_NUISANCE_ONLY", "parent": "STRICT_EXCHANGEABLE_NULL", "geometry_related_latent_nuisance": true},
+    {"id": "SAFETY_PLUS_GEOMETRY_NUISANCE", "parent": "STRICT_EXCHANGEABLE_NULL", "fresh_safety_conditioning": true, "geometry_related_latent_nuisance": true},
+    {"id": "FROZEN_NONEXCHANGEABLE_STRESS_NULL", "exact_historical_stress_generator": true},
+    {"id": "SAFETY_GEOMETRY_WITHOUT_INTERCEPTS", "parent": "SAFETY_PLUS_GEOMETRY_NUISANCE", "controller_intercepts": false},
+    {"id": "SAFETY_GEOMETRY_INDEPENDENT_SHELLS", "parent": "SAFETY_PLUS_GEOMETRY_NUISANCE", "two_shell_coupling": false}
+  ],
+  "outputs": ["empirical_FPR", "Wilson_95_interval", "rowwise_association_quantiles", "global_aggregate_rho_quantiles", "fresh_row_exchangeability_by_construction", "global_zero_and_exchangeability_coincide"],
+  "interpretation_rule": "Attribute the stress warning only to contrasts that reproduce it prospectively; report interactions and do not alter the frozen stress model."
+}

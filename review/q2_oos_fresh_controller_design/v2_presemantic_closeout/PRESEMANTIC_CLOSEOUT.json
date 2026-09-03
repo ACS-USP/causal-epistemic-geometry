@@ -1,0 +1,126 @@
+{
+  "schema_version": "q2-oos-v2-post-maintenance-presemantic-closeout-v1",
+  "status": "Q2_OOS_V2_READY_FOR_PREDICTION_LOCK",
+  "date_utc": "2026-09-02",
+  "historical_states_preserved": [
+    "Q2_V4_1_G2",
+    "RS+",
+    "RT+",
+    "Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED",
+    "Q2_OOS_V2_NULL_CALIBRATION_BLOCKED"
+  ],
+  "post_maintenance_environment": {
+    "classification": "Q2_OOS_V2_POST_MAINTENANCE_ENVIRONMENT_QUALIFIED",
+    "qualification_sha256": "f392aa16c2718d3c943fb626abdb629f199f3a13bf46a49bdf51bf85a6519a08",
+    "qualified_environment_profile": "8f53465b83e6454119977132d131a57a62785e97081612691fd33c4855b5a386",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "scientifically_relevant_drift": false,
+    "operational_only_differences": [
+      "kernel build",
+      "NVIDIA driver patch version"
+    ]
+  },
+  "safety": {
+    "completed_rows": 1632,
+    "expected_rows": 1632,
+    "safe_candidates": 26,
+    "selected_controllers": 16,
+    "selection_rule": "first 16 candidates passing both frozen shell gates in immutable stream order",
+    "selected_bank_sha256": "9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd",
+    "selected_bank_classification": "Q2_OOS_V2_SELECTED_BANK_GATE_PASS"
+  },
+  "label_free_capture": {
+    "source_commit": "f2ec44c2da9f00688a918f55b0f5d70b198f4744",
+    "capture_runner_sha256": "05e0f08417ceea82f7efbfd8ae051a09a8cc66244274b0c4f1dbb563f1779bf6",
+    "consolidator_sha256": "d60c2d5f31cab5200836a7adcddea7c581cca518723360aa420d51d2008ddefd",
+    "probe_count": 12,
+    "primary_raw_archives": 12,
+    "repeat_raw_archives": 12,
+    "total_raw_archives": 24,
+    "raw_archive_aggregate_sha256": "a479f6c35fb6e9da106eef989ae980b230ecc4d88abce29a295f20e085e2dd66",
+    "elapsed_seconds": 1418.585856493,
+    "raw_archives_in_git": false,
+    "raw_archives_private_hash_pinned": true,
+    "correctness_inspected": false,
+    "semantic_outcomes": 0
+  },
+  "label_free_qualification": {
+    "classification": "Q2_OOS_V2_LABEL_FREE_INSTRUMENT_QUALIFIED",
+    "A0": "QUALIFIED_BY_SELECTED_BANK_GATE",
+    "A1": "Q2_OOS_V2_A1_INSTRUMENT_QUALIFIED",
+    "A2": "Q2_OOS_V2_A2_INSTRUMENT_QUALIFIED",
+    "D2": "SECONDARY_SEALED",
+    "prediction_matrices_sha256": "b4ec00985e750c5bb8fd7fd49228267ec576bf6c2ad2ac3984f6f2390d927703",
+    "forensic_classification": "Q2_OOS_V2_LABEL_FREE_FORENSIC_CLEAN",
+    "maximum_primary_audit_difference": 1.2329692822277138e-11,
+    "repeat_radius_relative_error_max": 0.0,
+    "repeat_distance_relative_error_max": 0.0,
+    "repeat_angular_rank_correlation": 1.0,
+    "baseline_recapture_max_abs_difference": 0.0,
+    "historical_reproduction_max_abs_difference": 1.1102230246251565e-15
+  },
+  "selected_bank_geometry": {
+    "rank": 8,
+    "effective_rank": 6.842021185570888,
+    "stable_rank": 3.596249002477428,
+    "condition_number_descriptive": 2.6680977236031636,
+    "maximum_absolute_pair_cosine": 0.8148387642876267,
+    "fresh_reference_A0_q90_minus_q10": 0.959090505084742,
+    "shell_amplitude_cv": 9.956993521872947e-07
+  },
+  "future_inference": {
+    "scientific_unit": "one prospectively sampled safety-conditioned fresh controller",
+    "fresh_controllers": 16,
+    "fixed_reference_controllers": 31,
+    "primary": "exact one-sided controller-level row-Spearman sign test",
+    "positive_count_required": 12,
+    "all_row_statistics_finite_required": true,
+    "global_fresh_reference_rho": "DESCRIPTIVE_ONLY",
+    "original_row_qap": "DIAGNOSTIC_ONLY",
+    "fresh_fresh_secondary": "NODE_JACKKNIFE_PSEUDOVALUE_T_SECONDARY_ONLY"
+  },
+  "future_semantic_schedule": {
+    "status": "FROZEN_NOT_AUTHORIZED_NOT_RUN",
+    "controllers": 16,
+    "shells": 2,
+    "items": 300,
+    "rollouts": 2,
+    "conditions": 32,
+    "rows": 19200,
+    "unique_logical_keys": 19200,
+    "unique_seeds": 19200,
+    "sha256": "dac5c284b90c726016968f31d25200a362c42d96f63b63d730665f3f47e85ec5",
+    "max_new_tokens": 4096,
+    "repetition_stop": "EXTREME_MECHANICAL_REPETITION_V1",
+    "semantic_execution_authorized": false
+  },
+  "runtime_forecast_hours": {
+    "normal_mean": 9.901410,
+    "normal_p50": 9.759017,
+    "normal_p80": 11.054600,
+    "normal_p90": 11.805594,
+    "normal_p95": 12.451124,
+    "normal_p99": 13.750386,
+    "stress_1_5x_p95": 13.627550,
+    "stress_2x_p95": 14.843984,
+    "monitoring_only": true
+  },
+  "prediction_lock": {
+    "prediction_lock_sha256": "825d6e3536b51a31956cbd5c9e75bedfed38f9e3df5da05a4452a5681f65f9bb",
+    "prediction_lock_hash_manifest_sha256": "2b02c2a6e0fa14a1d6760e384d726787d54c3e8c66b1d81585be914e500e9f68",
+    "inference_lock_sha256": "a8d9ead49d9265211906a0f367ac3062d03b32c924e8606a2f8c12caaf3fbea1",
+    "runtime_monitor_lock_sha256": "fadafb50b9c26c42bfb2abd4dcdeb7a93870ac46c3a1e0925b4ba8fc3707ea8d"
+  },
+  "resource_audit": {
+    "Spark1_post_maintenance_qualified": true,
+    "Qwen_A2_model_inference_performed": true,
+    "correctness_inspected": false,
+    "N300_semantic_trajectories": 0,
+    "selected_16_changed": false,
+    "new_controller_stream_generated": false,
+    "Spark2_used": false,
+    "RunPod_used": false,
+    "Q3_run": false
+  }
+}

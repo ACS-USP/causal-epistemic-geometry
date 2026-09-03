@@ -1,0 +1,21 @@
+{
+  "classification_agreement": true,
+  "forensic_classification": "Q2_OOS_V2_A0_PASS",
+  "forensic_sign": {
+    "count": 16,
+    "degenerate": false,
+    "finite": 16,
+    "negatives": 0,
+    "p_value": 1.52587890625e-05,
+    "positives": 16,
+    "reject_0_05": true,
+    "zeros": 0
+  },
+  "max_dshape_difference": 0.0,
+  "max_error_array_difference": 0.0,
+  "max_primary_r_difference": 0.0,
+  "primary_classification": "Q2_OOS_V2_A0_PASS",
+  "raw_journal_reopened": true,
+  "scored_rows_reconstructed": 19200,
+  "status": "Q2_OOS_V2_FORENSIC_CLEAN"
+}

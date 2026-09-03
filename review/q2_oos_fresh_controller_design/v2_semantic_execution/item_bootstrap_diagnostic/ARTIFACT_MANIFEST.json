@@ -1,0 +1,32 @@
+{
+  "schema_version": "q2-oos-v2-item-bootstrap-diagnostic-artifact-manifest-v1",
+  "status": "SEALED_POST_HOC_DIAGNOSTIC",
+  "classification": "Q2_OOS_V2_ITEM_BOOTSTRAP_METHOD_NOT_CALIBRATED",
+  "frozen_primary_classification": "Q2_OOS_V2_A0_PASS",
+  "artifacts": {
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md": "1fa23b12ce601afb0c60b98368d027e23fe17905e9955cebfd7a87a5f91dc036",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_RESULT.json": "7465e81d568854b92a0a7e6f0e46ec4a800577459df663b044c1975ef5be1573",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_IMPLEMENTATION_AUDIT.json": "0ffdfbf62069a51a59291d8daa57b9ef22d8295d1091dd83ff035b4fac1724c6",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_REPRODUCTION_HISTOGRAM.csv": "6f6a878b13f081892222e4ca4b7bf5034803a270d4351af44f084621c23394f9",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_SYNTHETIC_CALIBRATION.json": "915b0fb9b50a4bd7f586b85c0f668a2c6a86ffa1e6e08f9731e894d2f269fbc6"
+  },
+  "locks": {
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_PRECHECK.json": "6148797e8d9a9279591f71a5f7e514a97e03b81a9ba76180f727e9d8a4c30f2f",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_SIMULATION_IMPLEMENTATION_LOCK.json": "80029dfd81110bd5d07c1d78268686a1d38714e7513a541073452bca794407ee",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_SIMULATION_LOCK_AMENDMENT_1.json": "76e23b6072b66db0b1ad1a1b93ff2871565f46eeb3cd974cc0b3cb3f687d49e7"
+  },
+  "code": {
+    "scripts/audit_q2_oos_v2_item_bootstrap.py": "b3712c792d7ddfb543704cc0e311584242b6bd88ff7cb093be3f68f27707d054",
+    "scripts/calibrate_q2_oos_v2_item_bootstrap.py": "4a9b3dacf5fb3294642f4260618d6101b208f2f7b32340c791fd3c9deba3f027",
+    "tests/test_q2_oos_v2_item_bootstrap_diagnostic.py": "f83b33181a58bab2ccbd502224d0b684423589da74b9f70935bb573dd52d5d5d"
+  },
+  "release_safety": {
+    "contains_raw_model_text": false,
+    "contains_benchmark_text": false,
+    "contains_item_level_correctness": false,
+    "contains_credentials_or_private_infrastructure": false,
+    "contains_aggregate_closed_result_statistics": true,
+    "contains_synthetic_statistics": true,
+    "private_sources_represented_by_hash_only": true
+  }
+}

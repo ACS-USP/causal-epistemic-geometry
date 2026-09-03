@@ -1,0 +1,24 @@
+{
+  "schema_version": "q2-oos-v2-null-calibration-artifact-hashes-v1",
+  "created_utc": "2026-09-02T02:22:32Z",
+  "calibration_code_commit": "48cba4e740fc65940d11b980d58780e381a6be7e",
+  "artifacts": {
+    "FUTURE_50000_MAP_PATH_PVALUES.csv": "7df4852a976c11040cf5b24348d4eb367dcba8874965f9801cb05907dd2b8528",
+    "NULL_CALIBRATION_PRECHECK.json": "a2cd99c9c98d66895b2af6851801c3d1d28c0c85892047c8b42f9ba893dd53c4",
+    "NULL_CALIBRATION_RESULT.json": "c585ec8c90e090fe5f97062c2fba636f57d998c465712e430d51bb3a2834abc2",
+    "PHASE0_PRECHECK_ERRATUM.json": "c0a47de2149d3a5ca197e862a178b67823b908575d0c88fbd4105d6522b601a7",
+    "RUNTIME_FORECAST_PROTOCOL.json": "c5226e2fdfd80ab77a81940b99f8a90bb007b7e7f3de689ae3a57a074c2a2638",
+    "SMALL_K_EXACT_AUDIT.json": "e96079735c3a54276ea18b7438318bae73ba7ff87d7e3839dbe12fe00f86e2be",
+    "STRESS_NULL_PVALUES.csv": "095e2d70684e6068058123784cf2705e6ba05ec545c2ec65cece944607fd5626",
+    "STRICT_NULL_PVALUES.csv": "3320a1f115e91f27372716c0e8ee2feb2a483eae4feffa0ba273b2f867eb5143",
+    "scripts/calibrate_q2_oos_v2_row_qap.py": "9e712010750ca4273ab7a560e59b9b527dbaae2bab38aa63ca252e657946c179"
+  },
+  "scientific_firewall": {
+    "actual_v2_seed_derived": false,
+    "correctness_inspected": false,
+    "historical_raw_text_inspected": false,
+    "model_inference": 0,
+    "new_v2_streams_generated": 0,
+    "semantic_trajectories": 0
+  }
+}

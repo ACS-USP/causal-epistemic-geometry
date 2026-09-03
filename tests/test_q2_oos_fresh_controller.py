@@ -1,0 +1,240 @@
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+
+from epistemic_geometry.experiments.q2_oos_fresh_controller import (
+    angular_cross_block,
+    candidate_stream_gate,
+    coefficient_bank_diagnostics,
+    controller_conjugation_test,
+    cross_block_shape,
+    fresh_candidate_bank,
+    fresh_row_permutations,
+    leave_one_fresh_out,
+    leave_one_fresh_out_symmetric,
+    protocol_seed,
+    row_permutation_test,
+    selected_bank_gate,
+    semantic_schedule,
+    shell_mean_spearman,
+    symmetric_upper_spearman,
+)
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_candidate_stream_is_deterministic_and_in_subspace() -> None:
+    rng = np.random.default_rng(4)
+    basis, _ = np.linalg.qr(rng.standard_normal((32, 8)))
+    first_c, first_v = fresh_candidate_bank(basis, count=12, seed=91)
+    second_c, second_v = fresh_candidate_bank(basis, count=12, seed=91)
+    assert np.array_equal(first_c, second_c)
+    assert np.array_equal(first_v, second_v)
+    assert np.max(np.abs(np.linalg.norm(first_c, axis=1) - 1.0)) < 1e-12
+    assert np.max(np.abs(first_v - (first_v @ basis) @ basis.T)) < 1e-12
+
+
+def test_cross_block_statistic_and_row_permutation_preserve_rows() -> None:
+    rng = np.random.default_rng(7)
+    reference = rng.standard_normal((9, 4))
+    fresh = rng.standard_normal((6, 4))
+    geometry = angular_cross_block(fresh, reference)
+    outcomes = {"MEDIUM": geometry.copy(), "STRONG": geometry.copy()}
+    geometries = {"MEDIUM": geometry.copy(), "STRONG": geometry.copy()}
+    permutations = fresh_row_permutations(6, 720, seed=18)
+    assert len(permutations) == 720
+    assert len({tuple(row) for row in permutations}) == 720
+    assert np.array_equal(permutations[0], np.arange(6))
+    result = row_permutation_test(geometries, outcomes, permutations)
+    assert result["observed_aggregate_rho"] > 0.999999
+    assert result["p_value"] == 1 / 720
+    assert result["degenerate_fail_closed"] is False
+    assert np.all(leave_one_fresh_out(geometries, outcomes) > 0.999999)
+
+
+def test_row_permutation_degenerate_spearman_fails_closed() -> None:
+    rng = np.random.default_rng(9)
+    geometry = rng.standard_normal((6, 5))
+    constant = np.ones((6, 5))
+    permutations = fresh_row_permutations(6, 50, seed=73)
+    result = row_permutation_test(
+        {"MEDIUM": geometry, "STRONG": geometry},
+        {"MEDIUM": constant, "STRONG": constant},
+        permutations,
+    )
+    assert np.isnan(result["observed_aggregate_rho"])
+    assert result["p_value"] == 1.0
+    assert result["degenerate_fail_closed"] is True
+
+
+def test_shell_mean_is_equal_weighted() -> None:
+    geometry = np.arange(24, dtype=float).reshape(4, 6)
+    medium = geometry.copy()
+    strong = -geometry
+    shell, aggregate = shell_mean_spearman(
+        {"MEDIUM": geometry, "STRONG": geometry},
+        {"MEDIUM": medium, "STRONG": strong},
+    )
+    assert shell == {"MEDIUM": 1.0, "STRONG": -1.0}
+    assert aggregate == 0.0
+
+
+def test_fresh_fresh_qap_conjugates_complete_controller_labels() -> None:
+    rng = np.random.default_rng(31)
+    coefficients = rng.standard_normal((6, 4))
+    geometry = angular_cross_block(coefficients, coefficients)
+    geometries = {"MEDIUM": geometry.copy(), "STRONG": geometry.copy()}
+    outcomes = {"MEDIUM": geometry.copy(), "STRONG": geometry.copy()}
+    permutations = fresh_row_permutations(6, 720, seed=22)
+    result = controller_conjugation_test(geometries, outcomes, permutations)
+    assert symmetric_upper_spearman(geometry, geometry) > 0.999999
+    assert result["observed_aggregate_rho"] > 0.999999
+    assert result["p_value"] == 1 / 720
+    assert np.all(leave_one_fresh_out_symmetric(geometries, outcomes) > 0.999999)
+
+
+def test_fresh_fresh_qap_rejects_non_square_endpoints() -> None:
+    rectangular = np.ones((4, 3))
+    with np.testing.assert_raises(ValueError):
+        symmetric_upper_spearman(rectangular, rectangular)
+
+
+def test_cross_block_shape_matches_scalar_reference() -> None:
+    fresh = np.asarray([[[0, 1], [1, 1], [0, 0], [1, 0]]], dtype=float)
+    reference = np.asarray([[[1, 1], [0, 1], [0, 1], [1, 0]]], dtype=float)
+    result = cross_block_shape(fresh, reference)[0, 0]
+    d0 = fresh[0, :, 0] - reference[0, :, 0]
+    d1 = fresh[0, :, 1] - reference[0, :, 1]
+    expected = len(d0) / (len(d0) - 1) * (np.mean(d0 * d1) - np.mean(d0) * np.mean(d1))
+    assert result == expected
+
+
+def test_future_schedule_contains_only_fresh_conditions() -> None:
+    rows = semantic_schedule(
+        ["item_a", "item_b"],
+        ["Q2_OOS_DIRECTION_00", "Q2_OOS_DIRECTION_01"],
+        "a" * 40,
+    )
+    assert len(rows) == 2 * 2 * 2 * 2
+    assert len({row["seed"] for row in rows}) == len(rows)
+    assert {row["condition"] for row in rows} == {
+        "Q2_OOS_DIRECTION_00_MEDIUM",
+        "Q2_OOS_DIRECTION_00_STRONG",
+        "Q2_OOS_DIRECTION_01_MEDIUM",
+        "Q2_OOS_DIRECTION_01_STRONG",
+    }
+    assert all(row["condition"] != "BASELINE" for row in rows)
+
+
+def test_frozen_candidate_stream_reproduces_and_has_no_historical_overlap() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design"
+    manifest = json.loads((review / "CANDIDATE_BANK_MANIFEST.json").read_text())
+    prelock_commit = "c774ef57b0247024d866c6efd8b0ab2aaa5c67d0"
+    expected_seed = protocol_seed("Q2-OOS-FRESH-CONTROLLER-DIRECTIONS-V1", prelock_commit)
+    basis = np.load(
+        ROOT / "review/q2_v4_spark1_presemantic/SPARK1_SUBSPACE_Q.npy",
+        allow_pickle=False,
+    )
+    coefficients, vectors = fresh_candidate_bank(basis, count=19, seed=expected_seed)
+    assert manifest["seed"] == expected_seed
+    assert np.array_equal(
+        coefficients,
+        np.asarray([row["coefficients"] for row in manifest["candidates"]]),
+    )
+    for row, vector in zip(manifest["candidates"], vectors, strict=True):
+        assert (
+            row["vector_array_sha256"]
+            == hashlib.sha256(np.asarray(vector, dtype=np.float64).tobytes()).hexdigest()
+        )
+    assert manifest["historical_overlap_audit"]["pass"] is True
+    assert manifest["algebraic_checks"]["pass"] is False
+    assert manifest["classification"] == ("Q2_OOS_FRESH_CONTROLLER_CANDIDATE_STREAM_ALGEBRAIC_FAIL")
+    assert manifest["semantic_outcomes"] == 0
+    assert manifest["correctness_inspected"] is False
+
+
+def test_v1_gate_metrics_match_closeout_and_projected_space() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design"
+    manifest = json.loads((review / "CANDIDATE_BANK_MANIFEST.json").read_text())
+    closeout = json.loads((review / "CANDIDATE_STREAM_CLOSEOUT.json").read_text())
+    coefficients = np.asarray([row["coefficients"] for row in manifest["candidates"]])
+    basis = np.load(
+        ROOT / "review/q2_v4_spark1_presemantic/SPARK1_SUBSPACE_Q.npy",
+        allow_pickle=False,
+    )
+    vectors = coefficients @ basis.T
+    coefficient_metrics = coefficient_bank_diagnostics(coefficients)
+    coefficient_singular = np.linalg.svd(coefficients, compute_uv=False)
+    projected_singular = np.linalg.svd(vectors, compute_uv=False)[:8]
+    frozen = closeout["candidate_stream"]
+    assert coefficient_metrics["count"] == 19
+    assert coefficient_metrics["dimension"] == 8
+    for name in (
+        "rank",
+        "effective_rank",
+        "condition_number",
+        "maximum_absolute_pair_cosine",
+    ):
+        assert coefficient_metrics[name] == frozen[name]
+    assert np.max(np.abs(coefficient_singular - projected_singular)) < 1e-12
+    assert candidate_stream_gate(coefficients)["pass"] is False
+
+
+def test_selected_bank_gate_uses_fresh_by_reference_cross_block() -> None:
+    safe = json.loads(
+        (
+            ROOT
+            / "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json"
+        ).read_text()
+    )
+    reference = np.asarray([row["coefficients"] for row in safe["directions"]])
+    fresh = reference[:10].copy()
+    result = selected_bank_gate(fresh, reference)
+    assert result["metrics"]["count"] == 10
+    assert result["metrics"]["a0_q90_minus_q10"] > 0.20
+    assert result["checks"]["shell_amplitude_cv_at_most_0_03"] is True
+
+
+def test_v2_gate_audit_does_not_materialize_a_controller_stream() -> None:
+    audit = ROOT / "review/q2_oos_fresh_controller_design/v2_gate_audit"
+    draft = json.loads((audit / "V2_PROTOCOL_DRAFT.json").read_text())
+    zero = json.loads((audit / "ZERO_INFERENCE_AUDIT.json").read_text())
+    assert draft["candidate_count"] == 24
+    assert draft["target_K"] == 10
+    assert draft["generation"]["actual_seed"] == "NOT_DERIVED_IN_THIS_AUDIT"
+    assert draft["future_semantic"]["authorized_by_this_draft"] is False
+    assert zero["new_controller_stream_generated"] is False
+    assert zero["model_inference"] == 0
+    assert not list(audit.rglob("*.npy"))
+
+
+def test_v2_reviewer_hardening_selects_k16_without_materializing_stream() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design/v2_reviewer_hardening"
+    precheck = json.loads((review / "REVIEWER_HARDENING_PRECHECK.json").read_text())
+    summary = json.loads((review / "SIMULATION_SUMMARY.json").read_text())
+    protocol = json.loads((review / "FINAL_V2_PROTOCOL_DRAFT.json").read_text())
+    zero = json.loads((review / "ZERO_INFERENCE_AUDIT.json").read_text())
+    assert precheck["frozen_before_final_simulation"] is True
+    assert summary["recommended_K"] == 16
+    assert summary["recommended_candidate_count"] == 34
+    assert summary["predicted_power_gate_ruling"] == (
+        "RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY"
+    )
+    assert protocol["design"]["K"] == 16
+    assert protocol["design"]["candidate_count"] == 34
+    assert protocol["generation"]["actual_seed"] == "NOT_DERIVED_IN_THIS_REVIEW"
+    assert protocol["future_semantic"]["authorized_by_this_draft"] is False
+    assert zero["new_v2_stream_generated"] is False
+    assert zero["model_inference"] == 0
+    assert not list(review.rglob("*.npy"))
+
+
+def test_v2_reviewer_hardening_hash_manifest_matches() -> None:
+    review = ROOT / "review/q2_oos_fresh_controller_design/v2_reviewer_hardening"
+    manifest = json.loads((review / "ARTIFACT_HASHES.json").read_text())
+    for name, expected in manifest["artifacts"].items():
+        assert hashlib.sha256((review / name).read_bytes()).hexdigest() == expected

@@ -214,6 +214,290 @@ experiments:
     holdout_status: CONSUMED_DEVELOPMENT_CLOSED
     next_action: PRINCIPAL_RESEARCHER_REVIEW
 
+  - id: Q2_OOS_FRESH_CONTROLLER_DESIGN
+    version: OOS-FRESH-CONTROLLER-V1
+    stage: DEVELOPMENT_DESIGN_PRESEMANTIC_STOP
+    question: >-
+      Does the Q2 V4.1 A0 relational association generalize to entirely fresh
+      controller identities sampled from the same frozen rank-8 subspace?
+    instrument: >-
+      CPU-only cross-block power design followed by one prospectively frozen
+      19-candidate PCG64DXSM coefficient stream; Spark-1 safety and label-free
+      qualification were authorized only after the algebraic stream gate.
+    model_policy: NO_MODEL_INFERENCE_REACHED
+    status: CLOSED_PRESEMANTIC
+    outcome: Q2_OOS_FRESH_CONTROLLER_DESIGN_BLOCKED
+    scientific_interpretation: >-
+      K=10 was the smallest power-qualified design, but the single frozen
+      candidate stream failed its prospectively fixed effective-rank and
+      condition-number gates before safety qualification. This is an
+      instrument-design stop, not a fresh-controller semantic null and not a
+      modification of Q2 V4.1.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: d57b8b410a6e12d1253eb189935ae8a878f17f53
+    prelock_commit: c774ef57b0247024d866c6efd8b0ab2aaa5c67d0
+    artifact: review/q2_oos_fresh_controller_design/REPORT.md
+    candidate_manifest: review/q2_oos_fresh_controller_design/CANDIDATE_BANK_MANIFEST.json
+    candidate_manifest_sha256: 61f3fbcc4a48b413fa6feeef6bdc865f9b3ec06f6c767cd6681e1401a538d66b
+    target_k: 10
+    candidate_count: 19
+    candidate_rank: 8
+    candidate_effective_rank: 5.915762425524043
+    candidate_condition_number: 3.591939479153766
+    safety_qualification: NOT_RUN_PREEMPTED_BY_FROZEN_CANDIDATE_STREAM_GATE
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_OOS_V2_CANDIDATE_GATE_ADEQUACY_AUDIT
+    version: V2-DESIGN-AUDIT-V1
+    stage: DEVELOPMENT_DESIGN_CPU_ONLY
+    question: >-
+      Were the V1 candidate-stream and selected-bank gates jointly calibrated
+      for the actual K-by-31 fresh-controller relational test, and what wholly
+      prospective V2 design should replace them?
+    instrument: >-
+      100,000 normalized-Gaussian streams per audited candidate count,
+      dependence-aware safety-selection sensitivity, and synthetic cross-block
+      planning power; no controller stream or model output was generated.
+    model_policy: NO_MODEL_INFERENCE
+    status: DRAFT_AWAITING_PRINCIPAL_RESEARCHER_REVIEW
+    outcome: Q2_OOS_V2_INFERENCE_ALIGNED_DESIGN_READY_FOR_PRINCIPAL_REVIEW
+    scientific_interpretation: >-
+      V1 n=19 had only 0.47182 probability of passing its full-stream gate.
+      Increasing n fixes that gate but not the original selected-K condition
+      gate, which passes only about 0.73 of random K=10 banks and did not
+      protect simulated K-by-31 power. A new one-shot n=24 design with
+      inference-aligned selected-bank gates is recommended prospectively;
+      V1 remains blocked and excluded.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: 249543e044f3d07713ac90dc6b68988e237f5119
+    historical_v1_commit: 249543e044f3d07713ac90dc6b68988e237f5119
+    precheck_commit: c871486
+    artifact: review/q2_oos_fresh_controller_design/v2_gate_audit/Q2_OOS_CANDIDATE_GATE_ADEQUACY_REVIEW.md
+    protocol_draft: review/q2_oos_fresh_controller_design/v2_gate_audit/V2_PROTOCOL_DRAFT.json
+    target_k: 10
+    recommended_candidate_count: 24
+    recommended_route: ROUTE_C_INFERENCE_ALIGNED_GATES
+    new_controller_stream_generated: false
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_OOS_V2_FINAL_REVIEWER_HARDENING
+    version: V2-FINAL-DESIGN-REVIEW-V1
+    stage: DEVELOPMENT_DESIGN_CPU_ONLY
+    question: >-
+      What fresh-controller identity count, reserve size, secondary new-new
+      validation, and power-gate policy make Route C maximally defensible
+      before one future V2 stream is committed?
+    instrument: >-
+      Forty thousand normalized-Gaussian streams per qualification cell,
+      independent and moderate historical-axis safety selection, and 600
+      dependence-aware synthetic N=300 panels per K/effect cell for K=10, 12,
+      and 16; no V2 controller stream or model output was generated.
+    model_policy: NO_MODEL_INFERENCE
+    status: DRAFT_READY_FOR_PRINCIPAL_PRELOCK_REVIEW
+    outcome: Q2_OOS_V2_FINAL_PROTOCOL_READY_FOR_PRELOCK
+    scientific_interpretation: >-
+      The prospectively frozen rule selected K=16 and n=34. This provides 16
+      independent fresh identities, 496 fresh-old and 120 fresh-fresh dyads
+      per shell, retains at least 0.95 qualification in both audited safety
+      scenarios, and improves small-effect planning power within a projected
+      46.01 Spark-1 safety-plus-semantic GPU-hour envelope. Synthetic per-bank
+      power is diagnostic rather than terminal; fresh-fresh A0 versus Dshape
+      is secondary and cannot rescue the primary.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: ff7ede3785e3e4a203cf64f4260e7cc6b819918b
+    precheck_commit: 6e7a4356409a193212ed70ecc65ff0dd1144841d
+    artifact: review/q2_oos_fresh_controller_design/v2_reviewer_hardening/Q2_OOS_V2_FINAL_REVIEWER_HARDENING_REVIEW.md
+    protocol_draft: review/q2_oos_fresh_controller_design/v2_reviewer_hardening/FINAL_V2_PROTOCOL_DRAFT.json
+    target_k: 16
+    candidate_count: 34
+    fresh_old_dyads_per_shell: 496
+    fresh_fresh_dyads_per_shell: 120
+    predicted_power_gate: RETAIN_AS_MANDATORY_DIAGNOSTIC_ONLY
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_used: false
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
+
+  - id: Q2_OOS_V2_NULL_CALIBRATION
+    version: V2-PRESEMANTIC-NULL-CALIBRATION-V1
+    stage: DEVELOPMENT_PRESEMANTIC_STOP
+    question: >-
+      Is the frozen K=16 fresh-row permutation test calibrated under both a
+      strict exchangeable null and the unchanged reviewer-hardening stress
+      null before any V2 controller stream exists?
+    instrument: >-
+      CPU-only synthetic K=16 row-QAP calibration with 10,000 strict panels,
+      10,000 stress panels, exact K=6 comparison, and a 50,000-map code-path
+      audit; no model or benchmark outcome was used.
+    model_policy: NO_MODEL_INFERENCE_REACHED
+    status: CLOSED_PRESEMANTIC
+    outcome: Q2_OOS_V2_NULL_CALIBRATION_BLOCKED
+    scientific_interpretation: >-
+      The strict exchangeable null was calibrated, but the unchanged stress
+      null rejected at 0.0758 (Wilson 95% interval 0.07077--0.08115), crossing
+      the prospectively frozen material-warning threshold. The machine audit
+      also failed closed because its aggregator treated the desired
+      dyad-level-permutation=false record as a failed Boolean; this was not
+      repaired or rerun after results were observed. The stop is a
+      presemantic test-design result, not a fresh-controller semantic null.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: 48cba4e740fc65940d11b980d58780e381a6be7e
+    precheck_commit: 630b0854b191d1da87800396987e1e6d85c2bdc6
+    precheck_erratum_commit: fe255060f4ec9ee2143a62b810a9d91aecd9167b
+    calibration_code_commit: 48cba4e740fc65940d11b980d58780e381a6be7e
+    artifact: review/q2_oos_fresh_controller_design/v2_presemantic_qualification/Q2_OOS_V2_NULL_CALIBRATION_CLOSEOUT.md
+    result: review/q2_oos_fresh_controller_design/v2_presemantic_qualification/NULL_CALIBRATION_RESULT.json
+    strict_null_panels: 10000
+    strict_null_rejection_rate: 0.0512
+    stress_null_panels: 10000
+    stress_null_rejection_rate: 0.0758
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    semantic_outcomes: 0
+    correctness_inspected: false
+    spark1_cpu_only_model_free_used: true
+    spark1_safety_trajectories: 0
+    spark1_a2_used: false
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q2_OOS_HETEROGENEITY_ROBUST_INFERENCE_REVIEW
+    version: V2-PRESEMANTIC-HETEROGENEITY-ROBUST-REDESIGN-V1
+    stage: DEVELOPMENT_PRESEMANTIC_INFERENCE_DESIGN
+    question: >-
+      Which fresh-controller-level inference procedure remains calibrated when
+      aggregate-zero relational association does not imply exchangeable fresh
+      rows, and does closed Q2 V4.1 remain supported under node-level robust
+      sensitivity inference?
+    instrument: >-
+      CPU-only synthetic nonexchangeability ablation and method tournament at
+      K=16 against the fixed 31-reference atlas, a separately frozen model-free
+      K=31 calibration audit, one exactly-once post-hoc node-jackknife sensitivity
+      of sealed Q2 V4.1 matrices, and an allowlisted historical runtime autopsy.
+    model_policy: NO_MODEL_INFERENCE_CPU_ONLY
+    status: CLOSED_DESIGN_REVIEW
+    outcome: Q2_OOS_HETEROGENEITY_ROBUST_INFERENCE_READY
+    cost_usd: 0.0
+    holdout_status: UNTOUCHED
+    scientific_interpretation: >-
+      The exact one-sided sign test over one row-Spearman per fresh controller
+      is the selected future primary. It calibrated under strict, frozen-stress,
+      row-heterogeneity, safety-conditioned, and heavy-heterogeneity nulls while
+      exceeding the frozen power floor. Global cross-block rho and historical
+      row-QAP are descriptive/diagnostic only. The fresh-by-fresh formal
+      secondary uses node-jackknife inference and cannot rescue the primary.
+      Closed Q2 V4.1 retained robust positive A0/A1/A2 support under the
+      precommitted post-hoc node-level sensitivity; its historical G2/RS+/RT+
+      classifications remain unchanged.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: a63b5b87167c0f7ed27d4800115f9c3b8af13aea
+    precheck_commit: d1166eaa202fddc68af8da5a98c8f18f747939e6
+    artifact: review/q2_oos_fresh_controller_design/heterogeneity_robust_inference/Q2_HETEROGENEITY_ROBUST_INFERENCE_REVIEW.md
+    protocol_draft: review/q2_oos_fresh_controller_design/heterogeneity_robust_inference/REVISED_OOS_PROTOCOL_DRAFT.json
+    selected_primary: B_ROW_SPEARMAN_SIGN
+    selected_secondary: NODE_JACKKNIFE_PSEUDOVALUE_T
+    fresh_controllers: 16
+    reference_controllers: 31
+    candidate_count: 34
+    future_semantic_trajectories: 19200
+    new_controller_stream_generated: false
+    actual_v2_seed_derived: false
+    model_inference: 0
+    semantic_outcomes: 0
+    raw_text_inspected: false
+    correctness_used_for_method_selection: false
+    spark1_cpu_only_model_free_used: true
+    spark2_used: false
+    runpod: 0
+    q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_PRELOCK_REVIEW
+
+  - id: Q2_OOS_V2_POST_MAINTENANCE_PRESEMANTIC_CLOSEOUT
+    version: V2-PRESEMANTIC-PREDICTION-LOCK-V1
+    stage: DEVELOPMENT_PRESEMANTIC_PREDICTION_LOCK
+    question: >-
+      Can one prospectively frozen stream provide 16 safe fresh controllers with
+      qualified A0/A1/A2/D2 geometry and a complete controller-level inference
+      lock before any fresh-controller semantic outcome exists?
+    instrument: >-
+      Exact 34-candidate PCG64DXSM stream, frozen two-shell safety gate, first-16
+      safe selection, 12-probe primary/repeat label-free A2 capture, frozen
+      consolidation, independent scalar-JS forensic audit, and a balanced
+      19,200-row future semantic schedule.
+    model_policy: >-
+      Spark-1 Qwen3-8B label-free teacher-forced capture only; future N=300 free
+      generation remains unauthorized and unrun.
+    status: CLOSED_PRESEMANTIC_AWAITING_PRINCIPAL_REVIEW
+    outcome: Q2_OOS_V2_READY_FOR_PREDICTION_LOCK
+    scientific_interpretation: >-
+      The fresh bank and its label-free geometry are prospectively qualified.
+      This is an instrument and prediction-lock result, not evidence that the
+      closed Q2 relational association generalizes to fresh controller
+      identities. The latter remains untested until separately authorized
+      semantic execution.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: 26b698639cb378112ce1f2ca37f2d00d90227279
+    capture_source_commit: f2ec44c2da9f00688a918f55b0f5d70b198f4744
+    prediction_lock_code_commit: 26b698639cb378112ce1f2ca37f2d00d90227279
+    artifact: review/q2_oos_fresh_controller_design/v2_presemantic_closeout/Q2_OOS_V2_POST_MAINTENANCE_PRESEMANTIC_CLOSEOUT.md
+    safety_rows: 1632
+    safe_candidates: 26
+    fresh_controllers: 16
+    reference_controllers: 31
+    raw_A2_archives: 24
+    raw_A2_aggregate_sha256: a479f6c35fb6e9da106eef989ae980b230ecc4d88abce29a295f20e085e2dd66
+    label_free_qualification: Q2_OOS_V2_LABEL_FREE_INSTRUMENT_QUALIFIED
+    forensic_classification: Q2_OOS_V2_LABEL_FREE_FORENSIC_CLEAN
+    maximum_primary_audit_difference: 1.2329692822277138e-11
+    selected_bank_sha256: 9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd
+    prediction_lock_sha256: 825d6e3536b51a31956cbd5c9e75bedfed38f9e3df5da05a4452a5681f65f9bb
+    schedule_sha256: dac5c284b90c726016968f31d25200a362c42d96f63b63d730665f3f47e85ec5
+    future_semantic_rows: 19200
+    semantic_execution_authorized: false
+    new_semantic_trajectories: 0
+    correctness_inspected: false
+    spark1_label_free_used: true
+    spark2_used: false
+    runpod: 0
+    cost_usd: 0.0
+    holdout_status: CONSUMED_DEVELOPMENT_CLOSED
+    q2: UNTESTED_FOR_FRESH_CONTROLLER_IDENTITIES
+    historical_q2: Q2_V4_1_G2_UNCHANGED
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW
+
   - id: Q2_V4_INTERVENTION_SUBSPACE_DESIGN
     version: V4-DESIGN
     stage: DEVELOPMENT_DESIGN_ONLY

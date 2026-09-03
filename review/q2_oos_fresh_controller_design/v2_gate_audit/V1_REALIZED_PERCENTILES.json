@@ -1,0 +1,16 @@
+{
+  "condition_number_cdf_percentile": 0.79668,
+  "condition_number_upper_tail": 0.20332,
+  "effective_rank_cdf_percentile": 0.00722,
+  "interpretation": "model-free position of the immutable V1 stream; not a semantic outcome",
+  "maximum_pair_cosine_cdf_percentile": 0.76911,
+  "probability_any_candidate_gate_failure": 0.52818,
+  "probability_fail_effective_and_condition": 0.01463,
+  "realized": {
+    "condition_number": 3.591939479153766,
+    "effective_rank": 5.915762425524043,
+    "maximum_absolute_pair_cosine": 0.8843979744859711,
+    "rank": 8
+  },
+  "replicates": 100000
+}
