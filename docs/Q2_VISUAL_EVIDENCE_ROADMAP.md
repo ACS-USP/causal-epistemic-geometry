@@ -1,22 +1,35 @@
-# Q2 visual evidence package — roadmap
+# Q2 visual evidence package — implementation status
 
-Q2 V4.1 has a sealed aggregate closeout but no publication-oriented visual
-package equivalent to Q1. No figure is claimed to exist yet.
+Q2 V4.1 now has a publication-oriented visual package generated entirely from
+frozen tracked aggregates and pre-outcome matrices. The implemented package is
+`notebooks/q2_visual_story.ipynb`, with figures under
+`manuscript/figures/paper1_q2/`, tables under
+`manuscript/data/paper1_q2/`, and deterministic source/data manifests.
 
-A future package should be generated only from the frozen tracked aggregates
-and hash-validated private artifacts, with deterministic source manifests.
-Candidate figures are:
+Implemented:
 
-1. A0/A1/A2 aggregate and shell-specific relational associations, including
-   corrected uncertainty and G3 contrasts.
-2. Angular geometry versus semantic blind-spot-shape distance, with the frozen
-   controller-pair structure made explicit.
-3. Per-direction STRONG−MEDIUM radial shape displacement for all 31 directions.
-4. The corresponding total-displacement radial result.
-5. A conceptual figure separating angular prediction, radial amplitude, and
-   the untested utility question.
+1. Explanatory Q1-to-Q2 intervention-laboratory overview.
+2. A0/A1/A2 fixed-decile relational panels for MEDIUM and STRONG, calibrated
+   to show moderate association together with broad conditional dispersion;
+   raw-scatter and shared-scale hexbin alternatives remain available.
+3. Full-sample association, separately displayed bootstrap summaries, and G3
+   contrasts explaining `G2` rather than `G3`.
+4. Per-direction STRONG−MEDIUM radial shape and total displacement for all 31
+   directions in frozen order.
+5. Secondary accuracy/C/D context.
+6. Exact frozen QAP null and delete-one-controller robustness.
 
-The package must not imply that 930 dyads are independent observations, select
-dramatic controller pairs, or portray G2 as A2 superiority. It should include a
-machine-readable provenance manifest analogous to the Q1 package.
+Deferred or rejected:
 
+- A standalone 2-D controller map was rejected because projection distance is
+  not primary; a small outcome-free PCA inset is sufficient.
+- A separate angular/radial “polar system” synthesis was rejected as redundant
+  and too easy to overread as a manifold theorem.
+- A standalone bootstrap-shift diagnostic was deferred; the registered
+  full-sample and bootstrap objects are kept visibly separate in Figure 3 and
+  the unresolved mechanical explanation remains explicit.
+- The post-hoc capped-output diagnostic remains notebook/table context only; it
+  cannot alter retained rows, G2, RS+, or RT+.
+
+The package never describes the 465 dyads per shell as independent, selects no
+dramatic controller pair, and does not portray G2 as A2 superiority.
