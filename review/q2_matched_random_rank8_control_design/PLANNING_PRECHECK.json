@@ -1,0 +1,129 @@
+{
+  "schema_version": "q2-matched-random-rank8-planning-precheck-v1",
+  "status": "FROZEN_MODEL_FREE_PLANNING_PRECHECK",
+  "created_utc": "2026-09-03T00:00:00Z",
+  "source_main_commit": "a230642be49ec4544b7c28a24951b594656b522c",
+  "scientific_purpose": "Distinguish the learned rank-8 intervention subspace from generic local smoothness in prospectively sampled matched random rank-8 subspace orientations.",
+  "independent_unit": "RANDOM_SUBSPACE_ORIENTATION",
+  "fixed_inputs": {
+    "ambient_dimension": 4096,
+    "rank": 8,
+    "layer": 27,
+    "historical_reference_controllers": 31,
+    "fresh_controllers": 16,
+    "total_coefficient_identities": 47,
+    "shells": {
+      "MEDIUM": 0.25,
+      "STRONG": 0.5
+    },
+    "historical_controller_order_source": "review/q2_v4_1_prediction_lock/PROTOCOL_LOCK.json",
+    "historical_coefficients_source": "review/q2_v4_spark1_presemantic/CANDIDATE_BANK_MANIFEST.json",
+    "fresh_controller_order_source": "review/q2_oos_fresh_controller_design/v2_presemantic_closeout/V2_SELECTED_CONTROLLER_BANK.json",
+    "fresh_coefficients_source": "review/q2_oos_fresh_controller_design/v2_final_presemantic/V2_CANDIDATE_BANK_MANIFEST.json",
+    "closed_learned_subspace_planning_statistic": {
+      "name": "median_fresh_controller_equal_shell_row_association",
+      "value": 0.7251739123454772,
+      "source": "review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_PRIMARY_RESULT_SEAL.json",
+      "use": "PLANNING_EFFECT_ONLY"
+    },
+    "validated_semantic_runtime": {
+      "rows": 19200,
+      "wall_hours": 9.423333333333334,
+      "source": "review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md"
+    }
+  },
+  "candidate_random_subspace_families": [
+    "AMBIENT_HAAR_RANK8",
+    "LEARNED_ORTHOGONAL_COMPLEMENT_HAAR_RANK8",
+    "ACTIVATION_COVARIANCE_MATCHED_RANK8_IF_PREOUTCOME_MEASURE_EXISTS"
+  ],
+  "candidate_routes": {
+    "ROUTE_1": "Closed learned result compared with S independently sampled random subspaces run later.",
+    "ROUTE_2": "Learned subspace and S random subspaces rerun on common new items and seeds.",
+    "ROUTE_3": "Nonselective pilot for feasibility followed by a prospectively separate common-panel confirmation; no semantic selection of subspaces."
+  },
+  "candidate_primary_statistics": [
+    "MEDIAN_OF_16_FRESH_CONTROLLER_EQUAL_SHELL_ROW_ASSOCIATIONS",
+    "MEAN_OF_16_FRESH_CONTROLLER_EQUAL_SHELL_ROW_ASSOCIATIONS_AS_SENSITIVITY"
+  ],
+  "candidate_inference": [
+    "MONTE_CARLO_REFERENCE_TAIL_AT_SUBSPACE_LEVEL",
+    "MEAN_LEARNED_MINUS_RANDOM_SUBSPACE_CONTRAST_WITH_SUBSPACE_BOOTSTRAP",
+    "HIERARCHICAL_ITEM_CONTROLLER_SUBSPACE_SENSITIVITY"
+  ],
+  "planning_grid": {
+    "random_subspaces_S": [20, 39, 79],
+    "items_N": [100, 150, 300],
+    "rollouts_R": [2, 4],
+    "controller_splits": [
+      {
+        "K_reference": 31,
+        "K_fresh": 16,
+        "role": "REQUIRED_FULL_47_IDENTITY_DESIGN"
+      },
+      {
+        "K_reference": 20,
+        "K_fresh": 12,
+        "role": "PLANNING_SENSITIVITY_ONLY_NOT_AN_AUTHORIZED_IDENTITY_CHANGE"
+      }
+    ],
+    "subspace_sd": [0.1, 0.2],
+    "generic_random_alignment_mean": [0.15, 0.35, 0.55],
+    "learned_advantage": {
+      "NULL": 0.0,
+      "MODEST_0_05": 0.05,
+      "MODEST_0_10": 0.1,
+      "TWENTY_FIVE_PERCENT_OF_OBSERVED": 0.1812934780863693,
+      "FIFTY_PERCENT_OF_OBSERVED": 0.3625869561727386
+    }
+  },
+  "simulation": {
+    "replicates_per_cell": 20000,
+    "rng": "numpy.random.Generator(PCG64DXSM)",
+    "planning_seed": 2026090301,
+    "planning_seed_is_not_a_future_experimental_seed": true,
+    "alpha": 0.05,
+    "baseline_measurement_sd_at_N300_R2_K31x16": 0.06,
+    "common_panel_measurement_correlation_route2": 0.6
+  },
+  "calibration_criteria": {
+    "maximum_null_false_positive_rate": 0.06,
+    "minimum_monte_carlo_tail_resolution": 0.05,
+    "report_wilson_interval": true,
+    "report_leave_one_subspace_resolution": true,
+    "no_dyad_iid_inference": true,
+    "no_controller_as_subspace_population_unit": true
+  },
+  "method_selection_precedence": [
+    "subspace-level estimand validity",
+    "null calibration",
+    "safety-conditioned target-population clarity",
+    "coefficient-geometry fidelity",
+    "auditability",
+    "power",
+    "compute"
+  ],
+  "safety_feasibility_scenarios": {
+    "per_controller_qualification_probability": [0.7647058823529411, 0.775, 0.9, 0.95, 0.99],
+    "required_fixed_identities_per_subspace": 47,
+    "safety_items": 24,
+    "shells": 2,
+    "assumption": "INDEPENDENT_CONTROLLER_PASS_APPROXIMATION_FOR_SENSITIVITY_ONLY"
+  },
+  "prohibitions": {
+    "generate_final_random_basis": true,
+    "derive_final_experimental_seed": true,
+    "run_safety": true,
+    "run_semantic_trajectories": true,
+    "use_semantic_outcomes_to_construct_or_screen_basis": true,
+    "treat_controller_or_dyad_as_independent_subspace_unit": true,
+    "alter_closed_q2_results": true,
+    "gpu_or_model_inference": true,
+    "start_q3": true
+  },
+  "ruling_options": [
+    "Q2_MATCHED_RANDOM_RANK8_CONTROL_READY_FOR_PRELOCK",
+    "Q2_MATCHED_RANDOM_RANK8_CONTROL_REQUIRES_FURTHER_THEORY",
+    "Q2_MATCHED_RANDOM_RANK8_CONTROL_NOT_COMPUTE_JUSTIFIED"
+  ]
+}
