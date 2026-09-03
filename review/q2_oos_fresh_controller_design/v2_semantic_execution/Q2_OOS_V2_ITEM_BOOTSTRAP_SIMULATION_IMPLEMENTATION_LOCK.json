@@ -1,0 +1,132 @@
+{
+  "schema_version": "q2-oos-v2-item-bootstrap-simulation-implementation-lock-v1",
+  "status": "FROZEN_BEFORE_FINAL_SYNTHETIC_CALIBRATION",
+  "label": "POST_HOC_DIAGNOSTIC_ONLY",
+  "diagnostic_precheck_sha256": "6148797e8d9a9279591f71a5f7e514a97e03b81a9ba76180f727e9d8a4c30f2f",
+  "implementation_commit": "4aa10aa9d50e7a10272d2a6d1d32d865e775630c",
+  "implementation_sha256": "a42f0c80308fd2a14253cb36137578f52eacf44b9d8771b198feacf7c459ff53",
+  "implementation_path": "scripts/calibrate_q2_oos_v2_item_bootstrap.py",
+  "structural_dimensions": {
+    "items": 300,
+    "rollouts": 2,
+    "fresh_controllers": 16,
+    "reference_controllers": 31,
+    "shells": 2
+  },
+  "final_calibration": {
+    "outer_panels_per_scenario": 96,
+    "resamples_per_method_per_panel": 127,
+    "delete_d_groups_per_fraction": 32,
+    "rng": "numpy Generator PCG64DXSM",
+    "synthetic_panel_generation_seed": 881920232,
+    "synthetic_resampling_seed": 881920233,
+    "tie_audit_seed": 881920234,
+    "tie_audit_is_exhaustive": true,
+    "random_tie_breaking": false
+  },
+  "shell_multipliers": {
+    "MEDIUM": 0.8,
+    "STRONG": 1.2
+  },
+  "scenario_parameters": {
+    "NULL": {
+      "signal": 0.0,
+      "nuisance": 0.65,
+      "difficulty_sd": 1.0,
+      "sparse_probability": 1.0,
+      "controller_scale_sd": 0.0
+    },
+    "WEAK_POSITIVE": {
+      "signal": 1.0,
+      "nuisance": 0.75,
+      "difficulty_sd": 1.0,
+      "sparse_probability": 1.0,
+      "controller_scale_sd": 0.0
+    },
+    "MODERATE_POSITIVE": {
+      "signal": 1.8,
+      "nuisance": 0.55,
+      "difficulty_sd": 1.0,
+      "sparse_probability": 1.0,
+      "controller_scale_sd": 0.0
+    },
+    "OBSERVED_LIKE": {
+      "signal": 2.8,
+      "nuisance": 0.35,
+      "difficulty_sd": 1.0,
+      "sparse_probability": 1.0,
+      "controller_scale_sd": 0.0
+    },
+    "HETEROGENEOUS_CONTROLLER_EFFECTS": {
+      "signal": 3.0,
+      "nuisance": 0.4,
+      "difficulty_sd": 1.0,
+      "sparse_probability": 1.0,
+      "controller_scale_sd": 0.45
+    },
+    "HETEROGENEOUS_ITEM_DIFFICULTY": {
+      "signal": 3.0,
+      "nuisance": 0.4,
+      "difficulty_sd": 2.0,
+      "sparse_probability": 1.0,
+      "controller_scale_sd": 0.0
+    },
+    "SPARSE_BLIND_SPOT_DIFFERENCES": {
+      "signal": 10.0,
+      "nuisance": 0.35,
+      "difficulty_sd": 1.0,
+      "sparse_probability": 0.15,
+      "controller_scale_sd": 0.0
+    },
+    "HEAVY_TIES_NEAR_DEGENERATE": {
+      "signal": 0.15,
+      "nuisance": 0.15,
+      "difficulty_sd": 0.35,
+      "sparse_probability": 0.35,
+      "controller_scale_sd": 0.0
+    }
+  },
+  "synthetic_parameterization_provenance": {
+    "development_panels": 8,
+    "development_resamples_per_method": 1,
+    "selection_used_method_coverage_or_interval_results": false,
+    "selection_used_raw_text_or_new_semantic_outcomes": false,
+    "selection_target": "named full-sample signal regimes before final coverage simulation",
+    "development_full_sample_global_means": {
+      "WEAK_POSITIVE": 0.134,
+      "MODERATE_POSITIVE": 0.364,
+      "OBSERVED_LIKE": 0.628
+    },
+    "observed_like_planning_target": 0.6430547122,
+    "observed_like_target_role": "explicit planning effect only"
+  },
+  "candidate_methods": [
+    "A_ordinary_item_bootstrap",
+    "B_bayesian_multiplier",
+    "C_subsampling_0.500",
+    "C_subsampling_0.632",
+    "C_subsampling_0.750",
+    "C_subsampling_0.900",
+    "D_delete_d_0.10",
+    "D_delete_d_0.25",
+    "E_controller_cluster"
+  ],
+  "calibration_screen": {
+    "coverage_point_interval": [
+      0.9,
+      0.99
+    ],
+    "maximum_absolute_centering_bias": 0.05,
+    "maximum_degeneracy_fraction": 0.01,
+    "ordinary_not_calibrated_rule": "at least two named scenarios fail for at least one reported statistic"
+  },
+  "governance": {
+    "primary_classification": "Q2_OOS_V2_A0_PASS",
+    "primary_mutable": false,
+    "replacement_method_selected_for_favorable_significance": false,
+    "new_semantic_trajectories": 0,
+    "Qwen_loaded": false,
+    "GPU": false,
+    "raw_text_inspected": false
+  }
+}
