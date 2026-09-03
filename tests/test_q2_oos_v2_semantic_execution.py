@@ -46,7 +46,7 @@ def _minimal_frozen(commit: str) -> dict[str, object]:
             str(executor.SELECTED.relative_to(executor.ROOT)): (
                 executor.EXPECTED_SELECTED_BANK_SHA256
             ),
-            str(executor.PANEL.relative_to(executor.ROOT)): executor.EXPECTED_PANEL_SHA256,
+            executor.PANEL_HASH_KEY: executor.EXPECTED_PANEL_SHA256,
         },
     }
 
@@ -120,6 +120,48 @@ def test_preopen_seal_validates_current_identity_and_frozen_hashes(
     seal, observed = executor.validate_preopen_seal(tmp_path, current)
     assert seal["status"] == "AUTHORIZED_PREOPEN_NO_SEMANTIC_OUTPUTS"
     assert observed == frozen
+
+
+def test_preopen_seal_validates_hash_map_emitted_by_frozen_file_hashes(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    current = "a" * 40
+    hashes = executor.frozen_file_hashes()
+    frozen = {
+        "head": current,
+        "prediction_lock_parent_head": executor.PREDICTION_LOCK_PARENT_HEAD,
+        "hashes": hashes,
+    }
+    (tmp_path / "PREOPEN_SEAL.json").write_text(
+        json.dumps(_preopen_payload(frozen)), encoding="utf-8"
+    )
+    monkeypatch.setattr(executor, "git_head", lambda: current)
+    monkeypatch.setattr(executor, "validate_frozen_objects", lambda: frozen)
+
+    seal, observed = executor.validate_preopen_seal(tmp_path, current)
+
+    assert seal["frozen"]["hashes"][executor.PANEL_HASH_KEY] == executor.EXPECTED_PANEL_SHA256
+    assert observed == frozen
+
+
+@pytest.mark.parametrize("replacement", [None, "0" * 64])
+def test_preopen_seal_requires_exact_panel_hash(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, replacement: str | None
+) -> None:
+    current = "a" * 40
+    frozen = _minimal_frozen(current)
+    if replacement is None:
+        del frozen["hashes"][executor.PANEL_HASH_KEY]
+    else:
+        frozen["hashes"][executor.PANEL_HASH_KEY] = replacement
+    (tmp_path / "PREOPEN_SEAL.json").write_text(
+        json.dumps(_preopen_payload(frozen)), encoding="utf-8"
+    )
+    monkeypatch.setattr(executor, "git_head", lambda: current)
+    monkeypatch.setattr(executor, "validate_frozen_objects", lambda: frozen)
+
+    with pytest.raises(RuntimeError, match="PREOPEN_SEAL_INVALID"):
+        executor.validate_preopen_seal(tmp_path, current)
 
 
 def test_model_bytes_use_the_existing_pinned_manifest(

@@ -53,6 +53,7 @@ from epistemic_geometry.types import BackendOutput, BenchmarkItem  # noqa: E402
 REVIEW = ROOT / "review/q2_oos_fresh_controller_design/v2_presemantic_closeout"
 V2_STREAM = ROOT / "review/q2_oos_fresh_controller_design/v2_final_presemantic"
 PANEL = ROOT / "review/q2_v4_1_prediction_lock/SEMANTIC_PANEL_MANIFEST.json"
+PANEL_HASH_KEY = "SEMANTIC_PANEL_MANIFEST.json"
 SCHEDULE = REVIEW / "FUTURE_SEMANTIC_SCHEDULE.json"
 LOCK = REVIEW / "PREDICTION_LOCK.json"
 LOCK_HASHES = REVIEW / "PREDICTION_LOCK_HASHES.json"
@@ -299,7 +300,7 @@ def frozen_file_hashes() -> dict[str, str]:
     expected.update(
         {
             str(LOCK_HASHES.relative_to(ROOT)): EXPECTED_LOCK_HASHES_SHA256,
-            "SEMANTIC_PANEL_MANIFEST.json": EXPECTED_PANEL_SHA256,
+            PANEL_HASH_KEY: EXPECTED_PANEL_SHA256,
             "V2_CANDIDATE_BANK_MANIFEST.json": EXPECTED_CANDIDATE_MANIFEST_SHA256,
             "V2_FINAL_PROTOCOL_LOCK.json": EXPECTED_V2_FINAL_PROTOCOL_SHA256,
             "Q2_OOS_V2_AMENDED_SEMANTIC_EXECUTION_LOCK.json": (
@@ -314,7 +315,7 @@ def frozen_file_hashes() -> dict[str, str]:
     paths.update(
         {
             str(LOCK_HASHES.relative_to(ROOT)): LOCK_HASHES,
-            "SEMANTIC_PANEL_MANIFEST.json": PANEL,
+            PANEL_HASH_KEY: PANEL,
             "V2_CANDIDATE_BANK_MANIFEST.json": CANDIDATE_MANIFEST,
             "V2_FINAL_PROTOCOL_LOCK.json": V2_FINAL_PROTOCOL,
             "Q2_OOS_V2_AMENDED_SEMANTIC_EXECUTION_LOCK.json": AMENDED_EXECUTION_LOCK,
@@ -798,15 +799,15 @@ def validate_preopen_seal(
     ):
         raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID")
     required_hashes = {
-        "schedule_sha256": (SCHEDULE, EXPECTED_SCHEDULE_SHA256),
-        "selected_controller_bank_sha256": (SELECTED, EXPECTED_SELECTED_BANK_SHA256),
-        "panel_sha256": (PANEL, EXPECTED_PANEL_SHA256),
+        str(SCHEDULE.relative_to(ROOT)): EXPECTED_SCHEDULE_SHA256,
+        str(SELECTED.relative_to(ROOT)): EXPECTED_SELECTED_BANK_SHA256,
+        PANEL_HASH_KEY: EXPECTED_PANEL_SHA256,
     }
     frozen_hashes = seal.get("frozen", {}).get("hashes")
     if not isinstance(frozen_hashes, dict):
         raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID")
-    for path, expected in required_hashes.values():
-        if frozen_hashes.get(str(path.relative_to(ROOT))) != expected:
+    for key, expected in required_hashes.items():
+        if frozen_hashes.get(key) != expected:
             raise RuntimeError("Q2_OOS_V2_PREOPEN_SEAL_INVALID")
     environment = seal.get("environment")
     model_bytes = environment.get("model_bytes") if isinstance(environment, dict) else None
