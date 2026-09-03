@@ -1,5 +1,5 @@
 schema_version: 1
-last_verified: "2026-08-30"
+last_verified: "2026-09-03"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
@@ -105,6 +105,157 @@ confirmatory_program:
     retained_volumes: 0
 
 instrument_history:
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_HIERARCHICAL_AMENDMENT1
+    status: Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED
+    conclusion: >-
+      The complete 128-trajectory Spark-2-native Stage A used 32 independent
+      question families and only BASELINE/TEXTUAL_CAREFUL. Baseline accuracy
+      and error opportunity were adequate, but commitment validity 0.828125
+      and semantic evaluability 0.812500 failed the frozen 0.95 guards.
+      TEXTUAL_CAREFUL passed its own guards and improved accuracy by 0.171875,
+      but cannot override baseline instrument failure. The independent audit
+      reproduced every metric exactly. Stage B was not opened; meaningful and
+      activation-null LiveCodeBench trajectory counts remain zero.
+    branch: research/q1-second-task-spark2-design
+    source_commit: d0f3d1da0988fcf905d974377eb6b5180876dd17
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_a_closeout/REPORT.md
+    parent_design_commit: 03098d80f73b1ee1a4cfb5fb56504c409aad6286
+    benchmark_rows: 442
+    question_families: 182
+    stage_a_families: 32
+    stage_b_families: 130
+    reserve_families: 20
+    stage_a_trajectories: 128
+    stage_b_trajectories: 5720
+    scientific_unit: QUESTION_FAMILY
+    bootstrap_unit: QUESTION_FAMILY
+    model_inference: true
+    correctness_inspected: true
+    livecodebench_scientific_outcomes: 128
+    stage_a_authorized: true
+    stage_a_completed: true
+    stage_a_classification: Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED
+    baseline_commitment_validity: 0.828125
+    baseline_semantic_evaluability: 0.8125
+    baseline_accuracy: 0.609375
+    baseline_B00: 0.25
+    textual_commitment_validity: 0.96875
+    textual_semantic_evaluability: 0.953125
+    textual_accuracy: 0.78125
+    textual_accuracy_delta: 0.171875
+    textual_manifestation: TEXTUAL_CAREFUL_ACCURACY_BENEFIT_PRESENT
+    stage_b_authorized: false
+    spark1_used: false
+    spark2_scientific_inference: true
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    historical_q1: UNCHANGED
+    q3: NOT_RUN
+    forensic_classification: Q1_SECOND_TASK_STAGE_A_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_A_NOT_QUALIFIED
+
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_A2
+    status: Q1_SECOND_TASK_STAGE_A2_QUALIFIED
+    conclusion: >-
+      A prospectively authorized parser-only repair was tested on 20 untouched
+      reserve question families with BASELINE and TEXTUAL_CAREFUL only. The
+      complete 80-trajectory Spark-2-native Stage A2 passed every frozen
+      opportunity, validity, evaluability, competence, and textual-manifestation
+      gate. Baseline validity/evaluability were both 0.95 and accuracy was 0.65.
+      TEXTUAL_CAREFUL accuracy was 0.675; its +0.025 accuracy delta and 1.404x
+      mean-token ratio did not cross their manifestation thresholds, while its
+      +155.5 median-token delta did. The proper label is non-harmful compute
+      manifestation, not accuracy benefit. The independent audit reproduced
+      every metric exactly. Stage A1 remains failed and unmodified; Stage B was
+      not opened and all activation-controller/null trajectories remain zero.
+    branch: research/q1-second-task-spark2-design
+    execution_source_commit: c882219e31db45998c19270de3d0f168a88ec011
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_a2_closeout/REPORT.md
+    parent_stage_a1_closeout_commit: 00ab87c386c72a7c88fac438e94240619555d629
+    stage_a1_classification: Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED
+    stage_a1_modified: false
+    scientific_unit: QUESTION_FAMILY
+    stage_a2_families: 20
+    stage_a2_trajectories: 80
+    stage_a2_classification: Q1_SECOND_TASK_STAGE_A2_QUALIFIED
+    baseline_commitment_validity: 0.95
+    baseline_semantic_evaluability: 0.95
+    baseline_accuracy: 0.65
+    baseline_B00: 0.25
+    textual_commitment_validity: 0.975
+    textual_semantic_evaluability: 0.975
+    textual_accuracy: 0.675
+    textual_accuracy_delta: 0.025000000000000022
+    textual_manifestation: TEXTUAL_CAREFUL_NONHARMFUL_COMPUTE_MANIFESTATION
+    stage_b_families_untouched: 130
+    stage_b_authorized: false
+    meaningful_controller_livecodebench_trajectories: 0
+    activation_null_livecodebench_trajectories: 0
+    spark1_used: false
+    spark2_scientific_inference: true
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    forensic_classification: Q1_SECOND_TASK_STAGE_A2_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_A2_QUALIFIED
+
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
+    status: Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY
+    conclusion: >-
+      The complete prospectively frozen Stage B executed 5,720 trajectories
+      over 130 independent question families, 11 conditions, and four
+      rollouts. The meaningful controller C point estimate was 0.00688 and
+      exceeded every individual null point estimate, but its frozen 95%
+      family-bootstrap interval included zero, the meaningful-minus-null-mean
+      interval included zero, and split-half A failed. The meaningful
+      condition also failed the frozen commitment-validity and semantic-
+      evaluability guards. The primary terminal state is therefore no
+      null-specific complementarity. A frozen post-closeout parser-equivalence
+      audit traced all 30 historical disagreements to a non-equivalent
+      independent-audit implementation. The corrected independent path matched
+      all 5,720 parser decisions and every metric exactly; no primary result or
+      historical first-audit artifact was modified.
+    branch: research/q1-second-task-spark2-design
+    analysis_source_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md
+    stage_a1_classification: Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED
+    stage_a2_classification: Q1_SECOND_TASK_STAGE_A2_QUALIFIED
+    scientific_unit: QUESTION_FAMILY
+    families: 130
+    conditions: 11
+    rollouts: 4
+    scheduled_trajectories: 5720
+    completed_trajectories: 5720
+    missing: 0
+    unexpected: 0
+    duplicates: 0
+    journal_sha256: 14ee3691de42c609dd4be1749ab4ea7d8b1c25b3cfbd47483423a83741fdb364
+    meaningful_C: 0.006879844961240278
+    meaningful_C_interval_95: [-0.010640373434704862, 0.0244633273703041]
+    meaningful_minus_nullmean_C: 0.011801207513416796
+    meaningful_minus_nullmean_C_interval_95: [-0.0005907824612403139, 0.02443910256410256]
+    meaningful_gt_every_null: true
+    split_half_A_pass: false
+    split_half_B_pass: true
+    safety_commitment_validity_pass: false
+    safety_semantic_evaluability_pass: false
+    safety_accuracy_pass: true
+    forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_RESOLVED_PRIMARY_CONFIRMED
+    historical_forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT
+    forensic_parser_disagreement_rows: 30
+    corrected_forensic_parser_disagreement_rows: 0
+    corrected_forensic_maximum_metric_difference: 0.0
+    forensic_resolution: AUDIT_IMPLEMENTATION_NON_EQUIVALENT
+    forensic_resolution_artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md
+    forensic_resolution_protocol_commit: 38c35758db66d40e37bfd699d7910ccbe5d289cb
+    forensic_classification_agreement: true
+    historical_q1_confirmatory_result: UNCHANGED
+    spark1_used: false
+    spark2_scientific_inference: true
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_RESOLUTION
+
   - id: Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION
     status: Q2_V4_SAFE_BANK_INSUFFICIENT
     conclusion: >-

@@ -1,0 +1,35 @@
+{
+  "backend_claim": "SPARK2_NATIVE_CROSS_BACKEND_REPLICATION",
+  "classification_if_pass": "SPARK2_NATIVE_ENGINE_QUALIFIED",
+  "cross_backend_numerical_equivalence_claimed": false,
+  "expected": {
+    "architecture": "aarch64",
+    "attention": "SDPA",
+    "cuda": "13.0",
+    "dtype": "BF16",
+    "gpu": "NVIDIA GB10",
+    "gpu_count": 1,
+    "hostname": "spark2",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "python": "3.12.3",
+    "torch": "2.13.0+cu130",
+    "torch_disable_native_jit": "1",
+    "transformers": "4.57.6"
+  },
+  "required_checks": [
+    "environment_exact",
+    "model_and_tokenizer_identity",
+    "vector_identity",
+    "alpha_zero_token_identity",
+    "seed_repeatability",
+    "hook_cleanup",
+    "per_forward_exact_shift_bf16_eps_le_2",
+    "current_token_noncurrent_change_le_0.125",
+    "one_application_per_forward",
+    "cached_decode_observed",
+    "random_delta_norm_range_le_1e-9",
+    "parser_roundtrip",
+    "journal_resume_synthetic"
+  ],
+  "scientific_benchmark_items_allowed": 0
+}

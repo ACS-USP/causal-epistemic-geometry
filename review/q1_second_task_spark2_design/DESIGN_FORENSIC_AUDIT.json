@@ -1,0 +1,64 @@
+{
+  "checks": {
+    "controller_identity": true,
+    "cross_stage_seed_uniqueness": true,
+    "engine_zero_scientific_items": true,
+    "item_pool_complete": true,
+    "model_free_instrument": true,
+    "no_stage_authorization": true,
+    "null_hashes": true,
+    "null_orthogonality": true,
+    "prelock_hashes": true,
+    "q2_firewall": true,
+    "question_split_disjoint": true,
+    "spark2_engine": true,
+    "stage_a_schedule": true,
+    "stage_b_schedule": true
+  },
+  "classification": "Q1_SECOND_TASK_DESIGN_FORENSIC_CLEAN",
+  "correctness_inspected": false,
+  "maximum_null_gram_error": 1.3322676295501878e-15,
+  "null_hash_checks": {
+    "RANDOM_R0": true,
+    "RANDOM_R1": true,
+    "RANDOM_R2": true,
+    "RANDOM_R3": true,
+    "RANDOM_R4": true,
+    "RANDOM_R5": true,
+    "RANDOM_R6": true,
+    "RANDOM_R7": true
+  },
+  "pass": true,
+  "prelock_hash_checks": {
+    "CONTROLLER_PROVENANCE_LOCK.json": true,
+    "ENGINEERING_FIXTURES.json": true,
+    "ESTIMATOR_AND_DECISION_LOCK.json": true,
+    "ITEM_POOL_HASH_MANIFEST.json": true,
+    "MODEL_FREE_INSTRUMENT_AUDIT.json": true,
+    "RANDOM_BANK_LOCK.json": true,
+    "RESERVE_MANIFEST.json": true,
+    "SPARK2_ENGINE_QUALIFICATION_PROTOCOL.json": true,
+    "STAGE_A_MANIFEST.json": true,
+    "STAGE_A_SCHEDULE.json": true,
+    "STAGE_B_HOLDOUT_MANIFEST.json": true,
+    "STAGE_B_SCHEDULE.json": true
+  },
+  "runpod_used": false,
+  "semantic_benchmark_outcomes": 0,
+  "spark1_used": false,
+  "stage_a_schedule": {
+    "expected_rows": 200,
+    "pass": true,
+    "rows": 200,
+    "unique_logical_keys": 200,
+    "unique_seeds": 200
+  },
+  "stage_b_schedule": {
+    "expected_rows": 6600,
+    "pass": true,
+    "rows": 6600,
+    "unique_logical_keys": 6600,
+    "unique_seeds": 6600
+  },
+  "total_frozen_rows": 6800
+}

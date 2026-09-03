@@ -1,0 +1,13 @@
+{
+  "conditional_on_valid_is_not_primary": true,
+  "correct_row_difference_among_both_evaluable": 3,
+  "correct_row_difference_associated_with_invalidity_union": 8,
+  "fractional_accuracy_difference": 0.171875,
+  "label": "POST_HOC_DIAGNOSTIC_NOT_STAGE_A1_RECLASSIFICATION",
+  "matched_family_rollout_pairs": 64,
+  "new_hypothesis_test": false,
+  "pairs_where_both_conditions_evaluable": 51,
+  "pairs_with_at_least_one_invalid_or_nonevaluable": 13,
+  "total_correct_row_difference_textual_minus_baseline": 11,
+  "unresolved_contribution": 0
+}

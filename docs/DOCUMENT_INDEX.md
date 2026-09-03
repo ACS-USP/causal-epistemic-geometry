@@ -70,6 +70,8 @@ current instruction source.
 | `docs/PAPER1_REVISION_MEMO.md` | Exact revision package for the external Paper 1 manuscript |
 | `docs/PAPER1_CLAIMS_AND_EVIDENCE.md` | Claim-by-claim evidence status and caveats |
 | `docs/PAPER1_FIGURE_PLAN.md` | Reproducible main-figure and appendix plan |
+| `docs/Q1_FIGURE_SPEC.md` | Frozen scientific communication contract for the Q1 visual evidence package |
+| `docs/Q1_VISUAL_EVIDENCE.md` | Index and provenance guide for the implemented Q1 visual evidence package |
 | `docs/PAPER1_GAP_REVIEW.md` | Skeptical review of remaining Paper 1 evidence gaps |
 | `docs/Q2_GRAND_DESIGN.md` | Formal intervention-to-error geometry research program |
 | `docs/Q2_CONTROLLER_BANK_DESIGN.md` | Existing controller inventory and prospective minimum/ambitious banks |

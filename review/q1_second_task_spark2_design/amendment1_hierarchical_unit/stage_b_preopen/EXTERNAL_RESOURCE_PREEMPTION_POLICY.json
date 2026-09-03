@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_PROSPECTIVE_PRE_OUTCOME",
+  "created_utc": "2026-08-29T18:49:22Z",
+  "event": "ANOTHER_LAB_MEMBER_REQUIRES_SPARK2",
+  "scientific_stop_rule": false,
+  "policy": [
+    "Allow the currently executing logical trajectory to reach its normal frozen terminal state when operationally feasible.",
+    "Persist that terminal trajectory before stopping.",
+    "Stop the serial runner cleanly between logical trajectories.",
+    "Preserve the append-only journal and all seals/checkpoints.",
+    "Do not inspect any scientific outcome while paused.",
+    "Resume only missing logical keys with their exact frozen seeds and scientific inputs."
+  ],
+  "pause_trigger_may_use_scientific_behavior": false,
+  "resource_priority": "LEGITIMATE_LAB_USER_REQUEST_TAKES_PRIORITY",
+  "runner_signal": "create namespaced STOP_AFTER_CURRENT marker",
+  "spark1_fallback": "FORBIDDEN",
+  "runpod_fallback": "FORBIDDEN",
+  "multi_node_fallback": "FORBIDDEN"
+}

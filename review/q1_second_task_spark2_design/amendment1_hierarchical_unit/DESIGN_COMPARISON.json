@@ -1,0 +1,26 @@
+{
+  "design_a": {
+    "family_weighting": "proportional to family row count",
+    "ruling": "REJECTED",
+    "scientific_unit": "test-output row",
+    "stage_b": "150 rows / 62 families"
+  },
+  "design_b": {
+    "family_weighting": "equal after within-family reduction",
+    "ruling": "VALID_BUT_DOMINATED_BY_DESIGN_C",
+    "scientific_unit": "question family",
+    "stage_a": "84 rows / 32 families",
+    "stage_b": "310 rows / 130 families"
+  },
+  "design_c": {
+    "family_weighting": "equal",
+    "representative_rule": "minimum stable digest of namespace, family ID, and stable item ID",
+    "reserve": "20 complete families",
+    "ruling": "SELECTED_PROSPECTIVELY",
+    "scientific_unit": "question family",
+    "selection_rationale": "meets the inherited approximately-80-percent full-transfer planning target, is invariant to within-family dependence, retains a 20-family reserve, and uses fewer trajectories than the old row-level design",
+    "stage_a": "32 rows / 32 families",
+    "stage_b": "130 rows / 130 families"
+  },
+  "selection_used_livecodebench_outcomes": false
+}

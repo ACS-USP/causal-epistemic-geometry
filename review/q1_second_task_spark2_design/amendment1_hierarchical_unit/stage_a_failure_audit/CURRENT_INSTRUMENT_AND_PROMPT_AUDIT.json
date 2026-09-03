@@ -1,0 +1,25 @@
+{
+  "baseline_prompt": {
+    "stage_a2_change": "NONE",
+    "system_prompt": null,
+    "user_prompt_builder": "q1_second_task.build_livecodebench_prompt",
+    "user_prompt_builder_source_sha256": "1ce7e7d4a53844de47f51d2d2477263515bd5d19f6a516e604f9468fe934da2c"
+  },
+  "classification": "PARSER_LIMITATION_PRIMARY_WITH_ONE_FAIL_CLOSED_AMBIGUITY",
+  "combined_repair_selected": false,
+  "evaluator_function_source_sha256": "45fa4afb166549666af1860ff9ac21aaed5663ab272639d4c0d27768a0796784",
+  "fuzzy_matching": false,
+  "historical_stage_a1_classification": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "historical_stage_a1_modified": false,
+  "llm_judge": false,
+  "parser_file_sha256": "42b8871c4e6775006fcec11c0025c4d72fcfa1d93b09caa627665166349d1ee2",
+  "prompt_difference_in_stage_a1": "TEXTUAL_CAREFUL alone added meticulous tracing, verification, and a repeated FINAL instruction; causal attribution among those components is not possible from Stage A1.",
+  "prompt_repair_selected": false,
+  "selected_repair": "parser-only condition-symmetric terminal typed literal extension",
+  "stage_a2_gate_file_sha256": "7bdab14c3c9b7138daf619c1d48b9e255229b35c2ee7d84c6d3f0fe22d8d1a3d",
+  "textual_careful_prompt": {
+    "stage_a2_change": "NONE",
+    "system_prompt_sha256": "d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388"
+  },
+  "typed_exact_comparison_preserved": true
+}

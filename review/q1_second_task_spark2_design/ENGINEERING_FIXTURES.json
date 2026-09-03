@@ -1,0 +1,60 @@
+{
+  "fixtures": [
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_00",
+      "prompt": "Continue this neutral token sequence briefly: alpha beta gamma.",
+      "prompt_sha256": "d8946e0f52fe5306d0f26e44aa10e9aebeb7dbbc3cb2e09fbb932ce936bbc42c",
+      "scientific_item": false
+    },
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_01",
+      "prompt": "Format one short line containing punctuation: [] {} ().",
+      "prompt_sha256": "c22aef498243df7ae53a55dd20bf32086d96e017ac44e1bd8f4db2fc922d856b",
+      "scientific_item": false
+    },
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_02",
+      "prompt": "Respond to this synthetic string without evaluating a benchmark: 0011223344.",
+      "prompt_sha256": "a00ce72a5d1a701635abdbcd2bbe2e0000b83dd702ead5256ab5079e02bb3d78",
+      "scientific_item": false
+    },
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_03",
+      "prompt": "Echo a compact multilingual-neutral token pattern: uno deux drei.",
+      "prompt_sha256": "33d3cf64d6e3acc5fdd59d52e460ce32feccd798b1523d75fc2470e1a2092c7e",
+      "scientific_item": false
+    },
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_04",
+      "prompt": "Write a short code-like placeholder using names foo and bar; no execution.",
+      "prompt_sha256": "20abf0a63de495ebf6cbbdb742a3a1693e8bac54c8d6a88df2943f5a2774e994",
+      "scientific_item": false
+    },
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_05",
+      "prompt": "Give a brief response to a repeated-token fixture: zeta zeta zeta zeta.",
+      "prompt_sha256": "49eecc67611972e00b3b8eee79e73cfdda66f32c209228250cdb9d683a91cbdf",
+      "scientific_item": false
+    },
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_06",
+      "prompt": "Produce a short literal-like answer for parser plumbing: [1, 2].",
+      "prompt_sha256": "377eb7bba0cb31797f578ff908df8b4a6fcedd171b151fc7727781737b9e3e46",
+      "scientific_item": false
+    },
+    {
+      "correctness_oracle": null,
+      "fixture_id": "SYNTHETIC_ENGINE_07",
+      "prompt": "End a generic engineering response with the marker FINAL: 7.",
+      "prompt_sha256": "30d698ee6fdf233e98d075224773c63c52220c247475ca2febb44f70b856574f",
+      "scientific_item": false
+    }
+  ]
+}

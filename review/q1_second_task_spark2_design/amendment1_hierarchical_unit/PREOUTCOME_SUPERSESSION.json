@@ -1,0 +1,36 @@
+{
+  "benchmark_outcomes_before_amendment": 0,
+  "classification": "OLD_ROW_DESIGN_SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED",
+  "correctness_inspected": false,
+  "old_artifacts": {
+    "PRINCIPAL_REVIEW_LOCK.json": {
+      "sha256": "5edee08136d609d18d4cedc70f40e36da63fc31ee1d3c0616a9aa396d1be4558",
+      "status": "SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED"
+    },
+    "PROTOCOL_LOCK.json": {
+      "sha256": "285a1b471b83254fbe67320ec0beac8be7167e98bd147201beea960975bddc34",
+      "status": "SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED"
+    },
+    "RESERVE_MANIFEST.json": {
+      "sha256": "90f91f84f85870f1ecfa2027bb17420f84158ae685b56699947aa41d5fb0b6c7",
+      "status": "SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED"
+    },
+    "STAGE_A_MANIFEST.json": {
+      "sha256": "cb29492a9fd56f5e9b7c10049299501db9e434abc2755a96352f7e9986443116",
+      "status": "SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED"
+    },
+    "STAGE_A_SCHEDULE.json": {
+      "sha256": "d1026ef73761110c8543341bfbded876c64cf02d8a13deca8eaff7aacc8fdae4",
+      "status": "SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED"
+    },
+    "STAGE_B_HOLDOUT_MANIFEST.json": {
+      "sha256": "3d9f3ce0ba7fdd7d60c680774581cd4aa0c9da14d2df8c46da4d4763227e0d58",
+      "status": "SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED"
+    },
+    "STAGE_B_SCHEDULE.json": {
+      "sha256": "724e3506e3df4fcbc8b6e0004703e9c38df3d044cc2be8f2dd40fb689ff37b87",
+      "status": "SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED"
+    }
+  },
+  "parent_commit": "03098d80f73b1ee1a4cfb5fb56504c409aad6286"
+}

@@ -1,0 +1,14 @@
+{
+  "classification": "STAGE_A2_PREOPEN_IMPLEMENTATION_ERRATUM",
+  "fresh_stage_a2_correctness_inspected": false,
+  "fresh_stage_a2_outcomes": 0,
+  "invariant_failure": "The runner compared the two-field Stage-A2 selected-item identity against the richer Stage-A1 public manifest record.",
+  "principal_authorization_changed": false,
+  "q2_outputs_inspected": false,
+  "repair": "Compare exactly the frozen Stage-A2 item_id and item_sha256 fields and the frozen family_id.",
+  "reviewed_manifest_changed": false,
+  "reviewed_schedule_changed": false,
+  "scientific_semantics_changed": false,
+  "stage_a2_opened": false,
+  "stage_b_status": "CLOSED_NOT_AUTHORIZED"
+}

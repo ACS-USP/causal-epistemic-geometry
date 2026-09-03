@@ -1,0 +1,46 @@
+{
+  "design_a": {
+    "bootstrap": "row bootstrap",
+    "estimand": "row-weighted average over test-output rows",
+    "reason": "shared-program rows are not defensibly independent",
+    "ruling": "REJECTED_AS_PRIMARY"
+  },
+  "design_b": {
+    "B00": "mean_f sum_(r!=s) bbar[f,r]*bbar[f,s]/(R*(R-1))",
+    "B0x": "mean_f mean_r(bbar[f,r])*mean_r(xbar[f,r])",
+    "C": "B00-B0x-U00+U0x; U terms exclude identical families",
+    "D": "mean_f sum_(r!=s)(bbar[f,r]-xbar[f,r])*(bbar[f,s]-xbar[f,s])/(R*(R-1))",
+    "G": "B00-B0x",
+    "bootstrap": "resample families; move every row, condition, and rollout together",
+    "damage": "mean_f (1-mean_r(bbar[f,r]))*mean_r(xbar[f,r])",
+    "estimand": "equal-weight average over question families",
+    "family_rollout_error": "ebar[f,r]=(1/m_f)*sum_t e[f,t,r]",
+    "rescue": "mean_f mean_r(bbar[f,r])*(1-mean_r(xbar[f,r]))",
+    "ruling": "VALID_BUT_NOT_RECOMMENDED"
+  },
+  "design_c": {
+    "bootstrap": "family bootstrap; equivalent to selected-row bootstrap by construction",
+    "estimand": "equal-weight average over question families",
+    "estimators": "canonical pooled-R4 equations apply without algebraic change",
+    "rows_per_family": 1,
+    "ruling": "RECOMMENDED"
+  },
+  "error_convention": "e[f,t,r]=1 for wrong or terminal invalid/unevaluable; 0 only for exact correct",
+  "r4_invariance": {
+    "between_family_products_exclude_same_family": true,
+    "bootstrap_resamples": 50000,
+    "negative_D_retained": true,
+    "r2_reduction_exact": true,
+    "split_halves": {
+      "A": [
+        0,
+        1
+      ],
+      "B": [
+        2,
+        3
+      ]
+    },
+    "within_condition_products_exclude_self_pairs": true
+  }
+}

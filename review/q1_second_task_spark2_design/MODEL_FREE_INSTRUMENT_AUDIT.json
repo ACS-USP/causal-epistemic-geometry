@@ -1,0 +1,59 @@
+{
+  "classification": "LIVECODEBENCH_OUTPUT_INSTRUMENT_MODEL_FREE_PASS",
+  "content_overlap_audit": {
+    "coverage": "entire official CRUXEval test revision; therefore covers all project development/source/calibration/confirmatory/Q2 CRUXEval subsets",
+    "cruxeval_rows_compared": 800,
+    "exact_normalized_code_collisions": 0,
+    "lcb_unique_questions": 182,
+    "maximum_five_token_shingle_jaccard": 0.0,
+    "near_duplicate_minimum_shingles": 20,
+    "near_duplicate_pairs": 0,
+    "near_duplicate_threshold": 0.8,
+    "q2_semantic_outputs_read": false
+  },
+  "correctness_outcomes_inspected": false,
+  "evaluator": {
+    "fuzzy_matching": false,
+    "llm_judge": false,
+    "name": "livecodebench-exact-literal-v1",
+    "official_evaluator_audited": "lcb_runner/evaluation/compute_test_output_prediction_metrics.py",
+    "official_evaluator_note": "The upstream evaluator calls Python eval on extracted model text. The CEG adapter freezes a narrower literal-only output grammar and uses ast.literal_eval/json.loads; there is no execution of generated code. It is an exact typed-value evaluator for the frozen grammar, not a claim of leaderboard-protocol identity.",
+    "reference_roundtrips": 442,
+    "untrusted_generated_code_executed": false
+  },
+  "failure_taxonomy": [
+    "VALID_CORRECT",
+    "VALID_WRONG",
+    "INVALID_FORMAT",
+    "UNEVALUABLE",
+    "TRUNCATION",
+    "RUNTIME_ERROR"
+  ],
+  "historical_low_cap_diagnostic": "LOW_CAP_DIAGNOSTIC_NOT_SCIENTIFIC_EVIDENCE",
+  "model_inference": false,
+  "official_dataset": {
+    "dataset_card_license_field": "cc",
+    "license_note": "The dataset card does not specify a CC variant. Benchmark content is not redistributed in Git; only IDs and hashes are sealed. Publication redistribution requires separate license review.",
+    "parquet_sha256": "4826aa00c059d6d47a099606ceed2d0e51d3aeeb1868f1bcf349a038bb64b4b1",
+    "repo": "livecodebench/test_generation",
+    "revision": "6f3ac40bbecf81eba15899139d279b077f2816fd",
+    "rows": 442,
+    "unique_ids": 442,
+    "unique_questions": 182
+  },
+  "official_repository": {
+    "commit": "28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24",
+    "license": "MIT",
+    "url": "https://github.com/LiveCodeBench/LiveCodeBench"
+  },
+  "one_test_per_row": true,
+  "prompt_reconstruction": "deterministic CEG final-commitment adapter over official fields",
+  "reference_type_counts": {
+    "bool": 33,
+    "int": 343,
+    "list": 45,
+    "str": 21
+  },
+  "stable_item_id": "question_id:test_id",
+  "task": "test_output_prediction"
+}

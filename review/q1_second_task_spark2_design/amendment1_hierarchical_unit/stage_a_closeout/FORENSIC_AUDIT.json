@@ -1,0 +1,16 @@
+{
+  "classification": "Q1_SECOND_TASK_STAGE_A_FORENSIC_CLEAN",
+  "primary_classification": "Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED",
+  "audit_classification": "Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED",
+  "journal_sha256": "5b0fec6960ac414f56995d91a43c3b41c49a06b5fb868156a8e24d037b9281b1",
+  "schedule_coverage": 128,
+  "duplicates": 0,
+  "missing": 0,
+  "families": 32,
+  "selected_rows_exact": true,
+  "seeds_exact": true,
+  "maximum_metric_difference": 0.0,
+  "gate_agreement": true,
+  "meaningful_controller_livecodebench_trajectories": 0,
+  "activation_null_livecodebench_trajectories": 0
+}

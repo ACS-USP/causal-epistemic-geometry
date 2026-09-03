@@ -2178,3 +2178,152 @@ experiments:
     q3: NOT_RUN
     design_audit: Q2_V3_FOUR_FAMILY_DESIGN_AUDIT_CLEAN
     next_action: PRINCIPAL_RESEARCHER_REVIEW
+
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_HIERARCHICAL_AMENDMENT1
+    version: AMENDMENT-1-STAGE-A-CLOSEOUT
+    stage: DEVELOPMENT_STAGE_A_CLOSED
+    question: >-
+      What is the correct independent sampling unit for LiveCodeBench
+      test-output prediction, and can the second-task design be prospectively
+      repaired before any benchmark outcome is opened?
+    instrument: >-
+      CPU-only structural reconstruction of 442 official test-output rows in
+      182 question families, dependence-aware power planning, deterministic
+      one-row-per-family selection, frozen family-disjoint manifests and
+      schedules, and independent outcome-free audit.
+    model_policy: NO_MODEL_CPU_ONLY_HIERARCHICAL_DESIGN_REPAIR
+    status: Q1_SECOND_TASK_INSTRUMENT_NOT_QUALIFIED
+    outcome: STAGE_A_BASELINE_VALIDITY_EVALUABILITY_GUARDS_FAILED
+    scientific_interpretation: >-
+      Rows in a question family share the same source program and problem
+      statement and differ only by exact test input/reference. The old Stage-B
+      row bootstrap treated 150 rows from 62 families as independent and is
+      not defensible under positive within-family dependence. Amendment 1
+      freezes one deterministic row for each of 32 Stage-A and 130 Stage-B
+      families, retains 20 reserve families, gives families equal weight, and
+      uses family bootstrap. This is a pre-outcome design repair, not a Q1
+      scientific result. The subsequently authorized 128-row Stage A completed
+      on Spark 2. Baseline accuracy/error opportunity passed, but commitment
+      validity and semantic evaluability failed their frozen 0.95 guards.
+      TEXTUAL_CAREFUL showed a positive accuracy manifestation. Stage B and all
+      activation-controller/null conditions remained unopened.
+    source_branch: research/q1-second-task-spark2-design
+    source_commit: d0f3d1da0988fcf905d974377eb6b5180876dd17
+    parent_design_commit: 03098d80f73b1ee1a4cfb5fb56504c409aad6286
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_a_closeout/REPORT.md
+    benchmark_rows: 442
+    question_families: 182
+    old_stage_a_rows: 50
+    old_stage_a_families: 21
+    old_stage_b_rows: 150
+    old_stage_b_families: 62
+    stage_a_families: 32
+    stage_b_families: 130
+    reserve_families: 20
+    stage_a_trajectories: 128
+    stage_b_trajectories: 5720
+    bootstrap_unit: QUESTION_FAMILY
+    estimand_weighting: EQUAL_FAMILY
+    full_transfer_joint_power: 0.81514
+    transfer_75pct_joint_power: 0.55722
+    null_false_positive: 0.00219
+    old_schedules: SUPERSEDED_PRE_OUTCOME_NEVER_EXECUTED
+    stage_a_runtime_seconds: 4593.385388884984
+    stage_a_journal_sha256: 5b0fec6960ac414f56995d91a43c3b41c49a06b5fb868156a8e24d037b9281b1
+    baseline_commitment_validity: 0.828125
+    baseline_semantic_evaluability: 0.8125
+    baseline_accuracy: 0.609375
+    baseline_B00: 0.25
+    textual_commitment_validity: 0.96875
+    textual_semantic_evaluability: 0.953125
+    textual_accuracy: 0.78125
+    textual_accuracy_delta: 0.171875
+    textual_manifestation: TEXTUAL_CAREFUL_ACCURACY_BENEFIT_PRESENT
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    model_inference: true
+    correctness_inspected: true
+    livecodebench_scientific_outcomes: 128
+    stage_a_authorized: true
+    stage_a_completed: true
+    stage_b_authorized: false
+    spark1_used: false
+    spark2_scientific_inference: true
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    historical_q1: UNCHANGED
+    q3: NOT_RUN
+    design_audit: Q1_SECOND_TASK_STAGE_A_FORENSIC_CLEAN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_A_NOT_QUALIFIED
+
+  - id: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
+    version: STAGE-B-CLOSEOUT-PRIMARY-CLASSIFICATION
+    stage: DEVELOPMENT_STAGE_B_CLOSED_FORENSIC_RESOLVED
+    question: >-
+      Does the exact frozen Qwen L27-D75 activation controller produce safe,
+      competence-adjusted, null-specific semantic error-profile
+      complementarity on LiveCodeBench test-output prediction?
+    instrument: >-
+      Fixed Qwen3-8B L27-D75 sustained-current-token controller, eight frozen
+      activation-null directions, 130 independent question families, one
+      prospectively selected row per family, four rollouts, and a 50,000-map
+      family bootstrap under the Stage-A2-qualified parser.
+    model_policy: SPARK2_NATIVE_FIXED_CONTROLLER_TRANSFER
+    status: Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY
+    outcome: >-
+      Primary C and the meaningful-minus-null-mean contrast both had frozen
+      percentile intervals crossing zero; split-half A failed. The meaningful
+      point estimate exceeded every null point estimate, but the full frozen
+      scientific conjunction did not pass. Commitment-validity and semantic-
+      evaluability safety guards also failed. A frozen parser-equivalence
+      resolution traced all 30 historical disagreements to the independent
+      audit implementation. The corrected independent path matched all 5,720
+      parser decisions and every primary metric exactly; the historical first
+      audit and the primary result remain immutable.
+    scientific_interpretation: >-
+      The fixed controller did not satisfy the prospectively frozen
+      LiveCodeBench transfer criterion at N=130/R=4. This bounds task transfer
+      and does not overturn the CRUXEval Qwen confirmatory result, prove zero
+      transfer, or support model/domain-general claims.
+    source_branch: research/q1-second-task-spark2-design
+    source_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
+    analysis_source_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
+    artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md
+    cost_usd: 0.0
+    holdout_status: CONSUMED_CONFIRMATORY_CLOSED
+    family_manifest_sha256: 56ed32a378bd0a1ee4cfb81c6e3bb4755098014fef6bba5bfbc9730080900605
+    schedule_sha256: 6c1b6437d4df8116ebfbd26ee7fcaefd7abc3066d57bec2b6a4755ffa407fd03
+    journal_sha256: 14ee3691de42c609dd4be1749ab4ea7d8b1c25b3cfbd47483423a83741fdb364
+    families: 130
+    conditions: 11
+    rollouts: 4
+    trajectories: 5720
+    completed: 5720
+    missing: 0
+    unexpected: 0
+    duplicates: 0
+    meaningful_C: 0.006879844961240278
+    meaningful_C_interval_95: [-0.010640373434704862, 0.0244633273703041]
+    meaningful_minus_nullmean_C: 0.011801207513416796
+    meaningful_minus_nullmean_C_interval_95: [-0.0005907824612403139, 0.02443910256410256]
+    meaningful_gt_every_null: true
+    split_half_A_pass: false
+    split_half_B_pass: true
+    safety_conjunction_pass: false
+    forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_RESOLVED_PRIMARY_CONFIRMED
+    historical_forensic_classification: Q1_SECOND_TASK_STAGE_B_FORENSIC_DISAGREEMENT
+    forensic_classification_agreement: true
+    forensic_parser_disagreement_rows: 30
+    corrected_forensic_parser_disagreement_rows: 0
+    corrected_forensic_maximum_metric_difference: 0.0
+    forensic_resolution: AUDIT_IMPLEMENTATION_NON_EQUIVALENT
+    forensic_resolution_artifact: review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md
+    forensic_resolution_protocol_commit: 38c35758db66d40e37bfd699d7910ccbe5d289cb
+    raw_artifacts: PRIVATE_HASH_PINNED
+    spark1_used: false
+    spark2_used: true
+    runpod_used: false
+    q2_outputs_inspected: false
+    q2_process_modified: false
+    q3: NOT_RUN
+    next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_RESOLUTION

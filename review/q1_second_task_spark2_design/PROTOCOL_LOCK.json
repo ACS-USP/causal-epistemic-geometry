@@ -1,0 +1,111 @@
+{
+  "controller": {
+    "dose": "D75",
+    "effective_delta_norm": 97.85168930581241,
+    "eta": 9.637427952852196,
+    "generation": {
+      "attention": "SDPA",
+      "do_sample": true,
+      "dtype": "BF16",
+      "enable_thinking": false,
+      "max_new_tokens": 4096,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "layer": 27,
+    "model": "Qwen/Qwen3-8B",
+    "reference_scale": 10.153299177386142,
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "scope": "FINAL_PROMPT_TOKEN_PREFILL_AND_CURRENT_TOKEN_EACH_DECODE_FORWARD",
+    "status": "EXACT_FIXED_QWEN_CONTROLLER_VERIFIED",
+    "textual_careful": "You are a meticulous program tracer. Carefully track every operation, mutation, intermediate value, branch, and loop. Verify the result before answering. End with exactly one line in the form FINAL: <answer>.",
+    "textual_careful_sha256": "d1c55164ec812c9dcff5e2824b1d39d38b30dd7a69e58f991d06ad49c309e388",
+    "timing": "SUSTAINED_CURRENT_TOKEN",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "vector_hash": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+  },
+  "decision_lock": "ESTIMATOR_AND_DECISION_LOCK.json",
+  "evaluator": {
+    "fuzzy_matching": false,
+    "llm_judge": false,
+    "name": "livecodebench-exact-literal-v1",
+    "official_evaluator_audited": "lcb_runner/evaluation/compute_test_output_prediction_metrics.py",
+    "official_evaluator_note": "The upstream evaluator calls Python eval on extracted model text. The CEG adapter freezes a narrower literal-only output grammar and uses ast.literal_eval/json.loads; there is no execution of generated code. It is an exact typed-value evaluator for the frozen grammar, not a claim of leaderboard-protocol identity.",
+    "reference_roundtrips": 442,
+    "untrusted_generated_code_executed": false
+  },
+  "experiment_id": "Q1_SECOND_TASK_LIVECODEBENCH_SPARK2",
+  "generation": {
+    "attention": "SDPA",
+    "do_sample": true,
+    "dtype": "BF16",
+    "enable_thinking": false,
+    "max_new_tokens": 4096,
+    "min_p": 0.0,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "hashes": {
+    "CONTROLLER_PROVENANCE_LOCK.json": "bef49d3e6a7b377b920097c4233aed52ce55d4f2f9b00953c697a94900c6dd93",
+    "ENGINEERING_FIXTURES.json": "4381904a20b54b258857cdf0243ef9da44a3b6ceb16322bdf62d7dcbabef6a64",
+    "ESTIMATOR_AND_DECISION_LOCK.json": "5944283c0ada311cd903a88370449001a6eeb24eb035d27054211076f0964a5e",
+    "ITEM_POOL_HASH_MANIFEST.json": "56119bfe639509ebbf4e64626d7c31ea9cdeaf100686d52ee626215b4f33f5a5",
+    "MODEL_FREE_INSTRUMENT_AUDIT.json": "07472f8364b63fa82e91a63dfd28d21067c218415d725f0a227808a875bfd31a",
+    "RANDOM_BANK_LOCK.json": "e0e923f2f87fa365f535b0038b11b74cf03665a794b821390563de28811b68dd",
+    "RESERVE_MANIFEST.json": "90f91f84f85870f1ecfa2027bb17420f84158ae685b56699947aa41d5fb0b6c7",
+    "SPARK2_ENGINE_QUALIFICATION_PROTOCOL.json": "5391136ef80990f4f7ff32ecf441f6d79d86d3307120f39644f9e459c52649f1",
+    "STAGE_A_MANIFEST.json": "cb29492a9fd56f5e9b7c10049299501db9e434abc2755a96352f7e9986443116",
+    "STAGE_A_SCHEDULE.json": "d1026ef73761110c8543341bfbded876c64cf02d8a13deca8eaff7aacc8fdae4",
+    "STAGE_B_HOLDOUT_MANIFEST.json": "3d9f3ce0ba7fdd7d60c680774581cd4aa0c9da14d2df8c46da4d4763227e0d58",
+    "STAGE_B_SCHEDULE.json": "724e3506e3df4fcbc8b6e0004703e9c38df3d044cc2be8f2dd40fb689ff37b87"
+  },
+  "instrument_classification": "LIVECODEBENCH_OUTPUT_INSTRUMENT_MODEL_FREE_PASS",
+  "principal_execution_authorization": "DESIGN_AND_SYNTHETIC_ENGINE_ONLY",
+  "q2_firewall": {
+    "outputs_inspected": false,
+    "paths_imported": false,
+    "process_modified": false
+  },
+  "random_bank_file": "RANDOM_BANK_LOCK.json",
+  "resource_policy": {
+    "multi_node": false,
+    "runpod": "FORBIDDEN",
+    "spark1": "FORBIDDEN_OWNED_BY_OPEN_Q2",
+    "spark2": "SYNTHETIC_ENGINE_ONLY_THIS_SPRINT"
+  },
+  "stage_a": {
+    "conditions": [
+      "BASELINE",
+      "TEXTUAL_CAREFUL"
+    ],
+    "logical_rows": 200,
+    "n": 50,
+    "rollouts": 2
+  },
+  "stage_a_inference_authorized": false,
+  "stage_b": {
+    "conditions": [
+      "BASELINE",
+      "TEXTUAL_CAREFUL",
+      "MEANINGFUL_FIXED_QWEN_L27_D75",
+      "RANDOM_R0",
+      "RANDOM_R1",
+      "RANDOM_R2",
+      "RANDOM_R3",
+      "RANDOM_R4",
+      "RANDOM_R5",
+      "RANDOM_R6",
+      "RANDOM_R7"
+    ],
+    "logical_rows": 6600,
+    "n": 150,
+    "rollouts": 4
+  },
+  "stage_b_inference_authorized": false,
+  "status": "PROSPECTIVE_LOCK_PRE_ENGINE"
+}

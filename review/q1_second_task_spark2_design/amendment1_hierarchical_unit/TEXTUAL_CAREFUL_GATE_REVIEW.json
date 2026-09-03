@@ -1,0 +1,14 @@
+{
+  "behavioral_or": [
+    "accuracy gain >= 0.03",
+    "mean tokens >= 1.5 * baseline",
+    "median tokens >= baseline + 10"
+  ],
+  "classification": "TEXTUAL_CAREFUL_GATE_RETAINED",
+  "commitment_validity_min": 0.95,
+  "competence_floor": "textual accuracy >= baseline accuracy - 0.03",
+  "historical_source": "scripts/analyze_gate10_cross_domain_charcount.py:135-144",
+  "interpretation": "The gate tests source-policy manifestation plus absence of material competence harm; token increase alone is not called an accuracy benefit. Gate 10 failed because its accuracy loss exceeded three points, exactly as this rule requires.",
+  "livecodebench_outcomes_used": false,
+  "semantic_evaluability_min": 0.95
+}

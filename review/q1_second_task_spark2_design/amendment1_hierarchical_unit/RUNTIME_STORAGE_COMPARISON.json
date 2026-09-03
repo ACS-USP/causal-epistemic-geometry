@@ -1,0 +1,65 @@
+[
+  {
+    "combined_hours_with_25pct_margin": {
+      "128": 26.216421679325276,
+      "256": 52.43284335865055,
+      "512": 104.8656867173011
+    },
+    "design": "A_CURRENT_ROW_LEVEL",
+    "stage_a_hours_with_25pct_margin": {
+      "128": 0.7710712258625081,
+      "256": 1.5421424517250162,
+      "512": 3.0842849034500324
+    },
+    "stage_a_trajectories": 200,
+    "stage_b_hours_with_25pct_margin": {
+      "128": 25.445350453462765,
+      "256": 50.89070090692553,
+      "512": 101.78140181385106
+    },
+    "stage_b_trajectories": 6600,
+    "storage_reservation_gb": 1.5
+  },
+  {
+    "combined_hours_with_25pct_margin": {
+      "128": 53.882457263272066,
+      "256": 107.76491452654413,
+      "512": 215.52982905308826
+    },
+    "design": "B_EQUAL_FAMILY_ALL_ROWS_32_130",
+    "stage_a_hours_with_25pct_margin": {
+      "128": 1.2953996594490136,
+      "256": 2.590799318898027,
+      "512": 5.181598637796054
+    },
+    "stage_a_trajectories": 336,
+    "stage_b_hours_with_25pct_margin": {
+      "128": 52.587057603823055,
+      "256": 105.17411520764611,
+      "512": 210.34823041529222
+    },
+    "stage_b_trajectories": 13640,
+    "storage_reservation_gb": 3.1000000000000005
+  },
+  {
+    "combined_hours_with_25pct_margin": {
+      "128": 22.54612264421974,
+      "256": 45.09224528843948,
+      "512": 90.18449057687896
+    },
+    "design": "C_ONE_ROW_PER_FAMILY_32_130",
+    "stage_a_hours_with_25pct_margin": {
+      "128": 0.49348558455200525,
+      "256": 0.9869711691040105,
+      "512": 1.973942338208021
+    },
+    "stage_a_trajectories": 128,
+    "stage_b_hours_with_25pct_margin": {
+      "128": 22.052637059667735,
+      "256": 44.10527411933547,
+      "512": 88.21054823867094
+    },
+    "stage_b_trajectories": 5720,
+    "storage_reservation_gb": 1.3
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "coverage": "entire official CRUXEval test revision; therefore covers all project development/source/calibration/confirmatory/Q2 CRUXEval subsets",
+  "cruxeval_rows_compared": 800,
+  "exact_normalized_code_collisions": 0,
+  "lcb_unique_questions": 182,
+  "maximum_five_token_shingle_jaccard": 0.0,
+  "near_duplicate_minimum_shingles": 20,
+  "near_duplicate_pairs": 0,
+  "near_duplicate_threshold": 0.8,
+  "q2_semantic_outputs_read": false
+}

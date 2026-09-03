@@ -1,0 +1,30 @@
+schema_version: 1
+id: Q1_SECOND_TASK_LIVECODEBENCH_SPARK2
+version: Q1-SECOND-TASK-DESIGN-V1
+status: PROSPECTIVE_DESIGN_AWAITING_PRINCIPAL_REVIEW
+stage: DEVELOPMENT_SECOND_TASK_REPLICATION_DESIGN
+model: Qwen/Qwen3-8B
+model_revision: b968826d9c46dd6066d109eabc6255188de91218
+instrument: LiveCodeBench/test_generation test-output prediction
+backend: SPARK2_NATIVE_CROSS_BACKEND_REPLICATION
+stage_a:
+  items: 50
+  conditions: 2
+  rollouts_per_item_condition: 2
+  logical_rows: 200
+stage_b:
+  items: 150
+  conditions: 11
+  rollouts_per_item_condition: 4
+  logical_rows: 6600
+controller:
+  source_domain: CRUXEval
+  layer: 27
+  sign: plus
+  dose: D75
+  eta: 9.637427952852196
+  vector_hash: e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838
+  duration: sustained_current_token
+authorization: DESIGN_ONLY_NO_STAGE_A_OR_STAGE_B_INFERENCE
+q2_campaign: OPEN_ON_SPARK1_UNTOUCHED
+q3: NOT_RUN

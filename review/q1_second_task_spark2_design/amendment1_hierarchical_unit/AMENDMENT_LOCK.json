@@ -1,0 +1,113 @@
+{
+  "artifact_hashes": {
+    "CURRENT_SPLIT_FAMILY_AUDIT.json": "ad97e1044d454b710266e318f615b9c4f877716de521dd1a9a2b05e144d4cb78",
+    "DEPENDENCE_AWARE_POWER_GRID.csv": "c0e5ac983ff219b66e7acf8b8c210325140c73fbe5e0e3752f79609d9926e026",
+    "DESIGN_COMPARISON.json": "59c0efc3dccfc669d2670f4d6f01c4dabdd3229756f6ecc0135377698323646c",
+    "EXCLUDED_SIBLING_ROWS_MANIFEST.json": "16630741cd6ea1194da44204bd3e8647e6b94a33feccef3897936a89a57e7e34",
+    "FAMILY_STRUCTURE_AUDIT.json": "ad68142896a7e70ce55aac5533a8220d82d3d088ece29344fa0fc8194bb4d178",
+    "HIERARCHICAL_ESTIMATOR_SPEC.json": "61e77f7bf681fac14c78761df9d162ca1f7665b7d47d1b20c0fcebbbb614b5f7",
+    "POWER_METHOD.json": "b743eb768a6f7e0389f2b83a1144f3c1b8d4c713289b3e99d11cdf0fbd5d6f8d",
+    "PREOUTCOME_SUPERSESSION.json": "ca12e2e030306699e5518dfe878da248b5a459a7220ccdd0c289582871074b07",
+    "RESERVE_FAMILY_MANIFEST.json": "731c068228000a8ded3783e01d944f178bdef28f07f4b7c472598a254af56d94",
+    "RUNTIME_STORAGE_COMPARISON.json": "ad2bfe1820c2b8f034fb21aee75ba7a73422342337588a00c859918a3bb9de6a",
+    "STAGE_A_FAMILY_MANIFEST.json": "78e6cf9b76c8c3d3b78847af2ce39449be0fe472567c7fe047a47938ed500036",
+    "STAGE_A_SCHEDULE.json": "fd1267c506827672cfe6c7e5374003821c78f512a3ed13fc745f655b5b13880a",
+    "STAGE_B_FAMILY_MANIFEST.json": "56ed32a378bd0a1ee4cfb81c6e3bb4755098014fef6bba5bfbc9730080900605",
+    "STAGE_B_SCHEDULE.json": "6c1b6437d4df8116ebfbd26ee7fcaefd7abc3066d57bec2b6a4755ffa407fd03",
+    "TEXTUAL_CAREFUL_GATE_REVIEW.json": "aaf1a4db658d0ce32f9c584d6f74f51282d8edaafb717f5db5dbc8afc264f858"
+  },
+  "benchmark_outcomes_before_amendment": 0,
+  "classification": "Q1_SECOND_TASK_HIERARCHICAL_DESIGN_READY_FOR_PRINCIPAL_REVIEW",
+  "controller_and_null_bank": "unchanged exact parent identities",
+  "correctness_inspected": false,
+  "dataset": {
+    "families": 182,
+    "parquet_sha256": "4826aa00c059d6d47a099606ceed2d0e51d3aeeb1868f1bcf349a038bb64b4b1",
+    "repository_revision": "6f3ac40bbecf81eba15899139d279b077f2816fd",
+    "rows": 442
+  },
+  "inherited_lock_hashes": {
+    "CONTROLLER_PROVENANCE_LOCK.json": "bef49d3e6a7b377b920097c4233aed52ce55d4f2f9b00953c697a94900c6dd93",
+    "ESTIMATOR_AND_DECISION_LOCK.json": "5944283c0ada311cd903a88370449001a6eeb24eb035d27054211076f0964a5e",
+    "MODEL_FREE_INSTRUMENT_AUDIT.json": "07472f8364b63fa82e91a63dfd28d21067c218415d725f0a227808a875bfd31a",
+    "RANDOM_BANK_LOCK.json": "e0e923f2f87fa365f535b0038b11b74cf03665a794b821390563de28811b68dd",
+    "SPARK2_ENGINE_QUALIFICATION.json": "4a2361bae15ed69facd5787039099f835558e29909001248f925ce753c0f2e8b"
+  },
+  "new_design": {
+    "bootstrap_unit": "QUESTION_FAMILY",
+    "estimand_weighting": "equal family weight",
+    "representative_rows_per_family": 1,
+    "reserve": {
+      "families": 20,
+      "raw_rows": 48
+    },
+    "scientific_unit": "QUESTION_FAMILY",
+    "stage_a": {
+      "families": 32,
+      "rollouts": 2,
+      "rows": 32,
+      "trajectories": 128
+    },
+    "stage_b": {
+      "families": 130,
+      "rollouts": 4,
+      "rows": 130,
+      "trajectories": 5720
+    }
+  },
+  "old_design": {
+    "stage_a": "50 rows / 21 families / row bootstrap",
+    "stage_b": "150 rows / 62 families / row bootstrap"
+  },
+  "parent_design_commit": "03098d80f73b1ee1a4cfb5fb56504c409aad6286",
+  "q2_outputs_inspected": false,
+  "q2_process_modified": false,
+  "reason": "hierarchical dependence discovered during principal design review",
+  "schema_version": 1,
+  "spark1_used": false,
+  "spark2_engine": "unchanged qualified environment fingerprint",
+  "spark2_scientific_inference": false,
+  "stage_a_authorized": false,
+  "stage_a_gate": {
+    "baseline_B00_min": 0.05,
+    "baseline_accuracy_range_inclusive": [
+      0.25,
+      0.9
+    ],
+    "baseline_commitment_validity_min": 0.95,
+    "baseline_semantic_evaluability_min": 0.95,
+    "count_translation": "ceil of old row fractions: wrong-both 5/50 -> 4/32; correct-at-least-once 10/50 -> 7/32",
+    "families_correct_at_least_once_min": 7,
+    "families_wrong_both_rollouts_min": 4,
+    "textual_gate": {
+      "behavioral_or": [
+        "accuracy gain >= 0.03",
+        "mean tokens >= 1.5 * baseline",
+        "median tokens >= baseline + 10"
+      ],
+      "classification": "TEXTUAL_CAREFUL_GATE_RETAINED",
+      "commitment_validity_min": 0.95,
+      "competence_floor": "textual accuracy >= baseline accuracy - 0.03",
+      "historical_source": "scripts/analyze_gate10_cross_domain_charcount.py:135-144",
+      "interpretation": "The gate tests source-policy manifestation plus absence of material competence harm; token increase alone is not called an accuracy benefit. Gate 10 failed because its accuracy loss exceeded three points, exactly as this rule requires.",
+      "livecodebench_outcomes_used": false,
+      "semantic_evaluability_min": 0.95
+    }
+  },
+  "stage_b_analysis": {
+    "bootstrap": "50,000 family resamples; all conditions and rollouts move together",
+    "pooled_r4_estimators": "unchanged algebra; each selected row is one family",
+    "primary_and_safety_rules": "unchanged from parent ESTIMATOR_AND_DECISION_LOCK.json",
+    "split_halves": {
+      "A": [
+        0,
+        1
+      ],
+      "B": [
+        2,
+        3
+      ]
+    }
+  },
+  "stage_b_authorized": false
+}

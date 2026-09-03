@@ -174,9 +174,16 @@ def require_remote_hf_execution(operation: str) -> None:
         and context["HF_HOME"] == "/srv/shared/hf-cache"
         and spark_root in (root, *root.parents)
     )
-    if not (runpod or spark1):
+    spark2 = (
+        os.environ.get("CEG_EXECUTION_PROFILE") == "SPARK2"
+        and os.environ.get("CEG_SPARK2_PROJECT")
+        == "Q1_SECOND_TASK_LIVECODEBENCH_SPARK2"
+        and context["hostname"].split(".", maxsplit=1)[0] == "spark2"
+        and context["HF_HOME"] == "/srv/shared/hf-cache"
+    )
+    if not (runpod or spark1 or spark2):
         raise RuntimeError(
             f"Refusing {operation}: real HuggingFace operations are remote-only. "
             "Required either the RunPod /workspace profile or the explicit "
-            "Spark-1 shared-cache profile. No download was attempted."
+            "Spark-1/Spark-2 shared-cache profile. No download was attempted."
         )

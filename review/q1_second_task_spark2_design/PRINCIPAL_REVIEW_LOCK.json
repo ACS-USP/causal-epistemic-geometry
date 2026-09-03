@@ -1,0 +1,35 @@
+{
+  "artifact_hash_manifest": {
+    "entries": 41,
+    "path": "review/q1_second_task_spark2_design/artifact_hashes.json",
+    "sha256": "0dfcc21eab34f4954f54543ec37c8729cb5a84d03aecac06d6eb846b7af1918c"
+  },
+  "backend_claim": "SPARK2_NATIVE_CROSS_BACKEND_REPLICATION",
+  "classification": "Q1_SECOND_TASK_DESIGN_READY_FOR_PRINCIPAL_REVIEW",
+  "correctness_inspected": false,
+  "engine": "SPARK2_NATIVE_ENGINE_QUALIFIED",
+  "engine_source_commit": "8300ce388cf2777790da683f52fa307b4c860f5f",
+  "forensic": "Q1_SECOND_TASK_DESIGN_FORENSIC_CLEAN",
+  "instrument": "LIVECODEBENCH_OUTPUT_INSTRUMENT_MODEL_FREE_PASS",
+  "prepared_at_parent_commit": "8300ce388cf2777790da683f52fa307b4c860f5f",
+  "q2_outputs_inspected": false,
+  "q2_process_modified": false,
+  "q3": "NOT_RUN",
+  "reserve_items": 242,
+  "schema_version": 1,
+  "scientific_benchmark_outcomes": 0,
+  "stage_a": {
+    "conditions": 2,
+    "logical_rows": 200,
+    "n": 50,
+    "rollouts": 2
+  },
+  "stage_a_authorized": false,
+  "stage_b": {
+    "conditions": 11,
+    "logical_rows": 6600,
+    "n": 150,
+    "rollouts": 4
+  },
+  "stage_b_authorized": false
+}

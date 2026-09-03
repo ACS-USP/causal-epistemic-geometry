@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_PROSPECTIVE_PRE_OUTCOME",
+  "created_utc": "2026-08-29T18:49:22Z",
+  "reason": "Stage A1 identified generic parser under-coverage; the condition-symmetric repair was frozen and prospectively qualified on untouched Stage-A2 families before Stage-B opening.",
+  "stage_b_outcomes_before_addendum": 0,
+  "stage_b_correctness_inspected": false,
+  "stage_b_family_manifest": {
+    "status": "UNCHANGED",
+    "path": "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/STAGE_B_FAMILY_MANIFEST.json",
+    "sha256": "56ed32a378bd0a1ee4cfb81c6e3bb4755098014fef6bba5bfbc9730080900605"
+  },
+  "stage_b_schedule": {
+    "status": "UNCHANGED",
+    "path": "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/STAGE_B_SCHEDULE.json",
+    "sha256": "6c1b6437d4df8116ebfbd26ee7fcaefd7abc3066d57bec2b6a4755ffa407fd03"
+  },
+  "stage_b_seeds": "UNCHANGED",
+  "controller_and_null_identities": "UNCHANGED",
+  "statistical_endpoints": "UNCHANGED",
+  "decision_thresholds": "UNCHANGED",
+  "only_instrument_change": "CONDITION_SYMMETRIC_PARSER_IDENTITY_INHERITED_FROM_QUALIFIED_STAGE_A2",
+  "parser_source_sha256": "0557447697a1f75caab0f9680863982fe2636393335e3fffd94223e6d92e50d9",
+  "parser": {
+    "version": "TERMINAL_TYPED_FINAL_AFTER_EMPTY_NONLITERAL_FINAL_HEADINGS_V1",
+    "source_path": "src/epistemic_geometry/experiments/q1_second_task_stage_a_failure.py",
+    "source_commit": "64285e4d6015985936bbb6ba8acb4a5137576579",
+    "source_sha256": "0557447697a1f75caab0f9680863982fe2636393335e3fffd94223e6d92e50d9",
+    "evaluator_function_sha256": "9c1e1d1572e9ee51033af3810d7c75d526441cda068183e8ef4c4a59fdc42169",
+    "prompt_builder_function_sha256": "1ce7e7d4a53844de47f51d2d2477263515bd5d19f6a516e604f9468fe934da2c",
+    "adversarial_test_path": "tests/test_q1_second_task_stage_a_failure.py",
+    "adversarial_test_sha256": "06e0c05d0cd1abf62b65f1f2942dd56a0d3ab19392ef6f32ff048422f35f4571",
+    "condition_symmetric": true,
+    "condition_identity_used": false,
+    "correctness_used_for_candidate_selection": false,
+    "reference_value_used_for_candidate_selection": false,
+    "item_specific_rules": false,
+    "fuzzy_matching": false,
+    "llm_judge": false,
+    "ambiguity_policy": "FAIL_CLOSED"
+  },
+  "stage_a2_qualification": {
+    "classification": "Q1_SECOND_TASK_STAGE_A2_QUALIFIED",
+    "forensic_classification": "Q1_SECOND_TASK_STAGE_A2_FORENSIC_CLEAN",
+    "artifact_path": "review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_a2_closeout/STAGE_A2_CLOSEOUT.json",
+    "artifact_sha256": "2776d195d117f9bb8d539aa340cd0c69da719e0390b8bdd5ddff6ed24f84089a"
+  },
+  "stage_a1_historical_result": "Q1_SECOND_TASK_STAGE_A_NOT_QUALIFIED",
+  "stage_a1_repaired_parser_rescore": "POST_HOC_DIAGNOSTIC_NOT_STAGE_A1_RECLASSIFICATION"
+}

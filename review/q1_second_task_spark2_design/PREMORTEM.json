@@ -1,0 +1,18 @@
+{
+  "classification": "PREMORTEM_PASS_FOR_SYNTHETIC_ENGINE",
+  "risks": [
+    "q2_cross_contamination",
+    "benchmark_shopping",
+    "controller_drift",
+    "prompt_search",
+    "unsafe_upstream_eval",
+    "question_family_leakage",
+    "null_redraw",
+    "backend_drift",
+    "r4_estimator_mismatch",
+    "split_half_selection",
+    "stage_a_peeking",
+    "spark1_misrouting"
+  ],
+  "scientific_benchmark_inference": false
+}

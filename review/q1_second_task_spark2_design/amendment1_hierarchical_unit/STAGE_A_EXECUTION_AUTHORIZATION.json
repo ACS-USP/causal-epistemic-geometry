@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "authorization": "STAGE_A_ONLY",
+  "authorization_timestamp_utc": "2026-08-29T12:53:28Z",
+  "approved_design_commit": "e20c68f1cbf9276425da63d8b2128418ae9e755b",
+  "approved_hashes": {
+    "amendment_lock": "5cf14cb5c41f6a6547c1c5d2385511faee26a7549576caa75c9c84b9bee02594",
+    "stage_a_manifest": "78e6cf9b76c8c3d3b78847af2ce39449be0fe472567c7fe047a47938ed500036",
+    "stage_a_schedule": "fd1267c506827672cfe6c7e5374003821c78f512a3ed13fc745f655b5b13880a",
+    "stage_b_manifest": "56ed32a378bd0a1ee4cfb81c6e3bb4755098014fef6bba5bfbc9730080900605",
+    "stage_b_schedule": "6c1b6437d4df8116ebfbd26ee7fcaefd7abc3066d57bec2b6a4755ffa407fd03",
+    "amendment_artifact_manifest": "936f5770b8036c7c354db004470f63617ad5dd0bfec8eb1c48256094f9e6eda7"
+  },
+  "spark2_environment_fingerprint": "306d65af9643cc1144d344ae57141ac96ffbbcf70520f67e9276a907d29660bc",
+  "model": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "generation": {
+    "dtype": "BF16",
+    "attention": "SDPA",
+    "enable_thinking": false,
+    "do_sample": true,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "max_new_tokens": 4096,
+    "torch_disable_native_jit": "1"
+  },
+  "stage_a": {
+    "scientific_unit": "QUESTION_FAMILY",
+    "families": 32,
+    "selected_rows": 32,
+    "conditions": ["BASELINE", "TEXTUAL_CAREFUL"],
+    "rollouts": 2,
+    "logical_trajectories": 128,
+    "activation_hooks": "FORBIDDEN"
+  },
+  "gate_thresholds": {
+    "baseline_commitment_validity_min": 0.95,
+    "baseline_semantic_evaluability_min": 0.95,
+    "baseline_accuracy_inclusive": [0.25, 0.9],
+    "baseline_B00_min": 0.05,
+    "baseline_wrong_both_min": 4,
+    "baseline_correct_at_least_once_min": 7,
+    "textual_commitment_validity_min": 0.95,
+    "textual_semantic_evaluability_min": 0.95,
+    "textual_accuracy_floor_relative_to_baseline": -0.03,
+    "textual_manifestation_or": [
+      "accuracy_gain_ge_0.03",
+      "mean_token_ratio_ge_1.5",
+      "median_token_gain_ge_10"
+    ]
+  },
+  "stage_b_status": "CLOSED_NOT_AUTHORIZED",
+  "meaningful_activation_controller_status": "SEALED_NOT_OPENED_ON_LIVECODEBENCH",
+  "activation_null_bank_status": "SEALED_NOT_OPENED_ON_LIVECODEBENCH",
+  "q2_firewall": {
+    "spark1": "FORBIDDEN",
+    "q2_outputs": "DO_NOT_INSPECT",
+    "q2_process": "DO_NOT_MODIFY"
+  },
+  "preauthorization_scientific_status": {
+    "livecodebench_scientific_outcomes_observed": 0,
+    "livecodebench_correctness_inspected": false,
+    "stage_a_previously_executed": false,
+    "stage_b_previously_executed": false,
+    "meaningful_controller_opened_on_livecodebench": false,
+    "q2_outputs_inspected": false
+  }
+}

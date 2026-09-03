@@ -1,0 +1,120 @@
+{
+  "livecodebench_stage_a2_outcomes": 0,
+  "options": [
+    {
+      "condition_rows": 40,
+      "correct_at_least_once_count_min": 4,
+      "estimated_raw_journal_bytes": 387381,
+      "maximum_invalid_rows_at_0_95": 2,
+      "option": "OPTION_1_RESERVE_ONLY",
+      "runtime_hours_with_25pct_margin": {
+        "mean_tokens_128": 0.3084284903450033,
+        "mean_tokens_256": 0.6168569806900066,
+        "mean_tokens_512": 1.2337139613800132,
+        "stage_a1_empirical_mix": 0.9968284264073317
+      },
+      "stage_a1_observed_mean_tokens_for_empirical_projection": 414.421875,
+      "stage_a2_families": 20,
+      "stage_a2_trajectories": 80,
+      "stage_b_families_remaining": 130,
+      "stage_b_power": {
+        "0.0": {
+          "expected_c_ci_width": 0.053654068955913244,
+          "expected_delta_c_ci_width": 0.04463947134378619,
+          "joint_frozen_rule_probability": 0.00219,
+          "monte_carlo_se": 0.0001478243518504309,
+          "power_c_lower_gt_zero": 0.20854,
+          "power_delta_c_lower_gt_zero": 0.02591,
+          "probability_c_above_every_random": 0.09689,
+          "split_half_sign_consistency": 0.1878
+        },
+        "0.75": {
+          "expected_c_ci_width": 0.053654068955913244,
+          "expected_delta_c_ci_width": 0.04463947134378619,
+          "joint_frozen_rule_probability": 0.55722,
+          "monte_carlo_se": 0.0015707510038195107,
+          "power_c_lower_gt_zero": 0.90365,
+          "power_delta_c_lower_gt_zero": 0.72155,
+          "probability_c_above_every_random": 0.68534,
+          "split_half_sign_consistency": 0.98648
+        },
+        "1.0": {
+          "expected_c_ci_width": 0.053654068955913244,
+          "expected_delta_c_ci_width": 0.04463947134378619,
+          "joint_frozen_rule_probability": 0.81514,
+          "monte_carlo_se": 0.0012275454386701946,
+          "power_c_lower_gt_zero": 0.97819,
+          "power_delta_c_lower_gt_zero": 0.92388,
+          "probability_c_above_every_random": 0.85656,
+          "split_half_sign_consistency": 0.99918
+        }
+      },
+      "stage_b_trajectories": 5720,
+      "untouched_reserve_families_after_stage_a2": 0,
+      "validity_resolution": 0.025,
+      "wrong_both_count_min": 2
+    },
+    {
+      "condition_rows": 60,
+      "correct_at_least_once_count_min": 6,
+      "estimated_raw_journal_bytes": 581071,
+      "maximum_invalid_rows_at_0_95": 3,
+      "option": "OPTION_2_RESERVE_PLUS_TEN_STAGE_B",
+      "runtime_hours_with_25pct_margin": {
+        "mean_tokens_128": 0.4626427355175049,
+        "mean_tokens_256": 0.9252854710350098,
+        "mean_tokens_512": 1.8505709420700196,
+        "stage_a1_empirical_mix": 1.4952426396109975
+      },
+      "stage_a1_observed_mean_tokens_for_empirical_projection": 414.421875,
+      "stage_a2_families": 30,
+      "stage_a2_trajectories": 120,
+      "stage_b_families_remaining": 120,
+      "stage_b_power": {
+        "0.0": {
+          "expected_c_ci_width": 0.05584492553926798,
+          "expected_delta_c_ci_width": 0.04646223486525124,
+          "joint_frozen_rule_probability": 0.00206,
+          "monte_carlo_se": 0.00014337909192068418,
+          "power_c_lower_gt_zero": 0.19507,
+          "power_delta_c_lower_gt_zero": 0.02505,
+          "probability_c_above_every_random": 0.09785,
+          "split_half_sign_consistency": 0.18613
+        },
+        "0.75": {
+          "expected_c_ci_width": 0.05584492553926798,
+          "expected_delta_c_ci_width": 0.04646223486525124,
+          "joint_frozen_rule_probability": 0.52326,
+          "monte_carlo_se": 0.0015794270239552065,
+          "power_c_lower_gt_zero": 0.8799,
+          "power_delta_c_lower_gt_zero": 0.68614,
+          "probability_c_above_every_random": 0.6662,
+          "split_half_sign_consistency": 0.98141
+        },
+        "1.0": {
+          "expected_c_ci_width": 0.05584492553926798,
+          "expected_delta_c_ci_width": 0.04646223486525124,
+          "joint_frozen_rule_probability": 0.78552,
+          "monte_carlo_se": 0.0012979920246288111,
+          "power_c_lower_gt_zero": 0.96817,
+          "power_delta_c_lower_gt_zero": 0.90461,
+          "probability_c_above_every_random": 0.83674,
+          "split_half_sign_consistency": 0.99841
+        }
+      },
+      "stage_b_trajectories": 5280,
+      "untouched_reserve_families_after_stage_a2": 0,
+      "validity_resolution": 0.016666666666666666,
+      "wrong_both_count_min": 3
+    }
+  ],
+  "planning_only": true,
+  "rationale": [
+    "The parser repair directly addresses the observed answer-channel defect.",
+    "Twenty families allow two invalid rows per condition at the unchanged 0.95 guard.",
+    "The task-opportunity gates were already comfortably passed in Stage A1.",
+    "Option 1 preserves all 130 Stage-B families and its frozen planning power.",
+    "Option 2 consumes ten Stage-B families and lowers full-transfer joint planning power from 0.81514 to 0.78552."
+  ],
+  "recommendation": "OPTION_1_RESERVE_ONLY"
+}

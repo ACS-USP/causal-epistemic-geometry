@@ -1,0 +1,3717 @@
+{
+  "n_rows": 232,
+  "records": [
+    {
+      "family_id": "2727",
+      "item": {
+        "content_sha256": "f107049547cd94c2b7e6bab1f6d3eab5ab4e162e2abe4e8774a9c08b29e42086",
+        "difficulty": "easy",
+        "item_id": "2727:1",
+        "item_sha256": "9e5145f3ff9e4ccb336fc1dc3b1873cddba1278d21afd3e58b48dccbf583bbd3",
+        "prompt_sha256": "25d7571386873ec8d4fca0c26cc66ca8019d217f74fd51d7f7b3333e7887bc61",
+        "question_id": "2727",
+        "reference_type": "int",
+        "source_index": 1,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2754",
+      "item": {
+        "content_sha256": "7e364b053c284283d187ce9e4c7b51b0f647a8f1ee9e98db5dcd1a69afe1f1c8",
+        "difficulty": "medium",
+        "item_id": "2754:0",
+        "item_sha256": "52baf70f1710abb8dc8b26e433dedab73c3ce4cec6da386560073e5c2319b0e3",
+        "prompt_sha256": "0b1a9c9d029e45ba1107c39482a66897543ab9f86d73da45df3d8e99bdc9c617",
+        "question_id": "2754",
+        "reference_type": "int",
+        "source_index": 6,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2757",
+      "item": {
+        "content_sha256": "3951546fc5471eef887c8137a0c771e68587d505b7bdae6c43481055e9326383",
+        "difficulty": "hard",
+        "item_id": "2757:1",
+        "item_sha256": "f68e43e56a77e54cbed94505d66819f51dc2fb93c731cf7eda0fa8f1ac89b163",
+        "prompt_sha256": "174b40826647273e7c3e70df0a8cb9ffc2ed526e55cd423dbe1fa8ab75da6ef9",
+        "question_id": "2757",
+        "reference_type": "int",
+        "source_index": 13,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2786",
+      "item": {
+        "content_sha256": "5730a97e0b39b13e69a03f3e0717f916b7a45fc414d68406db03282c945c56c3",
+        "difficulty": "medium",
+        "item_id": "2786:0",
+        "item_sha256": "893d8368001a58749e9450977872557d7692ed1856b058ce43049aa767f71fa4",
+        "prompt_sha256": "061bdf176b18519dbf6fe328ae3425b051788f730018e0f000b5957d38ebdd62",
+        "question_id": "2786",
+        "reference_type": "int",
+        "source_index": 23,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2786",
+      "item": {
+        "content_sha256": "0f27273ba4833f60156f3547e8d30de0bdb5df7d59853525a81c278c72bda020",
+        "difficulty": "medium",
+        "item_id": "2786:2",
+        "item_sha256": "05efbb2f6ac2862ae66685828edb9000613579c1900b8da1ec371a961edb50a8",
+        "prompt_sha256": "99cd63af27dc415530451dce0dd5d37f7dde76cb68209835849b24cd43baeaac",
+        "question_id": "2786",
+        "reference_type": "int",
+        "source_index": 25,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2827",
+      "item": {
+        "content_sha256": "6730efc65b9a8c110194a4ff7f6214bd9d00e9bae55a1f8e42ccf5b1b9068547",
+        "difficulty": "hard",
+        "item_id": "2827:1",
+        "item_sha256": "8739c7c849bf57956aa3027e1ff1ac116cc57f57b8eb8ed4324029b32e75cb37",
+        "prompt_sha256": "35365a8ce13e6f1d7d3a2f2defabd3e196802b7efffb10824ee655c6e2d99022",
+        "question_id": "2827",
+        "reference_type": "bool",
+        "source_index": 56,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2827",
+      "item": {
+        "content_sha256": "08df51a02b5325df8e1191958ca217cb4798e444c32522810f80b11ef235c8a6",
+        "difficulty": "hard",
+        "item_id": "2827:2",
+        "item_sha256": "0e855010e43950a3de00fb9fbc5af78899ea3eeb43df09c9897e87520f948ebb",
+        "prompt_sha256": "9fec43b6a8b1581712f4d86f6cf3d236f6f15c2e8215804961b552ba9b0f475d",
+        "question_id": "2827",
+        "reference_type": "bool",
+        "source_index": 57,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2839",
+      "item": {
+        "content_sha256": "9d05aeda7e39513ac217650d93c54f5fcd52c92fb6a41eb48ba0ec79660d080b",
+        "difficulty": "hard",
+        "item_id": "2839:0",
+        "item_sha256": "e648786a08cd8dbc97fbb4f9250e884676176a7abd95d52db0b8f7a563d3bff5",
+        "prompt_sha256": "93a2d4519a6c9ef985d177481b3409febd8e5e297f76aaef1906616b578e0e08",
+        "question_id": "2839",
+        "reference_type": "list",
+        "source_index": 71,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2839",
+      "item": {
+        "content_sha256": "54c44f591ab64c0fd777166b06f230d737b707ef52c39a77d7979c0438471fb1",
+        "difficulty": "hard",
+        "item_id": "2839:2",
+        "item_sha256": "c5c810623aa2f8178f54fe5b1123ea891c73d9328cbc159f201bcece369de9d1",
+        "prompt_sha256": "c659bbe218cecb622c38f65c14632fe2078197de3a4c6855bc4b7ca5e8b3b446",
+        "question_id": "2839",
+        "reference_type": "list",
+        "source_index": 73,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2845",
+      "item": {
+        "content_sha256": "8a8b9761998887c387ee4b181cab78102b651564152d77cb477716e0ee1bffb8",
+        "difficulty": "medium",
+        "item_id": "2845:0",
+        "item_sha256": "4ce0f8b0b53ef09dfd83d9399bd38b4375244c82e27b95438d3a3f67b3378534",
+        "prompt_sha256": "8cb23b3f4f54b9c3cd3e96918963e4ebdb781612cfb938cfa1fe5264cb269385",
+        "question_id": "2845",
+        "reference_type": "int",
+        "source_index": 76,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2855",
+      "item": {
+        "content_sha256": "a1a6cc8eae98d16c3dbe8949c96ce9688e77cd39e0d67fe202d36ab4817f817e",
+        "difficulty": "medium",
+        "item_id": "2855:0",
+        "item_sha256": "6b49c85077fbc405763eda06b47387086c020825bfcff84f546f4968ac2840dd",
+        "prompt_sha256": "5a6affcf3282e8db8dcc6cf58e127700da6628510fd8bef932b4588c76d19bb3",
+        "question_id": "2855",
+        "reference_type": "int",
+        "source_index": 90,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2855",
+      "item": {
+        "content_sha256": "11ac76e6f15a5e00d044a99981febd09ef1313290948dada8e70a6ad649054b9",
+        "difficulty": "medium",
+        "item_id": "2855:1",
+        "item_sha256": "ae3fd763c9f9544566b5d6c9ef652e076da3be0141c269c2f08e83ffc6612447",
+        "prompt_sha256": "e3599a7364ff945d50c00564e780ffc580299f5834589a98a62261f732a08cc1",
+        "question_id": "2855",
+        "reference_type": "int",
+        "source_index": 91,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2876",
+      "item": {
+        "content_sha256": "6a7a4f5cce13f6e02d8ee6e0b1dc63020bb277624e7617b7eda81d2c51e0462a",
+        "difficulty": "easy",
+        "item_id": "2876:1",
+        "item_sha256": "3e665e22f6cd3c063a47cded809388930566887dcb75e6c24016a31e5e818487",
+        "prompt_sha256": "bb94a0ee34001fcaf78441c45d7824f0dbff3f5de7d00f2047084f59a785731c",
+        "question_id": "2876",
+        "reference_type": "int",
+        "source_index": 114,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2879",
+      "item": {
+        "content_sha256": "02922ee30989ad00600fe432ff09c58ce1093697c750e26a9a6aa8b8df7a3c67",
+        "difficulty": "hard",
+        "item_id": "2879:0",
+        "item_sha256": "7cd4d0694d34e91be950321dda682ecd7a7b73cf307c53477ae724339d0655ee",
+        "prompt_sha256": "172f36e2b9593566582ea260724836b8a0f1f646f3c55fc36927cbd5eb098c6a",
+        "question_id": "2879",
+        "reference_type": "int",
+        "source_index": 119,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2879",
+      "item": {
+        "content_sha256": "c4c0808b131c57c8affefc143a783abcbee0a33a2df178ed7bedd4943d6ed9f4",
+        "difficulty": "hard",
+        "item_id": "2879:1",
+        "item_sha256": "aba7a175dc2d5ce52e21a6b78105548456b2a80be94c1f96c396ae9681e86812",
+        "prompt_sha256": "25dd1903c110fca67825eb1458bfd130cc7f9ff48af4242994186bbfabc46f03",
+        "question_id": "2879",
+        "reference_type": "int",
+        "source_index": 120,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2892",
+      "item": {
+        "content_sha256": "207192b29f19dad430cf0004f679055ddd2cb1ab44449e340b5f12a131923fe3",
+        "difficulty": "easy",
+        "item_id": "2892:1",
+        "item_sha256": "82c87e073dcc6db8cf97cf45f1f13e16b13242590dfb357afc02f20889ae0351",
+        "prompt_sha256": "9a7bf239bb85f6378a7c1b34bbdcc31076b0897be49c4c3b233d45a68c92be48",
+        "question_id": "2892",
+        "reference_type": "bool",
+        "source_index": 142,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2892",
+      "item": {
+        "content_sha256": "608850f7c4c204777b5b3d094c20b9e3739b4466d7734905fa0e872a80d0e697",
+        "difficulty": "easy",
+        "item_id": "2892:2",
+        "item_sha256": "b0ac0c1f84ea53797ad9df9f39889b0f47c96a8b7ae6645648c157e7d2e65603",
+        "prompt_sha256": "87530f195977a9fd4c345d0b99c538e8f669cefd41c398e0f2bd6a63b5f77d9e",
+        "question_id": "2892",
+        "reference_type": "bool",
+        "source_index": 143,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2892",
+      "item": {
+        "content_sha256": "33f4db712a37d3afe9ceed7b9262b7d580642cc96f6ff7273236b7eef9d0613a",
+        "difficulty": "easy",
+        "item_id": "2892:3",
+        "item_sha256": "4feec2fbeda91da17acd4aaedd9ffb7651ba9b5da87ee9a87cca05a30b782e6c",
+        "prompt_sha256": "f9a171190efbcaff704404ea9d7469687ab49d00e417f36c281b8a34e06c591c",
+        "question_id": "2892",
+        "reference_type": "bool",
+        "source_index": 144,
+        "test_id": 3
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2917",
+      "item": {
+        "content_sha256": "e154a6ffe14cce894b3f67a574566314e78457045bfa60daae2c69bddae1e46a",
+        "difficulty": "easy",
+        "item_id": "2917:1",
+        "item_sha256": "65867273e994773a407125fe1f59e2e7c8891fc8c5ee13d6e85092ccd866c4d4",
+        "prompt_sha256": "4fb9759513ba4cb5cefe353c84f4f1a1c726e8505a6da1a8941818845ee51a2d",
+        "question_id": "2917",
+        "reference_type": "int",
+        "source_index": 155,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2954",
+      "item": {
+        "content_sha256": "7e6913a63e1ff6a96a624abcc53eddfa9f1ab589a3ea6b3ef6112d8fa11b7b3b",
+        "difficulty": "medium",
+        "item_id": "2954:0",
+        "item_sha256": "7d32e3384832fab97b66b9830bbb88a7c195131f0010b2859ac13126e3e03e21",
+        "prompt_sha256": "9ac8c73a6d0e31100376bcf60e1a9653b244885aa3f6c2f3208262676b9be04e",
+        "question_id": "2954",
+        "reference_type": "int",
+        "source_index": 168,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2954",
+      "item": {
+        "content_sha256": "24710c514acc3b91e96590aa5b17ac3eabd67ace38953e43af4a6ca873701c69",
+        "difficulty": "medium",
+        "item_id": "2954:2",
+        "item_sha256": "86234a05dfa52ce61cc20195f8996d966ccf0fb51c525c19d49b1c2d0964f556",
+        "prompt_sha256": "6a3a2bf4c6a8fd260850269b37ac9fdae27ce9c6b11c7c4fd02f9f644a4b07ed",
+        "question_id": "2954",
+        "reference_type": "int",
+        "source_index": 170,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2998",
+      "item": {
+        "content_sha256": "17f5b7d0c23350715cec5e954297aaa16d2f4e935e1524f2c53bd8c79b74d5f3",
+        "difficulty": "easy",
+        "item_id": "2998:1",
+        "item_sha256": "6c26f21cd8e94490caf3bb6445d6f7aa84abb5e78bc83cf1d96a210f5ea2e5bb",
+        "prompt_sha256": "e64b4ba2441e6285e073e2f1127a37bb446cf59f9b41e0fc5ac4db287036bc8b",
+        "question_id": "2998",
+        "reference_type": "int",
+        "source_index": 179,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3017",
+      "item": {
+        "content_sha256": "5fd62cd3355b317e03f42a714a17c439b9849d5768d804f6c25bc3f973710f1b",
+        "difficulty": "hard",
+        "item_id": "3017:0",
+        "item_sha256": "52fb2938e249d1edfbdfbb5985981c16042b9163f64b0d617be6646088a4fb8a",
+        "prompt_sha256": "7df404fa5aa03017267d89780f83ac5b633dc6119eddc4aa99a11316a08b59f3",
+        "question_id": "3017",
+        "reference_type": "int",
+        "source_index": 185,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3017",
+      "item": {
+        "content_sha256": "5a052323e51fae3b3368b18b29c7eb51cc8f9eefdff0f3b964a3e56ccfec225e",
+        "difficulty": "hard",
+        "item_id": "3017:1",
+        "item_sha256": "e8bde2dff6d5beafebbfd59d47819a98d18b317b0da530cd12e7b988eb5cfd1c",
+        "prompt_sha256": "a6a300d78c123c620169c2dce3393fbf1f4a5ea2430ef82ca6761d7d17672f55",
+        "question_id": "3017",
+        "reference_type": "int",
+        "source_index": 186,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3019",
+      "item": {
+        "content_sha256": "6f0bdc5a7c3d9916153200b682e162221bf1a54d7bbe13e5242acc71b1fcafd5",
+        "difficulty": "easy",
+        "item_id": "3019:0",
+        "item_sha256": "5169faf869df1b8b023d60957943237d4ac63ff22c4aee0074d9422ec0970255",
+        "prompt_sha256": "ea3294c4de711f562b88118d116bc29ecc417b936333b4945f3c625a1df41528",
+        "question_id": "3019",
+        "reference_type": "int",
+        "source_index": 191,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3019",
+      "item": {
+        "content_sha256": "4738ea51217a80ef97711debd2d07d5cc6f9c7ae69fe3641f5ac26dfac431f08",
+        "difficulty": "easy",
+        "item_id": "3019:2",
+        "item_sha256": "2bdea0cfc2e2be382df08a1dddb933bdfde2c818c76fabe0610a69abaebfc8e9",
+        "prompt_sha256": "1b4ede05ddfa07eb65a4620be2799d0cd24f6571dbbf04b6029286501f39a9eb",
+        "question_id": "3019",
+        "reference_type": "int",
+        "source_index": 193,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3025",
+      "item": {
+        "content_sha256": "e66945b65403fde5df7e49ed8d9aa4ead23a773ed278565d7ab9a475d62ab252",
+        "difficulty": "hard",
+        "item_id": "3025:0",
+        "item_sha256": "3a7d4a1b2d15572bd43c21aff0d4266ffcee9c57098a26c3b05e0152d0c02b75",
+        "prompt_sha256": "99272fb7b52bc36e02a528d86b864249e3c226fba8886ba2749d124a580973a9",
+        "question_id": "3025",
+        "reference_type": "int",
+        "source_index": 196,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3025",
+      "item": {
+        "content_sha256": "e69f2c858f0fe0e5735e30bd38f282b114b742af979ecfb144964d5df6453f07",
+        "difficulty": "hard",
+        "item_id": "3025:2",
+        "item_sha256": "c3f5fe826a938edb6687e988f5bd0287a7c7573974546b8913597ef44b0386a1",
+        "prompt_sha256": "b772b8d551103def975eb9c430eb602250ef92868dc1a83832ea7d4f1ddd9595",
+        "question_id": "3025",
+        "reference_type": "int",
+        "source_index": 198,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3080",
+      "item": {
+        "content_sha256": "4da81245ba8c1a11b9b192fb63b1e51fa77b8f93f926bede501d9ec5780b69c6",
+        "difficulty": "medium",
+        "item_id": "3080:1",
+        "item_sha256": "d674b8d9ac9565ff5668e3bddfe34e37127aa37a0a6c9047a318a98f0381c840",
+        "prompt_sha256": "5a5767e90db91f8301caa701abccd38a9aee50e51742e63ce99a9bf1bb6801fc",
+        "question_id": "3080",
+        "reference_type": "int",
+        "source_index": 224,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3091",
+      "item": {
+        "content_sha256": "22efde597f5f1345976857d5bcc8569b5625b3a8f77acbf8f2d8fd32134b3965",
+        "difficulty": "hard",
+        "item_id": "3091:1",
+        "item_sha256": "dbf763d7a4eaff16218d4c9ab420fb81dc7a355520b8fe91ca1c0bce2c2ef9a1",
+        "prompt_sha256": "7868db915e284b81db58399e96d97ec32319a832f5b63b64503152d80c9a9192",
+        "question_id": "3091",
+        "reference_type": "int",
+        "source_index": 229,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3091",
+      "item": {
+        "content_sha256": "80044059b476dd5022321d81cdd8d2e9c865fb643757605313f5d1e98f650d4f",
+        "difficulty": "hard",
+        "item_id": "3091:2",
+        "item_sha256": "d05b4ae1588797b16759c5a8f2b9367f85572511d1dcbc3547b71a5ed09664d6",
+        "prompt_sha256": "9338faaae763abe792ee591203e906c00a47afe8c4b75c9df61396c52f84762b",
+        "question_id": "3091",
+        "reference_type": "int",
+        "source_index": 230,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3154",
+      "item": {
+        "content_sha256": "168cc8c7700ef414a48344a7be5fe1f8882b99c8f4a8a112100e78d9a0e2cd71",
+        "difficulty": "easy",
+        "item_id": "3154:0",
+        "item_sha256": "56aaa1e6b7faf2bc30830e0361f3e10c7c44d847e6b2c482581b0c5f31359bf9",
+        "prompt_sha256": "b965f4bd31270582607ac65796b9f5f78414583b50f6f3a79132d3ea9fcd4139",
+        "question_id": "3154",
+        "reference_type": "int",
+        "source_index": 253,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3154",
+      "item": {
+        "content_sha256": "8064234d47417116b298696ad9547d691316ae5f29fe89fc8be8db0d81040e55",
+        "difficulty": "easy",
+        "item_id": "3154:1",
+        "item_sha256": "70443bfabb73bb41975a04c9328ff7fef3612edc449225a758e10e632aec0a0f",
+        "prompt_sha256": "d1a980b8004c6efd39d540afe674dc8b6f7dc902a6f512dcf56dd5ab00905c7a",
+        "question_id": "3154",
+        "reference_type": "int",
+        "source_index": 254,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3166",
+      "item": {
+        "content_sha256": "212f42e95daed725ca27e2dceff0bfc5f3c5070d2dcb86f0968b07dc3afd1aed",
+        "difficulty": "medium",
+        "item_id": "3166:0",
+        "item_sha256": "e715766fcd0de5141deef679416d92945aca1b4707c003157d7fcbbfe866f835",
+        "prompt_sha256": "218aab7631e16cebf9b2741c2d2652cd91a6cad17c891c96140c261857a07622",
+        "question_id": "3166",
+        "reference_type": "int",
+        "source_index": 260,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3174",
+      "item": {
+        "content_sha256": "0c36ef0b1d7772c85ccf9e98f1a5f14799df157cbf13e7ea06be09dec08ac4fd",
+        "difficulty": "medium",
+        "item_id": "3174:0",
+        "item_sha256": "a0151b74f27ad00f82783c714ad46ae81f06a813f7e003513ae0ae9f4f683b51",
+        "prompt_sha256": "78f5d356db644f6b637bbcceea5eb457d30902d7d23e6fe6d000623dbd695777",
+        "question_id": "3174",
+        "reference_type": "int",
+        "source_index": 267,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3174",
+      "item": {
+        "content_sha256": "f6b4b12d5d5308a564f194a5a92a321814277d26c8b7d0cfcb5f2760ebc16f31",
+        "difficulty": "medium",
+        "item_id": "3174:2",
+        "item_sha256": "c4aff4fdce90cb476bb88ee3ce08303ada13f01889b132eaa29403edbad4b293",
+        "prompt_sha256": "5549b28f94e565effadc82b04476414384dedcb0f632309d31f0e8c829506562",
+        "question_id": "3174",
+        "reference_type": "int",
+        "source_index": 269,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3206",
+      "item": {
+        "content_sha256": "bdb20d3984fc338e24ad82fc3ebc3c08a036180022d810230520f4fa33c5bf4e",
+        "difficulty": "easy",
+        "item_id": "3206:0",
+        "item_sha256": "052f534ec2f1479fa18859649c7e9aa473444921554aac190046b2074fd62593",
+        "prompt_sha256": "6323a6b91f4484d7a5da81619ed5c997105d9c23a2e81a1e6f686eb7ce83dc07",
+        "question_id": "3206",
+        "reference_type": "list",
+        "source_index": 305,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3219",
+      "item": {
+        "content_sha256": "c710aa7cfeeeb236cee72e6a42219594327842887b98f40eaaef47a5cc062f7e",
+        "difficulty": "medium",
+        "item_id": "3219:0",
+        "item_sha256": "94ebcf66b5502e8e42c5972ac87a356f76bf5397104f1a16c2d4586e60e50cda",
+        "prompt_sha256": "cd5bcfd4a61efa2f18fefeb6f74a448240c89317350caa6304da02bce3705914",
+        "question_id": "3219",
+        "reference_type": "list",
+        "source_index": 322,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3219",
+      "item": {
+        "content_sha256": "ffb18ba2868fbb82ad82c88889b92be4dcafc01cc3250c82ab28b607bce10b2d",
+        "difficulty": "medium",
+        "item_id": "3219:2",
+        "item_sha256": "6878b97299626b10fa751c3f301065a781486ce3a3d795527b5dfae424526442",
+        "prompt_sha256": "29c42ac2bcfb53e729bd97b265a603b7dbdcc2300d0aad5b2ebe46630b577d1c",
+        "question_id": "3219",
+        "reference_type": "list",
+        "source_index": 324,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3242",
+      "item": {
+        "content_sha256": "d70e76db1c74259aee2132970deab8a67ea4461951b603fcfcb1d64914866329",
+        "difficulty": "easy",
+        "item_id": "3242:0",
+        "item_sha256": "c8ec201b6eca231cc9e40805243ece56e16a69938f171a13ad5dbd600ef12179",
+        "prompt_sha256": "fd82066eeca448a3f205e78283bfc8917b5f4a7e2deeb3e63af6b61dbf5ac192",
+        "question_id": "3242",
+        "reference_type": "int",
+        "source_index": 367,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3244",
+      "item": {
+        "content_sha256": "577c5de6df76b780655e9de3686c21034ca66580a739334d84b7aa3c48ae9b55",
+        "difficulty": "medium",
+        "item_id": "3244:1",
+        "item_sha256": "eef822bee201c8bda66290807ca61d116268e1c95b1b9825268663ef5dbea567",
+        "prompt_sha256": "30af477f57be3ceba11da09f72fe2971f86e5090dc42bef89e09a278dadb0696",
+        "question_id": "3244",
+        "reference_type": "int",
+        "source_index": 373,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3244",
+      "item": {
+        "content_sha256": "98954ae22f4debd5860f332ecb6937c80423fce4fc51e221eee880dd0ea99b3b",
+        "difficulty": "medium",
+        "item_id": "3244:2",
+        "item_sha256": "36b22b9ee2ab72d448720899bbe7877530b5bef76d960eca03d996ad125f183b",
+        "prompt_sha256": "d7919b9e16950ec45a42881d04124d8abae68659f8674e84b9ee5fac8411a8c4",
+        "question_id": "3244",
+        "reference_type": "int",
+        "source_index": 374,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3246",
+      "item": {
+        "content_sha256": "9f0b6c1e5df9e0e88b872927ff0c6ce3aaacf8c7765c179c722570e8b09d5837",
+        "difficulty": "easy",
+        "item_id": "3246:0",
+        "item_sha256": "744c5d77842f9ab9d8d65391477cd59501a448e662d8c986aaceea6e06a5a2b5",
+        "prompt_sha256": "300c259a8557c4a89ab366a93b1dd0c38067c7d52f2194715bafc9f7d64bb7b8",
+        "question_id": "3246",
+        "reference_type": "bool",
+        "source_index": 377,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3246",
+      "item": {
+        "content_sha256": "d09982d4ecbd5a93571e7743723eaba913c09e67985eb9efc44c6bdf88aa0c86",
+        "difficulty": "easy",
+        "item_id": "3246:2",
+        "item_sha256": "feb356b2778c13e6f55ced315cd348ddc592d77aab574bdbcbfd3e83bd6b056a",
+        "prompt_sha256": "0013995aefb974ac4030fb28fc4063217084bf0f516968d564bca7251d4f3f1a",
+        "question_id": "3246",
+        "reference_type": "bool",
+        "source_index": 379,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3249",
+      "item": {
+        "content_sha256": "5e4af416603a2aec44298e7308156124e611a6c0db1d9e8d8a9c132f06abd47e",
+        "difficulty": "medium",
+        "item_id": "3249:0",
+        "item_sha256": "f79cbaabf198b389d3a4fd7c55c267d23a2f943b41c3ecbe64786fdf93a15d82",
+        "prompt_sha256": "c0ac293a6c3e5e57198efd5791ee3899b8c5652778a7dd407aa3fe231941e052",
+        "question_id": "3249",
+        "reference_type": "int",
+        "source_index": 380,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3252",
+      "item": {
+        "content_sha256": "ae47fda4311edba874cf4013202c99d80673b76b70be98454bec7f3b5b7025be",
+        "difficulty": "easy",
+        "item_id": "3252:0",
+        "item_sha256": "b24e2da9a8fbf8c0c0fad72b4f4f6f5a25344aaf7f6d9119eb7d1655507b1d8e",
+        "prompt_sha256": "edaec4442e6183e7e700f2b8c056488a82c9e5627fa6005d6d132542f55e3ac1",
+        "question_id": "3252",
+        "reference_type": "int",
+        "source_index": 384,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3252",
+      "item": {
+        "content_sha256": "afd489e60e1724a4251d4367b615682524311c75ca39be7d420fd9ae4156e4dd",
+        "difficulty": "easy",
+        "item_id": "3252:1",
+        "item_sha256": "424308110615b18a9d7db2f4017e075c09cce2266bf1b9197288ab09ab8e86ce",
+        "prompt_sha256": "9ae4dce9aca58c85cf4e3c64a587636268d4e0ef8305cfd990c6e0e78e4a2d22",
+        "question_id": "3252",
+        "reference_type": "int",
+        "source_index": 385,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3265",
+      "item": {
+        "content_sha256": "8253abc89e5a6f340ca1406021ad1f9fd2c56979d104c68110e5df7e55722fff",
+        "difficulty": "medium",
+        "item_id": "3265:0",
+        "item_sha256": "d0ce6c883c4857b4626db1174a07893212c88d6238853a3d146ae1fdb8b6b707",
+        "prompt_sha256": "9191ec342477a28de788946c359db055e461fca29647bf4973102aa86bf26bb9",
+        "question_id": "3265",
+        "reference_type": "int",
+        "source_index": 396,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3265",
+      "item": {
+        "content_sha256": "a570b99ed326f7a057a67547636ed1c6c6b857c12e36123f4ec1e3f4db49239b",
+        "difficulty": "medium",
+        "item_id": "3265:1",
+        "item_sha256": "a015281006338ca4dee23961eac3a2b97fd42be740d3f9396006bdccbe367e4c",
+        "prompt_sha256": "ebaf2da524ed2ec90f21ef3a92f42be22693a68d68097decef88750bc86c56a8",
+        "question_id": "3265",
+        "reference_type": "int",
+        "source_index": 397,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3309",
+      "item": {
+        "content_sha256": "7f38fd532e41d7b9411db9f66a3e70f962cfc1418a71e2a76f8d69a5b1f0dfbb",
+        "difficulty": "easy",
+        "item_id": "3309:1",
+        "item_sha256": "56b129647dbee2867fdf6e108e9203b42caddbc990a268669c1fabb31546eb00",
+        "prompt_sha256": "5e24947d066ce470ae315bf48c7106fb0b4db5dc2819aa173ae665fc905edaa0",
+        "question_id": "3309",
+        "reference_type": "int",
+        "source_index": 422,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3309",
+      "item": {
+        "content_sha256": "e130e52d41e3891e751563fe47328c9b0b801bb48a373d110695c097550d62ad",
+        "difficulty": "easy",
+        "item_id": "3309:2",
+        "item_sha256": "2d0c0eab0b87b2cd9452f508b5ff3981bdd69fd65ace0ff36efaa13705d883c4",
+        "prompt_sha256": "cac051de918d71871e77d490e32ee249a04f9872ac5274820a14e0b29dc1f78e",
+        "question_id": "3309",
+        "reference_type": "int",
+        "source_index": 423,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3312",
+      "item": {
+        "content_sha256": "e5f637e9a4bfd1c1bd2e273e432b4140073bfc4de150ec8f10eb1fb927dac39c",
+        "difficulty": "easy",
+        "item_id": "3312:0",
+        "item_sha256": "996dd6809c3d895b4214296591853a94bf987fca2e9d3e46dd9d709cd545e66e",
+        "prompt_sha256": "62ce8fd479cb68a349f52516c2dc44bcb048d270e036c772f40d563566f2b5b8",
+        "question_id": "3312",
+        "reference_type": "int",
+        "source_index": 426,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_A",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2730",
+      "item": {
+        "content_sha256": "f68afab1fcc152f70f6efba0db1ba90b291815184e430103762aa91c20d2ded3",
+        "difficulty": "medium",
+        "item_id": "2730:1",
+        "item_sha256": "9a0b38426f931280a548a47d6ec6a3a58f655ffcf6ede753c3ad6f61c7a8069e",
+        "prompt_sha256": "6e42a1a961f9e449c09bd518aa357128c01aa636f9a88857d5ed2b381ce88405",
+        "question_id": "2730",
+        "reference_type": "int",
+        "source_index": 5,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2755",
+      "item": {
+        "content_sha256": "6955cd8e3ec21c02c05a5d33f048bb1307a8830bf613d014fa81855bd26f4831",
+        "difficulty": "medium",
+        "item_id": "2755:1",
+        "item_sha256": "c52dcb49e819d80824e915ef06f56601d3c8b65b1ef73a7d42a090e3bb721658",
+        "prompt_sha256": "95fb9ecfb364e570417d51ec0e3489d9c5ba7ff3090c485b698eec1ba7ebae8c",
+        "question_id": "2755",
+        "reference_type": "int",
+        "source_index": 9,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2756",
+      "item": {
+        "content_sha256": "7b3bddadda2fd3bd196ececbfaf3400ee4211e9b6ddcf2ebb7eaed5b8094ccd2",
+        "difficulty": "easy",
+        "item_id": "2756:1",
+        "item_sha256": "0dbd6e15fa74e1a9d3f2a0aa587837f5df1b434eb26b4b589000b24b89b946c8",
+        "prompt_sha256": "395bb28a4489af1b62cbfa9627cdaf7fc487b2be980ca77d72c41cb94b490818",
+        "question_id": "2756",
+        "reference_type": "int",
+        "source_index": 11,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2777",
+      "item": {
+        "content_sha256": "35d8cb9303c1afb1567dedcb782ce2128332754f8c29709ee4df4fc0b5651aa6",
+        "difficulty": "easy",
+        "item_id": "2777:0",
+        "item_sha256": "1d2722bd54051374371a48da056225c9d36c93417d6f7ae3a62d441e044e3b22",
+        "prompt_sha256": "f9bcc971c3b0692d5bd70dbd4412e74a0ca4cb912fee573a88c4d89364aa4f83",
+        "question_id": "2777",
+        "reference_type": "list",
+        "source_index": 14,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2779",
+      "item": {
+        "content_sha256": "9c6a48d8a3d5202161e9983f506e7068dbcf4d05e77d397475f3b3fce633e3cf",
+        "difficulty": "medium",
+        "item_id": "2779:0",
+        "item_sha256": "1c7b1de7cb4317b03694544f7bf96e2436dcec7b122c36ae079b022e783f0e8c",
+        "prompt_sha256": "ceafbe757f8d9cae218a6b5e19ee059a08093295e4e9a1dcbfa52f777b608e14",
+        "question_id": "2779",
+        "reference_type": "list",
+        "source_index": 16,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2784",
+      "item": {
+        "content_sha256": "3a89c548bce78231ab8a98d3a2292dc9d9b816890abc0e7de40989e85c5a1913",
+        "difficulty": "hard",
+        "item_id": "2784:1",
+        "item_sha256": "f6e0e56b05cb13fab50da2d699fbbeb37169d074e628cf8adf994fd7efa86f7a",
+        "prompt_sha256": "79bd775a381305aa6bba0f9ceb28259a537e4e6d6659a3f310e4c66aa2f736e6",
+        "question_id": "2784",
+        "reference_type": "int",
+        "source_index": 19,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2785",
+      "item": {
+        "content_sha256": "3689e44e1a4b2aafa17f7865244c4d8247d6b7fa98f19dc124ede837f848983a",
+        "difficulty": "easy",
+        "item_id": "2785:1",
+        "item_sha256": "7bbf8f26a7c7e1913ebb5ad0bbe29745972034c985e643fcd9c27107b135d176",
+        "prompt_sha256": "87c7ae9d93c6560ced088549a37314704d45ac3544b6bb3e9d8f68a7b5119738",
+        "question_id": "2785",
+        "reference_type": "int",
+        "source_index": 21,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2785",
+      "item": {
+        "content_sha256": "a66ab5bfb7734e660e243814e45528a3f45daf8d5a2bf6aaad4883058f58b0fa",
+        "difficulty": "easy",
+        "item_id": "2785:2",
+        "item_sha256": "a4e5f14acf8721fcaee903d441e824f10c29761f2b28df8925365159f97482b0",
+        "prompt_sha256": "939571c978351545e92a04fa41ff3295e85dc5ca49279f692d96e11350c4d119",
+        "question_id": "2785",
+        "reference_type": "int",
+        "source_index": 22,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2791",
+      "item": {
+        "content_sha256": "d6f5a9dda58d27ed22631c168c4c2dffa5e524e11ed1defff5e30180a00d7c4b",
+        "difficulty": "easy",
+        "item_id": "2791:0",
+        "item_sha256": "7ca24ebbad1dca3e4debaf330c4b450cf649325d340d684069617da6260d79df",
+        "prompt_sha256": "2680fc3fa887eab536b4c5a1a8c2e227fcedae7dc3a06f0ad895973d8571e078",
+        "question_id": "2791",
+        "reference_type": "list",
+        "source_index": 26,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2792",
+      "item": {
+        "content_sha256": "bfa4b6b85b3a478b489e1778ac798fde1931291ed88ef3f779bd732d3cab388d",
+        "difficulty": "medium",
+        "item_id": "2792:0",
+        "item_sha256": "7e8e4d3bc96c20772c72249bfcef656ae89376f4528c060cf0e391299a501ecd",
+        "prompt_sha256": "da8776c366006caebc427df7605f829483dcf9c5b61ea0c4501a4f786aa802ae",
+        "question_id": "2792",
+        "reference_type": "bool",
+        "source_index": 28,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2792",
+      "item": {
+        "content_sha256": "8524245a156fe4a03cd13048ecc48a68775dade7403a1f6a35f72720a7bd9862",
+        "difficulty": "medium",
+        "item_id": "2792:2",
+        "item_sha256": "e1395dc40757a74308a62ba35a18e263a8161425dcc8a6137b4f2fa7a621213e",
+        "prompt_sha256": "beee746a00bd83727c788dfe268d580c303ad63df0c5614db222bcbcf108f8d5",
+        "question_id": "2792",
+        "reference_type": "bool",
+        "source_index": 30,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2800",
+      "item": {
+        "content_sha256": "1a607dd690e07cbb2266ff9db4475d7dad9dc651e5c0bf544eb78b218401c6d2",
+        "difficulty": "easy",
+        "item_id": "2800:1",
+        "item_sha256": "cb396193ed16f023f6406661f95a5eb12b017dd488c90f2b417ca667a19f2cf3",
+        "prompt_sha256": "b3063161daab7f78f05892ea397fbc4378600b64fdbfcf3e9a87899c947c2ac3",
+        "question_id": "2800",
+        "reference_type": "int",
+        "source_index": 32,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2802",
+      "item": {
+        "content_sha256": "3634d2dac78669afbe5dad3208931cdd78e5afb9c7c44bc3cd1720a2ae99e729",
+        "difficulty": "medium",
+        "item_id": "2802:0",
+        "item_sha256": "cbda7888809b8b1a59dbfd4e0dfe622a1633f9b0275f55913755b74828962c8a",
+        "prompt_sha256": "0a0539e85bf2d9acbccde1a96d60a55abe6b5426605424be134d889715cfe0a4",
+        "question_id": "2802",
+        "reference_type": "int",
+        "source_index": 33,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2808",
+      "item": {
+        "content_sha256": "69b58c57dc5f4290cfaf2909dd1a680ecc14897bf512a659a71d1ff307567f70",
+        "difficulty": "hard",
+        "item_id": "2808:1",
+        "item_sha256": "608511fa53b6fce28f214b49854bdf9523d2a58e6318793f888a9b67f0568ca9",
+        "prompt_sha256": "d44c055b58457c44d2f5c9a73b26f3dbcab94e39e63bacbc2fa6fa6efe0fd489",
+        "question_id": "2808",
+        "reference_type": "int",
+        "source_index": 36,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2810",
+      "item": {
+        "content_sha256": "61567dc995593663ba099ad4568f7d9332083e965a210b8fae1f849274023737",
+        "difficulty": "medium",
+        "item_id": "2810:0",
+        "item_sha256": "c3f1167cdd95640714a920c8364f013f1430af6ef8ccd62acaf47e1a437012bd",
+        "prompt_sha256": "32689df97a2f8b2d6d13947b6f6366af0af15834d25f22eea64f7ed1330f3a56",
+        "question_id": "2810",
+        "reference_type": "int",
+        "source_index": 37,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2811",
+      "item": {
+        "content_sha256": "71688f87e1bb75e0488f2e7090b3daf70224c9aa1cb587aed09f6a530027b1c4",
+        "difficulty": "medium",
+        "item_id": "2811:0",
+        "item_sha256": "059d27ffce715a76ab57842e6350e5f11a3dd64ce76a0f4c77f93c6f3f5b9335",
+        "prompt_sha256": "f9215f85d60d269d271b598e4a73938e97cd0dcdb480f82ff24455b44f5db302",
+        "question_id": "2811",
+        "reference_type": "int",
+        "source_index": 39,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2816",
+      "item": {
+        "content_sha256": "541492a0820ca01f45f45e637a953cedaba88a5b7ff71e285aeaa35af2e97a73",
+        "difficulty": "easy",
+        "item_id": "2816:0",
+        "item_sha256": "15be892326d97ad0f152b00c98b93fd84a9ba7d351659cbfd29fd9857b83aaa2",
+        "prompt_sha256": "cf98f65edf8734724ac31d28cb645f228b5757e44eb7ca3803bb7a23ce9a6573",
+        "question_id": "2816",
+        "reference_type": "str",
+        "source_index": 43,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2816",
+      "item": {
+        "content_sha256": "8bf954339a13efe7fd6dac1068087e0ce6027d79a67baa33bcb384213ff8a4b5",
+        "difficulty": "easy",
+        "item_id": "2816:1",
+        "item_sha256": "6e429993ee3b268bbd988c4415d55ef1273730b0cef783c295a2b1e1eca3552a",
+        "prompt_sha256": "ed85147ee2cb85f2122dd25a07715afcb1e146e624ba4a53a9cdf8650b72bceb",
+        "question_id": "2816",
+        "reference_type": "str",
+        "source_index": 44,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2817",
+      "item": {
+        "content_sha256": "ce0e37682fd1034efaf92fa752079ab3c6f1eba02bf60a86769a237502bd2c11",
+        "difficulty": "medium",
+        "item_id": "2817:1",
+        "item_sha256": "4a7c0883a3d75b5b91c8d9b8bad8443e6b99be1c9858e10e0ac7d19f032086a9",
+        "prompt_sha256": "c217608ab7611f437d2ae61e864ea81bf5a7dcea0ad04580fe87d9131757bb9a",
+        "question_id": "2817",
+        "reference_type": "int",
+        "source_index": 47,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2819",
+      "item": {
+        "content_sha256": "eb544be1103d82b04de7377a837c9689212b5d124ce23190ab2b7f1014b216a7",
+        "difficulty": "easy",
+        "item_id": "2819:0",
+        "item_sha256": "70c4320a2745c25b071afd08a43a74362a817b6c902975ea36aa0f0a2bf22083",
+        "prompt_sha256": "c42ca32ca3c0680ddd29cb39aa3ea20742af86bd7a6cc3b8d009c6a2ca260051",
+        "question_id": "2819",
+        "reference_type": "str",
+        "source_index": 48,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2824",
+      "item": {
+        "content_sha256": "3cbbc371ddee0b772c2c2afb3140fcdd445341fe5b1745297ecf303ead0478c2",
+        "difficulty": "easy",
+        "item_id": "2824:1",
+        "item_sha256": "aa3d8125e8e0e82724250b967c15ccd0cb1e7f7e409b01c252745b833f47526f",
+        "prompt_sha256": "cf9b717bc54ff833ccbf71cbdab0e6bd9e99b4317769549392cfef724cbb5742",
+        "question_id": "2824",
+        "reference_type": "bool",
+        "source_index": 51,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2825",
+      "item": {
+        "content_sha256": "2e880590a44b0fc15c1c1404a5580384d0c43852e298de5ea26087f7b93c8116",
+        "difficulty": "easy",
+        "item_id": "2825:1",
+        "item_sha256": "dde004ea6e7c4c9422c0a765fced0212e7ce124992d916769e9e50d50a743ba7",
+        "prompt_sha256": "9be51f45c07043e5eb9d466ed609eab7b231b25baec66936e5b32992f28004f4",
+        "question_id": "2825",
+        "reference_type": "int",
+        "source_index": 53,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2825",
+      "item": {
+        "content_sha256": "bcf8c5a729b4f65858b94d50f49f48a8d2462e7aaed246b24b6ce0f88603b623",
+        "difficulty": "easy",
+        "item_id": "2825:2",
+        "item_sha256": "48308ad940aaf45b1924acd0253a29315f4afdeda26a732e4c143bde1c866537",
+        "prompt_sha256": "880d2df50dd74ef17f56a407ec763baf4b48eae1eae534972d1c661c617612b6",
+        "question_id": "2825",
+        "reference_type": "int",
+        "source_index": 54,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2828",
+      "item": {
+        "content_sha256": "3737ba2ba222e984a654a34e0386fb3e4ed486d2e6caaa5352d468188f144e34",
+        "difficulty": "medium",
+        "item_id": "2828:0",
+        "item_sha256": "408010363a32b3446a4f2576d440fc47deaacd906df59556a7b9d7e689190e8c",
+        "prompt_sha256": "956424a9affb2192ad6fd6255ead46d4976882a145c54fce90619382afa0ad5e",
+        "question_id": "2828",
+        "reference_type": "str",
+        "source_index": 58,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2828",
+      "item": {
+        "content_sha256": "9a439fd908a16ffb2fbd1083f632c93d2de5a558ca63b42fe28c4f3ea3e046a9",
+        "difficulty": "medium",
+        "item_id": "2828:1",
+        "item_sha256": "bb0d01fdb751a2895da91e0aa2a5fd6fed2b9a504d44ea9d604bdd15b3a2928a",
+        "prompt_sha256": "adc1ac5ebd89339e4de69d8ec622636f4f1283444413e0868b64afb078b10cfd",
+        "question_id": "2828",
+        "reference_type": "str",
+        "source_index": 59,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2831",
+      "item": {
+        "content_sha256": "09ebfde77da9c6714eb7036f83af8f26c0d96d3be8d2c06463adcf27c178de7b",
+        "difficulty": "easy",
+        "item_id": "2831:1",
+        "item_sha256": "51c272c20048b1f0cf666add590bb978451f58a916fff47dd2e158d703704f3c",
+        "prompt_sha256": "3f590ddc23f8d3c19ede5a8295323780c64ce29fe04d63425dc12d49f4d85f79",
+        "question_id": "2831",
+        "reference_type": "int",
+        "source_index": 62,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2832",
+      "item": {
+        "content_sha256": "ad79330df022cc6774efa7ec085448d9bdcea5bb7877b590b37638e4790b9f4f",
+        "difficulty": "medium",
+        "item_id": "2832:0",
+        "item_sha256": "8d3c3d7e46e31d9e3969f7b288a6f221ae29ee4460531e9b61c5c42a3144c254",
+        "prompt_sha256": "b3be02d16c551495d3e0f7625939f14e26270bdffdf67e5a11260a54fd0898b9",
+        "question_id": "2832",
+        "reference_type": "int",
+        "source_index": 63,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2833",
+      "item": {
+        "content_sha256": "4d51e94cde0218581af2e70bcbb66ea28eb583a6d954f2e23fd68f567672cacc",
+        "difficulty": "medium",
+        "item_id": "2833:0",
+        "item_sha256": "56ae8fe22f1b8c1de06d295ed092d7871bd0b68a20ee976be9941fd43af2133e",
+        "prompt_sha256": "62bc86cc56187409b7aeef29d3678a7c5a93b35a7dac4442de0b69c028cae260",
+        "question_id": "2833",
+        "reference_type": "list",
+        "source_index": 65,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2834",
+      "item": {
+        "content_sha256": "f4753ab9a9302552c25673d887edbe757cf1fa83de2cc6ae16721e11174375bf",
+        "difficulty": "medium",
+        "item_id": "2834:1",
+        "item_sha256": "8abf05c8e11472569c716789cfbe04fe70a65b8ca58bd0e968b73ca2cfc416e6",
+        "prompt_sha256": "cf1d06cfe3d79ee42ab80ea3e0f8ce804ad0adb655099cad70dea26979475662",
+        "question_id": "2834",
+        "reference_type": "list",
+        "source_index": 68,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2837",
+      "item": {
+        "content_sha256": "f57170befb3d992d7453770b793e194f12a72622e6fea2b4ded1726074409e17",
+        "difficulty": "medium",
+        "item_id": "2837:1",
+        "item_sha256": "94bb21e9fe678d10c1a57e4c873df9c6211c01cb21475c0600fe95c8dd7baca1",
+        "prompt_sha256": "099d3f1a01e68adf0bb1fde14a3a317991c0ba27fb4fced3cf2b4050148c91fd",
+        "question_id": "2837",
+        "reference_type": "int",
+        "source_index": 70,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2844",
+      "item": {
+        "content_sha256": "2b98c4ab1597045237ac9537fbc2cd934404578bd38e520a37b0f55e2e5e62f4",
+        "difficulty": "easy",
+        "item_id": "2844:0",
+        "item_sha256": "b255db682316b33d64ff9d6c642a6641c279aab8b1cd817b4f14f4f5e6f6e6b9",
+        "prompt_sha256": "a6864e928909b9a26e4e6c278c85cb8a85c21773e9cd617693a467230c18f059",
+        "question_id": "2844",
+        "reference_type": "int",
+        "source_index": 74,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2848",
+      "item": {
+        "content_sha256": "f05248740c1b436b9234337dbe3efe87c72d3c10dc00b6b4d7412a967b2a7173",
+        "difficulty": "medium",
+        "item_id": "2848:0",
+        "item_sha256": "8d180f23eb34c31401a77b41e43f5b9fe494d05be46d9492f9ef739c5aab8ef1",
+        "prompt_sha256": "3a69b3aa6962474aeaf2a8748e62c1a62eb4028b089d891a719e31a571864d84",
+        "question_id": "2848",
+        "reference_type": "int",
+        "source_index": 81,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2849",
+      "item": {
+        "content_sha256": "da7fe24ce0d8e73c6206d7a4d3f2816a60973ed820d98fa10660c5e907b5ebcd",
+        "difficulty": "hard",
+        "item_id": "2849:0",
+        "item_sha256": "4620f25b1eee3e8374f9984bb6242e08971e298a828ccbf186bf6a94bc88a73b",
+        "prompt_sha256": "621f4c00112061fbd37621fa7de68bc6ee057513287b3a90ce9697942f27ff1d",
+        "question_id": "2849",
+        "reference_type": "int",
+        "source_index": 83,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2850",
+      "item": {
+        "content_sha256": "187e498dce0b14b8093db3cd43eec5a460d393acb739dc9acaddc00aab933e65",
+        "difficulty": "medium",
+        "item_id": "2850:1",
+        "item_sha256": "cc4b08c8bbedb8bd546bdb2e26a2aa967cc3f965007fdcccb724b7c791d2f301",
+        "prompt_sha256": "3e45b3977baed864317ea92043a0c113a8d5c6e73e9a71b2dac2bd62f97d711b",
+        "question_id": "2850",
+        "reference_type": "int",
+        "source_index": 86,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2854",
+      "item": {
+        "content_sha256": "f7b65473d123aab25bf8fa7f865d07b06e8406382d545a7abd30b19f2ebc0d89",
+        "difficulty": "medium",
+        "item_id": "2854:1",
+        "item_sha256": "1c8e8145916a5e85fd35afdf559b01b8ea662b2170c1f5c675493e0d9de544cf",
+        "prompt_sha256": "233f673b594eb5e540a07f49e3bca09b2062cd8ce1fe6176685be33201dd1d7d",
+        "question_id": "2854",
+        "reference_type": "int",
+        "source_index": 88,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2854",
+      "item": {
+        "content_sha256": "4a0da2b83431ba276fa8cf8fd8345e580bab350f3dccc771b74e75bea0903697",
+        "difficulty": "medium",
+        "item_id": "2854:2",
+        "item_sha256": "d2def928981be5c2f19403d6cc326dad724b5e784c61e16ed1c73ce17ecb40a1",
+        "prompt_sha256": "5a96eaca178b221124665164b5e74b0504adaa1161889421221a4e0b44d80bff",
+        "question_id": "2854",
+        "reference_type": "int",
+        "source_index": 89,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2856",
+      "item": {
+        "content_sha256": "2071c669fc9100f6e60b8d38658a4534aa0557282a78fd6b355a0924011032a4",
+        "difficulty": "medium",
+        "item_id": "2856:0",
+        "item_sha256": "998476cbc45a6090923c86766f85e8b018ac2d0fc8268aa42ae329400bfbc179",
+        "prompt_sha256": "e07341c7179e0b303e682f0a7a0fd20aac00511bf1c6e688caaa124983c098d3",
+        "question_id": "2856",
+        "reference_type": "int",
+        "source_index": 93,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2857",
+      "item": {
+        "content_sha256": "4650037d9214e438ae53a294030c26f1bdd6d89bc0679ff24f14ce71347ee19b",
+        "difficulty": "easy",
+        "item_id": "2857:1",
+        "item_sha256": "0cbea5ee1ffc6ce64a698b87339cb696d88e945bf177a2fd9a16037023099a26",
+        "prompt_sha256": "fa20a4261616a50ed795df91bd36ead46280734156534f7a7402f1077a472efc",
+        "question_id": "2857",
+        "reference_type": "int",
+        "source_index": 96,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2866",
+      "item": {
+        "content_sha256": "ffd07a906d9a2c54251caf8638181d1e966280da70ab9aceb5c5a9de17e0a2d9",
+        "difficulty": "easy",
+        "item_id": "2866:1",
+        "item_sha256": "3df00fed59f06c16505f3ae09409f9093887775d65fe2f9912130dd91a72b774",
+        "prompt_sha256": "a5e6278275ae2872379f7d5ccffaaa2efdaf816032dd3798ba1da1ea159df7ed",
+        "question_id": "2866",
+        "reference_type": "int",
+        "source_index": 98,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2866",
+      "item": {
+        "content_sha256": "ddd49e72bffc2ec6724f610d1afa98fe6948cc61de44ea919bded9ec19e6d6a7",
+        "difficulty": "easy",
+        "item_id": "2866:2",
+        "item_sha256": "cb63e14b8a29a3b77ca3dc3f546ad2f31dbf8bb191668b01716f98124dbfd7c1",
+        "prompt_sha256": "1c5e3dc7cb97a34c042270952c43aecc133b4254f6abb5461a05d6ebfc138c1d",
+        "question_id": "2866",
+        "reference_type": "int",
+        "source_index": 99,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2867",
+      "item": {
+        "content_sha256": "f1a4670b23aa2dfb586f341ceac071a2bf61ed60b0f59179f3775441b183f430",
+        "difficulty": "medium",
+        "item_id": "2867:0",
+        "item_sha256": "e1a2ee7df5a74976469c34d670d07265c0c7af76b1eb7e8fa1303a86d596c745",
+        "prompt_sha256": "6b196047f85888362b35834d5ceec6ff026b5e47280c55d0e6cd867067843eb0",
+        "question_id": "2867",
+        "reference_type": "int",
+        "source_index": 100,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2868",
+      "item": {
+        "content_sha256": "5d93826bef37d8b65ec9630f2c6f8d7cc37989a51827f9e63298a77d4c39724d",
+        "difficulty": "medium",
+        "item_id": "2868:1",
+        "item_sha256": "b79e138079a691de8b2aed49f5e9222d8bf3ebc93e103b4dae545cc44f1393a8",
+        "prompt_sha256": "3660dd18b71ae06d4fe19394a531081ed5969bddde986147a9963a58d97637cd",
+        "question_id": "2868",
+        "reference_type": "int",
+        "source_index": 103,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2872",
+      "item": {
+        "content_sha256": "22b406b20aef637e18ffb0f98d99554c8de1e70e4de6a07c00202970f4464a78",
+        "difficulty": "medium",
+        "item_id": "2872:1",
+        "item_sha256": "46b370194f5f971b2ef7f1e62b9c8ea2d57f15794d80868b98ddc06ff3001949",
+        "prompt_sha256": "b5a21b114192d40c5b04510ea7d35648c820e9464a4135ae4815aa8b11340afe",
+        "question_id": "2872",
+        "reference_type": "int",
+        "source_index": 110,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2873",
+      "item": {
+        "content_sha256": "370bc4946cd2d90936995baa16623e794bbd663e11f3f89e4ad33f04bba6cbed",
+        "difficulty": "medium",
+        "item_id": "2873:0",
+        "item_sha256": "87b6382ea001ec77b0f7e9cae19a462347a31b23af5c1e99a3d3629ff1f6d90c",
+        "prompt_sha256": "db0021f9c140d6a04632de5a0c3977f768bd10303c4e293dfa14e95b837b1bfa",
+        "question_id": "2873",
+        "reference_type": "list",
+        "source_index": 111,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2877",
+      "item": {
+        "content_sha256": "40fd469c45b4c76299726ddab67e186fe938a5b43725800a859b44e0b9afdfcf",
+        "difficulty": "medium",
+        "item_id": "2877:1",
+        "item_sha256": "5cec89875112bcbacaa7286dc0024252987c374453bbced2bb9f571ba67a1e03",
+        "prompt_sha256": "c3c84bee3f8513c2e4698f7f93abb470c018d325821f48d86114ed4b6718f56e",
+        "question_id": "2877",
+        "reference_type": "str",
+        "source_index": 116,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2878",
+      "item": {
+        "content_sha256": "da24f76587b6c23df8b4bb48a099d94a1f7442e53f1da253e22e4af0b5d37b69",
+        "difficulty": "medium",
+        "item_id": "2878:1",
+        "item_sha256": "915039e102aacc81b99adb2cacff90223ce92f654305367e9830e7712046b8ee",
+        "prompt_sha256": "e92cb340f10e94e3a8094546e9e2a8849626e65c47c9b5cc1ec4f74a1a0b9178",
+        "question_id": "2878",
+        "reference_type": "bool",
+        "source_index": 118,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2881",
+      "item": {
+        "content_sha256": "b876141373b5f80fe3070ed9c961b552f6f807dc91df7811cc3d9cee9d1e05bc",
+        "difficulty": "easy",
+        "item_id": "2881:0",
+        "item_sha256": "353ae569f7a1f632ae50f3757d3509c9f235139750ae80a172ef9626288c960d",
+        "prompt_sha256": "0b22e3ee65927517e829931be8d28a670a4228fe8ded9c4f563d6fece9e600ea",
+        "question_id": "2881",
+        "reference_type": "list",
+        "source_index": 122,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2881",
+      "item": {
+        "content_sha256": "0720b3ab84529b025b1bed2eba67da0c8b7886aeae2d3217c51392b0419dea78",
+        "difficulty": "easy",
+        "item_id": "2881:2",
+        "item_sha256": "549765a1d4c7b98479d56271fc7f58c813d57f753b68567c07b6ffb9e947cab3",
+        "prompt_sha256": "a0876861830db1441d3d1d4abb70e3319ec31e3b4564b129d4c072aab628500c",
+        "question_id": "2881",
+        "reference_type": "list",
+        "source_index": 124,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2882",
+      "item": {
+        "content_sha256": "1bc980c21418f91521b61e9aeceb25dd11ac3f642155645ad2ba2f2f65638ca3",
+        "difficulty": "medium",
+        "item_id": "2882:0",
+        "item_sha256": "feac02493e5575e8ac6cc9aa6c0668fae37579b44dcf080ab2f87baadbdcc739",
+        "prompt_sha256": "b7050f2a906d5614ef04e91f7736937004f671e9a60bcd02d93ee2a29899b12f",
+        "question_id": "2882",
+        "reference_type": "int",
+        "source_index": 125,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2883",
+      "item": {
+        "content_sha256": "fd30f8943763611c17125a765cf42c8c9f8454b6f0cfd723e5bafc75abcdb31b",
+        "difficulty": "medium",
+        "item_id": "2883:1",
+        "item_sha256": "4a025e65a676bc39781822dedbba4e18f3c52ec6fcb75e58ee7ea6a70b5c9a86",
+        "prompt_sha256": "9c2df27c0937cd19ce47c39dfc45b41add62e0568437f5441ab6dbe7d064c677",
+        "question_id": "2883",
+        "reference_type": "int",
+        "source_index": 128,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2883",
+      "item": {
+        "content_sha256": "dbc2da7a941ff04d330f61252c08ab5cb9e1fa95adffa8f06420740fefddd946",
+        "difficulty": "medium",
+        "item_id": "2883:2",
+        "item_sha256": "c5c6adb7a177b28f4cf90b9e94e56f76309d2599a3d8966870dd54aab7445cc7",
+        "prompt_sha256": "08f26005ee1325e0e9008f840e0d2c783a3fcf3f59231b6135fbc0fc9022b546",
+        "question_id": "2883",
+        "reference_type": "int",
+        "source_index": 129,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2884",
+      "item": {
+        "content_sha256": "96d7c56218a3a530ef9b475bf5155bc3aad1eac0b897fc2f3d42a7205a796b82",
+        "difficulty": "hard",
+        "item_id": "2884:1",
+        "item_sha256": "bac5cc1f2c62da29a9a4d701d740b1bb157427e672b67cf3c4ec887f3981b125",
+        "prompt_sha256": "d261de2fcea3c46d25ff59d4edc48b4efaf4268608cc55bb42898132aabb468b",
+        "question_id": "2884",
+        "reference_type": "int",
+        "source_index": 131,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2886",
+      "item": {
+        "content_sha256": "f9decf78f29a5ba135c766b08d632c090dc0a6182cc02cb3c26b2ac8efbe7c91",
+        "difficulty": "easy",
+        "item_id": "2886:0",
+        "item_sha256": "233cf15bd3a9023aff46d5a171b60431fd729bb1847caaed499d0fd316b79f04",
+        "prompt_sha256": "291ad668ddf189f2a918653cc30d6fde53ece5e960009c0df6433440800ae322",
+        "question_id": "2886",
+        "reference_type": "str",
+        "source_index": 132,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2887",
+      "item": {
+        "content_sha256": "08a6bbafc6f039be1b206a1af5ce57ad94ec29c376859870f1679d65701447b5",
+        "difficulty": "medium",
+        "item_id": "2887:0",
+        "item_sha256": "8594a029ec3af37ed4a0e76277c7101d31104f7e754a113391f88b0111c9e008",
+        "prompt_sha256": "454a4de4248428feea12e66e9f44702aa32194314f8faeb76c7ab15e3bab1814",
+        "question_id": "2887",
+        "reference_type": "str",
+        "source_index": 134,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2888",
+      "item": {
+        "content_sha256": "e3068493c290c5c5b79323fd9464d00b74e3a025fc837674ff5ed38e970c84a2",
+        "difficulty": "medium",
+        "item_id": "2888:0",
+        "item_sha256": "4be38e24fc86464f2deab0c5b39368fc5855b0f0abe92cc137d9231555015f88",
+        "prompt_sha256": "dc960049a72375dd93ac51fed8a10632b79ad95f3629248a837925e9299666d7",
+        "question_id": "2888",
+        "reference_type": "int",
+        "source_index": 136,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2888",
+      "item": {
+        "content_sha256": "46e0fcd9ae05ff8cce3cf79704d4390901792f4f40a83757912f537f4b7953c3",
+        "difficulty": "medium",
+        "item_id": "2888:1",
+        "item_sha256": "259212e2bb7e98cd5ae8518d0a3998c140016036f8625f3858b3bd36451c275d",
+        "prompt_sha256": "f33d712bcefc7a7446a5845e7c60089f8a6d9b1a3691b77045e69c6acd35f863",
+        "question_id": "2888",
+        "reference_type": "int",
+        "source_index": 137,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2891",
+      "item": {
+        "content_sha256": "0dabbb72d03eb1083340c4f9a3c2f8b9988c1aef75e32b1718b50c417eeeb38c",
+        "difficulty": "medium",
+        "item_id": "2891:0",
+        "item_sha256": "9fa2d845efa1d13a96b092385f6ccc44f6edf69c4a75b937aa369f445af89be7",
+        "prompt_sha256": "8de25074838cfe8899cee9620cb4793b08af78b8be9a2a08c641c5a48963d92f",
+        "question_id": "2891",
+        "reference_type": "int",
+        "source_index": 139,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2902",
+      "item": {
+        "content_sha256": "5285af9f1f27aabf5961c6ef488d2a25288c3248c81e2566f6d0b9dc98f95db8",
+        "difficulty": "easy",
+        "item_id": "2902:1",
+        "item_sha256": "b7aeb55a33e5f89ba3e4207c22c3a6923d0826a2fe14b1856a9f506a2037b44c",
+        "prompt_sha256": "6d46cadad5b982f22270bea4a39233ee1355846897bfb1a6305e80f5cc63c106",
+        "question_id": "2902",
+        "reference_type": "int",
+        "source_index": 148,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2915",
+      "item": {
+        "content_sha256": "9b8b0a40e6f91d261e6f409121fc7d42cb7b5cbeedcf46dd193e392daba51612",
+        "difficulty": "medium",
+        "item_id": "2915:0",
+        "item_sha256": "ef315dbb72df5a445de4005eabcbf9d29159325ad10edd10664dd4553c9701d4",
+        "prompt_sha256": "c4cb87ebfe62f7b3b6d6366a1c5514ec11b6bb6855f2e950e60df187a9e7214a",
+        "question_id": "2915",
+        "reference_type": "int",
+        "source_index": 149,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2919",
+      "item": {
+        "content_sha256": "b29b7e3b5423317b2eb8485cd89704b5cf861408b35765daa3bfd77b2f0f8014",
+        "difficulty": "hard",
+        "item_id": "2919:1",
+        "item_sha256": "46b4d2ee59b918fd4deccad813e27d632c8b9145a0715f4e62ab32b427c3f89d",
+        "prompt_sha256": "0ccc33c2218918d9a025b7aec95b584e7cf69f3d15c77f6485c5cb762819c5ea",
+        "question_id": "2919",
+        "reference_type": "int",
+        "source_index": 157,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2919",
+      "item": {
+        "content_sha256": "fce04d076d2497228eb5f3df53ef92a91d927da482c13b8419187224f0833940",
+        "difficulty": "hard",
+        "item_id": "2919:2",
+        "item_sha256": "8e3530bf17ad405a69a1437d38505d6cb36b6125d27e38ffff3196ce75794997",
+        "prompt_sha256": "b7e71123dfb20f4bc86608a8de7499942979cd22b7354d1215155bbde1d94187",
+        "question_id": "2919",
+        "reference_type": "int",
+        "source_index": 158,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2920",
+      "item": {
+        "content_sha256": "8b29c2cdcc7bb959a28b5c58b4c47481e7e25153088de4cf22e8bc1ccafe8a02",
+        "difficulty": "medium",
+        "item_id": "2920:0",
+        "item_sha256": "e77ea531f57d1352d990d2913ca46d6dfff153848d332c88d362c8194ba4bc19",
+        "prompt_sha256": "8ff4d5d973990fb7e8b1b34aa3076616f12f135332b5d032fa3808f5f7350bf2",
+        "question_id": "2920",
+        "reference_type": "int",
+        "source_index": 159,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2920",
+      "item": {
+        "content_sha256": "3fb07509d83fd51463776521a68f0ec13e4fbbe5d4f2f14243f92cbdb59a087a",
+        "difficulty": "medium",
+        "item_id": "2920:1",
+        "item_sha256": "62da618c17de8b8f0e52b52cb2544529ca7980bc8495669c01d97ffa5eb8682e",
+        "prompt_sha256": "625a058f652ed122cbd23cc3a9eabad629894f240fd746f637fa73e1c331fbdf",
+        "question_id": "2920",
+        "reference_type": "int",
+        "source_index": 160,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2921",
+      "item": {
+        "content_sha256": "911c915d5bc19e373ad89238ae655292e8a2c517ddbfa853c23299f3b1417f8c",
+        "difficulty": "hard",
+        "item_id": "2921:0",
+        "item_sha256": "86738c51870e10de94b51e7f812a433040f6f6984c6988324d1d02b0067d8a7b",
+        "prompt_sha256": "25f610bb552415169e2402d521d34513637c23d813a25e9ccdefe30a13931c61",
+        "question_id": "2921",
+        "reference_type": "int",
+        "source_index": 162,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2952",
+      "item": {
+        "content_sha256": "96ff0f0e6666c1b1d4592afb5f56ee6c0e0836fc77f27ba9ca077f717cd9217a",
+        "difficulty": "hard",
+        "item_id": "2952:1",
+        "item_sha256": "971144aada0d973f5b6254fd9250d645d69e48974720c787c7ef82f81d892187",
+        "prompt_sha256": "7e52a43c4e95daa4d9af5e72eff639dba9c6e750869e396af5dbd19ed907fdd7",
+        "question_id": "2952",
+        "reference_type": "int",
+        "source_index": 165,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2953",
+      "item": {
+        "content_sha256": "e3b2ce6e61a4d45ab43f662b8bbcaf71ca210b2da9af42f12e6e1445d9cbbb23",
+        "difficulty": "medium",
+        "item_id": "2953:0",
+        "item_sha256": "fe004570da2fec321a355c0237639c9a3ee8fc6d7ac44eef8d82c62723fa5bca",
+        "prompt_sha256": "f161283a98167908120561ff728c1a6e4c0d117600749e2468f79849d8b32cdc",
+        "question_id": "2953",
+        "reference_type": "int",
+        "source_index": 166,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2955",
+      "item": {
+        "content_sha256": "2bd45b3d9a43b644ad6c8455068a2ad28520a18f9d62688e19931d742a3fe0c8",
+        "difficulty": "easy",
+        "item_id": "2955:1",
+        "item_sha256": "b4737fad26a769b18473d5c44acc74d775fd72c7521bd69ea2dbc2e3c20e4050",
+        "prompt_sha256": "590bf4bb1143ad301082b8b61295dcdd88f043ba06f6fcdba061debb84b0e1d7",
+        "question_id": "2955",
+        "reference_type": "int",
+        "source_index": 172,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2977",
+      "item": {
+        "content_sha256": "2f61fa713c2b56d22e89eb2a9cc085f435a666a534f01613279203d85e43c3d0",
+        "difficulty": "easy",
+        "item_id": "2977:0",
+        "item_sha256": "3ed0bc04ba0c8e47cd02ee65ce83414ad742e7496261a93f8e29d38822888065",
+        "prompt_sha256": "f86593bde374b32ba36956bda6106b1e64c606c3dac8d329a7958084a5c8928d",
+        "question_id": "2977",
+        "reference_type": "bool",
+        "source_index": 173,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2977",
+      "item": {
+        "content_sha256": "66f1cde6c1f09a2618ffa4c4960db1f9329ae3283012435827b8f2f6a52795a0",
+        "difficulty": "easy",
+        "item_id": "2977:1",
+        "item_sha256": "7def403c6e2d52c2ba27601e7ddd36d8ca0e6e09b62e7423d70cde54c4e8d5f1",
+        "prompt_sha256": "038caf210e047c96d718d435374835962ed48ebf7b749fd9cb067d7228b40a00",
+        "question_id": "2977",
+        "reference_type": "bool",
+        "source_index": 174,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2979",
+      "item": {
+        "content_sha256": "c04997349de15a03af933f4e1db8f8544a1b3dd39ff345964ca9c7f99ce15361",
+        "difficulty": "medium",
+        "item_id": "2979:1",
+        "item_sha256": "f2e8825500de4ec035fee684f59a6e49582db41660a4d88cd3426bb9cc39f8f5",
+        "prompt_sha256": "95fb59ba7bc0bf651ffb4c8297887a758312808a916d6e2cd3e5421735b20d30",
+        "question_id": "2979",
+        "reference_type": "int",
+        "source_index": 177,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "2999",
+      "item": {
+        "content_sha256": "72aadbfc5b5f05aa49ab06f1ecef6d38db18ff269c27b9a80f02644c77f99f5b",
+        "difficulty": "easy",
+        "item_id": "2999:0",
+        "item_sha256": "3c07ba7e2c5eb878782d0c47d1a446e039d12d94c8c52ebdbdaeb5a2f408b383",
+        "prompt_sha256": "9beb07897e278debb4a1d4bf2fa0750d3f8391fd6f0efd9931c44720d8432a69",
+        "question_id": "2999",
+        "reference_type": "bool",
+        "source_index": 180,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3000",
+      "item": {
+        "content_sha256": "9135ec25816226f8736e8fa8be280ee45cdf698f3af4f72221a2783f5483ac00",
+        "difficulty": "medium",
+        "item_id": "3000:0",
+        "item_sha256": "5ae0b7dd1972a966500b45ce0dd6763ce898705d78fbb0450677e69d84c286b7",
+        "prompt_sha256": "7cd8427de20dd9a4b65c53a72b5a8c4371cd3801b8f9a9d8549fb349417b60c1",
+        "question_id": "3000",
+        "reference_type": "int",
+        "source_index": 182,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3000",
+      "item": {
+        "content_sha256": "d5b1a42e2fe4317754e1200b66fe28f467ee2b2edbc4d37b1efe60bc28ae4659",
+        "difficulty": "medium",
+        "item_id": "3000:1",
+        "item_sha256": "24f5419d515827ee1a7b68effc06792d69793cbae452a8d994a8aa65a367ee3e",
+        "prompt_sha256": "358f1f47d37cd191d79eb4b83e1c2dfcff604de1e2023e36b41044356b4f82d0",
+        "question_id": "3000",
+        "reference_type": "int",
+        "source_index": 183,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3024",
+      "item": {
+        "content_sha256": "8b92f0b9bf86d548b884fc678a6ee01784cfb6da339fb71bf46ff60d95d8b012",
+        "difficulty": "hard",
+        "item_id": "3024:0",
+        "item_sha256": "1dd9666aabb3fa57f6535769aa05cedff7db3865a35d20b18d626ceabf31bdb1",
+        "prompt_sha256": "162776b5505d15b42685fbc83e85d1e2d255dd5dbb1ebe3a0dc0e20c99bb5237",
+        "question_id": "3024",
+        "reference_type": "int",
+        "source_index": 194,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3026",
+      "item": {
+        "content_sha256": "74215c983fb4f930bed2717704f2ee0abb6d7be935ce11fd1bc02fcd99658c10",
+        "difficulty": "medium",
+        "item_id": "3026:0",
+        "item_sha256": "d7322daf2a1ea23396213a33f27510eda303ba28949e50bffe8106e0092105c4",
+        "prompt_sha256": "8dcf2aabfe35b3db30f6e3b1530b84f5c5e483317ceb42848d95f6668e70453e",
+        "question_id": "3026",
+        "reference_type": "int",
+        "source_index": 199,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3026",
+      "item": {
+        "content_sha256": "1bb744080bc7ea31250324353bed7bee494f28ac9f9dc2474a6955c29cb67db3",
+        "difficulty": "medium",
+        "item_id": "3026:2",
+        "item_sha256": "89961d9765a5a6610cc9a8fccdc3d74567240f64bcc5263ea9ecfb8303515b6c",
+        "prompt_sha256": "05c02d91eb902db9e8be9b1674ed0d0b4ca4c3193096f4c9240bd8e85b353d8b",
+        "question_id": "3026",
+        "reference_type": "int",
+        "source_index": 201,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3031",
+      "item": {
+        "content_sha256": "ace4d5b75d8cdf712fdaecbca5af406f01b046da76d67a282532c4c36d9b84e1",
+        "difficulty": "medium",
+        "item_id": "3031:1",
+        "item_sha256": "500ca0a54b11c2052b3d7bfd0a3399acdeac6a740d9009aaaa599a4027926363",
+        "prompt_sha256": "46c6aaecd288928ee8d92eb4301733c788cfd7ca67d6a14324d859bd6aa1429c",
+        "question_id": "3031",
+        "reference_type": "list",
+        "source_index": 203,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3033",
+      "item": {
+        "content_sha256": "bc749b456467eebd78c22423c3f8da35245d7003c8e791a2c68e55e2514a22d7",
+        "difficulty": "medium",
+        "item_id": "3033:0",
+        "item_sha256": "17861001c4bdecb16aafd29d2bec805e22769d7a16177ec44aafcc24800f8518",
+        "prompt_sha256": "0765c572e402ec5588387fa65167e34b1a4ae8c2c16d8ac0d0f47ff77b84a873",
+        "question_id": "3033",
+        "reference_type": "int",
+        "source_index": 206,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3034",
+      "item": {
+        "content_sha256": "1dbc572719966333e21b344698f5ff8c07065f4e3727d2345d8d7547dca49921",
+        "difficulty": "easy",
+        "item_id": "3034:1",
+        "item_sha256": "616642824f070b7a665147ee2103bc82cf2dc60991375ed09c849712878b8447",
+        "prompt_sha256": "24a61be55cc928f99bf674bd7805a84986d841d1a4786a80fad62a69bfae57a2",
+        "question_id": "3034",
+        "reference_type": "int",
+        "source_index": 209,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3044",
+      "item": {
+        "content_sha256": "a4791646699d5f27cca58b61eee53fa2785fde0079781a217d6682089bcc4650",
+        "difficulty": "easy",
+        "item_id": "3044:1",
+        "item_sha256": "5d46f41a4f0d5b9f9c3efc5c975c4dfc08f6c8005b247875dfee06607736fef5",
+        "prompt_sha256": "b831034c51ff5b46dbc0bea972cb9d098e5f1173d5f14040cbfac6b74e6d80d3",
+        "question_id": "3044",
+        "reference_type": "int",
+        "source_index": 211,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3044",
+      "item": {
+        "content_sha256": "0f9c4da34f560e76feff86432f2a7588a6e330a177a4e32a2dd0f92a43b4f9e2",
+        "difficulty": "easy",
+        "item_id": "3044:2",
+        "item_sha256": "900902f97cd47ff484c73815ff59cbaed7f49fd870b85337550c7cb54aee2d0e",
+        "prompt_sha256": "a0a076d4cd9ef27b390a6cae40cd7374897f715901836bb0baee0f4caab443e4",
+        "question_id": "3044",
+        "reference_type": "int",
+        "source_index": 212,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3046",
+      "item": {
+        "content_sha256": "8ec8d26fe58babda8674fe5af1c56eea363370bc0dea56f2768c25195e3e547c",
+        "difficulty": "medium",
+        "item_id": "3046:0",
+        "item_sha256": "d6f05a89899b58870e90d71c33018c3425b7a0efabfff2315a8374560b9f2038",
+        "prompt_sha256": "a4a7ffbfceaa6fc81c42712365103544d03c472fdd4220d8e949b1135ce370ba",
+        "question_id": "3046",
+        "reference_type": "int",
+        "source_index": 216,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3046",
+      "item": {
+        "content_sha256": "c64f8403b8fdd049d6c6b4a39aa552d57a3a2aafd9c84a8bbd12811bada5369d",
+        "difficulty": "medium",
+        "item_id": "3046:1",
+        "item_sha256": "fdc145bd1e2282c509be078477aba1d129654200dfc6d04042361ad49ec9640c",
+        "prompt_sha256": "df0433d3494dfacf55f78e9becf595693a1b155e9fe4f24296d729e3020a3851",
+        "question_id": "3046",
+        "reference_type": "int",
+        "source_index": 217,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3047",
+      "item": {
+        "content_sha256": "ab8661d36ab3e2a9bc96e848f404ffe2ffad3b9ba75b7fcc480fe7428b485e22",
+        "difficulty": "hard",
+        "item_id": "3047:1",
+        "item_sha256": "1e21832e1e61bdbb5293a7c6cb5e7290b95bbab8c498197d786970151a1d0d4d",
+        "prompt_sha256": "fa2a551ac10b4678df0f262730cfebc4a7897912e86177a8863440b2a1cd1c9e",
+        "question_id": "3047",
+        "reference_type": "int",
+        "source_index": 220,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3055",
+      "item": {
+        "content_sha256": "e4d4c15063bf47a6f4235f55ccbd368f66d57ebf6a4fe896f07f44214e431f17",
+        "difficulty": "easy",
+        "item_id": "3055:0",
+        "item_sha256": "84b554aaa87cd45a88d10bf9f4d7038e504047d218a3616fd172493bfee8dca8",
+        "prompt_sha256": "aaf84239ce10c172dee35dbbdc61066c3f83d674915c164426e73864ba8011e6",
+        "question_id": "3055",
+        "reference_type": "str",
+        "source_index": 221,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3081",
+      "item": {
+        "content_sha256": "7633d112812f5533fcfe8d779c0183b820be1da1001d69e0e233fcdd6acc3340",
+        "difficulty": "medium",
+        "item_id": "3081:0",
+        "item_sha256": "d14bbe5ee12a217456f83699c290a32bcaef220052e4150a1f215aa2e003983f",
+        "prompt_sha256": "6fbbad4c067cf16a7be976be3c58635dc2897b0f61b063e4db016db65e6610f8",
+        "question_id": "3081",
+        "reference_type": "int",
+        "source_index": 225,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3081",
+      "item": {
+        "content_sha256": "488828e95b14c6483ce001b5e08c8250c6888b0394033818d8997f797256db40",
+        "difficulty": "medium",
+        "item_id": "3081:2",
+        "item_sha256": "c3045b9900bfb8a4bc1cfecb846768b52d9ac1e14e844764cc0b2eeca2317e5a",
+        "prompt_sha256": "f216e4ca749477ce43cd569cf8e3df5533385eff7287778e5173265361ec7370",
+        "question_id": "3081",
+        "reference_type": "int",
+        "source_index": 227,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3093",
+      "item": {
+        "content_sha256": "4851586b78f101cf681290c991729dff531d218a2ba13c0312978d87e7447865",
+        "difficulty": "easy",
+        "item_id": "3093:1",
+        "item_sha256": "71b062ed26587be8db787aa405bfbc5f694679945399f6d5acbb5f883545c47c",
+        "prompt_sha256": "a39e12252879b13b06be4bf5386c8cd12a5cb700f79c448a8f245039f3b08871",
+        "question_id": "3093",
+        "reference_type": "int",
+        "source_index": 232,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3094",
+      "item": {
+        "content_sha256": "3c1e691a6b93b1b0c7a56b8b48841373e6c3b14616056bafa652aadc97bcd718",
+        "difficulty": "medium",
+        "item_id": "3094:1",
+        "item_sha256": "12a1efa2a2caeadd8558b9bfad39492e9ce2006dfc467ad6af7785c599702ce7",
+        "prompt_sha256": "092c124dc45c61cb620687512356b37c8621acfdd2d25e51819d66579967c7b7",
+        "question_id": "3094",
+        "reference_type": "int",
+        "source_index": 234,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3104",
+      "item": {
+        "content_sha256": "7f316c32bcef10ea758daa563b8bcbb45020e6c57d725a0b59060b8509b2527c",
+        "difficulty": "medium",
+        "item_id": "3104:0",
+        "item_sha256": "ffd5910223493810177788bc4e817e590e1a791b16d5e974b4435d59d2c96798",
+        "prompt_sha256": "cec5dc8cd4afb4a4f5ca8deb0007523c865488ab5d188c59d81cdff2c1d439a0",
+        "question_id": "3104",
+        "reference_type": "int",
+        "source_index": 235,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3106",
+      "item": {
+        "content_sha256": "ea32a6bd94b3e86ee95b941cff5f6704248a481bafcec1434159aee953fc801b",
+        "difficulty": "medium",
+        "item_id": "3106:0",
+        "item_sha256": "56e83912e09a2fa1ed02e13c5217125ec24fe31b07800b06fc5c91a5b357e72f",
+        "prompt_sha256": "13bba3718b4de37e539dcaf447e5119e9557ac8cdc97f95a40f17929c5336772",
+        "question_id": "3106",
+        "reference_type": "int",
+        "source_index": 237,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3106",
+      "item": {
+        "content_sha256": "de15ae7fe63f7d562cca2682326e502897850615f1c5d03b2e6bc4c43065839a",
+        "difficulty": "medium",
+        "item_id": "3106:2",
+        "item_sha256": "08ee0c6952dbe4309ca5d139badf5896ede3ecb6b03cf6341eb8ebcb6c3df5c0",
+        "prompt_sha256": "3558984d1ee4e86f0e405857d35b8ce3ae2a0e21b8ee16f253e9c32fd1802aa9",
+        "question_id": "3106",
+        "reference_type": "int",
+        "source_index": 239,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3141",
+      "item": {
+        "content_sha256": "5b70506dc802a3dbfc132752060f80d15067203f7ed1a0e971e9e602f0d40a46",
+        "difficulty": "medium",
+        "item_id": "3141:0",
+        "item_sha256": "783e8775ee8e56dd40186297a0adb6a28d52082fc0f5947150d02ba7c67a4eb5",
+        "prompt_sha256": "3f2f80c890b12bc7f0a0aacbe261da244a3ec7bd7691968e28e6e362c72f2d41",
+        "question_id": "3141",
+        "reference_type": "int",
+        "source_index": 243,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3141",
+      "item": {
+        "content_sha256": "4df0ca176014d923a67503d04cbe3ae6b6f2112bf3321a9bccf2f0146c932d8d",
+        "difficulty": "medium",
+        "item_id": "3141:2",
+        "item_sha256": "ff1971d1fe8fa7effc90fa9cb90b8f0dab3158dbbb2f4a6a112d23bb267797a0",
+        "prompt_sha256": "f424feb76a3c14c134826ec6dbb0d1315f7188148db81fad8b357da91267523d",
+        "question_id": "3141",
+        "reference_type": "int",
+        "source_index": 245,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3163",
+      "item": {
+        "content_sha256": "9095d3952597df2053a3b60d052c09dfc24e4dbeac0ab236bd8173f758871014",
+        "difficulty": "easy",
+        "item_id": "3163:1",
+        "item_sha256": "de58a44c9a5f8b196d43dc87a84fffea3cc7183366e21de6096f00d4de1f77d7",
+        "prompt_sha256": "fc8fc14e5d862fbda0a2d4dfd9e484f070ef989ebf403be5fa52a72f2bc8f5d2",
+        "question_id": "3163",
+        "reference_type": "int",
+        "source_index": 257,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3164",
+      "item": {
+        "content_sha256": "c2da1feaca0959f49f87fe79bbcf05ed06ab1e42c6b1804fab5989b85a94db66",
+        "difficulty": "easy",
+        "item_id": "3164:0",
+        "item_sha256": "06353f7f2ae6915bf5951c3a51e253ca39c7c3b3117e7d231783bc61b42c3195",
+        "prompt_sha256": "3372557e2cda216ab7f604c4538e083560ab8f4ef7bfce1ee065b6e0867d5f43",
+        "question_id": "3164",
+        "reference_type": "list",
+        "source_index": 258,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3171",
+      "item": {
+        "content_sha256": "1e02cb5abc8e4f7fde2dbbda8b534351ddbc90f1e6c932c43a293100729a68ad",
+        "difficulty": "medium",
+        "item_id": "3171:0",
+        "item_sha256": "9743517210e5cca50aaf73eb60b6835e52019dc8355619acb7deccdcbd5883a4",
+        "prompt_sha256": "bc6faf688415e201c67ff3c75099411849d45a8a7a8ddbaae313b1687a8a4513",
+        "question_id": "3171",
+        "reference_type": "int",
+        "source_index": 262,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3172",
+      "item": {
+        "content_sha256": "a4bf625bae1cfc7d148f8df76bbf78d34ed3f8d776f0bc6a127446681cd7f539",
+        "difficulty": "easy",
+        "item_id": "3172:1",
+        "item_sha256": "33c08e03bfd7b6567e326809517fca772ed0a789601d67e09adc96af22d45354",
+        "prompt_sha256": "fe934ed52d2cea1fa55673b70230af15cf8d1c2bb3eac449643a3b4682b1c7a0",
+        "question_id": "3172",
+        "reference_type": "int",
+        "source_index": 265,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3172",
+      "item": {
+        "content_sha256": "0005fd7eb16743602d71215225da478a527c2c1e12aaae80fea2de6ebccbae02",
+        "difficulty": "easy",
+        "item_id": "3172:2",
+        "item_sha256": "f77da770a88c3d6ceac8615e1190e1a95655fb1e83fd9db555928aac5643a629",
+        "prompt_sha256": "69895932b6052cf51829e52fadab9e60026c16b0cea4e16f05584bf1ad27c977",
+        "question_id": "3172",
+        "reference_type": "int",
+        "source_index": 266,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3176",
+      "item": {
+        "content_sha256": "2eb551a4be236c377c6165942308f5086c2f329065e1eb1e2f8100b7276f4e2d",
+        "difficulty": "easy",
+        "item_id": "3176:1",
+        "item_sha256": "60e1af29bdd13f14d1a3492de468ca9f0c4bf279c1b9aa132a08222fcb9626ec",
+        "prompt_sha256": "cabab13a2b6c058d41743d7da920b93ee0279356ca498baa7ff7f5f6b8d77cf7",
+        "question_id": "3176",
+        "reference_type": "int",
+        "source_index": 271,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3176",
+      "item": {
+        "content_sha256": "224abfc78d7a7d2c7dce16f12302eb62ac7e3427e57c190116f4db28143bbd1a",
+        "difficulty": "easy",
+        "item_id": "3176:2",
+        "item_sha256": "27b98da40f2409ed373cc241ea04b9917cdce36cb089c09a6770625cf7d9854c",
+        "prompt_sha256": "da5797f7c0d94b6ad560728f1becc393297203408828537540f2225d8507d40f",
+        "question_id": "3176",
+        "reference_type": "int",
+        "source_index": 272,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3183",
+      "item": {
+        "content_sha256": "7a60e03f9ed969c4378ed7fe8955a31b8d0a1d9ec927a07625c3812ddc370280",
+        "difficulty": "easy",
+        "item_id": "3183:1",
+        "item_sha256": "101a67a14a44ecd57ad306a087e87fc85e391f5a93335c44c73a32f7c4809c8d",
+        "prompt_sha256": "5dc8a72a982704cf5dc6b38843ce77d96569abbdae34b7a830a33054630d1208",
+        "question_id": "3183",
+        "reference_type": "int",
+        "source_index": 274,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3183",
+      "item": {
+        "content_sha256": "0a9b3b9fa7717a6e3948873a8b815ddb6c4df979ba8adc737def37f673b6d567",
+        "difficulty": "easy",
+        "item_id": "3183:2",
+        "item_sha256": "2a658275e1f29b665471d86efcf77e8f39eec6ca0bf66a8564a7753c1725279d",
+        "prompt_sha256": "cba9c12ea3157a55ea202d4fe5b37606d1866f8a906348ba51676f68b6671efa",
+        "question_id": "3183",
+        "reference_type": "int",
+        "source_index": 275,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3184",
+      "item": {
+        "content_sha256": "d4f7e0eed8671e0d0ea7c8cad7e83ee081072ba9faec3f745e774a685e25e5a4",
+        "difficulty": "hard",
+        "item_id": "3184:1",
+        "item_sha256": "59671857ebfb740f4743c134f62c41a65a06e1a0c50939362a69f488b229d75a",
+        "prompt_sha256": "4c4cb20ce1a69bc1c974f2055b73254ba3cabaf2c02009f370559fb5e431a420",
+        "question_id": "3184",
+        "reference_type": "int",
+        "source_index": 277,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3184",
+      "item": {
+        "content_sha256": "63db1b3c7247eeaa221a1de67c164997dba720e6462363cc4214521c3b93f1c2",
+        "difficulty": "hard",
+        "item_id": "3184:2",
+        "item_sha256": "a87097bad14836e26f4cc3af40b9697ea70408cc67c1c6e4253ec3ae257c32b3",
+        "prompt_sha256": "4c4b1fe61411b15b126fe9c27a3e959a4b471eea8b930cc8ca512638b22e4db0",
+        "question_id": "3184",
+        "reference_type": "int",
+        "source_index": 278,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3190",
+      "item": {
+        "content_sha256": "aff30111fe505de0a1082c29c87e5a5cabc6c37617bc3c3b6021b0b4bc4499c1",
+        "difficulty": "medium",
+        "item_id": "3190:0",
+        "item_sha256": "615a4aaa822825c787e0321bee1f870745771630b9c5d4d74c5779e13e95a27b",
+        "prompt_sha256": "f2e977f206787dca9ca6fef3d07070ac1c0055fb4c7e5335aa5701c8befa1b3a",
+        "question_id": "3190",
+        "reference_type": "int",
+        "source_index": 281,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3190",
+      "item": {
+        "content_sha256": "f639dcc618c8497a1fe457be76ce8d55c54af7b3ea5a15905199499c33d96f8a",
+        "difficulty": "medium",
+        "item_id": "3190:2",
+        "item_sha256": "bbb8ef272670939adea6a897bf6e3fa70e1d2046aa3e55360932e66af886222e",
+        "prompt_sha256": "eed5bdc8c2b054cb4cc7ac58c557e279bc79c16ba241dac9d70e64c228416130",
+        "question_id": "3190",
+        "reference_type": "int",
+        "source_index": 283,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3192",
+      "item": {
+        "content_sha256": "e72587fee1e18ffce660e31eec38c62d7a48bb19c51399ed15bfc16294fc4373",
+        "difficulty": "medium",
+        "item_id": "3192:0",
+        "item_sha256": "04cd9f5222d6def74c542d3f5e086c5b6cb33c9b23edd6a5f1388a04daa982b5",
+        "prompt_sha256": "44163252b5e84f7d75231af8ecd38656dbdc0431148cf003836e48072eb15dc3",
+        "question_id": "3192",
+        "reference_type": "int",
+        "source_index": 284,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3192",
+      "item": {
+        "content_sha256": "c12d51c6266a212ccc7c77189ad8d3f58b779a5a2656e52d263aa31b423cd1e1",
+        "difficulty": "medium",
+        "item_id": "3192:1",
+        "item_sha256": "249fafcd2339405b9e9fc25a3891772cddbf341497401cb6c6b542e71d817f61",
+        "prompt_sha256": "bd8bb87f78fa0a4268dc47eabf4c60976fb47dde2524a6bb90d00063e8f31a0b",
+        "question_id": "3192",
+        "reference_type": "int",
+        "source_index": 285,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3193",
+      "item": {
+        "content_sha256": "0f0f95c1885d61f457ca68ec8f4906af8297442a7cb2ac955b67c4a803b29e97",
+        "difficulty": "easy",
+        "item_id": "3193:1",
+        "item_sha256": "cb9a6e22ee907aefed4f9aa2c1e329bce4c6a846475e1db65548b94fc357c01e",
+        "prompt_sha256": "dcb3cc69289b82c13ee05f9098699ffb1a6cbf0fe8de54febe05237bdf694d25",
+        "question_id": "3193",
+        "reference_type": "int",
+        "source_index": 288,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3193",
+      "item": {
+        "content_sha256": "dc057eb17d31a2d2ba5e9d05073d82410322f843881d2ff7b26f7b5189d162ab",
+        "difficulty": "easy",
+        "item_id": "3193:2",
+        "item_sha256": "8cfd25b6a93676c9606b0ce3cd0ff3444aee6c1f4f52e30fde8735b067665a3d",
+        "prompt_sha256": "cc8ef210431b7c2a1a5593a78579caf7ad7b077bfc3d1252559e0658711b69fc",
+        "question_id": "3193",
+        "reference_type": "int",
+        "source_index": 289,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3194",
+      "item": {
+        "content_sha256": "726df3cb5ed833da2dc63ee8de1573b466e0de9387fa4776caea497067f7656b",
+        "difficulty": "easy",
+        "item_id": "3194:0",
+        "item_sha256": "2a7c981fb23824623cc9d430f1e3cea3f0854735b2f8c0979997af5fddb85d94",
+        "prompt_sha256": "138c9c569cbe495e64de52b2db7b978719bf97f20c311f7b8199661b9875f6d0",
+        "question_id": "3194",
+        "reference_type": "list",
+        "source_index": 290,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3194",
+      "item": {
+        "content_sha256": "f2dfe29775bac1e3f825e8e09d427baee3eb7914322f9353f00f52a56def134c",
+        "difficulty": "easy",
+        "item_id": "3194:2",
+        "item_sha256": "40ef961d747803e53d4950cad105a9983f0ba01fe616aae648def24a32737143",
+        "prompt_sha256": "433253bb8767e901f92adfe47f9827485b1b9dd255f5f687eddd2ce34f7affe3",
+        "question_id": "3194",
+        "reference_type": "list",
+        "source_index": 292,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3195",
+      "item": {
+        "content_sha256": "e71bcaba04014d2ecf5028a0f70ba9f0cc45a11c0fc029acd92189bba65725ea",
+        "difficulty": "medium",
+        "item_id": "3195:1",
+        "item_sha256": "ccc4078eb17ca4a9ce2d6ba11cccf717f49ac10641e420819bd50903fbb28d6b",
+        "prompt_sha256": "8d1a82c952db16fba348231b2959d3b70f8fce40eb30b83dea8ac1901b3f1c78",
+        "question_id": "3195",
+        "reference_type": "int",
+        "source_index": 294,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3195",
+      "item": {
+        "content_sha256": "256e5302fc570341cfdf62750b1120cf25958dc125a28f5f36444f63e46c9bf5",
+        "difficulty": "medium",
+        "item_id": "3195:2",
+        "item_sha256": "187374c3dadb7461c4107c028654f9be83ecde0f6aed06254965c4612f42b354",
+        "prompt_sha256": "3e86ce70bb2873ffb6ab03ba4bd5b226446f09799921c4a77b8c046a8ce473d6",
+        "question_id": "3195",
+        "reference_type": "int",
+        "source_index": 295,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3196",
+      "item": {
+        "content_sha256": "b8d8ec6f161c9f896947140f7ad0ba4fce4e4705eac810bc2b9073b12adf9b2a",
+        "difficulty": "hard",
+        "item_id": "3196:1",
+        "item_sha256": "d0b9924c89b848e866012eb94965444ea92833396517f7e9a2a00b1bdc473360",
+        "prompt_sha256": "886ea51a77265474af2a3e6f240597b5fd88d50aa62e4b98e2986a3429b5677e",
+        "question_id": "3196",
+        "reference_type": "int",
+        "source_index": 297,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3203",
+      "item": {
+        "content_sha256": "0c8419a383a590bec213b5e8b7e50fc3907666dc52717b34865cc14d353424ad",
+        "difficulty": "hard",
+        "item_id": "3203:0",
+        "item_sha256": "1dabcb235810da6c8c698137f16d71a6eb6ad9c2ed355496f331ec70a7c1df08",
+        "prompt_sha256": "f71cf9c60d668645e10e957673ea1b5ad5833865f47708ca72e6e9251a7eaa97",
+        "question_id": "3203",
+        "reference_type": "list",
+        "source_index": 302,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3203",
+      "item": {
+        "content_sha256": "8689383988dedd5bb4e7169c4b5f478f6e5f6e4f1d9d89849c2da43405924701",
+        "difficulty": "hard",
+        "item_id": "3203:2",
+        "item_sha256": "57638b6e64a8f1b6c55ed9559d6a3aa5be2da4b490fc3f7a807645c371308903",
+        "prompt_sha256": "7cb655a3b0bda9cdf91d201aca2d8e33c527c58022852c25e7c0d15c34787c2a",
+        "question_id": "3203",
+        "reference_type": "list",
+        "source_index": 304,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3207",
+      "item": {
+        "content_sha256": "adb3e59a94d4a003bdda61c9881245a014aae410b8f2936a57d0281833eb8102",
+        "difficulty": "easy",
+        "item_id": "3207:0",
+        "item_sha256": "2845960341878e2fce0695661fb5e3c99329c91eedd9162d127aeeb76ed0d066",
+        "prompt_sha256": "8431b68ca1d64f7c26c2e92335e1b4891b2672d74236fbe057e4794a77f5784d",
+        "question_id": "3207",
+        "reference_type": "int",
+        "source_index": 307,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3210",
+      "item": {
+        "content_sha256": "20d69bb7f10e895bca324caf5e150bbf4cb5ed733f23477c87459e7f12b9b715",
+        "difficulty": "medium",
+        "item_id": "3210:0",
+        "item_sha256": "8240b38618ed38e49f3dd79eb90539a5ca3e23dd46078e5278b4cde26f12cbb5",
+        "prompt_sha256": "1b6863acb4e9a0d8777b94424c13bfe1e1939a10255d04ecb4d3876633bbbd4b",
+        "question_id": "3210",
+        "reference_type": "int",
+        "source_index": 311,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3210",
+      "item": {
+        "content_sha256": "e986dabdd9b8d1a322b922119314f27ae3646c2e6ccb6d5a565475c04ef7df29",
+        "difficulty": "medium",
+        "item_id": "3210:2",
+        "item_sha256": "6f3a403cf605e900940995d13daa39ad1b1410102f8a1f6327411ef33aa83409",
+        "prompt_sha256": "82fdd10c700f9fe0339fd3ba4e8e7f9a2251207859e40b56ba81a818255e4675",
+        "question_id": "3210",
+        "reference_type": "int",
+        "source_index": 313,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3211",
+      "item": {
+        "content_sha256": "2b663190abba0603e5c6371b7789f6f316efe2c1aca618fa5776dbe1a452c8ff",
+        "difficulty": "hard",
+        "item_id": "3211:0",
+        "item_sha256": "a884460edbfb1128405c374f176d6a60069838c769db6dd72ecae483edc21831",
+        "prompt_sha256": "17e9c5a1182635aea076a30a17478cd182da6fe7bb3b1aa9dcbb0fdeb2e3b919",
+        "question_id": "3211",
+        "reference_type": "int",
+        "source_index": 314,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3211",
+      "item": {
+        "content_sha256": "6932058d0d9d52dd836b021262d307647ea9c7a423eb640aeadc4892175f20b8",
+        "difficulty": "hard",
+        "item_id": "3211:2",
+        "item_sha256": "f7679b6c83b949ec3f42436b1e8399fefc8707f31172b4263c8a1ff13897722f",
+        "prompt_sha256": "4756562882b25192a257a87575c882c3937e14e90e84131215c9766418f5f37b",
+        "question_id": "3211",
+        "reference_type": "int",
+        "source_index": 316,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3212",
+      "item": {
+        "content_sha256": "8714cc518faa9fae5cdf5d6ced7bd7920d616a66443c6cbf2420431c23d03c51",
+        "difficulty": "hard",
+        "item_id": "3212:0",
+        "item_sha256": "8a58740af640accd157cf87652bb094225d2fef2895c8ca56795ca012ebe112a",
+        "prompt_sha256": "52af643329311b6526187272557a2a2f897f3976949fd97080f6b35a47e792b6",
+        "question_id": "3212",
+        "reference_type": "int",
+        "source_index": 317,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3212",
+      "item": {
+        "content_sha256": "2704685af133fa09c27ae2ddd124989329048c83aacce72c30d3ce91eab9f19a",
+        "difficulty": "hard",
+        "item_id": "3212:1",
+        "item_sha256": "1920457db16e7335db4529b23901fa111431829b97c8a9263a662a02de9a9ccf",
+        "prompt_sha256": "eb8850aa04df05e1e334eff4483df4190749b88f25a70b0dd2f4b7a3c37acab5",
+        "question_id": "3212",
+        "reference_type": "int",
+        "source_index": 318,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3213",
+      "item": {
+        "content_sha256": "828b8d2b1e94f43a0133338ad12dd7c95f2ffe9734a959f96f8b060eca5ff889",
+        "difficulty": "medium",
+        "item_id": "3213:1",
+        "item_sha256": "31604e12281494c13f3c4d0170b0ccf14ade906157df14e34ba9c08887352e80",
+        "prompt_sha256": "99a574024df8487aaf415a73da829781e65056af7944aeca9d41895b289af139",
+        "question_id": "3213",
+        "reference_type": "int",
+        "source_index": 321,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3220",
+      "item": {
+        "content_sha256": "da6102487ee76bab9eb838fe911a3dd48554c324bec5f9ff850938aca0de2b33",
+        "difficulty": "easy",
+        "item_id": "3220:1",
+        "item_sha256": "5a194a8ecb24dda366466ea6125387144187c6c04d47a989248db8cb36360826",
+        "prompt_sha256": "1645637ab6cd8138e5639db07a4639f8504831d25472b388fa70db9449720776",
+        "question_id": "3220",
+        "reference_type": "int",
+        "source_index": 326,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3221",
+      "item": {
+        "content_sha256": "668717de77712f3d0a2967c49c721ab1677c61b9b5e6180ae081737b35e6a269",
+        "difficulty": "easy",
+        "item_id": "3221:1",
+        "item_sha256": "75c6f8e4903409ee03b6978cdd1f70fefd0cf9ad49623ead11be457f78081603",
+        "prompt_sha256": "b0c1e4d40d5d0efd2c95884ae6c52381060c64ee34f1795ec8711da099bcb046",
+        "question_id": "3221",
+        "reference_type": "list",
+        "source_index": 328,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3223",
+      "item": {
+        "content_sha256": "bb14f4d11eea4d1b2152dd87b4e8d7608e92fc9075bc427f25e7d2e562131f8a",
+        "difficulty": "hard",
+        "item_id": "3223:0",
+        "item_sha256": "4d8c2f43943fdd46484ddc66f7466c553c1c2646c27060f6ceef3e6875e0d9be",
+        "prompt_sha256": "a4b52dfb21d609d7bb9709ebab4a652504ab255d756f71f55eab2a315240c30d",
+        "question_id": "3223",
+        "reference_type": "int",
+        "source_index": 329,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3224",
+      "item": {
+        "content_sha256": "02ee8bca7d1e3d8942e88f0bbf1947f22e8cd7faa916ae3cf6cbd772e6581050",
+        "difficulty": "hard",
+        "item_id": "3224:1",
+        "item_sha256": "0ae5b64764402dc5c663660c5bb1784402e33c8eb1fead6264875e9a6d505af2",
+        "prompt_sha256": "1ae1b6ce9105779d30e11be3bc762cf7392dcebb7ad9e6954f71dfed3db95c9b",
+        "question_id": "3224",
+        "reference_type": "int",
+        "source_index": 332,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3225",
+      "item": {
+        "content_sha256": "a9f36b195438f24493317e15065554002cbb9b0fb8091a361a888a01871531c1",
+        "difficulty": "medium",
+        "item_id": "3225:0",
+        "item_sha256": "04785d243960261d09f951496953a774298e2beb9d6d0516a35f0c085c512ca4",
+        "prompt_sha256": "534b1bea157fd008cddb7077c84a6e28cdeb86a0c41e128332614d6d8d02c81e",
+        "question_id": "3225",
+        "reference_type": "int",
+        "source_index": 333,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3225",
+      "item": {
+        "content_sha256": "24581f1db9ca6e005d8947f96ce7e4a0bee657a27c9d87deb81b8114db35137b",
+        "difficulty": "medium",
+        "item_id": "3225:1",
+        "item_sha256": "6a71bfed90263b83e4a01328c3c8d6f77126911bfc54d57369e123c866634cab",
+        "prompt_sha256": "837ade1624c1e9cd33bcae4c3740792850903c05956b548160462a317351c479",
+        "question_id": "3225",
+        "reference_type": "int",
+        "source_index": 334,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3226",
+      "item": {
+        "content_sha256": "e81192fb5fafa2163082004d931f1d2ed91e1c449c3ac24a36bb979e82b80519",
+        "difficulty": "easy",
+        "item_id": "3226:0",
+        "item_sha256": "5899290ec75dc4a0734c883016467dc863e370552f341fef9257afd3c582a1e7",
+        "prompt_sha256": "38aea918a2e93d767b254f239dbe2c346b788e06e43fe9642ec6a14665d3d333",
+        "question_id": "3226",
+        "reference_type": "list",
+        "source_index": 336,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3227",
+      "item": {
+        "content_sha256": "34b399e14d46b428a6ccccb69114b7f4a27046736bd662b7082ebcbecee0ac92",
+        "difficulty": "easy",
+        "item_id": "3227:0",
+        "item_sha256": "401054331c8290c5526dc3ccab432535e022660e51e91f31567fa550d684e279",
+        "prompt_sha256": "8b87c00f1f0a3639fe8648930b038d711b35e4e309da79772a91a7fea73f1693",
+        "question_id": "3227",
+        "reference_type": "list",
+        "source_index": 338,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3228",
+      "item": {
+        "content_sha256": "3faef9a7a03b68494c912fe110a83da9d466671705df2757c4afa8827669f311",
+        "difficulty": "medium",
+        "item_id": "3228:1",
+        "item_sha256": "f490a4e6606752f1787fe866fbff32cd744c772b423397fd5ff45c26abe3dfcf",
+        "prompt_sha256": "6bfa8007805342d76a5aa03912c2b2d94462a29dd8c9da748fac2e728337f204",
+        "question_id": "3228",
+        "reference_type": "int",
+        "source_index": 341,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3228",
+      "item": {
+        "content_sha256": "3519b26700016272931bc0d0d48951b9c7a3255632c80b9db600e609b20078f5",
+        "difficulty": "medium",
+        "item_id": "3228:2",
+        "item_sha256": "740ca5f8f58c1005c95d67d0924887a77d728692bd0959cff04efbfa5d14c599",
+        "prompt_sha256": "70b794ac928e7220a7871821c8161f7422c64152e99ad2053c9e9b697584870a",
+        "question_id": "3228",
+        "reference_type": "int",
+        "source_index": 342,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3229",
+      "item": {
+        "content_sha256": "a80b34ffd14d230388563941e5dfb569e44a33dfae701125e1a866dea777292a",
+        "difficulty": "medium",
+        "item_id": "3229:1",
+        "item_sha256": "cb6d89abbcad2c796697bf7b8cc6ae4544bba2bf0358072e09c6812dbb592dc5",
+        "prompt_sha256": "cae3942e807a95c3b6668a72f8290ff9f4e76c7a23f44cd061a83d0b56efe1f3",
+        "question_id": "3229",
+        "reference_type": "int",
+        "source_index": 344,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3229",
+      "item": {
+        "content_sha256": "15d562254211f761b6384bd1b73b0f43db1f3b3096a532fd8c110e2a792810c5",
+        "difficulty": "medium",
+        "item_id": "3229:2",
+        "item_sha256": "2b13c80e2930d35cfb1505a81afb6ddd491b2fbdb72ee97af7a21f4d0a4faf97",
+        "prompt_sha256": "abde8119675242086ef3ae65b98a83c4f3ededa4b6eca07ee7bf07f63260c24c",
+        "question_id": "3229",
+        "reference_type": "int",
+        "source_index": 345,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3230",
+      "item": {
+        "content_sha256": "c678582801293bd993c0e1f9568b0234f5ba816e82735edffeb414cca4c24e4e",
+        "difficulty": "medium",
+        "item_id": "3230:1",
+        "item_sha256": "8963de0f6792fce47d42b1ee2ac1135844b70c376690f24bfd85f2435db050ca",
+        "prompt_sha256": "cdd4baeff3ddab3f419f792dab737bfb1743d5ba1129a6dc67d2c8227def2c41",
+        "question_id": "3230",
+        "reference_type": "int",
+        "source_index": 347,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3230",
+      "item": {
+        "content_sha256": "9b58a1690790fba6a566e762afba7cb57b55caa776e8fd7bce6546b280ba9546",
+        "difficulty": "medium",
+        "item_id": "3230:2",
+        "item_sha256": "a69d80a873f918aeecdb5135002be6c7a92864e6561180ebed370c42afa51944",
+        "prompt_sha256": "16da348668fe39559399d2ad549403dd51f33c53739194a5e1d1d15933b7ede0",
+        "question_id": "3230",
+        "reference_type": "int",
+        "source_index": 348,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3231",
+      "item": {
+        "content_sha256": "cf9e06930b8da3d556eb78b5f55d8c480870117dfba95f14158659770a106979",
+        "difficulty": "medium",
+        "item_id": "3231:1",
+        "item_sha256": "3430873b807876599859e353988187db4f8d407041aeb5515ce3b4b6799bf63e",
+        "prompt_sha256": "b72f9e642c039d6142fbadfc58aab1812155d5dc0c941ac1f15ef3e41136e09f",
+        "question_id": "3231",
+        "reference_type": "int",
+        "source_index": 350,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3231",
+      "item": {
+        "content_sha256": "0491549471889da6266e8d28e33e2a689cdc0024f66256eef8cad49977b22f7f",
+        "difficulty": "medium",
+        "item_id": "3231:2",
+        "item_sha256": "1f249aa962c775a0c8d953aa4f5804848e7bef4a6c92ae511b2759ea259b053c",
+        "prompt_sha256": "768ce4e09e978130ce83eae07b74a34dc18d081e7170f4d442baf571a575fabd",
+        "question_id": "3231",
+        "reference_type": "int",
+        "source_index": 351,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3234",
+      "item": {
+        "content_sha256": "7bebc8f329d70b19563026541ffabb20563a4006970bb658badc980cafa4a206",
+        "difficulty": "medium",
+        "item_id": "3234:1",
+        "item_sha256": "ccc6a0f716af4d470826d45b5ce2fde08246e330e0c60c3a93ac97538b74f5fc",
+        "prompt_sha256": "f24f4ad4ee42065d2d32c514c7153eac041be4602cdaff4ca56fef97a28994c8",
+        "question_id": "3234",
+        "reference_type": "list",
+        "source_index": 356,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3235",
+      "item": {
+        "content_sha256": "4a667ad20f32acffe7d9a2ecaf0cc3c26164c2df249be3af4ef4e092a9c3c67d",
+        "difficulty": "medium",
+        "item_id": "3235:0",
+        "item_sha256": "3bdbf58d2275a56cbe6693570b19406e900c2ef97ea14061602d8803b50a2493",
+        "prompt_sha256": "3715347fbc077d9ef10e1a29623472222e969fada051ccaa747decd956c19cb4",
+        "question_id": "3235",
+        "reference_type": "int",
+        "source_index": 357,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3235",
+      "item": {
+        "content_sha256": "72469ed4b7b8cf6901172cb8643f3631d17b4f18aeaff5869fb193e9e574fb71",
+        "difficulty": "medium",
+        "item_id": "3235:1",
+        "item_sha256": "2c8c9ed3a3e6b85fcdcbeda39ff63ad3a691483e82d7956f631fea2aa1dc1574",
+        "prompt_sha256": "0b725d71e6edaceae1c6ca872d30674055afc5eee7e44177a264291f9a66b479",
+        "question_id": "3235",
+        "reference_type": "int",
+        "source_index": 358,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3236",
+      "item": {
+        "content_sha256": "34b56ac471f8bed705d1b99be78f6b48cf41c8dfd83fd8cba7148f2774aff8f2",
+        "difficulty": "easy",
+        "item_id": "3236:1",
+        "item_sha256": "deee76a234d74bfbc191ed1928c9a7c5341c941be08ad23d2f8062a3139a3920",
+        "prompt_sha256": "c2354e8de584171139f87cacc22df67fe82a8b87273e6f554bc1983e9f139c8c",
+        "question_id": "3236",
+        "reference_type": "int",
+        "source_index": 361,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3239",
+      "item": {
+        "content_sha256": "543e448e98e3bc4c86017eaab41c30b7f806571be5ce0516bb1d197b71f6255a",
+        "difficulty": "medium",
+        "item_id": "3239:0",
+        "item_sha256": "388f6b7b6fdb9ad89bd50e603ae61425023ecd7471273c2af091c3978d0a4e22",
+        "prompt_sha256": "15f2753a571c5d2e7a71db07015d67abcad265ab4c927ef5639c85756d32124e",
+        "question_id": "3239",
+        "reference_type": "int",
+        "source_index": 362,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3239",
+      "item": {
+        "content_sha256": "210ffe3f18ac58198ef143eff2a5776c6bebecb4286805dc45b2a6ed2cc9ec3f",
+        "difficulty": "medium",
+        "item_id": "3239:2",
+        "item_sha256": "d207de74fec4f8f7e81bc68ca62dc68de4490a218a81d623d9a3d2442c5c6e35",
+        "prompt_sha256": "d10386d29ad9e9bfaf1b9d317117f515c8f26194477dd4c316e9bf75eb75c78e",
+        "question_id": "3239",
+        "reference_type": "int",
+        "source_index": 364,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3240",
+      "item": {
+        "content_sha256": "a26eda57441feacb14fee2921a73c7bbe37f013e1d5dc4ab4f4b159ed18e2b7d",
+        "difficulty": "medium",
+        "item_id": "3240:0",
+        "item_sha256": "0fa14791f1c5e708d5b1e92efbdf9f92e8eb98ef7fe64bbcb064041ae9c1c27b",
+        "prompt_sha256": "8d2f88a318d7a8599dc9c9dce67da58a293e719fa8a5527104e80a856174151a",
+        "question_id": "3240",
+        "reference_type": "int",
+        "source_index": 365,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3243",
+      "item": {
+        "content_sha256": "c9b6f5f746965f44f79f64bc1cf97e603bcab23c6c374b77b2b66d823cd62b00",
+        "difficulty": "hard",
+        "item_id": "3243:0",
+        "item_sha256": "02e89911b309d80ba44755da1bf8a2b19aef95111763c286117131423d1fd75d",
+        "prompt_sha256": "ddae5724e2ec301cbe94f605d6960b7faa1ddd52be16cb0215256d0a3da403c3",
+        "question_id": "3243",
+        "reference_type": "int",
+        "source_index": 369,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3243",
+      "item": {
+        "content_sha256": "3aab5c753c3738649643a973199b1907e2b6be5c2bbe0a11b905f199da03c563",
+        "difficulty": "hard",
+        "item_id": "3243:2",
+        "item_sha256": "54c067dd4a206de5663b76631adf3a459f75783c40e81ade0a93a2df59ae243e",
+        "prompt_sha256": "67b09ee71e125368f21dc0f1756aa293def3650f8d3f8947ea200841006a31b8",
+        "question_id": "3243",
+        "reference_type": "int",
+        "source_index": 371,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3245",
+      "item": {
+        "content_sha256": "76f912826450fc02bf3c6b6a51c7d3b46092d1c08b3d40b913fc37db9b05e25f",
+        "difficulty": "medium",
+        "item_id": "3245:1",
+        "item_sha256": "506b9dd89d9e50c4d5b8f3b837194bd375d47c010351c447510f799a6209b220",
+        "prompt_sha256": "dfb5a6394ca39a6eca3f4b37b9d82a2e2a6495faba679d12155ae15441a99afc",
+        "question_id": "3245",
+        "reference_type": "list",
+        "source_index": 376,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3251",
+      "item": {
+        "content_sha256": "7f54f3641b3676966fe8c2230d9354928040d4cc45cc265ee1f60d10b85e19d7",
+        "difficulty": "easy",
+        "item_id": "3251:0",
+        "item_sha256": "4c75c57b6219264cf2e9ac197689b633e98b637ea548a5e0f987f0b71a9e2de5",
+        "prompt_sha256": "65396595bd9eadb550349cd89f0bae3606ece84e6ce32eaf374cfd256b577e0b",
+        "question_id": "3251",
+        "reference_type": "int",
+        "source_index": 382,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3261",
+      "item": {
+        "content_sha256": "f056ec36fa61869f6468acdbb6f9e2c06102d9ef69850b0734772add42fcfd34",
+        "difficulty": "hard",
+        "item_id": "3261:0",
+        "item_sha256": "5aef1dbb5824fa27547508f4e1e4e85962e472d045eeb42ee1662a7e2bc9152b",
+        "prompt_sha256": "4870db27a4056cf57809b8f894a70374d65108d17a2e20b8a973ab92bf8b8d61",
+        "question_id": "3261",
+        "reference_type": "int",
+        "source_index": 387,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3261",
+      "item": {
+        "content_sha256": "86fbae87fda8fdc17db974a199a2b0806d2dc85b38ecc2a65253ac91c9ec2820",
+        "difficulty": "hard",
+        "item_id": "3261:2",
+        "item_sha256": "4b6443aad282547cd4a74fbf0f5e2f4ac82915dad4c456d3567fac9dd1d8c115",
+        "prompt_sha256": "07b3c8f98e198abf2af06c2f9ba189ca808fd105fe34b60e9cb5f8e8e181d1e2",
+        "question_id": "3261",
+        "reference_type": "int",
+        "source_index": 389,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3262",
+      "item": {
+        "content_sha256": "acce85dbb9b797470ecce7b91e139036e18f0618d20a1b2aa21621dae5689a71",
+        "difficulty": "medium",
+        "item_id": "3262:0",
+        "item_sha256": "f88b513f3fc6e37b961fb106bbf20ba33400e8dbc78155d725d3dedac686216a",
+        "prompt_sha256": "874c3414bd8d5dcd93364195cddd1fd8c0d9ce7ae247b1a36638c2359a23242e",
+        "question_id": "3262",
+        "reference_type": "int",
+        "source_index": 390,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3262",
+      "item": {
+        "content_sha256": "7490df461eabcf57d7c8da80725261bbfc6b3dcabfeec2d2bb04a3865fd0b824",
+        "difficulty": "medium",
+        "item_id": "3262:1",
+        "item_sha256": "68261cc13e359abcbcb6768ad01e197d09530da8c8dbd29ccf549df62d84de35",
+        "prompt_sha256": "08048514c7c9f65c1f2ad95c88acb16f24aa4a387d6bc99944dc4e5796f408aa",
+        "question_id": "3262",
+        "reference_type": "int",
+        "source_index": 391,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3263",
+      "item": {
+        "content_sha256": "b525e4bb7c6d1ed4002006511c982336a01e761f8b884f5f9283d1720bcae873",
+        "difficulty": "easy",
+        "item_id": "3263:0",
+        "item_sha256": "2a1f5a15534aba817405cb7cc23483b3740cfcbf4144b18357d5be215bdf30d8",
+        "prompt_sha256": "fdf240dbbba93860a9dc3a970517bfbb901278a7da6d1dfcc9f4792664825f18",
+        "question_id": "3263",
+        "reference_type": "int",
+        "source_index": 393,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3263",
+      "item": {
+        "content_sha256": "1453d13d0b944b331c5a026584ba8428214f7797d69bc598824ffab60ffa6b4c",
+        "difficulty": "easy",
+        "item_id": "3263:1",
+        "item_sha256": "4d27e1e1c33c6bdce30893ccc88404bc499c87e5ed9c006486da160e615a4cb0",
+        "prompt_sha256": "71d51d4bb441639cd8247d4cb76fd2427442fcde5246773704ab03015d7eeb4d",
+        "question_id": "3263",
+        "reference_type": "int",
+        "source_index": 394,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3267",
+      "item": {
+        "content_sha256": "3ab642cc1aa7a29a4cd6acc5a4122319c8162c36d5d6ec7ba40338ce70db1644",
+        "difficulty": "medium",
+        "item_id": "3267:1",
+        "item_sha256": "9b6d7a515c27df008261d3255919002804054be724e3c00733b1f66f368b0033",
+        "prompt_sha256": "42c0aaa39b78c6f69792c6cbcc08be147a82fef60030527898b96447af9a8664",
+        "question_id": "3267",
+        "reference_type": "int",
+        "source_index": 400,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3267",
+      "item": {
+        "content_sha256": "16273694e0d8c66aded40b28963fc70a2e3bbb1ab32f20d8643822c31558784c",
+        "difficulty": "medium",
+        "item_id": "3267:2",
+        "item_sha256": "d46227bc46c6ff77d69a73de6efad6d668206e3faed3cbe12419f63389d5c9d5",
+        "prompt_sha256": "0f793f41bca30c98854fd1417625ba41382eec2d0be27563ed51e087e8524512",
+        "question_id": "3267",
+        "reference_type": "int",
+        "source_index": 401,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3269",
+      "item": {
+        "content_sha256": "c0f6c3525cb1fd0c0ff4da9b924e47e3510c6e9fa4fb16e32c51efc3ed896797",
+        "difficulty": "medium",
+        "item_id": "3269:1",
+        "item_sha256": "cb0d226ecbe524b2b0896a25d48b3a0afd4bd4070f6353f6e330844405bafc02",
+        "prompt_sha256": "f7366bbf44359a549e12ed180e18e28eb97630922a99f36bf80234bb9d9363ca",
+        "question_id": "3269",
+        "reference_type": "int",
+        "source_index": 403,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3291",
+      "item": {
+        "content_sha256": "063615f7892589e09e9a8bc5df6626dff935e24e238031596770070f175c806d",
+        "difficulty": "medium",
+        "item_id": "3291:1",
+        "item_sha256": "9e307f170b83570844fe21e574b3422f7b0a0de58fdb63ca110127500d4cee88",
+        "prompt_sha256": "9676f3a3f5b54560414cd3dd709a53080762814fbf5996d14cbba844a620e408",
+        "question_id": "3291",
+        "reference_type": "bool",
+        "source_index": 407,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3291",
+      "item": {
+        "content_sha256": "d100637c3fd5c9201512b6855b1ac66caf8d74abf512cb78b4d2015bcc954b30",
+        "difficulty": "medium",
+        "item_id": "3291:2",
+        "item_sha256": "ae31a0e89eedfa95cb7724c9dca304cc94fac8d2a809154e08a1ddb575c1dc67",
+        "prompt_sha256": "fd3f0fafd9231b43c0d55698eb6b72e5cb536c0ca750b0197b14dcc5b1658141",
+        "question_id": "3291",
+        "reference_type": "bool",
+        "source_index": 408,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3292",
+      "item": {
+        "content_sha256": "8c93f291ea51007d4d9018837b0f747b672920fb1bbbadd3e1caca900529ebcf",
+        "difficulty": "medium",
+        "item_id": "3292:1",
+        "item_sha256": "00ff76aef2d854ef0185be26626dcdb414f206e192551b2b9dd933fdac67fda3",
+        "prompt_sha256": "267e7f115cfeb88fd88da99521dce27082f5f68cf6a36ae3d1f361b9c74d3a18",
+        "question_id": "3292",
+        "reference_type": "int",
+        "source_index": 410,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3292",
+      "item": {
+        "content_sha256": "8901d41709fb40e9a4e550e0211b5d4df4c427ea93ed13a1fd6987e01cce43f5",
+        "difficulty": "medium",
+        "item_id": "3292:2",
+        "item_sha256": "d109385d6c1a5fc8cb8b67b294c09736cdea42b33099d889cfd50a650211194a",
+        "prompt_sha256": "bc2687b84be6ee9baefe70b63c7154f4abbc6111bdf403869c345feb0aed4145",
+        "question_id": "3292",
+        "reference_type": "int",
+        "source_index": 411,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3297",
+      "item": {
+        "content_sha256": "f9bee4da62b935e582611278360f66bc5280ba085b0d52e5970e4706c458bac8",
+        "difficulty": "medium",
+        "item_id": "3297:0",
+        "item_sha256": "e6b29bce063f197627d8c81d497f1563f3c034e54781655208fb1f6e010e69f9",
+        "prompt_sha256": "2607637dca1420f8ed3a69ffafd6902dd4823d861e951385d34528aaa3b2680a",
+        "question_id": "3297",
+        "reference_type": "int",
+        "source_index": 412,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3297",
+      "item": {
+        "content_sha256": "986c90f8e6dd85cdef3439368f88a7a64fbb33a1f9d495b48f8ba9309d7953b2",
+        "difficulty": "medium",
+        "item_id": "3297:1",
+        "item_sha256": "be9929936e63bd61f1e4b18d7e451c33bf155ec24dbbdd0b21ef903fff984670",
+        "prompt_sha256": "489fe2e275ba81e5370a114349bd0dd4702255f606c616abe24dc77f875717ee",
+        "question_id": "3297",
+        "reference_type": "int",
+        "source_index": 413,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3298",
+      "item": {
+        "content_sha256": "fae3f78951ab57dacf0baaccb403d0332caea4de591a7c128d945ca3fa6d6ff6",
+        "difficulty": "hard",
+        "item_id": "3298:0",
+        "item_sha256": "711118bbb09e6f5c364a1cd2258d1be86dbdfdcac0e4e3b3660ba0ed96bd3442",
+        "prompt_sha256": "bba1e471e1d478093f0e57057a54c14cd8a3e7ed22181b104d8bfaff29736c6d",
+        "question_id": "3298",
+        "reference_type": "int",
+        "source_index": 415,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3299",
+      "item": {
+        "content_sha256": "3c53dcd00682a558c7f8a144f4e82e5f5d1cffbb4f9ae232717bb6d15b68c968",
+        "difficulty": "medium",
+        "item_id": "3299:1",
+        "item_sha256": "83d91948373017d80b4a9af250245cadf7e913dcb8c9a58c39837b6cf9206855",
+        "prompt_sha256": "51b2b134060fc5ccf7c3ccf5720da2064a551bce1b5cb667fb3aa26d0d357251",
+        "question_id": "3299",
+        "reference_type": "int",
+        "source_index": 418,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3308",
+      "item": {
+        "content_sha256": "76a75f39585318b4559d9870a04faf5dfe65528bc95cb4fb1d4367f5989f18e9",
+        "difficulty": "medium",
+        "item_id": "3308:0",
+        "item_sha256": "3a3663e072f2101ca698fd1b0ba8ae96ca4b77aaedf97f4a195907b87cf85d4f",
+        "prompt_sha256": "90d22b8d9ea8674779cd92ae2565331cfca823fb1959fa503f44ff2ef1e1ceb3",
+        "question_id": "3308",
+        "reference_type": "str",
+        "source_index": 419,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3311",
+      "item": {
+        "content_sha256": "60579922c02e8aab17a461cba1e6ecfd8e34f2e9e91a57309b0816c2acf511a1",
+        "difficulty": "easy",
+        "item_id": "3311:0",
+        "item_sha256": "c7f0b47e2966b947ed94e6a52362717627a1bacf7968c56b89acb76f098884da",
+        "prompt_sha256": "5b44579cce23cdfaa46db06afffcf80adbed8d352fdc8b21cc478be90b0daad0",
+        "question_id": "3311",
+        "reference_type": "int",
+        "source_index": 424,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3317",
+      "item": {
+        "content_sha256": "584b9aed28277fc5a73f98c824b46fd1e893717302ff2cc87f02a1d41168d4ef",
+        "difficulty": "medium",
+        "item_id": "3317:0",
+        "item_sha256": "a772ad1ce41e6d23d532521f77171144e7aaf1331b9943b864b4281965c3e11a",
+        "prompt_sha256": "28b0ee41cb6b189e45d66366d7694ca946e2f9c353e08cd3ae1c9aad0c54b629",
+        "question_id": "3317",
+        "reference_type": "int",
+        "source_index": 428,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3317",
+      "item": {
+        "content_sha256": "f499f2ae88f5fa20ebfc95166582b159af356873b246b463cadb1109a7a6da1a",
+        "difficulty": "medium",
+        "item_id": "3317:2",
+        "item_sha256": "2def337d16b727f7f3410e3111a0ec4ed6296ec7d5fb9cf616b478fc665f26a0",
+        "prompt_sha256": "99f273fd7ef2fb5fda2c59113ed9d018ad404549b11dbe44617bf42a9e80db72",
+        "question_id": "3317",
+        "reference_type": "int",
+        "source_index": 430,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3320",
+      "item": {
+        "content_sha256": "971a9fd6138138834fdc96fcdd88e85b681b95fcb793f745e4aa419a74ec53fe",
+        "difficulty": "easy",
+        "item_id": "3320:1",
+        "item_sha256": "86fe28d85e54146a5f3c53f5f359165b177e4580033e1159069ddef35a0d4eb3",
+        "prompt_sha256": "499164077487e7c5a3456d67552e92aa243feba83328c2f6aa528301cdb0c8d6",
+        "question_id": "3320",
+        "reference_type": "int",
+        "source_index": 432,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3324",
+      "item": {
+        "content_sha256": "dd79cdc1c68ef2c5292992ea348e1ca8ec61158efab5b75dd26df0e94768e6dc",
+        "difficulty": "easy",
+        "item_id": "3324:1",
+        "item_sha256": "20d00967ce97f24e41ae42b8698c32e58ffb7ab6f46cc9328ecb4ee6e57567a6",
+        "prompt_sha256": "26930b073a20d4d9c54f632b007deeacf59ad4dc0c776958e0d991ab3614080b",
+        "question_id": "3324",
+        "reference_type": "bool",
+        "source_index": 434,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3329",
+      "item": {
+        "content_sha256": "3982a66b4a44f8eac14b76b98a17cb9b477d25e71190949b622af667e0d051f6",
+        "difficulty": "medium",
+        "item_id": "3329:1",
+        "item_sha256": "26c2ebd66725568a473ed04bc909d6dec4cfe7db640fc6c386c21d4bec930b5c",
+        "prompt_sha256": "dc2cfc4d2e7cfd5bb3b5f60dfaac3ca0142b76bfbbc6770ab97d6b3d0b9c4ead",
+        "question_id": "3329",
+        "reference_type": "int",
+        "source_index": 436,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3331",
+      "item": {
+        "content_sha256": "bc3cc1eca7912667216503e761823ca39a3b331c396ae2cb45717a53d4d97cfb",
+        "difficulty": "easy",
+        "item_id": "3331:0",
+        "item_sha256": "a4bfb030f494b0f1fbd582ee755fb23b44ad7be1b3b417dc86f3c4623defda58",
+        "prompt_sha256": "1e30432a8602fa04cd0c943e5081e66d567ae88d173e0ba260c32d88a363e68d",
+        "question_id": "3331",
+        "reference_type": "int",
+        "source_index": 437,
+        "test_id": 0
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3331",
+      "item": {
+        "content_sha256": "4d9d999d1eecfb6bfc24882e20f2cc69ad3da8f2b60b47eeea5d505eee1d2d05",
+        "difficulty": "easy",
+        "item_id": "3331:2",
+        "item_sha256": "64f8566a6e3dde5d2166918daab3acf345e1f9af6d834ad0359d5880f3b09979",
+        "prompt_sha256": "f15eb41bce279ca824918ea0b88c1171e0371070b7a05e79a064058ab3eda282",
+        "question_id": "3331",
+        "reference_type": "int",
+        "source_index": 439,
+        "test_id": 2
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    },
+    {
+      "family_id": "3347",
+      "item": {
+        "content_sha256": "145107eec97562e4e50be9ccc7232e8e55769b671fdd943df1cb0ef1ff665c7b",
+        "difficulty": "easy",
+        "item_id": "3347:1",
+        "item_sha256": "36f0c4e5c0ec0156ceb5070d4fec7ac1b58fedd4be970da1449b103ff46fa31f",
+        "prompt_sha256": "e2a5d8ca8dec0ca66a74aabf6713e6a36678fb4b95bce2949a8c1fe3926c529e",
+        "question_id": "3347",
+        "reference_type": "list",
+        "source_index": 441,
+        "test_id": 1
+      },
+      "stage_family": "STAGE_B",
+      "status": "STRUCTURAL_SIBLING_EXCLUDED_PRE_OUTCOME"
+    }
+  ]
+}
