@@ -189,7 +189,10 @@ def load_schedule() -> tuple[list[dict[str, Any]], dict[tuple[str, str, int], di
     if payload.get("row_count") != 19_200 or len(rows) != 19_200:
         raise RuntimeError("frozen semantic schedule count mismatch")
     expected_conditions = {f"{controller}_{shell}" for controller in FRESH_IDS for shell in SHELLS}
-    if set(payload.get("conditions", [])) != expected_conditions:
+    if payload.get("selected_controller_order") != list(FRESH_IDS):
+        raise RuntimeError("frozen selected-controller order mismatch")
+    observed_conditions = {str(row["condition"]) for row in rows}
+    if observed_conditions != expected_conditions:
         raise RuntimeError("frozen semantic condition set mismatch")
     by_key = {key_of(row): row for row in rows}
     if len(by_key) != len(rows) or len({int(row["seed"]) for row in rows}) != len(rows):
