@@ -204,10 +204,16 @@ def weighted_shape(
     fresh: np.ndarray,
     reference: np.ndarray,
     weights: np.ndarray,
+    *,
+    fixed_occurrence_count: int | None = None,
 ) -> np.ndarray:
     normalized = np.asarray(weights, dtype=np.float64)
     normalized = normalized / np.sum(normalized)
-    correction_denominator = 1.0 - float(np.sum(np.square(normalized)))
+    correction_denominator = (
+        1.0 - 1.0 / fixed_occurrence_count
+        if fixed_occurrence_count is not None
+        else 1.0 - float(np.sum(np.square(normalized)))
+    )
     if correction_denominator <= 0.0:
         return np.full((fresh.shape[0], reference.shape[0]), np.nan)
     d0 = fresh[:, None, :, 0] - reference[None, :, :, 0]
@@ -239,11 +245,18 @@ def resample_statistics(
     fresh: dict[str, np.ndarray],
     reference: dict[str, np.ndarray],
     weight_matrix: np.ndarray,
+    *,
+    fixed_occurrence_count: int | None = None,
 ) -> dict[str, np.ndarray]:
     output = {name: np.empty(len(weight_matrix), dtype=np.float64) for name in STATISTICS}
     for index, weights in enumerate(weight_matrix):
         shapes = {
-            shell: weighted_shape(fresh[shell], reference[shell], weights)
+            shell: weighted_shape(
+                fresh[shell],
+                reference[shell],
+                weights,
+                fixed_occurrence_count=fixed_occurrence_count,
+            )
             for shell in analysis.SHELLS
         }
         values = statistics(analysis, geometry, shapes)
@@ -421,7 +434,12 @@ def simulate_panel(task: dict[str, Any]) -> dict[str, Any]:
             rng_resampling.integers(0, items, size=items), minlength=items
         )
     ordinary = resample_statistics(
-        analysis, geometry, fresh_errors, reference_errors, ordinary_counts
+        analysis,
+        geometry,
+        fresh_errors,
+        reference_errors,
+        ordinary_counts,
+        fixed_occurrence_count=items,
     )
     methods["A_ordinary_item_bootstrap"] = {
         "values": ordinary,

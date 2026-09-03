@@ -53,3 +53,23 @@ def test_continuous_weights_fail_closed_at_single_item_support() -> None:
     reference = np.zeros((3, 5, 2), dtype=np.float64)
     weights = np.asarray([1.0, 0.0, 0.0, 0.0, 0.0])
     assert np.all(np.isnan(calibration.weighted_shape(fresh, reference, weights)))
+
+
+def test_occurrence_weighting_matches_explicit_historical_bootstrap_sample() -> None:
+    calibration = load_script(
+        "q2_item_bootstrap_occurrence_test",
+        "calibrate_q2_oos_v2_item_bootstrap.py",
+    )
+    rng = np.random.Generator(np.random.PCG64DXSM(9913))
+    fresh = rng.integers(0, 2, size=(3, 11, 2)).astype(np.float64)
+    reference = rng.integers(0, 2, size=(5, 11, 2)).astype(np.float64)
+    indices = np.asarray([0, 0, 1, 3, 3, 3, 6, 7, 8, 8, 10])
+    counts = np.bincount(indices, minlength=11)
+    observed = calibration.weighted_shape(
+        fresh,
+        reference,
+        counts,
+        fixed_occurrence_count=len(indices),
+    )
+    expected = cross_block_shape(fresh[:, indices, :], reference[:, indices, :])
+    np.testing.assert_allclose(observed, expected, rtol=0.0, atol=1e-15)
