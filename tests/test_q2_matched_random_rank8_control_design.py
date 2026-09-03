@@ -1,8 +1,10 @@
 import hashlib
 import json
+from copy import deepcopy
 from pathlib import Path
 
 import pytest
+from scripts.check_external_readiness import _validate_active_state
 from scripts.simulate_q2_matched_random_rank8_control import coefficient_audit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -77,3 +79,44 @@ def test_release_manifest_hashes() -> None:
         path = ROOT / relative if "/" in relative else REVIEW / relative
         assert path.is_file(), relative
         assert hashlib.sha256(path.read_bytes()).hexdigest() == expected, relative
+
+
+def test_external_readiness_accepts_only_consistent_closed_design_state() -> None:
+    import yaml
+
+    state = yaml.safe_load((ROOT / "project_state.yaml").read_text())
+    failures: list[str] = []
+    _validate_active_state(state, failures)
+    assert failures == []
+
+    changed = deepcopy(state)
+    changed["current"]["gpu_work_authorized"] = True
+    failures = []
+    _validate_active_state(changed, failures)
+    assert "design-review state unexpectedly authorizes GPU work" in failures
+
+    changed = deepcopy(state)
+    changed["current"]["stage"] = "Q2_MATCHED_RANDOM_RANK8_CONTROL_READY_FOR_PRELOCK"
+    failures = []
+    _validate_active_state(changed, failures)
+    assert "design-review ruling and project state disagree" in failures
+
+
+def test_external_readiness_preserves_open_campaign_fail_closed_check() -> None:
+    import yaml
+
+    state = yaml.safe_load((ROOT / "project_state.yaml").read_text())
+    state["current"]["active_experiment"]["status"] = "OPEN_RUNNING_BLIND_COLLECTION"
+    state["current"]["active_experiment"]["partial_scientific_outcomes_available_to_docs"] = (
+        False
+    )
+    failures: list[str] = []
+    _validate_active_state(state, failures)
+    assert failures == []
+
+    state["current"]["active_experiment"]["partial_scientific_outcomes_available_to_docs"] = (
+        True
+    )
+    failures = []
+    _validate_active_state(state, failures)
+    assert "open-experiment firewall is not explicit" in failures

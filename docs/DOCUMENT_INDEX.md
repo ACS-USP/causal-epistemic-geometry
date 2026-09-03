@@ -52,6 +52,7 @@ current instruction source.
 | `docs/Q2_VISUAL_EVIDENCE_DESIGN_MEMO.md` | Frozen communication hierarchy and visual encodings for the Q2 V4.1 package |
 | `docs/Q2_FIGURE_SPEC.md` | Source, panel, and claim contract for the Q2 V4.1 figures |
 | `docs/Q2_OOS_VISUAL_EVIDENCE.md` | Implemented fresh-controller OOS visual package and item-bootstrap terminology |
+| `review/q2_matched_random_rank8_control_design/DESIGN_REVIEW.md` | Model-free specificity-control review; orientation-level design requires further theory and is not authorized for execution |
 
 ## Current supporting references
 
@@ -99,6 +100,7 @@ current instruction source.
 | `review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md` | Complete 37,800-row Q2 V4.1 semantic closeout: frozen G2 relational classification, RS+/RT+ radial results, hashes, and clean independent forensic audit |
 | `review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md` | Complete 19,200-row fresh-controller validation: A0 pass, exact controller sign test, hashes, and clean independent forensic audit |
 | `review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md` | Post-hoc exact reconstruction and calibration audit: archived item bootstrap retained as panel-perturbation sensitivity, not conventional CI |
+| `review/q2_matched_random_rank8_control_design/DESIGN_REVIEW.md` | Exact 47-identity geometry audit, subspace-level inference design, power/compute study, and no-execution ruling |
 | `docs/Q2_V4_1_SEMANTIC_EXECUTION_CLOSEOUT.md` | Short canonical pointer to the Q2 V4.1 semantic closeout bundle |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |

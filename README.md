@@ -22,11 +22,11 @@ blind spots.
   yet converted the measured complementarity into realized utility.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_OOS_V2_CLOSED_POSTCLOSEOUT_HARDENING` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
+**Current stage:** `Q2_MATCHED_RANDOM_RANK8_CONTROL_DESIGN_REVIEW_COMPLETE` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
 
-Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. The post-hoc item-bootstrap audit found no primary defect but ruled that its percentile distribution is not a calibrated conventional confidence interval.
+Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. The post-hoc item-bootstrap audit found no primary defect but ruled that its percentile distribution is not a calibrated conventional confidence interval. The model-free matched random rank-8 specificity-control review is complete and requires further theory: the safety-conditioned orientation population is not yet defined or qualified for all 47 fixed coefficient identities, and the minimum serious paired design has limited power for modest effects at high compute.
 
-**Next authorized action:** COMPLETE_MODEL_FREE_MATCHED_RANDOM_RANK8_CONTROL_DESIGN_ONLY
+**Next authorized action:** NO_EXECUTION__RESOLVE_SAFETY_CONDITIONED_ORIENTATION_LAW_COVARIANCE_MATCHING_AND_COMPUTE_UTILITY
 <!-- PROJECT_STATUS:END -->
 
 This block is generated from [`project_state.yaml`](project_state.yaml). See the

@@ -54,6 +54,17 @@ python scripts/generate_q2_oos_paper_figures.py
 pytest -q tests/test_q2_oos_publication_visuals.py
 ```
 
+The CPU-only matched-random rank-8 design tables can be regenerated without
+constructing a random basis or loading a model:
+
+```bash
+python scripts/simulate_q2_matched_random_rank8_control.py
+python -m pytest -q tests/test_q2_matched_random_rank8_control_design.py
+```
+
+The planning seed in that precheck is not an experimental random-subspace
+seed. The design review generated zero final bases and zero semantic outcomes.
+
 The Q2 OOS tables reconcile to the sealed analysis artifact. Re-deriving its
 fresh×fresh pair table additionally requires the private Dshape array with
 SHA-256 `a6a6b4889e2c86df04ce42c4415281dde82af0d2deb1347b8083015e95089ea5`.

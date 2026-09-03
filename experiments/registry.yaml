@@ -2695,3 +2695,59 @@ experiments:
     model_inference: false
     q3: NOT_RUN
     next_action: PUBLICATION_LANGUAGE_RECALIBRATED
+
+  - id: Q2_MATCHED_RANDOM_RANK8_CONTROL_DESIGN
+    version: DESIGN-REVIEW-V1
+    stage: MODEL_FREE_DESIGN_REVIEW_COMPLETE
+    question: >-
+      Is the learned rank-8 intervention subspace more relationally aligned
+      with semantic blind-spot geometry than prospectively sampled, matched
+      random rank-8 subspace orientations?
+    instrument: >-
+      Exact reconstruction of the 31 historical plus 16 fresh frozen
+      coefficient identities, subspace-level estimand design, CPU-only
+      calibration/power simulations, safety-conditioning feasibility analysis,
+      and Spark-1 compute projections. No random basis was generated.
+    model_policy: NO_MODEL_CPU_ONLY_DESIGN
+    status: CLOSED_DESIGN_REVIEW
+    outcome: Q2_MATCHED_RANDOM_RANK8_CONTROL_REQUIRES_FURTHER_THEORY
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    scientific_interpretation: >-
+      Subspace orientation is the independent specificity unit. A transparent
+      Monte Carlo reference-tail test calibrated in the scalar planning model,
+      but the target population of safety-conditioned orientations is not yet
+      operationally defined for all 47 fixed coefficient identities. The
+      scientifically preferred common-panel route would require at least 20
+      random orientations and approximately 1.184 million semantic
+      trajectories at N=300/R=2, with weak-to-moderate power for modest or
+      25%-of-observed specificity advantages. No prelock or execution is
+      justified yet.
+    source_branch: research/q2-matched-random-rank8-control-design
+    precheck_commit: da06798823eaa9ba0057badc1c83bbf9e3405b79
+    source_commit: 4f0da6071c8621210ac04a790688388699c0b838
+    artifact: review/q2_matched_random_rank8_control_design/DESIGN_REVIEW.md
+    ruling_artifact: review/q2_matched_random_rank8_control_design/DESIGN_RULING.json
+    independent_unit: RANDOM_SUBSPACE_ORIENTATION
+    historical_reference_identities: 31
+    fresh_identities: 16
+    total_coefficient_identities: 47
+    coefficient_dimension: 8
+    minimum_random_subspaces_for_lofo_resolution: 20
+    preferred_route_if_resolved: ROUTE_2_COMMON_PANEL
+    route2_s20_n300_r2_semantic_trajectories: 1184400
+    route2_s20_n300_r2_projected_spark1_hours: 581.301875
+    simulation_replicates_per_cell: 20000
+    simulation_cells: 2160
+    null_fpr_range: [0.04245, 0.0532]
+    final_random_bases_generated: 0
+    experimental_seeds_generated: 0
+    safety_inference: 0
+    semantic_trajectories: 0
+    model_inference: false
+    gpu_used: false
+    spark1_used: false
+    spark2_used: false
+    runpod_used: false
+    q3: NOT_RUN
+    next_action: RESOLVE_ORIENTATION_LEVEL_SAFETY_CONDITIONING_AND_COVARIANCE_MATCHING

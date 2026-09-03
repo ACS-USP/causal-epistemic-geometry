@@ -15,6 +15,7 @@ summary. Last reconciled: 2026-09-03.
 | Q2 | V4.1 relational geometry | **DEVELOPMENT — G2** | A0, A1, and A2 predict blind-spot-shape geometry; A2 does not outperform A0/A1 | 31 directions, N=300, two shells; [closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md) |
 | Q2 radial | V4.1 radial tests | **DEVELOPMENT — RS+ / RT+** | STRONG exceeds MEDIUM shape and total displacement in all 31 directions | [radial artifact](../review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json) |
 | Q2 fresh-controller validation | OOS V2 | **DEVELOPMENT — PASS** | 16/16 prospectively sampled fresh-controller A0 row associations positive | Same Qwen3-8B/CRUXEval/learned-rank-8 laboratory and fixed 31-controller atlas; [closeout](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md) |
+| Q2 subspace specificity | Matched random rank-8 design | **DESIGN REVIEW — NOT RUN** | Further theory required before prelock | Orientation-level safety conditioning and compute/power are unresolved; [design review](../review/q2_matched_random_rank8_control_design/DESIGN_REVIEW.md) |
 | Q3 | Collective utility | **NOT_RUN** | No result | [concept note](Q3_CONCEPT_NOTE.md) only |
 
 ## Q1: confirmatory controllability
@@ -118,6 +119,21 @@ The result supports controller-identity generalization inside the same model,
 task, panel, learned subspace, and historical reference atlas. Matched-random-
 subspace specificity, cross-task generalization, cross-model generalization,
 and Q3 utility remain untested.
+
+## Q2: matched-random-subspace specificity design
+
+The model-free design review reconstructed all 47 frozen coefficient
+identities and confirmed that an orthonormal random basis can preserve their
+complete A0 Gram geometry. It also established that the independent
+specificity unit must be one random subspace orientation. A subspace-level
+Monte Carlo reference-tail test calibrated in planning simulations, but the
+experiment is not ready for prelock: safety-conditioning all 47 fixed
+identities does not yet define a qualified, feasible orientation population,
+and the minimum serious paired design (`S=20`, `N=300`, `R=2`) projects to
+1,184,400 semantic trajectories with limited power for modest advantages.
+The design-only ruling is
+`Q2_MATCHED_RANDOM_RANK8_CONTROL_REQUIRES_FURTHER_THEORY`; no basis, safety
+run, or semantic trajectory was generated.
 
 ## Forensic and artifact identity
 

@@ -14,7 +14,7 @@ narrower than the motivating theory.
 | Stronger interventions move blind spots farther | DEVELOPMENT | Q2 V4.1 radial tests | STRONG exceeded MEDIUM shape and total displacement in all 31 tested directions | Global monotonicity, smoothness, linearity, or a Riemannian manifold |
 | Positive A0 alignment generalizes across controller identities | DEVELOPMENT — PROSPECTIVE VALIDATION | Q2 OOS V2 | All 16 prospectively sampled safety-conditioned fresh-controller row associations were positive within the same Qwen3-8B/CRUXEval/learned-rank-8 laboratory | Cross-task, cross-model, or arbitrary-subspace generalization; treating 496 dyads as IID |
 | The OOS item bootstrap supplies a conventional 95% confidence interval | POST_HOC DIAGNOSTIC — NOT SUPPORTED | Q2 OOS item-bootstrap audit | The archived distribution is an item-panel perturbation sensitivity object; the implementation reproduced exactly but percentile-CI calibration was not established | Using its quantiles as ordinary CI bounds; selecting a favorable replacement method post hoc |
-| The learned rank-8 subspace is more specific than matched random rank-8 subspaces | NOT_RUN | None | A matched-random-subspace control is a prospective design question | Learned-subspace specificity has been demonstrated; one random subspace represents the population of orientations |
+| The learned rank-8 subspace is more specific than matched random rank-8 subspaces | NOT_RUN — DESIGN REQUIRES FURTHER THEORY | Matched random rank-8 model-free design review | Subspace orientation is the independent unit; safety-conditioned sampling and compute/power must be resolved before prelock | Learned-subspace specificity has been demonstrated; one random subspace represents the population of orientations; controller/dyad counts substitute for subspace replication |
 | Complementarity yields deployable collective utility | NOT_RUN | None | Q3 remains an open question | Oracle headroom is deployable utility; Q3 has been demonstrated |
 
 ## Canonical evidence
@@ -31,4 +31,6 @@ narrower than the motivating theory.
   and [`Q2_OOS_V2_FORENSIC_AUDIT.json`](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_FORENSIC_AUDIT.json).
 - Q2 OOS item-bootstrap diagnostic:
   [`Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md`](../review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md).
+- Q2 matched-random rank-8 design review:
+  [`DESIGN_REVIEW.md`](../review/q2_matched_random_rank8_control_design/DESIGN_REVIEW.md).
 - Current state: [`project_state.yaml`](../project_state.yaml).

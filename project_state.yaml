@@ -3,7 +3,7 @@ last_verified: "2026-09-03"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q2_OOS_V2_CLOSED_POSTCLOSEOUT_HARDENING
+  scientific_stage: Q2_MATCHED_RANDOM_RANK8_CONTROL_DESIGN_REVIEW_COMPLETE
   claim_status: Q2_V4_1_G2__Q2_OOS_V2_A0_PASS
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,10 +19,10 @@ project:
     utility?
 
 current:
-  workstream: CLOSED_RESULT_INTEGRATION_AND_SPECIFICITY_CONTROL_DESIGN
-  lifecycle: REPOSITORY_INTEGRATION
-  stage: Q1_AND_Q2_OOS_CLOSED_RESULTS_EXTERNALIZATION
-  source_commit: ac0c18b221d1393ac134ce377f01e26b4077be95
+  workstream: MATCHED_RANDOM_RANK8_CONTROL_DESIGN
+  lifecycle: DESIGN_REVIEW_COMPLETE
+  stage: Q2_MATCHED_RANDOM_RANK8_CONTROL_REQUIRES_FURTHER_THEORY
+  source_commit: 4f0da6071c8621210ac04a790688388699c0b838
   summary: >-
     Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL.
     The separate DEVELOPMENT LiveCodeBench transfer is closed as
@@ -32,15 +32,20 @@ current:
     Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller
     row associations were positive. The post-hoc item-bootstrap audit found no
     primary defect but ruled that its percentile distribution is not a
-    calibrated conventional confidence interval.
-  next_authorized_action: COMPLETE_MODEL_FREE_MATCHED_RANDOM_RANK8_CONTROL_DESIGN_ONLY
+    calibrated conventional confidence interval. The model-free matched
+    random rank-8 specificity-control review is complete and requires further
+    theory: the safety-conditioned orientation population is not yet defined
+    or qualified for all 47 fixed coefficient identities, and the minimum
+    serious paired design has limited power for modest effects at high compute.
+  next_authorized_action: >-
+    NO_EXECUTION__RESOLVE_SAFETY_CONDITIONED_ORIENTATION_LAW_COVARIANCE_MATCHING_AND_COMPUTE_UTILITY
   runpod: NOT_USED
   gpu_work_authorized: false
-  new_scientific_experiment_authorized: DESIGN_ONLY_NO_INFERENCE
+  new_scientific_experiment_authorized: MODEL_FREE_THEORY_ONLY_NO_EXECUTION
   active_experiment:
     name: MATCHED_RANDOM_RANK8_CONTROL_DESIGN
     evidence_level: DESIGN_ONLY
-    status: NOT_RUN
+    status: DESIGN_REVIEW_COMPLETE_NOT_RUN
     branch: research/q2-matched-random-rank8-control-design
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
@@ -58,7 +63,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: REPOSITORY_EXTERNALIZATION_AND_MODEL_FREE_CONTROL_DESIGN
+  current_task: MODEL_FREE_CONTROL_DESIGN_REVIEW_CLOSED_NO_EXECUTION
   free_generation: NONE_AUTHORIZED
 
 confirmatory_program:

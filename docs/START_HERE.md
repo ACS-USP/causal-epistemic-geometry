@@ -101,8 +101,13 @@ historical non-equivalent first audit remains preserved.
 
 Read the [Stage-B closeout](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md)
 and [forensic resolution](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md).
-There is currently no active semantic campaign. Authorized current work is
-repository externalization and model-free matched-random-subspace design only.
+There is currently no active semantic campaign. The model-free
+matched-random-subspace design review is complete and ruled
+`Q2_MATCHED_RANDOM_RANK8_CONTROL_REQUIRES_FURTHER_THEORY`. The independent
+specificity unit is a subspace orientation, not a controller or dyad. A valid
+prelock still needs a qualified safety-conditioned orientation law for all 47
+fixed coefficient identities and a justified compute/effect-size target. Read
+the [design review](../review/q2_matched_random_rank8_control_design/DESIGN_REVIEW.md).
 
 ## Evidence vocabulary
 

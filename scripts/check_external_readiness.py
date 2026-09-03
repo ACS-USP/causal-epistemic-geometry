@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 Q2_DIR = ROOT / "review" / "q2_v4_1_semantic_execution"
 Q1_LCB_DIR = ROOT / "review" / "q1_second_task_spark2_design" / "amendment1_hierarchical_unit"
 Q2_OOS_DIR = ROOT / "review" / "q2_oos_fresh_controller_design" / "v2_semantic_execution"
+Q2_MATCHED_RANDOM_DIR = ROOT / "review" / "q2_matched_random_rank8_control_design"
 PUBLIC_DOCS = (
     ROOT / "README.md",
     ROOT / "docs" / "START_HERE.md",
@@ -26,6 +27,70 @@ PUBLIC_DOCS = (
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _validate_active_state(state: dict[str, object], failures: list[str]) -> None:
+    """Validate open and closed-design states without weakening either firewall."""
+    current = state["current"]
+    firewall = state["scientific_firewall"]
+    assert isinstance(current, dict)
+    assert isinstance(firewall, dict)
+    active = current.get("active_experiment", {})
+    assert isinstance(active, dict)
+    status = active.get("status")
+
+    if status == "OPEN_RUNNING_BLIND_COLLECTION":
+        if active.get("partial_scientific_outcomes_available_to_docs") is not False:
+            failures.append("open-experiment firewall is not explicit")
+        return
+
+    if status == "NOT_RUN":
+        if firewall.get("free_generation") != "NONE_AUTHORIZED":
+            failures.append("closed-state firewall does not prohibit new free generation")
+        if current.get("gpu_work_authorized") is not False:
+            failures.append("closed-state project status unexpectedly authorizes GPU work")
+        return
+
+    if status == "DESIGN_REVIEW_COMPLETE_NOT_RUN":
+        if firewall.get("free_generation") != "NONE_AUTHORIZED":
+            failures.append("design-review state does not prohibit new free generation")
+        if current.get("gpu_work_authorized") is not False:
+            failures.append("design-review state unexpectedly authorizes GPU work")
+        if current.get("new_scientific_experiment_authorized") != (
+            "MODEL_FREE_THEORY_ONLY_NO_EXECUTION"
+        ):
+            failures.append("design-review state does not explicitly prohibit execution")
+        if active.get("name") != "MATCHED_RANDOM_RANK8_CONTROL_DESIGN":
+            failures.append("design-review state names an unexpected workstream")
+        if active.get("evidence_level") != "DESIGN_ONLY":
+            failures.append("design-review state is not explicitly design-only")
+        ruling_path = Q2_MATCHED_RANDOM_DIR / "DESIGN_RULING.json"
+        safety_path = Q2_MATCHED_RANDOM_DIR / "RELEASE_SAFETY_AUDIT.json"
+        if not ruling_path.is_file() or not safety_path.is_file():
+            failures.append("design-review closeout artifacts are missing")
+            return
+        ruling = json.loads(ruling_path.read_text(encoding="utf-8"))
+        safety = json.loads(safety_path.read_text(encoding="utf-8"))
+        if ruling.get("status") != current.get("stage"):
+            failures.append("design-review ruling and project state disagree")
+        zero_state = {
+            "closed_results_changed": False,
+            "final_random_bases_generated": 0,
+            "experimental_seeds_generated": 0,
+            "safety_inference": 0,
+            "semantic_trajectories": 0,
+            "qwen_loaded": False,
+            "gpu_used": False,
+            "q3_run": False,
+        }
+        for key, expected in zero_state.items():
+            if ruling.get(key) != expected:
+                failures.append(f"design-review firewall mismatch: {key}")
+        if safety.get("status") != "PASS":
+            failures.append("design-review release-safety audit did not pass")
+        return
+
+    failures.append("active scientific state is not a recognized fail-closed state")
 
 
 def main() -> int:
@@ -100,17 +165,7 @@ def main() -> int:
         if phrase in lowered:
             failures.append(f"stale public claim: {phrase}")
 
-    active = state["current"].get("active_experiment", {})
-    if active.get("status") == "OPEN_RUNNING_BLIND_COLLECTION":
-        if active.get("partial_scientific_outcomes_available_to_docs") is not False:
-            failures.append("open-experiment firewall is not explicit")
-    elif active.get("status") == "NOT_RUN":
-        if state["scientific_firewall"].get("free_generation") != "NONE_AUTHORIZED":
-            failures.append("closed-state firewall does not prohibit new free generation")
-        if state["current"].get("gpu_work_authorized") is not False:
-            failures.append("closed-state project status unexpectedly authorizes GPU work")
-    else:
-        failures.append("active scientific state is neither blind/open nor closed design-only")
+    _validate_active_state(state, failures)
 
     for name, expected in ledger["tracked_aggregate_artifacts"].items():
         path = Q2_DIR / name
