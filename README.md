@@ -15,16 +15,18 @@ blind spots.
 - **Q2 — geometry.** In a prospectively fixed bank of 31 intervention
   directions, pairwise intervention geometry predicted pairwise semantic
   blind-spot geometry. Q2 V4.1 closed as `Q2_V4_1_G2`; its independent radial
-  results are `RS+` and `RT+`.
+  results are `RS+` and `RT+`. A later prospective validation found positive
+  A0 alignment for all 16 safety-conditioned fresh controllers
+  (`Q2_OOS_V2_A0_PASS`).
 - **Q3 — utility.** Not run. No deployable selector, router, or committee has
   yet converted the measured complementarity into realized utility.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B_OPEN` — **scientific claim:** `Q2_V4_1_G2`.
+**Current stage:** `Q2_OOS_V2_CLOSED_POSTCLOSEOUT_HARDENING` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
 
-Q2 V4.1 is closed and forensic-clean as Q2_V4_1_G2 with independent RS+ and RT+ radial results. A separate Q1 DEVELOPMENT transfer experiment is currently collecting a frozen 5,720-trajectory LiveCodeBench Stage B on Spark 2. Its fixed controller, eight nulls, 130 question families, parser, schedule, endpoints, and decision rules were locked before opening. No partial Stage-B scientific outcome is part of the repository state or may be inspected during collection.
+Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. The post-hoc item-bootstrap audit found no primary defect but ruled that its percentile distribution is not a calibrated conventional confidence interval.
 
-**Next authorized action:** COMPLETE_FROZEN_5720_ROW_STAGE_B_AND_SEAL_BEFORE_ANALYSIS
+**Next authorized action:** COMPLETE_MODEL_FREE_MATCHED_RANDOM_RANK8_CONTROL_DESIGN_ONLY
 <!-- PROJECT_STATUS:END -->
 
 This block is generated from [`project_state.yaml`](project_state.yaml). See the
@@ -52,8 +54,9 @@ utility.
 | Q1, Qwen | Confirmatory pass | Safe, null-specific competence-adjusted complementarity on Qwen3-8B + CRUXEval |
 | Q1, Ministral | Confirmatory model-level fail | Complementarity components were positive, but frozen validity/evaluability guards failed |
 | Q1, character count | Negative boundary | The fixed Qwen controller did not transfer to long character counting |
-| Q1, LiveCodeBench | Open DEVELOPMENT experiment | Frozen Stage B is collecting; no partial scientific result is available |
+| Q1, LiveCodeBench | Negative DEVELOPMENT boundary | The fixed Qwen controller did not satisfy the frozen null-specific transfer conjunction; corrected forensic audit matched exactly |
 | Q2 V4.1 | `G2`, `RS+`, `RT+` | Relational and radial evidence within the fixed 31-direction Qwen subspace |
+| Q2 fresh controllers | `Q2_OOS_V2_A0_PASS` | 16/16 controller-level A0 associations positive against the fixed historical atlas; same model/task/subspace laboratory |
 | Q3 | Not run | Utility remains an open question |
 
 Exact numbers, classifications, and links to the evidence are in
@@ -65,10 +68,12 @@ Exact numbers, classifications, and links to the evidence are in
 2. [Scientific Results](docs/SCIENTIFIC_RESULTS.md) — exact current findings.
 3. [Current Status](docs/CURRENT_STATUS.md) — what is closed, open, and next.
 4. [Q1 Visual Evidence](docs/Q1_VISUAL_EVIDENCE.md) — reproducible figures and notebook.
-5. [Experiment Index](docs/EXPERIMENT_INDEX.md) — methodological genealogy.
-6. [Claim–Evidence Matrix](docs/CLAIM_EVIDENCE_MATRIX.md) — allowed wording and limits.
-7. [Reproducibility](docs/REPRODUCIBILITY.md) — tracked versus private artifacts.
-8. [Document Index](docs/DOCUMENT_INDEX.md) — complete navigation.
+5. [Q2 V4.1 Visual Evidence](docs/Q2_VISUAL_EVIDENCE_ROADMAP.md) and
+   [Q2 OOS Visual Evidence](docs/Q2_OOS_VISUAL_EVIDENCE.md).
+6. [Experiment Index](docs/EXPERIMENT_INDEX.md) — methodological genealogy.
+7. [Claim–Evidence Matrix](docs/CLAIM_EVIDENCE_MATRIX.md) — allowed wording and limits.
+8. [Reproducibility](docs/REPRODUCIBILITY.md) — tracked versus private artifacts.
+9. [Document Index](docs/DOCUMENT_INDEX.md) — complete navigation.
 
 ## Repository map
 
@@ -105,6 +110,14 @@ source bundle is available locally:
 python scripts/generate_q1_paper_figures.py
 ```
 
+The Q2 V4.1 and fresh-controller OOS figures regenerate from committed,
+release-safe tables without model inference:
+
+```bash
+python scripts/generate_q2_paper_figures.py
+python scripts/generate_q2_oos_paper_figures.py
+```
+
 No GPU or model download is required for the mock smoke, documentation checks,
 or tracked aggregate analyses. Q1 figure regeneration is offline but requires
 the private/hash-pinned row-level Q1 source bundle; generated figures and
@@ -122,10 +135,10 @@ tracked-artifact reproduction, full raw-data audit, and new model inference.
 
 ## Publication status
 
-This is an active research repository, not a final archival data release. Q1
-has a publication-oriented visual evidence package; the equivalent Q2 visual
-package is a documented [externalization TODO](docs/Q2_VISUAL_EVIDENCE_ROADMAP.md).
-Use the [claim matrix](docs/CLAIM_EVIDENCE_MATRIX.md) when citing results.
+This is an active research repository, not a final archival data release. Q1,
+Q2 V4.1, and the Q2 fresh-controller validation have publication-oriented
+visual evidence packages. Use the [claim matrix](docs/CLAIM_EVIDENCE_MATRIX.md)
+when citing results.
 
 ## License
 

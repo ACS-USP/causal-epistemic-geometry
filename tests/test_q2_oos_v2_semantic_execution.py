@@ -23,7 +23,10 @@ from run_q2_oos_v2_semantic import frozen_terminal_metadata  # noqa: E402
 from epistemic_geometry.types import BackendOutput  # noqa: E402
 
 
-def test_frozen_oos_schedule_and_objects_are_complete_without_model() -> None:
+def test_frozen_oos_schedule_and_objects_are_complete_without_model(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setattr(executor, "git_branch", lambda: executor.EXPECTED_BRANCH)
     result = validate_frozen_objects()
     assert result["schedule_count"] == EXPECTED_SCHEDULE_ROWS == 19_200
     assert result["unique_logical_keys"] == EXPECTED_SCHEDULE_ROWS
@@ -199,7 +202,10 @@ def test_model_bytes_use_the_existing_pinned_manifest(
         executor.verify_qualified_model_bytes(str(model_path))
 
 
-def test_frozen_schedule_binds_exact_controller_order_alpha_layer_and_duration() -> None:
+def test_frozen_schedule_binds_exact_controller_order_alpha_layer_and_duration(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setattr(executor, "git_branch", lambda: executor.EXPECTED_BRANCH)
     result = validate_frozen_objects()
     schedule = executor.load_schedule()
     _, selected = executor.load_selected_vectors()

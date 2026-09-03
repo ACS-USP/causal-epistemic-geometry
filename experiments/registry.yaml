@@ -2611,3 +2611,87 @@ experiments:
     q2_process_modified: false
     q3: NOT_RUN
     next_action: PRINCIPAL_RESEARCHER_REVIEW_STAGE_B_FORENSIC_RESOLUTION
+
+  - id: Q2_OOS_V2_SEMANTIC_EXECUTION
+    version: V2-FRESH-CONTROLLER-SEMANTIC
+    stage: DEVELOPMENT_PROSPECTIVE_GENERALIZATION_RESULT
+    question: >-
+      Does positive A0 relational alignment generalize across prospectively
+      sampled, safety-conditioned fresh controller identities within the same
+      frozen Qwen3-8B, CRUXEval, and learned rank-8 intervention laboratory?
+    instrument: >-
+      Sixteen fresh controllers, 31 fixed historical references, 300 frozen
+      items, MEDIUM and STRONG shells, two rollouts, one row association per
+      fresh controller, and an exact one-sided controller-level sign test.
+    model_policy: Qwen3-8B BF16 SDPA sustained-current-token on Spark 1
+    status: CLOSED
+    outcome: Q2_OOS_V2_A0_PASS
+    scientific_interpretation: >-
+      All 16 prospectively sampled fresh-controller A0 row associations were
+      positive; the exact sign-test p-value is 1.52587890625e-05. The complete
+      19,200-row journal was sealed before scoring and the independent forensic
+      implementation agreed exactly. The result generalizes across controller
+      identities within the same laboratory; it does not establish cross-task,
+      cross-model, or matched-random-subspace specificity.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: f2a037069bef2e432ad46126ae247c3b4340ffb8
+    artifact: review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md
+    cost_usd: 0.0
+    holdout_status: CONSUMED_DEVELOPMENT_CLOSED
+    analysis: review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_ANALYSIS.json
+    scientific_rows: 19200
+    fresh_controllers: 16
+    historical_reference_controllers: 31
+    panel_n: 300
+    shells: 2
+    rollouts: 2
+    positive_row_associations: 16
+    zero_row_associations: 0
+    negative_row_associations: 0
+    primary_exact_p: 0.0000152587890625
+    mean_row_association: 0.6911324967335312
+    median_row_association: 0.7251739123454772
+    global_A0_equal_shell_rho: 0.6430547122113816
+    raw_journal_sha256: 24fdd1c818c6e507f2e1999ce6e5da380405bc533af60723da01c1ec2bd66a40
+    forensic_classification: Q2_OOS_V2_FORENSIC_CLEAN
+    correctness_inspected_only_after_raw_seal: true
+    replacements: 0
+    retries: 0
+    historical_q2: Q2_V4_1_G2_RS+_RT+_UNCHANGED
+    q3: NOT_RUN
+    next_action: MATCHED_RANDOM_RANK8_CONTROL_DESIGN_ONLY
+
+  - id: Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC
+    version: V2-POSTHOC-ITEM-BOOTSTRAP-DIAGNOSTIC
+    stage: CLOSED_NOT_PRIMARY_POST_HOC_DIAGNOSTIC
+    question: >-
+      Why is the archived item-bootstrap distribution displaced below the
+      corresponding full-sample compound geometry estimands?
+    instrument: >-
+      Exact 50,000-resample reconstruction, item-support and rank-degeneracy
+      audit, and CPU-only structural simulations across signal, heterogeneity,
+      sparse-difference, and heavy-tie scenarios.
+    model_policy: NO_MODEL_CPU_ONLY_POST_HOC
+    status: CLOSED
+    outcome: Q2_OOS_V2_ITEM_BOOTSTRAP_METHOD_NOT_CALIBRATED
+    scientific_interpretation: >-
+      The historical implementation reproduced exactly and no primary-object
+      defect was found. Ordinary n-out-of-n item resampling was not calibrated
+      as a conventional percentile confidence interval for this compound R=2
+      Dshape-to-rank estimator. Preserve it as item-panel perturbation
+      sensitivity; do not use it to strengthen or reclassify the primary sign
+      test.
+    source_branch: research/q2-fresh-controller-oos-design
+    source_commit: d3d631f2433116231c6bbba0310f52717b385b02
+    artifact: review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    role: POST_HOC_DIAGNOSTIC_ONLY
+    archived_resamples: 50000
+    exact_reproduction_max_difference: 0.0
+    primary_object_defect_found: false
+    primary_classification_changed: false
+    replacement_interval_selected: false
+    model_inference: false
+    q3: NOT_RUN
+    next_action: PUBLICATION_LANGUAGE_RECALIBRATED

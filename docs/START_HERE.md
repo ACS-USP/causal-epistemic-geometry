@@ -65,15 +65,44 @@ global smoothness, linearity, manifold structure, or Riemannian geometry.
 Read the [short Q2 pointer](Q2_V4_1_SEMANTIC_EXECUTION_CLOSEOUT.md) and then the
 [canonical closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md).
 
-## What is open now
+## What the fresh-controller validation added
 
-A separate DEVELOPMENT transfer experiment is collecting the frozen
-LiveCodeBench Stage B on Spark 2. It tests the exact fixed Qwen controller and
-eight frozen null directions on 130 independent question families. Collection
-is blind; no partial correctness, controller comparison, or semantic metric is
-part of the current evidence. Its branch is
-`research/q1-second-task-spark2-design` at authorization commit
-`91c3db4ba41f8ad60f89920b605cbd09fba6dff9`.
+Q2 OOS V2 prospectively sampled 16 new controller identities from the same
+frozen learned rank-8 intervention subspace and compared each one with the
+fixed 31-controller historical atlas. The independent unit was one fresh
+controller. All 16 frozen equal-shell A0 row associations were positive; the
+exact one-sided sign-test p-value was 1.52587890625e-05. The result closed as
+`Q2_OOS_V2_A0_PASS`, and an independent implementation reproduced it exactly
+(`Q2_OOS_V2_FORENSIC_CLEAN`).
+
+This validates controller-identity generalization within the same Qwen3-8B,
+CRUXEval, layer-27, learned-subspace laboratory. It does not establish
+cross-task or cross-model generalization, nor that the learned rank-8 subspace
+is more specific than matched random rank-8 orientations. Read the
+[OOS closeout](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md)
+and the [OOS visual evidence package](Q2_OOS_VISUAL_EVIDENCE.md).
+
+The archived item bootstrap is not used as a conventional confidence interval.
+A post-hoc audit reproduced it exactly but did not validate percentile-CI
+coverage for the compound R=2 distance-to-rank estimator. It is retained only
+as item-panel perturbation sensitivity; the prospective controller-level sign
+test is unchanged.
+
+## Closed Q1 second-task boundary
+
+The separate DEVELOPMENT LiveCodeBench Stage B is complete. The meaningful
+controller had positive `C = 0.0068798` and exceeded every null point estimate,
+but both frozen confidence intervals crossed zero, split-half A failed, and the
+meaningful condition failed the commitment-validity/evaluability guards. Its
+terminal state is `Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY`, not a
+transfer pass and not proof that a smaller effect is zero. A corrected
+independent audit matched all 5,720 parser decisions and metrics exactly; the
+historical non-equivalent first audit remains preserved.
+
+Read the [Stage-B closeout](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md)
+and [forensic resolution](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md).
+There is currently no active semantic campaign. Authorized current work is
+repository externalization and model-free matched-random-subspace design only.
 
 ## Evidence vocabulary
 
@@ -97,4 +126,3 @@ claims and their allowed scope.
 For exact numbers, read [Scientific Results](SCIENTIFIC_RESULTS.md). For the
 full methodological genealogy, read the [Experiment Index](EXPERIMENT_INDEX.md).
 For data and command boundaries, read [Reproducibility](REPRODUCIBILITY.md).
-

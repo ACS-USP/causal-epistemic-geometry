@@ -22,7 +22,7 @@ def test_project_state_and_generated_status_are_current() -> None:
     result = _run("render_project_state.py", "--check")
     assert result.returncode == 0, result.stderr
     state = yaml.safe_load((ROOT / "project_state.yaml").read_text(encoding="utf-8"))
-    assert state["project"]["claim_status"] == "Q2_V4_1_G2"
+    assert state["project"]["claim_status"] == "Q2_V4_1_G2__Q2_OOS_V2_A0_PASS"
     assert state["scientific_firewall"]["confirmatory_holdout"] in {
         "UNTOUCHED",
         "SEALED_ASSIGNED_UNACCESSED",
@@ -90,6 +90,7 @@ def test_project_state_and_generated_status_are_current() -> None:
         "Q2_V4_1_SEMANTIC_EXECUTION",
         "Q2_V4_1_SEMANTIC_EXECUTION_COMPLETE",
         "Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B",
+        "CLOSED_RESULT_INTEGRATION_AND_SPECIFICITY_CONTROL_DESIGN",
         "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION",
         "Q2_V4_SPARK1_PRESEMANTIC_QUALIFICATION_COMPLETE",
     }

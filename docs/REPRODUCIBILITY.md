@@ -42,6 +42,23 @@ with relational estimands in [`ESTIMANDS.json`](../review/q2_v4_1_semantic_execu
 radial results in [`RADIAL_RESULTS.json`](../review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json),
 and an independent crosscheck in [`FORENSIC_AUDIT.json`](../review/q2_v4_1_semantic_execution/FORENSIC_AUDIT.json).
 
+Both Q2 publication packages regenerate from committed release-safe tables:
+
+```bash
+python scripts/generate_q2_paper_figures.py --validate-only
+python scripts/generate_q2_paper_figures.py
+pytest -q tests/test_q2_publication_visuals.py
+
+python scripts/generate_q2_oos_paper_figures.py --validate-only
+python scripts/generate_q2_oos_paper_figures.py
+pytest -q tests/test_q2_oos_publication_visuals.py
+```
+
+The Q2 OOS tables reconcile to the sealed analysis artifact. Re-deriving its
+fresh×fresh pair table additionally requires the private Dshape array with
+SHA-256 `a6a6b4889e2c86df04ce42c4415281dde82af0d2deb1347b8083015e95089ea5`.
+The committed table and source manifests make that dependency explicit.
+
 ## 2. Full raw-data audit
 
 Some scientific artifacts are intentionally absent from Git:
@@ -60,6 +77,13 @@ The raw journal has 37,800 rows and SHA-256
 `d726b473feca8c6922b545bdf8a217e8171c8267697ff2b9714b14e1a0363a99`;
 the score ledger has 37,800 rows and SHA-256
 `a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f`.
+
+For Q2 OOS V2, the private raw journal has 19,200 rows and SHA-256
+`24fdd1c818c6e507f2e1999ce6e5da380405bc533af60723da01c1ec2bd66a40`.
+The scored dataset, error arrays, Dshape, and Dtotal are also private and
+hash-pinned in the release-safety audit. Git contains the complete aggregate
+analysis, primary seal, forensic audit, visual tables, and figures, but no raw
+model text or benchmark content from that campaign.
 
 A complete third-party raw audit therefore currently requires controlled access
 to the private artifact store and any benchmark materials that can legally be
@@ -125,7 +149,8 @@ artifact is unavailable, the index and results page must say so explicitly.
   LiveCodeBench-derived content.
 - Q2 raw journals, row-level scores, and several large label-free arrays are
   hash-pinned but not publicly downloadable.
-- A publication-grade Q2 visual evidence package has not yet been generated.
+- A publication archive still needs a durable public release mechanism for the
+  private Q2/Q2-OOS hash-pinned bytes; figures and aggregate tables are tracked.
 - A durable archival environment/container for all historical inference stacks
   is not yet public.
 

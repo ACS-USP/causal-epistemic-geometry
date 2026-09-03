@@ -3,8 +3,8 @@ last_verified: "2026-09-03"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B_OPEN
-  claim_status: Q2_V4_1_G2
+  scientific_stage: Q2_OOS_V2_CLOSED_POSTCLOSEOUT_HARDENING
+  claim_status: Q2_V4_1_G2__Q2_OOS_V2_A0_PASS
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
     control which blind spots competence-preserving model variants exhibit?
@@ -19,36 +19,29 @@ project:
     utility?
 
 current:
-  workstream: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
-  lifecycle: COLLECTION
-  stage: DEVELOPMENT_FIXED_CONTROLLER_TRANSFER_EXECUTION
-  source_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
-  execution_source_commit: 64285e4d6015985936bbb6ba8acb4a5137576579
+  workstream: CLOSED_RESULT_INTEGRATION_AND_SPECIFICITY_CONTROL_DESIGN
+  lifecycle: REPOSITORY_INTEGRATION
+  stage: Q1_AND_Q2_OOS_CLOSED_RESULTS_EXTERNALIZATION
+  source_commit: ac0c18b221d1393ac134ce377f01e26b4077be95
   summary: >-
-    Q2 V4.1 is closed and forensic-clean as Q2_V4_1_G2 with independent RS+
-    and RT+ radial results. A separate Q1 DEVELOPMENT transfer experiment is
-    currently collecting a frozen 5,720-trajectory LiveCodeBench Stage B on
-    Spark 2. Its fixed controller, eight nulls, 130 question families, parser,
-    schedule, endpoints, and decision rules were locked before opening. No
-    partial Stage-B scientific outcome is part of the repository state or may
-    be inspected during collection.
-  next_authorized_action: COMPLETE_FROZEN_5720_ROW_STAGE_B_AND_SEAL_BEFORE_ANALYSIS
+    Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL.
+    The separate DEVELOPMENT LiveCodeBench transfer is closed as
+    Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent
+    audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed
+    fresh-controller validation is Q2_OOS_V2_A0_PASS and
+    Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller
+    row associations were positive. The post-hoc item-bootstrap audit found no
+    primary defect but ruled that its percentile distribution is not a
+    calibrated conventional confidence interval.
+  next_authorized_action: COMPLETE_MODEL_FREE_MATCHED_RANDOM_RANK8_CONTROL_DESIGN_ONLY
   runpod: NOT_USED
-  gpu_work_authorized: true
-  new_scientific_experiment_authorized: Q1_SECOND_TASK_STAGE_B_ONLY
+  gpu_work_authorized: false
+  new_scientific_experiment_authorized: DESIGN_ONLY_NO_INFERENCE
   active_experiment:
-    name: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B
-    evidence_level: DEVELOPMENT
-    status: OPEN_RUNNING_BLIND_COLLECTION
-    branch: research/q1-second-task-spark2-design
-    authorization_commit: 91c3db4ba41f8ad60f89920b605cbd09fba6dff9
-    scientific_unit: QUESTION_FAMILY
-    families: 130
-    conditions: 11
-    rollouts: 4
-    scheduled_trajectories: 5720
-    partial_scientific_outcomes_available_to_docs: false
-    merge_to_main: NOT_AUTHORIZED_WHILE_OPEN
+    name: MATCHED_RANDOM_RANK8_CONTROL_DESIGN
+    evidence_level: DESIGN_ONLY
+    status: NOT_RUN
+    branch: research/q2-matched-random-rank8-control-design
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
     machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
@@ -61,12 +54,12 @@ current:
 scientific_firewall:
   steering: Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL
   published_positive_control: PASS
-  geometry_q2: Q2_V4_1_G2
+  geometry_q2: Q2_V4_1_G2__Q2_OOS_V2_A0_PASS
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q1_SECOND_TASK_LIVECODEBENCH_STAGE_B_OPEN_BLIND_COLLECTION
-  free_generation: FROZEN_STAGE_B_SCHEDULE_ONLY
+  current_task: REPOSITORY_EXTERNALIZATION_AND_MODEL_FREE_CONTROL_DESIGN
+  free_generation: NONE_AUTHORIZED
 
 confirmatory_program:
   historical_57_reserved_cruxeval_ids: UNTOUCHED_DURING_DEVELOPMENT
@@ -1333,6 +1326,61 @@ instrument_history:
     q2: NOT_RUN
     q3: NOT_RUN
     next_action: Principal researcher review; no next experiment authorized.
+
+  - id: Q2_OOS_V2_SEMANTIC_EXECUTION
+    status: Q2_OOS_V2_A0_PASS
+    conclusion: >-
+      The prospectively frozen 19,200-row campaign completed with all 16
+      safety-conditioned fresh-controller A0 row associations positive against
+      the fixed 31-controller historical atlas. The exact one-sided sign-test
+      p-value is 1.52587890625e-05. Raw data were sealed before scoring and the
+      independent forensic implementation agreed exactly. This establishes
+      controller-identity generalization only within the same Qwen3-8B,
+      CRUXEval, layer-27, learned rank-8 intervention laboratory.
+    branch: research/q2-fresh-controller-oos-design
+    source_commit: f2a037069bef2e432ad46126ae247c3b4340ffb8
+    artifact: review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md
+    analysis: review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_ANALYSIS.json
+    scientific_rows: 19200
+    fresh_controllers: 16
+    historical_reference_controllers: 31
+    panel_n: 300
+    shells: [MEDIUM, STRONG]
+    rollouts: 2
+    positive_row_associations: 16
+    zero_row_associations: 0
+    negative_row_associations: 0
+    primary_exact_p: 0.0000152587890625
+    primary_mean_row_association: 0.6911324967335312
+    primary_median_row_association: 0.7251739123454772
+    global_A0_equal_shell_rho: 0.6430547122113816
+    raw_journal_sha256: 24fdd1c818c6e507f2e1999ce6e5da380405bc533af60723da01c1ec2bd66a40
+    forensic_classification: Q2_OOS_V2_FORENSIC_CLEAN
+    historical_q2: Q2_V4_1_G2_RS+_RT+_UNCHANGED
+    random_subspace_specificity: NOT_TESTED
+    q3: NOT_RUN
+    next_action: MATCHED_RANDOM_RANK8_CONTROL_DESIGN_ONLY
+
+  - id: Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC
+    status: Q2_OOS_V2_ITEM_BOOTSTRAP_METHOD_NOT_CALIBRATED
+    conclusion: >-
+      A post-hoc diagnostic reproduced the archived 50,000 item resamples
+      exactly and found no defect in scored rows, error arrays, Dshape, or the
+      16 primary row associations. Synthetic calibration did not validate the
+      ordinary percentile distribution as a conventional confidence interval
+      for the compound R=2 Dshape-to-rank estimator. The archived distribution
+      is retained as item-panel perturbation sensitivity only; the prospective
+      exact sign-test result is unchanged.
+    branch: research/q2-fresh-controller-oos-design
+    source_commit: d3d631f2433116231c6bbba0310f52717b385b02
+    artifact: review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md
+    role: POST_HOC_DIAGNOSTIC_ONLY
+    archived_resamples: 50000
+    primary_classification_changed: false
+    primary_object_defect_found: false
+    replacement_interval_selected: false
+    q3: NOT_RUN
+    next_action: REPORT_TRANSPARENTLY_AS_SECONDARY_PANEL_PERTURBATION_SENSITIVITY
 
 workflow_regimes:
   EXPLORATION:

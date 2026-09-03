@@ -13,9 +13,11 @@ current instruction source.
 5. [`docs/Q1_VISUAL_EVIDENCE.md`](Q1_VISUAL_EVIDENCE.md)
 6. [`docs/Q1_CONFIRMATORY_FIXED_CONTROLLERS_CLOSEOUT.md`](Q1_CONFIRMATORY_FIXED_CONTROLLERS_CLOSEOUT.md)
 7. [`review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md`](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md)
-8. [`docs/EXPERIMENT_INDEX.md`](EXPERIMENT_INDEX.md)
-9. [`docs/CLAIM_EVIDENCE_MATRIX.md`](CLAIM_EVIDENCE_MATRIX.md)
-10. [`docs/REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
+8. [`docs/Q2_OOS_VISUAL_EVIDENCE.md`](Q2_OOS_VISUAL_EVIDENCE.md)
+9. [`review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md`](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md)
+10. [`docs/EXPERIMENT_INDEX.md`](EXPERIMENT_INDEX.md)
+11. [`docs/CLAIM_EVIDENCE_MATRIX.md`](CLAIM_EVIDENCE_MATRIX.md)
+12. [`docs/REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
 
 ## Canonical and normative
 
@@ -46,7 +48,10 @@ current instruction source.
 | `docs/POST_Q1_RESEARCH_ROADMAP.md` | Focused Paper 1, Q2, DGX, and later-Q3 horizons after Q1 closeout |
 | `docs/Q1_VISUAL_EVIDENCE.md` | Reproducible Q1 publication figure and notebook entry point |
 | `docs/Q1_FIGURE_SPEC.md` | Frozen source, encoding, and interpretation contract for the Q1 visual package |
-| `docs/Q2_VISUAL_EVIDENCE_ROADMAP.md` | Explicit roadmap for a not-yet-implemented Q2 visual package |
+| `docs/Q2_VISUAL_EVIDENCE_ROADMAP.md` | Implemented Q2 V4.1 visual package and scope boundary |
+| `docs/Q2_VISUAL_EVIDENCE_DESIGN_MEMO.md` | Frozen communication hierarchy and visual encodings for the Q2 V4.1 package |
+| `docs/Q2_FIGURE_SPEC.md` | Source, panel, and claim contract for the Q2 V4.1 figures |
+| `docs/Q2_OOS_VISUAL_EVIDENCE.md` | Implemented fresh-controller OOS visual package and item-bootstrap terminology |
 
 ## Current supporting references
 
@@ -92,6 +97,8 @@ current instruction source.
 | `review/q2_v4_intervention_subspace_design/REPORT.md` | New CPU-only intervention-subspace design: exact rank-8 source span, corrected blind-spot-shape endpoint, baseline-centered M2 angle, K=32/N=300 decision, and native-Spark-1 qualification draft; V4 not frozen or run |
 | `review/q2_v4_1_31_safe_bank_review/Q2_V4_1_31_SAFE_BANK_REVIEW.md` | CPU-only, outcome-free adequacy review of the immutable 40-candidate V4 stream and all 31 directions passing both frozen safety shells; no semantic panel run |
 | `review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md` | Complete 37,800-row Q2 V4.1 semantic closeout: frozen G2 relational classification, RS+/RT+ radial results, hashes, and clean independent forensic audit |
+| `review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md` | Complete 19,200-row fresh-controller validation: A0 pass, exact controller sign test, hashes, and clean independent forensic audit |
+| `review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md` | Post-hoc exact reconstruction and calibration audit: archived item bootstrap retained as panel-perturbation sensitivity, not conventional CI |
 | `docs/Q2_V4_1_SEMANTIC_EXECUTION_CLOSEOUT.md` | Short canonical pointer to the Q2 V4.1 semantic closeout bundle |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
