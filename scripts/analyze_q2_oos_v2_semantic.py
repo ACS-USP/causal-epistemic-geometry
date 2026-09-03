@@ -161,7 +161,12 @@ def sha256_file(path: Path) -> str:
 
 
 def array_hash(value: np.ndarray) -> str:
-    return hashlib.sha256(np.asarray(value).tobytes()).hexdigest()
+    array = np.ascontiguousarray(value)
+    digest = hashlib.sha256()
+    digest.update(str(array.shape).encode())
+    digest.update(str(array.dtype).encode())
+    digest.update(array.tobytes())
+    return digest.hexdigest()
 
 
 def key_of(row: dict[str, Any]) -> tuple[str, str, int]:
