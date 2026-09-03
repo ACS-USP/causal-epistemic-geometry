@@ -547,8 +547,9 @@ def compute_distances(
 def row_associations(
     geometry: dict[str, np.ndarray], outcomes: dict[str, np.ndarray]
 ) -> np.ndarray:
+    first = np.asarray(next(iter(geometry.values())))
     values = []
-    for index in range(EXPECTED_CONTROLLER_COUNT):
+    for index in range(first.shape[0]):
         shell_values = [
             spearman_flat(geometry[shell][index], outcomes[shell][index]) for shell in SHELLS
         ]
