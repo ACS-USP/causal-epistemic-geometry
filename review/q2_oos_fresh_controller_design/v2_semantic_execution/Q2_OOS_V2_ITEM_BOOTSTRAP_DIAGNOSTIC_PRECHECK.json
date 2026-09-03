@@ -1,0 +1,208 @@
+{
+  "schema_version": "q2-oos-v2-item-bootstrap-diagnostic-precheck-v1",
+  "status": "FROZEN_PRE_DIAGNOSTIC",
+  "label": "POST_HOC_DIAGNOSTIC_ONLY",
+  "frozen_primary": {
+    "classification": "Q2_OOS_V2_A0_PASS",
+    "forensic_status": "Q2_OOS_V2_FORENSIC_CLEAN",
+    "mutable": false,
+    "change_permitted_only_for_primary_defect": true,
+    "primary_defect_scope": [
+      "sealed scored rows",
+      "binary error arrays",
+      "Dshape construction",
+      "fresh-controller r_i implementation"
+    ]
+  },
+  "source_commit": "f2a037069bef2e432ad46126ae247c3b4340ffb8",
+  "source_artifacts": {
+    "analysis_source": {
+      "path": "scripts/analyze_q2_oos_v2_semantic.py",
+      "sha256": "3a0c861aaec49dfa615db0b87f04f22c8a97f82a4182f85d7cf27a366174ddba"
+    },
+    "canonical_distance_source": {
+      "path": "src/epistemic_geometry/experiments/q2_v4.py",
+      "sha256": "45215a2b48c0824a9e5248866160185421bcb3e487e989bfa3908e6e3d8637db"
+    },
+    "semantic_analysis": {
+      "path": "review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_ANALYSIS.json",
+      "sha256": "97913256d32dcbdfd30fb247bdf925ed0ad0d6a8d39da29a0195bfd7845987c5"
+    },
+    "primary_result_seal": {
+      "path": "review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_PRIMARY_RESULT_SEAL.json",
+      "sha256": "ef583ff797d93e0863dc25ef6186834d48e804dd74af55c74d7eb6681559eb73"
+    },
+    "forensic_audit": {
+      "path": "review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_FORENSIC_AUDIT.json",
+      "sha256": "2c3193c1e7bf0f1644969b2a330bd7e5e4e5c03398d22488de75c0e0c713c71f"
+    },
+    "prediction_lock": {
+      "path": "review/q2_oos_fresh_controller_design/v2_presemantic_closeout/PREDICTION_LOCK.json",
+      "sha256": "825d6e3536b51a31956cbd5c9e75bedfed38f9e3df5da05a4452a5681f65f9bb"
+    },
+    "inference_lock": {
+      "path": "review/q2_oos_fresh_controller_design/v2_presemantic_closeout/INFERENCE_LOCK.json",
+      "sha256": "a8d9ead49d9265211906a0f367ac3062d03b32c924e8606a2f8c12caaf3fbea1"
+    },
+    "private_hash_pinned_inputs": {
+      "raw_journal_sha256": "24fdd1c818c6e507f2e1999ce6e5da380405bc533af60723da01c1ec2bd66a40",
+      "scored_dataset_sha256": "9f03d96d40839e228d6cfb55408ea056e262fbf7e9aef2e863080e035e4b721b",
+      "error_arrays_sha256": "6c0e555f7cccba0c41415c7605d161e84f99ba705b6430eaac53d2527b05086c",
+      "dshape_sha256": "a6a6b4889e2c86df04ce42c4415281dde82af0d2deb1347b8083015e95089ea5",
+      "dtotal_sha256": "354db2363a845c654eafa00a3865b28ee04158978dc035a8128d95cf58a05ed9",
+      "historical_reference_scores_sha256": "a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f"
+    }
+  },
+  "diagnostic_questions": [
+    "Does the existing 50000-resample implementation reproduce byte-for-byte or numerically within the frozen tolerance?",
+    "Are items, all 32 fresh conditions, both rollouts, and paired historical-reference profiles resampled together in frozen item order?",
+    "Does ordinary n-out-of-n resampling reduce effective support, induce ties, or attenuate compound Dshape-to-Spearman statistics?",
+    "Is the observed displacement explained by estimator nonlinearity and finite-support perturbation, by implementation error, or by failure of percentile-bootstrap calibration?",
+    "Which candidate item-level uncertainty methods are calibrated in model-free simulations for the exact structural dimensions and R=2 regime?",
+    "What uncertainty population does each method target?"
+  ],
+  "current_reproduction": {
+    "resampling_unit": "item",
+    "draws_per_resample": 300,
+    "replacement": true,
+    "fresh_conditions_coupled": 32,
+    "rollouts_coupled": 2,
+    "historical_reference_profiles_coupled": 31,
+    "shells_coupled": [
+      "MEDIUM",
+      "STRONG"
+    ],
+    "Dshape_recomputed": true,
+    "row_and_global_spearman_recomputed": true,
+    "negative_unbiased_distances_retained": true,
+    "complete_case_filtering": false,
+    "resamples": 50000,
+    "seed": "8570345065466006396",
+    "quantiles": [
+      0.025,
+      0.5,
+      0.975
+    ]
+  },
+  "candidate_methods": {
+    "A_ordinary_item_bootstrap": {
+      "draws": 300,
+      "replacement": true,
+      "role": "historical implementation and comparator"
+    },
+    "B_bayesian_multiplier": {
+      "weights": "independent Exponential(1) normalized to mean one",
+      "role": "continuous item-weight perturbation with full item support"
+    },
+    "C_subsampling_without_replacement": {
+      "fractions": [
+        0.5,
+        0.632,
+        0.75,
+        0.9
+      ],
+      "calibration": "center at the full-sample estimate and scale deviations by sqrt(m/N) for diagnostic interval construction",
+      "role": "finite-support sensitivity; each item appears at most once"
+    },
+    "D_delete_d_item_jackknife": {
+      "delete_fractions": [
+        0.1,
+        0.25
+      ],
+      "groups_per_fraction": 32,
+      "role": "item-level smoothness and bias diagnostic with explicit deleted-item estimand"
+    },
+    "E_controller_cluster_bootstrap": {
+      "unit": "fresh controller",
+      "role": "separate controller-population uncertainty object; never a replacement for item uncertainty"
+    }
+  },
+  "structural_dimensions": {
+    "items": 300,
+    "rollouts": 2,
+    "fresh_controllers": 16,
+    "reference_controllers": 31,
+    "shells": 2,
+    "fresh_reference_dyads_per_shell": 496
+  },
+  "simulation_scenarios": [
+    "NULL",
+    "WEAK_POSITIVE",
+    "MODERATE_POSITIVE",
+    "OBSERVED_LIKE",
+    "HETEROGENEOUS_CONTROLLER_EFFECTS",
+    "HETEROGENEOUS_ITEM_DIFFICULTY",
+    "SPARSE_BLIND_SPOT_DIFFERENCES",
+    "HEAVY_TIES_NEAR_DEGENERATE"
+  ],
+  "simulation_protocol": {
+    "outer_panels_per_scenario": 96,
+    "resamples_per_method_per_panel": 127,
+    "delete_d_groups_per_fraction": 32,
+    "real_data_exact_reproduction_resamples": 50000,
+    "real_data_structural_index_resamples": 50000,
+    "rng": "numpy Generator PCG64DXSM",
+    "seeds": {
+      "real_data_structural_indices": 881920231,
+      "synthetic_panel_generation": 881920232,
+      "synthetic_resampling": 881920233,
+      "method_tie_and_degeneracy_audit": 881920234
+    },
+    "parallelism": "deterministic panel-level CPU parallelism permitted; result order restored before aggregation",
+    "gpu": false,
+    "model_inference": false
+  },
+  "evaluation_criteria": {
+    "exact_real_data_reproduction_max_abs_difference": 1e-12,
+    "primary_object_integrity_requires": [
+      "sealed score hash match",
+      "error-array hash match",
+      "Dshape hash match",
+      "all 16 r_i match within 1e-12",
+      "fresh and historical item ordering match exactly"
+    ],
+    "structural_unique_item_expectation": "N*(1-(1-1/N)^N)",
+    "centering_bias_reported_as": [
+      "absolute difference between resampling median and full-sample estimand",
+      "signed mean resampling error relative to known simulation truth"
+    ],
+    "coverage_target": 0.95,
+    "coverage_report": "point estimate plus Wilson 95% interval across outer panels",
+    "calibration_screen": "coverage point estimate in [0.90,0.99], absolute centering bias <=0.05, and degeneracy <=0.01",
+    "ties": "report exact and rounded rank-tie frequencies; never jitter or break ties randomly",
+    "method_selection_precedence": [
+      "implementation correctness",
+      "explicit estimand",
+      "coverage across null, positive, heterogeneous, sparse, and heavy-tie scenarios",
+      "centering",
+      "degeneracy robustness",
+      "auditability",
+      "interval width"
+    ],
+    "outcome_favorability_not_a_selection_criterion": true
+  },
+  "diagnostic_rulings": [
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_IMPLEMENTATION_CLEAN_INTERPRETATION_RECALIBRATED",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_SECONDARY_IMPLEMENTATION_DEFECT",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_METHOD_NOT_CALIBRATED",
+    "Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_UNRESOLVED"
+  ],
+  "interpretation_rules": {
+    "implementation_defect": "any frozen coupling, ordering, duplicate-weighting, Dshape, statistic, seed, or quantile invariant fails",
+    "method_not_calibrated": "implementation is exact but ordinary percentile intervals fail the frozen calibration screen in at least two structurally relevant scenarios",
+    "implementation_clean_interpretation_recalibrated": "implementation is exact and the displacement is structurally explained; terminology is changed only if simulation shows the object targets panel perturbation rather than conventional confidence coverage",
+    "unresolved": "available simulations and algebra do not distinguish implementation, nonregularity, and finite-support attenuation with sufficient confidence",
+    "primary_result_change_forbidden_without_primary_defect": true,
+    "secondary_replacement_cannot_be_selected_for_favorable_significance": true
+  },
+  "firewall": {
+    "new_semantic_trajectories": 0,
+    "Qwen_loaded": false,
+    "raw_text_manual_inspection": false,
+    "Spark1_GPU": false,
+    "Spark2": false,
+    "RunPod": false,
+    "Q3": "NOT_RUN",
+    "final_random_subspace_bases_or_seeds": "FORBIDDEN"
+  }
+}
