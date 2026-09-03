@@ -1,3 +1,4 @@
+import hashlib
 import json
 from pathlib import Path
 
@@ -54,3 +55,25 @@ def test_planning_grid_does_not_change_required_controller_identity_design() -> 
         if split["role"].startswith("PLANNING_SENSITIVITY_ONLY")
     ]
     assert len(sensitivity) == 1
+
+
+def test_design_ruling_preserves_scientific_firewall() -> None:
+    ruling = json.loads((REVIEW / "DESIGN_RULING.json").read_text())
+    assert ruling["status"] == "Q2_MATCHED_RANDOM_RANK8_CONTROL_REQUIRES_FURTHER_THEORY"
+    assert ruling["scientific_unit"] == "RANDOM_SUBSPACE_ORIENTATION"
+    assert ruling["closed_results_changed"] is False
+    assert ruling["final_random_bases_generated"] == 0
+    assert ruling["experimental_seeds_generated"] == 0
+    assert ruling["semantic_trajectories"] == 0
+    assert ruling["qwen_loaded"] is False
+    assert ruling["gpu_used"] is False
+    assert ruling["q3_run"] is False
+
+
+def test_release_manifest_hashes() -> None:
+    manifest = json.loads((REVIEW / "ARTIFACT_MANIFEST.json").read_text())
+    assert manifest["classification"] == "MODEL_FREE_DESIGN_ARTIFACTS_RELEASE_SAFE"
+    for relative, expected in manifest["artifacts"].items():
+        path = ROOT / relative if "/" in relative else REVIEW / relative
+        assert path.is_file(), relative
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == expected, relative

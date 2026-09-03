@@ -1,0 +1,30 @@
+{
+  "schema_version": "q2-matched-random-rank8-artifact-manifest-v1",
+  "classification": "MODEL_FREE_DESIGN_ARTIFACTS_RELEASE_SAFE",
+  "precheck_commit": "da06798823eaa9ba0057badc1c83bbf9e3405b79",
+  "artifacts": {
+    "COEFFICIENT_GEOMETRY_AUDIT.json": "4af56875dd18d52dce8abb848177dc853b9da25c73206232cfa6364ffdd41f74",
+    "COMPUTE_GRID.csv": "4bced74336fe9162e631651e6558a273bd941d79495c0a3dda5bd1a72320591e",
+    "DESIGN_REVIEW.md": "688209044a6bd3125461783718eb30cd278c4d5212eae0b9521f8ab9e49dac45",
+    "DESIGN_RULING.json": "492621d89fd033963cccc8e89a1145033fb847416c9fa48022d6905a76393e5a",
+    "PLANNING_PRECHECK.json": "2d0eac398ed7b0c2dfc0791d0bc740a070f0b4619bfee207a579f5c4ca79b4e7",
+    "PLANNING_PRECHECK.md": "a9db7f1baabfc9578029acce3caaf937649d47a27dce45d16e7fe28ae7f3c36f",
+    "PLANNING_RESULTS.json": "12e07600c275c917c2a228f7604c509b6e619d7d09c1f0e482eaee58d1bddffe",
+    "POWER_GRID.csv": "4c024837e682149e9186687426e83be2f0ff38c03e4d61db82312cf006164334",
+    "SAFETY_FEASIBILITY.csv": "6ae9a1f8e541a489dbd44e4012594e7558a34bc579418cacbb7eb7dd8c2a4b73",
+    "SUPERSESSION_NOTICE.md": "ed841bf35b5f80aec570500fc61c8f26bb413a57f099f17a00ec337c9f524a74",
+    "scripts/simulate_q2_matched_random_rank8_control.py": "d8d8c950c12dc391daf215e9efef18085441c743286976fc3da7a0c5464b95c5",
+    "tests/test_q2_matched_random_rank8_control_design.py": "75abd21c8417f047cd3865f2d96ff3f2260a5a387e70d860a02c0e24969f638f"
+  },
+  "release_safety": {
+    "benchmark_text": false,
+    "raw_model_output": false,
+    "raw_activation_or_probe_dump": false,
+    "credentials_or_infrastructure_identifiers": false,
+    "private_paths": false,
+    "final_random_basis": false,
+    "experimental_seed": false,
+    "new_semantic_outcomes": false,
+    "closed_scientific_result_modified": false
+  }
+}

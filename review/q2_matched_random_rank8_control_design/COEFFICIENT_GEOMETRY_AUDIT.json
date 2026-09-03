@@ -1,0 +1,310 @@
+{
+  "a0_chord_float64_sha256": "8bb68147672d64a3c8def70c759aa57c0f83e8045ca7359e55f622679a37823d",
+  "coefficient_dimension": 8,
+  "coefficient_matrix_float64_sha256": "0afbb65b34a92ba1b95d113ae449255c06d17e0d6185ce1f5d601bf02712e069",
+  "final_random_basis_generated": 0,
+  "fresh_count": 16,
+  "historical_count": 31,
+  "identities": [
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_00",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "f44572ba59ceab4df37cd0a210d5093792ebf9d3542d316260de355b73ef9094"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_01",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "2abbe08480805357f8efba95d6d7563721d6a153ea440690523e3b3da6a25e7d"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_02",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "28cfa15767fcd48719125f58856c7e2708facd6029cebde049aba196cec6996f"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_03",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "484acefedb1b6d37c444232a8ab647270b3a2df15c306fe0397ae2579b0e8675"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_04",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "becfcca96c07ae06b33ba44b3bd178157438b809239d049b1590358c959cfe11"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_06",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "56c23124aae1546ebab0d0eb5debd2ee5acd574cf4721b0678f706431b737d73"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_07",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "a55116cbcfde8b965ed465ef2057d814058b7a33848c1868f485996d3a978a29"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_08",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "181a8f70f404fec8e8b429234bd8c7fa7d19a1415c4d687a09e1b9eb842a663a"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_09",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "1e6eeca5245f479fda1fe97f7ad9967871f6d7c5cb4c6462ae38350df0528cef"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_10",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "c3386eade16254026c09eb388f69756dcc567e499f3193963038885930d3908b"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_11",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "63eb7a426551d90e64905397d9ba41f1620ae9453a8e9f3eb18f032cb644f967"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_13",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "0c9353058285385208ca57d3c77a1900dedaaf45afe7aad9d2720ccba6a113d4"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_15",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "67016c272046783bb33d1831ed79e6cc523117f1881858cf2da7ebd5482dfd25"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_17",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "bad142b5ce6413e6d35ffd5bd1e39d9079e83e3ae24cc8d72cc6b649c10cb913"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_18",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "9c26caf2649ecc9b5e63a546b8c332d1baf23cdf05245f49e93fe00ff18e99c0"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_19",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "9960d4cfc46b621b9c05f1399163b0cbb4bb885fe875bb28bf6ad17381a46c4d"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_20",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "3f243b6f7540a83249baf10324520b7d5bdf94df03311da1ccfbad3a4c44e68a"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_22",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "8d3f50566363e81240152aa3cc5ab7b44194269a235099c31f0ce5a2e5f647e3"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_23",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "4a71daa4573a1db89f0d28ddc9576b5e82d9b05bddd752ae1da22bac92d6e6c5"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_24",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "12c2ea421fdae84297754a0f2e099169fc242cc3dfd63c799f1df6cabad57e21"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_26",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "ee3f1d4728c71d82feb983664f0eca21b7f3e9266042650079c82c0f9cb934e7"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_28",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "0dfd4fc7546f99b430f99414cfb7addd4a3c11525a7ca45c2b535bd44d72811c"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_29",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "14f891b0e980bee10f20c33fab6b0d2a90f79b42492aa177abae89f77440f0da"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_30",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "119b35b1bb2dc735e8a83854d091cbffed61b69e80bcfe4eac9e9a3d0f00ddb3"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_31",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "96c5e19e9aecba9357d596fbb6ea241f489f6047400c57af0796bf30599f4bd7"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_32",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "81b0130215ade4c9814afadcea51120639c015881399b7a18fda5ec008d88c69"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_33",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "e62c7ec70c5e96bb1745dcf10d16c8b3a1c57b51a106a58ebc907f290c652ba9"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_34",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "a2d0bf87a3d3daf5b8ad64c96c3f25fdde2f622669bb0ab7cadbcfd34b6117ad"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_35",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "fd2f6807981996c370aa82e18495f9d23dc42451b9846ab2b8fd54917c0a6d50"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "V4_DIRECTION_37",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "63b17dc06027c594e6c84521a12499dca64ddb2bbb5cad464a2fdb6592ca5a20"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "V4_DIRECTION_39",
+      "population": "HISTORICAL_REFERENCE",
+      "source_vector_sha256": "2e1666915e29957d43b8eeba54035faf5c69456b02170ebaea93f37531a7a68d"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_01",
+      "population": "FRESH",
+      "source_vector_sha256": "279f4435bd9f9b48f5aa3369f0e3902b5482f593a9028a64d09b3118da23c8ef"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "Q2_OOS_V2_DIRECTION_02",
+      "population": "FRESH",
+      "source_vector_sha256": "e8b9d5682cbe78bc3a4d7125ddf7674128c55cb8cb98a26a4e5a72093debcc8c"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "Q2_OOS_V2_DIRECTION_03",
+      "population": "FRESH",
+      "source_vector_sha256": "2e2756785cec4959588b6e6a6654dc6569a09cc5e0683118a8bc089824b0e531"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_04",
+      "population": "FRESH",
+      "source_vector_sha256": "8fe2f675e14d9108e370ee0241a07ecec838733f3901ccc2aff91710fb311e8e"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "Q2_OOS_V2_DIRECTION_05",
+      "population": "FRESH",
+      "source_vector_sha256": "b4f6f6596763c9abd06f0e005725aa0059a72abf55adba69c39b765fdbfc3260"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "Q2_OOS_V2_DIRECTION_06",
+      "population": "FRESH",
+      "source_vector_sha256": "a0caa805192face3a8fe0a55d15ccaa42b7a1e0ceb83a01cf0fcc28fbc375c72"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_07",
+      "population": "FRESH",
+      "source_vector_sha256": "759206b09d5c4ac547a72aee33e71bf8a839b2e9a22e8de08ba933c6523987cc"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_08",
+      "population": "FRESH",
+      "source_vector_sha256": "f57b0f4c7b82bd8e0760046c6466e97ca34fa231c3cb748d1bb7dc7a07591f77"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_09",
+      "population": "FRESH",
+      "source_vector_sha256": "24335a234bbc51cdbe21696eaef30ae8aa919e3ce74b1539fca300205710d13f"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "Q2_OOS_V2_DIRECTION_11",
+      "population": "FRESH",
+      "source_vector_sha256": "d6b357cc6f364cb3cf359fba3bb7d669b54963b161cdb28050c1c24cd46ecdcb"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_13",
+      "population": "FRESH",
+      "source_vector_sha256": "89963d74bc82a0099b1ccf14bafb5019581b305e51eb880e85aef378165f6743"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_14",
+      "population": "FRESH",
+      "source_vector_sha256": "238a615e2e7bd3914ec62457665a1431c0902c210940c1803f5a9845ff8edc95"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_15",
+      "population": "FRESH",
+      "source_vector_sha256": "13c240ddee315ab3537599caf824d4fe24d1b631bc8ea0cc3bffc83de3f47688"
+    },
+    {
+      "coefficient_norm": 1.0000000000000002,
+      "controller_id": "Q2_OOS_V2_DIRECTION_16",
+      "population": "FRESH",
+      "source_vector_sha256": "ebf8682f9e7501bd87d73d1b8b4cd90197c466d95f18698808a755dacbff4918"
+    },
+    {
+      "coefficient_norm": 0.9999999999999999,
+      "controller_id": "Q2_OOS_V2_DIRECTION_17",
+      "population": "FRESH",
+      "source_vector_sha256": "be5ef2bf472d2f7a9c7f3d0b73af19f6bad8d1deddb4f0ebfc1092e34c599bc9"
+    },
+    {
+      "coefficient_norm": 1.0,
+      "controller_id": "Q2_OOS_V2_DIRECTION_18",
+      "population": "FRESH",
+      "source_vector_sha256": "1aaa584678e6a92ebe02528b206ba6fea9972c6944485d95e82a4a65a3514d12"
+    }
+  ],
+  "mapping_identity": "v_k_random = Q_random c_k",
+  "maximum_coefficient_norm": 1.0000000000000002,
+  "maximum_gram_asymmetry": 0.0,
+  "maximum_gram_diagonal_error": 4.440892098500626e-16,
+  "minimum_coefficient_norm": 0.9999999999999998,
+  "normalized_gram_float64_sha256": "79cf24d22b187d6d5730a0a92f5144604f30a331297b60cf3074ccbf83db2fa5",
+  "ordered_identity_sha256": "67feee01058ac9089b9f43b186420b0d35a1819b6ac65244dec6fbd508008df1",
+  "orthonormal_mapping_implication": "Any 4096x8 basis with Q_random.T @ Q_random = I preserves this normalized Gram matrix and coefficient-space A0 exactly up to numerical tolerance.",
+  "schema_version": "q2-matched-random-rank8-coefficient-audit-v1",
+  "semantic_outcomes_used": 0,
+  "source_hashes": {
+    "review/q2_oos_fresh_controller_design/v2_final_presemantic/V2_CANDIDATE_BANK_MANIFEST.json": "3d19c8d71fe86329026d113312f5088468f45d956dd860f97d340da60a093479",
+    "review/q2_oos_fresh_controller_design/v2_presemantic_closeout/V2_SELECTED_CONTROLLER_BANK.json": "9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd",
+    "review/q2_v4_1_prediction_lock/PROTOCOL_LOCK.json": "0adc2d04e314bca4bf488595cdbd171da1a47f439b90170cb8125c9def35d278",
+    "review/q2_v4_spark1_presemantic/CANDIDATE_BANK_MANIFEST.json": "ac1d05f7202cc1afd5acf71d81952b5d247eeda62fb231ea7a8c4cd1f98ba5ac"
+  },
+  "status": "EXACT_47_COEFFICIENT_IDENTITIES_RECONSTRUCTED",
+  "total_count": 47
+}

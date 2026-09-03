@@ -1,0 +1,78 @@
+{
+  "schema_version": "q2-matched-random-rank8-control-ruling-v1",
+  "status": "Q2_MATCHED_RANDOM_RANK8_CONTROL_REQUIRES_FURTHER_THEORY",
+  "evidence_level": "MODEL_FREE_DESIGN_REVIEW",
+  "source_main_commit": "a230642be49ec4544b7c28a24951b594656b522c",
+  "precheck_commit": "da06798823eaa9ba0057badc1c83bbf9e3405b79",
+  "scientific_unit": "RANDOM_SUBSPACE_ORIENTATION",
+  "specificity_estimand": {
+    "learned_statistic": "T(Q_learned) = median_i r_i(Q_learned) over the 16 fixed fresh coefficient identities",
+    "random_population": "Prospectively sampled rank-8 orientations conditional on a fully specified, outcome-free safety qualification rule for all 47 fixed coefficient identities",
+    "mean_contrast": "Delta = T(Q_learned) - E_Q[T(Q) | Q qualifies]",
+    "tail_probability": "tau = P_Q(T(Q) >= T(Q_learned) | Q qualifies)"
+  },
+  "coefficient_geometry": {
+    "historical_reference_identities": 31,
+    "fresh_identities": 16,
+    "total_identities": 47,
+    "dimension": 8,
+    "mapping": "v_k_random = Q_random c_k",
+    "complete_gram_preserved_by_orthonormal_mapping": true,
+    "coefficient_audit": "COEFFICIENT_GEOMETRY_AUDIT.json"
+  },
+  "candidate_family_ruling": {
+    "AMBIENT_HAAR_RANK8": "Conceptually clear ambient-orientation null, but full-bank safety-conditioned sampling feasibility is not established.",
+    "LEARNED_ORTHOGONAL_COMPLEMENT_HAAR_RANK8": "Useful secondary contrast against overlap with the learned span, but not representative of the ambient random-orientation population.",
+    "ACTIVATION_COVARIANCE_MATCHED_RANK8": "Potentially strongest anisotropy-matched control, but no complete pre-outcome ambient covariance construction and regularization rule is presently frozen."
+  },
+  "route_ruling": {
+    "ROUTE_1": "Cheaper but vulnerable to campaign/time/seed comparability and does not provide a fully paired learned-versus-random contrast.",
+    "ROUTE_2": "Scientifically preferred if feasibility is solved; reruns learned and random subspaces on common items and seeds, with subspace-level inference.",
+    "ROUTE_3": "A nonselective feasibility pilot can diagnose safety and runtime, but cannot select subspaces using semantic outcomes and consumes scarce compute without increasing confirmatory N."
+  },
+  "calibration": {
+    "subspace_tail_test_null_fpr_min": 0.04245,
+    "subspace_tail_test_null_fpr_max": 0.0532,
+    "criterion_maximum": 0.06,
+    "pass": true,
+    "minimum_S_for_alpha_0_05_resolution": 19,
+    "minimum_S_for_one_deletion_resolution_at_alpha_0_05": 20
+  },
+  "key_power": {
+    "configuration": "ROUTE_2, S=20, N=300, R=2, K_ref=31, K_fresh=16, generic mean=0.35, subspace SD=0.10",
+    "modest_advantage_0_05": 0.10725,
+    "modest_advantage_0_10": 0.2017,
+    "advantage_25_percent_of_observed": 0.4408,
+    "advantage_50_percent_of_observed": 0.9112,
+    "heavy_subspace_heterogeneity_25_percent_power": 0.1945,
+    "heavy_subspace_heterogeneity_50_percent_power": 0.4777
+  },
+  "key_compute": {
+    "configuration": "ROUTE_2, S=20, N=300, R=2, full 47 identities",
+    "semantic_trajectories": 1184400,
+    "projected_spark1_hours": 581.301875,
+    "continuous_days": 24.220911458333333,
+    "safety_rows_per_evaluated_orientation": 2256,
+    "minimum_20_orientation_safety_rows_absent_attrition": 45120
+  },
+  "blocking_design_issues": [
+    "The target distribution over safety-conditioned random orientations is not yet operationally defined and qualified for the requirement that all 47 fixed coefficient identities pass both shells.",
+    "At empirical per-controller qualification rates, an independence sensitivity calculation makes complete 47-of-47 qualification extremely rare; dependence within an orientation is unknown and cannot be assumed favorable.",
+    "The most defensible paired full-panel route requires approximately 1.184 million semantic trajectories for only S=20 and has weak-to-moderate power for modest or 25%-of-observed specificity advantages.",
+    "The covariance-matched random family lacks a frozen ambient covariance operator, whitening/regularization rule, and resulting orientation law."
+  ],
+  "required_resolution_before_prelock": [
+    "Freeze a scientifically interpretable safety-conditioned orientation population without changing the 47 coefficient identities or shell targets.",
+    "Run a model-free or label-free feasibility study that estimates complete-bank qualification at the orientation level without semantic outcome screening.",
+    "Specify the ambient covariance-matched construction or explicitly reject it before selecting the primary random family.",
+    "Adopt an explicit compute ceiling and minimum practically important specificity advantage before choosing S and N."
+  ],
+  "closed_results_changed": false,
+  "final_random_bases_generated": 0,
+  "experimental_seeds_generated": 0,
+  "safety_inference": 0,
+  "semantic_trajectories": 0,
+  "qwen_loaded": false,
+  "gpu_used": false,
+  "q3_run": false
+}

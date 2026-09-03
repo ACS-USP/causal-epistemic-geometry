@@ -1,0 +1,26 @@
+{
+  "schema_version": "q2-matched-random-rank8-release-safety-v1",
+  "status": "PASS",
+  "scope": "MODEL_FREE_DESIGN_ONLY",
+  "checks": {
+    "contains_only_public_source_hashes_ids_derived_geometry_and_simulation": true,
+    "contains_no_benchmark_text_or_reference_answers": true,
+    "contains_no_raw_model_outputs": true,
+    "contains_no_raw_activation_or_probe_dumps": true,
+    "contains_no_credentials_tokens_endpoints_or_ssh_paths": true,
+    "contains_no_private_artifact_paths": true,
+    "contains_no_final_random_basis": true,
+    "contains_no_future_experimental_seed": true,
+    "contains_no_new_semantic_outcome": true,
+    "contains_no_q3_result": true
+  },
+  "scientific_firewall": {
+    "q2_v4_1_changed": false,
+    "q2_oos_v2_changed": false,
+    "qwen_loaded": false,
+    "gpu_used": false,
+    "semantic_trajectories": 0,
+    "random_bases_generated": 0,
+    "q3_run": false
+  }
+}
