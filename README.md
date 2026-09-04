@@ -20,15 +20,16 @@ blind spots.
   (`Q2_OOS_V2_A0_PASS`).
 - **Q3 — utility.** Not run. Closed-data DEVELOPMENT found that A0-maximin
   geometry supported policy-bank construction, while true coordinates did not
-  support routing transfer to unseen controller identities. No fresh utility
-  test has been run.
+  support routing transfer to unseen controller identities. Q3.3 has now
+  frozen one development-selected candidate system and designed—but not
+  generated—a fresh 1,600-family evaluation instrument.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q3_2_GEOMETRY_ROLE_DEVELOPMENT_CLOSED` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
+**Current stage:** `Q3_3_FINAL_SYSTEM_AND_SUPPLY_DESIGN_CLOSED` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
 
-Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. Q3.1 used 332 label-free prompt-only Qwen forwards on the closed 300-family development panel. Prompt representations made routing stable (+0.0533 over the cross-fitted champion; 5/5 positive folds), but true controller geometry exceeded a capacity-matched learned policy-ID control by only +0.0033, below the frozen +0.01 criterion. The ruling is Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL. Q3.2 then supported A0 geometry for K=8 policy-bank construction: the A0 routed gain was +0.0400 and ranked at the 98.63rd percentile of 512 competence-matched random banks. True coordinates did not support routing transfer from 31 historical to 16 held-out fresh controllers: gain was +0.011875, with only 3/5 positive folds. The ruling is Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING. No fresh evaluation holdout was allocated or inspected, and Q3 remains NOT_RUN.
+Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. Q3.1 used 332 label-free prompt-only Qwen forwards on the closed 300-family development panel. Prompt representations made routing stable (+0.0533 over the cross-fitted champion; 5/5 positive folds), but true controller geometry exceeded a capacity-matched learned policy-ID control by only +0.0033, below the frozen +0.01 criterion. The ruling is Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL. Q3.2 then supported A0 geometry for K=8 policy-bank construction: the A0 routed gain was +0.0400 and ranked at the 98.63rd percentile of 512 competence-matched random banks. True coordinates did not support routing transfer from 31 historical to 16 held-out fresh controllers: gain was +0.011875, with only 3/5 positive folds. The ruling is Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING. Q3.3 then froze one final development-selected A0 K=8 candidate system, rejected the exposed Tier-B pool for confirmation, and designed a fully fresh deterministic 1,600-family instrument with 300 qualification, 1,000 confirmation, and 300 reserve families. The preferred confirmation uses N=1,000 and R=2; no final items, IDs, seeds, holdout, or outcomes were generated or inspected. Q3 remains NOT_RUN.
 
-**Next authorized action:** NONE_AFTER_Q3_2_CLOSEOUT__FRESH_INSTRUMENT_REQUIRES_NEW_PRECHECK
+**Next authorized action:** NONE__FRESH_INSTRUMENT_REQUIRES_SEPARATE_PRELOCK
 <!-- PROJECT_STATUS:END -->
 
 This block is generated from [`project_state.yaml`](project_state.yaml). See the
@@ -59,7 +60,7 @@ utility.
 | Q1, LiveCodeBench | Negative DEVELOPMENT boundary | The fixed Qwen controller did not satisfy the frozen null-specific transfer conjunction; corrected forensic audit matched exactly |
 | Q2 V4.1 | `G2`, `RS+`, `RT+` | Relational and radial evidence within the fixed 31-direction Qwen subspace |
 | Q2 fresh controllers | `Q2_OOS_V2_A0_PASS` | 16/16 controller-level A0 associations positive against the fixed historical atlas; same model/task/subspace laboratory |
-| Q3 | Not run; Q3.2 development closed | A0 geometry supported portfolio construction on closed data; controller-OOS geometry routing transfer was not supported |
+| Q3 | Not run; Q3.3 design closed | One candidate routing system is development-selected; a fresh 1,600-family instrument is ready for a separate prelock, but no items or outcomes exist |
 
 Exact numbers, classifications, and links to the evidence are in
 [Scientific Results](docs/SCIENTIFIC_RESULTS.md).
@@ -77,8 +78,8 @@ Exact numbers, classifications, and links to the evidence are in
 8. [Reproducibility](docs/REPRODUCIBILITY.md) — tracked versus private artifacts.
 9. [Document Index](docs/DOCUMENT_INDEX.md) — complete navigation.
 
-For the latest Q3 development boundary, read the
-[Q3.2 geometry-role review](docs/Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md).
+For the latest Q3 development boundary and fresh-supply design, read the
+[Q3.3 final-system and evaluation-supply review](docs/Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md).
 
 ## Repository map
 

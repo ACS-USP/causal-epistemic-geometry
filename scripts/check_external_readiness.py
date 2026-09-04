@@ -17,6 +17,7 @@ Q2_OOS_DIR = ROOT / "review" / "q2_oos_fresh_controller_design" / "v2_semantic_e
 Q3_DESIGN_DIR = ROOT / "review" / "q3_realizable_utility_design"
 Q3_ROUTE_A_DIR = ROOT / "review" / "q3_route_a_prompt_representation"
 Q3_ROLE_DIR = ROOT / "review" / "q3_geometry_role_decomposition"
+Q3_FINAL_DIR = ROOT / "review" / "q3_final_system_and_evaluation_supply"
 PUBLIC_DOCS = (
     ROOT / "README.md",
     ROOT / "docs" / "START_HERE.md",
@@ -85,6 +86,17 @@ def main() -> int:
     q3_role_hashes = json.loads(
         (Q3_ROLE_DIR / "Q3_GEOMETRY_ROLE_ARTIFACT_HASHES.json").read_text(encoding="utf-8")
     )
+    q3_final = json.loads(
+        (Q3_FINAL_DIR / "Q3_FINAL_SYSTEM_AND_SUPPLY_RELEASE_SUMMARY.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    q3_final_safety = json.loads(
+        (Q3_FINAL_DIR / "Q3_FINAL_SYSTEM_RELEASE_SAFETY.json").read_text(encoding="utf-8")
+    )
+    q3_final_hashes = json.loads(
+        (Q3_FINAL_DIR / "Q3_FINAL_SYSTEM_ARTIFACT_HASHES.json").read_text(encoding="utf-8")
+    )
 
     allowed_q2_states = {"Q2_V4_1_G2", "Q2_V4_1_G2__Q2_OOS_V2_A0_PASS"}
     if state["scientific_firewall"]["geometry_q2"] not in allowed_q2_states:
@@ -122,6 +134,7 @@ def main() -> int:
         "Q3_FRESH_HOLDOUT_INSUFFICIENT",
         "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL",
         "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING",
+        "Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK",
         "Q3",
     )
     forbidden_current_phrases = (
@@ -277,6 +290,73 @@ def main() -> int:
             path = ROOT / relative
             if not path.is_file() or _sha256(path) != expected:
                 failures.append(f"Q3.2 artifact hash mismatch: {relative}")
+    elif active.get("status") == "Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK":
+        if active.get("name") != "Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY":
+            failures.append("Q3.3 closed state has an unexpected experiment identity")
+        if active.get("evidence_level") != "DESIGN_ONLY_DEVELOPMENT_CLOSURE":
+            failures.append("Q3.3 closed state is not explicitly design-only")
+        if active.get("branch") != "research/q3-final-system-and-evaluation-supply":
+            failures.append("Q3.3 closed state has an unexpected source branch")
+        if state["scientific_firewall"].get("free_generation") != "NONE_AUTHORIZED":
+            failures.append("Q3.3 closed state does not prohibit free generation")
+        if state["current"].get("gpu_work_authorized") is not False:
+            failures.append("Q3.3 closed state unexpectedly authorizes GPU work")
+        if q3_final.get("status") != "Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK":
+            failures.append("Q3.3 release summary ruling changed")
+        immutable = q3_final.get("immutable_q3_2", {})
+        if immutable.get("classification") != "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING":
+            failures.append("Q3.3 release summary changes Q3.2")
+        if immutable.get("part_a") != "GEOMETRY_BANK_SELECTION_SUPPORTED":
+            failures.append("Q3.3 release summary changes Q3.2 Part A")
+        if immutable.get("part_b") != "CONTROLLER_OOS_TRANSFER_NOT_SUPPORTED":
+            failures.append("Q3.3 release summary changes Q3.2 Part B")
+        final_system = q3_final.get("final_system", {})
+        if final_system.get("status") != "DEVELOPMENT_SELECTED_NOT_EVALUATED":
+            failures.append("Q3.3 candidate system is not explicitly unevaluated")
+        firewall = q3_final.get("firewall", {})
+        if firewall.get("new_semantic_trajectories") != 0:
+            failures.append("Q3.3 release summary reports new semantic trajectories")
+        if firewall.get("new_qwen_forwards") != 0:
+            failures.append("Q3.3 release summary reports new Qwen forwards")
+        if firewall.get("fresh_evaluation_outcomes_inspected") is not False:
+            failures.append("Q3.3 release summary reports fresh-outcome inspection")
+        if firewall.get("spark1_gpu") is not False or firewall.get("spark2") is not False:
+            failures.append("Q3.3 release summary reports unauthorized GPU resources")
+        fresh = q3_final.get("fresh_instrument", {})
+        allocation = fresh.get("allocation", {})
+        if allocation != {
+            "confirmation": 1000,
+            "qualification": 300,
+            "reserve": 300,
+            "total_families": 1600,
+        }:
+            failures.append("Q3.3 fresh-instrument allocation changed")
+        for key in ("final_ids_generated", "final_seeds_generated", "holdout_allocated"):
+            if fresh.get(key) != 0:
+                failures.append(f"Q3.3 unexpectedly reports {key}")
+        if q3_final_safety.get("status") != "PASS":
+            failures.append("Q3.3 release-safety status changed")
+        for key in (
+            "credentials_or_private_infrastructure",
+            "fresh_correctness",
+            "personal_handbook_modified",
+            "raw_benchmark_text",
+            "raw_model_output",
+        ):
+            if q3_final_safety.get(key) is not False:
+                failures.append(f"Q3.3 release-safety violation: {key}")
+        private_router = q3_final_hashes.get("private_router", {})
+        if private_router.get("tracked_in_git") is not False:
+            failures.append("Q3.3 private router is unexpectedly marked as tracked")
+        for name, metadata in q3_final_hashes.get("artifacts", {}).items():
+            path = Q3_FINAL_DIR / name
+            expected = metadata.get("sha256", "")
+            if not path.is_file() or _sha256(path) != expected:
+                failures.append(f"Q3.3 artifact hash mismatch: {name}")
+        review = q3_final_hashes.get("review", {})
+        review_path = ROOT / str(review.get("path", ""))
+        if not review_path.is_file() or _sha256(review_path) != review.get("sha256"):
+            failures.append("Q3.3 review hash mismatch")
     else:
         failures.append("active scientific state is not a recognized fail-closed lifecycle state")
 

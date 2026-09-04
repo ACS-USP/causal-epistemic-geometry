@@ -20,6 +20,9 @@ narrower than the motivating theory.
 | True controller geometry is necessary for Q3.1 routing | DEVELOPMENT — NOT SUPPORTED | Q3.1 geometry attribution controls | True geometry exceeded learned policy identity by only +0.0033 and failed the frozen +0.01 incremental criterion | Geometry-specific routing; causal geometry is the mechanism of selectability |
 | A0 geometry helps construct a useful policy portfolio | DEVELOPMENT_ONLY — SUPPORTED | Q3.2 Part A | On the closed 300-family panel, A0-maximin K=8 routed gain ranked at the 98.63rd percentile of competence-matched random banks under a geometry-blind router | Confirmatory utility; fresh-family generalization; all geometric bank constructions are superior |
 | True coordinates support routing to unseen controller identities | DEVELOPMENT — NOT SUPPORTED | Q3.2 Part B | The 31-historical-to-16-fresh transfer gained +0.011875 but failed frozen realization and fold-consistency gates | Successful controller-OOS routing; geometry bridges directly to deployable utility |
+| One Q3 candidate system is ready for fresh evaluation prelocking | DESIGN_ONLY | Q3.3 final-system closure | The A0 K=8 bank, geometry-blind router, and champion are development-selected and frozen by identity/hash | The system has fresh utility; Q3 has run; the chosen system is confirmatorily optimal |
+| The existing Tier-B pool can confirm Q3 utility | DESIGN — NOT SUPPORTED | Q3.3 exposure audit | Tier B has zero confirmatory-eligible and only 11 bounded internal-validation families | Reusing exposed families as a fresh holdout; pooling them with future confirmation |
+| A fresh deterministic program-execution instrument is ready to generate | DESIGN_ONLY | Q3.3 supply review | A 1,600-family generator/evaluator/qualification design is ready for a separate prelock | Final items, IDs, seeds, splits, or outcomes already exist; N=1,000 utility is demonstrated |
 
 ## Canonical evidence
 
@@ -41,4 +44,7 @@ narrower than the motivating theory.
 - Q3.2 geometry-role decomposition:
   [`Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md`](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md)
   and [`Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json`](../review/q3_geometry_role_decomposition/Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json).
+- Q3.3 final-system and evaluation-supply design:
+  [`Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md`](Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md)
+  and [`Q3_FINAL_SYSTEM_AND_SUPPLY_RELEASE_SUMMARY.json`](../review/q3_final_system_and_evaluation_supply/Q3_FINAL_SYSTEM_AND_SUPPLY_RELEASE_SUMMARY.json).
 - Current state: [`project_state.yaml`](../project_state.yaml).

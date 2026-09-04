@@ -88,6 +88,26 @@ The expected private full-result SHA-256 is
 `d1913c4e2b4f500ecece62da83598f5ca157455a788f6b7fc3a45f166c86c71e`.
 No raw model text is read by this analysis or included in the public package.
 
+Q3.3 adds a release-safe final-system specification, Tier-B exposure counts,
+deterministic power/calibration tables, and a fresh-instrument design under
+[`review/q3_final_system_and_evaluation_supply`](../review/q3_final_system_and_evaluation_supply/).
+The focused tracked-artifact checks are:
+
+```bash
+python scripts/finalize_q3_final_system_and_supply.py
+pytest -q tests/test_q3_final_system_and_supply.py
+```
+
+Re-fitting the frozen candidate router requires the same three private,
+hash-pinned Q3.2 inputs listed above. Its fitted parameter archive is also
+private and identified by SHA-256
+`269dc116c70b64dd47cf59340b07dbe558ec8c0f13be8410ed97017310ebad3d`.
+The public candidate-system JSON stores the exact bank, architecture,
+hyperparameters, source identities, and private parameter hash, but no prompt
+activations or row-level outcomes. The fresh instrument is not yet generated:
+there are no final item IDs, seeds, splits, benchmark contents, or outcomes to
+reproduce. A separate prospective prelock must precede generation.
+
 ## 2. Full raw-data audit
 
 Some scientific artifacts are intentionally absent from Git:

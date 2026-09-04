@@ -3,7 +3,7 @@ last_verified: "2026-09-04"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q3_2_GEOMETRY_ROLE_DEVELOPMENT_CLOSED
+  scientific_stage: Q3_3_FINAL_SYSTEM_AND_SUPPLY_DESIGN_CLOSED
   claim_status: Q2_V4_1_G2__Q2_OOS_V2_A0_PASS
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,10 +19,10 @@ project:
     utility?
 
 current:
-  workstream: Q3_GEOMETRY_ROLE_DECOMPOSITION
-  lifecycle: DEVELOPMENT_REVIEW_CLOSED
-  stage: Q3_2_GEOMETRY_ROLE_DECOMPOSITION_CLOSEOUT
-  source_commit: 718959f469272ec04ea7984f0faa8ac7f3f358a6
+  workstream: Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY
+  lifecycle: DEVELOPMENT_DESIGN_CLOSED
+  stage: Q3_3_FINAL_SYSTEM_FREEZE_AND_EVALUATION_SUPPLY
+  source_commit: 428090ebc7be5e8dbaae6e1d2bd27268ff9de534
   summary: >-
     Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL.
     The separate DEVELOPMENT LiveCodeBench transfer is closed as
@@ -41,17 +41,22 @@ current:
     competence-matched random banks. True coordinates did not support routing
     transfer from 31 historical to 16 held-out fresh controllers: gain was
     +0.011875, with only 3/5 positive folds. The ruling is
-    Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING. No fresh evaluation holdout was
-    allocated or inspected, and Q3 remains NOT_RUN.
-  next_authorized_action: NONE_AFTER_Q3_2_CLOSEOUT__FRESH_INSTRUMENT_REQUIRES_NEW_PRECHECK
+    Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING. Q3.3 then froze one final
+    development-selected A0 K=8 candidate system, rejected the exposed Tier-B
+    pool for confirmation, and designed a fully fresh deterministic 1,600-family
+    instrument with 300 qualification, 1,000 confirmation, and 300 reserve
+    families. The preferred confirmation uses N=1,000 and R=2; no final items,
+    IDs, seeds, holdout, or outcomes were generated or inspected. Q3 remains
+    NOT_RUN.
+  next_authorized_action: NONE__FRESH_INSTRUMENT_REQUIRES_SEPARATE_PRELOCK
   runpod: NOT_USED
   gpu_work_authorized: false
   new_scientific_experiment_authorized: NONE_AFTER_Q3_2_CLOSEOUT
   active_experiment:
-    name: Q3_2_GEOMETRY_ROLE_DECOMPOSITION
-    evidence_level: DEVELOPMENT_ONLY
-    status: Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING
-    branch: research/q3-geometry-role-decomposition
+    name: Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY
+    evidence_level: DESIGN_ONLY_DEVELOPMENT_CLOSURE
+    status: Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK
+    branch: research/q3-final-system-and-evaluation-supply
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
     machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
@@ -68,7 +73,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q3_2_DEVELOPMENT_CLOSED_NO_NEW_INFERENCE
+  current_task: Q3_3_DESIGN_CLOSED_NO_NEW_INFERENCE
   free_generation: NONE_AUTHORIZED
 
 confirmatory_program:

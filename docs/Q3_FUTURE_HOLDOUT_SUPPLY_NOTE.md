@@ -6,10 +6,11 @@ create benchmark items, inspect fresh correctness, or authorize Q3 inference.
 Q3.1 found stable development selectability but did not establish incremental
 value from true controller geometry inside a fixed bank. Q3.2 subsequently
 supported A0 geometry for policy-bank construction while not supporting
-controller-OOS routing transfer. The surviving claim therefore concerns a
-geometry-designed portfolio routed by prompt representations and learned
-identity for known policies. No evaluation population should be consumed until
-that exact claim receives a new prospective instrument and power precheck.
+controller-OOS routing transfer. Q3.3 froze one development-selected candidate
+system and selected a fully fresh 1,600-family instrument design. The surviving
+claim therefore concerns a geometry-designed portfolio routed by prompt
+representations and learned identity for known policies. No evaluation
+population has been generated or allocated; a separate prelock is required.
 
 Three future supply categories remain plausible:
 
@@ -26,5 +27,5 @@ power, policy bank, routing mechanism and claim boundary. Benchmark shopping,
 outcome-conditioned source selection and weakening freshness because the
 current CRUXEval pool is small remain prohibited.
 
-The current minimum target and qualification sequence are in the
+The current allocation and qualification sequence are in the
 [Q3 Fresh-Evaluation Instrument Roadmap](Q3_FRESH_EVALUATION_INSTRUMENT_ROADMAP.md).

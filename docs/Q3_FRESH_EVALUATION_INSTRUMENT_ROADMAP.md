@@ -1,9 +1,10 @@
 # Q3 Fresh-Evaluation Instrument Roadmap
 
-This is a design-only supply roadmap following Q3.2. It does not allocate a
-holdout, select a source, generate items, inspect future correctness or
-authorize Q3. The minimum target remains **800 family-independent evaluation
-units**, pending a separate prospectively justified power review.
+This is the current design-only supply roadmap after Q3.3. It does not allocate
+a holdout, generate items, inspect future correctness, or authorize Q3. The
+earlier Q3.2 minimum of 800 family-independent evaluation units is preserved as
+historical planning. The Q3.3 calibrated recommendation is a **1,600-family**
+instrument: 300 qualification, 1,000 confirmation, and 300 reserve families.
 
 | Route | Task match | Exact evaluator | Family unit | Main risk | Licensing/reviewer posture |
 |---|---|---|---|---|---|
@@ -13,27 +14,34 @@ units**, pending a separate prospectively justified power review.
 
 ## Required qualification sequence
 
-1. Freeze task definition, family ontology, generator/source provenance,
-   deduplication, license and evaluator before model contact.
-2. Construct a development pool separate from the permanent evaluation pool.
-3. Qualify commitment validity, semantic evaluability, difficulty, family
-   independence and policy opportunity on development families only.
-4. Run an outcome-independent power review for the surviving Q3 claim.
-5. Allocate and hash at least 800 evaluation families only after all gates pass.
-6. Keep policy-bank construction and router training outside the evaluation
-   families; open the holdout exactly once under a new confirmatory lock.
+1. Freeze the restricted-Python AST generator, construct quotas, family
+   ontology, evaluator, deduplication, license, and split namespaces before
+   generating final items.
+2. Generate the 300 qualification, 1,000 confirmation, and 300 reserve families
+   from prospectively disjoint namespaces; one source skeleton defines one
+   independent family.
+3. Qualify evaluator determinism, dual evaluator agreement, parser round-trip,
+   answer-channel validity/evaluability, difficulty, family independence,
+   policy opportunity, and repetition rate on the 300 qualification families.
+4. Do not use routed gain as an instrument-qualification gate and do not adapt
+   the frozen candidate system.
+5. If every gate passes, seal the untouched 1,000-family confirmation split and
+   exact seeds under a separate execution lock; preserve 300 reserve families.
+6. Open the confirmation split exactly once. Keep policy-bank construction and
+   router training confined to the original closed 300-family development set.
 
 ## Runtime envelope
 
-At the observed Q2 OOS rate (19,200 trajectories in 9.42 h), a minimal
-8-policy × 2-rollout evaluation over 800 families would contain 12,800 semantic
-trajectories and scale to roughly 6.3 Spark-1 hours before qualification,
-prompt capture, retries or safety overhead. This is an operational extrapolation,
-not a runtime lock.
+The selected utility-only design uses one routed answer and one champion answer
+per family and rollout: N=1,000, R=2, at most 4,000 semantic trajectories. The
+frozen Q2 OOS scaling gives P50/P80/P95 estimates of approximately
+2.03/2.30/2.59 Spark-1 hours, 79,506 expected generated tokens, and 26.7 MB of
+storage. These are planning estimates, not an execution lock.
 
 ## Decision still required
 
-No source should be chosen merely for convenience. A future principal review
-must select the instrument only after model-free provenance, licensing,
-family-independence, exact-evaluator and contamination audits. No candidate
-future correctness has been inspected here.
+The preferred source is a separately generated deterministic restricted-Python
+output-prediction instrument. A future prelock must still freeze the generator,
+license, evaluator, construct quotas, IDs, seeds, and split hashes. No final
+item or candidate future correctness has been generated or inspected. See the
+[Q3.3 review](Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md).

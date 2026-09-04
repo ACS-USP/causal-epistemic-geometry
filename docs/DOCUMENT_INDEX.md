@@ -54,7 +54,8 @@ current instruction source.
 | `docs/Q2_OOS_VISUAL_EVIDENCE.md` | Implemented fresh-controller OOS visual package and item-bootstrap terminology |
 | `docs/Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md` | Q3.1 closed DEVELOPMENT review: stable prompt-representation routing without incremental geometry attribution |
 | `docs/Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md` | Q3.2 closed DEVELOPMENT review: A0 portfolio construction supported; controller-OOS geometry routing not supported |
-| `docs/Q3_FRESH_EVALUATION_INSTRUMENT_ROADMAP.md` | Design-only roadmap for at least 800 family-independent future evaluation units; no holdout allocated |
+| `docs/Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md` | Q3.3 design closeout: one frozen development-selected system, Tier-B rejection, and fully fresh 1,600-family instrument design |
+| `docs/Q3_FRESH_EVALUATION_INSTRUMENT_ROADMAP.md` | Current design-only roadmap for 300 qualification, 1,000 confirmation, and 300 reserve families; no items or holdout allocated |
 | `docs/Q3_SINGLE_FORWARD_ROUTING_FEASIBILITY.md` | Engineering proof for same-prefill capture, selection, and intervention ordering |
 | `docs/Q3_FUTURE_HOLDOUT_SUPPLY_NOTE.md` | Model-free future evaluation-population categories; no allocation or authorization |
 
@@ -108,6 +109,7 @@ current instruction source.
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
 | `docs/Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md` | Q3.0 closed-data feasibility review; Q3 remains not run |
 | `docs/Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md` | Q3.2 geometry-role closeout and exact development boundaries |
+| `docs/Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md` | Q3.3 final-system freeze and fresh-supply prelock boundary; Q3 remains not run |
 | `docs/Q3_FRESH_EVALUATION_INSTRUMENT_ROADMAP.md` | Future supply alternatives and qualification sequence; no generation or authorization |
 | `docs/Q3_FEATURE_FIREWALL.md` | Prospective deployment-time feature and leakage boundary for Q3 |
 | `docs/Q3_RELATED_WORK_AND_DESIGN_PRIORS.md` | Primary-source methodological map for routing, selection, verification, ensembles, and budgeted inference |

@@ -19,10 +19,11 @@ predictable geometric structure.
    into improved performance?
 
 The current evidence answers Q1 narrowly and Q2 within one fixed experimental
-subspace. Q3 has not been run. A Q3.1 DEVELOPMENT study found that label-free
-prompt representations support stable policy routing on the closed panel, but
-did not show incremental value from true controller geometry over learned
-policy identity.
+subspace. Q3 has not been run. Q3.1 and Q3.2 DEVELOPMENT studies found stable
+closed-panel policy routing and support for A0 geometry in portfolio
+construction, but not incremental geometry in the known-policy router or
+controller-OOS routing transfer. Q3.3 closes development around one candidate
+system and designs a fresh evaluation instrument without generating it.
 
 ## What Q1 established
 
@@ -137,6 +138,25 @@ portfolio, while prompt representations and learned policy identity route
 known policies. It does not establish controller-OOS routing, fresh-family
 utility, or Q3 itself. Read the
 [Q3.2 review](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md).
+
+## What Q3.3 froze—and did not run
+
+Q3.3 deterministically materialized one development-selected system: the exact
+A0-maximin K=8 policy bank, a frozen geometry-blind prompt-representation plus
+learned-policy-identity router, and the Q3.0 champion comparator. The fitted
+router parameters are private and hash-pinned; the release-safe specification,
+bank identities, hashes, tests, and power analysis are tracked.
+
+The existing 500-family Tier-B supply contains zero confirmatory-eligible
+families and only 11 families eligible for bounded internal validation, so it
+was rejected as both numerically and provenance inadequate. The recommended
+route is a fully fresh deterministic restricted-Python instrument with 1,600
+independent families: 300 qualification, 1,000 confirmation, and 300 reserve.
+The preferred future utility design is N=1,000, R=2, with at most 4,000
+semantic trajectories and planning power 0.8233 at a +3-point effect. No final
+items, IDs, seeds, holdout, model output, or correctness were generated or
+inspected. A separate prelock is required. Read the
+[Q3.3 review](Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md).
 
 ## Evidence vocabulary
 

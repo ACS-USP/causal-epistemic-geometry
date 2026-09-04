@@ -15,7 +15,7 @@ summary. Last reconciled: 2026-09-04.
 | Q2 | V4.1 relational geometry | **DEVELOPMENT — G2** | A0, A1, and A2 predict blind-spot-shape geometry; A2 does not outperform A0/A1 | 31 directions, N=300, two shells; [closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md) |
 | Q2 radial | V4.1 radial tests | **DEVELOPMENT — RS+ / RT+** | STRONG exceeds MEDIUM shape and total displacement in all 31 directions | [radial artifact](../review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json) |
 | Q2 fresh-controller validation | OOS V2 | **DEVELOPMENT — PASS** | 16/16 prospectively sampled fresh-controller A0 row associations positive | Same Qwen3-8B/CRUXEval/learned-rank-8 laboratory and fixed 31-controller atlas; [closeout](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md) |
-| Q3 | Collective utility | **NOT_RUN** | No scientific result; Q3.2 DEVELOPMENT supports A0 geometry for portfolio construction, not controller-OOS routing | [Q3.1 review](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md), [Q3.2 review](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md) |
+| Q3 | Collective utility | **NOT_RUN** | Q3.3 froze one development-selected system and designed a fresh 1,600-family instrument; neither has been evaluated on fresh outcomes | [Q3.2 review](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md), [Q3.3 review](Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md) |
 
 ## Q1: confirmatory controllability
 
@@ -161,6 +161,29 @@ The mechanical development ruling is
 role for A0 geometry on closed data; it does not establish controller-OOS
 routing, fresh-family utility or Q3. A future evaluation instrument requires
 at least 800 family-independent units under the current supply roadmap.
+
+## Q3.3 final system and evaluation supply
+
+Q3.3 used only closed Q3.1/Q3.2 development artifacts and CPU/model-free
+analysis. It deterministically froze one candidate system around the exact
+A0-maximin K=8 bank, the geometry-blind prompt-representation plus learned
+policy-ID router, and the frozen champion `V4_DIRECTION_02_MEDIUM`. This is
+`DEVELOPMENT_SELECTED_NOT_EVALUATED`, not a Q3 result.
+
+The Tier-B exposure audit found A=0, B=11, C=0, D=177, E=0, and F=312 among
+500 families. Thus zero families are confirmatory-eligible and only 11 are
+eligible for bounded internal validation. Reopening that pool cannot provide a
+meaningful test of the frozen system.
+
+The design-only recommendation is a fully fresh deterministic restricted-
+Python output-prediction instrument containing 1,600 independent families:
+300 qualification, 1,000 confirmation, and 300 reserve. The preferred future
+utility test uses N=1,000 and R=2, family-level paired routed-minus-champion
+correctness, at most 4,000 semantic trajectories, planning power 0.8233 at a
++3-point effect, and mean expected 95% half-width 0.02289. These are planning
+quantities only. No final family, item, ID, seed, split, or outcome was
+generated or inspected. The exact terminal design state is
+`Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK`; Q3 remains `NOT_RUN`.
 
 ## Forensic and artifact identity
 

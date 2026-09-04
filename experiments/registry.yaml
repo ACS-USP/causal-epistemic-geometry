@@ -2843,3 +2843,63 @@ experiments:
     q1_q2_q3_1_classifications_changed: false
     q3: NOT_RUN
     next_action: NONE_AFTER_Q3_2_CLOSEOUT__FRESH_INSTRUMENT_REQUIRES_NEW_PRECHECK
+
+  - id: Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY
+    version: Q3-3-DESIGN
+    stage: DESIGN_ONLY_CLOSED
+    question: >-
+      What single development-selected routing system should be frozen, and
+      what genuinely fresh exact-evaluator supply is required for a future
+      realizable-utility test without reopening model selection?
+    instrument: >-
+      Closed Q3.1/Q3.2 development evidence; deterministic full-development
+      materialization of the A0-maximin K=8 bank and geometry-blind policy-ID
+      router; item-exposure severity audit; family-level CPU power simulations;
+      and a design-only deterministic restricted-Python instrument roadmap.
+    model_policy: CLOSED_DATA_CPU_ONLY_NO_NEW_QWEN_FORWARD
+    status: CLOSED_DESIGN_ONLY
+    outcome: Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK
+    scientific_interpretation: >-
+      The development phase is closed around one fixed candidate system. The
+      existing Tier-B pool has zero confirmatory-eligible families and only 11
+      bounded internal-validation families, so it cannot qualify or confirm
+      utility. A fully fresh 1,600-family instrument is recommended: 300
+      qualification, 1,000 confirmation, and 300 reserve families. The future
+      primary is family-level routed-minus-champion correctness with N=1,000
+      and R=2. No final item, seed, holdout, or outcome was created; Q3 remains
+      not run.
+    source_branch: research/q3-final-system-and-evaluation-supply
+    source_commit: 428090ebc7be5e8dbaae6e1d2bd27268ff9de534
+    parent_q3_2_commit: cc799a79e786044c5d4d63f79ea38c1e03095362
+    precheck_commit: dd9cbee18a97a6b7e1efbeef9804121c56f9f609
+    additive_steer_commit: 1cede2227d9bf60cd49fd7ac62b59fb8efab1f7d
+    artifact: docs/Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md
+    review_namespace: review/q3_final_system_and_evaluation_supply
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    development_panel_n: 300
+    final_bank_size: 8
+    candidate_system_status: DEVELOPMENT_SELECTED_NOT_EVALUATED
+    private_router_parameters: HASH_PINNED_NOT_TRACKED
+    tier_b_total_families: 500
+    tier_b_confirmatory_eligible: 0
+    tier_b_internal_validation_eligible: 11
+    proposed_total_fresh_families: 1600
+    proposed_qualification_families: 300
+    proposed_confirmation_families: 1000
+    proposed_reserve_families: 300
+    proposed_rollouts: 2
+    proposed_maximum_semantic_trajectories: 4000
+    planning_power_at_plus_3pp: 0.8233
+    planning_mean_ci_half_width: 0.022890939029721676
+    proposed_runtime_p50_hours: 2.033333333333333
+    proposed_runtime_p80_hours: 2.3020833333333335
+    proposed_runtime_p95_hours: 2.59375
+    new_semantic_trajectories: 0
+    new_qwen_forwards: 0
+    future_fresh_outcomes_inspected: false
+    future_items_generated: 0
+    future_ids_or_seeds_generated: 0
+    q1_q2_q3_1_classifications_changed: false
+    q3: NOT_RUN
+    next_action: NONE__FRESH_INSTRUMENT_REQUIRES_SEPARATE_PRELOCK
