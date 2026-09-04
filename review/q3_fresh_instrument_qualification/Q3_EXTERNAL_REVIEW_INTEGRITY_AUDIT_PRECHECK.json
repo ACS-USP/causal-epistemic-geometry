@@ -1,0 +1,166 @@
+{
+  "schema_version": "q3-fresh-external-review-integrity-audit-precheck-v1",
+  "status": "FROZEN_BEFORE_PRIVATE_STRUCTURAL_AUDIT",
+  "classification": "ADDITIVE_MODEL_FREE_INTEGRITY_AUDIT",
+  "created_at_utc": "2026-09-04T22:58:46Z",
+  "executed_head": "dda4f6b40d371eaa93cde575838451d98b953fc6",
+  "historical_artifacts_mutable": false,
+  "dataset_materialized_before_audit": true,
+  "dataset_state_at_pause": {
+    "accepted_scientific_families": {
+      "qualification": 300,
+      "confirmation": 1000,
+      "reserve": 300
+    },
+    "engineering_qwen_generations": 4,
+    "engineering_qwen_forwards": 44,
+    "qualification_scientific_attempts_started": 36,
+    "qualification_complete_rows": 35,
+    "qualification_interrupted_in_flight_attempts": 1,
+    "correctness_inspected": false,
+    "qualification_collection_sealed": false,
+    "confirmation_qwen_access": 0,
+    "reserve_qwen_access": 0
+  },
+  "frozen_source_artifacts": {
+    "instrument_module": {
+      "path": "src/epistemic_geometry/benchmarks/q3_fresh/instrument.py",
+      "sha256": "a62d0a10930bd5c6a516cadb0711af43bf9e1fbb0421c05719c6e8f2ce2e7733"
+    },
+    "dataset_materializer": {
+      "path": "scripts/generate_q3_fresh_instrument.py",
+      "sha256": "b91d09470c5a586158ae2680b8b9f2cfb3f949a036eefa26d1f8aee4ba7f5357"
+    },
+    "power_simulator": {
+      "path": "scripts/simulate_q3_utility_power.py",
+      "sha256": "ca304e32951b5949adeeecd212b80d2b60df6671fe5911b316fe27d45bd1b6f0"
+    },
+    "original_prelock_sha256": "673b63632c3b446760d70064514a105a32d9c4a2c97c9c0725a283183574f364",
+    "amendment_1_sha256": "4021ba5a7d089eca171990187f50f05b5d06438dbadb036b52af815be71104e9",
+    "dataset_seal_sha256": "1b889c3c1de9b6d20d93fca96e866322d4a75f672577dcffdc3e49571ea0da72",
+    "qualification_manifest_sha256": "9a01142e4825efad36c9ede99cacf88ec6c8cc42d37f24c2ba213bb6c4a790a1",
+    "confirmation_manifest_sha256": "3b021291b20a4faf961e40fbb343b0671aa83f28fd8e986025924d72a4885920",
+    "reserve_manifest_sha256": "acbabbbb8bd79b3df6c1db4f3f8b440745e66c49915ec034be48fff0dff0fd00",
+    "qualification_schedule_sha256": "edba56fc8435cdc34b6f7551fc2d1b4a6d4cc3d87fc34127a5096526d670a635",
+    "qualification_execution_lock_sha256": "3a51a8d6d9fe57722f9ca740e1c5281e0645031f1641cb824c469ab4dc36635f",
+    "paused_private_journal": {
+      "rows": 35,
+      "bytes": 778228,
+      "sha256": "ec838d88494adc856deefca2ab35e2db230bdfdb84b5b3975108bcca4d56c154",
+      "content_inspected": false
+    }
+  },
+  "structural_audit": {
+    "private_fields_allowed": [
+      "namespace",
+      "family_id",
+      "source",
+      "canonical_skeleton",
+      "canonical_skeleton_sha256",
+      "normalized_token_sha256",
+      "operations",
+      "output_type"
+    ],
+    "private_fields_forbidden": [
+      "reference_repr",
+      "prompt",
+      "model_output",
+      "correctness"
+    ],
+    "program_execution": false,
+    "external_service_access": false,
+    "strict_ast_fingerprint": {
+      "parser": "Python ast.parse only",
+      "identifier_normalization": "scope-aware deterministic binding indices; every Name and arg reference resolves to its normalized binding, preserving use-definition relations",
+      "literal_normalization": "replace literal values by exact Python literal-type markers while preserving container shape and dictionary-key position",
+      "preserved": [
+        "AST node type and field order",
+        "operator and comparator identity",
+        "call target identity",
+        "control-flow nesting",
+        "assignment, mutation, subscript and alias relations",
+        "argument order and use-definition structure"
+      ],
+      "fingerprint": "SHA-256 of canonical JSON AST representation"
+    },
+    "relaxed_diagnostics": {
+      "ordered_ast_node_similarity_min": 0.95,
+      "ast_feature_multiset_jaccard_min": 0.95,
+      "same_normalized_output_type_required": true,
+      "role": "diagnostic only; not sufficient by itself to assert dependence"
+    },
+    "required_synthetic_tests": [
+      "hold AFFINE operation and a/b/c fixed, vary only variant: rendered source is identical while current kind:variant identity differs",
+      "change an option that changes the rendered AST: independent fingerprint must differ",
+      "rename bound variables consistently: independent strict fingerprint must remain equal",
+      "change literals only: independent strict fingerprint must remain equal",
+      "change operator, call, control-flow or use-definition relation: fingerprint must differ"
+    ],
+    "material_violation_rule": "any independent strict-AST-equivalent group counted as multiple scientific families, especially across splits, is material; hash inequality cannot override it",
+    "resume_rule": "qualification may resume only if no material violation is found and no family, seed, schedule, system or gate must change"
+  },
+  "oracle_audit": {
+    "historical_gate_immutable": true,
+    "definition": "family mean of max across K=8 policy means over R=2 minus champion mean",
+    "null_example": {
+      "K": 8,
+      "R": 2,
+      "p": 0.5,
+      "expected_empirical_max": 0.9499359130859375,
+      "expected_apparent_headroom": 0.4499359130859375,
+      "true_policy_specialization": 0
+    },
+    "simulation_seed": 2026090401,
+    "simulation_replicates": 200000,
+    "interpretation": "opportunity/upper-bound diagnostic only; a pass alone does not establish repeatable complementarity or selectability",
+    "post_completion_exploratory_transfer": "select policy on rollout 0 and evaluate against champion on rollout 1; reverse directions; deterministic frozen bank-order tie break; average both directions; never a gate"
+  },
+  "power_audit": {
+    "historical_protocol_mutable": false,
+    "scenarios_frozen_before_simulation": [
+      "NULL_EQUAL_P_HOMOGENEOUS",
+      "NULL_EQUAL_P_FAMILY_HETEROGENEOUS",
+      "INDEPENDENT_BERNOULLI_DELTA_0_01",
+      "INDEPENDENT_BERNOULLI_DELTA_0_02",
+      "INDEPENDENT_BERNOULLI_DELTA_0_03",
+      "INDEPENDENT_BERNOULLI_DELTA_0_04",
+      "TERNARY_DISCORDANCE_HISTORICAL_COMPARATOR",
+      "EXACT_POLICY_SHARED_EXECUTION_SENSITIVITY"
+    ],
+    "family_probability_laws": [
+      "constant champion p in {0.35,0.50,0.70}",
+      "logit-normal family heterogeneity with SD in {0.5,1.0}",
+      "beta family heterogeneity matched to mean p and concentration in {4,12}"
+    ],
+    "independent_mechanism": "Y_router,t,r ~ Bernoulli(p_router,t) and Y_champion,t,r ~ Bernoulli(p_champion,t) with independent system and rollout RNG streams",
+    "checks": [
+      "q_t identity",
+      "Var(d_t) identity",
+      "one-sided alpha=.05 FPR",
+      "two-sided 95% interval coverage",
+      "power at N in {800,1000}, R=2",
+      "difference from historical ternary-discordance generator",
+      "whether exact-policy sharing is possible in the frozen final bank"
+    ],
+    "master_seed": 2026090402,
+    "replicates_per_scenario": 50000,
+    "selection_prohibitions": [
+      "no qualification routed gain",
+      "no confirmation outcomes",
+      "no scenario selection by favorable power"
+    ]
+  },
+  "terminal_rulings": [
+    "Q3_FRESH_INSTRUMENT_STRUCTURALLY_CLEAN_QUALIFICATION_RESUMED",
+    "Q3_FRESH_INSTRUMENT_MATERIAL_FAMILY_VIOLATION_QUALIFICATION_BLOCKED",
+    "Q3_FRESH_INSTRUMENT_INTEGRITY_AUDIT_UNRESOLVED"
+  ],
+  "firewall": {
+    "new_qwen_inference_during_audit": 0,
+    "confirmation_qwen_access": 0,
+    "reserve_qwen_access": 0,
+    "spark2": false,
+    "runpod": false,
+    "raw_program_examples_in_reports": false
+  }
+}
