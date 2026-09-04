@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import math
@@ -59,6 +60,31 @@ def support_probabilities(positive: np.ndarray, negative: np.ndarray) -> np.ndar
         ]
     )
     probabilities /= probabilities.sum()
+    return probabilities
+
+
+def center_support_probabilities(probabilities: np.ndarray, target: float) -> np.ndarray:
+    """Reproduce the historical minimum mass transfer to an exact target mean."""
+
+    probabilities = probabilities.copy()
+    discrepancy = float(probabilities @ SUPPORT - target)
+    if abs(discrepancy) <= 1e-15:
+        return probabilities
+    target_index = int(np.argmin(SUPPORT) if discrepancy > 0 else np.argmax(SUPPORT))
+    sources = np.argsort(SUPPORT)[::-1] if discrepancy > 0 else np.argsort(SUPPORT)
+    remaining = abs(discrepancy)
+    for source in sources:
+        distance = abs(SUPPORT[source] - SUPPORT[target_index])
+        if distance <= 0 or probabilities[source] <= 0:
+            continue
+        amount = min(probabilities[source], remaining / distance)
+        probabilities[source] -= amount
+        probabilities[target_index] += amount
+        remaining -= amount * distance
+        if remaining <= 1e-14:
+            break
+    if remaining > 1e-12:
+        raise RuntimeError("cannot center support distribution")
     return probabilities
 
 
@@ -182,10 +208,15 @@ def conservative_combined_independent(
     delta = rng.normal((0.03 + 0.10 * 0.10) / 0.90, 0.05, pool)
     delta[harm] = rng.normal(-0.10, 0.02, int(harm.sum()))
     delta = delta - delta.mean() + 0.03
-    router = np.clip(champion + delta, 0.001, 0.999)
-    # Preserve the declared +.03 planning estimand after probability clipping.
-    realized = router - champion
-    router = np.clip(router + (0.03 - realized.mean()), 0.001, 0.999)
+    low, high = -0.5, 0.5
+    for _ in range(80):
+        shift = (low + high) / 2
+        router = np.clip(champion + delta + shift, 0.001, 0.999)
+        if float(np.mean(router - champion)) < 0.03:
+            low = shift
+        else:
+            high = shift
+    router = np.clip(champion + delta + (low + high) / 2, 0.001, 0.999)
     target = float(np.mean(router - champion))
     positive = router * (1 - champion)
     negative = champion * (1 - router)
@@ -203,6 +234,54 @@ def conservative_combined_independent(
         }
     )
     return result
+
+
+def conservative_combined_historical(
+    rng: np.random.Generator, n: int, replicates: int, pool: int
+) -> dict[str, Any]:
+    concentration = 1 / 0.35 - 1
+    champion = rng.beta(0.60 * concentration, 0.40 * concentration, pool)
+    harm = rng.random(pool) < 0.10
+    delta = rng.normal((0.03 + 0.10 * 0.10) / 0.90, 0.05, pool)
+    delta[harm] = rng.normal(-0.10, 0.02, int(harm.sum()))
+    delta = delta - delta.mean() + 0.03
+    router = np.clip(champion + delta, 0.001, 0.999)
+    delta = router - champion
+    q_max = np.minimum(router + champion, 2 - router - champion)
+    discordance = np.minimum(np.maximum(0.35, np.abs(delta)), q_max)
+    positive = (discordance + delta) / 2
+    negative = (discordance - delta) / 2
+    probabilities = center_support_probabilities(
+        support_probabilities(positive, negative), 0.03
+    )
+    result = panel_simulation(rng, probabilities, n, replicates, 0.03)
+    result.update(
+        {
+            "mechanism": "HISTORICAL_CONSERVATIVE_COMBINED_TERNARY",
+            "law": "CONSERVATIVE_COMBINED_MATCH_TO_HISTORICAL",
+            "delta": 0.03,
+            "discordance": 0.35,
+            "N": n,
+            "R": 2,
+            "support_probabilities": probabilities.tolist(),
+        }
+    )
+    return result
+
+
+def frozen_historical_power() -> float:
+    path = ROOT / "review/q3_final_system_and_evaluation_supply/Q3_UTILITY_POWER_PRECISION.csv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            if (
+                row["scenario"] == "CONSERVATIVE_COMBINED"
+                and row["seed_regime"] == "INDEPENDENT"
+                and float(row["gain"]) == 0.03
+                and int(row["N"]) == 1000
+                and int(row["R"]) == 2
+            ):
+                return float(row["t_power"])
+    raise RuntimeError("frozen historical power cell not found")
 
 
 def oracle_audit(rng: np.random.Generator, replicates: int) -> dict[str, Any]:
@@ -254,6 +333,7 @@ def main() -> int:
             for law in ("CONSTANT", "LOGIT_NORMAL_1.0", "BETA_4"):
                 cells.append(independent_cell(rng_cells, law, 0.50, delta, n, 50_000, args.pool))
         cells.append(historical_ternary_cell(rng_cells, n, 50_000, 0.03, 0.35))
+        cells.append(conservative_combined_historical(rng_cells, n, 50_000, args.pool))
         cells.append(conservative_combined_independent(rng_cells, n, 50_000, args.pool))
 
     final_system = json.loads(FINAL_SYSTEM.read_text(encoding="utf-8"))
@@ -292,6 +372,7 @@ def main() -> int:
                 "ONLY_FOR_THE_HISTORICAL_TERNARY_CONSERVATIVE_COMBINED_PLANNING_MODEL; "
                 "not as a mechanism-free guarantee for the new generator"
             ),
+            "historical_frozen_n1000_r2_delta_003_power": frozen_historical_power(),
             "confirmation_design_changed": False,
             "confirmation_authorization_implication": (
                 "qualification may proceed; confirmation power justification requires explicit "
