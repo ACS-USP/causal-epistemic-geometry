@@ -1,0 +1,12 @@
+{
+  "confirmation_and_reserve_model_firewall": "CLOSED",
+  "generated_families": 1600,
+  "manual_content_inspection": false,
+  "qwen_access": {
+    "confirmation": 0,
+    "qualification": 0,
+    "reserve": 0
+  },
+  "raw_content_tracked_in_git": false,
+  "schema_version": "q3-fresh-instrument-access-record-v1"
+}

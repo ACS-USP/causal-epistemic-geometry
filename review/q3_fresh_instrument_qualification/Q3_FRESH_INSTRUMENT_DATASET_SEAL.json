@@ -1,0 +1,57 @@
+{
+  "access_record": {
+    "path": "review/q3_fresh_instrument_qualification/DATASET_ACCESS_RECORD.json",
+    "sha256": "727e5806472c0cecc7c4a01079c2e21d5aa0c2cce6552032dcc1875bfb4d8063"
+  },
+  "allocation": {
+    "confirmation": 1000,
+    "qualification": 300,
+    "reserve": 300
+  },
+  "effective_prelock": {
+    "commit": "fc06e2e0aea18d29382e72849240a464a3ff916c",
+    "path": "review/q3_fresh_instrument_qualification/Q3_FRESH_INSTRUMENT_PRELOCK_AMENDMENT_1.json",
+    "sha256": "4021ba5a7d089eca171990187f50f05b5d06438dbadb036b52af815be71104e9"
+  },
+  "generation_seconds": 108.05382854200434,
+  "global_checks": {
+    "cross_split_collisions": 0,
+    "dual_evaluator_agreement": 1.0,
+    "exact_canonical_skeletons_unique": true,
+    "exact_family_ids_unique": true,
+    "near_duplicate_gate_pass": true,
+    "parser_reference_roundtrip": 1.0,
+    "reference_repeat_determinism": 1.0,
+    "structural_near_duplicate_rate": 0.0
+  },
+  "manifests": {
+    "confirmation": {
+      "accepted_families": 1000,
+      "path": "review/q3_fresh_instrument_qualification/CONFIRMATION_FAMILY_MANIFEST.json",
+      "private_dataset_bytes": 5693593,
+      "private_dataset_sha256": "af6800120891bdda77cd750cf4361a45d21d0a821f61ceb9b541ba0cf1a4ad11",
+      "sha256": "3b021291b20a4faf961e40fbb343b0671aa83f28fd8e986025924d72a4885920"
+    },
+    "qualification": {
+      "accepted_families": 300,
+      "path": "review/q3_fresh_instrument_qualification/QUALIFICATION_FAMILY_MANIFEST.json",
+      "private_dataset_bytes": 1696900,
+      "private_dataset_sha256": "c791e38c29d36a43fbac8ce00412e4c77d533665e0b8cb9eef8fa12fb918ac1d",
+      "sha256": "9a01142e4825efad36c9ede99cacf88ec6c8cc42d37f24c2ba213bb6c4a790a1"
+    },
+    "reserve": {
+      "accepted_families": 300,
+      "path": "review/q3_fresh_instrument_qualification/RESERVE_FAMILY_MANIFEST.json",
+      "private_dataset_bytes": 1680124,
+      "private_dataset_sha256": "3d76bdb8ba36e291999fe32da58cced025787ab5a7c2d93d9f7748c988f55862",
+      "sha256": "acbabbbb8bd79b3df6c1db4f3f8b440745e66c49915ec034be48fff0dff0fd00"
+    }
+  },
+  "model_inference": 0,
+  "rejections": {},
+  "schema_version": "q3-fresh-instrument-dataset-seal-v1",
+  "scientific_outcomes": 0,
+  "status": "DATASET_COMPLETE_RAW_UNOPENED_TO_QWEN",
+  "total_accepted_families": 1600,
+  "total_candidate_rejections": 0
+}
