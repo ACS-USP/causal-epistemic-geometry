@@ -157,9 +157,6 @@ def test_generation_context_binds_layer_duration_and_policy(
     torch = pytest.importorskip("torch")
 
     class Backend:
-        device = torch.device("cpu")
-        torch = torch
-
         @staticmethod
         def layer_module(layer: int):
             assert layer == 27
@@ -168,6 +165,9 @@ def test_generation_context_binds_layer_duration_and_policy(
         @staticmethod
         def _encode_item(_item):
             return {"input_ids": torch.zeros((1, 3), dtype=torch.long)}, "x", "hash"
+
+    Backend.device = torch.device("cpu")
+    Backend.torch = torch
 
     meta = {
         "P": {
