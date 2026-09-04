@@ -1,0 +1,199 @@
+{
+  "candidate_system": {
+    "path": "review/q3_final_system_and_evaluation_supply/FINAL_Q3_CANDIDATE_SYSTEM_DRAFT.json",
+    "private_router_sha256": "269dc116c70b64dd47cf59340b07dbe558ec8c0f13be8410ed97017310ebad3d",
+    "router_refit_or_modification": false,
+    "sha256": "d8128e4ef4bf9459977cc46a3c9698b36c96afb8a2a388428f5daf03ac6e78f0"
+  },
+  "code_identity": {
+    "excluded_fixture_report": {
+      "path": "review/q3_fresh_instrument_qualification/EXCLUDED_ENGINEERING_FIXTURE_REPORT.json",
+      "sha256": "52b39f28fefe5cbce70f704eddf505e2129933a54429ea67d733b6b7f18f0619"
+    },
+    "generator_module": {
+      "path": "src/epistemic_geometry/benchmarks/q3_fresh/instrument.py",
+      "sha256": "bc94c5c16dc7883412efd4449beaa1cb14fd629df6826b81c14bba85543e1f1f"
+    },
+    "generator_version": "q3-restricted-python-generator-v1",
+    "prelock_builder": {
+      "path": "scripts/prepare_q3_fresh_instrument_prelock.py",
+      "sha256": "977dd494c70abedc3d15ec9f680a0d812c752553d58af6b10360b37f8f186171"
+    },
+    "prompt_template_version": "q3-restricted-python-output-v1",
+    "qualification_parser": {
+      "path": "src/epistemic_geometry/benchmarks/external/semantic_v3.py",
+      "sha256": "51ac492a6cea1284c36df6ef659520adf4a04e0595cf0e66bfd15ba172b960c3",
+      "version": "external-semantic-v3"
+    },
+    "reference_version": "q3-dual-reference-v1"
+  },
+  "confirmation_firewall": {
+    "confirmation_not_authorized": true,
+    "confirmation_qwen_forwards": 0,
+    "reserve_qwen_forwards": 0
+  },
+  "evidence_class": "INSTRUMENT_CONSTRUCTION_AND_QUALIFICATION_ONLY",
+  "experimental_seeds_derived": false,
+  "family_acceptance": {
+    "canonicalization": "alpha-normalized identifiers; all literal values removed; operation kind/order/variant and output type retained",
+    "cross_split_checks": "all exact and near-duplicate checks use the union of earlier accepted splits",
+    "exact_behavioral_signature_overlap": 0,
+    "exact_canonical_skeleton_overlap": 0,
+    "exact_normalized_token_overlap": 0,
+    "near_duplicate_rate_gate": 0.01,
+    "near_duplicate_rule": "reject when same output type and operation-token multiset Jaccard >=0.90 and ordered operation-token similarity >=0.90",
+    "no_manual_replacement": true,
+    "numeric_near_duplicate_rule": "input-only similarity never creates a new family; skeleton uniqueness is mandatory regardless of numeric distance",
+    "prior_content_overlap": "reject exact source, prompt, or canonical skeleton hashes found in tracked prior project artifacts or excluded fixtures",
+    "structural_rejections_logged": true
+  },
+  "generation_contract": {
+    "attention": "SDPA",
+    "do_sample": true,
+    "dtype": "BF16",
+    "layer": 27,
+    "max_new_tokens": 4096,
+    "min_p": 0.0,
+    "model": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "router_rng": "feature transform and policy selection consume no sampling RNG",
+    "temperature": 0.6,
+    "termination": "EXTREME_MECHANICAL_REPETITION_V1",
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "population": {
+    "allocation": {
+      "confirmation": 1000,
+      "qualification": 300,
+      "reserve": 300
+    },
+    "archetype_cycle": [
+      "ARITHMETIC",
+      "BRANCHING",
+      "SEQUENCE_ALIASING",
+      "TEXT",
+      "MAPPING",
+      "NESTED_CONTROL",
+      "BOUNDED_RECURSION",
+      "MIXED"
+    ],
+    "candidate_order": "increasing candidate_index within each namespace",
+    "complexity_cycle": [
+      6,
+      8,
+      10,
+      12
+    ],
+    "estimand": "utility over independently generated families from this frozen restricted-Python generator law",
+    "family": "one normalized source-program skeleton with one allocated typed input",
+    "input_law": {
+      "n": "discrete uniform integers [-50,50]",
+      "text": "uniform over the frozen eight-token vocabulary",
+      "values": "iid discrete uniform integers [-40,40]",
+      "values_length": "discrete uniform integers [3,8]"
+    },
+    "maximum_candidates_per_namespace": 100000,
+    "namespace_split_before_generation": true,
+    "nested_not_independent": "additional inputs, renamed variables, formatting changes, and literal-only changes to one skeleton",
+    "operation_fill": "required archetype operations plus uniform deterministic draws from eight operation kinds",
+    "output_type_cycle": [
+      "int",
+      "bool",
+      "str",
+      "list",
+      "tuple",
+      "dict"
+    ]
+  },
+  "qualification": {
+    "champion_accuracy": "pooled correctness over 600 champion rows",
+    "conditions": "exact eight bank policies, external champion, online routed system",
+    "exact_policy_sharing": false,
+    "families": 300,
+    "gates": {
+      "champion_accuracy_range": [
+        0.25,
+        0.9
+      ],
+      "champion_commitment_validity_min": 0.95,
+      "champion_semantic_evaluability_min": 0.95,
+      "cross_split_family_or_skeleton_collision": 0,
+      "dual_evaluator_agreement": 1.0,
+      "frozen_bank_oracle_headroom_min": 0.05,
+      "near_duplicate_rate_max": 0.01,
+      "parser_reference_roundtrip": 1.0,
+      "reference_repeat_determinism": 1.0,
+      "router_commitment_validity_min": 0.95,
+      "router_semantic_evaluability_min": 0.95,
+      "terminal_repetition_rate_max_per_condition": 0.1
+    },
+    "logical_generations": 6000,
+    "oracle_headroom": "mean over 300 families of max across bank policies of two-rollout mean correctness minus champion two-rollout mean correctness",
+    "pooled_row_aggregation": "validity/evaluability/repetition rates pool 600 rows per condition",
+    "rollouts": 2,
+    "routed_correctness_not_required_for_qualification": true,
+    "routed_minus_champion_gain_is_gate": false,
+    "sharing_rationale": "qualification conditions retain distinct frozen seeds and independently exercise the online routed engine; no post-hoc reuse"
+  },
+  "reference_contract": {
+    "agreement": "exact type and repr, twice",
+    "path_a": "direct IR interpreter; never compiles source",
+    "path_b": "isolated pinned CPython -I -S worker after independent AST whitelist validation",
+    "typed_serialization": "Python repr for int/bool/str/list/tuple/string-keyed dict; exact ast.literal_eval roundtrip",
+    "worker": {
+      "filesystem": "empty non-writable cwd plus audit hook",
+      "network": "blocked by absence of allowed import/attribute nodes plus audit hook",
+      "python_executable_sha256": "cd226e7546887d11c50f86ff8862269e928e0be4d3ec1fb6cf2b2bada0b324e6",
+      "python_implementation": "CPython",
+      "python_version": "3.13.4",
+      "resource_policy": "CPU/file/fd rlimits; Linux AS cap; macOS 2ms fail-closed RSS watchdog"
+    }
+  },
+  "restricted_language": {
+    "bounds": {
+      "container_elements": 128,
+      "integer_absolute_modulus": 1000000000,
+      "loop_iterations_total": 10000,
+      "recursion_depth": 32,
+      "reference_memory_mb": 256,
+      "reference_timeout_seconds": 2.0
+    },
+    "forbidden": [
+      "imports",
+      "attributes",
+      "filesystem",
+      "network",
+      "reflection",
+      "dynamic code",
+      "randomness",
+      "ambient process/environment",
+      "unbounded loops"
+    ],
+    "productions": [
+      "typed scalar/container assignment",
+      "bounded for and while loops",
+      "nested bounded loops",
+      "if/else",
+      "integer arithmetic with Python floor/modulo semantics",
+      "list aliasing and bounded indexed mutation",
+      "bounded string slicing/reversal",
+      "string-keyed dictionary updates",
+      "bounded digit recursion represented by a depth-limited while production"
+    ]
+  },
+  "schema_version": "q3-fresh-instrument-generator-prelock-v1",
+  "scientific_generation_started": false,
+  "seed_derivation": {
+    "formula": "first 63 bits of SHA256('Q3-FRESH-V1' || prelock_file_sha256 || containing_commit || namespace)",
+    "namespaces": [
+      "qualification",
+      "confirmation",
+      "reserve"
+    ],
+    "one_stream_per_namespace": true,
+    "when": "only after the containing prelock commit is published"
+  },
+  "source_parent": "1bb3a16b81a2d11b5fa421c900907bad9cbcca66",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_GENERATION"
+}

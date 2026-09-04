@@ -1,0 +1,1949 @@
+{
+  "all_dual_evaluator_agreement": true,
+  "all_parser_reference_roundtrip": true,
+  "all_reference_repeat_determinism": true,
+  "covered_archetypes": [
+    "ARITHMETIC",
+    "BOUNDED_RECURSION",
+    "BRANCHING",
+    "MAPPING",
+    "MIXED",
+    "NESTED_CONTROL",
+    "SEQUENCE_ALIASING",
+    "TEXT"
+  ],
+  "covered_output_types": [
+    "bool",
+    "dict",
+    "int",
+    "list",
+    "str",
+    "tuple"
+  ],
+  "fixture_count": 192,
+  "fixtures": [
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0000",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0001",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0002",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0003",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0004",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0005",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0006",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0007",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0008",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0009",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0010",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0011",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0012",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0013",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0014",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0015",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0016",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0017",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0018",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0019",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0020",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0021",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0022",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0023",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0024",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0025",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0026",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0027",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0028",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0029",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0030",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0031",
+      "output_type": "int",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "int"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0032",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0033",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0034",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0035",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0036",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0037",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0038",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0039",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0040",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0041",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0042",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0043",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0044",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0045",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0046",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0047",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0048",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0049",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0050",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0051",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0052",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0053",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0054",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0055",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0056",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0057",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0058",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0059",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0060",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0061",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0062",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0063",
+      "output_type": "bool",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "bool"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0064",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0065",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0066",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0067",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0068",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0069",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0070",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0071",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0072",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0073",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0074",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0075",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0076",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0077",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0078",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0079",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0080",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0081",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0082",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0083",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0084",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0085",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0086",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0087",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0088",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0089",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0090",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0091",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0092",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0093",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0094",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0095",
+      "output_type": "str",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "str"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0096",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0097",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0098",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0099",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0100",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0101",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0102",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0103",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0104",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0105",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0106",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0107",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0108",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0109",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0110",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0111",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0112",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0113",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0114",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0115",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0116",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0117",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0118",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0119",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0120",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0121",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0122",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0123",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0124",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0125",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0126",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0127",
+      "output_type": "list",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "list"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0128",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0129",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0130",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0131",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0132",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0133",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0134",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0135",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0136",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0137",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0138",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0139",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0140",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0141",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0142",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0143",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0144",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0145",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0146",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0147",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0148",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0149",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0150",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0151",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0152",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0153",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0154",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0155",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0156",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0157",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0158",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0159",
+      "output_type": "tuple",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "tuple"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0160",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0161",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0162",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0163",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0164",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0165",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0166",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 6,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0167",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0168",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0169",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0170",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0171",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0172",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0173",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0174",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 8,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0175",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0176",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0177",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0178",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0179",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0180",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0181",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0182",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 10,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0183",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "ARITHMETIC",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0184",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BRANCHING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0185",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "SEQUENCE_ALIASING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0186",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "TEXT",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0187",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MAPPING",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0188",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "NESTED_CONTROL",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0189",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "BOUNDED_RECURSION",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0190",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    },
+    {
+      "archetype": "MIXED",
+      "complexity": 12,
+      "dual_evaluator_agreement": true,
+      "fixture_id": "Q3-EXCLUDED-0191",
+      "output_type": "dict",
+      "parser_reference_roundtrip": true,
+      "reference_repeat_determinism": true,
+      "reference_type": "dict"
+    }
+  ],
+  "schema_version": "q3-fresh-instrument-excluded-fixtures-v1",
+  "scientific_population_eligible": false,
+  "status": "PASS"
+}
