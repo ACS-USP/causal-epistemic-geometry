@@ -347,7 +347,21 @@ def main() -> int:
         if row["N"] == 1000
         and abs(row["delta"] - 0.03) < 1e-6
         and row["mechanism"] == "CONDITIONALLY_INDEPENDENT_BERNOULLI"
+        and row["law"] in {"CONSTANT", "LOGIT_NORMAL_1.0", "BETA_4"}
     ]
+    historical_matched = next(
+        row
+        for row in cells
+        if row["N"] == 1000
+        and row["mechanism"] == "HISTORICAL_CONSERVATIVE_COMBINED_TERNARY"
+    )
+    independent_matched = next(
+        row
+        for row in cells
+        if row["N"] == 1000
+        and row["law"] == "CONSERVATIVE_COMBINED_MATCH_TO_HISTORICAL"
+        and row["mechanism"] == "CONDITIONALLY_INDEPENDENT_BERNOULLI"
+    )
     output = {
         "schema_version": "q3-external-review-oracle-power-audit-v1",
         "classification": "POST_MATERIALIZATION_MODEL_FREE_DIAGNOSTIC",
@@ -373,6 +387,12 @@ def main() -> int:
                 "not as a mechanism-free guarantee for the new generator"
             ),
             "historical_frozen_n1000_r2_delta_003_power": frozen_historical_power(),
+            "historical_mechanism_reproduction_n1000_r2_delta_003_power": historical_matched[
+                "rejection_rate"
+            ],
+            "matched_independent_bernoulli_n1000_r2_delta_003_power": independent_matched[
+                "rejection_rate"
+            ],
             "confirmation_design_changed": False,
             "confirmation_authorization_implication": (
                 "qualification may proceed; confirmation power justification requires explicit "
