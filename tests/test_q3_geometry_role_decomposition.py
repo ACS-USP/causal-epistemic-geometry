@@ -1,11 +1,17 @@
 from __future__ import annotations
 
+import hashlib
 import importlib.util
+import json
 from pathlib import Path
 
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def load_analysis():
@@ -79,3 +85,16 @@ def test_analysis_has_no_model_or_gpu_execution_path() -> None:
     assert "torch" not in source
     assert ".generate(" not in source
     assert "cuda" not in source.lower()
+
+
+def test_execution_amendment_binds_precheck_and_analysis() -> None:
+    review = ROOT / "review/q3_geometry_role_decomposition"
+    amendment = json.loads((review / "Q3_GEOMETRY_ROLE_EXECUTION_AMENDMENT.json").read_text())
+    assert amendment["scientific_results_opened_before_amendment"] == 0
+    assert amendment["scientific_changes"] == 0
+    assert amendment["precheck_sha256"] == sha256_file(
+        review / "Q3_GEOMETRY_ROLE_DECOMPOSITION_PRECHECK.json"
+    )
+    assert amendment["analysis_sha256"] == sha256_file(
+        ROOT / "scripts/analyze_q3_geometry_role_decomposition.py"
+    )

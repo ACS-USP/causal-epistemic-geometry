@@ -26,6 +26,7 @@ import design_q3_realizable_utility as q3  # noqa: E402
 
 REVIEW = ROOT / "review/q3_geometry_role_decomposition"
 PRECHECK = REVIEW / "Q3_GEOMETRY_ROLE_DECOMPOSITION_PRECHECK.json"
+EXECUTION_AMENDMENT = REVIEW / "Q3_GEOMETRY_ROLE_EXECUTION_AMENDMENT.json"
 Q31_SUMMARY = (
     ROOT
     / "review/q3_route_a_prompt_representation"
@@ -128,7 +129,8 @@ def greedy_oracle_bank(
 
 
 def fit_blind_bank_fold(
-    raw: np.ndarray,
+    train_representation: np.ndarray,
+    test_representation: np.ndarray,
     data: dict[str, dict[str, np.ndarray]],
     item_ids: list[str],
     train: np.ndarray,
@@ -140,11 +142,10 @@ def fit_blind_bank_fold(
 ) -> dict[str, Any]:
     y_train = np.stack([data[policy]["correct"][train].mean(axis=1) for policy in bank], axis=1)
     y_test = np.stack([data[policy]["correct"][test].mean(axis=1) for policy in bank], axis=1)
-    tx, vx = q31.fit_pca(raw[train], raw[test], int(hyperparameter["dimension"]))
     c = np.zeros((len(bank), 8), dtype=np.float64)
     model_name = "GEOMETRY_BLIND_POLICY_ID"
     fitted = q31.fit_low_rank_logistic(
-        tx,
+        train_representation,
         c,
         y_train,
         int(hyperparameter["rank"]),
@@ -154,7 +155,7 @@ def fit_blind_bank_fold(
         int(precheck["router"]["optimizer_steps"]),
         float(precheck["router"]["learning_rate"]),
     )
-    probability = q31.predict_probabilities(vx, c, fitted, "BLIND")
+    probability = q31.predict_probabilities(test_representation, c, fitted, "BLIND")
     chosen = probability.argmax(axis=1)
     routed = y_test[np.arange(len(test)), chosen]
     champion = own_champion(bank, data, train)
@@ -267,6 +268,9 @@ def part_a_analysis(
         low_indices = np.asarray(low_order[:distribution_size], dtype=int)
         deterministic_indices = np.arange(distribution_size, dtype=int)
         oracle = greedy_oracle_bank(shells, data, train)
+        train_representation, test_representation = q31.fit_pca(
+            raw[train], raw[test], int(hyperparameters[fold]["dimension"])
+        )
         fold_contexts.append(
             {
                 "fold": fold,
@@ -279,6 +283,8 @@ def part_a_analysis(
                 "low_indices": low_indices,
                 "oracle": oracle,
                 "target_features": target.tolist(),
+                "train_representation": train_representation,
+                "test_representation": test_representation,
             }
         )
 
@@ -292,7 +298,8 @@ def part_a_analysis(
             banks.append(bank)
             folds.append(
                 fit_blind_bank_fold(
-                    raw,
+                    context["train_representation"],
+                    context["test_representation"],
                     data,
                     item_ids,
                     context["train"],
@@ -322,7 +329,8 @@ def part_a_analysis(
                 banks.append(bank)
                 folds.append(
                     fit_blind_bank_fold(
-                        raw,
+                        context["train_representation"],
+                        context["test_representation"],
                         data,
                         item_ids,
                         context["train"],
@@ -971,7 +979,10 @@ def main() -> int:
     precheck = read_json(PRECHECK)
     if precheck.get("status") != "Q3_GEOMETRY_ROLE_DECOMPOSITION_PRECHECK_FROZEN":
         raise RuntimeError("Q3.2 precheck is not frozen")
-    if sha256_file(Path(__file__).resolve()) != precheck["implementation"]["analysis_sha256"]:
+    amendment = read_json(EXECUTION_AMENDMENT)
+    if sha256_file(PRECHECK) != amendment["precheck_sha256"]:
+        raise RuntimeError("Q3.2 execution amendment precheck hash mismatch")
+    if sha256_file(Path(__file__).resolve()) != amendment["analysis_sha256"]:
         raise RuntimeError("Q3.2 analysis source hash mismatch")
     q3.verify_inputs(args.historical_scores, args.fresh_scores)
     if sha256_file(args.representations) != precheck["sources"]["representation_matrix_sha256"]:

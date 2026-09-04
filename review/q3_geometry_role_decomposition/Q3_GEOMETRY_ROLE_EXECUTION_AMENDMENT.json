@@ -1,0 +1,24 @@
+{
+  "analysis_sha256": "d9c029ff65a519b3b2110c314f1d987893b71262d61a666f0523bbfccde3a51f",
+  "classification": "IMPLEMENTATION_ONLY_PRE_RESULT_OPTIMIZATION",
+  "description": "Cache the invariant prompt-representation PCA once per outer fold instead of recomputing the identical transform for every bank.",
+  "evidence_class": [
+    "DEVELOPMENT_ONLY",
+    "POST_CLOSED_RESULT_PLANNING"
+  ],
+  "precheck_sha256": "1754b7ad4b842752498f23a7c9b2ce7be0e57f2ad15754ff8babc19cff0f85ee",
+  "scientific_changes": 0,
+  "scientific_results_opened_before_amendment": 0,
+  "unchanged": [
+    "source data and hashes",
+    "bank populations and eligibility",
+    "random-bank seeds and order",
+    "bank membership rules",
+    "outer and inner folds",
+    "router family and hyperparameters",
+    "model initialization seeds",
+    "estimands and metrics",
+    "attribution thresholds",
+    "terminal rulings"
+  ]
+}
