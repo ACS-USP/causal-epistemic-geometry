@@ -1,0 +1,69 @@
+{
+  "artifacts": {
+    "FINAL_Q3_CANDIDATE_SYSTEM_DRAFT.json": {
+      "bytes": 6852,
+      "sha256": "d8128e4ef4bf9459977cc46a3c9698b36c96afb8a2a388428f5daf03ac6e78f0"
+    },
+    "Q3_DEVELOPMENT_PHASE_CLOSURE_PRECHECK.json": {
+      "bytes": 10098,
+      "sha256": "45375df863b8815c52f60c0c50ea3a309a4273c02195f86fc84c5c1dfb3143cc"
+    },
+    "Q3_DEVELOPMENT_PHASE_CLOSURE_PRECHECK_ADDITIVE_STEER.json": {
+      "bytes": 7054,
+      "sha256": "43390961c99f2ce32a6ce2d8123bd520980753d56797040d04e0f048245a89fe"
+    },
+    "Q3_EVALUATION_SUPPLY_DECISION.json": {
+      "bytes": 3217,
+      "sha256": "120d6efd5959cf4bd72f16bd1e782a4071465422273a7960da8d7f72b74058fe"
+    },
+    "Q3_FINAL_SYSTEM_AND_SUPPLY_RELEASE_SUMMARY.json": {
+      "bytes": 8469,
+      "sha256": "dbcac9417733901daa1f98ce58b31f9684f9f2e4023a9f24660526f9833d8fa1"
+    },
+    "Q3_FINAL_SYSTEM_RELEASE_SAFETY.json": {
+      "bytes": 376,
+      "sha256": "e847777e435ce5f5977c193c2caa5065c40286774eddbd57f9164b38aad40058"
+    },
+    "Q3_FRESH_INSTRUMENT_DESIGN_DRAFT.json": {
+      "bytes": 4823,
+      "sha256": "28c936fa0bd1e110aac9fda2a3c8648d7daf9776c7ca9bf013d3f2aa0fc7692f"
+    },
+    "Q3_FRESH_INSTRUMENT_SOURCE_AUDIT.json": {
+      "bytes": 6832,
+      "sha256": "fc6710f63aeef0fd63b59d97e792741d77337acb3a8dc7808590eefae66786c7"
+    },
+    "Q3_RUNTIME_ACCOUNTING.json": {
+      "bytes": 2860,
+      "sha256": "753c584f278bc90c11fc538d07064ff10b764b8e14bbf86ea81af75b1f5c7bb2"
+    },
+    "Q3_TIER_B_EXPOSURE_SEVERITY_AUDIT.json": {
+      "bytes": 2644,
+      "sha256": "fb3b81f8d6267469baba3d5bcd14b9168f3395c202e987109cacb8bf7b5e8725"
+    },
+    "Q3_UTILITY_INFERENCE_CALIBRATION.csv": {
+      "bytes": 326830,
+      "sha256": "b49a922e31706f91871dd4171d0c877e8d6f5e848bf14b19d3331174db7d989a"
+    },
+    "Q3_UTILITY_POWER_PRECISION.csv": {
+      "bytes": 201686,
+      "sha256": "bd6a5f506213dc00b759f68918a01a75c7e77b4751024cda59f18309fb44ebd6"
+    },
+    "Q3_UTILITY_POWER_PRECISION_SUMMARY.json": {
+      "bytes": 1949,
+      "sha256": "0739c68c01736c5bbfcd9cbf3e870f398a1e678f985c4b432e51f315e01b162f"
+    }
+  },
+  "private_router": {
+    "artifact": "Q3_FINAL_ROUTER_PARAMETERS_PRIVATE.npz",
+    "bytes": 149452,
+    "reason": "derived prompt-activation and closed-outcome router parameters are private/hash-pinned",
+    "sha256": "269dc116c70b64dd47cf59340b07dbe558ec8c0f13be8410ed97017310ebad3d",
+    "tracked_in_git": false
+  },
+  "review": {
+    "bytes": 10624,
+    "path": "docs/Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md",
+    "sha256": "e2a62ec187ecfabb30bc45c36f305fcb98f624b31e57eb075dfe1c5197c3a1a6"
+  },
+  "schema_version": "q3-final-system-and-supply-artifact-hashes-v1"
+}

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ruff: noqa: E501
 """Freeze the model-free Q3.3 development-closure and supply-audit plan."""
 
 from __future__ import annotations
@@ -6,7 +7,6 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / "review/q3_final_system_and_evaluation_supply"
@@ -31,8 +31,7 @@ def main() -> None:
         "q3_1_analysis": "scripts/analyze_q3_prompt_representation.py",
     }
     source_records = {
-        name: {"path": path, "sha256": sha256_file(ROOT / path)}
-        for name, path in sources.items()
+        name: {"path": path, "sha256": sha256_file(ROOT / path)} for name, path in sources.items()
     }
     precheck = {
         "schema_version": "q3-final-system-evaluation-supply-precheck-v1",

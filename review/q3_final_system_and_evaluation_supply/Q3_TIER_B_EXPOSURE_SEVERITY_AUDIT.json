@@ -1,0 +1,63 @@
+{
+  "eligibility": {
+    "bounded_internal_validation_families": 11,
+    "bounded_internal_validation_ids_sha256": "b783a15b09d27c20e581bde8e63d3100733818c013ea647adc24da673af37491",
+    "confirmatory_families": 0,
+    "confirmatory_ids_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ineligible_families": 489,
+    "ruling": "TIER_B_NUMERICALLY_INADEQUATE_FOR_INTERNAL_VALIDATION"
+  },
+  "evidence_class": "MODEL_FREE_PROVENANCE_AUDIT",
+  "interpretation": {
+    "A": "stable ID/hash/manifest exposure only",
+    "B": "prompt touched only by model-free parser/provenance tooling; no human raw-content inspection and no generation",
+    "C": "model generation under unrelated conditions, with correctness never scored or inspected",
+    "D": "correctness or semantic outcome scored/inspected under unrelated conditions",
+    "E": "known manual raw item/output inspection",
+    "F": "possible influence on final bank, router, parser, metric, threshold, protocol, or exact candidate-policy outcome",
+    "no_outcome_from_exact_47_candidate_controllers": true,
+    "tier_b_is_not_globally_fresh": true
+  },
+  "population": {
+    "families": 500,
+    "family_definition": "one CRUXEval output-prediction item",
+    "permanent_allocation": false,
+    "population_id_sha256": "dc16035860b0a522156e31f184d17e8a5cf7c6308c691985745bd2d96c8339d4"
+  },
+  "reason_counts": {
+    "controller_selection": 201,
+    "hyperparameter_selection": 63,
+    "metric_selection": 120,
+    "model_free_content_hashing_or_provenance": 11,
+    "outcome_inspected": 177,
+    "semantic_correctness_scored": 172,
+    "source_axis_construction": 144,
+    "threshold_calibration": 63
+  },
+  "release_safety": {
+    "correctness_values": false,
+    "future_correctness_inspected": false,
+    "model_output": false,
+    "only_counts_and_set_hashes": true,
+    "prompt_or_reference_text": false,
+    "stable_ids_listed": false
+  },
+  "schema_version": "q3-tier-b-exposure-severity-audit-v1",
+  "status": "Q3_TIER_B_EXPOSURE_SEVERITY_AUDIT_COMPLETE",
+  "stratum_counts": {
+    "A": 0,
+    "B": 11,
+    "C": 0,
+    "D": 177,
+    "E": 0,
+    "F": 312
+  },
+  "stratum_id_hashes": {
+    "A": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "B": "b783a15b09d27c20e581bde8e63d3100733818c013ea647adc24da673af37491",
+    "C": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "D": "9ed015f83109ffbad6913fcaee7c077920bd1406778ae4e742404e27c066ed7f",
+    "E": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "F": "743dead202480ba1c952b28e4c5267894cbc85d73fa6bc28e6f0ce06254f0973"
+  }
+}

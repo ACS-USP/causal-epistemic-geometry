@@ -1,0 +1,150 @@
+{
+  "champion": {
+    "controller_id": "V4_DIRECTION_02",
+    "policy_id": "V4_DIRECTION_02_MEDIUM",
+    "selection_rule": "highest pooled correctness; then evaluability; then lower mean generated tokens; then lexicographic policy identity",
+    "shell": "MEDIUM",
+    "source": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+    "vector_file_sha256": "28cfa15767fcd48719125f58856c7e2708facd6029cebde049aba196cec6996f",
+    "vector_sha256": "37e530b2d9d909c578bcec616ffe1defa00e3f8e6d33e4eb5ce3c6344152786f"
+  },
+  "deployment": {
+    "answer_generations": 1,
+    "pseudocode": [
+      "run unsteered prefill through layer 27 block input",
+      "read final non-padding prompt-token representation",
+      "apply frozen PCA and frozen learned-policy-identity router",
+      "select argmax policy, with frozen champion fallback on non-finite router state",
+      "apply selected policy's frozen sustained-current-token intervention from that same prefill point",
+      "decode exactly one answer with the frozen generation contract"
+    ],
+    "same_forward": true
+  },
+  "development_families": 300,
+  "development_phase_closed": true,
+  "evidence_class": "DEVELOPMENT_ONLY",
+  "firewall": {
+    "fresh_outcomes_inspected": false,
+    "new_qwen_forwards": 0,
+    "new_semantic_trajectories": 0
+  },
+  "future_data_may_change_system": false,
+  "portfolio": {
+    "coordinates_used_for_construction_only": true,
+    "method": "A0_MAXIMIN",
+    "policies": [
+      {
+        "controller_id": "V4_DIRECTION_31",
+        "order": 0,
+        "policy_id": "V4_DIRECTION_31_MEDIUM",
+        "shell": "MEDIUM",
+        "source": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+        "vector_file_sha256": "96c5e19e9aecba9357d596fbb6ea241f489f6047400c57af0796bf30599f4bd7",
+        "vector_sha256": "19ca2a98ff342a4565f6ea84b9c1b48fd44d1b8459001228df333403cfe5ca48"
+      },
+      {
+        "controller_id": "V4_DIRECTION_10",
+        "order": 1,
+        "policy_id": "V4_DIRECTION_10_MEDIUM",
+        "shell": "MEDIUM",
+        "source": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+        "vector_file_sha256": "c3386eade16254026c09eb388f69756dcc567e499f3193963038885930d3908b",
+        "vector_sha256": "edd580f19b8b3cdd1c742c0baf992fd4bec066bb37a78e06fd2dba32a117855a"
+      },
+      {
+        "controller_id": "V4_DIRECTION_32",
+        "order": 2,
+        "policy_id": "V4_DIRECTION_32_MEDIUM",
+        "shell": "MEDIUM",
+        "source": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+        "vector_file_sha256": "81b0130215ade4c9814afadcea51120639c015881399b7a18fda5ec008d88c69",
+        "vector_sha256": "ae04e9c3d46915436de7ebc8298f4a8635e4ea78111d6e308ebef324d8bfea38"
+      },
+      {
+        "controller_id": "Q2_OOS_V2_DIRECTION_13",
+        "order": 3,
+        "policy_id": "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+        "shell": "MEDIUM",
+        "source": "review/q2_oos_fresh_controller_design/v2_final_presemantic/V2_CANDIDATE_BANK_MANIFEST.json",
+        "vector_file_sha256": "89963d74bc82a0099b1ccf14bafb5019581b305e51eb880e85aef378165f6743",
+        "vector_sha256": "88bcb1b94d50caec05ee96165072a29712d972ca1523f039c74f576db2845a87"
+      },
+      {
+        "controller_id": "V4_DIRECTION_19",
+        "order": 4,
+        "policy_id": "V4_DIRECTION_19_MEDIUM",
+        "shell": "MEDIUM",
+        "source": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+        "vector_file_sha256": "9960d4cfc46b621b9c05f1399163b0cbb4bb885fe875bb28bf6ad17381a46c4d",
+        "vector_sha256": "8baa1867a7be252705f3751df19c9996f9104bd3607fe815e86c392141631e2d"
+      },
+      {
+        "controller_id": "Q2_OOS_V2_DIRECTION_03",
+        "order": 5,
+        "policy_id": "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+        "shell": "MEDIUM",
+        "source": "review/q2_oos_fresh_controller_design/v2_final_presemantic/V2_CANDIDATE_BANK_MANIFEST.json",
+        "vector_file_sha256": "2e2756785cec4959588b6e6a6654dc6569a09cc5e0683118a8bc089824b0e531",
+        "vector_sha256": "d9e224d04b414926116a5d1a6c95ff2c482dcbd2ce3fec0dde7d3f821836ba32"
+      },
+      {
+        "controller_id": "Q2_OOS_V2_DIRECTION_16",
+        "order": 6,
+        "policy_id": "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+        "shell": "MEDIUM",
+        "source": "review/q2_oos_fresh_controller_design/v2_final_presemantic/V2_CANDIDATE_BANK_MANIFEST.json",
+        "vector_file_sha256": "ebf8682f9e7501bd87d73d1b8b4cd90197c466d95f18698808a755dacbff4918",
+        "vector_sha256": "f991620c3ee6a0bec9d18e8053321133bb51418b7f7e50c31f0bd2f1ea826cce"
+      },
+      {
+        "controller_id": "V4_DIRECTION_35",
+        "order": 7,
+        "policy_id": "V4_DIRECTION_35_STRONG",
+        "shell": "STRONG",
+        "source": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+        "vector_file_sha256": "fd2f6807981996c370aa82e18495f9d23dc42451b9846ab2b8fd54917c0a6d50",
+        "vector_sha256": "e4909caac7fc944c94e0e77cdd0670f649188e55467a38a74a9632d0c1675934"
+      }
+    ],
+    "size": 8
+  },
+  "representation": {
+    "input_dimension": 4096,
+    "pca_dimension": 8,
+    "preprocessing": "subtract frozen full-development mean; project onto frozen dual-SVD components; divide by frozen full-development score SD with <1e-8 mapped to 1",
+    "source": "ordinary unsteered layer-27 block input at final non-padding prompt token",
+    "source_matrix_sha256": "3612a645e3739e3cf7bf4d32f1f808034b15604a1e7f99e784c45e04b49d81ac"
+  },
+  "router": {
+    "calibration": "native sigmoid scores; no post-hoc recalibration selected",
+    "controller_coordinates_as_input": false,
+    "fallback": "V4_DIRECTION_02_MEDIUM",
+    "family": "regularized low-rank logistic prompt-policy interaction",
+    "initialization_seed": 2026090511,
+    "interaction_rank": 2,
+    "l2": 1.0,
+    "learning_rate": 0.03,
+    "mode": "GEOMETRY_BLIND_POLICY_ID",
+    "optimizer": "deterministic full-batch Adam",
+    "private_parameter_manifest": {
+      "artifact": "Q3_FINAL_ROUTER_PARAMETERS_PRIVATE.npz",
+      "bytes": 149452,
+      "reason": "derived prompt-activation and closed-outcome router parameters are private/hash-pinned",
+      "sha256": "269dc116c70b64dd47cf59340b07dbe558ec8c0f13be8410ed97017310ebad3d",
+      "tracked_in_git": false
+    },
+    "selection": "argmax predicted policy correctness; ties resolved by frozen policy order",
+    "steps": 400,
+    "target": "mean correctness across the two closed rollouts for each bank policy"
+  },
+  "schema_version": "q3-final-candidate-system-draft-v1",
+  "source_counts": {
+    "fresh": 19200,
+    "historical": 37800
+  },
+  "status": "DEVELOPMENT_SELECTED_NOT_EVALUATED",
+  "upper_bound_clarification": {
+    "not_routed_accuracy_upper_bound": true,
+    "q3_2_outcome_optimized_bank": "bank-opportunity upper bound only"
+  }
+}

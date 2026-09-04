@@ -1,0 +1,102 @@
+{
+  "allocation": {
+    "confirmation": 1000,
+    "qualification": 300,
+    "reserve": 300,
+    "total_families": 1600
+  },
+  "allocation_status": "DESIGN_ONLY_NO_IDS_OR_SEEDS_GENERATED",
+  "benchmark": {
+    "family_definition": "one independently generated source-program skeleton with one allocated typed input; no source program or canonical skeleton appears in more than one family",
+    "generator": "model-free typed restricted-Python AST grammar",
+    "name": "prospective deterministic program-execution instrument",
+    "response_task": "predict the exact typed output of a terminating deterministic Python program"
+  },
+  "execution_safety": {
+    "allowed": [
+      "bounded integers, booleans, strings, lists, tuples, and dictionaries",
+      "assignment and bounded mutation/aliasing",
+      "if/else, bounded for/while, and nested control flow",
+      "pure helper functions and prospectively depth-bounded recursion"
+    ],
+    "bounds": {
+      "container_elements": 128,
+      "integer_absolute_value": 1000000000,
+      "loop_iterations_total": 10000,
+      "memory_mb": 256,
+      "recursion_depth": 32,
+      "reference_timeout_seconds": 2
+    },
+    "forbidden": [
+      "filesystem",
+      "network",
+      "imports",
+      "reflection or dynamic code",
+      "wall-clock or randomness",
+      "environment or process access",
+      "unbounded loops/recursion"
+    ],
+    "sandbox": "isolated subprocess/container with no network, read-only empty filesystem, seccomp/resource limits, deterministic locale/hash seed",
+    "verification": "restricted-AST interpreter and sandboxed pinned CPython must agree exactly twice"
+  },
+  "freshness_and_diversity": {
+    "behavioral_signature": "private generator-only execution signatures on multiple nonallocated probe inputs",
+    "cross_split_canonical_skeleton_overlap": 0,
+    "generator_namespace_split_before_generation": true,
+    "near_duplicate_checks": [
+      "canonical AST identity and tree-edit threshold",
+      "normalized token MinHash threshold",
+      "behavioral-signature collision threshold"
+    ],
+    "near_duplicate_rate_gate": "<= 1% within split and 0 exact canonical-skeleton matches across splits",
+    "template_and_production_quotas": "frozen before final generation",
+    "same_program_different_input_is_new_family": false
+  },
+  "inference": {
+    "confidence_interval": "two-sided 95% studentized family-level paired-mean t interval",
+    "independent_unit": "semantic family",
+    "invalid_or_unevaluable": "incorrect",
+    "missing": "blocks completion",
+    "primary_endpoint": "Delta_utility",
+    "primary_test": "one-sided studentized paired-family mean t test",
+    "rollouts": 2,
+    "seed_regime": "independent frozen policy seeds; exact same-policy router/champion selections share one generation and contribute zero",
+    "simulation_basis": "calibrated for independent seeds at N>=800; selected N=1000/R=2 gives 0.823 power for +0.03 under the conservative combined scenario"
+  },
+  "instrument_qualification": {
+    "confirmation_reuse": false,
+    "families": 300,
+    "full_bank_required_for_opportunity_only": true,
+    "gates": {
+      "cross_split_family_or_skeleton_collision": 0,
+      "dual_evaluator_agreement": 1.0,
+      "evaluator_repeat_determinism": 1.0,
+      "frozen_bank_oracle_headroom_over_champion": ">= 0.05 descriptively on qualification families",
+      "near_duplicate_rate": "<= 0.01",
+      "parser_reference_roundtrip": 1.0,
+      "router_and_champion_commitment_validity": ">= 0.95 each",
+      "router_and_champion_semantic_evaluability": ">= 0.95 each",
+      "single_champion_accuracy": "within [0.25, 0.90]",
+      "terminal_repetition_rate": "<= 0.10 per condition"
+    },
+    "no_gate": "observed routed gain",
+    "system_adaptation": false
+  },
+  "license": "generator, generated programs, metadata, evaluator, and manifests to receive a prospectively selected permissive release license after legal/repository review",
+  "parser": "condition-symmetric unique typed FINAL-literal parser; no fuzzy or semantic judge; exact typed comparison",
+  "primary_system": {
+    "candidate_status": "DEVELOPMENT_SELECTED_NOT_EVALUATED",
+    "comparison": "frozen one-call routed A0 K=8 portfolio versus frozen V4_DIRECTION_02_MEDIUM champion",
+    "deployment_answer_generations": 1,
+    "router_training_population": "original closed 300 CRUXEval development families only"
+  },
+  "schema_version": "q3-fresh-instrument-design-draft-v1",
+  "status": "READY_FOR_FUTURE_PRELOCK_REVIEW",
+  "stop_rule": "qualification failure closes or prospectively redesigns the instrument; no cherry-picking and no reuse of qualification families",
+  "terminal_firewall": {
+    "final_items_generated": 0,
+    "final_seeds_generated": 0,
+    "holdout_allocated": 0,
+    "semantic_trajectories": 0
+  }
+}

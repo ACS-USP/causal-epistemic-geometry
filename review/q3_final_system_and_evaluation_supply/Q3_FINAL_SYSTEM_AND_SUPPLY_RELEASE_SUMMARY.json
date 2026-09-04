@@ -1,0 +1,222 @@
+{
+  "claims": {
+    "C_OOS": "NOT_SUPPORTED",
+    "G": "NOT_SUPPORTED",
+    "P": "DEVELOPMENT_SUPPORTED_NOT_CONFIRMATORY",
+    "U": "DEVELOPMENT_SUPPORTED_NOT_CONFIRMATORY"
+  },
+  "final_system": {
+    "bank": [
+      "V4_DIRECTION_31_MEDIUM",
+      "V4_DIRECTION_10_MEDIUM",
+      "V4_DIRECTION_32_MEDIUM",
+      "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+      "V4_DIRECTION_19_MEDIUM",
+      "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+      "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+      "V4_DIRECTION_35_STRONG"
+    ],
+    "champion": "V4_DIRECTION_02_MEDIUM",
+    "draft_sha256": "d8128e4ef4bf9459977cc46a3c9698b36c96afb8a2a388428f5daf03ac6e78f0",
+    "status": "DEVELOPMENT_SELECTED_NOT_EVALUATED"
+  },
+  "firewall": {
+    "fresh_evaluation_outcomes_inspected": false,
+    "new_qwen_forwards": 0,
+    "new_semantic_trajectories": 0,
+    "spark1_gpu": false,
+    "spark2": false
+  },
+  "fresh_instrument": {
+    "allocation": {
+      "confirmation": 1000,
+      "qualification": 300,
+      "reserve": 300,
+      "total_families": 1600
+    },
+    "final_ids_generated": 0,
+    "final_seeds_generated": 0,
+    "holdout_allocated": 0,
+    "instrument": "SEPARATELY_GENERATED_DETERMINISTIC_PROGRAM_EXECUTION",
+    "minimum_proposed_fresh_family_count": 1600,
+    "selected_confirmatory_design": {
+      "N": 1000,
+      "R": 2,
+      "expected_storage_bytes": 26660002.083333332,
+      "expected_tokens": 79506.25,
+      "mean_half_width": 0.022890939029721676,
+      "p50_hours": 2.033333333333333,
+      "p80_hours": 2.3020833333333335,
+      "p95_hours": 2.59375,
+      "power": 0.8233,
+      "utility_trajectories_max": 4000
+    },
+    "why_not_N800_R2": "conservative +0.03 power is below 0.80"
+  },
+  "immutable_q3_2": {
+    "a0_bank_percentile": 0.986328125,
+    "a0_routed_gain": 0.04,
+    "classification": "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING",
+    "controller_oos_true_gain": 0.011875,
+    "part_a": "GEOMETRY_BANK_SELECTION_SUPPORTED",
+    "part_b": "CONTROLLER_OOS_TRANSFER_NOT_SUPPORTED"
+  },
+  "power_comparisons": {
+    "N1000_R2_SELECTED": {
+      "expected_storage_bytes": 26660002.083333332,
+      "expected_tokens": 79506.25,
+      "mean_half_width": 0.022890939029721676,
+      "p50_hours": 2.033333333333333,
+      "p80_hours": 2.3020833333333335,
+      "p95_hours": 2.59375,
+      "power": 0.8233,
+      "utility_trajectories_max": 4000
+    },
+    "N1200_R2": {
+      "expected_storage_bytes": 31992002.5,
+      "expected_tokens": 95407.5,
+      "mean_half_width": 0.020893241530999616,
+      "p50_hours": 2.44,
+      "p80_hours": 2.7625,
+      "p95_hours": 3.1125,
+      "power": 0.8839,
+      "utility_trajectories_max": 4800
+    },
+    "N500_R4": {
+      "expected_storage_bytes": 26660002.083333332,
+      "expected_tokens": 79506.25,
+      "mean_half_width": 0.02325764778519975,
+      "p50_hours": 2.033333333333333,
+      "p80_hours": 2.3020833333333335,
+      "p95_hours": 2.59375,
+      "power": 0.8164,
+      "utility_trajectories_max": 4000
+    },
+    "N800_R2": {
+      "expected_storage_bytes": 21328001.666666668,
+      "expected_tokens": 63604.99999999999,
+      "mean_half_width": 0.025615743523994514,
+      "p50_hours": 1.6266666666666667,
+      "p80_hours": 1.8416666666666666,
+      "p95_hours": 2.075,
+      "power": 0.7422,
+      "utility_trajectories_max": 3200
+    },
+    "N800_R4": {
+      "expected_storage_bytes": 42656003.333333336,
+      "expected_tokens": 127209.99999999999,
+      "mean_half_width": 0.018379951742860494,
+      "p50_hours": 3.2533333333333334,
+      "p80_hours": 3.683333333333333,
+      "p95_hours": 4.15,
+      "power": 0.9419,
+      "utility_trajectories_max": 6400
+    }
+  },
+  "reviewer_red_team": [
+    {
+      "attack": "Router overfit to 300 families",
+      "cheapest_check": "Evaluate the frozen system on the untouched fresh confirmation split",
+      "fragility": "Development gain may not transfer",
+      "stop_condition": "Any router/bank adaptation after opening qualification or evaluation"
+    },
+    {
+      "attack": "A0-bank selection overfit",
+      "cheapest_check": "Keep P development-only or run a separately powered multi-bank design",
+      "fragility": "One deterministic bank was selected using closed development data",
+      "stop_condition": "Calling one bank a population-level geometry attribution"
+    },
+    {
+      "attack": "Synthetic artifacts",
+      "cheapest_check": "Public generator, construct quotas, human-blind structural audit, and public-benchmark bridge",
+      "fragility": "A generator may create shortcuts",
+      "stop_condition": "Qualification reveals template shortcuts or narrow skeleton dominance"
+    },
+    {
+      "attack": "Benchmark contamination",
+      "cheapest_check": "Generate all final source/input pairs after prelock",
+      "fragility": "Public tasks may be in pretraining",
+      "stop_condition": "Any evidence final items existed before freeze"
+    },
+    {
+      "attack": "Pseudo-replication/family leakage",
+      "cheapest_check": "One source skeleton per family and zero cross-split canonical overlap",
+      "fragility": "Inputs or templates may masquerade as independent families",
+      "stop_condition": "Duplicate skeleton or shared source across splits"
+    },
+    {
+      "attack": "Champion leakage",
+      "cheapest_check": "Freeze V4_DIRECTION_02_MEDIUM now",
+      "fragility": "Comparator could be selected on confirmation",
+      "stop_condition": "Any confirmatory-outcome-dependent comparator change"
+    },
+    {
+      "attack": "Compute unfairness",
+      "cheapest_check": "Same generation contract and one answer each; share only identical-policy calls",
+      "fragility": "Router and champion may receive unequal calls",
+      "stop_condition": "Unequal generation budgets or adaptive retries"
+    },
+    {
+      "attack": "Matched-seed validity",
+      "cheapest_check": "Use independent frozen seeds for distinct policies",
+      "fragility": "Different policies consume randomness differently",
+      "stop_condition": "Power claim relies on unverified common-random-number coupling"
+    },
+    {
+      "attack": "Random-bank population",
+      "cheapest_check": "Separate bank-level prelock with prospectively sampled constructions",
+      "fragility": "Shared policies/families make banks dependent",
+      "stop_condition": "Treating controller pairs or banks as IID"
+    },
+    {
+      "attack": "Repeated Tier-B testing",
+      "cheapest_check": "Skip Tier B",
+      "fragility": "Historical exposure invites adaptation",
+      "stop_condition": "Any Tier-B outcome is opened before the fresh system is permanently frozen"
+    },
+    {
+      "attack": "Distribution shift",
+      "cheapest_check": "Qualification reports difficulty, validity, constructs, and a public descriptive bridge",
+      "fragility": "Fresh generated tasks may differ from CRUXEval",
+      "stop_condition": "Qualification task is too easy/hard or answer contract fails"
+    },
+    {
+      "attack": "Practical +3 pp",
+      "cheapest_check": "Report CI, +3 pp benchmark, latency, tokens, and failure modes separately",
+      "fragility": "Statistical positivity may be too small to matter",
+      "stop_condition": "Narrative claims practical benefit when point estimate is below +3 pp"
+    },
+    {
+      "attack": "Same-forward one-call",
+      "cheapest_check": "Synthetic engine test traces one prefill and one decode",
+      "fragility": "Implementation might secretly require a second prefill",
+      "stop_condition": "Any second model forward solely for routing"
+    },
+    {
+      "attack": "Paper scope",
+      "cheapest_check": "Treat Q3 confirmation as an extension unless fresh evaluation is clean and decisive",
+      "fragility": "Q3 may dilute the closed Q1/Q2 claim",
+      "stop_condition": "Pressing Q3 into the current paper before fresh confirmation"
+    }
+  ],
+  "schema_version": "q3-final-system-evaluation-supply-release-summary-v1",
+  "selected_route": {
+    "III_TIER_B_THEN_FRESH": "REJECT; 11 eligible families cannot meaningfully de-risk the frozen system and repeated opening would add adaptation pressure",
+    "II_FULLY_FRESH": "SELECT",
+    "I_TIER_B_ONLY": "REJECT"
+  },
+  "status": "Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK",
+  "tier_b": {
+    "confirmatory_eligible": 0,
+    "counts": {
+      "A": 0,
+      "B": 11,
+      "C": 0,
+      "D": 177,
+      "E": 0,
+      "F": 312
+    },
+    "internal_validation_eligible": 11,
+    "route_I": "REJECT_NUMERICALLY_AND_PROVENANCE_INADEQUATE"
+  }
+}

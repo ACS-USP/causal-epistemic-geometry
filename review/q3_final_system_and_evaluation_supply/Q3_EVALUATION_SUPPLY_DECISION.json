@@ -1,0 +1,93 @@
+{
+  "claim_states": {
+    "C_OOS": "NOT_SUPPORTED",
+    "G": "NOT_SUPPORTED",
+    "P": "DEVELOPMENT_SUPPORTED_NOT_CONFIRMATORY",
+    "U": "DEVELOPMENT_SUPPORTED_NOT_CONFIRMATORY"
+  },
+  "development_phase_closed": true,
+  "final_candidate_system": {
+    "bank": [
+      "V4_DIRECTION_31_MEDIUM",
+      "V4_DIRECTION_10_MEDIUM",
+      "V4_DIRECTION_32_MEDIUM",
+      "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+      "V4_DIRECTION_19_MEDIUM",
+      "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+      "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+      "V4_DIRECTION_35_STRONG"
+    ],
+    "champion": "V4_DIRECTION_02_MEDIUM",
+    "draft_sha256": "d8128e4ef4bf9459977cc46a3c9698b36c96afb8a2a388428f5daf03ac6e78f0",
+    "status": "DEVELOPMENT_SELECTED_NOT_EVALUATED"
+  },
+  "firewall": {
+    "fresh_evaluation_outcomes_inspected": false,
+    "new_qwen_forwards": 0,
+    "new_semantic_trajectories": 0,
+    "spark1_gpu": false,
+    "spark2": false
+  },
+  "fresh_supply": {
+    "allocation": {
+      "confirmation": 1000,
+      "qualification": 300,
+      "reserve": 300,
+      "total_families": 1600
+    },
+    "final_ids_generated": 0,
+    "final_seeds_generated": 0,
+    "holdout_allocated": 0,
+    "instrument": "SEPARATELY_GENERATED_DETERMINISTIC_PROGRAM_EXECUTION",
+    "minimum_proposed_fresh_family_count": 1600,
+    "selected_confirmatory_design": {
+      "N": 1000,
+      "R": 2,
+      "expected_storage_bytes": 26660002.083333332,
+      "expected_tokens": 79506.25,
+      "mean_half_width": 0.022890939029721676,
+      "p50_hours": 2.033333333333333,
+      "p80_hours": 2.3020833333333335,
+      "p95_hours": 2.59375,
+      "power": 0.8233,
+      "utility_trajectories_max": 4000
+    },
+    "why_not_N800_R2": "conservative +0.03 power is below 0.80"
+  },
+  "future_action": "prepare a separate generator/evaluator/qualification prelock; do not generate final items under Q3.3",
+  "paper_strategy": {
+    "portfolio_geometry": "retain as development evidence; do not make co-primary",
+    "reason": "Claim U is the direct one-call utility claim; Claim P already has development support but a valid multi-bank confirmation would cost much more and is not necessary for U.",
+    "selected": "A_CONFIRM_REALIZED_UTILITY_ONLY"
+  },
+  "primary_inference": {
+    "calibration_regime": "INDEPENDENT_POLICY_SEEDS_AND_N_GE_800",
+    "confidence_interval": "T_95_PERCENT_FAMILY_LEVEL",
+    "matched_seeds_for_distinct_policies": "REJECTED",
+    "max_fpr": 0.05445,
+    "method": "PAIRED_FAMILY_STUDENTIZED_T",
+    "minimum_coverage": 0.946,
+    "same_exact_policy_generation_reuse": "ALLOWED_AND_DIFFERENCE_ZERO"
+  },
+  "q3": "NOT_RUN",
+  "routes": {
+    "III_TIER_B_THEN_FRESH": "REJECT; 11 eligible families cannot meaningfully de-risk the frozen system and repeated opening would add adaptation pressure",
+    "II_FULLY_FRESH": "SELECT",
+    "I_TIER_B_ONLY": "REJECT"
+  },
+  "schema_version": "q3-evaluation-supply-decision-v1",
+  "status": "Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK",
+  "tier_b": {
+    "confirmatory_eligible": 0,
+    "counts": {
+      "A": 0,
+      "B": 11,
+      "C": 0,
+      "D": 177,
+      "E": 0,
+      "F": 312
+    },
+    "internal_validation_eligible": 11,
+    "route_I": "REJECT_NUMERICALLY_AND_PROVENANCE_INADEQUATE"
+  }
+}

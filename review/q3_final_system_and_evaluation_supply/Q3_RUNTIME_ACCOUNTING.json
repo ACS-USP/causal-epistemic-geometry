@@ -1,0 +1,85 @@
+{
+  "full_bank_diagnostic_N1000_R2": {
+    "expected_generated_tokens": 318025.0,
+    "expected_storage_bytes": 106640008.33333333,
+    "observed_rate_hours": 7.852845808472453,
+    "p50_hours": 8.133333333333333,
+    "p80_hours": 9.208333333333334,
+    "p95_hours": 10.375,
+    "trajectories": 16000
+  },
+  "interpretation": {
+    "champion_generation": "experimental comparator only",
+    "deployment_calls": 1,
+    "full_bank_required_for_primary_utility": false,
+    "portfolio_banks_are_deployed_one-call_systems": true,
+    "research_cost_is_not_deployment_cost": true
+  },
+  "portfolio_attribution_N1000_R2": {
+    "12": {
+      "expected_generated_tokens": 556543.75,
+      "expected_storage_bytes": 186620014.58333334,
+      "observed_rate_hours": 13.742480164826793,
+      "p50_hours": 14.233333333333333,
+      "p80_hours": 16.114583333333332,
+      "p95_hours": 18.15625,
+      "trajectories": 28000
+    },
+    "16": {
+      "expected_generated_tokens": 715556.25,
+      "expected_storage_bytes": 239940018.75,
+      "observed_rate_hours": 17.668903069063017,
+      "p50_hours": 18.3,
+      "p80_hours": 20.71875,
+      "p95_hours": 23.34375,
+      "trajectories": 36000
+    },
+    "19": {
+      "expected_generated_tokens": 834815.625,
+      "expected_storage_bytes": 279930021.875,
+      "observed_rate_hours": 20.61372024724019,
+      "p50_hours": 21.35,
+      "p80_hours": 24.171875000000004,
+      "p95_hours": 27.234374999999996,
+      "trajectories": 42000
+    },
+    "20": {
+      "expected_generated_tokens": 874568.75,
+      "expected_storage_bytes": 293260022.9166667,
+      "observed_rate_hours": 21.595325973299246,
+      "p50_hours": 22.366666666666667,
+      "p80_hours": 25.32291666666667,
+      "p95_hours": 28.53125,
+      "trajectories": 44000
+    },
+    "8": {
+      "expected_generated_tokens": 397531.25,
+      "expected_storage_bytes": 133300010.41666667,
+      "observed_rate_hours": 9.816057260590565,
+      "p50_hours": 10.166666666666666,
+      "p80_hours": 11.510416666666666,
+      "p95_hours": 12.96875,
+      "trajectories": 20000
+    }
+  },
+  "qualification_full_bank_plus_champion_plus_baseline_N300_R2": {
+    "expected_generated_tokens": 119259.375,
+    "expected_storage_bytes": 39990003.125,
+    "observed_rate_hours": 2.9448171781771695,
+    "p50_hours": 3.05,
+    "p80_hours": 3.453125,
+    "p95_hours": 3.890625,
+    "trajectories": 6000
+  },
+  "schema_version": "q3-runtime-accounting-v1",
+  "source": "linear scaling of sealed Q2 OOS V2 19,200-row runtime/tokens/storage and frozen tail forecast",
+  "utility_only_selected_N1000_R2": {
+    "expected_generated_tokens": 79506.25,
+    "expected_storage_bytes": 26660002.083333332,
+    "observed_rate_hours": 1.9632114521181132,
+    "p50_hours": 2.033333333333333,
+    "p80_hours": 2.3020833333333335,
+    "p95_hours": 2.59375,
+    "trajectories": 4000
+  }
+}

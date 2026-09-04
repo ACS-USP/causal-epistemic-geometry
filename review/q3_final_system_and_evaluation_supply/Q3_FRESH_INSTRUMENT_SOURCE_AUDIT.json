@@ -1,0 +1,105 @@
+{
+  "access_date": "2026-09-04",
+  "candidates": [
+    {
+      "candidate": "NEWLY_AUTHORED_CRUXEVAL_LIKE",
+      "contamination_risk": "low if all programs, inputs, and split seeds are created only after prelock",
+      "distribution_shift": "small-to-moderate; source is newly authored but task contract matches typed output prediction",
+      "evaluator": "dual deterministic execution of a restricted Python subset plus exact typed-literal comparison",
+      "family_count": "arbitrarily scalable above 1,600 without duplicating source programs",
+      "family_definition": "one independently authored source program and its single allocated input; another input to the same program is not another family",
+      "implementation_burden": "high",
+      "license": "newly authored code and metadata can be released under the repository license after review",
+      "parser_contract": "one mechanically unique typed FINAL literal; ambiguity fails closed",
+      "pseudo_replication_risk": "controlled only if AST-skeleton, token, and behavioral-signature deduplication all pass",
+      "reviewer_credibility": "moderate-to-high if generator, templates, exclusions, dual evaluator, and held-out splits are public",
+      "source_availability": "must be created prospectively; no final items exist",
+      "task_similarity": "highest among genuinely fresh options"
+    },
+    {
+      "candidate": "PUBLIC_EXACT_EVALUATOR_BENCHMARKS",
+      "examples": [
+        {
+          "family_count": 1140,
+          "license": "Apache-2.0 repository",
+          "name": "BigCodeBench",
+          "task": "function-level code generation with executable tests",
+          "url": "https://github.com/bigcode-project/bigcodebench"
+        },
+        {
+          "family_count": 500,
+          "license": "google-research repository terms require separate release review",
+          "name": "MBPP official test split",
+          "task": "basic Python code generation with three tests per problem",
+          "url": "https://github.com/google-research/google-research/tree/master/mbpp"
+        },
+        {
+          "family_count": 164,
+          "license": "MIT",
+          "name": "HumanEval",
+          "task": "hand-written function completion with executable tests",
+          "url": "https://github.com/openai/human-eval"
+        }
+      ],
+      "contamination_risk": "high for old public benchmarks; unknown for any specific model without a dedicated audit",
+      "distribution_shift": "large: code generation rather than typed program-output prediction",
+      "evaluator": "official executable unit-test harnesses",
+      "family_definition": "one official problem/task; individual tests are nested, not independent families",
+      "implementation_burden": "medium",
+      "parser_contract": "generated program extraction and sandbox execution, materially different from the frozen typed-output parser",
+      "pseudo_replication_risk": "low when the official problem is the unit; high if tests are counted as independent rows",
+      "reviewer_credibility": "high as benchmarks, lower as a test of the exact CRUXEval-derived Q3 system because the response contract changes",
+      "source_availability": "public and official",
+      "task_similarity": "low-to-moderate"
+    },
+    {
+      "candidate": "SEPARATELY_GENERATED_DETERMINISTIC_PROGRAM_EXECUTION",
+      "contamination_risk": "lowest if generated only after protocol/hash freeze",
+      "distribution_shift": "moderate and controllable through prospective construct quotas",
+      "evaluator": "restricted-AST interpreter plus sandboxed CPython reference execution; exact agreement required",
+      "family_count": "selected prospectively; recommended total 1,600",
+      "family_definition": "one independently sampled program skeleton, constants, and input; no skeleton crosses splits",
+      "implementation_burden": "high initially, low marginal cost",
+      "license": "original generator and outputs can be released under a chosen permissive license",
+      "parser_contract": "same typed FINAL contract as the frozen task family",
+      "pseudo_replication_risk": "main risk; requires grammar-production quotas and three-way near-duplicate audit",
+      "reviewer_credibility": "moderate; strongest if accompanied by transparent generator and a public-benchmark descriptive bridge",
+      "source_availability": "designable now; final generation prohibited in Q3.3",
+      "task_similarity": "high",
+      "recommended": true
+    },
+    {
+      "candidate": "HYBRID_PUBLIC_PROGRAMS_NEW_INPUTS",
+      "contamination_risk": "source programs are public and may be in training; new inputs reduce answer memorization but not source exposure",
+      "distribution_shift": "moderate; natural source programs but input generation can distort difficulty",
+      "evaluator": "sandboxed execution against newly generated typed inputs",
+      "family_count": "potentially >1,000 only if each distinct source program is one family",
+      "family_definition": "one public source program; multiple new inputs remain nested within that family",
+      "implementation_burden": "very high because accepted programs need normalization and input-domain reconstruction",
+      "license": "Project CodeNet is CDLA-Permissive-2.0; CodeContests mixes CC BY 4.0 non-code material and third-party terms",
+      "parser_contract": "typed output prediction is possible after source normalization",
+      "pseudo_replication_risk": "high if many inputs from one program are counted independently",
+      "reviewer_credibility": "moderate, limited by target-population ambiguity and third-party provenance",
+      "source_availability": "Project CodeNet has 4,053 problems and CodeContests provides train/validation/test problem splits",
+      "task_similarity": "high at response level",
+      "urls": [
+        "https://github.com/IBM/Project_CodeNet",
+        "https://github.com/google-deepmind/code_contests"
+      ]
+    }
+  ],
+  "official_context": {
+    "cruxeval": {
+      "facts": "800 short Python functions with input-output pairs; output-prediction task; outputs produced by execution; MIT license; official repository archived read-only in 2025",
+      "url": "https://github.com/facebookresearch/cruxeval"
+    },
+    "livecodebench": {
+      "facts": "official runner supports test-output prediction and code execution, but the already closed project audit found only 182 independent test-output question families in the pinned instrument; it is not a fresh Q3 fallback",
+      "url": "https://github.com/LiveCodeBench/LiveCodeBench"
+    }
+  },
+  "raw_or_restricted_content_downloaded": false,
+  "recommended_route": "SEPARATELY_GENERATED_DETERMINISTIC_PROGRAM_EXECUTION",
+  "schema_version": "q3-fresh-instrument-source-audit-v1",
+  "status": "MODEL_FREE_SOURCE_AUDIT_COMPLETE"
+}
