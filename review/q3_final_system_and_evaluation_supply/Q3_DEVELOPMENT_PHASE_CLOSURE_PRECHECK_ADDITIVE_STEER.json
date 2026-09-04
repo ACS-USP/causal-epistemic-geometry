@@ -1,0 +1,166 @@
+{
+  "base_precheck_sha256": "45375df863b8815c52f60c0c50ea3a309a4273c02195f86fc84c5c1dfb3143cc",
+  "evidence_class": [
+    "DEVELOPMENT_ONLY",
+    "CLOSED_DATA_PLANNING_ONLY"
+  ],
+  "evaluation_designs": {
+    "F_FULL_BANK_DIAGNOSTIC": {
+      "claim_role": "secondary diagnostic",
+      "cost": "N * R * 8 semantic trajectories",
+      "deployment_calls": 1,
+      "purpose": "oracle/headroom, counterfactual policy matrix, and routing diagnostics",
+      "required_for_claim_u": false
+    },
+    "P_PORTFOLIO_ATTRIBUTION": {
+      "bank_counts_to_compare": [
+        8,
+        12,
+        16,
+        19,
+        20
+      ],
+      "claim_role": "optional powered secondary or future separate claim",
+      "independent_unit": "portfolio construction / random-bank draw, subject to dependence from shared families and policies",
+      "primary_utility_may_depend_on_this": false,
+      "purpose": "compare A0-maximin with competence-matched non-geometric portfolios"
+    },
+    "U_UTILITY_ONLY": {
+      "claim_role": "future Q3 primary",
+      "cost_maximum": "N * R * 2 semantic trajectories",
+      "deployment_calls": 1,
+      "endpoint": "Delta_utility = mean over families and rollouts of correctness(router-selected policy) minus correctness(frozen champion)",
+      "invalid_or_unevaluable": "incorrect",
+      "same_policy_rule": "when router and champion select the exact same frozen policy, one generation with the frozen block seed is shared by both logical roles and contributes paired difference zero; distinct policies use independent frozen seeds",
+      "systems_generated": [
+        "router-selected policy",
+        "frozen champion"
+      ]
+    }
+  },
+  "claim_precedence": {
+    "C_OOS": "NOT_SUPPORTED",
+    "G": "NOT_SUPPORTED",
+    "P": "DEVELOPMENT_SUPPORTED_NOT_CONFIRMATORY",
+    "U": "DEVELOPMENT_SUPPORTED_NOT_CONFIRMATORY",
+    "future_primary": "U",
+    "paper_strategies": {
+      "A": "confirm realized utility; retain portfolio geometry as development evidence",
+      "B": "confirm realized utility and separately power portfolio attribution"
+    },
+    "selection_priority": "recommend A unless a subspace/bank-level design is independently calibrated and compute-justified; G and C-OOS cannot be revived"
+  },
+  "development_phase": {
+    "closed": true,
+    "further_open_ended_tournaments": false,
+    "new_architecture_or_hyperparameter_selection": false
+  },
+  "final_router_training_contract": {
+    "candidate_system_fit_population": "original closed 300 development families only",
+    "future_qualification_or_confirmation_refit": false,
+    "option_a": "refitting the already-frozen architecture/hyperparameters on a separately declared new-development split would create a new candidate system and require a new untouched confirmation split",
+    "option_b": "reopening architecture/hyperparameter selection is a new development stage and is outside Q3.3",
+    "qualification_use": "instrument qualification only; no router, bank, champion, parser, or threshold adaptation"
+  },
+  "fresh_supply_splits": [
+    {
+      "confirmation": 800,
+      "qualification_development": 100,
+      "reserve": 200,
+      "total": 1100
+    },
+    {
+      "confirmation": 800,
+      "qualification_development": 300,
+      "reserve": 300,
+      "total": 1400
+    },
+    {
+      "confirmation": 800,
+      "qualification_development": 400,
+      "reserve": 400,
+      "total": 1600
+    }
+  ],
+  "future_instrument_qualification": {
+    "confirmatory_reuse": false,
+    "gates_to_specify_in_future_prelock": [
+      "evaluator determinism",
+      "parser/evaluator roundtrip",
+      "commitment validity",
+      "semantic evaluability",
+      "baseline and champion difficulty",
+      "policy opportunity without routed-gain selection",
+      "family independence",
+      "near-duplicate rate",
+      "runtime",
+      "repetition behavior"
+    ],
+    "selection_using_routed_gain": false
+  },
+  "generated_instrument_requirements": {
+    "final_items_generated_in_q3_3": 0,
+    "family_definition": "one independently structured program; different inputs to the same source program are not independent families",
+    "model_free_generator": [
+      "terminating deterministic Python",
+      "bounded steps, runtime, and memory",
+      "no filesystem, network, imports, nondeterminism, or ambient state",
+      "typed inputs and outputs",
+      "exact sandboxed reference execution with timeout",
+      "mutation and aliasing coverage",
+      "loops, branching, nested control flow, containers, and bounded recursion if enabled",
+      "AST and skeleton diversity quotas",
+      "near-duplicate detection at token, AST, and behavioral-signature levels",
+      "generator-template split separation",
+      "independent dual reference verification and property-based tests",
+      "release-compatible original licensing"
+    ],
+    "nonscientific_fixtures": "permanently excluded from future allocation"
+  },
+  "primary_inference_addendum": {
+    "additional_gain": 0.01,
+    "adverse_scenarios": [
+      "heterogeneous family difficulty",
+      "heterogeneous treatment effect",
+      "rare systematic routing harm",
+      "variable routed/champion discordance",
+      "invalid/unevaluable outputs"
+    ],
+    "confidence_interval": "studentized family-level paired mean interval, retained only if prespecified calibration and coverage criteria pass",
+    "do_not_reuse": "Q2 compound Dshape item bootstrap",
+    "fixed_compute_comparison": true
+  },
+  "safety_and_economics": {
+    "future_candidate_guards_for_prelock": {
+      "commitment_validity": "routed >= champion - 0.03",
+      "semantic_evaluability": "routed >= champion - 0.03",
+      "utility": "positive Delta_utility under the calibrated primary test and interval",
+      "pathology": "no prospectively defined concentrated catastrophic failure mode",
+      "practical_effect": "report whether the lower interval bound exceeds 0 and whether the point estimate reaches +0.03; do not conflate statistical and practical criteria"
+    },
+    "report_separately": [
+      "one-call deployment tokens/latency and routing concentration",
+      "utility-only evaluation trajectories",
+      "optional full-bank diagnostic trajectories",
+      "optional portfolio-attribution trajectories"
+    ]
+  },
+  "reviewer_red_team": [
+    "router overfit to 300 development families",
+    "A0-bank selection overfit",
+    "synthetic benchmark artifacts",
+    "benchmark contamination",
+    "pseudo-replication and family leakage",
+    "champion leakage",
+    "compute unfairness",
+    "matched-seed invalidity",
+    "one deterministic A0 bank versus a random-bank population",
+    "repeated testing on Tier B",
+    "distribution shift",
+    "practical relevance of +3 percentage points",
+    "same-forward one-call implementation validity",
+    "whether Q3 belongs in the current Q1/Q2 paper or remains an extension"
+  ],
+  "schema_version": "q3-development-phase-closure-precheck-additive-steer-v1",
+  "status": "Q3_DEVELOPMENT_PHASE_CLOSURE_PRECHECK_ADDITIVE_STEER_FROZEN"
+}
