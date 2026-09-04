@@ -1,0 +1,29 @@
+{
+  "artifacts": {
+    "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_CAPTURE_FORENSICS.json": "b57327e6ee1554f8c3c1010679670f60d2eda7222b7923c52f6b1c13f87e8808",
+    "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_PRECHECK.json": "aa78b37d730b1bfe7b0ff3e8bb4b2b47b67784a4f912485e7d9a30592caab8e1",
+    "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SAFETY.json": "e9aa14747cc6d49c39f15d82e78a001a8eb45f44a203015f3db78e3a9c29c9eb",
+    "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json": "049518e0b2c689d25adb5082853441499cd04e69cc195a66f0d959047664013f",
+    "scripts/analyze_q3_prompt_representation.py": "90c58cae6c76085aa3128a39ec7e70ee8c1c7ad7d572a5b0c20e4c127479befa",
+    "scripts/run_q3_prompt_representation_capture.py": "6383d5701b3bfa6f48a1b8fd9c96dafc6e263b81a01c9fa95af5592d6ef82c0a"
+  },
+  "private_hash_pinned": [
+    {
+      "artifact": "prompt-only manifest containing benchmark prompts",
+      "sha256": "535fb1bd6500c84257c6fa3f0935a8037e44306e2c4aad36be5fec81cf0cfa1b"
+    },
+    {
+      "artifact": "300x4096 float32 prompt-representation matrix",
+      "sha256": "3612a645e3739e3cf7bf4d32f1f808034b15604a1e7f99e784c45e04b49d81ac"
+    },
+    {
+      "artifact": "representation row metadata",
+      "sha256": "5cde8c15cd89c32a53655787fb8d74632fd6e8c7d30b894c564a7e0eba3005d9"
+    },
+    {
+      "artifact": "full itemwise development result",
+      "sha256": "e281a55b31cadd74176c54c5887da615c0128a9e9709cbe8c5b1b8ab71e3cfa2"
+    }
+  ],
+  "schema_version": "q3-route-a-prompt-representation-artifact-hashes-v1"
+}

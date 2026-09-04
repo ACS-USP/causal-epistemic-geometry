@@ -1,0 +1,40 @@
+{
+  "credentials_present": false,
+  "excluded": [
+    "benchmark prompt text",
+    "hidden representation values",
+    "itemwise routed/champion correctness arrays",
+    "raw model outputs",
+    "references",
+    "credentials and infrastructure identifiers"
+  ],
+  "private_hash_pinned_not_tracked": [
+    {
+      "artifact": "prompt-only manifest containing benchmark prompts",
+      "sha256": "535fb1bd6500c84257c6fa3f0935a8037e44306e2c4aad36be5fec81cf0cfa1b"
+    },
+    {
+      "artifact": "300x4096 float32 prompt-representation matrix",
+      "sha256": "3612a645e3739e3cf7bf4d32f1f808034b15604a1e7f99e784c45e04b49d81ac"
+    },
+    {
+      "artifact": "representation row metadata",
+      "sha256": "5cde8c15cd89c32a53655787fb8d74632fd6e8c7d30b894c564a7e0eba3005d9"
+    },
+    {
+      "artifact": "full itemwise development result",
+      "sha256": "e281a55b31cadd74176c54c5887da615c0128a9e9709cbe8c5b1b8ab71e3cfa2"
+    }
+  ],
+  "private_infrastructure_present": false,
+  "raw_model_text_present": false,
+  "schema_version": "q3-route-a-prompt-representation-release-safety-v1",
+  "status": "PASS",
+  "tracked": [
+    "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_PRECHECK.json",
+    "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json",
+    "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_CAPTURE_FORENSICS.json",
+    "aggregate development reports",
+    "capture and analysis source"
+  ]
+}

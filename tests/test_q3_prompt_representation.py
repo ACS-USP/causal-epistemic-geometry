@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 
 import numpy as np
@@ -64,3 +65,39 @@ def test_capture_runner_has_no_generation_or_scoring_path() -> None:
     assert "reference_answer" in source  # forbidden-field validation only
     assert "correctness" in source  # provenance and forbidden-field validation only
     assert "backend.model(**encoded" in source
+
+
+def test_release_summary_omits_itemwise_outcomes() -> None:
+    path = (
+        ROOT
+        / "review/q3_route_a_prompt_representation"
+        / "Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json"
+    )
+    if not path.exists():
+        pytest.skip("closeout summary not built yet")
+    value = json.loads(path.read_text())
+    assert value["status"] == (
+        "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL"
+    )
+    serialized = json.dumps(value)
+    assert "itemwise_routed_correctness" not in serialized
+    assert "itemwise_champion_correctness" not in serialized
+    assert value["firewall"]["new_semantic_trajectories"] == 0
+    assert value["firewall"]["fresh_evaluation_outcomes_inspected"] is False
+
+
+def test_release_summary_preserves_frozen_primary_gate_logic() -> None:
+    path = (
+        ROOT
+        / "review/q3_route_a_prompt_representation"
+        / "Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json"
+    )
+    if not path.exists():
+        pytest.skip("closeout summary not built yet")
+    value = json.loads(path.read_text())
+    true = value["primary_bank"]["models"]["TRUE_GEOMETRY"]
+    incremental = value["gate_results"]["incremental_geometry"]
+    assert true["absolute_gain"] >= 0.03
+    assert true["positive_outer_folds"] >= 4
+    assert incremental["true_minus_blind_gain"] < 0.01
+    assert incremental["fold_consistency"] is False

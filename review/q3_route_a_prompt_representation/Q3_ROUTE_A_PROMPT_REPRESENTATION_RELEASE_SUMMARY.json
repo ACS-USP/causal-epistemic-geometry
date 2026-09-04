@@ -1,0 +1,844 @@
+{
+  "capture": {
+    "matrix_sha256": "3612a645e3739e3cf7bf4d32f1f808034b15604a1e7f99e784c45e04b49d81ac",
+    "prompt_only_forward_count": 332,
+    "representation_site": "layer_27_block_input_final_nonpadding_prompt_token",
+    "single_forward_deployment_feasible": true
+  },
+  "control_completeness": {
+    "capacity_matched_geometry_blind": "COMPUTED",
+    "effect_on_terminal_ruling": "NONE_PRIMARY_AND_INCREMENTAL_GATES_DO_NOT_DEPEND_ON_RANDOM_ROUTER",
+    "fixed_coordinate_permutation": "COMPUTED",
+    "global_champion": "PRIMARY_COMPARATOR",
+    "policy_prior_random_router": "NOT_INSTANTIATED_PRECHECK_DID_NOT_FIX_PROBABILITY_RULE",
+    "q3_0_prompt_structure": "COMPUTED_FROM_FROZEN_Q3_0_ARTIFACT"
+  },
+  "evidence_class": [
+    "DEVELOPMENT_ONLY",
+    "POST_CLOSED_RESULT_PLANNING"
+  ],
+  "firewall": {
+    "fresh_evaluation_outcomes_inspected": false,
+    "new_semantic_trajectories": 0,
+    "q1_q2_classifications_changed": false,
+    "q3_confirmatory_experiment": "NOT_RUN",
+    "reference_or_correctness_used_in_capture": false
+  },
+  "gate_results": {
+    "incremental_geometry": {
+      "fold_consistency": false,
+      "true_minus_blind_gain": 0.003333333333333334,
+      "true_minus_permuted_gain": 0.018333333333333333,
+      "true_over_blind_nonnegative_folds": 4,
+      "true_over_blind_threshold": false,
+      "true_over_permuted_nonnegative_folds": 3,
+      "true_over_permuted_threshold": true
+    },
+    "realization": {
+      "absolute_gain": true,
+      "oracle_fraction": true,
+      "positive_folds": true,
+      "selection_concentration": true,
+      "selection_diversity": true,
+      "worst_fold": true
+    }
+  },
+  "primary_bank": {
+    "bank_method": "A0",
+    "fold_banks": [
+      [
+        "V4_DIRECTION_31_MEDIUM",
+        "V4_DIRECTION_10_MEDIUM",
+        "V4_DIRECTION_32_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+        "V4_DIRECTION_19_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+        "V4_DIRECTION_35_STRONG"
+      ],
+      [
+        "V4_DIRECTION_31_STRONG",
+        "V4_DIRECTION_10_MEDIUM",
+        "V4_DIRECTION_32_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+        "V4_DIRECTION_19_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+        "V4_DIRECTION_35_STRONG"
+      ],
+      [
+        "V4_DIRECTION_31_MEDIUM",
+        "V4_DIRECTION_10_MEDIUM",
+        "V4_DIRECTION_32_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+        "V4_DIRECTION_19_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+        "V4_DIRECTION_35_STRONG"
+      ],
+      [
+        "V4_DIRECTION_31_STRONG",
+        "V4_DIRECTION_10_MEDIUM",
+        "V4_DIRECTION_32_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+        "V4_DIRECTION_19_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+        "V4_DIRECTION_35_STRONG"
+      ],
+      [
+        "V4_DIRECTION_31_MEDIUM",
+        "V4_DIRECTION_10_MEDIUM",
+        "V4_DIRECTION_32_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+        "V4_DIRECTION_19_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+        "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+        "V4_DIRECTION_35_STRONG"
+      ]
+    ],
+    "hyperparameters": {
+      "fold_0_GEOMETRY_BLIND_POLICY_ID": {
+        "dimension": 16,
+        "inner_accuracy": 0.5291666666666667,
+        "l2": 10.0,
+        "rank": 1
+      },
+      "fold_0_PERMUTED_COORDINATES": {
+        "dimension": 8,
+        "inner_accuracy": 0.5083333333333333,
+        "l2": 10.0,
+        "rank": 2
+      },
+      "fold_0_TRUE_GEOMETRY": {
+        "dimension": 8,
+        "inner_accuracy": 0.525,
+        "l2": 0.1,
+        "rank": 1
+      },
+      "fold_1_GEOMETRY_BLIND_POLICY_ID": {
+        "dimension": 8,
+        "inner_accuracy": 0.5375,
+        "l2": 1.0,
+        "rank": 2
+      },
+      "fold_1_PERMUTED_COORDINATES": {
+        "dimension": 8,
+        "inner_accuracy": 0.5145833333333333,
+        "l2": 0.1,
+        "rank": 1
+      },
+      "fold_1_TRUE_GEOMETRY": {
+        "dimension": 8,
+        "inner_accuracy": 0.5166666666666667,
+        "l2": 0.1,
+        "rank": 1
+      },
+      "fold_2_GEOMETRY_BLIND_POLICY_ID": {
+        "dimension": 16,
+        "inner_accuracy": 0.49166666666666664,
+        "l2": 0.1,
+        "rank": 2
+      },
+      "fold_2_PERMUTED_COORDINATES": {
+        "dimension": 8,
+        "inner_accuracy": 0.5,
+        "l2": 10.0,
+        "rank": 4
+      },
+      "fold_2_TRUE_GEOMETRY": {
+        "dimension": 32,
+        "inner_accuracy": 0.49375,
+        "l2": 10.0,
+        "rank": 2
+      },
+      "fold_3_GEOMETRY_BLIND_POLICY_ID": {
+        "dimension": 8,
+        "inner_accuracy": 0.53125,
+        "l2": 0.1,
+        "rank": 2
+      },
+      "fold_3_PERMUTED_COORDINATES": {
+        "dimension": 8,
+        "inner_accuracy": 0.5375,
+        "l2": 0.1,
+        "rank": 2
+      },
+      "fold_3_TRUE_GEOMETRY": {
+        "dimension": 16,
+        "inner_accuracy": 0.525,
+        "l2": 10.0,
+        "rank": 4
+      },
+      "fold_4_GEOMETRY_BLIND_POLICY_ID": {
+        "dimension": 8,
+        "inner_accuracy": 0.5416666666666666,
+        "l2": 1.0,
+        "rank": 1
+      },
+      "fold_4_PERMUTED_COORDINATES": {
+        "dimension": 32,
+        "inner_accuracy": 0.54375,
+        "l2": 0.1,
+        "rank": 1
+      },
+      "fold_4_TRUE_GEOMETRY": {
+        "dimension": 8,
+        "inner_accuracy": 0.5333333333333333,
+        "l2": 0.1,
+        "rank": 1
+      }
+    },
+    "models": {
+      "GEOMETRY_BLIND_POLICY_ID": {
+        "absolute_gain": 0.05,
+        "calibration": {
+          "brier": 0.19081968654465475,
+          "ece_10": 0.08371192834451306,
+          "log_loss": 0.6018874650709185
+        },
+        "champion_accuracy": 0.4533333333333333,
+        "commitment_validity": 0.9783333333333334,
+        "distinct_selected_policies": 6,
+        "fold_gain_standard_deviation": 0.035355339059327376,
+        "fraction_oracle_headroom_realized": 0.297029702970297,
+        "maximum_single_policy_selection_share": 0.48333333333333334,
+        "oracle_headroom": 0.16833333333333333,
+        "outer_fold_gains": [
+          0.041666666666666664,
+          0.09166666666666666,
+          0.075,
+          0.0,
+          0.041666666666666664
+        ],
+        "policy_selection_counts": {
+          "Q2_OOS_V2_DIRECTION_03_MEDIUM": 11,
+          "V4_DIRECTION_19_MEDIUM": 91,
+          "V4_DIRECTION_31_MEDIUM": 4,
+          "V4_DIRECTION_31_STRONG": 28,
+          "V4_DIRECTION_32_MEDIUM": 21,
+          "V4_DIRECTION_35_STRONG": 145
+        },
+        "positive_outer_folds": 4,
+        "routed_accuracy": 0.5033333333333333,
+        "semantic_evaluability": 0.9783333333333334,
+        "worst_outer_fold_gain": 0.0
+      },
+      "PERMUTED_COORDINATES": {
+        "absolute_gain": 0.035,
+        "calibration": {
+          "brier": 0.19572654783596397,
+          "ece_10": 0.08447730680804395,
+          "log_loss": 0.6150170022805991
+        },
+        "champion_accuracy": 0.4533333333333333,
+        "commitment_validity": 0.98,
+        "distinct_selected_policies": 7,
+        "fold_gain_standard_deviation": 0.025276251480171836,
+        "fraction_oracle_headroom_realized": 0.20792079207920794,
+        "maximum_single_policy_selection_share": 0.5,
+        "oracle_headroom": 0.16833333333333333,
+        "outer_fold_gains": [
+          0.025,
+          0.06666666666666667,
+          0.03333333333333333,
+          0.0,
+          0.05
+        ],
+        "policy_selection_counts": {
+          "Q2_OOS_V2_DIRECTION_03_MEDIUM": 28,
+          "V4_DIRECTION_10_MEDIUM": 7,
+          "V4_DIRECTION_19_MEDIUM": 37,
+          "V4_DIRECTION_31_MEDIUM": 28,
+          "V4_DIRECTION_31_STRONG": 29,
+          "V4_DIRECTION_32_MEDIUM": 21,
+          "V4_DIRECTION_35_STRONG": 150
+        },
+        "positive_outer_folds": 4,
+        "routed_accuracy": 0.48833333333333334,
+        "semantic_evaluability": 0.98,
+        "worst_outer_fold_gain": 0.0
+      },
+      "TRUE_GEOMETRY": {
+        "absolute_gain": 0.05333333333333334,
+        "calibration": {
+          "brier": 0.19923019193998026,
+          "ece_10": 0.09104239444367748,
+          "log_loss": 0.6219145359012064
+        },
+        "champion_accuracy": 0.4533333333333333,
+        "commitment_validity": 0.9783333333333334,
+        "distinct_selected_policies": 6,
+        "fold_gain_standard_deviation": 0.0375462677535627,
+        "fraction_oracle_headroom_realized": 0.31683168316831684,
+        "maximum_single_policy_selection_share": 0.49333333333333335,
+        "oracle_headroom": 0.16833333333333333,
+        "outer_fold_gains": [
+          0.008333333333333333,
+          0.1,
+          0.08333333333333333,
+          0.03333333333333333,
+          0.041666666666666664
+        ],
+        "policy_selection_counts": {
+          "Q2_OOS_V2_DIRECTION_03_MEDIUM": 19,
+          "V4_DIRECTION_10_MEDIUM": 2,
+          "V4_DIRECTION_19_MEDIUM": 92,
+          "V4_DIRECTION_31_STRONG": 17,
+          "V4_DIRECTION_32_MEDIUM": 22,
+          "V4_DIRECTION_35_STRONG": 148
+        },
+        "positive_outer_folds": 5,
+        "routed_accuracy": 0.5066666666666667,
+        "semantic_evaluability": 0.9783333333333334,
+        "worst_outer_fold_gain": 0.008333333333333333
+      }
+    }
+  },
+  "private_artifact_identity": {
+    "capture_result_sha256": "d243e8720e008d7e10f50158163690f145282d91caa77a0010bcb4f539f0b25b",
+    "full_result_sha256": "e281a55b31cadd74176c54c5887da615c0128a9e9709cbe8c5b1b8ab71e3cfa2",
+    "representation_matrix_sha256": "3612a645e3739e3cf7bf4d32f1f808034b15604a1e7f99e784c45e04b49d81ac",
+    "row_metadata_sha256": "5cde8c15cd89c32a53655787fb8d74632fd6e8c7d30b894c564a7e0eba3005d9"
+  },
+  "q3_0_deterministic_prompt_structure_control": {
+    "absolute_gain": 0.02,
+    "development_selected_champion_accuracy": 0.4533333333333333,
+    "fraction_oracle_headroom_realized": 0.1188118811881188,
+    "outer_fold_gains": [
+      0.0,
+      0.075,
+      0.03333333333333333,
+      -0.016666666666666666,
+      0.008333333333333333
+    ],
+    "positive_outer_folds": 3,
+    "routed_accuracy": 0.47333333333333333,
+    "worst_outer_fold_gain": -0.016666666666666666
+  },
+  "schema_version": "q3-route-a-prompt-representation-release-summary-v1",
+  "scientific_state": "Q3_NOT_RUN_DEVELOPMENT_ONLY",
+  "secondary_banks_cannot_rescue_primary": {
+    "A1": {
+      "bank_method": "A1",
+      "fold_banks": [
+        [
+          "V4_DIRECTION_31_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "V4_DIRECTION_34_MEDIUM",
+          "V4_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_07_MEDIUM",
+          "V4_DIRECTION_18_MEDIUM",
+          "V4_DIRECTION_08_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_31_STRONG",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "V4_DIRECTION_34_MEDIUM",
+          "V4_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_07_MEDIUM",
+          "V4_DIRECTION_18_MEDIUM",
+          "V4_DIRECTION_08_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_31_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "V4_DIRECTION_34_MEDIUM",
+          "V4_DIRECTION_13_STRONG",
+          "V4_DIRECTION_07_MEDIUM",
+          "V4_DIRECTION_18_MEDIUM",
+          "V4_DIRECTION_08_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_31_STRONG",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "V4_DIRECTION_34_MEDIUM",
+          "V4_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_07_MEDIUM",
+          "V4_DIRECTION_18_MEDIUM",
+          "V4_DIRECTION_08_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_31_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "V4_DIRECTION_34_MEDIUM",
+          "V4_DIRECTION_13_STRONG",
+          "V4_DIRECTION_07_MEDIUM",
+          "V4_DIRECTION_18_MEDIUM",
+          "V4_DIRECTION_08_STRONG"
+        ]
+      ],
+      "hyperparameters": {
+        "fold_0_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 16,
+          "inner_accuracy": 0.5291666666666667,
+          "l2": 10.0,
+          "rank": 1
+        },
+        "fold_0_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5083333333333333,
+          "l2": 10.0,
+          "rank": 2
+        },
+        "fold_0_TRUE_GEOMETRY": {
+          "dimension": 8,
+          "inner_accuracy": 0.525,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_1_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 8,
+          "inner_accuracy": 0.5375,
+          "l2": 1.0,
+          "rank": 2
+        },
+        "fold_1_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5145833333333333,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_1_TRUE_GEOMETRY": {
+          "dimension": 8,
+          "inner_accuracy": 0.5166666666666667,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_2_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 16,
+          "inner_accuracy": 0.49166666666666664,
+          "l2": 0.1,
+          "rank": 2
+        },
+        "fold_2_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5,
+          "l2": 10.0,
+          "rank": 4
+        },
+        "fold_2_TRUE_GEOMETRY": {
+          "dimension": 32,
+          "inner_accuracy": 0.49375,
+          "l2": 10.0,
+          "rank": 2
+        },
+        "fold_3_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 8,
+          "inner_accuracy": 0.53125,
+          "l2": 0.1,
+          "rank": 2
+        },
+        "fold_3_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5375,
+          "l2": 0.1,
+          "rank": 2
+        },
+        "fold_3_TRUE_GEOMETRY": {
+          "dimension": 16,
+          "inner_accuracy": 0.525,
+          "l2": 10.0,
+          "rank": 4
+        },
+        "fold_4_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 8,
+          "inner_accuracy": 0.5416666666666666,
+          "l2": 1.0,
+          "rank": 1
+        },
+        "fold_4_PERMUTED_COORDINATES": {
+          "dimension": 32,
+          "inner_accuracy": 0.54375,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_4_TRUE_GEOMETRY": {
+          "dimension": 8,
+          "inner_accuracy": 0.5333333333333333,
+          "l2": 0.1,
+          "rank": 1
+        }
+      },
+      "models": {
+        "GEOMETRY_BLIND_POLICY_ID": {
+          "absolute_gain": 0.011666666666666667,
+          "calibration": {
+            "brier": 0.18668800751849018,
+            "ece_10": 0.07052081330180275,
+            "log_loss": 0.5787835417527416
+          },
+          "champion_accuracy": 0.4533333333333333,
+          "commitment_validity": 0.9783333333333334,
+          "distinct_selected_policies": 8,
+          "fold_gain_standard_deviation": 0.045107895342414536,
+          "fraction_oracle_headroom_realized": 0.09210526315789473,
+          "maximum_single_policy_selection_share": 0.24666666666666667,
+          "oracle_headroom": 0.12666666666666668,
+          "outer_fold_gains": [
+            -0.058333333333333334,
+            0.06666666666666667,
+            0.025,
+            0.008333333333333333,
+            0.016666666666666666
+          ],
+          "policy_selection_counts": {
+            "V4_DIRECTION_07_MEDIUM": 62,
+            "V4_DIRECTION_08_MEDIUM": 1,
+            "V4_DIRECTION_13_MEDIUM": 74,
+            "V4_DIRECTION_13_STRONG": 56,
+            "V4_DIRECTION_18_MEDIUM": 13,
+            "V4_DIRECTION_31_MEDIUM": 34,
+            "V4_DIRECTION_31_STRONG": 40,
+            "V4_DIRECTION_32_MEDIUM": 20
+          },
+          "positive_outer_folds": 4,
+          "routed_accuracy": 0.465,
+          "semantic_evaluability": 0.9783333333333334,
+          "worst_outer_fold_gain": -0.058333333333333334
+        },
+        "PERMUTED_COORDINATES": {
+          "absolute_gain": 0.023333333333333334,
+          "calibration": {
+            "brier": 0.1849396715806797,
+            "ece_10": 0.053350206855336056,
+            "log_loss": 0.5847382740665474
+          },
+          "champion_accuracy": 0.4533333333333333,
+          "commitment_validity": 0.9833333333333333,
+          "distinct_selected_policies": 9,
+          "fold_gain_standard_deviation": 0.03881938232950705,
+          "fraction_oracle_headroom_realized": 0.18421052631578946,
+          "maximum_single_policy_selection_share": 0.26,
+          "oracle_headroom": 0.12666666666666668,
+          "outer_fold_gains": [
+            -0.03333333333333333,
+            0.06666666666666667,
+            0.025,
+            0.008333333333333333,
+            0.05
+          ],
+          "policy_selection_counts": {
+            "V4_DIRECTION_07_MEDIUM": 35,
+            "V4_DIRECTION_08_MEDIUM": 1,
+            "V4_DIRECTION_10_MEDIUM": 1,
+            "V4_DIRECTION_13_MEDIUM": 78,
+            "V4_DIRECTION_13_STRONG": 49,
+            "V4_DIRECTION_18_MEDIUM": 5,
+            "V4_DIRECTION_31_MEDIUM": 68,
+            "V4_DIRECTION_31_STRONG": 51,
+            "V4_DIRECTION_32_MEDIUM": 12
+          },
+          "positive_outer_folds": 4,
+          "routed_accuracy": 0.4766666666666667,
+          "semantic_evaluability": 0.9833333333333333,
+          "worst_outer_fold_gain": -0.03333333333333333
+        },
+        "TRUE_GEOMETRY": {
+          "absolute_gain": 0.025,
+          "calibration": {
+            "brier": 0.1880209045948881,
+            "ece_10": 0.0702225803296803,
+            "log_loss": 0.5858676710811949
+          },
+          "champion_accuracy": 0.4533333333333333,
+          "commitment_validity": 0.985,
+          "distinct_selected_policies": 10,
+          "fold_gain_standard_deviation": 0.03535533905932738,
+          "fraction_oracle_headroom_realized": 0.19736842105263158,
+          "maximum_single_policy_selection_share": 0.25,
+          "oracle_headroom": 0.12666666666666668,
+          "outer_fold_gains": [
+            -0.025,
+            0.06666666666666667,
+            0.05,
+            0.016666666666666666,
+            0.016666666666666666
+          ],
+          "policy_selection_counts": {
+            "V4_DIRECTION_07_MEDIUM": 31,
+            "V4_DIRECTION_08_MEDIUM": 5,
+            "V4_DIRECTION_10_MEDIUM": 3,
+            "V4_DIRECTION_13_MEDIUM": 75,
+            "V4_DIRECTION_13_STRONG": 56,
+            "V4_DIRECTION_18_MEDIUM": 9,
+            "V4_DIRECTION_31_MEDIUM": 48,
+            "V4_DIRECTION_31_STRONG": 54,
+            "V4_DIRECTION_32_MEDIUM": 14,
+            "V4_DIRECTION_34_MEDIUM": 5
+          },
+          "positive_outer_folds": 4,
+          "routed_accuracy": 0.47833333333333333,
+          "semantic_evaluability": 0.985,
+          "worst_outer_fold_gain": -0.025
+        }
+      }
+    },
+    "A2": {
+      "bank_method": "A2",
+      "fold_banks": [
+        [
+          "V4_DIRECTION_09_STRONG",
+          "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+          "V4_DIRECTION_02_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_00_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_09_STRONG",
+          "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+          "V4_DIRECTION_02_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_00_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_09_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+          "V4_DIRECTION_02_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_00_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_09_STRONG",
+          "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+          "V4_DIRECTION_02_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_00_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+        ],
+        [
+          "V4_DIRECTION_09_STRONG",
+          "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+          "V4_DIRECTION_02_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+          "V4_DIRECTION_00_MEDIUM",
+          "V4_DIRECTION_10_MEDIUM",
+          "V4_DIRECTION_32_MEDIUM",
+          "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+        ]
+      ],
+      "hyperparameters": {
+        "fold_0_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 16,
+          "inner_accuracy": 0.5291666666666667,
+          "l2": 10.0,
+          "rank": 1
+        },
+        "fold_0_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5083333333333333,
+          "l2": 10.0,
+          "rank": 2
+        },
+        "fold_0_TRUE_GEOMETRY": {
+          "dimension": 8,
+          "inner_accuracy": 0.525,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_1_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 8,
+          "inner_accuracy": 0.5375,
+          "l2": 1.0,
+          "rank": 2
+        },
+        "fold_1_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5145833333333333,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_1_TRUE_GEOMETRY": {
+          "dimension": 8,
+          "inner_accuracy": 0.5166666666666667,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_2_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 16,
+          "inner_accuracy": 0.49166666666666664,
+          "l2": 0.1,
+          "rank": 2
+        },
+        "fold_2_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5,
+          "l2": 10.0,
+          "rank": 4
+        },
+        "fold_2_TRUE_GEOMETRY": {
+          "dimension": 32,
+          "inner_accuracy": 0.49375,
+          "l2": 10.0,
+          "rank": 2
+        },
+        "fold_3_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 8,
+          "inner_accuracy": 0.53125,
+          "l2": 0.1,
+          "rank": 2
+        },
+        "fold_3_PERMUTED_COORDINATES": {
+          "dimension": 8,
+          "inner_accuracy": 0.5375,
+          "l2": 0.1,
+          "rank": 2
+        },
+        "fold_3_TRUE_GEOMETRY": {
+          "dimension": 16,
+          "inner_accuracy": 0.525,
+          "l2": 10.0,
+          "rank": 4
+        },
+        "fold_4_GEOMETRY_BLIND_POLICY_ID": {
+          "dimension": 8,
+          "inner_accuracy": 0.5416666666666666,
+          "l2": 1.0,
+          "rank": 1
+        },
+        "fold_4_PERMUTED_COORDINATES": {
+          "dimension": 32,
+          "inner_accuracy": 0.54375,
+          "l2": 0.1,
+          "rank": 1
+        },
+        "fold_4_TRUE_GEOMETRY": {
+          "dimension": 8,
+          "inner_accuracy": 0.5333333333333333,
+          "l2": 0.1,
+          "rank": 1
+        }
+      },
+      "models": {
+        "GEOMETRY_BLIND_POLICY_ID": {
+          "absolute_gain": 0.06333333333333334,
+          "calibration": {
+            "brier": 0.18209798875272232,
+            "ece_10": 0.07037770309580525,
+            "log_loss": 0.6070922232912793
+          },
+          "champion_accuracy": 0.4533333333333333,
+          "commitment_validity": 0.9683333333333334,
+          "distinct_selected_policies": 8,
+          "fold_gain_standard_deviation": 0.029814239699997195,
+          "fraction_oracle_headroom_realized": 0.4130434782608696,
+          "maximum_single_policy_selection_share": 0.42333333333333334,
+          "oracle_headroom": 0.15333333333333332,
+          "outer_fold_gains": [
+            0.058333333333333334,
+            0.10833333333333334,
+            0.025,
+            0.06666666666666667,
+            0.058333333333333334
+          ],
+          "policy_selection_counts": {
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM": 11,
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM": 20,
+            "V4_DIRECTION_00_MEDIUM": 2,
+            "V4_DIRECTION_02_MEDIUM": 127,
+            "V4_DIRECTION_09_MEDIUM": 11,
+            "V4_DIRECTION_09_STRONG": 120,
+            "V4_DIRECTION_10_MEDIUM": 5,
+            "V4_DIRECTION_32_MEDIUM": 4
+          },
+          "positive_outer_folds": 5,
+          "routed_accuracy": 0.5166666666666667,
+          "semantic_evaluability": 0.9683333333333334,
+          "worst_outer_fold_gain": 0.025
+        },
+        "PERMUTED_COORDINATES": {
+          "absolute_gain": 0.05,
+          "calibration": {
+            "brier": 0.18623991753420854,
+            "ece_10": 0.06893775761940511,
+            "log_loss": 0.6163225324082414
+          },
+          "champion_accuracy": 0.4533333333333333,
+          "commitment_validity": 0.9716666666666667,
+          "distinct_selected_policies": 7,
+          "fold_gain_standard_deviation": 0.04787135538781691,
+          "fraction_oracle_headroom_realized": 0.3260869565217392,
+          "maximum_single_policy_selection_share": 0.38666666666666666,
+          "oracle_headroom": 0.15333333333333332,
+          "outer_fold_gains": [
+            0.025,
+            0.10833333333333334,
+            -0.016666666666666666,
+            0.075,
+            0.058333333333333334
+          ],
+          "policy_selection_counts": {
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM": 10,
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM": 35,
+            "V4_DIRECTION_00_MEDIUM": 3,
+            "V4_DIRECTION_02_MEDIUM": 110,
+            "V4_DIRECTION_09_MEDIUM": 16,
+            "V4_DIRECTION_09_STRONG": 116,
+            "V4_DIRECTION_32_MEDIUM": 10
+          },
+          "positive_outer_folds": 4,
+          "routed_accuracy": 0.5033333333333333,
+          "semantic_evaluability": 0.9716666666666667,
+          "worst_outer_fold_gain": -0.016666666666666666
+        },
+        "TRUE_GEOMETRY": {
+          "absolute_gain": 0.05333333333333334,
+          "calibration": {
+            "brier": 0.18700338905327277,
+            "ece_10": 0.10830451064526331,
+            "log_loss": 0.6213737129739809
+          },
+          "champion_accuracy": 0.4533333333333333,
+          "commitment_validity": 0.975,
+          "distinct_selected_policies": 8,
+          "fold_gain_standard_deviation": 0.03890872509976251,
+          "fraction_oracle_headroom_realized": 0.3478260869565218,
+          "maximum_single_policy_selection_share": 0.4033333333333333,
+          "oracle_headroom": 0.15333333333333332,
+          "outer_fold_gains": [
+            0.025,
+            0.10833333333333334,
+            0.008333333333333333,
+            0.06666666666666667,
+            0.058333333333333334
+          ],
+          "policy_selection_counts": {
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM": 19,
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM": 17,
+            "V4_DIRECTION_00_MEDIUM": 7,
+            "V4_DIRECTION_02_MEDIUM": 121,
+            "V4_DIRECTION_09_MEDIUM": 5,
+            "V4_DIRECTION_09_STRONG": 113,
+            "V4_DIRECTION_10_MEDIUM": 10,
+            "V4_DIRECTION_32_MEDIUM": 8
+          },
+          "positive_outer_folds": 5,
+          "routed_accuracy": 0.5066666666666667,
+          "semantic_evaluability": 0.975,
+          "worst_outer_fold_gain": 0.008333333333333333
+        }
+      }
+    }
+  },
+  "source_counts": {
+    "fresh": 19200,
+    "historical": 37800
+  },
+  "status": "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL"
+}
