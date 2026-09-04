@@ -16,6 +16,8 @@ narrower than the motivating theory.
 | The OOS item bootstrap supplies a conventional 95% confidence interval | POST_HOC DIAGNOSTIC — NOT SUPPORTED | Q2 OOS item-bootstrap audit | The archived distribution is an item-panel perturbation sensitivity object; the implementation reproduced exactly but percentile-CI calibration was not established | Using its quantiles as ordinary CI bounds; selecting a favorable replacement method post hoc |
 | The learned rank-8 subspace is more specific than matched random rank-8 subspaces | NOT_RUN | None | A matched-random-subspace control is a prospective design question | Learned-subspace specificity has been demonstrated; one random subspace represents the population of orientations |
 | Complementarity yields deployable collective utility | NOT_RUN | None | Q3 remains an open question | Oracle headroom is deployable utility; Q3 has been demonstrated |
+| Label-free prompt representations make closed-panel policy diversity selectable | DEVELOPMENT_ONLY | Q3.1 prompt-representation tournament | On the closed 300-family development panel, prompt representations enabled stable routing over the A0 K=8 bank | Confirmatory Q3 utility; fresh-family generalization; deployable gain |
+| True controller geometry is necessary for Q3.1 routing | DEVELOPMENT — NOT SUPPORTED | Q3.1 geometry attribution controls | True geometry exceeded learned policy identity by only +0.0033 and failed the frozen +0.01 incremental criterion | Geometry-specific routing; causal geometry is the mechanism of selectability |
 
 ## Canonical evidence
 
@@ -31,4 +33,7 @@ narrower than the motivating theory.
   and [`Q2_OOS_V2_FORENSIC_AUDIT.json`](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_FORENSIC_AUDIT.json).
 - Q2 OOS item-bootstrap diagnostic:
   [`Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md`](../review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md).
+- Q3.1 prompt-representation development:
+  [`Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md`](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md)
+  and [`Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json`](../review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json).
 - Current state: [`project_state.yaml`](../project_state.yaml).

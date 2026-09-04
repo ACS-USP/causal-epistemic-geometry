@@ -52,6 +52,9 @@ current instruction source.
 | `docs/Q2_VISUAL_EVIDENCE_DESIGN_MEMO.md` | Frozen communication hierarchy and visual encodings for the Q2 V4.1 package |
 | `docs/Q2_FIGURE_SPEC.md` | Source, panel, and claim contract for the Q2 V4.1 figures |
 | `docs/Q2_OOS_VISUAL_EVIDENCE.md` | Implemented fresh-controller OOS visual package and item-bootstrap terminology |
+| `docs/Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md` | Q3.1 closed DEVELOPMENT review: stable prompt-representation routing without incremental geometry attribution |
+| `docs/Q3_SINGLE_FORWARD_ROUTING_FEASIBILITY.md` | Engineering proof for same-prefill capture, selection, and intervention ordering |
+| `docs/Q3_FUTURE_HOLDOUT_SUPPLY_NOTE.md` | Model-free future evaluation-population categories; no allocation or authorization |
 
 ## Current supporting references
 

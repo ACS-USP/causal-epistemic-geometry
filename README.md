@@ -18,15 +18,17 @@ blind spots.
   results are `RS+` and `RT+`. A later prospective validation found positive
   A0 alignment for all 16 safety-conditioned fresh controllers
   (`Q2_OOS_V2_A0_PASS`).
-- **Q3 — utility.** Not run. No deployable selector, router, or committee has
-  yet converted the measured complementarity into realized utility.
+- **Q3 — utility.** Not run. A DEVELOPMENT-only prompt-representation router
+  was selectable on closed data, but true controller geometry did not add the
+  frozen minimum value over learned policy identity; no fresh utility test has
+  been run.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q3_0_REALIZABLE_UTILITY_DESIGN_CLOSED` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
+**Current stage:** `Q3_1_PROMPT_REPRESENTATION_DEVELOPMENT_CLOSED` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
 
-Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. Q3.0 used the closed 300-item Q2 panel for development-only nested cross-fitting. Oracle opportunity exists, but no tested route met every feasibility/stability gate. Only 23 CRUXEval items are globally untouched and the broader 500-item candidate-policy-unexposed pool is below the frozen N=800 power requirement. Q3 remains NOT_RUN.
+Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. Q3.1 used 332 label-free prompt-only Qwen forwards on the closed 300-family development panel. Prompt representations made routing stable (+0.0533 over the cross-fitted champion; 5/5 positive folds), but true controller geometry exceeded a capacity-matched learned policy-ID control by only +0.0033, below the frozen +0.01 criterion. The ruling is Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL. No fresh holdout was allocated or inspected, and Q3 remains NOT_RUN.
 
-**Next authorized action:** PRINCIPAL_REVIEW_OF_Q3_0_HOLDOUT_AND_SELECTABILITY_BLOCKERS
+**Next authorized action:** PRINCIPAL_REVIEW_OF_Q3_1_ATTRIBUTION_BOUNDARY
 <!-- PROJECT_STATUS:END -->
 
 This block is generated from [`project_state.yaml`](project_state.yaml). See the
@@ -57,7 +59,7 @@ utility.
 | Q1, LiveCodeBench | Negative DEVELOPMENT boundary | The fixed Qwen controller did not satisfy the frozen null-specific transfer conjunction; corrected forensic audit matched exactly |
 | Q2 V4.1 | `G2`, `RS+`, `RT+` | Relational and radial evidence within the fixed 31-direction Qwen subspace |
 | Q2 fresh controllers | `Q2_OOS_V2_A0_PASS` | 16/16 controller-level A0 associations positive against the fixed historical atlas; same model/task/subspace laboratory |
-| Q3 | Not run | Utility remains an open question |
+| Q3 | Not run; Q3.1 development closed | Prompt representations enabled stable closed-panel routing, but incremental geometry attribution failed |
 
 Exact numbers, classifications, and links to the evidence are in
 [Scientific Results](docs/SCIENTIFIC_RESULTS.md).

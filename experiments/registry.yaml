@@ -2742,3 +2742,52 @@ experiments:
     q1_q2_classifications_changed: false
     q3: NOT_RUN
     next_action: PRINCIPAL_REVIEW_OF_HOLDOUT_AND_SELECTABILITY_BLOCKERS
+
+  - id: Q3_ROUTE_A_PROMPT_REPRESENTATION_SELECTABILITY
+    version: Q3-1-DEVELOPMENT
+    stage: DEVELOPMENT_ONLY_CLOSED
+    question: >-
+      Does an unsteered label-free prompt representation make one-call policy
+      selectability stable, and does true controller geometry add incremental
+      value over capacity-matched learned policy identity?
+    instrument: >-
+      Exact closed 300-family Q2/Q3.0 development panel; 332 prompt-only Qwen
+      forwards; layer-27 block input at the final non-padding prompt token;
+      fold-local PCA; exact Q3.0 5x4 nested family folds; A0-maximin K=8 primary
+      bank; low-rank geometry-aware, policy-ID, and permuted-coordinate routers.
+    model_policy: QWEN_PROMPT_ONLY_NO_SEMANTIC_GENERATION
+    status: CLOSED_DEVELOPMENT_ONLY
+    outcome: Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL
+    scientific_interpretation: >-
+      Prompt representations yielded stable development routing: +0.0533 over
+      the cross-fitted champion, 31.68% of oracle headroom, 5/5 positive folds,
+      and +0.0083 worst-fold gain. True controller geometry exceeded the
+      capacity-matched learned policy-ID control by only +0.0033, below the
+      frozen +0.01 criterion; the true-minus-permuted effect was +0.0183 but
+      fold consistency failed at 3/5. This supports selectability of causal
+      policy diversity on closed data, not geometry-specific or realized Q3
+      utility.
+    source_branch: research/q3-route-a-prompt-representation
+    source_commit: 28927cbf71e9fb3b11971ce622ab69253936472d
+    parent_q3_0_commit: da90220311ad710794233745677430067bf30d75
+    precheck_commit: b9251a5b7819e5a79d4a6edc4e212aad94876985
+    artifact: docs/Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md
+    review_namespace: review/q3_route_a_prompt_representation
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    development_panel_n: 300
+    prompt_only_forwards: 332
+    semantic_trajectories: 0
+    representation_site: LAYER_27_BLOCK_INPUT_FINAL_NONPADDING_PROMPT_TOKEN
+    representation_matrix_sha256: 3612a645e3739e3cf7bf4d32f1f808034b15604a1e7f99e784c45e04b49d81ac
+    single_forward_deployment_feasible: true
+    primary_routed_gain: 0.05333333333333334
+    oracle_fraction_realized: 0.31683168316831684
+    positive_outer_folds: 5
+    worst_outer_fold_gain: 0.008333333333333333
+    true_minus_geometry_blind_gain: 0.003333333333333334
+    true_minus_permuted_gain: 0.018333333333333333
+    fresh_outcomes_inspected: false
+    q1_q2_classifications_changed: false
+    q3: NOT_RUN
+    next_action: PRINCIPAL_REVIEW_OF_Q3_1_ATTRIBUTION_BOUNDARY

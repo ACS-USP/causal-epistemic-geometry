@@ -3,7 +3,7 @@ last_verified: "2026-09-04"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q3_0_REALIZABLE_UTILITY_DESIGN_CLOSED
+  scientific_stage: Q3_1_PROMPT_REPRESENTATION_DEVELOPMENT_CLOSED
   claim_status: Q2_V4_1_G2__Q2_OOS_V2_A0_PASS
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,10 +19,10 @@ project:
     utility?
 
 current:
-  workstream: Q3_REALIZABLE_UTILITY_DESIGN
-  lifecycle: DESIGN_REVIEW_CLOSED
-  stage: Q3_0_DESIGN_ONLY_CLOSEOUT
-  source_commit: a230642be49ec4544b7c28a24951b594656b522c
+  workstream: Q3_ROUTE_A_PROMPT_REPRESENTATION
+  lifecycle: DEVELOPMENT_REVIEW_CLOSED
+  stage: Q3_1_LABEL_FREE_PROMPT_REPRESENTATION_CLOSEOUT
+  source_commit: 28927cbf71e9fb3b11971ce622ab69253936472d
   summary: >-
     Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL.
     The separate DEVELOPMENT LiveCodeBench transfer is closed as
@@ -30,20 +30,22 @@ current:
     audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed
     fresh-controller validation is Q2_OOS_V2_A0_PASS and
     Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller
-    row associations were positive. Q3.0 used the closed 300-item Q2 panel for
-    development-only nested cross-fitting. Oracle opportunity exists, but no
-    tested route met every feasibility/stability gate. Only 23 CRUXEval items
-    are globally untouched and the broader 500-item candidate-policy-unexposed
-    pool is below the frozen N=800 power requirement. Q3 remains NOT_RUN.
-  next_authorized_action: PRINCIPAL_REVIEW_OF_Q3_0_HOLDOUT_AND_SELECTABILITY_BLOCKERS
+    row associations were positive. Q3.1 used 332 label-free prompt-only Qwen
+    forwards on the closed 300-family development panel. Prompt representations
+    made routing stable (+0.0533 over the cross-fitted champion; 5/5 positive
+    folds), but true controller geometry exceeded a capacity-matched learned
+    policy-ID control by only +0.0033, below the frozen +0.01 criterion. The
+    ruling is Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL.
+    No fresh holdout was allocated or inspected, and Q3 remains NOT_RUN.
+  next_authorized_action: PRINCIPAL_REVIEW_OF_Q3_1_ATTRIBUTION_BOUNDARY
   runpod: NOT_USED
   gpu_work_authorized: false
-  new_scientific_experiment_authorized: DESIGN_ONLY_NO_INFERENCE
+  new_scientific_experiment_authorized: NONE_AFTER_Q3_1_CLOSEOUT
   active_experiment:
-    name: Q3_0_REALIZABLE_COLLECTIVE_UTILITY_DESIGN
-    evidence_level: DESIGN_ONLY
-    status: Q3_FRESH_HOLDOUT_INSUFFICIENT
-    branch: research/q3-realizable-utility-design
+    name: Q3_1_LABEL_FREE_PROMPT_REPRESENTATION_SELECTABILITY
+    evidence_level: DEVELOPMENT_ONLY
+    status: Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL
+    branch: research/q3-route-a-prompt-representation
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
     machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
@@ -60,7 +62,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q3_0_DESIGN_ONLY_NO_INFERENCE
+  current_task: Q3_1_DEVELOPMENT_CLOSED_NO_NEW_INFERENCE
   free_generation: NONE_AUTHORIZED
 
 confirmatory_program:

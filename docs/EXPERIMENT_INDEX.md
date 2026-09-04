@@ -89,6 +89,7 @@ that subspace with arbitrary matched rank-8 orientations.
 |---|---|---|---|
 | Realizable collective utility | NOT_RUN | No selector, router, committee, or geometry-guided controller has been executed as Q3 | [Q3 concept note](Q3_CONCEPT_NOTE.md) |
 | Q3.0 realizable-utility design | DESIGN_ONLY / DEVELOPMENT_PLANNING | Closed-data nested cross-fitting found oracle opportunity, but no mechanism met all feasibility gates and available fresh CRUXEval families were underpowered | [design review](Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md) |
+| Q3.1 label-free prompt representations | DEVELOPMENT_ONLY / CLOSED | Prompt representations produced stable routing on 300 closed families, but true geometry added only +0.0033 over learned policy identity and failed the frozen incremental-attribution gate | [Q3.1 review](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md), [release summary](../review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json) |
 
 Oracle pair headroom, rescue/damage decomposition, and complementarity are
 inputs to Q3 design; none is itself a Q3 result.

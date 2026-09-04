@@ -19,7 +19,10 @@ predictable geometric structure.
    into improved performance?
 
 The current evidence answers Q1 narrowly and Q2 within one fixed experimental
-subspace. Q3 has not been run.
+subspace. Q3 has not been run. A Q3.1 DEVELOPMENT study found that label-free
+prompt representations support stable policy routing on the closed panel, but
+did not show incremental value from true controller geometry over learned
+policy identity.
 
 ## What Q1 established
 
@@ -101,8 +104,20 @@ historical non-equivalent first audit remains preserved.
 
 Read the [Stage-B closeout](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md)
 and [forensic resolution](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md).
-There is currently no active semantic campaign. Authorized current work is
-repository externalization and model-free matched-random-subspace design only.
+There is currently no active semantic campaign. Q3.1 used prompt-only forwards,
+not candidate-answer generation, and is now closed pending principal review.
+
+## What Q3.1 added—and did not add
+
+On the closed 300-family development panel, a low-rank router using label-free
+layer-27-input prompt representations gained +5.33 percentage points over the
+cross-fitted champion, with positive gains in all five outer folds. However,
+the same prompt representation with a capacity-matched learned policy identity
+gained +5.00 points. The +0.33-point true-geometry increment missed the frozen
++1-point minimum, so the result supports policy selectability but not a
+geometry-specific routing mechanism. No fresh holdout was allocated or
+inspected, and Q3 remains `NOT_RUN`. Read the
+[Q3.1 development review](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md).
 
 ## Evidence vocabulary
 

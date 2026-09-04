@@ -15,7 +15,7 @@ summary. Last reconciled: 2026-09-04.
 | Q2 | V4.1 relational geometry | **DEVELOPMENT — G2** | A0, A1, and A2 predict blind-spot-shape geometry; A2 does not outperform A0/A1 | 31 directions, N=300, two shells; [closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md) |
 | Q2 radial | V4.1 radial tests | **DEVELOPMENT — RS+ / RT+** | STRONG exceeds MEDIUM shape and total displacement in all 31 directions | [radial artifact](../review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json) |
 | Q2 fresh-controller validation | OOS V2 | **DEVELOPMENT — PASS** | 16/16 prospectively sampled fresh-controller A0 row associations positive | Same Qwen3-8B/CRUXEval/learned-rank-8 laboratory and fixed 31-controller atlas; [closeout](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md) |
-| Q3 | Collective utility | **NOT_RUN** | No scientific result; Q3.0 design found opportunity but insufficient fresh holdout and no mechanism meeting all development gates | [concept note](Q3_CONCEPT_NOTE.md), [design review](Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md) |
+| Q3 | Collective utility | **NOT_RUN** | No scientific result; Q3.1 DEVELOPMENT found stable prompt-representation selectability, but true controller geometry was not incrementally better than learned policy identity | [concept note](Q3_CONCEPT_NOTE.md), [Q3.0 design](Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md), [Q3.1 review](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md) |
 
 ## Q1: confirmatory controllability
 
@@ -118,6 +118,23 @@ The result supports controller-identity generalization inside the same model,
 task, panel, learned subspace, and historical reference atlas. Matched-random-
 subspace specificity, cross-task generalization, cross-model generalization,
 and Q3 utility remain untested.
+
+## Q3 development status
+
+Q3.1 captured label-free layer-27-input prompt representations for the closed
+300-family development panel using 332 prompt-only Qwen forwards. The primary
+A0-maximin K=8 low-rank router achieved 0.5067 accuracy against a 0.4533
+cross-fitted champion: gain +0.0533, 31.68% of oracle headroom, 5/5 positive
+folds, and worst-fold gain +0.0083. Stable pre-generation selectability is
+therefore present in development.
+
+The capacity-matched learned policy-ID control gained +0.0500. True geometry's
+increment was only +0.0033, below the prospectively frozen +0.01 threshold.
+True geometry exceeded fixed permuted coordinates by +0.0183, but passed only
+3/5 required foldwise contrasts. The exact ruling is
+`Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL`.
+This is not a Q3 result, does not allocate a fresh holdout, and does not show
+realized utility or geometry-specific routing.
 
 ## Forensic and artifact identity
 

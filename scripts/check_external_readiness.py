@@ -15,6 +15,7 @@ Q2_DIR = ROOT / "review" / "q2_v4_1_semantic_execution"
 Q1_LCB_DIR = ROOT / "review" / "q1_second_task_spark2_design" / "amendment1_hierarchical_unit"
 Q2_OOS_DIR = ROOT / "review" / "q2_oos_fresh_controller_design" / "v2_semantic_execution"
 Q3_DESIGN_DIR = ROOT / "review" / "q3_realizable_utility_design"
+Q3_ROUTE_A_DIR = ROOT / "review" / "q3_route_a_prompt_representation"
 PUBLIC_DOCS = (
     ROOT / "README.md",
     ROOT / "docs" / "START_HERE.md",
@@ -57,6 +58,21 @@ def main() -> int:
         (Q3_DESIGN_DIR / "FRESH_HOLDOUT_FEASIBILITY.json").read_text(encoding="utf-8")
     )
     q3_hashes = json.loads((Q3_DESIGN_DIR / "ARTIFACT_HASHES.json").read_text(encoding="utf-8"))
+    q3_route_a = json.loads(
+        (Q3_ROUTE_A_DIR / "Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    q3_route_a_forensics = json.loads(
+        (Q3_ROUTE_A_DIR / "Q3_ROUTE_A_PROMPT_REPRESENTATION_CAPTURE_FORENSICS.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    q3_route_a_hashes = json.loads(
+        (Q3_ROUTE_A_DIR / "Q3_ROUTE_A_PROMPT_REPRESENTATION_ARTIFACT_HASHES.json").read_text(
+            encoding="utf-8"
+        )
+    )
 
     allowed_q2_states = {"Q2_V4_1_G2", "Q2_V4_1_G2__Q2_OOS_V2_A0_PASS"}
     if state["scientific_firewall"]["geometry_q2"] not in allowed_q2_states:
@@ -92,6 +108,7 @@ def main() -> int:
         "Q2_OOS_V2_A0_PASS",
         "Q2_OOS_V2_FORENSIC_CLEAN",
         "Q3_FRESH_HOLDOUT_INSUFFICIENT",
+        "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL",
         "Q3",
     )
     forbidden_current_phrases = (
@@ -149,8 +166,57 @@ def main() -> int:
             path = ROOT / relative
             if not path.is_file() or _sha256(path) != expected:
                 failures.append(f"Q3 design artifact hash mismatch: {relative}")
+    elif (
+        active.get("status")
+        == "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL"
+    ):
+        if active.get("name") != "Q3_1_LABEL_FREE_PROMPT_REPRESENTATION_SELECTABILITY":
+            failures.append("Q3.1 closed state has an unexpected experiment identity")
+        if active.get("evidence_level") != "DEVELOPMENT_ONLY":
+            failures.append("Q3.1 closed state is not explicitly DEVELOPMENT_ONLY")
+        if active.get("branch") != "research/q3-route-a-prompt-representation":
+            failures.append("Q3.1 closed state has an unexpected source branch")
+        if state["scientific_firewall"].get("free_generation") != "NONE_AUTHORIZED":
+            failures.append("Q3.1 closed state does not prohibit free generation")
+        if state["current"].get("gpu_work_authorized") is not False:
+            failures.append("Q3.1 closed state unexpectedly authorizes GPU work")
+        if q3_protocol.get("final_design_ruling") != "Q3_FRESH_HOLDOUT_INSUFFICIENT":
+            failures.append("Q3.1 parent Q3.0 ruling changed")
+        expected_ruling = "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL"
+        if q3_route_a.get("status") != expected_ruling:
+            failures.append("Q3.1 release summary ruling changed")
+        if q3_route_a.get("scientific_state") != "Q3_NOT_RUN_DEVELOPMENT_ONLY":
+            failures.append("Q3.1 release summary upgrades Q3")
+        firewall = q3_route_a.get("firewall", {})
+        if firewall.get("new_semantic_trajectories") != 0:
+            failures.append("Q3.1 release summary reports semantic trajectories")
+        if firewall.get("fresh_evaluation_outcomes_inspected") is not False:
+            failures.append("Q3.1 release summary reports fresh-outcome inspection")
+        capture = q3_route_a.get("capture", {})
+        if capture.get("prompt_only_forward_count") != 332:
+            failures.append("Q3.1 prompt-only forward count changed")
+        if capture.get("single_forward_deployment_feasible") is not True:
+            failures.append("Q3.1 single-forward feasibility state changed")
+        incremental = q3_route_a.get("gate_results", {}).get("incremental_geometry", {})
+        if incremental.get("true_over_blind_threshold") is not False:
+            failures.append("Q3.1 geometry-blind attribution gate changed")
+        if incremental.get("fold_consistency") is not False:
+            failures.append("Q3.1 incremental fold gate changed")
+        if (
+            q3_route_a_forensics.get("status")
+            != "Q3_ROUTE_A_PROMPT_REPRESENTATION_CAPTURE_FORENSIC_CLEAN"
+        ):
+            failures.append("Q3.1 capture forensic status changed")
+        if q3_route_a_forensics.get("semantic_generation") != 0:
+            failures.append("Q3.1 capture forensics reports semantic generation")
+        if q3_route_a_forensics.get("reference_or_correctness_loaded") is not False:
+            failures.append("Q3.1 capture forensics reports reference/correctness loading")
+        for relative, expected in q3_route_a_hashes.get("artifacts", {}).items():
+            path = ROOT / relative
+            if not path.is_file() or _sha256(path) != expected:
+                failures.append(f"Q3.1 artifact hash mismatch: {relative}")
     else:
-        failures.append("active scientific state is neither blind/open nor closed design-only")
+        failures.append("active scientific state is not a recognized fail-closed lifecycle state")
 
     for name, expected in ledger["tracked_aggregate_artifacts"].items():
         path = Q2_DIR / name
