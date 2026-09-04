@@ -34,7 +34,7 @@
     "runner": "scripts/execute_q3_fresh_qualification.py",
     "runner_sha256": "31789b3d159303f23c73d256cc17ade1cfdbc7e0a8fc9c9cc106157de89bbf9b",
     "tests": "tests/test_q3_fresh_qualification.py",
-    "tests_sha256": "69d00d036de187891d36d1e806eafc4030fd02eeee2754fc963dda3003c5624e"
+    "tests_sha256": "89de5424f14ce7b098681a9806b794b17abc980a84c853e4d8e336a34c6ae878"
   },
   "model": {
     "attention": "SDPA",
@@ -197,6 +197,6 @@
   "schedule_sha256": "edba56fc8435cdc34b6f7551fc2d1b4a6d4cc3d87fc34127a5096526d670a635",
   "schema_version": "q3-fresh-qualification-execution-lock-v1",
   "scientific_outcomes_before_lock": 0,
-  "source_parent": "4cbd7e59cbe83de8d3af8554195f1da14d13a2d2",
+  "source_parent": "1f8d375151f3d4bc105ad66fedff5fb90aa87211",
   "status": "FROZEN_BEFORE_QWEN_QUALIFICATION"
 }
