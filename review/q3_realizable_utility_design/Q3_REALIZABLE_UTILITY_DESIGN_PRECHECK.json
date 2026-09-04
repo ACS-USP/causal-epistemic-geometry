@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "classification": "Q3_REALIZABLE_UTILITY_DESIGN_PRECHECK_FROZEN",
+  "evidence_class": [
+    "DEVELOPMENT_ONLY",
+    "POST_CLOSED_RESULT_PLANNING"
+  ],
+  "created_utc": "2026-09-04T11:49:42Z",
+  "base": {
+    "branch": "research/q3-realizable-utility-design",
+    "origin_main_commit": "a230642be49ec4544b7c28a24951b594656b522c",
+    "q3_scientific_state": "NOT_RUN"
+  },
+  "canonical_closed_sources": {
+    "q2_v4_1": {
+      "classification": "Q2_V4_1_G2",
+      "forensic": "Q2_V4_1_SEMANTIC_FORENSIC_CLEAN",
+      "closeout_commit": "9232a765db4ebded0a997a9969f4691783a57d21",
+      "semantic_scores": {
+        "path": "review/q2_v4_1_semantic_execution/SEMANTIC_SCORES.jsonl",
+        "sha256": "a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f",
+        "tracked": false
+      },
+      "panel_manifest": {
+        "path": "review/q2_v4_1_prediction_lock/SEMANTIC_PANEL_MANIFEST.json",
+        "sha256": "c127cf3594e8ea849dbd038492606b3afaaac406feb4146188769c04d6691187"
+      },
+      "safe_bank_manifest": {
+        "path": "review/q2_v4_1_31_safe_bank_review/SAFE_31_IMMUTABLE_MANIFEST.json",
+        "sha256": "a641d612628c4f9eff2ae9fdf12d3ad17af5a3e921ec726d31c208ee5e030447"
+      },
+      "geometry_metadata": {
+        "path": "review/q2_v4_1_prediction_lock/PREDICTION_MATRIX_METADATA.json",
+        "sha256": "98876a77f7c001265dad7b86db77854b16d498e242d870323ed60e3992ff9b1f"
+      }
+    },
+    "q2_oos_v2": {
+      "classification": "Q2_OOS_V2_A0_PASS",
+      "forensic": "Q2_OOS_V2_FORENSIC_CLEAN",
+      "closeout_commit": "f2a037069bef2e432ad46126ae247c3b4340ffb8",
+      "scored_dataset_sha256": "9f03d96d40839e228d6cfb55408ea056e262fbf7e9aef2e863080e035e4b721b",
+      "error_arrays_sha256": "6c0e555f7cccba0c41415c7605d161e84f99ba705b6430eaac53d2527b05086c",
+      "primary_result_seal": {
+        "path": "review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_PRIMARY_RESULT_SEAL.json",
+        "sha256": "ef583ff797d93e0863dc25ef6186834d48e804dd74af55c74d7eb6681559eb73"
+      },
+      "selected_bank_manifest": {
+        "path": "review/q2_oos_fresh_controller_design/v2_presemantic_closeout/V2_SELECTED_CONTROLLER_BANK.json",
+        "sha256": "9a544b4ec6d43ec1c3530feb963cd0340db516e82f91a40c2624300483e2e0fd"
+      },
+      "geometry_metadata": {
+        "path": "review/q2_oos_fresh_controller_design/v2_presemantic_closeout/PREDICTION_MATRIX_METADATA.json",
+        "sha256": "39ceaa889abc30a6740ab60ef4bdd7c24197b6ea2cc5189245bf365b9edd3b06"
+      }
+    },
+    "global_exposure_source": {
+      "path": "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+      "sha256": "3f8c22baa6fee56fd292cc9dabb9bcd8500c5b09038e2cd7e4715c1668f8a7cc"
+    }
+  },
+  "allowed_closed_development_data": [
+    "Q2 V4.1 31-controller item-level binary error profiles on the frozen 300-item CRUXEval panel",
+    "Q2 OOS V2 16-controller item-level binary error profiles on the same frozen panel",
+    "the historically collected baseline profile only after protocol comparability is verified",
+    "frozen controller coefficient vectors and A0/A1/A2 descriptors",
+    "closed validity, evaluability, generated-token, and runtime metadata",
+    "prompt text and deterministic structural features only where benchmark licensing permits local analysis"
+  ],
+  "source_compatibility_gate": {
+    "required_equalities": [
+      "item identity and order",
+      "Qwen3-8B model and tokenizer revision",
+      "prompt semantics",
+      "external-semantic-v3 parser and binary-error convention",
+      "shell identities and rollout provenance"
+    ],
+    "failure_action": "EXCLUDE_NONCOMPARABLE_SOURCE_WITH_REASON",
+    "baseline_special_rule": "Baseline may enter only if its generation and scoring protocol is directly comparable; otherwise it remains a descriptive external control."
+  },
+  "future_holdout_firewall": {
+    "correctness_or_model_outcomes_may_be_opened": false,
+    "reference_answers_may_be_used_for_allocation_or_features": false,
+    "permanent_allocation_in_this_task": false,
+    "required_unit": "semantic problem or question family",
+    "eligibility": [
+      "no prior candidate-policy correctness observation",
+      "no router-training membership",
+      "no family overlap with development",
+      "no model-output generation under a candidate Q3 policy",
+      "canonical order fixed without reference use"
+    ],
+    "inadequacy_state": "Q3_FRESH_HOLDOUT_INSUFFICIENT"
+  },
+  "policy_population": {
+    "candidate_identity": "controller identity plus shell; baseline is a distinct optional policy",
+    "historical_controllers": 31,
+    "fresh_controllers": 16,
+    "shells": ["MEDIUM", "STRONG"],
+    "bank_sizes": [2, 4, 8],
+    "same_direction_rule": "At most one shell from a controller may appear in a bank.",
+    "shell_selection_rule": "Within each training partition, retain the shell with higher mean binary correctness; ties break by higher evaluability, then lower mean generated tokens, then MEDIUM.",
+    "baseline_options": ["EXCLUDED", "INCLUDED_AS_ADDITIONAL_FIXED_POLICY"]
+  },
+  "policy_bank_rules": {
+    "A0_MAXIMIN": "Deterministic farthest-point selection in frozen A0 geometry; first policy is the competence-qualified medoid; later ties break lexicographically.",
+    "A1_MAXIMIN": "Same deterministic rule using A1.",
+    "A2_MAXIMIN": "Same deterministic rule using equal-shell-average A2.",
+    "ACCURACY_QUALIFIED_A0_MAXIMIN": "Training-only eligibility requires accuracy >= max(0.50, training champion accuracy - 0.10), commitment validity >= training baseline - 0.05, and evaluability >= training baseline - 0.05; then apply A0 maximin.",
+    "RANDOM_PLANNING": "One thousand deterministic random banks per K using seed 2026090403; planning distribution only.",
+    "OUTCOME_ORACLE": "Training/test outcome-optimized coverage upper bound only; never an eligible deployable bank."
+  },
+  "routing_mechanisms_in_precedence_order": [
+    {
+      "route": "A",
+      "name": "ONE_CALL_PRE_GENERATION_ROUTER",
+      "models": [
+        "regularized bilinear phi(x)^T W c_k with policy bias",
+        "low-capacity nonlinear geometry-aware model with one hidden layer of at most 16 units",
+        "capacity-matched geometry-blind policy-identity model",
+        "frozen global-best policy",
+        "frozen-prior random router"
+      ]
+    },
+    {
+      "route": "B",
+      "name": "BUDGETED_BASELINE_FIRST_ADAPTIVE_POLICY",
+      "open_only_if": "Route A fails the frozen feasibility criteria"
+    },
+    {
+      "route": "C",
+      "name": "VERIFIER_MEDIATED_COMMITTEE",
+      "open_only_if": "Routes A and B fail the frozen feasibility criteria"
+    }
+  ],
+  "feature_families": {
+    "available_without_new_model_inference": [
+      "deterministic lexical and formatting counts",
+      "Python AST node and control-flow proxy counts without execution",
+      "prompt length and tokenizer-free character statistics",
+      "frozen controller coefficients",
+      "frozen A0/A1/A2 policy descriptors",
+      "outer-training-only policy priors"
+    ],
+    "future_capture_only_not_run_here": [
+      "label-free prompt hidden representations",
+      "sequence confidence or entropy",
+      "prompt-prefill activation summaries"
+    ],
+    "forbidden": [
+      "reference answer or any derivative",
+      "correctness-derived item feature",
+      "benchmark program execution",
+      "candidate answer for Route A",
+      "item ID as a predictive feature",
+      "outer-test policy summaries",
+      "test-set preprocessing or calibration"
+    ]
+  },
+  "nested_cross_fitting": {
+    "unit": "semantic problem or family",
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "allocation": "SHA-256(item_family_id || q3-realizable-utility-v1) modulo fold count, with deterministic balancing by hash rank if any fold differs by more than one",
+    "outer_seed": 2026090401,
+    "inner_seed": 2026090402,
+    "all_policy_shell_rollout_rows_stay_together": true,
+    "preprocessing_fit_on_training_only": true,
+    "policy_bank_selected_on_training_only": true,
+    "champion_selected_on_training_only": true,
+    "hyperparameters_selected_on_inner_validation_only": true,
+    "rollout_handling": "Average two rollout correctness indicators within item-policy for estimation; retain item/family as the uncertainty unit."
+  },
+  "utility_definitions": {
+    "primary_future_estimand": "mean_item(correctness_router_selected_policy - correctness_frozen_development_selected_best_single_policy)",
+    "invalid_or_unevaluable": "incorrect",
+    "oracle_headroom": "diagnostic opportunity only",
+    "one_call_budget": "one selected-policy generation per item; any separate label-free feature forward is counted as prefill-equivalent compute",
+    "multi_call_requirement": "Must beat a credible repeated-baseline or self-consistency control at equal expected generations and token budget."
+  },
+  "feasibility_criteria": {
+    "minimum_scientifically_important_absolute_accuracy_gain": 0.03,
+    "minimum_fraction_of_oracle_headroom_realized": 0.25,
+    "maximum_commitment_validity_harm": 0.02,
+    "maximum_semantic_evaluability_harm": 0.02,
+    "route_a_maximum_generation_budget_per_item": 1.0,
+    "route_a_maximum_extra_feature_cost": "one prompt-prefill-equivalent forward, counted explicitly",
+    "cross_fold_stability": {
+      "positive_gain_folds_required": 4,
+      "outer_folds": 5,
+      "minimum_worst_fold_gain": -0.02
+    },
+    "minimum_fresh_holdout_power": 0.80,
+    "fresh_power_target_effect": 0.03,
+    "alpha": 0.05,
+    "development_p_value_required": false
+  },
+  "primary_inference_candidates": {
+    "paired_unit": "fresh semantic problem or family",
+    "primary_test": "one-sided paired permutation/randomization test on item-level correctness differences, with exact enumeration when feasible and deterministic Monte Carlo otherwise",
+    "confidence_interval": "paired family-level nonparametric bootstrap calibrated prospectively by simulation; percentile interpretation allowed only if calibration passes",
+    "bootstrap_resamples": 50000,
+    "inference_seed": 2026090404,
+    "multiplicity": "One frozen primary Route-versus-champion contrast; other controls are secondary with Holm correction within their declared family.",
+    "missingness": "Missing scheduled output blocks completion; it is not imputed.",
+    "stochastic_rollouts": "Future lock must freeze R; paired analysis averages all frozen rollouts within item-policy before testing."
+  },
+  "power_simulation": {
+    "absolute_gains": [0.01, 0.02, 0.03, 0.05],
+    "fresh_item_counts": [200, 300, 500, 800, 1200, 1600, 2400],
+    "paired_discordance_rates": [0.05, 0.10, 0.20, 0.30, 0.40],
+    "rollouts": [1, 2],
+    "replicates": 100000,
+    "seed": 2026090405,
+    "selection_rule": "Smallest eligible N with >=0.80 power at 3 percentage points under the empirically plausible development discordance scenario and no less than 0.80 under the prespecified conservative discordance=0.20 scenario."
+  },
+  "selection_precedence": [
+    "Q3_ONE_CALL_ROUTER_READY_FOR_PRELOCK",
+    "Q3_BUDGETED_ADAPTIVE_POLICY_READY_FOR_PRELOCK",
+    "Q3_VERIFIER_COMMITTEE_READY_FOR_PRELOCK",
+    "Q3_FRESH_HOLDOUT_INSUFFICIENT",
+    "Q3_NO_REALIZABLE_DEVELOPMENT_SIGNAL",
+    "Q3_REALIZABLE_UTILITY_REQUIRES_FURTHER_THEORY"
+  ],
+  "deterministic_tie_breaking": [
+    "higher inner-validation utility",
+    "lower expected generated tokens",
+    "smaller mechanism capacity",
+    "smaller policy bank",
+    "lexicographic mechanism and policy IDs"
+  ],
+  "automatic_execution": {
+    "gpu_or_model_inference": false,
+    "q3_semantic_trajectories": 0,
+    "prompt_activation_capture": 0,
+    "future_holdout_outcomes": 0
+  },
+  "prohibitions": [
+    "No closed development analysis becomes Q3 evidence.",
+    "No future holdout outcome may be inspected or used in this task.",
+    "No method may be selected because it gives a favorable future outcome.",
+    "No oracle selector may be described as realizable utility.",
+    "No Q1 or Q2 classification may be changed."
+  ]
+}
