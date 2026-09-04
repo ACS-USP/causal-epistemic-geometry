@@ -1,0 +1,70 @@
+{
+  "actual_dataset": {
+    "current_identity_merges_distinct_strict_ids": 0,
+    "current_unique_canonical_skeletons": 1600,
+    "current_unique_family_ids": 1600,
+    "duplicate_members_by_split": {
+      "confirmation": 0,
+      "qualification": 0,
+      "reserve": 0
+    },
+    "exact_rendered_source_duplicate_groups": 0,
+    "relaxed_ast_candidate_pairs": 0,
+    "relaxed_ast_cross_split_candidate_pairs": 0,
+    "rows": 1600,
+    "strict_ast_unique_skeletons": 1600,
+    "strict_cross_split_groups": 0,
+    "strict_cross_split_members": 0,
+    "strict_duplicate_excess_rows": 0,
+    "strict_duplicate_groups": 0,
+    "strict_duplicate_members": 0,
+    "strict_group_size_distribution": {},
+    "strict_identity_split_across_current_ids": 0
+  },
+  "classification": "ADDITIVE_MODEL_FREE_SOURCE_ONLY_AUDIT",
+  "content_access": {
+    "correctness_decoded": false,
+    "examples_emitted": 0,
+    "forbidden_field_occurrences_skipped_opaquely": {
+      "archetype": 1600,
+      "behavioral_signature_sha256": 1600,
+      "candidate_index": 1600,
+      "canonical_skeleton": 1600,
+      "complexity": 1600,
+      "input_value": 1600,
+      "prompt": 1600,
+      "reference_repr": 1600,
+      "reference_type": 1600,
+      "validation": 1600
+    },
+    "model_outputs_decoded": false,
+    "programs_executed": 0,
+    "prompts_decoded": false,
+    "references_decoded": false,
+    "source_fields_decoded": true
+  },
+  "historical_artifacts_modified": false,
+  "material_violation": false,
+  "precheck_sha256": "04d914ccada95e0d73709b34a0ab5a83bad83fcdf0eaf778f903637cc1823a48",
+  "private_split_hashes": {
+    "confirmation": "af6800120891bdda77cd750cf4361a45d21d0a821f61ceb9b541ba0cf1a4ad11",
+    "qualification": "c791e38c29d36a43fbac8ce00412e4c77d533665e0b8cb9eef8fa12fb918ac1d",
+    "reserve": "3d76bdb8ba36e291999fe32da58cced025787ab5a7c2d93d9f7748c988f55862"
+  },
+  "qualification_partial_rows_scored": false,
+  "qualification_resume_permitted": true,
+  "qwen_inference": 0,
+  "schema_version": "q3-fresh-external-review-structural-audit-v1",
+  "status": "Q3_FRESH_INSTRUMENT_STRUCTURALLY_CLEAN_QUALIFICATION_RESUMED",
+  "synthetic_tests": {
+    "all_pass": true,
+    "checks": {
+      "affine_variant_current_identity_differs": true,
+      "affine_variant_source_identical": true,
+      "affine_variant_strict_ast_equal": true,
+      "consistent_bound_rename_equal": true,
+      "literal_only_change_equal": true,
+      "operator_change_differs": true
+    }
+  }
+}
