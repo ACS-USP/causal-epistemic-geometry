@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_ROUTE_B_OR_C_ANALYSIS",
+  "parent_precheck_commit": "21e10901eea82575ac757b4769800fd9b32e6d66",
+  "reason": "The parent precheck fixed Route B/C precedence and feature classes but did not mechanically specify their development estimators. Route A has failed the frozen feasibility gate; no Route B/C output-level development analysis has been run.",
+  "evidence_class": [
+    "DEVELOPMENT_ONLY",
+    "POST_CLOSED_RESULT_PLANNING"
+  ],
+  "route_a_state_before_amendment": {
+    "feasible_configurations": 0,
+    "best_complete_absolute_gain": 0.015,
+    "minimum_required_gain": 0.03
+  },
+  "route_b": {
+    "name": "BUDGETED_BASELINE_FIRST_ADAPTIVE_POLICY",
+    "bank": "Outer-training A0-maximin K=8 bank without baseline",
+    "alternative_selection": "Within each outer-training fold, choose the bank policy with the largest mean correctness advantage on baseline-incorrect training rollout cells; ties use higher overall correctness, higher evaluability, lower generated-token mean, then lexicographic policy ID.",
+    "decision_features": [
+      "deterministic prompt features",
+      "baseline commitment-valid indicator",
+      "baseline semantic-evaluable indicator",
+      "baseline generated-token count"
+    ],
+    "decision_model": "Ridge regression predicting alternative-minus-baseline correctness, trained only on outer-training items.",
+    "invoke_thresholds_inner_cv": [
+      0.0,
+      0.05,
+      0.10,
+      0.20
+    ],
+    "final_answer": "Use the baseline answer when predicted advantage is below threshold; otherwise generate and use the frozen alternative answer.",
+    "expected_generation_budget": "1 + observed invocation rate",
+    "equal_compute_controls": [
+      "Repeated-baseline draw at the same invocation rate, whose expected accuracy is the frozen baseline accuracy",
+      "development-selected one-call champion",
+      "random invocation of the same alternative at the same rate"
+    ],
+    "feasibility": "Must beat the one-call champion by at least 0.03, beat equal-compute repeated baseline, realize at least 0.25 of oracle headroom, and satisfy the parent stability/safety rules."
+  },
+  "route_c": {
+    "name": "VERIFIER_MEDIATED_COMMITTEE",
+    "banks": "Outer-training A0-maximin K in {2,4}; no baseline addition",
+    "mechanism": "Mechanical plurality over frozen parsed typed answers; invalid/unevaluable answers abstain; ties fall back to the outer-training champion's answer.",
+    "reference_access": false,
+    "raw_text_access": false,
+    "equal_compute_control": "Repeated-baseline/self-consistency is directly estimable only for K=2 because the closed baseline has two rollouts. K=4 is opportunity/descriptive only and is ineligible for prelock without a new equal-compute development source.",
+    "feasibility": "Must beat the one-call champion by at least 0.03 and the available equal-compute control, realize at least 0.25 of oracle headroom, and satisfy the parent stability/safety rules."
+  },
+  "prohibitions": [
+    "No raw generation text may be read.",
+    "Parsed answers may be compared mechanically only for Route C.",
+    "Reference values may not be used as features or tie-breakers.",
+    "No future holdout outcome may be opened.",
+    "No Q3 execution is authorized."
+  ]
+}
