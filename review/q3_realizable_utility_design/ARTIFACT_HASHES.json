@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "README.md": "1c1490245ffedc212ea6dce8b87d3002df8180b96edffaf00858e85e20c346e1",
+    "docs/CURRENT_STATUS.md": "c24f941dbfbeee8b9d44f5beef97452d5ea4d35cdfe4f96fcba5a5ca11babf6b",
+    "docs/DOCUMENT_INDEX.md": "0c1a6347bf0655c2425bcfcc306578b14b64af5614a53104b50762b8fb20c576",
+    "docs/EXPERIMENT_INDEX.md": "406660ea4de86b9e51688cd87e4598ef36b1cbc4747c9e46397753dc87688185",
+    "docs/Q3_CONCEPT_NOTE.md": "29fc11f1c32d20b5f373f9efc3848ca3e55dd30c4b05013abf97f83617aa1a15",
+    "docs/Q3_FEATURE_FIREWALL.md": "22a15756d3071930fb6b4bc1439eafc7585d970280c315b9daf3faea62ec90ad",
+    "docs/Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md": "470732596d0516153c19cd26ce05362cfaebaceed1e4fcdf2d6786e0af722814",
+    "docs/Q3_RELATED_WORK_AND_DESIGN_PRIORS.md": "410d1a65f67213995d72df6ac604a2ad632a4bf7c10dee8f921e8a7b86d95e4d",
+    "docs/SCIENTIFIC_RESULTS.md": "e234f5596fa50d504777c29293f1ac254590dc117ab8034771a1bd9c326b841a",
+    "experiments/registry.yaml": "eb4cba604f41dd3a0de27e5cbf84b0698a940f78a9b5540c378b8e98e27ce264",
+    "project_state.yaml": "78b2ab901a2270bbc0040e6a4018b4eb130824cfd6c977913bc0ca3d90746162",
+    "review/q3_realizable_utility_design/CROSS_FIT_RESULTS.json": "67200712e1a17e02a35aec10165544ff934d595f554d9a6d79170cd1908b672f",
+    "review/q3_realizable_utility_design/FRESH_HOLDOUT_FEASIBILITY.json": "ef69d79ae609e9b5ee3cf48c89b58425d455fd8ee2336bbc7becbb7641d0135e",
+    "review/q3_realizable_utility_design/ITEM_EXPOSURE_LEDGER.json": "a61c105c03ed59354d3fe0678cddb36504e91729d6328a3e60ef37987495ae9a",
+    "review/q3_realizable_utility_design/OPPORTUNITY_AUDIT.json": "d102b6f8035fcd42d71abacf7cd6c69ee1b922a5ee67fc84493cdd8af1523e2d",
+    "review/q3_realizable_utility_design/POLICY_BANK_COMPARISON.json": "134ca954f389dcb868f46689a81f03138458a3c12ab7f900e97723726eab301a",
+    "review/q3_realizable_utility_design/POWER_AND_COMPUTE.json": "9b28881c48581a58cc7bd73145ff7d8f2b41b680c1d8ef51d0907bfc6b00ea1c",
+    "review/q3_realizable_utility_design/Q3_REALIZABLE_UTILITY_DESIGN_PRECHECK.json": "77420b2438d84d2b75ef80f2d3dbe1e3e859af27fc3f7170344a8620c078de06",
+    "review/q3_realizable_utility_design/Q3_REALIZABLE_UTILITY_DESIGN_PRECHECK_AMENDMENT_1.json": "8f38b0a1bb462438320563115a8542eed7b2115ca94e804f50dcae0f4a989d28",
+    "review/q3_realizable_utility_design/RECOMMENDED_PROTOCOL_DRAFT.json": "e42ea74fcd3c17bcaba3885cfd978869e175e0fbaa0df1314ca855ec2a219b79",
+    "review/q3_realizable_utility_design/ROUTER_MECHANISM_COMPARISON.json": "db95313e0e5728b226da77f74eb8de2b46a921a437e0e1d91396e3562527a62b",
+    "scripts/design_q3_realizable_utility.py": "993273891f210af2c9df91bd88f67b76e3fb9151d770d8e778046cc7d8c74bd7",
+    "scripts/render_project_state.py": "06434322da8744fb1563d9d6c1f1793d324c492bc334a5ce3923c1d381b2ea3b",
+    "tests/test_q3_realizable_utility_design.py": "0b6c6ec64c59425e3714c6cbae1d3c1cac1734ccb145c9d2cd078024c638dbdc"
+  },
+  "classification": "Q3_FRESH_HOLDOUT_INSUFFICIENT",
+  "future_holdout_outcomes_included": false,
+  "labels": [
+    "DEVELOPMENT_ONLY",
+    "POST_CLOSED_RESULT_PLANNING"
+  ],
+  "private_development_sources": {
+    "Q2_OOS_V2_SEMANTIC_SCORES.jsonl": "9f03d96d40839e228d6cfb55408ea056e262fbf7e9aef2e863080e035e4b721b",
+    "Q2_V4_1_SEMANTIC_SCORES.jsonl": "a6a9f4b419d4531716337d2277688063d5655167a5d7b1a9bd85b34217f8a33f"
+  },
+  "q3_semantic_trajectories": 0,
+  "raw_text_included": false,
+  "schema_version": "1.0"
+}

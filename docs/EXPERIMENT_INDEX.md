@@ -88,6 +88,7 @@ that subspace with arbitrary matched rank-8 orientations.
 | Stage | Class | Status | Evidence |
 |---|---|---|---|
 | Realizable collective utility | NOT_RUN | No selector, router, committee, or geometry-guided controller has been executed as Q3 | [Q3 concept note](Q3_CONCEPT_NOTE.md) |
+| Q3.0 realizable-utility design | DESIGN_ONLY / DEVELOPMENT_PLANNING | Closed-data nested cross-fitting found oracle opportunity, but no mechanism met all feasibility gates and available fresh CRUXEval families were underpowered | [design review](Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md) |
 
 Oracle pair headroom, rescue/damage decomposition, and complementarity are
 inputs to Q3 design; none is itself a Q3 result.

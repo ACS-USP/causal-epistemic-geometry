@@ -1,0 +1,30 @@
+{
+  "champion_rule": "Select the highest pooled correctness policy on the complete closed development panel after all Q3.0 method choices are frozen; ties use evaluability, lower generated-token mean, then lexicographic policy ID.",
+  "cost": "one policy generation per item plus at most one explicitly counted prompt-prefill-equivalent feature forward",
+  "execution_authorized": false,
+  "final_design_ruling": "Q3_FRESH_HOLDOUT_INSUFFICIENT",
+  "future_holdout": {
+    "available_tier_a": 23,
+    "available_tier_b": 500,
+    "permanently_allocated": false,
+    "required_minimum_N": 800
+  },
+  "future_primary_estimand": "mean family-level correctness(router-selected policy - frozen development-selected champion)",
+  "future_rollouts": 2,
+  "invalid_unevaluable": "incorrect",
+  "labels": [
+    "DEVELOPMENT_ONLY",
+    "POST_CLOSED_RESULT_PLANNING"
+  ],
+  "matched_random_subspace_specificity": "unresolved and outside the Q3 claim",
+  "missingness": "blocks completion; no imputation",
+  "multiplicity": "one primary router-versus-champion contrast; Holm within declared secondary family",
+  "preferred_mechanism_if_holdout_becomes_adequate": null,
+  "primary_inference": "one-sided paired family-level randomization test plus a simulation-calibrated paired interval",
+  "safety_guards": {
+    "commitment_validity_harm_max": 0.02,
+    "semantic_evaluability_harm_max": 0.02
+  },
+  "schema_version": "1.0",
+  "status": "DRAFT_AWAITING_PRINCIPAL_PRELOCK"
+}

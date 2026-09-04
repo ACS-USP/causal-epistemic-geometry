@@ -2,7 +2,7 @@
 
 This page summarizes current evidence for external readers. Frozen closeouts
 and forensic audits remain authoritative if any narrative conflicts with this
-summary. Last reconciled: 2026-09-03.
+summary. Last reconciled: 2026-09-04.
 
 ## Results at a glance
 
@@ -15,7 +15,7 @@ summary. Last reconciled: 2026-09-03.
 | Q2 | V4.1 relational geometry | **DEVELOPMENT — G2** | A0, A1, and A2 predict blind-spot-shape geometry; A2 does not outperform A0/A1 | 31 directions, N=300, two shells; [closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md) |
 | Q2 radial | V4.1 radial tests | **DEVELOPMENT — RS+ / RT+** | STRONG exceeds MEDIUM shape and total displacement in all 31 directions | [radial artifact](../review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json) |
 | Q2 fresh-controller validation | OOS V2 | **DEVELOPMENT — PASS** | 16/16 prospectively sampled fresh-controller A0 row associations positive | Same Qwen3-8B/CRUXEval/learned-rank-8 laboratory and fixed 31-controller atlas; [closeout](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md) |
-| Q3 | Collective utility | **NOT_RUN** | No result | [concept note](Q3_CONCEPT_NOTE.md) only |
+| Q3 | Collective utility | **NOT_RUN** | No scientific result; Q3.0 design found opportunity but insufficient fresh holdout and no mechanism meeting all development gates | [concept note](Q3_CONCEPT_NOTE.md), [design review](Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md) |
 
 ## Q1: confirmatory controllability
 

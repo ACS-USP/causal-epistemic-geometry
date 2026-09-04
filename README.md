@@ -22,11 +22,11 @@ blind spots.
   yet converted the measured complementarity into realized utility.
 
 <!-- PROJECT_STATUS:START -->
-**Current stage:** `Q2_OOS_V2_CLOSED_POSTCLOSEOUT_HARDENING` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
+**Current stage:** `Q3_0_REALIZABLE_UTILITY_DESIGN_CLOSED` — **scientific claim:** `Q2_V4_1_G2__Q2_OOS_V2_A0_PASS`.
 
-Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. The post-hoc item-bootstrap audit found no primary defect but ruled that its percentile distribution is not a calibrated conventional confidence interval.
+Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL. The separate DEVELOPMENT LiveCodeBench transfer is closed as Q1_SECOND_TASK_NO_NULL_SPECIFIC_COMPLEMENTARITY with a resolved independent audit. Historical Q2 V4.1 remains Q2_V4_1_G2 with RS+ and RT+. The closed fresh-controller validation is Q2_OOS_V2_A0_PASS and Q2_OOS_V2_FORENSIC_CLEAN: all 16 prospectively sampled fresh-controller row associations were positive. Q3.0 used the closed 300-item Q2 panel for development-only nested cross-fitting. Oracle opportunity exists, but no tested route met every feasibility/stability gate. Only 23 CRUXEval items are globally untouched and the broader 500-item candidate-policy-unexposed pool is below the frozen N=800 power requirement. Q3 remains NOT_RUN.
 
-**Next authorized action:** COMPLETE_MODEL_FREE_MATCHED_RANDOM_RANK8_CONTROL_DESIGN_ONLY
+**Next authorized action:** PRINCIPAL_REVIEW_OF_Q3_0_HOLDOUT_AND_SELECTABILITY_BLOCKERS
 <!-- PROJECT_STATUS:END -->
 
 This block is generated from [`project_state.yaml`](project_state.yaml). See the

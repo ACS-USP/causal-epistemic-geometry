@@ -2695,3 +2695,50 @@ experiments:
     model_inference: false
     q3: NOT_RUN
     next_action: PUBLICATION_LANGUAGE_RECALIBRATED
+
+  - id: Q3_REALIZABLE_UTILITY_DESIGN
+    version: Q3-0-DESIGN-FEASIBILITY
+    stage: DESIGN_ONLY_CLOSED
+    question: >-
+      Can measured or predicted epistemic complementarity be converted into
+      realizable collective utility without oracle access?
+    instrument: >-
+      Release-safe 800-item exposure ledger; closed 300-item Q2 development
+      panel with 31 historical and 16 OOS controllers; nested 5x4 item-level
+      cross-fitting; K in {2,4,8}; one-call, baseline-first, and committee
+      mechanisms; model-free paired power simulation.
+    model_policy: NO_MODEL_CPU_ONLY_CLOSED_DATA_DESIGN
+    status: CLOSED_DESIGN_ONLY
+    outcome: Q3_FRESH_HOLDOUT_INSUFFICIENT
+    scientific_interpretation: >-
+      Closed-data policy banks exhibit substantial oracle opportunity, but no
+      tested mechanism met every prespecified realization and fold-stability
+      gate. Only 23 CRUXEval families are globally untouched; the broader 500
+      families without outcomes from the exact Q2 candidate controllers remain
+      below the frozen N=800 requirement for 80% planning power at a 3-point
+      gain under paired discordance 0.20 and two rollouts. This is a design
+      ruling, not a negative Q3 scientific result.
+    source_branch: research/q3-realizable-utility-design
+    source_commit: 21e10901eea82575ac757b4769800fd9b32e6d66
+    base_commit: a230642be49ec4544b7c28a24951b594656b522c
+    precheck_commit: 21e10901eea82575ac757b4769800fd9b32e6d66
+    staged_mechanism_amendment_commit: 8b128499d9d446491a5e53f09607ffaa3ade771b
+    artifact: docs/Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md
+    review_namespace: review/q3_realizable_utility_design
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    development_panel_n: 300
+    development_policies: 95
+    globally_untouched_families: 23
+    candidate_policy_unexposed_families: 500
+    minimum_power_qualified_families: 800
+    preferred_opportunity_bank_size: 8
+    preferred_mechanism: NONE_READY_FOR_PRELOCK
+    semantic_trajectories: 0
+    model_inference: false
+    prompt_activation_capture: 0
+    future_correctness_inspected: false
+    future_holdout_allocated: false
+    q1_q2_classifications_changed: false
+    q3: NOT_RUN
+    next_action: PRINCIPAL_REVIEW_OF_HOLDOUT_AND_SELECTABILITY_BLOCKERS

@@ -101,6 +101,9 @@ current instruction source.
 | `review/q2_oos_fresh_controller_design/v2_semantic_execution/item_bootstrap_diagnostic/Q2_OOS_V2_ITEM_BOOTSTRAP_DIAGNOSTIC_REPORT.md` | Post-hoc exact reconstruction and calibration audit: archived item bootstrap retained as panel-perturbation sensitivity, not conventional CI |
 | `docs/Q2_V4_1_SEMANTIC_EXECUTION_CLOSEOUT.md` | Short canonical pointer to the Q2 V4.1 semantic closeout bundle |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
+| `docs/Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md` | Q3.0 closed-data feasibility review; Q3 remains not run |
+| `docs/Q3_FEATURE_FIREWALL.md` | Prospective deployment-time feature and leakage boundary for Q3 |
+| `docs/Q3_RELATED_WORK_AND_DESIGN_PRIORS.md` | Primary-source methodological map for routing, selection, verification, ensembles, and budgeted inference |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
 | `docs/GATE4_MICRO_Q1_CLOSEOUT.md` | First original development micro-Q1 closeout |
