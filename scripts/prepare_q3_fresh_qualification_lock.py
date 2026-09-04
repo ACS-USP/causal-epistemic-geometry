@@ -140,13 +140,13 @@ def main() -> None:
                 "prompt_sha256": prompt_hash,
             }
         )
-    if args.private_prompt_output.exists():
-        raise SystemExit("private prompt-only output already exists")
     args.private_prompt_output.parent.mkdir(parents=True, mode=0o700, exist_ok=True)
-    args.private_prompt_output.write_text(
-        "".join(json.dumps(row, sort_keys=True) + "\n" for row in prompt_rows),
-        encoding="utf-8",
-    )
+    prompt_bytes = "".join(json.dumps(row, sort_keys=True) + "\n" for row in prompt_rows)
+    if args.private_prompt_output.exists():
+        if args.private_prompt_output.read_text(encoding="utf-8") != prompt_bytes:
+            raise SystemExit("existing private prompt-only output differs")
+    else:
+        args.private_prompt_output.write_text(prompt_bytes, encoding="utf-8")
     prompt_only_sha = sha256_file(args.private_prompt_output)
     system = read_json(SYSTEM)
     if system["router"]["private_parameter_manifest"]["sha256"] != EXPECTED_ROUTER_SHA:
@@ -205,6 +205,12 @@ def main() -> None:
         "dataset_seal_sha256": sha256_file(DATASET_SEAL),
         "qualification_manifest_sha256": sha256_file(QUALIFICATION_MANIFEST),
         "private_qualification_dataset_sha256": EXPECTED_DATASET_SHA,
+        "private_prompt_only_dataset": {
+            "sha256": prompt_only_sha,
+            "rows": 300,
+            "contains_references": False,
+            "tracked_in_git": False,
+        },
         "schedule_sha256": sha256_file(schedule_path),
         "implementation": {
             "runner": str(RUNNER.relative_to(ROOT)),
