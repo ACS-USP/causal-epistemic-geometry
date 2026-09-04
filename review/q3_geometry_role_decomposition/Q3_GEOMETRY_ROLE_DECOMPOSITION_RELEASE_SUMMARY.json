@@ -1,0 +1,996 @@
+{
+  "evidence_class": [
+    "DEVELOPMENT_ONLY",
+    "POST_CLOSED_RESULT_PLANNING"
+  ],
+  "firewall": {
+    "fresh_evaluation_outcomes_inspected": false,
+    "new_qwen_forwards": 0,
+    "new_semantic_trajectories": 0,
+    "q1_q2_q3_1_classifications_changed": false,
+    "q3_confirmatory_experiment": "NOT_RUN"
+  },
+  "future_instrument": {
+    "future_outcomes_inspected": false,
+    "holdout_allocated": false,
+    "items_generated": 0,
+    "minimum_family_count": 800
+  },
+  "immutable_q3_1": {
+    "classification": "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL",
+    "classification_mutable": false,
+    "positive_outer_folds": 5,
+    "primary_routed_gain": 0.05333333333333334,
+    "single_forward_deployment_feasible": true,
+    "true_minus_geometry_blind_gain": 0.003333333333333334
+  },
+  "part_a": {
+    "attribution": {
+      "a0_gain_percentile_matched_random": 0.986328125,
+      "a0_headroom_percentile_matched_random": 0.990234375,
+      "a0_minus_matched_median_gain": 0.03166666666666667,
+      "a0_nonnegative_fold_contrasts": 5,
+      "gain_randomization_p": 0.021442495126705652,
+      "gates": {
+        "a0_realization_gain": true,
+        "fold_consistency": true,
+        "gain_over_matched_median": true,
+        "gain_percentile": true,
+        "gain_randomization_p": true,
+        "headroom_percentile": true,
+        "headroom_randomization_p": true
+      },
+      "headroom_randomization_p": 0.015594541910331383,
+      "matched_median_fold_gains": [
+        0.0,
+        0.008333333333333333,
+        0.0,
+        0.0,
+        0.016666666666666666
+      ]
+    },
+    "distributions": {
+      "COMPETENCE_MATCHED_RANDOM": {
+        "oracle_headroom_quantiles": [
+          0.085,
+          0.11666666666666667,
+          0.145,
+          0.1520416666666666
+        ],
+        "replicates": 512,
+        "routed_accuracy_quantiles": [
+          0.4483333333333333,
+          0.475,
+          0.5,
+          0.505
+        ],
+        "routed_gain_quantiles": [
+          -0.023333333333333334,
+          0.008333333333333333,
+          0.035,
+          0.03833333333333333
+        ]
+      },
+      "DETERMINISTIC_RANDOM": {
+        "oracle_headroom_quantiles": [
+          0.09629166666666666,
+          0.13333333333333333,
+          0.16574999999999998,
+          0.17333333333333334
+        ],
+        "replicates": 512,
+        "routed_accuracy_quantiles": [
+          0.46,
+          0.485,
+          0.5083333333333333,
+          0.5116666666666667
+        ],
+        "routed_gain_quantiles": [
+          -0.01,
+          0.016666666666666666,
+          0.045,
+          0.04833333333333333
+        ]
+      },
+      "LOW_A0_DIVERSITY": {
+        "oracle_headroom_quantiles": [
+          0.084625,
+          0.11333333333333333,
+          0.14333333333333334,
+          0.14833333333333334
+        ],
+        "replicates": 512,
+        "routed_accuracy_quantiles": [
+          0.45,
+          0.47833333333333333,
+          0.5024166666666666,
+          0.5066666666666667
+        ],
+        "routed_gain_quantiles": [
+          -0.021666666666666667,
+          0.008333333333333333,
+          0.03666666666666667,
+          0.04
+        ]
+      }
+    },
+    "fixed_banks": {
+      "A0": {
+        "commitment_validity": 0.9783333333333334,
+        "distinct_selected_policies": 6,
+        "fold_banks": [
+          [
+            "V4_DIRECTION_31_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_19_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+            "V4_DIRECTION_35_STRONG"
+          ],
+          [
+            "V4_DIRECTION_31_STRONG",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_19_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+            "V4_DIRECTION_35_STRONG"
+          ],
+          [
+            "V4_DIRECTION_31_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_19_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+            "V4_DIRECTION_35_STRONG"
+          ],
+          [
+            "V4_DIRECTION_31_STRONG",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_19_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+            "V4_DIRECTION_35_STRONG"
+          ],
+          [
+            "V4_DIRECTION_31_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_19_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+            "V4_DIRECTION_35_STRONG"
+          ]
+        ],
+        "fold_gain_sd": 0.02850438562747845,
+        "fold_gains": [
+          0.025,
+          0.05,
+          0.05,
+          0.0,
+          0.075
+        ],
+        "maximum_policy_share": 0.48333333333333334,
+        "mean_generated_tokens": 99.24666666666667,
+        "oracle_accuracy": 0.6216666666666667,
+        "oracle_fraction_realized": 0.25263157894736843,
+        "oracle_headroom": 0.15833333333333333,
+        "own_champion_accuracy": 0.4633333333333333,
+        "positive_fold_count": 4,
+        "routed_accuracy": 0.5033333333333333,
+        "routed_gain": 0.04,
+        "semantic_evaluability": 0.9783333333333334,
+        "worst_fold_gain": 0.0
+      },
+      "A1": {
+        "commitment_validity": 0.9783333333333334,
+        "distinct_selected_policies": 8,
+        "fold_banks": [
+          [
+            "V4_DIRECTION_31_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "V4_DIRECTION_34_MEDIUM",
+            "V4_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_07_MEDIUM",
+            "V4_DIRECTION_18_MEDIUM",
+            "V4_DIRECTION_08_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_31_STRONG",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "V4_DIRECTION_34_MEDIUM",
+            "V4_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_07_MEDIUM",
+            "V4_DIRECTION_18_MEDIUM",
+            "V4_DIRECTION_08_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_31_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "V4_DIRECTION_34_MEDIUM",
+            "V4_DIRECTION_13_STRONG",
+            "V4_DIRECTION_07_MEDIUM",
+            "V4_DIRECTION_18_MEDIUM",
+            "V4_DIRECTION_08_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_31_STRONG",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "V4_DIRECTION_34_MEDIUM",
+            "V4_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_07_MEDIUM",
+            "V4_DIRECTION_18_MEDIUM",
+            "V4_DIRECTION_08_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_31_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "V4_DIRECTION_34_MEDIUM",
+            "V4_DIRECTION_13_STRONG",
+            "V4_DIRECTION_07_MEDIUM",
+            "V4_DIRECTION_18_MEDIUM",
+            "V4_DIRECTION_08_STRONG"
+          ]
+        ],
+        "fold_gain_sd": 0.02725904538966021,
+        "fold_gains": [
+          -0.03333333333333333,
+          0.025,
+          0.0,
+          0.025,
+          0.03333333333333333
+        ],
+        "maximum_policy_share": 0.24666666666666667,
+        "mean_generated_tokens": 84.98166666666667,
+        "oracle_accuracy": 0.58,
+        "oracle_fraction_realized": 0.08,
+        "oracle_headroom": 0.125,
+        "own_champion_accuracy": 0.455,
+        "positive_fold_count": 3,
+        "routed_accuracy": 0.465,
+        "routed_gain": 0.01,
+        "semantic_evaluability": 0.9783333333333334,
+        "worst_fold_gain": -0.03333333333333333
+      },
+      "A2": {
+        "commitment_validity": 0.9683333333333334,
+        "distinct_selected_policies": 8,
+        "fold_banks": [
+          [
+            "V4_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+            "V4_DIRECTION_02_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_00_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+            "V4_DIRECTION_02_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_00_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_09_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+            "V4_DIRECTION_02_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_00_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+            "V4_DIRECTION_02_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_00_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_01_MEDIUM",
+            "V4_DIRECTION_02_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_00_MEDIUM",
+            "V4_DIRECTION_10_MEDIUM",
+            "V4_DIRECTION_32_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_04_MEDIUM"
+          ]
+        ],
+        "fold_gain_sd": 0.05451809077932042,
+        "fold_gains": [
+          0.058333333333333334,
+          0.10833333333333334,
+          -0.025,
+          -0.008333333333333333,
+          0.058333333333333334
+        ],
+        "maximum_policy_share": 0.42333333333333334,
+        "mean_generated_tokens": 164.25166666666667,
+        "oracle_accuracy": 0.6066666666666667,
+        "oracle_fraction_realized": 0.2987012987012987,
+        "oracle_headroom": 0.12833333333333333,
+        "own_champion_accuracy": 0.47833333333333333,
+        "positive_fold_count": 3,
+        "routed_accuracy": 0.5166666666666667,
+        "routed_gain": 0.03833333333333333,
+        "semantic_evaluability": 0.9683333333333334,
+        "worst_fold_gain": -0.025
+      },
+      "OUTCOME_OPTIMIZED_UPPER_BOUND": {
+        "commitment_validity": 0.9766666666666667,
+        "distinct_selected_policies": 12,
+        "fold_banks": [
+          [
+            "V4_DIRECTION_02_MEDIUM",
+            "V4_DIRECTION_09_STRONG",
+            "V4_DIRECTION_35_STRONG",
+            "Q2_OOS_V2_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_02_STRONG",
+            "V4_DIRECTION_13_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_07_MEDIUM",
+            "V4_DIRECTION_15_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_09_STRONG",
+            "V4_DIRECTION_35_STRONG",
+            "Q2_OOS_V2_DIRECTION_14_MEDIUM",
+            "V4_DIRECTION_31_STRONG",
+            "V4_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_17_STRONG",
+            "Q2_OOS_V2_DIRECTION_11_STRONG"
+          ],
+          [
+            "V4_DIRECTION_17_MEDIUM",
+            "Q2_OOS_V2_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_02_STRONG",
+            "Q2_OOS_V2_DIRECTION_11_STRONG",
+            "V4_DIRECTION_13_STRONG",
+            "Q2_OOS_V2_DIRECTION_14_MEDIUM",
+            "V4_DIRECTION_20_STRONG",
+            "V4_DIRECTION_11_STRONG"
+          ],
+          [
+            "V4_DIRECTION_35_STRONG",
+            "Q2_OOS_V2_DIRECTION_09_STRONG",
+            "V4_DIRECTION_19_MEDIUM",
+            "V4_DIRECTION_09_STRONG",
+            "V4_DIRECTION_20_STRONG",
+            "V4_DIRECTION_31_STRONG",
+            "V4_DIRECTION_13_MEDIUM",
+            "V4_DIRECTION_06_MEDIUM"
+          ],
+          [
+            "V4_DIRECTION_02_MEDIUM",
+            "V4_DIRECTION_09_STRONG",
+            "V4_DIRECTION_13_STRONG",
+            "V4_DIRECTION_24_STRONG",
+            "Q2_OOS_V2_DIRECTION_09_STRONG",
+            "Q2_OOS_V2_DIRECTION_14_MEDIUM",
+            "V4_DIRECTION_20_STRONG",
+            "V4_DIRECTION_01_STRONG"
+          ]
+        ],
+        "fold_gain_sd": 0.028259708263021953,
+        "fold_gains": [
+          0.058333333333333334,
+          0.06666666666666667,
+          0.0,
+          0.016666666666666666,
+          0.025
+        ],
+        "maximum_policy_share": 0.26,
+        "mean_generated_tokens": 135.12166666666667,
+        "oracle_accuracy": 0.6616666666666666,
+        "oracle_fraction_realized": 0.16,
+        "oracle_headroom": 0.20833333333333334,
+        "own_champion_accuracy": 0.4533333333333333,
+        "positive_fold_count": 4,
+        "routed_accuracy": 0.4866666666666667,
+        "routed_gain": 0.03333333333333333,
+        "semantic_evaluability": 0.9766666666666667,
+        "worst_fold_gain": 0.0
+      }
+    },
+    "question": "geometry as policy-bank construction",
+    "ruling": "GEOMETRY_BANK_SELECTION_SUPPORTED"
+  },
+  "part_b": {
+    "attribution": {
+      "differences": {
+        "AGNOSTIC": {
+          "fold_differences": [
+            0.005208333333333334,
+            -0.028125,
+            0.043229166666666666,
+            0.008854166666666666,
+            -0.0005208333333333332
+          ],
+          "nonnegative_fold_count": 3,
+          "predictive_log_loss_improvement": 0.01777847093260998,
+          "routing_gain_difference": 0.005729166666666667
+        },
+        "PERMUTED": {
+          "fold_differences": [
+            -0.016666666666666663,
+            0.008333333333333331,
+            0.041666666666666664,
+            0.016666666666666666,
+            0.025
+          ],
+          "nonnegative_fold_count": 4,
+          "predictive_log_loss_improvement": 0.020239246239632358,
+          "routing_gain_difference": 0.015
+        },
+        "RANDOM": {
+          "fold_differences": [
+            0.008333333333333335,
+            -0.016666666666666666,
+            0.016666666666666663,
+            0.025,
+            0.04166666666666667
+          ],
+          "nonnegative_fold_count": 4,
+          "predictive_log_loss_improvement": 0.019183004553934957,
+          "routing_gain_difference": 0.015
+        }
+      },
+      "gates": {
+        "folds_over_agnostic": false,
+        "folds_over_permuted": true,
+        "folds_over_random": true,
+        "log_loss_over_agnostic": true,
+        "log_loss_over_permuted": true,
+        "log_loss_over_random": true,
+        "routing_over_agnostic": false,
+        "routing_over_permuted": true,
+        "routing_over_random": true,
+        "true_positive_folds": false,
+        "true_realization_gain": false,
+        "true_worst_fold": false
+      }
+    },
+    "fixed_controller_split": {
+      "held_out_fresh": [
+        "Q2_OOS_V2_DIRECTION_01",
+        "Q2_OOS_V2_DIRECTION_02",
+        "Q2_OOS_V2_DIRECTION_03",
+        "Q2_OOS_V2_DIRECTION_04",
+        "Q2_OOS_V2_DIRECTION_05",
+        "Q2_OOS_V2_DIRECTION_06",
+        "Q2_OOS_V2_DIRECTION_07",
+        "Q2_OOS_V2_DIRECTION_08",
+        "Q2_OOS_V2_DIRECTION_09",
+        "Q2_OOS_V2_DIRECTION_11",
+        "Q2_OOS_V2_DIRECTION_13",
+        "Q2_OOS_V2_DIRECTION_14",
+        "Q2_OOS_V2_DIRECTION_15",
+        "Q2_OOS_V2_DIRECTION_16",
+        "Q2_OOS_V2_DIRECTION_17",
+        "Q2_OOS_V2_DIRECTION_18"
+      ],
+      "training_historical": [
+        "V4_DIRECTION_00",
+        "V4_DIRECTION_01",
+        "V4_DIRECTION_02",
+        "V4_DIRECTION_03",
+        "V4_DIRECTION_04",
+        "V4_DIRECTION_06",
+        "V4_DIRECTION_07",
+        "V4_DIRECTION_08",
+        "V4_DIRECTION_09",
+        "V4_DIRECTION_10",
+        "V4_DIRECTION_11",
+        "V4_DIRECTION_13",
+        "V4_DIRECTION_15",
+        "V4_DIRECTION_17",
+        "V4_DIRECTION_18",
+        "V4_DIRECTION_19",
+        "V4_DIRECTION_20",
+        "V4_DIRECTION_22",
+        "V4_DIRECTION_23",
+        "V4_DIRECTION_24",
+        "V4_DIRECTION_26",
+        "V4_DIRECTION_28",
+        "V4_DIRECTION_29",
+        "V4_DIRECTION_30",
+        "V4_DIRECTION_31",
+        "V4_DIRECTION_32",
+        "V4_DIRECTION_33",
+        "V4_DIRECTION_34",
+        "V4_DIRECTION_35",
+        "V4_DIRECTION_37",
+        "V4_DIRECTION_39"
+      ]
+    },
+    "historical_global_shell_prior": {
+      "folds": [
+        {
+          "fold": 0,
+          "historical_shell_accuracy": {
+            "MEDIUM": 0.467271505376344,
+            "STRONG": 0.4439516129032258
+          },
+          "preferred_shell": "MEDIUM",
+          "random_policy_accuracy": 0.4609375,
+          "routing_accuracy": 0.4630208333333333,
+          "routing_gain": 0.0020833333333333333
+        },
+        {
+          "fold": 1,
+          "historical_shell_accuracy": {
+            "MEDIUM": 0.46310483870967734,
+            "STRONG": 0.4489247311827957
+          },
+          "preferred_shell": "MEDIUM",
+          "random_policy_accuracy": 0.46197916666666666,
+          "routing_accuracy": 0.47708333333333336,
+          "routing_gain": 0.015104166666666667
+        },
+        {
+          "fold": 2,
+          "historical_shell_accuracy": {
+            "MEDIUM": 0.44959677419354843,
+            "STRONG": 0.4285618279569892
+          },
+          "preferred_shell": "MEDIUM",
+          "random_policy_accuracy": 0.5338541666666666,
+          "routing_accuracy": 0.5354166666666667,
+          "routing_gain": 0.0015625
+        },
+        {
+          "fold": 3,
+          "historical_shell_accuracy": {
+            "MEDIUM": 0.4729838709677419,
+            "STRONG": 0.4551747311827957
+          },
+          "preferred_shell": "MEDIUM",
+          "random_policy_accuracy": 0.4315104166666667,
+          "routing_accuracy": 0.4427083333333333,
+          "routing_gain": 0.011197916666666667
+        },
+        {
+          "fold": 4,
+          "historical_shell_accuracy": {
+            "MEDIUM": 0.4849462365591397,
+            "STRONG": 0.471505376344086
+          },
+          "preferred_shell": "MEDIUM",
+          "random_policy_accuracy": 0.38567708333333334,
+          "routing_accuracy": 0.4005208333333333,
+          "routing_gain": 0.01484375
+        }
+      ],
+      "random_policy_accuracy": 0.45479166666666665,
+      "routed_accuracy": 0.46375,
+      "routing_gain": 0.008958333333333336
+    },
+    "models": {
+      "AGNOSTIC": {
+        "fold_gain_sd": 0.004631464841695456,
+        "fold_gains": [
+          0.008854166666666666,
+          0.0078125,
+          0.00625,
+          0.009635416666666667,
+          -0.0018229166666666667
+        ],
+        "fold_hyperparameters": [
+          {
+            "dimension": 16,
+            "inner_brier": 0.19602725189333942,
+            "inner_log_loss": 0.598312370637256,
+            "l2": 10.0,
+            "rank": 2
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.18570070723804877,
+            "inner_log_loss": 0.574127098580008,
+            "l2": 10.0,
+            "rank": 2
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.18845448295784256,
+            "inner_log_loss": 0.580966669954232,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 16,
+            "inner_brier": 0.18532167023315957,
+            "inner_log_loss": 0.5773713180663221,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.18041618788507058,
+            "inner_log_loss": 0.5611592168528639,
+            "l2": 10.0,
+            "rank": 1
+          }
+        ],
+        "mean_item_policy_rank_correlation": 0.04678169573213355,
+        "oracle_accuracy": 0.7083333333333334,
+        "oracle_fraction_realized": 0.024239934264585043,
+        "oracle_headroom_over_random": 0.25354166666666667,
+        "per_fresh_controller_mean_prediction_residual": {
+          "Q2_OOS_V2_DIRECTION_01": 0.013656228967363671,
+          "Q2_OOS_V2_DIRECTION_02": -0.006343771032636328,
+          "Q2_OOS_V2_DIRECTION_03": 0.011156228967363667,
+          "Q2_OOS_V2_DIRECTION_04": -0.008010437699302996,
+          "Q2_OOS_V2_DIRECTION_05": 0.014489562300697001,
+          "Q2_OOS_V2_DIRECTION_06": 0.00032289563403033867,
+          "Q2_OOS_V2_DIRECTION_07": -0.008010437699302996,
+          "Q2_OOS_V2_DIRECTION_08": 0.012822895634030334,
+          "Q2_OOS_V2_DIRECTION_09": -0.003843771032636328,
+          "Q2_OOS_V2_DIRECTION_11": -0.01467710436596966,
+          "Q2_OOS_V2_DIRECTION_13": 0.03532289563403034,
+          "Q2_OOS_V2_DIRECTION_14": 0.00032289563403033796,
+          "Q2_OOS_V2_DIRECTION_15": -0.0005104376993029991,
+          "Q2_OOS_V2_DIRECTION_16": 0.026989562300697004,
+          "Q2_OOS_V2_DIRECTION_17": 0.014489562300697005,
+          "Q2_OOS_V2_DIRECTION_18": -0.013010437699302995
+        },
+        "positive_fold_count": 4,
+        "predictive": {
+          "brier": 0.19348342366617688,
+          "ece_10": 0.0569287088224419,
+          "log_loss": 0.5940247255680322
+        },
+        "random_policy_accuracy": 0.45479166666666665,
+        "rank_degenerate_items": 145,
+        "routed_accuracy": 0.4609375,
+        "routing_gain": 0.006145833333333333,
+        "top_k_policy_recall": {
+          "1": null,
+          "3": null,
+          "5": null
+        },
+        "worst_fold_gain": -0.0018229166666666667
+      },
+      "PERMUTED": {
+        "fold_gain_sd": 0.025139988921412636,
+        "fold_gains": [
+          0.030729166666666665,
+          -0.028645833333333332,
+          0.0078125,
+          0.0018229166666666667,
+          -0.02734375
+        ],
+        "fold_hyperparameters": [
+          {
+            "dimension": 8,
+            "inner_brier": 0.19306385035272325,
+            "inner_log_loss": 0.5911107700558721,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.1881054086761041,
+            "inner_log_loss": 0.5800382856974129,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.1961918316974492,
+            "inner_log_loss": 0.5989954250176934,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 16,
+            "inner_brier": 0.1850546188888512,
+            "inner_log_loss": 0.570225022636845,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 16,
+            "inner_brier": 0.1806522415510414,
+            "inner_log_loss": 0.564616507266265,
+            "l2": 10.0,
+            "rank": 1
+          }
+        ],
+        "mean_item_policy_rank_correlation": -0.0021440961788596813,
+        "oracle_accuracy": 0.7083333333333334,
+        "oracle_fraction_realized": -0.012325390304026296,
+        "oracle_headroom_over_random": 0.25354166666666667,
+        "per_fresh_controller_mean_prediction_residual": {
+          "Q2_OOS_V2_DIRECTION_01": 0.004978499930549867,
+          "Q2_OOS_V2_DIRECTION_02": -0.006577990506390941,
+          "Q2_OOS_V2_DIRECTION_03": 0.017754078446754556,
+          "Q2_OOS_V2_DIRECTION_04": -0.02129291951234407,
+          "Q2_OOS_V2_DIRECTION_05": 0.015306195143660743,
+          "Q2_OOS_V2_DIRECTION_06": -0.006384583101653732,
+          "Q2_OOS_V2_DIRECTION_07": -0.008274674004966,
+          "Q2_OOS_V2_DIRECTION_08": 0.024373010984427977,
+          "Q2_OOS_V2_DIRECTION_09": -0.015895678156363294,
+          "Q2_OOS_V2_DIRECTION_11": -0.024745635120155728,
+          "Q2_OOS_V2_DIRECTION_13": 0.035106647392470935,
+          "Q2_OOS_V2_DIRECTION_14": -0.001468062791450268,
+          "Q2_OOS_V2_DIRECTION_15": -0.00885701798366188,
+          "Q2_OOS_V2_DIRECTION_16": 0.027082266468412292,
+          "Q2_OOS_V2_DIRECTION_17": 0.021989406979056835,
+          "Q2_OOS_V2_DIRECTION_18": -0.021746765339827955
+        },
+        "positive_fold_count": 3,
+        "predictive": {
+          "brier": 0.1943987062754359,
+          "ece_10": 0.04457330450507504,
+          "log_loss": 0.5964855008750546
+        },
+        "random_policy_accuracy": 0.45479166666666665,
+        "rank_degenerate_items": 145,
+        "routed_accuracy": 0.45166666666666666,
+        "routing_gain": -0.003125,
+        "top_k_policy_recall": {
+          "1": 0.7,
+          "3": 0.7766666666666667,
+          "5": 0.8133333333333332
+        },
+        "worst_fold_gain": -0.028645833333333332
+      },
+      "RANDOM": {
+        "fold_gain_sd": 0.02762810970273804,
+        "fold_gains": [
+          0.005729166666666666,
+          -0.0036458333333333334,
+          0.0328125,
+          -0.006510416666666667,
+          -0.04401041666666667
+        ],
+        "fold_hyperparameters": [
+          {
+            "dimension": 8,
+            "inner_brier": 0.18977519076404414,
+            "inner_log_loss": 0.5847126131001754,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.18723450131700942,
+            "inner_log_loss": 0.5782663747492406,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.19008750712204486,
+            "inner_log_loss": 0.5844775245514299,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 16,
+            "inner_brier": 0.1810460599557272,
+            "inner_log_loss": 0.5691259232483556,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 16,
+            "inner_brier": 0.18308927820261192,
+            "inner_log_loss": 0.5702902843123803,
+            "l2": 10.0,
+            "rank": 1
+          }
+        ],
+        "mean_item_policy_rank_correlation": 0.017860051356718865,
+        "oracle_accuracy": 0.7083333333333334,
+        "oracle_fraction_realized": -0.012325390304026296,
+        "oracle_headroom_over_random": 0.25354166666666667,
+        "per_fresh_controller_mean_prediction_residual": {
+          "Q2_OOS_V2_DIRECTION_01": 0.024726667704977827,
+          "Q2_OOS_V2_DIRECTION_02": -0.01834576928614576,
+          "Q2_OOS_V2_DIRECTION_03": 0.01234592855980521,
+          "Q2_OOS_V2_DIRECTION_04": -0.015247421267749296,
+          "Q2_OOS_V2_DIRECTION_05": 0.025317814000486598,
+          "Q2_OOS_V2_DIRECTION_06": 0.011376003285845043,
+          "Q2_OOS_V2_DIRECTION_07": -0.02284115846161301,
+          "Q2_OOS_V2_DIRECTION_08": -0.002533289137692421,
+          "Q2_OOS_V2_DIRECTION_09": -0.012185072021166332,
+          "Q2_OOS_V2_DIRECTION_11": -0.02403519675940945,
+          "Q2_OOS_V2_DIRECTION_13": 0.033223531696221414,
+          "Q2_OOS_V2_DIRECTION_14": -0.009835094914755253,
+          "Q2_OOS_V2_DIRECTION_15": 0.0046893844605671664,
+          "Q2_OOS_V2_DIRECTION_16": 0.02321200901678799,
+          "Q2_OOS_V2_DIRECTION_17": 0.016177236435584313,
+          "Q2_OOS_V2_DIRECTION_18": 0.0006207889628473155
+        },
+        "positive_fold_count": 2,
+        "predictive": {
+          "brier": 0.19417965945237645,
+          "ece_10": 0.04391181509012774,
+          "log_loss": 0.5954292591893572
+        },
+        "random_policy_accuracy": 0.45479166666666665,
+        "rank_degenerate_items": 145,
+        "routed_accuracy": 0.45166666666666666,
+        "routing_gain": -0.003125,
+        "top_k_policy_recall": {
+          "1": 0.7066666666666667,
+          "3": 0.79,
+          "5": 0.8166666666666668
+        },
+        "worst_fold_gain": -0.04401041666666667
+      },
+      "TRUE": {
+        "fold_gain_sd": 0.02598470332441067,
+        "fold_gains": [
+          0.0140625,
+          -0.0203125,
+          0.049479166666666664,
+          0.018489583333333334,
+          -0.00234375
+        ],
+        "fold_hyperparameters": [
+          {
+            "dimension": 8,
+            "inner_brier": 0.19679357008937245,
+            "inner_log_loss": 0.6007755027409181,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.18541766641446455,
+            "inner_log_loss": 0.5743997864544442,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 16,
+            "inner_brier": 0.1923421139459276,
+            "inner_log_loss": 0.5907770591570659,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.18973215354341819,
+            "inner_log_loss": 0.5841422494012888,
+            "l2": 10.0,
+            "rank": 1
+          },
+          {
+            "dimension": 8,
+            "inner_brier": 0.1865272115393194,
+            "inner_log_loss": 0.576202269435202,
+            "l2": 10.0,
+            "rank": 1
+          }
+        ],
+        "mean_item_policy_rank_correlation": 0.09003469413593876,
+        "oracle_accuracy": 0.7083333333333334,
+        "oracle_fraction_realized": 0.04683648315529992,
+        "oracle_headroom_over_random": 0.25354166666666667,
+        "per_fresh_controller_mean_prediction_residual": {
+          "Q2_OOS_V2_DIRECTION_01": 0.006042248238617438,
+          "Q2_OOS_V2_DIRECTION_02": 0.006725483488168455,
+          "Q2_OOS_V2_DIRECTION_03": 0.012387465173357419,
+          "Q2_OOS_V2_DIRECTION_04": 0.00834900017248351,
+          "Q2_OOS_V2_DIRECTION_05": -0.001935866149914945,
+          "Q2_OOS_V2_DIRECTION_06": 0.002910135308517637,
+          "Q2_OOS_V2_DIRECTION_07": 0.01975678081133563,
+          "Q2_OOS_V2_DIRECTION_08": 0.0008668378693829336,
+          "Q2_OOS_V2_DIRECTION_09": -0.00829456209865998,
+          "Q2_OOS_V2_DIRECTION_11": 0.01355306770318403,
+          "Q2_OOS_V2_DIRECTION_13": 0.01994839798543542,
+          "Q2_OOS_V2_DIRECTION_14": -0.0038473343407396093,
+          "Q2_OOS_V2_DIRECTION_15": -0.0007345691508976504,
+          "Q2_OOS_V2_DIRECTION_16": 0.011182372845134009,
+          "Q2_OOS_V2_DIRECTION_17": 0.006147995340392365,
+          "Q2_OOS_V2_DIRECTION_18": 0.003938861715779208
+        },
+        "positive_fold_count": 3,
+        "predictive": {
+          "brier": 0.1877179516393339,
+          "ece_10": 0.04310030052163038,
+          "log_loss": 0.5762462546354222
+        },
+        "random_policy_accuracy": 0.45479166666666665,
+        "rank_degenerate_items": 145,
+        "routed_accuracy": 0.4666666666666667,
+        "routing_gain": 0.011875,
+        "top_k_policy_recall": {
+          "1": 0.7133333333333333,
+          "3": 0.8099999999999999,
+          "5": 0.86
+        },
+        "worst_fold_gain": -0.0203125
+      }
+    },
+    "question": "historical-to-fresh controller routing transfer",
+    "ruling": "CONTROLLER_OOS_TRANSFER_NOT_SUPPORTED",
+    "true_geometry_kernel_prior": {
+      "folds": [
+        {
+          "bandwidth": 4.3271555974711235,
+          "fold": 0,
+          "random_policy_accuracy": 0.4609375,
+          "routing_accuracy": 0.43333333333333335,
+          "routing_gain": -0.027604166666666666,
+          "selected_policy": "Q2_OOS_V2_DIRECTION_07_STRONG"
+        },
+        {
+          "bandwidth": 4.3271555974711235,
+          "fold": 1,
+          "random_policy_accuracy": 0.46197916666666666,
+          "routing_accuracy": 0.44166666666666665,
+          "routing_gain": -0.0203125,
+          "selected_policy": "Q2_OOS_V2_DIRECTION_07_STRONG"
+        },
+        {
+          "bandwidth": 4.3271555974711235,
+          "fold": 2,
+          "random_policy_accuracy": 0.5338541666666666,
+          "routing_accuracy": 0.5583333333333333,
+          "routing_gain": 0.024479166666666666,
+          "selected_policy": "Q2_OOS_V2_DIRECTION_07_MEDIUM"
+        },
+        {
+          "bandwidth": 4.3271555974711235,
+          "fold": 3,
+          "random_policy_accuracy": 0.4315104166666667,
+          "routing_accuracy": 0.45,
+          "routing_gain": 0.018489583333333334,
+          "selected_policy": "Q2_OOS_V2_DIRECTION_07_STRONG"
+        },
+        {
+          "bandwidth": 4.3271555974711235,
+          "fold": 4,
+          "random_policy_accuracy": 0.38567708333333334,
+          "routing_accuracy": 0.36666666666666664,
+          "routing_gain": -0.019010416666666665,
+          "selected_policy": "Q2_OOS_V2_DIRECTION_07_STRONG"
+        }
+      ],
+      "positive_fold_count": 2,
+      "random_policy_accuracy": 0.45479166666666665,
+      "routed_accuracy": 0.45,
+      "routing_gain": -0.004791666666666665,
+      "worst_fold_gain": -0.027604166666666666
+    }
+  },
+  "schema_version": "q3-geometry-role-decomposition-release-summary-v1",
+  "scientific_state": "Q3_NOT_RUN_DEVELOPMENT_ONLY",
+  "sources": {
+    "execution_amendment_sha256": "5394b82ab8d89c1cab2d75737f3ad0c526d1b5c48f60be444d4c9a38921bf6bd",
+    "precheck_sha256": "1754b7ad4b842752498f23a7c9b2ce7be0e57f2ad15754ff8babc19cff0f85ee",
+    "private_full_result_sha256": "d1913c4e2b4f500ecece62da83598f5ca157455a788f6b7fc3a45f166c86c71e",
+    "private_full_result_tracked": false
+  },
+  "status": "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING",
+  "surviving_claim": "On the closed 300-family development panel, A0-maximin bank construction supported more realizable prompt-representation routing utility than the prospectively frozen competence-matched random-bank distribution; true coordinates did not support useful routing transfer to held-out fresh controller identities."
+}

@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "docs/Q3_FRESH_EVALUATION_INSTRUMENT_ROADMAP.md": "8ea7a29e0b3ed1fd6ca557bf832ca7bec25e1e661c065a342279cea19b70041c",
+    "docs/Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md": "7cc0c070068ec5ba72981ca674bf4d57f1c1ea6d41784af057d0f6bbec3ad5dd",
+    "review/q3_geometry_role_decomposition/Q3_GEOMETRY_ROLE_DECOMPOSITION_PRECHECK.json": "1754b7ad4b842752498f23a7c9b2ce7be0e57f2ad15754ff8babc19cff0f85ee",
+    "review/q3_geometry_role_decomposition/Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json": "962fe0e79713c76e411fab453c54a2d3a6d0efcc9b027451a5689029cffcf7a4",
+    "review/q3_geometry_role_decomposition/Q3_GEOMETRY_ROLE_EXECUTION_AMENDMENT.json": "5394b82ab8d89c1cab2d75737f3ad0c526d1b5c48f60be444d4c9a38921bf6bd",
+    "review/q3_geometry_role_decomposition/Q3_GEOMETRY_ROLE_RELEASE_SAFETY.json": "5fd0a317a03e078acee0bcdcfaefa36573d2188cad03cab955270b424e19e361",
+    "scripts/analyze_q3_geometry_role_decomposition.py": "d9c029ff65a519b3b2110c314f1d987893b71262d61a666f0523bbfccde3a51f",
+    "scripts/prepare_q3_geometry_role_closeout.py": "98b2168f0ff6d2fd1a31d4b374a74aeb623be3b07f90134ef6cc41657859bb6d",
+    "scripts/prepare_q3_geometry_role_precheck.py": "63db3f6bba0e8deecfb382b97f12d59926cfabde08fbb705ce659f3784977d8c",
+    "tests/test_q3_geometry_role_decomposition.py": "d9995c25dd0c6b389380dfd006d0a807f462a2c43ac42359cd33f1c65111a009"
+  },
+  "classification": "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING",
+  "private_hash_pinned": {
+    "Q3_GEOMETRY_ROLE_DECOMPOSITION_FULL_RESULT.json": "d1913c4e2b4f500ecece62da83598f5ca157455a788f6b7fc3a45f166c86c71e"
+  },
+  "q3": "NOT_RUN",
+  "raw_text_included": false,
+  "schema_version": "q3-geometry-role-artifact-hashes-v1"
+}

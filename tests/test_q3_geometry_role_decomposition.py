@@ -98,3 +98,33 @@ def test_execution_amendment_binds_precheck_and_analysis() -> None:
     assert amendment["analysis_sha256"] == sha256_file(
         ROOT / "scripts/analyze_q3_geometry_role_decomposition.py"
     )
+
+
+def test_release_summary_matches_frozen_rulings() -> None:
+    review = ROOT / "review/q3_geometry_role_decomposition"
+    summary = json.loads(
+        (review / "Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json").read_text()
+    )
+    assert summary["status"] == "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING"
+    assert summary["scientific_state"] == "Q3_NOT_RUN_DEVELOPMENT_ONLY"
+    assert summary["part_a"]["ruling"] == "GEOMETRY_BANK_SELECTION_SUPPORTED"
+    assert summary["part_b"]["ruling"] == "CONTROLLER_OOS_TRANSFER_NOT_SUPPORTED"
+    assert summary["part_a"]["attribution"]["a0_gain_percentile_matched_random"] == 0.986328125
+    assert summary["part_b"]["models"]["TRUE"]["routing_gain"] == 0.011875
+    assert summary["future_instrument"]["minimum_family_count"] == 800
+    assert summary["future_instrument"]["future_outcomes_inspected"] is False
+
+
+def test_release_hashes_and_safety_are_fail_closed() -> None:
+    review = ROOT / "review/q3_geometry_role_decomposition"
+    manifest = json.loads((review / "Q3_GEOMETRY_ROLE_ARTIFACT_HASHES.json").read_text())
+    for relative, expected in manifest["artifacts"].items():
+        assert sha256_file(ROOT / relative) == expected
+    assert manifest["raw_text_included"] is False
+    assert manifest["q3"] == "NOT_RUN"
+    safety = json.loads((review / "Q3_GEOMETRY_ROLE_RELEASE_SAFETY.json").read_text())
+    assert safety["status"] == "Q3_GEOMETRY_ROLE_RELEASE_SAFETY_PASS"
+    assert safety["raw_benchmark_text_included"] is False
+    assert safety["raw_model_outputs_included"] is False
+    assert safety["prompt_representation_values_included"] is False
+    assert safety["private_itemwise_outcomes_included"] is False
