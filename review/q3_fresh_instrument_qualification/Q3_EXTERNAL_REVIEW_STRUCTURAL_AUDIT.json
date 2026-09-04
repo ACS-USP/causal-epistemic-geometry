@@ -64,7 +64,9 @@
       "affine_variant_strict_ast_equal": true,
       "consistent_bound_rename_equal": true,
       "literal_only_change_equal": true,
-      "operator_change_differs": true
+      "operator_change_differs": true,
+      "structure_option_current_identity_differs": true,
+      "structure_option_strict_ast_differs": true
     }
   }
 }

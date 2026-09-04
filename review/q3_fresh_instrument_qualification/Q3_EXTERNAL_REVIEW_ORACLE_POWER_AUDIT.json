@@ -1,0 +1,1338 @@
+{
+  "classification": "POST_MATERIALIZATION_MODEL_FREE_DIAGNOSTIC",
+  "confirmation_outcomes_used": false,
+  "oracle": {
+    "K": 8,
+    "R": 2,
+    "analytic_expected_apparent_headroom": 0.4499359130859375,
+    "analytic_expected_empirical_max": 0.9499359130859375,
+    "corrected_interpretation": "OPPORTUNITY_UPPER_BOUND_DIAGNOSTIC_ONLY; passing alone does not establish repeatable complementarity or selectability",
+    "historical_gate_changed": false,
+    "p": 0.5,
+    "replicates": 200000,
+    "rollout_transfer_diagnostic": "FROZEN_FOR_POST_COMPLETION_EXPLORATORY_USE_ONLY; not run on partial collection",
+    "simulated_apparent_headroom": 0.4493975,
+    "simulated_expected_empirical_max": 0.9497525,
+    "true_policy_specialization": 0.0
+  },
+  "power_mechanism": {
+    "cells": [
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.94886,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06618237862871729,
+        "mean_estimate": -0.000139625,
+        "mean_standard_error": 0.01685799469932481,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.35000000000000075,
+        "p_mean_requested": 0.35,
+        "q_identity": 0.45499999999999885,
+        "rejection_rate": 0.04978,
+        "rejection_wilson_95": [
+          0.04790799694079663,
+          0.05172117780817449
+        ],
+        "support_probabilities": [
+          0.05175625000000013,
+          0.24797500000000028,
+          0.4005374999999992,
+          0.24797500000000028,
+          0.05175625000000013
+        ],
+        "variance_empirical_distribution": 0.22750000000000037,
+        "variance_identity": 0.22749999999999942,
+        "variance_identity_abs_difference": 9.43689570931383e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95102,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06938357525203669,
+        "mean_estimate": -1.0449999999999993e-05,
+        "mean_standard_error": 0.017673404432634068,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.04832,
+        "rejection_wilson_95": [
+          0.04647482295455883,
+          0.050234576118372794
+        ],
+        "support_probabilities": [
+          0.0625,
+          0.25,
+          0.375,
+          0.25,
+          0.0625
+        ],
+        "variance_empirical_distribution": 0.25,
+        "variance_identity": 0.25,
+        "variance_identity_abs_difference": 0.0
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.94974,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06358248362219211,
+        "mean_estimate": 9.772499999999998e-05,
+        "mean_standard_error": 0.016195748688423887,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.7000000000000015,
+        "p_mean_requested": 0.7,
+        "q_identity": 0.4200000000000011,
+        "rejection_rate": 0.05154,
+        "rejection_wilson_95": [
+          0.0496362603954743,
+          0.053512643935571834
+        ],
+        "support_probabilities": [
+          0.04409999999999997,
+          0.24360000000000034,
+          0.4245999999999995,
+          0.24360000000000034,
+          0.04409999999999997
+        ],
+        "variance_empirical_distribution": 0.21000000000000013,
+        "variance_identity": 0.21000000000000055,
+        "variance_identity_abs_difference": 4.163336342344337e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95154,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "LOGIT_NORMAL_0.5",
+        "mean_ci_width": 0.06780591254994531,
+        "mean_estimate": 2.2475000000000014e-05,
+        "mean_standard_error": 0.017271541731107676,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.4998314170931077,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4773986077072213,
+        "rejection_rate": 0.04914,
+        "rejection_wilson_95": [
+          0.04727969929197021,
+          0.05106957379079182
+        ],
+        "support_probabilities": [
+          0.05718566967008655,
+          0.24865592902687508,
+          0.38831680260607676,
+          0.24865592902687508,
+          0.05718566967008655
+        ],
+        "variance_empirical_distribution": 0.23869930385361066,
+        "variance_identity": 0.23869930385361066,
+        "variance_identity_abs_difference": 0.0
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95114,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.06433278158279386,
+        "mean_estimate": -0.00016122500000000003,
+        "mean_standard_error": 0.01638686480278564,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5003379252732479,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.429687107053662,
+        "rejection_rate": 0.04992,
+        "rejection_wilson_95": [
+          0.04804544873009106,
+          0.05186370450836329
+        ],
+        "support_probabilities": [
+          0.04756518342651198,
+          0.239426373347614,
+          0.4260168864517479,
+          0.239426373347614,
+          0.04756518342651198
+        ],
+        "variance_empirical_distribution": 0.21484355352683096,
+        "variance_identity": 0.214843553526831,
+        "variance_identity_abs_difference": 2.7755575615628914e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.94854,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "BETA_4",
+        "mean_ci_width": 0.06351609012435949,
+        "mean_estimate": -0.00010682500000000001,
+        "mean_standard_error": 0.01617883691737965,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.49969797374267283,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.419103706870619,
+        "rejection_rate": 0.04984,
+        "rejection_wilson_95": [
+          0.04796690434056992,
+          0.051782261189608304
+        ],
+        "support_probabilities": [
+          0.04578410807727702,
+          0.2359672745615109,
+          0.43649723472242413,
+          0.2359672745615109,
+          0.04578410807727702
+        ],
+        "variance_empirical_distribution": 0.20955185343530947,
+        "variance_identity": 0.2095518534353095,
+        "variance_identity_abs_difference": 2.7755575615628914e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95038,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "BETA_12",
+        "mean_ci_width": 0.06719562962297239,
+        "mean_estimate": 6.970000000000001e-05,
+        "mean_standard_error": 0.017116090286763034,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.4998464382488773,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.46885601556382045,
+        "rejection_rate": 0.04814,
+        "rejection_wilson_95": [
+          0.04629816264568825,
+          0.05005126408362207
+        ],
+        "support_probabilities": [
+          0.05534426300845723,
+          0.24747896352999166,
+          0.39435354692310226,
+          0.24747896352999166,
+          0.05534426300845723
+        ],
+        "variance_empirical_distribution": 0.2344280077819103,
+        "variance_identity": 0.23442800778191022,
+        "variance_identity_abs_difference": 8.326672684688674e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95026,
+        "degenerate_rate": 0.0,
+        "delta": 0.01,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.0693808689074888,
+        "mean_estimate": 0.009910612499999999,
+        "mean_standard_error": 0.01767271507176509,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.13784,
+        "rejection_wilson_95": [
+          0.13484615683154721,
+          0.14088948780238147
+        ],
+        "support_probabilities": [
+          0.06002499999999986,
+          0.24500000000000055,
+          0.3749499999999994,
+          0.255,
+          0.0650250000000002
+        ],
+        "variance_empirical_distribution": 0.2499500000000002,
+        "variance_identity": 0.24994999999999928,
+        "variance_identity_abs_difference": 9.159339953157541e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95042,
+        "degenerate_rate": 0.0,
+        "delta": 0.01,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.06431365200899503,
+        "mean_estimate": 0.009940612500000001,
+        "mean_standard_error": 0.016381992112193627,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5003076534419538,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.429687009248188,
+        "rejection_rate": 0.15026,
+        "rejection_wilson_95": [
+          0.14715482953950842,
+          0.1534189068042905
+        ],
+        "support_probabilities": [
+          0.045447059450586115,
+          0.2337019013533619,
+          0.4259989484845859,
+          0.2451081611683981,
+          0.049743929543068006
+        ],
+        "variance_empirical_distribution": 0.21479350462409413,
+        "variance_identity": 0.21479350462409424,
+        "variance_identity_abs_difference": 1.1102230246251565e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95086,
+        "degenerate_rate": 0.0,
+        "delta": 0.01,
+        "law": "BETA_4",
+        "mean_ci_width": 0.06352131212258666,
+        "mean_estimate": 0.0100055,
+        "mean_standard_error": 0.016180167066284196,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5003315405868798,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.41909144908969453,
+        "rejection_rate": 0.1516,
+        "rejection_wilson_95": [
+          0.14848327525252067,
+          0.1547702552049036
+        ],
+        "support_probabilities": [
+          0.04371529007068428,
+          0.23013937431606038,
+          0.4364815857174076,
+          0.24175754533426655,
+          0.047906204561581275
+        ],
+        "variance_empirical_distribution": 0.2094957245448473,
+        "variance_identity": 0.20949572454484736,
+        "variance_identity_abs_difference": 5.551115123125783e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95184,
+        "degenerate_rate": 0.0,
+        "delta": 0.02,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06935937002512742,
+        "mean_estimate": 0.019963412500000003,
+        "mean_standard_error": 0.017667238870208126,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.30298,
+        "rejection_wilson_95": [
+          0.2989672320754184,
+          0.3070230393675256
+        ],
+        "support_probabilities": [
+          0.057599999999999915,
+          0.23999999999999932,
+          0.37480000000000036,
+          0.2600000000000006,
+          0.06759999999999988
+        ],
+        "variance_empirical_distribution": 0.24979999999999974,
+        "variance_identity": 0.2498000000000003,
+        "variance_identity_abs_difference": 5.551115123125783e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.94814,
+        "degenerate_rate": 0.0,
+        "delta": 0.02,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.06428987596240955,
+        "mean_estimate": 0.020036250000000002,
+        "mean_standard_error": 0.016375935870704367,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5001094594145259,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.42968517058053934,
+        "rejection_rate": 0.3383,
+        "rejection_wilson_95": [
+          0.33416546161082766,
+          0.3424593830360307
+        ],
+        "support_probabilities": [
+          0.043384151037831234,
+          0.22795486301760376,
+          0.4259156753007408,
+          0.2507674561943821,
+          0.051977854449441994
+        ],
+        "variance_empirical_distribution": 0.21464258529026972,
+        "variance_identity": 0.2146425852902697,
+        "variance_identity_abs_difference": 2.7755575615628914e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95182,
+        "degenerate_rate": 0.0,
+        "delta": 0.02,
+        "law": "BETA_4",
+        "mean_ci_width": 0.06347269086964744,
+        "mean_estimate": 0.01985945,
+        "mean_standard_error": 0.0161677822466191,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.4998871495467688,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.41892414832044944,
+        "rejection_rate": 0.34046,
+        "rejection_wilson_95": [
+          0.33631887402047345,
+          0.34462563874984065
+        ],
+        "support_probabilities": [
+          0.04167720573321868,
+          0.22423684242116582,
+          0.4365503866576401,
+          0.24747987648834777,
+          0.0500556886996277
+        ],
+        "variance_empirical_distribution": 0.2092620741602248,
+        "variance_identity": 0.2092620741602249,
+        "variance_identity_abs_difference": 1.1102230246251565e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.94934,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06931168519811204,
+        "mean_estimate": 0.030011862500000003,
+        "mean_standard_error": 0.017655092577226233,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.52222,
+        "rejection_wilson_95": [
+          0.5178401779109377,
+          0.5265964080627593
+        ],
+        "support_probabilities": [
+          0.055225000000000087,
+          0.23499999999999974,
+          0.37454999999999966,
+          0.2650000000000005,
+          0.07022500000000001
+        ],
+        "variance_empirical_distribution": 0.24955000000000013,
+        "variance_identity": 0.2495499999999995,
+        "variance_identity_abs_difference": 6.38378239159465e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95146,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.0642741179909329,
+        "mean_estimate": 0.030029187500000002,
+        "mean_standard_error": 0.016371921995634756,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.4996875410901627,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4298701609785668,
+        "rejection_rate": 0.57428,
+        "rejection_wilson_95": [
+          0.5699404757040437,
+          0.5786081114303493
+        ],
+        "support_probabilities": [
+          0.04140980046749234,
+          0.2222348542792402,
+          0.4256067953358918,
+          0.25644264462052635,
+          0.05430590529684932
+        ],
+        "variance_empirical_distribution": 0.2144850804892833,
+        "variance_identity": 0.21448508048928336,
+        "variance_identity_abs_difference": 5.551115123125783e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.9504,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "law": "BETA_4",
+        "mean_ci_width": 0.06344559320217183,
+        "mean_estimate": 0.029994175,
+        "mean_standard_error": 0.016160879920892327,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.499889654715496,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4190837492825509,
+        "rejection_rate": 0.58392,
+        "rejection_wilson_95": [
+          0.5795932720866626,
+          0.5882338338950048
+        ],
+        "support_probabilities": [
+          0.039758144636904726,
+          0.21837865825645555,
+          0.4362989066917559,
+          0.25323363329950255,
+          0.052330657115381256
+        ],
+        "variance_empirical_distribution": 0.20909187464127552,
+        "variance_identity": 0.2090918746412755,
+        "variance_identity_abs_difference": 2.7755575615628914e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.94936,
+        "degenerate_rate": 0.0,
+        "delta": 0.04,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06927222680390768,
+        "mean_estimate": 0.04014165,
+        "mean_standard_error": 0.017645041723598372,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.73402,
+        "rejection_wilson_95": [
+          0.7301291821026996,
+          0.7378748615320696
+        ],
+        "support_probabilities": [
+          0.052900000000000086,
+          0.2300000000000003,
+          0.3741999999999999,
+          0.2699999999999997,
+          0.07289999999999996
+        ],
+        "variance_empirical_distribution": 0.24920000000000006,
+        "variance_identity": 0.24919999999999926,
+        "variance_identity_abs_difference": 8.049116928532385e-16
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95064,
+        "degenerate_rate": 0.0,
+        "delta": 0.04,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.0641919894295031,
+        "mean_estimate": 0.0401494,
+        "mean_standard_error": 0.016351002184622616,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.499748021357866,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4296911781838683,
+        "rejection_rate": 0.78984,
+        "rejection_wilson_95": [
+          0.7862466546843746,
+          0.7933888124000689
+        ],
+        "support_probabilities": [
+          0.03942651164146042,
+          0.21639748449067198,
+          0.4255396548630902,
+          0.2620221902359623,
+          0.05661415876881515
+        ],
+        "variance_empirical_distribution": 0.21404558909193414,
+        "variance_identity": 0.21404558909193422,
+        "variance_identity_abs_difference": 8.326672684688674e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95038,
+        "degenerate_rate": 0.0,
+        "delta": 0.04,
+        "law": "BETA_4",
+        "mean_ci_width": 0.06340091363870938,
+        "mean_estimate": 0.0399992375,
+        "mean_standard_error": 0.01614949912951516,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5001455684051674,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4190809050588283,
+        "rejection_rate": 0.797,
+        "rejection_wilson_95": [
+          0.7934515863834797,
+          0.8005027805916782
+        ],
+        "support_probabilities": [
+          0.03786607496904958,
+          0.21245336898027686,
+          0.4361243483037002,
+          0.2589268965755706,
+          0.05462931117140273
+        ],
+        "variance_empirical_distribution": 0.20874045252941417,
+        "variance_identity": 0.2087404525294141,
+        "variance_identity_abs_difference": 8.326672684688674e-17
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.9494,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "discordance": 0.35,
+        "law": "FIXED_Q",
+        "mean_ci_width": 0.057965759160247,
+        "mean_estimate": 0.029965675,
+        "mean_standard_error": 0.014765055002749177,
+        "mechanism": "HISTORICAL_TERNARY_FIXED_DISCORDANCE_COMPARATOR",
+        "rejection_rate": 0.64976,
+        "rejection_wilson_95": [
+          0.6455672326866958,
+          0.6539297572062323
+        ],
+        "support_probabilities": [
+          0.025599999999999984,
+          0.20799999999999996,
+          0.48330000000000006,
+          0.247,
+          0.03609999999999999
+        ]
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.95004,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "discordance": 0.35,
+        "law": "CONSERVATIVE_COMBINED_MATCH_TO_HISTORICAL",
+        "mean_ci_width": 0.05118161611262674,
+        "mean_estimate": 0.029977937500000003,
+        "mean_standard_error": 0.013036996115989578,
+        "mechanism": "HISTORICAL_CONSERVATIVE_COMBINED_TERNARY",
+        "rejection_rate": 0.74344,
+        "rejection_wilson_95": [
+          0.7395933237406054,
+          0.7472492725436788
+        ],
+        "support_probabilities": [
+          0.01697953543594532,
+          0.164519384543948,
+          0.5885042692457635,
+          0.2015151661328477,
+          0.028481644641495468
+        ]
+      },
+      {
+        "N": 800,
+        "R": 2,
+        "ci_coverage": 0.94928,
+        "degenerate_rate": 0.0,
+        "delta": 0.029999999999999985,
+        "law": "CONSERVATIVE_COMBINED_MATCH_TO_HISTORICAL",
+        "mean_ci_width": 0.05488802952502311,
+        "mean_estimate": 0.029941149999999996,
+        "mean_standard_error": 0.01398109481649431,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "q_identity": 0.31010524707012765,
+        "rejection_rate": 0.69032,
+        "rejection_wilson_95": [
+          0.6862528041911355,
+          0.694357953797794
+        ],
+        "support_probabilities": [
+          0.026796801846047047,
+          0.1675652630212314,
+          0.5613235867609857,
+          0.20746983003014643,
+          0.03684451834158942
+        ]
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95108,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.05917822570003258,
+        "mean_estimate": 2.1209999999999995e-05,
+        "mean_standard_error": 0.01507847305685,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.35000000000000075,
+        "p_mean_requested": 0.35,
+        "q_identity": 0.45499999999999885,
+        "rejection_rate": 0.0493,
+        "rejection_wilson_95": [
+          0.04743676544183288,
+          0.05123248305748142
+        ],
+        "support_probabilities": [
+          0.05175625000000013,
+          0.24797500000000028,
+          0.4005374999999992,
+          0.24797500000000028,
+          0.05175625000000013
+        ],
+        "variance_empirical_distribution": 0.22750000000000037,
+        "variance_identity": 0.22749999999999942,
+        "variance_identity_abs_difference": 9.43689570931383e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94864,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06205172486617094,
+        "mean_estimate": 0.00011920999999999999,
+        "mean_standard_error": 0.015810633902210967,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.05098,
+        "rejection_wilson_95": [
+          0.049086288821432116,
+          0.05294270155168105
+        ],
+        "support_probabilities": [
+          0.0625,
+          0.25,
+          0.375,
+          0.25,
+          0.0625
+        ],
+        "variance_empirical_distribution": 0.25,
+        "variance_identity": 0.25,
+        "variance_identity_abs_difference": 0.0
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94946,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.056863615406674825,
+        "mean_estimate": 7.056999999999998e-05,
+        "mean_standard_error": 0.014488715784937004,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.7000000000000015,
+        "p_mean_requested": 0.7,
+        "q_identity": 0.4200000000000011,
+        "rejection_rate": 0.05014,
+        "rejection_wilson_95": [
+          0.048261452788839906,
+          0.052087666647373826
+        ],
+        "support_probabilities": [
+          0.04409999999999997,
+          0.24360000000000034,
+          0.4245999999999995,
+          0.24360000000000034,
+          0.04409999999999997
+        ],
+        "variance_empirical_distribution": 0.21000000000000013,
+        "variance_identity": 0.21000000000000055,
+        "variance_identity_abs_difference": 4.163336342344337e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94874,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "LOGIT_NORMAL_0.5",
+        "mean_ci_width": 0.06062172070282824,
+        "mean_estimate": 1.831999999999999e-05,
+        "mean_standard_error": 0.015446272196649818,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5001382394884553,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.47739009773424457,
+        "rejection_rate": 0.05052,
+        "rejection_wilson_95": [
+          0.04863457469286733,
+          0.05247448635765806
+        ],
+        "support_probabilities": [
+          0.05718332821253005,
+          0.24865678488412424,
+          0.3883197738066916,
+          0.24865678488412424,
+          0.05718332821253005
+        ],
+        "variance_empirical_distribution": 0.23869504886712223,
+        "variance_identity": 0.23869504886712228,
+        "variance_identity_abs_difference": 5.551115123125783e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.9506,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.05750907681777359,
+        "mean_estimate": 6.727000000000001e-05,
+        "mean_standard_error": 0.014653177838020892,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.500307290258949,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4296818687835053,
+        "rejection_rate": 0.05066,
+        "rejection_wilson_95": [
+          0.04877204826253467,
+          0.05261699127747395
+        ],
+        "support_probabilities": [
+          0.04756250031113419,
+          0.2394318675389688,
+          0.4260112642997941,
+          0.2394318675389688,
+          0.04756250031113419
+        ],
+        "variance_empirical_distribution": 0.21484093439175278,
+        "variance_identity": 0.21484093439175264,
+        "variance_identity_abs_difference": 1.3877787807814457e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95088,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "BETA_4",
+        "mean_ci_width": 0.05679729957586074,
+        "mean_estimate": 2.103000000000001e-05,
+        "mean_standard_error": 0.014471818666844254,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5002678297024489,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4190349266787494,
+        "rejection_rate": 0.04986,
+        "rejection_wilson_95": [
+          0.047986540310566,
+          0.05180262214668126
+        ],
+        "support_probabilities": [
+          0.04576668566408126,
+          0.23596818402242434,
+          0.4365302606269888,
+          0.23596818402242434,
+          0.04576668566408126
+        ],
+        "variance_empirical_distribution": 0.20951746333937468,
+        "variance_identity": 0.2095174633393747,
+        "variance_identity_abs_difference": 2.7755575615628914e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94942,
+        "degenerate_rate": 0.0,
+        "delta": 0.0,
+        "law": "BETA_12",
+        "mean_ci_width": 0.06007484868002725,
+        "mean_estimate": -8.916999999999997e-05,
+        "mean_standard_error": 0.01530693048838118,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5001158601228323,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4688050635974408,
+        "rejection_rate": 0.05036,
+        "rejection_wilson_95": [
+          0.048477467045761134,
+          0.052311618588211976
+        ],
+        "support_probabilities": [
+          0.055334489240376865,
+          0.2474671066359334,
+          0.39439680824737955,
+          0.2474671066359334,
+          0.055334489240376865
+        ],
+        "variance_empirical_distribution": 0.23440253179872045,
+        "variance_identity": 0.2344025317987204,
+        "variance_identity_abs_difference": 5.551115123125783e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94856,
+        "degenerate_rate": 0.0,
+        "delta": 0.01,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06203769252871506,
+        "mean_estimate": 0.00998822,
+        "mean_standard_error": 0.015807058495551675,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.1541,
+        "rejection_wilson_95": [
+          0.15096194602275134,
+          0.15729120031830215
+        ],
+        "support_probabilities": [
+          0.06002499999999986,
+          0.24500000000000055,
+          0.3749499999999994,
+          0.255,
+          0.0650250000000002
+        ],
+        "variance_empirical_distribution": 0.2499500000000002,
+        "variance_identity": 0.24994999999999928,
+        "variance_identity_abs_difference": 9.159339953157541e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95002,
+        "degenerate_rate": 0.0,
+        "delta": 0.01,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.05749780441329526,
+        "mean_estimate": 0.01008682,
+        "mean_standard_error": 0.014650305655808568,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5000249898476866,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4296704332644405,
+        "rejection_rate": 0.16802,
+        "rejection_wilson_95": [
+          0.164768352498258,
+          0.17132265508284328
+        ],
+        "support_probabilities": [
+          0.045444350256605794,
+          0.23369632790537292,
+          0.42601534800868707,
+          0.24510291924008415,
+          0.049741054589250204
+        ],
+        "variance_empirical_distribution": 0.21478521663222025,
+        "variance_identity": 0.2147852166322201,
+        "variance_identity_abs_difference": 1.3877787807814457e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.9512,
+        "degenerate_rate": 0.0,
+        "delta": 0.01,
+        "law": "BETA_4",
+        "mean_ci_width": 0.056778339404017664,
+        "mean_estimate": 0.01008457,
+        "mean_standard_error": 0.014466987659545414,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5002446955407435,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4188707534100502,
+        "rejection_rate": 0.17216,
+        "rejection_wilson_95": [
+          0.16887617393556478,
+          0.17549419754882659
+        ],
+        "support_probabilities": [
+          0.0436793566445976,
+          0.23006461929755928,
+          0.4367007556497868,
+          0.24168720422935827,
+          0.04786806417869807
+        ],
+        "variance_empirical_distribution": 0.20938537670502505,
+        "variance_identity": 0.209385376705025,
+        "variance_identity_abs_difference": 5.551115123125783e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95134,
+        "degenerate_rate": 0.0,
+        "delta": 0.02,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.062014706258487005,
+        "mean_estimate": 0.02006965,
+        "mean_standard_error": 0.01580120164783089,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.35386,
+        "rejection_wilson_95": [
+          0.3496801366860771,
+          0.35806231722048987
+        ],
+        "support_probabilities": [
+          0.057599999999999915,
+          0.23999999999999932,
+          0.37480000000000036,
+          0.2600000000000006,
+          0.06759999999999988
+        ],
+        "variance_empirical_distribution": 0.24979999999999974,
+        "variance_identity": 0.2498000000000003,
+        "variance_identity_abs_difference": 5.551115123125783e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94842,
+        "degenerate_rate": 0.0,
+        "delta": 0.02,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.05748555345728405,
+        "mean_estimate": 0.019992839999999998,
+        "mean_standard_error": 0.01464718414096167,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.49989870740261005,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.42978460903467286,
+        "rejection_rate": 0.38568,
+        "rejection_wilson_95": [
+          0.3814224154220294,
+          0.38995514945137105
+        ],
+        "support_probabilities": [
+          0.04339853564387586,
+          0.22799477427847603,
+          0.4258090723359898,
+          0.250803389917089,
+          0.05199422782456934
+        ],
+        "variance_empirical_distribution": 0.21469230451733645,
+        "variance_identity": 0.21469230451733648,
+        "variance_identity_abs_difference": 2.7755575615628914e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94962,
+        "degenerate_rate": 0.0,
+        "delta": 0.02,
+        "law": "BETA_4",
+        "mean_ci_width": 0.05676734404660553,
+        "mean_estimate": 0.019965600000000003,
+        "mean_standard_error": 0.014464186068275518,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.49973889747573935,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.41888093248005603,
+        "rejection_rate": 0.39536,
+        "rejection_wilson_95": [
+          0.39108263280382294,
+          0.39965344477098996
+        ],
+        "support_probabilities": [
+          0.041667358178103076,
+          0.22423388111804288,
+          0.43657514005730913,
+          0.24747864381884077,
+          0.05004497682770418
+        ],
+        "variance_empirical_distribution": 0.20924046624002815,
+        "variance_identity": 0.20924046624002812,
+        "variance_identity_abs_difference": 2.7755575615628914e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94906,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.061982653086006124,
+        "mean_estimate": 0.03006335,
+        "mean_standard_error": 0.015793034574690012,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.59978,
+        "rejection_wilson_95": [
+          0.5954780335759442,
+          0.6040666355714674
+        ],
+        "support_probabilities": [
+          0.055225000000000087,
+          0.23499999999999974,
+          0.37454999999999966,
+          0.2650000000000005,
+          0.07022500000000001
+        ],
+        "variance_empirical_distribution": 0.24955000000000013,
+        "variance_identity": 0.2495499999999995,
+        "variance_identity_abs_difference": 6.38378239159465e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95114,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.05745154317955985,
+        "mean_estimate": 0.03003272,
+        "mean_standard_error": 0.014638518401996807,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.4996645034300927,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4296374667688248,
+        "rejection_rate": 0.65714,
+        "rejection_wilson_95": [
+          0.6529675231151639,
+          0.6612883328662376
+        ],
+        "support_probabilities": [
+          0.041369631046865744,
+          0.22216981857829707,
+          0.4258102247527391,
+          0.2563915705721676,
+          0.05425875504993048
+        ],
+        "variance_empirical_distribution": 0.2143687333844124,
+        "variance_identity": 0.21436873338441248,
+        "variance_identity_abs_difference": 8.326672684688674e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95136,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "law": "BETA_4",
+        "mean_ci_width": 0.05674881689544184,
+        "mean_estimate": 0.03004592,
+        "mean_standard_error": 0.01445946539362978,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5000153376660377,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.4192478558924758,
+        "rejection_rate": 0.66534,
+        "rejection_wilson_95": [
+          0.6611913776120262,
+          0.6694632184676796
+        ],
+        "support_probabilities": [
+          0.039782558832436005,
+          0.21844018488595748,
+          0.43613194823998724,
+          0.25328531353240885,
+          0.05235999450921026
+        ],
+        "variance_empirical_distribution": 0.20917392794623785,
+        "variance_identity": 0.2091739279462378,
+        "variance_identity_abs_difference": 5.551115123125783e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.9491,
+        "degenerate_rate": 0.0,
+        "delta": 0.04,
+        "law": "CONSTANT",
+        "mean_ci_width": 0.06194352259115873,
+        "mean_estimate": 0.04005896999999999,
+        "mean_standard_error": 0.015783064216415864,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.5,
+        "rejection_rate": 0.81214,
+        "rejection_wilson_95": [
+          0.8086923679515302,
+          0.8155396728148864
+        ],
+        "support_probabilities": [
+          0.052900000000000086,
+          0.2300000000000003,
+          0.3741999999999999,
+          0.2699999999999997,
+          0.07289999999999996
+        ],
+        "variance_empirical_distribution": 0.24920000000000006,
+        "variance_identity": 0.24919999999999926,
+        "variance_identity_abs_difference": 8.049116928532385e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94902,
+        "degenerate_rate": 0.0,
+        "delta": 0.04,
+        "law": "LOGIT_NORMAL_1.0",
+        "mean_ci_width": 0.05740093349918926,
+        "mean_estimate": 0.04013221,
+        "mean_standard_error": 0.01462562317418528,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.5000062730000814,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.42961085890537554,
+        "rejection_rate": 0.8652,
+        "rejection_wilson_95": [
+          0.8621785170577243,
+          0.8681653712228401
+        ],
+        "support_probabilities": [
+          0.03941300751274182,
+          0.21637439449819326,
+          0.4256096303343446,
+          0.2620055257857633,
+          0.056597441868956884
+        ],
+        "variance_empirical_distribution": 0.21400542945268783,
+        "variance_identity": 0.2140054294526879,
+        "variance_identity_abs_difference": 8.326672684688674e-17
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94878,
+        "degenerate_rate": 0.0,
+        "delta": 0.04,
+        "law": "BETA_4",
+        "mean_ci_width": 0.05668141972919229,
+        "mean_estimate": 0.04003018,
+        "mean_standard_error": 0.014442292753805241,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "p_champion_mean": 0.500049341672366,
+        "p_mean_requested": 0.5,
+        "q_identity": 0.41891791230788517,
+        "rejection_rate": 0.8686,
+        "rejection_wilson_95": [
+          0.8656104412252448,
+          0.8715329246570556
+        ],
+        "support_probabilities": [
+          0.037841755903659964,
+          0.21239417220092985,
+          0.4362848602831357,
+          0.2588807392162991,
+          0.054598472395975366
+        ],
+        "variance_empirical_distribution": 0.2086589561539426,
+        "variance_identity": 0.2086589561539427,
+        "variance_identity_abs_difference": 1.1102230246251565e-16
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95048,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "discordance": 0.35,
+        "law": "FIXED_Q",
+        "mean_ci_width": 0.051838296572617994,
+        "mean_estimate": 0.030044110000000006,
+        "mean_standard_error": 0.01320827633706479,
+        "mechanism": "HISTORICAL_TERNARY_FIXED_DISCORDANCE_COMPARATOR",
+        "rejection_rate": 0.73536,
+        "rejection_wilson_95": [
+          0.7314753219603178,
+          0.7392085157880766
+        ],
+        "support_probabilities": [
+          0.025599999999999984,
+          0.20799999999999996,
+          0.48330000000000006,
+          0.247,
+          0.03609999999999999
+        ]
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.95032,
+        "degenerate_rate": 0.0,
+        "delta": 0.03,
+        "discordance": 0.35,
+        "law": "CONSERVATIVE_COMBINED_MATCH_TO_HISTORICAL",
+        "mean_ci_width": 0.045765634745594995,
+        "mean_estimate": 0.030001240000000002,
+        "mean_standard_error": 0.01166097635199482,
+        "mechanism": "HISTORICAL_CONSERVATIVE_COMBINED_TERNARY",
+        "rejection_rate": 0.82244,
+        "rejection_wilson_95": [
+          0.8190657061133909,
+          0.8257647520935784
+        ],
+        "support_probabilities": [
+          0.016963252470720377,
+          0.164544228938749,
+          0.5885223245807497,
+          0.20146965413937212,
+          0.028500539870408816
+        ]
+      },
+      {
+        "N": 1000,
+        "R": 2,
+        "ci_coverage": 0.94936,
+        "degenerate_rate": 0.0,
+        "delta": 0.029999999999999995,
+        "law": "CONSERVATIVE_COMBINED_MATCH_TO_HISTORICAL",
+        "mean_ci_width": 0.049068311556701154,
+        "mean_estimate": 0.029961499999999995,
+        "mean_standard_error": 0.012502490654302133,
+        "mechanism": "CONDITIONALLY_INDEPENDENT_BERNOULLI",
+        "q_identity": 0.3099645964013407,
+        "rejection_rate": 0.77456,
+        "rejection_wilson_95": [
+          0.770876247209301,
+          0.7782015675944004
+        ],
+        "support_probabilities": [
+          0.02678315608153102,
+          0.1674657746143302,
+          0.5615600514605034,
+          0.20734994890987846,
+          0.0368410689337569
+        ]
+      }
+    ],
+    "confirmation_authorization_implication": "qualification may proceed; confirmation power justification requires explicit review of the independent-Bernoulli range before confirmation opens",
+    "confirmation_design_changed": false,
+    "exact_policy_sharing": {
+      "champion_in_eight_policy_bank": false,
+      "interpretation": "The external champion is absent from the eight-policy bank. A non-finite fallback does not authorize outcome reuse, and distinct conditions retain independent frozen seeds.",
+      "planned_shared_execution": false
+    },
+    "family_probability_pool": 1000000,
+    "formula_checks_max_abs_difference": 9.43689570931383e-16,
+    "historical_frozen_n1000_r2_delta_003_power": 0.8233,
+    "historical_independent_branch_actual_mechanism": "TERNARY_DIFFERENCE_WITH_USER_CHOSEN_DISCORDANCE; not two conditionally independent Bernoulli correctness streams",
+    "historical_mechanism_reproduction_n1000_r2_delta_003_power": 0.82244,
+    "historical_reported_power_0_8233_defensible": "ONLY_FOR_THE_HISTORICAL_TERNARY_CONSERVATIVE_COMBINED_PLANNING_MODEL; not as a mechanism-free guarantee for the new generator",
+    "intended_mechanism": "Y_router,t,r ~ Bernoulli(p_router,t) and Y_champion,t,r ~ Bernoulli(p_champion,t) with independent system and rollout RNG streams",
+    "matched_independent_bernoulli_n1000_r2_delta_003_power": 0.77456,
+    "n1000_delta_003_power_range_under_simple_independent_laws": [
+      0.59978,
+      0.66534
+    ],
+    "null_max_fpr": 0.05154,
+    "null_min_coverage": 0.94854,
+    "replicates_per_cell": 50000
+  },
+  "precheck_sha256": "04d914ccada95e0d73709b34a0ab5a83bad83fcdf0eaf778f903637cc1823a48",
+  "qualification_outcomes_used": false,
+  "qwen_inference": 0,
+  "schema_version": "q3-external-review-oracle-power-audit-v1"
+}

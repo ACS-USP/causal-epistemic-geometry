@@ -1,0 +1,43 @@
+{
+  "schema_version": "q3-fresh-external-review-interpretation-addendum-v1",
+  "status": "ADDITIVE_INTERPRETATION_ONLY_QUALIFICATION_MAY_RESUME",
+  "historical_objects_mutable": false,
+  "structural_audit": {
+    "artifact": "review/q3_fresh_instrument_qualification/Q3_EXTERNAL_REVIEW_STRUCTURAL_AUDIT.json",
+    "sha256": "583f277fdd7256d9c83f5a9faabb5ddc6b59276f567a18d303c2b9901a4a73ea",
+    "detector_defect_confirmed": true,
+    "material_dataset_violation_found": false,
+    "qualification_resume_permitted": true
+  },
+  "oracle_gate": {
+    "historical_definition_changed": false,
+    "historical_threshold_changed": false,
+    "authorized_interpretation": "OPPORTUNITY_UPPER_BOUND_DIAGNOSTIC_ONLY",
+    "passing_does_not_establish": [
+      "repeatable policy complementarity",
+      "router selectability",
+      "realized routed utility"
+    ],
+    "rollout_transfer_diagnostic": "FROZEN_EXPLORATORY_POST_COMPLETION_ONLY_NOT_A_GATE"
+  },
+  "power_audit": {
+    "artifact": "review/q3_fresh_instrument_qualification/Q3_EXTERNAL_REVIEW_ORACLE_POWER_AUDIT.json",
+    "sha256": "bd5b0a24193741119d2e853b63301a15846250bf783bc23e83d0a17b025b437e",
+    "historical_0_8233_scope": "HISTORICAL_TERNARY_CONSERVATIVE_COMBINED_PLANNING_MODEL_ONLY",
+    "confirmation_design_changed": false,
+    "confirmation_may_open_without_new_power_review": false,
+    "qualification_may_continue": true
+  },
+  "qualification": {
+    "journal_resume": "ORIGINAL_JOURNAL_MISSING_KEYS_ONLY",
+    "completed_rows_are_immutable": true,
+    "partial_results_may_be_scored": false,
+    "families_changed": false,
+    "seeds_changed": false,
+    "schedule_changed": false,
+    "system_changed": false,
+    "gates_changed": false
+  },
+  "confirmation": "CLOSED_NOT_AUTHORIZED",
+  "reserve": "CLOSED_NOT_AUTHORIZED"
+}

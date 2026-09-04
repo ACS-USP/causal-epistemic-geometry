@@ -260,7 +260,9 @@ def synthetic_tests() -> dict[str, bool]:
     render_program, canonical_skeleton = frozen_identity_functions()
     base = ({"kind": "AFFINE", "a": 3, "b": 5, "c": 7, "variant": 0},)
     variant = ({**base[0], "variant": 1},)
+    structural_option = ({**base[0], "kind": "BRANCH"},)
     source_a, source_b = render_program(base, "int"), render_program(variant, "int")
+    source_structural = render_program(structural_option, "int")
     fp_a = ast_fingerprint(source_a)[0]
     fp_b = ast_fingerprint(source_b)[0]
     renamed = source_a.replace("acc", "state").replace("value", "entry")
@@ -272,6 +274,10 @@ def synthetic_tests() -> dict[str, bool]:
             canonical_skeleton(base, "int") != canonical_skeleton(variant, "int")
         ),
         "affine_variant_strict_ast_equal": fp_a == fp_b,
+        "structure_option_current_identity_differs": (
+            canonical_skeleton(base, "int") != canonical_skeleton(structural_option, "int")
+        ),
+        "structure_option_strict_ast_differs": fp_a != ast_fingerprint(source_structural)[0],
         "consistent_bound_rename_equal": fp_a == ast_fingerprint(renamed)[0],
         "literal_only_change_equal": fp_a == ast_fingerprint(literal_changed)[0],
         "operator_change_differs": fp_a != ast_fingerprint(operator_changed)[0],
