@@ -1,0 +1,202 @@
+{
+  "aggregation": {
+    "champion_accuracy": "pooled across 600 rows",
+    "oracle_headroom": "mean over 300 families of max bank two-rollout correctness mean minus champion two-rollout correctness mean",
+    "routed_gain_is_gate": false,
+    "validity_evaluability_repetition": "pooled across 600 rows per condition"
+  },
+  "candidate_system": {
+    "path": "review/q3_final_system_and_evaluation_supply/FINAL_Q3_CANDIDATE_SYSTEM_DRAFT.json",
+    "sha256": "d8128e4ef4bf9459977cc46a3c9698b36c96afb8a2a388428f5daf03ac6e78f0"
+  },
+  "confirmation_generations": 0,
+  "dataset_seal_sha256": "1b889c3c1de9b6d20d93fca96e866322d4a75f672577dcffdc3e49571ea0da72",
+  "firewall": {
+    "collection_imports_parser": false,
+    "collection_loads_reference": false,
+    "confirmation_qwen_access": false,
+    "reserve_qwen_access": false,
+    "runpod": false,
+    "spark1_only": true,
+    "spark2": false
+  },
+  "generation": {
+    "do_sample": true,
+    "enable_thinking": false,
+    "max_new_tokens": 4096,
+    "min_p": 0.0,
+    "temperature": 0.6,
+    "termination": "EXTREME_MECHANICAL_REPETITION_V1",
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "implementation": {
+    "runner": "scripts/execute_q3_fresh_qualification.py",
+    "runner_sha256": "31789b3d159303f23c73d256cc17ade1cfdbc7e0a8fc9c9cc106157de89bbf9b",
+    "tests": "tests/test_q3_fresh_qualification.py",
+    "tests_sha256": "69d00d036de187891d36d1e806eafc4030fd02eeee2754fc963dda3003c5624e"
+  },
+  "model": {
+    "attention": "SDPA",
+    "dtype": "BF16",
+    "id": "Qwen/Qwen3-8B",
+    "model_byte_manifest_sha256": "cedc88ba2f732baea6bb71f5e6d7f6bc3aad00d302c3456d208a21687c9e069c",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  "online_router": {
+    "fallback": "V4_DIRECTION_02_MEDIUM",
+    "feature": "unsteered layer-27 block input at final non-padding prompt token",
+    "sampling_rng_consumed": false,
+    "select_once": "during prefill before the same layer-27 invocation output hook",
+    "selection": "argmax frozen geometry-blind policy-identity score",
+    "tie_break": "frozen policy order"
+  },
+  "policies": [
+    {
+      "alpha": 99.3909912109375,
+      "controller_id": "V4_DIRECTION_31",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 0,
+      "policy_id": "V4_DIRECTION_31_MEDIUM",
+      "role": "BANK",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "96c5e19e9aecba9357d596fbb6ea241f489f6047400c57af0796bf30599f4bd7",
+      "vector_path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_31.npy",
+      "vector_sha256": "19ca2a98ff342a4565f6ea84b9c1b48fd44d1b8459001228df333403cfe5ca48"
+    },
+    {
+      "alpha": 99.38422775268555,
+      "controller_id": "V4_DIRECTION_10",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 1,
+      "policy_id": "V4_DIRECTION_10_MEDIUM",
+      "role": "BANK",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "c3386eade16254026c09eb388f69756dcc567e499f3193963038885930d3908b",
+      "vector_path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_10.npy",
+      "vector_sha256": "edd580f19b8b3cdd1c742c0baf992fd4bec066bb37a78e06fd2dba32a117855a"
+    },
+    {
+      "alpha": 99.38813122105785,
+      "controller_id": "V4_DIRECTION_32",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 2,
+      "policy_id": "V4_DIRECTION_32_MEDIUM",
+      "role": "BANK",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "81b0130215ade4c9814afadcea51120639c015881399b7a18fda5ec008d88c69",
+      "vector_path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_32.npy",
+      "vector_sha256": "ae04e9c3d46915436de7ebc8298f4a8635e4ea78111d6e308ebef324d8bfea38"
+    },
+    {
+      "alpha": 99.37936142180115,
+      "controller_id": "Q2_OOS_V2_DIRECTION_13",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 3,
+      "policy_id": "Q2_OOS_V2_DIRECTION_13_MEDIUM",
+      "role": "BANK",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "89963d74bc82a0099b1ccf14bafb5019581b305e51eb880e85aef378165f6743",
+      "vector_path": "review/q2_oos_fresh_controller_design/v2_final_presemantic/CANDIDATE_DIRECTIONS/Q2_OOS_V2_DIRECTION_13.npy",
+      "vector_sha256": "88bcb1b94d50caec05ee96165072a29712d972ca1523f039c74f576db2845a87"
+    },
+    {
+      "alpha": 99.38916015625,
+      "controller_id": "V4_DIRECTION_19",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 4,
+      "policy_id": "V4_DIRECTION_19_MEDIUM",
+      "role": "BANK",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "9960d4cfc46b621b9c05f1399163b0cbb4bb885fe875bb28bf6ad17381a46c4d",
+      "vector_path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_19.npy",
+      "vector_sha256": "8baa1867a7be252705f3751df19c9996f9104bd3607fe815e86c392141631e2d"
+    },
+    {
+      "alpha": 99.37899780273438,
+      "controller_id": "Q2_OOS_V2_DIRECTION_03",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 5,
+      "policy_id": "Q2_OOS_V2_DIRECTION_03_MEDIUM",
+      "role": "BANK",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "2e2756785cec4959588b6e6a6654dc6569a09cc5e0683118a8bc089824b0e531",
+      "vector_path": "review/q2_oos_fresh_controller_design/v2_final_presemantic/CANDIDATE_DIRECTIONS/Q2_OOS_V2_DIRECTION_03.npy",
+      "vector_sha256": "d9e224d04b414926116a5d1a6c95ff2c482dcbd2ce3fec0dde7d3f821836ba32"
+    },
+    {
+      "alpha": 99.38434595102444,
+      "controller_id": "Q2_OOS_V2_DIRECTION_16",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 6,
+      "policy_id": "Q2_OOS_V2_DIRECTION_16_MEDIUM",
+      "role": "BANK",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "ebf8682f9e7501bd87d73d1b8b4cd90197c466d95f18698808a755dacbff4918",
+      "vector_path": "review/q2_oos_fresh_controller_design/v2_final_presemantic/CANDIDATE_DIRECTIONS/Q2_OOS_V2_DIRECTION_16.npy",
+      "vector_sha256": "f991620c3ee6a0bec9d18e8053321133bb51418b7f7e50c31f0bd2f1ea826cce"
+    },
+    {
+      "alpha": 198.7886299015954,
+      "controller_id": "V4_DIRECTION_35",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 7,
+      "policy_id": "V4_DIRECTION_35_STRONG",
+      "role": "BANK",
+      "shell": "STRONG",
+      "vector_file_sha256": "fd2f6807981996c370aa82e18495f9d23dc42451b9846ab2b8fd54917c0a6d50",
+      "vector_path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_35.npy",
+      "vector_sha256": "e4909caac7fc944c94e0e77cdd0670f649188e55467a38a74a9632d0c1675934"
+    },
+    {
+      "alpha": 99.37637329101562,
+      "controller_id": "V4_DIRECTION_02",
+      "duration": "sustained_current_token",
+      "layer": 27,
+      "order": 8,
+      "policy_id": "V4_DIRECTION_02_MEDIUM",
+      "role": "CHAMPION",
+      "shell": "MEDIUM",
+      "vector_file_sha256": "28cfa15767fcd48719125f58856c7e2708facd6029cebde049aba196cec6996f",
+      "vector_path": "review/q2_v4_spark1_presemantic/CANDIDATE_DIRECTIONS/V4_DIRECTION_02.npy",
+      "vector_sha256": "37e530b2d9d909c578bcec616ffe1defa00e3f8e6d33e4eb5ce3c6344152786f"
+    }
+  ],
+  "private_prompt_only_dataset": {
+    "contains_references": false,
+    "rows": 300,
+    "sha256": "17a2634a0f8f56e9ea6b7aefadcc640c3086ed134fc5689a4fae540a30fd6a8b",
+    "tracked_in_git": false
+  },
+  "private_qualification_dataset_sha256": "c791e38c29d36a43fbac8ce00412e4c77d533665e0b8cb9eef8fa12fb918ac1d",
+  "private_router_sha256": "269dc116c70b64dd47cf59340b07dbe558ec8c0f13be8410ed97017310ebad3d",
+  "qualification_gates": {
+    "cross_split_family_or_skeleton_collision": 0,
+    "dual_evaluator_agreement": 1.0,
+    "evaluator_repeat_determinism": 1.0,
+    "frozen_bank_oracle_headroom_over_champion": ">= 0.05 descriptively on qualification families",
+    "near_duplicate_rate": "<= 0.01",
+    "parser_reference_roundtrip": 1.0,
+    "router_and_champion_commitment_validity": ">= 0.95 each",
+    "router_and_champion_semantic_evaluability": ">= 0.95 each",
+    "single_champion_accuracy": "within [0.25, 0.90]",
+    "terminal_repetition_rate": "<= 0.10 per condition"
+  },
+  "qualification_generations_before_lock": 0,
+  "qualification_manifest_sha256": "9a01142e4825efad36c9ede99cacf88ec6c8cc42d37f24c2ba213bb6c4a790a1",
+  "reserve_generations": 0,
+  "schedule_sha256": "edba56fc8435cdc34b6f7551fc2d1b4a6d4cc3d87fc34127a5096526d670a635",
+  "schema_version": "q3-fresh-qualification-execution-lock-v1",
+  "scientific_outcomes_before_lock": 0,
+  "source_parent": "4cbd7e59cbe83de8d3af8554195f1da14d13a2d2",
+  "status": "FROZEN_BEFORE_QWEN_QUALIFICATION"
+}
