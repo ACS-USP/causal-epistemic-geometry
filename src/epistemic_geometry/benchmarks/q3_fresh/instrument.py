@@ -34,6 +34,7 @@ LOOP_BOUND = 10_000
 RECURSION_BOUND = 32
 REFERENCE_TIMEOUT_SECONDS = 2.0
 REFERENCE_MEMORY_MB = 256
+BEHAVIORAL_PROBE_COUNT = 32
 
 ARCHETYPES = (
     "ARITHMETIC",
@@ -481,7 +482,37 @@ def _behavioral_signature(operations: tuple[dict[str, int | str], ...], output_t
         {"n": 0, "values": [4, 4, 4, 4], "text": "axis"},
         {"n": 19, "values": [-5, 2, 9], "text": "quartz"},
         {"n": 41, "values": [1, -1, 2, -2, 3], "text": "z"},
+        {"n": -43, "values": [7, 0, -7, 14], "text": "ember"},
+        {"n": -18, "values": [3, 1, 4, 1, 5], "text": "indigo"},
+        {"n": -1, "values": [-9, -3, 0, 3, 9], "text": "amber"},
+        {"n": 2, "values": [8, 6, 7, 5, 3, 0, 9], "text": "cobalt"},
+        {"n": 5, "values": [2, -4, 8, -16], "text": "delta"},
+        {"n": 11, "values": [11, 0, 11], "text": "forest"},
+        {"n": 23, "values": [-8, 13, -21, 34], "text": "lumen"},
+        {"n": 37, "values": [6, 2, 6, 4, 3], "text": "quartz"},
+        {"n": 50, "values": [-40, 40, -20, 20], "text": "amber"},
+        {"n": -29, "values": [1, 1, 2, 3, 5, 8], "text": "forest"},
+        {"n": 31, "values": [10, -10, 30, -30, 0], "text": "indigo"},
+        {"n": 47, "values": [-1, -1, -2, -3, -5], "text": "cobalt"},
+        {"n": -50, "values": [12, 24, 36], "text": "delta"},
+        {"n": -37, "values": [-2, 4, -6, 8], "text": "lumen"},
+        {"n": -23, "values": [17, -13, 11, -7], "text": "quartz"},
+        {"n": -11, "values": [0, 2, 0, 2, 0], "text": "ember"},
+        {"n": 1, "values": [39, -39, 13, -13], "text": "forest"},
+        {"n": 3, "values": [-6, -4, -2, 0, 2, 4, 6], "text": "amber"},
+        {"n": 7, "values": [5, 10, 15, 20], "text": "cobalt"},
+        {"n": 13, "values": [-31, 0, 31], "text": "indigo"},
+        {"n": 17, "values": [4, 16, -4, -16], "text": "lumen"},
+        {"n": 29, "values": [7, 14, 21, 28], "text": "delta"},
+        {"n": 43, "values": [-11, 22, -33], "text": "quartz"},
+        {"n": 49, "values": [9, 8, 7, 6, 5, 4], "text": "ember"},
+        {"n": -47, "values": [37, 23, 11, 5], "text": "amber"},
+        {"n": -31, "values": [-17, -19, -23], "text": "forest"},
+        {"n": -13, "values": [32, -16, 8, -4, 2], "text": "cobalt"},
+        {"n": 0, "values": [-1, 0, 1, 0, -1], "text": "indigo"},
     )
+    if len(probes) != BEHAVIORAL_PROBE_COUNT:
+        raise AssertionError("behavioral probe count drifted")
     values = [_typed(custom_reference(operations, output_type, probe)) for probe in probes]
     return _sha(canonical_json(values))
 

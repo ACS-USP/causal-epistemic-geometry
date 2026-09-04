@@ -6,6 +6,7 @@ import pytest
 
 from epistemic_geometry.benchmarks.q3_fresh.instrument import (
     ARCHETYPES,
+    BEHAVIORAL_PROBE_COUNT,
     OUTPUT_TYPES,
     build_family,
     canonical_skeleton,
@@ -32,6 +33,15 @@ def test_candidate_stream_is_deterministic_and_namespaced() -> None:
     assert first == repeated
     assert first.canonical_skeleton != other.canonical_skeleton
     assert first.family_id != other.family_id
+
+
+def test_behavioral_signature_has_sufficient_boolean_resolution() -> None:
+    families = [build_family("fixture-resolution", index, 9871) for index in range(1200)]
+    boolean_families = [family for family in families if family.output_type == "bool"]
+    signatures = {family.behavioral_signature_sha256 for family in boolean_families}
+    assert BEHAVIORAL_PROBE_COUNT == 32
+    assert len(boolean_families) >= 190
+    assert len(signatures) > 16
 
 
 def test_family_identity_ignores_literal_values_but_not_structure() -> None:
