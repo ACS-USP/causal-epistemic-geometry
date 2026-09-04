@@ -15,7 +15,7 @@ summary. Last reconciled: 2026-09-04.
 | Q2 | V4.1 relational geometry | **DEVELOPMENT — G2** | A0, A1, and A2 predict blind-spot-shape geometry; A2 does not outperform A0/A1 | 31 directions, N=300, two shells; [closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md) |
 | Q2 radial | V4.1 radial tests | **DEVELOPMENT — RS+ / RT+** | STRONG exceeds MEDIUM shape and total displacement in all 31 directions | [radial artifact](../review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json) |
 | Q2 fresh-controller validation | OOS V2 | **DEVELOPMENT — PASS** | 16/16 prospectively sampled fresh-controller A0 row associations positive | Same Qwen3-8B/CRUXEval/learned-rank-8 laboratory and fixed 31-controller atlas; [closeout](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md) |
-| Q3 | Collective utility | **NOT_RUN** | No scientific result; Q3.1 DEVELOPMENT found stable prompt-representation selectability, but true controller geometry was not incrementally better than learned policy identity | [concept note](Q3_CONCEPT_NOTE.md), [Q3.0 design](Q3_REALIZABLE_UTILITY_DESIGN_REVIEW.md), [Q3.1 review](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md) |
+| Q3 | Collective utility | **NOT_RUN** | No scientific result; Q3.2 DEVELOPMENT supports A0 geometry for portfolio construction, not controller-OOS routing | [Q3.1 review](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md), [Q3.2 review](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md) |
 
 ## Q1: confirmatory controllability
 
@@ -135,6 +135,32 @@ True geometry exceeded fixed permuted coordinates by +0.0183, but passed only
 `Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL`.
 This is not a Q3 result, does not allocate a fresh holdout, and does not show
 realized utility or geometry-specific routing.
+
+## Q3.2 geometry-role decomposition
+
+Q3.2 used only the closed 300-family outcomes, the private hash-pinned prompt
+representation matrix, 31 historical controllers and 16 already closed fresh
+controllers. No new Qwen forward or semantic trajectory occurred.
+
+For bank construction, the A0-maximin K=8 bank gained +0.0400 over its own
+cross-fitted champion. It ranked at the 98.63rd percentile of 512
+competence-matched random banks and passed every frozen realization,
+opportunity, randomization and fold-consistency gate. Part A is
+`GEOMETRY_BANK_SELECTION_SUPPORTED`.
+
+For controller-OOS transfer, the true-coordinate router trained on historical
+controllers and evaluated on fresh identities gained +0.011875 over a uniform
+fresh-policy comparator, with positive gain in 3/5 folds and worst-fold gain
+−0.0203125. It failed the frozen realization and consistency gates. Although
+true coordinates improved predictive log loss over random, permuted and
+agnostic coordinates, they did not deliver enough routing utility. Part B is
+`CONTROLLER_OOS_TRANSFER_NOT_SUPPORTED`.
+
+The mechanical development ruling is
+`Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING`. This supports a portfolio-design
+role for A0 geometry on closed data; it does not establish controller-OOS
+routing, fresh-family utility or Q3. A future evaluation instrument requires
+at least 800 family-independent units under the current supply roadmap.
 
 ## Forensic and artifact identity
 

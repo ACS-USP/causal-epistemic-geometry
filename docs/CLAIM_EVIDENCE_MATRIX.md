@@ -18,6 +18,8 @@ narrower than the motivating theory.
 | Complementarity yields deployable collective utility | NOT_RUN | None | Q3 remains an open question | Oracle headroom is deployable utility; Q3 has been demonstrated |
 | Label-free prompt representations make closed-panel policy diversity selectable | DEVELOPMENT_ONLY | Q3.1 prompt-representation tournament | On the closed 300-family development panel, prompt representations enabled stable routing over the A0 K=8 bank | Confirmatory Q3 utility; fresh-family generalization; deployable gain |
 | True controller geometry is necessary for Q3.1 routing | DEVELOPMENT — NOT SUPPORTED | Q3.1 geometry attribution controls | True geometry exceeded learned policy identity by only +0.0033 and failed the frozen +0.01 incremental criterion | Geometry-specific routing; causal geometry is the mechanism of selectability |
+| A0 geometry helps construct a useful policy portfolio | DEVELOPMENT_ONLY — SUPPORTED | Q3.2 Part A | On the closed 300-family panel, A0-maximin K=8 routed gain ranked at the 98.63rd percentile of competence-matched random banks under a geometry-blind router | Confirmatory utility; fresh-family generalization; all geometric bank constructions are superior |
+| True coordinates support routing to unseen controller identities | DEVELOPMENT — NOT SUPPORTED | Q3.2 Part B | The 31-historical-to-16-fresh transfer gained +0.011875 but failed frozen realization and fold-consistency gates | Successful controller-OOS routing; geometry bridges directly to deployable utility |
 
 ## Canonical evidence
 
@@ -36,4 +38,7 @@ narrower than the motivating theory.
 - Q3.1 prompt-representation development:
   [`Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md`](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md)
   and [`Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json`](../review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json).
+- Q3.2 geometry-role decomposition:
+  [`Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md`](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md)
+  and [`Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json`](../review/q3_geometry_role_decomposition/Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json).
 - Current state: [`project_state.yaml`](../project_state.yaml).

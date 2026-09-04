@@ -59,6 +59,35 @@ fresh×fresh pair table additionally requires the private Dshape array with
 SHA-256 `a6a6b4889e2c86df04ce42c4415281dde82af0d2deb1347b8083015e95089ea5`.
 The committed table and source manifests make that dependency explicit.
 
+Q3.2 is reproducible in two layers. The release-safe summary, gates and report
+are tracked under
+[`review/q3_geometry_role_decomposition`](../review/q3_geometry_role_decomposition/),
+with exact source hashes in `Q3_GEOMETRY_ROLE_ARTIFACT_HASHES.json`. The focused
+mechanical checks are:
+
+```bash
+pytest -q tests/test_q3_geometry_role_decomposition.py
+python scripts/check_external_readiness.py
+```
+
+Re-running the complete closed-data analysis additionally requires three
+private, hash-pinned inputs: the 300×4096 prompt-representation matrix, the
+historical 31-controller scored outcomes, and the fresh 16-controller scored
+outcomes. Their SHA-256 identities are frozen in the Q3.2 precheck. With those
+exact files restored, run:
+
+```bash
+python scripts/analyze_q3_geometry_role_decomposition.py \
+  --representations PRIVATE_REPRESENTATIONS.npy \
+  --historical-scores PRIVATE_HISTORICAL_SCORES.jsonl \
+  --fresh-scores PRIVATE_FRESH_SCORES.jsonl \
+  --output PRIVATE_FULL_RESULT.json
+```
+
+The expected private full-result SHA-256 is
+`d1913c4e2b4f500ecece62da83598f5ca157455a788f6b7fc3a45f166c86c71e`.
+No raw model text is read by this analysis or included in the public package.
+
 ## 2. Full raw-data audit
 
 Some scientific artifacts are intentionally absent from Git:

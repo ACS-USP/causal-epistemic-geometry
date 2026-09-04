@@ -105,7 +105,8 @@ historical non-equivalent first audit remains preserved.
 Read the [Stage-B closeout](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md)
 and [forensic resolution](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md).
 There is currently no active semantic campaign. Q3.1 used prompt-only forwards,
-not candidate-answer generation, and is now closed pending principal review.
+not candidate-answer generation. Q3.2 subsequently used only closed scored
+outcomes and CPU analysis.
 
 ## What Q3.1 added—and did not add
 
@@ -118,6 +119,24 @@ gained +5.00 points. The +0.33-point true-geometry increment missed the frozen
 geometry-specific routing mechanism. No fresh holdout was allocated or
 inspected, and Q3 remains `NOT_RUN`. Read the
 [Q3.1 development review](Q3_ROUTE_A_PROMPT_REPRESENTATION_REVIEW.md).
+
+## What Q3.2 added—and did not add
+
+Q3.2 separated geometry's possible roles. With the same geometry-blind
+prompt-representation router, the A0-maximin K=8 bank gained +4.00 percentage
+points over its own cross-fitted champion and ranked at the 98.63rd percentile
+of 512 competence-matched random banks. This passed the frozen policy-bank
+construction criteria.
+
+In contrast, a router trained on 31 historical controllers and evaluated on 16
+held-out fresh controller identities gained only +1.1875 points with true
+coordinates, had positive gain in 3/5 folds, and failed the frozen realization
+and consistency gates. The ruling is
+`Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING`: geometry may help design the
+portfolio, while prompt representations and learned policy identity route
+known policies. It does not establish controller-OOS routing, fresh-family
+utility, or Q3 itself. Read the
+[Q3.2 review](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md).
 
 ## Evidence vocabulary
 

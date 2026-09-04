@@ -3,7 +3,7 @@ last_verified: "2026-09-04"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q3_1_PROMPT_REPRESENTATION_DEVELOPMENT_CLOSED
+  scientific_stage: Q3_2_GEOMETRY_ROLE_DEVELOPMENT_CLOSED
   claim_status: Q2_V4_1_G2__Q2_OOS_V2_A0_PASS
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,10 +19,10 @@ project:
     utility?
 
 current:
-  workstream: Q3_ROUTE_A_PROMPT_REPRESENTATION
+  workstream: Q3_GEOMETRY_ROLE_DECOMPOSITION
   lifecycle: DEVELOPMENT_REVIEW_CLOSED
-  stage: Q3_1_LABEL_FREE_PROMPT_REPRESENTATION_CLOSEOUT
-  source_commit: 28927cbf71e9fb3b11971ce622ab69253936472d
+  stage: Q3_2_GEOMETRY_ROLE_DECOMPOSITION_CLOSEOUT
+  source_commit: 718959f469272ec04ea7984f0faa8ac7f3f358a6
   summary: >-
     Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL.
     The separate DEVELOPMENT LiveCodeBench transfer is closed as
@@ -36,16 +36,22 @@ current:
     folds), but true controller geometry exceeded a capacity-matched learned
     policy-ID control by only +0.0033, below the frozen +0.01 criterion. The
     ruling is Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL.
-    No fresh holdout was allocated or inspected, and Q3 remains NOT_RUN.
-  next_authorized_action: PRINCIPAL_REVIEW_OF_Q3_1_ATTRIBUTION_BOUNDARY
+    Q3.2 then supported A0 geometry for K=8 policy-bank construction: the A0
+    routed gain was +0.0400 and ranked at the 98.63rd percentile of 512
+    competence-matched random banks. True coordinates did not support routing
+    transfer from 31 historical to 16 held-out fresh controllers: gain was
+    +0.011875, with only 3/5 positive folds. The ruling is
+    Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING. No fresh evaluation holdout was
+    allocated or inspected, and Q3 remains NOT_RUN.
+  next_authorized_action: NONE_AFTER_Q3_2_CLOSEOUT__FRESH_INSTRUMENT_REQUIRES_NEW_PRECHECK
   runpod: NOT_USED
   gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE_AFTER_Q3_1_CLOSEOUT
+  new_scientific_experiment_authorized: NONE_AFTER_Q3_2_CLOSEOUT
   active_experiment:
-    name: Q3_1_LABEL_FREE_PROMPT_REPRESENTATION_SELECTABILITY
+    name: Q3_2_GEOMETRY_ROLE_DECOMPOSITION
     evidence_level: DEVELOPMENT_ONLY
-    status: Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL
-    branch: research/q3-route-a-prompt-representation
+    status: Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING
+    branch: research/q3-geometry-role-decomposition
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
     machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
@@ -62,7 +68,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q3_1_DEVELOPMENT_CLOSED_NO_NEW_INFERENCE
+  current_task: Q3_2_DEVELOPMENT_CLOSED_NO_NEW_INFERENCE
   free_generation: NONE_AUTHORIZED
 
 confirmatory_program:

@@ -2791,3 +2791,55 @@ experiments:
     q1_q2_classifications_changed: false
     q3: NOT_RUN
     next_action: PRINCIPAL_REVIEW_OF_Q3_1_ATTRIBUTION_BOUNDARY
+
+  - id: Q3_GEOMETRY_ROLE_DECOMPOSITION
+    version: Q3-2-DEVELOPMENT
+    stage: DEVELOPMENT_ONLY_CLOSED
+    question: >-
+      Does A0 geometry improve policy-bank construction, and can true
+      controller coordinates transfer prompt-policy routing from 31 historical
+      controllers to 16 held-out fresh controller identities?
+    instrument: >-
+      Exact closed 300-family Q2/Q3.0 panel; private hash-pinned Q3.1 prompt
+      representations; geometry-blind learned-policy-identity router for K=8
+      bank comparison; simultaneous controller-OOS and item-fold-OOS transfer
+      with no fresh-controller outcomes used for fitting or tuning.
+    model_policy: CLOSED_DATA_CPU_ONLY_NO_NEW_QWEN_FORWARD
+    status: CLOSED_DEVELOPMENT_ONLY
+    outcome: Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING
+    part_a_ruling: GEOMETRY_BANK_SELECTION_SUPPORTED
+    part_b_ruling: CONTROLLER_OOS_TRANSFER_NOT_SUPPORTED
+    scientific_interpretation: >-
+      The A0-maximin K=8 bank gained +0.0400 over its own cross-fitted champion
+      and ranked at the 98.63rd percentile of 512 competence-matched random
+      banks, passing every frozen Part-A gate. True coordinates gained only
+      +0.011875 over uniform fresh-policy selection, with 3/5 positive folds,
+      and failed the frozen controller-OOS realization and consistency gates.
+      Geometry is supported as a closed-data portfolio-construction tool, not
+      as a router for unseen controller identities or as realized Q3 utility.
+    source_branch: research/q3-geometry-role-decomposition
+    source_commit: 718959f469272ec04ea7984f0faa8ac7f3f358a6
+    parent_q3_1_commit: 9c8c3fd5f34fcc8262be01d5250b5db7a1517323
+    precheck_commit: 4afb68aa0743c77a23969111f3e9ce904b1b753b
+    execution_amendment_commit: 89ff7861e958b011a0daebd0804ca834de770b46
+    artifact: docs/Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md
+    review_namespace: review/q3_geometry_role_decomposition
+    cost_usd: 0.0
+    holdout_status: NOT_APPLICABLE
+    development_panel_n: 300
+    historical_training_controllers: 31
+    held_out_fresh_controllers: 16
+    bank_size: 8
+    matched_random_banks: 512
+    a0_matched_random_gain_percentile: 0.986328125
+    a0_routed_gain: 0.04
+    true_controller_oos_gain: 0.011875
+    true_controller_oos_positive_folds: 3
+    new_semantic_trajectories: 0
+    new_qwen_forwards: 0
+    future_fresh_outcomes_inspected: false
+    future_holdout_allocated: false
+    minimum_future_family_count: 800
+    q1_q2_q3_1_classifications_changed: false
+    q3: NOT_RUN
+    next_action: NONE_AFTER_Q3_2_CLOSEOUT__FRESH_INSTRUMENT_REQUIRES_NEW_PRECHECK

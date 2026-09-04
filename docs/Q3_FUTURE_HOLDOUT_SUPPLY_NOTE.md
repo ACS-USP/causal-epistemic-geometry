@@ -4,9 +4,12 @@ This note is prospective and model-free. It does not allocate a holdout,
 create benchmark items, inspect fresh correctness, or authorize Q3 inference.
 
 Q3.1 found stable development selectability but did not establish incremental
-value from the true controller geometry. Therefore fresh-data construction is
-not yet the only blocker, and no evaluation population should be consumed
-until the scientific attribution question is resolved.
+value from true controller geometry inside a fixed bank. Q3.2 subsequently
+supported A0 geometry for policy-bank construction while not supporting
+controller-OOS routing transfer. The surviving claim therefore concerns a
+geometry-designed portfolio routed by prompt representations and learned
+identity for known policies. No evaluation population should be consumed until
+that exact claim receives a new prospective instrument and power precheck.
 
 Three future supply categories remain plausible:
 
@@ -22,3 +25,6 @@ scientific unit, item supply, evaluator, freshness definition, overlap audit,
 power, policy bank, routing mechanism and claim boundary. Benchmark shopping,
 outcome-conditioned source selection and weakening freshness because the
 current CRUXEval pool is small remain prohibited.
+
+The current minimum target and qualification sequence are in the
+[Q3 Fresh-Evaluation Instrument Roadmap](Q3_FRESH_EVALUATION_INSTRUMENT_ROADMAP.md).

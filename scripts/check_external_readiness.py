@@ -16,6 +16,7 @@ Q1_LCB_DIR = ROOT / "review" / "q1_second_task_spark2_design" / "amendment1_hier
 Q2_OOS_DIR = ROOT / "review" / "q2_oos_fresh_controller_design" / "v2_semantic_execution"
 Q3_DESIGN_DIR = ROOT / "review" / "q3_realizable_utility_design"
 Q3_ROUTE_A_DIR = ROOT / "review" / "q3_route_a_prompt_representation"
+Q3_ROLE_DIR = ROOT / "review" / "q3_geometry_role_decomposition"
 PUBLIC_DOCS = (
     ROOT / "README.md",
     ROOT / "docs" / "START_HERE.md",
@@ -73,6 +74,17 @@ def main() -> int:
             encoding="utf-8"
         )
     )
+    q3_role = json.loads(
+        (Q3_ROLE_DIR / "Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    q3_role_safety = json.loads(
+        (Q3_ROLE_DIR / "Q3_GEOMETRY_ROLE_RELEASE_SAFETY.json").read_text(encoding="utf-8")
+    )
+    q3_role_hashes = json.loads(
+        (Q3_ROLE_DIR / "Q3_GEOMETRY_ROLE_ARTIFACT_HASHES.json").read_text(encoding="utf-8")
+    )
 
     allowed_q2_states = {"Q2_V4_1_G2", "Q2_V4_1_G2__Q2_OOS_V2_A0_PASS"}
     if state["scientific_firewall"]["geometry_q2"] not in allowed_q2_states:
@@ -109,6 +121,7 @@ def main() -> int:
         "Q2_OOS_V2_FORENSIC_CLEAN",
         "Q3_FRESH_HOLDOUT_INSUFFICIENT",
         "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL",
+        "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING",
         "Q3",
     )
     forbidden_current_phrases = (
@@ -167,8 +180,7 @@ def main() -> int:
             if not path.is_file() or _sha256(path) != expected:
                 failures.append(f"Q3 design artifact hash mismatch: {relative}")
     elif (
-        active.get("status")
-        == "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL"
+        active.get("status") == "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL"
     ):
         if active.get("name") != "Q3_1_LABEL_FREE_PROMPT_REPRESENTATION_SELECTABILITY":
             failures.append("Q3.1 closed state has an unexpected experiment identity")
@@ -215,6 +227,56 @@ def main() -> int:
             path = ROOT / relative
             if not path.is_file() or _sha256(path) != expected:
                 failures.append(f"Q3.1 artifact hash mismatch: {relative}")
+    elif active.get("status") == "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING":
+        if active.get("name") != "Q3_2_GEOMETRY_ROLE_DECOMPOSITION":
+            failures.append("Q3.2 closed state has an unexpected experiment identity")
+        if active.get("evidence_level") != "DEVELOPMENT_ONLY":
+            failures.append("Q3.2 closed state is not explicitly DEVELOPMENT_ONLY")
+        if active.get("branch") != "research/q3-geometry-role-decomposition":
+            failures.append("Q3.2 closed state has an unexpected source branch")
+        if state["scientific_firewall"].get("free_generation") != "NONE_AUTHORIZED":
+            failures.append("Q3.2 closed state does not prohibit free generation")
+        if state["current"].get("gpu_work_authorized") is not False:
+            failures.append("Q3.2 closed state unexpectedly authorizes GPU work")
+        if q3_role.get("status") != "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING":
+            failures.append("Q3.2 release summary ruling changed")
+        if q3_role.get("scientific_state") != "Q3_NOT_RUN_DEVELOPMENT_ONLY":
+            failures.append("Q3.2 release summary upgrades Q3")
+        if q3_role.get("immutable_q3_1", {}).get("classification") != (
+            "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL"
+        ):
+            failures.append("Q3.2 release summary changes Q3.1")
+        if q3_role.get("part_a", {}).get("ruling") != "GEOMETRY_BANK_SELECTION_SUPPORTED":
+            failures.append("Q3.2 Part-A ruling changed")
+        if q3_role.get("part_b", {}).get("ruling") != "CONTROLLER_OOS_TRANSFER_NOT_SUPPORTED":
+            failures.append("Q3.2 Part-B ruling changed")
+        firewall = q3_role.get("firewall", {})
+        if firewall.get("new_semantic_trajectories") != 0:
+            failures.append("Q3.2 release summary reports new semantic trajectories")
+        if firewall.get("new_qwen_forwards") != 0:
+            failures.append("Q3.2 release summary reports new Qwen forwards")
+        if firewall.get("fresh_evaluation_outcomes_inspected") is not False:
+            failures.append("Q3.2 release summary reports future outcome inspection")
+        future = q3_role.get("future_instrument", {})
+        if future.get("holdout_allocated") is not False:
+            failures.append("Q3.2 unexpectedly allocates a future holdout")
+        if future.get("future_outcomes_inspected") is not False:
+            failures.append("Q3.2 reports inspection of future outcomes")
+        if q3_role_safety.get("status") != "Q3_GEOMETRY_ROLE_RELEASE_SAFETY_PASS":
+            failures.append("Q3.2 release-safety status changed")
+        for key in (
+            "raw_benchmark_text_included",
+            "raw_model_outputs_included",
+            "prompt_representation_values_included",
+            "private_itemwise_outcomes_included",
+            "credentials_or_infrastructure_included",
+        ):
+            if q3_role_safety.get(key) is not False:
+                failures.append(f"Q3.2 release-safety violation: {key}")
+        for relative, expected in q3_role_hashes.get("artifacts", {}).items():
+            path = ROOT / relative
+            if not path.is_file() or _sha256(path) != expected:
+                failures.append(f"Q3.2 artifact hash mismatch: {relative}")
     else:
         failures.append("active scientific state is not a recognized fail-closed lifecycle state")
 
