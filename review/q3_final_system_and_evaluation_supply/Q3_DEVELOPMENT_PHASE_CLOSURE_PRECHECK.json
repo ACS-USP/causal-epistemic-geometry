@@ -1,0 +1,262 @@
+{
+  "evidence_class": [
+    "DEVELOPMENT_ONLY",
+    "CLOSED_DATA_PLANNING_ONLY"
+  ],
+  "final_system_materialization": {
+    "bank": {
+      "baseline_included": false,
+      "controller_population": "exact frozen historical-31 plus fresh-16 identities",
+      "maximin_ties": "lexicographic controller identity under the frozen implementation",
+      "method": "A0_MAXIMIN",
+      "shell_choice": "per-controller full-development Q3.0 lexicographic rule: accuracy, evaluability, lower mean tokens, MEDIUM tie preference",
+      "size": 8
+    },
+    "champion": {
+      "population": "all exact 94 direction-by-shell policies",
+      "rule": "highest pooled correctness; then evaluability; then lower mean generated tokens; then lexicographic policy identity"
+    },
+    "future_changes_forbidden_without_new_prelock": [
+      "bank identities or shells",
+      "router features or fitted parameters",
+      "champion identity",
+      "parser/evaluator",
+      "primary endpoint"
+    ],
+    "outcomes_allowed": "closed 300-family development outcomes only",
+    "router": {
+      "controller_coordinates_used": false,
+      "family": "regularized low-rank logistic prompt-policy interaction",
+      "hyperparameter_rule": "componentwise median/mode of the five Q3.1 outer-fold GEOMETRY_BLIND_POLICY_ID choices; no full-panel performance lookup",
+      "initialization_seed": 2026090511,
+      "interaction_rank": 2,
+      "l2": 1.0,
+      "learning_rate": 0.03,
+      "mode": "GEOMETRY_BLIND_POLICY_ID",
+      "optimizer": "deterministic full-batch Adam",
+      "pca": "fit once on all 300 closed development representations; persist mean, components, and score scales",
+      "pca_dimension": 8,
+      "representation": "frozen L27 prompt representation",
+      "steps": 400,
+      "targets": "mean correctness across the two closed rollouts for each bank policy"
+    },
+    "status_after_materialization": "DEVELOPMENT_SELECTED_NOT_EVALUATED"
+  },
+  "firewall": {
+    "fresh_correctness_inspected": false,
+    "new_controllers": 0,
+    "new_prompt_capture": 0,
+    "new_qwen_forwards": 0,
+    "new_random_subspaces": 0,
+    "new_semantic_trajectories": 0,
+    "paper_workspace_modified": false,
+    "personal_handbook_modified": false,
+    "q3_confirmatory": "NOT_RUN",
+    "runpod": false,
+    "spark1_gpu": false,
+    "spark2": false
+  },
+  "fresh_instrument_audit": {
+    "criteria": [
+      "task and estimand match",
+      "exact deterministic evaluator",
+      "independent family definition",
+      "contamination and adaptation risk",
+      "licensing and redistribution",
+      "template/source diversity",
+      "development/evaluation separation",
+      "difficulty calibration without final-evaluation outcomes",
+      "reviewer credibility",
+      "runtime"
+    ],
+    "final_item_generation": 0,
+    "holdout_allocation": 0,
+    "minimum_target_families": 800,
+    "restricted_content_download": false,
+    "routes": [
+      "new executable CRUXEval-like program-tracing families",
+      "family-disjoint public exact-evaluator benchmark",
+      "separately generated deterministic program-execution benchmark",
+      "hybrid public source programs with prospectively generated new inputs"
+    ]
+  },
+  "future_primary": {
+    "comparison": "frozen routed A0 portfolio versus frozen best single champion",
+    "endpoint": "Delta_route: mean family-and-rollout correctness difference",
+    "paired_by": "family and rollout index, without assuming RNG coupling from equal numeric seeds",
+    "scientific_unit": "question family",
+    "secondary_geometry_attribution": "matched-random-bank analysis only; cannot rescue primary utility"
+  },
+  "immutable_parent": {
+    "a1_a2_pooling": false,
+    "development_panel_closed_after_materialization": true,
+    "development_panel_families": 300,
+    "q3_2": "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING",
+    "q3_2_mutable": false,
+    "q3_status": "NOT_RUN"
+  },
+  "lineage": {
+    "branch": "research/q3-final-system-and-evaluation-supply",
+    "parent_branch": "research/q3-geometry-role-decomposition",
+    "parent_commit": "cc799a79e786044c5d4d63f79ea38c1e03095362"
+  },
+  "power_precision": {
+    "accuracy_gains": [
+      0.02,
+      0.03,
+      0.04,
+      0.05
+    ],
+    "bootstrap_draws": 10000,
+    "calibration_replicates": 20000,
+    "candidate_tests": [
+      "one-sided studentized paired-family mean test",
+      "one-sided studentized family sign-flip randomization test",
+      "family-cluster bootstrap-t interval",
+      "exact discordant-pair binomial test for R=1 diagnostic"
+    ],
+    "champion_accuracy": [
+      0.35,
+      0.5,
+      0.65
+    ],
+    "deployment_calls": 1,
+    "discordance": [
+      0.1,
+      0.2,
+      0.35,
+      0.5
+    ],
+    "endpoint": "family-weighted mean of rollout-mean routed-minus-champion correctness",
+    "evaluation_rollouts_are_replication_not_deployment_calls": true,
+    "family_latent_icc": [
+      0.0,
+      0.15,
+      0.35
+    ],
+    "invalid_or_unevaluable": "incorrect",
+    "method_selection": [
+      "FPR upper Wilson limit <= 0.065 in all prespecified null scenarios",
+      "95% interval coverage >= 0.93 in all regular scenarios",
+      "family is the independent inference unit",
+      "simple and auditable",
+      "power >= 0.80 for +0.03 under the designated conservative scenario",
+      "smaller interval width only after calibration"
+    ],
+    "missing": "blocks completion",
+    "n_families": [
+      23,
+      100,
+      250,
+      400,
+      500,
+      800,
+      1000,
+      1200
+    ],
+    "paired_seed_interpretation": "same numeric seed is not assumed to induce valid common-random-number coupling for divergent autoregressive policies",
+    "power_replicates": 10000,
+    "randomization_draws": 9999,
+    "rollouts": [
+      1,
+      2,
+      4,
+      6,
+      8
+    ],
+    "seed_scenarios": [
+      "independent policy seeds",
+      "paired/common seeds sensitivity"
+    ],
+    "simulation_seed": 2026090701
+  },
+  "route_decision": {
+    "I": "Tier B only: eligible and adequately powered bounded internal validation",
+    "II": "fully fresh: defensible fresh exact-evaluator instrument and Tier B inadequate or too exposed",
+    "III": "Tier B de-risking followed by unchanged fresh evaluation when both are independently justified",
+    "if_adaptation_after_tier_b": "newly freeze the later instrument; Tier B remains development-only"
+  },
+  "schema_version": "q3-final-system-evaluation-supply-precheck-v1",
+  "sources": {
+    "cruxeval_provenance_ledger": {
+      "path": "review/q2_m3_qualification_cruxeval_provenance/CRUXEVAL_PROVENANCE_LEDGER.jsonl",
+      "sha256": "3f8c22baa6fee56fd292cc9dabb9bcd8500c5b09038e2cd7e4715c1668f8a7cc"
+    },
+    "q3_0_analysis": {
+      "path": "scripts/design_q3_realizable_utility.py",
+      "sha256": "993273891f210af2c9df91bd88f67b76e3fb9151d770d8e778046cc7d8c74bd7"
+    },
+    "q3_0_exposure_ledger": {
+      "path": "review/q3_realizable_utility_design/ITEM_EXPOSURE_LEDGER.json",
+      "sha256": "a61c105c03ed59354d3fe0678cddb36504e91729d6328a3e60ef37987495ae9a"
+    },
+    "q3_0_holdout_feasibility": {
+      "path": "review/q3_realizable_utility_design/FRESH_HOLDOUT_FEASIBILITY.json",
+      "sha256": "ef69d79ae609e9b5ee3cf48c89b58425d455fd8ee2336bbc7becbb7641d0135e"
+    },
+    "q3_1_analysis": {
+      "path": "scripts/analyze_q3_prompt_representation.py",
+      "sha256": "90c58cae6c76085aa3128a39ec7e70ee8c1c7ad7d572a5b0c20e4c127479befa"
+    },
+    "q3_1_release_summary": {
+      "path": "review/q3_route_a_prompt_representation/Q3_ROUTE_A_PROMPT_REPRESENTATION_RELEASE_SUMMARY.json",
+      "sha256": "049518e0b2c689d25adb5082853441499cd04e69cc195a66f0d959047664013f"
+    },
+    "q3_2_release_summary": {
+      "path": "review/q3_geometry_role_decomposition/Q3_GEOMETRY_ROLE_DECOMPOSITION_RELEASE_SUMMARY.json",
+      "sha256": "962fe0e79713c76e411fab453c54a2d3a6d0efcc9b027451a5689029cffcf7a4"
+    }
+  },
+  "status": "Q3_DEVELOPMENT_PHASE_CLOSURE_PRECHECK_FROZEN",
+  "terminal_rulings": [
+    "Q3_TIER_B_INTERNAL_VALIDATION_READY_FOR_PRELOCK",
+    "Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK",
+    "Q3_TWO_STAGE_VALIDATION_RECOMMENDED",
+    "Q3_EVALUATION_SUPPLY_REQUIRES_FURTHER_THEORY",
+    "Q3_NO_DEFENSIBLE_EVALUATION_POPULATION"
+  ],
+  "tier_b_audit": {
+    "allocation_permitted": false,
+    "bounded_internal_validation_eligibility": "A or B only; no exact final-policy outcome, router access, manual inspection, or design influence",
+    "confirmatory_eligibility": "A only, with no unresolved provenance",
+    "future_correctness_permitted": false,
+    "population": "exact 500 Q3.0 Tier-B CRUXEval families",
+    "raw_content_inspection": false,
+    "release_safe_fields_only": true,
+    "strata": {
+      "A": "stable ID/hash/manifest exposure only",
+      "B": "prompt touched only by model-free parser/provenance tooling; no human raw-content inspection and no generation",
+      "C": "model generation under unrelated conditions, with correctness never scored or inspected",
+      "D": "correctness or semantic outcome scored/inspected under unrelated conditions",
+      "E": "known manual raw item/output inspection",
+      "F": "possible influence on final bank, router, parser, metric, threshold, protocol, or exact candidate-policy outcome"
+    },
+    "stratum_precedence": [
+      "F",
+      "E",
+      "D",
+      "C",
+      "B",
+      "A"
+    ],
+    "unknown_or_conflicting_provenance": "fail closed as ineligible"
+  },
+  "tier_b_route_gate": {
+    "candidate_rollouts": [
+      4,
+      6,
+      8
+    ],
+    "maximum_families": 500,
+    "minimum_power_for_gain_0_03": 0.8,
+    "purpose": "bounded internal validation only; never fresh confirmatory evidence",
+    "requires_frozen_system_before_allocation": true,
+    "requires_no_final_policy_prior_outcomes": true,
+    "requires_no_leakage": true
+  },
+  "upper_bound_clarification": {
+    "not_an_upper_bound_on": "cross-fitted routed accuracy",
+    "q3_2_outcome_optimized_bank": "upper bound on bank opportunity/construction under outer-training-only selection",
+    "scientific_result_changed": false
+  }
+}
