@@ -1,0 +1,37 @@
+{
+  "schema_version": "q3-fresh-qualification-closeout-artifacts-v1",
+  "status": "Q3_FRESH_INSTRUMENT_NOT_QUALIFIED",
+  "forensic_status": "Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN",
+  "artifacts": {
+    "review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_INSTRUMENT_QUALIFICATION_CLOSEOUT.md": "c07648504c006c4bbffea419ef0f382551622181ceb67a15019bfb61a82cd334",
+    "review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_QUALIFICATION_RESULT.json": "ebf2720d8fb8266bf615c022664639efbfb831189954fe1f666744b83415df5e",
+    "review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_QUALIFICATION_FORENSIC_AUDIT.json": "15830a33394cf9d243225f331adb7f83ceee8c06fc4aceaa8313b66bd670f610",
+    "review/q3_journal_persistence_incident/INCIDENT_REVIEW.md": "31e90c893659fe22dd3b90eafec04e7c6410359e81571aed31dfe2170530d0f4",
+    "scripts/recover_q3_fresh_qualification_missing.py": "79c3f40915cbc836cdca348e86d1709ed93f609a5f7cc031b47cc15fed2167b8",
+    "scripts/analyze_q3_fresh_qualification.py": "c17d953fde06936639b0a86c609b62b3a904991425a10cd119467ca5f8f82f95",
+    "scripts/audit_q3_fresh_qualification.py": "3b847d2140826c8799e6f647a2b6bcf2b0f49f6a49cbd29b43d10dac075f8d48",
+    "src/epistemic_geometry/research/durable_journal.py": "56aeb9a3270e7403ef54d2d6dd5577a3e467e91b469c4f35dfebc42b11ad95d2"
+  },
+  "frozen_inputs": {
+    "dataset_seal_sha256": "1b889c3c1de9b6d20d93fca96e866322d4a75f672577dcffdc3e49571ea0da72",
+    "execution_lock_sha256": "3a51a8d6d9fe57722f9ca740e1c5281e0645031f1641cb824c469ab4dc36635f",
+    "generator_prelock_sha256": "673b63632c3b446760d70064514a105a32d9c4a2c97c9c0725a283183574f364",
+    "prelock_amendment_sha256": "4021ba5a7d089eca171990187f50f05b5d06438dbadb036b52af815be71104e9",
+    "qualification_schedule_sha256": "edba56fc8435cdc34b6f7551fc2d1b4a6d4cc3d87fc34127a5096526d670a635"
+  },
+  "private_hash_pinned_artifacts": {
+    "final_recovered_journal_bytes": 80077505,
+    "final_recovered_journal_rows": 6000,
+    "final_recovered_journal_sha256": "2194646bcf25ff9512c5e3aaf35d4c2d0ed922f1f86ba6480709a1958dc89431",
+    "private_scores_sha256": "c3b4ab47cf2422afb311fa978496e2abfbe5485ac76040ee3dcead2986ace533",
+    "recovery_collection_seal_sha256": "e7eaf43da51690bd388c191283287374f3b45b7cb8f8015e33b790ff5a6e79ba"
+  },
+  "release_safety": {
+    "confirmation_or_reserve_content": false,
+    "credentials_or_private_infrastructure": false,
+    "private_router_parameters": false,
+    "raw_benchmark_text": false,
+    "raw_model_outputs": false,
+    "raw_qualification_prompts_or_references": false
+  }
+}

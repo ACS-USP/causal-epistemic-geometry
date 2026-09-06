@@ -1,0 +1,18 @@
+{
+  "classification_agreement": true,
+  "confirmation_qwen_access": 0,
+  "correctness_first_inspected_after_raw_seal": true,
+  "duplicates": 0,
+  "forensic_classification": "Q3_FRESH_INSTRUMENT_NOT_QUALIFIED",
+  "max_aggregate_metric_difference": 0.0,
+  "missing": 0,
+  "parser_disagreement_rows": 0,
+  "primary_classification": "Q3_FRESH_INSTRUMENT_NOT_QUALIFIED",
+  "raw_journal_sha256": "2194646bcf25ff9512c5e3aaf35d4c2d0ed922f1f86ba6480709a1958dc89431",
+  "raw_rows": 6000,
+  "reexecuted_missing_rows": 10,
+  "reserve_qwen_access": 0,
+  "schema_version": "q3-fresh-qualification-forensic-audit-v1",
+  "status": "Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN",
+  "unexpected": 0
+}
