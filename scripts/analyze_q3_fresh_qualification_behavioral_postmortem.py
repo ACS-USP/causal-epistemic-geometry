@@ -360,6 +360,14 @@ def main() -> None:
     }
     family_intersection = set.intersection(*(family_sets[policy] for policy in seven))
     family_union = set.union(*(family_sets[policy] for policy in seven))
+    per_policy_family_coverage = {}
+    for policy in seven:
+        counts = Counter(family_id for family_id, _rollout in correct_sets[policy])
+        per_policy_family_coverage[policy] = {
+            "families_correct_at_least_once": len(counts),
+            "families_correct_in_both_rollouts": sum(value == 2 for value in counts.values()),
+            "families_correct_in_one_rollout": sum(value == 1 for value in counts.values()),
+        }
     pairwise = {}
     for left, right in combinations(seven, 2):
         overlap = len(correct_sets[left] & correct_sets[right])
@@ -531,6 +539,7 @@ def main() -> None:
             "row_union": len(union),
             "family_intersection": len(family_intersection),
             "family_union": len(family_union),
+            "per_policy_family_coverage": per_policy_family_coverage,
             "correct_rows_by_number_of_policies": dict(sorted(row_policy_multiplicity.items())),
             "pairwise": pairwise,
             "by_output_type": stratum_table(seven, scores_by_condition, family_meta, "output_type"),
