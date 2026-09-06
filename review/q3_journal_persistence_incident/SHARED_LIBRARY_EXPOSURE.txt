@@ -1,0 +1,23 @@
+Potential exposure only. No historical campaign is reclassified by this inventory.
+Q3 formerly used the same constructor and is changed only in the isolated patch.
+scripts/run_q2_v4_1_semantic.py:453:    journal = CrashSafeJournal(JOURNAL, identity=identity, key_fields=KEY_FIELDS)
+scripts/run_q2_controller_heldout_v2.py:170:    return list(CrashSafeJournal(path, identity=identity, key_fields=keys).rows.values())
+scripts/run_q2_controller_heldout_v2.py:215:    journal = CrashSafeJournal(
+scripts/run_q2_controller_heldout_v2.py:489:    journal = CrashSafeJournal(
+scripts/run_q2_controller_heldout_v2.py:1092:    journal = CrashSafeJournal(
+scripts/run_q2_controller_heldout.py:205:    journal = CrashSafeJournal(
+scripts/run_q2_controller_heldout.py:259:    return list(CrashSafeJournal(path, identity=identity, key_fields=keys).rows.values())
+scripts/run_q2_controller_heldout.py:518:    journal = CrashSafeJournal(
+scripts/run_q2_controller_heldout.py:834:    journal = CrashSafeJournal(
+scripts/run_q2_v4_presemantic.py:403:    resume = CrashSafeJournal(
+scripts/run_q2_v4_presemantic.py:410:    reopened = CrashSafeJournal(
+scripts/run_q2_v4_presemantic.py:477:    journal = CrashSafeJournal(
+scripts/run_q2_v4_presemantic.py:526:        CrashSafeJournal(
+scripts/run_q2_v4_presemantic.py:822:    journal = CrashSafeJournal(
+scripts/execute_q2_oos_v2_semantic.py:839:    journal = CrashSafeJournal(
+scripts/run_q2_v3.py:321:    return list(CrashSafeJournal(path, identity=identity, key_fields=keys).rows.values())
+scripts/run_q2_v3.py:349:    journal = CrashSafeJournal(
+scripts/run_q2_v3.py:743:    journal = CrashSafeJournal(
+scripts/run_q2_v3.py:1372:    journal = CrashSafeJournal(
+scripts/analyze_q2_controller_heldout.py:61:    journal = CrashSafeJournal(
+scripts/run_q2_oos_v2_presemantic.py:362:    journal = CrashSafeJournal(

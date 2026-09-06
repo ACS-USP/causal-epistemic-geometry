@@ -1,0 +1,82 @@
+{
+  "supplemental_manifest_sha256": "b4a520f0e54457851ecf495cf3ad634c589d2556f6b87cab60071a8ac2de0ba0",
+  "originals_unchanged": true,
+  "file_count": 15,
+  "inventory": [
+    {
+      "name": "000-COLLECTION_COMPLETE_SEAL.json",
+      "bytes": 1705,
+      "sha256": "2b1c848af719d8be923949abc70a9fcdc809121166d4f72cfaf4faea61756e1c"
+    },
+    {
+      "name": "001-journal.jsonl",
+      "bytes": 80032031,
+      "sha256": "ae65de79f99f6ef12b423c6e3604b0afea952b9d6cf835bb1668786cf15ed811"
+    },
+    {
+      "name": "002-PREOPEN_SEAL.json",
+      "bytes": 1942,
+      "sha256": "68711ceb4a8cfc7e1bcc770aed7ffa7b5f025977a255649115ad01f4ec04329f"
+    },
+    {
+      "name": "003-engine.log",
+      "bytes": 758,
+      "sha256": "bcba0bc8ce98ead271725aee10a349a3abfa2e302fbea16033452394b055ff26"
+    },
+    {
+      "name": "004-collection.log",
+      "bytes": 7826,
+      "sha256": "f1d8ac908ce48d4edc017e5feb0bdc4a89701304ffe0bfde476b0e23b600c127"
+    },
+    {
+      "name": "005-ENGINE_VALIDATION.json",
+      "bytes": 2217,
+      "sha256": "abc904db907d834a4b1d6719f8b39818b88b739fe3034d671a8d05d1591c81e4"
+    },
+    {
+      "name": "006-Q3_FRESH_QUALIFICATION_SCHEDULE.json",
+      "bytes": 1787259,
+      "sha256": "edba56fc8435cdc34b6f7551fc2d1b4a6d4cc3d87fc34127a5096526d670a635"
+    },
+    {
+      "name": "007-Q3_FRESH_QUALIFICATION_EXECUTION_LOCK.json",
+      "bytes": 8696,
+      "sha256": "3a51a8d6d9fe57722f9ca740e1c5281e0645031f1641cb824c469ab4dc36635f"
+    },
+    {
+      "name": "008-execute_q3_fresh_qualification.py",
+      "bytes": 28262,
+      "sha256": "31789b3d159303f23c73d256cc17ade1cfdbc7e0a8fc9c9cc106157de89bbf9b"
+    },
+    {
+      "name": "009-reliability.py",
+      "bytes": 9073,
+      "sha256": "5c29533c7489077a30f0c7d8e67f10df3c3379403b59d0560226ed5d24f307c4"
+    },
+    {
+      "name": "PAUSED_PREFIX_35_AUTHENTICATED.jsonl",
+      "bytes": 778228,
+      "sha256": "ec838d88494adc856deefca2ab35e2db230bdfdb84b5b3975108bcca4d56c154"
+    },
+    {
+      "name": "PRESERVATION_MANIFEST_PRIVATE.json",
+      "bytes": 18118,
+      "sha256": "1f31b5fc16dfd7126c5c68ec67ba5401a1cd03a6be64c6c8c982d730fb20d2a5"
+    },
+    {
+      "name": "execute_q3_fresh_qualification.preserved.pyc",
+      "bytes": 37879,
+      "sha256": "6c8092a6dea74ef979ef76301beb6cf687028c575cd8d3aeb56e22c78c903851"
+    },
+    {
+      "name": "reliability.preserved.pyc",
+      "bytes": 15249,
+      "sha256": "fa1b13b9fb9bc54b0427ea47c6b7ae672301f2b86e2c03e0c3d6136bc4e56ea9"
+    },
+    {
+      "name": "reproducibility.preserved.pyc",
+      "bytes": 9736,
+      "sha256": "a8d62c10d9b6a42932ca327c71d1f435f98e71c3694a6cfd1ed830171c4325fb"
+    }
+  ]
+}

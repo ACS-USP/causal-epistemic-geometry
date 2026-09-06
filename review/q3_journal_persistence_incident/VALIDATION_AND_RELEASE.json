@@ -1,0 +1,20 @@
+{
+  "scope": "OPERATIONAL_FORENSIC_AND_ISOLATED_IMPLEMENTATION_ONLY",
+  "focused_tests_passed": 47,
+  "focused_tests_failed": 0,
+  "ruff": "PASS",
+  "compileall_changed_python": "PASS",
+  "diff_check": "PASS",
+  "report_local_links": "PASS",
+  "generation_loop_ast_equal_to_frozen": true,
+  "exact_64_bit_missing_seeds_match_schedule": true,
+  "new_module_deployed_to_campaign": false,
+  "original_journal_and_seals_unchanged": true,
+  "raw_or_reference_content_in_release": false,
+  "private_full_manifests_in_release": false,
+  "credentials_or_private_infrastructure_paths_in_release": false,
+  "new_model_inference": 0,
+  "scoring": "NOT_STARTED",
+  "scope_limit": "Record loss cause unresolved; no original missing records recovered. No scientific retry authorization inferred.",
+  "historical_campaigns_reclassified": false
+}

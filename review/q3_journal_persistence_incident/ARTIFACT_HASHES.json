@@ -1,0 +1,17 @@
+{
+  "schema": "q3-persistence-incident-artifacts-v1",
+  "files": {
+    "review/q3_journal_persistence_incident/BYTECODE_STRUCTURAL_COMPARISON.json": "79dac54af0d70618bc3d06bc9b28a877997092098e99cc1c38301dc3759823ad",
+    "review/q3_journal_persistence_incident/INCIDENT_REVIEW.md": "31e90c893659fe22dd3b90eafec04e7c6410359e81571aed31dfe2170530d0f4",
+    "review/q3_journal_persistence_incident/INDEPENDENT_READONLY_AUDIT.json": "2e51e4100fa64ecf64c05b6eac083458e84d7796f5d214460e22ccbdac9bd08e",
+    "review/q3_journal_persistence_incident/PRESERVATION_PUBLIC_HASHES.json": "760596f45edb63dfc7548fa78650543d60500fff319ac3be4bb659849d5373dd",
+    "review/q3_journal_persistence_incident/READONLY_JOURNAL_AUDIT.json": "e7a5168d6682dd5672c6fdc30240e104973219b80e961cd8457c655f9960203e",
+    "review/q3_journal_persistence_incident/SHARED_LIBRARY_EXPOSURE.txt": "be1db9467226e7a50b9c7493283a645aa0ac7a27a5bea1a49bae60e9ec3bcef5",
+    "review/q3_journal_persistence_incident/VALIDATION_AND_RELEASE.json": "ff55773fea249210d93b14b120445892ffff6450bce7964767ff1d2e14737317",
+    "scripts/audit_q3_journal_persistence.py": "4e2d5ca271d384e95d68fd558c1824937a4e1c4e1beeab6ed94388616ce38f4e",
+    "scripts/audit_q3_journal_persistence_independent.py": "51e15bf764d72ad639ded17cd2eb51768b581fef6c02907b5ae4c187cd9c78ec",
+    "scripts/execute_q3_fresh_qualification.py": "da860bcffe2b6f03ad935a60aeb9af21fc5702fcc1a0d2313ec1c38b61684551",
+    "src/epistemic_geometry/research/durable_journal.py": "56aeb9a3270e7403ef54d2d6dd5577a3e467e91b469c4f35dfebc42b11ad95d2",
+    "tests/test_q3_durable_journal.py": "a21098f720b8374269479416edd2e7b404816b66580860b89e25fc1f4ca1851d"
+  }
+}

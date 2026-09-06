@@ -37,8 +37,8 @@ from epistemic_geometry.backends.huggingface import HuggingFaceBackend  # noqa: 
 from epistemic_geometry.benchmarks.q3_fresh.instrument import build_family  # noqa: E402
 from epistemic_geometry.config import BackendConfig  # noqa: E402
 from epistemic_geometry.experiments.gate6 import vector_sha256  # noqa: E402
+from epistemic_geometry.research.durable_journal import SingleWriterJournal  # noqa: E402
 from epistemic_geometry.research.reliability import (  # noqa: E402
-    CrashSafeJournal,
     validate_logical_rows,
 )
 from epistemic_geometry.steering.gate6 import Gate6HookTrace  # noqa: E402
@@ -555,103 +555,105 @@ def collect(
         "environment": environment,
         "semantic_scoring": "DEFERRED_UNTIL_RAW_SEAL",
     }
-    journal = CrashSafeJournal(
+    with SingleWriterJournal(
         execution_dir / "journal.jsonl", identity=identity, key_fields=KEY_FIELDS
-    )
-    backend = build_backend(model_path)
-    started = time.monotonic()
-    for index, row in enumerate(schedule):
-        key = (row["family_id"], row["condition"], int(row["rollout_index"]))
-        if key in journal.rows:
-            continue
-        item = model_item(row["family_id"], prompts[row["family_id"]])
-        attempts = 0
-        retry_reasons: list[str] = []
-        while True:
-            try:
-                context, condition_meta = generation_context(
-                    backend, item, row["condition"], vectors, metadata, order, router
-                )
-                trajectory_started = time.perf_counter()
-                with context as trace:
-                    output = backend.generate_reasoning(
-                        item,
-                        sampling_seed=int(row["seed"]),
-                        max_new_tokens=4096,
-                        token_stop_predicate=extreme_mechanical_repetition_v1,
-                        token_stop_name=EXTREME_REPETITION_NAME,
+    ) as journal:
+        backend = build_backend(model_path)
+        started = time.monotonic()
+        for index, row in enumerate(schedule):
+            key = (row["family_id"], row["condition"], int(row["rollout_index"]))
+            if key in journal.rows:
+                continue
+            item = model_item(row["family_id"], prompts[row["family_id"]])
+            attempts = 0
+            retry_reasons: list[str] = []
+            while True:
+                try:
+                    context, condition_meta = generation_context(
+                        backend, item, row["condition"], vectors, metadata, order, router
                     )
-                elapsed = time.perf_counter() - trajectory_started
-                terminal = frozen_terminal_metadata(output)
-                trace_meta = trace.metadata()
-                if row["condition"] == "ONLINE_ROUTED" and trace_meta["selection_count"] != 1:
-                    raise RuntimeError("Q3_FRESH_ROUTER_SELECTION_COUNT_INVALID")
-                journal.append(
-                    {
-                        **row,
-                        "schedule_index": index,
-                        "raw_output": output.raw_output,
-                        "generated_token_ids": output.metadata["generated_token_ids"],
-                        **terminal,
-                        "condition_metadata": condition_meta,
-                        "hook_trace": trace_meta,
-                        "model": MODEL,
-                        "model_revision": MODEL_REVISION,
-                        "seed": int(row["seed"]),
-                        "retry_count": attempts,
-                        "retry_reasons": retry_reasons,
-                        "elapsed_seconds": elapsed,
-                        "runtime_error": None,
-                        "semantic_scoring": "DEFERRED_UNTIL_COMPLETE_RAW_SEAL",
-                    }
+                    trajectory_started = time.perf_counter()
+                    with context as trace:
+                        output = backend.generate_reasoning(
+                            item,
+                            sampling_seed=int(row["seed"]),
+                            max_new_tokens=4096,
+                            token_stop_predicate=extreme_mechanical_repetition_v1,
+                            token_stop_name=EXTREME_REPETITION_NAME,
+                        )
+                    elapsed = time.perf_counter() - trajectory_started
+                    terminal = frozen_terminal_metadata(output)
+                    trace_meta = trace.metadata()
+                    if row["condition"] == "ONLINE_ROUTED" and trace_meta["selection_count"] != 1:
+                        raise RuntimeError("Q3_FRESH_ROUTER_SELECTION_COUNT_INVALID")
+                    journal.append(
+                        {
+                            **row,
+                            "schedule_index": index,
+                            "raw_output": output.raw_output,
+                            "generated_token_ids": output.metadata["generated_token_ids"],
+                            **terminal,
+                            "condition_metadata": condition_meta,
+                            "hook_trace": trace_meta,
+                            "model": MODEL,
+                            "model_revision": MODEL_REVISION,
+                            "seed": int(row["seed"]),
+                            "retry_count": attempts,
+                            "retry_reasons": retry_reasons,
+                            "elapsed_seconds": elapsed,
+                            "runtime_error": None,
+                            "semantic_scoring": "DEFERRED_UNTIL_COMPLETE_RAW_SEAL",
+                        }
+                    )
+                    break
+                except BaseException as exc:
+                    if _retryable(exc) and attempts + 1 < MAX_INFRASTRUCTURE_ATTEMPTS:
+                        attempts += 1
+                        retry_reasons.append(f"{type(exc).__name__}: {exc}")
+                        continue
+                    raise
+            completed = len(journal.rows)
+            if completed == 1 or completed % 100 == 0:
+                print(
+                    json.dumps({"completed": completed, "pending": EXPECTED_ROWS - completed}),
+                    flush=True,
                 )
-                break
-            except BaseException as exc:
-                if _retryable(exc) and attempts + 1 < MAX_INFRASTRUCTURE_ATTEMPTS:
-                    attempts += 1
-                    retry_reasons.append(f"{type(exc).__name__}: {exc}")
-                    continue
-                raise
-        completed = len(journal.rows)
-        if completed == 1 or completed % 100 == 0:
-            print(
-                json.dumps({"completed": completed, "pending": EXPECTED_ROWS - completed}),
-                flush=True,
-            )
-    rows = list(journal.rows.values())
-    expected = [(r["family_id"], r["condition"], int(r["rollout_index"])) for r in schedule]
-    coverage = validate_logical_rows(rows, key_fields=KEY_FIELDS, expected_keys=expected)
-    if not coverage.valid or len(rows) != EXPECTED_ROWS:
-        raise RuntimeError("Q3_FRESH_QUALIFICATION_EXECUTION_INCOMPLETE")
-    tokens = [int(row["generated_token_count"]) for row in rows]
-    seal = {
-        "schema_version": "q3-fresh-qualification-collection-seal-v1",
-        "status": "COLLECTION_COMPLETE_RAW_UNSCORED",
-        "completed": len(rows),
-        "expected": EXPECTED_ROWS,
-        "missing": len(coverage.missing_keys),
-        "unexpected": len(coverage.unexpected_keys),
-        "duplicates": len(coverage.duplicate_keys),
-        "replacements": 0,
-        "retry_rows": sum(int(r["retry_count"]) > 0 for r in rows),
-        "runtime_errors": sum(r["runtime_error"] is not None for r in rows),
-        "repetition_stops": sum(r["terminal_reason"] == EXTREME_REPETITION_NAME for r in rows),
-        "hard_caps": sum(r["terminal_reason"] == "max_new_tokens" for r in rows),
-        "generated_tokens": sum(tokens),
-        "generated_token_mean": float(np.mean(tokens)),
-        "generated_token_median": float(np.median(tokens)),
-        "elapsed_seconds": time.monotonic() - started,
-        "journal_sha256": sha256_file(journal.path),
-        "journal_bytes": journal.path.stat().st_size,
-        "preopen_sha256": sha256_file(execution_dir / "PREOPEN_SEAL.json"),
-        "correctness_inspected": False,
-        "semantic_scoring": "NOT_RUN",
-        "confirmation_qwen_access": 0,
-        "reserve_qwen_access": 0,
-        "environment": environment,
-    }
-    write_json(execution_dir / "COLLECTION_COMPLETE_SEAL.json", seal)
-    return seal
+        persisted = journal.persisted_rows(schedule)
+        rows = list(persisted.rows.values())
+        expected = [(r["family_id"], r["condition"], int(r["rollout_index"])) for r in schedule]
+        coverage = validate_logical_rows(rows, key_fields=KEY_FIELDS, expected_keys=expected)
+        if not coverage.valid or len(rows) != EXPECTED_ROWS:
+            raise RuntimeError("Q3_FRESH_QUALIFICATION_EXECUTION_INCOMPLETE")
+        tokens = [int(row["generated_token_count"]) for row in rows]
+        seal = {
+            "schema_version": "q3-fresh-qualification-collection-seal-v1",
+            "status": "COLLECTION_COMPLETE_RAW_UNSCORED",
+            "completed": len(rows),
+            "expected": EXPECTED_ROWS,
+            "missing": len(coverage.missing_keys),
+            "unexpected": len(coverage.unexpected_keys),
+            "duplicates": len(coverage.duplicate_keys),
+            "replacements": 0,
+            "retry_rows": sum(int(r["retry_count"]) > 0 for r in rows),
+            "runtime_errors": sum(r["runtime_error"] is not None for r in rows),
+            "repetition_stops": sum(r["terminal_reason"] == EXTREME_REPETITION_NAME for r in rows),
+            "hard_caps": sum(r["terminal_reason"] == "max_new_tokens" for r in rows),
+            "generated_tokens": sum(tokens),
+            "generated_token_mean": float(np.mean(tokens)),
+            "generated_token_median": float(np.median(tokens)),
+            "elapsed_seconds": time.monotonic() - started,
+            "journal_sha256": persisted.sha256,
+            "journal_bytes": len(persisted.raw),
+            "preopen_sha256": sha256_file(execution_dir / "PREOPEN_SEAL.json"),
+            "correctness_inspected": False,
+            "semantic_scoring": "NOT_RUN",
+            "confirmation_qwen_access": 0,
+            "reserve_qwen_access": 0,
+            "environment": environment,
+        }
+        return journal.seal(
+            execution_dir / "COLLECTION_COMPLETE_SEAL.json", schedule, lambda audited: seal
+        )
 
 
 def main() -> None:

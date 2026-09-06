@@ -1,0 +1,51 @@
+{
+  "independent_reader": "stdlib_streaming_no_shared_audit_imports",
+  "journal_sha256": "ae65de79f99f6ef12b423c6e3604b0afea952b9d6cf835bb1668786cf15ed811",
+  "physical_lines": 5990,
+  "newline_terminated_lines": 5990,
+  "unique_keys": 5990,
+  "duplicate_keys": 0,
+  "missing_schedule_indices": [
+    1380,
+    1381,
+    1565,
+    1566,
+    1855,
+    3043,
+    4481,
+    4482,
+    4678,
+    5989
+  ],
+  "unexpected": 0,
+  "identity_variants": 1,
+  "validation_errors": 0,
+  "schedule_hash_matches_preopen": true,
+  "seal_hash_matches": true,
+  "progress_events": 62,
+  "last_progress_events": [
+    {
+      "completed": 5900,
+      "pending": 100
+    },
+    {
+      "completed": 6000,
+      "pending": 0
+    },
+    {
+      "completed": 6000,
+      "status": "COLLECTION_COMPLETE_RAW_UNSCORED",
+      "expected": 6000
+    }
+  ],
+  "error_keyword_counts": {
+    "No space left": 0,
+    "Input/output error": 0,
+    "BrokenPipeError": 0,
+    "MemoryError": 0,
+    "KeyboardInterrupt": 1,
+    "Traceback": 1
+  },
+  "raw_content_emitted": false,
+  "scoring_performed": false
+}
