@@ -22,7 +22,7 @@ narrower than the motivating theory.
 | True coordinates support routing to unseen controller identities | DEVELOPMENT — NOT SUPPORTED | Q3.2 Part B | The 31-historical-to-16-fresh transfer gained +0.011875 but failed frozen realization and fold-consistency gates | Successful controller-OOS routing; geometry bridges directly to deployable utility |
 | One Q3 candidate system is ready for fresh evaluation prelocking | DESIGN_ONLY | Q3.3 final-system closure | The A0 K=8 bank, geometry-blind router, and champion are development-selected and frozen by identity/hash | The system has fresh utility; Q3 has run; the chosen system is confirmatorily optimal |
 | The existing Tier-B pool can confirm Q3 utility | DESIGN — NOT SUPPORTED | Q3.3 exposure audit | Tier B has zero confirmatory-eligible and only 11 bounded internal-validation families | Reusing exposed families as a fresh holdout; pooling them with future confirmation |
-| A fresh deterministic program-execution instrument is ready to generate | DESIGN_ONLY | Q3.3 supply review | A 1,600-family generator/evaluator/qualification design is ready for a separate prelock | Final items, IDs, seeds, splits, or outcomes already exist; N=1,000 utility is demonstrated |
+| The Q3 fresh deterministic program-execution instrument qualified | DEVELOPMENT — NOT SUPPORTED | Q3.4 qualification | The instrument was built, but mandatory answer-channel, difficulty, and bank-opportunity gates failed; confirmation and reserve stayed unopened | Treating Q3.4 as a utility test; opening or interpreting confirmation; claiming fresh-family utility |
 
 ## Canonical evidence
 
@@ -47,4 +47,8 @@ narrower than the motivating theory.
 - Q3.3 final-system and evaluation-supply design:
   [`Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md`](Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md)
   and [`Q3_FINAL_SYSTEM_AND_SUPPLY_RELEASE_SUMMARY.json`](../review/q3_final_system_and_evaluation_supply/Q3_FINAL_SYSTEM_AND_SUPPLY_RELEASE_SUMMARY.json).
+- Q3.4 fresh-instrument qualification:
+  [`Q3_FRESH_INSTRUMENT_QUALIFICATION_CLOSEOUT.md`](../review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_INSTRUMENT_QUALIFICATION_CLOSEOUT.md),
+  [`Q3_FRESH_QUALIFICATION_RESULT.json`](../review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_QUALIFICATION_RESULT.json),
+  and [`Q3_FRESH_QUALIFICATION_FORENSIC_AUDIT.json`](../review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_QUALIFICATION_FORENSIC_AUDIT.json).
 - Current state: [`project_state.yaml`](../project_state.yaml).

@@ -1,9 +1,9 @@
 schema_version: 1
-last_verified: "2026-09-04"
+last_verified: "2026-09-06"
 project:
   name: Causal Geometry of Epistemic Complementarity
   repository: ACS-USP/causal-epistemic-geometry
-  scientific_stage: Q3_3_FINAL_SYSTEM_AND_SUPPLY_DESIGN_CLOSED
+  scientific_stage: Q3_4_FRESH_INSTRUMENT_QUALIFICATION_CLOSED
   claim_status: Q2_V4_1_G2__Q2_OOS_V2_A0_PASS
   long_term_question: >-
     Can internal representation and intervention geometry predict and causally
@@ -19,10 +19,10 @@ project:
     utility?
 
 current:
-  workstream: Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY
-  lifecycle: DEVELOPMENT_DESIGN_CLOSED
-  stage: Q3_3_FINAL_SYSTEM_FREEZE_AND_EVALUATION_SUPPLY
-  source_commit: 428090ebc7be5e8dbaae6e1d2bd27268ff9de534
+  workstream: Q3_FRESH_INSTRUMENT_QUALIFICATION
+  lifecycle: DEVELOPMENT_INSTRUMENT_QUALIFICATION_CLOSED
+  stage: Q3_4_FRESH_INSTRUMENT_QUALIFICATION
+  source_commit: 161c6012c2ae1596381326d9f1df459824bccd62
   summary: >-
     Q1 confirmatory evidence remains Q1_CONFIRMATORY_QWEN_PASS_MINISTRAL_FAIL.
     The separate DEVELOPMENT LiveCodeBench transfer is closed as
@@ -42,21 +42,26 @@ current:
     transfer from 31 historical to 16 held-out fresh controllers: gain was
     +0.011875, with only 3/5 positive folds. The ruling is
     Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING. Q3.3 then froze one final
-    development-selected A0 K=8 candidate system, rejected the exposed Tier-B
-    pool for confirmation, and designed a fully fresh deterministic 1,600-family
-    instrument with 300 qualification, 1,000 confirmation, and 300 reserve
-    families. The preferred confirmation uses N=1,000 and R=2; no final items,
-    IDs, seeds, holdout, or outcomes were generated or inspected. Q3 remains
-    NOT_RUN.
-  next_authorized_action: NONE__FRESH_INSTRUMENT_REQUIRES_SEPARATE_PRELOCK
+    development-selected A0 K=8 candidate system and a deterministic
+    restricted-Python instrument. Q3.4 generated and sealed 1,600 independent
+    families and evaluated only the 300-family qualification split. The
+    6,000-row qualification closed as Q3_FRESH_INSTRUMENT_NOT_QUALIFIED with
+    Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN: router validity and
+    evaluability were 0.94, champion accuracy was 0.1333, and bank oracle
+    headroom was 0.015, each below a frozen mandatory gate. Confirmation and
+    reserve remained unopened to Qwen. Q3 remains NOT_RUN.
+  next_authorized_action: NONE__CONFIRMATION_CLOSED_AFTER_INSTRUMENT_NONQUALIFICATION
   runpod: NOT_USED
   gpu_work_authorized: false
-  new_scientific_experiment_authorized: NONE_AFTER_Q3_2_CLOSEOUT
+  new_scientific_experiment_authorized: NONE_AFTER_Q3_4_CLOSEOUT
   active_experiment:
-    name: Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY
-    evidence_level: DESIGN_ONLY_DEVELOPMENT_CLOSURE
-    status: Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK
-    branch: research/q3-final-system-and-evaluation-supply
+    name: Q3_FRESH_INSTRUMENT_QUALIFICATION
+    evidence_level: DEVELOPMENT_INSTRUMENT_QUALIFICATION
+    status: Q3_FRESH_INSTRUMENT_NOT_QUALIFIED
+    forensic_status: Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN
+    branch: research/q3-fresh-instrument-qualification-recovery
+    confirmation_status: CLOSED_NOT_AUTHORIZED
+    reserve_status: CLOSED_NOT_AUTHORIZED
   normative_addendum:
     machine_readable: review/q2_v4_1_prediction_lock/Q2_V4_1_NORMATIVE_EXECUTION_AND_ANALYSIS_LOCK.json
     machine_readable_sha256: ee70e60b9d2f64ee8d4a8e59afb8635a80f20bfd06da72600703e50fbdf33d8a
@@ -73,7 +78,7 @@ scientific_firewall:
   committee_q3: NOT_RUN
   confirmatory_holdout: CONSUMED_CONFIRMATORY_CLOSED
   model_downloads_local: FORBIDDEN
-  current_task: Q3_3_DESIGN_CLOSED_NO_NEW_INFERENCE
+  current_task: Q3_4_QUALIFICATION_CLOSED_CONFIRMATION_NOT_AUTHORIZED
   free_generation: NONE_AUTHORIZED
 
 confirmatory_program:

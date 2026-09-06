@@ -18,6 +18,7 @@ Q3_DESIGN_DIR = ROOT / "review" / "q3_realizable_utility_design"
 Q3_ROUTE_A_DIR = ROOT / "review" / "q3_route_a_prompt_representation"
 Q3_ROLE_DIR = ROOT / "review" / "q3_geometry_role_decomposition"
 Q3_FINAL_DIR = ROOT / "review" / "q3_final_system_and_evaluation_supply"
+Q3_QUALIFICATION_DIR = ROOT / "review" / "q3_fresh_instrument_qualification_closeout"
 PUBLIC_DOCS = (
     ROOT / "README.md",
     ROOT / "docs" / "START_HERE.md",
@@ -97,6 +98,21 @@ def main() -> int:
     q3_final_hashes = json.loads(
         (Q3_FINAL_DIR / "Q3_FINAL_SYSTEM_ARTIFACT_HASHES.json").read_text(encoding="utf-8")
     )
+    q3_qualification = json.loads(
+        (Q3_QUALIFICATION_DIR / "Q3_FRESH_QUALIFICATION_RESULT.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    q3_qualification_audit = json.loads(
+        (Q3_QUALIFICATION_DIR / "Q3_FRESH_QUALIFICATION_FORENSIC_AUDIT.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    q3_qualification_hashes = json.loads(
+        (Q3_QUALIFICATION_DIR / "Q3_FRESH_QUALIFICATION_CLOSEOUT_ARTIFACTS.json").read_text(
+            encoding="utf-8"
+        )
+    )
 
     allowed_q2_states = {"Q2_V4_1_G2", "Q2_V4_1_G2__Q2_OOS_V2_A0_PASS"}
     if state["scientific_firewall"]["geometry_q2"] not in allowed_q2_states:
@@ -135,6 +151,8 @@ def main() -> int:
         "Q3_ROUTE_A_REPRESENTATION_SELECTABLE_BUT_GEOMETRY_NOT_INCREMENTAL",
         "Q3_GEOMETRY_SUPPORTS_PORTFOLIO_NOT_ROUTING",
         "Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK",
+        "Q3_FRESH_INSTRUMENT_NOT_QUALIFIED",
+        "Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN",
         "Q3",
     )
     forbidden_current_phrases = (
@@ -357,6 +375,69 @@ def main() -> int:
         review_path = ROOT / str(review.get("path", ""))
         if not review_path.is_file() or _sha256(review_path) != review.get("sha256"):
             failures.append("Q3.3 review hash mismatch")
+    elif active.get("status") == "Q3_FRESH_INSTRUMENT_NOT_QUALIFIED":
+        if active.get("name") != "Q3_FRESH_INSTRUMENT_QUALIFICATION":
+            failures.append("Q3.4 closed state has an unexpected experiment identity")
+        if active.get("evidence_level") != "DEVELOPMENT_INSTRUMENT_QUALIFICATION":
+            failures.append("Q3.4 closed state is not instrument-development evidence")
+        if active.get("branch") != "research/q3-fresh-instrument-qualification-recovery":
+            failures.append("Q3.4 closed state has an unexpected source branch")
+        if active.get("forensic_status") != "Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN":
+            failures.append("Q3.4 project state omits the clean forensic ruling")
+        if active.get("confirmation_status") != "CLOSED_NOT_AUTHORIZED":
+            failures.append("Q3.4 project state does not keep confirmation closed")
+        if active.get("reserve_status") != "CLOSED_NOT_AUTHORIZED":
+            failures.append("Q3.4 project state does not keep reserve closed")
+        if state["scientific_firewall"].get("free_generation") != "NONE_AUTHORIZED":
+            failures.append("Q3.4 closed state does not prohibit free generation")
+        if state["current"].get("gpu_work_authorized") is not False:
+            failures.append("Q3.4 closed state unexpectedly authorizes GPU work")
+        if q3_qualification.get("status") != "Q3_FRESH_INSTRUMENT_NOT_QUALIFIED":
+            failures.append("Q3.4 qualification ruling changed")
+        if q3_qualification.get("q3_confirmatory_result") != "NOT_RUN":
+            failures.append("Q3.4 qualification result upgrades Q3")
+        if q3_qualification.get("confirmation_status") != "CLOSED_NOT_AUTHORIZED":
+            failures.append("Q3.4 result does not keep confirmation closed")
+        if q3_qualification.get("reserve_status") != "CLOSED_NOT_AUTHORIZED":
+            failures.append("Q3.4 result does not keep reserve closed")
+        raw = q3_qualification.get("raw_provenance", {})
+        if raw.get("journal_rows") != 6000:
+            failures.append("Q3.4 result does not report 6,000 sealed rows")
+        if raw.get("original_persisted_rows") != 5990:
+            failures.append("Q3.4 original persisted-row provenance changed")
+        if raw.get("reexecuted_missing_rows") != 10:
+            failures.append("Q3.4 recovery provenance changed")
+        if raw.get("reexecution_label") != "REEXECUTED_MISSING_PERSISTED_KEY":
+            failures.append("Q3.4 recovery label changed")
+        if q3_qualification.get("routed_gain_used_for_qualification") is not False:
+            failures.append("Q3.4 incorrectly uses routed gain as a qualification gate")
+        if q3_qualification_audit.get("status") != (
+            "Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN"
+        ):
+            failures.append("Q3.4 forensic ruling changed")
+        if q3_qualification_audit.get("classification_agreement") is not True:
+            failures.append("Q3.4 forensic audit does not agree with the primary")
+        if q3_qualification_audit.get("max_aggregate_metric_difference") != 0.0:
+            failures.append("Q3.4 forensic audit reports a metric discrepancy")
+        if q3_qualification_audit.get("confirmation_qwen_access") != 0:
+            failures.append("Q3.4 forensic audit reports confirmation Qwen access")
+        if q3_qualification_audit.get("reserve_qwen_access") != 0:
+            failures.append("Q3.4 forensic audit reports reserve Qwen access")
+        release_safety = q3_qualification_hashes.get("release_safety", {})
+        for key in (
+            "confirmation_or_reserve_content",
+            "credentials_or_private_infrastructure",
+            "private_router_parameters",
+            "raw_benchmark_text",
+            "raw_model_outputs",
+            "raw_qualification_prompts_or_references",
+        ):
+            if release_safety.get(key) is not False:
+                failures.append(f"Q3.4 release-safety violation: {key}")
+        for relative, expected in q3_qualification_hashes.get("artifacts", {}).items():
+            path = ROOT / relative
+            if not path.is_file() or _sha256(path) != expected:
+                failures.append(f"Q3.4 artifact hash mismatch: {relative}")
     else:
         failures.append("active scientific state is not a recognized fail-closed lifecycle state")
 

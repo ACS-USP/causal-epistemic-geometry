@@ -2,7 +2,7 @@
 
 This page summarizes current evidence for external readers. Frozen closeouts
 and forensic audits remain authoritative if any narrative conflicts with this
-summary. Last reconciled: 2026-09-04.
+summary. Last reconciled: 2026-09-06.
 
 ## Results at a glance
 
@@ -15,7 +15,7 @@ summary. Last reconciled: 2026-09-04.
 | Q2 | V4.1 relational geometry | **DEVELOPMENT — G2** | A0, A1, and A2 predict blind-spot-shape geometry; A2 does not outperform A0/A1 | 31 directions, N=300, two shells; [closeout](../review/q2_v4_1_semantic_execution/Q2_V4_1_SEMANTIC_CLOSEOUT.md) |
 | Q2 radial | V4.1 radial tests | **DEVELOPMENT — RS+ / RT+** | STRONG exceeds MEDIUM shape and total displacement in all 31 directions | [radial artifact](../review/q2_v4_1_semantic_execution/RADIAL_RESULTS.json) |
 | Q2 fresh-controller validation | OOS V2 | **DEVELOPMENT — PASS** | 16/16 prospectively sampled fresh-controller A0 row associations positive | Same Qwen3-8B/CRUXEval/learned-rank-8 laboratory and fixed 31-controller atlas; [closeout](../review/q2_oos_fresh_controller_design/v2_semantic_execution/Q2_OOS_V2_SEMANTIC_CLOSEOUT.md) |
-| Q3 | Collective utility | **NOT_RUN** | Q3.3 froze one development-selected system and designed a fresh 1,600-family instrument; neither has been evaluated on fresh outcomes | [Q3.2 review](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md), [Q3.3 review](Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md) |
+| Q3 | Collective utility | **NOT_RUN** | Q3.4 evaluated only the fresh instrument's qualification split; mandatory gates failed, so confirmation remained unopened | [Q3.4 closeout](../review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_INSTRUMENT_QUALIFICATION_CLOSEOUT.md) |
 
 ## Q1: confirmatory controllability
 
@@ -183,7 +183,33 @@ correctness, at most 4,000 semantic trajectories, planning power 0.8233 at a
 +3-point effect, and mean expected 95% half-width 0.02289. These are planning
 quantities only. No final family, item, ID, seed, split, or outcome was
 generated or inspected. The exact terminal design state is
-`Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK`; Q3 remains `NOT_RUN`.
+`Q3_FRESH_INSTRUMENT_DESIGN_READY_FOR_PRELOCK`.
+
+## Q3.4 fresh-instrument qualification
+
+Q3.4 generated and sealed the prospectively specified restricted-Python
+population: 300 qualification, 1,000 confirmation, and 300 reserve families.
+Only qualification received Qwen access. Its 6,000 scheduled generations
+completed with zero final missing, unexpected, duplicate, replacement, retry,
+or runtime-error rows. A persistence incident affected ten prespecified journal
+keys; before correctness inspection, only those ten missing persisted keys were
+reexecuted under their exact frozen identities and marked explicitly. The final
+journal SHA-256 is
+`2194646bcf25ff9512c5e3aaf35d4c2d0ed922f1f86ba6480709a1958dc89431`.
+
+The instrument passed both reference paths, determinism, parser roundtrip,
+split separation, structural deduplication, champion answer-channel, and
+repetition gates. It failed four mandatory gates: router validity and
+evaluability were 0.94 (required at least 0.95), champion accuracy was 0.1333
+(required 0.25 to 0.90), and bank oracle headroom was 0.015 (required at least
+0.05). The terminal state is `Q3_FRESH_INSTRUMENT_NOT_QUALIFIED`; the
+independent audit state is
+`Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN`.
+
+Router accuracy was 0.135 and routed-minus-champion accuracy was +0.00167, but
+that difference was prospectively excluded from qualification. Confirmation
+and reserve received zero Qwen forwards and generations. Consequently Q3
+remains `NOT_RUN`; this closeout is not a negative utility result.
 
 ## Forensic and artifact identity
 

@@ -104,9 +104,17 @@ private and identified by SHA-256
 `269dc116c70b64dd47cf59340b07dbe558ec8c0f13be8410ed97017310ebad3d`.
 The public candidate-system JSON stores the exact bank, architecture,
 hyperparameters, source identities, and private parameter hash, but no prompt
-activations or row-level outcomes. The fresh instrument is not yet generated:
-there are no final item IDs, seeds, splits, benchmark contents, or outcomes to
-reproduce. A separate prospective prelock must precede generation.
+activations or row-level outcomes.
+
+Q3.4 subsequently generated the 1,600-family instrument and ran only its
+300-family qualification split. The release-safe closeout, aggregate result,
+independent audit, and hash manifest are under
+[`review/q3_fresh_instrument_qualification_closeout`](../review/q3_fresh_instrument_qualification_closeout/).
+The private 6,000-row journal is identified by SHA-256
+`2194646bcf25ff9512c5e3aaf35d4c2d0ed922f1f86ba6480709a1958dc89431`.
+Private prompts, references, raw model output, row-level scores, and fitted
+router parameters are not redistributed. Confirmation and reserve were not
+opened to Qwen, and the instrument did not qualify.
 
 ## 2. Full raw-data audit
 

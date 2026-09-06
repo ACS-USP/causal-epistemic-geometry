@@ -22,8 +22,9 @@ The current evidence answers Q1 narrowly and Q2 within one fixed experimental
 subspace. Q3 has not been run. Q3.1 and Q3.2 DEVELOPMENT studies found stable
 closed-panel policy routing and support for A0 geometry in portfolio
 construction, but not incremental geometry in the known-policy router or
-controller-OOS routing transfer. Q3.3 closes development around one candidate
-system and designs a fresh evaluation instrument without generating it.
+controller-OOS routing transfer. Q3.3 froze one candidate system; Q3.4 then
+built the fresh instrument, which failed its prospective qualification gates
+before confirmation was opened.
 
 ## What Q1 established
 
@@ -105,9 +106,8 @@ historical non-equivalent first audit remains preserved.
 
 Read the [Stage-B closeout](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_closeout/REPORT.md)
 and [forensic resolution](../review/q1_second_task_spark2_design/amendment1_hierarchical_unit/stage_b_forensic_resolution/REPORT.md).
-There is currently no active semantic campaign. Q3.1 used prompt-only forwards,
-not candidate-answer generation. Q3.2 subsequently used only closed scored
-outcomes and CPU analysis.
+There is currently no active semantic campaign. Q3.4 qualification is closed;
+confirmation and reserve remain unopened to Qwen.
 
 ## What Q3.1 added—and did not add
 
@@ -139,7 +139,7 @@ known policies. It does not establish controller-OOS routing, fresh-family
 utility, or Q3 itself. Read the
 [Q3.2 review](Q3_GEOMETRY_ROLE_DECOMPOSITION_REVIEW.md).
 
-## What Q3.3 froze—and did not run
+## What Q3.3 froze
 
 Q3.3 deterministically materialized one development-selected system: the exact
 A0-maximin K=8 policy bank, a frozen geometry-blind prompt-representation plus
@@ -152,11 +152,23 @@ families and only 11 families eligible for bounded internal validation, so it
 was rejected as both numerically and provenance inadequate. The recommended
 route is a fully fresh deterministic restricted-Python instrument with 1,600
 independent families: 300 qualification, 1,000 confirmation, and 300 reserve.
-The preferred future utility design is N=1,000, R=2, with at most 4,000
-semantic trajectories and planning power 0.8233 at a +3-point effect. No final
-items, IDs, seeds, holdout, model output, or correctness were generated or
-inspected. A separate prelock is required. Read the
+The preferred future utility design was N=1,000 and R=2. Read the
 [Q3.3 review](Q3_FINAL_SYSTEM_AND_EVALUATION_SUPPLY_REVIEW.md).
+
+## What Q3.4 qualified—and why it stopped
+
+Q3.4 implemented and prospectively froze that instrument, generated all 1,600
+families, and opened only the 300-family qualification split. The 6,000-row
+qualification completed and was independently audited. Router commitment
+validity and evaluability were both 0.94, below 0.95; champion accuracy was
+0.1333, below the 0.25 difficulty floor; and frozen-bank oracle headroom was
+0.015, below 0.05. The mechanical result is
+`Q3_FRESH_INSTRUMENT_NOT_QUALIFIED`, with
+`Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN`.
+
+This is an instrument failure, not a negative Q3 utility result. The 1,000
+confirmation and 300 reserve families received no Qwen access. Read the
+[Q3.4 closeout](../review/q3_fresh_instrument_qualification_closeout/Q3_FRESH_INSTRUMENT_QUALIFICATION_CLOSEOUT.md).
 
 ## Evidence vocabulary
 
