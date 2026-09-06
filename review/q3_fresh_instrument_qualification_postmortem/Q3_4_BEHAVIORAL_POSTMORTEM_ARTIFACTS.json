@@ -1,0 +1,38 @@
+{
+  "aggregate_analysis": {
+    "release_safe": true,
+    "sha256": "5dd5c2775735218ecd856ce8af7cf8c843dce33008b2632861943b089d48c974",
+    "tracked_in_git": false
+  },
+  "analysis_script": {
+    "path": "scripts/analyze_q3_fresh_qualification_behavioral_postmortem.py",
+    "sha256": "698319aa0d606e354e20a396968d0d5fb82792546955e71ca49573a9df61bb9f"
+  },
+  "firewall": {
+    "confirmation_qwen_access": 0,
+    "new_model_inference": 0,
+    "new_semantic_trajectories": 0,
+    "raw_benchmark_or_model_content_released": false,
+    "reserve_qwen_access": 0,
+    "runpod_used": false,
+    "spark2_used": false
+  },
+  "historical_classification_modified": false,
+  "historical_forensic_status": "Q3_FRESH_INSTRUMENT_QUALIFICATION_FORENSIC_CLEAN",
+  "historical_status": "Q3_FRESH_INSTRUMENT_NOT_QUALIFIED",
+  "private_sources": {
+    "qualification_dataset_sha256": "c791e38c29d36a43fbac8ce00412e4c77d533665e0b8cb9eef8fa12fb918ac1d",
+    "raw_journal_sha256": "2194646bcf25ff9512c5e3aaf35d4c2d0ed922f1f86ba6480709a1958dc89431",
+    "score_table_sha256": "c3b4ab47cf2422afb311fa978496e2abfbe5485ac76040ee3dcead2986ace533"
+  },
+  "report": {
+    "path": "review/q3_fresh_instrument_qualification_postmortem/Q3_4_QUALIFICATION_FAILURE_BEHAVIORAL_POSTMORTEM.md",
+    "sha256": "ccf44918667710cd6436c660db901287482b0c4f95d3e7de3e109bdd56f936c0"
+  },
+  "schema_version": "q3-fresh-qualification-behavioral-postmortem-artifacts-v1",
+  "status": "POST_HOC_DESCRIPTIVE_ONLY",
+  "test": {
+    "path": "tests/test_q3_fresh_qualification_behavioral_postmortem.py",
+    "sha256": "cf3ddb4a6b49b21f41f4ef71cdfe2c42ab606e433f44c13d68d814dfb9683b2d"
+  }
+}
