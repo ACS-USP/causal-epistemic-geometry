@@ -386,13 +386,18 @@ def main() -> None:
     schedule_prompt_failures = 0
     raw_prompt_failures = 0
     for family_id, item in family_meta.items():
+        frozen_input = {
+            "n": item["input_value"]["n"],
+            "values": item["input_value"]["values"],
+            "text": item["input_value"]["text"],
+        }
         expected_prompt = q3_prompt_template.format(
-            source=item["source"], input_value=repr(item["input_value"])
+            source=item["source"], input_value=repr(frozen_input)
         )
         if (
             expected_prompt != item["prompt"]
             or item["source"] not in item["prompt"]
-            or repr(item["input_value"]) not in item["prompt"]
+            or repr(frozen_input) not in item["prompt"]
         ):
             prompt_reconstruction_failures += 1
         prompt_hash = hashlib.sha256(str(item["prompt"]).encode()).hexdigest()
