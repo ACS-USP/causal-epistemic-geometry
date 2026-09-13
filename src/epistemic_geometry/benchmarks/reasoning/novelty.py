@@ -26,7 +26,16 @@ from .splits import (
 
 DIVERSIFICATION_COVERAGE_SPLIT = "DIVERSIFICATION_COVERAGE"
 DIVERSIFICATION_COVERAGE_NAMESPACE = "Q1-V3-DIVERSIFICATION-COVERAGE-V1"
+# Phase namespaces are intentionally derived from the single study namespace.
+# Keeping this suffix stable makes phase identity explicit while preventing a
+# qualification item from being silently reused as an evaluation item.
+DIVERSIFICATION_QUALIFICATION_NAMESPACE = f"{DIVERSIFICATION_COVERAGE_NAMESPACE}:QUALIFICATION"
+DIVERSIFICATION_EVALUATION_NAMESPACE = f"{DIVERSIFICATION_COVERAGE_NAMESPACE}:EVALUATION"
+DIVERSIFICATION_QUALIFICATION_PHASE = "qualification"
+DIVERSIFICATION_EVALUATION_PHASE = "evaluation"
 DIVERSIFICATION_CONDITIONS = ("A", "B", "T")
+DIVERSIFICATION_QUALIFICATION_CONDITIONS = ("A", "T")
+DIVERSIFICATION_EVALUATION_CONDITIONS = DIVERSIFICATION_CONDITIONS
 ROLLOUTS = 2
 
 # These names are protocol history.  Keeping this set private to the new
@@ -167,6 +176,328 @@ class DiversificationNoveltyReport:
             "candidate_disjoint": self.candidate_disjoint,
             "passed": self.passed,
         }
+
+
+@dataclass(frozen=True)
+class DiversificationCoveragePlan:
+    """Pure, deterministic qualification/evaluation coverage plan.
+
+    The plan contains only procedurally constructed items and schedule
+    metadata.  It does not read historical files or outcomes: callers provide
+    historical latent IDs explicitly through ``historical_excluded_latent_ids``.
+    ``cell_counts`` retains the caller's family/cell order as a tuple.
+    """
+
+    study_seed: int
+    cell_counts: tuple[tuple[str, str, int, int], ...]
+    historical_excluded_latent_ids: frozenset[str]
+    qualification_manifests: tuple[DiversificationManifest, ...]
+    evaluation_manifests: tuple[DiversificationManifest, ...]
+    schedule_counts: dict[str, int]
+    schedule_keys: dict[str, tuple[tuple[str, str, int], ...]]
+
+    @property
+    def phase_namespaces(self) -> dict[str, str]:
+        """Return the explicit namespace used by each phase."""
+
+        return {
+            DIVERSIFICATION_QUALIFICATION_PHASE: DIVERSIFICATION_QUALIFICATION_NAMESPACE,
+            DIVERSIFICATION_EVALUATION_PHASE: DIVERSIFICATION_EVALUATION_NAMESPACE,
+        }
+
+    @property
+    def phases(self) -> dict[str, tuple[DiversificationManifest, ...]]:
+        """Return phase manifests keyed by their stable phase names."""
+
+        return {
+            DIVERSIFICATION_QUALIFICATION_PHASE: self.qualification_manifests,
+            DIVERSIFICATION_EVALUATION_PHASE: self.evaluation_manifests,
+        }
+
+    @property
+    def qualification_latent_ids(self) -> tuple[str, ...]:
+        return tuple(
+            item.latent_id
+            for manifest in self.qualification_manifests
+            for item in manifest.items
+        )
+
+    @property
+    def evaluation_latent_ids(self) -> tuple[str, ...]:
+        return tuple(
+            item.latent_id
+            for manifest in self.evaluation_manifests
+            for item in manifest.items
+        )
+
+    @property
+    def all_latent_ids(self) -> tuple[str, ...]:
+        return self.qualification_latent_ids + self.evaluation_latent_ids
+
+    @property
+    def passed(self) -> bool:
+        """Whether both phase sets are disjoint and exclude history."""
+
+        history = set(self.historical_excluded_latent_ids)
+        qualification = set(self.qualification_latent_ids)
+        evaluation = set(self.evaluation_latent_ids)
+        return not (
+            qualification & history
+            or evaluation & history
+            or qualification & evaluation
+        )
+
+    def to_record(self) -> dict[str, Any]:
+        """Return a deterministic JSON-compatible plan/report record."""
+
+        record: dict[str, Any] = {
+            "study_seed": self.study_seed,
+            "namespace": DIVERSIFICATION_COVERAGE_NAMESPACE,
+            "split_name": DIVERSIFICATION_COVERAGE_SPLIT,
+            "phase_namespaces": dict(self.phase_namespaces),
+            "cell_counts": [
+                {
+                    "family": family,
+                    "cell": cell,
+                    "qualification": qualification_count,
+                    "evaluation": evaluation_count,
+                }
+                for family, cell, qualification_count, evaluation_count in self.cell_counts
+            ],
+            "historical_excluded_latent_ids": sorted(self.historical_excluded_latent_ids),
+            "qualification_manifests": [
+                manifest.to_record() for manifest in self.qualification_manifests
+            ],
+            "evaluation_manifests": [
+                manifest.to_record() for manifest in self.evaluation_manifests
+            ],
+            "qualification_latent_ids": list(self.qualification_latent_ids),
+            "evaluation_latent_ids": list(self.evaluation_latent_ids),
+            "all_latent_ids": list(self.all_latent_ids),
+            "schedule_counts": dict(self.schedule_counts),
+            "schedule_keys": {
+                phase: [list(key) for key in keys]
+                for phase, keys in self.schedule_keys.items()
+            },
+            "passed": self.passed,
+        }
+        record["plan_hash"] = stable_digest(
+            "Q1-V3-DIVERSIFICATION-COVERAGE-PLAN", canonical_json(record)
+        )
+        return record
+
+
+def _count_pair(value: Any, *, family: str, cell: str) -> tuple[int, int]:
+    """Normalize one cell count to ``(qualification, evaluation)``."""
+
+    if isinstance(value, Mapping):
+        aliases = {
+            "qualification": "qualification",
+            "qualification_count": "qualification",
+            "n_qualification": "qualification",
+            "evaluation": "evaluation",
+            "evaluation_count": "evaluation",
+            "n_evaluation": "evaluation",
+        }
+        counts: dict[str, Any] = {}
+        for key, count in value.items():
+            phase = aliases.get(str(key))
+            if phase is None:
+                raise ValueError(
+                    f"unknown count field for reasoning family/cell: {family}/{cell}: {key}"
+                )
+            if phase in counts:
+                raise ValueError(
+                    f"duplicate {phase} count for reasoning family/cell: {family}/{cell}"
+                )
+            counts[phase] = count
+        if set(counts) != {"qualification", "evaluation"}:
+            raise ValueError(
+                f"counts for reasoning family/cell must specify qualification and evaluation: "
+                f"{family}/{cell}"
+            )
+        value = (counts["qualification"], counts["evaluation"])
+    elif isinstance(value, Sequence) and not isinstance(value, (str, bytes)):
+        if len(value) != 2:
+            raise ValueError(
+                "counts for reasoning family/cell must be an int or a two-item pair: "
+                f"{family}/{cell}"
+            )
+    else:
+        value = (value, value)
+
+    result: list[int] = []
+    for count in value:
+        if isinstance(count, bool) or not isinstance(count, int) or count <= 0:
+            raise ValueError(
+                f"counts must be positive integers for reasoning family/cell: {family}/{cell}"
+            )
+        result.append(count)
+    return result[0], result[1]
+
+
+def _ordered_cell_counts(
+    family_cell_counts: Mapping[str, Mapping[str, Any]],
+) -> tuple[tuple[str, str, int, int], ...]:
+    """Validate a nested ordered ``family -> cell -> counts`` mapping."""
+
+    if isinstance(family_cell_counts, (str, bytes)) or not isinstance(family_cell_counts, Mapping):
+        raise ValueError("family_cell_counts must be a non-empty family-to-cell mapping")
+    if not family_cell_counts:
+        raise ValueError("family_cell_counts must be non-empty")
+
+    result: list[tuple[str, str, int, int]] = []
+    for family, cells in family_cell_counts.items():
+        if not isinstance(family, str) or not family:
+            raise ValueError("reasoning family names must be non-empty strings")
+        if family in HISTORICAL_REASONING_SPLIT_NAMES:
+            raise ValueError(
+                f"historical reasoning split name cannot be used as a family: {family}"
+            )
+        if family not in FAMILY_CELLS:
+            raise ValueError(f"unknown reasoning family: {family}")
+        if isinstance(cells, (str, bytes)) or not isinstance(cells, Mapping) or not cells:
+            raise ValueError(f"cells for reasoning family must be a non-empty mapping: {family}")
+        for cell, counts in cells.items():
+            if not isinstance(cell, str) or not cell:
+                raise ValueError("reasoning cell names must be non-empty strings")
+            if cell not in FAMILY_CELLS[family]:
+                raise ValueError(f"unknown reasoning family/cell: {family}/{cell}")
+            qualification_count, evaluation_count = _count_pair(
+                counts, family=family, cell=cell
+            )
+            result.append((family, cell, qualification_count, evaluation_count))
+    if not result:
+        raise ValueError("family_cell_counts must contain at least one cell")
+    return tuple(result)
+
+
+def plan_diversification_coverage(
+    family_cell_counts: Mapping[str, Mapping[str, Any]],
+    *,
+    seed: int | None = None,
+    study_seed: int | None = None,
+    historical_excluded_latent_ids: Iterable[str] = (),
+    qualification_conditions: Sequence[str] = DIVERSIFICATION_QUALIFICATION_CONDITIONS,
+    evaluation_conditions: Sequence[str] = DIVERSIFICATION_EVALUATION_CONDITIONS,
+    n_rollouts: int = ROLLOUTS,
+) -> DiversificationCoveragePlan:
+    """Plan disjoint qualification and evaluation manifests by family/cell.
+
+    ``family_cell_counts`` is an ordered nested mapping.  Each value may be a
+    positive integer (used for both phases), a ``(qualification, evaluation)``
+    pair, or a mapping with explicit ``qualification`` and ``evaluation``
+    fields.  The only exclusion inputs are the caller-provided historical IDs;
+    no files, journals, outcomes, model inference, or remote services are
+    consulted.  Qualification schedules default to A/T; evaluation schedules
+    default to A/B/T and each phase can be configured independently.
+    """
+
+    if seed is None and study_seed is None:
+        raise ValueError("study seed is required")
+    if seed is not None and study_seed is not None and int(seed) != int(study_seed):
+        raise ValueError("seed and study_seed must agree when both are supplied")
+    study_seed_value = int(seed if seed is not None else study_seed)
+    ordered_counts = _ordered_cell_counts(family_cell_counts)
+    historical = _excluded_ids(historical_excluded_latent_ids)
+    if n_rollouts <= 0:
+        raise ValueError("n_rollouts must be positive")
+    for phase, conditions_for_phase in (
+        (DIVERSIFICATION_QUALIFICATION_PHASE, qualification_conditions),
+        (DIVERSIFICATION_EVALUATION_PHASE, evaluation_conditions),
+    ):
+        condition_ids = tuple(str(condition) for condition in conditions_for_phase)
+        if not condition_ids or len(set(condition_ids)) != len(condition_ids):
+            raise ValueError(f"{phase} conditions must be non-empty and unique")
+        if any(not condition for condition in condition_ids):
+            raise ValueError(f"{phase} conditions must be non-empty")
+
+    qualification_seed = stable_seed(
+        DIVERSIFICATION_COVERAGE_NAMESPACE,
+        DIVERSIFICATION_QUALIFICATION_PHASE,
+        study_seed_value,
+    )
+    evaluation_seed = stable_seed(
+        DIVERSIFICATION_COVERAGE_NAMESPACE,
+        DIVERSIFICATION_EVALUATION_PHASE,
+        study_seed_value,
+    )
+
+    qualification: list[DiversificationManifest] = []
+    qualification_ids: set[str] = set()
+    for family, cell, qualification_count, _evaluation_count in ordered_counts:
+        manifest = generate_diversification_manifest(
+            family,
+            cell,
+            seed=qualification_seed,
+            n_items=qualification_count,
+            namespace=DIVERSIFICATION_QUALIFICATION_NAMESPACE,
+            excluded_latent_ids=historical,
+        )
+        qualification.append(manifest)
+        qualification_ids.update(item.latent_id for item in manifest.items)
+
+    evaluation_excluded = historical | qualification_ids
+    evaluation: list[DiversificationManifest] = []
+    for family, cell, _qualification_count, evaluation_count in ordered_counts:
+        manifest = generate_diversification_manifest(
+            family,
+            cell,
+            seed=evaluation_seed,
+            n_items=evaluation_count,
+            namespace=DIVERSIFICATION_EVALUATION_NAMESPACE,
+            excluded_latent_ids=evaluation_excluded,
+        )
+        evaluation.append(manifest)
+
+    # Building schedules here validates logical keys and independent rollout
+    # seeds while returning only compact counts and keys in the plan.
+    schedules = {
+        DIVERSIFICATION_QUALIFICATION_PHASE: [
+            row
+            for manifest in qualification
+            for row in build_diversification_schedule(
+                manifest,
+                conditions=qualification_conditions,
+                n_rollouts=n_rollouts,
+            )
+        ],
+        DIVERSIFICATION_EVALUATION_PHASE: [
+            row
+            for manifest in evaluation
+            for row in build_diversification_schedule(
+                manifest,
+                conditions=evaluation_conditions,
+                n_rollouts=n_rollouts,
+            )
+        ],
+    }
+    schedule_counts = {phase: len(rows) for phase, rows in schedules.items()}
+    schedule_keys = {
+        phase: tuple(
+            (str(row["latent_id"]), str(row["condition"]), int(row["rollout_index"]))
+            for row in rows
+        )
+        for phase, rows in schedules.items()
+    }
+    plan = DiversificationCoveragePlan(
+        study_seed=study_seed_value,
+        cell_counts=ordered_counts,
+        historical_excluded_latent_ids=historical,
+        qualification_manifests=tuple(qualification),
+        evaluation_manifests=tuple(evaluation),
+        schedule_counts=schedule_counts,
+        schedule_keys=schedule_keys,
+    )
+    if not plan.passed:
+        raise RuntimeError("diversification coverage plan failed phase disjointness checks")
+    return plan
+
+
+# Descriptive aliases keep the constructor discoverable for callers that use
+# "construct" or "build" for pure planning APIs.
+construct_diversification_coverage_plan = plan_diversification_coverage
+build_diversification_coverage_plan = plan_diversification_coverage
 
 
 def _historical_records(records: Iterable[Mapping[str, Any]]) -> list[tuple[str, tuple[str, ...]]]:
@@ -416,10 +747,20 @@ __all__ = [
     "DIVERSIFICATION_CONDITIONS",
     "DIVERSIFICATION_COVERAGE_NAMESPACE",
     "DIVERSIFICATION_COVERAGE_SPLIT",
+    "DIVERSIFICATION_EVALUATION_NAMESPACE",
+    "DIVERSIFICATION_EVALUATION_CONDITIONS",
+    "DIVERSIFICATION_EVALUATION_PHASE",
+    "DIVERSIFICATION_QUALIFICATION_CONDITIONS",
+    "DIVERSIFICATION_QUALIFICATION_NAMESPACE",
+    "DIVERSIFICATION_QUALIFICATION_PHASE",
+    "DiversificationCoveragePlan",
     "DiversificationManifest",
     "DiversificationNoveltyReport",
     "HISTORICAL_REASONING_SPLIT_NAMES",
     "audit_diversification_novelty",
+    "build_diversification_coverage_plan",
     "build_diversification_schedule",
+    "construct_diversification_coverage_plan",
     "generate_diversification_manifest",
+    "plan_diversification_coverage",
 ]
