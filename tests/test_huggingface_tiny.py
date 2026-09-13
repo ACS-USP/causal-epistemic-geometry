@@ -287,6 +287,47 @@ def test_seeded_full_generation_supports_explicit_nonthinking_mode(tiny_backend)
     assert output.metadata["generated_token_ids"]
 
 
+@pytest.mark.parametrize(
+    ("generated_ids", "eos_token_id", "expected_stop_reason"),
+    [
+        ([9, 8, 7], 2, "max_new_tokens"),
+        ([9, 2], 2, "eos_token"),
+        ([9, 8], 2, None),
+        ([], 2, None),
+        ([9, 8, 7], None, None),
+    ],
+)
+def test_serial_reasoning_records_conservative_stop_reason(
+    tiny_backend, monkeypatch, generated_ids, eos_token_id, expected_stop_reason
+) -> None:
+    tiny_backend.config = replace(
+        tiny_backend.config,
+        enable_thinking=True,
+        do_sample=True,
+        max_new_tokens=3,
+        temperature=0.6,
+        top_p=0.95,
+        top_k=20,
+        min_p=0.0,
+    )
+    monkeypatch.setattr(tiny_backend.tokenizer, "eos_token_id", eos_token_id)
+
+    def fake_generate(**kwargs):
+        input_ids = kwargs["input_ids"]
+        continuation = torch.tensor(
+            [generated_ids], dtype=input_ids.dtype, device=input_ids.device
+        )
+        return torch.cat((input_ids, continuation), dim=1)
+
+    monkeypatch.setattr(tiny_backend.model, "generate", fake_generate)
+    output = tiny_backend.generate_reasoning(
+        BenchmarkItem(id="stop-reason-tiny", prompt="alpha beta", target="3"),
+        sampling_seed=321,
+    )
+    assert output.metadata["generated_token_ids"] == generated_ids
+    assert output.metadata["stop_reason"] == expected_stop_reason
+
+
 def test_batched_reasoning_preserves_per_row_seed_streams(tiny_backend) -> None:
     tiny_backend.config = replace(
         tiny_backend.config,

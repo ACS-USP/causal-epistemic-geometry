@@ -7,6 +7,7 @@ import inspect
 import time
 from collections.abc import Iterator
 from contextlib import contextmanager
+from numbers import Integral
 from typing import Any
 
 import numpy as np
@@ -302,8 +303,9 @@ class HuggingFaceBackend(ModelBackend):
             raise ValueError("Q1 V3 canonical reasoning generation requires do_sample=true")
         encoded, _rendered_prompt, prompt_hash = self._encode_item(item)
         input_length = int(encoded["input_ids"].shape[1])
+        generation_budget = int(max_new_tokens or self.config.max_new_tokens)
         generation_kwargs: dict[str, Any] = {
-            "max_new_tokens": int(max_new_tokens or self.config.max_new_tokens),
+            "max_new_tokens": generation_budget,
             "do_sample": True,
             "temperature": self.config.temperature,
             "top_p": self.config.top_p,
@@ -336,6 +338,12 @@ class HuggingFaceBackend(ModelBackend):
             self.torch.cuda.synchronize(self.device)
         generation_seconds = time.perf_counter() - generation_started
         new_tokens = generated[0, input_length:]
+        generated_token_ids = [int(token) for token in new_tokens.tolist()]
+        stop_reason = self._infer_serial_stop_reason(
+            generated_token_ids,
+            max_new_tokens=generation_budget,
+            eos_token_id=getattr(self.tokenizer, "eos_token_id", None),
+        )
         # Preserve the complete decoded trajectory; the parser is responsible
         # for whitespace normalization around the exact FINAL field.
         raw_output = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
@@ -347,7 +355,8 @@ class HuggingFaceBackend(ModelBackend):
             "rendered_prompt_hash": prompt_hash,
             "input_token_count": input_length,
             "generated_token_count": int(new_tokens.numel()),
-            "generated_token_ids": [int(token) for token in new_tokens.tolist()],
+            "generated_token_ids": generated_token_ids,
+            "stop_reason": stop_reason,
             "generation_seed": int(sampling_seed),
             "timing": {
                 "generation_seconds": generation_seconds,
@@ -370,7 +379,7 @@ class HuggingFaceBackend(ModelBackend):
                 "top_p": self.config.top_p,
                 "top_k": self.config.top_k,
                 "min_p": self.config.min_p,
-                "max_new_tokens": int(max_new_tokens or self.config.max_new_tokens),
+                "max_new_tokens": generation_budget,
             },
             "intervention": "none",
         }
@@ -380,6 +389,41 @@ class HuggingFaceBackend(ModelBackend):
             raw_output=raw_output,
             metadata=metadata,
         )
+
+    @staticmethod
+    def _infer_serial_stop_reason(
+        generated_token_ids: list[int],
+        *,
+        max_new_tokens: int,
+        eos_token_id: Any,
+    ) -> str | None:
+        """Infer the terminal condition visible from one generated sequence.
+
+        ``None`` is retained when no generated token is available, the EOS
+        configuration cannot be interpreted, or generation ended before the
+        requested budget without a visible EOS token.  A full-budget sequence
+        is classified as ``max_new_tokens`` only when the EOS configuration is
+        known and its final token is not an EOS token.
+        """
+        if not generated_token_ids or max_new_tokens <= 0:
+            return None
+        if isinstance(eos_token_id, Integral):
+            eos_ids = {int(eos_token_id)}
+        elif isinstance(eos_token_id, (str, bytes)) or eos_token_id is None:
+            return None
+        else:
+            try:
+                eos_values = list(eos_token_id)
+                eos_ids = {int(value) for value in eos_values}
+            except (TypeError, ValueError):
+                return None
+            if not eos_ids:
+                return None
+        if generated_token_ids[-1] in eos_ids:
+            return "eos_token"
+        if len(generated_token_ids) >= max_new_tokens:
+            return "max_new_tokens"
+        return None
 
     def generate_reasoning_view(
         self,
