@@ -1,0 +1,106 @@
+{
+  "artifact_sha256": {
+    "MANIFEST.json": "577a8f8f9a8aca49efc60a968caa793df5291e68cecf03627b16aa55efda38c8",
+    "PROVENANCE.json": "000596b7eaca0a94674cbea031f6434943f4c73e8ba05fc605e54587aadb1d51",
+    "SCHEDULE.json": "8cb57d2ab257bf010baea7756b5da893bfed302ff0cb794af752bc266a2b2e7d"
+  },
+  "candidate_identity": {
+    "attention_backend": "sdpa",
+    "decoding_config": {
+      "do_sample": true,
+      "enable_thinking": true,
+      "execution_mode": "serial_reference",
+      "inference_mode": "generation",
+      "min_p": 0.0,
+      "prompt_mode": "chat",
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "dtype": "torch.bfloat16",
+    "eta": 9.637427952852196,
+    "hook_scope": "sustained_current_token",
+    "layer": 27,
+    "model_repo": "Qwen/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "tokenizer_repo": "Qwen/Qwen3-8B",
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "vector_canonical_sha256": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+  },
+  "candidate_identity_hash": "4e1712a45bd121bff5c39967955d884d6f1fbefeaccbaad32d82eb90ba2dd75a",
+  "controller_provenance": {
+    "eta": 9.637427952852196,
+    "historical_condition": "MEANINGFUL_L27_D75",
+    "hook_scope": "sustained_current_token",
+    "layer": 27,
+    "vector_canonical_sha256": "e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838",
+    "vector_file_sha256": "b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772",
+    "vector_path": "review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy"
+  },
+  "decision_rule": {
+    "candidate_closes_after_one_sealed_analysis": true,
+    "decision_implementation_sha256": "db445aece73556bf43f5d7106d2fcbfeaf48cffbd1b39fd8394dbde6f4541ee8",
+    "delta": 0.1,
+    "threshold": 60.0
+  },
+  "design": {
+    "calls": 768,
+    "calls_per_cap": 384,
+    "caps": [
+      2048,
+      4096
+    ],
+    "conditions": [
+      "BASELINE",
+      "D75"
+    ],
+    "max_generated_tokens": 2359296,
+    "no_adaptive_retries": true,
+    "only_missing_schedule_keys_may_resume": true,
+    "outcome_categories": [
+      "correct",
+      "valid_wrong",
+      "incomplete",
+      "invalid"
+    ],
+    "rollouts_per_cell": 2
+  },
+  "draft_sha256": "626eeea17ae4c1a2128a93ae036c8e507dca00f5acdc51ba80bd95e1b04736ad",
+  "journal_identity": {
+    "candidate_identity_hash": "4e1712a45bd121bff5c39967955d884d6f1fbefeaccbaad32d82eb90ba2dd75a",
+    "code_sha256": {
+      "scripts/materialize_budget_interaction_prelock.py": "34072451590719b345462cf1fea0fe6be5afab6a7509bf4a0248a6c1111ae8c9",
+      "src/epistemic_geometry/analysis/budget_interaction.py": "db445aece73556bf43f5d7106d2fcbfeaf48cffbd1b39fd8394dbde6f4541ee8",
+      "src/epistemic_geometry/benchmarks/reasoning/budget_interaction.py": "c777ea824405b2627c3d9f3d19a45bd67dae8c6c950ba0d0ddd4ab48d801b357",
+      "src/epistemic_geometry/benchmarks/reasoning/budget_interaction_journal.py": "1b875777a0505b23696fec1393250045c64a2527de0973bc4df0e761b8f40513",
+      "src/epistemic_geometry/benchmarks/reasoning/budget_interaction_runner.py": "2b3b96d582520d155f89e950d68649f0e9ef051736c3a01057a55e8f0ea6f9b8"
+    },
+    "experiment_id": "Q1-V3-BUDGET-CAUSAL-INTERACTION-V1",
+    "historical_manifest_sha256": "2a0cce17262f9f33bf8820f0e234eb02e18121a4c88ffc7e9e4a41473013a66b",
+    "manifest_hash": "9efa71c8710630bda8f47d8abdb506533208a2e329736817fc035031b01ca0be",
+    "manifest_sha256": "577a8f8f9a8aca49efc60a968caa793df5291e68cecf03627b16aa55efda38c8",
+    "protocol_status": "FROZEN_NOT_RUN",
+    "schedule_digest": "c87f13d86b59229087f7e8e248d604b4d689f0a652d637f9042b2512be8b488e",
+    "schedule_sha256": "8cb57d2ab257bf010baea7756b5da893bfed302ff0cb794af752bc266a2b2e7d",
+    "source_commit": "b01d253965c77e07a74a28b8687ffcee6e5ca09b"
+  },
+  "journal_identity_hash": "8aaf164fbdb31fd6de9c01a20afe1e5ff820522f95ebc0882bf40c18ee156cc4",
+  "no_new_qwen_outcomes_before_lock": true,
+  "prelock_artifacts": {
+    "N": 96,
+    "call_count": 768,
+    "calls_per_cap": 384,
+    "extracted_id_count": 720,
+    "manifest_hash": "9efa71c8710630bda8f47d8abdb506533208a2e329736817fc035031b01ca0be",
+    "n_per_cell": 8,
+    "namespace": "Q1-V3-BUDGET-CAUSAL-INTERACTION-V1",
+    "schedule_digest": "c87f13d86b59229087f7e8e248d604b4d689f0a652d637f9042b2512be8b488e",
+    "schema_version": "q1-budget-interaction-prelock-provenance-v1",
+    "source_sha256": "2a0cce17262f9f33bf8820f0e234eb02e18121a4c88ffc7e9e4a41473013a66b"
+  },
+  "schema_version": "q1-budget-interaction-prelock-v1",
+  "source_commit": "b01d253965c77e07a74a28b8687ffcee6e5ca09b",
+  "status": "FROZEN_NOT_RUN"
+}

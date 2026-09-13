@@ -1,10 +1,16 @@
 # Q1 Budget × D75 causal interaction — prospective prelock draft
 
-**Status:** `DRAFT_NOT_FROZEN_NO_NEW_QWEN_OUTCOMES`  
+**Status:** `SUPERSEDED_BY_FROZEN_LOCK_NO_NEW_QWEN_OUTCOMES`  
 **Branch:** `research/q1-budget-causal-interaction`  
 **Purpose:** define one finite causal experiment prompted by the historical Q1-V3
 completion failure. This is not a coverage qualification, a router study, or a
 search for a task population that makes D75 look favorable.
+
+The authoritative frozen object is `PRELOCK_ARTIFACTS/LOCK.json`, whose
+SHA-256 is `4940c5ab434becb6d5f06e58f3199735c5582b20411ad81f4d11b1747cf0ec7b`.
+It pins the prospective manifest, schedule, execution identity, and analysis
+implementation. This document preserves the rationale and contract used to
+create that lock.
 
 ## Question and estimands
 
