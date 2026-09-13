@@ -49,10 +49,14 @@ def _synthetic_stage_a(path: Path) -> bytes:
     return raw
 
 
-def test_materializer_writes_deterministic_identity_and_provenance(tmp_path: Path) -> None:
+def test_materializer_writes_deterministic_identity_and_provenance(
+    tmp_path: Path, monkeypatch
+) -> None:
     module = _script_module()
     source = tmp_path / "synthetic_stage_a.json"
     source_bytes = _synthetic_stage_a(source)
+    source_digest = hashlib.sha256(source_bytes).hexdigest()
+    monkeypatch.setattr(module, "EXPECTED_HISTORICAL_STAGE_A_MANIFEST_SHA256", source_digest)
     first_dir = tmp_path / "first"
     second_dir = tmp_path / "second"
 
@@ -81,10 +85,14 @@ def test_materializer_writes_deterministic_identity_and_provenance(tmp_path: Pat
     assert first["provenance"] == second["provenance"] == provenance
 
 
-def test_cli_reports_counts_without_printing_latent_ids(tmp_path: Path, capsys) -> None:
+def test_cli_reports_counts_without_printing_latent_ids(
+    tmp_path: Path, capsys, monkeypatch
+) -> None:
     module = _script_module()
     source = tmp_path / "synthetic_stage_a.json"
-    _synthetic_stage_a(source)
+    source_bytes = _synthetic_stage_a(source)
+    source_digest = hashlib.sha256(source_bytes).hexdigest()
+    monkeypatch.setattr(module, "EXPECTED_HISTORICAL_STAGE_A_MANIFEST_SHA256", source_digest)
 
     assert module.main([str(source), str(tmp_path / "prelock")]) == 0
     stdout = capsys.readouterr().out
@@ -97,7 +105,8 @@ def test_cli_reports_counts_without_printing_latent_ids(tmp_path: Path, capsys) 
 def test_materializer_refuses_existing_artifacts_without_overwrite(tmp_path: Path) -> None:
     module = _script_module()
     source = tmp_path / "synthetic_stage_a.json"
-    _synthetic_stage_a(source)
+    source_bytes = _synthetic_stage_a(source)
+    module.EXPECTED_HISTORICAL_STAGE_A_MANIFEST_SHA256 = hashlib.sha256(source_bytes).hexdigest()
     output = tmp_path / "prelock"
     module.materialize(source, output)
     before = {
@@ -110,3 +119,15 @@ def test_materializer_refuses_existing_artifacts_without_overwrite(tmp_path: Pat
 
     after = {name: (output / name).read_bytes() for name in module.OUTPUT_FILENAMES}
     assert after == before
+
+
+def test_materializer_rejects_source_digest_mismatch_without_output(tmp_path: Path) -> None:
+    module = _script_module()
+    source = tmp_path / "synthetic_stage_a.json"
+    _synthetic_stage_a(source)
+    output = tmp_path / "prelock"
+
+    with pytest.raises(ValueError, match="SHA256.*frozen.*digest"):
+        module.materialize(source, output)
+
+    assert not output.exists()

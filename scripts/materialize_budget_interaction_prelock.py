@@ -34,6 +34,9 @@ MANIFEST_FILENAME = "MANIFEST.json"
 SCHEDULE_FILENAME = "SCHEDULE.json"
 PROVENANCE_FILENAME = "PROVENANCE.json"
 OUTPUT_FILENAMES = (MANIFEST_FILENAME, SCHEDULE_FILENAME, PROVENANCE_FILENAME)
+EXPECTED_HISTORICAL_STAGE_A_MANIFEST_SHA256 = (
+    "2a0cce17262f9f33bf8820f0e234eb02e18121a4c88ffc7e9e4a41473013a66b"
+)
 
 
 def _sha256_bytes(value: bytes) -> str:
@@ -70,6 +73,12 @@ def materialize(
         raise FileNotFoundError(f"historical Stage-A manifest is not a file: {source}")
 
     source_bytes = source.read_bytes()
+    source_sha256 = _sha256_bytes(source_bytes)
+    if source_sha256 != EXPECTED_HISTORICAL_STAGE_A_MANIFEST_SHA256:
+        raise ValueError(
+            "historical Stage-A manifest SHA256 does not match the frozen "
+            "prelock digest"
+        )
     try:
         source_payload = json.loads(source_bytes)
     except json.JSONDecodeError as exc:
@@ -97,7 +106,7 @@ def materialize(
 
     provenance: dict[str, Any] = {
         "schema_version": "q1-budget-interaction-prelock-provenance-v1",
-        "source_sha256": _sha256_bytes(source_bytes),
+        "source_sha256": source_sha256,
         "extracted_id_count": len(excluded_ids),
         "manifest_hash": manifest_hash,
         "schedule_digest": _schedule_digest(schedule),
