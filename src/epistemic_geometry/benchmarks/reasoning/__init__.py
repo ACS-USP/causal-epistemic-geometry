@@ -13,6 +13,12 @@ from .base import (
     ReasoningView,
 )
 from .families import FAMILY_CELLS, generate_item, oracle_for
+from .semantic_audit import (
+    SemanticAudit,
+    audit_reasoning_view,
+    audit_reasoning_views,
+    validate_reasoning_view,
+)
 
 __all__ = [
     "FAMILY_CELLS",
@@ -21,6 +27,10 @@ __all__ = [
     "ReasoningItem",
     "ReasoningView",
     "SUITE_VERSION",
+    "SemanticAudit",
+    "audit_reasoning_view",
+    "audit_reasoning_views",
     "generate_item",
     "oracle_for",
+    "validate_reasoning_view",
 ]
