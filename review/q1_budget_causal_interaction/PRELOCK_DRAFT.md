@@ -38,7 +38,7 @@ The final lock must verify every value below before any new model forward pass.
 | Component | Candidate value |
 | --- | --- |
 | Model | `Qwen/Qwen3-8B`, revision `b968826d9c46dd6066d109eabc6255188de91218`, BF16/SDPA |
-| Treatment | existing Q1 layer-27 D75 controller, sustained at the final prompt token and current decode token |
+| Treatment | existing Q1 layer-27 D75 controller; hook scope `sustained_current_token` (final prompt token and current decode token) |
 | Direction | `review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy` |
 | Direction SHA-256 | `b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772` |
 | Canonical float64 direction SHA-256 | `e7bf23a75e20aa02cf87587c8094a7b93b8d5d9eaeb820a3bf332a5e98931838` |
@@ -57,11 +57,14 @@ and at most 2,359,296 generated tokens. There will be no replacement of a
 latent, cell, family, cap, dose, or rollout after the schedule is locked.
 
 Before materializing the new manifest, the historical Stage-A manifest will be
-read only through `extract_historical_latent_ids()`. That pure parser extracts
-only IDs, never outcomes or journals. Its frozen source digest is
+read only through `scripts/materialize_budget_interaction_prelock.py`. That
+command calls `extract_historical_latent_ids()`, extracts only IDs, and never
+opens outcomes or journals. Its frozen source digest is
 `2a0cce17262f9f33bf8820f0e234eb02e18121a4c88ffc7e9e4a41473013a66b`.
-All extracted IDs are excluded from the new manifest. The actual new-manifest
-and schedule digests will be added to the final lock before execution.
+All extracted IDs are excluded from the new manifest. The command writes the
+new manifest, complete schedule, and a provenance record with all three
+digests; it refuses to overwrite an existing artifact set by default. Those
+digests will be added to the final lock before execution.
 
 ## Outcomes and raw-data rules
 
@@ -141,7 +144,9 @@ following have been recorded together:
 2. verified historical-ID exclusion set, regenerated new manifest, complete
    schedule, and their hashes;
 3. verified controller vector file and float64 hashes, layer, dose, model
-   revision, dtype, attention backend, decoding configuration, and hook scope;
+   revision, dtype, attention backend, decoding configuration, and hook scope.
+   The runner checks those frozen values against `backend.provenance()`,
+   `backend.config`, and the live `Intervention` object before its first call;
 4. a hash-pinned journal identity containing those values;
 5. passing focused unit tests and a fresh independent audit of the prelock
    implementation; and
