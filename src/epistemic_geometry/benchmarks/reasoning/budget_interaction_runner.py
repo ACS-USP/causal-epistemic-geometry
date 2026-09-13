@@ -30,6 +30,8 @@ from .rollouts import RolloutRecord, generation_config_hash, rollout_record_from
 CANDIDATE_IDENTITY_FIELDS = (
     "model_repo",
     "model_revision",
+    "tokenizer_repo",
+    "tokenizer_revision",
     "dtype",
     "attention_backend",
     "vector_path",
@@ -43,6 +45,8 @@ CANDIDATE_IDENTITY_FIELDS = (
 _CANDIDATE_IDENTITY_STRING_FIELDS = {
     "model_repo",
     "model_revision",
+    "tokenizer_repo",
+    "tokenizer_revision",
     "dtype",
     "attention_backend",
     "vector_path",
@@ -272,6 +276,8 @@ class SerialBudgetInteractionAdapter:
         provenance_fields = {
             "model_repo": "model_identifier",
             "model_revision": "model_revision",
+            "tokenizer_repo": "tokenizer_identifier",
+            "tokenizer_revision": "tokenizer_revision",
             "dtype": "dtype",
         }
         for candidate_field, provenance_field in provenance_fields.items():

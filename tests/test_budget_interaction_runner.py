@@ -37,6 +37,8 @@ def _candidate_identity() -> dict[str, object]:
     return {
         "model_repo": "fake/model",
         "model_revision": "fake-revision",
+        "tokenizer_repo": "fake/tokenizer",
+        "tokenizer_revision": "fake-tokenizer-revision",
         "dtype": "bf16",
         "attention_backend": "sdpa",
         "vector_path": str(_FAKE_VECTOR_PATH),
@@ -77,6 +79,8 @@ class _FakeBackend:
         self.provenance_values = {
             "model_identifier": "fake/model",
             "model_revision": "fake-revision",
+            "tokenizer_identifier": "fake/tokenizer",
+            "tokenizer_revision": "fake-tokenizer-revision",
             "dtype": "bf16",
             "attention_backend": "sdpa",
         }
@@ -280,6 +284,8 @@ def test_runner_rejects_journal_identity_candidate_hash_before_generation(
     [
         ("model_identifier", "other/model"),
         ("model_revision", "other-revision"),
+        ("tokenizer_identifier", "other/tokenizer"),
+        ("tokenizer_revision", "other-tokenizer-revision"),
         ("dtype", "float32"),
         ("attention_backend", "eager"),
     ],
