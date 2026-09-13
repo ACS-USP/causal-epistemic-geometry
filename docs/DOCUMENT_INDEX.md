@@ -69,6 +69,7 @@ current instruction source.
 | `review/q2_v4_intervention_subspace_design/REPORT.md` | New CPU-only intervention-subspace design: exact rank-8 source span, corrected blind-spot-shape endpoint, baseline-centered M2 angle, K=32/N=300 decision, and native-Spark-1 qualification draft; V4 not frozen or run |
 | `review/q2_v4_1_31_safe_bank_review/Q2_V4_1_31_SAFE_BANK_REVIEW.md` | CPU-only, outcome-free adequacy review of the immutable 40-candidate V4 stream and all 31 directions passing both frozen safety shells; no semantic panel run |
 | `docs/Q3_CONCEPT_NOTE.md` | Non-executing concept for converting complementarity into realizable utility |
+| `docs/DIVERSIFICATION_COVERAGE_CANDIDATE_CLOSEOUT.md` | Coverage candidature withdrawn before new inference after reconciling its population with the Q1 V3 screen failure |
 | `docs/DGX_SPARK_ONBOARDING.md` | Read-only DGX discovery, smoke, provenance, and teardown checklist |
 | `docs/GATE3_SUBSTRATE_RACE_CLOSEOUT.md` | Completed baseline-only substrate selection |
 | `docs/GATE4_MICRO_Q1_CLOSEOUT.md` | First original development micro-Q1 closeout |
