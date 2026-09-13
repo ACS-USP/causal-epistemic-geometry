@@ -8,9 +8,11 @@ returns only parsed :class:`RolloutRecord` objects.
 from __future__ import annotations
 
 import copy
+import hashlib
 import math
 from collections.abc import Mapping, Sequence
 from dataclasses import replace
+from pathlib import Path
 from typing import Any
 
 from epistemic_geometry.reproducibility import canonical_json, stable_digest
@@ -231,9 +233,35 @@ class SerialBudgetInteractionAdapter:
         except AttributeError as exc:
             raise ValueError(f"backend.config is missing {field}") from exc
 
+    def _validate_vector_file(self) -> None:
+        """Verify the caller-identified vector bytes without fetching anything."""
+
+        candidate_path = Path(self.candidate_identity["vector_path"])
+        try:
+            resolved_path = candidate_path.expanduser().resolve(strict=True)
+        except (OSError, RuntimeError) as exc:
+            raise ValueError(
+                "candidate_identity vector_path must resolve to a regular file"
+            ) from exc
+        if not resolved_path.is_file():
+            raise ValueError("candidate_identity vector_path must resolve to a regular file")
+        digest = hashlib.sha256()
+        try:
+            with resolved_path.open("rb") as handle:
+                for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                    digest.update(chunk)
+        except OSError as exc:
+            raise ValueError("candidate_identity vector_path could not be read") from exc
+        observed = digest.hexdigest()
+        if observed != self.candidate_identity["vector_file_sha256"]:
+            raise ValueError(
+                "candidate vector file SHA-256 does not match candidate_identity"
+            )
+
     def _validate_live_identity(self) -> None:
         """Cross-check frozen identity against the live backend and controller."""
 
+        self._validate_vector_file()
         provenance_fn = getattr(self.backend, "provenance", None)
         if not callable(provenance_fn):
             raise ValueError("backend.provenance() is required for serial budget interaction")

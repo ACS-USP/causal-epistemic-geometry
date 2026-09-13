@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import hashlib
 from dataclasses import replace
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -18,6 +20,9 @@ from epistemic_geometry.benchmarks.reasoning.budget_interaction_runner import (
 )
 from epistemic_geometry.types import BackendOutput, Intervention, SteeringVector
 
+_FAKE_VECTOR_PATH = Path(__file__).resolve()
+_FAKE_VECTOR_FILE_SHA256 = hashlib.sha256(_FAKE_VECTOR_PATH.read_bytes()).hexdigest()
+
 
 def _intervention() -> Intervention:
     vector = SteeringVector(np.ones(3), 27, "fake", "none", hash="fake-vector")
@@ -30,8 +35,8 @@ def _candidate_identity() -> dict[str, object]:
         "model_revision": "fake-revision",
         "dtype": "bf16",
         "attention_backend": "sdpa",
-        "vector_path": "vectors/fake.npz",
-        "vector_file_sha256": "fake-file-sha",
+        "vector_path": str(_FAKE_VECTOR_PATH),
+        "vector_file_sha256": _FAKE_VECTOR_FILE_SHA256,
         "vector_canonical_sha256": "fake-vector",
         "layer": 27,
         "eta": 0.75,
@@ -48,6 +53,15 @@ def _candidate_identity() -> dict[str, object]:
             "execution_mode": "serial_reference",
         },
     }
+
+
+def _temp_candidate_identity(tmp_path, payload: bytes = b"frozen-vector") -> dict[str, object]:
+    path = tmp_path / "vector.bin"
+    path.write_bytes(payload)
+    identity = _candidate_identity()
+    identity["vector_path"] = str(path)
+    identity["vector_file_sha256"] = hashlib.sha256(payload).hexdigest()
+    return identity
 
 
 class _FakeBackend:
@@ -100,7 +114,7 @@ def test_runner_is_serial_and_scopes_d75_contexts() -> None:
         candidate_identity=_candidate_identity(),
         controller_provenance={
             "controller": "frozen-d75",
-            "vector_file_sha256": "fake-file-sha",
+            "vector_file_sha256": _FAKE_VECTOR_FILE_SHA256,
         },
     )
 
@@ -124,7 +138,7 @@ def test_runner_is_serial_and_scopes_d75_contexts() -> None:
     assert len({record.metadata["physical_generation_id"] for record in records}) == len(records)
     assert all(
         record.metadata["controller_provenance"]
-        == {"controller": "frozen-d75", "vector_file_sha256": "fake-file-sha"}
+        == {"controller": "frozen-d75", "vector_file_sha256": _FAKE_VECTOR_FILE_SHA256}
         for record in records
         if record.metadata["condition"] == "D75"
     )
@@ -142,7 +156,7 @@ def test_runner_rejects_tampered_schedule_identity_before_generation() -> None:
             schedule,
             intervention=_intervention(),
             candidate_identity=_candidate_identity(),
-            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+            controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
         )
     assert backend.calls == []
 
@@ -202,7 +216,7 @@ def test_runner_preserves_candidate_identity_on_baseline_and_d75_records() -> No
         candidate_identity=identity,
         controller_provenance={
             "controller": "frozen-d75",
-            "vector_file_sha256": "fake-file-sha",
+            "vector_file_sha256": _FAKE_VECTOR_FILE_SHA256,
         },
     )
     assert all(record.metadata["candidate_identity"] == identity for record in records)
@@ -214,7 +228,7 @@ def test_runner_preserves_candidate_identity_on_baseline_and_d75_records() -> No
     )
     assert all(
         record.metadata["controller_provenance"]
-        == {"controller": "frozen-d75", "vector_file_sha256": "fake-file-sha"}
+        == {"controller": "frozen-d75", "vector_file_sha256": _FAKE_VECTOR_FILE_SHA256}
         for record in records
         if record.metadata["condition"] == "D75"
     )
@@ -250,7 +264,7 @@ def test_runner_rejects_journal_identity_candidate_hash_before_generation(
             build_schedule(manifest),
             intervention=_intervention(),
             candidate_identity=_candidate_identity(),
-            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+            controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
             journal=journal,
             journal_identity=journal_identity,
         )
@@ -277,7 +291,7 @@ def test_runner_rejects_backend_provenance_mismatch_before_generation(field, val
             build_schedule(manifest),
             intervention=_intervention(),
             candidate_identity=_candidate_identity(),
-            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+            controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
         )
     assert backend.calls == []
 
@@ -293,7 +307,7 @@ def test_runner_rejects_decoding_config_mismatch_before_generation() -> None:
             build_schedule(manifest),
             intervention=_intervention(),
             candidate_identity=_candidate_identity(),
-            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+            controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
         )
     assert backend.calls == []
 
@@ -323,7 +337,7 @@ def test_runner_rejects_intervention_mismatch_before_generation(kind) -> None:
             build_schedule(manifest),
             intervention=intervention,
             candidate_identity=_candidate_identity(),
-            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+            controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
         )
     assert backend.calls == []
 
@@ -341,5 +355,55 @@ def test_runner_requires_matching_controller_vector_file_hash_before_generation(
             intervention=_intervention(),
             candidate_identity=_candidate_identity(),
             controller_provenance=provenance,
+        )
+    assert backend.calls == []
+
+
+def test_runner_accepts_matching_local_vector_file_before_generation(tmp_path) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    identity = _temp_candidate_identity(tmp_path)
+    records = run_serial_budget_interaction(
+        backend,
+        manifest,
+        build_schedule(manifest),
+        intervention=_intervention(),
+        candidate_identity=identity,
+        controller_provenance={"vector_file_sha256": identity["vector_file_sha256"]},
+    )
+    assert len(records) > 0
+    assert backend.calls
+
+
+def test_runner_rejects_tampered_local_vector_file_before_generation(tmp_path) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    identity = _temp_candidate_identity(tmp_path)
+    Path(identity["vector_path"]).write_bytes(b"tampered-vector")
+    with pytest.raises(ValueError, match="vector file SHA-256"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            candidate_identity=identity,
+            controller_provenance={"vector_file_sha256": identity["vector_file_sha256"]},
+        )
+    assert backend.calls == []
+
+
+def test_runner_rejects_missing_local_vector_file_before_generation(tmp_path) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    identity = _temp_candidate_identity(tmp_path)
+    Path(identity["vector_path"]).unlink()
+    with pytest.raises(ValueError, match="vector_path"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            candidate_identity=identity,
+            controller_provenance={"vector_file_sha256": identity["vector_file_sha256"]},
         )
     assert backend.calls == []
