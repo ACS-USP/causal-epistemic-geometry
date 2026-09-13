@@ -269,6 +269,8 @@ class BudgetInteractionJournal:
             except (UnicodeDecodeError, json.JSONDecodeError) as exc:
                 if index != len(lines) - 1:
                     raise ValueError(f"invalid non-final budget journal row {index}") from exc
+                if complete:
+                    raise ValueError(f"invalid final budget journal row {index}") from exc
                 digest = hashlib.sha256(line).hexdigest()[:16]
                 quarantine = self.path.with_name(f"{self.path.name}.truncated.{digest}")
                 quarantine.write_bytes(line)

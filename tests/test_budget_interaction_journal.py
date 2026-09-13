@@ -97,6 +97,20 @@ def test_budget_journal_recovers_only_malformed_final_partial_tail(tmp_path) -> 
         BudgetInteractionJournal(path, identity=_identity())
 
 
+def test_budget_journal_rejects_malformed_final_line_with_newline(tmp_path) -> None:
+    schedule = build_schedule(build_manifest(n_per_cell=1))[0]
+    path = tmp_path / "budget.jsonl"
+    journal = BudgetInteractionJournal(path, identity=_identity())
+    journal.append(schedule, _record(schedule))
+    original = path.read_bytes()
+    path.write_bytes(original + b"not-json\n")
+
+    with pytest.raises(ValueError, match="final"):
+        BudgetInteractionJournal(path, identity=_identity())
+    assert path.read_bytes() == original + b"not-json\n"
+    assert not list(path.parent.glob(f"{path.name}.truncated.*"))
+
+
 def test_budget_journal_physical_keys_include_cap_and_condition(tmp_path) -> None:
     schedule = build_schedule(build_manifest(n_per_cell=1))
     baseline_2048 = schedule[0]
@@ -110,4 +124,3 @@ def test_budget_journal_physical_keys_include_cap_and_condition(tmp_path) -> Non
     assert len(journal.rows) == 3
     assert len({physical_key(row) for row in (baseline_2048, d75_2048, baseline_4096)}) == 3
     assert schedule_identity_hash(d75_2048) != schedule_identity_hash(baseline_2048)
-
