@@ -6,6 +6,7 @@ from epistemic_geometry.benchmarks.reasoning.budget_interaction import (
     NAMESPACE,
     build_manifest,
     build_schedule,
+    validate_manifest,
 )
 
 
@@ -63,3 +64,11 @@ def test_manifest_rejects_duplicate_or_malformed_history() -> None:
         build_manifest(["historical", "historical"])
     with pytest.raises(TypeError, match="iterable"):
         build_manifest("historical")
+
+
+def test_manifest_validation_reconstructs_latent_identity_from_seed() -> None:
+    manifest = build_manifest(n_per_cell=1)
+    tampered = [dict(row) for row in manifest]
+    tampered[0]["latent_id"] = "FSM-R:length_4:not-a-generated-latent"
+    with pytest.raises(ValueError, match="does not match generator seed"):
+        validate_manifest(tampered, n_per_cell=1)

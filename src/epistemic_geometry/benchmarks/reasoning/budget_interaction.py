@@ -162,6 +162,11 @@ def validate_manifest(
             raise ValueError(f"manifest contains duplicate latent ID: {latent_id}")
         if not isinstance(seed, int) or isinstance(seed, bool):
             raise ValueError("manifest generator_seed must be an integer")
+        regenerated = generate_item(family, cell, seed)
+        if latent_id != regenerated.latent_id or latent_hash != regenerated.latent_hash:
+            raise ValueError(f"manifest latent identity does not match generator seed: {latent_id}")
+        if row.get("latent_seed") != regenerated.latent_seed:
+            raise ValueError(f"manifest latent_seed does not match generator seed: {latent_id}")
         expected_identity = stable_digest(
             NAMESPACE, "LATENT", family, cell, latent_id, latent_hash, seed
         )
