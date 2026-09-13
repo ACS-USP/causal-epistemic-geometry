@@ -9,6 +9,7 @@ from epistemic_geometry.benchmarks.reasoning.novelty import (
     audit_diversification_novelty,
     build_diversification_schedule,
     generate_diversification_manifest,
+    plan_diversification_coverage,
 )
 from epistemic_geometry.benchmarks.reasoning.splits import GEOMETRY_CALIBRATION
 
@@ -151,3 +152,48 @@ def test_novelty_audit_output_order_is_deterministic() -> None:
     assert first["candidate_collisions"] == sorted(
         first["candidate_collisions"], key=lambda row: row["latent_id"]
     )
+
+
+def test_coverage_plan_is_disjoint_and_uses_at_only_for_qualification() -> None:
+    counts = {
+        "MODREG-R": {"depth_4": (2, 3)},
+        "FSM-R": {"length_4": (2, 3)},
+        "SATCOUNT-R": {"vars4_clauses4": (2, 3)},
+    }
+    first = plan_diversification_coverage(counts, seed=101)
+    second = plan_diversification_coverage(counts, seed=101)
+    assert first.to_record() == second.to_record()
+    assert first.passed
+    assert not (set(first.qualification_latent_ids) & set(first.evaluation_latent_ids))
+    assert first.schedule_counts == {"qualification": 24, "evaluation": 54}
+    assert {key[1] for key in first.schedule_keys["qualification"]} == {"A", "T"}
+    assert {key[1] for key in first.schedule_keys["evaluation"]} == {"A", "B", "T"}
+
+
+def test_standard_qualification_plan_has_exactly_384_at_generations() -> None:
+    counts = {
+        "MODREG-R": {cell: (8, 1) for cell in ("depth_4", "depth_8", "depth_12", "depth_16")},
+        "FSM-R": {cell: (8, 1) for cell in ("length_4", "length_8", "length_12", "length_16")},
+        "SATCOUNT-R": {
+            cell: (8, 1)
+            for cell in ("vars4_clauses4", "vars4_clauses6", "vars5_clauses8", "vars6_clauses10")
+        },
+    }
+    plan = plan_diversification_coverage(counts, seed=102)
+    assert len(plan.qualification_latent_ids) == 96
+    assert plan.schedule_counts["qualification"] == 384
+
+
+def test_coverage_plan_excludes_history_and_rejects_bad_cells() -> None:
+    initial = plan_diversification_coverage(
+        {"FSM-R": {"length_4": 1}}, seed=103
+    )
+    excluded = initial.qualification_latent_ids + initial.evaluation_latent_ids
+    plan = plan_diversification_coverage(
+        {"FSM-R": {"length_4": 1}},
+        seed=103,
+        historical_excluded_latent_ids=excluded,
+    )
+    assert not (set(plan.all_latent_ids) & set(excluded))
+    with pytest.raises(ValueError, match="unknown reasoning family/cell"):
+        plan_diversification_coverage({"FSM-R": {"not-a-cell": 1}}, seed=104)
