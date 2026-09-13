@@ -108,6 +108,10 @@ class SerialBudgetInteractionAdapter:
         )
         if journal is not None and not isinstance(journal, BudgetInteractionJournal):
             raise TypeError("journal must be a BudgetInteractionJournal")
+        if journal is not None and journal_identity is None:
+            raise ValueError(
+                "journal_identity is required when a budget interaction journal is supplied"
+            )
         if journal_identity is not None and not isinstance(journal_identity, Mapping):
             raise TypeError("journal_identity must be a mapping")
         self.journal = journal
@@ -160,12 +164,7 @@ class SerialBudgetInteractionAdapter:
     ) -> dict[tuple[str, int, str, int], RolloutRecord]:
         if self.journal is None:
             return {}
-        expected_identity = (
-            self.journal.identity
-            if self.journal_identity is None
-            else self.journal_identity
-        )
-        if expected_identity != self.journal.identity:
+        if self.journal_identity != self.journal.identity:
             raise ValueError(
                 "budget interaction journal identity does not match the frozen run identity"
             )
