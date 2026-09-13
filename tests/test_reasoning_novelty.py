@@ -6,6 +6,7 @@ from epistemic_geometry.benchmarks.reasoning.novelty import (
     DIVERSIFICATION_COVERAGE_NAMESPACE,
     DIVERSIFICATION_COVERAGE_SPLIT,
     DiversificationManifest,
+    audit_diversification_novelty,
     build_diversification_schedule,
     generate_diversification_manifest,
 )
@@ -92,3 +93,61 @@ def test_manifest_rejects_excluded_collision_and_schedule_argument_errors() -> N
         )
     with pytest.raises(ValueError, match="unique"):
         build_diversification_schedule(manifest, conditions=("A", "A"))
+
+
+def test_novelty_audit_reports_candidate_collision_and_historical_duplicates() -> None:
+    candidate = generate_diversification_manifest(
+        "FSM-R", "length_4", seed=31, n_items=2, namespace="candidate"
+    )
+    first = {"split_name": "z-history", "items": [candidate.items[0].to_record()]}
+    second = {
+        "split_name": "a-history",
+        "items": [candidate.items[0].to_record(), candidate.items[0].to_record()],
+    }
+    report = audit_diversification_novelty([first, second], candidate)
+    assert report.candidate_disjoint is False
+    assert report.historical_duplicate_ids == (candidate.items[0].latent_id,)
+    assert report.candidate_collisions[0]["latent_id"] == candidate.items[0].latent_id
+    assert report.passed is False
+
+
+def test_novelty_audit_detects_duplicate_across_historical_records() -> None:
+    manifest = generate_diversification_manifest(
+        "FSM-R", "length_4", seed=32, n_items=1, namespace="candidate"
+    )
+    item = manifest.items[0].to_record()
+    report = audit_diversification_novelty(
+        [{"split_name": "b", "items": [item]}, {"split_name": "a", "items": [item]}],
+        manifest,
+    )
+    assert report.historical_collisions[0]["kind"] == "across_manifests"
+    assert report.historical_collisions[0]["manifest_names"] == ["a", "b"]
+
+
+def test_novelty_audit_rejects_malformed_or_tampered_inputs() -> None:
+    manifest = generate_diversification_manifest(
+        "FSM-R", "length_4", seed=33, n_items=1, namespace="candidate"
+    )
+    tampered = manifest.to_record()
+    tampered["items"][0]["latent_id"] = "tampered"
+    with pytest.raises(ValueError, match="hash mismatch"):
+        audit_diversification_novelty([], tampered)
+    with pytest.raises(ValueError, match="malformed items"):
+        audit_diversification_novelty([{"split_name": "bad", "items": "latent-id"}], manifest)
+
+
+def test_novelty_audit_output_order_is_deterministic() -> None:
+    candidate = generate_diversification_manifest(
+        "FSM-R", "length_4", seed=34, n_items=2, namespace="candidate"
+    )
+    historical = [
+        {"split_name": "z", "items": [candidate.items[1].to_record()]},
+        {"split_name": "a", "items": [candidate.items[0].to_record()]},
+    ]
+    first = audit_diversification_novelty(historical, candidate).to_record()
+    second = audit_diversification_novelty(list(reversed(historical)), candidate).to_record()
+    assert first == second
+    assert first["historical_manifest_names"] == ["a", "z"]
+    assert first["candidate_collisions"] == sorted(
+        first["candidate_collisions"], key=lambda row: row["latent_id"]
+    )

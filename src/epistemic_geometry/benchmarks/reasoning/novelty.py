@@ -137,6 +137,169 @@ class DiversificationManifest:
         )
 
 
+@dataclass(frozen=True)
+class DiversificationNoveltyReport:
+    """Deterministic result of an outcome-free historical ID audit."""
+
+    candidate_namespace: str
+    candidate_split_name: str
+    candidate_latent_ids: tuple[str, ...]
+    historical_manifest_names: tuple[str, ...]
+    historical_latent_ids: tuple[str, ...]
+    historical_duplicate_ids: tuple[str, ...]
+    historical_collisions: tuple[dict[str, Any], ...]
+    candidate_collisions: tuple[dict[str, Any], ...]
+    candidate_disjoint: bool
+    passed: bool
+
+    def to_record(self) -> dict[str, Any]:
+        """Return a JSON-compatible, deterministic report record."""
+
+        return {
+            "candidate_namespace": self.candidate_namespace,
+            "candidate_split_name": self.candidate_split_name,
+            "candidate_latent_ids": list(self.candidate_latent_ids),
+            "historical_manifest_names": list(self.historical_manifest_names),
+            "historical_latent_ids": list(self.historical_latent_ids),
+            "historical_duplicate_ids": list(self.historical_duplicate_ids),
+            "historical_collisions": [dict(collision) for collision in self.historical_collisions],
+            "candidate_collisions": [dict(collision) for collision in self.candidate_collisions],
+            "candidate_disjoint": self.candidate_disjoint,
+            "passed": self.passed,
+        }
+
+
+def _historical_records(records: Iterable[Mapping[str, Any]]) -> list[tuple[str, tuple[str, ...]]]:
+    """Validate and extract IDs from explicitly supplied historical records."""
+
+    if isinstance(records, (str, bytes, Mapping)):
+        raise ValueError("historical_manifest_records must be an iterable of mappings")
+    try:
+        raw_records = list(records)
+    except TypeError as exc:
+        raise ValueError("historical_manifest_records must be an iterable of mappings") from exc
+
+    normalized: list[tuple[str, str, tuple[str, ...]]] = []
+    for record_index, record in enumerate(raw_records):
+        if not isinstance(record, Mapping):
+            raise ValueError(f"historical manifest record {record_index} must be a mapping")
+        items = record.get("items")
+        if isinstance(items, (str, bytes, Mapping)) or not isinstance(items, Sequence):
+            raise ValueError(f"historical manifest record {record_index} has malformed items")
+        if not items:
+            raise ValueError(f"historical manifest record {record_index} must contain items")
+
+        ids: list[str] = []
+        for item_index, item in enumerate(items):
+            if not isinstance(item, Mapping):
+                raise ValueError(
+                    f"historical manifest record {record_index} item {item_index} must be a mapping"
+                )
+            latent_id = item.get("latent_id")
+            if not isinstance(latent_id, str) or not latent_id:
+                raise ValueError(
+                    f"historical manifest record {record_index} item {item_index} "
+                    "has a malformed latent_id"
+                )
+            ids.append(latent_id)
+
+        label_value = record.get("split_name", record.get("namespace"))
+        label = label_value if isinstance(label_value, str) and label_value else ""
+        canonical = canonical_json(record)
+        if not label:
+            digest = stable_digest("Q1-V3-HISTORICAL-MANIFEST", canonical)[:16]
+            label = f"historical-{digest}"
+        normalized.append((label, canonical, tuple(ids)))
+
+    normalized.sort(key=lambda row: (row[0], row[1]))
+    result: list[tuple[str, tuple[str, ...]]] = []
+    label_counts: dict[str, int] = {}
+    for label, _canonical, ids in normalized:
+        count = label_counts.get(label, 0) + 1
+        label_counts[label] = count
+        result.append((label if count == 1 else f"{label}#{count}", ids))
+    return result
+
+
+def audit_diversification_novelty(
+    historical_manifest_records: Iterable[Mapping[str, Any]],
+    candidate: DiversificationManifest | Mapping[str, Any],
+) -> DiversificationNoveltyReport:
+    """Audit candidate latent IDs against explicit historical manifest records.
+
+    Historical records are trusted, caller-provided mappings.  Their only
+    scientific content used here is each item's ``latent_id``.  A candidate
+    record is fully reconstructed so a stale or tampered manifest hash fails
+    closed before any candidate IDs are considered.
+    """
+
+    historical = _historical_records(historical_manifest_records)
+    if isinstance(candidate, DiversificationManifest):
+        candidate_manifest = candidate
+    elif isinstance(candidate, Mapping):
+        try:
+            candidate_manifest = DiversificationManifest.from_record(candidate)
+        except (KeyError, TypeError, ValueError, OverflowError) as exc:
+            raise ValueError(
+                f"candidate diversification manifest record is malformed: {exc}"
+            ) from exc
+    else:
+        raise TypeError("candidate must be a DiversificationManifest or manifest record")
+
+    candidate_ids = tuple(item.latent_id for item in candidate_manifest.items)
+    occurrences: dict[str, list[tuple[str, int]]] = {}
+    for manifest_name, ids in historical:
+        for item_index, latent_id in enumerate(ids):
+            occurrences.setdefault(latent_id, []).append((manifest_name, item_index))
+
+    historical_duplicate_ids = tuple(
+        sorted(latent_id for latent_id, places in occurrences.items() if len(places) > 1)
+    )
+    historical_collisions: list[dict[str, Any]] = []
+    for latent_id in historical_duplicate_ids:
+        places = occurrences[latent_id]
+        manifest_names = tuple(dict.fromkeys(name for name, _index in places))
+        kind = "within_manifest" if len(manifest_names) == 1 else "across_manifests"
+        historical_collisions.append(
+            {
+                "kind": kind,
+                "latent_id": latent_id,
+                "manifest_names": list(manifest_names),
+                "occurrences": [
+                    {"manifest_name": name, "item_index": index} for name, index in places
+                ],
+            }
+        )
+
+    historical_id_set = set(occurrences)
+    candidate_collisions = tuple(
+        {
+            "kind": "candidate_historical",
+            "latent_id": latent_id,
+            "historical_manifest_names": [
+                name for name, ids in historical if latent_id in ids
+            ],
+        }
+        for latent_id in sorted(set(candidate_ids) & historical_id_set)
+    )
+
+    historical_latent_ids = tuple(sorted(historical_id_set))
+    candidate_disjoint = not bool(set(candidate_ids) & historical_id_set)
+    passed = candidate_disjoint and not historical_duplicate_ids
+    return DiversificationNoveltyReport(
+        candidate_namespace=candidate_manifest.namespace,
+        candidate_split_name=candidate_manifest.split_name,
+        candidate_latent_ids=tuple(candidate_ids),
+        historical_manifest_names=tuple(name for name, _ids in historical),
+        historical_latent_ids=historical_latent_ids,
+        historical_duplicate_ids=historical_duplicate_ids,
+        historical_collisions=tuple(historical_collisions),
+        candidate_collisions=tuple(candidate_collisions),
+        candidate_disjoint=candidate_disjoint,
+        passed=passed,
+    )
+
+
 def generate_diversification_manifest(
     family: str,
     cell: str,
@@ -254,7 +417,9 @@ __all__ = [
     "DIVERSIFICATION_COVERAGE_NAMESPACE",
     "DIVERSIFICATION_COVERAGE_SPLIT",
     "DiversificationManifest",
+    "DiversificationNoveltyReport",
     "HISTORICAL_REASONING_SPLIT_NAMES",
+    "audit_diversification_novelty",
     "build_diversification_schedule",
     "generate_diversification_manifest",
 ]

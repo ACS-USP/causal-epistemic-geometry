@@ -19,6 +19,8 @@ from .novelty import (
     DIVERSIFICATION_COVERAGE_SPLIT,
     HISTORICAL_REASONING_SPLIT_NAMES,
     DiversificationManifest,
+    DiversificationNoveltyReport,
+    audit_diversification_novelty,
     build_diversification_schedule,
     generate_diversification_manifest,
 )
@@ -46,7 +48,9 @@ __all__ = [
     "DIVERSIFICATION_COVERAGE_NAMESPACE",
     "DIVERSIFICATION_COVERAGE_SPLIT",
     "DiversificationManifest",
+    "DiversificationNoveltyReport",
     "HISTORICAL_REASONING_SPLIT_NAMES",
+    "audit_diversification_novelty",
     "build_diversification_schedule",
     "generate_diversification_manifest",
 ]
