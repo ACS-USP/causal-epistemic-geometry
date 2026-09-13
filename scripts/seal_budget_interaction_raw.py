@@ -76,9 +76,49 @@ def _validate_record_metadata(
     schedule_row: Mapping[str, Any],
     record: Mapping[str, Any],
     candidate_hash: str,
+    candidate_identity: Mapping[str, Any],
     expected_controller: Mapping[str, Any],
 ) -> None:
     """Validate execution provenance without touching scientific outcomes."""
+
+    # The journal loader validates the schedule wrapper, but intentionally
+    # leaves the scientific payload opaque for resume. A raw seal still has to
+    # establish that each row is a complete runner record. Checking presence
+    # and primitive types does not parse the response or recompute correctness.
+    required = {
+        "latent_id",
+        "view_id",
+        "family",
+        "cell",
+        "intervention_id",
+        "rollout_index",
+        "sampling_seed",
+        "raw_text",
+        "parsed_answer",
+        "parse_status",
+        "correct",
+    }
+    missing = sorted(required - set(record))
+    if missing:
+        raise RawSealError(f"journal record is missing runner fields: {missing}")
+    if not isinstance(record["raw_text"], str):
+        raise RawSealError("journal record raw_text is not a string")
+    if record["parsed_answer"] is not None and (
+        isinstance(record["parsed_answer"], bool)
+        or not isinstance(record["parsed_answer"], int)
+    ):
+        raise RawSealError("journal record parsed_answer has an invalid type")
+    if not isinstance(record["parse_status"], str):
+        raise RawSealError("journal record parse_status is not a string")
+    if not isinstance(record["correct"], bool):
+        raise RawSealError("journal record correct is not a boolean")
+    expected_intervention = (
+        "baseline"
+        if schedule_row.get("condition") == "BASELINE"
+        else candidate_identity["vector_canonical_sha256"]
+    )
+    if record["intervention_id"] != expected_intervention:
+        raise RawSealError("journal record intervention identity mismatch")
 
     metadata = record.get("metadata")
     config = record.get("generation_config")
@@ -96,8 +136,12 @@ def _validate_record_metadata(
         raise RawSealError("journal record generation cap mismatch")
     if config.get("sampling_seed") != schedule_row.get("sampling_seed"):
         raise RawSealError("journal record sampling seed mismatch")
+    if set(config) != {"surface", "condition", "max_new_tokens", "sampling_seed"}:
+        raise RawSealError("journal record generation config is not canonical")
     if record.get("generation_config_hash") != generation_config_hash(dict(config)):
         raise RawSealError("journal record generation config hash mismatch")
+    if metadata.get("candidate_identity") != dict(candidate_identity):
+        raise RawSealError("journal record candidate identity metadata mismatch")
 
     condition = schedule_row.get("condition")
     controller = metadata.get("controller_provenance")
@@ -185,6 +229,7 @@ def validate_completed_raw_journal(
             expected,
             record,
             lock["candidate_identity_hash"],
+            loaded["candidate_identity"],
             lock.get("controller_provenance", {}),
         )
 

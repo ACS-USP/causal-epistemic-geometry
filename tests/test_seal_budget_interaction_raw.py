@@ -47,6 +47,7 @@ def _complete_fixture_journal(path: Path) -> None:
                     "condition": row["condition"],
                     "schedule_identity_hash": row["schedule_identity_hash"],
                     "seed_regime": row["seed_regime"],
+                    "candidate_identity": loaded["candidate_identity"],
                     "candidate_identity_hash": candidate_hash,
                     "controller_provenance": controller,
                 },
@@ -64,6 +65,15 @@ def _complete_fixture_journal(path: Path) -> None:
                         "sampling_seed": row["sampling_seed"],
                     }
                 ),
+                "intervention_id": (
+                    "baseline"
+                    if row["condition"] == "BASELINE"
+                    else loaded["candidate_identity"]["vector_canonical_sha256"]
+                ),
+                "raw_text": "fixture-raw-text",
+                "parsed_answer": None,
+                "parse_status": "FIXTURE_UNPARSED",
+                "correct": False,
             },
         )
 
@@ -119,3 +129,16 @@ def test_raw_seal_rejects_unterminated_tail_without_rewriting(tmp_path: Path) ->
     with pytest.raises(RawSealError, match="unterminated"):
         validate_completed_raw_journal(LOCK, journal)
     assert journal.read_bytes() == before
+
+
+def test_raw_seal_rejects_incomplete_runner_record(tmp_path: Path) -> None:
+    journal = tmp_path / "JOURNAL.jsonl"
+    _complete_fixture_journal(journal)
+    rows = journal.read_bytes().splitlines(keepends=True)
+    first = json.loads(rows[0])
+    del first["record"]["raw_text"]
+    rows[0] = (json.dumps(first, sort_keys=True, separators=(",", ":")) + "\n").encode()
+    journal.write_bytes(b"".join(rows))
+
+    with pytest.raises(RawSealError, match="missing runner fields"):
+        validate_completed_raw_journal(LOCK, journal)
