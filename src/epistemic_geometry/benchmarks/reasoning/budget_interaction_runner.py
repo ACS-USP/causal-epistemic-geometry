@@ -19,9 +19,11 @@ from .budget_interaction import (
     NAMESPACE,
     validate_schedule,
 )
+from .budget_interaction_journal import BudgetInteractionJournal, physical_key
 from .families import generate_item
+from .parser import parse_family_final
 from .rendering import render_reasoning
-from .rollouts import RolloutRecord, rollout_record_from_output
+from .rollouts import RolloutRecord, generation_config_hash, rollout_record_from_output
 
 
 def _physical_generation_id(schedule_identity_hash: str) -> str:
@@ -90,6 +92,8 @@ class SerialBudgetInteractionAdapter:
         intervention: Intervention | None = None,
         d75_intervention: Intervention | None = None,
         controller_provenance: Mapping[str, Any] | None = None,
+        journal: BudgetInteractionJournal | None = None,
+        journal_identity: Mapping[str, Any] | None = None,
     ) -> None:
         if intervention is not None and d75_intervention is not None:
             raise ValueError("provide only one D75 intervention")
@@ -102,6 +106,85 @@ class SerialBudgetInteractionAdapter:
         self.controller_provenance = (
             dict(controller_provenance) if controller_provenance is not None else None
         )
+        if journal is not None and not isinstance(journal, BudgetInteractionJournal):
+            raise TypeError("journal must be a BudgetInteractionJournal")
+        if journal_identity is not None and not isinstance(journal_identity, Mapping):
+            raise TypeError("journal_identity must be a mapping")
+        self.journal = journal
+        self.journal_identity = dict(journal_identity) if journal_identity is not None else None
+
+    @staticmethod
+    def _rehydrate_record(
+        row: Mapping[str, Any], view: ReasoningView, stored: Mapping[str, Any]
+    ) -> RolloutRecord:
+        """Validate and rehydrate a journal row without regenerating it."""
+
+        record = dict(stored)
+        # The answer key is deliberately not persisted by this runner.  It is
+        # recovered from the already validated manifest view at resume time.
+        record.setdefault("target", view.answer)
+        if record["target"] != view.answer:
+            raise ValueError("journaled rollout target does not match manifest view")
+        if record.get("view_id") != view.view_id:
+            raise ValueError("journaled rollout view identity does not match manifest view")
+        try:
+            parsed = parse_family_final(
+                record["raw_text"],
+                view.family,
+                truncated=record.get("stop_reason") == "max_new_tokens",
+            )
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError("journaled rollout raw response is corrupt") from exc
+        if (
+            record.get("parsed_answer") != parsed.answer
+            or record.get("parse_status") != parsed.status
+        ):
+            raise ValueError("journaled rollout parse result does not match raw response")
+        expected_correct = parsed.valid and parsed.answer == view.answer
+        if record.get("correct") is not expected_correct:
+            raise ValueError("journaled rollout correctness does not match parsed response")
+        config = record.get("generation_config")
+        if not isinstance(config, Mapping):
+            raise ValueError("journaled rollout generation config is corrupt")
+        if record.get("generation_config_hash") not in (None, generation_config_hash(dict(config))):
+            raise ValueError("journaled rollout generation config hash mismatch")
+        try:
+            return RolloutRecord.from_record(record)
+        except (TypeError, ValueError, KeyError) as exc:
+            raise ValueError("journaled rollout record is corrupt") from exc
+
+    def _validate_journal(
+        self,
+        schedule: Sequence[Mapping[str, Any]],
+        views: Mapping[str, ReasoningView],
+    ) -> dict[tuple[str, int, str, int], RolloutRecord]:
+        if self.journal is None:
+            return {}
+        expected_identity = (
+            self.journal.identity
+            if self.journal_identity is None
+            else self.journal_identity
+        )
+        if expected_identity != self.journal.identity:
+            raise ValueError(
+                "budget interaction journal identity does not match the frozen run identity"
+            )
+        by_key = {physical_key(row): row for row in schedule}
+        recovered: dict[tuple[str, int, str, int], RolloutRecord] = {}
+        # Scan every persisted entry before the first backend call.  Extra rows
+        # from another schedule are unsafe to silently ignore.
+        for key, entry in self.journal.entries.items():
+            stored_schedule = entry.get("schedule")
+            stored_record = entry.get("record")
+            if key not in by_key or not isinstance(stored_schedule, Mapping):
+                raise ValueError(f"journal contains a row outside the frozen schedule: {key}")
+            row = by_key[key]
+            if dict(stored_schedule) != dict(row):
+                raise ValueError(f"journal schedule mismatch for physical key: {key}")
+            if not isinstance(stored_record, Mapping):
+                raise ValueError("journaled rollout record is corrupt")
+            recovered[key] = self._rehydrate_record(row, views[row["latent_id"]], stored_record)
+        return recovered
 
     def run(self) -> list[RolloutRecord]:
         """Validate, execute, parse, and return the raw records in schedule order."""
@@ -112,12 +195,31 @@ class SerialBudgetInteractionAdapter:
         if any(row["condition"] == "D75" for row in self.schedule) and self.intervention is None:
             raise ValueError("D75 schedule rows require an Intervention")
         manifest_by_id = {row["latent_id"]: row for row in self.manifest}
+        # Validate every schedule/manifest pairing before recovering or
+        # generating any row.  validate_schedule intentionally focuses on the
+        # combinatorial schedule contract and cannot infer these fields.
+        for row in self.schedule:
+            _validate_schedule_identity(row, manifest_by_id[row["latent_id"]])
+        # Materialize and validate all views before touching the backend.  This
+        # also gives journal resume a trusted answer for rehydrating records.
+        views = {}
+        for latent_id, manifest_row in manifest_by_id.items():
+            views[latent_id] = _materialize_view(manifest_row)
+        recovered = self._validate_journal(self.schedule, views)
         records: list[RolloutRecord] = []
         for row in self.schedule:
             manifest_row = manifest_by_id[row["latent_id"]]
-            _validate_schedule_identity(row, manifest_row)
-            view = _materialize_view(manifest_row)
-            self._execute_row(row, view, records)
+            key = physical_key(row)
+            if key in recovered:
+                records.append(recovered[key])
+            else:
+                self._execute_row(row, views[row["latent_id"]], records)
+                if self.journal is not None:
+                    # Keep the raw response and provenance needed to audit and
+                    # rehydrate; omit the manifest answer key from disk.
+                    journal_record = records[-1].to_record()
+                    journal_record.pop("target", None)
+                    self.journal.append(row, journal_record)
         return records
 
     def _execute_row(
@@ -201,6 +303,8 @@ def run_serial_budget_interaction(
     intervention: Intervention | None = None,
     d75_intervention: Intervention | None = None,
     controller_provenance: Mapping[str, Any] | None = None,
+    journal: BudgetInteractionJournal | None = None,
+    journal_identity: Mapping[str, Any] | None = None,
 ) -> list[RolloutRecord]:
     """Convenience wrapper around :class:`SerialBudgetInteractionAdapter`."""
 
@@ -211,6 +315,8 @@ def run_serial_budget_interaction(
         intervention=intervention,
         d75_intervention=d75_intervention,
         controller_provenance=controller_provenance,
+        journal=journal,
+        journal_identity=journal_identity,
     ).run()
 
 
