@@ -7,7 +7,11 @@ from epistemic_geometry.benchmarks.reasoning.budget_interaction import (
     build_manifest,
     build_schedule,
 )
+from epistemic_geometry.benchmarks.reasoning.budget_interaction_journal import (
+    BudgetInteractionJournal,
+)
 from epistemic_geometry.benchmarks.reasoning.budget_interaction_runner import (
+    candidate_identity_hash,
     run_serial_budget_interaction,
 )
 from epistemic_geometry.types import BackendOutput, Intervention, SteeringVector
@@ -16,6 +20,22 @@ from epistemic_geometry.types import BackendOutput, Intervention, SteeringVector
 def _intervention() -> Intervention:
     vector = SteeringVector(np.ones(3), 0, "fake", "none", hash="fake-vector")
     return Intervention(0, 0.75, "fake-vector", "last_token", vector)
+
+
+def _candidate_identity() -> dict[str, object]:
+    return {
+        "model_repo": "fake/model",
+        "model_revision": "fake-revision",
+        "dtype": "bf16",
+        "attention_backend": "sdpa",
+        "vector_path": "vectors/fake.npz",
+        "vector_file_sha256": "fake-file-sha",
+        "canonical_float64_vector_sha256": "fake-canonical-sha",
+        "layer": 27,
+        "eta": 0.75,
+        "hook_scope": "last_token",
+        "decoding_config": {"temperature": 0.6, "top_p": 0.95},
+    }
 
 
 class _FakeBackend:
@@ -55,6 +75,7 @@ def test_runner_is_serial_and_scopes_d75_contexts() -> None:
         manifest,
         schedule,
         intervention=_intervention(),
+        candidate_identity=_candidate_identity(),
         controller_provenance={"controller": "frozen-d75"},
     )
 
@@ -89,7 +110,13 @@ def test_runner_rejects_tampered_schedule_identity_before_generation() -> None:
     schedule[0] = {**schedule[0], "family": "FSM-R"}
     backend = _FakeBackend()
     with pytest.raises(ValueError, match="schedule family"):
-        run_serial_budget_interaction(backend, manifest, schedule, intervention=_intervention())
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            schedule,
+            intervention=_intervention(),
+            candidate_identity=_candidate_identity(),
+        )
     assert backend.calls == []
 
 
@@ -97,5 +124,102 @@ def test_runner_requires_d75_intervention_before_generation() -> None:
     manifest = build_manifest(n_per_cell=1)
     backend = _FakeBackend()
     with pytest.raises(ValueError, match="require an Intervention"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            candidate_identity=_candidate_identity(),
+        )
+    assert backend.calls == []
+
+
+def test_runner_requires_candidate_identity_before_generation() -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    with pytest.raises(ValueError, match="candidate_identity is required"):
         run_serial_budget_interaction(backend, manifest, build_schedule(manifest))
+    assert backend.calls == []
+
+
+@pytest.mark.parametrize(
+    "mutator, message",
+    [
+        (lambda identity: identity.pop("dtype"), "missing fields"),
+        (lambda identity: identity.update({"layer": True}), "layer"),
+        (lambda identity: identity.update({"decoding_config": {}}), "decoding_config"),
+    ],
+)
+def test_runner_rejects_malformed_candidate_identity_before_generation(mutator, message) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    identity = _candidate_identity()
+    mutator(identity)
+    with pytest.raises((TypeError, ValueError), match=message):
+        run_serial_budget_interaction(
+            backend, manifest, build_schedule(manifest), candidate_identity=identity
+        )
+    assert backend.calls == []
+
+
+def test_runner_preserves_candidate_identity_on_baseline_and_d75_records() -> None:
+    manifest = build_manifest(n_per_cell=1)
+    schedule = build_schedule(manifest)
+    backend = _FakeBackend()
+    identity = _candidate_identity()
+    expected_hash = candidate_identity_hash(identity)
+    records = run_serial_budget_interaction(
+        backend,
+        manifest,
+        schedule,
+        intervention=_intervention(),
+        candidate_identity=identity,
+        controller_provenance={"controller": "frozen-d75"},
+    )
+    assert all(record.metadata["candidate_identity"] == identity for record in records)
+    assert all(record.metadata["candidate_identity_hash"] == expected_hash for record in records)
+    assert all(
+        record.metadata["controller_provenance"] is None
+        for record in records
+        if record.metadata["condition"] == "BASELINE"
+    )
+    assert all(
+        record.metadata["controller_provenance"] == {"controller": "frozen-d75"}
+        for record in records
+        if record.metadata["condition"] == "D75"
+    )
+
+
+def test_controller_provenance_cannot_substitute_for_candidate_identity() -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    with pytest.raises(ValueError, match="candidate_identity is required"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            controller_provenance=_candidate_identity(),
+        )
+    assert backend.calls == []
+
+
+@pytest.mark.parametrize(
+    "journal_identity", [{"run": "fake"}, {"candidate_identity_hash": "wrong"}]
+)
+def test_runner_rejects_journal_identity_candidate_hash_before_generation(
+    tmp_path, journal_identity
+) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    journal = BudgetInteractionJournal(tmp_path / "journal.jsonl", identity=journal_identity)
+    with pytest.raises(ValueError, match="candidate_identity_hash"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            candidate_identity=_candidate_identity(),
+            journal=journal,
+            journal_identity=journal_identity,
+        )
     assert backend.calls == []

@@ -7,23 +7,91 @@ returns only parsed :class:`RolloutRecord` objects.
 
 from __future__ import annotations
 
+import copy
+import math
 from collections.abc import Mapping, Sequence
 from dataclasses import replace
 from typing import Any
 
-from epistemic_geometry.reproducibility import stable_digest
+from epistemic_geometry.reproducibility import canonical_json, stable_digest
 from epistemic_geometry.types import Intervention
 
 from .base import ReasoningView
-from .budget_interaction import (
-    NAMESPACE,
-    validate_schedule,
-)
+from .budget_interaction import NAMESPACE, validate_schedule
 from .budget_interaction_journal import BudgetInteractionJournal, physical_key
 from .families import generate_item
 from .parser import parse_family_final
 from .rendering import render_reasoning
 from .rollouts import RolloutRecord, generation_config_hash, rollout_record_from_output
+
+CANDIDATE_IDENTITY_FIELDS = (
+    "model_repo",
+    "model_revision",
+    "dtype",
+    "attention_backend",
+    "vector_path",
+    "vector_file_sha256",
+    "canonical_float64_vector_sha256",
+    "layer",
+    "eta",
+    "hook_scope",
+    "decoding_config",
+)
+_CANDIDATE_IDENTITY_STRING_FIELDS = {
+    "model_repo",
+    "model_revision",
+    "dtype",
+    "attention_backend",
+    "vector_path",
+    "vector_file_sha256",
+    "canonical_float64_vector_sha256",
+    "hook_scope",
+}
+
+
+def validate_candidate_identity(identity: Mapping[str, Any]) -> dict[str, Any]:
+    """Validate and copy the complete frozen candidate execution identity.
+
+    The candidate identity is deliberately separate from controller and journal
+    provenance.  Keeping an exact schema here prevents either of those
+    narrower records from silently standing in for the model/vector setup.
+    """
+
+    if not isinstance(identity, Mapping):
+        raise TypeError("candidate_identity must be a mapping")
+    supplied = set(identity)
+    expected = set(CANDIDATE_IDENTITY_FIELDS)
+    missing = sorted(expected - supplied)
+    extra = sorted(supplied - expected)
+    if missing:
+        raise ValueError(f"candidate_identity is missing fields: {missing}")
+    if extra:
+        raise ValueError(f"candidate_identity has unexpected fields: {extra}")
+    for field in _CANDIDATE_IDENTITY_STRING_FIELDS:
+        value = identity[field]
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"candidate_identity {field} must be a non-empty string")
+    layer = identity["layer"]
+    if isinstance(layer, bool) or not isinstance(layer, int) or layer < 0:
+        raise ValueError("candidate_identity layer must be a non-negative integer")
+    eta = identity["eta"]
+    if isinstance(eta, bool) or not isinstance(eta, (int, float)) or not math.isfinite(float(eta)):
+        raise ValueError("candidate_identity eta must be a finite number")
+    decoding_config = identity["decoding_config"]
+    if not isinstance(decoding_config, Mapping) or not decoding_config:
+        raise ValueError("candidate_identity decoding_config must be a non-empty mapping")
+    return copy.deepcopy(dict(identity))
+
+
+def candidate_identity_hash(identity: Mapping[str, Any]) -> str:
+    """Return the deterministic hash of a validated candidate identity."""
+
+    validated = validate_candidate_identity(identity)
+    return stable_digest(
+        NAMESPACE,
+        "CANDIDATE-IDENTITY",
+        canonical_json(validated),
+    )
 
 
 def _physical_generation_id(schedule_identity_hash: str) -> str:
@@ -91,6 +159,7 @@ class SerialBudgetInteractionAdapter:
         *,
         intervention: Intervention | None = None,
         d75_intervention: Intervention | None = None,
+        candidate_identity: Mapping[str, Any] | None = None,
         controller_provenance: Mapping[str, Any] | None = None,
         journal: BudgetInteractionJournal | None = None,
         journal_identity: Mapping[str, Any] | None = None,
@@ -103,6 +172,10 @@ class SerialBudgetInteractionAdapter:
         self.intervention = d75_intervention if d75_intervention is not None else intervention
         if self.intervention is not None and not isinstance(self.intervention, Intervention):
             raise TypeError("D75 intervention must be an Intervention")
+        if candidate_identity is None:
+            raise ValueError("candidate_identity is required for serial budget interaction")
+        self.candidate_identity = validate_candidate_identity(candidate_identity)
+        self.candidate_identity_hash = candidate_identity_hash(self.candidate_identity)
         self.controller_provenance = (
             dict(controller_provenance) if controller_provenance is not None else None
         )
@@ -114,6 +187,14 @@ class SerialBudgetInteractionAdapter:
             )
         if journal_identity is not None and not isinstance(journal_identity, Mapping):
             raise TypeError("journal_identity must be a mapping")
+        if (
+            journal is not None
+            and journal_identity.get("candidate_identity_hash") != self.candidate_identity_hash
+        ):
+            raise ValueError(
+                "journal_identity candidate_identity_hash does not match "
+                "the frozen candidate identity"
+            )
         self.journal = journal
         self.journal_identity = dict(journal_identity) if journal_identity is not None else None
 
@@ -282,6 +363,8 @@ class SerialBudgetInteractionAdapter:
                 "schedule_identity_hash": schedule_identity_hash,
                 "seed_regime": row["seed_regime"],
                 "controller_provenance": provenance,
+                "candidate_identity": copy.deepcopy(self.candidate_identity),
+                "candidate_identity_hash": self.candidate_identity_hash,
                 "physical_generation_id": physical_id,
             }
         )
@@ -301,6 +384,7 @@ def run_serial_budget_interaction(
     *,
     intervention: Intervention | None = None,
     d75_intervention: Intervention | None = None,
+    candidate_identity: Mapping[str, Any] | None = None,
     controller_provenance: Mapping[str, Any] | None = None,
     journal: BudgetInteractionJournal | None = None,
     journal_identity: Mapping[str, Any] | None = None,
@@ -313,10 +397,17 @@ def run_serial_budget_interaction(
         schedule,
         intervention=intervention,
         d75_intervention=d75_intervention,
+        candidate_identity=candidate_identity,
         controller_provenance=controller_provenance,
         journal=journal,
         journal_identity=journal_identity,
     ).run()
 
 
-__all__ = ["SerialBudgetInteractionAdapter", "run_serial_budget_interaction"]
+__all__ = [
+    "CANDIDATE_IDENTITY_FIELDS",
+    "SerialBudgetInteractionAdapter",
+    "candidate_identity_hash",
+    "run_serial_budget_interaction",
+    "validate_candidate_identity",
+]
