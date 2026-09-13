@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from epistemic_geometry.reproducibility import canonical_json, stable_digest
+from epistemic_geometry.steering.vector import vector_hash
 from epistemic_geometry.types import Intervention
 
 from .base import ReasoningView
@@ -316,7 +317,13 @@ class SerialBudgetInteractionAdapter:
             raise ValueError("intervention vector layer does not match candidate_identity")
         if self.intervention.alpha != self.candidate_identity["eta"]:
             raise ValueError("intervention alpha does not match candidate_identity eta")
-        if self.intervention.vector.hash != self.candidate_identity["vector_canonical_sha256"]:
+        expected_vector_hash = self.candidate_identity["vector_canonical_sha256"]
+        recomputed_vector_hash = vector_hash(self.intervention.vector.values)
+        if recomputed_vector_hash != expected_vector_hash:
+            raise ValueError(
+                "recomputed intervention vector hash does not match candidate_identity"
+            )
+        if self.intervention.vector.hash != expected_vector_hash:
             raise ValueError("intervention vector hash does not match candidate_identity")
         if self.intervention.token_scope != "last_token":
             raise ValueError("intervention token_scope must be last_token")

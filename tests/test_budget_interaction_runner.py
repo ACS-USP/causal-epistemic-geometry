@@ -18,14 +18,18 @@ from epistemic_geometry.benchmarks.reasoning.budget_interaction_runner import (
     candidate_identity_hash,
     run_serial_budget_interaction,
 )
+from epistemic_geometry.steering.vector import vector_hash
 from epistemic_geometry.types import BackendOutput, Intervention, SteeringVector
 
 _FAKE_VECTOR_PATH = Path(__file__).resolve()
 _FAKE_VECTOR_FILE_SHA256 = hashlib.sha256(_FAKE_VECTOR_PATH.read_bytes()).hexdigest()
+_FAKE_VECTOR_CANONICAL_SHA256 = vector_hash(np.ones(3))
 
 
 def _intervention() -> Intervention:
-    vector = SteeringVector(np.ones(3), 27, "fake", "none", hash="fake-vector")
+    vector = SteeringVector(
+        np.ones(3), 27, "fake", "none", hash=_FAKE_VECTOR_CANONICAL_SHA256
+    )
     return Intervention(27, 0.75, "fake-vector", "last_token", vector)
 
 
@@ -37,7 +41,7 @@ def _candidate_identity() -> dict[str, object]:
         "attention_backend": "sdpa",
         "vector_path": str(_FAKE_VECTOR_PATH),
         "vector_file_sha256": _FAKE_VECTOR_FILE_SHA256,
-        "vector_canonical_sha256": "fake-vector",
+        "vector_canonical_sha256": _FAKE_VECTOR_CANONICAL_SHA256,
         "layer": 27,
         "eta": 0.75,
         "hook_scope": "sustained_current_token",
@@ -336,6 +340,25 @@ def test_runner_rejects_intervention_mismatch_before_generation(kind) -> None:
             manifest,
             build_schedule(manifest),
             intervention=intervention,
+            candidate_identity=_candidate_identity(),
+            controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
+        )
+    assert backend.calls == []
+
+
+def test_runner_rejects_forged_declared_vector_hash_before_generation() -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    forged_vector = SteeringVector(
+        np.zeros(3), 27, "fake", "none", hash=_FAKE_VECTOR_CANONICAL_SHA256
+    )
+    forged_intervention = Intervention(27, 0.75, "fake-vector", "last_token", forged_vector)
+    with pytest.raises(ValueError, match="recomputed intervention vector hash"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=forged_intervention,
             candidate_identity=_candidate_identity(),
             controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
         )
