@@ -11,6 +11,7 @@ from __future__ import annotations
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass
+from math import prod
 from typing import Any, Final, TypeAlias
 
 import numpy as np
@@ -35,6 +36,12 @@ CATEGORIES: Final[tuple[str, str, str, str]] = (
 Key: TypeAlias = tuple[str, str, str, int, str, int]
 Stratum: TypeAlias = tuple[str, str]
 Rates: TypeAlias = dict[str, float]
+LatentKey: TypeAlias = tuple[str, str, str]
+
+PRELOCK_DELTA: Final[float] = 0.10
+PRELOCK_THRESHOLD: Final[float] = 60.0
+PRELOCK_STATUS_TRIGGERED: Final[str] = "TRIGGERED"
+PRELOCK_STATUS_NOT_TRIGGERED: Final[str] = "NOT_TRIGGERED"
 
 
 @dataclass(frozen=True, slots=True)
@@ -395,9 +402,278 @@ def stratified_latent_bootstrap(
     }
 
 
+def _hierarchical_weights(
+    latent_rates: Mapping[tuple[str, str, str, int, str], Rates],
+) -> dict[LatentKey, float]:
+    """Return equal family, cell, and latent weights for observed latents."""
+
+    strata = sorted({(family, cell) for family, cell, *_ in latent_rates})
+    if not strata:
+        raise ValueError("cannot weight an empty latent set")
+    families = tuple(sorted({family for family, _ in strata}))
+    cells_by_family = {
+        family: tuple(sorted(cell for fam, cell in strata if fam == family))
+        for family in families
+    }
+    latents_by_stratum = {
+        stratum: tuple(
+            sorted(
+                {
+                    latent
+                    for family, cell, latent, *_ in latent_rates
+                    if (family, cell) == stratum
+                }
+            )
+        )
+        for stratum in strata
+    }
+    weights: dict[LatentKey, float] = {}
+    for family in families:
+        family_weight = 1.0 / len(families)
+        cell_weight = 1.0 / len(cells_by_family[family])
+        for cell in cells_by_family[family]:
+            latents = latents_by_stratum[(family, cell)]
+            latent_weight = 1.0 / len(latents)
+            for latent in latents:
+                weights[(family, cell, latent)] = family_weight * cell_weight * latent_weight
+    if not np.isclose(sum(weights.values()), 1.0, rtol=0.0, atol=1e-12):
+        raise ValueError("hierarchical weights do not sum to one")
+    return weights
+
+
+def _fixed_e_value(
+    values: Mapping[LatentKey, float],
+    *,
+    weights: Mapping[LatentKey, float],
+    delta: float,
+    direction: int,
+) -> tuple[float, dict[LatentKey, float]]:
+    """Evaluate one of the fixed pre-lock product e-value bounds.
+
+    With ``a_i = N q_i`` and ``c = 1 / (2 max_i a_i)``, the bound is
+    ``prod_i(1 + direction*c*a_i*(value_i-delta))``.  The construction is
+    deterministic and finite-sample descriptive; it is not a power or
+    posterior calculation.
+    """
+
+    if direction not in (-1, 1):
+        raise ValueError("direction must be either +1 (Eplus) or -1 (Eminus)")
+    if not isinstance(delta, (int, float)) or isinstance(delta, bool) or not np.isfinite(delta):
+        raise ValueError("delta must be a finite real number")
+    if not values or set(values) != set(weights):
+        raise ValueError("values and weights must contain the same non-empty latent keys")
+    n = len(values)
+    a_values = {key: n * float(weights[key]) for key in sorted(weights)}
+    max_a = max(a_values.values())
+    if not np.isfinite(max_a) or max_a <= 0:
+        raise ValueError("latent weights must be finite and positive")
+    c = 1.0 / (2.0 * max_a)
+    factors: dict[LatentKey, float] = {}
+    for key in sorted(values):
+        value = values[key]
+        if not isinstance(value, (int, float)) or isinstance(value, bool) or not np.isfinite(value):
+            raise ValueError("contrast values must be finite real numbers")
+        factor = 1.0 + direction * c * a_values[key] * (float(value) - float(delta))
+        if factor < 0.0 or not np.isfinite(factor):
+            raise ValueError("fixed e-value factor is outside its supported bounds")
+        factors[key] = factor
+    return float(prod(factors.values())), factors
+
+
+def _weighted_hierarchy(
+    values: Mapping[LatentKey, float],
+) -> dict[str, Any]:
+    """Aggregate a latent vector using equal latent-to-cell-to-family weights."""
+
+    cells: dict[tuple[str, str], list[float]] = defaultdict(list)
+    for (family, cell, _latent), value in values.items():
+        cells[(family, cell)].append(float(value))
+    cell_values = {
+        key: float(np.mean(sorted(values))) for key, values in sorted(cells.items())
+    }
+    family_values: dict[str, list[float]] = defaultdict(list)
+    for (family, _cell), value in cell_values.items():
+        family_values[family].append(value)
+    family_means = {
+        family: float(np.mean(sorted(values))) for family, values in sorted(family_values.items())
+    }
+    overall = float(np.mean(tuple(family_means.values())))
+    return {
+        "latent": {key: float(values[key]) for key in sorted(values)},
+        "cell": cell_values,
+        "family": family_means,
+        "overall": overall,
+    }
+
+
+def fixed_rule_prelock_decisions(
+    observations: Iterable[Observation | Mapping[str, Any]],
+    *,
+    expected_latents: Mapping[Stratum, Iterable[str]] | None = None,
+    canonical_cells: Mapping[str, Iterable[str]] | None = None,
+    delta: float = PRELOCK_DELTA,
+    threshold: float = PRELOCK_THRESHOLD,
+) -> dict[str, Any]:
+    """Apply the three fixed e-value pre-lock candidate decision rules.
+
+    Each latent receives equal weight within its cell, each cell equal weight
+    within its family, and each family equal weight overall.  For each cap,
+    ``d_iL`` is the paired mean over the two rollouts (correct D75 minus
+    correct BASELINE), and ``j_i = d_i4096 - d_i2048``.  The returned product
+    bounds use ``a_i=N*q_i`` and ``c=1/(2*max_i(a_i))``.
+
+    The three statuses are candidates under a fixed pre-lock rule:
+    relevant gain at either cap, 10 percentage-point gain excluded at both
+    caps, and nonzero interaction (the two-sided mixture).  They are not power
+    calculations, confidence statements, or posterior probabilities.
+    """
+
+    if not isinstance(threshold, (int, float)) or isinstance(threshold, bool):
+        raise ValueError("threshold must be a positive finite real number")
+    if not np.isfinite(threshold) or threshold <= 0:
+        raise ValueError("threshold must be a positive finite real number")
+    if (
+        not isinstance(delta, (int, float))
+        or isinstance(delta, bool)
+        or not np.isfinite(delta)
+        or float(delta) != PRELOCK_DELTA
+    ):
+        raise ValueError(f"delta is fixed at {PRELOCK_DELTA} for the pre-lock rules")
+
+    rows = validate_factorial_schedule(
+        observations, expected_latents=expected_latents, canonical_cells=canonical_cells
+    )
+    latent_rates = _latent_rates(rows)
+    weights = _hierarchical_weights(latent_rates)
+    n_latents = len(weights)
+    if n_latents <= 0:
+        raise ValueError("factorial observations must contain at least one latent")
+    a_values = {key: n_latents * weight for key, weight in sorted(weights.items())}
+    max_a = max(a_values.values())
+    c = 1.0 / (2.0 * max_a)
+
+    d_by_cap: dict[int, dict[LatentKey, float]] = {
+        cap: {
+            (family, cell, latent): float(
+                latent_rates[(family, cell, latent, cap, "D75")]["correct"]
+                - latent_rates[(family, cell, latent, cap, "BASELINE")]["correct"]
+            )
+            for family, cell, latent in sorted(weights)
+        }
+        for cap in TOKEN_CAPS
+    }
+    interaction = {
+        key: float(d_by_cap[4096][key] - d_by_cap[2048][key]) for key in sorted(weights)
+    }
+    d_hierarchy = {cap: _weighted_hierarchy(d_by_cap[cap]) for cap in TOKEN_CAPS}
+    interaction_hierarchy = _weighted_hierarchy(interaction)
+
+    gain_eplus: dict[int, float] = {}
+    gain_eminus: dict[int, float] = {}
+    gain_plus_factors: dict[int, dict[LatentKey, float]] = {}
+    gain_minus_factors: dict[int, dict[LatentKey, float]] = {}
+    for cap in TOKEN_CAPS:
+        gain_eplus[cap], gain_plus_factors[cap] = _fixed_e_value(
+            d_by_cap[cap], weights=weights, delta=PRELOCK_DELTA, direction=1
+        )
+        gain_eminus[cap], gain_minus_factors[cap] = _fixed_e_value(
+            d_by_cap[cap], weights=weights, delta=PRELOCK_DELTA, direction=-1
+        )
+    interaction_eplus, interaction_plus_factors = _fixed_e_value(
+        {key: value / 2.0 for key, value in interaction.items()},
+        weights=weights,
+        delta=0.0,
+        direction=1,
+    )
+    interaction_eminus, interaction_minus_factors = _fixed_e_value(
+        {key: value / 2.0 for key, value in interaction.items()},
+        weights=weights,
+        delta=0.0,
+        direction=-1,
+    )
+
+    average_gain_eplus = float(np.mean([gain_eplus[cap] for cap in TOKEN_CAPS]))
+    minimum_gain_eminus = float(min(gain_eminus.values()))
+    status_gain = average_gain_eplus >= float(threshold)
+    status_excluded = minimum_gain_eminus >= float(threshold)
+    interaction_mixture = float((interaction_eplus + interaction_eminus) / 2.0)
+    status_interaction = interaction_mixture >= float(threshold)
+
+    def decision(status: bool, statistic: float, criterion: str) -> dict[str, Any]:
+        return {
+            "status": PRELOCK_STATUS_TRIGGERED if status else PRELOCK_STATUS_NOT_TRIGGERED,
+            "triggered": bool(status),
+            "statistic": float(statistic),
+            "threshold": float(threshold),
+            "criterion": criterion,
+        }
+
+    decisions = {
+        "relevant_gain_at_either_cap": decision(
+            status_gain,
+            average_gain_eplus,
+            "average Eplus(delta, dL) >= threshold",
+        ),
+        "ten_pp_gain_excluded_at_both_caps": decision(
+            status_excluded,
+            minimum_gain_eminus,
+            "min Eminus(delta, dL) >= threshold",
+        ),
+        "interaction_nonzero": decision(
+            status_interaction,
+            interaction_mixture,
+            "(Eplus(0, j/2) + Eminus(0, j/2)) / 2 >= threshold",
+        ),
+    }
+    statuses = {name: details["status"] for name, details in decisions.items()}
+
+    # Include both descriptive names and compact aliases so downstream reports
+    # can consume the result without reconstructing any statistic.
+    return {
+        "method": "fixed_rule_prelock_candidates",
+        "power_calculation": False,
+        "delta": PRELOCK_DELTA,
+        "threshold": float(threshold),
+        "n_latents": n_latents,
+        "weights": {"q_i": weights, "a_i": a_values, "sum_q_i": float(sum(weights.values()))},
+        "c": float(c),
+        "d_iL": d_by_cap,
+        "d_by_cap": d_by_cap,
+        "j_i": interaction,
+        "interaction_by_latent": interaction,
+        "hierarchy": {"d_by_cap": d_hierarchy, "interaction": interaction_hierarchy},
+        "weighted_delta": {cap: d_hierarchy[cap]["overall"] for cap in TOKEN_CAPS},
+        "weighted_interaction": interaction_hierarchy["overall"],
+        "e_values": {
+            "gain": {
+                "Eplus": gain_eplus,
+                "Eminus": gain_eminus,
+                "Eplus_factors": gain_plus_factors,
+                "Eminus_factors": gain_minus_factors,
+                "average_Eplus": average_gain_eplus,
+                "minimum_Eminus": minimum_gain_eminus,
+            },
+            "interaction": {
+                "Eplus": interaction_eplus,
+                "Eminus": interaction_eminus,
+                "Eplus_factors": interaction_plus_factors,
+                "Eminus_factors": interaction_minus_factors,
+                "mixture": interaction_mixture,
+                "minimum_directional_E": min(interaction_eplus, interaction_eminus),
+            },
+        },
+        "decisions": decisions,
+        "statuses": statuses,
+        "fixed_rule_candidate": True,
+    }
+
+
 # Short aliases make the endpoint convenient while preserving the explicit API.
 analyze_outcomes = aggregate_outcomes
 bootstrap_latents = stratified_latent_bootstrap
+prelock_decisions = fixed_rule_prelock_decisions
+evaluate_prelock_decisions = fixed_rule_prelock_decisions
+apply_prelock_decision_rules = fixed_rule_prelock_decisions
 
 
 __all__ = [
@@ -407,12 +683,20 @@ __all__ = [
     "INCOMPLETE_STATUSES",
     "Observation",
     "PARSE_STATUSES",
+    "PRELOCK_DELTA",
+    "PRELOCK_STATUS_NOT_TRIGGERED",
+    "PRELOCK_STATUS_TRIGGERED",
+    "PRELOCK_THRESHOLD",
     "ROLLOUTS",
     "TOKEN_CAPS",
     "aggregate_outcomes",
+    "apply_prelock_decision_rules",
     "analyze_outcomes",
     "bootstrap_latents",
+    "evaluate_prelock_decisions",
+    "fixed_rule_prelock_decisions",
     "outcome_category",
+    "prelock_decisions",
     "stratified_latent_bootstrap",
     "validate_factorial_schedule",
 ]
