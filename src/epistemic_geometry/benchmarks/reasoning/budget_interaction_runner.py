@@ -31,7 +31,7 @@ CANDIDATE_IDENTITY_FIELDS = (
     "attention_backend",
     "vector_path",
     "vector_file_sha256",
-    "canonical_float64_vector_sha256",
+    "vector_canonical_sha256",
     "layer",
     "eta",
     "hook_scope",
@@ -44,9 +44,21 @@ _CANDIDATE_IDENTITY_STRING_FIELDS = {
     "attention_backend",
     "vector_path",
     "vector_file_sha256",
-    "canonical_float64_vector_sha256",
+    "vector_canonical_sha256",
     "hook_scope",
 }
+DECODING_CONFIG_FIELDS = (
+    "do_sample",
+    "temperature",
+    "top_p",
+    "top_k",
+    "min_p",
+    "enable_thinking",
+    "prompt_mode",
+    "inference_mode",
+    "execution_mode",
+)
+SUPPORTED_HOOK_SCOPE = "sustained_current_token"
 
 
 def validate_candidate_identity(identity: Mapping[str, Any]) -> dict[str, Any]:
@@ -78,8 +90,25 @@ def validate_candidate_identity(identity: Mapping[str, Any]) -> dict[str, Any]:
     if isinstance(eta, bool) or not isinstance(eta, (int, float)) or not math.isfinite(float(eta)):
         raise ValueError("candidate_identity eta must be a finite number")
     decoding_config = identity["decoding_config"]
-    if not isinstance(decoding_config, Mapping) or not decoding_config:
-        raise ValueError("candidate_identity decoding_config must be a non-empty mapping")
+    if not isinstance(decoding_config, Mapping):
+        raise ValueError("candidate_identity decoding_config must be a mapping")
+    decoding_fields = set(decoding_config)
+    expected_decoding_fields = set(DECODING_CONFIG_FIELDS)
+    missing_decoding = sorted(expected_decoding_fields - decoding_fields)
+    extra_decoding = sorted(decoding_fields - expected_decoding_fields)
+    if missing_decoding:
+        raise ValueError(
+            f"candidate_identity decoding_config is missing fields: {missing_decoding}"
+        )
+    if extra_decoding:
+        raise ValueError(
+            f"candidate_identity decoding_config has unexpected fields: {extra_decoding}"
+        )
+    if identity["hook_scope"] != SUPPORTED_HOOK_SCOPE:
+        raise ValueError(
+            "candidate_identity hook_scope must be "
+            f"{SUPPORTED_HOOK_SCOPE!r}"
+        )
     return copy.deepcopy(dict(identity))
 
 
@@ -139,15 +168,6 @@ def _validate_schedule_identity(
         raise ValueError("schedule reasoning budget does not match cap")
 
 
-def _default_controller_provenance(intervention: Intervention) -> dict[str, Any]:
-    return {
-        "vector_id": intervention.vector_id,
-        "layer": intervention.layer,
-        "alpha": intervention.alpha,
-        "token_scope": intervention.token_scope,
-    }
-
-
 class SerialBudgetInteractionAdapter:
     """Execute every frozen budget row as one independent serial generation."""
 
@@ -176,6 +196,8 @@ class SerialBudgetInteractionAdapter:
             raise ValueError("candidate_identity is required for serial budget interaction")
         self.candidate_identity = validate_candidate_identity(candidate_identity)
         self.candidate_identity_hash = candidate_identity_hash(self.candidate_identity)
+        if controller_provenance is not None and not isinstance(controller_provenance, Mapping):
+            raise TypeError("controller_provenance must be a mapping")
         self.controller_provenance = (
             dict(controller_provenance) if controller_provenance is not None else None
         )
@@ -197,6 +219,79 @@ class SerialBudgetInteractionAdapter:
             )
         self.journal = journal
         self.journal_identity = dict(journal_identity) if journal_identity is not None else None
+
+    @staticmethod
+    def _config_value(config: Any, field: str) -> Any:
+        if isinstance(config, Mapping):
+            if field not in config:
+                raise ValueError(f"backend.config is missing {field}")
+            return config[field]
+        try:
+            return getattr(config, field)
+        except AttributeError as exc:
+            raise ValueError(f"backend.config is missing {field}") from exc
+
+    def _validate_live_identity(self) -> None:
+        """Cross-check frozen identity against the live backend and controller."""
+
+        provenance_fn = getattr(self.backend, "provenance", None)
+        if not callable(provenance_fn):
+            raise ValueError("backend.provenance() is required for serial budget interaction")
+        provenance = provenance_fn()
+        if not isinstance(provenance, Mapping):
+            raise ValueError("backend.provenance() must return a mapping")
+        provenance_fields = {
+            "model_repo": "model_identifier",
+            "model_revision": "model_revision",
+            "dtype": "dtype",
+        }
+        for candidate_field, provenance_field in provenance_fields.items():
+            if provenance.get(provenance_field) != self.candidate_identity[candidate_field]:
+                raise ValueError(
+                    f"backend provenance {provenance_field} does not match candidate_identity"
+                )
+        attention_backend = provenance.get("attention_backend")
+        if attention_backend is None:
+            attention_backend = provenance.get("attention_implementation")
+        if attention_backend != self.candidate_identity["attention_backend"]:
+            raise ValueError(
+                "backend provenance attention backend does not match candidate_identity"
+            )
+
+        config = getattr(self.backend, "config", None)
+        if config is None:
+            raise ValueError("backend.config is required for serial budget interaction")
+        decoding_config = self.candidate_identity["decoding_config"]
+        for field in DECODING_CONFIG_FIELDS:
+            if self._config_value(config, field) != decoding_config[field]:
+                raise ValueError(f"backend.config {field} does not match candidate_identity")
+
+        has_d75 = any(row["condition"] == "D75" for row in self.schedule)
+        if has_d75:
+            if self.intervention is None:
+                raise ValueError("D75 schedule rows require an Intervention")
+            if self.controller_provenance is None:
+                raise ValueError("D75 schedule rows require controller_provenance")
+            file_sha = self.controller_provenance.get("vector_file_sha256")
+            if not isinstance(file_sha, str) or not file_sha.strip():
+                raise ValueError("controller_provenance vector_file_sha256 is required")
+            if file_sha != self.candidate_identity["vector_file_sha256"]:
+                raise ValueError(
+                    "controller_provenance vector_file_sha256 does not match candidate_identity"
+                )
+        if self.intervention is None:
+            return
+        candidate_layer = self.candidate_identity["layer"]
+        if self.intervention.layer != candidate_layer:
+            raise ValueError("intervention layer does not match candidate_identity")
+        if self.intervention.vector.layer != candidate_layer:
+            raise ValueError("intervention vector layer does not match candidate_identity")
+        if self.intervention.alpha != self.candidate_identity["eta"]:
+            raise ValueError("intervention alpha does not match candidate_identity eta")
+        if self.intervention.vector.hash != self.candidate_identity["vector_canonical_sha256"]:
+            raise ValueError("intervention vector hash does not match candidate_identity")
+        if self.intervention.token_scope != "last_token":
+            raise ValueError("intervention token_scope must be last_token")
 
     @staticmethod
     def _rehydrate_record(
@@ -274,6 +369,7 @@ class SerialBudgetInteractionAdapter:
         validate_schedule(self.schedule, self.manifest)
         if any(row["condition"] == "D75" for row in self.schedule) and self.intervention is None:
             raise ValueError("D75 schedule rows require an Intervention")
+        self._validate_live_identity()
         manifest_by_id = {row["latent_id"]: row for row in self.manifest}
         # Validate every schedule/manifest pairing before recovering or
         # generating any row.  validate_schedule intentionally focuses on the
@@ -317,9 +413,9 @@ class SerialBudgetInteractionAdapter:
         if condition == "D75":
             if self.intervention is None:
                 raise ValueError("D75 schedule rows require an Intervention")
-            provenance = self.controller_provenance or _default_controller_provenance(
-                self.intervention
-            )
+            # The live identity check requires this mapping and its explicit
+            # vector file hash before the first treatment generation.
+            provenance = self.controller_provenance
             # The context is deliberately scoped to this one generation call.
             with self.backend.steer_sustained_current_token(self.intervention):
                 output = self.backend.generate_reasoning_view(

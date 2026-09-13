@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from dataclasses import replace
+
 import numpy as np
 import pytest
 
@@ -18,8 +20,8 @@ from epistemic_geometry.types import BackendOutput, Intervention, SteeringVector
 
 
 def _intervention() -> Intervention:
-    vector = SteeringVector(np.ones(3), 0, "fake", "none", hash="fake-vector")
-    return Intervention(0, 0.75, "fake-vector", "last_token", vector)
+    vector = SteeringVector(np.ones(3), 27, "fake", "none", hash="fake-vector")
+    return Intervention(27, 0.75, "fake-vector", "last_token", vector)
 
 
 def _candidate_identity() -> dict[str, object]:
@@ -30,11 +32,21 @@ def _candidate_identity() -> dict[str, object]:
         "attention_backend": "sdpa",
         "vector_path": "vectors/fake.npz",
         "vector_file_sha256": "fake-file-sha",
-        "canonical_float64_vector_sha256": "fake-canonical-sha",
+        "vector_canonical_sha256": "fake-vector",
         "layer": 27,
         "eta": 0.75,
-        "hook_scope": "last_token",
-        "decoding_config": {"temperature": 0.6, "top_p": 0.95},
+        "hook_scope": "sustained_current_token",
+        "decoding_config": {
+            "do_sample": True,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "enable_thinking": True,
+            "prompt_mode": "plain",
+            "inference_mode": "generation",
+            "execution_mode": "serial_reference",
+        },
     }
 
 
@@ -43,6 +55,16 @@ class _FakeBackend:
         self.calls: list[tuple[str, int, int, bool]] = []
         self.contexts: list[tuple[str, bool]] = []
         self.active = False
+        self.config = _candidate_identity()["decoding_config"]
+        self.provenance_values = {
+            "model_identifier": "fake/model",
+            "model_revision": "fake-revision",
+            "dtype": "bf16",
+            "attention_backend": "sdpa",
+        }
+
+    def provenance(self) -> dict[str, object]:
+        return dict(self.provenance_values)
 
     def steer_sustained_current_token(self, intervention):
         class Context:
@@ -76,7 +98,10 @@ def test_runner_is_serial_and_scopes_d75_contexts() -> None:
         schedule,
         intervention=_intervention(),
         candidate_identity=_candidate_identity(),
-        controller_provenance={"controller": "frozen-d75"},
+        controller_provenance={
+            "controller": "frozen-d75",
+            "vector_file_sha256": "fake-file-sha",
+        },
     )
 
     assert len(records) == len(schedule)
@@ -98,7 +123,8 @@ def test_runner_is_serial_and_scopes_d75_contexts() -> None:
     assert all(record.metadata["physical_generation_id"] for record in records)
     assert len({record.metadata["physical_generation_id"] for record in records}) == len(records)
     assert all(
-        record.metadata["controller_provenance"] == {"controller": "frozen-d75"}
+        record.metadata["controller_provenance"]
+        == {"controller": "frozen-d75", "vector_file_sha256": "fake-file-sha"}
         for record in records
         if record.metadata["condition"] == "D75"
     )
@@ -116,6 +142,7 @@ def test_runner_rejects_tampered_schedule_identity_before_generation() -> None:
             schedule,
             intervention=_intervention(),
             candidate_identity=_candidate_identity(),
+            controller_provenance={"vector_file_sha256": "fake-file-sha"},
         )
     assert backend.calls == []
 
@@ -173,7 +200,10 @@ def test_runner_preserves_candidate_identity_on_baseline_and_d75_records() -> No
         schedule,
         intervention=_intervention(),
         candidate_identity=identity,
-        controller_provenance={"controller": "frozen-d75"},
+        controller_provenance={
+            "controller": "frozen-d75",
+            "vector_file_sha256": "fake-file-sha",
+        },
     )
     assert all(record.metadata["candidate_identity"] == identity for record in records)
     assert all(record.metadata["candidate_identity_hash"] == expected_hash for record in records)
@@ -183,7 +213,8 @@ def test_runner_preserves_candidate_identity_on_baseline_and_d75_records() -> No
         if record.metadata["condition"] == "BASELINE"
     )
     assert all(
-        record.metadata["controller_provenance"] == {"controller": "frozen-d75"}
+        record.metadata["controller_provenance"]
+        == {"controller": "frozen-d75", "vector_file_sha256": "fake-file-sha"}
         for record in records
         if record.metadata["condition"] == "D75"
     )
@@ -219,7 +250,96 @@ def test_runner_rejects_journal_identity_candidate_hash_before_generation(
             build_schedule(manifest),
             intervention=_intervention(),
             candidate_identity=_candidate_identity(),
+            controller_provenance={"vector_file_sha256": "fake-file-sha"},
             journal=journal,
             journal_identity=journal_identity,
+        )
+    assert backend.calls == []
+
+
+@pytest.mark.parametrize(
+    "field, value",
+    [
+        ("model_identifier", "other/model"),
+        ("model_revision", "other-revision"),
+        ("dtype", "float32"),
+        ("attention_backend", "eager"),
+    ],
+)
+def test_runner_rejects_backend_provenance_mismatch_before_generation(field, value) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    backend.provenance_values[field] = value
+    with pytest.raises(ValueError, match="backend provenance"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            candidate_identity=_candidate_identity(),
+            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+        )
+    assert backend.calls == []
+
+
+def test_runner_rejects_decoding_config_mismatch_before_generation() -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    backend.config["top_p"] = 0.9
+    with pytest.raises(ValueError, match="backend.config top_p"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            candidate_identity=_candidate_identity(),
+            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+        )
+    assert backend.calls == []
+
+
+@pytest.mark.parametrize(
+    "kind",
+    ["layer", "vector_layer", "alpha", "vector_hash", "token_scope"],
+)
+def test_runner_rejects_intervention_mismatch_before_generation(kind) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    intervention = _intervention()
+    if kind == "layer":
+        intervention = replace(intervention, layer=26)
+    elif kind == "vector_layer":
+        intervention = replace(intervention, vector=replace(intervention.vector, layer=26))
+    elif kind == "alpha":
+        intervention = replace(intervention, alpha=0.5)
+    elif kind == "vector_hash":
+        intervention = replace(intervention, vector=replace(intervention.vector, hash="wrong"))
+    else:
+        intervention = replace(intervention, token_scope="all_tokens")
+    with pytest.raises(ValueError, match="intervention"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=intervention,
+            candidate_identity=_candidate_identity(),
+            controller_provenance={"vector_file_sha256": "fake-file-sha"},
+        )
+    assert backend.calls == []
+
+
+@pytest.mark.parametrize("file_sha", [None, "wrong-file-sha"])
+def test_runner_requires_matching_controller_vector_file_hash_before_generation(file_sha) -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    provenance = {} if file_sha is None else {"vector_file_sha256": file_sha}
+    with pytest.raises(ValueError, match="vector_file_sha256"):
+        run_serial_budget_interaction(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            candidate_identity=_candidate_identity(),
+            controller_provenance=provenance,
         )
     assert backend.calls == []
