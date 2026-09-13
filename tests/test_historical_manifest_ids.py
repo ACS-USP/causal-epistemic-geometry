@@ -34,6 +34,35 @@ def test_extracts_the_same_ids_from_both_supported_representations() -> None:
     ) == {"latent-a", "latent-b"}
 
 
+def test_unions_partial_overlaps_across_manifest_containers_and_groups() -> None:
+    assert budget_interaction.extract_historical_latent_ids(
+        {
+            "manifests": {
+                "first": {
+                    "items": [
+                        {"latent_id": "latent-a"},
+                        {"latent_id": "latent-b"},
+                    ]
+                },
+                "second": {
+                    "items": [
+                        {"latent_id": "latent-b"},
+                        {"latent_id": "latent-c"},
+                    ]
+                },
+            }
+        }
+    ) == {"latent-a", "latent-b", "latent-c"}
+    assert budget_interaction.extract_historical_latent_ids(
+        {
+            "paired_budget_groups": {
+                "first": {"latent_ids": ["latent-a", "latent-b"]},
+                "second": {"latent_ids": ["latent-b", "latent-c"]},
+            }
+        }
+    ) == {"latent-a", "latent-b", "latent-c"}
+
+
 @pytest.mark.parametrize(
     "payload, message",
     [
@@ -43,15 +72,6 @@ def test_extracts_the_same_ids_from_both_supported_representations() -> None:
         ),
         (
             {"paired_budget_groups": {"one": {"latent_ids": ["latent-a", "latent-a"]}}},
-            "duplicate",
-        ),
-        (
-            {
-                "paired_budget_groups": {
-                    "one": {"latent_ids": ["latent-a"]},
-                    "two": {"latent_ids": ["latent-a"]},
-                }
-            },
             "duplicate",
         ),
         (

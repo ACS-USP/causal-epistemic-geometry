@@ -48,7 +48,7 @@ def _latent_id(value: Any, *, field: str) -> str:
 
 def _manifest_latent_ids(value: Any) -> frozenset[str]:
     manifests = _record_sequence(value, field="manifests")
-    manifest_sets: list[frozenset[str]] = []
+    extracted: set[str] = set()
     for manifest in manifests:
         if "items" not in manifest:
             raise ValueError("manifest is missing items")
@@ -60,17 +60,8 @@ def _manifest_latent_ids(value: Any) -> frozenset[str]:
             ids.append(_latent_id(item["latent_id"], field="latent_id"))
         if len(set(ids)) != len(ids):
             raise ValueError("manifest items contain duplicate latent IDs")
-        manifest_sets.append(frozenset(ids))
-
-    # Stage A has one item set repeated for each paired budget.  Repetition is
-    # valid only when the complete sets agree; accidental partial overlap is
-    # rejected rather than silently deduplicated.
-    extracted = manifest_sets[0]
-    for current in manifest_sets[1:]:
-        if extracted & current and extracted != current:
-            raise ValueError("manifests contain inconsistent latent ID sets")
-        extracted |= current
-    return extracted
+        extracted.update(ids)
+    return frozenset(extracted)
 
 
 def _paired_group_latent_ids(value: Any) -> frozenset[str]:
@@ -89,8 +80,6 @@ def _paired_group_latent_ids(value: Any) -> frozenset[str]:
         ]
         if len(set(current)) != len(current):
             raise ValueError("paired budget group contains duplicate latent IDs")
-        if extracted.intersection(current):
-            raise ValueError("paired budget groups contain duplicate latent IDs")
         extracted.update(current)
     return frozenset(extracted)
 
@@ -103,8 +92,9 @@ def extract_historical_latent_ids(
     The extractor is deliberately a pure boundary: callers provide the loaded
     mapping or sequence, and this function performs no external record or
     result access.  It accepts the item-oriented ``manifests`` shape, the
-    deduplicated ``paired_budget_groups`` shape, or both.  When both are
-    present they must describe the same ID set.
+    ``paired_budget_groups`` shape, or both.  IDs are conservatively unioned
+    within each representation.  When both are present they must describe the
+    same total ID set.
     """
 
     if isinstance(manifest, Mapping):
