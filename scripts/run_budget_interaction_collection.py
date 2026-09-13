@@ -17,15 +17,19 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
-from epistemic_geometry.benchmarks.reasoning.budget_interaction_journal import (  # noqa: E402
+from epistemic_geometry.benchmarks.reasoning.budget_interaction_journal import (  # noqa: E402, I001
+    BudgetInteractionJournal,
     identity_hash as journal_identity_hash,
 )
 from epistemic_geometry.benchmarks.reasoning.budget_interaction_runner import (  # noqa: E402
     candidate_identity_hash,
+    run_serial_budget_interaction,
     validate_candidate_identity,
 )
+from epistemic_geometry.config import BackendConfig  # noqa: E402
 from epistemic_geometry.reproducibility import canonical_json, stable_digest  # noqa: E402
 from epistemic_geometry.steering.vector import vector_hash  # noqa: E402
+from epistemic_geometry.types import Intervention, SteeringVector  # noqa: E402
 
 
 class LockValidationError(ValueError):
@@ -180,6 +184,124 @@ def load_and_validate_lock(lock_path: str | Path) -> dict[str, Any]:
     }
 
 
+def _backend_dtype(value: str) -> str:
+    """Map the lock's torch spelling to BackendConfig's spelling."""
+
+    return {
+        "torch.bfloat16": "bf16",
+        "bfloat16": "bf16",
+        "torch.float16": "fp16",
+        "float16": "fp16",
+        "torch.float32": "fp32",
+        "float32": "fp32",
+    }.get(value, value)
+
+
+def build_backend_config(
+    candidate_identity: Mapping[str, Any],
+    schedule: list[Mapping[str, Any]],
+    *,
+    model_path: str | None = None,
+) -> BackendConfig:
+    """Build the exact HuggingFace configuration represented by the lock."""
+
+    candidate = validate_candidate_identity(candidate_identity)
+    decoding = candidate["decoding_config"]
+    caps = [row.get("cap") for row in schedule]
+    if not caps or any(
+        isinstance(cap, bool) or not isinstance(cap, int) or cap <= 0 for cap in caps
+    ):
+        raise LockValidationError("schedule must contain positive integer caps")
+    return BackendConfig(
+        type="huggingface",
+        model_id=candidate["model_repo"],
+        model_path=model_path,
+        model_revision=candidate["model_revision"],
+        tokenizer_id=candidate["tokenizer_repo"],
+        tokenizer_revision=candidate["tokenizer_revision"],
+        device="auto",
+        dtype=_backend_dtype(candidate["dtype"]),
+        layer=candidate["layer"],
+        prompt_mode=decoding["prompt_mode"],
+        max_new_tokens=max(caps),
+        do_sample=decoding["do_sample"],
+        temperature=decoding["temperature"],
+        top_p=decoding["top_p"],
+        top_k=decoding["top_k"],
+        min_p=decoding["min_p"],
+        enable_thinking=decoding["enable_thinking"],
+        attention_implementation=candidate["attention_backend"],
+        inference_mode=decoding["inference_mode"],
+        execution_mode=decoding["execution_mode"],
+        batch_size=1,
+        item_batch_size=1,
+        condition_chunk_size=1,
+    )
+
+
+def _default_backend_factory(config: BackendConfig) -> Any:
+    """Import the optional model backend only after lock validation."""
+
+    from epistemic_geometry.backends.huggingface import HuggingFaceBackend
+
+    return HuggingFaceBackend(config)
+
+
+def execute_collection(
+    lock_path: str | Path,
+    journal_path: str | Path | None,
+    *,
+    model_path: str | None = None,
+    backend_factory: Any = None,
+    journal_factory: Any = None,
+    runner: Any = None,
+) -> dict[str, int]:
+    """Validate, construct, and execute the locked collection exactly once.
+
+    Factories are injection seams for tests and local adapters.  The default
+    factory imports and constructs HuggingFaceBackend only after the complete
+    lock, vector, and journal validation succeeds.
+    """
+
+    loaded = load_and_validate_lock(lock_path)
+    if journal_path is None:
+        raise ValueError("--journal is required with --execute")
+    candidate = loaded["candidate_identity"]
+    schedule = loaded["schedule"]
+    vector = SteeringVector(
+        loaded["vector_values"],
+        candidate["layer"],
+        "locked_file",
+        "locked",
+        metadata={"vector_path": str(loaded["vector_path"])},
+        hash=candidate["vector_canonical_sha256"],
+    )
+    intervention = Intervention(
+        candidate["layer"],
+        float(candidate["eta"]),
+        candidate["vector_canonical_sha256"],
+        "last_token",
+        vector,
+    )
+    config = build_backend_config(candidate, schedule, model_path=model_path)
+    make_journal = journal_factory or BudgetInteractionJournal
+    journal = make_journal(journal_path, identity=loaded["journal_identity"])
+    make_backend = backend_factory or _default_backend_factory
+    backend = make_backend(config)
+    invoke = runner or run_serial_budget_interaction
+    records = invoke(
+        backend,
+        loaded["manifest"],
+        schedule,
+        intervention=intervention,
+        candidate_identity=candidate,
+        controller_provenance=loaded["lock"].get("controller_provenance"),
+        journal=journal,
+        journal_identity=loaded["journal_identity"],
+    )
+    return {"schedule_rows": len(schedule), "journal_rows": len(records)}
+
+
 def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Validate a frozen budget-interaction lock.")
     parser.add_argument(
@@ -189,13 +311,27 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=ROOT / "review/q1_budget_causal_interaction/PRELOCK_ARTIFACTS/LOCK.json",
     )
     parser.add_argument("--lock", dest="lock_option", type=Path, help="LOCK.json path")
+    parser.add_argument(
+        "--execute", action="store_true", help="construct the backend and collect journal rows"
+    )
+    parser.add_argument("--journal", type=Path, help="append-only journal path for --execute")
+    parser.add_argument("--model-path", help="optional local model path")
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = _parse_args(argv)
-    load_and_validate_lock(args.lock_option or args.lock_path)
-    print("LOCK_VALIDATION_PASS")
+    lock_path = args.lock_option or args.lock_path
+    if args.execute:
+        result = execute_collection(
+            lock_path,
+            args.journal,
+            model_path=args.model_path,
+        )
+        print(json.dumps(result, sort_keys=True))
+    else:
+        load_and_validate_lock(lock_path)
+        print("LOCK_VALIDATION_PASS")
     return 0
 
 

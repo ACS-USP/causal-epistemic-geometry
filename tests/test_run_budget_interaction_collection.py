@@ -8,7 +8,9 @@ import numpy as np
 import pytest
 from scripts.run_budget_interaction_collection import (
     LockValidationError,
+    execute_collection,
     load_and_validate_lock,
+    main,
 )
 
 from epistemic_geometry.benchmarks.reasoning.budget_interaction_journal import identity_hash
@@ -57,7 +59,7 @@ def _fixture(tmp_path: Path) -> Path:
         },
     }
     manifest = [{"identity_hash": "fixture-latent"}]
-    schedule = [{"schedule": "fixture"}]
+    schedule = [{"schedule": "fixture", "cap": 2048}]
     manifest_hash = stable_digest(NAMESPACE, "MANIFEST", "fixture-latent")
     schedule_digest = stable_digest(NAMESPACE, "SCHEDULE", canonical_json(schedule))
     manifest_raw = _write_json(tmp_path / "MANIFEST.json", manifest)
@@ -117,3 +119,80 @@ def test_bad_vector_hash_blocks_loading(tmp_path: Path) -> None:
 
     with pytest.raises(LockValidationError, match="candidate identity hash"):
         load_and_validate_lock(lock_path)
+
+
+def test_execute_constructs_backend_after_validation_and_calls_runner(tmp_path: Path) -> None:
+    lock_path = _fixture(tmp_path)
+    calls: list[object] = []
+
+    def backend_factory(config):
+        calls.append(("backend", config))
+        return object()
+
+    def journal_factory(path, *, identity):
+        calls.append(("journal", path, identity))
+        return object()
+
+    def runner(backend, manifest, schedule, **kwargs):
+        calls.append(("runner", backend, manifest, schedule, kwargs))
+        return ["one", "two"]
+
+    result = execute_collection(
+        lock_path,
+        tmp_path / "journal.jsonl",
+        backend_factory=backend_factory,
+        journal_factory=journal_factory,
+        runner=runner,
+    )
+
+    assert result == {"schedule_rows": 1, "journal_rows": 2}
+    assert [call[0] for call in calls] == ["journal", "backend", "runner"]
+    assert calls[1][1].dtype == "bf16"
+    assert calls[2][4]["intervention"].vector.hash
+
+
+def test_execute_rejects_missing_journal_before_backend(tmp_path: Path) -> None:
+    lock_path = _fixture(tmp_path)
+    called = False
+
+    def backend_factory(config):
+        nonlocal called
+        called = True
+        return object()
+
+    with pytest.raises(ValueError, match="--journal"):
+        execute_collection(lock_path, None, backend_factory=backend_factory)
+    assert called is False
+
+
+def test_execute_bad_lock_never_constructs_backend(tmp_path: Path) -> None:
+    lock_path = _fixture(tmp_path)
+    lock = json.loads(lock_path.read_text())
+    lock["artifact_sha256"]["SCHEDULE.json"] = "0" * 64
+    lock_path.write_text(json.dumps(lock), encoding="utf-8")
+    called = False
+
+    def backend_factory(config):
+        nonlocal called
+        called = True
+        return object()
+
+    with pytest.raises(LockValidationError, match="SHA-256 mismatch"):
+        execute_collection(
+            lock_path,
+            tmp_path / "journal.jsonl",
+            backend_factory=backend_factory,
+            runner=lambda *args, **kwargs: [],
+        )
+    assert called is False
+
+
+def test_default_mode_remains_validation_only(tmp_path: Path, monkeypatch, capsys) -> None:
+    lock_path = _fixture(tmp_path)
+    monkeypatch.setattr(
+        "scripts.run_budget_interaction_collection._default_backend_factory",
+        lambda config: (_ for _ in ()).throw(AssertionError("backend constructed")),
+    )
+
+    assert main([str(lock_path)]) == 0
+    assert capsys.readouterr().out.strip() == "LOCK_VALIDATION_PASS"
