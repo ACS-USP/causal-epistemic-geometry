@@ -37,7 +37,7 @@ The final lock must verify every value below before any new model forward pass.
 
 | Component | Candidate value |
 | --- | --- |
-| Model | `Qwen/Qwen3-8B`, revision `b968826d9c46dd6066d109eabc6255188de91218`, BF16/SDPA |
+| Model and tokenizer | `Qwen/Qwen3-8B`, both at revision `b968826d9c46dd6066d109eabc6255188de91218`, BF16/SDPA |
 | Treatment | existing Q1 layer-27 D75 controller; hook scope `sustained_current_token` (final prompt token and current decode token) |
 | Direction | `review/gate6_2_first_stage_repair_mean_bridge/PAIRED_MEAN_DIRECTIONS/PROMPT_BOUNDARY/L27.npy` |
 | Direction SHA-256 | `b1630039fcbb829028a0e8f9f521d7e87bb24e831bc81c74a1591a6c39f40772` |
@@ -143,8 +143,9 @@ following have been recorded together:
    journal, parser, and decision-rule code;
 2. verified historical-ID exclusion set, regenerated new manifest, complete
    schedule, and their hashes;
-3. verified controller vector file and float64 hashes, layer, dose, model
-   revision, dtype, attention backend, decoding configuration, and hook scope.
+3. verified controller vector file and float64 hashes, layer, dose, model and
+   tokenizer repositories/revisions, dtype, attention backend, decoding
+   configuration, and hook scope.
    The runner checks those frozen values against `backend.provenance()`,
    `backend.config`, and the live `Intervention` object before its first call;
 4. a hash-pinned journal identity containing those values;
