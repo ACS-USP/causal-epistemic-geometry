@@ -24,6 +24,113 @@ ROLLOUTS = ROLLOUT_INDICES
 SEED_REGIME = "MATCHED"
 
 
+def _record_sequence(value: Any, *, field: str) -> tuple[Mapping[str, Any], ...]:
+    """Return records from a schema container without interpreting its source."""
+
+    if isinstance(value, Mapping):
+        records = tuple(value.values())
+    elif isinstance(value, Sequence) and not isinstance(value, (str, bytes)):
+        records = tuple(value)
+    else:
+        raise TypeError(f"{field} must be a mapping or sequence")
+    if not records:
+        raise ValueError(f"{field} must not be empty")
+    if any(not isinstance(record, Mapping) for record in records):
+        raise TypeError(f"{field} entries must be mappings")
+    return records  # type: ignore[return-value]
+
+
+def _latent_id(value: Any, *, field: str) -> str:
+    if not isinstance(value, str) or not value:
+        raise ValueError(f"{field} must contain non-empty strings")
+    return value
+
+
+def _manifest_latent_ids(value: Any) -> frozenset[str]:
+    manifests = _record_sequence(value, field="manifests")
+    manifest_sets: list[frozenset[str]] = []
+    for manifest in manifests:
+        if "items" not in manifest:
+            raise ValueError("manifest is missing items")
+        items = _record_sequence(manifest["items"], field="manifest items")
+        ids: list[str] = []
+        for item in items:
+            if "latent_id" not in item:
+                raise ValueError("manifest item is missing latent_id")
+            ids.append(_latent_id(item["latent_id"], field="latent_id"))
+        if len(set(ids)) != len(ids):
+            raise ValueError("manifest items contain duplicate latent IDs")
+        manifest_sets.append(frozenset(ids))
+
+    # Stage A has one item set repeated for each paired budget.  Repetition is
+    # valid only when the complete sets agree; accidental partial overlap is
+    # rejected rather than silently deduplicated.
+    extracted = manifest_sets[0]
+    for current in manifest_sets[1:]:
+        if extracted & current and extracted != current:
+            raise ValueError("manifests contain inconsistent latent ID sets")
+        extracted |= current
+    return extracted
+
+
+def _paired_group_latent_ids(value: Any) -> frozenset[str]:
+    groups = _record_sequence(value, field="paired_budget_groups")
+    extracted: set[str] = set()
+    for group in groups:
+        if "latent_ids" not in group:
+            raise ValueError("paired budget group is missing latent_ids")
+        latent_ids = group["latent_ids"]
+        if not isinstance(latent_ids, Sequence) or isinstance(latent_ids, (str, bytes)):
+            raise TypeError("paired_budget_group latent_ids must be a sequence")
+        if not latent_ids:
+            raise ValueError("paired_budget_group latent_ids must not be empty")
+        current = [
+            _latent_id(value, field="paired_budget_group latent_ids") for value in latent_ids
+        ]
+        if len(set(current)) != len(current):
+            raise ValueError("paired budget group contains duplicate latent IDs")
+        if extracted.intersection(current):
+            raise ValueError("paired budget groups contain duplicate latent IDs")
+        extracted.update(current)
+    return frozenset(extracted)
+
+
+def extract_historical_latent_ids(
+    manifest: Mapping[str, Any] | Sequence[Any],
+) -> frozenset[str]:
+    """Extract latent IDs from an already-loaded Stage A manifest object.
+
+    The extractor is deliberately a pure boundary: callers provide the loaded
+    mapping or sequence, and this function performs no external record or
+    result access.  It accepts the item-oriented ``manifests`` shape, the
+    deduplicated ``paired_budget_groups`` shape, or both.  When both are
+    present they must describe the same ID set.
+    """
+
+    if isinstance(manifest, Mapping):
+        has_manifests = "manifests" in manifest
+        has_groups = "paired_budget_groups" in manifest
+        if not has_manifests and not has_groups:
+            raise ValueError(
+                "manifest must contain manifests or paired_budget_groups"
+            )
+        representations: list[frozenset[str]] = []
+        if has_manifests:
+            representations.append(_manifest_latent_ids(manifest["manifests"]))
+        if has_groups:
+            representations.append(_paired_group_latent_ids(manifest["paired_budget_groups"]))
+    elif isinstance(manifest, Sequence) and not isinstance(manifest, (str, bytes)):
+        representations = [_manifest_latent_ids(manifest)]
+    else:
+        raise TypeError("manifest must be a mapping or sequence")
+
+    if any(not ids for ids in representations):
+        raise ValueError("manifest contains no latent IDs")
+    if len(representations) == 2 and representations[0] != representations[1]:
+        raise ValueError("manifest representations contain inconsistent latent IDs")
+    return representations[0]
+
+
 def _positive_count(value: int) -> int:
     if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
         raise ValueError("n_per_cell must be a positive integer")
@@ -311,6 +418,7 @@ __all__ = [
     "SEED_REGIME",
     "build_manifest",
     "build_schedule",
+    "extract_historical_latent_ids",
     "materialize_manifest",
     "validate_manifest",
     "validate_schedule",
