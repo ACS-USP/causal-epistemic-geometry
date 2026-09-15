@@ -1806,6 +1806,43 @@ class HuggingFaceBackend(ModelBackend):
         edited.
         """
 
+        with self._steer_sustained_current_token(
+            intervention, max_generated_tokens=None
+        ) as trace:
+            yield trace
+
+    @contextmanager
+    def steer_sustained_current_token_until(
+        self, intervention: Intervention, *, max_generated_tokens: int
+    ) -> Iterator[dict[str, Any]]:
+        """Apply a sustained shift only while predicting an initial token prefix.
+
+        The prefill forward predicts generated token zero; each cached decode
+        forward predicts the next generated token.  Consequently a limit of
+        ``n`` applies the intervention to exactly the first ``n`` generated
+        token predictions, provided decoding reaches that prefix.  The hook is
+        deliberately left installed for the rest of generation so its trace
+        can attest that later forwards received no shift.
+        """
+
+        if isinstance(max_generated_tokens, bool) or not isinstance(max_generated_tokens, int):
+            raise TypeError("max_generated_tokens must be a positive integer")
+        if max_generated_tokens <= 0:
+            raise ValueError("max_generated_tokens must be a positive integer")
+        with self._steer_sustained_current_token(
+            intervention, max_generated_tokens=max_generated_tokens
+        ) as trace:
+            yield trace
+
+    @contextmanager
+    def _steer_sustained_current_token(
+        self,
+        intervention: Intervention,
+        *,
+        max_generated_tokens: int | None,
+    ) -> Iterator[dict[str, Any]]:
+        """Implement full or prefix-limited current-token steering."""
+
         validate_vector_dimension(intervention.vector, self)
         layer = self.layer_module(intervention.layer)
         vector = self.torch.as_tensor(
@@ -1815,8 +1852,12 @@ class HuggingFaceBackend(ModelBackend):
         ).view(1, 1, -1)
         trace: dict[str, Any] = {
             "forward_count": 0,
+            "prefill_forwards": 0,
+            "decode_forwards": 0,
             "prefill_applications": 0,
             "decode_applications": 0,
+            "active_applications": 0,
+            "inactive_forwards": 0,
             "applications": [],
             "max_abs_shift_error": 0.0,
             "max_relative_shift_error": 0.0,
@@ -1840,9 +1881,28 @@ class HuggingFaceBackend(ModelBackend):
                 )
             if hidden.ndim != 3:
                 raise ValueError("sustained intervention expects [batch, sequence, hidden]")
+            generation_token_index = trace["forward_count"]
             trace["forward_count"] += 1
             sequence_length = int(hidden.shape[1])
             phase = "prefill" if sequence_length > 1 else "decode"
+            trace[f"{phase}_forwards"] += 1
+            active = (
+                max_generated_tokens is None
+                or generation_token_index < max_generated_tokens
+            )
+            if not active:
+                trace["inactive_forwards"] += 1
+                trace["applications"].append(
+                    {
+                        "phase": phase,
+                        "sequence_length": sequence_length,
+                        "token_position": sequence_length - 1,
+                        "generated_token_index": generation_token_index,
+                        "active": False,
+                    }
+                )
+                return output
+            trace["active_applications"] += 1
             trace[f"{phase}_applications"] += 1
             delta = intervention.alpha * vector.to(device=hidden.device, dtype=hidden.dtype)
             updated = hidden.clone()
@@ -1877,6 +1937,8 @@ class HuggingFaceBackend(ModelBackend):
                     "phase": phase,
                     "sequence_length": sequence_length,
                     "token_position": sequence_length - 1,
+                    "generated_token_index": generation_token_index,
+                    "active": True,
                     "shift_error": shift_error,
                     "non_current_change": non_current_change,
                 }

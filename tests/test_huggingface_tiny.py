@@ -177,6 +177,38 @@ def test_sustained_current_token_hook_tracks_prefill_decode_and_cleans_up(tiny_b
     assert len(tiny_backend.layer_module(0)._forward_hooks) == 0
 
 
+def test_prefix_limited_sustained_hook_stops_shifting_after_token_limit(tiny_backend) -> None:
+    tiny_backend.config = replace(
+        tiny_backend.config,
+        enable_thinking=False,
+        do_sample=True,
+        max_new_tokens=4,
+        temperature=0.6,
+        top_p=0.95,
+        top_k=20,
+        min_p=0.0,
+    )
+    item = BenchmarkItem(id="prefix-tiny", prompt="alpha beta gamma", target="3")
+    intervention = _intervention(0.5, "last_token", np.arange(32, dtype=np.float64) / 32)
+    with tiny_backend.steer_sustained_current_token_until(
+        intervention, max_generated_tokens=1
+    ) as trace:
+        _ = tiny_backend.generate_reasoning(item, sampling_seed=321)
+    assert trace["active_applications"] == 1
+    assert trace["inactive_forwards"] == trace["forward_count"] - 1
+    assert trace["prefill_forwards"] + trace["decode_forwards"] == trace["forward_count"]
+    assert trace["prefill_applications"] + trace["decode_applications"] == 1
+    assert trace["applications"][0]["generated_token_index"] == 0
+    assert trace["applications"][0]["active"] is True
+    assert all(not entry["active"] for entry in trace["applications"][1:])
+    assert len(tiny_backend.layer_module(0)._forward_hooks) == 0
+    with pytest.raises(ValueError, match="positive integer"):
+        with tiny_backend.steer_sustained_current_token_until(
+            intervention, max_generated_tokens=0
+        ):
+            pass
+
+
 def test_steer_preserves_choice_prompt_position_until_inference_finishes(tiny_backend) -> None:
     tiny_backend._choice_prompt_index = 2
     with tiny_backend.steer(_intervention(0.1, "last_token")):
