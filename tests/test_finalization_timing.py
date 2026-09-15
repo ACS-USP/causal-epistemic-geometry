@@ -8,6 +8,7 @@ from epistemic_geometry.analysis.finalization_timing import (
     directional_evalues,
     equal_family_cell_mean,
     normalized_paired_shortening,
+    paired_shortening_from_restricted_times,
     think_close_time,
     validate_timing_schedule,
 )
@@ -55,3 +56,27 @@ def test_directional_evalues_respect_the_sign() -> None:
     later = directional_evalues([-0.5] * 21, delta=0.1)
     assert earlier["d75_earlier_by_delta"] > 40
     assert later["d75_later_by_delta"] > 40
+
+
+def test_structural_seal_records_cannot_carry_semantic_fields() -> None:
+    records = []
+    for condition, time in (("BASELINE", 10), ("D75", 2)):
+        for rollout in (0, 1):
+            records.append(
+                {
+                    "family": "f",
+                    "cell": "c",
+                    "latent": "a",
+                    "condition": condition,
+                    "rollout": rollout,
+                    "cap": 10,
+                    "restricted_think_close_time": time,
+                    "think_close_observed": time < 10,
+                }
+            )
+    assert paired_shortening_from_restricted_times(records, cap=10) == {
+        ("f", "c", "a"): 0.8
+    }
+    records[0]["correct"] = False
+    with pytest.raises(ValueError, match="unexpected schema"):
+        paired_shortening_from_restricted_times(records, cap=10)

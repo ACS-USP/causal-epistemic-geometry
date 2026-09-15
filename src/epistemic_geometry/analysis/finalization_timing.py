@@ -36,6 +36,23 @@ class TimingObservation:
         return (self.family, self.cell, self.latent, self.condition, self.rollout)
 
 
+@dataclass(frozen=True, slots=True)
+class RestrictedTimingObservation:
+    """One structural-only record emitted by the timing journal seal."""
+
+    family: str
+    cell: str
+    latent: str
+    condition: str
+    rollout: int
+    cap: int
+    restricted_think_close_time: int
+    think_close_observed: bool
+
+    def key(self) -> tuple[str, str, str, str, int]:
+        return (self.family, self.cell, self.latent, self.condition, self.rollout)
+
+
 def _observation(value: TimingObservation | Mapping[str, Any]) -> TimingObservation:
     if isinstance(value, TimingObservation):
         return value
@@ -201,3 +218,84 @@ def directional_evalues(contrasts: Iterable[float], *, delta: float) -> dict[str
         "exclude_d75_earlier_by_delta": float(prod(1.0 + (delta - values) / 2.0)),
         "exclude_d75_later_by_delta": float(prod(1.0 + (delta + values) / 2.0)),
     }
+
+
+def paired_shortening_from_restricted_times(
+    records: Iterable[Mapping[str, Any]], *, cap: int
+) -> dict[tuple[str, str, str], float]:
+    """Compute paired timing contrasts from a structural seal only.
+
+    The input schema is exact by design: semantic journal fields cannot enter
+    this analysis path, even accidentally.
+    """
+
+    required = {
+        "family",
+        "cell",
+        "latent",
+        "condition",
+        "rollout",
+        "cap",
+        "restricted_think_close_time",
+        "think_close_observed",
+    }
+    grouped: dict[tuple[str, str, str, str], list[RestrictedTimingObservation]] = defaultdict(list)
+    keys: set[tuple[str, str, str, str, int]] = set()
+    for record in records:
+        if not isinstance(record, Mapping) or set(record) != required:
+            raise ValueError("structural timing record has an unexpected schema")
+        observation = RestrictedTimingObservation(**dict(record))
+        if not all(
+            isinstance(value, str) and value
+            for value in (observation.family, observation.cell, observation.latent)
+        ):
+            raise ValueError("structural identifiers must be non-empty strings")
+        if observation.condition not in CONDITIONS or observation.rollout not in ROLLOUTS:
+            raise ValueError("structural timing record has an unsupported condition or rollout")
+        if observation.cap != cap or type(observation.cap) is not int:
+            raise ValueError("structural timing record cap does not match the locked horizon")
+        if (
+            type(observation.restricted_think_close_time) is not int
+            or not 1 <= observation.restricted_think_close_time <= cap
+            or type(observation.think_close_observed) is not bool
+        ):
+            raise ValueError("structural timing record has an invalid restricted outcome")
+        key = observation.key()
+        if key in keys:
+            raise ValueError("duplicate structural timing record")
+        keys.add(key)
+        group_key = (
+            observation.family,
+            observation.cell,
+            observation.latent,
+            observation.condition,
+        )
+        grouped[group_key].append(observation)
+    if not grouped:
+        raise ValueError("at least one structural timing record is required")
+    contrasts: dict[tuple[str, str, str], float] = {}
+    units = {(family, cell, latent) for family, cell, latent, _ in grouped}
+    for family, cell, latent in units:
+        baseline = grouped.get((family, cell, latent, "BASELINE"), [])
+        d75 = grouped.get((family, cell, latent, "D75"), [])
+        if len(baseline) != 2 or len(d75) != 2:
+            raise ValueError("each structural latent-condition requires two rollouts")
+        if {item.rollout for item in baseline} != set(ROLLOUTS) or {
+            item.rollout for item in d75
+        } != set(ROLLOUTS):
+            raise ValueError("structural latent-condition has an incomplete rollout pair")
+        baseline = sorted(baseline, key=lambda item: item.rollout)
+        d75 = sorted(d75, key=lambda item: item.rollout)
+        contrasts[(family, cell, latent)] = float(
+            np.mean(
+                [
+                    (base.restricted_think_close_time - treated.restricted_think_close_time)
+                    / cap
+                    for base, treated in zip(baseline, d75, strict=True)
+                ]
+            )
+        )
+    expected_count = len(units) * len(CONDITIONS) * len(ROLLOUTS)
+    if len(keys) != expected_count:
+        raise ValueError("structural timing records do not form a complete paired schedule")
+    return contrasts
