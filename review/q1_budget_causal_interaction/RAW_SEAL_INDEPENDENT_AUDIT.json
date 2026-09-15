@@ -1,0 +1,14 @@
+{
+  "aggregates_computed": false,
+  "classification": "RAW_SEAL_INDEPENDENT_AUDIT_PASS",
+  "expected_logical_key_count": 768,
+  "journal_sha256": "36324cb330b9ae7c7d1bbb6f44ee3e021a6aaca146572044151897a1ec2f74a5",
+  "lock_sha256": "4940c5ab434becb6d5f06e58f3199735c5582b20411ad81f4d11b1747cf0ec7b",
+  "logical_key_count": 768,
+  "parse_or_correctness_evaluated": false,
+  "primary_raw_seal_sha256": "5f3a5add3d5662400691ff5254b819183d2d62bfa1423d523f4a0ad3cbfcef8c",
+  "response_text_exposed": false,
+  "schedule_sha256": "8cb57d2ab257bf010baea7756b5da893bfed302ff0cb794af752bc266a2b2e7d",
+  "schema_version": "q1-v3-budget-interaction-raw-seal-independent-audit-v1",
+  "scientific_model_outcomes_computed": false
+}

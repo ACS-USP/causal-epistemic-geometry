@@ -1,0 +1,20 @@
+{
+  "aggregates_computed": false,
+  "candidate_identity_hash": "4e1712a45bd121bff5c39967955d884d6f1fbefeaccbaad32d82eb90ba2dd75a",
+  "expected_logical_key_count": 768,
+  "experiment_id": "Q1-V3-BUDGET-CAUSAL-INTERACTION-V1",
+  "journal_bytes": 14487066,
+  "journal_identity_hash": "8aaf164fbdb31fd6de9c01a20afe1e5ff820522f95ebc0882bf40c18ee156cc4",
+  "journal_path": "/srv/shared/ceg-q1-budget-causal-interaction/JOURNAL.jsonl",
+  "journal_sha256": "36324cb330b9ae7c7d1bbb6f44ee3e021a6aaca146572044151897a1ec2f74a5",
+  "lock_sha256": "4940c5ab434becb6d5f06e58f3199735c5582b20411ad81f4d11b1747cf0ec7b",
+  "logical_key_count": 768,
+  "manifest_sha256": "577a8f8f9a8aca49efc60a968caa793df5291e68cecf03627b16aa55efda38c8",
+  "parse_or_correctness_evaluated": false,
+  "response_text_exposed": false,
+  "schedule_digest": "c87f13d86b59229087f7e8e248d604b4d689f0a652d637f9042b2512be8b488e",
+  "schedule_sha256": "8cb57d2ab257bf010baea7756b5da893bfed302ff0cb794af752bc266a2b2e7d",
+  "schema_version": "q1-v3-budget-interaction-raw-seal-v1",
+  "scientific_model_outcomes_computed": false,
+  "status": "RAW_JOURNAL_SEALED"
+}
