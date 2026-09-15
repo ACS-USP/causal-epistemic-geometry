@@ -17,7 +17,7 @@ def put(p: Path, x):
     return p
 
 
-def test_freeze_is_outcome_free_and_refuses_overwrite(tmp_path: Path):
+def _fixture_lock(tmp_path: Path) -> Path:
     source = put(tmp_path / "source.json", [{"latent_id": "old"}])
     out = tmp_path / "a"
     materialize({source: hashlib.sha256(source.read_bytes()).hexdigest()}, out)
@@ -59,5 +59,16 @@ def test_freeze_is_outcome_free_and_refuses_overwrite(tmp_path: Path):
         "journal_identity",
         "candidate_identity",
     }
+    return out / "LOCK.json"
+
+
+def test_freeze_is_outcome_free_and_refuses_overwrite(tmp_path: Path) -> None:
+    lock_path = _fixture_lock(tmp_path)
+    assert lock_path.is_file()
     with pytest.raises(FileExistsError):
-        freeze(out, cp, ctrl, draft)
+        freeze(
+            lock_path.parent,
+            lock_path.parent.parent / "candidate.json",
+            lock_path.parent.parent / "controller.json",
+            lock_path.parent.parent / "draft.md",
+        )
