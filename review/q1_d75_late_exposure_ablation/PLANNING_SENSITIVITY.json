@@ -1,0 +1,2296 @@
+{
+  "decision_rule": {
+    "contrast": "mean(correct_D75_off_after_2048 - correct_D75_full_4096)",
+    "declarations": [
+      "support relevant late-exposure harm",
+      "exclude relevant late-exposure harm"
+    ],
+    "delta": 0.1,
+    "per_declaration_evalue_threshold": 40.0
+  },
+  "implementation_sha256": "fc3e3657e9cafbd9eb9ade14e4c7f3f2e7776d61907c186727cf72e3490a851c",
+  "rows": [
+    {
+      "exclude_rate": 0.222,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0008333333333333345,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.393,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0015416666666666651,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.042,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04796354166666666,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.043,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05188541666666667,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.013,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05008854166666663,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09915625000000002,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09994791666666655,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09968749999999997,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15053645833333343,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.041
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15004166666666674,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.045
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14905729166666645,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.03
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2006197916666666,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.284
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20039583333333358,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.39
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2007135416666667,
+      "n_latents": 96,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.553
+    },
+    {
+      "exclude_rate": 0.229,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0008593750000000002,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.423,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.00013541666666666666,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.033,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05140104166666672,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.052,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.049505208333333335,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.019,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05019791666666659,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09951562500000008,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.003
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10187499999999992,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10006770833333327,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15227083333333336,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.045
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1496927083333334,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.049
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15140625000000002,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.039
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2003281250000001,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.223
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20052604166666685,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.337
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20115625000000006,
+      "n_latents": 96,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.565
+    },
+    {
+      "exclude_rate": 0.328,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0016614583333333353,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.521,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0005781250000000003,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.042,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05038541666666661,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.049,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05011458333333332,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.013,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05022395833333332,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09650000000000002,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10163020833333325,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.004
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10068229166666663,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1490208333333333,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.035
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14843229166666655,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.042
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15067187499999996,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.042
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19828645833333308,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.243
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20056770833333346,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.391
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20014583333333336,
+      "n_latents": 96,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.553
+    },
+    {
+      "exclude_rate": 0.423,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.002572916666666665,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.72,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0012118055555555562,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.084,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04888541666666668,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.138,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04920138888888889,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.297,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05028819444444439,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10010416666666655,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.005
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.1002465277777779,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.005
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09966319444444442,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14857291666666675,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.07
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1483020833333333,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.117
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14891666666666661,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.208
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2009166666666667,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.49
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20086111111111113,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.68
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19951736111111118,
+      "n_latents": 144,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.928
+    },
+    {
+      "exclude_rate": 0.387,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0003263888888888894,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.74,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0008402777777777775,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.054,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.052451388888888895,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.108,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05210069444444454,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.3,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04995486111111115,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10010416666666662,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.005
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09887847222222208,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09903819444444452,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15030555555555553,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.062
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14784027777777808,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.102
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1505937500000001,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.218
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20017013888888882,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.375
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.1983784722222226,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.585
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19990972222222234,
+      "n_latents": 144,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.926
+    },
+    {
+      "exclude_rate": 0.598,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0002708333333333339,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.876,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.00044791666666666634,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.096,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05063888888888888,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.141,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05075000000000004,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.276,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.0506527777777778,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.0993645833333333,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.002
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10001388888888901,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.002
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09978819444444459,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1497499999999998,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.09
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15047916666666653,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.147
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15088194444444444,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.219
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19911805555555592,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.464
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20088194444444438,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.684
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.1997430555555555,
+      "n_latents": 144,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.911
+    },
+    {
+      "exclude_rate": 0.515,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0008281249999999992,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.887,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0006927083333333327,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.082,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05166927083333334,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.218,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04902343749999999,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.622,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04993229166666671,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09905468750000021,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.001,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09994010416666667,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.006
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10024218750000008,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15046875,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.103
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15086197916666677,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.194
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14897135416666657,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.408
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19911979166666646,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.594
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19983854166666665,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.835
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19857812500000005,
+      "n_latents": 192,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.991
+    },
+    {
+      "exclude_rate": 0.522,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.00018749999999999778,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.882,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0004661458333333336,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.085,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.0508255208333333,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.202,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04964843749999999,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.649,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04971354166666663,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.004,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10029947916666668,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.005
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09963281249999997,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.004
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10028645833333334,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.002
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15175520833333334,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.073
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15003906250000024,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.168
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14960677083333304,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.428
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19935677083333336,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.483
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20064583333333336,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.777
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2000286458333333,
+      "n_latents": 192,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.989
+    },
+    {
+      "exclude_rate": 0.797,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0006666666666666669,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.982,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0003489583333333327,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.129,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05059895833333334,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.272,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.049984375000000004,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.643,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04946354166666668,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09993229166666684,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.004,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.1010078125000001,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.004
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10007552083333339,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1521718750000001,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.131
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1490520833333333,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.187
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1506848958333335,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.432
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19882291666666652,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.613
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2002994791666668,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.85
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19959114583333332,
+      "n_latents": 192,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.989
+    },
+    {
+      "exclude_rate": 0.603,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.001454166666666666,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.965,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0005687499999999994,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.092,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04958333333333333,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.266,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04986666666666675,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.882,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04949374999999997,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10039166666666673,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.002
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09999791666666659,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.001,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09993541666666673,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14951666666666674,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.114
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1502645833333333,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.271
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14937291666666655,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.601
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19974166666666662,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.707
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19988125,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.913
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19884791666666657,
+      "n_latents": 240,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.998
+    },
+    {
+      "exclude_rate": 0.617,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0014229166666666663,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.965,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0013020833333333335,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.1,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04909583333333327,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.281,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05023541666666664,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.898,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04972291666666661,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09993958333333335,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.002
+    },
+    {
+      "exclude_rate": 0.004,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09946250000000008,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.003
+    },
+    {
+      "exclude_rate": 0.001,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09984375,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15053958333333314,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.093
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14980624999999984,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.226
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14993958333333335,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.622
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.1991729166666668,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.542
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20018125000000014,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.867
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19913125000000026,
+      "n_latents": 240,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.999
+    },
+    {
+      "exclude_rate": 0.862,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 1.0416666666667092e-05,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.995,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0008749999999999989,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.174,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05083333333333337,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.382,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04941458333333331,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.848,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05064374999999999,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09963749999999998,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.003
+    },
+    {
+      "exclude_rate": 0.004,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09932708333333332,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.006
+    },
+    {
+      "exclude_rate": 0.001,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10017916666666672,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14881250000000007,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.148
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15047291666666665,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.292
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14944583333333325,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.624
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19956041666666674,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.699
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20073333333333335,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.935
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20010624999999999,
+      "n_latents": 240,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.997
+    },
+    {
+      "exclude_rate": 0.678,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 3.9930555555554873e-05,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.981,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.00040451388888888915,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.124,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.04974479166666669,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.343,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05007465277777779,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.95,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05013194444444447,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10110069444444456,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.004,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09987847222222213,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.003
+    },
+    {
+      "exclude_rate": 0.002,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10050347222222214,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15045659722222207,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.132
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.148998263888889,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.319
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.15052256944444464,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.769
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19900347222222203,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.785
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.200451388888889,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.964
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.20071006944444442,
+      "n_latents": 288,
+      "p_early_stop": 0.4,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 1.0
+    },
+    {
+      "exclude_rate": 0.676,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 6.423611111111094e-05,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.985,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -0.0002343750000000001,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.091,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.049027777777777864,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.321,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05137500000000008,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.944,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.05005381944444442,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.004,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09887326388888881,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.002
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.09983159722222211,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.004
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10038020833333339,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.004
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14945486111111134,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.086
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14839583333333348,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.248
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1494288194444446,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.75
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2012361111111112,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.677
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19922222222222236,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.905
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19976041666666675,
+      "n_latents": 288,
+      "p_early_stop": 0.6,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 1.0
+    },
+    {
+      "exclude_rate": 0.919,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": -8.159722222222235e-05,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0004461805555555564,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 1.0,
+      "late_exposure_harm": 0.0,
+      "mean_observed_contrast": 0.0,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.217,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.0497170138888889,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.48,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.049864583333333344,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.952,
+      "late_exposure_harm": 0.05,
+      "mean_observed_contrast": 0.049972222222222196,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.0
+    },
+    {
+      "exclude_rate": 0.003,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10049479166666667,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.002
+    },
+    {
+      "exclude_rate": 0.005,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10027430555555568,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.1,
+      "mean_observed_contrast": 0.10039756944444442,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.001
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14920659722222243,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.151
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.1488420138888891,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.341
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.15,
+      "mean_observed_contrast": 0.14972222222222234,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 0.762
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19914930555555552,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.0,
+      "support_rate": 0.771
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.2004496527777778,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 0.5,
+      "support_rate": 0.956
+    },
+    {
+      "exclude_rate": 0.0,
+      "late_exposure_harm": 0.2,
+      "mean_observed_contrast": 0.19978472222222238,
+      "n_latents": 288,
+      "p_early_stop": 0.8,
+      "replications": 1000,
+      "shared_randomness": 1.0,
+      "support_rate": 1.0
+    }
+  ],
+  "schema_version": "q1-d75-late-exposure-planning-v1",
+  "scope": "synthetic paired-Bernoulli sensitivity only; no Qwen prompt, latent, seed, response, or outcome was used",
+  "simulation": {
+    "interpretation": "shared_randomness is a sensitivity parameter, not an estimate of future Qwen trajectory dependence",
+    "late_exposure_harm": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "n_latents": [
+      96,
+      144,
+      192,
+      240,
+      288
+    ],
+    "p_early_stop": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "replications_per_cell": 1000,
+    "seed": 20260915,
+    "shared_randomness": [
+      0.0,
+      0.5,
+      1.0
+    ]
+  },
+  "status": "OUTCOME_FREE_SENSITIVITY_COMPLETE"
+}
