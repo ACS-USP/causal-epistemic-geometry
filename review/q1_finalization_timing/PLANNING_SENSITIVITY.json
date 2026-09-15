@@ -1,0 +1,582 @@
+{
+  "decision_rule": {
+    "contrast": "mean((time_baseline - time_D75) / 4096)",
+    "declarations": [
+      "D75 closes thinking at least delta earlier",
+      "D75 closes thinking at least delta later",
+      "both directional shifts of delta excluded"
+    ],
+    "delta": 0.1,
+    "per_declaration_evalue_threshold": 60.0
+  },
+  "implementation_sha256": "3099bfc9a5e7801ab2ea8e9362bb73e1d6bb4bf53296955fea54822ae3c8d7a6",
+  "planner_sha256": "da5eed835a698e4204828e40918b34e2a5143c946b1f7c732f8e30298a0ca325",
+  "rows": [
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.9829,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.3722,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0024,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0002,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0027,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.026,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.9918,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.6901,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.3845,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 96,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 1.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.9973,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.5835,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.025,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.1469,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.1158,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0013,
+      "exclude_both_directions_rate": 0.0009,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0242,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.1487,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.1158,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 1.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.9974,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.7921,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 144,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 1.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 1.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.8866,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.9572,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.5505,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.239,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0009,
+      "exclude_both_directions_rate": 0.0018,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.9563,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.554,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.2406,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 1.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 1.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.9422,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 192,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 1.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 1.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.9963,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.0,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 1.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.9634,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.4735,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.05,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0001,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.0012,
+      "exclude_both_directions_rate": 0.0013,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.1,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 1.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.9606,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.4711,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.15,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 1.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.05,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 1.0,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.15,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 288,
+      "replications": 10000
+    },
+    {
+      "earlier_by_delta_rate": 0.9962,
+      "exclude_both_directions_rate": 0.0,
+      "latent_contrast_sd": 0.3,
+      "later_by_delta_rate": 0.0,
+      "mean_shortening": 0.2,
+      "n_latents": 288,
+      "replications": 10000
+    }
+  ],
+  "schema_version": "q1-finalization-timing-planning-v1",
+  "scope": "synthetic bounded latent-contrast sensitivity only; no Qwen prompt, latent, seed, response, token sequence, or outcome was used",
+  "simulation": {
+    "interpretation": "normal values are clipped to the bounded estimand range and are a sensitivity grid, not an assumed Qwen timing distribution",
+    "latent_contrast_sd": [
+      0.05,
+      0.15,
+      0.3
+    ],
+    "mean_shortening": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "n_latents": [
+      96,
+      144,
+      192,
+      288
+    ],
+    "replications_per_cell": 10000,
+    "seed": 20260915
+  },
+  "status": "OUTCOME_FREE_SENSITIVITY_COMPLETE"
+}
