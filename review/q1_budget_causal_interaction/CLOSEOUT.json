@@ -1,0 +1,25 @@
+{
+  "schema_version": "q1-v3-budget-interaction-closeout-v1",
+  "classification": "Q1_BUDGET_CAUSAL_INTERACTION_INCONCLUSIVE_AT_N96",
+  "candidate_state": "CLOSED_NO_FURTHER_COLLECTION",
+  "lock_sha256": "4940c5ab434becb6d5f06e58f3199735c5582b20411ad81f4d11b1747cf0ec7b",
+  "journal_sha256": "36324cb330b9ae7c7d1bbb6f44ee3e021a6aaca146572044151897a1ec2f74a5",
+  "raw_seal_status": "RAW_JOURNAL_SEALED",
+  "raw_seal_independent_audit": "RAW_SEAL_INDEPENDENT_AUDIT_PASS",
+  "analysis_status": "Q1_BUDGET_INTERACTION_ANALYSIS_COMPLETE",
+  "analysis_independent_audit": "Q1_BUDGET_INTERACTION_ANALYSIS_AUDIT_PASS",
+  "maximum_numeric_difference": 1.3877787807814457e-17,
+  "call_count": 768,
+  "latent_count": 96,
+  "delta_correct": {
+    "2048": 0.04166666666666674,
+    "4096": -0.03125
+  },
+  "interaction": -0.07291666666666674,
+  "fixed_rule_statuses": {
+    "relevant_gain_at_either_cap": "NOT_TRIGGERED",
+    "ten_pp_gain_excluded_at_both_caps": "NOT_TRIGGERED",
+    "interaction_nonzero": "NOT_TRIGGERED"
+  },
+  "no_further_collection_within_candidate": true
+}
