@@ -47,6 +47,7 @@ def _candidate_identity() -> dict[str, object]:
         "layer": 27,
         "eta": 0.75,
         "hook_scope": "sustained_current_token",
+        "think_close_token_id": 151668,
         "decoding_config": {
             "do_sample": True,
             "temperature": 0.6,
@@ -76,6 +77,7 @@ class _FakeBackend:
         self.contexts: list[tuple[str, bool]] = []
         self.active = False
         self.config = _candidate_identity()["decoding_config"]
+        self.tokenizer = lambda _text, *, add_special_tokens: {"input_ids": [151668]}
         self.provenance_values = {
             "model_identifier": "fake/model",
             "model_revision": "fake-revision",
@@ -316,6 +318,22 @@ def test_runner_rejects_decoding_config_mismatch_before_generation() -> None:
     backend = _FakeBackend()
     backend.config["top_p"] = 0.9
     with pytest.raises(ValueError, match="backend.config top_p"):
+        run_serial_finalization_timing(
+            backend,
+            manifest,
+            build_schedule(manifest),
+            intervention=_intervention(),
+            candidate_identity=_candidate_identity(),
+            controller_provenance={"vector_file_sha256": _FAKE_VECTOR_FILE_SHA256},
+        )
+    assert backend.calls == []
+
+
+def test_runner_rejects_unpinned_think_close_token_before_generation() -> None:
+    manifest = build_manifest(n_per_cell=1)
+    backend = _FakeBackend()
+    backend.tokenizer = lambda _text, *, add_special_tokens: {"input_ids": [999]}
+    with pytest.raises(ValueError, match="</think> encoding"):
         run_serial_finalization_timing(
             backend,
             manifest,

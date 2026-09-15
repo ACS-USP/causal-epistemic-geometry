@@ -15,6 +15,7 @@ from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
+from epistemic_geometry.analysis.finalization_timing import QWEN3_THINK_CLOSE_TOKEN_ID
 from epistemic_geometry.reproducibility import canonical_json, stable_digest
 from epistemic_geometry.steering.vector import vector_hash
 from epistemic_geometry.types import Intervention
@@ -40,6 +41,7 @@ CANDIDATE_IDENTITY_FIELDS = (
     "layer",
     "eta",
     "hook_scope",
+    "think_close_token_id",
     "decoding_config",
 )
 _CANDIDATE_IDENTITY_STRING_FIELDS = {
@@ -96,6 +98,11 @@ def validate_candidate_identity(identity: Mapping[str, Any]) -> dict[str, Any]:
     eta = identity["eta"]
     if isinstance(eta, bool) or not isinstance(eta, (int, float)) or not math.isfinite(float(eta)):
         raise ValueError("candidate_identity eta must be a finite number")
+    close_token_id = identity["think_close_token_id"]
+    if close_token_id != QWEN3_THINK_CLOSE_TOKEN_ID:
+        raise ValueError(
+            "candidate_identity think_close_token_id must match the Qwen3 structural token"
+        )
     decoding_config = identity["decoding_config"]
     if not isinstance(decoding_config, Mapping):
         raise ValueError("candidate_identity decoding_config must be a mapping")
@@ -300,6 +307,27 @@ class SerialFinalizationTimingAdapter:
         for field in DECODING_CONFIG_FIELDS:
             if self._config_value(config, field) != decoding_config[field]:
                 raise ValueError(f"backend.config {field} does not match candidate_identity")
+
+        tokenizer = getattr(self.backend, "tokenizer", None)
+        if tokenizer is None or not callable(tokenizer):
+            raise ValueError("backend.tokenizer is required for finalization timing")
+        encoded = tokenizer("</think>", add_special_tokens=False)
+        if not isinstance(encoded, Mapping) or "input_ids" not in encoded:
+            raise ValueError("backend tokenizer did not return input_ids for </think>")
+        token_ids = encoded["input_ids"]
+        if hasattr(token_ids, "tolist"):
+            token_ids = token_ids.tolist()
+        nested_ids = (
+            isinstance(token_ids, Sequence)
+            and len(token_ids) == 1
+            and isinstance(token_ids[0], Sequence)
+        )
+        if nested_ids:
+            token_ids = token_ids[0]
+        if token_ids != [self.candidate_identity["think_close_token_id"]]:
+            raise ValueError(
+                "backend tokenizer </think> encoding does not match candidate_identity"
+            )
 
         has_d75 = any(row["condition"] == "D75" for row in self.schedule)
         if has_d75:
