@@ -118,7 +118,7 @@ def validate_timing_schedule(
 def think_close_time(
     row: TimingObservation, *, close_token_id: int = QWEN3_THINK_CLOSE_TOKEN_ID
 ) -> int:
-    """Return one-based close position; absent close is administratively censored at cap."""
+    """Return one-based close position; an absent event is encoded at the fixed horizon."""
 
     if type(close_token_id) is not int or close_token_id < 0:
         raise ValueError("close_token_id must be a non-negative integer")
@@ -138,7 +138,7 @@ def normalized_paired_shortening(
     """Return baseline-minus-D75 restricted-time contrasts per latent.
 
     Positive values mean D75 moved the structural close event earlier.  An
-    absent close remains a cap-censored observation in every condition.
+    an absent close is encoded as the fixed-horizon restricted outcome in every condition.
     """
 
     rows = validate_timing_schedule(observations, expected_latents=expected_latents, cap=cap)

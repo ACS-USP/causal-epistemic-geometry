@@ -35,10 +35,11 @@ establishing whether D75 changes timing at all.
 | Conditions | `BASELINE`, `D75`, using matched sampling seeds within latent × rollout. |
 | Rollouts | Two per condition and latent: 768 trajectories, at most 3,145,728 sampled-token positions. |
 | Event | First generated token with ID `151668` (`</think>`), validated against the pinned Qwen tokenizer before any model forward. |
-| Censoring | If the event is absent, its restricted time is 4096, including an early terminal sequence without a closing token. |
+| Restricted outcome | If the event is absent, its restricted time is encoded as 4096, including an early terminal sequence without a closing token. This is a no-event value under the executed policy, not an imputed continuation time. |
 
 For latent \(i\), rollout \(r\), and cap \(L=4096\), let \(T\) be the
-one-based closing-token position, administratively censored at \(L\). The
+one-based first closing-token position, encoded as \(L\) whenever no such
+event occurs in the observed trajectory. The
 latent contrast is
 
 \[
@@ -52,8 +53,10 @@ equally within family, and families equally.
 
 ## Decisions and interpretation
 
-A relevant timing movement is \(\delta=0.10\), or 409.6 tokens of the fixed
-horizon. This is a scale for a practically visible change in response timing;
+A relevant timing movement is \(\delta=0.10\), or 409.6 tokens in the mean
+restricted endpoint on the fixed horizon. It is not a claim that every
+trajectory closes ten percent sooner. This is a scale for a practically visible
+change in response timing;
 it was selected without looking at timing data.
 
 Three fixed e-value declarations, each at threshold 60, will control the
@@ -80,8 +83,9 @@ relevant timing movement. A negative exclusion result applies at the fixed
 The fixed 60-cell sensitivity grid in `PLANNING_SENSITIVITY.json` uses only
 synthetic bounded latent contrasts. At the deliberately adverse contrast SD of
 0.30, N=192 had a 0.94 simulated support rate for a 0.20 normalized shortening
-and a 0.89 simulated exclusion rate under zero shift. These are planning
-operating characteristics, not a Qwen forecast. N=192 is chosen because it is
+and a 0.89 simulated exclusion rate under zero shift. These are conditional planning
+operating characteristics, not a Qwen forecast or a guarantee of resolution at
+a 0.10 shift. N=192 is chosen because it is
 more resolving than 96 or 144 under that declared stress case while remaining
 a single finite collection.
 
