@@ -1,0 +1,106 @@
+{
+  "analysis": {
+    "category_rates": {
+      "2048": {
+        "BASELINE": {
+          "correct": 0.5572916666666666,
+          "incomplete": 0.4375,
+          "invalid": 0.0,
+          "valid_wrong": 0.005208333333333333
+        },
+        "D75": {
+          "correct": 0.5989583333333334,
+          "incomplete": 0.3958333333333333,
+          "invalid": 0.0,
+          "valid_wrong": 0.005208333333333333
+        }
+      },
+      "4096": {
+        "BASELINE": {
+          "correct": 0.6614583333333334,
+          "incomplete": 0.3385416666666667,
+          "invalid": 0.0,
+          "valid_wrong": 0.0
+        },
+        "D75": {
+          "correct": 0.6302083333333334,
+          "incomplete": 0.3541666666666667,
+          "invalid": 0.0,
+          "valid_wrong": 0.015625
+        }
+      }
+    },
+    "delta_correct": {
+      "2048": 0.04166666666666674,
+      "4096": -0.03125
+    },
+    "descriptive_bootstrap": {
+      "delta_correct_percentile_95": {
+        "2048": [
+          0.0,
+          0.08333333333333326
+        ],
+        "4096": [
+          -0.05208333333333337,
+          -0.01041666666666674
+        ]
+      },
+      "interaction_percentile_95": [
+        -0.11979166666666674,
+        -0.03125
+      ],
+      "method": "stratified_latent_bootstrap_descriptive",
+      "n_resamples": 2000,
+      "seed": 0
+    },
+    "fixed_prelock_rule": {
+      "decisions": {
+        "interaction_nonzero": {
+          "criterion": "(Eplus(0, j/2) + Eminus(0, j/2)) / 2 >= threshold",
+          "statistic": 2.433336945831588,
+          "status": "NOT_TRIGGERED",
+          "threshold": 60.0,
+          "triggered": false
+        },
+        "relevant_gain_at_either_cap": {
+          "criterion": "average Eplus(delta, dL) >= threshold",
+          "statistic": 0.016758148641389768,
+          "status": "NOT_TRIGGERED",
+          "threshold": 60.0,
+          "triggered": false
+        },
+        "ten_pp_gain_excluded_at_both_caps": {
+          "criterion": "min Eminus(delta, dL) >= threshold",
+          "statistic": 7.920292268536744,
+          "status": "NOT_TRIGGERED",
+          "threshold": 60.0,
+          "triggered": false
+        }
+      },
+      "delta": 0.1,
+      "method": "fixed_rule_prelock_candidates",
+      "n_latents": 96,
+      "statuses": {
+        "interaction_nonzero": "NOT_TRIGGERED",
+        "relevant_gain_at_either_cap": "NOT_TRIGGERED",
+        "ten_pp_gain_excluded_at_both_caps": "NOT_TRIGGERED"
+      },
+      "threshold": 60.0,
+      "weighted_delta": {
+        "2048": 0.041666666666666664,
+        "4096": -0.03125
+      },
+      "weighted_interaction": -0.07291666666666667
+    },
+    "interaction": -0.07291666666666674
+  },
+  "analysis_implementation_sha256": "db445aece73556bf43f5d7106d2fcbfeaf48cffbd1b39fd8394dbde6f4541ee8",
+  "journal_sha256": "36324cb330b9ae7c7d1bbb6f44ee3e021a6aaca146572044151897a1ec2f74a5",
+  "latent_count": 96,
+  "lock_sha256": "4940c5ab434becb6d5f06e58f3199735c5582b20411ad81f4d11b1747cf0ec7b",
+  "observation_count": 768,
+  "raw_seal_independent_audit_sha256": "0cca201757c62c8cf3ca641e8f8c6f0343d6fa5e96c2f2690d5ed6fd322bc4a8",
+  "raw_seal_sha256": "5f3a5add3d5662400691ff5254b819183d2d62bfa1423d523f4a0ad3cbfcef8c",
+  "schema_version": "q1-v3-budget-interaction-sealed-analysis-v1",
+  "status": "Q1_BUDGET_INTERACTION_ANALYSIS_COMPLETE"
+}
